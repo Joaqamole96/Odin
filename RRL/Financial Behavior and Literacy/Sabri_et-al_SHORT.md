@@ -7,7 +7,7 @@ member_checklist:
   - name: "Gabion, Stefanie S."
     status: "[ ]"
   - name: "Guevarra, Joaquin Luis T."
-    status: "[ ]"
+    status: "[X]"
   - name: "San Jose, Alexa Joanne Paula G."
     status: "[ ]"
   - name: "Togle, Charles Nathaniel B."
@@ -15,6 +15,7 @@ member_checklist:
 summary_date: 2026-04-23
 version: "1.0"
 ---
+```
 
 # Impact of financial behaviour on financial well-being: evidence among young adults in Malaysia
 
@@ -71,4 +72,3 @@ None. (Mediation is path‑based: indirect effect = a×b, tested via bootstrappi
 - 🔑 **Knowledge alone isn’t enough** – financial behaviour is the engine; fintech helps only if you act responsibly.
 - 📌 **Fintech mediates 59%** – using apps without good behaviour does not raise well‑being.
 - ⚠️ **Self‑control has no direct effect** – only works through better financial habits (like budgeting).
-```
