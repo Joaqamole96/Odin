@@ -15,6 +15,7 @@ member_checklist:
 summary_date: 2026-04-22
 version: "1.0"
 ---
+```
 
 # Financial literacy and sustainable planning assessment among Filipino millennials
 
@@ -73,4 +74,3 @@ None. The study uses path coefficients (β) from SEM, not explicit mathematical 
 - 🔑 **FL does not drive planning** – despite very low literacy (only 34% know risk diversification), Filipinos still plan using income, expenses, and job.
 - 💡 **Expenses matter most** – monthly expenses (β=0.205) affect planning more than income (β=0.180) or occupation.
 - 📌 **Goal acceptance is key** – accepting financial goals has the strongest effect (β=0.924) on actual planning behavior.
-```
