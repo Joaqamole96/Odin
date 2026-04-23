@@ -1,11 +1,11 @@
 ```yaml
 ---
-designation: international
+designation: local
 member_checklist:
   - name: "Gabion, Stefanie S."
     status: "[ ]"
   - name: "Guevarra, Joaquin Luis T."
-    status: "[ ]"
+    status: "[X]"
   - name: "San Jose, Alexa Joanne Paula G."
     status: "[ ]"
   - name: "Togle, Charles Nathaniel B."
@@ -29,7 +29,19 @@ Keywords: Behavior Financial literacy Financial planning Goal setting Millennial
 
 ## Abstract
 
-Financial literacy plays an important role in improving personal financial management and helping individuals reach their financial goals, especially for millennials, who currently represent the largest working- age demographic and key consumers. This study sought to address the gaps in low financial literacy levels and poor financial decision- making among Filipinos, as well as the lack of publicly available studies on millennial financial literacy in the Philippines particularly in relation to financial planning. The study assessed the financial literacy of Filipino millennials and its influence on financial planning by employing a correlational research method to test four hypotheses using data from 400 respondents. Financial literacy was measured through "The Big Three" questions, and structural equation modeling was applied to analyze the relationships between financial literacy and demographic factors to financial planning, with goal- setting moderators (goal commitment, goal specificity, goal acceptance, and goal difficulty) serving as the basis for financial planning. Results indicated low levels of financial literacy - leading to the insignificant relationship on sustainable planning, while demographic factors such as monthly income, occupation, and monthly expenses showed high significant influence on financial planning. This study provided additional understanding on the financial literacy and planning of Filipino millennials, offered implications and financial sustainable strategies for the government, financial institutions, and educational institutions aiming to improve financial literacy and planning. Additionally, it emphasized the need for more targeted financial inclusion initiatives tailored to Filipino millennials.
+Financial literacy plays an important role in improving personal financial management and helping individuals reach their financial goals, especially for millennials, who currently represent the largest working-age demographic and key consumers. 
+
+This study sought to address the gaps in low financial literacy levels and poor financial decision- making among Filipinos, as well as the lack of publicly available studies on millennial financial literacy in the Philippines particularly in relation to financial planning.
+
+The study assessed the financial literacy of Filipino millennials and its influence on financial planning by employing a correlational research method to test four hypotheses using data from 400 respondents.
+
+Financial literacy was measured through "The Big Three" questions, and structural equation modeling was applied to analyze the relationships between financial literacy and demographic factors to financial planning, with goal- setting moderators (goal commitment, goal specificity, goal acceptance, and goal difficulty) serving as the basis for financial planning.
+
+Results indicated low levels of financial literacy - leading to the insignificant relationship on sustainable planning, while demographic factors such as monthly income, occupation, and monthly expenses showed high significant influence on financial planning.
+
+This study provided additional understanding on the financial literacy and planning of Filipino millennials, offered implications and financial sustainable strategies for the government, financial institutions, and educational institutions aiming to improve financial literacy and planning.
+
+Additionally, it emphasized the need for more targeted financial inclusion initiatives tailored to Filipino millennials.
 
 ## 1. Introduction
 
@@ -580,4 +592,3 @@ Yamane, T. (1967). *Statistics: An introductory analysis* (2nd ed.). New York: H
 Yeniaras, V., Akarsu, T. N., & Kaya, I. (2020). The role of PLS-SEM in financial research. *Journal of Financial Services Marketing*, 25(3), 89-102.
 
 Zaimovic, A., Torlakovic, A., & Hadzic, A. (2023). Financial literacy and retirement planning: A systematic review. *Journal of Pension Economics and Finance*, 22(1), 45-67.
-```
