@@ -1,5 +1,5 @@
 ---
-name: z-pdf-to-markdown-converter
+name: z-converter
 description: Converts PDF research documents to strict Markdown with YAML metadata, member checklist, and preservation of all semantic content. For models with PDF/OCR capabilities.
 ---
 

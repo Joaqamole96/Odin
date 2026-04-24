@@ -1,5 +1,5 @@
 ---
-name: z-markdown-summarizer
+name: z-summarizer
 description: Converts a converted research Markdown file (from PDF) into a highly structured, human-optimized summary for comprehension, understanding, and memorization. Includes YAML metadata and member checklist.
 ---
 
