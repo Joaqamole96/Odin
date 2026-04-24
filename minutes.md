@@ -1,0 +1,15 @@
+- Algorithm is LSTM
+- Fallback designs forecast and budget based on what the behavioral profiles typically spend
+- Discussed a scenario in the budget recommendation module, specifically in budget size, where 20k was alloted to Essentials for the month of March (18k minimum as defined by protected category function), but only 5k was spent. Budget recommendation module will recommend what the user can do with the remaining 13k. For the budgeting of April, alloted budget size for Essentials will be 18k, with the excess 2k alotted to other categories.
+- Budgets for Variable income will be created for their income and not for the month. Stable incomes will have their budget recommendation monthly
+- Should the budget be based on income, when considering this scenario: a user earned 300k and chooses not to work for several months. How should the budget be determined?
+- Ultimately, budget should not increase just because there is excess from previous
+- Proposal to remove Isolation Forest in exchange for simple rule-based "if-else"
+- Assess if budget recommendation module needs recommendation algorithm. If yes, look for recommendation algorithm for budget recommendation module to use
+
+- Budget recommendation is per-time-horizon zero-based budgeting
+- Weekly option for budgets must be run at the start of the week Scenario (I need my budget for this week then run budgetting but for weekly option, for the next week ask the user "How much money do you have now?" Then create the budget for that week)
+- Budgetting Options:
+  - Weekly (We ask the users how much they want to be budgetted for this week, and next week we ask again. System assigns allocations for categories)
+  - Weekly (We ask the users how much is they money right now, System looks back on how much is being budgetted per week then allocates)
+  - 
