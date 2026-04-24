@@ -30,7 +30,7 @@
 	- She further added that the members can choose which machine learning algorithm will be used for that, then asked if we intended not to.
 		- Charles answered that, currently, only rule-based algorithms are used for classification.
 	- She finally stated that users must be classified into one of the four financial behavioral profiles using any clustering or classification algorithm of the members' choice.
-- She asked about swapping behavioral profiles.
+- She asked about progressively changing behavioral profiles.
 	- She asked if a user's behavioral profile can change or be changed over time.
 		- Joaquin answered that the user is able to change their behavioral profile.
 	- She then asked how often it can be changed.
@@ -75,6 +75,7 @@
 		- Joaquin explained that when users input expenses for a category that exceeds the thresholds of said category, the system will flag the transaction and alert the user.
 	- She then asked what the next steps are after the flagging, like if the system will reduce allocations for that category the next time.
 		- Joaquin confirmed, and noted that the protected categories are excluded from the reduction.
+		- Additional Notes from Charles gave an example that the system will suggest excess spendings to be redirected to high priority categories such as emergency funds
 - She asked about additional recommendation features and reports.
 	- She asked if there are analytics in the System
 		- Joaquin answered that the analytics are in the Dashboard page, like income-expense forecasting, spending breakdowns, and budget health.
