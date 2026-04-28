@@ -23,6 +23,7 @@
 
 | paper_id | desig. | year | authors | title | venue | topics | shorthand_tags | checklist | notes |
 | :--- | :---: | :---: | :--- | :--- | :--- | :--- | :--- | :---: | :--- |
+| 10.62986/dp2024.10 | local | 2024 | Albert, J. R. G.; Briones, R. M.; Rivera, J. P. R. | Wealth Creation for Expanding the Middle Class in the Philippines | Philippine Institute for Development Studies Discussion Paper Series | [] | [shorthand_tags] | [checklist] | [notes] |
 | [paper_id] | [desig.] | [year] | [authors] | [title] | [venue] | [topics] | [shorthand_tags] | [checklist] | [notes] |
 
 ---
@@ -38,7 +39,7 @@
 | `title` | plain text | converter YAML `title` | Exact title, truncated at 60 chars with `…` if needed. |
 | `venue` | plain text | converter YAML `venue` | Full journal or conference name. |
 | `topics` | comma-separated integers | summarizer YAML `odin_topics` | Topic numbers this paper supports. See topic table below. |
-| `shorthand_tags` | comma-separated `/tags` | manual, from outline | Specific `[/shorthand]` nodes from `odin_topic_outline.md`. |
+| `shorthand_tags` | comma-separated `/tags` | manual, from outline | Specific `[/shorthand]` nodes from `topic-outline.md`. |
 | `checklist` | "Gabion: [], Guevarra: [], San Jose: [], Togle: []" with ✓ | summarizer YAML `member_checklist` | ✓ = member has read the summary. |
 | `notes` | one line | manual | Primary contribution of this paper to Odin's RRL in ≤50 words. |
 

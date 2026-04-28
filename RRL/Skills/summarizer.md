@@ -64,7 +64,7 @@ member_checklist:
 
 **`title`, `authors`, `year`, `venue`** — Copy exactly from the source converted file's YAML frontmatter.
 
-**`odin_topics`** — A YAML list of the topic numbers (integers) this paper contributes to. Populated after completing the Relevance to Odin section. If none, write `[]`.
+**`odin_topics`** — A YAML list of the topic numbers (integers) this paper contributes to. Populated after completing the Relevance to Odin section.
 
 **`summary_date`** — Today's date in ISO format (YYYY-MM-DD).
 
