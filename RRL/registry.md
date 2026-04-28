@@ -21,10 +21,16 @@
 
 ## Paper Registry
 
-| paper_id | desig. | year | authors | title | venue | topics | shorthand_tags | checklist | notes |
-| :--- | :---: | :---: | :--- | :--- | :--- | :--- | :--- | :---: | :--- |
-| 10.62986/dp2024.10 | local | 2024 | Albert, J. R. G.; Briones, R. M.; Rivera, J. P. R. | Wealth Creation for Expanding the Middle Class in the Philippines | Philippine Institute for Development Studies Discussion Paper Series | [1, 2, 4, 5, 7, 9, 11, 12] | [shorthand_tags] | [checklist] | [notes] |
-| [paper_id] | [desig.] | [year] | [authors] | [title] | [venue] | [topics] | [shorthand_tags] | [checklist] | [notes] |
+| Paper ID | Designation | Year | Author/s | Title | Venue | Topic/s | Tag/s | Notes |
+| :--- | :---: | :---: | :--- | :--- | :--- | :--- | :--- | :--- |
+| 10.62986/dp2024.10 | local | 2024 | Albert, J. R. G.; Briones, R. M.; Rivera, J. P. R. | Wealth Creation for Expanding the Middle Class in the Philippines | Philippine Institute for Development Studies Discussion Paper Series | [1, 2, 4, 5, 7, 9, 11, 12] | ["/income-typology", "/expenditure-patterns", "/fil-behavioral-patterns", "/western-taxonomy-gap", "/cultural-expense-types", "/profiling-role"] | ... |
+| 10.20944/preprints202508.0349.v1 | local | 2025 | Ama, N. A. | Analysis of the Food and Income Expenditure Survey 2023 Among Filipino Households | Preprints.org | [1] | [/expenditure-patterns, /income-typology] | ... |
+| 10.63498/ijabms2 | local | 2026 | Amado, M. A. A. | The plight of teachers on the twice-a-month salary release: Financial literacy and survival | International Journal of Accountancy, Business, and Management Studies (IJABMS) | [1, 4] | ["/income-typology", "/budget-time-horizons", "/expenditure-patterns", "/budgeting-prevalence", "/budget-failure-points", "/intelligent-vs-literacy", "/strategy-income-fit", "/surplus-logic", "/lump-sum-income", "/min-user-input", "/western-taxonomy-gap", "/fil-behavioral-patterns", "/cultural-obligations"] | ... |
+| 10.69569/ijp.2026.065 | local | 2026 | Am-una, A. | Beyond Awareness: Examining Financial Behaviors Among Public School Teachers in the Philippines | Journal of Interdisciplinary Perspectives | [1, 2, 4, 10] | [/income-typology, /expenditure-patterns, /budget-failure-points, /budgeting-prevalence, /intelligent-vs-literacy, /pfms-gap, /surplus-logic, /min-user-input, /western-taxonomy-gap, /fil-behavioral-patterns, /profile-dimensions] | ... |
+| a2b3c4d5-e6f7-4a8b-9c0d-1e2f3a4b5c6d | local | 2025 | Apao, A. A.; Cayanpat, R. A. B.; Edullantes, Y. P. Jr.; Cabanero, K. E. S.; Hechanova, J. M. T.; Candia, H. G. | Martime Students' Financial Knowledge, Attitude, and Behavior | Daengku: Journal of Humanities and Social Sciences Innovation | [1, 10, 11] | ["/income-typology", "/budget-time-horizons", "/intelligent-vs-literacy", "/western-taxonomy-gap", "/fil-behavioral-patterns", "/profile-dimensions", "/classification-vs-clustering"] | ... |
+| 10.1371/journal.pone.0294466 | international | 2023 | Bai, R. | Impact of Financial Literacy, Mental Budgeting, and Self-Control on Financial Well-Being with the Mediating Role of Investment Decision Making | PLoS ONE | [1, 4, 5, 10] | [/expenditure-patterns, /budgeting-prevalence, /intelligent-vs-literacy, /strategy-mechanics, /budget-rec-formulation, /western-taxonomy-gap, /fil-behavioral-patterns] | ... |
+| [paper_id] | [desig.] | [year] | [authors] | [title] | [venue] | [topics] | [shorthand_tags] | ... |
+
 
 ---
 
@@ -40,7 +46,6 @@
 | `venue` | plain text | converter YAML `venue` | Full journal or conference name. |
 | `topics` | comma-separated integers | summarizer YAML `odin_topics` | Topic numbers this paper supports. See topic table below. |
 | `shorthand_tags` | comma-separated `/tags` | manual, from outline | Specific `[/shorthand]` nodes from `topic-outline.md`. |
-| `checklist` | "Gabion: [], Guevarra: [], San Jose: [], Togle: []" with ✓ | summarizer YAML `member_checklist` | ✓ = member has read the summary. |
 | `notes` | one line | manual | Primary contribution of this paper to Odin's RRL in ≤50 words. |
 
 ---
