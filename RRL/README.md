@@ -1,393 +1,385 @@
-# Topic Outline [/odin-outline]
-## Development of Odin: A Personal Budget Management System Using LSTM, Classification Algorithm, and Recommendation Algorithm
+# Odin RRL Working Directory
 
 ---
 
-> **How to read this document**
-> `[/shorthand]` tags appear beside every node — use them as folder names or paper-tracking IDs.
-> Each lettered topic (A–J) is a major conceptual territory the thesis must cover.
-> Each numbered subtopic is a research area within that territory (maps to an RRL pillar).
-> Each bulleted sub-subtopic is a specific claim the literature must establish.
-> The *Scholar query* below each bullet is ready to paste into Google Scholar Labs.
+## Table of Contents
+
+- [Odin RRL Working Directory](#odin-rrl-working-directory)
+  - [Table of Contents](#table-of-contents)
+  - [1. Directory Structure](#1-directory-structure)
+  - [2. The Three Core Documents](#2-the-three-core-documents)
+    - [`topic-outline.md`](#topic-outlinemd)
+    - [`registry.md`](#registrymd)
+    - [`Papers/<paper_id>-summary.md`](#paperspaper_id-summarymd)
+  - [3. The Two Skills](#3-the-two-skills)
+    - [`converter.md` — PDF to Markdown](#convertermd--pdf-to-markdown)
+    - [`summarizer.md` — Converted Markdown to Summary](#summarizermd--converted-markdown-to-summary)
+  - [4. Source Quota](#4-source-quota)
+  - [5. Full Paper Pipeline](#5-full-paper-pipeline)
+  - [6. The Registry](#6-the-registry)
+    - [Column Reference](#column-reference)
+  - [7. Finding Papers](#7-finding-papers)
+    - [Starting from a topic](#starting-from-a-topic)
+    - [Starting from a topic](#starting-from-a-topic)
+    - [Checking quota gaps](#checking-quota-gaps)
+    - [Searching for a specific shorthand](#searching-for-a-specific-shorthand)
+  - [8. The Topic System](#8-the-topic-system)
+  - [9. Designation Rules](#9-designation-rules)
+  - [10. Citation Recency Rules](#10-citation-recency-rules)
+  - [11. Member Checklist Workflow](#11-member-checklist-workflow)
+  - [12. Quick Reference](#12-quick-reference)
+    - [Add a new paper (command sequence)](#add-a-new-paper-command-sequence)
+    - [Topic-to-outline cross-reference](#topic-to-outline-cross-reference)
+    - [Quota status](#quota-status)
+    - [File naming](#file-naming)
+    - [Shorthand tags](#shorthand-tags)
 
 ---
 
-## A. Target Users and the Financial Problem [/target-users]
+## 1. Directory Structure
 
-### A.1 Spending and Budgeting Behavior of Filipino Young Professionals [/fil-spending-behavior]
+```
+rrl/
+│
+├── README.md                       ← this file
+├── registry.md                     ← one-row-per-paper master index
+├── topic-outline.md                ← mind map of all RRL territory + Scholar queries
+│
+├── Skills/
+│   ├── converter.md                ← PDF → Markdown conversion skill (for Claude)
+│   └── summarizer.md               ← Markdown → Summary skill (for Claude)
+│
+└── Papers/
+    ├── <paper_id>.pdf              ← raw paper
+    ├── <paper_id>.md     ← converted markdown (converter output)
+    └── <paper_id>-summary.md       ← structured summary (summarizer output)
+```
 
-- Income structure typology: salaried, freelance, informal, and mixed-income earners [/income-typology]
-  > *Scholar query: income structure classification Filipino young professionals salaried freelance informal gig economy personal finance Philippines*
+**All papers, whether in PDF or MD format, live in one flat `Papers/` folder.** There are no subfolders by topic or topic. Cross-topic relevance is tracked in each summary's YAML and in `registry.md` — not by file location. See [Section 6](#6-the-registry) for why.
 
-- Budgeting time horizons: weekly, semi-monthly, and monthly cycles among Filipino young adults [/budget-time-horizons]
-  > *Scholar query: budgeting time horizon frequency weekly monthly Filipino young adults personal finance planning behavior*
+The `<paper_id>` in filenames is the paper's permanent identifier: the DOI (with slashes replaced by underscores) if available, or a UUID v4 if not. Example:
 
-- Documented expenditure patterns disaggregated by income stability type [/expenditure-patterns]
-  > *Scholar query: household expenditure patterns income stability type regular irregular Filipino young professionals spending allocation*
-
-- Prevalence of budgeting practice and methods used in this demographic [/budgeting-prevalence]
-  > *Scholar query: budgeting behavior prevalence methods Filipino millennials Gen Z personal finance habits financial planning practice*
-
-- Failure points: irregular tracking, impulse overspending, unplanned obligatory expenses [/budget-failure-points]
-  > *Scholar query: personal finance management failure irregular transaction tracking overspending unplanned expenses Filipino young adults challenges*
-
-- Financial behavior differences across income stability types: stable vs. variable earners [/income-type-behavior-diff]
-  > *Scholar query: financial management behavior differences stable variable irregular income earners Philippines young professionals comparison*
-
-- Culturally specific financial obligations: remittances, paluwagan, religious and social contributions [/cultural-obligations]
-  > *Scholar query: paluwagan rotating savings credit association remittances religious social financial obligations Filipino cultural spending behavior*
-
-- Case that intelligent adaptive budgeting tools outperform financial literacy-only interventions [/intelligent-vs-literacy]
-  > *Scholar query: intelligent budgeting system tool effectiveness versus financial literacy intervention behavioral change personal finance young adults*
-
----
-
-### A.2 Existing Personal Finance and Budget Management Systems [/existing-pfms]
-
-- Classification and typology of PFMS and PBMS documented in literature [/pfms-typology]
-  > *Scholar query: personal finance management system budget management application typology classification features literature review 2023 2024*
-
-- Feature sets of existing systems and evidence of their effectiveness [/pfms-features]
-  > *Scholar query: personal budget management system dominant features user effectiveness evaluation systematic review*
-
-- Documented limitations: manual entry burden, no forecasting, no anomaly detection, generic categories [/pfms-limitations]
-  > *Scholar query: personal finance application limitations manual data entry lack forecasting anomaly detection generic expense categories usability*
-
-- Budget recommendation approaches implemented in existing systems [/pfms-budget-rec]
-  > *Scholar query: budget recommendation approach rule-based algorithmic implemented existing personal finance management system*
-
-- Budgeting strategies technically implemented in existing systems [/pfms-strategies-impl]
-  > *Scholar query: budgeting strategies zero-based envelope 50-30-20 pay yourself first technically implemented personal finance app*
-
-- Gap between existing systems and an intelligent, adaptive, locally grounded system for Filipino users [/pfms-gap]
-  > *Scholar query: gap limitations existing personal finance system intelligent adaptive localized Philippine Filipino context young professionals*
+```
+10.1016_j.eswa.2023.119872.pdf
+10.1016_j.eswa.2023.119872-converted.md
+10.1016_j.eswa.2023.119872-summary.md
+```
 
 ---
 
-## B. Mobile-First Design and Deployment Constraints [/mobile-first]
+## 2. The Three Core Documents
 
-### B.1 Mobile-First Design in Personal Finance Systems [/mobile-pfms-design]
+### `topic-outline.md`
+The mind map of the entire RRL. It organizes all research territory the thesis must cover into a hierarchy:
 
-- Definition and distinction: mobile-first vs. desktop-first design in PFMS [/mobile-first-def]
-  > *Scholar query: mobile-first design approach definition personal finance management system versus desktop-first application architecture*
+```
+Topic (A–J)
+  └── Subtopic (A.1, A.2, ...)       ← maps to an RRL topic
+        └── Sub-subtopic (bullet)    ← specific claim literature must establish
+              └── Scholar query      ← paste directly into Google Scholar Labs
+```
 
-- Evidence of mobile-first dominance among younger users in Southeast Asian and emerging markets [/mobile-dominance]
-  > *Scholar query: mobile-first personal finance application adoption younger users Southeast Asia Philippines emerging market dominance evidence*
+Every node has a `[/shorthand]` tag. These are used as search terms when filtering the registry — not as folder names. 
+For example, when you want all papers relevant to LSTM, search `registry.md` for `/lstm` in the `topics_covered` column.
 
-- Technical constraints on mobile platforms: compute, network connectivity, screen, battery life [/mobile-constraints]
-  > *Scholar query: mobile application technical constraints limited computational resources network bandwidth battery personal finance machine learning deployment*
+### `registry.md`
+The master index of every paper that has been processed. One row per paper. Updated every time a new paper completes the pipeline. See [Section 6](#6-the-registry) for full column reference.
 
-- Influence of mobile deployment constraints on ML algorithm selection for embedded modules [/mobile-ml-algo-selection]
-  > *Scholar query: machine learning algorithm selection mobile deployment constraints lightweight inference model size forecasting anomaly detection personal finance*
-
-- Mobile UX patterns that minimize transaction data entry burden [/mobile-ux-entry]
-  > *Scholar query: mobile user experience design minimize transaction data entry burden personal finance app input friction reduction*
-
----
-
-## C. Budget Recommendation Theory and Algorithm [/budget-rec]
-
-### C.1 Budgeting Strategies and Budget Recommendation [/budgeting-strategies]
-
-- Core mechanics and structure of documented budgeting strategies [/strategy-mechanics]
-  > *Scholar query: budgeting strategies core mechanics zero-based budgeting envelope method pay yourself first proportional allocation comparison personal finance*
-
-- Comparative strengths and weaknesses of each strategy across income stability types [/strategy-income-fit]
-  > *Scholar query: budgeting strategy effectiveness comparison stable variable irregular income type strengths weaknesses salaried freelance personal finance*
-
-- Multi-strategy distillation: combining elements into one unified system-level configuration [/strategy-distillation]
-  > *Scholar query: hybrid budgeting strategy distillation unified system configuration combining multiple approaches personal finance implementation*
-
-- Technical implementation of budget recommendation in existing PFMS [/budget-rec-existing]
-  > *Scholar query: budget recommendation technical implementation existing personal finance management system rule-based algorithmic user configured*
-
-- Algorithmic approaches to budget recommendation: constraint optimization, MCDM, RL, collaborative filtering [/budget-rec-algorithms]
-  > *Scholar query: budget recommendation algorithm constraint optimization multi-criteria decision making reinforcement learning collaborative filtering personal finance*
-
-- Budget period surplus: reset vs. carryforward logic by income type [/surplus-logic]
-  > *Scholar query: budget surplus handling carryforward reset period income type variable stable personal finance application design*
-
-- Budget recommendation behavior under lump-sum, delayed, or absent income [/lump-sum-income]
-  > *Scholar query: budget recommendation lump-sum delayed irregular absent income handling cold-start personal finance system design*
-
-- Minimum user input threshold for generating a useful budget recommendation [/min-user-input]
-  > *Scholar query: minimum user input requirements budget recommendation accuracy tradeoff intelligent personal finance system cold-start onboarding*
+### `Papers/<paper_id>-summary.md`
+The file the team actually reads. Produced by the summarizer skill. Contains the TL;DR, findings, definitions, and critically, the **Relevance to Odin** section — which states exactly what each paper justifies in Odin's design and RRL.
 
 ---
 
-### C.2 Budget Recommendation Algorithm [/budget-rec-algo]
+## 3. The Two Skills
 
-- Problem formulation: resource allocation, optimization, ranking, or hybrid recommendation [/budget-rec-formulation]
-  > *Scholar query: budget recommendation problem formulation resource allocation optimization ranking prediction hybrid personal finance algorithm literature*
+Both skills are prompt files given to a language model when processing a paper. They are **not** run automatically — a team member must invoke them manually.
 
-- Algorithmic solutions applied to budget distribution and financial resource allocation [/budget-alloc-algos]
-  > *Scholar query: resource allocation budget distribution financial planning algorithm linear programming multi-objective optimization literature results*
+### `converter.md` — PDF to Markdown
 
-- Algorithm applications specifically within PFMS and PBMS contexts [/budget-algo-pfms]
-  > *Scholar query: budget recommendation algorithm applied personal finance budget management system context evaluation results literature 2023 2024 2025*
+**Input:** A PDF research paper.
+**Output:** `<paper_id>.md` — a clean, fully structured Markdown representation of the paper, optimized for AI reading.
 
-- Tradeoffs: mobile feasibility, user-facing explainability, adaptability, cold-start performance [/budget-algo-tradeoffs]
-  > *Scholar query: budget recommendation algorithm tradeoffs explainability mobile feasibility cold-start adaptability comparison personal finance evaluation*
+**What it produces in YAML:**
+```yaml
+paper_id:       # DOI or UUID — permanent ID
+designation:    # local | international | algorithm-specific
+title:          # exact paper title
+authors:        # Last, F.; Last, F.
+year:           # YYYY
+venue:          # full journal or conference name
+```
 
-- Justification of the chosen algorithm over alternatives for Odin's context and constraints [/budget-algo-justification]
-  > *Scholar query: budget recommendation algorithm selection justification comparison alternatives mobile personal finance Filipino young professionals context*
+**When to use it:** Every time a new PDF is added to the pipeline. Always before the summarizer.
 
----
+**How to invoke:**
+1. Open a new conversation in any language model. It is important that they have file uploading, text-reading/OCR, and thinking features.
+2. Paste the contents of `converter.md` as the first message, or use it as a system prompt if on API.
+3. Upload the PDF.
+4. The language model will output the converted Markdown. Save it as `<paper_id>.md` in `Papers/`.
 
-## D. Spending Forecasting [/forecasting]
-
-### D.1 Predictive Modeling in Personal Finance Systems [/predictive-modeling-pfms]
-
-- Survey of forecasting methods applied to personal spending data [/forecasting-methods]
-  > *Scholar query: forecasting methods comparison ARIMA LSTM XGBoost Random Forest personal finance household spending prediction accuracy*
-
-- Characterization of personal finance transaction data as sequential time-series [/spending-time-series]
-  > *Scholar query: personal finance transaction data time-series sequential structure characterization temporal properties spending behavior*
-
-- Evidence of temporal dependency in spending: prior periods predict subsequent periods [/temporal-dependency]
-  > *Scholar query: temporal dependency autocorrelation spending behavior prior period prediction personal finance sequential influence evidence*
-
-- Interaction between mobile constraints and the practical choice of forecasting algorithm [/mobile-forecast-tradeoff]
-  > *Scholar query: forecasting algorithm selection mobile deployment constraints lightweight model personal finance inference time memory footprint*
-
-- Cold-start fallback strategies for forecasting without sufficient transaction history [/forecast-cold-start]
-  > *Scholar query: cold-start forecasting fallback strategy insufficient transaction history personal finance new user population average prior*
-
-- Per-category spending forecasting across multiple simultaneous expense categories [/per-category-forecast]
-  > *Scholar query: per-category spending forecast multiple simultaneous expense categories personal finance multi-output model household expenditure*
+> **Note on `paper_id`:** If the paper has a DOI (usually found on the first page or in the header), use it as the ID with `/` replaced by `_`. Example: DOI `10.1016/j.eswa.2023.119872` → ID `10.1016_j.eswa.2023.119872`. If no DOI, generate a UUID v4 at [uuidgenerator.net](https://www.uuidgenerator.net) and use that.
 
 ---
 
-### D.2 LSTM as the Spending Forecasting Algorithm [/lstm]
+### `summarizer.md` — Converted Markdown to Summary
 
-- LSTM architecture: gates, cell state, and the class of sequential problems it solves [/lstm-architecture]
-  > *Scholar query: LSTM long short-term memory architecture input forget output gate cell state sequential dependency time-series overview*
+**Input:** A `<paper_id>.md` file.
+**Output:** `<paper_id>-summary.md` — a human-optimized structured summary.
 
-- Comparative performance of LSTM vs. ARIMA, XGBoost, GRU, and Transformer on time-series tasks [/lstm-vs-alternatives]
-  > *Scholar query: LSTM versus ARIMA XGBoost GRU Transformer time-series forecasting comparison performance accuracy benchmark*
+**What it produces in YAML:**
+```yaml
+paper_id:           # copied from converter output
+odin_topics:       # [1, 5, 6] — list of topic numbers this paper supports
+member_checklist:   # four team members, each with "[ ]" status
+```
 
-- LSTM applied to household expenditure, consumption, and personal spending data [/lstm-spending-applied]
-  > *Scholar query: LSTM applied household expenditure personal spending consumption forecasting personal finance budget prediction results*
+**When to use it:** Immediately after conversion, before adding the paper to the registry.
 
-- LSTM for simultaneous multi-output, multi-category forecasting [/lstm-multi-output]
-  > *Scholar query: LSTM multi-output simultaneous multi-category forecasting spending expense categories household personal finance model*
+**How to invoke:**
+1. Open a new conversation in any language model. It is important that they have file uploading, text-reading/OCR, and thinking features.
+2. Paste the contents of `summarizer.md` as the first message.
+3. Paste or upload the `<paper_id>.md` file.
+4. The language model will output the summary. Save it as `<paper_id>-summary.md` in `Papers/`.
 
-- LSTM feasibility under mobile and resource-constrained deployment [/lstm-mobile]
-  > *Scholar query: LSTM mobile deployment resource-constrained lightweight model compression quantization pruning inference optimization embedded*
+**Mandatory sections in every summary:**
 
-- Justification of LSTM over surveyed alternatives given Odin's data characteristics and context [/lstm-justification]
-  > *Scholar query: LSTM justified selection personal finance sequential spending Filipino mobile deployment temporal dependency comparison alternatives*
+| Section | Purpose |
+|---|---|
+| TL;DR | One sentence, ≤30 words |
+| Problem and Motivation | The gap the paper addresses |
+| Approach | Compact method bullets |
+| Findings | Numbered results |
+| Key Figures and Tables | Condensed visual takeaways |
+| Key Equations | 1–3 central equations with plain-English meaning |
+| Definitions | All terms and acronyms in a table |
+| Critical Citations | ≤3 foundational references |
+| **Relevance to Odin** | **The most important section — see below** |
+| Limitations | Up to 4 caveats |
+| Remember This | 3 emoji bullets for recall |
 
----
-
-## E. Anomaly and Overage Detection [/anomaly-detection]
-
-### E.1 Anomaly Detection in Personal Finance Systems [/anomaly-pfms-domain]
-
-- Definition and taxonomy of financial anomalies detectable in personal spending data [/anomaly-taxonomy]
-  > *Scholar query: financial anomaly definition taxonomy types personal spending transaction data detectable categories classification*
-
-- Threshold-based overage alerting vs. behavioral baseline deviation: distinction and scope [/overage-vs-behavioral]
-  > *Scholar query: threshold budget overage alert versus behavioral baseline deviation anomaly detection personal finance distinction scope design*
-
-- Detection approaches applied to personal finance data and their reported results [/anomaly-approaches]
-  > *Scholar query: anomaly detection approaches personal finance transaction data Isolation Forest One-Class SVM rule-based statistical results comparison*
-
-- Tradeoffs between rule-based and algorithmic detection: complexity, explainability, accuracy [/anomaly-tradeoffs]
-  > *Scholar query: rule-based versus algorithmic anomaly detection personal finance explainability accuracy complexity false positive rate tradeoff*
-
-- Anomaly detection output feeding forward into next budget recommendation cycle [/anomaly-feedback]
-  > *Scholar query: anomaly detection feedback loop budget recommendation adjustment next cycle personal finance management system documented*
-
-- Filipino culturally specific high-value spending recognized as expected, not anomalous [/cultural-spending-protection]
-  > *Scholar query: culturally specific spending Filipino paluwagan remittances religious festival protected category anomaly detection exclusion design*
-
-- Alert design: frequency, format, and framing to minimize alert fatigue while ensuring action [/alert-design]
-  > *Scholar query: anomaly alert design frequency format framing user experience alert fatigue minimization personal finance mobile application*
+The **Relevance to Odin** section is the reason the summary exists. It answers four questions:
+- Which topics does this paper support?
+- What specifically does it contribute to Odin's design or RRL?
+- What exact claims can this paper be cited for?
+- What are the limits of how strongly it can be used?
 
 ---
 
-### E.2 Anomaly Detection Algorithm [/anomaly-algo]
+## 4. Source Quota
 
-- Anomaly detection as an ML problem: unsupervised, semi-supervised, and supervised families [/anomaly-ml-families]
-  > *Scholar query: anomaly detection machine learning families unsupervised semi-supervised supervised approaches comparison overview personal finance transactions*
+The department requires exactly **50 sources**, split as follows:
 
-- Isolation Forest: mechanism, per-user baseline learning without labeled training data [/isolation-forest]
-  > *Scholar query: Isolation Forest algorithm mechanism unsupervised per-user baseline anomaly detection without labeled training data overview*
+| Designation | Target | Meaning |
+|---|---|---|
+| `local` | 25 | Published in the Philippines |
+| `international` | 25 | Published outside the Philippines |
+| `algorithm-specific` | Not tracked; any amount | Primarily describes an algorithm or model |
 
-- Isolation Forest applied to personal financial transaction and spending data [/isolation-forest-applied]
-  > *Scholar query: Isolation Forest applied personal finance financial transaction spending anomaly detection results evaluation*
+**Critical rule:** `algorithm-specific` is the highest-priority designation and **overrides** local/international. A paper from the Philippines that primarily describes LSTM architecture is `algorithm-specific`, not `local`.
 
-- Tradeoffs: mobile feasibility, false positive control, and user-facing explainability [/anomaly-algo-tradeoffs]
-  > *Scholar query: Isolation Forest mobile deployment feasibility false positive rate control explainability personal finance user-facing comparison*
-
-- Justification of chosen anomaly detection approach over alternatives for Odin [/anomaly-algo-justification]
-  > *Scholar query: anomaly detection algorithm selection justification Isolation Forest alternatives personal finance mobile behavioral Filipino context*
+Track current counts in the summary row of `registry.md`. See [Section 9](#9-designation-rules) for full designation logic.
 
 ---
 
-## F. User Profiling and Classification [/user-profiling]
+## 5. Full Paper Pipeline
 
-### F.1 User Behavioral Profiling in Filipino Personal Finance Contexts [/fil-profiling-domain]
+Every paper goes through these steps in order. No step is skippable.
 
-- Role of user profiling in budget recommendation, forecasting fallback, and system personalization [/profiling-role]
-  > *Scholar query: user behavioral profiling role budget recommendation forecasting fallback personalization personal finance management system*
+```
+Step 1 — FIND
+  Use topic-outline.md Scholar queries to identify candidate papers.
+  Confirm the paper is 2023–2026 (or an exempted source — see Section 10).
+  Download the PDF.
 
-- Inadequacy of Western financial behavioral taxonomies for Filipino user contexts [/western-taxonomy-gap]
-  > *Scholar query: Western financial behavioral taxonomy profile inadequacy Filipino Southeast Asian cultural differences personal finance context*
+Step 2 — ASSIGN ID
+  Check for a DOI on the paper. If present: replace "/" with "_" → paper_id.
+  If absent: generate UUID v4 → paper_id.
 
-- Filipino-specific financial behavioral patterns documented in BSP CFS and FIES data [/fil-behavioral-patterns]
-  > *Scholar query: Filipino financial behavior patterns spending saving obligations BSP Consumer Finance Survey FIES PSA data institutional*
+Step 3 — CONVERT
+  Run converter skill on the PDF.
+  Save output as Papers/<paper_id>.md.
 
-- Constructing locally grounded financial profiles from Philippine institutional datasets [/fil-profile-construction]
-  > *Scholar query: Filipino financial profile construction behavioral archetypes segments FIES BSP CFS data-driven local context*
+Step 4 — SUMMARIZE
+  Run summarizer skill on the converted file.
+  Save output as Papers/<paper_id>-summary.md.
 
-- Behavioral dimensions as meaningful profile differentiators: income stability, obligation weight, savings disposition [/profile-dimensions]
-  > *Scholar query: behavioral dimensions financial user profile income stability obligation weight savings flexibility disposition differentiators*
+Step 5 — READ
+  The assigned team member reads the summary (and optionally the full paper).
+  They check off their name in the member_checklist in the summary YAML:
+    status: "[x]"
 
-- Concept drift as a framework for progressive user profile updates over time [/concept-drift]
-  > *Scholar query: concept drift adaptive user behavioral modeling profile update progressive personal finance system learning over time*
+Step 6 — REGISTER
+  Add one row to registry.md using the YAML fields from the summary.
+  Update the quota tally row at the bottom of the registry.
 
-- Behavioral signals that should trigger profile reassessment [/profile-triggers]
-  > *Scholar query: behavioral signals trigger profile reassessment income change spending shift obligation increase personal finance adaptive system*
-
-- Automatic system-initiated vs. user-confirmed profile update mechanisms [/profile-update-mechanism]
-  > *Scholar query: automatic versus user-confirmed profile update mechanism behavioral system design personal finance reclassification transparency*
-
-- Cold-start problem and profile-average fallback for new users without behavioral history [/profiling-cold-start]
-  > *Scholar query: cold-start personalized financial system new user profile-average population prior fallback approaches documented personal finance*
-
----
-
-### F.2 Profile Classification Algorithm [/profile-classification-algo]
-
-- Supervised classification vs. clustering for predefined profile categories [/classification-vs-clustering]
-  > *Scholar query: supervised classification versus clustering predefined categories financial user profiling comparison suitability fixed profiles*
-
-- Classification algorithms documented for behavioral and financial user profiling [/classifier-candidates]
-  > *Scholar query: classification algorithm behavioral financial user profiling logistic regression SVM Random Forest neural network comparison results*
-
-- Feature selection: onboarding questionnaire responses vs. early transaction behavioral data [/classifier-features]
-  > *Scholar query: feature selection financial user profiling onboarding questionnaire transaction history classification input behavioral data*
-
-- Cold-start classification: initial model training without labeled real user data [/classifier-cold-start]
-  > *Scholar query: classification cold-start training without labeled real user data synthetic data augmentation financial profiling initial deployment*
-
-- Progressive reclassification: periodic batch, continuous, or drift-triggered profile updates [/progressive-reclassification]
-  > *Scholar query: progressive reclassification user profile update strategies periodic continuous drift-triggered behavioral change personal finance*
-
-- Tradeoffs across candidate classifiers: predictive accuracy, interpretability, mobile feasibility [/classifier-tradeoffs]
-  > *Scholar query: classification algorithm tradeoff predictive accuracy interpretability explainability mobile deployment feasibility comparison personal finance*
-
-- Justification of the chosen classifier for Odin's four-profile structure and use context [/classifier-justification]
-  > *Scholar query: financial user profile classifier justification four-class predefined Filipino mobile personal finance system selection comparison*
+Step 7 — DONE
+  Paper is now citable. Use paper_id to find the summary when writing RRL.
+```
 
 ---
 
-## G. Expense Categorization [/expense-categories]
+## 6. The Registry
 
-### G.1 Expense Categorization in Filipino Personal Finance Contexts [/expense-cat-domain]
+`registry.md` is the master index. Every processed paper has exactly one row. It is the authoritative source for:
+- Quota tracking (are we at 25/25?)
+- Cross-topic lookup (which papers cover topic 6?)
+- Checklist status (has everyone read this?)
+- Finding a paper by title or author without opening every summary file
 
-- Approaches to expense categorization: user-defined, institutionally derived, ML-generated, hybrid [/cat-approaches]
-  > *Scholar query: expense transaction categorization approaches user-defined institutional machine learning hybrid personal finance system comparison*
+### Column Reference
 
-- Limitations of Western expense category schemas for Filipino spending contexts [/western-cat-limitations]
-  > *Scholar query: Western expense category schema limitations Filipino Southeast Asian spending context personal finance inadequacy cultural mismatch*
-
-- PSA FIES and BSP CFS expenditure categories and their mapping to a local PFMS [/fies-bsp-mapping]
-  > *Scholar query: PSA Family Income Expenditure Survey FIES BSP Consumer Finance Survey expenditure categories Filipino personal finance system mapping*
-
-- Cultural expense types warranting dedicated categories: paluwagan, remittances, religious obligations [/cultural-expense-types]
-  > *Scholar query: paluwagan remittances religious social obligations dedicated expense category personal finance Filipino cultural spending literature*
-
-- Institutional basis for protected expense categories and minimum spending floors [/protected-categories]
-  > *Scholar query: protected expense categories minimum spending floor essential non-negotiable BSP institutional basis personal finance system design*
-
-- Expense category design in existing PFMS explicitly serving Filipino users [/fil-pfms-categories]
-  > *Scholar query: expense category design Filipino-specific personal finance application local versus Western categories user-centered design*
-
-- SSS and Pag-IBIG contributions: automatic deductions for employees vs. voluntary entries for variable-income users [/sss-pagibig]
-  > *Scholar query: SSS Pag-IBIG PhilHealth contribution classification automatic deduction regular employee voluntary freelance self-employed personal finance categorization*
+| Column | Source | Description |
+|---|---|---|
+| `paper_id` | converter YAML | Permanent ID. DOI (slashes → underscores) or UUID v4. |
+| `designation` | converter YAML | `local`, `international`, or `algorithm-specific`. |
+| `year` | converter YAML | Four-digit publication year. |
+| `authors` | converter YAML | Last, F. format. First author only if list is long; append "et al." |
+| `title` | converter YAML | Exact paper title. Truncate at 60 chars with `…` if needed. |
+| `venue` | converter YAML | Full journal or conference name. |
+| `topics` | summarizer YAML `odin_topics` | Comma-separated topic numbers. E.g. `1, 5, 6`. |
+| `shorthand_tags` | manually from outline | Relevant `[/shorthand]` tags from the outline. E.g. `/lstm, /lstm-mobile`. |
+| `checklist` | summarizer YAML | `G` Gabion · `J` Guevarra · `A` San Jose · `C` Togle. Mark `✓` when read. |
+| `notes` | manual | One-line note on the paper's primary Odin contribution. Optional but recommended. |
 
 ---
 
-## H. Data Privacy, Security, and User Trust [/privacy-security]
+## 7. Finding Papers
 
-### H.1 Data Privacy, Security, and User Trust in Personal Finance Systems [/privacy-pfms-domain]
+### Starting from a topic
+1. Open `topic-outline.md`.
+2. Navigate to the relevant subtopic.
+3. Copy a Scholar query from beneath a sub-subtopic bullet.
+4. Paste into Google Scholar Labs.
+5. Filter results to 2023–2026.
 
-- Sensitivity classification of personal financial data in literature [/data-sensitivity]
-  > *Scholar query: personal financial data sensitivity classification privacy personal information legal protection literature personal finance application*
+### Starting from a topic
+1. Open `registry.md`.
+2. Search the `topics` column for the topic number.
+3. Each matching row links to a `paper_id` whose summary file has the full Relevance to Odin section.
 
-- Technical security standards for financial application data handling [/security-standards]
-  > *Scholar query: financial application security standards encryption authentication data minimization access control personal finance best practices*
+### Checking quota gaps
+1. Open `registry.md`.
+2. Look at the tally row at the bottom.
+3. The designation with the lowest count is where to prioritize next.
 
-- User trust in personal finance applications and its effect on data-sharing and logging behavior [/user-trust]
-  > *Scholar query: user trust personal finance mobile application data sharing transaction logging behavior design factors determinants*
-
-- Privacy concern as a driver of inconsistent or withheld transaction logging [/privacy-logging]
-  > *Scholar query: privacy concern financial data withholding incomplete transaction logging personal finance application user behavior retention*
-
-- Philippine regulatory framework: RA 10173, BSP data governance guidelines, NPC issuances [/ph-privacy-law]
-  > *Scholar query: Republic Act 10173 Data Privacy Act Philippines BSP NPC financial data governance compliance personal finance application*
-
-- Privacy-by-design principles applied in comparable financial system research [/privacy-by-design]
-  > *Scholar query: privacy by design principles applied financial management system personal finance data protection research implementation*
-
-- Privacy implications specific to manual self-reported financial data without banking API integration [/manual-data-privacy]
-  > *Scholar query: self-reported manual financial data privacy implications no banking integration personal finance application design*
-
----
-
-## I. User Retention and Engagement [/retention]
-
-### I.1 User Retention and Engagement in Personal Finance Systems [/retention-pfms-domain]
-
-- Relationship between transaction data completeness and downstream ML model performance [/data-completeness-ml]
-  > *Scholar query: transaction data completeness logging consistency effect machine learning model performance personal finance forecasting anomaly detection*
-
-- Drop-off patterns in personal finance apps: when users stop logging and why [/drop-off-patterns]
-  > *Scholar query: user drop-off attrition retention personal finance application transaction logging cessation behavior patterns reasons*
-
-- Manual data entry as the primary engagement friction point in PFMS [/entry-friction]
-  > *Scholar query: manual transaction data entry friction primary engagement barrier personal finance application usability burden*
-
-- Non-gamification retention mechanisms: smart notifications, frictionless input, feedback loops, goal-setting [/retention-mechanisms]
-  > *Scholar query: non-gamification retention mechanisms personal finance app notifications frictionless input immediate value feedback goal setting effectiveness*
-
-- Minimum viable interaction frequency for a personal finance app to deliver perceived value [/min-interaction-freq]
-  > *Scholar query: minimum interaction frequency personal finance application engagement perceived usefulness value delivery threshold*
-
-- Demonstrated system value — accurate forecasts, actionable alerts — as intrinsic retention driver [/value-driven-retention]
-  > *Scholar query: perceived system value demonstrated accuracy forecast alert retention engagement personal finance intrinsic motivation driver*
+### Searching for a specific shorthand
+1. Open `registry.md`.
+2. Search the `shorthand_tags` column for the tag (e.g. `/concept-drift`).
+3. All papers tagged to that sub-subtopic will appear.
 
 ---
 
-## J. System Evaluation [/system-eval]
+## 8. The Topic System
 
-### J.1 System Evaluation in Personal Finance and Budget Management Systems [/eval-pfms-domain]
+The 15 RRL topics map directly to the subtopics in `topic-outline.md`. Every summary's `odin_topics` YAML field uses these numbers. Every registry row's `topics` column uses these numbers.
 
-- Evaluation frameworks, metrics, and methodologies documented for PFMS and PBMS [/eval-frameworks]
-  > *Scholar query: personal finance budget management system evaluation framework metrics methodology literature review 2023 2024 2025*
-
-- ISO/IEC 25010:2023 quality characteristics and their application to evaluating a PFMS [/iso-25010]
-  > *Scholar query: ISO IEC 25010 2023 software product quality characteristics model evaluation application system study*
-
-- System Usability Scale: instrument design, scoring, administration, and scope [/sus]
-  > *Scholar query: System Usability Scale SUS instrument scoring administration reliability validity usability evaluation*
-
-- SUS applied specifically to mobile-first applications [/sus-mobile]
-  > *Scholar query: System Usability Scale SUS mobile application usability evaluation results benchmark score*
-
-- Combining ISO 25010 and SUS as a joint evaluation framework [/iso-sus-combined]
-  > *Scholar query: ISO 25010 SUS combined joint evaluation framework software system study implementation results*
-
-- ISO 25010 and SUS applied in PFMS or comparable financial application evaluations [/eval-pfms-applied]
-  > *Scholar query: ISO 25010 SUS applied personal finance budget management system evaluation study results comparable*
-
-- Acknowledged limitations of SUS and ISO 25010 as evaluation instruments [/eval-limitations]
-  > *Scholar query: System Usability Scale SUS ISO 25010 acknowledged limitations evaluation instrument scope validity critique*
-
-- Sample size and respondent profile guidelines for SUS-based evaluations [/sus-sample-size]
-  > *Scholar query: SUS System Usability Scale evaluation sample size respondent profile recommendation guidelines comparable study*
+| Topic | Name | Outline Node |
+|---|---|---|
+| 1 | Spending and Budgeting Behavior of Filipino Young Professionals | A.1 |
+| 2 | Existing Personal Finance and Budget Management Systems | A.2 |
+| 3 | Mobile-First Design in Personal Finance Systems | B.1 |
+| 4 | Budgeting Strategies and Budget Recommendation | C.1 |
+| 5 | Budget Recommendation Algorithm | C.2 |
+| 6 | Predictive Modeling in Personal Finance Systems | D.1 |
+| 7 | LSTM as the Spending Forecasting Algorithm | D.2 |
+| 8 | Anomaly Detection in Personal Finance Systems | E.1 |
+| 9 | Anomaly Detection Algorithm | E.2 |
+| 10 | User Behavioral Profiling in Filipino Personal Finance Contexts | F.1 |
+| 11 | Profile Classification Algorithm | F.2 |
+| 12 | Expense Categorization in Filipino Personal Finance Contexts | G.1 |
+| 13 | Data Privacy, Security, and User Trust in Personal Finance Systems | H.1 |
+| 14 | User Retention and Engagement in Personal Finance Systems | I.1 |
+| 15 | System Evaluation | J.1 |
 
 ---
+
+## 9. Designation Rules
+
+Apply in strict priority order. Stop at the first match.
+
+**1. `algorithm-specific` (highest priority)**
+The document primarily describes a specific algorithm, model, or computational method. This applies regardless of where the paper was published. Covers: original algorithm papers, comparative benchmarks, applied ML papers where the algorithm is the primary subject, architecture overviews.
+
+Examples that qualify: LSTM for time-series forecasting, Isolation Forest for anomaly detection, a classifier comparison study, a quantization method for mobile ML inference.
+
+Examples that do not qualify: a study on Filipino spending behavior that happens to use regression as a tool; a PFMS evaluation that uses SUS as the instrument.
+
+**2. `local`**
+Published in or by a Philippine institution, and not algorithm-specific. Covers: Philippine journals, theses from Philippine universities, PSA/BSP/NPC publications, conference papers with Philippine lead authors at Philippine institutions.
+
+**3. `international`**
+Published outside the Philippines, and not algorithm-specific. This is the residual category — if it does not qualify as algorithm-specific or local, it is international.
+
+---
+
+## 10. Citation Recency Rules
+
+The department requires all sources to be **2023–2026**, with these specific exceptions:
+
+| Exception | Rule |
+|---|---|
+| **Laws and statutes** | Any year. Cite by Republic Act number and full title. |
+| **ISO standards** | Any year. Always cite the specific edition (e.g., ISO/IEC 25010:2023). |
+| **Foundational algorithm papers** | The original paper (e.g., Hochreiter & Schmidhuber 1997 for LSTM) may be cited **only through a recent applied work** that itself cites it. Do not cite the original directly. |
+| **PSA/BSP institutional data** | The most recent available release of FIES, BSP CFS, or similar. Cite the data release year, not the institution's founding year. |
+
+**If a paper is pre-2023 and does not fall into an exception above, do not use it.**
+
+When in doubt: check the publication date in the converter YAML `year` field before adding to the registry.
+
+---
+
+## 11. Member Checklist Workflow
+
+Every summary file has this block in its YAML:
+
+```yaml
+member_checklist:
+  - name: "Gabion, Stefanie S."
+    status: "[ ]"
+  - name: "Guevarra, Joaquin Luis T."
+    status: "[ ]"
+  - name: "San Jose, Alexa Joanne Paula G."
+    status: "[ ]"
+  - name: "Togle, Charles Nathaniel B."
+    status: "[ ]"
+```
+
+When a team member has read the summary, they change their `status` from `"[ ]"` to `"[x]"`. The registry `checklist` column uses initials (G · J · A · C) with ✓ marks to show the same status at a glance.
+
+**Reading the summary is the minimum.** Members should read the full converted paper only if the Relevance to Odin section directly concerns a module they are building.
+
+---
+
+## 12. Quick Reference
+
+### Add a new paper (command sequence)
+```
+1. Find paper via topic-outline.md Scholar query
+2. Check year ≥ 2023 (or exemption applies)
+3. Assign paper_id (DOI with / → _ , or UUID v4)
+4. Run converter → save as Papers/<paper_id>.md
+5. Run summarizer → save as Papers/<paper_id>-summary.md
+6. Read summary → check off your name in member_checklist
+7. Add row to registry.md → update tally
+```
+
+### Topic-to-outline cross-reference
+Search `topic-outline.md` for `[/shorthand]` or heading text. Each subtopic heading corresponds to one topic number in the table above.
+
+### Quota status
+Look at the last row of `registry.md` (the tally row). Three numbers: local / international / algorithm-specific. Target is 25 / 25 / 25 = 75 total.
+
+### File naming
+```
+Papers/<paper_id>.md
+Papers/<paper_id>-summary.md
+```
+Where `<paper_id>` = DOI with `/` replaced by `_`, or UUID v4 if no DOI.
+
+### Shorthand tags
+Every node in `topic-outline.md` has a `[/shorthand]` tag. Use these in the `shorthand_tags` column of the registry to link papers to specific sub-subtopics, not just topics. This enables fine-grained lookup later when writing the RRL chapter.
+
+---
+
+*Last updated: 2026-04-28 | Team Aesir, Group 4*

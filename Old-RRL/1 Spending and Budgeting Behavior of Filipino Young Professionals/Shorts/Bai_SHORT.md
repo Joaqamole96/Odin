@@ -68,4 +68,4 @@ Financial distress harms mental health and productivity, yet the combined effect
 ## Takeaway for Memory (≤ 3 bullet points)
 - 🔑 **FL strongest direct boost** – each 1‑point increase in financial literacy raises FWB by 0.30 (largest effect).
 - 💡 **Partial mediation matters** – investment decisions explain about 5‑10% of the total effect; the rest is direct.
-- 📌 **Three pillars** – financial literacy + mental budgeting + self‑control work together; strengthen all three for best wellbeing.
+- 📌 **Three topics** – financial literacy + mental budgeting + self‑control work together; strengthen all three for best wellbeing.

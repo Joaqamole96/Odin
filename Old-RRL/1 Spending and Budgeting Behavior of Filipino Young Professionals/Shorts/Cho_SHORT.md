@@ -61,8 +61,8 @@ None.
 
 ## Relevance to Odin
 
-**Pillar(s):**
-Pillar 1: Spending and Budgeting Behavior of Filipino Young Professionals; Pillar 4: Budgeting Strategies and Budget Recommendation in Personal Finance Systems; Pillar 8: Expense Categorization in Filipino Personal Finance Contexts
+**Topic(s):**
+Topic 1: Spending and Budgeting Behavior of Filipino Young Professionals; Topic 4: Budgeting Strategies and Budget Recommendation in Personal Finance Systems; Topic 8: Expense Categorization in Filipino Personal Finance Contexts
 
 **How it contributes:**
 This paper provides rich qualitative evidence on how young adults actually budget (saving‑centric vs spending‑centric), use mental accounting, and leverage social support (family, peers) for financial decisions. These behavioral patterns directly inform Odin’s user profiling and budget recommendation modules, especially the need to support multiple budgeting philosophies and social accountability features.
@@ -75,8 +75,8 @@ This paper provides rich qualitative evidence on how young adults actually budge
 
 **Limitations of relevance:**
 - Study population is Hong Kong ethnic minorities, not Filipino young professionals – cultural and regulatory contexts differ.
-- Qualitative findings are not directly quantifiable for predictive modeling (Pillar 5).
-- No direct evaluation of mobile‑first design or digital tool effectiveness (Pillar 3).
+- Qualitative findings are not directly quantifiable for predictive modeling (Topic 5).
+- No direct evaluation of mobile‑first design or digital tool effectiveness (Topic 3).
 
 ## Limitations & Assumptions (from paper)
 - Sample is relatively well‑educated (half with bachelor’s degree) – may not represent lower‑SES ethnic minorities.

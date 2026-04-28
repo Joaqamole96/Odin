@@ -56,21 +56,21 @@ None. (The study uses correlation and ANOVA, no mathematical models.)
 
 ## Relevance to Odin
 
-**Pillar(s):**
-Pillar 1: Spending and Budgeting Behavior of Filipino Young Professionals, Pillar 4: Budgeting Strategies and Budget Recommendation in Personal Finance Systems, Pillar 7: User Behavioral Profiling in Filipino Personal Finance Contexts
+**Topic(s):**
+Topic 1: Spending and Budgeting Behavior of Filipino Young Professionals, Topic 4: Budgeting Strategies and Budget Recommendation in Personal Finance Systems, Topic 7: User Behavioral Profiling in Filipino Personal Finance Contexts
 
 **How it contributes:**
 This paper provides empirical evidence that online buying decisions (influenced by social media, instant gratification, and marketing) negatively affect personal budgeting among young Filipino students. It directly justifies Odin’s focus on behavioral triggers (likes, flash sales, peer influence) as features that must be countered through budgeting recommendations. The demographic findings (age, allowance level) support tailored profiling for Filipino users.
 
 **Directly justifies:**
-- The need for real‑time spending alerts when users engage with social‑media promotions (Pillar 4).
-- Inclusion of “impulse buying tendency” as a behavioral feature in user profiling (Pillar 7).
-- Budgeting strategies that account for low‑allowance users (₱1,000/month) who are most vulnerable to online overspending (Pillar 1).
-- The use of financial literacy nudges within e‑commerce interfaces to reduce unplanned purchases (Pillar 4).
+- The need for real‑time spending alerts when users engage with social‑media promotions (Topic 4).
+- Inclusion of “impulse buying tendency” as a behavioral feature in user profiling (Topic 7).
+- Budgeting strategies that account for low‑allowance users (₱1,000/month) who are most vulnerable to online overspending (Topic 1).
+- The use of financial literacy nudges within e‑commerce interfaces to reduce unplanned purchases (Topic 4).
 
 **Limitations of relevance:**
 - Sample limited to business students in one Philippine campus, not young professionals (though overlapping demographics).
-- No predictive model or algorithm tested; only correlational, so does not directly justify predictive pillars (5, 6).
+- No predictive model or algorithm tested; only correlational, so does not directly justify predictive topics (5, 6).
 - Published in 2025 – recent but not yet widely cited; use as primary evidence rather than meta‑analysis.
 
 ## Limitations & Assumptions
