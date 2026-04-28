@@ -23,7 +23,7 @@
 
 | paper_id | desig. | year | authors | title | venue | topics | shorthand_tags | checklist | notes |
 | :--- | :---: | :---: | :--- | :--- | :--- | :--- | :--- | :---: | :--- |
-| 10.62986/dp2024.10 | local | 2024 | Albert, J. R. G.; Briones, R. M.; Rivera, J. P. R. | Wealth Creation for Expanding the Middle Class in the Philippines | Philippine Institute for Development Studies Discussion Paper Series | [] | [shorthand_tags] | [checklist] | [notes] |
+| 10.62986/dp2024.10 | local | 2024 | Albert, J. R. G.; Briones, R. M.; Rivera, J. P. R. | Wealth Creation for Expanding the Middle Class in the Philippines | Philippine Institute for Development Studies Discussion Paper Series | [1, 2, 4, 5, 7, 9, 11, 12] | [shorthand_tags] | [checklist] | [notes] |
 | [paper_id] | [desig.] | [year] | [authors] | [title] | [venue] | [topics] | [shorthand_tags] | [checklist] | [notes] |
 
 ---
