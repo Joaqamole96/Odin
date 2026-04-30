@@ -21,6 +21,7 @@ All data, literature, income ranges, spending distributions, and noise events ar
    - 5.1 Noise Justification
    - 5.2 Noise Event List and Parameters
    - 5.3 Noise as Sampled Distributions
+   - 5.4 Noise Verification
 6. [Model Architecture](#6-model-architecture)
    - 6.1 LSTM vs Prophet Justification
    - 6.2 Algorithm Design
@@ -342,6 +343,41 @@ mmff_multiplier        = np.random.normal(loc=1.30, scale=0.15)
 # BPO variation: applied only to ~15-20% of users flagged as BPO workers
 bpo_weekly_smoothing   = np.random.normal(loc=1.0,  scale=0.10)  # flattens payday spike
 ```
+
+### 5.4 Noise Verification
+
+Each noise event is classified by verification level: **Academically Verified** (peer-reviewed source confirms the behavioral mechanism), **News Verified** (Philippine news reporting documents the event with measurable scale), **Legally Established** (statutory law mandates the financial event), or **Expert-Validated** (validated through expert consultation and/or included in the expense category structure reviewed by a subject matter expert).
+
+| # | Noise Event | Level | Author(s) | Title | Link |
+|---|---|---|---|---|---|
+| 1 | Payday Spree | Academically Verified | Shim et al. | *Present bias, mental budget constraint, and the payday consumption cycle* (2024) | [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1043951X24001950) |
+| 1 | Payday Spree | Academically Verified | Wang & St John | *Present Bias, Payday Borrowing, and Financial Literacy* (2024) | [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4806897) |
+| 2 | Petsa de Peligro | Academically Verified | Runnemark & Westerberg | *Scarcity and consumption priorities* (2023) | [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S2214804323001738) |
+| 2 | Petsa de Peligro | Academically Verified | Cacnio & Lubangco | *How Do Households' Views on Inflation Expectations Affect Their Consumption Decisions?* — BSP DP No. 2024-20 (2026) | [BSP](https://www.bsp.gov.ph/sites/researchsite/Publications/BSP-Discussion-Papers/DP202420.pdf) |
+| 3 | Christmas / Ber Months | Academically Verified | BSP Dept. of Economic Statistics | *Consumer Expectations Survey Report, Q4 2025* (2025) | [BSP](https://www.bsp.gov.ph/Lists/Consumer%20Expectation%20Report/Attachments/24/CES_4qtr2025.pdf) |
+| 3 | Christmas / Ber Months | News Verified | Inquirer Business | *Pinoys urged to practice responsible spending during Christmas season* (2024) | [Inquirer](https://business.inquirer.net/496955/pinoys-urged-to-practice-responsible-spending-during-christmas-season) |
+| 4 | 13th Month Pay | Legally Established | Republic of the Philippines | *Republic Act No. 6686 — 13th Month Pay Law* | — |
+| 5 | Semana Santa | News Verified | PhilStar | *MIAA sees over 1 million arrivals this Holy Week* (2024) | [PhilStar](https://www.philstar.com/headlines/2024/03/22/2342408/miaa-sees-over-1-million-arrivals-holy-week) |
+| 5 | Semana Santa | News Verified | Inquirer | *Holy Week traffic on NLEx seen to peak at 493,000 daily* (2024) | [Inquirer](https://newsinfo.inquirer.net/2053388/holy-week-traffic-on-nlex-seen-to-peak-at-493000-daily) |
+| 6 | Undas / All Saints Day | News Verified | PhilStar | *Peak season for Undas travel expected on October 30, 31* (2025) | [PhilStar](https://www.philstar.com/nation/2025/10/29/2483403/peak-season-undas-travel-expected-october-30-31-ports-authority) |
+| 6 | Undas / All Saints Day | News Verified | GMA News | *Tradition alive as Pinoys flock to cemeteries for Undas 2024* (2024) | [GMA](https://www.gmanetwork.com/news/topstories/nation/925658/pinoy-cemeteries-undas/story/) |
+| 7 | MMFF Entertainment Spike | News Verified (quantified) | Rappler | *MMFF 2023 sets new gross sales record with P1.069 billion* (2024) | [Rappler](https://www.rappler.com/entertainment/movies/metro-manila-film-festival-mmff-2023-highest-grossing-record-exceed-one-billion-pesos/) |
+| 7 | MMFF Entertainment Spike | News Verified (quantified) | Inquirer Entertainment | *MMFF 2024: 'And the Breadwinner Is,' 'Green Bones' top box office* (2024) | [Inquirer](https://entertainment.inquirer.net/593408/mmff-2024-hits-and-the-breadwinner-is-green-bones-the-kingdom) |
+| 8 | School Enrollment Season | News Verified | GMA News | *DepEd kicks off enrollment for SY 2024–2025* (2024) | [GMA](https://www.gmanetwork.com/news/topstories/nation/912085/deped-enrollment-sy-2024-2025/story/) |
+| 8 | School Enrollment Season | News Verified | GMA News | *36% of Pinoy families borrow money to pay tuition* | [GMA](https://www.gmanetwork.com/news/topstories/nation/814483/36-of-pinoy-families-borrow-money-to-pay-their-children-s-tuition-unesco/story/) |
+| 9 | BPO Payday Variation | Academically Verified | Author TBC | *Working Daily, Paid Monthly? Effects of On-Demand Wage Access on the Financial Engagement of Low-Wage Workers* (2024) | [ResearchGate](https://www.researchgate.net/publication/398339288_Working_Daily_Paid_Monthly_Effects_of_On-Demand_Wage_Access_on_the_Financial_Engagement_of_Low-Wage_Workers) |
+| 9 | BPO Payday Variation | Academically Verified | BSP | *Balance of Payments Report Q2 2024 — BPO export revenues US$14.5B (2024 H1)* | [BSP](https://www.bsp.gov.ph/Media_And_Research/Balance%20of%20Payments%20Report/2024/BOP_2qtr2024.pdf) |
+| 10 | Paluwagan | Academically Verified | Flores | *Financial freedom of Filipinos in personal finance management* — Pantao Journal (2025) | [DOI](https://doi.org/10.69651/pijhss040107) |
+| 10 | Paluwagan | Academically Verified | Dimaunahan et al. | *Financial literacy and sustainable planning assessment among Filipino millennials* — Acta Psychologica (2025) | [DOI](https://doi.org/10.1016/j.actpsy.2025.105334) |
+| 10 | Paluwagan | News Verified | PhilStar | *Bill seeks regulation of paluwagan scheme* (2024) | [PhilStar](https://www.philstar.com/business/2024/05/16/2355371/bill-seeks-regulation-paluwagan-scheme) |
+| 11 | Ambag | Expert-Validated | Go, P. A. (SME, Univ. of Makati) | Expense category structure validated by subject matter expert — cited in Odin Research Proposal (2025) | — |
+| 11 | Ambag | Academically Verified | Flores | *Financial freedom of Filipinos in personal finance management* — Pantao Journal (2025) | [DOI](https://doi.org/10.69651/pijhss040107) |
+
+> **Notes:**
+> - Paluwagan and Ambag are periodic cash outflow obligations, not impulse events. In the model they manifest as scheduled spending spikes in the Obligatory or Financial Allocation category, or as a Discretionary drop when contribution is due.
+> - MMFF has the strongest quantitative news verification of any cultural noise event — P1.069B gross (2023), P800M gross (2024).
+> - Semana Santa and Undas are verified for travel volume only. No peso-denominated household spending study was found in 2023–2026 literature.
+> - 13th Month Pay requires no academic verification — it is a legal mandate. The spending effect is the implementation assumption, supported by BSP CES Q4 seasonal spending data.
 
 ---
 
