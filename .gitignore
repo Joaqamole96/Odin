@@ -3,3 +3,7 @@
 .claude
 AGENTS.md
 CLAUDE.md
+
+# Office temporary/lock files
+~$*
+.~lock.*#
