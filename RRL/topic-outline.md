@@ -35,8 +35,8 @@
 - Financial behavior differences across income stability types: stable vs. variable earners [/income-type-behavior-diff]
   > *Scholar query: financial management behavior differences stable variable irregular income earners Philippines young professionals comparison*
 
-- Culturally specific financial obligations: remittances, paluwagan, religious and social contributions [/cultural-obligations]
-  > *Scholar query: paluwagan rotating savings credit association remittances religious social financial obligations Filipino cultural spending behavior*
+- Culturally specific financial behaviors: remittances, paluwagan, religious and social contributions, family obligations, holidays, school enrollment [/cultural-obligations]
+  > *Scholar query: paluwagan rotating savings credit association remittances religious social family financial obligations holiday seasons school enrollment Filipino cultural spending behavior*
 
 - Case that intelligent adaptive budgeting tools outperform financial literacy-only interventions [/intelligent-vs-literacy]
   > *Scholar query: intelligent budgeting system tool effectiveness versus financial literacy intervention behavioral change personal finance young adults*
@@ -65,7 +65,7 @@
 
 ---
 
-## B. Mobile-First Design and Deployment Constraints [/mobile-first]
+## *B. Mobile-First Design and Deployment Constraints [/mobile-first]
 
 ### B.1 Mobile-First Design in Personal Finance Systems [/mobile-pfms-design]
 
@@ -312,7 +312,7 @@
 
 ---
 
-## H. Data Privacy, Security, and User Trust [/privacy-security]
+## *H. Data Privacy, Security, and User Trust [/privacy-security]
 
 ### H.1 Data Privacy, Security, and User Trust in Personal Finance Systems [/privacy-pfms-domain]
 
@@ -363,7 +363,7 @@
 
 ---
 
-## J. System Evaluation [/system-eval]
+## *J. System Evaluation [/system-eval]
 
 ### J.1 System Evaluation in Personal Finance and Budget Management Systems [/eval-pfms-domain]
 
@@ -392,3 +392,5 @@
   > *Scholar query: SUS System Usability Scale evaluation sample size respondent profile recommendation guidelines comparable study*
 
 ---
+
+* Flagged; to be discussed further.
