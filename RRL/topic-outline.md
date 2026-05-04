@@ -40,6 +40,21 @@
 - Culturally specific financial behaviors: remittances, paluwagan, religious and social contributions, family obligations, holidays, school enrollment [/cultural-obligations]
   > *Scholar query: What culturally specific financial behaviors and obligations are documented among Filipino young adults that Western personal finance frameworks do not adequately account for? I am looking for studies covering practices such as paluwagan participation, regular family remittances, contributions to religious or community events, bayanihan-style financial support, and the financial impact of seasonal obligations like Christmas, school enrollment periods, and town fiestas — particularly how these affect cash flow patterns and budget adherence.*
 
+> NOTE: Add this to the scope of the sub-subtopic:
+> Data also includes spikes that are driven by Filipino cultural practices and events, such as:
+> Petsa de Peligro: pre-payday spending suppression
+> Payday spree: post-payday spending spike
+> 13th month pay effect: bonus-driven December spending surge
+> Christmas / Ber Months: September to December seasonal spending escalation
+> Semana Santa / Holy Week spending: travel and leisure spike
+> School enrollment season spending: school fees, uniforms, supplies spike
+> Undas / All Saints’ Day spending: travel and reunion-related spike
+> MMFF entertainment spike: post-Christmas cinema and leisure spending
+> Paluwagan contribution cycle: periodic obligation-driven outflow
+> Ambag contribution cycle: periodic shared-expense outflow
+> Summer-related consumption spike
+> et cetera.
+
 - Case that intelligent adaptive budgeting tools outperform financial literacy-only interventions [/intelligent-vs-literacy]
   > *Scholar query: What evidence exists that intelligent or adaptive budgeting systems produce better financial behavior outcomes than financial literacy education alone? I am looking for studies that compare the effectiveness of tool-mediated interventions — such as automated tracking, personalized alerts, or algorithmic budget recommendations — against purely instructional or literacy-based approaches, particularly in populations of young adults where behavioral support matters more than knowledge transfer.*
 
