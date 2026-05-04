@@ -72,6 +72,8 @@ Important clarification: the repository does **not** show one single published p
 
 So the most defensible answer from the repository is: **the exact four-profile schema is Odin’s own operational model**, but its dimensions are grounded in local sources like the BSP Consumer Finance Survey and Cacnio & Romarate’s work on Filipino financial behavior.
 
+An important limitation should also be stated here: the repository supports the **conceptual dimensions** behind the four profiles, but it does **not yet provide empirical or literature-backed proof for the exact decision thresholds** used to separate those dimensions in implementation. In practice, the current profile structure is academically strongest when described as a **locally grounded but still provisional operational model**. The BSP/CFS/FIES-backed evidence supports using dimensions such as income structure, expenditure composition, remittances, debt, and savings behavior, but the study still needs statistical justification for the exact numeric cutoffs currently used to divide users into Stable vs Variable and Obligated vs Flexible groups.
+
 **Sources in repo:**
 - [Documents/Panel-Comments-and-Suggestions.md](../Documents/Panel-Comments-and-Suggestions.md)
 - [Data/data-synthesis-handoff.md](../Data/data-synthesis-handoff.md)
@@ -158,6 +160,18 @@ The formula explicitly stated in the repo is:
 - `Obligated Ratio = (Essentials + Obligatory) / Total Spend`
 
 There is also evidence from the panel comments that the earlier idea was to classify from onboarding questions alone, but the panel pushed back and required a more defensible clustering or classification basis. The `algorithm-approach-comparison.md` document then shows two possible paths: a real classifier such as Decision Tree/Random Forest, or the current simplified rule-based classification.
+
+However, an important academic limitation must be stated clearly: while the **dimensions themselves** are supported by BSP/CFS/FIES-style variables, the exact thresholds `CV = 0.2` and `Obligated Ratio = 0.5` are **not yet empirically or literature-backed in the repository as fixed validated cutoffs**. At present, these values function as **project-defined operational thresholds** for system design. The repository materials support the use of:
+
+- income and expenditure structure,
+- spending composition,
+- remittances,
+- debt,
+- and savings behavior
+
+as profiling dimensions, but they do not yet provide a published study proving that `0.2` is the correct boundary for Stable vs Variable or that `0.5` is the correct boundary for Obligated vs Flexible.
+
+This means the current logic should be described as **provisional**. A stronger academic version of the study would still need **statistical backing** for why those thresholds were chosen. That backing could come from NCR-specific calibration using FIES/CFS distributions, percentile analysis, clustering, or another explicit validation method. In other words, the repository currently justifies the **choice of dimensions**, but not yet the **final numeric cutoffs**.
 
 **Sources in repo:**
 - [Data/data-synthesis-handoff.md](../Data/data-synthesis-handoff.md)
