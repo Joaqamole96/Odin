@@ -105,6 +105,7 @@ def process_one_file(file_path: Path) -> Optional[str]:
     authors = frontmatter.get("authors", "Unknown authors")
     if isinstance(authors, str):
         authors = authors.replace(";", ",")
+    year = frontmatter.get("year", "")
     odin_topics = frontmatter.get("odin_topics", [])
 
     tldr = extract_tldr(body)
@@ -117,7 +118,7 @@ def process_one_file(file_path: Path) -> Optional[str]:
     # Build the output section
     lines = []
     lines.append(f"# {title}")
-    lines.append(f"*by {authors}*")
+    lines.append(f"*by {authors}{f', {year}' if year else ''}*")
     lines.append("")
     lines.append("## TL;DR")
     lines.append(tldr)

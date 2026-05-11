@@ -1,5 +1,5 @@
 # An Insight of Deep Learning Based Demand Forecasting in Smart Grids
-*by Aguiar-Pérez, J. M., Pérez-Juárez, M. Á.*
+*by Aguiar-Pérez, J. M., Pérez-Juárez, M. Á., 2023*
 
 ## TL;DR
 LSTM networks excel at forecasting sequential energy demand data because their memory gates learn long-term patterns—a key advantage over simpler RNNs and ARIMA models.
@@ -27,7 +27,7 @@ This review provides foundational justification for Odin's choice of LSTM over a
 ---
 
 # Next.js-Powered AI Platform for Smart Expense Tracking, Budgeting and Insights
-*by Badiger, R., Robin, R., Moraas, T., Naik, V. G., Karthikeyan, A. N.*
+*by Badiger, R., Robin, R., Moraas, T., Naik, V. G., Karthikeyan, A. N., 2026*
 
 ## TL;DR
 Spend AI combines XGBoost categorization (91.3% F1) and Gemini LLM insights in a Next.js platform, cutting manual expense logging by 78%.
@@ -71,7 +71,7 @@ This paper provides a production-ready blueprint for Odin’s expense categoriza
 ---
 
 # ARTIFICIAL INTELLIGENCE-DRIVEN PERSONAL FINANCE SOLUTION
-*by Bashshar, S. A., Imran, M., Kumar, P. S., Goud, E. S., Venunath, M., Prasad, M. L. M.*
+*by Bashshar, S. A., Imran, M., Kumar, P. S., Goud, E. S., Venunath, M., Prasad, M. L. M., 2025*
 
 ## TL;DR
 NLP‑based transaction categorization reaches 86.2% accuracy; ARIMA forecasts 30‑day expenses with MAE 253.47.
@@ -101,7 +101,7 @@ This paper directly informs Odin’s expense categorization module by demonstrat
 ---
 
 # AI-Based Wealth Advisory System using Machine Learning and Predictive Analytics for Personalized Budget Planning
-*by Bhavana, B. R., Pavan, D., Darshan, T. H. Guru*
+*by Bhavana, B. R., Pavan, D., Darshan, T. H. Guru, 2025*
 
 ## TL;DR
 An AI wealth advisor using forecasting, anomaly detection, and explainable AI achieved **95% anomaly detection accuracy** and 22% savings improvement in a 100-user pilot.
@@ -144,7 +144,7 @@ This paper validates the multi-module architecture Odin intends to implement —
 ---
 
 # Dive into Time-Series Anomaly Detection: A Decade Review
-*by Boniol, P., Liu, Q., Huang, M., Palpanas, T., Paparrizos, J.*
+*by Boniol, P., Liu, Q., Huang, M., Palpanas, T., Paparrizos, J., 2024*
 
 ## TL;DR
 A process-centric taxonomy organizes a decade of time-series anomaly detection into distance, density, and prediction-based methods, revealing a surge in deep learning approaches after 2016.
@@ -177,7 +177,7 @@ This survey directly informs Odin’s anomaly detection module by providing a st
 ---
 
 # An Introduction to Machine Learning Methods for Fraud Detection
-*by Compagnino, A. A., Maruccia, Y., Cavuoti, S., Riccio, G., Tutone, A., Crupi, R., Pagliaro, A.*
+*by Compagnino, A. A., Maruccia, Y., Cavuoti, S., Riccio, G., Tutone, A., Crupi, R., Pagliaro, A., 2025*
 
 ## TL;DR
 Machine learning fraud detection models face severe class imbalance and concept drift; even well-tuned Random Forest misses over 60% of frauds in real banking data.
@@ -212,7 +212,7 @@ This review directly informs Odin’s anomaly detection module by benchmarking I
 ---
 
 # Optimized Financial Planning: Integrating Individual and Cooperative Budgeting Models with LLM Recommendations
-*by de Zarzà, I., de Curtò, J., Roig, G., Calafate, C. T.*
+*by de Zarzà, I., de Curtò, J., Roig, G., Calafate, C. T., 2024*
 
 ## TL;DR
 LLM-generated budget advice, when used as bounds in linear optimization, produces personalized allocations that align with standard financial planning principles and improve savings over unguided spending.
@@ -240,7 +240,7 @@ This paper directly informs Odin’s budget recommendation module by presenting 
 ---
 
 # Machine Learning for Fraud Detection in Digital Banking: A Systematic Literature Review
-*by George, M. Z. H., Alam, M. K., Hasan, M. T.*
+*by George, M. Z. H., Alam, M. K., Hasan, M. T., 2023*
 
 ## TL;DR
 Supervised learning dominates fraud detection, but deep learning (especially LSTM) and hybrid models are rapidly rising, with precision-recall metrics and interpretability frameworks essential for real-world banking deployment.
@@ -273,7 +273,7 @@ This systematic review directly supports Odin’s anomaly detection module by co
 ---
 
 # A Survey of Machine Learning Methods for Time Series Prediction
-*by Hall, T., Rasheed, K.*
+*by Hall, T., Rasheed, K., 2025*
 
 ## TL;DR
 LSTM and LightGBM achieve the highest forecast accuracy across time series tasks, but LightGBM trains 100–1,000× faster, making it the practical default for most applications.
@@ -301,7 +301,7 @@ This survey directly informs Odin’s algorithm selection for the spending forec
 ---
 
 # AI-Enabled NLP Framework for Automated Expense Management and Financial Analysis
-*by Jayaprakashnarayan, N., Sakthivel, M., Sachidhanandam, P., Devi, N. K., Mughilan, T. S. M.*
+*by Jayaprakashnarayan, N., Sakthivel, M., Sachidhanandam, P., Devi, N. K., Mughilan, T. S. M., 2026*
 
 ## TL;DR
 A transformer-based NLP framework for automatic expense tracking from SMS achieves 96.8% entity extraction accuracy and 94.3% merchant precision using on-device multi-task learning.
@@ -339,7 +339,7 @@ This paper directly informs Odin’s expense categorization module by demonstrat
 ---
 
 # Detection of Fraudulent Transaction Issues in the Payment Card Industry using Machine Learning: A Comprehensive Survey
-*by Kalideen, M. R.*
+*by Kalideen, M. R., 2025*
 
 ## TL;DR
 A comprehensive survey of machine learning techniques for payment card fraud detection, comparing supervised, unsupervised, deep learning, and ensemble methods while highlighting imbalanced data, interpretability, scalability, and privacy challenges.
@@ -371,7 +371,7 @@ This survey directly informs Odin's anomaly detection module by cataloging algor
 ---
 
 # A Comparative Analysis of Budget Forecasting Methods: A Systematic Literature Review Covering the 1983–2024 Period
-*by Kara, B., Şengüler, H.*
+*by Kara, B., Şengüler, H., 2025*
 
 ## TL;DR
 No single forecasting method is universally best; context dictates choice, with **43%** of studies on the US.
@@ -402,7 +402,7 @@ This systematic review directly supports Odin’s forecasting module by demonstr
 ---
 
 # A Review of ARIMA vs. Machine Learning Approaches for Time Series Forecasting in Data Driven Networks
-*by Kontopoulou, V. I., Panagopoulos, A. D., Kakkos, I., Matsopoulos, G. K.*
+*by Kontopoulou, V. I., Panagopoulos, A. D., Kakkos, I., Matsopoulos, G. K., 2023*
 
 ## TL;DR
 Machine learning models generally outperform ARIMA in time series forecasting, but ARIMA remains competitive for small, linear datasets; hybrid models consistently beat both.
@@ -430,7 +430,7 @@ This review directly supports Odin's choice of LSTM over ARIMA for the spending 
 ---
 
 # Comparing deep learning and classical regression approaches for predicting healthcare expenditure and spending: a systematic review
-*by Lee, J. T., Yeh, M. H.-S., Li, V. C.-S., Chen, H.-H., Liu, Y.-H., Chen, Y.-C., Wu, D. B.-C.*
+*by Lee, J. T., Yeh, M. H.-S., Li, V. C.-S., Chen, H.-H., Liu, Y.-H., Chen, Y.-C., Wu, D. B.-C., 2026*
 
 ## TL;DR
 Sequential deep learning models (LSTM, CNN-LSTM) reduce prediction error by 10–20% over regression for longitudinal healthcare cost forecasting, but tree-based methods remain competitive for cross-sectional tabular data.
@@ -460,7 +460,7 @@ This systematic review directly informs Odin's choice of LSTM for the spending f
 ---
 
 # A Constrained, Data-Driven Budgeting Framework Integrating Macro Demand Forecasting and Marketing Response Modeling
-*by Lu, Y., Zhou, H., Zhang, Y.*
+*by Lu, Y., Zhou, H., Zhang, Y., 2025*
 
 ## TL;DR
 Multivariate VAR improves total demand forecast accuracy to **2.85% MAPE**; optimal marketing spend sits below ratio caps due to diminishing returns and revenue uncertainty.
@@ -492,7 +492,7 @@ This paper directly supports Odin’s budget recommendation module by demonstrat
 ---
 
 # Review of Family-Level Short-Term Load Forecasting and Its Application in Household Energy Management System
-*by Ma, P., Cui, S., Chen, M., Zhou, S., Wang, K.*
+*by Ma, P., Cui, S., Chen, M., Zhou, S., Wang, K., 2023*
 
 ## TL;DR
 LSTM and hybrid deep learning models achieve higher accuracy than classical methods for household-level time series forecasting, with hybrid CNN-LSTM capturing both short and long-term dependencies.
@@ -521,7 +521,7 @@ This review directly justifies Odin’s selection of LSTM for the spending forec
 ---
 
 # A Review of Anomaly Identification in Finance Frauds Using Machine Learning Systems
-*by Majumder, R.*
+*by Majumder, R., 2025*
 
 ## TL;DR
 Supervised, semi-supervised, and unsupervised ML methods for financial fraud detection face key challenges: imbalanced datasets and adversarial attacks.
@@ -551,7 +551,7 @@ This paper directly supports Odin's anomaly detection module by surveying ML met
 ---
 
 # A Review of Machine Learning and Deep Learning Approaches for Fraud Detection Across Financial and Supply Chain Domains
-*by Martínez, O., Sánchez, P., Alcaraz, E.*
+*by Martínez, O., Sánchez, P., Alcaraz, E., 2025*
 
 ## TL;DR
 Ensemble methods (XGBoost, LightGBM, Random Forest) consistently outperform deep learning on tabular fraud data, while two-phase semi-supervised frameworks (Isolation Forest + self-training SVM) achieve strong performance with only 1.2% labeled data.
@@ -587,7 +587,7 @@ This review directly informs Odin’s algorithm selection across multiple module
 ---
 
 # Harnessing artificial intelligence and machine learning for fraud detection and prevention in Nigeria
-*by Odufisan, O. I., Abhulimen, O. V., Ogunti, E. O.*
+*by Odufisan, O. I., Abhulimen, O. V., Ogunti, E. O., 2025*
 
 ## TL;DR
 AI and ML detect fraud in real time via anomaly detection, behavior analysis, and risk scoring, outperforming static rule-based systems across Nigeria’s banking, e‑commerce, healthcare, and education sectors.
@@ -617,7 +617,7 @@ This paper directly validates the use of unsupervised anomaly detection and beha
 ---
 
 # Artificial Intelligence vs. Efficient Markets: A Critical Reassessment of Predictive Models in the Big Data Era
-*by Pagliaro, A.*
+*by Pagliaro, A., 2025*
 
 ## TL;DR
 Ensemble methods like Extra Trees and Random Forest consistently outperform single classifiers in stock market prediction, but statistical significance rarely translates into economic value after transaction costs.
@@ -647,7 +647,7 @@ This review directly informs Odin's spending forecasting module by providing a c
 ---
 
 # An Intelligent AI-Based Framework for Automated Personal Financial Management
-*by Patel, A., Singh, A.*
+*by Patel, A., Singh, A., 2026*
 
 ## TL;DR
 An AI-based personal finance framework automates transaction categorization and budgeting, reducing manual effort while providing predictive spending insights and real-time dashboards.
@@ -682,7 +682,7 @@ This paper directly informs Odin's expense categorization module by validating t
 ---
 
 # A SYSTEMATIC REVIEW OF DEMAND FORECASTING MODELS FOR RETAIL E-COMMERCE ENHANCING ACCURACY IN INVENTORY AND DELIVERY PLANNING
-*by Chowdhury, A. R., Paul, R., Rozony, F. Z.*
+*by Chowdhury, A. R., Paul, R., Rozony, F. Z., 2025*
 
 ## TL;DR
 A systematic review of 72 studies finds that deep learning models (LSTM, transformers) outperform traditional statistical methods in volatile e-commerce demand forecasting, with hybrid and context-aware models offering balanced accuracy and interpretability.
@@ -710,7 +710,7 @@ This systematic review provides a comprehensive benchmark of LSTM against altern
 ---
 
 # Deep learning-based time series forecasting
-*by Song, X., Deng, L., Wang, H., Zhang, Y., He, Y., Cao, W.*
+*by Song, X., Deng, L., Wang, H., Zhang, Y., He, Y., Cao, W., 2025*
 
 ## TL;DR
 Complex deep learning time series forecasting models often underperform simpler linear models due to overfitting and inability to effectively use sequential order information.
@@ -738,7 +738,7 @@ This systematic review directly supports Odin’s spending forecasting module by
 ---
 
 # Expense tracker management system using machine learning
-*by Thakur, R. S., Jadhav, A.*
+*by Thakur, R. S., Jadhav, A., 2025*
 
 ## TL;DR
 A voting ensemble regressor achieves **78.11% R-squared** and the lowest relative absolute error (0.1765) for expense prediction, outperforming individual models like XGBoost.
@@ -768,7 +768,7 @@ This paper directly informs Odin's spending forecasting module by demonstrating 
 ---
 
 # Selected Topics in Time Series Forecasting: Statistical Models vs. Machine Learning
-*by Tjøstheim, D.*
+*by Tjøstheim, D., 2025*
 
 ## TL;DR
 Machine learning methods outperform statistical models on high-entropy and intermittent time series (M5 competition), but hybrid statistical‑ML approaches achieve the best overall forecasting accuracy.
@@ -799,7 +799,7 @@ This paper provides a comprehensive, evidence‑based comparison of forecasting 
 ---
 
 # A Survey of Deep Anomaly Detection in Multivariate Time Series: Taxonomy, Applications, and Directions
-*by Wang, F., Jiang, Y., Zhang, R., Wei, A., Xie, J., Pang, X.*
+*by Wang, F., Jiang, Y., Zhang, R., Wei, A., Xie, J., Pang, X., 2025*
 
 ## TL;DR
 Deep learning methods for multivariate time series anomaly detection are organized into forecasting, reconstruction, and contrastive approaches, with **46 models** reviewed and a new anomaly type taxonomy proposed.
@@ -833,7 +833,7 @@ This survey directly informs Odin’s anomaly detection module by providing a st
 ---
 
 # Rare Category Analysis for Complex Data: A Review
-*by Zhou, D., He, J.*
+*by Zhou, D., He, J., 2023*
 
 ## TL;DR
 Rare category examples are statistically significant anomalies that form compact clusters, requiring specialized detection, characterization, representation, and interpretation methods beyond standard outlier detection.
@@ -865,7 +865,7 @@ This survey directly informs Odin’s anomaly detection module by defining rare 
 ---
 
 # AI Wealth Navigator: An Integrated Platform for Smart Budgeting, Financial Learning, and Personalized Policy Guidance
-*by Yadav, A., Prakash, R. S., Iqubal, S. M., Gebremicahea, M. G.*
+*by Yadav, A., Prakash, R. S., Iqubal, S. M., Gebremicahea, M. G., 2025*
 
 ## TL;DR
 An integrated AI platform combining smart budgeting, adaptive financial learning, and policy recommendation achieved 94% receipt scan accuracy and user ratings above 4.6/5 across 50 users.
@@ -901,7 +901,7 @@ This paper directly supports Odin’s expense categorization module by demonstra
 ---
 
 # Goal Programming Model in Financial Planning of the International Development Bank
-*by Aboud, M. S. F.*
+*by Aboud, M. S. F., 2025*
 
 ## TL;DR
 Goal programming balances seven conflicting financial objectives (revenue, expenses, profit, assets, loans, equity, management ratio) with near-zero deviations for an Iraqi development bank.
@@ -929,7 +929,7 @@ This paper directly informs Odin's budget recommendation module by demonstrating
 ---
 
 # The Role of Artificial Intelligence in Enhancing Financial Decision-Making and Administrative Efficiency: A Systematic Review
-*by Al-E'mari, S., Sanjalawe, Y., Al-E'mari, A.*
+*by Al-E'mari, S., Sanjalawe, Y., Al-E'mari, A., 2025*
 
 ## TL;DR
 AI enhances financial decision-making through predictive analytics and fraud detection, cutting legal review time by 99% at JPMorgan Chase.
@@ -965,7 +965,7 @@ This systematic review provides high-level justification that AI/ML models (pred
 ---
 
 # Evaluating Budgeting Apps: Limited Support for Budgeting Compared to Tracking
-*by Alenazi, M., Sas, C.*
+*by Alenazi, M., Sas, C., 2023*
 
 ## TL;DR
 Only 26 of 45 top-rated budgeting apps (58%) support envelope-based multiple budgets; one third offer only expense tracking with no budgeting functionality.
@@ -994,7 +994,7 @@ This paper directly justifies Odin’s design decision to prioritize envelope-ba
 ---
 
 # Reimagining social protection: financialised futures among ageing migrant domestic workers in Asia
-*by Amrith, M.*
+*by Amrith, M., 2026*
 
 ## TL;DR
 Filipino migrant domestic workers enrol in financial literacy courses to shift from a family-first breadwinner mindset towards self-responsibility and personal savings for retirement.
@@ -1022,7 +1022,7 @@ This paper informs Odin’s understanding of Filipino financial behavior by docu
 ---
 
 # Understanding Millennials’ Financial Behavior: The Role of Fintech Adoption, Financial Literacy, and the Mediating Effect of Financial Attitudes in a Crisis-Affected Emerging Economy
-*by Aoun, D., Rahal, R., Sfeir, L., Al Maalouf, N. J.*
+*by Aoun, D., Rahal, R., Sfeir, L., Al Maalouf, N. J., 2026*
 
 ## TL;DR
 FinTech adoption and financial literacy positively affect millennials’ financial behavior, with financial attitudes mediating the literacy‑behavior link in Lebanon’s crisis context.
@@ -1058,7 +1058,7 @@ This paper justifies Odin’s inclusion of financial attitude as a mediating var
 ---
 
 # Examining Mobile-First Database Solutions for East African Markets in Detail
-*by Arinze, E. D.*
+*by Arinze, E. D., 2024*
 
 ## TL;DR
 Mobile-first database solutions with offline sync, real-time updates, and strong encryption are critical for reliable app performance in East Africa's low-bandwidth, high-mobile-penetration markets.
@@ -1087,7 +1087,7 @@ This paper directly supports Odin’s mobile‑first architecture by establishin
 ---
 
 # AI-Powered Personalization in Digital Banking: A Review of Customer Behavior Analytics and Engagement
-*by Ashrafuzzaman, M., Parveen, R., Sumiya, M. A., Rahman, A.*
+*by Ashrafuzzaman, M., Parveen, R., Sumiya, M. A., Rahman, A., 2025*
 
 ## TL;DR
 Behavior analytics and predictive models power AI personalization in digital banking, boosting engagement and retention, but measurement inconsistencies and privacy gaps remain unresolved.
@@ -1125,7 +1125,7 @@ This review directly informs Odin's user profiling and behavioral classification
 ---
 
 # Impact of financial literacy, mental budgeting and self control on financial wellbeing: Mediating impact of investment decision making
-*by Bai, R.*
+*by Bai, R., 2023*
 
 ## TL;DR
 Higher financial literacy, mental budgeting, and self-control each improve subjective financial wellbeing among Chinese university students; investment decisions partially mediate these relationships.
@@ -1151,7 +1151,7 @@ This paper provides behavioral evidence that mental budgeting — the cognitive 
 ---
 
 # Financial Education in the Age of Artificial Intelligence: A Systematic Review with Text Mining and Natural Language Processing
-*by Balcazar-Paiva, E. S., Haro-Sarango, A. F., Villanueva-Calderón, J. A.*
+*by Balcazar-Paiva, E. S., Haro-Sarango, A. F., Villanueva-Calderón, J. A., 2026*
 
 ## TL;DR
 A systematic review of 50 studies (2020–2025) finds AI in financial education is technically framed with slight optimism but lacks longitudinal evidence and standardized metrics for sustained behavioral change.
@@ -1179,7 +1179,7 @@ This systematic review contextualizes the broader AI-in-finance landscape, helpi
 ---
 
 # Psychology and Development: Applications from Cognitive and Social Psychology
-*by Breza, E., Kaur, S.*
+*by Breza, E., Kaur, S., 2026*
 
 ## TL;DR
 Poverty amplifies psychological constraints (self-control, cognition, mental health, social norms) through missing markets and high stakes, creating persistent behavioral distortions and justifying policy interventions as market corrections.
@@ -1217,7 +1217,7 @@ This review directly justifies Odin’s emphasis on psychological constraints ac
 ---
 
 # Artificial Intelligence Powered Personal Finance Management System
-*by Chahar, P., Vishwakarma, Y., Mishra, R., Paliwal, G.*
+*by Chahar, P., Vishwakarma, Y., Mishra, R., Paliwal, G., 2026*
 
 ## TL;DR
 AI-powered personal finance assistant with machine learning and NLP achieved 4.4/5 user satisfaction, 4.5/5 ease of use, and 4.2/5 transaction categorization accuracy.
@@ -1263,7 +1263,7 @@ This paper provides a modular AI system design (classification, forecasting, rec
 ---
 
 # What UK Fintechs Can Learn From African Mobile Money Models
-*by Chepkutwo, D.*
+*by Chepkutwo, D., 2025*
 
 ## TL;DR
 African mobile money models succeed through frugal design, agent networks, community trust, and offline resilience — lessons UK fintechs can adopt to serve excluded users.
@@ -1295,7 +1295,7 @@ This paper justifies Odin’s mobile-first design by emphasizing that simplicity
 ---
 
 # A qualitative investigation of financial decision-making and enabling factors among ethnic minority young adults in Hong Kong
-*by Cho, E. Y.-N.*
+*by Cho, E. Y.-N., 2024*
 
 ## TL;DR
 Ethnic minority young adults in Hong Kong save roughly one-third of income, use digital budgeting tools, and struggle with self-control and high living costs.
@@ -1332,7 +1332,7 @@ This paper directly informs Odin's understanding of Filipino young adults' finan
 ---
 
 # Robo-Advice: Transforming Households into Rational Economic Agents
-*by D'Acunto, F., Rossi, A. G.*
+*by D'Acunto, F., Rossi, A. G., 2023*
 
 ## TL;DR
 Robo-advice transforms biased household decision-makers into rational economic agents by providing fully informed benchmarks, correcting distorted beliefs, and minimizing transaction costs across consumption, saving, and debt management.
@@ -1371,7 +1371,7 @@ This review directly justifies Odin's robo-advice-like architecture by synthesiz
 ---
 
 # A Comprehensive Review of Machine Learning Techniques for Intelligent Personal Finance Management Systems
-*by D'Souza, M., Bhegade, P., Bhalekar, P., Bhavsar, Y.*
+*by D'Souza, M., Bhegade, P., Bhalekar, P., Bhavsar, Y., 2026*
 
 ## TL;DR
 This review systematically compares ML techniques for budgeting, forecasting, anomaly detection, and group finance in PFMS, highlighting LSTM for temporal dependencies and Isolation Forest for unsupervised anomaly detection.
@@ -1412,7 +1412,7 @@ This review directly informs Odin's algorithm selection across multiple modules 
 ---
 
 # FINANCIAL LITERACY AND DIGITAL SAVINGS BEHAVIOR OF GEN Z IN THE FINTECH ERA: A SYSTEMATIC LITERATURE REVIEW
-*by Dewi, A. K.*
+*by Dewi, A. K., 2025*
 
 ## TL;DR
 Financial literacy and fintech synergistically shape Gen Z's saving behavior; gamification and auto-reminders build discipline and reduce high-cost loan reliance.
@@ -1442,7 +1442,7 @@ This paper supports Odin's budget recommendation module by showing that fintech 
 ---
 
 # Human-AI Collaboration in Customer Behavior Research: Personalizing Financial Services
-*by Duvalla, V. R.*
+*by Duvalla, V. R., 2025*
 
 ## TL;DR
 Human-AI collaboration in financial services improves customer segmentation granularity (up to 15 distinct behavioral segments) and retention via predictive churn analysis, blending AI pattern recognition with human contextual intelligence.
@@ -1477,7 +1477,7 @@ This paper directly informs Odin's user profile classification module by demonst
 ---
 
 # Simple Financial Management in Housewife Communities: A Qualitative Study on Daily Financial Management Patterns
-*by Efendi, M. I., Widagdo, C. S.*
+*by Efendi, M. I., Widagdo, C. S., 2025*
 
 ## TL;DR
 Housewives in resource-constrained Indonesian communities develop sophisticated adaptive financial strategies—including mental accounting, communal savings (arisan), and social insurance—that challenge conventional financial literacy narratives.
@@ -1510,7 +1510,7 @@ This paper informs Odin’s budget recommendation module by detailing how low-re
 ---
 
 # A Systematic Literature Review on Personal Financial Management Practices: Budgeting, Investment, Debt, and Saving
-*by Elliyana, E., Maricar, R., Toalib, R.*
+*by Elliyana, E., Maricar, R., Toalib, R., 2025*
 
 ## TL;DR
 Financial literacy and digital tools boost budgeting, saving, investing, and debt management, yet social and behavioral factors limit their effectiveness.
@@ -1541,7 +1541,7 @@ This systematic review directly supports Odin’s budget recommendation module b
 ---
 
 # THE ROLE OF DIGITAL BANKING FEATURES IN BANK SELECTION AN ANALYSIS OF CUSTOMER PREFERENCES FOR ONLINE AND MOBILE BANKING
-*by Faisal, N., Nahar, J., Waliullah, M., Borna, R. S.*
+*by Faisal, N., Nahar, J., Waliullah, M., Borna, R. S., 2024*
 
 ## TL;DR
 Convenience (24/7 access, ease of use) is the top driver of digital banking adoption, followed by security and AI‑driven personalization, according to 112 studies.
@@ -1571,7 +1571,7 @@ This systematic review validates that mobile banking users prioritize convenienc
 ---
 
 # Dynamic Model for Budget Allocation in via Multi-Criteria Optimization
-*by Gulbakyt, S., Almaz, A., Saule, S., Suhrab, Y.*
+*by Gulbakyt, S., Almaz, A., Saule, S., Suhrab, Y., 2025*
 
 ## TL;DR
 Multi-criteria optimization with SQP and GA allocates a regional budget across seven sectors, achieving near-identical objective values (0.0007% difference) and a Gini coefficient of 0.223.
@@ -1597,7 +1597,7 @@ This paper directly informs Odin’s budget recommendation module by demonstrati
 ---
 
 # A User-Centric Exploration of Axiomatic Explainable AI in Participatory Budgeting
-*by Hashemi, M., Darejeh, A., Cruz, F.*
+*by Hashemi, M., Darejeh, A., Cruz, F., 2024*
 
 ## TL;DR
 Users find axiomatic explanations helpful for understanding system decisions and perceiving fairness, but trust impact is mixed — 27% increased trust, 23% decreased.
@@ -1624,7 +1624,7 @@ This paper directly informs Odin’s design priority of user trust and explainab
 ---
 
 # A User Profile System for the Finance Platform of Commerce
-*by Hu, Z., Qiu, Y., Hu, S., Cheng, Z., Qiu, S.*
+*by Hu, Z., Qiu, Y., Hu, S., Cheng, Z., Qiu, S., 2024*
 
 ## TL;DR
 K-means clustering groups users by shared characteristics, enabling precise marketing and risk control in a finance platform user profile system.
@@ -1652,7 +1652,7 @@ This paper directly informs Odin’s user profile classification module by demon
 ---
 
 # Enhancing Financial Literacy in Young Adults: An Android-Based Personal Finance Management Tool
-*by Imawan, R., Putra, W. P., Alqahtani, R., Milakis, E. D., Dumchykov, M.*
+*by Imawan, R., Putra, W. P., Alqahtani, R., Milakis, E. D., Dumchykov, M., 2025*
 
 ## TL;DR
 An Android-based personal finance app achieved an **"Excellent" 4.6/5** usability score from 50 young adults, with income/expense tracking and goal setting driving consistent engagement.
@@ -1688,7 +1688,7 @@ This paper validates the feature set Odin intends to implement (income/expense t
 ---
 
 # Innovations in UI/UX Design of Mobile Applications: Trends, Practices and Challenges
-*by Jamal, A., Hashmat, S.*
+*by Jamal, A., Hashmat, S., 2025*
 
 ## TL;DR
 Mobile UI/UX design is shifting toward AI-driven personalization, gesture/voice interactions, and inclusive design, while struggling with small screens, cross-platform consistency, and rapid user expectations.
@@ -1717,7 +1717,7 @@ This review directly informs Odin's mobile-first design strategy by consolidatin
 ---
 
 # DIGITIZATION IN RETAIL BANKING: A REVIEW OF CUSTOMER ENGAGEMENT AND FINANCIAL PRODUCT ADOPTION IN SOUTH ASIA
-*by Kowsar, M. M., Islam, S., Mohiuddin, M., Siddiqui, N. A.*
+*by Kowsar, M. M., Islam, S., Mohiuddin, M., Siddiqui, N. A., 2025*
 
 ## TL;DR
 Mobile internet and national digital ID systems in South Asia have expanded financial inclusion, but persistent rural-urban infrastructure gaps and low digital literacy limit equitable adoption of credit and insurance products.
@@ -1753,7 +1753,7 @@ This systematic review directly supports Odin’s mobile-first design priority b
 ---
 
 # The Influence of E-Wallets on The Consumptive Behavior Generation Z: Systematic Review
-*by Kuswardhani, E. L., Sari, M. A. N. P., Yuniawan, A., Kusumawardhani, A.*
+*by Kuswardhani, E. L., Sari, M. A. N. P., Yuniawan, A., Kusumawardhani, A., 2025*
 
 ## TL;DR
 Digital wallets increase Generation Z’s spending frequency and impulsivity by reducing the psychological “pain of paying” through frictionless, gamified interfaces.
@@ -1786,7 +1786,7 @@ This systematic review directly informs Odin’s user profiling and budgeting mo
 ---
 
 # Proteus: Shapeshifting Desktop Visualizations for Mobile via Multi-level Intelligent Adaptation
-*by Liu, C., Cheng, S., Liang, F., Jiang, Z., Huang, L., Athapaththu, K., Wang, Y.*
+*by Liu, C., Cheng, S., Liang, F., Jiang, Z., Huang, L., Athapaththu, K., Wang, Y., 2026*
 
 ## TL;DR
 A multi-level design space and LLM-driven multi-agent system transform desktop visualizations into mobile-optimized versions, achieving 91.8% render success and significantly higher readability and interaction quality than baseline.
@@ -1814,7 +1814,7 @@ This paper provides a validated framework for adapting any desktop visualization
 ---
 
 # Explainable and Context-Aware Financial Nudges via Event-Driven Microservices
-*by Mandaleeka, A. P.*
+*by Mandaleeka, A. P., 2025*
 
 ## TL;DR
 A modular, event-driven microservices framework with SHAP-based explanations delivers context-aware financial nudges that users understand and trust.
@@ -1850,7 +1850,7 @@ This paper directly informs Odin’s design by showing how explainability (via S
 ---
 
 # Integration of Explainability in Recommender Systems to Enhance Enterprise Value Strategies
-*by Montagna, A.*
+*by Montagna, A., 2024*
 
 ## TL;DR
 Balancing business value and explainability in recommender systems improves user trust and adoption without catastrophic accuracy loss, demonstrated by the XVMF model.
@@ -1878,7 +1878,7 @@ This thesis directly informs Odin's budget recommendation module by demonstratin
 ---
 
 # Intelligent UI’s: Revolutionizing Financial Transaction Systems Through AI and Event-Driven Architecture
-*by Musunuri, H.*
+*by Musunuri, H., 2025*
 
 ## TL;DR
 Event-driven UIs with behavioral biometrics reduce transaction friction by 78% and cut fraud detection false positives by 37.8% while improving completion rates 31.6%.
@@ -1911,7 +1911,7 @@ This paper justifies Odin’s mobile-first UI decisions by quantifying how event
 ---
 
 # The Mediating Role of Financial Well-Being in the Relationship between Financial Behavior and Stress Among Irregular Income Workers
-*by Nurkhalida, K., Renanita, T.*
+*by Nurkhalida, K., Renanita, T., 2025*
 
 ## TL;DR
 Financial well-being fully mediates the relationship between financial behavior and stress in irregular income workers aged 20–40, meaning behavior reduces stress only indirectly through improved well-being.
@@ -1941,7 +1941,7 @@ This paper directly informs Odin’s user profiling and budget recommendation mo
 ---
 
 # Behavior-Driven Personalization Framework to Improve Repeat Usage in Mobile-Enabled Financial Ecosystems
-*by Omotayo, K., Uzoka, A., Okolo, C., Olinmah, F., Adanigbo, O.*
+*by Omotayo, K., Uzoka, A., Okolo, C., Olinmah, F., Adanigbo, O., 2023*
 
 ## TL;DR
 Behavior-driven personalization using real-time user actions, dynamic segmentation, and adaptive triggers increases repeat usage in mobile financial ecosystems.
@@ -1975,7 +1975,7 @@ This paper directly informs Odin's User Profile Classification module (F.2) by p
 ---
 
 # Optimizing Banking Application Interfaces: A User-Centric Perspective on Consent Management in Digital Banking Environments
-*by Pakarinen, O.*
+*by Pakarinen, O., 2025*
 
 ## TL;DR
 Two-layer consent management (category overview + detailed permissions) improved user understanding and perceived control over data-sharing decisions in digital banking usability tests.
@@ -2005,7 +2005,7 @@ This paper directly informs Odin’s approach to data privacy and user trust by 
 ---
 
 # EXPLORING TWO DECADES OF PERSONAL FINANCIAL PLANNING: A SYSTEMATIC LITERATURE REVIEW
-*by Pande, S., Mazhar, S. S., Khan, F. S., Khan, B. A., Haque, E., Mir, M. A.*
+*by Pande, S., Mazhar, S. S., Khan, F. S., Khan, B. A., Haque, E., Mir, M. A., 2024*
 
 ## TL;DR
 A 20-year systematic literature review shows growing scholarly interest in personal financial planning, the rise of digital tools like mobile apps, and persistent gaps in understanding financial behaviors across socioeconomic groups.
@@ -2033,7 +2033,7 @@ This review confirms that mobile applications and digital planning tools have be
 ---
 
 # Development and Evaluation of My Money Manager: An Intelligent Mobile App for Personalized Financial Insight
-*by Parameswaran, S., Saad, S. Z.*
+*by Parameswaran, S., Saad, S. Z., 2025*
 
 ## TL;DR
 A personal finance Android app with fixed-variable expense differentiation and 90-day spending pattern analysis achieved **82.8% user validation** for income-expense tracking and 74.3% for improved financial habits.
@@ -2071,7 +2071,7 @@ This paper provides direct empirical validation that users value fixed-vs-variab
 ---
 
 # Integrating Financial Management and Gamification: A Systematic Literature Review and Future Research Agenda
-*by Prasetyo, A. P., Santoso, H. B., Putra, P. O. H.*
+*by Prasetyo, A. P., Santoso, H. B., Putra, P. O. H., 2023*
 
 ## TL;DR
 A systematic review of 53 studies (2018–2022) finds that gamification in personal finance is under-researched, with most work in education; self-determination theory and technology acceptance models dominate, and future research should explore cultural factors and financial contexts.
@@ -2099,7 +2099,7 @@ Although Odin explicitly excludes gamification, this review’s synthesis of beh
 ---
 
 # Modeling the Future: A Comprehensive Analysis of Modeling Languages in the Development of Next-Generation Academic Information Systems (2016–2026)
-*by Pratama, A. R.*
+*by Pratama, A. R., 2026*
 
 ## TL;DR
 High-fidelity BPMN modeling reduces post-implementation logic errors by 22% and raises perceived ease of use by 18%, bridging the adoption gap in academic information systems.
@@ -2131,7 +2131,7 @@ Though the domain is academic, this paper’s findings on mobile‑first modelin
 ---
 
 # Making maps & visualizations for mobile devices: A research agenda for mobile-first and responsive cartographic design
-*by Roth, R. E., Çöltekin, A., Delazari, L., Denney, B., Mendonça, A., Ricker, B. A., Shen, J., Stachoň, Z., Wu, M.*
+*by Roth, R. E., Çöltekin, A., Delazari, L., Denney, B., Mendonça, A., Ricker, B. A., Shen, J., Stachoň, Z., Wu, M., 2024*
 
 ## TL;DR
 Mobile-first cartographic design requires rethinking scale, projections, symbols, labels, and interaction — this paper lists 20 research challenges to adapt cartography for small screens, touch, and mobile contexts.
@@ -2157,7 +2157,7 @@ This paper directly informs the mobile-first design of Odin’s interface. Odin 
 ---
 
 # Digital Persona Modeling for Context-Aware Financial Decisioning
-*by Sanhosh, S. R., Singh, A. K.*
+*by Sanhosh, S. R., Singh, A. K., 2025*
 
 ## TL;DR
 LSTM achieves 93.6% accuracy and 92.9% F1-score for context-aware financial decisioning, outperforming Random Forest and K-Means on simulated mobile transaction data.
@@ -2192,7 +2192,7 @@ This paper directly justifies Odin's selection of LSTM for the spending forecast
 ---
 
 # Recommendation system for financial decision-making using Artificial intelligence
-*by Shuryhin, K. A., Zinovatna, S. L.*
+*by Shuryhin, K. A., Zinovatna, S. L., 2024*
 
 ## TL;DR
 A system that combines Isolation Forest for anomaly detection, ARIMA and LSTM for budget forecasting, and a large language model to generate personalized, ethically-grounded financial recommendations.
@@ -2236,7 +2236,7 @@ This paper directly validates Odin’s design choice to use Isolation Forest for
 ---
 
 # Proof of concept of centralized personal finance application
-*by Sipilä, M.*
+*by Sipilä, M., 2025*
 
 ## TL;DR
 A centralized personal finance PoC reduced manual effort and improved data reliability by automating asset tracking, cash flow visualization, and report generation, validated through task-based testing with a stakeholder.
@@ -2264,7 +2264,7 @@ This paper provides a concrete example of designing and evaluating a PFM system 
 ---
 
 # On the human-centered AI transformation of banking: Exploring the impact of behavioral finance & AI on banking transformation
-*by van Thiel, D.*
+*by van Thiel, D., 2025*
 
 ## TL;DR
 Integrating psychometric and behavioral finance principles with AI (random forests, neural nets) improves digital advice adoption and inclusive credit scoring, achieving 30% higher approval and 23% lower default rates during market volatility.
@@ -2300,7 +2300,7 @@ This dissertation directly informs Odin’s **predictive modeling module** (D.1)
 ---
 
 # The Role of Big Data Analytics in Behavioral Finance: Understanding Dynamics of Consumer Spending and Saving
-*by Whitaker, K.*
+*by Whitaker, K., 2025*
 
 ## TL;DR
 Big data analytics combined with behavioral finance reveals hidden psychological and social drivers of consumer spending and saving, enabling personalized financial products and real-time behavioral interventions.
@@ -2333,7 +2333,7 @@ This paper provides a high-level justification for integrating big data analytic
 ---
 
 # Study of an Adaptive Financial Recommendation Algorithm Using Big Data Analysis and User Interest Pattern with Fuzzy K‑Means Algorithm
-*by Yang, J.*
+*by Yang, J., 2024*
 
 ## TL;DR
 Fuzzy K-means clustering with neural collaborative filtering improves financial product recommendation accuracy and clustering quality compared to existing methods.
@@ -2363,7 +2363,7 @@ This paper directly informs Odin’s user profile classification module by demon
 ---
 
 # Leveraging Big Data Analytics in Behavioral Finance: Insights into Consumer Spending and Saving Dynamics
-*by Ying, H., Blaise, M.*
+*by Ying, H., Blaise, M., 2025*
 
 ## TL;DR
 Big data analytics uncovers psychological and behavioral drivers of spending and saving, enabling personalized financial strategies through machine learning and predictive models.
@@ -2393,7 +2393,7 @@ This paper provides high-level justification for Odin’s reliance on behavioral
 ---
 
 # Cash Management Practices and the Financial Performance of Micro-Enterprises
-*by Aguilar, T. S., Chavez, M. M., Rayos, C. M. D., Remoquin, K. J. A., Melo, M. C. F.*
+*by Aguilar, T. S., Chavez, M. M., Rayos, C. M. D., Remoquin, K. J. A., Melo, M. C. F., 2024*
 
 ## TL;DR
 Proper budgeting and cash flow management strongly correlate with higher sales growth, profitability, and liquidity in 163 Philippine micro-enterprises.
@@ -2420,7 +2420,7 @@ This paper documents specific budgeting gaps among Filipino micro‑enterprise o
 ---
 
 # Wealth Creation for Expanding the Middle Class in the Philippines
-*by Albert, J. R. G., Briones, R. M., Rivera, J. P. R.*
+*by Albert, J. R. G., Briones, R. M., Rivera, J. P. R., 2024*
 
 ## TL;DR
 The Philippine middle class, defined as households with per capita income 2–12 times the poverty line, grew to **39.8%** of the population by 2021 but the pandemic reversed gains from the 43.5% peak in 2018.
@@ -2450,7 +2450,7 @@ This paper provides empirically grounded baseline data on how Filipino household
 ---
 
 # Budgeting Practices Among Below Minimum Wage Earners: A Case Study of Sales Personnel of Local Enterprises in Pagadian City
-*by Alvarina, C. C., Handumon, H. O., Peralta, J. M. B., Paguia, M. A., Alfanta, M. P.*
+*by Alvarina, C. C., Handumon, H. O., Peralta, J. M. B., Paguia, M. A., Alfanta, M. P., 2025*
 
 ## TL;DR
 Below-minimum-wage sales personnel in Pagadian City prioritize essentials (food, utilities, childcare) and supplement income through side hustles, demonstrating tight budgeting and emergency savings despite financial stress.
@@ -2480,7 +2480,7 @@ This paper directly informs Odin’s understanding of how low-income Filipino wo
 ---
 
 # Beyond Awareness: Examining Financial Behaviors Among Public School Teachers in the Philippines
-*by Am-una, A.*
+*by Am-una, A., 2026*
 
 ## TL;DR
 Public school teachers in Baguio City show moderately positive financial behaviors, but these reflect "conscious constraint"—disciplined management of scarce resources—not true financial security.
@@ -2510,7 +2510,7 @@ This paper directly informs Odin's user profiling and budget recommendation modu
 ---
 
 # Analysis of the Food and Income Expenditure Survey 2023 Among Filipino Households
-*by Ama, N. A.*
+*by Ama, N. A., 2025*
 
 ## TL;DR
 Food spending is income‑inelastic (elasticity = 0.58) — as Filipino household income rises 1%, food expenditure rises only 0.58%, confirming Engel’s Law.
@@ -2541,7 +2541,7 @@ This paper provides empirical, nationally representative data on how Filipino ho
 ---
 
 # The plight of teachers on the twice-a-month salary release: Financial literacy and survival
-*by Amado, M. A.*
+*by Amado, M. A., 2026*
 
 ## TL;DR
 Twice-a-month salary release improves short-term financial planning for teachers, but financial stress persists; higher financial literacy directly enables better budgeting and survival strategies.
@@ -2573,7 +2573,7 @@ This paper provides empirical evidence on how income regularity (twice-a-month) 
 ---
 
 # Peer Influence and Adolescent Spending: Insights into High School Students’ Buying Behavior
-*by Anaya, K. K. O., Piquero, J. R. M., Romero, C. J. P., Sales, Y. L. M., Suñga, P. A. N., Ibañez, M. M., Ramos, R. I. A., Asi, G. M.*
+*by Anaya, K. K. O., Piquero, J. R. M., Romero, C. J. P., Sales, Y. L. M., Suñga, P. A. N., Ibañez, M. M., Ramos, R. I. A., Asi, G. M., 2024*
 
 ## TL;DR
 Implicit peer pressure shows a weak positive correlation (r = 0.273) with impulsive buying among Filipino senior high school students, explaining only 7.45% of the variance.
@@ -2601,7 +2601,7 @@ This paper provides empirical evidence on Filipino adolescent spending behavior,
 ---
 
 # Martime Students’ Financial Knowledge, Attitude, and Behavior
-*by Apao, A. A., Cayanpat, R. A. B., Edullantes Jr., Y. P., Cabañero, K. E. S., Hechanova, J. M. T., Candia, H. G.*
+*by Apao, A. A., Cayanpat, R. A. B., Edullantes Jr., Y. P., Cabañero, K. E. S., Hechanova, J. M. T., Candia, H. G., 2025*
 
 ## TL;DR
 High financial knowledge and positive attitudes among Filipino maritime students do not translate into better financial behavior, revealing a gap between knowing and doing.
@@ -2629,7 +2629,7 @@ This paper directly informs Odin's user profiling module by demonstrating that f
 ---
 
 # The Impact of Psychological, Economic, Social Aspects, and Interest Rate Variations on Working Millennials' Saving Patterns Through Digital Banking
-*by Ataza, C., Porcel, M., Resabal, L., Sandoval, A., Bragas, C.*
+*by Ataza, C., Porcel, M., Resabal, L., Sandoval, A., Bragas, C., 2024*
 
 ## TL;DR
 Interest rate variations (β=0.878) and psychological aspects (β=0.430) significantly increase saving patterns of working millennials via digital banking, but social aspects decrease it (β=-0.182).
@@ -2659,7 +2659,7 @@ This paper provides empirical evidence on factors that drive saving behavior amo
 ---
 
 # Peso By Peso: Comparing Adaptive Practices of Solo Parents Across Income Levels in Balanga City, Bataan, and Olongapo City, Zambales
-*by Avelino, Z. L., Piol, J. A. S., Gutierrez, W. B., Ibabao, E. J. A., Fadera, D. T.*
+*by Avelino, Z. L., Piol, J. A. S., Gutierrez, W. B., Ibabao, E. J. A., Fadera, D. T., 2026*
 
 ## TL;DR
 Income level significantly affects solo parents' financial management and lifestyle modifications (p<.001), with Olongapo City respondents showing stronger adaptive behaviors than those in Balanga City.
@@ -2689,7 +2689,7 @@ This paper directly informs Odin's understanding of how income level drives fina
 ---
 
 # Consumer Finance Survey Report 2021
-*by Bangko Sentral ng Pilipinas*
+*by Bangko Sentral ng Pilipinas, 2021*
 
 ## TL;DR
 Filipino households earned ₱190k average annual income in 2021, spent 55% of it on food at home, held ₱435k median net worth, and only 29% carried debt.
@@ -2722,7 +2722,7 @@ This survey provides the authoritative empirical baseline for Filipino household
 ---
 
 # CONSUMER EXPECTATIONS SURVEY REPORT 1st Quarter 2026
-*by Bangko Sentral ng Pilipinas*
+*by Bangko Sentral ng Pilipinas, 2026*
 
 ## TL;DR
 Filipino consumer sentiment improved in Q1 2026 but spending outlook softened, with the saving intention index rising to **12.4%** and year-ahead inflation forecast at 2.7%.
@@ -2752,7 +2752,7 @@ This BSP survey provides primary empirical data on Filipino household spending i
 ---
 
 # Street Vendors' Stories: Informal Borrowing Practices and Implications on Business
-*by Bara-Labitad, J.*
+*by Bara-Labitad, J., 2025*
 
 ## TL;DR
 Filipino street vendors borrow PHP 5,000–10,000 from "5-6" lenders at 20% interest over two months, gaining short-term inventory benefits but facing debt cycles and financial strain.
@@ -2772,7 +2772,7 @@ Not applicable — paper is outside Odin's scope.
 ---
 
 # Do Remittances Boost Household Spending: New Evidence from Migrants’ Household Survey
-*by Bayangos, V. B., Lubangco, C. K.*
+*by Bayangos, V. B., Lubangco, C. K., 2024*
 
 ## TL;DR
 Remittances boost household spending in the Philippines, but poor households face binding financial constraints that limit welfare gains, and high transfer costs reduce remittance inflows.
@@ -2802,7 +2802,7 @@ This paper directly informs Odin's user profiling (F.1) by demonstrating that in
 ---
 
 # Influence of Digital Wallets on the Financial Behavior of HEI's Students
-*by Bongado, M. B., Magallanes, A. R., Semaña, C. M.*
+*by Bongado, M. B., Magallanes, A. R., Semaña, C. M., 2025*
 
 ## TL;DR
 Digital wallet use explains 45.4% of variance in financial behavior among Filipino HEI students, with positive effects on cash management and budgeting.
@@ -2832,7 +2832,7 @@ This paper provides empirical evidence that Filipino students perceive digital w
 ---
 
 # The Traditional Way of Saving Money Versus the Modern Style of Investment: The Financial Management Styles of Sorsogon State University (Sorsu) Bulan Campus Faculty Members
-*by Bongalonta, M. B., Bongalonta, M. M., Gigantoca, S. E.*
+*by Bongalonta, M. B., Bongalonta, M. M., Gigantoca, S. E., 2024*
 
 ## TL;DR
 Filipino university faculty save using both traditional (piggy banks, paluwagan, bank deposits) and modern methods, but rising costs, low financial literacy, poor debt management, and delayed salaries limit **60% to saving only 0–15% of income**.
@@ -2862,7 +2862,7 @@ This paper provides empirical evidence on actual saving behaviors, budgeting pra
 ---
 
 # Financial Management Practices of Employees at Bureau Of Internal Revenue
-*by Cabiles, S.*
+*by Cabiles, S., 2025*
 
 ## TL;DR
 BIR employees show strong budgeting and saving habits but inconsistent spending and investing, with debt accumulation and impulse spending as key barriers, calling for structured workplace financial literacy programs.
@@ -2892,7 +2892,7 @@ This paper provides field data on actual financial management practices of Filip
 ---
 
 # How does financial literacy affect financial behavior over the life cycle? Evidence from Filipino households
-*by Cacnio, F., Romarate, M.*
+*by Cacnio, F., Romarate, M., 2024*
 
 ## TL;DR
 Higher financial literacy among young Filipino adults (18-39) does not guarantee spending within income, but improves loan payment timeliness, retirement planning, and insurance uptake across age groups.
@@ -2920,7 +2920,7 @@ This paper directly informs Odin's user profiling module by providing empirical 
 ---
 
 # BUY NOW, PAY LATER: SHOPEE ONLINE STORE USERS EXPERIENCES ON SHOPEE PAY LATER FEATURE (SPAY LATER)
-*by Calanog, V. C., Paderan, M. J. D., Adove, R. C. A., Bathan, C. M. N., Catibog, D. N., Rivera, G. R., Mangarin, J. A.*
+*by Calanog, V. C., Paderan, M. J. D., Adove, R. C. A., Bathan, C. M. N., Catibog, D. N., Rivera, G. R., Mangarin, J. A., 2025*
 
 ## TL;DR
 Shopee Pay Later users in Batangas use the feature primarily for essential purchases during financial constraints, finding it convenient and helpful for budgeting, though technical issues and overspending risks exist.
@@ -2948,7 +2948,7 @@ This qualitative study provides direct evidence of Filipino young professionals'
 ---
 
 # The Impact of AUP-CES Livelihood Initiatives, Leadership and Management in Buklod Bahayan
-*by Carpizo, E., Balitar, J., Balila, J.*
+*by Carpizo, E., Balitar, J., Balila, J., 2024*
 
 ## TL;DR
 AUP-CES livelihood initiatives and management training enabled Buklod Bahayan residents to build a resilient cooperative that provides income, loans, camaraderie, and crisis support.
@@ -2970,7 +2970,7 @@ This paper does not address personal finance applications, budgeting algorithms,
 ---
 
 # The Gig Economy: Financial Challenges and Opportunities Faced by Freelancers
-*by Casalhay, S. F., Guevarra, C. M., Bragas, C. M.*
+*by Casalhay, S. F., Guevarra, C. M., Bragas, C. M., 2025*
 
 ## TL;DR
 Freelancers in Metro Manila face persistent income volatility and lack of traditional benefits; budgeting and saving strategies are common but insufficient for long-term financial security.
@@ -3003,7 +3003,7 @@ This paper provides empirical evidence on the financial behaviors and pain point
 ---
 
 # Exploring Parental Expectations on Children Helping Parents out in Lower Middle-Income Families
-*by Casilan, J. J., Baclagan, T.*
+*by Casilan, J. J., Baclagan, T., 2024*
 
 ## TL;DR
 Lower middle-income Filipino parents see children helping out as a non‑obligatory, voluntary act that honors parents, driven by poverty awareness and *utang na loob*, not required.
@@ -3031,7 +3031,7 @@ This paper directly informs Odin’s user behavioral profiling module by groundi
 ---
 
 # Revisiting the Filipino Value Utang na Loob: Contextual Perceptions, Implications and Inputs to Sustaining the Filipino Psychology Discussions
-*by Casiño, R. M. Z., Serrano, L. L., Granada, M. I. D.*
+*by Casiño, R. M. Z., Serrano, L. L., Granada, M. I. D., 2025*
 
 ## TL;DR
 Utang na loob strengthens social ties when rooted in goodwill, but its misuse creates emotional pressure and turns the value into a toxic obligation.
@@ -3059,7 +3059,7 @@ This paper provides cultural grounding for Odin’s user profiling module by sho
 ---
 
 # The Effect of Online Buying Decision on Personal Budget of Business Administration Students
-*by Cervantes, J. Z., Custora, J. M. G., Duguran, J. C. C., Malacaya, A. S., Mendoza, J., Panga, R. B., Waminal, E. D.*
+*by Cervantes, J. Z., Custora, J. M. G., Duguran, J. C. C., Malacaya, A. S., Mendoza, J., Panga, R. B., Waminal, E. D., 2025*
 
 ## TL;DR
 Social media exposure and instant gratification drive unplanned online purchases, which strongly correlate (r=0.61) with poor budget management among Filipino business students.
@@ -3089,7 +3089,7 @@ This paper directly informs Odin’s anomaly detection and user profiling module
 ---
 
 # Effects of Filipino Consumers’ Financial Attitudes, Subjective Norms, and Perceived Behavioral Control on Intentions to Formal Banking: Towards Financial Inclusion
-*by Co, M., Centeno, D.D.G.*
+*by Co, M., Centeno, D.D.G., 2023*
 
 ## TL;DR
 Subjective norms (having a banked household member) and perceived behavioral control significantly predict unbanked Filipinos’ intention to save surplus money in formal banks, but attitudes do not.
@@ -3119,7 +3119,7 @@ This paper directly informs Odin's user profiling module (F.1) by identifying sp
 ---
 
 # Navigating Financial Struggle: The Ripple Effect of Inflation Rates on Working Students
-*by D, A. G., R, V. M., G, L. B. L.*
+*by D, A. G., R, V. M., G, L. B. L., 2024*
 
 ## TL;DR
 Rising inflation forces Filipino working students to prioritize necessities, cut discretionary spending, and seek government aid — with 216,000 students (8% of college population) balancing work and study.
@@ -3149,7 +3149,7 @@ This paper provides qualitative evidence of how Filipinos (working students, a s
 ---
 
 # The Impact of Personal Budgeting Skills on College Students’ Financial Stability
-*by Dela Torre, J. M. Y., Jangao, J. P. P., Maghilum, J. T., Man-onan, R. J. H., Pepito, S. G. Jr, Rapirap, G. P. Jr, Cervantes, J. Z.*
+*by Dela Torre, J. M. Y., Jangao, J. P. P., Maghilum, J. T., Man-onan, R. J. H., Pepito, S. G. Jr, Rapirap, G. P. Jr, Cervantes, J. Z., 2025*
 
 ## TL;DR
 Strong budgeting skills (planning, goal setting, expense tracking) correlate strongly with financial stability in college students, reducing stress and increasing savings.
@@ -3177,7 +3177,7 @@ This paper provides empirical evidence from a Filipino student population that s
 ---
 
 # Budgeting Practices and Challenges of Micro-Entrepreneurs in Maria Aurora Public Market: Toward a Strategic Management Plan
-*by Delos Santos, D. T., Austria, M. G. P., Candelario, C. C., Garcia, L. E. B., Gonaranao, B. S.*
+*by Delos Santos, D. T., Austria, M. G. P., Candelario, C. C., Garcia, L. E. B., Gonaranao, B. S., 2026*
 
 ## TL;DR
 Micro-entrepreneurs in Maria Aurora public market show strong budgeting discipline (AWM 3.48–3.63) but face major challenges from financial liability (AWM 3.27) and income volatility (AWM 3.40), requiring strategic interventions.
@@ -3213,7 +3213,7 @@ This paper provides empirical data on how Filipino micro-entrepreneurs manage ir
 ---
 
 # Financial literacy and sustainable planning assessment among Filipino millennials
-*by Dimaunahan, D. S. F., Santiago, A. F. B., Eusebio, M. C. C., Loteriña, S. M. M., Ong, A. K. S., Chavez, J. X. S.*
+*by Dimaunahan, D. S. F., Santiago, A. F. B., Eusebio, M. C. C., Loteriña, S. M. M., Ong, A. K. S., Chavez, J. X. S., 2025*
 
 ## TL;DR
 Low financial literacy among Filipino millennials does not directly drive financial planning; monthly income, expenses, and occupation matter more, with goal acceptance being the strongest predictor of planning behavior.
@@ -3246,7 +3246,7 @@ This paper directly supports Odin's user profile classification module by demons
 ---
 
 # Family dynamics in Filipino transnational families: the role of non-migrant mothers
-*by Domingo, P.*
+*by Domingo, P., 2026*
 
 ## TL;DR
 Non-migrant mothers sustain OFW family cohesion through intensive mothering and father-child mediation, but this also reproduces mediated patriarchy and financial surveillance.
@@ -3268,7 +3268,7 @@ This paper does not address personal finance systems, budgeting algorithms, or P
 ---
 
 # Knowledge, Attitudes, and Practices in Financial Literacy among Business Administration Students in Urban College in the Philippines
-*by Espiritu, M.*
+*by Espiritu, M., 2025*
 
 ## TL;DR
 Financial literacy knowledge, attitudes, and practices among Filipino business students vary significantly by age, sex, and year level, with a strong positive correlation among the three dimensions (R=0.697).
@@ -3297,7 +3297,7 @@ This paper provides direct empirical evidence on the financial knowledge, attitu
 ---
 
 # Ka-abag o Babag? Exploring the Lived Experiences in the Context of Financial Well-being of Microfinance Borrowers
-*by Estorba, V. L., Relativo, J. L. C., Rellon, S. B. S., Regis, K. J. M.*
+*by Estorba, V. L., Relativo, J. L. C., Rellon, S. B. S., Regis, K. J. M., 2025*
 
 ## TL;DR
 Microfinance acts as both a lifeline (ka-abag) and a debt trap (babag) for low-income Filipino women, providing short-term relief while perpetuating stress, cyclical debt, and emotional strain.
@@ -3326,7 +3326,7 @@ This paper provides qualitative evidence of how low-income Filipino borrowers pr
 ---
 
 # Financial freedom of Filipinos in personal finance management
-*by Flores, C.*
+*by Flores, C., 2025*
 
 ## TL;DR
 Cash, debt, risk, and wealth management practices among Filipino corporate employees do not significantly predict financial freedom, despite moderate self-assessed competence.
@@ -3355,7 +3355,7 @@ This paper provides direct empirical evidence on the personal finance practices,
 ---
 
 # Understanding the Impulse Buying Behavior in the Digital Age: Influential Factors in Online Consumer Behavior
-*by Gabatin, R., Sierra, S., Maniago, M., Capole, A., Torres, R.*
+*by Gabatin, R., Sierra, S., Maniago, M., Capole, A., Torres, R., 2025*
 
 ## TL;DR
 Website ease and payment options increase urgency, strongly predicting impulse buying (β=0.804, p<0.001) among Filipino online shoppers.
@@ -3384,7 +3384,7 @@ This paper directly informs Odin’s understanding of impulse spending as a comp
 ---
 
 # Financial Literacy and Financial Health of Public Junior High School Teachers
-*by Garcia, E.*
+*by Garcia, E., 2025*
 
 ## TL;DR
 Public junior high school teachers in Quezon City show high financial literacy (mean 4.02/5) but are only “financially coping” (61.2/100), with critical gaps in emergency funds and retirement planning.
@@ -3415,7 +3415,7 @@ This paper provides empirical baseline data on Filipino professionals’ spendin
 ---
 
 # The Concept of Utang Na Loob Among Filipino Working Millennials
-*by Donato, A., Panentan, G., Castro, J., Gavino, R.*
+*by Donato, A., Panentan, G., Castro, J., Gavino, R., 2023*
 
 ## TL;DR
 Filipino working millennials perceive utang na loob as a self-imposed obligation to reciprocate kindness, primarily expressed through financial support to family, which motivates work but can also become a personal burden.
@@ -3443,7 +3443,7 @@ This paper directly informs Odin's user profiling module by providing qualitativ
 ---
 
 # From Surge to Stability: Digital Payments Driving a Steady Transition: 2024 Status of Digital Payments in the Philippines
-*by Mesina-Romero, B., Masangkay, M. C., Franco, M., Yambao, M. A. V., Delgado, K., Bueno, P. N., Lingat, P. J., Natividad, G. M., Lapus, A. R., Manuel, R. M., Yñigo, K. T.*
+*by Mesina-Romero, B., Masangkay, M. C., Franco, M., Yambao, M. A. V., Delgado, K., Bueno, P. N., Lingat, P. J., Natividad, G. M., Lapus, A. R., Manuel, R. M., Yñigo, K. T., 2024*
 
 ## TL;DR
 Digital payments reached **57.4%** of retail transaction volume in the Philippines by 2024, driven by merchant payments (66.4% share) and person-to-person transfers (20.6% share).
@@ -3473,7 +3473,7 @@ This BSP report provides authoritative, national-scale data on how Filipinos act
 ---
 
 # FINANCIAL HARDSHIPS OF TRICENARIANS EDUCATORS: PREPARING FOR THE FUTURE AMID DEBT CHALLENGES
-*by Navarro, R. L., Bantulo, J. S.*
+*by Navarro, R. L., Bantulo, J. S., 2026*
 
 ## TL;DR
 Tricenarian Filipino teachers face persistent debt, mental burden, and work disruption despite using manual budgeting and loans to cope.
@@ -3501,7 +3501,7 @@ This paper provides empirical evidence of how Filipino professionals in their th
 ---
 
 # NURSING CAREER TOWARDS FINANCIAL INDEPENDENCE
-*by Nduka, P., Benedicto, E. G.*
+*by Nduka, P., Benedicto, E. G., 2026*
 
 ## TL;DR
 Filipino nurses face persistent income-expense deficits due to low government salary grades and high family obligations, leaving most unable to save for emergencies or retirement.
@@ -3531,7 +3531,7 @@ This paper provides real-world evidence of income-expense mismatches among Filip
 ---
 
 # The Moderating Effect of Access to Finance on Myopic Decision-Making and Business Performance of Low-income Household Micro-Enterprises in Manila
-*by Ong, H., Keh, K., Lui, N., Santos, A., Suarez, E.*
+*by Ong, H., Keh, K., Lui, N., Santos, A., Suarez, E., 2026*
 
 ## TL;DR
 Myopic decision-making among low-income micro-entrepreneurs in Manila significantly reduces business performance (p < 0.001), but better access to finance moderates this negative effect (p = 0.005).
@@ -3559,7 +3559,7 @@ This paper directly informs Odin’s user profiling module (F.1) by empirically 
 ---
 
 # Personal Financial Management Practices of Average earning households within Indigenous Communities of Mountain Province: Exploring Their Strategies and Challenges
-*by Rosario, E.*
+*by Rosario, E., 2025*
 
 ## TL;DR
 Indigenous households in Bontoc blend strict budgeting and kinship-based reciprocity (og-ogfo, bayanihan, paluwagan) to manage income insufficiency, prioritizing cultural obligations over individual wealth accumulation.
@@ -3592,7 +3592,7 @@ This paper directly informs Odin's user profiling (F.1) and expense categorizati
 ---
 
 # The Shift to Gig Economy: How Traditional Employment Stacks Up Against Platform-Based Independent Workers
-*by Torres, R. C., Bartolome, Z. M. I., Jimena, L. G., Paner, J. P.*
+*by Torres, R. C., Bartolome, Z. M. I., Jimena, L. G., Paner, J. P., 2025*
 
 ## TL;DR
 Traditional employees have higher debt-to-income ratios than gig workers, but both groups show similar financial literacy, social support, and job satisfaction levels.
@@ -3620,7 +3620,7 @@ This paper directly informs Odin's user profiling module (F.1) by providing empi
 ---
 
 # A Systematic Review of Mobile Banking, Fintech Innovations, and Regulatory Gaps to Achieve Financial Inclusion in the Philippines
-*by Velez, G.*
+*by Velez, G., 2025*
 
 ## TL;DR
 GCash reduced cash dependency by 41% in urban and 29% in rural Philippines, but digital divides, gender gaps, and low financial literacy (34% understand security) persist.
