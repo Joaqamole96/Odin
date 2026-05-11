@@ -1,24 +1,24 @@
 # Street Vendors' Stories: Informal Borrowing Practices and Implications on Business
 
+> NOTE: An exception could be made for this paper; while it influences no topics for Odin, it is closely adjacent to debt mangement behavior.
+
+## Metadata
+
 ```yaml
 ---
-name: paper-summary
-paper_id: "8f7e5d4c-3b2a-1f0e-9d8c-7b6a5f4e3d2c"
-source_document: "Labitad_2025_converted.md"
-designation: international
+paper_id: "10.54536/ajsde.v4i1.4552"
+designation: local
 title: "Street Vendors' Stories: Informal Borrowing Practices and Implications on Business"
-authors: "Labitad, J. B."
+authors: "Bara-Labitad, J."
 year: 2025
 venue: "American Journal of Social Development and Entrepreneurship (AJSDE)"
-odin_topics: ["F.1"]
-shorthand_tags: ["/fil-behavioral-patterns"]
-summary_date: 2026-05-07
-version: "1.0"
+odin_topics: []
+shorthand_tags: []
 member_checklist:
   - name: "Gabion, Stefanie S."
     status: "[ ]"
   - name: "Guevarra, Joaquin Luis T."
-    status: "[X]"
+    status: "[ ]"
   - name: "San Jose, Alexa Joanne Paula G."
     status: "[ ]"
   - name: "Togle, Charles Nathaniel B."
@@ -28,32 +28,35 @@ member_checklist:
 
 ## TL;DR
 
-Philippine street vendors borrow PHP 5,000–10,000 at 20% interest over two months, creating a debt cycle that briefly boosts inventory but erodes net income.
+Filipino street vendors borrow PHP 5,000–10,000 from "5-6" lenders at 20% interest over two months, gaining short-term inventory benefits but facing debt cycles and financial strain.
 
 ## Problem and Motivation
 
-Street vendors lack access to formal credit, forcing them into informal “5‑6” loans that are illegal under Philippine law. Prior work documented high interest rates but did not systematically measure how these loans affect pricing, inventory, net income, gross sales, and selling techniques. Policymakers need evidence on the trade‑offs between short‑term survival and long‑term debt dependency.
+Street vendors in the Philippines lack access to formal financial services, forcing them to rely on informal credit sources with exploitative terms. This financial exclusion affects millions of informal workers who contribute significantly to the economy yet remain vulnerable to predatory lending. No prior study had systematically documented "5-6" loan terms and their dual impact on business performance and long-term financial health of street vendors.
 
 ## Approach
 
-- Mixed‑method study (convergent design) with 251 street vendors at Cogon Public Market, Cagayan de Oro, Philippines.
-- Survey instrument translated to Cebuano; descriptive statistics for borrowing terms and business metrics.
-- In‑depth interviews (n=10) analyzed thematically to capture lived experiences.
-- Focus on “5‑6” loans: borrow PHP 5,000 ($87) – 10,000 ($174), repay 20% interest within two months.
+- Mixed-method convergent design with 251 street vendors at Cogon Public Market, Cagayan de Oro.
+- Survey questionnaire translated from English to Cebuano, plus in-depth interviews with 10 vendors.
+- Measured informal credit value, interest rates, payment schemes, loan maturity, penalties, and reborrowing frequency.
+- Assessed business performance across pricing tactics, inventory management, net income, gross sales, and selling techniques.
+- Descriptive statistics for quantitative data; thematic analysis for qualitative narratives.
+- All participants had outstanding "5-6" loan balances and were of legal age.
 
 ## Findings
 
-1. **82.1%** reborrow within **one day** of full repayment — a continuous debt treadmill.
-2. **92%** use daily repayment schedules, matching daily cash inflow but causing severe pressure on low‑earnings days.
-3. **78.5%** face no monetary penalty for default — trust replaces formal collateral.
-4. Borrowing increases inventory (mean 3.45/4 “Always”) and gross sales (mean 3.49/4 “Always”).
-5. Net income overall rated “Always” (3.45), **but** high interest rates make net income “Occasionally” lower (3.34).
-6. Vendors resist deep price cuts (“bagsak presyo”) to protect customer relationships (mean 3.16 “Never” feel pressured to set lower prices).
+1. Most vendors (58.6%) borrow between PHP 1,000 and PHP 10,000 ($17.47–$174.69).
+2. 59% pay interest rates of 16–20%; 79.3% of loans mature within 1–2 months.
+3. 92% adhere to daily repayment schedules; 82.1% reborrow within one day of full payment.
+4. **82.1% immediate reborrowing rate** — vendors remain in continuous debt cycles, effectively paying >100% annual interest.
+
+- Vendors report using loans to increase inventory, stock up during peak seasons, and boost gross sales.
+- High interest and daily repayments limit retained earnings, restricting business reinvestment and long-term profitability.
+- Financial exclusion, not lack of awareness, drives dependency: banks reject vendors due to low income and limited education.
 
 ## Key Figures and Tables
 
-- Table 1: 59% pay 16–20% interest; 79.3% have loan maturity of 1–2 months → *Extremely short, expensive credit.*
-- Table 7: Daily profits range PHP 500–3,000 ($8.73–$52.41) → *Thin margins amplify repayment stress.*
+None.
 
 ## Key Equations
 
@@ -63,48 +66,47 @@ None.
 
 | Term / Acronym | Plain-English Definition |
 | -------------- | ------------------------ |
-| “5‑6” loan | Borrow PHP 5, repay PHP 6 (20% interest) — illegal but common informal lending scheme in the Philippines. |
-| Suki | Regular, loyal customer — a relationship vendors protect by avoiding price cuts. |
-| Bagsak presyo | “Price drop” — discounting strategy that vendors resist to maintain perceived value. |
+| 5-6 | Informal lending scheme in the Philippines where a borrower receives PHP 5 and repays PHP 6 (20% interest), typically over a short period. |
+| Informal borrowing | Loans obtained from non-institutional sources (individuals, not banks or cooperatives) without formal documentation or collateral. |
+| Street vendor | A person selling goods in public or semi-regulated spaces such as streets, markets, or pavements, operating outside formal business regulations. |
+| Suki | A regular, loyal customer with whom a vendor has built a trusting relationship through repeated transactions. |
+| RBV (Resource-Based View) | A management theory stating firms create economic value by effectively managing their resources — here, informal credit as a liquidity resource. |
 
 ## Critical Citations
 
-- [Karlan et al., 2018] — Found market vendors in the Philippines reborrow within weeks, confirming the debt trap mechanism.
-- [Dula & Grego, 2017] — Documented that 5‑6 loans increase sales but cause household stress, directly paralleling this study.
-- [Punongbayan, 2017] — Argues 5‑6 lending is a symptom of deeper financial exclusion, used here as a policy framing reference.
+- [Karlan et al., 2018] — Found Philippine market vendors reborrow within six weeks at high interest to maintain working capital.
+- [Dula & Grego, 2017] — Documented "5-6" lending in Tacloban and its cycle of debt for micro-entrepreneurs.
+- [Archer et al., 2020] — Defined informal credit value as funds from non-bank financing activities, characterizing small, unsecured, short-term loans.
 
 ## Relevance to Odin
 
 **Topics:**
 
-F.1 — User Behavioral Profiling in Filipino Personal Finance Contexts
+None — contextual only.
 
 **Contribution to Odin:**
 
-This paper provides empirical evidence on how financially excluded Filipinos (street vendors) manage cash flow through high‑cost, short‑term debt cycles. It reveals behavioral patterns — daily repayment alignment, immediate reborrowing, trust‑based penalties, and resistance to price cuts — that inform profiling of low‑income users in personal finance systems. The findings directly support Odin’s design assumption that users may prioritize debt servicing over savings or investment, and that cultural factors (suki relationships) affect transaction behavior.
+This paper does not contribute to any Odin module. It describes informal borrowing practices of street vendors in a Philippine public market, a demographic and context distinct from Odin's target users (young professionals aged 20–40 in Metro Manila). The paper contains no AI, ML, or statistical models applicable to spending forecasting, anomaly detection, budget recommendation, user profiling, or expense categorization. Its findings on financial exclusion and debt cycles, while relevant to Filipino financial behavior broadly, do not provide algorithmic justifications, design decisions, or evaluation methods that Odin's RRL would cite. The paper's methodology (descriptive statistics, thematic analysis) and subject matter (informal lending, not personal budget management) fall outside Odin's scope.
 
 **Directly justifies:**
 
-- Filipino informal workers exhibit “reborrowing reflex” — repaying one loan and immediately taking another (82.1% within one day).
-- High‑cost debt (20% per two months) forces users to treat daily revenue as primarily debt service, not discretionary spending.
-- Trust and social relationship (missing formal penalties) drive repayment compliance — a profile dimension relevant to financial app retention.
-- User resistance to price discounting (“bagsak presyo”) suggests price‑sensitive alerts may be ignored; behavioral profiling must incorporate vendor‑customer loyalty norms.
+None — this paper does not provide citable claims that directly justify any Odin design decision.
 
 **Limits of relevance:**
 
-- Study population is street vendors, not young professionals — income patterns and spending categories differ.
-- Focus on business performance (inventory, pricing), not personal household budgeting, though many use loans for household needs.
-- No evaluation of digital financial tools — all borrowing is offline, informal, cash‑based.
+Not applicable — paper is outside Odin's scope.
 
 ## Limitations
 
-- No formal accounting records; all profit and sales data are self‑reported estimates.
-- Single market (Cogon, Cagayan de Oro) — may not generalize to other Philippine cities or rural vendors.
-- Descriptive statistics only; no regression or causal inference linking borrowing to business outcomes.
-- Qualitative theme saturation not explicitly assessed (only 10 interviews).
+- Study focuses on street vendors, not the target demographic of young professionals with formal employment or irregular freelance income.
+- Vendors lacked formal record-keeping, making profitability and revenue assessments less reliable. [unacknowledged]
+- Analysis remained primarily descriptive, limiting generalizability beyond the Cogon Public Market context.
+- No longitudinal tracking of debt cycles or business performance beyond self-reported, cross-sectional data.
+- Existing literature on "5-6" loans within the street vendor sector is scarce, limiting comparative analysis.
 
 ## Remember This
 
-- 🔑 **82% reborrow the next day** — a daily debt cycle, not a one‑time loan.
-- ⚠️ **20% interest / 2 months** → effective annual rate >100%, yet vendors have no alternative.
-- 💡 **No penalty for default (78.5%)** — trust replaces collateral, but trust doesn’t break the debt trap.
+- 🔑 **82.1%** of vendors reborrow within one day — perpetual debt, not occasional borrowing.
+- ⚠️ 20% interest per 2 months equals >100% annual rate, far above BSP's 6% cap.
+- 📌 92% daily repayment — lenders align with daily cash flow, leaving zero savings margin.
+- 💡 Banks reject vendors due to low income and education — exclusion, not ignorance, drives "5-6" use.

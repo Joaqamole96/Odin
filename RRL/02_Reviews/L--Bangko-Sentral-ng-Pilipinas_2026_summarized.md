@@ -1,24 +1,22 @@
-# Consumer Confidence Improves in Q1 2026, Less Upbeat for the Year Ahead
+# CONSUMER EXPECTATIONS SURVEY REPORT: 1st Quarter 2026
+
+## Metadata
 
 ```yaml
 ---
-name: paper-summary
-paper_id: "f47ac10b-58cc-4372-a567-0e02b2c3d479"
-source_document: "Bangko-Sentral-ng-Pilipinas-(2026).md"
+paper_id: "b9d8c7a6-5e4d-3c2b-1a0f-9e8d7c6b5a4f"
 designation: local
-title: "Consumer Confidence Improves in Q1 2026, Less Upbeat for the Year Ahead"
+title: "CONSUMER EXPECTATIONS SURVEY REPORT 1st Quarter 2026"
 authors: "Bangko Sentral ng Pilipinas"
 year: 2026
 venue: "Bangko Sentral ng Pilipinas"
-odin_topics: [1]
-shorthand_tags: ["/expenditure-patterns", "/income-type-behavior-diff", "/budgeting-prevalence"]
-summary_date: 2026-05-04
-version: "1.0"
+odin_topics: ["A.1", "F.1", "G.1"]
+shorthand_tags: ["/income-typology", "/expenditure-patterns", "/fil-behavioral-patterns", "/budgeting-prevalence"]
 member_checklist:
   - name: "Gabion, Stefanie S."
     status: "[ ]"
   - name: "Guevarra, Joaquin Luis T."
-    status: "[X]"
+    status: "[ ]"
   - name: "San Jose, Alexa Joanne Paula G."
     status: "[ ]"
   - name: "Togle, Charles Nathaniel B."
@@ -28,35 +26,38 @@ member_checklist:
 
 ## TL;DR
 
-Philippine consumer confidence improved in Q1 2026 (‑15.8 index) but outlook for the next 12 months turned less upbeat (9.6 from 11.8).
+Filipino consumer sentiment improved in Q1 2026 but spending outlook softened, with the saving intention index rising to **12.4%** and year-ahead inflation forecast at 2.7%.
 
 ## Problem and Motivation
 
-Policymakers need timely, representative measures of household sentiment to assess economic conditions and design interventions. Existing quarterly surveys provided national data but lacked granular behavioral insights on spending, saving, and borrowing intentions. This report fills that gap by capturing forward‑looking expectations across income groups and geographic areas.
+The survey measures quarterly household expectations on economic conditions, income, spending, saving, and inflation to guide monetary policy. Understanding consumer sentiment is critical for predicting aggregate spending and saving behavior. Prior quarter data (Q4 2025) showed more pessimistic outlooks; this update reveals shifting trends after the Middle East conflict onset.
 
 ## Approach
 
-- Nationwide stratified multi‑stage probability sample of 5,440 households (response rate 98.5%).
-- Conducted 22 Jan – 5 Feb 2026 by Bangko Sentral ng Pilipinas (BSP).
-- Computes Confidence Indices (CI) as % optimistic minus % pessimistic.
-- Reports three reference periods: current quarter, next quarter, next 12 months.
-- Breaks down results by income group (low, middle, high) and region (NCR vs AONCR).
+- Sample: 5,358 households nationwide (NCR: 2,434; AONCR: 2,924), response rate 98.5%, margin of error ±1.3% (national).
+- Survey period: 22 January – 5 February 2026, before the US-Israel-Iran conflict escalation.
+- Measures confidence indices (CI) as % optimistic minus % pessimistic for current quarter, next quarter, and next 12 months.
+- Three component indices: overall economic condition, family financial situation, family income.
+- Spending outlook and saving intention captured via net balance approach (intention to spend/save minus no intention).
+- Income groups: low (<₱10,000/month), middle (₱10,000–₱29,999), high (>₱30,000), including OFW remittances.
 
 ## Findings
 
-1. Current‑quarter CI rose from **‑22.2%** (Q4 2025) to **‑15.8%** (Q1 2026) — less pessimistic.
-2. Year‑ahead CI fell from 11.8% to 9.6% — households are **less optimistic** about the next 12 months.
-3. Saving intention index more than doubled: 4.6% → **12.4%**.
-4. Borrowing intention index for next quarter improved from ‑71.7% to **‑69.5%**.
-5. Year‑ahead inflation forecast settled at **2.7%**, below BSP’s 3.0% target.
-6. OFW remittances used primarily for food (96.1%), education (69.9%), medical (66.0%).
-7. **58.6%** of households plan to buy real property priced ≤₱450,000.
+1. Current‑quarter CI improved from -22.2% (Q4 2025) to **-15.8%** in Q1 2026 — less pessimistic.
+2. Next‑quarter CI fell from 3.6% to 1.8%; next‑12‑months CI dropped from 11.8% to 9.6% — less upbeat.
+3. Spending outlook CI for Q2 2026 declined from 43.7% to **40.3%**, with decreases in all categories except water and electricity.
+4. Saving intention index rose sharply from 4.6% to **12.4%**; 73.9% of savers plan to set aside less than 10% of monthly income.
+
+- High-income group (40.3% of respondents) had the most optimistic outlook; low-income (23.0%) remained pessimistic.
+- Year‑ahead inflation point forecast edged up from 2.6% to **2.7%**, still below BSP’s 3.0% target.
 
 ## Key Figures and Tables
 
-- Table 1: Composite CI by income group → High‑income group is consistently less pessimistic than low‑income.
-- Table 10a: Saving intention index by group → High income +28.7, low income ‑2.7.
-- Table 16: Income distribution of respondents → High income 40.3%, middle 36.7%, low 23.0%.
+- Figure 1: Overall CI (Q1 2021–Q1 2026) → CI turned less negative in Q1 2026 after three quarters of decline.
+- Figure 5: Next‑quarter spending outlook on goods and services → CI fell to 40.3%, down from 43.7% in Q4 2025.
+- Figure 7: Saving intention index → sharp increase from 4.6% to 12.4%, highest since at least 2021.
+- Table 1: Composite CI by income group and geography → all income groups improved current‑quarter outlook; high‑income group least pessimistic (-7.9%).
+- Table 5: Spending by category → water supply (+14.5 ppt) and electricity (+5.2 ppt) were the only categories with improved outlook.
 
 ## Key Equations
 
@@ -66,48 +67,55 @@ None.
 
 | Term / Acronym | Plain-English Definition |
 | -------------- | ------------------------ |
-| CI (Confidence Index) | % optimistic minus % pessimistic; positive = favorable. |
-| NCR / AONCR | National Capital Region / Areas Outside NCR. |
-| OFW | Overseas Filipino Worker — household member working abroad. |
-| CES | Consumer Expectations Survey — quarterly BSP household survey. |
+| CI (Confidence Index) | Percentage of respondents who are optimistic minus percentage who are pessimistic. Positive = favorable view (except for inflation/interest rates). |
+| AONCR | Areas Outside the National Capital Region — all Philippine regions except Metro Manila. |
+| OFW | Overseas Filipino Worker — a Filipino migrant worker whose remittances are tracked in the survey. |
+| NCR | National Capital Region (Metro Manila). |
+| Diffusion Index | A measure of net expectations (e.g., more respondents expect increase vs. decrease). |
 
 ## Critical Citations
 
-- [BSP CES Methodology] — Establishes the official survey design and sampling error (±1.3% national).
-- [BSP Inflation Target] — Defines the 3.0% ±1.0 pp tolerance range used as benchmark.
+None.
 
 ## Relevance to Odin
 
 **Topics:**
 
-1 - Spending and Budgeting Behavior of Filipino Young Professionals
+A.1 — Spending and Budgeting Behavior of Filipino Young Professionals
+
+F.1 — User Behavioral Profiling in Filipino Personal Finance Contexts
+
+G.1 — Expense Categorization in Filipino Personal Finance Contexts
 
 **Contribution to Odin:**
 
-This BSP survey provides authoritative, nationally representative data on how Filipino households (including the middle‑income bracket where most young professionals fall) form spending, saving, and borrowing intentions. It quantifies the gap between current optimism and future caution, directly informing the behavioral assumptions Odin must encode. The finding that high‑income groups save at much higher rates (saving intention index +28.7 vs low‑income ‑2.7) justifies differentiated behavioral profiles.
+This BSP survey provides primary empirical data on Filipino household spending intentions, saving rates, and income‑group differences — directly grounding Odin’s spending categories and budget recommendation baselines in local behavior. The finding that 73.9% of savers allocate less than 10% of income to savings (and only 40.2% of OFW households save at all) justifies Odin’s focus on low‑touch, high‑value recommendations rather than aggressive saving goals. Spending outlook declines across food, transport, and personal care categories signal where young professionals may be most price‑sensitive, informing per‑category budget constraints.
 
 **Directly justifies:**
 
-- "Filipino households exhibit higher saving intention when income rises, but remain cautious about the 12‑month economic outlook."
-- "Spending outlook varies by expense category, with food and utilities prioritized over durables and recreation during periods of inflation concern."
-- "Low‑income households are substantially more pessimistic about their ability to save than high‑income households."
-- "Perceived corruption and inflation are primary drivers of pessimistic financial expectations."
+- “73.9% of Filipino households that save put aside less than 10% of monthly income — budget recommendation algorithms must assume very low savings elasticity.”
+- “Spending outlook for Q2 2026 fell most sharply for food (−7.4 ppt), transportation (−4.0 ppt), and personal care (−3.9 ppt), while water and electricity outlook improved — critical for setting realistic per‑category spending thresholds in a Philippine PFMS.”
+- “High‑income households (40.3% of sample) had current‑quarter CI of -7.9%, compared to -24.7% for low‑income households — profile classification must separate income‑group expectations.”
+- “Only 40.2% of OFW‑receiving households allocate remittances to savings, and just 17.1% to house purchase — most remittances go to immediate needs (food: 96.1%, education: 69.9%).”
 
 **Limits of relevance:**
 
-- The survey covers all adult household heads, not specifically young professionals (typically 22‑35 years old).
-- Data are macroeconomic aggregates, not individual‑level transaction records needed for algorithmic training.
-- Geographic granularity is only NCR/AONCR, not city or barangay level.
+- Survey covers all Filipino households, not specifically young professionals aged 20–40; income bands may not align exactly with Odin’s target demographic.
+- Expectations data (intentions) may not match actual spending behavior; Odin uses transaction history for forecasting, not survey proxies.
+- No granular transaction‑level data — cannot derive category spending distributions; only directional changes are reported.
+- Inflation and interest rate expectations are aggregate, not tied to individual spending categories.
 
 ## Limitations
 
-- Self‑reported intentions may not translate to actual behavior.
-- Sampling error margins (±1.3% national) mean small changes (e.g., 11.8% to 9.6%) may not be statistically significant.
-- No breakdown by age, education, or occupation limits applicability to young professionals.
-- Inflation expectations are point forecasts; the survey does not ask for probability distributions.
+- Expectations may diverge from actual behavior — a known limitation the report acknowledges via diffusion index methodology.
+- Income groups are broad (e.g., >₱30,000 lumped as “high”), masking variation within Odin’s young professional segment.
+- No age breakdown — cannot isolate 20–40 age group directly. [unacknowledged]
+- Survey conducted before the Middle East conflict escalation; subsequent confidence changes are not captured. [unacknowledged]
+- Sampling excludes households without stable addresses (e.g., informal settlers), potentially biasing consumer sentiment upward.
 
 ## Remember This
 
-- 🔑 **Q1 2026 CI = ‑15.8%** (less pessimistic than Q4 2025’s ‑22.2%).
-- 💡 Year‑ahead outlook *dropped* to 9.6% — households are **less upbeat** about the next 12 months.
-- 📌 **Saving intention more than doubled** from 4.6% to 12.4% — more people plan to save.
+- 🔑 Saving intention index jumped to **12.4%** — more Filipinos plan to save, but 73.9% save under 10% of income.
+- 📌 Spending outlook fell to **40.3%** — consumers less keen to spend on food, transport, and personal care in Q2 2026.
+- 💡 Year‑ahead inflation forecast is **2.7%** — below BSP’s 3% target, evidence of moderating price expectations.
+- 🧠 High‑income group (40.3% of respondents) drives confidence gains — low‑income remain deeply pessimistic (-24.7% CI).
