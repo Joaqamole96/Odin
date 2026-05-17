@@ -53,7 +53,7 @@
 
 ### 1.C Financial Behavior of Filipino Young Professionals [/fin-behavior]
 
-#### 1.C.I Budgeting practice: prevalence, methods, and time horizons [/budgeting-prevalence]
+#### [X] 1.C.I Budgeting practice: prevalence, methods, and time horizons [/budgeting-prevalence]
 > *Scholar query: How prevalent is active budgeting practice among Filipino millennials and Gen Z, and what budgeting methods and time horizons — weekly, semi-monthly, or monthly — do they most commonly use? I am looking for studies that measure the proportion of Filipino young adults who maintain a budget, the formats or tools they use, and the behavioral or demographic factors that predict whether someone budgets at all — particularly in Metro Manila or urban Philippine settings.*
 
 #### 1.C.II Financial behavior differences across income stability types [/income-type-behavior-diff]
@@ -73,7 +73,7 @@
 
 ### 2.A Culturally Specific Financial Practices [/cultural-practices]
 
-#### 2.A.I Informal financial mechanisms: paluwagan, rotating savings, and community lending [/informal-fin-mechanisms]
+#### [X] 2.A.I Informal financial mechanisms: paluwagan, rotating savings, and community lending [/informal-fin-mechanisms]
 > *Scholar query: What informal financial mechanisms are documented among Filipino households and young professionals — particularly paluwagan (rotating savings and credit associations), community lending, and peer-to-peer borrowing — and how do these practices affect cash flow patterns, budget adherence, and savings behavior? I am looking for studies that characterize participation rates, contribution structures, and the financial consequences of these mechanisms for individual budget management.*
 
 #### 2.A.II Family financial obligations: remittances, breadwinner expectations, and utang na loob [/family-obligations]

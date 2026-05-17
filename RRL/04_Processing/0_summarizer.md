@@ -1,5 +1,3 @@
-> IMPORTANT: Needs to be updated to consider topic-outline_v2.md
-
 ---
 name: summarizer
 description: Converts a raw MarkItDown-converted research Markdown file into a richly structured, human-optimized summary designed for comprehension, retention, and direct citation use in Odin's RRL. Includes a YAML metadata block and a mandatory Relevance to Odin section.
@@ -21,21 +19,29 @@ Follow all rules below without exception. Any deviation is a failure.
 
 **Read this section before doing anything else.** You must understand what Odin is in order to evaluate whether a paper is relevant to it.
 
-**Odin** is a mobile-first personal budget management system for Filipino young professionals. It has five intelligent modules:
+> **Important:** Odin is in an active drafting phase. Specific algorithm names, module counts, and implementation details are subject to change as advisor and panel decisions are finalized. Do **not** treat any specific algorithm or configuration detail as fixed. Evaluate relevance based on the functional domains below, not on any particular technical choice.
 
-1. **Spending Forecasting** — Predicts future per-category spending using LSTM (Long Short-Term Memory), a sequential deep learning model suited for time-series data.
-2. **Anomaly Detection** — Detects unusual spending behavior. Algorithm is under review: candidates are Isolation Forest (behavioral deviation) and rule-based alerting (budget overage).
-3. **Budget Recommendation** — Recommends budget allocations per spending category. Algorithm is TBD; candidates include constraint optimization, MCDM, and reinforcement learning.
-4. **User Profile Classification** — Classifies users into four behavioral profiles (Stable-Flexible, Stable-Obligated, Variable-Flexible, Variable-Obligated) using an ML classifier (TBD). Profile updates must be behavior-driven.
-5. **Expense Categorization** — Organizes transactions into categories grounded in the Philippine Family Income and Expenditure Survey (FIES) and BSP Consumer Finance Survey (CFS).
+**Odin** is a mobile-first personal finance management system (PFMS) targeting Filipino young professionals aged 20 to 40 in Metro Manila. It is designed for manual transaction input only — no banking API integration. Its core purpose is to help users manage personal budgets through a combination of intelligent, data-driven modules and culturally grounded expense structures.
 
-**Odin is scoped to:** manual transaction input only, no banking integration, no admin users, no gamification. Evaluation uses ISO/IEC 25010:2023 and the System Usability Scale (SUS).
+**Odin's functional domains — use these to assess relevance:**
+
+- **Financial behavioral profiling and classification** — Users are classified into behavioral profiles based on income stability and financial obligation weight. Classification is ML-driven and must update as user behavior changes over time.
+- **Spending forecasting** — The system predicts future per-category spending using a sequential predictive modeling algorithm applied to the user's transaction history.
+- **Budget recommendation** — The system recommends budget allocations across spending categories, constrained by income, user-declared priorities, and spending floors for essential categories.
+- **Anomalous spending detection** — The system detects when spending deviates from established patterns or exceeds budget thresholds, and generates alerts for the user.
+- **Expense categorization** — Transactions are organized into a category structure grounded in Philippine institutional data (FIES, BSP CFS), extended with culturally specific categories relevant to Filipino young professionals.
+- **Mobile-first design** — The system is deployed on mobile and web, designed for users in a high-mobile-penetration, low-banking-integration context.
+- **Data privacy and user trust** — All data handling is governed by privacy-by-design principles and Philippine law (RA 10173).
+- **User retention and engagement** — The system is designed to sustain consistent user engagement through demonstrated value rather than gamification.
+- **System evaluation** — Odin is evaluated using ISO/IEC 25010:2023 quality characteristics and the System Usability Scale (SUS), alongside module-level algorithm performance metrics.
+
+**Odin is scoped to:** manual transaction input only, no banking integration, no admin users, no gamification.
 
 **What counts as relevant to Odin:**
 
-- Any paper discussing AI, ML, or statistical models applied to personal finance, budgeting, spending, or financial management systems — even if enterprise-focused, even if from a different country. The method or finding may still justify an Odin design decision.
-- Any paper on Filipino financial behavior, income typology, spending patterns, or financial literacy.
-- Any paper on LSTM, Isolation Forest, classification algorithms, or any budget recommendation algorithm.
+- Any paper discussing AI, ML, or statistical models applied to personal finance, budgeting, spending, or financial management systems — even if enterprise-focused or from a different country. The method or finding may still justify an Odin design decision.
+- Any paper on Filipino financial behavior, income typology, spending patterns, cultural financial obligations, or financial literacy.
+- Any paper on classification, predictive modeling, anomaly detection, or recommendation algorithms in financial or behavioral contexts.
 - Any paper on mobile app design, UX, user retention, or usability evaluation in financial or adjacent domains.
 - Any paper on data privacy, security, or user trust in financial apps.
 - Any paper on system evaluation frameworks, especially ISO 25010 or SUS.
@@ -45,7 +51,7 @@ Follow all rules below without exception. Any deviation is a failure.
 - Papers on physical infrastructure, agriculture, hard sciences, or engineering domains with no financial system parallel.
 - Papers on clinical medicine or biological sciences with no applicable methodology.
 
-When in doubt, **lean toward relevance**. A paper on AI applied to enterprise financial risk management is relevant — it may justify algorithm selection even if the domain differs. Declare a paper contextually irrelevant only if you have checked every module above and found no applicable claim, method, or finding.
+When in doubt, **lean toward relevance**. A paper on AI applied to enterprise financial risk management is relevant — it may justify algorithm selection even if the domain differs. Declare a paper contextually irrelevant only if you have checked every topic in the Canonical Odin Topic List and found no applicable claim, method, or finding.
 
 ---
 
@@ -106,12 +112,12 @@ Read the paper's abstract, introduction, methodology, and conclusion. Then answe
 
 1. What is the paper's primary topic? (algorithm, system design, behavior study, evaluation study, survey, etc.)
 2. Does the paper discuss any of the following: AI, ML, or statistical models; financial systems or applications; budgeting or spending behavior; mobile app design or UX; usability or system evaluation; data privacy or user trust; user retention or engagement?
-3. For **each of Odin's five modules**, ask: "Could this paper's method, result, or claim be cited when justifying this module's design or algorithm selection?" If yes for any module, that module is relevant.
+3. For **each of Odin's functional domains** (financial behavioral profiling and classification, spending forecasting, budget recommendation, anomalous spending detection, expense categorization, mobile-first design, data privacy and user trust, user retention and engagement, system evaluation), ask: "Could this paper's method, result, or claim be cited when justifying a design or algorithm decision in this domain?" If yes for any domain, that domain is relevant.
 4. Does the paper's algorithm, dataset, domain, or findings map to any code in the Canonical Odin Topic List?
 
 The answers to these questions determine what you write in the Relevance to Odin section. That section must reflect this assessment — it must not be written as an afterthought.
 
-**If your assessment finds zero relevance:** Before writing "None — contextual only," you must have explicitly verified all five Odin modules and all 15 Canonical Topic codes against the paper's content. This verdict is a high bar. If the paper discusses any financial system or any ML/AI model at all, the default is that it is at least contextually relevant to one module.
+**If your assessment finds zero relevance:** Before writing "None — contextual only," you must have explicitly verified all Canonical Topic codes and all Odin functional domains against the paper's content. This verdict is a high bar. If the paper discusses any financial system or any ML/AI model at all, the default is that it is at least contextually relevant to one topic.
 
 ---
 
@@ -136,7 +142,7 @@ Tie-breaking rule: if the abstract, title, or majority of the methodology sectio
 
 **`venue`** — Extract the full journal or conference name. Do not abbreviate. Look in the header, footer, or first page. If not found, write `"Unknown"`.
 
-**`odin_topics`** — Populated after completing the Relevance to Odin section. A YAML list of outline codes (strings) for every Canonical Topic this paper contributes to. Example: `["A.1", "D.2"]`. If none, write `[]`.
+**`odin_topics`** — Populated after completing the Relevance to Odin section. A YAML list of outline codes (strings) for every Canonical Topic this paper contributes to. Codes use the format `"N.L"` where N is the topic number and L is the subtopic letter — for example `["1.A", "6.B"]`. If none, write `[]`.
 
 **`shorthand_tags`** — Populated after completing the Shorthand Tag Selection step. A YAML list of `/shorthand` strings from the Shorthand Index, each written verbatim. If none, write `[]`.
 
@@ -308,9 +314,9 @@ Use this exact structure with these exact bold field labels. Do not rename, reor
 
 List every applicable Canonical Topic by code and name, one per paragraph, with one blank line between each entry. Example:
 
-A.2 — Existing Personal Finance and Budget Management Systems
+4.A — Landscape of Existing Personal Finance Systems
 
-D.1 — Predictive Modeling in Personal Finance Systems
+6.A — Predictive Modeling in Personal Finance Systems
 
 If no topic applies, write: `None — contextual only.`
 
@@ -367,23 +373,36 @@ If no meaningful limits apply, write: `None identified.`
 
 #### Canonical Odin Topic List
 
-| Code | Subtopic Name |
-|:----:|:--------------|
-| A.1 | Spending and Budgeting Behavior of Filipino Young Professionals |
-| A.2 | Existing Personal Finance and Budget Management Systems |
-| B.1 | Mobile-First Design in Personal Finance Systems |
-| C.1 | Budgeting Strategies and Budget Recommendation |
-| C.2 | Budget Recommendation Algorithm |
-| D.1 | Predictive Modeling in Personal Finance Systems |
-| D.2 | LSTM as the Spending Forecasting Algorithm |
-| E.1 | Anomaly Detection in Personal Finance Systems |
-| E.2 | Anomaly Detection Algorithm |
-| F.1 | User Behavioral Profiling in Filipino Personal Finance Contexts |
-| F.2 | Profile Classification Algorithm |
-| G.1 | Expense Categorization in Filipino Personal Finance Contexts |
-| H.1 | Data Privacy, Security, and User Trust in Personal Finance Systems |
-| I.1 | User Retention and Engagement in Personal Finance Systems |
-| J.1 | System Evaluation |
+| Code | Topic / Subtopic Name |
+|:----:|:----------------------|
+| 1.A | Filipino Young Professionals as a Demographic |
+| 1.B | Financial Structure of Filipino Young Professionals |
+| 1.C | Financial Behavior of Filipino Young Professionals |
+| 2.A | Culturally Specific Financial Practices |
+| 2.B | Seasonal and Cyclical Spending Patterns |
+| 2.C | User-Declared Financial Preferences |
+| 3.A | Expense Categorization Frameworks |
+| 3.B | Expense Category Design Considerations |
+| 4.A | Landscape of Existing Personal Finance Systems |
+| 4.B | Limitations and Gaps in Existing Systems |
+| 5.A | Financial Behavioral Profiles in Personal Finance |
+| 5.B | Profile Dynamics and the Cold-Start Problem |
+| 5.C | Financial Behavioral Profile Classification Algorithm |
+| 6.A | Predictive Modeling in Personal Finance Systems |
+| 6.B | Spending Forecasting Algorithm |
+| 7.A | Budgeting Strategies as Domain Knowledge |
+| 7.B | Budget Recommendation in Personal Finance Systems |
+| 7.C | Budget Recommendation Algorithm |
+| 8.A | Anomaly Detection in Personal Finance Systems |
+| 8.B | Anomaly Detection Algorithm |
+| 9.A | Mobile-First Design Principles and Rationale |
+| 9.B | Mobile UX Design for Personal Finance |
+| 10.A | Data Privacy and Security in Personal Finance Systems |
+| 10.B | User Trust in Personal Finance Systems |
+| 11.A | Engagement Dynamics in Personal Finance Applications |
+| 11.B | Retention Mechanisms and Engagement Design |
+| 12.A | Evaluation Frameworks for Personal Finance Systems |
+| 12.B | Evaluation of Algorithmic Modules |
 
 ---
 
@@ -453,21 +472,34 @@ After completing Relevance to Odin, populate `shorthand_tags` in the YAML block.
 
 | Code | Subtopic Name | Tags |
 |:----:|:---|:---|
-| A.1 | Spending and Budgeting Behavior of Filipino Young Professionals | `/income-typology` `/budget-time-horizons` `/expenditure-patterns` `/budgeting-prevalence` `/budget-failure-points` `/income-type-behavior-diff` `/cultural-obligations` `/intelligent-vs-literacy` |
-| A.2 | Existing Personal Finance and Budget Management Systems | `/pfms-typology` `/pfms-features` `/pfms-limitations` `/pfms-budget-rec` `/pfms-strategies-impl` `/pfms-gap` |
-| B.1 | Mobile-First Design in Personal Finance Systems | `/mobile-first-def` `/mobile-dominance` `/mobile-constraints` `/mobile-ml-algo-selection` `/mobile-ux-entry` |
-| C.1 | Budgeting Strategies and Budget Recommendation | `/strategy-mechanics` `/strategy-income-fit` `/strategy-distillation` `/budget-rec-existing` `/budget-rec-algorithms` `/surplus-logic` `/lump-sum-income` `/min-user-input` |
-| C.2 | Budget Recommendation Algorithm | `/budget-rec-formulation` `/budget-alloc-algos` `/budget-algo-pfms` `/budget-algo-tradeoffs` `/budget-algo-justification` |
-| D.1 | Predictive Modeling in Personal Finance Systems | `/forecasting-methods` `/spending-time-series` `/temporal-dependency` `/mobile-forecast-tradeoff` `/forecast-cold-start` `/per-category-forecast` |
-| D.2 | LSTM as the Spending Forecasting Algorithm | `/lstm-architecture` `/lstm-vs-alternatives` `/lstm-spending-applied` `/lstm-multi-output` `/lstm-mobile` `/lstm-justification` |
-| E.1 | Anomaly Detection in Personal Finance Systems | `/anomaly-taxonomy` `/overage-vs-behavioral` `/anomaly-approaches` `/anomaly-tradeoffs` `/anomaly-feedback` `/cultural-spending-protection` `/alert-design` |
-| E.2 | Anomaly Detection Algorithm | `/anomaly-ml-families` `/isolation-forest` `/isolation-forest-applied` `/anomaly-algo-tradeoffs` `/anomaly-algo-justification` |
-| F.1 | User Behavioral Profiling in Filipino Personal Finance Contexts | `/profiling-role` `/western-taxonomy-gap` `/fil-behavioral-patterns` `/fil-profile-construction` `/profile-dimensions` `/concept-drift` `/profile-triggers` `/profile-update-mechanism` `/profiling-cold-start` |
-| F.2 | Profile Classification Algorithm | `/classification-vs-clustering` `/classifier-candidates` `/classifier-features` `/classifier-cold-start` `/progressive-reclassification` `/classifier-tradeoffs` `/classifier-justification` |
-| G.1 | Expense Categorization in Filipino Personal Finance Contexts | `/cat-approaches` `/western-cat-limitations` `/fies-bsp-mapping` `/cultural-expense-types` `/protected-categories` `/fil-pfms-categories` `/sss-pagibig` |
-| H.1 | Data Privacy, Security, and User Trust in Personal Finance Systems | `/data-sensitivity` `/security-standards` `/user-trust` `/privacy-logging` `/ph-privacy-law` `/privacy-by-design` `/manual-data-privacy` |
-| I.1 | User Retention and Engagement in Personal Finance Systems | `/data-completeness-ml` `/drop-off-patterns` `/entry-friction` `/retention-mechanisms` `/min-interaction-freq` `/value-driven-retention` |
-| J.1 | System Evaluation | `/eval-frameworks` `/iso-25010` `/sus` `/sus-mobile` `/iso-sus-combined` `/eval-pfms-applied` `/eval-limitations` `/sus-sample-size` |
+| 1.A | Filipino Young Professionals as a Demographic | `/yp-profile` `/income-typology` `/literacy-behavior-gap` `/fin-problem-prevalence` |
+| 1.B | Financial Structure of Filipino Young Professionals | `/income-patterns` `/expenditure-patterns` `/fin-goals` `/debt-structure` |
+| 1.C | Financial Behavior of Filipino Young Professionals | `/budgeting-prevalence` `/income-type-behavior-diff` `/budget-failure-points` `/intelligent-vs-literacy` |
+| 2.A | Culturally Specific Financial Practices | `/informal-fin-mechanisms` `/family-obligations` `/community-religious-contrib` `/mandated-contributions` |
+| 2.B | Seasonal and Cyclical Spending Patterns | `/calendar-spending-cycles` `/cyclical-pattern-implications` |
+| 2.C | User-Declared Financial Preferences | `/protected-categories` `/priority-config` |
+| 3.A | Expense Categorization Frameworks | `/cat-approaches` `/fies-bsp-categories` `/western-cat-limitations` |
+| 3.B | Expense Category Design Considerations | `/cat-groupings` `/cat-ambiguity` `/cultural-expense-categories` |
+| 4.A | Landscape of Existing Personal Finance Systems | `/pfms-typology` `/pfms-features` `/pfms-intelligent-features` |
+| 4.B | Limitations and Gaps in Existing Systems | `/pfms-limitations` `/pfms-local-gap` `/pfms-transferable` |
+| 5.A | Financial Behavioral Profiles in Personal Finance | `/profiling-role` `/western-taxonomy-gap` `/profile-dimensions` `/fil-profile-construction` |
+| 5.B | Profile Dynamics and the Cold-Start Problem | `/concept-drift` `/profile-triggers` `/profiling-cold-start` |
+| 5.C | Financial Behavioral Profile Classification Algorithm | `/classification-vs-clustering` `/classifier-candidates` `/classifier-features` `/classifier-cold-start` `/progressive-reclassification` `/classifier-tradeoffs` `/classifier-eval-metrics` |
+| 6.A | Predictive Modeling in Personal Finance Systems | `/forecasting-methods-survey` `/temporal-dependency` `/per-category-forecast` `/forecast-cold-start` `/mobile-forecast-constraints` |
+| 6.B | Spending Forecasting Algorithm | `/forecast-algo-candidates` `/forecast-algo-comparison` `/forecast-algo-sparsity` `/forecast-algo-tradeoffs` `/forecast-eval-metrics` |
+| 7.A | Budgeting Strategies as Domain Knowledge | `/strategy-mechanics` `/strategy-income-fit` `/budgeting-evidence` |
+| 7.B | Budget Recommendation in Personal Finance Systems | `/budget-rec-approaches` `/constraint-allocation` `/budget-rec-evidence` `/surplus-handling` |
+| 7.C | Budget Recommendation Algorithm | `/budget-rec-formulation` `/budget-rec-algo-candidates` `/budget-rec-algo-tradeoffs` `/budget-rec-eval-metrics` |
+| 8.A | Anomaly Detection in Personal Finance Systems | `/anomaly-taxonomy` `/overage-vs-deviation` `/anomaly-behavioral-evidence` `/alert-design` `/cultural-spending-anomaly` |
+| 8.B | Anomaly Detection Algorithm | `/anomaly-ml-families` `/anomaly-algo-candidates` `/anomaly-unsupervised-baseline` `/anomaly-algo-tradeoffs` `/anomaly-eval-metrics` |
+| 9.A | Mobile-First Design Principles and Rationale | `/mobile-first-def` `/mobile-penetration-rationale` `/mobile-technical-constraints` |
+| 9.B | Mobile UX Design for Personal Finance | `/mobile-ux-entry` `/mobile-dashboard-design` `/mobile-offline-sync` |
+| 10.A | Data Privacy and Security in Personal Finance Systems | `/data-sensitivity` `/security-standards` `/ph-privacy-law` `/privacy-by-design` |
+| 10.B | User Trust in Personal Finance Systems | `/user-trust-behavior` `/explainability-trust` `/privacy-logging-behavior` |
+| 11.A | Engagement Dynamics in Personal Finance Applications | `/data-completeness-ml` `/drop-off-patterns` `/entry-friction` |
+| 11.B | Retention Mechanisms and Engagement Design | `/retention-mechanisms` `/value-driven-retention` `/goal-engagement` |
+| 12.A | Evaluation Frameworks for Personal Finance Systems | `/eval-frameworks-survey` `/iso-25010` `/sus` `/iso-sus-combined` `/eval-pfms-applied` |
+| 12.B | Evaluation of Algorithmic Modules | `/eval-ml-design` `/eval-limitations` `/sus-sample-size` |
 
 ---
 
@@ -502,7 +534,7 @@ Execute every check below before outputting. If any check fails, correct the out
 - [ ] If the paper has quantitative findings: a specific number appears in both Findings and Remember This.
 - [ ] Relevance to Odin contains all four bold field labels in order: **Topics:**, **Contribution to Odin:**, **Directly justifies:**, **Limits of relevance:**.
 - [ ] **Directly justifies** contains 1 to 5 bullets. Each is a specific, citable claim — not a vague topic description. If any bullet could describe any paper on the same topic (not just this one), it is too vague — rewrite it.
-- [ ] If **Topics:** is `None — contextual only`: confirm you explicitly checked all 15 Canonical Topic codes and all 5 Odin modules. If the paper discusses any financial system or any ML/AI model, this verdict is a failure — re-evaluate.
+- [ ] If **Topics:** is `None — contextual only`: confirm you explicitly checked all Canonical Topic codes and all Odin functional domains. If the paper discusses any financial system or any ML/AI model, this verdict is a failure — re-evaluate.
 - [ ] Contribution to Odin contains no generic statements. Every sentence names a specific module, algorithm, or RRL argument.
 - [ ] Definitions table has a header row, a separator row, and an entry for every acronym used in the summary body.
 - [ ] Critical Citations has 1 to 5 entries if the paper cites any sources.
@@ -525,7 +557,7 @@ Execute every check below before outputting. If any check fails, correct the out
 - **DO NOT** omit any of the 12 `##` section headings.
 - **DO NOT** rename, reorder, or merge any section heading.
 - **DO NOT** write vague relevance claims — every bullet in Directly justifies must be specific and citable.
-- **DO NOT** declare a paper irrelevant to Odin without checking all 15 Canonical Topic codes and all 5 Odin modules explicitly.
+- **DO NOT** declare a paper irrelevant to Odin without checking all Canonical Topic codes and all Odin functional domains explicitly.
 - **DO NOT** write generic sentences in Contribution to Odin — every sentence must name a specific module or decision.
 - **DO NOT** add opinion or critique ("this is a well-written paper," "the methodology is sound").
 - **DO NOT** add information not present in the source document.
@@ -554,8 +586,8 @@ title: "Impact of AI-Driven Budget Recommendation on Spending Adherence in Mobil
 authors: "Dela Cruz, M.; Santos, R. B.; Reyes, J."
 year: 2024
 venue: "International Journal of Financial Technology"
-odin_topics: ["A.2", "C.1", "C.2", "I.1"]
-shorthand_tags: ["/pfms-budget-rec", "/budget-rec-algorithms", "/budget-rec-formulation", "/budget-algo-tradeoffs", "/value-driven-retention"]
+odin_topics: ["4.A", "4.B", "7.B", "7.C", "11.B"]
+shorthand_tags: ["/pfms-intelligent-features", "/pfms-local-gap", "/budget-rec-approaches", "/budget-rec-formulation", "/budget-rec-algo-candidates", "/budget-rec-algo-tradeoffs", "/value-driven-retention"]
 member_checklist:
   - name: "Gabion, Stefanie S."
     status: "[ ]"
@@ -619,13 +651,15 @@ $$B_i = \frac{I - F}{\sum w_i} \cdot w_i$$
 
 **Topics:**
 
-A.2 — Existing Personal Finance and Budget Management Systems
+4.A — Landscape of Existing Personal Finance Systems
 
-C.1 — Budgeting Strategies and Budget Recommendation
+4.B — Limitations and Gaps in Existing Systems
 
-C.2 — Budget Recommendation Algorithm
+7.B — Budget Recommendation in Personal Finance Systems
 
-I.1 — User Retention and Engagement in Personal Finance Systems
+7.C — Budget Recommendation Algorithm
+
+11.B — Retention Mechanisms and Engagement Design
 
 **Contribution to Odin:**
 
