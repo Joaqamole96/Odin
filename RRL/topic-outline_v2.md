@@ -257,7 +257,7 @@
 
 ### 6.B Spending Forecasting Algorithm [/forecasting-algo]
 
-#### 6.B.I Candidate forecasting algorithms for sequential personal spending data [/forecast-algo-candidates]
+#### [X] 6.B.I Candidate forecasting algorithms for sequential personal spending data [/forecast-algo-candidates]
 > *Scholar query: What algorithms are most commonly applied to sequential personal or household spending forecasting tasks, and what are the documented strengths and weaknesses of each? I am looking for comparative literature covering statistical approaches such as ARIMA and exponential smoothing, tree-based methods such as gradient boosting, and deep learning approaches such as LSTM and GRU — with attention to how each handles non-linearity, temporal dependency, and sparse individual-level data.*
 
 #### 6.B.II Comparative performance of candidate algorithms on time-series forecasting tasks [/forecast-algo-comparison]
