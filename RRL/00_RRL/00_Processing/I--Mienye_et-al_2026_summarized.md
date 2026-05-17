@@ -10,8 +10,8 @@ title: "Deep Learning for Credit Risk Prediction: A Survey of Methods, Applicati
 authors: "Mienye, I. D.; Esenogho, E.; Modisane, C."
 year: 2026
 venue: "Information"
-odin_topics: ["4.B", "5.C", "6.A", "6.B", "8.B", "12.A", "12.B"]
-shorthand_tags: ["/pfms-limitations", "/classifier-candidates", "/forecasting-methods-survey", "/forecast-algo-candidates", "/anomaly-ml-families", "/eval-frameworks-survey", "/eval-ml-design"]
+odin_topics: ["5.C", "6.A", "6.B", "8.A", "8.B", "12.A", "12.B"]
+shorthand_tags: ["/forecasting-methods-survey", "/temporal-dependency", "/forecast-algo-candidates", "/forecast-algo-comparison", "/forecast-eval-metrics", "/classification-vs-clustering", "/classifier-candidates", "/anomaly-algo-candidates", "/anomaly-eval-metrics", "/eval-frameworks-survey", "/eval-ml-design"]
 member_checklist:
   - name: "Gabion, Stefanie S."
     status: "[ ]"
@@ -26,91 +26,84 @@ member_checklist:
 
 ## TL;DR
 
-Deep learning models (MLP, CNN, RNN, Transformer, GNN) beat traditional credit scoring on large behavioral datasets, but evaluation integrity, interpretability, and deployment governance remain unsolved.
+Deep learning architectures (MLP, CNN, RNN, transformer, GNN) improve credit risk prediction over classical models on large datasets but face unresolved challenges in temporal evaluation, calibration, interpretability, fairness, and operational deployment.
 
 ## Problem and Motivation
 
-Prior surveys on credit risk either treat deep learning as one among many model families or focus narrowly on tabular scorecards, lacking systematic coverage of sequential, transformer, and graph architectures for borrower-level prediction. Systematic understanding of when and why specific DL architectures work for credit risk is essential for regulatory adoption and reliable deployment. No existing review synthesizes model families, data modalities, and deployment challenges together in a unified taxonomy.
+Prior surveys on credit risk prediction either treat deep learning as one model family among many or focus narrowly on tabular scorecard settings, lacking systematic coverage of sequential, transformer, and graph-based architectures. Credit risk prediction is central to financial stability and regulatory compliance, yet the rapid adoption of data-driven lending demands a unified synthesis of deep learning methods and their deployment challenges. No existing review provides a modality-aware taxonomy linking model families to borrower-level data structures while critically assessing evaluation integrity, interpretability, and governance gaps.
 
 ## Approach
 
-- Search across IEEE Xplore, Scopus, ACM, ScienceDirect, SpringerLink, Web of Science, and Google Scholar (2015–2025).
-- Screening: 380 initial records → 208 after de-duplication → 140 DL application studies + 18 survey/guideline papers included.
-- Taxonomy organized by model class: MLP, CNN, RNN/LSTM/GRU, TCN, Transformer, GNN, and hybrid architectures.
-- Extracted data modality (tabular, sequential, textual, relational), credit segment (consumer, SME, corporate), prediction target (PD, LGD, EAD), and evaluation metrics.
-- Evaluation integrity assessed: temporal leakage, calibration metrics (Brier, ECE), cost-sensitive scoring, and reject inference.
+- Searched IEEE Xplore, Scopus, ACM, ScienceDirect, SpringerLink, Web of Science, and Google Scholar for peer-reviewed studies (2015–2025).
+- Queries paired credit‑risk terms (credit scoring, default prediction) with deep learning terms (CNN, RNN, LSTM, transformer, GNN).
+- Screened 380 records down to 140 application studies and 18 surveys after de‑duplication and title/abstract filtering.
+- Extracted data modality (tabular, sequential, textual, relational), model architecture, credit product segment, prediction target, and evaluation metrics.
+- Synthesized challenges and research directions through narrative analysis, not formal meta‑analysis.
 
 ## Findings
 
-1. HDNN with L1–L2 regularization achieved **80.12% accuracy** for corporate credit, outperforming LR (AUC=0.717) and SVM (AUC=0.738).
-2. LSTM for monthly default rate forecasting reduced **MAE from 0.095 to 0.072** and RMSE from 0.119 to 0.093 versus ARIMA, SVM, and ANN.
-3. CNN–LSTM–attention model reached AUC=0.92 and F1=0.91 for enterprise credit, beating CNN-only and LSTM-only baselines.
-4. RGAT on SME relational graphs achieved AUC=0.799 and KS=0.528; multi-head extension reached AUC=0.799, KS=0.528.
-5. TabNet-stacking ensemble on Tianchi dataset (≈800k cases) achieved **AUC=0.941** and accuracy=0.979.
+1. LSTM reduced MAE from 0.095 to 0.072 (**24% improvement**) on monthly default‑rate forecasting, outperforming ARIMA, SVM, and ANN on the Lending Club dataset.
+2. TabNet‑stacking ensemble achieved AUC = 0.941 and accuracy = 0.979 on the Tianchi dataset (≈800,000 cases), substantially outperforming single‑model baselines.
+3. Multi‑head RGAT on SME relational graphs reached AUC = 0.799 and KS = 0.528, surpassing non‑graph models without using transactional features.
 
-- Transformers (TabTransformer, FT-Transformer) match or exceed XGBoost/CatBoost on high-cardinality tabular data.
-- Most studies use random k-fold cross-validation, causing temporal leakage; calibration (Brier, ECE) and cost-sensitive metrics are rarely reported.
-- Interpretability (SHAP, attention) and fairness (equalized odds) are treated as post hoc add-ons, not training objectives.
+- Deep models systematically outperform logistic regression and tree ensembles only when trained on large, temporally rich, and high‑cardinality datasets.
+- Most studies rely on random k‑fold cross‑validation, causing temporal leakage and overoptimistic performance estimates.
+- Calibration metrics (Brier score, expected calibration error) and cost‑sensitive evaluation are rarely reported despite being central to decision‑making.
+- Interpretability and fairness are treated as post‑hoc add‑ons; only a small fraction incorporate explainability or fairness constraints in training.
 
 ## Key Figures and Tables
 
-- Figure 2: MLP architecture → feed-forward with hidden layers learns nonlinear feature interactions for tabular credit data.
-- Figure 3: LSTM gating mechanism → forget, input, output gates preserve long-term repayment patterns.
-- Table 3: DL architectures for credit risk → maps each model class to input modality, strengths, and limitations.
-- Table 4: Summary of DL applications → collates 30+ studies with datasets, architectures, and reported metrics.
-- Table 5: Challenges and research directions → links evaluation integrity, imbalance, interpretability, robustness, and governance to concrete future work.
+- Figure 1: PRISMA flowchart → 380 initial records → 140 application studies after screening.
+- Table 2: Benchmark datasets → German Credit (1k rows), Home Credit (300k+ rows); larger datasets better approximate industrial settings.
+- Table 3: DL architecture summary → matches each model class to input modality, strength, and limitation.
+- Table 4: Deep learning applications → 30+ studies organized by model family, reporting AUC, accuracy, MAE, etc.
+- Table 5: Challenges and directions → maps evaluation integrity, imbalance, interpretability, robustness, and governance to research pathways.
 
 ## Key Equations
 
-$$P(y=1|x)=\frac{1}{1+\exp(-w^\top x-b)}$$
-*Logistic regression — baseline credit scoring model with linear log-odds.*
+$$EL = PD \times LGD \times EAD$$
+*Expected loss = product of default probability, loss severity, and exposure.*
 
-$$f_t=\sigma(W_f[h_{t-1},x_t]+b_f),\quad i_t=\sigma(W_i[h_{t-1},x_t]+b_i),\quad C_t=f_t\odot C_{t-1}+i_t\odot\tilde{C}_t,\quad h_t=o_t\odot\tanh(C_t)$$
-*LSTM gates (forget, input, output) control long-term memory in repayment sequences.*
+$$\text{Attention}(Q,K,V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V$$
+*Self-attention computes pairwise relevance across all sequence positions in parallel.*
 
-$$\text{Attention}(Q,K,V)=\text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V$$
-*Self-attention computes global dependencies across all time steps or features in parallel.*
-
-$$h_v^{(l+1)}=\sigma\left(\sum_{u\in\mathcal{N}(v)}\frac{1}{c_{vu}}W^{(l)}h_u^{(l)}\right)$$
-*GNN message passing — borrower node updates by aggregating neighbor representations.*
+$$\mathbf{h}_v^{(l+1)} = \sigma\left( \sum_{u \in \mathcal{N}(v)} \frac{1}{c_{vu}} \mathbf{W}^{(l)} \mathbf{h}_u^{(l)} \right)$$
+*GNN message passing: neighbor embeddings are aggregated to update each node’s risk representation.*
 
 ## Definitions
 
 | Term / Acronym | Plain-English Definition |
 | -------------- | ------------------------ |
-| PD | Probability of default — likelihood a borrower fails to repay. |
-| LGD | Loss given default — proportion of exposure not recovered after default. |
-| EAD | Exposure at default — total amount outstanding when default occurs. |
-| MLP | Multi-layer perceptron — basic feed-forward neural network with hidden layers. |
-| CNN | Convolutional neural network — uses sliding filters to capture local temporal patterns. |
-| RNN | Recurrent neural network — processes sequences stepwise with hidden state. |
-| LSTM | Long short-term memory [think: memory cell with forget/input/output gates] — preserves long-range repayment patterns. |
-| GRU | Gated recurrent unit [simplified LSTM with update and reset gates] — fewer parameters than LSTM. |
-| TCN | Temporal convolutional network — uses dilated convolutions for parallel sequence processing. |
-| GNN | Graph neural network — learns from relational structures (borrower networks) via message passing. |
-| AUC | Area under ROC curve — threshold-agnostic ranking performance metric. |
-| AUPRC | Area under precision–recall curve — better for imbalanced default datasets. |
-| ECE | Expected calibration error — measures alignment between predicted probabilities and observed frequencies. |
+| AUC | Area under the ROC curve – rank‑based measure of class separation. |
+| Calibration | How well predicted probabilities match observed default rates. |
+| Concept drift | Change in the relationship between features and target over time. |
+| DL | Deep learning – neural networks with multiple hidden layers. |
+| EL | Expected loss – product of PD, LGD, and EAD. |
+| GNN | Graph neural network – learns from relational borrower networks. |
+| LSTM | Long short‑term memory [think: forget gate keeps long patterns, input gate adds new info]. |
+| MLP | Multi‑layer perceptron – basic feed‑forward neural network. |
+| Out‑of‑time validation | Training on past data, testing on strictly later data – prevents leakage. |
+| PD | Probability of default – core credit scoring target. |
+| RNN | Recurrent neural network – processes sequences stepwise with a hidden state. |
+| TCN | Temporal convolutional network – uses dilated convolutions for parallel sequence processing. |
 
 ## Critical Citations
 
-- [Vaswani et al., 2017] — Introduced transformer self-attention, now adapted to credit risk via TabTransformer and FT-Transformer.
-- [LeCun et al., 2015] — Foundational deep learning review establishing representation learning principles for tabular and sequential data.
-- [Lessmann et al., 2015] — Benchmarking study showing tree ensembles (random forest, boosting) often outperform deep nets on small credit datasets.
-- [Thomas et al., 2017] — Canonical credit scoring text defining PD, LGD, EAD and reject inference challenges.
-- [Rudin, 2019] — Argues against black-box explanations for high-stakes decisions, motivating interpretable-by-design credit models.
+- [Vaswani et al., 2017] — Introduced transformer self‑attention, enabling parallel global dependency modelling in credit sequences.
+- [Lessmann et al., 2015] — Established benchmark protocols for credit scoring, showing AUC alone masks operating‑region performance.
+- [Rudin, 2019] — Argues against post‑hoc explanations for high‑stakes decisions, motivating interpretable‑by‑design architectures.
 
 ## Relevance to Odin
 
 **Topics:**
-
-4.B — Limitations and Gaps in Existing Systems
 
 5.C — Financial Behavioral Profile Classification Algorithm
 
 6.A — Predictive Modeling in Personal Finance Systems
 
 6.B — Spending Forecasting Algorithm
+
+8.A — Anomaly Detection in Personal Finance Systems
 
 8.B — Anomaly Detection Algorithm
 
@@ -120,35 +113,36 @@ $$h_v^{(l+1)}=\sigma\left(\sum_{u\in\mathcal{N}(v)}\frac{1}{c_{vu}}W^{(l)}h_u^{(
 
 **Contribution to Odin:**
 
-This survey directly informs Odin’s algorithm selection for spending forecasting (LSTM/GRU vs. CNN vs. transformer) and anomaly detection by benchmarking sequential deep learning architectures on financial time series. The paper’s critique of evaluation integrity—temporal leakage, calibration neglect, overreliance on AUC—provides a checklist for Odin’s module-level validation, especially given Odin’s manual transaction input and cold-start constraints. Its synthesis of interpretability (SHAP, attention) and fairness (equalized odds) offers practical guidance for Odin’s user trust and explainability requirements under Philippine data privacy law (RA 10173).
+This survey directly informs Odin’s forecasting and anomaly detection modules by providing a comparative analysis of deep learning architectures for sequential financial data. The documented superiority of LSTM/GRU over static models on repayment sequences justifies Odin’s choice of recurrent networks for spending forecasting, while the survey’s synthesis of temporal convolutional networks and transformers offers alternative candidates if Odin’s transaction histories grow long or multimodal. Importantly, the paper’s critical evaluation of random split versus out‑of‑time validation establishes a required evaluation standard for Odin’s module performance testing, and its discussion of calibration, concept drift, and class imbalance provides actionable design warnings even though the domain differs (credit default vs. personal spending).
 
 **Directly justifies:**
 
-- "LSTM networks reduce MAE from 0.095 to 0.072 for monthly default forecasting, demonstrating that recurrent architectures capture behavioral drift better than static models."
-- "Random k-fold cross-validation causes temporal leakage in credit risk studies; out-of-time splits and rolling-origin validation are required for realistic performance estimates."
-- "Deep tabular models (MLP, TabNet) with attentive embeddings match gradient boosting on large datasets (≥300k records) with high-cardinality categorical features."
-- "Most deep credit risk studies ignore probability calibration (Brier score, ECE), leading to miscalibrated PD estimates even when AUC improves."
-- "GNNs (RGAT, GraphSAGE) capture relational risk propagation (co-applicant, director, supply-chain ties) that tabular models structurally cannot represent."
+- “LSTM reduces forecasting MAE from 0.095 to 0.072 (24% gain) on monthly financial sequences, outperforming ARIMA and SVM – directly applicable to Odin’s per‑category spending forecast module.”
+- “Random k‑fold cross‑validation causes temporal leakage; out‑of‑time splits are mandatory for realistic evaluation of any sequential spending model in Odin.”
+- “Deep tabular models (TabNet‑stacking) achieve AUC = 0.941 on large‑scale financial data, but gradient boosting remains competitive on small datasets – Odin must benchmark both families on its expected user scale.”
+- “Graph neural networks capture risk propagation without transactional features (AUC = 0.799 on SME relational graphs) – relevant if Odin later adds household or group spending analytics.”
+- “Calibration metrics (Brier score, expected calibration error) are rarely reported in deep credit studies, yet miscalibrated probabilities lead to poor budget alerts – Odin’s evaluation must mandate calibration reporting.”
 
 **Limits of relevance:**
 
-- Survey focuses on credit default (borrower non-repayment), not personal spending budgeting; spending forecasting and anomaly detection in Odin share similar sequential modeling needs but different outcome definitions.
-- All studies use banking/transaction data with rich historical sequences; Odin starts from manual input with sparse cold-start histories, limiting direct transfer of reported performance gains.
-- No Filipino-specific demographic or income stability analysis; behavioral patterns of South African, US, and Chinese borrowers may not generalize.
-- Many benchmark datasets (German Credit, Australian Credit) are small (≤1000 records) and static, unlike Odin’s per-user transaction stream.
+- Domain mismatch: credit default prediction (rare binary event, high cost of misclassification) vs. spending forecasting and anomaly detection (continuous, lower stakes) – methods transfer but performance expectations differ.
+- Geography: all datasets and studies are non‑Filipino; spending patterns and income volatility in Metro Manila may not mirror Western or Chinese credit data.
+- Data scale: most high‑performing DL studies use hundreds of thousands to millions of records; Odin’s per‑user transaction history will be far smaller, potentially favoring simpler models.
+- No coverage of cold‑start or manual input constraints – Odin’s lack of banking API integration and initial user sparsity are not addressed.
+- No discussion of mobile‑first design or on‑device inference constraints – the survey assumes server‑side deployment.
 
 ## Limitations
 
-- Only peer-reviewed English studies indexed in major databases; proprietary industry implementations and regulatory grey literature excluded.
-- No formal risk-of-bias or meta-analysis; reported performance numbers are not standardized across datasets, horizons, or label definitions. [unacknowledged]
-- Does not address cold-start profiling or spending forecasting for new users with no transaction history—central to Odin’s design problem.
-- Survey’s evaluation recommendations (out-of-time splits, calibration metrics) are not applied to any original model, remaining prescriptive rather than demonstrative. [unacknowledged]
-- Privacy-preserving methods (differential privacy, federated learning) are mentioned but not evaluated on credit tasks; practical utility–privacy trade-offs unknown.
+- Only peer‑reviewed English studies; excludes proprietary industrial models and grey literature (e.g., central bank reports) that may contain relevant Filipino context.
+- No formal risk‑of‑bias scoring or meta‑analysis; performance claims from individual studies may not generalize across datasets or horizons. [unacknowledged]
+- Temporal evaluation practices are critiqued but not quantitatively assessed across the surveyed literature (e.g., what fraction of papers use out‑of‑time splits). [unacknowledged]
+- Fairness and interpretability are discussed at a high level, but the survey does not operationalize which techniques work for which model families in production.
+- The survey’s recommendations focus on regulatory credit (Basel, SR 11-7) and do not map to personal finance system evaluation (ISO 25010, SUS) – Odin would need to adapt the evaluation integrity lessons to its own quality model.
 
 ## Remember This
 
-- 🔑 **LSTM cut MAE by 24% (0.095→0.072)** — sequential models beat ARIMA/SVM for financial time series.
-- 📌 Most credit DL papers use random splits → temporal leakage inflates results; use out-of-time validation.
-- 💡 AUC alone is insufficient — report calibration (Brier, ECE) and AUPRC for imbalanced defaults.
-- ⚠️ No cold-start evaluation in survey — Odin’s manual-entry users lack history, so reported gains may not apply.
-- 🔍 GNNs capture hidden risk propagation (co-applicant networks) — relevant if Odin adds social/family obligation features.
+- 🔑 **LSTM cut MAE by 24%** on financial sequences – sequential memory beats static models.
+- 📌 Out‑of‑time validation is mandatory – random splits leak future information and overestimate performance.
+- 💡 Deep models win only on large, rich datasets – tree ensembles remain strong small‑data baselines.
+- ⚠️ Calibration (Brier/ECE) almost never reported – yet crucial for trustworthy budget alerts.
+- 🔍 GNNs capture relational risk without transaction details – useful if Odin adds group spending.
