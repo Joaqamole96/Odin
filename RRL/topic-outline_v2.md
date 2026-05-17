@@ -167,7 +167,7 @@
 
 ### 4.B Limitations and Gaps in Existing Systems [/pfms-gaps]
 
-#### 4.B.I Documented limitations: manual entry burden, absence of forecasting, generic categories, no profiling [/pfms-limitations]
+#### [X] 4.B.I Documented limitations: manual entry burden, absence of forecasting, generic categories, no profiling [/pfms-limitations]
 > *Scholar query: What limitations of existing personal finance and budgeting applications are most consistently identified in research literature? I am specifically interested in studies that critique the usability cost of manual transaction entry, the absence of predictive or forecasting capabilities, the lack of anomaly or overspending detection, the use of generic expense categories that do not reflect actual user spending, and the absence of behavioral user profiling.*
 
 #### 4.B.II Absence of locally grounded systems for Filipino users [/pfms-local-gap]
@@ -182,7 +182,7 @@
 
 ### 5.A Financial Behavioral Profiles in Personal Finance [/profile-domain]
 
-#### 5.A.I Role of behavioral profiling in personalizing budget recommendation, forecasting, and anomaly detection [/profiling-role]
+#### [X] 5.A.I Role of behavioral profiling in personalizing budget recommendation, forecasting, and anomaly detection [/profiling-role]
 > *Scholar query: What role does user behavioral profiling play in enabling personalization within personal finance management systems — specifically in improving budget recommendation accuracy, providing fallback behavior for new users during cold start, and tailoring forecasting and anomaly detection to individual spending patterns? I am looking for system design literature or implemented PFMS studies that demonstrate how assigning users to profile types shapes the output of downstream algorithmic modules.*
 
 #### 5.A.II Inadequacy of Western behavioral taxonomies for Filipino financial user contexts [/western-taxonomy-gap]
