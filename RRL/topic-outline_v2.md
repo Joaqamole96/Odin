@@ -211,7 +211,7 @@
 
 ### 5.C Financial Behavioral Profile Classification Algorithm [/profile-classification-algo]
 
-#### 5.C.I Supervised classification versus clustering for predefined profile categories [/classification-vs-clustering]
+#### [X] 5.C.I Supervised classification versus clustering for predefined profile categories [/classification-vs-clustering]
 > *Scholar query: When should supervised classification be chosen over clustering for assigning users to financial behavioral profiles, particularly when the profile categories are predefined by domain knowledge rather than discovered from data? I am looking for research that discusses the suitability of supervised versus unsupervised approaches in the context of fixed profile taxonomies — arguing that classification is appropriate when profiles are already specified and the task is to assign users, not to discover new groupings.*
 
 #### 5.C.II Candidate classification algorithms for behavioral and financial user profiling [/classifier-candidates]
