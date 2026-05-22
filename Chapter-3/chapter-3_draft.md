@@ -68,8 +68,6 @@ Odin is designed to have a modern, easy to use, and adaptable layout, cleanly di
 
 Odin employs a multi-service architecture consisting of a frontend application, a primary backend, and an ML microservice. The frontend is built using React Native, React, React Native for Web, and Expo SDK, targeting Android mobile and web browser environments from a single codebase. TypeScript is used across the frontend and primary backend. Node.js with Express.js handles the primary backend, while a FastAPI microservice written in Python serves as the ML inference layer. PostgreSQL via Supabase provides the database and authentication infrastructure. NativeWind, Tailwind CSS, @expo/vector-icons, and React Native Paper handle interface styling and components. Git and GitHub are used for version control throughout.
 
-ponents. Git and GitHub are used for version control throughout.
-
 | ![][image9] | ![][image10] | ![][image11] |
 | :---- | :---- | :---- |
 | ![][image12] | ![][image13] | ![][image14] |

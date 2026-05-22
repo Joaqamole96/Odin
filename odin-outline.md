@@ -471,10 +471,6 @@
 - ISO 25010 operationalization: quality characteristics mapped to system features
 - SUS instrument, administration, target score, sample size
 - ML module evaluation: metrics per module, walk-forward validation, synthetic data generation from BSP/PSA/pre-survey
-- Evaluation procedure
-    - Phase 1: Offline ML module testing (walk-forward validation on synthetic data)
-    - Phase 2: Qualitative pilot (small-group usability observation)
-    - Phase 3: SUS administration (30 users after 14-day usage period)
 
 #### Ethical Considerations
 
