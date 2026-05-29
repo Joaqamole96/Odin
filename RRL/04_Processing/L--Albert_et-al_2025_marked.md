@@ -1,5 +1,3 @@
-
-
 Albert, Jose Ramon et al.
 
 Working Paper
@@ -3752,11 +3750,11 @@ demographic changes.
 
 2019
 
-2016
-
 2017
 
 2018
+
+2016
 
 2021
 
@@ -4392,6 +4390,13 @@ Note: Authors’ calculations on microdata of the 2015 Family Income and Expendi
 148,924
 57,802
 
+27,606
+43,920
+61,703
+90,021
+203,210
+85,291
+
 22,428
 36,452
 51,672
@@ -4405,13 +4410,6 @@ Note: Authors’ calculations on microdata of the 2015 Family Income and Expendi
 73,452
 174,589
 70,291
-
-27,606
-43,920
-61,703
-90,021
-203,210
-85,291
 
 2023 (PHP)
 
@@ -4750,17 +4748,17 @@ Population Share
 
 2023
 
-0.629
-0.371
+0.726
+0.274
 
 0.621
 0.379
 
-0.726
-0.274
-
 0.740
 0.260
+
+0.629
+0.371
 
 Location:
   Urban
@@ -4782,22 +4780,22 @@ Source: Authors' calculations from FIES-LFS 2018, 2021 and 2023.
 
 0.008
 0.099
-0.111
-0.088
-0.270
-0.048
-0.096
-0.258
-0.022
-
-0.008
-0.099
 0.122
 0.085
 0.272
 0.071
 0.090
 0.230
+0.022
+
+0.008
+0.099
+0.111
+0.088
+0.270
+0.048
+0.096
+0.258
 0.022
 
 0.648
@@ -6274,21 +6272,6 @@ Projection year
 Source:  Authors’  computation  based  on  the  Philippine  Statistics  Authority’s  projected  population  using
 scenario 1. Downloaded from https://psa.gov.ph/statistics/census/projected-population on July 22, 2025.
 
-2025
-36.9
-21.3
-9.6
-
-2030
-33.9
-22.3
-11.0
-
-2035
-31.5
-22.8
-12.2
-
 2045
 29.7
 23.0
@@ -6304,15 +6287,30 @@ scenario 1. Downloaded from https://psa.gov.ph/statistics/census/projected-popul
 20.3
 18.7
 
-2040
-29.7
-23.1
-13.6
+2030
+33.9
+22.3
+11.0
+
+2035
+31.5
+22.8
+12.2
 
 2020
 40.3
 20.1
 8.5
+
+2025
+36.9
+21.3
+9.6
+
+2040
+29.7
+23.1
+13.6
 
 Care Infrastructure Development
 
@@ -7137,12 +7135,12 @@ Source: Labor Force Survey, Philippine Statistics Authority (PSA)
 2.9
 
 2.2
-4.2
-2.3
-
-2.2
 3.3
 1.8
+
+2.2
+4.2
+2.3
 
 2.3
 2.2
@@ -7493,9 +7491,6 @@ workers in each sex category
 Male
 Female
 
-63
-60
-
 33
 39
 
@@ -7505,11 +7500,14 @@ Female
 39
 38
 
-1758815
-2289572
+63
+60
 
 1521971
 1885377
+
+1758815
+2289572
 
 7462122
 8770789
@@ -7565,11 +7563,11 @@ operated farm or business, Worked with/without pay in own family-operated farm o
 9620492
 9684199
 
-44
-51
-
 56
 53
+
+44
+51
 
 26
 20
@@ -7627,13 +7625,13 @@ Table 29. Contribution of the digital economy to employment and output: 2018 and
 48846
 23
 
-2245872
-26446369
-8
-
 1630182
 18265190
 9
+
+2245872
+26446369
+8
 
 Employment
 Digital Economy
@@ -8107,6 +8105,11 @@ Platform work is the primary job
 5.0
 4.0
 
+-12.59***
+0.35
+-14.46***
+-0.68***
+
 A month before the ECQ
 A month before the ECQ
 During the ECQ
@@ -8121,11 +8124,6 @@ Notes: */***Significant at 10/1% level, left-sided test. Number of observations 
 platform work): Male without platform work (249), female without platform work (387), male with platform
 work (65), and female with platform work (154). Number of observations (platform work is not primary or
 primary job): male, not primary (26), female, not primary (58), male, primary (39), female, primary (96).
-
--12.59***
-0.35
--14.46***
--0.68***
 
 23.07
 22.45
