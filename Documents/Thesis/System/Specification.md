@@ -57,15 +57,17 @@
 
     > NOTE: The LSTM model is hosted on the server. Therefore, all processes except for the forecasting module shall be available offline.
 
+<!-- 
 2. A desktop web version shall also be provided.
 
     2.1. The desktop version shall use a centered container with a maximum width of 1200 pixels.
 
     2.2. The desktop version may use multi‑column layouts where appropriate.
 
-    2.3. Web screens shall support the same core workflows as mobile, with more room for analysis and reporting.
+    2.3. Web screens shall support the same core workflows as mobile, with more room for analysis and reporting. 
 
 3. *The mobile web version should lead to the Google Play link or installation link of the mobile application.*
+-->
 
 ### Section 2. Screens
 
@@ -73,63 +75,145 @@
 
     1.1. Registration
 
+> NOTE: Register email & password -> Activate Account (email) -> Login -> Questionnaire (frontend) -> results (frontend) -> Random Forest classifier (backend) -> profile assignment  (frontend) OR user override & profile manual selection (frontend)
+
+<!--
         1.1.1. Onboarding Questionnaire
 
         1.1.2. Onboarding Result and Financial Behavioral Profile Assignment
+-->
 
     1.2. Login
 
+        1.2.1. Forgot Password
+
     1.3. User Profile
 
-    1.4. Financial Behavioral Profile Overview
+    1.4. FBP Overview
 
         1.4.1. Financial Behavioral Profile
 
-        1.4.1. Profile Reassignment
+        1.4.2. Change My FBP
 
     1.5. Dashboard
 
+    > NOTE: Can include any of the following:
+
+        1.5.1. Balance Summary
+
+        1.5.2. Budget Health
+
+        1.5.3. Budget Summary (Bar)
+
+        1.5.4. Income Tracking (Pie Chart; by Category Group, Category)
+
+        1.5.5. Expense Tracking (Pie Chart; by Category Group, Category)
+        
+        1.5.6. Largest Transactions
+        
+        <!-- 1.5.6. Active Alerts -->
+
+        1.5.7. Savings Goal Progress Preview
+        
+        1.5.8. Debt Repayment Preview
+
+        1.5.9. Forecast Summary
+
+        1.5.10. Category Group Forecast Preview
+
+        1.5.11. Calendar/Action Cards for Upcoming Obligations
+        
+        1.5.12 Quick Actions for Adding Transactions
+
     1.6. Transaction Entry
 
-        1.6.1. Manual Transaction Entry
-
-        1.6.2. Recurring Transaction Entry
+        1.6.1. Transaction Templates
 
     1.7. Transactions History
 
-    1.8. Budget Overview
+        1.7.1. Searching, Sorting, & Filtering Operations
+
+        1.7.2. Transaction Record Editing & Deletion
+
+        > NOTE: Look into sensitivity of models, and the magnitude of the effects by editing and deletion of transaction History.
+
+        <!-- 
+        1.7.3. Transaction History Import
+        -->
+
+    1.8. Budgeting
+
+        1.8.1. Budget
+
+        1.8.2. Budget Health
+
+        > NOTE: Budget Health = <Remaining Budget Amount> / <Total Amount Spent That Day> / <Remaining Days in Horizon> * 100
+
+        > NOTE: Tweak weights for budget health per category group.
+
+        1.8.2. Budget Setup
 
         1.8.1. Budget Recommendation
 
         1.8.2. Budget Categories
 
-    1.9. Forecasting Overview
+    1.9. Expense Forecasting
 
-    1.10. Anomaly Detection Overview
+        1.9.1. Per-Category Group Forecast
+
+        1.9.2. Per-Category Forecast
+
+        1.9.3. Forecast Summary/Breakdown (-7% less expenses this week (Php103.03))
+
+    1.10. Anomaly Detection
 
         1.10.1. Overspending Detection
 
         1.10.2. Anomaly Detection 
 
-    1.11. Savings Goals Overview
+        1.10.3. Anomaly Whitelist
+
+        1.10.4. Anomaly Actions 
+        
+        > NOTE: (reduce budget allocation to remediate this thing)
+
+    1.11. Savings Goals Management
 
         1.11.1. Savings Goal Hierarchy
 
-    1.12. Debt Overview
+        1.11.2. Savings Goal Progress
+
+        1.11.3. Savings Goal Actions
+
+    1.12. Debt Management
 
         1.12.1. Debt Hierarchy
 
+        1.12.2. Debt Repayment Progress
+
+        1.12.3. Debt Repayment Actions
+
     1.13. Reports & Analytics
+
+        1.13.1. Analytics Breakdown
+
+        1.13.2. Budget versus actual table.
+
+        1.13.3. Forecast versus actual table.
+
+        1.13.4. Savings & Debt Breakdown
+
+        1.13.5. Report Export
 
     1.14. Settings
 
-        1.14.1. User Settings
+        1.14.1. User Settings (Data Handling)
 
-        1.14.2. System Settings
+        1.14.2. System Settings (Notifications, Permissions, Dark Mode)
 
-        1.14.3. Help & Problem Reporting
+        1.14.3. FAQ & Problem Reporting
 
-    1.15. Notifications & Alerts
+    1.15. Notifications
 
 ---
 
@@ -139,7 +223,7 @@
 
 1. The System is designed exclusively for the following users.
 
-    1.1. Demographic requirement. The user shall be a Filipino working young adult aged twenty to forty years inclusive.
+    1.1. Demographic requirement. The user shall be a Filipino young adult aged twenty to forty years inclusive.
 
     1.2. Geographic requirement. The user shall live or work in Metro Manila, covering any of its sixteen cities and one municipality.
 
@@ -163,9 +247,7 @@
 
         1.3.3. Fixed-Term and Project Employees. This employment type has variable or low security of tenure. The individuals are employed only for the length of their contractual obligations (project completion dates, termination dates). This employment type supports the Variable income dimension.
 
-            1.3.4. Contractual/project‑based employee or similar
-
-            1.3.5. Business owner/entrepreneur
+            1.3.3.1 Contractual/project‑based employee or similar
 
             1.3.6. Gig economy worker
 
@@ -185,9 +267,7 @@
 
 2. *The desktop web version shall be accessible via a standard web browser at a domain designated accordingly.*
 
-### Section 2. Installation Guide
-
-> NOTE: Add installation guide for the user starting from installation site all the way to working mobile app.
+> NOTE: Confirmed to be published on Google Play Store.
 
 ---
 
@@ -199,17 +279,19 @@
 
 2. Income stability is the capacity of the user's inflow to maintain a stable amount and frequency in regular intervals.
 
+    2.1. A rule of thumb is that they are able to affirm the question, "Are you able to say with certainty that you will be able to get a salary this month?"
+
 3. Depending on the user's income stability, they can be classified as either **Stable** or **Variable**.
     
-4. Income stability shall be derived initially from the user’s *employment status and income variability as declared during onboarding*.
+4. Income stability shall be derived initially from the user’s *employment status and income frequency as declared during onboarding*.
 
     4.1. Afterwards, income stability shall be derived from the user's actual transaction history.
 
-5. Obligation level is the proportion of the user's necessary expenses (sum of Essential and Obligatory expenses; see Article X) and their total expenses.
+5. Obligation level is the proportion of the user's necessary expenses (sum of Essential and Obligatory expenses) and their total expenses.
 
 6. Depending on the user's obligation level, they can be classified as either **Flexible** or **Obligated**.
 
-7. Obligation level shall be derived from *declared fixed obligations, dependents, debt payments, and protected expenses as declared during onboarding*.
+7. Obligation level shall be derived from *declared fixed obligations, dependents, debt repayments, and protected & fixed expenses as declared during onboarding*.
 
     7.1. Afterwards, obligation level shall be derived from the user's actual transaction history.
 
@@ -235,6 +317,12 @@
 
 > NOTE: Should discuss prior things like training, design, architecture, etc., preferably as sections.
 
+### Input Features
+
+### Architecture
+
+### Cold-Start
+
 ### Section 2. Input
 
 ### Section 3. Process
@@ -244,6 +332,10 @@
 ### Section 5. Details
 
 > NOTE: Should discuss posterior things like algorithm evaluation, explainability, fallback, etc., preferably as sections.
+
+### Evaluation
+
+### Explainability
 
 ---
 
@@ -271,29 +363,57 @@
 
 ---
 
-## ===== Article VII. Financial Behavioral Profile Module =====
+## ===== Article VII. Questionnaire Structure =====
 
-### Section 1. Onboarding Questionnaire
+### Section 1. Questionnaire
 
-### Section 2. Onboarding Results
+> 
 
-### Section 3. Profile Classification
-
-### Section 4. User Profile Creation
-
-### Section 5. Periodic Reclassification Check
-
-> NOTE: Every set length of days, the system runs the classifier 
+### Section 2. Questionnaire Results and Classification
 
 ---
 
-## ===== Article VIII. User Profile Module =====
+## ===== Section VIII. Login and Registration Module =====
 
-### Section 1. User Profile
+### Section 1. Data Privacy and Security Notice
 
-### Section 2. User Profile Settings
+> NOTE: Discusses how user data privacy is enforced through anonymization and user data security is ensured through encryption.
+
+### Section 2. Data Use and Consent Notice
+
+> NOTE: Discusses how user data is used in the system's intelligent features. Also includes user agreement and consent.
+
+### Section 3. Account Creation & Registration
+
+### Section 4. Login
+
+### Section 5. Forgotten Password in Login
+
+> NOTE: Either send OTP or send user to webpage where they can reset password.
+
+### Section 6. Login Session
+
+> NOTE: Auto-logout OR auto-lock.
+
+---
+
+## ===== Article VII. Financial Behavioral Profile Module =====
+
+### Section 1. Financial Behavioral Profile
+
+### Section 2. Periodic Reclassification Check
+
+> NOTE: Every set length of days, the system runs the classifier.
+
+---
+
+## ===== Article VIII. User Account Module =====
+
+### Section 1. User Account
 
 > NOTE: Should atleast cover user data export and toggling of opt-in for model training.
+
+> NOTE: Should cover the ff: Opt-in for model training (use user data to train and improve Odin's models), Data privacy & security, Opt-in for data selling to Chinese markets, User Consent (part of registration, Delete user data, Export user data
 
 ---
 
@@ -301,14 +421,25 @@
 
 > NOTE: Need to consider: what if the user withdrew money from their savings, funds, or somewhere from their financial allocation group? Do we explain that it should be logged as a normal income transaction, or should we create a special process for it?
 
-### Section 1. Financial Account
+> ANS: Suggestion: add actions in savings goal management to not only edit savings goal amount, but "Withdraw" to withdraw a certain amount to the user's balance
 
-### Section 2. Financial Account Balance
+### Section 1. General Account
+
+### Section 2. Savings Account
+
+### Section 3. Debt Account
+
+### Section 2. Account Balance
 
 > NOTE: Should tackle negative balance too.
 
+> NOTE: Negative balance is only for general accounts.
+
 ### Section 3. Financial Account Flow
 
+> NOTE: Income -> Balance -> Expenses
+>                         -> Savings
+>                         -> Debt
 ---
 
 ## ===== Article X. Transaction Structure =====
@@ -382,13 +513,11 @@
 
 ### Section 1. Transaction Records
 
-### Section 2. Transaction Records Searching Operations
+### Section 2. Transaction Records Searching, Sorting, and Filtering Operations
 
 > NOTE: Includes searching, sorting, and filtering.
 
 ### Section 3. Transaction Editing & Deletion
-
-> NOTE: Idk if it's more appropriate to discuss this topic here or in the intelligent modules that are affected by it, like the forecasting module. Or maybe an exact "Transaction Editing & Deletion" section in those modules as well?
 
 ### Section 2. Transaction Record Retention
 
@@ -405,11 +534,15 @@
 
 ### Section 4. Budget Allocations
 
+> NOTE: Per category group, cat., and subcat.
+
 ### Section 5. Budget Constraints
 
 > NOTE: Should discuss floors and ceilings.
 
 ### Section 6. Budget Feasibility
+
+> NOTE: If suggested budget, considering the requirements and constraints like floors (protected & locked), can be supported by current balance, then it is considered Feasible. If not Feasible, system will begin budget reduction.
 
 ---
 
@@ -433,7 +566,9 @@
 
 ### Section 1. Details
 
-> NOTE: Should discuss prior things like training, design, architecture, etc., preferably as sections.
+> NOTE: Should discuss prior things like design, etc., preferably as sections.
+
+### Design
 
 ### Section 2. Input
 
@@ -443,7 +578,7 @@
 
 ### Section 6. Details
 
-> NOTE: Should discuss posterior things like algorithm evaluation, explainability, fallback, etc., preferably as sections.
+> NOTE: Should discuss posterior things like evaluation, explainability, fallback, etc., preferably as sections.
 
 > NOTE: Maybe move all expainability sections/subsections of algorithm articles to their process articles isntead.
 
@@ -463,11 +598,13 @@
 
 ## ===== Article XVII. Budgeting Module =====
 
-### Section 1. Budget Recommendation
-
-### Section 2. Budget Health
+### Section 1. Budget Health
 
 > NOTE: Should include a health indicator and prescribed vs. actual tracker
+
+### Section 2. Budget Recommendation
+
+### Section 3. Budget Setup
 
 ### Section 3. Budget Surplus and Deficit
 
@@ -479,7 +616,7 @@
 
 > NOTE: We also have to consider, what if the user does not have any savings goals at all?
 
-### Section 4. Budget Editing (and Deletion?)
+### Section 4. Budget Editing
 
 ---
 
@@ -525,7 +662,13 @@
 
 ## ===== Article XXI. Forecast Module
 
-### Section 1. Forecast
+### Section 1. Total Forecast
+
+### Section 2. Per-Category Group Forecast
+
+### Section 3. Per-Category Forecast
+
+### Section 4. Forecast Breakdown
 
 ---
 
@@ -557,6 +700,10 @@
 
 > NOTE: Should discuss posterior things like algorithm evaluation, explainability, fallback, etc., preferably as sections.
 
+### Fallback
+
+> NOTE: Point of debate; how can system know what is anomalous with insufficient data?
+
 ---
 
 ## ===== Article XXIII. Anomaly Detection Process
@@ -577,6 +724,8 @@
 
 ### Section 3. Anomaly Whitelisting
 
+> NOTE: Editing and deletion possible.
+
 ### Section 4. Anomaly Remediation (?)
 
 > NOTE: Further action to mitigate anomalous transaction if the user wishes?
@@ -588,6 +737,8 @@
 ### Section 1. Savings Goal
 
 ### Section 2. Savings Goal Progress
+
+### Section 3. Savings Goal Milestone
 
 ---
 
@@ -618,6 +769,8 @@
 ### Section 3. Debt Projection
 
 ### Section 4. Debt Hardship
+
+> NOTE: User will unfortunately have to record the penalty if any. System will suggest outside help at this situation.
 
 ---
 
@@ -671,7 +824,7 @@
 
 ### Section 3. Privacy and Consent
 
-### Section 4. Help and Problem Reporting
+### Section 4. FAQ and Problem Reporting
 
 ---
 

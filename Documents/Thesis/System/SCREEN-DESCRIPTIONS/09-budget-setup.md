@@ -11,6 +11,7 @@ This screen lets users create or edit the budget period, total budget amount, ca
 - Total budget amount input.
 - Per-category allocation editor.
 - Protected category review.
+> EDIT: Category restriction level review (Open/Protected/Fixed)
 - Budget priority settings.
 - Surplus handling options: carry forward, reallocate, or save.
 - Deficit planning and warning preferences.
