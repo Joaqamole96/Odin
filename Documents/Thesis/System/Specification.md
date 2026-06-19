@@ -43,299 +43,560 @@
 
 # SYSTEM SPECIFICATION
 
+> TODO: Three out of the four core modules, the FBP classification module, the forecasting module, and the anomaly detection module, hereby known as the intelligent modules, implement a model, and are consequently hosted on the server side. Therefore, their functionality relies on Internet access.
+
+> TODO: Include every module in the offline capability support list except for the FBP, forecasting, and anomaly detection module.
+    
+> TODO: Add this to the scope and delimitations: "iOS is explicitly excluded from the scope. No iOS‑specific development, testing, or distribution shall be undertaken."
+
 ---
 
-## ===== Article I. Interface =====
+## ===== Article 0. Acronyms and Abbreviations =====
+
+### Section 1. Acronyms
+
+- FBP: Financial Behavioral Profile
+
+- SHAP: SHapley Additive exPlanations
+
+- BSP: Bangko Sentral ng Pilipinas
+
+- PSA: Philippine Statistics Authority
+
+- RF: Random Forest
+
+- LSTM: Long Short-Term Memory
+
+- IF: Isolation Forest
+
+- LP: Linear Programming
+
+---
+
+## ===== Article I. Platform and Application =====
 
 ### Section 1. Platform
 
 1. The System shall be implemented as a mobile‑first application.
 
-    1.1. *All core user flows must be fully operable on a mobile screen width of 375 density‑independent pixels or less.*
+    1.1. The System shall be published and distributed as a mobile application for Android devices on the Google Play Store. 
 
-    1.2. *The layout shall adapt to any width between 320 and 450 dp without requiring horizontal scrolling.*
+    > PROPOSAL: All core user flows must be fully operable on a mobile screen width of 375 density‑independent pixels (dp) or less, corresponding to devices such as the Google Pixel 4a and similar compact Android smartphones. The layout shall adapt responsively to any width between 320 and 450 dp without requiring horizontal scrolling.
 
-    > NOTE: The LSTM model is hosted on the server. Therefore, all processes except for the forecasting module shall be available offline.
+---
 
-<!-- 
-2. A desktop web version shall also be provided.
+## ===== Article II. Interface
 
-    2.1. The desktop version shall use a centered container with a maximum width of 1200 pixels.
+### Section 1. Navigation
 
-    2.2. The desktop version may use multi‑column layouts where appropriate.
+1. The System shall implement a navigation toolbar with an Add button in the middle. This toolbar shall be anchored at the bottom of the screen and shall be present in all primary screens.
 
-    2.3. Web screens shall support the same core workflows as mobile, with more room for analysis and reporting. 
+    1.1. The toolbar shall contain the following items, along with their respective linked screens, from left to right, excluding the central Add button:
 
-3. *The mobile web version should lead to the Google Play link or installation link of the mobile application.*
--->
+        1.1.1. ...
+
+        1.1.2. ...
+
+        1.1.3. ...
+
+        1.1.4. ...
+
+    1.2. The toolbar shall contain an Add button in the middle, between the second and third item.
+
+        1.2.1. Tapping the Add button shall open a modal or bottom sheet with the following options:
+
+            - Record Transaction
+
+            - Create / Use Transaction Template
 
 ### Section 2. Screens
 
-1. The System shall implement the following primary screens:
+1. The System shall implement the following primary screens and their respective subscreens or modals:
 
-    1.1. Registration
+    - Registration Screen
 
-> NOTE: Register email & password -> Activate Account (email) -> Login -> Questionnaire (frontend) -> results (frontend) -> Random Forest classifier (backend) -> profile assignment  (frontend) OR user override & profile manual selection (frontend)
+    - Login Screen
+
+        - Login: Forgotten Password Subscreen
+
+    - Onboarding Screen
+
+        - Onboarding: Questionnaire Subscreen
+
+        - Onboarding: Result & Classification Subscreen
+
+    - Dashboard Screen
+
+    - User Account Screen
+
+    - FBP Screen
+
+    - Transaction Entry Screen
+
+        - Transaction Entry: Transaction Modal [Creation]
+
+        - Transaction Entry: Transaction Template Modal
+
+    - Transaction History Screen
+
+        - Transaction History: Transaction Modal [Updation & Deletion]
+
+    - Budgeting Screen
+
+    - Forecasting Screen
+
+    - Anomaly Detection Screen
+
+    - Savings Goals Management Screen
+
+    - Debt Management Screen
+
+    - Reports & Analytics Screen
+
+    - Settings Screen
+
+    - Notifications Screen
+
+2. The System shall support both light and dark themes, with the light theme as the default visual theme.
+
+---
+
+## ===== Article III. Users =====
+
+### Section 1. General Users
+
+1. The System shall be accessible to any individual who downloads and installs the application, regardless of age, geographic location, or employment status. The System shall refer these individuals as General Users.
+
+2. All General Users shall have full access to all features of the System.
+
+### Section 2. Target Users
+
+1. The System is specifically designed and optimized for Target Users, defined as individuals who meet all of the following criteria:
+
+    2.1. Demographic requirement. The user shall be a Filipino young adult aged 20 to 40 years inclusive.
+
+        2.1.1. The age requirement is a design constraint for the System's intended audience, not an enforcement mechanism. The System shall not implement age verification (e.g., government ID upload) at registration.
+
+        2.1.2. The System shall display an informational notice during onboarding that states: "Odin is a thesis project designed primarily for Filipino working young adults aged 20–40 in Metro Manila. All users are welcome to use the app, but please be aware that only data from users meeting these criteria will be used to train and improve Odin's AI models. By continuing, you acknowledge this limitation."
+
+    2.2. Geographic requirement. The user shall live or work in Metro Manila, covering any of its sixteen cities and one municipality (Caloocan, Las Piñas, Makati, Malabon, Mandaluyong, Manila, Marikina, Muntinlupa, Navotas, Parañaque, Pasay, Pasig, Pateros, Quezon City, San Juan, Taguig, and Valenzuela).
+
+        2.2.1. The geographic requirement is a design constraint, not an enforcement mechanism. The System shall not implement GPS‑based location verification or IP address geolocation blocking.
+
+        2.2.2. The System shall collect the user's declared city/municipality during onboarding for data segmentation purposes but shall not restrict access based on this declaration.
+
+    2.3. Employment requirement. The user shall declare a primary employment or income source in any of the following capacities, based on the Department of Labor and Employment's Labor Code of the Philippines standards:
+
+        2.3.1. Regular Employees. This employment type is entitled to security of tenure and usually entitled to statutory benefits (SSS, PhilHealth, Pag‑IBIG, 13th month pay) on a pro‑rata basis. This employment type supports the Stable income dimension.
+
+            2.3.1.1. Full‑time Employee
+
+            2.3.1.2. Part‑time Employee
+
+        2.3.2. Independent Contractors. This employment type has variable security of tenure and usually no employer‑employee relationship. The individuals are responsible for their own taxes and governmental contributions as voluntary members. This employment type supports the Variable income dimension.
+
+            2.3.2.1. Self‑employed Individual
+
+            2.3.2.2. Freelancer
+
+            2.3.2.3. Business Owner
+
+            2.3.2.4. Entrepreneur
+
+        2.3.3. Fixed‑Term and Project Employees. This employment type has variable or low security of tenure. The individuals are employed only for the length of their contractual obligations (project completion dates, termination dates). This employment type supports the Variable income dimension.
+
+            2.3.3.1. Contractual/Project‑based Employee
+
+            2.3.3.2. Gig Economy Worker
+
+        2.3.4. The employment requirement is a design constraint, not an enforcement mechanism. The System shall not require document upload (e.g., Certificate of Employment, payslip) for verification.
+
+        2.3.5. The user shall declare their employment type via a dropdown selection during onboarding.
+
+        2.3.6. Employment shall not bear more influence than other more appropriate features (income sources, income amount, income frequency) in the FBP classification module. Employment type serves primarily as a supplementary indicator and cold‑start proxy for income stability.
+
+> NOTE: Move this block onto a more appropriate Article or Section:
 
 <!--
-        1.1.1. Onboarding Questionnaire
+    2.4. Data usage distinction.
 
-        1.1.2. Onboarding Result and Financial Behavioral Profile Assignment
+        2.4.1. Only data generated by Target Users shall be used for model training (Random Forest classifier, LSTM forecaster, Isolation Forest anomaly detector) and algorithm evolution and improvement.
+
+        2.4.2. Data from General Users who do not meet the Target User criteria shall be excluded from all training datasets. Their data shall still be used for inference (i.e., providing personal recommendations, forecasts, and anomaly detection to that specific user).
+
+        2.4.3. The System shall implement a Target User flag in the user's profile, set during onboarding based on declared criteria. This flag shall be used to route data appropriately for training versus inference‑only purposes.
+
+        2.4.4. The System shall apply statistical filters to training datasets to further safeguard against inadvertent inclusion of data from users who may have misdeclared their eligibility.
 -->
 
-    1.2. Login
+> NOTE: Move this block onto a more appropriate Article or Section:
 
-        1.2.1. Forgot Password
+<!--
+    2.5. Income Sources.
 
-    1.3. User Profile
+        2.5.1. The user shall declare one or more income sources during onboarding and may add, edit, or remove sources at any time via the Transaction Entry screen.
 
-    1.4. FBP Overview
+        2.5.2. Each income source shall have the following fields:
 
-        1.4.1. Financial Behavioral Profile
+            2.5.2.1. Source name (e.g., "Primary Salary", "Freelance Income", "Remittances")
 
-        1.4.2. Change My FBP
+            2.5.2.2. Amount (PHP per period)
 
-    1.5. Dashboard
+            2.5.2.3. Frequency: Recurring (Daily/Weekly/Monthly/Quarterly/Yearly) or Non‑recurring
 
-    > NOTE: Can include any of the following:
+            2.5.2.4. Source type: Primary or Secondary
 
-        1.5.1. Balance Summary
+        2.5.3. Primary source designation:
 
-        1.5.2. Budget Health
+            2.5.3.1. The first income source added during onboarding shall be designated as the primary source by default.
 
-        1.5.3. Budget Summary (Bar)
+            2.5.3.2. The user may change the primary source at any time via a radio button or selector on the income sources list.
 
-        1.5.4. Income Tracking (Pie Chart; by Category Group, Category)
+            2.5.3.3. Only one income source may be designated as primary at any given time.
 
-        1.5.5. Expense Tracking (Pie Chart; by Category Group, Category)
-        
-        1.5.6. Largest Transactions
-        
-        <!-- 1.5.6. Active Alerts -->
+            2.5.3.4. The primary source is used as the primary indicator of the user's income stability and as the default source for income transaction templates.
 
-        1.5.7. Savings Goal Progress Preview
-        
-        1.5.8. Debt Repayment Preview
+        2.5.4. Internal mapping to transaction templates:
 
-        1.5.9. Forecast Summary
+            2.5.4.1. Each income source declared by the user shall be internally mapped to an income transaction template.
 
-        1.5.10. Category Group Forecast Preview
+            2.5.4.2. If the source is configured as Recurring, the template shall automatically include the recurrence pattern.
 
-        1.5.11. Calendar/Action Cards for Upcoming Obligations
-        
-        1.5.12 Quick Actions for Adding Transactions
+            2.5.4.3. If the source is configured as Non‑recurring, the template shall default to a one‑time transaction.
 
-    1.6. Transaction Entry
+            2.5.4.4. The user may use these templates from the Transaction Entry Screen or the central add button to quickly record income from declared sources.
 
-        1.6.1. Transaction Templates
+        2.5.5. The income sources list shall serve as the primary data source for:
 
-    1.7. Transactions History
+            Income stability determination in the FBP classification
 
-        1.7.1. Searching, Sorting, & Filtering Operations
+            Budget feasibility calculations
 
-        1.7.2. Transaction Record Editing & Deletion
-
-        > NOTE: Look into sensitivity of models, and the magnitude of the effects by editing and deletion of transaction History.
-
-        <!-- 
-        1.7.3. Transaction History Import
-        -->
-
-    1.8. Budgeting
-
-        1.8.1. Budget
-
-        1.8.2. Budget Health
-
-        > NOTE: Budget Health = <Remaining Budget Amount> / <Total Amount Spent That Day> / <Remaining Days in Horizon> * 100
-
-        > NOTE: Tweak weights for budget health per category group.
-
-        1.8.2. Budget Setup
-
-        1.8.1. Budget Recommendation
-
-        1.8.2. Budget Categories
-
-    1.9. Expense Forecasting
-
-        1.9.1. Per-Category Group Forecast
-
-        1.9.2. Per-Category Forecast
-
-        1.9.3. Forecast Summary/Breakdown (-7% less expenses this week (Php103.03))
-
-    1.10. Anomaly Detection
-
-        1.10.1. Overspending Detection
-
-        1.10.2. Anomaly Detection 
-
-        1.10.3. Anomaly Whitelist
-
-        1.10.4. Anomaly Actions 
-        
-        > NOTE: (reduce budget allocation to remediate this thing)
-
-    1.11. Savings Goals Management
-
-        1.11.1. Savings Goal Hierarchy
-
-        1.11.2. Savings Goal Progress
-
-        1.11.3. Savings Goal Actions
-
-    1.12. Debt Management
-
-        1.12.1. Debt Hierarchy
-
-        1.12.2. Debt Repayment Progress
-
-        1.12.3. Debt Repayment Actions
-
-    1.13. Reports & Analytics
-
-        1.13.1. Analytics Breakdown
-
-        1.13.2. Budget versus actual table.
-
-        1.13.3. Forecast versus actual table.
-
-        1.13.4. Savings & Debt Breakdown
-
-        1.13.5. Report Export
-
-    1.14. Settings
-
-        1.14.1. User Settings (Data Handling)
-
-        1.14.2. System Settings (Notifications, Permissions, Dark Mode)
-
-        1.14.3. FAQ & Problem Reporting
-
-    1.15. Notifications
+            Income forecasting
+-->
 
 ---
 
-## ===== Article II. Users =====
+## ===== Article IV. FBP Structure =====
 
-### Section 1. Target Users
+### Section 1. Financial Behavioral Profile Dimensions
 
-1. The System is designed exclusively for the following users.
+1. There are two binary dimensions that define the four FBPs: income stability and obligation weight.
 
-    1.1. Demographic requirement. The user shall be a Filipino young adult aged twenty to forty years inclusive.
-
-    1.2. Geographic requirement. The user shall live or work in Metro Manila, covering any of its sixteen cities and one municipality.
-
-    1.3. Employment requirement. The user shall *classify their primary employment in* any of the following capacities:
-
-        1.3.1 Regular Employees. This employment type is entitled to security of tenure, and usually entitled to statutory benefits (SSS, PhilHealth, Pag-IBIG, 13th month pay) on a pro-rata basis. This employment type supports the Stable income dimension.
-
-            1.3.1.1. Full‑time Employee
-
-            1.3.1.2. Part‑time Employee
-
-        1.3.2. Independent Contractors. This employment type has variable security of tenure, and usually no employer-employee relationship. The individuals are responsible for their own taxes and governmental contributions as voluntary members. This employment type supports the Variable income dimension.
-
-            1.3.2.1. Self‑employed Individual
-            
-            1.3.2.2. Freelancer
-            
-            1.3.2.3. Business Owner
-
-            1.3.2.4. Entrepreneur
-
-        1.3.3. Fixed-Term and Project Employees. This employment type has variable or low security of tenure. The individuals are employed only for the length of their contractual obligations (project completion dates, termination dates). This employment type supports the Variable income dimension.
-
-            1.3.3.1 Contractual/project‑based employee or similar
-
-            1.3.6. Gig economy worker
-
-    > NOTE: Primary employment is emphasized since the user can have more than one job (side hustles, freelancing). In the financial behavioral profile classification module, employment shall not bear more influence than other more appropriate features like income sources, income amount, income frequency, etc., which better defines the user's income stability.
-
-    > NOTE: The "This employment type supports..." parts could probably be moved to the Financial Behavioral Profile Article/Section.
-
-    > Employment classifications are based on the Department of Labor and Employment's own standards (Labor Code of the Philippines).
-
----
-
-## ===== Article III. App Installation =====
-
-### Section 1. Installation Site
-
-1. *The System shall be distributed as a mobile‑first application for Android devices via an Android Package Kit.*
-
-2. *The desktop web version shall be accessible via a standard web browser at a domain designated accordingly.*
-
-> NOTE: Confirmed to be published on Google Play Store.
-
----
-
-## ===== Article IV. Financial Behavioral Profile Structure =====
-
-### Section 1. Financial Behavioral Dimensions
-
-1. There are two binary dimensions that define the four financial behavioral profiles: **Income Stability** and **Obligation Level**.
+> NOTE: The two dimensions need to be described better and more thoroughly.
 
 2. Income stability is the capacity of the user's inflow to maintain a stable amount and frequency in regular intervals.
 
-    2.1. A rule of thumb is that they are able to affirm the question, "Are you able to say with certainty that you will be able to get a salary this month?"
+3. Obligation weight is the proportion of the user's necessary expenses (sum of Essential and Obligatory expenses) to their total expenses.
 
-3. Depending on the user's income stability, they can be classified as either **Stable** or **Variable**.
-    
-4. Income stability shall be derived initially from the user’s *employment status and income frequency as declared during onboarding*.
+### Section 2. Financial Behavioral Profile Scores
 
-    4.1. Afterwards, income stability shall be derived from the user's actual transaction history.
+1. There are two continuous score values that are thresholded into their respective binary classifications: income stability score and obligation weight score.
 
-5. Obligation level is the proportion of the user's necessary expenses (sum of Essential and Obligatory expenses) and their total expenses.
+2. Income stability has a specific threshold value.
 
-6. Depending on the user's obligation level, they can be classified as either **Flexible** or **Obligated**.
+    2.1. The user is classified as Stable if their income stability meets or exceeds the threshold.
 
-7. Obligation level shall be derived from *declared fixed obligations, dependents, debt repayments, and protected & fixed expenses as declared during onboarding*.
+    2.2. The user is classified as Variable if their income stability falls below the threshold.
 
-    7.1. Afterwards, obligation level shall be derived from the user's actual transaction history.
+3. Obligation weight has a specific threshold value.
 
-### Section 2. Financial Behavioral Profile
+    3.1. The user is classified as Obligated if their obligation weight meets or exceeds the threshold.
 
-1. The financial behavioral profiles are derived from a combination of the user's income stability and obligation ratio.
+    3.2. The user is classified as Flexible if their obligation weight falls below the threshold.
 
-2. The four financial behavioral profiles are:
+### Section 2. Income Stability
 
-    2.1. **Stable‑Flexible**
+1. The System shall determine the user's income stability from their income stability score.
 
-    2.2. **Stable‑Obligated**
+    1.1. The System shall analyze the user's income transaction history to derive the following features:
 
-    2.3. **Variable‑Flexible**
+        - Income frequency
 
-    2.4. **Variable‑Obligated**
+        - Income source count
+
+        - Income source type/s
+
+    > NOTE: Need to also consider how income source types affect income stability. Income source must not only be viewed as coming from employment, but also other inflows such as government grants, allowances, remittances, etc.
+
+        - Gross income
+
+    > NOTE: Need to finalize the income stability features. Above are draft features.
+
+    > NOTE: Need to validate the following statements:
+    > - Users declaring employment types under Regular Employees (Full‑time/Part‑time) shall contribute to a higher income stability score than those declaring Independent Contractor or Fixed‑Term/Project Employee types.
+    > - Users declaring recurring income sources (e.g., monthly salary) shall receive a higher income stability score than those declaring non‑recurring or irregular sources.
+
+    1.2. The income stability score shall be computed as a weighted combination of the abovementioned income stability features.
+
+    > [RESEARCH NOTE] The specific number of transactions or number of days required to have sufficient data for reliable income stability derivation from transaction history has not yet been determined. This threshold shall be established during algorithm prototyping and hyperparameter tuning. Possible approaches include:
+    > - Minimum 3 months of transaction history
+    > - Minimum 12 income transactions
+    > - A hybrid approach where the threshold is defined by statistical confidence intervals
+    > This determination shall be informed by the RRL.
+
+> NOTE: Exact income stability features need to be properly defined here and at 1.1:
+
+2. If the user's transaction history is insufficient to calculate the income stability score, then the score shall initially be calculated from the user's income stability features during onboarding.
+
+> NOTE: This needs to be moved into the periodic evaluation section.
+
+3. The System shall periodically evaluate the user's income stability score based on transaction history, independent of the user's declared employment status.
+
+    3.1. If the re-evaluation produces a score that classifies the user into a different dimension, the System shall reclassify the user.
+
+### Section 3. Obligation Weight
+
+1. The System shall determine the user's obligation weight from their obligation weight score.
+
+    1.1. The System shall analyze the user's expense transaction history to derive the following features:
+
+        - Essential expense transactions count
+
+        - Obligatory expense transactions count
+
+        - Total Essential expense transaction amount
+
+        - Total Obligatory expense transaction amount
+
+        - Dependents 
+
+        - Number of protected and fixed budget categories and subcategories
+
+    > NOTE: Need to finalize the obligation weight features. Above are draft features.
+
+    1.2. The obligation weight score shall be computed as a weighted combination of the abovementioned obligation weighty features.
+
+    > [RESEARCH NOTE] The specific number of transactions or number of days required to have sufficient data for reliable obligation weight derivation from transaction history has not yet been determined. This threshold shall be established during algorithm prototyping and hyperparameter tuning. This determination shall be informed by the RRL.
+
+> NOTE: Exact obligation weight features need to be properly defined here and at 1.1:
+
+2. If the user's transaction history is insufficient to calculate the obligation weight score, then the score shall initially be calculated from the user's obligation weight features during onboarding.
+
+> NOTE: This needs to be moved into the periodic evaluation section.
+
+3. The System shall periodically evaluate the user's obligation weight score based on transaction history, independent of the user's declared employment status.
+
+    3.1. If the re-evaluation produces a score that classifies the user into a different dimension, the System shall reclassify the user.
+
+### Section 4. Financial Behavioral Profiles
+
+1. The four FBPs, derived from a combination of the user's income stability and obligation weight binary classifications, are:
+
+    1.1. Stable‑Flexible
+
+    1.2. Stable‑Obligated
+
+    1.3. Variable‑Flexible
+
+    1.4. Variable‑Obligated
+
+> NOTE: This should be moved to the FBP module.
+
+<!--
+### Section 5. Periodic Reclassification Check
+
+1. The System shall perform periodic reclassification checks at defined intervals.
+
+    1.1. During each check, the System shall:
+
+        1.1.1. Re‑compute income stability and obligation weight scores based on the user's transaction history
+
+        1.1.2. Re‑classify the user if the computed scores cross the classification thresholds
+
+        1.1.3. Notify the user of any proposed profile change
+
+    1.2. The reclassification interval shall be determined during algorithm prototyping.
+
+    > [RESEARCH NOTE] The optimal reclassification interval (e.g., 30 days, 60 days, 90 days) has not yet been determined. Factors to consider include:
+    > - Data sufficiency (minimum transaction count for reliable classification)
+    > - Behavioral change sensitivity (how quickly the system should adapt to changing user circumstances)
+    > - User experience (avoiding overly frequent classification changes that may confuse users)
+    > This interval shall be validated during system evaluation (Paper Specification Article IV).
+
+2. The user shall have control over the reclassification process.
+
+    2.1. By default, the System shall automatically apply reclassification upon detection of a significant change in the user's profile.
+
+    2.2. The user may disable autonomous reclassification checking via the Settings screen. When disabled:
+
+        2.2.1. The System shall still compute reclassification scores but shall not automatically apply changes
+
+        2.2.2. The user shall be notified of any proposed changes and may manually approve or reject them
+
+    2.3. The user may manually trigger a reclassification check at any time via the FBP Overview or Settings screens.
+
+### Section 6. Manual Override Implications
+
+1. When a user manually selects a profile (Manual Classification), the following rules apply:
+
+    1.1. The selected profile shall be applied immediately and shall become the user's active profile.
+
+    1.2. The System shall continue to perform periodic reclassification checks in the background.
+
+    1.3. If a reclassification check produces a profile that differs from the user's manually selected profile:
+
+        1.3.1. The System shall not automatically apply the reclassification
+
+        1.3.2. The user shall be notified of the proposed change via a notification
+
+        1.3.3. The user may choose to accept the reclassification, reject it, or ignore it
+
+    1.4. The System shall retain the user's manual selection preference until the user explicitly changes it.
+
+2. If the user disables autonomous reclassification via Settings, the System shall not apply any reclassification automatically. The user shall be notified of changes but must manually approve them.
+-->
 
 ---
 
 ## ===== Article V. Random Forest Classifier =====
 
-### Section 1. Details
+### Section 1. Overview
 
-> NOTE: Should discuss prior things like training, design, architecture, etc., preferably as sections.
+1. The Random Forest Classifier is the System's primary mechanism for assigning an FBP to each user.
 
-### Input Features
+2. The classifier shall be implemented using the Random Forest ensemble learning method, which constructs multiple decision trees during training and outputs the mode of the classes (classification) or mean prediction (regression) of individual trees.
 
-### Architecture
+3. The classifier shall support both cold-start classification (using onboarding questionnaire data only) and standard classification (using transaction history).
 
-### Cold-Start
+4. The classifier shall provide explainability via SHAP values to communicate to users which features most influenced their classification.
 
-### Section 2. Input
+### Section 2. Configuration
 
-### Section 3. Process
+1. The Random Forest Classifier shall be configured with the following hyperparameters & values, along with a justification for the configuration:
 
-### Section 4. Output
+    1.1. The number of trees (n_estimators) shall have the value of 100. This is the standard baseline for Random Forest, as this balances performance and computational cost.
 
-### Section 5. Details
+    1.2. The maximum depth (max_depth) shal have the value of 10. This prevents overfitting while capturing sufficient complexity.
 
-> NOTE: Should discuss posterior things like algorithm evaluation, explainability, fallback, etc., preferably as sections.
+    1.3. The minimum samples split (min_samples_split) shall have the value of 5. This ensures splits are based on meaningful sample sizes.
 
-### Evaluation
+    1.4. The minimum samples leaf (min_samples_leaf) shall have the value of 2. This prevents leaf nodes from being too specific.
 
-### Explainability
+    1.5. The maximum features (max_value) shall have the value of the square root. This is standard practice for classification problems.
+
+    1.6. The criterion shall have the value of Gini Impurity. This is standard for classification, as this is computationally efficient.
+
+    1.7. The boostrap shall have the value of true. This enables bagging for variance reduction.
+
+    1.8. The out-of-bag (OOB) score shall have the value of true. This enables out-of-bag evaluation for validation.
+
+    > RESEARCH: The hyperparameters above are initial baselines derived from standard Random Forest implementations (scikit-learn defaults) and related works in financial classification. Hyperparameter tuning via Grid Search or Randomized Search shall be performed during algorithm prototyping to optimize for the target dataset. The tuned hyperparameters shall be documented in Appendix E of the thesis manuscript.
+
+### Section 3. Training Data
+
+1. The classifier shall be trained on a dataset comprising:
+
+    - Onboarding questionnaire responses
+    
+    - Transaction history features
+
+2. The training dataset shall be generated using synthetic data derived from:
+
+    - BSP 2021 Consumer Finance Survey (CFS)
+    
+    - PSA 2023 Family Income and Expenditure Survey (FIES)
+    
+    - Preliminary survey of 100 Filipino working young adults
+
+3. The training dataset shall be balanced across all four FBP classes to prevent class imbalance bias.
+
+### Section 4. Feature Engineering
+
+> NOTE: A reminder that all input features so far are proposals and drafts. They may be changed in the future after research support and validation.
+
+1. The classifier shall process input features through the following pipeline:
+
+    1.1. Feature Encoding:
+    
+        1.1.1. Categorical features that shall be one-hot encoded are:
+
+            - Employment type
+            
+            - Income frequency
+            
+            - Location
+        
+        1.1.2. Ordinal features that shall be label encoded are:
+
+            - Age bracket
+            
+            - Number of dependents
+
+        1.1.3. Continuous features that shall be standardized, with a mean of 0 and a standard deviation of 1, are:
+
+            - Income amount
+            
+            - Obligation ratio
+
+    1.2. Feature Selection:
+    
+        1.2.1. Feature importance shall be computed during training to identify the most predictive features.
+        
+        1.2.2. Features with importance below a threshold (e.g., < 0.01) may be considered for removal in subsequent iterations.
+
+    1.3. Imputation:
+    
+        1.3.1. Missing values shall be imputed using median values for continuous features and mode for categorical features.
+
+### Section 5. Input Feature Categories
+
+> NOTE: The features here are, once again, drafts and proposals. The exact list may change.
+
+> NOTE: The thresholds of categorical features need to be exactly defined.
+
+1. The classifier shall accept the following input features, organized into four categories:
+
+    1.1. Onboarding Questionnaire Features:
+
+        1.1.1. Employment Type
+
+            - This is a categorical feature that directly influences the income stability score. Regular employment contributes to Stable, while the rest of the employment types contribute to Variable.
+
+        1.1.2. Income Frequency
+
+            - This is a categorical feature that directly influences the income stability score. A higher frequency contributes to Stable, while a lower frequency contributes to Variable.
+
+    > NOTE: Setting income frequency as categorical may be incorrect. It may be more appropriate to set it as a continuous feature.
+
+        1.1.3. Primary Income Amount
+
+            - This is a continuous feature that indirectly influences the income stability score. A higher income alone does not contribute to income stability, but combining it with income frequency does. Weight shall depend on frequency.
+
+        1.1.4. Number of Income Sources
+
+            - This is an integer feature that may indicate diversification. However, multiple sources with variable amount and/or frequency do not necessarily imply stability. Weight shall be lower than frequency and type.
+
+        1.1.5. Total Obligations
+
+            - This is a continuous feature that directly influences the obligation weight score. Higher obligation sums contribute to Obligated.
+
+        1.1.6. Number of Dependents
+
+            - This is an integer feature that indirectly influences the obligation weight score. More dependents can mean higher necessary expenses.
+
+        1.1.7. Category Restriction Ratio
+
+            - This is a continuous feature that directly influences the obligation weight score. More categories and subcategories marked as protected and locked compared to those marked as open contribute to Obligated. 
+    
+    1.2. Transaction-Derived Features
+
+        1.2.1. Income Consistency Score
+
+            - This is a continuous feature that directly influences the income stability score, defined as a measure of regularity of income intervals. Higher consistency contributes to Stable.
+
+        1.2.2. Income Variance
+
+            - This is a continuous feature that directly influences the income stability score, defined as the standard deviation of income amounts. Lower variance contributes to Stable.
+
+| Feature | Type | Description | Impact on FBP |
+|---------|------|-------------|---------------|
+| Income Variance | Continuous | Standard deviation of income amounts | Directly influences Income Stability. Low variance → Stable. |
+| Obligation Ratio | Continuous (0–1) | (Essential + Obligatory expenses) / Total expenses | Directly influences Obligation Level. High ratio → Obligated. |
+| Expense Volatility | Continuous | Standard deviation of monthly expenses | Indirectly influences both dimensions. High volatility may indicate variable spending patterns. |
+| Savings Rate | Continuous | (Income - Expenses) / Income | Indirectly influences Obligation Level. Low savings rate may indicate high obligations. |
+| Average Transaction Count | Integer | Average number of transactions per month | Indirectly signals financial activity level. May be used for confidence weighting. |
+| Recurring Expense Ratio | Continuous | Recurring expenses / Total expenses | Indirectly influences Obligation Level. Higher ratio → higher fixed obligations. |
 
 ---
 
