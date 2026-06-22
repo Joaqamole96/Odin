@@ -2,32 +2,32 @@
 
 ---
 
-**Document Type:** Technical Specification
+Document Type: Technical Specification
 
-**Version:** 4.0
+Version: 4.0
 
-**Date:** 2026-06-13
+Date: 2026-06-13
 
-**Authors:**
+Authors:
 - Gabion, Stefanie S.
 - Guevarra, Joaquin Luis T.
 - San Jose, Alexa Joanne Paula G.
 - Togle, Charles Nathaniel B.
 
-**Course Adviser:** Prof. Era Marie Gannaban
+Course Adviser: Prof. Era Marie Gannaban
 
-**Technical Adviser:** Prof. Christian Michael Mansueto
+Technical Adviser: Prof. Christian Michael Mansueto
 
-**Panels:**
+Panels:
 - Prof. Daniel Dellosa (Chair)
 - Prof. Jomariss Plan
 - Prof. Janice Congzon
 
-**Institutional Affiliation:** College of Computing and Information Sciences, University of Makati
+Institutional Affiliation: College of Computing and Information Sciences, University of Makati
 
 ---
 
-# Notes
+# RULES
 
 1. All *italicized statements* (including their subsections) are suggestions that may be modified with justification.
 
@@ -39,6 +39,8 @@
 
 4. Cross‑cutting dependencies, or dependencies with two or more dependents, provided that they qualify as articles, shall be defined in dedicated articles before any module that uses them. These articles appear in order of conceptual dependency (e.g. User → Account → Transaction → Category).
 
+5. Nested statements shall only be a maximum of one indentation
+
 ---
 
 # SYSTEM SPECIFICATION
@@ -48,6 +50,8 @@
 > TODO: Include every module in the offline capability support list except for the FBP, forecasting, and anomaly detection module.
     
 > TODO: Add this to the scope and delimitations: "iOS is explicitly excluded from the scope. No iOS‑specific development, testing, or distribution shall be undertaken."
+
+> TODO: Add this to the onboarding: 'The System shall display an informational notice during onboarding that states: "Odin is a thesis project designed primarily for Filipino working young adults aged 20–40 in Metro Manila. All users are welcome to use the app, but please be aware that only data from users meeting these criteria will be used to train and improve Odin's AI models. By continuing, you acknowledge this limitation."'
 
 ---
 
@@ -71,93 +75,133 @@
 
 - LP: Linear Programming
 
----
+- OOB: Out-of-Bag
 
-## ===== Article I. Platform and Application =====
+- AUC-ROC: Area Under the Receiver Operating Characteristic Curve
 
-### Section 1. Platform
+- SMOTE: Synthetic Minority Over-sampling Technique
 
-1. The System shall be implemented as a mobile‑first application.
+- RFE: Recursive Feature Elimination
 
-    1.1. The System shall be published and distributed as a mobile application for Android devices on the Google Play Store. 
-
-    > PROPOSAL: All core user flows must be fully operable on a mobile screen width of 375 density‑independent pixels (dp) or less, corresponding to devices such as the Google Pixel 4a and similar compact Android smartphones. The layout shall adapt responsively to any width between 320 and 450 dp without requiring horizontal scrolling.
+- OTP: One-Time Password
 
 ---
 
-## ===== Article II. Interface
+## ===== Article I. Application =====
 
-### Section 1. Navigation
+### Section 1. Name
 
-1. The System shall implement a navigation toolbar with an Add button in the middle. This toolbar shall be anchored at the bottom of the screen and shall be present in all primary screens.
+> PROP: The name of the completed System and deployed Application shall be "Odin".
 
-    1.1. The toolbar shall contain the following items, along with their respective linked screens, from left to right, excluding the central Add button:
+> PROP: The tagline of the Application shall be: "Makes truly Filipino budgets."
 
-        1.1.1. ...
+### Section 2. Platform
 
-        1.1.2. ...
+1. The System shall be published and distributed as a mobile application for Android devices on the Google Play Store.
 
-        1.1.3. ...
+### Section 3. Permissions
 
-        1.1.4. ...
+> PROP: The System shall not request additional device permissions such as access to the phone's camera, contacts, ability to record audio, etc., as these are unnecessary.
 
-    1.2. The toolbar shall contain an Add button in the middle, between the second and third item.
+### Section 4. On-line Functionality
 
-        1.2.1. Tapping the Add button shall open a modal or bottom sheet with the following options:
+> PROP: All modules of the System shall function with full capability during on-line connectivity.
 
-            - Record Transaction
+### Section 5. Off-line Functionality
 
-            - Create / Use Transaction Template
+1. The System shall support offline capability for all modules except for the intelligent modules which rely on server-side model inference.
 
-### Section 2. Screens
+---
 
-1. The System shall implement the following primary screens and their respective subscreens or modals:
+## ===== Article II. Interface =====
 
-    - Registration Screen
+### Section 1. Screens
 
-    - Login Screen
+1. The System shall implement the following primary screens, their respective subscreens or modals, and their subscreen or modal type if applicable:
 
-        - Login: Forgotten Password Subscreen
+    1. Registration Screen
 
-    - Onboarding Screen
+    2. Onboarding Screen
 
-        - Onboarding: Questionnaire Subscreen
+        1. Questionnaire Subscreen
 
-        - Onboarding: Result & Classification Subscreen
+        2. Results Subscreen
 
-    - Dashboard Screen
+        3. Classification Subscreen
 
-    - User Account Screen
+    3. Login Screen
 
-    - FBP Screen
+        1. Forgotten Password Subscreen
 
-    - Transaction Entry Screen
+    4. Dashboard Screen
 
-        - Transaction Entry: Transaction Modal [Creation]
+    5. User Account Screen
 
-        - Transaction Entry: Transaction Template Modal
+    6. Financial Behavioral Profile Screen
 
-    - Transaction History Screen
+    7. Transaction Entry Screen
 
-        - Transaction History: Transaction Modal [Updation & Deletion]
+        1. Recurring Transactions Subscreen
 
-    - Budgeting Screen
+        2. Transaction Templates Subscreen
 
-    - Forecasting Screen
+        3. Transaction Modal
+        
+            - Creation
 
-    - Anomaly Detection Screen
+        4. Transaction Template Modal
 
-    - Savings Goals Management Screen
+    8. Transaction History Screen
 
-    - Debt Management Screen
+        1. Transaction Modal
+        
+            - Update
 
-    - Reports & Analytics Screen
+            - Deletion
 
-    - Settings Screen
+    9. Budgeting Screen
 
-    - Notifications Screen
+    10. Forecasting Screen
+
+    11. Anomaly Detection Screen
+
+    12. Savings Goals Management Screen
+
+    13. Debt Management Screen
+
+    14. Reports & Analytics Screen
+
+    15. Settings Screen
+
+    16. Notifications Screen
 
 2. The System shall support both light and dark themes, with the light theme as the default visual theme.
+
+### Section 2. Navigation
+
+1. The System shall implement a navigation toolbar anchored at the bottom of the screen, present in all primary screens.
+
+2. The toolbar shall contain an "Add" button, a prominent circular button with a plus symbol, in the center of the toolbar between the second and third item.
+
+3. Tapping the Add button shall open a modal or bottom sheet with the following actions:
+
+    1. **Record Transaction**: This action opens the Transaction Entry Screen.
+
+    2. **Create or Use Transaction Template**: This action opens the Transaction Template Modal.
+
+2. The toolbar shall contain the following items, along with their respective linked screens, from left to right:
+
+    > NOTE: The exact ordering and icons will be finalized during UI/UX design. The following are placeholders representing the primary destinations:
+
+    1. **Dashboard**: Dashboard Screen
+
+    2. **Transactions**: Transaction History Screen
+
+    3. **Add Button**
+
+    4. **Budget**: Budgeting Screen
+
+    5. **Profile**: FBP Screen:
 
 ---
 
@@ -165,476 +209,157 @@
 
 ### Section 1. General Users
 
-1. The System shall be accessible to any individual who downloads and installs the application, regardless of age, geographic location, or employment status. The System shall refer these individuals as General Users.
+1. The System shall define General Users as any individual who downloads and installs the application, regardless of age, geographic location, or employment status. 
 
-2. All General Users shall have full access to all features of the System.
+2. General Users shall have full access to all features of the System.
 
 ### Section 2. Target Users
 
-1. The System is specifically designed and optimized for Target Users, defined as individuals who meet all of the following criteria:
+1. The System shall define Target Users as individuals who meet all of the following criteria:
 
-    2.1. Demographic requirement. The user shall be a Filipino young adult aged 20 to 40 years inclusive.
+    1. **Demographic criterion**: The user is a Filipino citizen aged 20 to 40 years inclusive.
+    
+    2. **Geographic criterion**: The user lives or works in the National Capital Region, also known as Metro Manila, covering any of the following cities or municipality:
 
-        2.1.1. The age requirement is a design constraint for the System's intended audience, not an enforcement mechanism. The System shall not implement age verification (e.g., government ID upload) at registration.
+        1. City of Caloocan
+        
+        2. City of Las Piñas
+        
+        3. City of Makati
+        
+        4. City of Malabon
+        
+        5. City of Mandaluyong
+        
+        6. City of Manila
+        
+        7. City of Marikina
+        
+        8. City of Muntinlupa
+        
+        9. City of Navotas
+        
+        10. City of Parañaque
+        
+        11. City of Pasay
+        
+        12. City of Pasig
+        
+        13. Municipality of Pateros
+        
+        14. Quezon City
+        
+        15. City of San Juan
+        
+        16. City of Taguig
+        
+        17. City of Valenzuela
 
-        2.1.2. The System shall display an informational notice during onboarding that states: "Odin is a thesis project designed primarily for Filipino working young adults aged 20–40 in Metro Manila. All users are welcome to use the app, but please be aware that only data from users meeting these criteria will be used to train and improve Odin's AI models. By continuing, you acknowledge this limitation."
+    3. **Employment requirement**: The user declares a Primary Employment that falls into an employment type in any of the following employment category, based on the Department of Labor and Employment's Labor Code of the Philippines standards:
 
-    2.2. Geographic requirement. The user shall live or work in Metro Manila, covering any of its sixteen cities and one municipality (Caloocan, Las Piñas, Makati, Malabon, Mandaluyong, Manila, Marikina, Muntinlupa, Navotas, Parañaque, Pasay, Pasig, Pateros, Quezon City, San Juan, Taguig, and Valenzuela).
+        1. **Regular Employment**: Entitled to security of tenure and statutory benefits on a pro‑rata basis. Supports the Stable income dimension. The following employment types fall under this category:
 
-        2.2.1. The geographic requirement is a design constraint, not an enforcement mechanism. The System shall not implement GPS‑based location verification or IP address geolocation blocking.
+            - Full‑time Employee
+            
+            - Part‑time Employee
 
-        2.2.2. The System shall collect the user's declared city/municipality during onboarding for data segmentation purposes but shall not restrict access based on this declaration.
+        2. **Independent Contract/Employment**: Variable security of tenure; no employer‑employee relationship; responsible for own taxes and contributions. Supports the Variable income dimension. The following employment types fall under this category:
 
-    2.3. Employment requirement. The user shall declare a primary employment or income source in any of the following capacities, based on the Department of Labor and Employment's Labor Code of the Philippines standards:
+            - Self‑employed Individual
+            
+            - Freelancer
+            
+            - Business Owner
+            
+            - Entrepreneur
 
-        2.3.1. Regular Employees. This employment type is entitled to security of tenure and usually entitled to statutory benefits (SSS, PhilHealth, Pag‑IBIG, 13th month pay) on a pro‑rata basis. This employment type supports the Stable income dimension.
+        3. **Fixed‑Term/Project Employment**. Variable or low security of tenure; employed only for the length of contractual obligations. Supports the Variable income dimension. The following employment types fall under this category:
 
-            2.3.1.1. Full‑time Employee
+            - Contractual Employee/Worker
 
-            2.3.1.2. Part‑time Employee
-
-        2.3.2. Independent Contractors. This employment type has variable security of tenure and usually no employer‑employee relationship. The individuals are responsible for their own taxes and governmental contributions as voluntary members. This employment type supports the Variable income dimension.
-
-            2.3.2.1. Self‑employed Individual
-
-            2.3.2.2. Freelancer
-
-            2.3.2.3. Business Owner
-
-            2.3.2.4. Entrepreneur
-
-        2.3.3. Fixed‑Term and Project Employees. This employment type has variable or low security of tenure. The individuals are employed only for the length of their contractual obligations (project completion dates, termination dates). This employment type supports the Variable income dimension.
-
-            2.3.3.1. Contractual/Project‑based Employee
-
-            2.3.3.2. Gig Economy Worker
-
-        2.3.4. The employment requirement is a design constraint, not an enforcement mechanism. The System shall not require document upload (e.g., Certificate of Employment, payslip) for verification.
-
-        2.3.5. The user shall declare their employment type via a dropdown selection during onboarding.
-
-        2.3.6. Employment shall not bear more influence than other more appropriate features (income sources, income amount, income frequency) in the FBP classification module. Employment type serves primarily as a supplementary indicator and cold‑start proxy for income stability.
-
-> NOTE: Move this block onto a more appropriate Article or Section:
-
-<!--
-    2.4. Data usage distinction.
-
-        2.4.1. Only data generated by Target Users shall be used for model training (Random Forest classifier, LSTM forecaster, Isolation Forest anomaly detector) and algorithm evolution and improvement.
-
-        2.4.2. Data from General Users who do not meet the Target User criteria shall be excluded from all training datasets. Their data shall still be used for inference (i.e., providing personal recommendations, forecasts, and anomaly detection to that specific user).
-
-        2.4.3. The System shall implement a Target User flag in the user's profile, set during onboarding based on declared criteria. This flag shall be used to route data appropriately for training versus inference‑only purposes.
-
-        2.4.4. The System shall apply statistical filters to training datasets to further safeguard against inadvertent inclusion of data from users who may have misdeclared their eligibility.
--->
-
-> NOTE: Move this block onto a more appropriate Article or Section:
-
-<!--
-    2.5. Income Sources.
-
-        2.5.1. The user shall declare one or more income sources during onboarding and may add, edit, or remove sources at any time via the Transaction Entry screen.
-
-        2.5.2. Each income source shall have the following fields:
-
-            2.5.2.1. Source name (e.g., "Primary Salary", "Freelance Income", "Remittances")
-
-            2.5.2.2. Amount (PHP per period)
-
-            2.5.2.3. Frequency: Recurring (Daily/Weekly/Monthly/Quarterly/Yearly) or Non‑recurring
-
-            2.5.2.4. Source type: Primary or Secondary
-
-        2.5.3. Primary source designation:
-
-            2.5.3.1. The first income source added during onboarding shall be designated as the primary source by default.
-
-            2.5.3.2. The user may change the primary source at any time via a radio button or selector on the income sources list.
-
-            2.5.3.3. Only one income source may be designated as primary at any given time.
-
-            2.5.3.4. The primary source is used as the primary indicator of the user's income stability and as the default source for income transaction templates.
-
-        2.5.4. Internal mapping to transaction templates:
-
-            2.5.4.1. Each income source declared by the user shall be internally mapped to an income transaction template.
-
-            2.5.4.2. If the source is configured as Recurring, the template shall automatically include the recurrence pattern.
-
-            2.5.4.3. If the source is configured as Non‑recurring, the template shall default to a one‑time transaction.
-
-            2.5.4.4. The user may use these templates from the Transaction Entry Screen or the central add button to quickly record income from declared sources.
-
-        2.5.5. The income sources list shall serve as the primary data source for:
-
-            Income stability determination in the FBP classification
-
-            Budget feasibility calculations
-
-            Income forecasting
--->
+            - Project‑based Employee/Worker
+            
+            - Gig Economy Worker
 
 ---
 
-## ===== Article IV. FBP Structure =====
+## ===== Article IV. Financial Behavioral Profiles =====
 
-### Section 1. Financial Behavioral Profile Dimensions
+### Section 1. Income Stability
 
-1. There are two binary dimensions that define the four FBPs: income stability and obligation weight.
-
-> NOTE: The two dimensions need to be described better and more thoroughly.
+> NOTE: Discuss income stability as a binary dimension, its labels, its quantitative/numerical measurability as a score, and its threshold.
 
 2. Income stability is the capacity of the user's inflow to maintain a stable amount and frequency in regular intervals.
 
+### Section 2. Obligation Weight
+
+> NOTE: Discuss obligation weight as a binary dimension, its labels, its quantitative/numerical measurability as a score, and its threshold.
+
 3. Obligation weight is the proportion of the user's necessary expenses (sum of Essential and Obligatory expenses) to their total expenses.
 
-### Section 2. Financial Behavioral Profile Scores
-
-1. There are two continuous score values that are thresholded into their respective binary classifications: income stability score and obligation weight score.
-
-2. Income stability has a specific threshold value.
-
-    2.1. The user is classified as Stable if their income stability meets or exceeds the threshold.
-
-    2.2. The user is classified as Variable if their income stability falls below the threshold.
-
-3. Obligation weight has a specific threshold value.
-
-    3.1. The user is classified as Obligated if their obligation weight meets or exceeds the threshold.
-
-    3.2. The user is classified as Flexible if their obligation weight falls below the threshold.
-
-### Section 2. Income Stability
-
-1. The System shall determine the user's income stability from their income stability score.
-
-    1.1. The System shall analyze the user's income transaction history to derive the following features:
-
-        - Income frequency
-
-        - Income source count
-
-        - Income source type/s
-
-    > NOTE: Need to also consider how income source types affect income stability. Income source must not only be viewed as coming from employment, but also other inflows such as government grants, allowances, remittances, etc.
-
-        - Gross income
-
-    > NOTE: Need to finalize the income stability features. Above are draft features.
-
-    > NOTE: Need to validate the following statements:
-    > - Users declaring employment types under Regular Employees (Full‑time/Part‑time) shall contribute to a higher income stability score than those declaring Independent Contractor or Fixed‑Term/Project Employee types.
-    > - Users declaring recurring income sources (e.g., monthly salary) shall receive a higher income stability score than those declaring non‑recurring or irregular sources.
-
-    1.2. The income stability score shall be computed as a weighted combination of the abovementioned income stability features.
-
-    > [RESEARCH NOTE] The specific number of transactions or number of days required to have sufficient data for reliable income stability derivation from transaction history has not yet been determined. This threshold shall be established during algorithm prototyping and hyperparameter tuning. Possible approaches include:
-    > - Minimum 3 months of transaction history
-    > - Minimum 12 income transactions
-    > - A hybrid approach where the threshold is defined by statistical confidence intervals
-    > This determination shall be informed by the RRL.
-
-> NOTE: Exact income stability features need to be properly defined here and at 1.1:
-
-2. If the user's transaction history is insufficient to calculate the income stability score, then the score shall initially be calculated from the user's income stability features during onboarding.
-
-> NOTE: This needs to be moved into the periodic evaluation section.
-
-3. The System shall periodically evaluate the user's income stability score based on transaction history, independent of the user's declared employment status.
-
-    3.1. If the re-evaluation produces a score that classifies the user into a different dimension, the System shall reclassify the user.
-
-### Section 3. Obligation Weight
-
-1. The System shall determine the user's obligation weight from their obligation weight score.
-
-    1.1. The System shall analyze the user's expense transaction history to derive the following features:
-
-        - Essential expense transactions count
-
-        - Obligatory expense transactions count
-
-        - Total Essential expense transaction amount
-
-        - Total Obligatory expense transaction amount
-
-        - Dependents 
-
-        - Number of protected and fixed budget categories and subcategories
-
-    > NOTE: Need to finalize the obligation weight features. Above are draft features.
-
-    1.2. The obligation weight score shall be computed as a weighted combination of the abovementioned obligation weighty features.
-
-    > [RESEARCH NOTE] The specific number of transactions or number of days required to have sufficient data for reliable obligation weight derivation from transaction history has not yet been determined. This threshold shall be established during algorithm prototyping and hyperparameter tuning. This determination shall be informed by the RRL.
-
-> NOTE: Exact obligation weight features need to be properly defined here and at 1.1:
-
-2. If the user's transaction history is insufficient to calculate the obligation weight score, then the score shall initially be calculated from the user's obligation weight features during onboarding.
-
-> NOTE: This needs to be moved into the periodic evaluation section.
-
-3. The System shall periodically evaluate the user's obligation weight score based on transaction history, independent of the user's declared employment status.
-
-    3.1. If the re-evaluation produces a score that classifies the user into a different dimension, the System shall reclassify the user.
-
-### Section 4. Financial Behavioral Profiles
+### Section 3. Financial Behavioral Profile
 
 1. The four FBPs, derived from a combination of the user's income stability and obligation weight binary classifications, are:
 
-    1.1. Stable‑Flexible
+    1. Stable‑Flexible
 
-    1.2. Stable‑Obligated
+    2. Stable‑Obligated
 
-    1.3. Variable‑Flexible
+    3. Variable‑Flexible
 
-    1.4. Variable‑Obligated
+    4. Variable‑Obligated
 
 > NOTE: This should be moved to the FBP module.
 
-<!--
-### Section 5. Periodic Reclassification Check
+### Section 4. Financial Behavioral Drift
 
-1. The System shall perform periodic reclassification checks at defined intervals.
-
-    1.1. During each check, the System shall:
-
-        1.1.1. Re‑compute income stability and obligation weight scores based on the user's transaction history
-
-        1.1.2. Re‑classify the user if the computed scores cross the classification thresholds
-
-        1.1.3. Notify the user of any proposed profile change
-
-    1.2. The reclassification interval shall be determined during algorithm prototyping.
-
-    > [RESEARCH NOTE] The optimal reclassification interval (e.g., 30 days, 60 days, 90 days) has not yet been determined. Factors to consider include:
-    > - Data sufficiency (minimum transaction count for reliable classification)
-    > - Behavioral change sensitivity (how quickly the system should adapt to changing user circumstances)
-    > - User experience (avoiding overly frequent classification changes that may confuse users)
-    > This interval shall be validated during system evaluation (Paper Specification Article IV).
-
-2. The user shall have control over the reclassification process.
-
-    2.1. By default, the System shall automatically apply reclassification upon detection of a significant change in the user's profile.
-
-    2.2. The user may disable autonomous reclassification checking via the Settings screen. When disabled:
-
-        2.2.1. The System shall still compute reclassification scores but shall not automatically apply changes
-
-        2.2.2. The user shall be notified of any proposed changes and may manually approve or reject them
-
-    2.3. The user may manually trigger a reclassification check at any time via the FBP Overview or Settings screens.
-
-### Section 6. Manual Override Implications
-
-1. When a user manually selects a profile (Manual Classification), the following rules apply:
-
-    1.1. The selected profile shall be applied immediately and shall become the user's active profile.
-
-    1.2. The System shall continue to perform periodic reclassification checks in the background.
-
-    1.3. If a reclassification check produces a profile that differs from the user's manually selected profile:
-
-        1.3.1. The System shall not automatically apply the reclassification
-
-        1.3.2. The user shall be notified of the proposed change via a notification
-
-        1.3.3. The user may choose to accept the reclassification, reject it, or ignore it
-
-    1.4. The System shall retain the user's manual selection preference until the user explicitly changes it.
-
-2. If the user disables autonomous reclassification via Settings, the System shall not apply any reclassification automatically. The user shall be notified of changes but must manually approve them.
--->
+> INFO: Drifting of FBP over time
 
 ---
 
-## ===== Article V. Random Forest Classifier =====
+## ===== Article V. Financial Behavioral Profile Classifiers =====
 
-### Section 1. Overview
+### Section 1. Financial Behavioral Profile Classifier
 
-1. The Random Forest Classifier is the System's primary mechanism for assigning an FBP to each user.
+### Section 2. Data Collection
 
-2. The classifier shall be implemented using the Random Forest ensemble learning method, which constructs multiple decision trees during training and outputs the mode of the classes (classification) or mean prediction (regression) of individual trees.
-
-3. The classifier shall support both cold-start classification (using onboarding questionnaire data only) and standard classification (using transaction history).
-
-4. The classifier shall provide explainability via SHAP values to communicate to users which features most influenced their classification.
-
-### Section 2. Configuration
-
-1. The Random Forest Classifier shall be configured with the following hyperparameters & values, along with a justification for the configuration:
-
-    1.1. The number of trees (n_estimators) shall have the value of 100. This is the standard baseline for Random Forest, as this balances performance and computational cost.
-
-    1.2. The maximum depth (max_depth) shal have the value of 10. This prevents overfitting while capturing sufficient complexity.
-
-    1.3. The minimum samples split (min_samples_split) shall have the value of 5. This ensures splits are based on meaningful sample sizes.
-
-    1.4. The minimum samples leaf (min_samples_leaf) shall have the value of 2. This prevents leaf nodes from being too specific.
-
-    1.5. The maximum features (max_value) shall have the value of the square root. This is standard practice for classification problems.
-
-    1.6. The criterion shall have the value of Gini Impurity. This is standard for classification, as this is computationally efficient.
-
-    1.7. The boostrap shall have the value of true. This enables bagging for variance reduction.
-
-    1.8. The out-of-bag (OOB) score shall have the value of true. This enables out-of-bag evaluation for validation.
-
-    > RESEARCH: The hyperparameters above are initial baselines derived from standard Random Forest implementations (scikit-learn defaults) and related works in financial classification. Hyperparameter tuning via Grid Search or Randomized Search shall be performed during algorithm prototyping to optimize for the target dataset. The tuned hyperparameters shall be documented in Appendix E of the thesis manuscript.
-
-### Section 3. Training Data
-
-1. The classifier shall be trained on a dataset comprising:
-
-    - Onboarding questionnaire responses
-    
-    - Transaction history features
-
-2. The training dataset shall be generated using synthetic data derived from:
-
-    - BSP 2021 Consumer Finance Survey (CFS)
-    
-    - PSA 2023 Family Income and Expenditure Survey (FIES)
-    
-    - Preliminary survey of 100 Filipino working young adults
-
-3. The training dataset shall be balanced across all four FBP classes to prevent class imbalance bias.
+### Section 3. Data Preprocessing and Cleaning
 
 ### Section 4. Feature Engineering
 
-> NOTE: A reminder that all input features so far are proposals and drafts. They may be changed in the future after research support and validation.
+### Section 5. Exploratory Data Analysis
 
-1. The classifier shall process input features through the following pipeline:
+### Section 6. Data Modeling
 
-    1.1. Feature Encoding:
-    
-        1.1.1. Categorical features that shall be one-hot encoded are:
+### Section 7. Model Evaluation
 
-            - Employment type
-            
-            - Income frequency
-            
-            - Location
-        
-        1.1.2. Ordinal features that shall be label encoded are:
+### Section 8. Optimization
 
-            - Age bracket
-            
-            - Number of dependents
-
-        1.1.3. Continuous features that shall be standardized, with a mean of 0 and a standard deviation of 1, are:
-
-            - Income amount
-            
-            - Obligation ratio
-
-    1.2. Feature Selection:
-    
-        1.2.1. Feature importance shall be computed during training to identify the most predictive features.
-        
-        1.2.2. Features with importance below a threshold (e.g., < 0.01) may be considered for removal in subsequent iterations.
-
-    1.3. Imputation:
-    
-        1.3.1. Missing values shall be imputed using median values for continuous features and mode for categorical features.
-
-### Section 5. Input Feature Categories
-
-> NOTE: The features here are, once again, drafts and proposals. The exact list may change.
-
-> NOTE: The thresholds of categorical features need to be exactly defined.
-
-1. The classifier shall accept the following input features, organized into four categories:
-
-    1.1. Onboarding Questionnaire Features:
-
-        1.1.1. Employment Type
-
-            - This is a categorical feature that directly influences the income stability score. Regular employment contributes to Stable, while the rest of the employment types contribute to Variable.
-
-        1.1.2. Income Frequency
-
-            - This is a categorical feature that directly influences the income stability score. A higher frequency contributes to Stable, while a lower frequency contributes to Variable.
-
-    > NOTE: Setting income frequency as categorical may be incorrect. It may be more appropriate to set it as a continuous feature.
-
-        1.1.3. Primary Income Amount
-
-            - This is a continuous feature that indirectly influences the income stability score. A higher income alone does not contribute to income stability, but combining it with income frequency does. Weight shall depend on frequency.
-
-        1.1.4. Number of Income Sources
-
-            - This is an integer feature that may indicate diversification. However, multiple sources with variable amount and/or frequency do not necessarily imply stability. Weight shall be lower than frequency and type.
-
-        1.1.5. Total Obligations
-
-            - This is a continuous feature that directly influences the obligation weight score. Higher obligation sums contribute to Obligated.
-
-        1.1.6. Number of Dependents
-
-            - This is an integer feature that indirectly influences the obligation weight score. More dependents can mean higher necessary expenses.
-
-        1.1.7. Category Restriction Ratio
-
-            - This is a continuous feature that directly influences the obligation weight score. More categories and subcategories marked as protected and locked compared to those marked as open contribute to Obligated. 
-    
-    1.2. Transaction-Derived Features
-
-        1.2.1. Income Consistency Score
-
-            - This is a continuous feature that directly influences the income stability score, defined as a measure of regularity of income intervals. Higher consistency contributes to Stable.
-
-        1.2.2. Income Variance
-
-            - This is a continuous feature that directly influences the income stability score, defined as the standard deviation of income amounts. Lower variance contributes to Stable.
-
-| Feature | Type | Description | Impact on FBP |
-|---------|------|-------------|---------------|
-| Income Variance | Continuous | Standard deviation of income amounts | Directly influences Income Stability. Low variance → Stable. |
-| Obligation Ratio | Continuous (0–1) | (Essential + Obligatory expenses) / Total expenses | Directly influences Obligation Level. High ratio → Obligated. |
-| Expense Volatility | Continuous | Standard deviation of monthly expenses | Indirectly influences both dimensions. High volatility may indicate variable spending patterns. |
-| Savings Rate | Continuous | (Income - Expenses) / Income | Indirectly influences Obligation Level. Low savings rate may indicate high obligations. |
-| Average Transaction Count | Integer | Average number of transactions per month | Indirectly signals financial activity level. May be used for confidence weighting. |
-| Recurring Expense Ratio | Continuous | Recurring expenses / Total expenses | Indirectly influences Obligation Level. Higher ratio → higher fixed obligations. |
+### Section 9. Deployment
 
 ---
 
-## ===== Article VI. Financial Behavioral Profile Classification Process =====
+## ===== Article VI. Financial Behavioral Profile Classification =====
 
-> NOTE: Autonomous reclassification shall simply follow the processes of the respective classification.
+### Section 1. Standard Classification
 
-> NOTE: Outline the process of executing the Random Forest classification model, namely its input phase, process phase, and output phase. 
-
-### Section 1. Manual Classification
-
-> NOTE: Manual classification is when the user opts to select their profile instead of having the system assign it for them. This is when they have rejected their assigned profile during onboarding, or when they wish to change their profile via selection instead of retaking the questionnaire.
+> INFO: Standard process of model-based classification classifying the user's profile based on historical data.
 
 ### Section 2. Questionnaire Classification
 
-> NOTE: Questionnaire is different from the other classification processes, since the user invokes it during their registration or when they want to change their profile via the questionnaire.
+> INFO: Special process of model-based classification classifying the user's profile based on questionnaire answers.
 
-### Section 3. Cold Start Classification
+### Section 3. Cold-Start Classification
 
-> NOTE: Cold start classification is when the system is due for its periodic reclassification check, but the user does not have sufficient transactions for the system to perform the standard classification.
+> NOTE: See if a cold-start fallback for the classifier is needed. My logic right now says no?
 
-### Section 4. Standard Classification
+### Section 4. Manual Classification
 
-> NOTE: The basic classification process we know and love.
-
----
-
-## ===== Article VII. Questionnaire Structure =====
-
-### Section 1. Questionnaire
-
-> 
-
-### Section 2. Questionnaire Results and Classification
+> NOTE: Manual classification is when the user opts to select their profile instead of having the system assign it for them. This is when they have rejected their assigned profile during onboarding, or when they wish to change their profile via selection instead of retaking the questionnaire.
 
 ---
 
-## ===== Section VIII. Login and Registration Module =====
+## ===== Article VII. Registration Module =====
 
 ### Section 1. Data Privacy and Security Notice
 
@@ -646,43 +371,58 @@
 
 ### Section 3. Account Creation & Registration
 
-### Section 4. Login
+---
 
-### Section 5. Forgotten Password in Login
+## ===== Article VIII. Questionnaire Module =====
+
+### Section 1. Questionnaire Issuance
+
+### Section 2. Questionnaire Results
+
+### Section 3. Questionnaire Classification
+
+---
+
+## ===== Article IX. Log-in and Log-out Module =====
+
+### Section 1. Log-in
+
+### Section 2. Forgotten Password
 
 > NOTE: Either send OTP or send user to webpage where they can reset password.
 
-### Section 6. Login Session
+### Section 3. Session
 
 > NOTE: Auto-logout OR auto-lock.
 
+### Section 4. Log-out
+
 ---
 
-## ===== Article VII. Financial Behavioral Profile Module =====
+## ===== Article X. Financial Behavioral Profile Module =====
 
 ### Section 1. Financial Behavioral Profile
 
-### Section 2. Periodic Reclassification Check
+> INFO: Includes current FBP and user option to change FBP via questionnaire or simple manual user selection.
+
+### Section 2. Financial Behavioral Drift Checking
 
 > NOTE: Every set length of days, the system runs the classifier.
 
+
 ---
 
-## ===== Article VIII. User Account Module =====
+## ===== Article XI. User Accounts =====
 
 ### Section 1. User Account
 
 > NOTE: Should atleast cover user data export and toggling of opt-in for model training.
 
-> NOTE: Should cover the ff: Opt-in for model training (use user data to train and improve Odin's models), Data privacy & security, Opt-in for data selling to Chinese markets, User Consent (part of registration, Delete user data, Export user data
+> NOTE: Should cover the ff: Opt-in for model training (use user data to train and improve Odin's models), Data privacy & security, Opt-in for data selling to Chinese markets, User Consent (part of registration), Delete user data, Export user data
 
 ---
 
-## ===== Article IX. Financial Account Structure =====
-
-> NOTE: Need to consider: what if the user withdrew money from their savings, funds, or somewhere from their financial allocation group? Do we explain that it should be logged as a normal income transaction, or should we create a special process for it?
-
-> ANS: Suggestion: add actions in savings goal management to not only edit savings goal amount, but "Withdraw" to withdraw a certain amount to the user's balance
+## ===== Article XII. Financial Accounts =====
 
 ### Section 1. General Account
 
@@ -690,24 +430,26 @@
 
 ### Section 3. Debt Account
 
-### Section 2. Account Balance
+### Section 4. Account Balance
 
 > NOTE: Should tackle negative balance too.
 
-> NOTE: Negative balance is only for general accounts.
+> NOTE: Debt accounts should be negative or zero only.
 
-### Section 3. Financial Account Flow
+### Section 5. Financial Account Flow
 
 > NOTE: Income -> Balance -> Expenses
 >                         -> Savings
 >                         -> Debt
 ---
 
-## ===== Article X. Transaction Structure =====
+## ===== Article XIII. Transactions =====
 
-### Section 1. Transaction
+### Section 1. Transaction Types
 
 > NOTE: Should cover the transaction types. For recurring transactions, should cover patterns.
+
+> NOTE: What did I mean by patterns haha
 
 ### Section 2. Transaction Fields
 
@@ -730,7 +472,15 @@
 
 ---
 
-## ===== Article XI. Expense Structure =====
+## ===== Article XIV. Income =====
+
+### Section 1. Income
+
+> INFO: Discuss income, distinction between employment/occupation income and other types of inflows, income categories, etc.
+
+---
+
+## ===== Article XV. Expenses =====
 
 ### Section 1. Expense
 
@@ -758,58 +508,62 @@
 
 ---
 
-## ===== Article XII. Transaction Entry Module =====
+## ===== Article XVI. Transaction Entry Module =====
 
-### Section 1. Manual Transaction Entry
+### Section 1. Transaction Entry
 
-### Section 2. Recurring Transaction Entry
+> INFO: Discusses the transaction entry, fields, option to set as recurring
 
-### Section 3. Transaction Suggestions
+### Section 2. Recurring Transactions
+
+> INFO: Discusses the recurring transactions subscreen; list of recurring transactions set by the user, with options to edit or delete
+
+### Section 3. Transaction Templates
+
+> INFO: Discusses the transaction templates subscreen; list of templates made by the user, with options to edit or delete
+
+### Section 4. Transaction Suggestions
 
 > NOTE: Should discuss ease of use by displaying frequent income/expense details (and expense categories).
 
 ---
 
-## ===== Article XIII. Transaction History Module =====
+## ===== Article XVII. Transaction History Module =====
 
-### Section 1. Transaction Records
+### Section 1. Transaction History
 
-### Section 2. Transaction Records Searching, Sorting, and Filtering Operations
+### Section 2. Searching, Sorting, and Filtering Operations
 
 > NOTE: Includes searching, sorting, and filtering.
 
-### Section 3. Transaction Editing & Deletion
+### Section 3. Editing & Deletion
 
 ### Section 2. Transaction Record Retention
 
 > NOTE: The retention limit must be validated official guidelines, like from the BSP.
 ---
 
-## ===== Article XIV. Budget Structure =====
+## ===== Article XVIII. Budgets =====
 
 ### Section 1. Budget
 
-### Section 2. Budget Size
+### Section 2. Size
 
-### Section 3. Budget Period
+### Section 3. Period
 
-### Section 4. Budget Allocations
+### Section 4. Allocation
 
 > NOTE: Per category group, cat., and subcat.
 
-### Section 5. Budget Constraints
+### Section 5. Constraint
 
 > NOTE: Should discuss floors and ceilings.
 
-### Section 6. Budget Feasibility
+### Section 6. Feasibility
 
 > NOTE: If suggested budget, considering the requirements and constraints like floors (protected & locked), can be supported by current balance, then it is considered Feasible. If not Feasible, system will begin budget reduction.
 
----
-
-## ===== Article XV. Budget Strategy Structure =====
-
-### Section 1. Budget Strategy
+### Section 7. Strategy
 
 > NOTE: Should discuss the components of a budget strategy, like hierarchy and stuff. Here's what I'm thinking. The given budget strategies (e.g. 50/30/20) need to be distilled into a set of configurations, such that the user, with the custom budget strategy feature, can replicate the given budget strategies.
 > There needs to be a restriction configuration (for the 50% needs portion of 50/30/20 that cannot be reduced, for example). There also needs to be a hierarchy configuration, for the order of allocation.
@@ -817,47 +571,43 @@
 
 > NOTE: The given budget strategies should be sourced from those mentioned in the RRL.
 
-### Section 2. 50/30/20 Strategy
-
-### Section 3. Savings-First Strategy
-
 ---
 
-## ===== Article XV. Linear Programming Recommender =====
+## ===== Article XIX. Budget Recommenders =====
 
-### Section 1. Details
+### Section 1. Budget Recommenders
 
-> NOTE: Should discuss prior things like design, etc., preferably as sections.
+### Section 2. Data Collection
 
-### Design
+### Section 3. Data Preprocessing and Cleaning
 
-### Section 2. Input
+### Section 4. Feature Engineering
 
-### Section 3. Process
+### Section 5. Exploratory Data Analysis
 
-### Section 4. Output
+### Section 6. Data Modeling
 
-### Section 6. Details
+### Section 7. Model Evaluation
 
-> NOTE: Should discuss posterior things like evaluation, explainability, fallback, etc., preferably as sections.
+### Section 8. Optimization
 
-> NOTE: Maybe move all expainability sections/subsections of algorithm articles to their process articles isntead.
+### Section 9. Deployment
 
-## ===== Article XVI. Budget Recommendation Process =====
+## ===== Article XX. Budget Recommendation Process =====
+
+### Section 2. Standard Budget Recommendation
 
 ### Section 1. Cold-Start Budget Recommendation
 
 > NOTE: Can cold-start budget recommendations be affected by budget infeasibility? 
 
-### Section 2. Standard Budget Recommendation
+### Section 3. Reduced Budget Recommendation
 
-### Section 3. Budget Infeasibility & Reduction
-
-> NOTE: This section is for when budget size exceeds current balance plus foreseeable income streams. Discuss which allocations are reduced; in what order, and by how much per. Also need to discuss what to do when, after all legal reductions are performed, the budget is still infeasible. It may be important to consider not to tell the user outright that they don't have enough money for the budget period, as that can invoke panic and despair. This is an unfortunate occurence that is a reality to some Filipinos today, so our system must also be sensitive aside from being intelligent and ethical.
+> NOTE: This section is for when recommended budget becomes infeasible and size exceeds current balance plus foreseeable income streams. Discuss which allocations are reduced; in what order, and by how much per. Also need to discuss what to do when, after all legal reductions are performed, the budget is still infeasible. It may be important to consider not to tell the user outright that they don't have enough money for the budget period, as that can invoke panic and despair. This is an unfortunate occurence that is a reality to some Filipinos today, so our system must also be sensitive aside from being intelligent and ethical.
 
 ---
 
-## ===== Article XVII. Budgeting Module =====
+## ===== Article XXI. Budgeting Module =====
 
 ### Section 1. Budget Health
 
@@ -881,103 +631,101 @@
 
 ---
 
-## ===== Article XVIII. Forecast Structure =====
+## ===== Article XXII. Forecasts =====
 
-### Section 1. Forecast Targets
+### Section 1. Forecast Target
 
-### Section 2. Forecast Horizons
-
-### Section 3. Forecast Granularities
+### Section 2. Forecast Horizon
 
 ---
 
-## ===== Article XIX. Long Short-Term Memory Forecaster =====
+## ===== Article XXIII. Forecasters =====
 
-### Section 1. Details
+### Section 1. Forecasters
 
-> NOTE: Should discuss prior things like training, design, architecture, etc., preferably as sections.
+### Section 2. Data Collection
 
-### Section 2. Input
+### Section 3. Data Preprocessing and Cleaning
 
-### Section 3. Process
+### Section 4. Feature Engineering
 
-### Section 4. Output
+### Section 5. Exploratory Data Analysis
 
-### Section 6. Details
+### Section 6. Data Modeling
 
-> NOTE: Should discuss posterior things like algorithm evaluation, explainability, fallback, etc., preferably as sections.
+### Section 7. Model Evaluation
 
----
+### Section 8. Optimization
 
-## ===== Article XX. Forecasting Process =====
-
-### Section 1. Cold-Start Aggregated Forecasting
-
-### Section 2. Cold-Start Per-Category Forecasting
-
-### Section 3. Standard Aggregated Forecasting
-
-### Section 4. Standard Per-Category Forecasting
+### Section 9. Deployment
 
 ---
 
-## ===== Article XXI. Forecast Module
+## ===== Article XXIV. Forecasting Process =====
+
+### Section 1. Standard Forecasting
+
+### Section 2. Cold-Start Forecasting
+
+---
+
+## ===== Article XXV. Forecasting Module
 
 ### Section 1. Total Forecast
 
-### Section 2. Per-Category Group Forecast
+### Section 2. Category Group Forecast
 
-### Section 3. Per-Category Forecast
+### Section 3. Category Forecast
 
 ### Section 4. Forecast Breakdown
 
 ---
 
-## ===== Article XXI. Anomaly Structure =====
+## ===== Article XXVI. Anomalies =====
 
-### Section 1. Overspending Anomalies
+### Section 1. Overspending Transaction
 
-### Section 2. Statistical Anomalies
+### Section 2. Anomalous Transaction
 
-### Section 3. Exclusions
+### Section 3. Exclusion
 
 ### Section 4. Whitelist
 
 ---
 
-## ===== Article XXII. Isolation Forest Anomaly Detector =====
+## ===== Article XXVII. Anomaly Detectors =====
 
-### Section 1. Details
+### Section 1. Anomaly Detector
 
-> NOTE: Should discuss prior things like training, design, architecture, etc., preferably as sections.
+### Section 2. Data Collection
 
-### Section 2. Input
+### Section 3. Data Preprocessing and Cleaning
 
-### Section 3. Process
+### Section 4. Feature Engineering
 
-### Section 4. Output
+### Section 5. Exploratory Data Analysis
 
-### Section 6. Details
+### Section 6. Data Modeling
 
-> NOTE: Should discuss posterior things like algorithm evaluation, explainability, fallback, etc., preferably as sections.
+### Section 7. Model Evaluation
 
-### Fallback
+### Section 8. Optimization
 
-> NOTE: Point of debate; how can system know what is anomalous with insufficient data?
-
----
-
-## ===== Article XXIII. Anomaly Detection Process
-
-### Section 1. Cold-Start Statistical Anomaly Detection
-
-### Section 2. Standard Statistical Anomaly Detection
-
-### Section 3. Standard Overspending Anomaly Detection
+### Section 9. Deployment
 
 ---
 
-## ===== Article XXIV. Anomaly Detection Module =====
+## ===== Article XXVIII. Anomaly Detection Process
+
+### Section 1. Standard Anomalous Transaction Detection
+
+### Section 2. Cold-Start Anomalous Transaction Detection
+
+### Section 3. Standard Overspending Transaction Detection
+
+---
+
+## ===== Article XXIX. Anomaly Detection Module =====
 
 ### Section 1. Anomaly Detection
 
@@ -993,7 +741,7 @@
 
 ---
 
-## ===== Article XXV. Savings Goal Structure =====
+## ===== Article XXX. Savings Goals =====
 
 ### Section 1. Savings Goal
 
@@ -1003,7 +751,7 @@
 
 ---
 
-## ===== Article XXVI. Savings Goal Module =====
+## ===== Article XXXI. Savings Goal Module =====
 
 ### Section 1. Savings Goal Hierarchy
 
@@ -1015,13 +763,13 @@
 
 ---
 
-## ===== Article XXVII. Debt Structure =====
+## ===== Article XXXII. Debts =====
 
 ### Section 1. Debt
 
 ---
 
-## ===== Article XXVIII. Debt Module =====
+## ===== Article XXXIII. Debt Module =====
 
 ### Section 1. Debt Hierarchy
 
@@ -1035,7 +783,7 @@
 
 ---
 
-## ===== Article XXIX. Reports and Analytics =====
+## ===== Article XXXIV. Reports and Analytics =====
 
 ### Section 1. Budget vs. Actual Report
 
@@ -1051,7 +799,7 @@
 
 ---
 
-## ===== Article XXX. Notifications Module =====
+## ===== Article XXXV. Notifications Module =====
 
 ### Section 1. Notifications
 
@@ -1063,7 +811,7 @@
 
 ---
 
-## ===== Article XXXI. Dashboard Module =====
+## ===== Article XXXVI. Dashboard Module =====
 
 ### Section 1. Dashboard
 
@@ -1077,7 +825,7 @@
 
 ---
 
-## ===== Article XXXII. Settings =====
+## ===== Article XXXVII. Settings =====
 
 ### Section 1. User Settings
 
@@ -1089,250 +837,10 @@
 
 ---
 
-## ===== Article XXXIII. Offboarding =====
+## ===== Article XXXVIII. Offboarding =====
 
 ### Section 1. User Data Deletion
 
 ### Section 2. User Account Deletion
 
 ---
-
-# PAPER SPECIFICATION
-
----
-
-## Article I: Introduction Section
-
-### Section 1. Background
-
-1. The Background subsection shall contain at least the following elements.
-
-    1.1. Domain context. Overview of personal finance management in the Philippines, including prevalence of financial distress among young adults (cite BSP CFS 2021, PSA data).
-
-    1.2. Problem space. Discussion of budgeting, saving, and debt management challenges specific to Metro Manila working young adults (age 20‑40).
-
-    1.3. Existing solutions. Survey of existing PFM apps (both international and local) and their limitations for Filipino users.
-
-2. Length requirement. Minimum 500 words, maximum 1000 words.
-
-### Section 2. Problem Statement
-
-1. The Problem subsection shall be structured as follows.
-
-    1.1. General problem. A single sentence stating the overarching problem the System addresses.
-
-        1.1.1. Example: "Filipino working young adults lack access to a personal finance management system that adapts to their variable income patterns, cultural spending norms, and behavioral profiles."
-
-    1.2. Specific problems. Enumerated list (3‑5 items) of sub‑problems, each mapped to a system module.
-
-### Section 3. Objectives.
-
-1. General objective. "To design, implement, and evaluate Odin, a personal finance management system for Filipino working young adults in Metro Manila using Random Forest, LSTM, and Isolation Forest algorithms."
-
-2. Specific objectives. Enumerated list (5‑8 items), each corresponding to a system module or evaluation activity.
-
-    2.1. Each objective must be verifiable and mapped to a metric in Article XIII of the System Specification.
-
-### Section 4. Significance.
-
-1. The Significance subsection shall list primary and secondary beneficiaries.
-
-    1.1. Primary beneficiaries. Filipino working young adults (age 20‑40, Metro Manila).
-
-    1.2. Secondary beneficiaries.
-
-        1.2.1. Researchers in financial technology for developing economies.
-        
-        1.2.2. PFM app developers targeting Southeast Asian markets.
-        
-        1.2.3. Policymakers interested in financial inclusion metrics.
-
-### Section 5. Scope and Delimitations.
-
-1. Scope (inclusions). Reference Article XV of the System Specification but restate in prose.
-
-2. Delimitations (exclusions). Reference Article XV exclusions of the System Specification.
-
-### Section 6. Definition of Terms.
-
-1. Reproduce the terms from Article XVI of the System Specification that appear in the paper.
-
----
-
-## Article II: Review of Related Literature (RRL) Topics
-
-### Section 1. Topic Organization.
-
-1. The RRL chapter shall be organized into exactly 12 topics as listed below.
-
-2. For each topic, the paper shall contain:
-
-    2.1. A minimum of 10 peer‑reviewed citations (except where local data is scarce, in which case government reports and conference proceedings are acceptable).
-
-> NOTE: The minimum are actually as follows:
-> Local studies: Philippines-based, does NOT discuss or utilize algorithms or models; at least 25 total.
-> International studies: NOT Philippines-based, does NOT discuss or utilize algorithms or models; at least 25 total.
-> Algorithm-specific:
-    > Random Forest: At least 10 each for local and int'l; 20 total.
-    > LSTM: At least 10 each for local and int'l; 20 total.
-    > Isolation Forest: At least 10 each for local and int'l; 20 total.
-    > Linear Programming: ACTUALLY this is debatable; does not technically classify as a computer algorithm or model, technically mathematical; can be classified as rule-based though; Can instead research rule-based budget recom. algos.; at least 10 each for local and int'l; 20 total.
-
-    2.2. A synthesis paragraph that identifies gaps that Odin addresses.
-
-    2.3. A table or figure summarizing key findings (where appropriate).
-
-### Section 2. The Twelve Topics.
-
-1. Topic 1. Filipino Working Young Adults and the Financial Problem.
-
-2. Topic 2. Filipino Cultural Context in Personal Finance.
-
-3. Topic 3. Expense Categorization in Personal Finance Systems.
-
-4. Topic 4. Existing Personal Finance and Budget Management Systems.
-
-5. Topic 5. Financial Behavioral Profiling.
-
-6. Topic 6. Spending Forecasting.
-
-7. Topic 7. Budget Recommendation.
-
-8. Topic 8. Anomalous Spending Detection.
-
-9. Topic 9. Mobile‑First Design.
-
-10. Topic 10. Data Privacy, Security, and User Trust.
-
-11. Topic 11. User Retention and Engagement.
-
-12. Topic 12. System Evaluation.
-
----
-
-## Article III: Research Methodology
-
-### Section 1. Research Paradigm.
-
-1. The study shall adopt a pragmatist paradigm (mixed methods) combining quantitative (ML metrics, SUS) and qualitative (thematic analysis of feedback).
-
-### Section 2. Research Design.
-
-1. The research design shall be developmental, with the following phases.
-
-    1.1. Requirements analysis.
-
-    1.2. Synthetic data generation.
-
-    1.3. Algorithm prototyping.
-
-    1.4. System development (Agile, 2‑week sprints).
-
-    1.5. Internal testing.
-
-    1.6. User evaluation.
-
-### Section 3. Agile Development Methodology.
-
-1. The team shall use Scrum with 2‑week sprints.
-
-> NOTE: No. Just normal agile.
-
-### Section 4. Evaluation Design.
-
-1. ISO 25010 shall be operationalized via test cases.
-
-2. SUS shall be administered after 14 days of use.
-
-3. ML metrics shall be computed via Python on synthetic data.
-
-### Section 5. Data Collection for ML Training.
-
-1. Primary data source. Synthetic data from BSP CFS 2021 and PSA FIES 2018.
-
-2. Secondary data source (optional). Pre‑survey of 50‑100 Filipino working young adults.
-
-3. Tertiary data source (pilot). Up to 10 pilot users with consent, used only for final inference evaluation, not training.
-
-### Section 6. Ethical Considerations.
-
-1. The following ethical requirements shall be met.
-
-    1.1. Informed consent obtained from all participants.
-
-    1.2. Compliance with RA 10173 (Data Privacy Act).
-
-    1.3. Anonymization of user data as specified in System Specification Article XIV.
-
-    1.4. Ethics clearance from UMak Research Ethics Committee.
-
-    1.5. App disclaimer displayed on first launch.
-
----
-
-> NOTE: There's no Chapter 4 and 5.
-
-## Article IV: Expected Outcomes and Contribution
-
-1. The thesis shall produce the following outputs.
-
-    1.1. Functional Odin application.
-
-    1.2. Random Forest classifier (accuracy ≥ 0.85).
-
-    1.3. LSTM forecasting model (sMAPE < 25% / 30% as per category).
-
-    1.4. Isolation Forest anomaly detector (F1 ≥ 0.675).
-
-    1.5. LP‑based budget recommendation (adherence ≥ 70%).
-
-    1.6. Thesis manuscript.
-
-    1.7. Public GitHub repository.
-
----
-
-## Article V: Thesis Timeline
-
-1. The following milestones and durations shall be used.
-
-Milestone	Duration
-RRL completion (12 pillars)	8 weeks
-Synthetic data generation	2 weeks
-Algorithm prototyping	4 weeks
-System development (4 sprints)	8 weeks
-Internal testing	2 weeks
-User evaluation (SUS + ML metrics)	3 weeks
-Thesis writing and revision	6 weeks
-Final defense preparation	2 weeks
-
-2. A Gantt chart shall be included in the final paper.
-
----
-
----
-
-## Article VII: References Style
-
-1. References shall follow APA 7th edition.
-
-2. Minimum 60 references, of which at least 40 shall be peer‑reviewed journal articles or conference proceedings.
-
-> NOTE: Update the references minimum.
-
----
-
-## Article VIII: Appendices Required
-
-1. The following appendices shall be included.
-
-Appendix	Content
-A	Onboarding questionnaire
-B	SUS survey form
-C	User consent form (English and Tagalog)
-D	Synthetic data generation code (Python)
-E	Hyperparameter tuning grids
-F	Walk‑forward validation results (tables)
-G	System architecture diagram
-H	Database schema
-I	User manual
