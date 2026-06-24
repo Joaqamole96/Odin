@@ -1,82 +1,159 @@
 ```yaml
 paper_id: 10.34104/cjbis.024.0910105
-designation: local
+designation: international-algorithm-specific
 title: Financial Literacy Practices on the Investment Decisions of Accounting Professionals in Makati City
-authors: Pinca, J.M.; NG, J.G.; Lacerona, R.B.; Minorca, J.C.; Rodriguez, N.R.; Ramos, J.I.
+authors: Pinca, J. M.; NG, J. G.; Lacerona, R. B.; Minorca, J. C.; Rodriguez, N. R.; Ramos, J. I.
 year: 2024
 venue: Canadian Journal of Business and Information Studies
 odin_topics:
+  - 1.A
+  - 1.B
   - 1.C
+  - 2.A
+  - 2.C
+  - 3.A
+  - 3.B
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.B
   - 7.A
+  - 7.B
+  - 7.C
+  - 10.A
+  - 10.B
+  - 11.A
+  - 11.B
+  - 12.A
   - 13.A
-  - 13.B
-shorthand_tags:
-  - /financial-behavior-1C
-  - /budgeting-strategies-7A
-  - /savings-goal-13A
-  - /debt-management-13B
-tldr: Financial literacy practices in budgeting, saving and investing, and debt management show very strong positive correlations with investment decisions among accounting professionals in Makati City.
-problem_and_motivation: Despite the recognized importance of financial literacy, limited research has examined how specific financial literacy practices influence investment decisions, particularly among accounting professionals in the Philippines. Understanding this relationship is crucial for improving financial decision-making and economic progress.
+tldr: Financial literacy practices, particularly saving/investing, budgeting, and debt management, show very strong positive correlations with investment decisions among accounting professionals in Makati City.
+problem_and_motivation: While financial literacy is known to influence investment decisions, limited research explores the correlation between specific literacy practices and choices. This creates a gap in understanding how budgeting, saving, and debt management directly affect investment behavior among professionals.
 approach:
-  - Surveyed 80 accounting professionals from selected firms in Makati City using a self-made questionnaire.
-  - Measured financial literacy practices across budgeting, saving/investing, and debt management using a four-point Likert scale.
-  - Assessed investment decisions across risk tolerance, investment goals, cost-effectiveness, and asset allocation.
-  - Analyzed correlations using Pearson's product-moment correlation coefficient with significance at p<0.001.
+  - A quantitative, cross-sectional survey was administered to 80 accounting professionals in Makati City.
+  - A self-made questionnaire measured financial literacy practices (budgeting, saving/investing, debt management) and investment decision parameters (risk tolerance, goals, cost-effectiveness, asset allocation).
+  - Data were analyzed using Pearson's Product Moment Correlation Coefficient to determine relationships.
+  - Instrument reliability was verified with Cronbach's alpha scores of .876 and .815, deemed 'Good'.
 findings:
-  - "num: Budgeting practices showed a very strong positive correlation with investment decisions (r=0.924, p=0.001)."
-  - "num: Saving and investing practices showed a very strong positive correlation with investment decisions (r=0.970, p<0.001)."
-  - "num: Debt management practices showed a very strong positive correlation with investment decisions (r=0.919, p=0.001)."
-  - Respondents rated diversification as the most valued saving/investing practice (mean 3.90).
-  - Avoiding new debts unless necessary was the highest-rated debt management practice (mean 3.95).
+  - num: A very strong and significant correlation exists between budgeting and investment decisions (r=0.924, p=0.001).
+  - num: A very strong and significant correlation exists between saving/investing and investment decisions (r=0.970, p<0.001).
+  - num: A very strong and significant correlation exists between debt management and investment decisions (r=0.919, p=0.001).
+  - Respondents rated "I understand the risks associated with different investment options due to my financial education" as the highest factor for risk tolerance (mean 3.98).
+  - Respondents rated "I refrain from acquiring new debts unless absolutely necessary" as the highest debt management practice (mean 3.95).
 key_figures_tables:
-  - "Table 10: Pearson correlation budgeting vs investment → r=0.924, p=0.001."
-  - "Table 11: Saving/investing vs investment → r=0.970, p<0.001."
-  - "Table 12: Debt management vs investment → r=0.919, p=0.001."
-  - "Table 3: Budgeting practices → tracking spending highest at 3.93."
+  - Table 10: Budgeting vs. Investment Decisions correlation → Very strong positive correlation (r=0.924, p=0.001).
+  - Table 11: Saving/Investing vs. Investment Decisions correlation → Very strong positive correlation (r=0.970, p<0.001).
+  - Table 12: Debt Management vs. Investment Decisions correlation → Very strong positive correlation (r=0.919, p=0.001).
 key_equations:
   - equation: None.
     explanation: ""
 definitions:
-  - term: None.
-    definition: ""
+  - term: Financial Literacy
+    definition: Understanding financial terms and concepts related to investing, handling money, and making informed financial decisions.
+  - term: Pearson-r
+    definition: A measure of the linear correlation between two variables, ranging from -1 to 1.
 critical_citations:
-  - "[Klapper, Lusardi, & van Oudheusden, 2014] — global financial literacy data."
-  - "[Lusardi & Mitchell, 2014] — financial literacy importance."
-  - "[Kumari, 2020] — defines financial literacy."
+  - "[Kumari, 2020] — Defines financial literacy as expertise for money handling."
+  - "[Lusardi and Mitchell, 2014] — Links education level to financial literacy."
 relevance:
   topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: The study directly focuses on accounting professionals in Makati City, a key subset of Filipino young professionals.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: It analyzes their budgeting, saving, and debt management practices, which define their financial structure.
     - code: 1.C
       name: Financial Behavior of Filipino Young Professionals
-      justification: Studies financial literacy practices and investment decisions of accounting professionals aged 25-34 in Makati.
+      relevance: high
+      justification: The core of the study is the financial behavior (practices) and its influence on investment decisions.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: It examines financial practices within a specific Philippine context (Makati City).
+    - code: 2.C
+      name: User-Declared Financial Preferences
+      relevance: medium
+      justification: The survey captures self-declared preferences related to budgeting, saving, and risk tolerance.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: Budgeting practices, a key focus, are a fundamental part of expense categorization.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: low
+      justification: It mentions budgeting at a high level but not specific design considerations for categories.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: Does not review specific PFMS systems but informs the behavioral principles they should support.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: contextual
+      justification: Highlights the general need for financial literacy tools but doesn't critique existing systems.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: The findings on different practices (saving, budgeting, debt) can inform the development of behavioral profiles.
+    - code: 5.B
+      name: Profile Dynamics and the Cold-Start Problem
+      relevance: low
+      justification: Does not address profile dynamics or cold-start problems but provides static data on professionals.
     - code: 7.A
       name: Budgeting Strategies as Domain Knowledge
-      justification: Surveys budgeting practices including tracking, planning, and spending limits.
+      relevance: high
+      justification: Directly investigates budgeting as a key financial literacy practice and its influence on decisions.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: contextual
+      justification: Provides evidence that budgeting is critical, justifying its inclusion in budget recommendations.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: low
+      justification: Does not address optimization, but the strong correlation with debt management highlights constraints.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Not directly addressed, but user trust is indirectly implied through professional behavior.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: low
+      justification: Not a focus of the study.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: contextual
+      justification: The positive correlation suggests engagement with these practices, but engagement with apps is not studied.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: low
+      justification: No direct relevance to retention mechanisms.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: contextual
+      justification: Uses survey methodology but not an evaluation of a PFMS.
     - code: 13.A
-      name: Savings Goal Management
-      justification: Measures saving practices such as setting objectives, emergency funds, and monitoring.
-    - code: 13.B
-      name: Debt Management in PFMS
-      justification: Examines debt management practices including repayment strategies and avoiding new debt.
-  contribution: This paper provides empirical evidence that budgeting practices correlate strongly with investment decisions, which can inform Odin's budget recommendation module by highlighting the importance of tracking and planning features. The strong correlation between saving/investing practices and decisions supports the design of Odin's savings goal management feature, particularly around diversification and emergency funds. The debt management findings justify Odin's debt management module, emphasizing features that help users avoid unnecessary debt and prioritize high-interest debt repayment. The survey methodology demonstrates a quantitative approach for evaluating user practices, applicable to Odin's system evaluation framework.
+      name: Savings Goal Management in PFMS
+      relevance: high
+      justification: Saving and investing is a core practice studied, with a very strong correlation to investment decisions.
+  contribution: "This paper provides empirical evidence from a Philippine context that specific financial literacy practices (budgeting, saving/investing, and debt management) are strongly correlated with investment decisions. For Odin, this justifies the inclusion of modules that track and reinforce these specific behaviors, such as budget setting, saving goals, and debt management. The high correlations suggest that Odin's recommendation engine should prioritize these areas to influence user behavior effectively. The findings on risk tolerance and diversification can inform Odin's risk assessment features. The study's focus on user-perceived importance of avoiding new debt highlights a key area for Odin's engagement and notification strategies."
   directly_justifies:
-    - Budgeting practices have a very strong positive correlation with investment decisions (r=0.924).
-    - Saving and investing practices are positively associated with investment decisions (r=0.970).
-    - Debt management practices show a significant relationship with investment decisions (r=0.919).
-    - Avoiding new debts unless necessary is the most highly rated debt management practice.
+    - "Budgeting practices are strongly correlated with investment decisions, justifying a dedicated budgeting module in Odin."
+    - "Saving and investing are very strongly correlated with investment decisions, supporting Odin's savings goal management features."
+    - "Debt management is strongly correlated with investment decisions, warranting a focus on debt reduction in Odin's recommendations."
   limits:
-    - Convenience sample of 80 accounting professionals limits generalizability.
-    - Focus on Makati City only; not representative of all Filipino young professionals.
-    - Relies on self-reported Likert scale data, which may introduce bias.
-    - No control group or baseline comparison.
-  mapping_rationale: The paper was screened against Odin's functional domains. It does not address behavioral profiling, spending forecasting, anomaly detection, mobile design, data privacy, retention, or algorithm evaluation. However, it directly provides citeable claims on financial behavior of Filipino young professionals (domain: behavioral profiling), budgeting strategies (domain: budget recommendation), and savings/debt management (domain: savings & debt management). Topic codes 1.C, 7.A, 13.A, and 13.B were selected. Codes related to expense categorization (3.A, 3.B) were rejected because the paper does not propose or evaluate categorization frameworks. Codes for predictive modeling (6.A, 6.B) were rejected as no forecasting is involved. The borderline case of 2.A (culturally specific practices) was rejected because the practices are generic financial literacy concepts, not unique to Filipino culture.
+    - "Convenience sampling of only 80 respondents from Makati City limits generalizability."
+    - "The study uses self-reported data, which may be subject to response bias."
+  mapping_rationale: "A systematic scan of all 12 functional domains was conducted. The paper was flagged as highly relevant to domains related to Filipino Cultural Context (1.A, 1.B, 1.C), Expense Categorization (3.A), Behavioral Profiling (5.A), and Budgeting (7.A, 13.A) because it directly measures specific financial practices of Filipino professionals. It was deemed medium for topics like User-Declared Preferences (2.C) and Behavioral Profiles (5.A) due to its survey methodology. It has low relevance to technical topics like Optimization (7.C) or System Evaluation (12.A), as it does not address them. Borderline cases included its relevance to Engagement (11.A), which was considered contextual as it measures behavior but not engagement with a digital system. The overall relevance is high for informing Odin's user-facing behavioral modules and low for its algorithmic infrastructure."
 limitations:
-  - Convenience sample of 80 accounting professionals from selected firms limits generalizability. [unacknowledged]
-  - Focus on Makati City only; not representative of all Filipino young professionals. [unacknowledged]
-  - Relies on self-reported Likert scale data, which may introduce social desirability bias. [unacknowledged]
-  - No control group or baseline comparison. [unacknowledged]
+  - "The sample is limited to accounting professionals in Makati City, which may not represent the general Filipino young professional population."
+  - "The study relies on self-reported perceptions and behaviors, which may not perfectly align with actual financial actions."
+  - "The cross-sectional design does not establish causality, only correlation between practices and decisions."
+  - "The study does not explore the influence of digital financial tools or investment platforms, which is an unacknowledged gap."
 remember_this:
-  - Saving and investing practices show the strongest correlation with investment decisions (r=0.970).
-  - Avoiding new debt is the most emphasized debt management practice (mean 3.95).
-  - Diversification is highly valued for managing investment risk.
-  - Budgeting practices correlate strongly with investment decisions (r=0.924).
+  - "Financial literacy strongly correlates with investment decisions among professionals."
+  - "Saving and investing have a very strong relationship with investment choices."
+  - "Budgeting is a critical practice linked to better investment outcomes."
+  - "Avoiding new debt is the most highly rated debt management behavior."
+  - "The correlation between saving/investing and decisions is very strong at r=0.970."
 ```

@@ -1,101 +1,87 @@
 ```yaml
-paper_id: "10.32996/jcsts.2025.7.5.74"
-designation: "international"
-title: "Evolution of Machine Learning: A Foundation for Intelligent Systems"
-authors: "Gouni, M."
+paper_id: 10.32996/jcsts.2025.7.5.74
+designation: international
+title: Evolution of Machine Learning: A Foundation for Intelligent Systems
+authors: Gouni, M. R.
 year: 2025
-venue: "Journal of Computer Science and Technology Studies"
+venue: Journal of Computer Science and Technology Studies
 odin_topics:
-  - "8.A"
-  - "8.B"
-  - "12.A"
-  - "12.B"
-  - "10.A"
-shorthand_tags:
-  - "/anomaly-detection"
-  - "/anomaly-algorithm"
-  - "/evaluation-framework"
-  - "/evaluation-metrics"
-  - "/privacy-preserving"
-tldr: "Machine learning techniques from supervised to deep learning enable adaptive credit card fraud detection by identifying patterns and anomalies, reducing false positives compared to rule-based systems."
-problem_and_motivation: "Traditional rule-based fraud detection systems are static, require constant manual updates, and fail against evolving fraud tactics, leading to high false positives and financial losses. Machine learning offers adaptive, proactive detection capabilities that learn from transaction data without explicit reprogramming."
+  - 8.B
+  - 6.B
+  - 12.B
+  - 12.C
+tldr: A review of machine learning evolution in fraud detection, covering supervised, unsupervised, and deep learning techniques with an emphasis on anomaly detection, forecasting, and evaluation.
+problem_and_motivation: Traditional rule-based fraud detection systems are inadequate against evolving, sophisticated fraud tactics. There is a critical need for adaptive, proactive systems that can learn from data and detect novel patterns without requiring constant manual updates. This review synthesizes the progression of machine learning solutions to address this gap.
 approach:
-  - "Reviews supervised learning models including logistic regression, decision trees, random forests, gradient boosting, and deep neural networks for fraud classification."
-  - "Examines unsupervised techniques such as k-means clustering, DBSCAN, spectral clustering, and autoencoders for detecting novel fraud patterns without labeled data."
-  - "Analyzes deep learning architectures including RNNs, LSTMs, GRUs, and CNNs for sequential and spatial pattern recognition in transaction monitoring."
-  - "Discusses hybrid architectures, federated learning, zero-shot learning, and explainable AI as future directions for fraud detection."
-  - "Evaluates challenges including false positive balance, regulatory compliance for transparency, and adaptive detection under concept drift."
+  - This is a systematic literature review that surveys the evolution of machine learning in fraud detection.
+  - It synthesizes findings from seminal and recent papers on supervised, unsupervised, and deep learning models.
+  - The review covers logistic regression, decision trees, random forests, gradient boosting, and deep neural networks.
+  - It also examines clustering algorithms like k-means and DBSCAN, and autoencoders for anomaly detection.
+  - The survey covers sequential models (RNN, LSTM, GRU) and spatial models (CNN) for transaction monitoring.
+  - It discusses future directions including hybrid architectures, federated learning, and adversarial techniques.
+  - The review addresses challenges like class imbalance, concept drift, and the need for explainable AI.
 findings:
-  - "num: Deep learning models significantly outperform traditional methods in detecting sophisticated fraud patterns across multiple studies."
-  - "num: Ensemble methods and advanced neural approaches consistently outperform single-classifier methods on imbalanced fraud datasets."
-  - "Unsupervised autoencoders capture complex non-linear relationships to identify anomalies that distance-based clustering methods miss."
-  - "Sequential models (RNN/LSTM) excel at detecting card-not-present fraud by analyzing transaction sequences rather than isolated events."
-  - "Hybrid architectures combining rule-based systems with machine learning models provide superior resilience against diverse attack vectors."
+  - num: Ensemble and deep learning approaches consistently outperform single-classifier methods in fraud detection.
+  - num: Deep learning architectures like LSTM and CNN can maintain real-time performance with GPUs and optimized inference.
+  - Autoencoders effectively identify anomalies through reconstruction error, capturing complex non-linear patterns.
+  - Hybrid systems combining multiple model types provide superior resilience against diverse fraud attack vectors.
+  - Adaptive frameworks with drift-detection mechanisms maintain long-term detection performance and reduce false positives.
 key_figures_tables:
-  - "Figure 1: Evolution of supervised learning models from logistic regression to deep neural networks → Detection capability increases with model complexity."
-  - "Figure 2: Unsupervised learning clustering and autoencoder approaches for novel fraud patterns → Autoencoders capture non-linear anomalies."
-  - "Figure 3: Deep learning applications including RNN, LSTM, CNN for transaction monitoring → Sequential models improve temporal pattern detection."
-  - "Figure 4: Future directions including federated learning and hybrid architectures → Privacy-preserving collaborative training enhances detection."
+  - Figure 1: Evolution of supervised learning models in fraud detection → Shows progression from logistic regression to deep neural networks.
+  - Figure 2: Unsupervised learning for novel fraud pattern detection → Illustrates clustering and autoencoder-based anomaly detection.
+  - Figure 3: Deep learning applications in transaction monitoring → Depicts RNN and CNN architectures for sequential and spatial pattern recognition.
+  - Figure 4: Future directions and challenges in ML-based fraud detection → Summarizes hybrid, federated, and explainable AI approaches.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "ML"
-    definition: "Machine learning"
-  - term: "RNN"
-    definition: "Recurrent Neural Network for sequential data"
-  - term: "LSTM"
-    definition: "Long Short-Term Memory network, a type of RNN"
-  - term: "CNN"
-    definition: "Convolutional Neural Network for spatial pattern recognition"
-  - term: "GRU"
-    definition: "Gated Recurrent Unit, a streamlined RNN variant"
-  - term: "GPU"
-    definition: "Graphics Processing Unit for parallel computation"
-  - term: "TPU"
-    definition: "Tensor Processing Unit for neural network acceleration"
+  - term: None.
+    definition: ""
 critical_citations:
-  - "[Dal Pozzolo et al., 2017] — Realistic fraud detection modeling and learning strategy."
+  - "[Dal Pozzolo et al., 2017] — Realistic modeling and novel learning strategy for fraud detection."
+  - "[Du et al., 2023] — AutoEncoder and LightGBM for credit card fraud detection problems."
+  - "[Sezer et al., 2020] — Systematic literature review on deep learning for financial time series forecasting."
   - "[Carminati et al., 2018] — Security evaluation of banking fraud analysis systems."
-  - "[Chan et al., 2002] — Distributed data mining for credit card fraud detection."
 relevance:
   topics:
-    - code: "8.A"
-      name: "Anomaly Detection in Personal Finance Systems"
-      justification: "Paper reviews ML methods for identifying fraudulent transactions as anomalies in spending data."
-    - code: "8.B"
-      name: "Anomaly Detection Algorithm"
-      justification: "Details supervised, unsupervised, and deep learning algorithms for anomaly detection in transactions."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      justification: "Discusses false positive rates, detection accuracy, and cost-sensitive evaluation metrics."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      justification: "Compares ensemble vs. single classifiers and sequential vs. non-sequential models."
-    - code: "10.A"
-      name: "Data Privacy and Security in Personal Finance Systems"
-      justification: "Mentions federated learning for privacy-preserving collaborative training and regulatory compliance."
-  contribution: "This paper justifies integrating anomaly detection algorithms (8.A/8.B) into Odin for identifying unusual spending patterns that may indicate fraud or financial distress. It provides evaluation frameworks (12.A/12.B) for assessing detection accuracy and false positive rates, critical for maintaining user trust in Odin's alerts. The discussion of federated learning supports data privacy measures (10.A) for collaborative model improvement without exposing individual user transaction data."
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: low
+      justification: Reviews anomaly detection techniques like autoencoders and clustering for fraud detection.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: Discusses RNNs, LSTMs, and GRUs for modeling sequential financial transaction data.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: low
+      justification: Mentions performance metrics like accuracy, false positive rates, and resilience evaluation.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: contextual
+      justification: The review's focus on evaluation frameworks for fraud detection is broadly relevant to system evaluation.
+  contribution: This paper provides a comprehensive but general survey of ML techniques for fraud detection. While not specific to personal finance management, its review of anomaly detection (8.B) and forecasting algorithms (6.B) offers a foundational understanding of these techniques. The discussion on evaluation frameworks (12.B) is applicable to Odin's algorithmic modules. The paper's focus is on financial fraud, which is a different domain than budget recommendation, but the algorithmic principles are transferable. Its value to Odin is primarily contextual, providing a high-level overview of relevant ML paradigms.
   directly_justifies:
-    - "Machine learning models dynamically learn from transaction data, adapting to new fraud patterns without manual rule updates."
-    - "Unsupervised autoencoders detect anomalies based on reconstruction error, useful for unknown pattern detection in spending behavior."
-    - "Ensemble methods like random forests reduce false positives compared to single classifiers in imbalanced datasets."
-    - "Sequential models (LSTM/GRU) capture temporal dependencies, enabling detection of anomalous sequences of transactions."
+    - "Ensemble methods like random forests and gradient boosting improve robustness in imbalanced classification tasks."
+    - "Recurrent neural networks, particularly LSTMs, are effective for modeling dependencies in sequential transaction data."
+    - "Autoencoders can detect anomalies by measuring reconstruction error in transaction data."
+    - "Hybrid architectures combining multiple model types can provide superior resilience to diverse attack patterns."
   limits:
-    - "Paper focuses on credit card fraud detection, not general spending anomalies or budgeting violations in personal finance."
-    - "No empirical evaluation on Filipino financial data or young professional demographic."
-    - "Assumes labeled fraud data for supervised methods, which may not exist in Odin's cold-start scenario."
-    - "Does not address real-time mobile deployment constraints such as battery and compute limits [unacknowledged]."
-  mapping_rationale: "The paper directly addresses anomaly detection (8.A, 8.B) through survey of supervised, unsupervised, and deep learning techniques for transaction fraud. Evaluation metrics and false positive trade-offs map to system evaluation (12.A, 12.B). Federated learning and privacy considerations support data privacy (10.A). Topics like spending forecasting, budgeting, behavioral profiling, or mobile UX are not covered; behavioral profiling is mentioned but only for fraud baseline comparison, not for financial personality classification. No cultural or demographic specificity, so local topics are rejected."
+    - "The paper is a general survey and does not provide specific implementation details or empirical results for Odin's context."
+    - "It focuses on fraud detection, which is a distinct application from budget recommendation and spending behavior analysis."
+    - "The review does not address Filipino-specific financial practices, seasonal spending, or cultural factors."
+    - "It does not discuss cold-start problems or user behavioral profiling in the context of personal finance."
+    - "The paper lacks specific evaluation methodologies that could be directly applied to a budget recommendation system."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The only areas with any relevance were those related to algorithmic techniques. The paper's focus on forecasting (6.B), anomaly detection (8.B), and evaluation (12.B, 12.C) flagged them as relevant, albeit with low or contextual relevance. Domains like Filipino Cultural Context (2.A-D), Expense Categorization (3.A-C), Behavioral Profiling (5.A-C), and Savings & Debt Management (13.A-C) were considered and rejected as the paper does not address these personal finance topics. The paper's contribution is purely algorithmic and methodological, with no connection to user-facing design, cultural context, or financial planning. The overall relevance to Odin is low, serving only as a general background on machine learning techniques for financial data analysis.
 limitations:
-  - "Survey lacks empirical comparison of specific algorithms on a common benchmark dataset."
-  - "Does not address computational cost of deep learning in real-time mobile environments [unacknowledged]."
-  - "Focus on credit card fraud rather than general expense anomaly detection for personal finance management."
-  - "No discussion of explainability requirements for end-user facing alerts in a PFMS [unacknowledged]."
+  - "This is a review paper and does not present novel empirical results or a specific proposed model. [unacknowledged]"
+  - "The paper does not address the specific challenges of personal finance management, such as user-defined constraints or budget allocation. [unacknowledged]"
+  - "It lacks a discussion on cold-start problems or user profiling, which are critical for Odin. [unacknowledged]"
+  - "The review does not cover mobile-first design, data privacy, or user engagement, which are essential for Odin's PFMS context. [unacknowledged]"
 remember_this:
-  - "Ensemble models outperform single classifiers in imbalanced fraud data."
-  - "Autoencoders detect non-linear anomalies missed by clustering methods."
-  - "Federated learning enables privacy-preserving collaborative model training."
-  - "Sequential models like LSTM capture temporal patterns across transaction sequences."
-  - "Hybrid rule-ML systems provide superior resilience against sophisticated attacks."
+  - "Ensemble and deep learning models significantly outperform traditional classifiers in financial anomaly detection."
+  - "Recurrent neural networks effectively model sequential transaction data for identifying temporal fraud patterns."
+  - "Autoencoders detect anomalies by calculating reconstruction error without requiring labeled fraud examples."
+  - "Hybrid model architectures provide greater resilience against complex and evolving financial threats."
+  - "Adaptive learning systems maintain detection accuracy by continuously updating to evolving transaction patterns."
 ```

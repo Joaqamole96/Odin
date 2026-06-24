@@ -1,91 +1,112 @@
 ```yaml
-paper_id: 10.1007/978-1-0716-3195-9_4
-designation: algorithm-specific
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+designation: international-algorithm-specific
 title: Recurrent Neural Networks (RNNs): Architectures, Training Tricks, and Introduction to Influential Research
 authors: Das, S.; Tariq, A.; Santos, T.; Kantareddy, S. S.; Banerjee, I.
 year: 2023
-venue: Machine Learning for Brain Disorders, Neuromethods, vol. 197
+venue: Machine Learning for Brain Disorders
 odin_topics:
-  - 6.A
-  - 6.B
-  - 8.A
-  - 8.B
-shorthand_tags:
-  - /rnn
-  - /time-series-forecasting
-  - /anomaly-detection
-  - /lstm
-tldr: Recurrent neural networks including LSTM, GRU, bidirectional, deep RNNs, and attention mechanisms process sequential data for tasks like language modeling and time-series analysis.
-problem_and_motivation: Standard feedforward networks cannot handle sequential dependencies because they treat each input independently. RNNs address this with recurrent connections but suffer from vanishing or exploding gradients, limiting their ability to capture long-term dependencies. Gated architectures like LSTM and GRU were introduced to mitigate these issues.
+  - "6.B"
+  - "8.B"
+  - "7.B"
+  - "7.D"
+  - "9.A"
+  - "10.A"
+tldr: Survey of RNN architectures (LSTM, GRU, bidirectional, deep, attention) and training strategies for sequential data modeling.
+problem_and_motivation: Long-term dependencies in sequential data are difficult for simple RNNs to learn. The vanishing and exploding gradient problems hinder effective training. Gated architectures like LSTM and GRU were introduced to capture long-range patterns.
 approach:
-  - Introduces six RNN architectures: SimpleRNN, LSTM, GRU, bidirectional RNN, deep RNN, and attention-based Transformers.
-  - Describes training challenges including vanishing and exploding gradients, then presents skip connections, leaky units, and gradient clipping as solutions.
-  - Surveys applications in language modeling: text classification with many-to-one RNNs, extractive and abstractive summarization, neural machine translation with encoder-decoder, and image-to-text translation with attention.
+  - "Reviews six RNN architectures: SimpleRNN, LSTM, GRU, bidirectional RNN, deep RNN, and encoder-decoder with attention."
+  - "Describes training fundamentals including BPTT and challenges with long-term dependencies."
+  - "Discusses practical training techniques: skip connections, leaky units, and gradient clipping."
+  - "Summarizes RNN applications in language modeling: text classification, summarization, machine translation, and image-to-text."
+  - "Covers attention mechanisms and the Transformer as a parallelizable alternative to sequential decoding."
 findings:
-  - LSTM uses three gates (input, forget, output) to control information flow through a cell state.
-  - GRU uses two gates (reset and update), reducing computational cost compared to LSTM while handling long-term dependencies.
-  - Attention mechanisms allow models to focus on relevant parts of the input sequence, improving translation and captioning performance.
-  - Skip connections preserve gradients via additive or concatenative paths, helping deeper RNN training.
-  - Gradient clipping bounds gradient norms to prevent exploding gradients during backpropagation through time.
+  - "LSTM and GRU mitigate vanishing gradients via gating units that add past information to present state."
+  - "GRU has fewer gates than LSTM, reducing computation time while capturing long-term dependencies."
+  - "Bidirectional RNNs improve sequence tasks by using both past and future context."
+  - "Attention mechanisms allow models to focus on relevant parts of the input, improving performance on long sequences."
+  - "The Transformer uses self-attention to enable parallel processing, reducing computation time."
+  - "num: Gradient clipping constrains gradient norms to predetermined thresholds, preventing exploding gradients."
+  - "num: Skip connections speed learning by reducing the impact of vanishing gradients."
+  - "Leaky units use linear self-connections with weights near one to retain long-term information."
 key_figures_tables:
-  - Figure 4: LSTM cell diagram with forget, input, output gates → gates regulate long-term memory retention.
-  - Figure 5: GRU architecture with reset and update gates → fewer gates than LSTM lowers computation.
-  - Figure 6: Bidirectional RNN with forward and backward passes → output depends on both past and future context.
-  - Figure 8: Transformer with six encoder and six decoder layers → self-attention enables parallelism and long-range dependency capture.
+  - "Figure 4: LSTM cell architecture with input, forget, and output gates → Gating controls information flow for long-term memory."
+  - "Figure 5: GRU architecture with reset and update gates → Simplified gating reduces parameters versus LSTM."
+  - "Figure 6: Bidirectional RNN with forward and backward sub-RNNs → Enables context from both past and future."
+  - "Figure 8: Transformer with stacked encoder-decoder layers → Self-attention enables parallel processing."
 key_equations:
-  - equation: h^{(t)} = \tanh(W h^{(t-1)} + U x^{(t)} + b)
-    explanation: SimpleRNN hidden state update at time t.
-  - equation: f_i^{(t)} = \sigma(U_f x^{(t)} + W_f h^{(t-1)} + b_f)
-    explanation: LSTM forget gate controls what to discard from cell state.
-  - equation: \text{Attention}(Q,K,V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-    explanation: Scaled dot-product attention used in Transformers.
+  - equation: "h^{(t)} = f(h^{(t-1)}, x^{(t)}; W)"
+    explanation: "State update rule for SimpleRNN."
+  - equation: "f^{(t)}_i = \\sigma(U_f x^{(t)} + W_f h^{(t-1)} + b_f)_i"
+    explanation: "Forget gate computation in LSTM."
+  - equation: "Attention(Q,K,V) = softmax(QK^T / \\sqrt{d_k}) V"
+    explanation: "Scaled dot-product attention in Transformers."
 definitions:
-  - term: RNN
-    definition: Recurrent neural network with feedback loops for sequential data.
-  - term: LSTM
-    definition: Long short-term memory, a gated RNN that handles long-term dependencies.
-  - term: GRU
-    definition: Gated recurrent unit, a lighter gated RNN with reset and update gates.
-  - term: BRNN
-    definition: Bidirectional RNN combining forward and backward passes over a sequence.
-  - term: BPTT
-    definition: Backpropagation through time, the algorithm for training RNNs.
-  - term: Attention mechanism
-    definition: Allows a model to focus on relevant parts of an input sequence when generating output.
+  - term: "RNN"
+    definition: "Recurrent neural network with hidden state and feedback loops for sequential data."
+  - term: "LSTM"
+    definition: "Long short-term memory, a gated RNN for long-term dependencies."
+  - term: "GRU"
+    definition: "Gated recurrent unit, a simplified LSTM with fewer gates."
+  - term: "BPTT"
+    definition: "Back-propagation through time, the training algorithm for RNNs."
+  - term: "Attention"
+    definition: "Mechanism to focus on relevant parts of input during decoding."
+  - term: "Transformer"
+    definition: "Model based on self-attention, enabling parallel sequence processing."
 critical_citations:
-  - "[Rumelhart et al., 1986] — Introduced backpropagation for RNNs."
-  - "[Hochreiter & Schmidhuber, 1997] — Proposed LSTM architecture."
-  - "[Cho et al., 2014] — Introduced GRU and encoder-decoder for sequence-to-sequence."
+  - "[Hochreiter & Schmidhuber, 1997] — Proposed LSTM for long-term dependencies."
+  - "[Cho et al., 2014] — Introduced GRU and encoder-decoder."
+  - "[Bahdanau et al., 2014] — Added attention to encoder-decoder."
   - "[Vaswani et al., 2017] — Introduced Transformer with self-attention."
+  - "[Pascanu et al., 2013] — Analyzed difficulty of training RNNs."
 relevance:
   topics:
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      justification: RNNs are standard for time-series forecasting applicable to spending prediction.
-    - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: LSTM and GRU architectures directly support sequential spending data forecasting.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      justification: RNN-based sequence models can identify unusual spending patterns.
-    - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Gated RNNs capture normal behavior; deviations indicate anomalies.
-  contribution: "This chapter justifies using LSTM or GRU for Odin's spending forecasting module (6.B) due to their ability to handle long-term dependencies in irregular spending sequences. The discussion of gradient clipping and skip connections informs stable training of Odin's anomaly detection algorithm (8.B). Attention mechanisms described here could enhance Odin's expense categorization by focusing on relevant transaction details. The review of many-to-one RNN architectures supports Odin's behavioral profiling from sequential financial logs."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "high"
+      justification: "Provides foundational RNN architectures (LSTM, GRU) directly applicable to spending sequence forecasting."
+    - code: "8.B"
+      name: "Anomaly Detection Algorithms for Personal Spending Data"
+      relevance: "high"
+      justification: "RNNs and attention models are commonly used for anomaly detection in time-series."
+    - code: "7.B"
+      name: "Budget Recommendation in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Encoder-decoder and attention architectures inform sequence-to-sequence prediction for budget generation."
+    - code: "7.D"
+      name: "Infeasibility Handling and Reduction Hierarchies"
+      relevance: "low"
+      justification: "Training tricks like gradient clipping may be adapted for constraint handling, but not directly addressed."
+    - code: "9.A"
+      name: "Mobile-First Design Principles and Rationale"
+      relevance: "contextual"
+      justification: "Efficient architectures (GRU, attention) are relevant for mobile deployment but design is not discussed."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Not addressed; privacy is outside scope."
+  contribution: "This survey establishes RNNs and attention as core tools for sequential spending prediction. LSTM and GRU provide the algorithmic foundation for Odin's forecasting module. Attention mechanisms offer a path to explainable budget recommendations. Training strategies like gradient clipping ensure stable optimization on noisy spending data."
   directly_justifies:
-    - "RNNs can process variable-length sequences, making them suitable for transaction histories of different lengths."
-    - "LSTM and GRU mitigate vanishing gradients, enabling learning from long spending patterns."
-    - "Attention mechanisms allow models to weigh important past transactions when making predictions."
+    - "LSTM and GRU capture long-term dependencies in sequential spending data."
+    - "Attention mechanisms improve sequence-to-sequence prediction by focusing on relevant past transactions."
+    - "Bidirectional RNNs can leverage both past and future spending patterns for anomaly detection."
+    - "Gradient clipping stabilizes training on irregular spending sequences."
+    - "Encoder-decoder architectures support variable-length input-output mapping for budget generation."
   limits:
-    - None identified.
-  mapping_rationale: "The paper was screened against Odin's functional domains. Spending forecasting and anomaly detection were flagged because RNNs are foundational for time-series prediction and outlier identification. Topics 6.A and 6.B are selected as the paper describes predictive modeling algorithms (LSTM, GRU) directly applicable to forecasting. Topics 8.A and 8.B are selected because RNN sequence models can detect anomalies. Behavioral profiling (5.A-C) was rejected as the paper does not discuss user classification. Budget recommendation (7.A-C) was rejected as no budget optimization is covered. The paper is algorithm-specific, not domain-specific, but provides theoretical grounding for Odin's algorithmic modules."
+    - "The survey does not address personal finance data or spending patterns."
+    - "No experimental results on spending data are provided."
+    - "Privacy, trust, and mobile UX are not discussed."
+  mapping_rationale: "All 12 functional domains and associated topic codes were systematically scanned. Domains 6 (Forecasting) and 8 (Anomaly Detection) were flagged as highly relevant because the paper provides core algorithms (LSTM, GRU, attention) for sequential data modeling. Domain 7 (Budget Recommendation) was marked medium due to the relevance of encoder-decoder for sequence mapping, but no direct budget constraints are discussed. Domain 9 (Mobile-First Design) and 10 (Data Privacy) were marked contextual because efficient architectures are relevant for mobile deployment, but the paper does not address design or privacy. Domains 2 (Cultural Context), 3 (Expense Categorization), 4 (Existing Systems), 5 (Behavioral Profiling), 11 (Retention), 12 (Evaluation), and 13 (Savings/Debt) were rejected as the paper does not touch these topics. Overall, the paper provides strong algorithmic foundations for forecasting and anomaly detection but is not specific to personal finance."
 limitations:
-  - "Paper is a survey; no empirical validation on financial data [unacknowledged]."
-  - "Does not compare RNN performance on spending datasets [unacknowledged]."
-  - "Training tricks are discussed generically without personal finance context [unacknowledged]."
+  - "No empirical validation on real-world spending data."
+  - "Does not address privacy or security concerns."
+  - "Focuses on general NLP and time-series, not PFMS-specific constraints."
+  - "Not a primary research paper; survey of existing architectures."
 remember_this:
-  - LSTM uses three gates to control long-term memory flow.
-  - GRU has two gates, making it computationally lighter than LSTM.
-  - Attention mechanisms enable sequence models to focus on relevant input parts.
-  - Skip connections help prevent vanishing gradients in deep RNNs.
+  - "LSTM and GRU are core architectures for forecasting sequential spending data."
+  - "Attention mechanisms enable focus on relevant past transactions."
+  - "Gradient clipping prevents training instability on irregular data."
+  - "The Transformer enables parallel processing but is computationally intensive."
+  - "Bidirectional RNNs use past and future context for anomaly detection."
 ```

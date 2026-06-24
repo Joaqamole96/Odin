@@ -1,114 +1,126 @@
 ```yaml
-paper_id: "10.1007/s10462-024-10989-8"
-designation: "international"
-title: "Deep learning-based time series forecasting"
-authors: "Song, X.; Deng, L.; Wang, H.; Zhang, Y.; He, Y.; Cao, W."
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+designation: international-algorithm-specific
+title: Deep learning-based time series forecasting
+authors: Song, X.; Deng, L.; Wang, H.; Zhang, Y.; He, Y.; Cao, W.
 year: 2025
-venue: "Artificial Intelligence Review"
+venue: Artificial Intelligence Review
 odin_topics:
-  - "6.A"
-  - "6.B"
-  - "8.A"
-  - "8.B"
-  - "12.A"
-  - "12.B"
-shorthand_tags:
-  - "/predictive-modeling"
-  - "/spending-forecast"
-  - "/anomaly-detection"
-  - "/model-evaluation"
-tldr: "A comprehensive review of deep learning-based time series forecasting models from 2014 to 2024, examining their ability to capture temporal dependencies and variable correlations, long-term forecasting optimizations, and loss functions."
-problem_and_motivation: "Traditional time series models like ARIMA fail to capture complex nonlinear correlations and long-term dependencies in real-world data. Deep learning offers potential but the field has rapidly expanded with many architectures. This survey systematically organizes the progress to guide researchers and practitioners."
+  - 6.A
+  - 6.B
+  - 7.A
+  - 7.B
+  - 8.A
+  - 8.B
+  - 12.A
+  - 12.B
+  - 12.C
+tldr: A comprehensive survey of deep learning time series forecasting models (2014-2024) analyzing temporal and variable correlations, computational efficiency, and loss functions, with findings that simpler linear models often outperform complex ones.
+problem_and_motivation: Accurate time series forecasting is critical for domains like energy, finance, and health, but existing deep learning models face challenges in capturing complex temporal patterns and computational efficiency. A systematic review and comparison of these models is needed to guide both research and practical application.
 approach:
-  - "Reviews models from 2014-2024 including RNNs, LSTMs, GRUs, CNNs, TCNs, Transformers, and decomposition-based methods."
-  - "Evaluates models on ETT, Electricity, Exchange, Traffic, and ILI datasets with input lengths 36-192 and output horizons 12-336."
-  - "Uses MAE, MSE, MAPE, and R2 metrics with simple time split and sliding window validation."
-  - "Compares baselines: ARIMA for univariate, VAR for multivariate, and 20+ deep learning models."
-  - "Analyzes trend and season extraction using an artificial dataset with explicit trend and seasonal terms."
-  - "Examines attention mechanism variants (LogSparse, LSH, ProbSparse, Patch, Pyramidal) under controlled complexity."
+  - The paper surveys over 30 deep learning forecasting models developed between 2014 and 2024, including RNNs, CNNs, Transformers, and linear models.
+  - It introduces a novel classification based on the logic of time series information mining, distinguishing approaches that model time-step dependencies from those modeling variable correlations.
+  - It analyzes methods for long-term forecasting optimization, including sequence shortening and attention sparsification, to address the quadratic complexity of standard Transformers.
+  - The study categorizes loss functions into single-objective (MAE, MSE, quantile) and hybrid (negative log-likelihood, adversarial) types, explaining their suitability for different prediction tasks.
+  - It provides an extensive empirical evaluation on five real-world datasets (ETT, Electricity, Exchange, Traffic, ILI) and an artificial dataset, comparing models on prediction accuracy, information mining, and computational complexity.
 findings:
-  - "num: DLinear, a simple linear model, often outperforms complex Transformers, reducing MSE by up to 27.30% on ILI dataset compared to NS-Transformer."
-  - "num: PatchTST’s patch attention improves MSE by 85.27% on Exchange dataset over vanilla attention."
-  - "num: Shuffling input sequence degrades DLinear and PatchTST by 93-1092% in MSE, while complex models like TDformer improve, indicating poor use of sequential order."
-  - "num: Fedformer achieves best trend and season prediction on artificial data, with MAE improvements of 26.65% (season) and 3.14% (trend) over second-best."
-  - "num: Reformer has shortest inference time (10.14% faster than LogTrans) while PatchTST reduces memory by 10.93% for long horizons."
-  - "Frequency domain-based seasonal extraction outperforms time-domain methods."
-  - "Longer lookback windows decrease accuracy for complex models (Autoformer, ETSformer) due to overfitting, but improve for DLinear and PatchTST."
+  - num: DLinear, a simple linear model, often outperforms sophisticated deep learning models in prediction accuracy, demonstrating that complex architectures may not effectively capture temporal dependencies.
+  - num: Shuffling input sequences for models like DLinear and PatchTST caused prediction accuracy drops of up to 1092.50% (MSE) on the Exchange dataset, while many complex models showed minimal change, indicating overfitting and poor utilization of temporal order.
+  - num: Extending the lookback window for complex models (e.g., ETSformer, Autoformer) did not consistently improve accuracy, suggesting overfitting and noise interference, whereas PatchTST and DLinear benefited from longer sequences.
+  - Models using frequency-domain methods for seasonal information extraction (Fedformer, ETSformer, TDformer) outperformed time-domain methods (LSTnet, DLinear) on an artificial dataset, with Fedformer showing up to 44.17% lower MSE for seasonal term prediction.
+  - The patch-slicing approach (PatchTST, Pyraformer) effectively reduces attention mechanism complexity while improving accuracy, with PatchTST achieving 28.83% lower MAE and 42.09% lower MSE than LogTrans on the ETTh1 dataset for a prediction length of 336.
 key_figures_tables:
-  - "Table 5: Multivariate forecasting results → DLinear and PatchTST lead on most datasets; Crossformer excels on high-dimensional Electricity."
-  - "Table 7: Shuffling analysis → Simpler models (DLinear, PatchTST) rely heavily on sequence order; complex models show minimal degradation or improvement."
-  - "Table 8: Extended lookback window → Complex models peak at short windows (48) then degrade; DLinear and PatchTST improve with longer windows."
-  - "Table 9: Artificial dataset → Fedformer best at trend and season extraction; frequency-domain methods superior for seasonality."
-  - "Table 10: Attention module comparison → Patch Attention achieves largest accuracy gains under equal complexity."
-  - "Figure 20: Inference time → Reformer fastest; Figure 21: Memory → PatchTST most memory-efficient for long sequences."
+  - Table 5: Multivariate forecasting results → DLinear and PatchTST consistently achieve top performance across datasets and horizons.
+  - Table 7: Input shuffling experiment → Complex models show significantly lower performance drops, indicating weaker use of temporal order than simpler models.
+  - Table 8: Lookback window extension → Performance of complex models often degrades with longer inputs, while DLinear and PatchTST benefit.
+  - Table 9: Trend and season prediction on artificial data → Fedformer and TDformer excel at trend terms, while frequency-domain models excel at season terms.
+  - Figure 20: Inference time comparison → Reformer has the lowest inference time, followed by PatchTST.
+  - Figure 21: Memory occupation comparison → PatchTST has the lowest memory usage, especially for long-term forecasting.
 key_equations:
-  - equation: "i_t = σ(W_{xi} x_t + W_{hi} h_{t-1} + b_i), f_t = σ(W_{xf} x_t + W_{hf} h_{t-1} + b_f), o_t = σ(W_{xo} x_t + W_{ho} h_{t-1} + b_o), c_t = f_t ⊙ c_{t-1} + i_t ⊙ tanh(W_{xc} x_t + W_{hc} h_{t-1} + b_c), h_t = o_t ⊙ tanh(c_t)"
-    explanation: "LSTM gate equations for long-term dependency capture."
-  - equation: "Attention(Q,K,V) = V \\cdot \\text{Softmax}(Q^T K / \\sqrt{D_k})"
-    explanation: "Core self-attention mechanism for temporal similarity."
-  - equation: "Auto-Correlation(X) = \\sum_{i=1}^k \\text{Roll}(X, \\tau_i) \\cdot \\text{Softmax}(R_X(\\tau_1),...,R_X(\\tau_k))"
-    explanation: "Autoformer's time-delay similarity for periodic pattern extraction."
+  - equation: "LSTM: i_t = σ(W_xi x_t + W_hi h_{t-1} + b_i), f_t = σ(W_xf x_t + W_hf h_{t-1} + b_f), c_t = f_t * c_{t-1} + i_t * tanh(W_xc x_t + W_hc h_{t-1} + b_c), h_t = o_t * tanh(c_t)"
+    explanation: LSTM gating mechanisms for long-term dependency capture.
+  - equation: "Attention: O = V Softmax(Q^T K / √D_k)"
+    explanation: Core transformer attention mechanism for similarity computation.
+  - equation: "Auto-Correlation: τ_1,...,τ_k = arg Top_{τ∈{1,...,L}} R(τ), Auto-Correlation(X) = Σ Roll(X,τ_i) * R_hat(τ_i)"
+    explanation: Autoformer's method for extracting seasonal patterns via time-delay similarity.
 definitions:
-  - term: "LSTM"
-    definition: "Long Short-Term Memory, a recurrent network with gating to avoid vanishing gradients."
-  - term: "TCN"
-    definition: "Temporal Convolutional Network using dilated causal convolutions for long-range dependencies."
-  - term: "MAE"
-    definition: "Mean Absolute Error, loss function measuring average absolute prediction error."
-  - term: "MSE"
-    definition: "Mean Squared Error, loss function penalizing larger errors quadratically."
-  - term: "PatchTST"
-    definition: "Transformer model that slices time series into patches before attention."
-  - term: "RevIN"
-    definition: "Reversible Instance Normalization for non-stationary time series."
+  - term: Time-step dependency
+    definition: Correlations between consecutive and distant time steps in a sequence.
+  - term: Variable correlation
+    definition: Interdependencies among different univariate time series in a multivariate dataset.
+  - term: Patch slicing
+    definition: Dividing a long time series into fixed-length segments for efficient attention computation.
+  - term: Frequency domain analysis
+    definition: Transforming time series to frequencies using Fourier transforms to extract periodic patterns.
+  - term: Non-stationary information
+    definition: Variations in statistical properties (mean, variance) of a time series over time.
 critical_citations:
-  - "[Vaswani et al., 2017] — Introduced Transformer architecture with self-attention."
-  - "[Hochreiter & Schmidhuber, 1997] — LSTM foundation for sequence modeling."
-  - "[Wu et al., 2021] — Autoformer with auto-correlation mechanism for seasonal patterns."
-  - "[Zhou et al., 2021] — Informer with ProbSparse attention for long sequences."
-  - "[Nie et al., 2022] — PatchTST demonstrating patch-based attention efficiency."
+  - "[Vaswani et al., 2017] — Introduced Transformer architecture."
+  - "[Wu et al., 2021] — Proposed Autoformer with time series decomposition."
+  - "[Zhou et al., 2021] — Developed Informer for efficient long-term forecasting."
+  - "[Nie et al., 2022] — Introduced PatchTST with patch-slicing attention."
+  - "[Goodfellow et al., 2014] — Foundation for adversarial loss functions."
 relevance:
   topics:
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      justification: "Paper surveys deep learning models directly applicable to spending prediction."
-    - code: "6.B"
-      name: "Spending Forecasting Algorithm"
-      justification: "Reviews algorithms (LSTM, Transformer, etc.) for time series forecasting."
-    - code: "8.A"
-      name: "Anomaly Detection in Personal Finance Systems"
-      justification: "Forecasting errors can flag anomalies; paper discusses loss functions and evaluation."
-    - code: "8.B"
-      name: "Anomaly Detection Algorithm"
-      justification: "Describes MAE/MSE sensitivity to outliers, relevant for anomaly detection."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      justification: "Provides systematic evaluation with MAE, MSE, MAPE, R2 and validation strategies."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      justification: "Compares attention modules, decomposition methods, and complexity trade-offs."
-  contribution: "Odin’s spending forecasting module can directly adopt the reviewed deep learning models (LSTM, Transformer, PatchTST) for predicting future expenses based on historical transaction sequences. The anomaly detection module can leverage forecasting residuals and the surveyed loss functions (e.g., quantile loss) to flag irregular spending patterns. The system evaluation framework benefits from the paper’s multi-metric (MAE, MSE, MAPE, R2) and multi-split validation methodology to benchmark Odin’s algorithmic components against baselines."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Provides comprehensive review of deep learning models for time series forecasting.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Evaluates and compares numerous forecasting algorithms applicable to spending data.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Informs the choice of forecasting models that can be used in budget recommendation systems.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: medium
+      justification: Findings on model performance inform algorithm selection for budget recommendation.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: medium
+      justification: Forecasting accuracy and uncertainty measures are relevant for anomaly detection.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: Models evaluated are applicable to anomaly detection in spending patterns.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Provides rigorous evaluation methodology (MAE, MSE, MAPE, R2) for forecasting modules.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Extensive comparison of different algorithms (DLinear, PatchTST, Transformer variants) on multiple datasets.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: medium
+      justification: Evaluation metrics and experimental setups can be adapted for budget recommendation evaluation.
+  contribution: "The paper provides Odin with a systematic, evidence-based evaluation of state-of-the-art time series forecasting models, directly informing algorithm selection for its core spending forecasting and budget recommendation modules. Its demonstration that simpler linear models (DLinear) can outperform complex Transformers challenges assumptions about model complexity and suggests a more efficient architecture for Odin's deployment. The detailed analysis of model behavior under input shuffling and lookback window extension reveals critical overfitting and noise-handling limitations, guiding Odin's development team on potential pitfalls. The classification of loss functions and their suitability for different data characteristics (e.g., outlier-heavy vs. information-rich points) provides design guidance for Odin's optimization objectives. Overall, this survey serves as a foundational technical reference for implementing, evaluating, and justifying Odin's algorithmic core."
   directly_justifies:
-    - "DLinear, a simple linear model, often outperforms complex Transformers on time series forecasting tasks."
-    - "Patch-based attention (PatchTST) significantly reduces memory usage while improving accuracy."
-    - "Frequency-domain seasonal extraction outperforms time-domain methods for periodic spending patterns."
-    - "Longer lookback windows can degrade performance of complex models due to overfitting and noise."
-    - "Shuffling input sequence reveals whether a model truly uses temporal order or relies on distributional shortcuts."
+    - "DLinear's linear layer effectively captures sequential information for time series forecasting."
+    - "PatchTST's patch-slicing method reduces attention complexity while improving prediction accuracy."
+    - "Frequency domain methods (Fedformer, ETSformer) excel at extracting seasonal spending patterns."
+    - "Complex models (Autoformer, ETSformer) suffer from overfitting and poor utilization of temporal order."
+    - "Extending lookback windows does not consistently improve complex models, suggesting noise interference."
   limits:
-    - "None of the datasets or experiments involve personal financial transaction data from Filipino young professionals."
-    - "The survey does not address privacy-preserving forecasting or on-device model constraints for mobile PFMS."
-    - "Computational complexity is analyzed only for ETTh1 dataset, not for mobile inference scenarios."
-  mapping_rationale: "This paper provides foundational algorithms for spending forecasting (6.A, 6.B) and anomaly detection (8.A, 8.B) through its exhaustive review of time series models. It also offers a rigorous evaluation framework (12.A, 12.B) that Odin can adopt for benchmarking. Topics related to behavioral profiling (5.A-C), budget recommendation (7.A-C), or mobile UX (9.A-B) are absent because the paper focuses on general forecasting without user-specific financial constraints. Cultural spending patterns (2.A-C) are not addressed. The paper is classified as international due to Chinese authors and no Philippine institutional affiliation."
+    - "The survey is general and does not address the specific characteristics of personal financial spending data, such as user-defined categories or irregular transaction timing."
+    - "Findings on overfitting and model selection are based on benchmark datasets (e.g., Electricity, Traffic) that may not fully represent the financial behavior of Filipino young professionals."
+    - "The paper does not evaluate models under mobile-first design constraints like latency or limited on-device compute."
+    - "Recommendations for probabilistic forecasting are mentioned but not deeply explored in the empirical evaluation."
+  mapping_rationale: "The systematic scan across all 12 functional domains and 38 canonical topic codes flagged the core technical domains (Spending Forecasting, Budget Recommendation, Anomaly Detection, and System Evaluation) as highly relevant. Within these, topics 6.A, 6.B, 12.A, and 12.B were assigned 'high' relevance due to the paper's direct focus on evaluating and comparing forecasting algorithms. Topics 7.B and 8.B received 'medium' relevance because while the paper does not directly address recommendation or detection, its findings on model performance are directly transferable to those modules. Borderline cases included 2.B (Seasonal and Cyclical Spending Patterns), which was considered but rejected (low relevance) because the paper does not address cultural or domain-specific seasonality—it focuses on generic periodic patterns in electricity, traffic, and finance. Similarly, 3.A (Expense Categorization Frameworks) was considered and rejected (contextual) as the paper does not discuss category design or user-defined constraints. Topics related to privacy, engagement, and behavioral profiling were deemed irrelevant (not selected) due to a complete lack of coverage. The paper's overall relevance to Odin is high as a comprehensive technical reference for algorithm selection, evaluation, and optimization."
 limitations:
-  - "Survey does not propose a novel algorithm; it synthesizes existing work. [unacknowledged]"
-  - "All experiments use public datasets (energy, traffic, exchange rates), not personal finance data. [unacknowledged]"
-  - "Does not consider real-time or streaming forecasting scenarios common in PFMS. [unacknowledged]"
-  - "No discussion of model interpretability for user-facing spending explanations. [unacknowledged]"
-  - "The input/output length is fixed, whereas Odin may need variable-length predictions. [unacknowledged]"
+  - "Does not address specific financial data challenges like irregular intervals or user-defined categories. [unacknowledged]"
+  - "Evaluation datasets are from energy, traffic, and healthcare, not personal finance. [unacknowledged]"
+  - "Does not consider model deployment constraints like latency or on-device inference for mobile applications. [unacknowledged]"
+  - "The paper acknowledges that most models are designed for fixed input/output lengths, limiting flexibility for on-demand forecasting."
+  - "Does not provide guidance on handling missing or sparse data, common in personal finance. [unacknowledged]"
 remember_this:
-  - "Simple linear models (DLinear) often beat complex Transformers on forecasting accuracy."
-  - "Patch-based attention reduces memory by 10.93% while improving MSE by 85.27% on exchange data."
-  - "Frequency-domain methods extract seasonal spending patterns more accurately than time-domain."
-  - "Longer lookback windows harm complex models due to overfitting but help simpler models."
-  - "Shuffling the input sequence degrades DLinear and PatchTST by over 100% MSE, proving they use temporal order."
+  - "DLinear often outperforms complex deep learning models in time series forecasting."
+  - "Patch slicing effectively reduces attention complexity while maintaining high accuracy."
+  - "Simple linear models better utilize sequential order than sophisticated architectures."
+  - "Frequency domain methods excel at extracting seasonal patterns from time series data."
+  - "Extending lookback windows does not consistently improve complex models due to overfitting."
 ```

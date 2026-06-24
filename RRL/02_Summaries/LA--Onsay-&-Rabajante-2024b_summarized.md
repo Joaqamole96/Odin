@@ -1,81 +1,95 @@
 ```yaml
-paper_id: 10.1016/j.sctalk.2024.100387
-designation: local
-title: When machine learning meets econometrics: Can it build a better measure to predict multidimensional poverty and examine unmeasurable economic conditions?
-authors: Onsay, E. A.; Rabajante, J. F.
+paper_id: "10.1016/j.sctalk.2024.100387"
+designation: "local-algorithm-specific"
+title: "When machine learning meets econometrics: Can it build a better measure to predict multidimensional poverty and examine unmeasurable economic conditions?"
+authors: "Onsay, E. A.; Rabajante, J. F."
 year: 2024
-venue: Science Talks
+venue: "Science Talks"
 odin_topics:
-  - 12.A
-  - 12.B
-shorthand_tags:
-  - /evaluation-frameworks
-  - /algorithm-evaluation
-tldr: Random forest outperforms econometric and other ML models in predicting multidimensional poverty for indigenous communities in the Philippines, achieving 0.9208 R-squared and 95.94% accuracy.
-problem_and_motivation: Traditional poverty measurement methods are costly, labor-intensive, and time-consuming, making it difficult for policymakers to target interventions. Indigenous communities face complex, multifaceted socioeconomic conditions that generic poverty research fails to capture. There is a need for disaggregated, cost-effective methods to measure multidimensional poverty.
+  - "6.A"
+  - "6.B"
+  - "12.A"
+  - "12.B"
+  - "12.C"
+tldr: "Combines machine learning and econometrics to predict multidimensional poverty in Philippine indigenous communities, finding random forest outperforms other algorithms with high accuracy and R-square."
+problem_and_motivation: "Poverty measurement is costly and time-consuming, and existing methods suffer from sampling errors. Indigenous communities have complex socioeconomic conditions that are often studied qualitatively, lacking disaggregated quantitative measures. This gap hinders effective policy targeting."
 approach:
-  - Data comes from a complete census of indigenous communities in Goa, Camarines Sur, Philippines (1,660 indigenous households, 8,022 persons).
-  - Blends econometric causality tests (logit and probit) with ML models including random forest, LightGBM, XGBoost, SVM, and linear regression.
-  - Uses 15 multidimensional indicators (health, housing, water, education, income, peace/order) as predictors of poverty.
-  - Evaluates regressors using RMSE, MSE, and R-square; classifiers using accuracy.
-  - Benchmarks random forest against linear regression, decision tree, bagging, AdaBoost, GaussianNB, and perceptron.
+  - "Uses census data from Goa, Camarines Sur, covering all households including indigenous communities, with 15 multidimensional socioeconomic indicators."
+  - "Applies econometric models (logit and probit) to establish causal relationships between predictors and poverty status."
+  - "Trains and compares multiple machine learning regressors and classifiers: random forest, XGBoost, LightGBM, SVM, AdaBoost, GaussianNB, and others."
+  - "Evaluates model performance using RMSE, MSE, R-square, and accuracy, and uses pipeline algorithms for classification."
+  - "Conducts causality tests to identify key poverty predictors, including household size, informal settler status, and indicators of health, education, and income."
 findings:
-  - "num: Random forest regressor achieved the highest R-square of 0.92075 for impoverished societies."
-  - "num: Random forest classifier attained 95.94% accuracy in pipeline algorithms and 90.69% at random."
-  - "num: Random forest had the lowest RMSE (0.3298) compared to LightGBM (0.3642) and XGBoost (0.4001)."
-  - "num: For indigenous communities, random forest R-square was 0.9208 and MSE 0.5497."
-  - "num: 82% of indigenous people live in poverty and 71% lack food access."
-  - Random forest identifies explanatory factors, nonlinear correlations, and feature importance driving poverty classification.
-  - Econometric tests confirmed causal relationships between the 15 predictors and poverty outcomes.
+  - "num: Random forest achieved the highest R-square of 0.9208 and accuracy of 0.9108 for poverty prediction."
+  - "num: For the general population, 63.70% live in poverty and 51.10% lack food access."
+  - "num: For indigenous communities, 82% live in poverty and 71% lack food access."
+  - "Household size and informal settler status are strong positive predictors of poverty."
+  - "num: Random forest had the lowest RMSE (0.3298) compared to XGBoost (0.4001) and LightGBM (0.3642) for regressors."
+  - "num: In pipeline classification, random forest achieved 94.89% accuracy for indigenous communities."
 key_figures_tables:
-  - "Figure 4: RMSE comparison of ML regressors → Random forest lowest (0.3298)."
-  - "Figure 6: R-square of ML regressors → Random forest highest (0.92075)."
-  - "Figure 7: Accuracy of ML classifiers → Random forest highest (95.94% pipeline)."
-  - "Figure 12: MSE for indigenous communities → Random forest lowest (0.5497)."
-  - "Figure 13: R-square for indigenous communities → Random forest highest (0.9208)."
-  - "Figure 14: Accuracy for indigenous tribes → Random forest highest (90.69% random, 94.89% pipeline)."
+  - "Figure 2: Multidimensional poverty evaluation results → Shows deprivation across education, income, and health indicators."
+  - "Figure 4: RMSE of regressors → Random forest has lowest RMSE (0.3298)."
+  - "Figure 6: R-square of regressors → Random forest highest R-square (0.9208)."
+  - "Figure 7: Performance evaluation classifiers → Random forest accuracy 0.9108, pipeline 94.89%."
+  - "Figure 13: R-square for indigenous communities → Random forest 0.9208."
+  - "Figure 14: Accuracy for indigenous communities → Random forest 90.69% random, 94.89% pipeline."
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
-  - term: ML
-    definition: Machine learning
-  - term: RMSE
-    definition: Root mean square error
-  - term: MSE
-    definition: Mean square error
-  - term: IP
-    definition: Indigenous people
+  - term: "Multidimensional poverty"
+    definition: "Poverty measured across multiple dimensions such as education, health, income, and living standards."
+  - term: "Indigenous People (IP)"
+    definition: "Members of indigenous communities in the Philippines, often marginalized."
+  - term: "Deprivation"
+    definition: "Lack of access to basic necessities or indicators."
 critical_citations:
-  - "[Onsay & Rabajante, 2024] — Provides the dataset and poverty measurement approach."
-  - "[Hastie et al., 2009] — Foundational ML methods used in the paper."
-  - "[Alkire, 2005] — Capability approach for multidimensional poverty."
+  - "[Alkire, 2005] — Capability approach to poverty measurement."
+  - "[Foster et al., 1984] — Decomposable poverty measures."
+  - "[Sobreviñas, 2020] — CBMS data for poverty dynamics."
+  - "[Onsay & Rabajante, 2024] — Data brief and dataset."
 relevance:
   topics:
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      justification: Paper benchmarks multiple ML models using RMSE, MSE, R-square, and accuracy.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: Compares random forest against LightGBM, XGBoost, linear regression, and others.
-  contribution: The paper provides a comparative evaluation framework that Odin can adopt for assessing spending forecasting algorithms. It demonstrates that random forest outperforms linear regression and gradient boosting methods on regression and classification metrics. The use of RMSE, R-square, and accuracy as primary evaluation metrics directly maps to Odin's need for algorithmic module assessment. The paper's approach of combining econometric causality tests with ML validation can inform Odin's model selection pipeline.
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "high"
+      justification: "Uses ML to predict poverty, demonstrating predictive modeling for financial vulnerability."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "high"
+      justification: "Compares multiple forecasting algorithms (RF, XGBoost, LightGBM) on socioeconomic data."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "high"
+      justification: "Provides systematic evaluation of ML models using RMSE, R-square, and accuracy."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "high"
+      justification: "Specifically evaluates classification and regression modules for predictive accuracy."
+    - code: "12.C"
+      name: "Evaluation Methodologies for Budget Recommendation Systems"
+      relevance: "medium"
+      justification: "Methodology of model comparison can inform evaluation of recommendation systems."
+  contribution: "This paper demonstrates the feasibility of using machine learning for predictive classification of economic vulnerability, which can inform spending forecasting and anomaly detection modules in Odin. The systematic evaluation framework comparing multiple algorithms provides a template for selecting optimal models for Odin's algorithmic components. The causal identification of poverty predictors using econometrics can guide feature engineering for user profiling and budget recommendation. The replicable methodology using publicly available census data supports data-driven policy targeting, which aligns with Odin's goal of personalized financial management."
   directly_justifies:
-    - "Random forest achieves higher R-square (0.9208) than linear regression (0.4221) for prediction tasks."
-    - "Random forest classification accuracy reaches 95.94% in pipeline algorithms."
-    - "RMSE for random forest is 0.3298, lower than LightGBM (0.3642) and XGBoost (0.4001)."
-    - "Feature importance from random forest identifies key predictors for targeted interventions."
+    - "Random forest can achieve over 90% accuracy in classifying poverty status."
+    - "Household size and informal settler status are strong predictors of economic status."
+    - "Econometric causal testing can identify relevant predictors for ML models."
+    - "The methodology is replicable for other regions with available data."
   limits:
-    - "Paper focuses on poverty prediction, not personal financial spending patterns."
-    - "Models were trained on census data from a single Philippine municipality, limiting direct transferability to PFMS contexts."
-    - "No comparison with deep learning methods like neural networks."
-  mapping_rationale: The paper was screened against all Odin functional domains. It does not address behavioral profiling, spending forecasting, budget recommendation, anomaly detection, expense categorization, mobile design, data privacy, user retention, or savings/debt management. However, its extensive comparison of ML algorithms using standard regression and classification evaluation metrics (RMSE, MSE, R-square, accuracy) directly supports topics 12.A (Evaluation Frameworks) and 12.B (Evaluation of Algorithmic Modules). Borderline consideration of topic 6.B (Spending Forecasting Algorithm) was rejected because the paper predicts poverty status rather than spending amounts or patterns. Thus only the two evaluation-related codes are included.
+    - "The paper focuses on poverty, not spending behavior, limiting direct applicability to expenditure forecasting."
+    - "The data is cross-sectional, not time-series, so temporal spending patterns are not modeled."
+    - "Models are trained on rural indigenous communities, which may not generalize to urban young professionals."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was conducted. Domains flagged as relevant include Spending Forecasting (6) and System Evaluation (12), as the paper directly addresses predictive modeling and algorithm evaluation. Specifically, topic 6.A and 6.B were assigned high relevance due to the use of ML for prediction and comparison of algorithms. Topics 12.A and 12.B were assigned high relevance for the evaluation frameworks and module assessment; 12.C received medium relevance as the evaluation methodology could inform budget recommendation systems. Domains related to Filipino cultural context (2), expense categorization (3), existing systems (4), behavioral profiling (5), budget recommendation (7), anomaly detection (8), mobile-first design (9), data privacy (10), user retention (11), and savings/debt management (13) were considered but rejected because the paper does not address these topics; it focuses on poverty measurement rather than personal finance management. The overall relevance to Odin is moderate, providing methodological inspiration for predictive modules rather than direct content."
 limitations:
-  - "Results are specific to rural poverty in the Philippines; generalizability to other domains like personal finance is untested [unacknowledged]."
-  - "Paper acknowledges time required to build trustworthy datasets but does not discuss real-time prediction constraints."
-  - "Models rely on census data updated every two years, which may not capture rapid changes in financial behavior [unacknowledged]."
+  - "Cross-sectional data limits temporal forecasting capabilities. [unacknowledged]"
+  - "Models are not validated on external datasets, reducing generalizability. [unacknowledged]"
+  - "The paper does not address real-time or sequential data, which are central to PFMS. [unacknowledged]"
+  - "The focus on indigenous communities may not represent the broader Filipino young professional demographic. [unacknowledged]"
 remember_this:
-  - Random forest achieved 0.9208 R-square for poverty prediction.
-  - Random forest classifier accuracy was 95.94% in pipeline algorithms.
-  - Random forest had the lowest RMSE (0.3298) among regressors.
-  - Feature importance from random forest identifies key poverty predictors.
+  - "Random forest achieved 0.9208 R-square and 0.9108 accuracy for poverty prediction."
+  - "Household size and informal settler status are key poverty predictors."
+  - "The study demonstrates cost-effective poverty measurement using ML."
+  - "Causal econometric testing identifies robust predictors for ML models."
+  - "Methodology is replicable with available census data."
 ```

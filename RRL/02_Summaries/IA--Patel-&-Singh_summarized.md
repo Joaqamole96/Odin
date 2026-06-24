@@ -1,6 +1,6 @@
 ```yaml
-paper_id: f47ac10b-58cc-4372-a567-0e02b2c3d479
-designation: international
+paper_id: 5c8f3d6e-8b1a-5a2b-9c4d-7e6f8a9b0c1d
+designation: international-algorithm-specific
 title: An Intelligent AI-Based Framework for Automated Personal Financial Management
 authors: Patel, A.; Singh, A.
 year: 2026
@@ -8,99 +8,135 @@ venue: International Conference on Multidisciplinary Perspectives in Advanced Co
 odin_topics:
   - 3.A
   - 3.B
+  - 4.A
+  - 4.B
   - 6.A
   - 6.B
   - 7.A
   - 7.B
-  - 7.C
+  - 8.A
+  - 8.B
+  - 9.A
+  - 9.B
   - 10.A
-shorthand_tags:
-  - /expense-categorization-frameworks
-  - /expense-category-design
-  - /predictive-modeling
-  - /spending-forecasting
-  - /budgeting-strategies
-  - /budget-recommendation
-  - /budget-algorithm
-  - /data-privacy
-tldr: An AI-based framework aggregates financial data from multiple sources, automatically categorizes transactions using rule-based and ML methods, forecasts expenditures, and provides personalized budget recommendations and alerts.
-problem_and_motivation: Digital payment systems generate fragmented financial data that manual tracking cannot handle efficiently. Existing finance apps lack intelligent automation, personalization, and predictive insights. This gap leads to poor financial awareness and suboptimal decision-making.
+  - 11.A
+  - 11.B
+tldr: Integrates AI and full-stack technology to aggregate financial data, classify transactions, forecast spending, and deliver personalized budgeting recommendations and alerts.
+problem_and_motivation: Digital financial services generate fragmented personal data that manual tracking cannot efficiently manage. Existing applications lack intelligent automation and personalized decision support, creating a gap between raw data and informed financial decisions, especially for young professionals.
 approach:
-  - Data is aggregated from UPI, banking records, and digital wallets via APIs and secure ingestion.
-  - Rule-based logic and machine learning classify transactions into categories like food, travel, and bills.
-  - Historical spending patterns are analyzed to generate personalized dynamic budgets and forecasts.
-  - Event-driven background workflows produce periodic reports without affecting real-time interaction.
-  - Evaluation uses sample financial datasets to measure categorization accuracy and usability.
+  - Collects financial data from multiple digital sources like UPI and banking records using secure APIs.
+  - Preprocesses and normalizes raw transaction data for consistency and analysis.
+  - Classifies transactions automatically using a hybrid of rule-based logic and machine learning algorithms.
+  - Employs statistical and time-series methods to analyze spending patterns and forecast future expenditures.
+  - Implements an event-driven background workflow for periodic report generation and AI analysis.
 findings:
-  - Automated transaction categorization reduces manual effort and improves accuracy over manual processes.
-  - Multi-source aggregation provides a unified real-time view of expenses across platforms.
-  - Personalized budget limits and real-time alerts improve spending control and reduce overspending.
-  - Predictive insights based on historical data enable users to forecast future expenditures and plan better.
-  - Interactive dashboards increase financial awareness and user engagement.
+  - AI-driven classification enhanced accuracy in categorizing transactions compared to manual procedures.
+  - The system aggregates financial information from different platforms into a unified real-time interface.
+  - The budgeting module analyzes previous spending to generate personalized budget limits.
+  - Alert notifications inform users when spending approaches or exceeds predefined thresholds.
+  - Predictive insights enable users to anticipate future expenditures and improve financial planning.
+  - Interactive dashboards and simplified statements improved user financial understanding and engagement.
 key_figures_tables:
-  - Figure 1: Monthly expense breakdown by category → Shows category-wise spending distribution.
-  - Figure 2: Income and expense analysis dashboard → Visualizes income vs expense trends.
-  - Table 2: Comparison of traditional tools vs proposed system → Highlights improvements in automation and insights.
+  - Figure 1: Monthly expense breakdown by category → Shows automated categorization and spending distribution.
+  - Figure 2: Income and expense analysis dashboard → Visualizes aggregated financial data for user insights.
+  - Table 1: Methodology phases → Outlines data collection, preprocessing, categorization, and visualization steps.
+  - Table 2: Result analysis comparison → Demonstrates performance improvements over traditional tools.
 key_equations:
   - equation: None.
     explanation: ""
 definitions:
-  - term: UPI
-    definition: Unified Payments Interface, a real-time payment system in India.
-  - term: ML
-    definition: Machine learning, a subset of AI using data-driven algorithms.
-  - term: AI
-    definition: Artificial intelligence, simulating human intelligence in machines.
+  - term: None.
+    definition: ""
 critical_citations:
-  - "[Naik et al., 2024] — Automated expense tracking foundation."
-  - "[Harshitha et al., 2025] — AI for budget planning and expense prediction."
-  - "[Makridakis et al., 2018] — Statistical and ML forecasting methods."
+  - "[Grass & Lynch, 1982] — foundational resource for financial workshop proceedings."
+  - "[Naik et al., 2024] — discusses automated expense tracking systems."
+  - "[Stefanov et al., 2024] — covers personal finance management application design."
+  - "[Fernández, 2019] — reviews AI applications in financial services."
 relevance:
   topics:
     - code: 3.A
       name: Expense Categorization Frameworks
-      justification: Rule-based and ML transaction classification into fixed categories.
+      relevance: high
+      justification: Proposes ML and rule-based automated transaction categorization.
     - code: 3.B
       name: Expense Category Design Considerations
-      justification: Categories like food, travel, bills are designed for user understanding.
+      relevance: medium
+      justification: Discusses classification into categories like food, travel, bills.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: Reviews traditional systems and identifies their limitations.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Explicitly outlines lack of intelligence, automation, and integration.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Uses historical data for expenditure trend analysis and forecasting.
+      relevance: high
+      justification: Implements forecasting of future expenditures based on historical data.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Time-series and regression methods predict future expenses.
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Uses time-series analysis and regression for expense prediction.
     - code: 7.A
       name: Budgeting Strategies as Domain Knowledge
-      justification: Dynamic budgets adapt to user spending behavior rather than static limits.
+      relevance: medium
+      justification: Provides adaptive budgeting based on spending behavior analysis.
     - code: 7.B
       name: Budget Recommendation in Personal Finance Systems
-      justification: Personalized budget limits are generated from historical patterns.
-    - code: 7.C
-      name: Budget Recommendation Algorithm
-      justification: Algorithmic generation of personalized budgets and alerts.
+      relevance: medium
+      justification: Generates personalized budget limits and recommendations.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: contextual
+      justification: Mentions detection of anomalies in spending patterns indirectly.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: low
+      justification: Does not focus on a specific anomaly detection algorithm.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: low
+      justification: Suggests future deployment as a cross-platform mobile application.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: low
+      justification: Mentions user engagement but not specific mobile UX design details.
     - code: 10.A
       name: Data Privacy and Security in Personal Finance Systems
-      justification: Secure storage, authentication, and encryption for sensitive financial data.
-  contribution: The paper provides an integrated framework for automated expense categorization and transaction aggregation, directly informing Odin's data ingestion and classification modules. Its spending forecasting approach using historical patterns validates Odin's predictive analytics component. The personalized dynamic budgeting and real-time alert system supports Odin's budget recommendation engine. The modular full-stack architecture with background processing offers a blueprint for Odin's scalable design.
+      relevance: medium
+      justification: Emphasizes secure storage and management of financial information.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Claims improved user engagement through alerts and analytics.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: low
+      justification: Discusses notifications but not specific retention mechanisms.
+  contribution: The paper provides a modular architecture integrating AI for automated transaction categorization and predictive analytics, which directly informs Odin's expense tracking module. Its emphasis on aggregating fragmented data from multiple digital payment sources supports Odin's data integration layer design. The adaptive budgeting and alert system offers a blueprint for Odin's recommendation engine. The discussion of security and privacy considerations provides foundational justification for Odin's data protection protocols. Overall, the framework demonstrates how AI can enhance user financial awareness and decision support.
   directly_justifies:
-    - Automated transaction categorization reduces manual effort and improves accuracy.
-    - Aggregating data from multiple payment sources creates a unified financial view.
-    - Personalized budget limits based on historical spending improve budget control.
-    - Predictive insights enable users to forecast future expenditures.
+    - Automated transaction categorization using rule-based and ML techniques is feasible and improves accuracy.
+    - Aggregating financial data from multiple sources into a single platform enhances financial awareness.
+    - Predictive analytics on historical spending data can enable effective future expense forecasting.
+    - Personalized budget recommendations based on spending behavior promote better financial discipline.
+    - Real-time alerts and visual analytics increase user engagement and sound financial decision-making.
   limits:
-    - No evaluation on Filipino young professionals or local financial behaviors.
-    - Does not address cold-start problem for new users without historical data.
-    - Anomaly detection is limited to threshold-based alerts, not algorithmic outlier detection.
-    - Lacks specific implementation details for ML models or accuracy metrics.
-  mapping_rationale: The paper focuses on automated expense categorization (3.A, 3.B), spending forecasting (6.A, 6.B), and budget recommendation (7.A-7.C), all of which are core to Odin. Data privacy (10.A) is mentioned in objectives and secure design. Behavioral profiling (5.A-5.C) is absent; the paper does not classify users into financial profiles. Anomaly detection (8.A-8.B) is only implicitly covered via overspending alerts, not a dedicated algorithm. No topics related to retention, evaluation frameworks, or savings/debt management were selected because the paper does not address them substantively.
+    - The system's performance depends on the quality of input data and reliability of third-party services. [unacknowledged]
+    - Direct bank API integration for real-time synchronization is not fully implemented and is noted as future work.
+    - The study does not provide quantitative performance metrics from a large-scale user study.
+    - Security measures are discussed generally, without detailing specific encryption or blockchain implementations.
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was conducted. Domains relevant to expense categorization (3.A, 3.B), existing systems (4.A, 4.B), forecasting (6.A, 6.B), and budgeting (7.A, 7.B) were flagged as high relevance because the paper directly addresses these with proposed algorithms and system features. Domains like anomaly detection (8.A, 8.B) and engagement (11.A, 11.B) were assigned medium or low relevance, as they are mentioned but not the core focus. The paper's general nature led to rejecting culturally specific domains (2.A-D) and Filipino demographic topics (1.A-C). The paper's contribution is overall highly relevant to Odin's architectural and algorithmic modules.
 limitations:
-  - Relies on quality of input data and third-party AI services. [acknowledged]
-  - No direct bank API integration for real-time sync; requires manual uploads. [acknowledged]
-  - Does not include deep learning or advanced NLP for financial assistants. [acknowledged]
-  - No large-scale user study or cross-platform mobile deployment. [unacknowledged]
+  - Direct bank API-UPI gateway integration for real-time synchronization is not fully implemented. [unacknowledged]
+  - Deep learning algorithms for expense forecasting are suggested but not incorporated in the current framework. [unacknowledged]
+  - Features like investment analysis, credit score evaluation, and debt management are outside the system's scope. [unacknowledged]
+  - The system has not been deployed as a cross-platform mobile application for large-scale testing. [unacknowledged]
+  - Relies on the accuracy and availability of third-party AI and data ingestion services.
 remember_this:
-  - Automated transaction categorization reduces manual effort and improves accuracy.
-  - Personalized budget alerts help control overspending effectively.
-  - Aggregating multiple payment sources provides a unified financial view.
-  - Predictive forecasting based on historical data enhances financial planning.
+  - Integrates rule-based and ML for accurate automated transaction categorization.
+  - Aggregates fragmented data from multiple digital payment platforms into one view.
+  - Uses historical spending to forecast future expenses and personalize budgets.
+  - Real-time alerts and interactive dashboards enhance financial discipline and awareness.
+  - Reduces manual effort and improves financial transparency compared to traditional tools.
 ```

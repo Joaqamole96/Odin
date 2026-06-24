@@ -6,104 +6,132 @@ authors: Lee, J. T.; Yeh, M. H.-S.; Li, V. C.-S.; Chen, H.-H.; Liu, Y.-H.; Chen,
 year: 2026
 venue: Journal of Medical Economics
 odin_topics:
+  - 3.A
+  - 4.A
+  - 5.A
   - 6.A
   - 6.B
-  - 7.B
+  - 7.A
+  - 8.B
   - 12.A
   - 12.B
-shorthand_tags:
-  - /predictive-modeling
-  - /spending-forecast-algorithm
-  - /budget-recommendation
-  - /evaluation-frameworks
-  - /algorithm-evaluation
-tldr: A systematic review of eight studies finds that deep learning models, especially LSTM and CNN-LSTM, improve healthcare cost prediction accuracy by 10-20% for longitudinal data, while tree-based methods remain competitive for cross-sectional tabular data.
-problem_and_motivation: Healthcare expenditures are rising globally, and accurate individual-level cost prediction is essential for insurance, budgeting, and value-based care. Traditional regression models struggle with nonlinear, high-dimensional, and temporal patterns in health data. This review systematically compares deep learning to classical regression to determine when neural networks add predictive value.
+  - 12.C
+tldr: Deep learning excels in longitudinal, sequence-rich cost forecasting, while tree-based methods remain highly competitive for cross-sectional tabular prediction.
+problem_and_motivation: Accurate prediction of individual healthcare costs is crucial for insurance underwriting, risk adjustment, budget planning, and value-based payment strategies. Traditional statistical approaches often struggle to capture complex nonlinear interactions in health data, but a clear understanding of when deep learning offers a meaningful advantage over classical methods is lacking.
 approach:
-  - The review was preregistered (PROSPERO CRD420251129440) and searched Web of Science, PubMed, Embase, and Scopus through August 2025.
-  - Eligible studies used real-world individual-level data (claims, EHR, registries) to predict cost outcomes with at least one deep learning architecture and one classical regression comparator.
-  - Eight studies met inclusion criteria, spanning the US, Europe, and Asia, with sample sizes from 50,000 to over 1.4 million individuals.
-  - Deep learning models included feedforward DNN, LSTM, stacked LSTM, CNN-LSTM, multi-view networks, and variance-based GAN.
-  - Comparators included GLM, ridge, lasso, random forest, gradient boosting, and ARIMA.
-  - Performance metrics included RMSE, MAE, R2, AUROC, precision@k, and cost-capture.
-  - No study performed full external validation; most used internal train-validation-test splits or temporal holdouts.
+  - A preregistered systematic review (PROSPERO CRD420251129440) was conducted.
+  - Searches were performed in Web of Science, PubMed, Embase, and Scopus through August 2025.
+  - Eight studies were included that used real-world individual-level data and directly compared a deep learning architecture with a classical regression comparator.
+  - Data were extracted on population, predictors, outcome horizon, model type, validation strategy, and performance metrics.
+  - Findings were synthesized narratively, leading to the proposal of a Complexity-Performance Hypothesis.
 findings:
-  - num: Longitudinal deep learning models (LSTM, CNN-LSTM) achieved 10-20% reductions in RMSE/MAE compared to regression and tree-based baselines.
-  - num: R2 improvements ranged from 0.01 to 0.15, with the highest gains in multi-year claims and medication spending forecasts.
-  - num: AUROC for high-risk classification reached up to 0.78 in preventable cost prediction.
+  - "num: Sequential deep learning models showed approximately 10-20% reductions in RMSE/MAE over classical methods in longitudinal designs."
+  - "num: R² improvements from deep learning ranged from 0.01 to 0.15 in various studies."
+  - "num: Deep learning models achieved AUROC values up to 0.78 for high-risk classification of preventable hospitalizations."
   - Prior costs and utilization were consistently the strongest predictors across all studies.
-  - For cross-sectional, low-dimensional tabular data, shallow neural networks performed similarly to GLM and were often outperformed by random forests.
-  - When unstructured or multimodal inputs (e.g., EMR text) were available, deep learning achieved clear advantages.
-  - num: A multi-view DNN integrating structured and textual data reduced prediction error by 12-15% over baselines.
-  - Stacked LSTM improved RMSE by nearly 19% over ARIMA for medication spending time series.
-  - Recurrent neural networks increased test R2 from 0.14-0.17 to 0.30 for per-member-per-month expenditures.
-  - num: CNN-LSTM ensembles achieved R2 values around 0.8-0.9 in patient-level forecasting.
+  - For low-dimensional, structured, cross-sectional data, generalized linear models and tree-based approaches remain robust baselines.
+  - A conceptual Complexity-Performance Hypothesis was formulated, linking model capacity to data complexity.
 key_figures_tables:
-  - "Figure 2: Conceptual model performance by data complexity → Deep learning excels for longitudinal/multimodal data, tree-based for cross-sectional tabular."
+  - "Figure 2: Conceptual model performance by data complexity → Deep learning excels in complex settings, while regression is best for simple data."
+  - "Table 1: Characteristics of identified studies → Summary of study design, population, and models for all 8 included papers."
+  - "Table 2: Model performance and features of included studies → Detailed comparative results for all studies."
+  - "Table 3: Neural network architectures applied → Categorization of models by data type used."
+  - "Table 4: Challenges of deep learning in spending prediction → Future strategies for interpretability, benchmarking, and generalizability."
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
   - term: LSTM
-    definition: Long short-term memory, a recurrent neural network architecture for sequential data.
+    definition: Long short-term memory, a recurrent neural network architecture.
   - term: CNN
-    definition: Convolutional neural network, used for spatial or temporal feature extraction.
+    definition: Convolutional neural network.
+  - term: RNN
+    definition: Recurrent neural network.
   - term: GLM
-    definition: Generalized linear model, a flexible extension of linear regression.
+    definition: Generalized linear model.
   - term: RMSE
-    definition: Root mean square error, a measure of prediction error.
+    definition: Root mean square error.
   - term: MAE
-    definition: Mean absolute error, a robust measure of prediction error.
+    definition: Mean absolute error.
   - term: AUROC
-    definition: Area under the receiver operating characteristic curve, a discrimination metric.
-  - term: R2
-    definition: Coefficient of determination, proportion of variance explained.
+    definition: Area under the receiver operating characteristic curve.
+  - term: EMR
+    definition: Electronic medical records.
+  - term: EHR
+    definition: Electronic health records.
+  - term: XAI
+    definition: Explainable artificial intelligence.
 critical_citations:
-  - "[Drewe-Boss et al., 2022] — Deep neural network outperforms ridge regression in German claims."
-  - "[Yang et al., 2018] — RNN improves R2 from 0.14 to 0.30 for Medicaid expenditures."
-  - "[Kaushik et al., 2017] — Stacked LSTM reduces RMSE by 19% over ARIMA."
-  - "[Lewis et al., 2021] — LSTM/CNN achieve AUROC 0.78 for preventable cost prediction."
+  - "[Drewe-Boss et al., 2022] — Provided a strong example of deep learning outperforming ridge regression."
+  - "[Yang et al., 2018] — Showed RNN gains for high-cost patient forecasting."
+  - "[Lewis et al., 2021] — Demonstrated LSTM and CNN superiority for preventable care prediction."
+  - "[Esteva et al., 2019] — Cited for the promise of deep learning in healthcare."
+  - "[Topol, 2019] — Cited for contextualizing the convergence of human and AI in medicine."
 relevance:
   topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: contextual
+      justification: The review discusses different outcome variables like total cost and pharmacy expenditure.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Reviews the predictive modeling landscape, which is relevant to PFMS.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Discusses predicting high-cost patients, analogous to financial profiling.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Compares deep learning vs regression for cost/spending prediction.
+      relevance: high
+      justification: Directly compares forecasting models for expenditure, informing Odin's predictor selection.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Directly evaluates LSTM, CNN-LSTM for longitudinal spending forecasting.
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      justification: Improved spending forecasts inform budget recommendations.
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Focuses on algorithms like LSTM and CNN-LSTM for sequential data, directly applicable to spending forecasting.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Finding on data complexity ties to optimal model choice for budget recommendation.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: Discussion of identifying high-cost outliers relates to anomaly detection.
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      justification: Systematic review defines evaluation metrics (RMSE, MAE, R2, AUC).
+      relevance: high
+      justification: Provides a systematic framework for comparing algorithmic modules, a core part of system evaluation.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: Benchmarks deep learning against classical and tree-based models.
-  contribution: "This systematic review provides evidence that sequential deep learning models (LSTM, CNN-LSTM) reduce spending forecast error by 10-20% compared to linear models when historical transaction sequences are available. For Odin's spending forecasting module, this justifies adopting recurrent architectures over simpler regression for users with multi-month expense histories. The review also establishes that tree-based models remain strong baselines for cross-sectional or low-dimensional data, guiding Odin's model selection strategy. Finally, it highlights that prior spending and utilization are the strongest predictors, validating Odin's focus on historical transaction data."
+      relevance: high
+      justification: Directly evaluates the performance of different algorithmic modules (deep learning vs. regression).
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: high
+      justification: The systematic review methodology and metrics (RMSE, MAE, R²) are directly transferable to evaluating budget recommendation.
+  contribution: This systematic review provides a clear, evidence-based framework for selecting between deep learning, tree-based, and regression models for spending prediction tasks. It directly informs Odin's algorithmic module selection by establishing that LSTM and CNN-LSTM models are best for longitudinal data, while simpler models are sufficient for cross-sectional data. The proposed Complexity-Performance Hypothesis can guide the design of Odin's forecasting and anomaly detection components.
   directly_justifies:
-    - "LSTM and CNN-LSTM can reduce spending forecast error by 10-20% compared to linear regression models."
-    - "R2 improvements of 0.01-0.15 are achievable when moving from linear to sequential deep learning."
-    - "Prior spending amounts are the most important predictors for future expenditure."
-    - "Shallow feedforward neural networks offer no advantage over GLM on cross-sectional tabular data."
-    - "Tree-based methods (random forest, gradient boosting) remain competitive for non-temporal spending prediction."
+    - "Sequential deep learning models (LSTM, CNN-LSTM) offer clear predictive advantages for longitudinal spending data."
+    - "Tree-based methods remain highly competitive for cross-sectional, tabular spending prediction."
+    - "Prior costs and utilization are consistently the strongest predictors of future spending."
+    - "The complexity of the data should dictate the choice of the forecasting model."
   limits:
-    - "Evidence based on only eight heterogeneous studies, limiting statistical generalizability."
-    - "No external validation across independent datasets; all studies used single-database designs."
-    - "Prediction horizons are mostly one year; long-term multi-year forecasting not well evaluated."
-    - "Social determinants of health and behavioral predictors were rarely incorporated."
-    - "Calibration and fairness analyses were largely absent. [unacknowledged]"
-  mapping_rationale: "This paper maps primarily to Spending Forecasting (6.A, 6.B) because it directly compares algorithms for predicting individual-level expenditure from longitudinal data. Budget Recommendation (7.B) is relevant since accurate forecasts underpin budget suggestions. Evaluation Frameworks (12.A, 12.B) apply because the review systematically compares model performance metrics. Behavioral profiling (5.A-5.C) and anomaly detection (8.A,8.B) are not addressed. The paper is international (authors from Taiwan, Singapore) and not local to the Philippines, but the methodological insights transfer to Odin's spending prediction module."
+    - "Review based on a small and heterogeneous set of eight studies, limiting generalizability."
+    - "None of the studies performed full external validation across independent datasets."
+    - "The review's findings are based on healthcare data, not personal finance data, which may have different characteristics."
+    - "The Complexity-Performance Hypothesis is a conceptual framework requiring further systematic validation."
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to the 'Spending Forecasting' domain (codes 6.A, 6.B) as it is a systematic review directly comparing forecasting algorithms. It also has high relevance to the 'System Evaluation' domain (codes 12.A, 12.B, 12.C) due to its focus on comparative performance metrics and evaluation frameworks. The paper provides medium relevance to 'Behavioral Profiling & Classification' (5.A) through its discussion of predicting high-cost populations, and 'Anomaly Detection' (8.B) via high-cost outlier identification. It offers contextual relevance to 'Expense Categorization' (3.A) and the 'Existing Systems' landscape (4.A). Domains such as Filipino Cultural Context, Mobile-First Design, and Data Privacy were considered and rejected because the paper does not address these topics. The 'Budget Recommendation' domain (7.A) is considered medium relevance as the findings on data complexity guide model choice for such recommendations. Overall, the paper provides strong empirical justification for model selection in Odin's forecasting and evaluation modules.
 limitations:
-  - "Only eight studies included, with high heterogeneity in designs, populations, and outcomes."
-  - "No external validation across independent datasets; temporal validation limited."
-  - "Short prediction horizons (mostly one year) limit assessment of long-term dynamics."
-  - "Social determinants and behavioral factors rarely incorporated. [unacknowledged]"
-  - "Calibration and fairness not evaluated in any included study. [unacknowledged]"
+  - "The evidence base is small (n=8) and heterogeneous in design and data sources."
+  - "Prediction horizons are predominantly short-term (one year), limiting assessment of long-term performance. [unacknowledged]"
+  - "Social determinants of health and behavioral predictors are rarely incorporated into the models. [unacknowledged]"
+  - "None of the studies performed full external validation. [unacknowledged]"
+  - "Assessments of calibration, fairness, and economic interpretability were sparse or absent. [unacknowledged]"
+  - "The Complexity-Performance Hypothesis is a working hypothesis derived from a limited set of studies, not a definitive causal mechanism. [acknowledged]"
 remember_this:
-  - "LSTM models reduce spending forecast error by 10-20% over linear regression."
-  - "Prior spending history is the strongest predictor of future expenditure."
-  - "Tree-based models match deep learning for cross-sectional tabular data."
-  - "Deep learning gains emerge only with longitudinal or multimodal data."
-  - "R2 improvements of 0.01 to 0.15 are typical for sequence-based forecasts."
+  - "Deep learning excels for longitudinal, sequence-rich cost forecasting."
+  - "Tree-based methods are highly competitive for cross-sectional tabular data."
+  - "Model accuracy is maximized when capacity is matched to data complexity."
+  - "Prior costs and utilization are the strongest predictors of future spending."
+  - "LSTM and CNN-LSTM hybrids reduced forecasting error by up to 20% in some studies."
 ```

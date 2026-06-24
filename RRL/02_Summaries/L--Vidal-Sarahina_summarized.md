@@ -1,89 +1,121 @@
 ```yaml
-paper_id: "10.69569/jip.2025.483"
-designation: "local"
-title: "Financial Literacy of Department of Education Teachers in the Philippines"
-authors: "Vidal-Sarahina, M. E."
+paper_id: 10.69569/jip.2025.483
+designation: local
+title: Financial Literacy of Department of Education Teachers in the Philippines
+authors: Vidal-Sarahina, M.E.
 year: 2025
-venue: "Journal of Interdisciplinary Perspectives"
+venue: Journal of Interdisciplinary Perspectives
 odin_topics:
-  - "1.C"
-  - "2.A"
-  - "5.A"
-  - "13.A"
-  - "13.B"
-shorthand_tags:
-  - "/fin-behavior-filipino"
-  - "/cultural-finance"
-  - "/behavioral-profiles"
-  - "/savings-goals"
-  - "/debt-management"
-tldr: "Examines financial knowledge, attitudes, and behaviors of 30 Filipino public school teachers, finding a significant gap between knowledge and practice due to economic pressures, cultural obligations, and behavioral biases."
-problem_and_motivation: "Teachers face financial instability despite their critical role. Existing financial literacy programs focus on knowledge acquisition but fail to address socio-economic, cultural, and behavioral barriers. Limited research exists on the financial literacy of DepEd teachers in Guihulngan City."
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.B
+  - 2.D
+  - 5.A
+  - 7.A
+  - 13.A
+tldr: Study reveals gap between financial knowledge and behavior among DepEd teachers due to cultural obligations, low salaries, and behavioral biases, advocating for comprehensive financial education.
+problem_and_motivation: Teachers face financial instability despite financial literacy, with external pressures, cultural expectations, and behavioral biases hindering practical application of knowledge. Limited research on DepEd teachers in Guihulngan City exists, requiring a holistic assessment of financial knowledge, attitudes, and behaviors.
 approach:
-  - "Mixed-methods study with 30 quantitative survey respondents and 10 qualitative interview participants from DepEd teachers in Guihulngan City, Philippines."
-  - "Measured financial knowledge, attitude, and behavior using a Likert-scale questionnaire, analyzed with weighted means and Spearman correlation."
-  - "Qualitative data analyzed using reflexive thematic analysis to identify barriers such as cultural obligations, economic constraints, and behavioral biases."
-  - "Purposive sampling included teachers with at least ten years of service to ensure consistency in professional experience."
+  - Mixed-methods design with quantitative survey of 30 teachers and qualitative interviews with 10 teachers from Guihulngan City Division.
+  - Quantitative data used weighted means, standard deviations, and Spearman's rank-order correlation for financial knowledge, attitude, and behavior.
+  - Qualitative data analyzed using Braun and Clarke's reflexive thematic analysis to identify factors contributing to knowledge-behavior gap.
+  - Lincoln and Guba's trustworthiness criteria applied for rigor in qualitative component.
+  - Purposive sampling selected teachers with at least ten years of service in the Department of Education.
 findings:
-  - "num: Mean financial knowledge score 2.15 (moderate), attitude 3.02 (positive), behavior 2.80 (moderately acceptable)."
-  - "num: No significant correlation between knowledge and behavior (r=0.01, p=0.96)."
-  - "num: Very weak correlation between knowledge and attitude (r=0.09, p=0.62)."
-  - "Qualitative themes: Knowledge-Action Gap, Cultural and Familial Expectations, Economic Realities, Behavioral Biases."
-  - "Teachers report low salaries, loan dependence, and utang na loob obligations overriding personal financial goals."
+  - num: Mean financial knowledge score was 2.15, indicating moderate understanding.
+  - num: Mean financial attitude score was 3.02, showing generally positive outlook.
+  - num: Mean financial behavior score was 2.80, reflecting moderately acceptable practices.
+  - num: Very weak positive correlation between knowledge and attitude (r = 0.09, p = 0.62).
+  - num: No significant correlation between knowledge and behavior (r = 0.01, p = 0.96).
+  - num: Weak correlation between attitude and behavior (r = 0.06, p = 0.75).
+  - Qualitative analysis revealed themes: Knowledge-Action Gap, Cultural and Familial Expectations, Economic Realities, and Behavioral Biases.
+  - Financial behavior is shaped by complex interplay of knowledge, culture, economic pressures, and psychology.
+  - Emotional spending and overconfidence contribute to suboptimal financial decisions among teachers.
+  - Systemic issues like low salaries and loan dependence constrain financial freedom.
 key_figures_tables:
-  - "Table 1: Mean financial knowledge (2.15), attitude (3.02), behavior (2.80) → moderate levels across all."
-  - "Table 2: Correlation matrix shows no significant relationship between knowledge and behavior → knowledge does not predict behavior."
-  - "Table 3: Thematic analysis categories including Knowledge-Action Gap and Behavioral Biases → four themes explain disconnect."
+  - Table 1: Respondents' Financial Knowledge, Attitude, and Behavior means and standard deviations → Shows moderate scores with knowledge lowest (2.15) and attitude highest (3.02).
+  - Table 2: Correlation between variables → Reveals weak and non-significant relationships among knowledge, attitude, and behavior.
+  - Table 3: Thematic analysis themes → Lists Knowledge-Action Gap, Cultural & Familial Expectations, Economic Realities, and Behavioral Biases with categories and descriptions.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "DepEd"
-    definition: "Department of Education in the Philippines."
-  - term: "Utang na loob"
-    definition: "Filipino cultural debt of gratitude influencing financial decisions."
+  - term: Financial Literacy
+    definition: Ability to apply financial knowledge, attitudes, and behaviors to achieve financial well-being and resilience.
+  - term: DepEd
+    definition: Department of Education in the Philippines.
+  - term: Knowledge-Action Gap
+    definition: Disconnect between possessing financial knowledge and translating it into actual financial behavior.
+  - term: Utang na Loob
+    definition: Filipino cultural concept of a profound debt of gratitude that influences financial decision-making.
 critical_citations:
-  - "[Lusardi & Mitchell, 2023] — knowledge does not guarantee good outcomes under stress."
-  - "[Casingal & Ancho, 2021] — Filipino teachers face financial instability."
-  - "[Variacion et al., 2024] — persistent knowledge-behavior gap among teachers."
-  - "[Jardinico et al., 2024] — debt traps and dual-income roles for teachers."
+  - "[OECD/INFE, 2023] — Defines financial literacy as knowledge, attitudes, and behaviors."
+  - "[Lusardi & Messy, 2023] — Emphasizes financial literacy for navigating complex systems."
+  - "[Casingal & Ancho, 2021] — Highlights financial instability among Filipino teachers."
+  - "[Variacion et al., 2024] — Identifies disparity between knowledge and behavior in teachers."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Paper examines financial behavior of Filipino teachers, a professional demographic."
-    - code: "2.A"
-      name: "Culturally Specific Financial Practices"
-      justification: "Identifies utang na loob and familial obligations as key financial drivers."
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Describes behavioral biases (impulsivity, overconfidence) and knowledge-action gap."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Teachers report inability to save due to economic constraints and family obligations."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Loan dependence and salary loan cycles are central themes in teachers' financial lives."
-  contribution: "Odin could integrate behavioral bias detection into user profiling by flagging overconfidence or impulsive spending patterns. The finding that cultural obligations override financial knowledge suggests Odin's recommendation engine should incorporate user-defined family support priorities. The weak correlation between attitude and behavior indicates that Odin's budgeting tools need habit-formation support rather than just informational prompts. For debt management, Odin could offer structured loan repayment plans tailored to teachers' salary loan cycles."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: Study focuses on Filipino teachers as a professional demographic with financial challenges.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: Examines financial structures like salaries, loan dependence, and budgeting constraints.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly analyzes financial behavior, knowledge, and attitudes of Filipino teachers.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: high
+      justification: Highlights cultural obligations and utang na loob impacting financial decisions.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: medium
+      justification: Discusses budget constraints and economic pressures that may relate to cyclical spending.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: medium
+      justification: Cultural and familial expectations may influence spending during occasions and obligations.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Identifies behavioral biases like impulsivity and overconfidence affecting financial profiles.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Discusses budgeting as a survival skill and the need for structured savings programs.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: medium
+      justification: Addresses savings challenges and the need for support systems to achieve savings goals.
+  contribution: Provides empirical evidence of the knowledge-behavior gap among Filipino teachers, emphasizing cultural and behavioral barriers. This directly informs Odin's user profiling (5.A) by highlighting behavioral biases like overconfidence and impulsivity. The study's cultural insights (2.A) support Odin's need for culturally aware categorization and recommendation systems. Findings on economic constraints (1.B) justify Odin's focus on realistic budgeting and debt management (13.A). The research validates Odin's approach to integrating behavioral finance principles into financial education.
   directly_justifies:
-    - "Financial knowledge does not significantly correlate with financial behavior among Filipino teachers (r=0.01, p=0.96)."
-    - "Cultural obligation of utang na loob drives financial decisions that prioritize family over personal savings."
-    - "Behavioral biases such as impulsive spending and overconfidence lead to inconsistent financial actions."
-    - "Low salary and loan dependence are primary economic barriers to applying financial knowledge."
+    - "Financial knowledge alone does not predict behavior among Filipino teachers."
+    - "Cultural obligations and familial expectations significantly override personal financial goals."
+    - "Behavioral biases such as impulsive spending and overconfidence lead to poor financial decisions."
+    - "Economic realities like low salaries and loan dependence constrain financial freedom."
+    - "Financial education must address socio-economic, cultural, and behavioral barriers."
   limits:
-    - "Sample limited to 30 teachers from one city division, not generalizable [unacknowledged]."
-    - "Self-reported data may suffer from social desirability bias [unacknowledged]."
-    - "Cross-sectional design cannot establish causality [unacknowledged]."
-  mapping_rationale: "The paper was screened against Odin's functional domains. Behavioral profiling (5.A) was selected due to detailed discussion of behavioral biases and the knowledge-action gap. Culturally specific practices (2.A) were flagged because utang na loob and collectivist family obligations directly shape financial decisions. Savings (13.A) and debt (13.B) management domains apply as teachers' loan dependence and savings struggles are central. Topics related to algorithms (5.C, 6.B, 7.C, 8.B) were rejected as the paper presents no computational models. Mobile-first and data privacy domains were irrelevant. The paper's focus on Filipino professionals justified including 1.C despite teachers not strictly being 'young'; however, the demographic overlaps with Odin's target users."
+    - "Sample limited to 40 teachers from a single city division, limiting generalizability."
+    - "Cross-sectional design cannot capture long-term behavioral changes."
+    - "Self-reported data may be subject to social desirability bias."
+    - "Focus on teachers may not directly generalize to other Filipino young professionals."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes identified strong relevance to Filipino Cultural Context (2.A, 2.B, 2.D), Financial Structure (1.B), and Behavioral Profiling (5.A). The paper directly addresses financial behavior, knowledge, and attitudes of Filipino teachers, making high relevance for 1.A, 1.B, 1.C, 2.A, and 5.A. Seasonal spending (2.B) and spending cycles (2.D) are touched upon through discussions of economic pressures and cultural obligations, assigned medium relevance. Budgeting strategies (7.A) and savings management (13.A) are relevant through the need for structured programs, assigned medium. Topics like 3.A (Expense Categorization), 3.B (Category Design), 4.A (Existing Systems), 6.A (Forecasting), 8.A (Anomaly Detection), 9.A (Mobile Design), 10.A (Data Privacy), 11.A (Engagement), and 12.A (Evaluation) were considered but rejected as the paper does not directly address algorithmic, system design, or PFMS-specific implementation concerns. The study's primary value to Odin lies in understanding user context, behavioral drivers, and cultural factors affecting financial management.
 limitations:
-  - "Sample size of 30 is small for quantitative correlation analysis [unacknowledged]."
-  - "Purposive sampling may introduce selection bias [unacknowledged]."
-  - "Findings may not generalize beyond Guihulngan City [unacknowledged]."
-  - "No control for cognitive ability or prior financial education [unacknowledged]."
+  - "Sample limited to 40 teachers from a single city division, limiting generalizability."
+  - "Cross-sectional design cannot capture long-term behavioral changes."
+  - "Self-reported data may be subject to social desirability bias."
+  - "Focus on teachers may not directly generalize to other Filipino young professionals."
+  - "Limited discussion of specific financial products or technologies relevant to PFMS."
 remember_this:
-  - "Financial knowledge does not predict financial behavior among Filipino teachers."
-  - "Cultural obligation utang na loob overrides personal savings goals."
-  - "Low salaries and loan dependence trap teachers in debt cycles."
-  - "Behavioral biases like impulsive spending require emotional regulation training."
-  - "Mean financial knowledge score of 2.15 indicates moderate understanding only."
+  - "Financial knowledge does not translate to behavior for Filipino teachers."
+  - "Cultural obligations and family support strongly influence financial decisions."
+  - "Behavioral biases like overconfidence and impulsivity hinder sound financial management."
+  - "Low salaries and loan dependence create significant economic constraints."
+  - "Effective financial programs must address behavioral and systemic barriers."
 ```

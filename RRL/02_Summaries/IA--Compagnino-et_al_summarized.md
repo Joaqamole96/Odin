@@ -1,106 +1,133 @@
 ```yaml
-paper_id: 10.3390/app15211787
+paper_id: 10.3390/app152111787
 designation: international
 title: An Introduction to Machine Learning Methods for Fraud Detection
-authors: Compagnino, A. A.; Maruccia, Y.; Cavuoti, S.; Riccio, G.; Tutone, A.; Crupi, R.; Pagliaro, A.
+authors: Compagnino, A.A.; Maruccia, Y.; Cavuoti, S.; Riccio, G.; Tutone, A.; Crupi, R.; Pagliaro, A.
 year: 2025
 venue: Applied Sciences
 odin_topics:
   - 8.A
   - 8.B
-  - 12.A
-  - 12.B
+  - 8.C
+  - 6.A
+  - 6.B
   - 10.A
   - 10.B
-shorthand_tags:
-  - /anomaly-detection
-  - /anomaly-detection-algorithm
-  - /evaluation-frameworks
-  - /algorithm-evaluation
-  - /data-privacy
-  - /user-trust
-tldr: Reviews machine learning for financial fraud detection, covering supervised, unsupervised, and deep learning approaches, datasets, performance metrics, and case studies highlighting class imbalance and recall challenges.
-problem_and_motivation: Financial fraud causes severe economic and social damage, with 56% of companies experiencing fraud. Traditional detection methods are increasingly inadequate against evolving fraudulent activities. A systematic analysis of ML techniques bridging academic research and operational reality is missing.
+  - 1.A
+tldr: A systematic review of machine learning techniques for financial fraud detection, analyzing supervised, unsupervised, and deep learning approaches with case studies on real-world banking data.
+problem_and_motivation: Financial fraud causes substantial economic damage and traditional detection methods are increasingly inadequate against evolving sophisticated schemes. A significant gap exists between academic research on ML-based fraud detection and its practical, operational application in real-world financial environments.
 approach:
-  - Systematic literature search across Scopus, IEEE Xplore, ACM Digital Library, and Web of Science for articles published 2014-2023.
-  - Classification of fraud types into external (credit card, loan, insurance) and internal (financial statement, money laundering, tax, asset misappropriation).
-  - Review of supervised methods (Random Forest, XGBoost, SVM, etc.), unsupervised methods (Isolation Forest, Autoencoders, K-Means), and deep learning (LSTM, CNN, RNN, GAN).
-  - Analysis of datasets (ULB credit card, CSMAR, PaySim, etc.) and evaluation metrics (precision, recall, F1, AUPRC, silhouette coefficient).
-  - Two case studies on proprietary banking data applying Random Forest and XGBoost with class_weight tuning and temporal validation.
+  - A systematic literature review was conducted across Scopus, IEEE Xplore, ACM Digital Library, and Web of Science.
+  - The review synthesizes findings from over 120 peer-reviewed articles published between January 2014 and December 2023.
+  - The paper categorizes financial fraud types, reviews ML approaches, and examines commonly used datasets and performance metrics.
+  - Two case studies apply supervised models (Random Forest, XGBoost, ExtraTrees) to proprietary real-world banking datasets.
+  - The experimental setup includes temporal splits, stratified k-fold cross-validation, and hyperparameter tuning via randomized search.
 findings:
-  - "num: Random Forest achieved AUPRC of 0.619 on banking test set (prevalence 2.37%) but fraud recall was only 0.34."
-  - "num: XGBoost on ULB2013 dataset achieved AUPRC of 0.867, outperforming Logistic Regression (0.724) and KNN (0.585)."
-  - "num: Class_weight='balanced' and 'balanced_subsample' did not improve recall (stuck at 0.36) compared to default on bank transfer dataset."
-  - "num: Recall@0.5% for Random Forest was 0.202, capturing about 24 of 119 frauds when screening top 0.5% of transactions."
-  - Supervised learning accounts for 57% of techniques in reviewed literature, Random Forest appears in 34 studies.
+  - Supervised learning is the predominant approach, accounting for 57% of techniques employed in the reviewed literature.
+  - Random Forest emerges as the most widely adopted technique, appearing in 34 studies with accuracy rates often exceeding 95%.
+  - num: The case study on bank transfers achieved a fraud recall of only 0.36 on a test set with 3.39% fraud prevalence, even with class weights.
+  - num: In the first case study, Random Forest achieved an AUPRC of 0.619 but a fraud recall of only 0.34 at the default threshold.
+  - Extreme class imbalance is a fundamental challenge, with fraudulent transactions typically less than 1% of all transactions.
+  - The study confirms that standard supervised models, even with hyperparameter tuning, are often insufficient for robust operational fraud detection.
 key_figures_tables:
-  - "Table 1: Comparative analysis of ML algorithms (RF, LR, XGBoost, Isolation Forest, Autoencoders, LSTM) → trade-offs between complexity, interpretability, and imbalance handling."
-  - "Table 4: Case study 1 results on banking data (N=5000, prevalence 2.37%) → Random Forest best AUPRC 0.6188, fraud recall only 0.34."
-  - "Figure 1: Precision-recall curve for Random Forest → AUPRC 0.619, illustrating difficulty of achieving high recall at high precision."
-  - "Table 5: Case study 2 results with class_weight settings → none improved recall beyond 0.36 despite AUPRC ~0.70."
+  - Table 1: Comparative analysis of ML approaches → Summarizes algorithm advantages, disadvantages, complexity, and interpretability.
+  - Table 2: SOTA micro-benchmark on ULB 2013 → Shows XGBoost and RF lead AUPRC on a standard dataset.
+  - Table 3: Summary of banking dataset characteristics → Shows 48,559 instances with ~1.43% fraud rate.
+  - Table 4: Case Study 1 results → Shows Random Forest achieves best AUPRC of 0.619 and Recall@0.5% of 0.202.
+  - Table 5: Case Study 2 results → Shows class_weight adjustments did not improve fraud recall significantly.
+  - Figure 1: PR curve for Random Forest in Case Study 1 → Average precision (AUPRC) is 0.619.
+  - Figure 2: PR curve for Random Forest in Case Study 2 → Average precision (AUPRC) is 0.697.
 key_equations:
+  - equation: "Accuracy = (TP + TN) / (TP + TN + FP + FN)"
+    explanation: Measures overall correct predictions but is misleading for imbalanced data.
   - equation: "Precision = TP / (TP + FP)"
-    explanation: "Proportion of flagged transactions that are truly fraudulent."
+    explanation: Measures the proportion of flagged transactions that are actually fraudulent.
   - equation: "Recall = TP / (TP + FN)"
-    explanation: "Proportion of actual frauds correctly detected."
-  - equation: "F1 = 2 * (Precision * Recall) / (Precision + Recall)"
-    explanation: "Harmonic mean balancing precision and recall."
-  - equation: "AUPRC = ∫_0^1 Precision(Recall) d(Recall)"
-    explanation: "Area under precision-recall curve for imbalanced data."
+    explanation: Measures the proportion of actual frauds that are correctly detected.
+  - equation: "F1-Score = (2 * Precision * Recall) / (Precision + Recall)"
+    explanation: Harmonic mean balancing precision and recall, useful for imbalanced data.
+  - equation: "AUC-ROC = ∫ TPR(FPR^-1(t)) dt"
+    explanation: Evaluates model's discrimination ability across different thresholds.
+  - equation: "OutputSize = floor((InputSize + 2*Padding - KernelSize) / Stride) + 1"
+    explanation: Formula for calculating output dimensions after a convolution operation.
 definitions:
-  - term: AUPRC
-    definition: Area under the precision-recall curve, preferred over ROC for imbalanced classification.
-  - term: LSTM
-    definition: Long Short-Term Memory, a recurrent neural network for sequential data.
   - term: XAI
-    definition: Explainable artificial intelligence, methods like SHAP and LIME for model transparency.
+    definition: Explainable Artificial Intelligence, methods for making model decisions transparent.
+  - term: Concept Drift
+    definition: The change in the relationship between features and target variable over time.
+  - term: Federated Learning
+    definition: Training a shared model across decentralized data sources without raw data exchange.
   - term: SMOTE
-    definition: Synthetic Minority Over-sampling Technique for balancing imbalanced datasets.
-  - term: Concept drift
-    definition: Change in data distribution over time, degrading model performance.
+    definition: Synthetic Minority Over-sampling Technique to balance imbalanced datasets.
+  - term: GAN
+    definition: Generative Adversarial Network, two competing neural networks for generating synthetic data.
+  - term: AUPRC
+    definition: Area Under the Precision-Recall Curve, a metric for imbalanced classification.
+  - term: SHAP
+    definition: SHapley Additive exPlanations, a method for explaining model predictions.
 critical_citations:
-  - "[Dal Pozzolo et al., 2022] — Practitioner perspective on credit card fraud detection challenges."
-  - "[Saito & Rehmsmeier, 2015] — Precision-recall plot more informative than ROC for imbalanced data."
-  - "[López-Rojas, 2017] — Synthetic datasets (PaySim, BankSim) for fraud detection research."
+  - "[Dal Pozzolo et al., 2022] — Provides key lessons on concept drift and calibration in fraud detection."
+  - "[Ahmed et al., 2016] — Foundational survey on anomaly detection techniques in the financial domain."
+  - "[Saito and Rehmsmeier, 2015] — Establishes AUPRC as more informative than ROC for imbalanced data."
+  - "[Lucas et al., 2020] — Covers automated feature engineering challenges for credit card fraud detection."
+  - "[Fiore et al., 2019] — Demonstrates use of GANs for improving classification effectiveness in fraud detection."
 relevance:
   topics:
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: "Reviews anomaly detection methods (Isolation Forest, Autoencoders, LOF) for financial fraud."
+      relevance: high
+      justification: Directly addresses anomaly detection for identifying fraudulent financial transactions.
     - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: "Compares supervised, unsupervised, and deep learning algorithms with benchmark AUPRC results."
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      justification: "Provides comprehensive metrics (precision, recall, F1, AUPRC, silhouette coefficient) and validation protocols."
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: "Case studies demonstrate temporal validation, cost-sensitive thresholding, and top-K screening."
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Reviews and benchmarks specific algorithms like Isolation Forest and autoencoders.
+    - code: 8.C
+      name: Cold-Start Baseline Strategies for Anomaly Detection
+      relevance: medium
+      justification: Discusses unsupervised methods like autoencoders that are relevant for cold-start scenarios.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: medium
+      justification: Provides context on forecasting challenges due to concept drift and temporal data.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: medium
+      justification: Reviews LSTM and RNNs for sequential transaction data, applicable to spending forecasting.
     - code: 10.A
       name: Data Privacy and Security in Personal Finance Systems
-      justification: "Discusses privacy-preserving federated learning and synthetic data generation for fraud detection."
+      relevance: medium
+      justification: Discusses federated learning and privacy concerns with centralized sensitive data.
     - code: 10.B
       name: User Trust in Personal Finance Systems
-      justification: "Highlights need for explainable AI (SHAP, LIME) and fairness/bias mitigation to maintain user trust."
-  contribution: "This paper justifies selection of anomaly detection algorithms (8.B) by benchmarking Random Forest, XGBoost, and deep learning models on real banking data. It provides an evaluation framework (12.A) for imbalanced classification using AUPRC and Recall@K metrics. The case studies demonstrate that standard supervised models fail to achieve adequate recall, motivating hybrid architectures (anomaly detection + classification) for Odin's spending anomaly module. Privacy-preserving techniques like federated learning (10.A) are identified as enablers for collaborative model training without exposing user data."
+      relevance: low
+      justification: Mentions explainability and bias as trust factors but not as a primary focus.
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Provides general fraud detection context; no specific focus on Filipino demography.
+  contribution: This review provides a comprehensive catalog of ML techniques for fraud detection, including a systematic performance comparison on standard datasets and a detailed evaluation of supervised models on proprietary banking data. The paper's analysis of concept drift and data imbalance is directly applicable to Odin's spending forecasting and anomaly detection modules. The case studies offer practical insights into model limitations, particularly the low recall challenge, which informs Odin's need for robust anomaly handling. The discussion on federated learning and XAI provides actionable guidance for Odin's data privacy and user trust design considerations.
   directly_justifies:
-    - "Fraudulent transactions typically constitute less than 1% of all transactions, making class imbalance a fundamental challenge."
-    - "Accuracy is misleading for imbalanced data; AUPRC is the preferred metric for comparing anomaly detectors."
-    - "Even with class_weight adjustments, Random Forest recall on fraud class was only 0.34 in a real banking dataset."
-    - "Explainable AI (SHAP, LIME) is required for regulatory compliance and user trust in automated financial decisions."
+    - "Fraudulent transactions typically constitute less than 1% of all transactions, making it exceptionally difficult for models to learn discriminative features."
+    - "Extreme class imbalance requires specialized techniques like SMOTE or cost-sensitive learning."
+    - "Concept drift renders models trained on historical data obsolete as fraudsters continuously evolve tactics."
+    - "Explainability is not just desirable but a critical compliance requirement for financial systems."
   limits:
-    - "Review focuses on financial fraud detection broadly, not specifically on personal finance management for young professionals."
-    - "Case studies use proprietary banking data, limiting reproducibility of exact numerical results."
-    - "Deep learning methods (LSTM, GANs) are discussed but not empirically evaluated in the case studies."
-  mapping_rationale: "The paper strongly aligns with Anomaly Detection (8.A, 8.B) as its core subject is identifying fraudulent transactions, a canonical anomaly detection task. Evaluation frameworks (12.A, 12.B) are directly addressed through detailed metrics and validation protocols. Data privacy (10.A) appears in discussions of federated learning and synthetic data. User trust (10.B) is justified by sections on explainable AI and algorithmic bias. Topics related to Filipino demographics, spending forecasting, budgeting, expense categorization, mobile design, retention, and savings/debt were rejected because the paper contains no citeable claims about those domains."
+    - "The case studies use proprietary banking data, limiting replicability and generalizability."
+    - "The paper primarily reviews tree-based and traditional ML models, with less depth on graph-based or hybrid approaches."
+    - "The systematic review excludes studies from 2024 and 2025."
+    - "The paper does not address region-specific cultural or financial behaviors."
+    - "The evaluation focuses on fraud detection, not personal finance management or budgeting."
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was performed. The domain most directly relevant is Anomaly Detection, with topic codes 8.A, 8.B, and 8.C flagged as high relevance due to the paper's core focus on identifying fraudulent transactions. Predictive Modeling (6.A, 6.B) was flagged as medium relevance because the paper's discussion of temporal data and sequential models (LSTM, RNN) is directly applicable to spending forecasting. Data Privacy (10.A, 10.B) was assigned medium relevance due to substantial sections on federated learning and explainability. Filipino Cultural Context (2.A-D) and Behavioral Profiling (5.A-C) were rejected as the paper does not address cultural behaviors or user profiling. The topic 1.A (Demographic) was considered contextual only. Borderline cases included the overlap between anomaly detection and predictive modeling, resolved by classifying algorithm-specific discussions under 8.B and forecasting-specific challenges under 6.B.
 limitations:
-  - "The review does not propose a novel algorithm or system, only synthesizes existing literature."
-  - "Case studies use tree-based ensembles only; deep learning and hybrid methods were not empirically tested. [unacknowledged]"
-  - "The low recall achieved (0.34-0.36) suggests standard supervised models are insufficient, but the paper does not implement or evaluate the recommended hybrid solutions."
-  - "All experiments use proprietary data, making exact replication impossible for independent researchers."
+  - "The use of PCA-transformed features in many public datasets obscures interpretability and limits domain knowledge integration."
+  - "Most studies report high accuracy but fail to address the critical operational trade-off between precision and recall."
+  - "The adversarial nature of fraud is under-addressed; models are not evaluated against adaptive fraudsters."
+  - "The case studies demonstrate that standard class_weight adjustments are insufficient for extreme imbalance."
+  - "The field lacks standardized benchmarks and recent publicly accessible fraud datasets. [unacknowledged]"
 remember_this:
-  - "Random Forest achieved AUPRC 0.619 but fraud recall only 0.34 on real banking data."
-  - "Class_weight adjustments did not improve recall beyond 0.36 in imbalanced fraud detection."
-  - "AUPRC is preferred over ROC for evaluating models on imbalanced datasets."
-  - "Explainable AI (SHAP, LIME) is required for regulatory compliance in automated finance."
+  - "Random Forest models achieve high accuracy but low recall on imbalanced fraud data."
+  - "Class weight adjustments alone do not solve the extreme class imbalance problem."
+  - "Model interpretability is a legal and operational requirement in financial systems."
+  - "Federated learning enables cross-institutional collaboration without sharing sensitive data."
+  - "Concept drift requires adaptive models that can detect evolving fraud patterns in real-time."
 ```

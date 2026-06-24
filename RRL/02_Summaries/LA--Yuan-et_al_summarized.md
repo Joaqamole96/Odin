@@ -1,124 +1,103 @@
 ```yaml
-paper_id: 10.1109/ACCESS.2023.3338705
-designation: international
-title: User Cold Start Problem in Recommendation Systems: A Systematic Review
-authors: Yuan, H.; Hernandez, A.A.
+paper_id: "10.1109/ACCESS.2023.3338705"
+designation: "local-algorithm-specific"
+title: "User Cold Start Problem in Recommendation Systems: A Systematic Review"
+authors: "Yuan, H.; Hernandez, A. A."
 year: 2023
-venue: IEEE Access
+venue: "IEEE Access"
 odin_topics:
-  - 4.B
-  - 5.A
-  - 5.B
-  - 5.C
-  - 6.A
-  - 10.A
-  - 10.B
-  - 11.A
-  - 12.A
-  - 12.B
-shorthand_tags:
-  - /limitations-gaps
-  - /behavioral-profiles
-  - /cold-start-dynamics
-  - /profile-classification
-  - /predictive-modeling
-  - /data-privacy
-  - /user-trust
-  - /engagement-dynamics
-  - /evaluation-frameworks
-  - /algorithm-evaluation
-tldr: A systematic review of 45 papers (2016-2023) categorizes user cold start solutions into data-driven and method-driven approaches, analyzing evaluation metrics and future directions.
-problem_and_motivation: Existing systematic reviews on user cold start are scarce, outdated, or fail to distinguish between user and item cold start problems. Solutions for these two problems differ, yet prior work often conflates them. A focused, up-to-date review is needed to guide researchers.
+  - "5.A"
+  - "5.B"
+  - "5.C"
+  - "12.A"
+  - "12.B"
+tldr: "A systematic review of literature from 2016 to 2023 categorizes approaches to the user cold start problem into data-driven and method-driven techniques."
+problem_and_motivation: "Accurate recommendations for new users are hindered by a lack of historical data. This limits the utility and user experience of recommender systems. Existing systematic reviews are outdated or do not distinguish between user and item cold start problems."
 approach:
-  - Followed systematic literature review guidelines (Kitchenham 2007) with seven steps: research questions, search strings, database selection (IEEE, ACM, Web of Science), inclusion/exclusion criteria, paper search, pre-selection, full reading, and classification.
-  - Search strings combined terms like "recommendation system", "user cold start", and "cold start".
-  - 1480 papers initially retrieved; after title/abstract screening and inclusion/exclusion criteria, 45 papers from 2016-2023 were selected for deep analysis.
-  - Categorized approaches into data-driven (using cross-domain, social network, demographic data) and method-driven (meta-learning, deep learning, matrix factorization, collaborative filtering improvements, content-based improvements).
-  - Analyzed evaluation metrics used (rating prediction, classification accuracy, ranking metrics) and future research directions.
+  - "A systematic literature review was conducted following established guidelines for selecting and analyzing scientific papers."
+  - "A search of IEEE, ACM, and Web of Science databases yielded 45 relevant papers published from January 2016 to April 2023."
+  - "The study categorizes solution approaches into two main groups: data-driven technologies and approach-driven technologies."
+  - "Data-driven techniques utilize additional user information like cross-domain data, social network data, and demographic data."
+  - "Approach-driven techniques are further subdivided into five categories: meta-learning, deep learning, matrix factorization, improved collaborative filtering, and improved content-based approaches."
+  - "The paper also analyzes the primary evaluation criteria used in the reviewed studies."
+  - "Key future research directions are outlined, including collecting additional information and multi-task learning."
 findings:
-  - num: 45 papers were selected from 1480 initial search results, with the highest number (11) published in 2020.
-  - Data-driven strategies commonly use cross-domain and social network data to provide additional user information for cold-start users.
-  - Method-driven strategies increasingly apply meta-learning, deep learning (DNN, GNN, GAN), and attention mechanisms to learn from limited user interactions.
-  - num: Most literature (over 70% of analyzed papers) uses ranking metrics such as NDCG@K and Hit@K for evaluation, rather than rating prediction metrics.
-  - Future directions identified include multi-task learning, attention mechanisms, harmonized user satisfaction indicators, and privacy-preserving methods.
+  - "num: 45 research papers from 35 venues were selected for in-depth analysis."
+  - "num: The quantity of relevant literature peaked in 2020 with 11 papers."
+  - "The user cold start problem has been a growing research area from 2016 to 2023."
+  - "IEEE Access and ACM Transactions on Information Systems are the most common venues, each with 4 papers."
+  - "Method-driven strategies are categorized into five main approaches: meta-learning, deep learning, matrix factorization, improved collaborative filtering, and improved content-based."
+  - "Data-driven strategies primarily use cross-domain data, social network data, and user demographic data to build better user profiles."
+  - "Commonly used evaluation metrics include Rating Prediction (RMSE, MAE), Classification Accuracy (AUC, Recall), and Ranking Metrics (NDCG@K, Hit@K)."
+  - "Ranking Metrics, especially NDCG, are increasingly popular for evaluating user cold start solutions."
+  - "Recommendation methods for films, music, and books are the most researched areas due to the availability of public datasets."
+  - "Deep learning and graph neural networks are increasingly applied to solve the user cold start problem."
 key_figures_tables:
-  - "Figure 1: Systematic literature review flow diagram → Seven-step process from questions to classification."
-  - "Figure 2: Paper selection process → 1480 initial papers reduced to 45 final selected."
-  - "Figure 3: Papers per year (2016-2023) → Peak of 11 papers in 2020, increasing trend."
-  - "Figure 7: Classification of user cold start recommendation strategies → Two main branches: data-driven and method-driven."
-  - "Figure 8: Timeline of methods for new user problem → Deep learning and meta-learning dominate recent years."
-  - "Figure 9: Deep learning algorithm overlay visualization → GNN and attention mechanisms are newest."
-  - "Figure 10: Evaluation metrics overlay diagram → NDCG is most frequently used recently."
+  - "Figure 1: Flow diagram of the systematic literature review process → The seven steps for selecting and analyzing papers."
+  - "Figure 2: The paper selection process → From 1480 initial papers to 45 final papers selected for the review."
+  - "Figure 3: Number of papers per year → Shows a peak in publications on user cold start in 2020."
+  - "Figure 7: Classification of user cold start recommendation strategies → Diagrams the data-driven and method-driven categories."
+  - "Table 8: Classification of approaches for alleviating the user cold start problem → Provides a high-level summary of both main categories and their sub-approaches."
 key_equations:
-  - equation: Y_t = W Y_s
-    explanation: Similarity-based model for cold-start using source domain Y_s and target domain Y_t.
+  - equation: "Y_s = W Y_t"
+    explanation: "A general formulation for similarity-based models using a similarity matrix W."
 definitions:
-  - term: User cold start
-    definition: Problem where a new user lacks historical data, making accurate recommendations difficult.
-  - term: Item cold start
-    definition: Problem where a new item lacks ratings, hindering its recommendation to users.
-  - term: Meta-learning
-    definition: Learning to learn; enables rapid adaptation to new tasks with few examples.
-  - term: Cross-domain recommendation
-    definition: Using user preferences from source domains to improve recommendations in a target domain.
-  - term: NDCG@K
-    definition: Normalized Discounted Cumulative Gain at rank K, a ranking metric for recommendation quality.
+  - term: "User Cold Start Problem"
+    definition: "The challenge of making accurate recommendations for new users due to a lack of historical interaction data."
+  - term: "Item Cold Start Problem"
+    definition: "The challenge of recommending newly added items for which no user rating or interaction history exists."
+  - term: "Data-Driven Techniques"
+    definition: "Approaches that solve the cold start problem by utilizing additional user or item information from various sources."
+  - term: "Approach-Driven Techniques"
+    definition: "Approaches that solve the cold start problem by proposing new algorithms or modifying existing ones."
+  - term: "Meta-Learning"
+    definition: "A machine learning approach that enables models to quickly adapt to new tasks with limited data, useful for new users."
+  - term: "NDCG@K"
+    definition: "Normalized Discounted Cumulative Gain, a ranking metric used to evaluate the quality of a top-K recommendation list."
 critical_citations:
-  - "[Panda and Ray, 2022] — Categorized cold-start mitigation but did not separate user vs item."
-  - "[Son, 2016] — Early user cold start review but outdated (pre-2014)."
-  - "[Camacho and Alves-Souza, 2018] — Focused only on social network data for cold start."
-  - "[Abdullah et al., 2021] — Reviewed only data-driven strategies, missing method-driven approaches."
+  - "[Panda & Ray, 2022] — A recent systematic review on cold-start mitigation strategies."
+  - "[Son, 2016] — A comparative review of three approaches for the new user cold-start problem."
+  - "[Abdullah et al., 2021] — A survey focused on eliciting auxiliary information for cold-start users."
+  - "[Camacho & Alves-Souza, 2018] — A systematic review on using social network data to alleviate cold starts."
 relevance:
   topics:
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      justification: Paper explicitly identifies gaps in prior cold-start reviews.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      justification: User profiling is central to cold-start recommendation.
-    - code: 5.B
-      name: Profile Dynamics and the Cold‑Start Problem
-      justification: Directly addresses the cold-start problem for new user profiles.
-    - code: 5.C
-      name: Financial Behavioral Profile Classification Algorithm
-      justification: Reviews classification algorithms (meta-learning, deep learning) for new users.
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      justification: Cold-start solutions involve predicting user preferences from limited data.
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      justification: Paper lists privacy protection as a future research direction.
-    - code: 10.B
-      name: User Trust in Personal Finance Systems
-      justification: Privacy concerns affect user trust; paper discusses reluctance to share data.
-    - code: 11.A
-      name: Engagement Dynamics in Personal Finance Applications
-      justification: Cold start affects user experience and engagement; paper mentions user satisfaction.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      justification: Paper analyzes evaluation metrics (NDCG, RMSE, AUC) for cold-start systems.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: Categorizes and compares performance of different cold-start algorithms.
-  contribution: "Odin's behavioral profiling module can leverage cross-domain and social network data fusion strategies from this review to address cold-start for new Filipino young professionals. The review's categorization of meta-learning algorithms provides a blueprint for Odin's spending forecasting module to quickly adapt to new users with few interaction records. The analysis of evaluation metrics (NDCG, RMSE, AUC) informs Odin's system evaluation framework for cold-start scenarios. Privacy-preserving methods highlighted in future directions guide Odin's data privacy module to balance personalization and user trust."
+    - code: "5.A"
+      name: "Financial Behavioral Profiles in Personal Finance"
+      relevance: "contextual"
+      justification: "Discusses user profiling as part of building user models to address cold starts."
+    - code: "5.B"
+      name: "Profile Dynamics and the Cold‑Start Problem"
+      relevance: "high"
+      justification: "The paper is a systematic review directly addressing the user cold-start problem, which is the core of this topic."
+    - code: "5.C"
+      name: "Classification Approaches for Financial Behavioral Profiles"
+      relevance: "medium"
+      justification: "Reviews classification approaches like clustering and meta-learning, which are relevant for profile classification."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "medium"
+      justification: "Dedicates a section to reviewing evaluation criteria (e.g., NDCG, RMSE) used in the literature."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "medium"
+      justification: "The review analyzes algorithmic solutions and their performance as measured by common metrics."
+  contribution: "This systematic review provides Odin with a comprehensive taxonomy of user cold start solutions, categorizing them into data-driven and approach-driven methods. The review's analysis of evaluation metrics informs the design of robust testing protocols for Odin's behavioral profiling and recommendation modules. The categorization of deep learning, meta-learning, and other algorithmic approaches guides the selection of appropriate techniques for cold-start user modeling. The paper's insights into future research directions, like multi-task learning, can inspire advanced features for Odin. Overall, it serves as a foundational reference for Odin's approach to new user onboarding and initial budget recommendations."
   directly_justifies:
-    - "User cold start can be mitigated using auxiliary data from social networks or cross-domain sources."
-    - "Meta-learning enables rapid adaptation to new users with limited interaction data."
-    - "Ranking metrics like NDCG@K are preferred for evaluating cold-start recommendation performance."
-    - "Deep learning methods (GNN, attention) capture non-linear user-item relationships for cold-start users."
+    - "The user cold start problem occurs when a new user cannot be appropriately suggested due to a lack of detailed preference information."
+    - "Solving the user cold start problem is essential for the large-scale utility of recommender systems."
+    - "Approaches to solve the user cold start problem can be categorized as data-driven or method-driven strategies."
   limits:
-    - "Review includes no experimental validation or comparative analysis of the surveyed methods."
-    - "Papers selected only from IEEE, ACM, and Web of Science; other databases may contain relevant work."
-    - "Focus is on general recommendation systems, not specifically on personal finance or Filipino demographics."
-  mapping_rationale: "This systematic review directly addresses the user cold-start problem, which maps to Odin's behavioral profiling domain (5.A, 5.B, 5.C) and predictive modeling (6.A). The paper identifies gaps in existing systems (4.B) and reviews evaluation frameworks (12.A, 12.B). Privacy and trust (10.A, 10.B) are noted as future challenges, and engagement (11.A) is mentioned via user experience. Topics unrelated to personal finance (e.g., expense categorization, mobile design, savings/debt) were rejected because the paper does not cover those domains."
+    - "The review is limited to a systematic analysis of existing literature and does not include an experimental validation or comparison of the reviewed methods."
+    - "The study focuses on the user cold start problem and does not analyze solutions for item cold starts, which may have different optimal strategies."
+  mapping_rationale: "In the systematic scan, the domains of 'Behavioral Profiling & Classification' and 'System Evaluation' were flagged as relevant. Under the 'Behavioral Profiling & Classification' domain, topic 5.B (Profile Dynamics and the Cold-Start Problem) was assigned high relevance because the paper is a comprehensive review directly focused on this issue. Topic 5.A (Financial Behavioral Profiles) was rated contextual as user profiling is a component of many reviewed solutions, but the paper does not specifically address financial profiles. Topic 5.C (Classification Approaches) was assigned medium relevance, as the review discusses various classification and learning methods used to build profiles. Under the 'System Evaluation' domain, topics 12.A (Evaluation Frameworks) and 12.B (Evaluation of Algorithmic Modules) were rated medium, as the paper provides a systematic analysis of evaluation metrics used in the literature. All other domains were considered and rejected. The 'Expense Categorization' domain was rejected because the paper does not discuss categorization frameworks. 'Spending Forecasting' and 'Budget Recommendation' were rejected as the paper focuses on user identification, not financial prediction. 'Anomaly Detection' was not relevant as the paper does not discuss identifying outliers in spending. In summary, while not directly about finance, the paper's structured review of cold start solutions and evaluation metrics is highly relevant for Odin's initial user modeling and module benchmarking."
 limitations:
-  - "No experimental validation of the surveyed methods. [unacknowledged]"
-  - "Only 45 papers analyzed; may not capture all recent advances."
-  - "Does not address domain-specific challenges of personal finance systems. [unacknowledged]"
+  - "No experimental validation was performed to compare the effectiveness of the different methods reviewed. [unacknowledged]"
+  - "The authors acknowledge that the review is limited to a systematic literature review of 45 articles, which, while comprehensive, may not include all relevant studies."
+  - "The paper notes that it does not address the item cold start problem, which is a distinct but related issue in recommender systems."
 remember_this:
-  - "45 papers from 2016-2023 were analyzed for user cold start."
-  - "Data-driven and method-driven are the two main solution categories."
-  - "Meta-learning and deep learning are increasingly applied to cold start."
-  - "Ranking metrics like NDCG dominate evaluation of cold-start systems."
-  - "Privacy protection remains an open challenge for cold-start recommendations."
+  - "User cold start solutions are categorized into data-driven and method-driven strategies."
+  - "Data-driven approaches use cross-domain, social, and demographic user data."
+  - "Method-driven approaches include meta-learning, deep learning, and improved collaborative filtering."
+  - "num: 45 papers from 2016-2023 were systematically reviewed on this topic."
+  - "Ranking metrics like NDCG are the most prevalent for evaluating cold start performance."
 ```

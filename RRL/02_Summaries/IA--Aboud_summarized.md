@@ -1,84 +1,84 @@
 ```yaml
 paper_id: 10.21070/acopen.10.2025.12858
-designation: international
+designation: international-algorithm-specific
 title: Goal Programming Model in Financial Planning of the International Development Bank
-authors: Aboud, S. F.
+authors: Aboud, M.M.S.F.
 year: 2025
 venue: Academia Open
 odin_topics:
-  - 7.A
   - 7.C
-  - 12.A
-shorthand_tags:
-  - /budgeting-strategies
-  - /budget-recommendation
-  - /evaluation-frameworks
-tldr: Goal programming optimizes conflicting financial objectives (revenue, expenses, profit, assets) in a bank's financial planning, achieving near-optimal resource allocation.
-problem_and_motivation: Financial institutions struggle to balance multiple conflicting objectives like profit maximization, cost control, and liquidity. Traditional planning models cannot accommodate competing goals under resource constraints. A quantitative method is needed to prioritize and trade off these objectives.
+  - 12.C
+tldr: Goal programming optimizes conflicting financial objectives in banking under resource constraints, achieving near-optimal solutions with minimal deviations.
+problem_and_motivation: Financial institutions struggle to balance multiple conflicting objectives like profitability, cost control, and liquidity. Traditional planning models lack the capability to handle these competing goals, especially in resource-constrained environments. A quantitative method is needed to reconcile these trade-offs and improve decision-making.
 approach:
-  - Data: Annual reports of International Development Bank for Investment and Finance (Iraq) from 2016 to 2024.
-  - Method: Weighted-preemptive hybrid goal programming with seven prioritized goals and assigned weights.
-  - Solved using WINQSB software.
-  - Goals: revenue (min 0.290878B/year), expenses (max 0.238279B), net profit (min 0.342094B), fixed assets (min 1.069823B), loans (max 0.684292B), common stock (min 0.337092B), financial management ratio (min 1.608461B).
+  - A weighted-preemptive hybrid goal programming model is formulated for bank financial planning.
+  - The model incorporates multiple objectives: revenue, expenses, net profit, fixed assets, loans, and equity.
+  - WINQSB software is used to solve the model with prioritized goals and assigned weights.
+  - The case study uses annual financial data from the International Development Bank for 2016-2024.
+  - The model is evaluated by comparing actual and target values across all financial goals.
 findings:
-  - num: The model achieved near-optimal solutions with minimal deviations across all seven goals.
-  - num: Revenue goal met with negative deviation 0.1884 billion.
-  - num: Expenses goal met with deviation 0.1873 billion.
-  - num: Net profit met with deviation 0.3006 billion.
-  - num: Fixed assets exceeded target with positive deviation 0.7833 billion.
-  - Loan reduction goal fully achieved (deviations zero).
-  - num: Equity goal partially achieved with deviation 0.2956 billion.
+  - The GP model achieved near-optimal solutions for all prioritized goals.
+  - Revenue goal was slightly underachieved with a negative deviation of 0.1884.
+  - Expense goal was slightly underachieved with a negative deviation of 0.1873.
+  - Net profit goal was underachieved with a negative deviation of 0.3006.
+  - Fixed assets goal was overachieved with a positive deviation of 0.7833.
+  - Equity goal was underachieved with a negative deviation of 0.2956.
+  - The model demonstrates flexible prioritization of goals in a multi-objective setting.
 key_figures_tables:
-  - Table 1: Raw financial data (2016-2024) for seven variables → Provides input to goal programming model.
-  - Table 2: Scaled values in billion IQD → Normalizes data for optimization.
+  - Table 1: Financial data summary 2016-2024 → Provides raw data for the model.
+  - Table 2: Scaled financial data in billion IQD → Enables analysis with smaller numbers.
 key_equations:
-  - equation: \min Z = \sum_{i=1}^{m} (w_i^- d_i^- + w_i^+ d_i^+)
-    explanation: Weighted method minimizes total weighted deviations.
-  - equation: \min Z = \sum_{i=1}^{n} \rho_i (d_i^- + d_i^+)
-    explanation: Preemptive method ranks goals by priority.
+  - equation: Min Z = Σ(w_i^- d_i^- + w_i^+ d_i^+)
+    explanation: Minimizes weighted deviations from multiple goals.
+  - equation: Σ a_ij X_j + d_i^- - d_i^+ = b_i
+    explanation: Defines goal constraints with deviation variables.
 definitions:
   - term: Goal Programming
-    definition: Mathematical model transforming all functions into goals with deviation variables.
+    definition: A mathematical model for solving multi-objective problems with competing goals.
   - term: Negative Deviation
-    definition: Amount actual value falls below aspiration level.
+    definition: The amount by which an actual value is below the aspiration level.
   - term: Positive Deviation
-    definition: Amount actual value exceeds aspiration level.
+    definition: The amount by which an actual value exceeds the aspiration level.
   - term: Weighted Method
-    definition: Assigns numeric weights to each goal and minimizes total deviation.
+    definition: Assigns weights to goals and minimizes total weighted deviation.
   - term: Preemptive Method
-    definition: Solves multi-criteria problems by ranking goals, satisfying higher priorities first.
+    definition: Prioritizes goals, satisfying higher-priority ones first.
+  - term: WINQSB
+    definition: Software used to solve the goal programming model.
 critical_citations:
-  - "[Alam, 2022] — Applied GP to SABIC financial planning."
-  - "[Nyor, 2022] — GP in Nigerian industrial goods firm."
-  - "[Lakshmi, 2021] — GP in Indian distribution company."
+  - "[Alam, 2022] — Foundational GP model for financial planning."
+  - "[Lakshmi et al., 2021] — GP application in financial planning case study."
+  - "[Nyor et al., 2022] — GP for financial management in Nigeria."
 relevance:
   topics:
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      justification: Goal programming is a quantitative multi-objective optimization strategy applicable to budget allocation.
     - code: 7.C
-      name: Budget Recommendation Algorithm
-      justification: The weighted-preemptive GP model can inform algorithm design for personal finance budget recommendations.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      justification: The paper evaluates GP model performance using deviation minimization, a framework for algorithm assessment.
-  contribution: The weighted-preemptive hybrid goal programming approach can inform Odin's budget recommendation module by providing a method to balance user-defined savings, spending, and debt repayment goals. The deviation minimization objective aligns with Odin's need to respect user priorities (e.g., essential expenses first). The WINQSB implementation demonstrates a practical evaluation pathway for algorithmic modules.
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: high
+      justification: Applies goal programming to optimize multi-objective financial planning.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: medium
+      justification: Demonstrates a method for evaluating optimal solutions against target values.
+  contribution: "The paper provides a practical optimization framework that can inform Odin's budget recommendation module by demonstrating how conflicting objectives (e.g., maximizing savings while minimizing expenses) can be balanced using a weighted-preemptive goal programming approach. The solution method, using WINQSB, offers a reproducible technique for solving multi-objective financial planning problems with prioritized constraints. The case study results, including deviation analysis, provide a benchmark for evaluating optimization models. The model's flexibility suggests it can be adapted for personalized budget allocation based on user-defined financial goals. The research validates the use of constrained optimization for complex financial planning in resource-limited settings, directly applicable to Odin's budget recommendation engine."
   directly_justifies:
-    - Goal programming can resolve conflicting financial objectives by assigning priorities and weights.
-    - Near-optimal solutions are achievable with minimal deviation from targets.
-    - Preemptive ordering ensures higher-priority goals are satisfied before lower ones.
+    - "Goal programming can optimize financial planning with conflicting objectives."
+    - "The model achieves near-optimal solutions with minimal goal deviations."
+    - "Prioritization of goals allows flexible decision-making in resource allocation."
+    - "The approach is applicable to banking and personal finance contexts."
   limits:
-    - The model assumes linear relationships between decision variables.
-    - Results are specific to a single bank's data (2016-2024).
-    - The paper does not address dynamic or real-time re-planning.
-  mapping_rationale: The paper focuses on multi-objective financial planning using goal programming. While applied to a bank rather than personal finance, the methodology directly informs Odin's budget recommendation (7.C) and budgeting strategies (7.A) because personal finance involves similar trade-offs (spending vs saving vs debt). The evaluation approach (12.A) is also relevant as Odin needs to validate its algorithmic modules. Topics related to behavioral profiling (5.A-C), forecasting (6.A-B), anomaly detection (8.A-B), and mobile design (9.A-B) are not addressed. Expense categorization (3.A-B) is not covered. Thus only 7.A, 7.C, and 12.A are selected.
+    - "The model is demonstrated on a single bank's data and may not generalize."
+    - "User preferences and behavioral factors are not incorporated."
+    - "The study focuses on a bank, not individual personal finance management."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to the 'Budget Recommendation' domain (Topic 7.C) because it directly applies constrained optimization (goal programming) to balance multiple, conflicting financial objectives. It is also relevant to 'System Evaluation' (Topic 12.C) because it demonstrates an evaluation methodology based on comparing actual outcomes to target values and analyzing deviations. The paper touches on 'Savings & Debt Management' (Topic 13.A and 13.B) tangentially through its objectives but does not focus on user-level savings goals or debt management strategies. The following domains/topics were considered and rejected: 'Filipino Cultural Context' (Topics 2.A-2.D) because the case study is based on an Iraqi bank and does not address Filipino-specific practices; 'Expense Categorization' (Topic 3.A-3.C) because the paper does not deal with categorizing expenses; 'Behavioral Profiling' (Topics 5.A-5.C) because it does not involve user behavior or profiles; 'Anomaly Detection' (Topics 8.A-8.C) because it does not address detecting outliers. Overall, the paper is most relevant for its constrained optimization methodology, which can be adapted for Odin's budget recommendation algorithm."
 limitations:
-  - The model uses annual data, not high-frequency spending data typical of PFMS. [unacknowledged]
-  - User-specific preferences or behavioral dynamics are absent. [unacknowledged]
-  - No comparison with baseline or alternative algorithms. [unacknowledged]
+  - "The model is based on historical data from a single bank, limiting generalizability."
+  - "The study does not consider dynamic changes in user behavior or financial conditions."
+  - "Behavioral and psychological factors influencing financial decisions are not incorporated. [unacknowledged]"
+  - "The approach is applied to banking rather than individual personal finance. [unacknowledged]"
 remember_this:
-  - Goal programming balances revenue, expenses, profit, and assets with minimal deviations.
-  - The preemptive method satisfies higher-priority goals before lower ones.
-  - Achieved near-optimal solutions in a multi-objective banking scenario.
-  - Deviations as low as 0.1884 billion for revenue target.
+  - "Goal programming balances conflicting financial objectives effectively."
+  - "The model achieved near-optimal solutions with minimal deviations."
+  - "Prioritization allows flexible resource allocation in financial planning."
+  - "Multi-objective optimization is feasible for complex financial systems."
+  - "The method can be adapted for personalized budget recommendation."
 ```

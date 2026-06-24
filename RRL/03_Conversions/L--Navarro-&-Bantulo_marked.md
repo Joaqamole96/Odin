@@ -1400,16 +1400,16 @@ Artavanis, N., & Karra, S. (2021). Financial literacy and student debt. In Finan
 
 FinTech  Era
 
-Finance
-
 (pp.
+
+Responsible
+https://doi.org/10.4324/9781003169192
+
+Finance
 
 the
 
 in
-
-Responsible
-https://doi.org/10.4324/9781003169192
 
 European Journal of Education Studies - Volume 13 │ Issue 5 │ 2026                                                                                  337
 
@@ -1616,16 +1616,16 @@ Korankye, T., & Kalenkoski, C. M. (2021). The effect of households’ student de
 
 and  Economic
 
+of  Family
+
+Journal
+
 Issues,
 
 42(4),
 
 satisfaction.
 https://doi.org/10.1007/s10834-021-09753-9
-
-of  Family
-
-Journal
 
 Kralj, A., Nimri, R., Yang, M. J. H., & Mahshi, R. (2025). Celebrating 30 years of the journal
 of  vacation  marketing:  A  bibliometric  review.  Journal  of  Vacation  Marketing.
@@ -1689,14 +1689,14 @@ of
 Martin, E. C., & Dwyer, R. E. (2021). Financial stress, race, and student debt during the
 424-445.
 
+recession.
+
 Currents,
 
 8(5),
 
 great
 https://doi.org/10.1177/23294965211026692
-
-recession.
 
 Social
 
@@ -1782,12 +1782,12 @@ University
 
 Harvard
 
-college
+in
 
 drowning
 https://doi.org/10.2307/j.ctv33wwtxc
 
-in
+college
 
 Soria, K. M., Horgos, B., & Shenouda, J. D. (2023). Disparities in college students’ financial
 hardships during the COVID-19 pandemic. Journal of Student Affairs Research and
@@ -1861,11 +1861,11 @@ Education,
 
 110(1),
 
-in
-
 adjuncts.
 Research
 https://doi.org/10.1177/0034523720939992
+
+in
 
 Yabroff, K. R., Han, X., Song, W., Zhao, J., Nogueira, L., Pollack, C. E., & Zheng, Z. (2022).
 Association of medical financial hardship and mortality among cancer survivors

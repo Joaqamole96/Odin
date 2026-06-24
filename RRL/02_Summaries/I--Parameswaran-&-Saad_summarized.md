@@ -1,122 +1,161 @@
 ```yaml
-paper_id: 10.32890/jdsd2025.3.2.9
-designation: international
-title: Development and Evaluation of My Money Manager: An Intelligent Mobile App for Personalized Financial Insight
-authors: Parameswaran, S.; Saad, S. Z.
+paper_id: "10.32890/jdsd2025.3.2.9"
+designation: "local-algorithm-specific"
+title: "Development and Evaluation of My Money Manager: An Intelligent Mobile App for Personalized Financial Insight"
+authors: "Parameswaran, S.; Saad, S. Z."
 year: 2025
-venue: Journal of Digital System Development
+venue: "Journal of Digital System Development"
 odin_topics:
-  - 3.A
-  - 3.B
-  - 8.A
-  - 9.A
-  - 9.B
-  - 12.A
-  - 13.A
-shorthand_tags:
-  - /expense-categorization
-  - /category-design
-  - /anomaly-detection
-  - /mobile-first
-  - /ux-design
-  - /evaluation-framework
-  - /savings-management
-tldr: My Money Manager mobile app uses algorithmic expense categorization and 90-day spending analysis to provide personalized savings recommendations and anomaly detection, with a usability study showing high effectiveness in tracking and habit improvement.
-problem_and_motivation: Existing personal finance apps lack intelligent analysis and personalized guidance, often offering generic one-size-fits-all advice that fails to account for individual spending patterns. Most apps do not differentiate fixed versus variable expenses or detect abnormal spending behaviors, leading to irrelevant recommendations.
+  - "3.A"
+  - "3.B"
+  - "4.A"
+  - "4.B"
+  - "7.A"
+  - "7.B"
+  - "8.A"
+  - "8.B"
+  - "9.A"
+  - "9.B"
+  - "10.A"
+  - "10.B"
+  - "12.A"
+  - "13.A"
+  - "13.C"
+tldr: "My Money Manager is an Android app that distinguishes fixed and variable expenses, detects spending anomalies, and provides personalized savings recommendations based on 90-day spending patterns, evaluated with 35 users showing improved financial management."
+problem_and_motivation: "Existing mobile finance apps lack intelligent personalization, failing to differentiate fixed versus variable expenses or adapt to individual spending patterns. Users need dynamic insights and anomaly detection to improve financial decisions. This app addresses the gap by providing tailored recommendations based on actual user behavior."
 approach:
-  - Iterative and incremental development methodology with agile principles and user-centered design.
-  - Android app following Model-View-Controller pattern and Material Design guidelines.
-  - Key calculations: monthly income, expenses, savings, income/expense ratio, budget status, category expense, and category percentage.
-  - Evaluation with 35 participants using six-point Likert-scale questionnaires across four dimensions: App Experience, Perceived Ease of Use, Perceived Usefulness, and Perceived Acceptance.
-  - Features include automated expense categorization, fixed/variable expense differentiation, spending anomaly detection, and 90-day trend analysis.
+  - "Iterative and incremental development methodology with six phases: initiation, planning, design, development, testing, deployment."
+  - "Android-based app using MVC architecture and Material Design principles."
+  - "Algorithmic expense categorization distinguishes fixed (e.g., rent) from variable (e.g., dining) costs."
+  - "Anomaly detection highlights unusual spending behaviors based on historical patterns."
+  - "Personalized financial insights computed monthly from income, expenses, savings, ratio, and budget status."
+  - "Visualizations include pie charts for expense distribution and trend analysis over time."
+  - "Evaluation with 35 participants using six-point Likert-scale questionnaires across four dimensions."
 findings:
   - "num: 82.8% of users confirmed income and expense tracking was efficient and reliable."
-  - "num: 74.3% reported the app encouraged them to manage finances more effectively."
-  - "num: 71.4% agreed that financial insights helped guide their financial decision-making."
-  - "num: 77.1% rated navigation, adding entries, and setting budgets as very easy (strongly agree)."
-  - "num: 45.7% strongly agreed and 37.1% agreed that tracking income/expenses was easy."
-  - "Only 37.1% strongly agreed that viewing and understanding financial insights was easy; 14.3% found it somewhat difficult."
-  - "Data security confidence was low: 31.4% somewhat disagreed that their data was safe."
+  - "num: 74.3% reported the app encouraged more effective financial management."
+  - "num: 71.4% agreed financial insights helped guide financial decision-making."
+  - "Ease of use was high for navigation, data entry, and budget setting (77.1% strongly agreed)."
+  - "Understanding financial insights received lower ease ratings (37.1% strongly agreed, 14.3% somewhat difficult)."
+  - "Security trust was a concern: only 11.4% strongly agreed data was safe, 31.4% somewhat disagreed."
 key_figures_tables:
-  - "Figure 2: Home screen dashboard → Central hub with balance, quick actions, and recent transactions."
-  - "Figure 6: Financial insights interface → Charts for spending patterns, trends, and anomaly detection."
-  - "Figure 8: Perceived ease of use → Navigation and data entry highly rated; insights comprehension lowest."
-  - "Table 1: Responses on Perceived Ease of Use → 77.1% strongly agreed navigation was easy."
-  - "Table 2: Responses on Perceived Usefulness → 82.8% agreed expense tracking was effective."
+  - "Figure 2: Home screen dashboard showing balance, income, expenses, and quick actions → central financial overview."
+  - "Figure 3: Add income/expense interfaces with streamlined forms → efficient data entry."
+  - "Figure 4: Budget planning with progress bars and alerts → visual budget tracking."
+  - "Figure 5: Financial summary with tabs and filters → organized transaction review."
+  - "Figure 6: Financial insights with charts and anomaly detection → actionable intelligence from raw data."
+  - "Figure 7: App experience responses → positive visual appeal and user-friendliness, mixed task completion independence."
+  - "Figure 8: Perceived ease of use → core tasks rated easy, insights comprehension less so."
+  - "Figure 9: Perceived usefulness → strong for tracking and habit improvement, moderate for insights."
+  - "Figure 10: Perceived acceptance → high satisfaction, lower trust in accuracy and security."
+  - "Tables 1-2: Detailed response percentages for ease and usefulness."
 key_equations:
-  - equation: "Monthly Income = \\sum(\\text{all income entries for selected month})"
-    explanation: "Sum of income entries in a month."
-  - equation: "Monthly Expenses = \\sum(\\text{all expense entries for selected month})"
-    explanation: "Sum of expense entries in a month."
+  - equation: "Monthly Income = Σ(all income entries for selected month)"
+    explanation: "Sum of all income entries in the month."
+  - equation: "Monthly Expenses = Σ(all expense entries for selected month)"
+    explanation: "Sum of all expense entries in the month."
   - equation: "Monthly Savings = Monthly Income - Monthly Expenses"
-    explanation: "Difference between income and expenses."
-  - equation: "Income/Expense Ratio = Monthly Income \\div Monthly Expenses"
-    explanation: "Ratio of income to expenses."
+    explanation: "Surplus for the month."
+  - equation: "Income/Expense Ratio = Monthly Income ÷ Monthly Expenses"
+    explanation: "Proportion of income to expenses."
   - equation: "Budget Status = Monthly Budget - Monthly Expenses"
-    explanation: "Surplus or deficit relative to budget."
-  - equation: "Category Expense = \\sum(\\text{expenses for specific category in month})"
-    explanation: "Total spending per category."
-  - equation: "Category Percentage = (Category Expense \\div Monthly Expenses) \\times 100"
-    explanation: "Category share of total expenses."
+    explanation: "Remaining budget amount."
+  - equation: "Category Expense = Σ(all expenses for specific category in selected month)"
+    explanation: "Total spending in a category."
+  - equation: "Category Percentage = (Category Expense ÷ Monthly Expenses) × 100"
+    explanation: "Share of total expenses by category."
 definitions:
-  - term: Fixed expenses
-    definition: Essential recurring costs such as rent, loan payments, and utilities.
-  - term: Variable expenses
-    definition: Discretionary costs such as entertainment, dining out, and shopping.
-  - term: Anomaly detection
-    definition: Identification of unusual spending behaviors compared to historical patterns.
-  - term: 90-day analysis
-    definition: Review of financial trends over a 90-day period to generate actionable insights.
+  - term: "None."
+    definition: ""
 critical_citations:
-  - "[Shaikh et al., 2022] — Found existing apps fail to differentiate fixed vs variable expenses."
-  - "[Mijić & Ćebić, 2023] — Identified static, one-size-fits-all recommendations as a key limitation."
-  - "[Carlin et al., 2022] — Showed mobile apps reduce barriers and improve financial behavior."
+  - "[Shaikh et al., 2022] — identifies key drivers of mobile financial adoption."
+  - "[Mijić & Ćebić, 2023] — applies UTAUT2 to personal finance app acceptance."
+  - "[Carlin et al., 2022] — shows mobile apps improve financial behavior."
+  - "[Forbes Advisor, 2024] — reviews existing apps like YNAB and PocketGuard."
 relevance:
   topics:
-    - code: 3.A
-      name: Expense Categorization Frameworks
-      justification: App automatically categorizes expenses and distinguishes fixed vs variable costs.
-    - code: 3.B
-      name: Expense Category Design Considerations
-      justification: Custom category creation and predefined options inform category design.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      justification: Financial insights interface highlights unusual spending behaviors.
-    - code: 9.A
-      name: Mobile-First Design Principles and Rationale
-      justification: App follows Material Design and mobile-first principles for Android.
-    - code: 9.B
-      name: Mobile UX Design for Personal Finance
-      justification: Usability evaluation measured ease of navigation, data entry, and budget setting.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      justification: Structured Likert-scale evaluation across four dimensions with 35 participants.
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      justification: Personalized savings recommendations based on 90-day spending patterns.
-  contribution: "This paper provides a validated implementation of automated expense categorization and anomaly detection for a mobile PFMS, directly informing Odin's expense categorization module (3.A, 3.B) and anomaly detection module (8.A). The usability evaluation framework (12.A) offers a template for Odin's system evaluation. The mobile-first UX design and user acceptance results (9.A, 9.B) guide Odin's mobile interface decisions. The savings recommendation logic (13.A) can be adapted for Odin's savings and debt management features."
+    - code: "3.A"
+      name: "Expense Categorization Frameworks"
+      relevance: "high"
+      justification: "Proposes algorithmic distinction between fixed and variable expenses."
+    - code: "3.B"
+      name: "Expense Category Design Considerations"
+      relevance: "high"
+      justification: "Designs category selection with custom creation and predefined options."
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "medium"
+      justification: "Reviews existing apps and their limitations."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "medium"
+      justification: "Identifies gaps: lack of personalization, static advice, failure to differentiate costs."
+    - code: "7.A"
+      name: "Budgeting Strategies as Domain Knowledge"
+      relevance: "medium"
+      justification: "Provides budget planning and alerts based on spending limits."
+    - code: "7.B"
+      name: "Budget Recommendation in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Offers personalized savings recommendations and budget adjustments."
+    - code: "8.A"
+      name: "Anomaly Detection in Personal Finance Systems"
+      relevance: "high"
+      justification: "Implements anomaly detection to highlight unusual spending behaviors."
+    - code: "8.B"
+      name: "Anomaly Detection Algorithms for Personal Spending Data"
+      relevance: "medium"
+      justification: "Uses algorithmic analysis to detect anomalies but algorithm details are not specified."
+    - code: "9.A"
+      name: "Mobile-First Design Principles and Rationale"
+      relevance: "high"
+      justification: "Follows mobile-first and material design principles for Android."
+    - code: "9.B"
+      name: "Mobile UX Design for Personal Finance"
+      relevance: "high"
+      justification: "Usability evaluation confirms intuitive navigation and user-friendly interfaces."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Evaluation reveals user concerns about data security, highlighting need for improvement."
+    - code: "10.B"
+      name: "User Trust in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Trust in accuracy and security was moderate, indicating areas for enhancement."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "high"
+      justification: "Conducts usability evaluation with Likert-scale questionnaires across multiple dimensions."
+    - code: "13.A"
+      name: "Savings Goal Management in PFMS"
+      relevance: "medium"
+      justification: "Provides savings recommendations and tracks savings as surplus."
+    - code: "13.C"
+      name: "End-of-Period Surplus as a Savings Input"
+      relevance: "medium"
+      justification: "Calculates monthly savings as income minus expenses, recommending savings strategies."
+  contribution: "This paper directly supports Odin's expense categorization module by demonstrating a method to differentiate fixed and variable costs. Its anomaly detection feature informs Odin's anomaly detection subsystem. The usability evaluation framework can guide Odin's system evaluation approach. The findings on user trust and security concerns highlight critical design considerations for Odin's data privacy module. Finally, the savings recommendation logic informs Odin's budget recommendation and savings management functions."
   directly_justifies:
-    - "Automated differentiation between fixed and variable expenses improves personalized financial guidance."
-    - "Spending anomaly detection can be implemented using simple threshold or deviation calculations on 90-day windows."
-    - "Mobile PFMS evaluation should measure ease of use for navigation, data entry, and insights comprehension separately."
-    - "User trust in data security is a critical barrier that requires explicit design attention."
+    - "Categorizing expenses into fixed and variable improves personalized financial insights."
+    - "Anomaly detection can highlight unusual spending to prompt user awareness."
+    - "Mobile-first design with intuitive interfaces enhances user adoption and satisfaction."
+    - "User trust in data security is a significant factor for long-term retention."
+    - "Usability evaluation with Likert scales effectively measures system acceptance."
   limits:
-    - "Small sample size (n=35) limits generalizability of usability findings."
-    - "Evaluation was short-term; long-term retention and behavior change not measured."
-    - "Data security concerns were identified but not resolved by the app's design. [unacknowledged]"
-    - "Financial insights comprehension was low for 14.3% of users, indicating visualization issues."
-    - "No comparison against algorithmic baselines (e.g., rule-based vs ML) for anomaly detection. [unacknowledged]"
-  mapping_rationale: "The paper was screened against all Odin functional domains. Strong relevance found for expense categorization (3.A, 3.B) due to automated fixed/variable distinction, anomaly detection (8.A) via unusual spending alerts, mobile UX (9.A, 9.B) through usability evaluation, evaluation frameworks (12.A) from structured Likert testing, and savings management (13.A) via personalized recommendations. Behavioral profiling (5.A-C) was rejected because no user clustering or cold-start profiling is performed. Spending forecasting (6.A-B) was rejected as no predictive modeling is used. Budget recommendation (7.A-C) was rejected because the app provides savings advice but not algorithmic budget allocation. Data privacy (10.A-B) and retention (11.A-B) were flagged as limitations but not contributions."
+    - "Small sample size (n=35) limits generalizability [unacknowledged]."
+    - "Algorithm for anomaly detection is not specified, hindering replication."
+    - "Security and privacy measures are not detailed, despite user concerns."
+    - "Long-term retention and engagement are not evaluated."
+  mapping_rationale: "I systematically scanned all 12 functional domains and their associated topic codes. The paper directly addresses Expense Categorization (3.A, 3.B, high) and Anomaly Detection (8.A, high, 8.B, medium) through its algorithmic expense classification and anomaly highlighting features. It also provides strong support for Mobile-First Design (9.A, 9.B, high) and System Evaluation (12.A, high) through its iterative development and usability study. The paper's review of existing systems and gaps maps to 4.A and 4.B (medium). Budgeting strategies and recommendations (7.A, 7.B, medium) are evident in the budget planning and savings advice. Data privacy and trust (10.A, 10.B, medium) are surfaced by user concerns in the evaluation. Savings management (13.A, 13.C, medium) is touched upon via savings calculations and recommendations. Borderline cases include the distinction between expense categorization (3.A) and category design (3.B), both selected because the app designs categories and implements categorization logic. The paper does not address Filipino cultural context (domains 2.A-2.D) or behavioral profiling (5.A-5.C) beyond generic personalization, so those were rejected. Spending forecasting (6.A, 6.B) was not present as the app does not predict future spending. User retention (11.A, 11.B) and debt management (13.B) were not covered. Overall, the paper provides moderate to high relevance for several Odin modules, particularly in categorization, anomaly detection, mobile design, and evaluation."
 limitations:
-  - "Small sample size (n=35) limits statistical power and generalizability."
-  - "No longitudinal follow-up to assess sustained behavior change or retention."
-  - "Financial insights comprehension was problematic for 14.3% of users, but no redesign was tested. [unacknowledged]"
-  - "Data security confidence was low (31.4% somewhat disagreed), yet no encryption or privacy features were evaluated in depth. [unacknowledged]"
-  - "The anomaly detection method is not specified algorithmically (e.g., statistical vs ML), limiting reproducibility. [unacknowledged]"
+  - "Small sample size (n=35) limits generalizability [unacknowledged]."
+  - "No long-term follow-up to assess sustained impact on financial habits [unacknowledged]."
+  - "Algorithmic details for anomaly detection are not provided, preventing independent validation [unacknowledged]."
+  - "Data security concerns identified in evaluation were not addressed in the design [unacknowledged]."
 remember_this:
-  - "82.8% of users found income and expense tracking reliable."
-  - "74.3% reported improved financial management habits."
-  - "Only 37.1% strongly agreed financial insights were easy to understand."
-  - "Data security confidence was the lowest-rated dimension."
-  - "77.1% rated navigation and data entry as very easy."
+  - "82.8% of users rated income and expense tracking as efficient and reliable."
+  - "74.3% reported improved financial management due to the app."
+  - "Anomaly detection and expense categorization differentiate this app from basic trackers."
+  - "User trust in data security emerged as a critical concern requiring attention."
+  - "Iterative development with user feedback was effective for mobile app refinement."
 ```

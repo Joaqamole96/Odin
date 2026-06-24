@@ -1,135 +1,148 @@
 ```yaml
-paper_id: "10.15662/IJEETR.2026.0802073"
-designation: "international"
-title: "AI-Enabled NLP Framework for Automated Expense Management and Financial Analysis"
-authors: "Jayaprakashnarayan, N.; Sakthivel, M.; Sachidhanandam, P.; Kanjana Devi, N.; Manivel Mughilan, T.S."
+paper_id: 10.15662/IJEETR.2026.0802073
+designation: international-algorithm-specific
+title: AI-Enabled NLP Framework for Automated Expense Management and Financial Analysis
+authors: Jayaprakashnarayan, N.; Sakthivel, M.; Sachidhanandam, P.; Devi, N. Kanjana; Mughilan, T.S. Manivel
 year: 2026
-venue: "International Journal of Engineering & Extended Technologies Research (IJEETR)"
+venue: International Journal of Engineering & Extended Technologies Research
 odin_topics:
-  - "3.A"
-  - "3.B"
-  - "8.A"
-  - "8.B"
-  - "10.A"
-  - "10.B"
-  - "12.A"
-  - "12.B"
-shorthand_tags:
-  - "/expense-categorization"
-  - "/nlp-finance"
-  - "/anomaly-detection"
-  - "/fraud-detection-ensemble"
-  - "/on-device-privacy"
-  - "/explainable-ai"
-  - "/evaluation-framework"
-tldr: "An AI-enabled NLP framework using transformer-based models and multi-task learning automates transaction extraction (96.8% accuracy) and categorization (94.3% merchant precision) from financial SMS messages with on-device privacy."
-problem_and_motivation: "Digital payments generate overwhelming transaction data, making personal finance management complex and error-prone. Existing rule-based or supervised systems are brittle, unable to adapt to changing message formats or evolving fraud patterns. There is a need for a self-adaptive, privacy-preserving NLP framework that operates on mobile devices."
+  - 3.A
+  - 3.B
+  - 3.C
+  - 5.C
+  - 6.A
+  - 8.A
+  - 8.B
+  - 9.A
+  - 9.B
+  - 10.A
+  - 10.B
+  - 12.A
+  - 12.B
+tldr: A multi-task NLP framework using MuRIL and ensemble fraud detection automates expense tracking from financial SMS with 96.8% extraction accuracy and 91.7% fraud sensitivity.
+problem_and_motivation: Digital payment proliferation generates fragmented financial notifications that overwhelm manual tracking. Existing systems fail to handle code-mixed languages, evolving message formats, and personalized spending patterns. A unified, adaptive NLP framework is needed for accurate, privacy-preserving expense management.
 approach:
-  - "Curated dataset of 124,583 financial SMS messages from 250 Indian participants across 42 banks and 18 UPI apps, annotated with transaction entities and 14 expense categories."
-  - "Hybrid architecture combining MuRIL transformer encoder (12 layers, 768 hidden) with rule-based verification for entity extraction and multi-task learning for classification."
-  - "Multi-task objective jointly optimizes token-level CRF for entities and sequence-level softmax for expense categories, with dynamic loss weights (0.7/0.3)."
-  - "Ensemble fraud detection integrates rule-based screening, Isolation Forest, and LSTM autoencoder, with weighted voting optimized on validation data."
-  - "On-device deployment using 8-bit quantization and pruning (34% connections removed), achieving 4× size reduction and 43-127ms latency on Android devices."
-  - "Evaluation metrics include precision, recall, F1, AUC-ROC, and user satisfaction; baselines: rule-based, CRF-only, BiLSTM-CRF, and FinBERT fine-tuned."
-  - "Longitudinal study with 50 participants over 6 months (187,342 transactions) to measure adaptation to bank format changes and new merchants."
-  - "Uncertainty-aware processing flags low-confidence extractions (entropy > threshold) for human review, preventing automation errors in ambiguous cases."
-  - "Privacy via on-device processing, encrypted storage (device keys), and differential privacy for federated updates (gradient noise)."
-  - "Explainability through attention visualizations and templated justifications for fraud alerts and category decisions."
+  - Framework integrates transformer-based language model (MuRIL) for contextual understanding of financial messages.
+  - Multi-task learning architecture performs simultaneous entity extraction and transaction classification using shared representations.
+  - Ensemble anomaly detection combines rule-based screening, statistical outlier detection, and LSTM autoencoders for fraud identification.
+  - Online learning enables on-device personalization from user corrections without transmitting financial data.
+  - Uncertainty-aware processing flags low-confidence extractions for human review, ensuring accuracy.
 findings:
-  - "num: 96.8% overall F1-score for transaction entity extraction (proposed MuRIL multi-task vs 94.0% for FinBERT)."
-  - "num: 94.3% precision in merchant identification across code-mixed and varied formats."
-  - "num: 91.7% sensitivity and 3.8% false positive rate for ensemble fraud detection (AUC-ROC 0.956)."
-  - "num: 85.6% reduction in manual expense tracking effort based on user-reported time savings."
-  - "num: Multi-task learning improves classification F1 by 1.2% over single-task fine-tuning (94.9% vs 93.7%)."
-  - "Merchant extraction F1=0.952; most errors occur for rare merchants (<5 training examples) or generic descriptors."
-  - "Shopping category shows lowest classification F1 (0.924) due to diverse merchant types and overlaps with entertainment."
-  - "On-device quantized model preserves 98.7% of original accuracy with 4× size reduction (124-183MB)."
-  - "Battery impact of 0.9-2.0% per hour on mid-range devices; low-end devices have higher memory contention."
-  - "User corrections during longitudinal study (3,421 corrections) enabled online learning that adapted to 23 bank format changes and 1,847 new merchants."
+  - num: Entity extraction achieved 96.8% F1-score overall, with amount and date extraction exceeding 98%.
+  - num: Transaction classification reached 94.9% weighted F1-score across 14 expense categories.
+  - num: Ensemble fraud detection attained 91.7% sensitivity with 3.8% false positive rate.
+  - num: On-device processing achieved 43-127ms latency with 0.9-2.0% hourly battery impact on commodity smartphones.
+  - num: Multi-task learning improved entity extraction by 1.2% over single-task MuRIL fine-tuning.
+  - Multi-layered security protocol includes account matching, duplicate detection, and encrypted local storage.
+  - The framework processes code-mixed Hinglish text effectively, a challenge for English-only models.
+  - Federated learning with differential privacy enables global model improvement without compromising user data.
 key_figures_tables:
-  - "Figure 1: Entity extraction performance comparison (bar chart) → Proposed method achieves 0.968 F1, outperforming FinBERT (0.940) and BiLSTM-CRF (0.888)."
-  - "Table I: Phase 1 dataset characteristics (124,583 messages, 347 senders, 37.2% code-mixed) → Diverse and representative of Indian digital payments."
-  - "Table II: Entity-level performance by type → Amount (0.988) and date (0.983) are near-perfect; merchant (0.952) and reference number (0.945) are lower."
-  - "Table IV: Transaction classification by category → Shopping (0.924) and Others (0.882) are hardest; Income (0.986) and Utilities (0.965) are easiest."
-  - "Figure 4: Fraud detection performance comparison (ROC curves) → Ensemble (AUC 0.956) beats LSTM autoencoder (0.921) and Isolation Forest (0.894)."
-  - "Figure 5: ROC curve for fraud ensemble → True positive rate 0.917 at false positive rate 0.038, significantly better than individual detectors."
+  - Table I: Dataset characteristics (124,583 messages, 42 banks, 18 UPI apps) → Diverse financial SMS corpus.
+  - Table II: Entity extraction by type → Merchants hardest (95.2% F1), amounts easiest (98.8% F1).
+  - Table IV: Classification per category → Shopping hardest (92.4% F1), income easiest (98.6% F1).
+  - Table V: Fraud detection comparison → Ensemble best (91.7% sensitivity, 95.6% AUC).
+  - Figure 2: Entity-level performance by type → Visualizes extraction difficulty variation.
 key_equations:
-  - equation: "H_{token} = -\\sum_{t \\in tags} p(t|x) \\log p(t|x)"
-    explanation: "Token-level uncertainty via entropy of predicted tag distribution."
-  - equation: "Margin = p(c_1|x) - p(c_2|x)"
-    explanation: "Margin between top two class probabilities for classification uncertainty."
-  - equation: "L = \\lambda_{entity} L_{entity} + \\lambda_{class} L_{class}"
-    explanation: "Multi-task loss with dynamic weights (0.7/0.3)."
+  - equation: L = λ_entity L_entity + λ_class L_class
+    explanation: Multi-task objective balancing entity and classification losses.
+  - equation: H_token = -∑ p(t|x) log p(t|x)
+    explanation: Token-level uncertainty measured as entropy of tag distribution.
+  - equation: Margin = p(c1|x) - p(c2|x)
+    explanation: Classification uncertainty via gap between top probabilities.
 definitions:
-  - term: "MuRIL"
-    definition: "Multilingual Representations for Indian Languages, a BERT-based model pre-trained on 17 Indian languages and code-mixed variants."
-  - term: "UPI"
-    definition: "Unified Payments Interface, a real-time payment system in India."
-  - term: "Hinglish"
-    definition: "Code-mixed Hindi-English language commonly used in Indian digital communications."
-  - term: "F1-score"
-    definition: "Harmonic mean of precision and recall, ranging from 0 to 1."
-  - term: "CRF"
-    definition: "Conditional Random Field, a sequence labeling model."
-  - term: "BiLSTM"
-    definition: "Bidirectional Long Short-Term Memory network for sequence processing."
-  - term: "AUC-ROC"
-    definition: "Area under the receiver operating characteristic curve, measuring classifier discrimination."
+  - term: MuRIL
+    definition: Multilingual Representations for Indian Languages, a BERT model pre-trained on 17 Indian languages.
+  - term: UPI
+    definition: Unified Payments Interface, India's real-time payment system.
+  - term: NLP
+    definition: Natural Language Processing, enabling computers to understand human language.
+  - term: LSTM
+    definition: Long Short-Term Memory, a recurrent neural network for sequence modeling.
+  - term: CRF
+    definition: Conditional Random Field, a statistical modeling method for structured prediction.
 critical_citations:
-  - "[Hochreiter & Schmidhuber, 1997] — Introduced LSTM, foundation for sequence fraud detection."
-  - "[Devlin et al., 2019] — BERT architecture that enabled transformer-based financial NLP."
-  - "[Khanuja et al., 2020] — MuRIL model for Indian languages, used as base encoder."
-  - "[Araci, 2019] — FinBERT, key baseline comparison for financial entity extraction."
-  - "[Liu et al., 2017] — Demonstrated BiLSTM-CRF for financial named entity recognition, used as baseline."
+  - "[Devlin et al., 2019] — BERT transformer architecture for language understanding."
+  - "[Khanuja et al., 2021] — MuRIL multilingual model for Indian languages."
+  - "[Hochreiter and Schmidhuber, 1997] — LSTM foundations for sequence modeling."
+  - "[Liu et al., 2023] — Financial named entity recognition benchmarks."
+  - "[Ahmed and Mahmood, 2020] — Hybrid fraud detection ensemble methodology."
 relevance:
   topics:
-    - code: "3.A"
-      name: "Expense Categorization Frameworks"
-      justification: "Proposes multi-task NLP framework for automated transaction categorization into 14 expense categories."
-    - code: "3.B"
-      name: "Expense Category Design Considerations"
-      justification: "Defines category taxonomy (Food, Shopping, Utilities, etc.) and evaluates per-category classification performance."
-    - code: "8.A"
-      name: "Anomaly Detection in Personal Finance Systems"
-      justification: "Includes ensemble fraud detection module with rule-based, statistical, and deep learning components."
-    - code: "8.B"
-      name: "Anomaly Detection Algorithm"
-      justification: "Compares Isolation Forest, LSTM autoencoder, and ensemble; reports 91.7% sensitivity and 3.8% false positive rate."
-    - code: "10.A"
-      name: "Data Privacy and Security in Personal Finance Systems"
-      justification: "Implements on-device processing, encrypted storage, and differential privacy for federated updates."
-    - code: "10.B"
-      name: "User Trust in Personal Finance Systems"
-      justification: "Provides explainable decisions via attention visualization and uncertainty-aware processing to build user trust."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      justification: "Uses rigorous evaluation with precision, recall, F1, AUC-ROC, and longitudinal user study over 6 months."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      justification: "Evaluates entity extraction, classification, and fraud detection modules separately against baselines."
-  contribution: "This paper directly informs Odin's expense categorization module (3.A) by providing a validated multi-task NLP architecture that extracts transaction entities and classifies spending categories from unstructured financial messages. It contributes to anomaly detection (8.A/B) through an ensemble fraud detection approach that balances sensitivity (91.7%) and false positives (3.8%), with on-device adaptation. The privacy-preserving design (10.A) using on-device processing and differential privacy aligns with Odin's need for user trust (10.B) in handling sensitive financial data. Finally, the evaluation framework (12.A/B) offers metrics and longitudinal protocols for benchmarking Odin's algorithmic modules."
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: high
+      justification: Proposes a multi-task classification system for 14 expense categories with 94.9% F1.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: high
+      justification: Defines and evaluates a detailed 14-category taxonomy for personal finance.
+    - code: 3.C
+      name: User-Defined Allocation Constraints
+      relevance: medium
+      justification: Online learning enables personalization of category boundaries via user corrections.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Transaction classification and fraud detection infer spending behavior.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: low
+      justification: Framework foundation for future predictive modules via sequential transaction modeling.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Ensemble fraud detection module directly addresses transaction anomaly detection.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Compares rule-based, statistical, and LSTM autoencoder anomaly detection methods.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: high
+      justification: On-device processing and optimization for mobile constraints (latency, battery, memory).
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: medium
+      justification: Uncertainty-aware UI and interactive dashboards enhance user experience.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: high
+      justification: On-device processing, encryption, and differential privacy prevent data leakage.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: medium
+      justification: Explainable AI and uncertainty flags build user trust and enable informed overrides.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Phased evaluation (component, end-to-end, longitudinal, UX) provides a rigorous framework.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Detailed component-level benchmarking of entity extraction, classification, and fraud detection.
+  contribution: The paper directly informs Odin's expense categorization engine by providing a validated multi-task NLP architecture for parsing financial messages and classifying transactions into a detailed category taxonomy. Its ensemble fraud detection module offers a template for Odin's anomaly detection subsystem, incorporating rule-based, statistical, and deep learning components with uncertainty quantification. The privacy-preserving on-device processing and federated learning approach provide a blueprint for Odin's data security and personalization mechanisms. The rigorous component-level and longitudinal evaluation frameworks establish benchmarks for Odin's own algorithmic module testing. The mobile optimization strategies (quantization, pruning, latency/battery analysis) offer practical guidance for deploying Odin on resource-constrained devices in the Philippines.
   directly_justifies:
-    - "The proposed NLP framework achieves 96.8% accuracy in extracting transaction entities from financial SMS messages."
-    - "Multi-task learning improves transaction classification F1 by 1.2% over single-task fine-tuning."
-    - "Ensemble fraud detection achieves 91.7% sensitivity with only 3.8% false positives, suitable for user-facing alerts."
-    - "On-device quantization preserves 98.7% of model accuracy while reducing size by 4×, enabling mobile deployment."
-    - "User corrections during longitudinal use enabled adaptation to 23 bank format changes without cloud retraining."
+    - "Transformer-based models significantly outperform rule-based and recurrent baselines for financial entity extraction (F1 0.968 vs 0.888)."
+    - "Multi-task learning with shared representations improves both entity extraction and classification performance."
+    - "Ensemble fraud detection achieves 91.7% sensitivity with 3.8% false positive rate on personal transaction data."
+    - "On-device deployment with quantization achieves 4× size reduction while preserving 98.7% accuracy."
+    - "Uncertainty-aware processing prevents automation errors in ambiguous cases."
   limits:
-    - "Dataset limited to Indian financial ecosystem (UPI, Indian banks); generalizability to other countries and payment systems not evaluated."
-    - "On-device constraints (memory, battery) limit model size; larger cloud-based models could achieve higher accuracy."
-    - "Shopping category classification F1 (0.924) remains challenging due to merchant diversity and category overlap."
-    - "Long-term adaptation beyond 6 months and to major fraud pattern shifts not tested."
-  mapping_rationale: "The paper directly addresses expense categorization (3.A, 3.B) via its core NLP pipeline for transaction parsing and classification into 14 categories. Fraud detection (8.A, 8.B) is a major component with ensemble methods and explicit performance metrics. Privacy and trust (10.A, 10.B) are foundational design choices (on-device, encryption, explainability). Evaluation (12.A, 12.B) is comprehensive with component-level and system-level metrics. Topics related to behavioral profiling (5.A-C), spending forecasting (6.A-B), budget recommendation (7.A-C), mobile-first design (9.A-B), retention (11.A-B), and savings/debt (13.A-B) were rejected because the paper does not address them. Borderline case: multi-task learning could relate to profile dynamics, but no user behavioral profiles are constructed."
+    - "Dataset focused on Indian financial ecosystem; generalization to Philippine banks and payment systems untested."
+    - "Model compression (quantization/pruning) sacrifices 1.3% accuracy for mobile deployment."
+    - "Longitudinal adaptation study limited to 6 months; longer-term concept drift effects unexplored."
+    - "Battery impact scales with transaction volume; heavy users may experience significant drain."
+  mapping_rationale: Systematic scanning of all 12 functional domains and their associated topic codes flagged relevance primarily in Expense Categorization (3.A, 3.B, 3.C), Anomaly Detection (8.A, 8.B), Mobile-First Design (9.A, 9.B), Data Privacy (10.A, 10.B), and System Evaluation (12.A, 12.B). High relevance was assigned for topics directly addressed by core algorithms: 3.A (categorization framework), 8.A (anomaly detection system), 9.A (mobile optimization), 10.A (privacy architecture), and 12.B (algorithm evaluation). Medium relevance for 5.C (classification informing profiles), 3.C (personalization), 9.B (UX), 10.B (trust), and 12.A (evaluation framework). Low relevance for 6.A because predictive modeling is discussed as future work, not a primary contribution. Domains like Filipino Cultural Context (2.A-D), Behavioral Profiling (5.A-B), Budget Recommendation (7.A-D), Retention (11.A-B), and Savings/Debt (13.A-C) were rejected as not addressed. Borderline cases: 6.A was considered due to sequential modeling but is not a central prediction engine; 5.C was included for its classification methodology though not directly user profiling. Overall, the paper is highly relevant for Odin's algorithmic core, especially NLP-based parsing, classification, anomaly detection, and mobile-first secure architecture.
 limitations:
-  - "Geographic generalizability not evaluated; results may not transfer to non-Indian payment ecosystems. [unacknowledged]"
-  - "On-device model quantization causes 1.3% accuracy loss compared to full-precision model, affecting millions of transactions."
-  - "Battery impact of 2% per hour on low-end devices may reduce user adoption for high-volume users (300+ daily transactions)."
-  - "Paper does not compare against commercial apps like Expensify or Mint in the same experimental setup. [unacknowledged]"
-  - "Long-term adaptation beyond 6 months and robustness to adversarial fraud techniques not assessed."
+  - "Geographic generalizability to Philippine banks and payment systems is untested. [unacknowledged]"
+  - "Long-term performance after 6+ months without retraining is not evaluated. [unacknowledged]"
+  - "Heavy transaction volumes may cause significant battery drain on low-end devices."
+  - "Loss of 1.3% accuracy due to quantization may affect millions of transactions annually."
+  - "Shopping category classification remains challenging (92.4% F1) due to merchant diversity."
 remember_this:
-  - "Transaction extraction achieves 96.8% F1 using transformer multi-task learning on Indian financial SMS."
-  - "Ensemble fraud detection yields 91.7% sensitivity with only 3.8% false positives."
-  - "On-device processing reduces manual expense tracking effort by 85.6% while preserving privacy."
-  - "Merchant identification precision is 94.3% despite code-mixed and abbreviated message formats."
-  - "The framework adapted to 23 bank format changes over 6 months using online learning from user corrections."
+  - "96.8% entity extraction accuracy using MuRIL multi-task learning on financial SMS."
+  - "94.9% classification F1 across 14 expense categories with on-device personalization."
+  - "91.7% fraud sensitivity with only 3.8% false positives via ensemble detection."
+  - "Quantized models achieve 4× size reduction with 98.7% accuracy preservation."
+  - "Uncertainty-aware processing flags low-confidence decisions for user review."
 ```

@@ -1,77 +1,99 @@
 ```yaml
-paper_id: "10.1016/j.sasc.2025.200352"
-designation: "local"
-title: "Predicting student retention: A comparative study of machine learning approach utilizing sociodemographic and academic factors"
-authors: "Delen˜a, R. D.; Diab, N. J.; Sacayan, R. R.; Sieras, J. C.; Khalid, S. A.; Macatotong, A. H. T.; Gulam, S. B."
+paper_id: 10.1016/j.sasc.2025.200352
+designation: local-algorithm-specific
+title: Predicting student retention: A comparative study of machine learning approach utilizing sociodemographic and academic factors
+authors: Delen˜a, R. D.; Dia, N. J.; Sacayan, R. R.; Sieras, J. C.; Khalid, S. A.; Macatotong, A. H. T.; Gulam, S. B.
 year: 2025
-venue: "Systems and Soft Computing"
+venue: Systems and Soft Computing
 odin_topics:
-  - "12.A"
-  - "12.B"
-shorthand_tags:
-  - "/evaluation-framework"
-  - "/algorithm-evaluation"
-tldr: "A comparative study of ten machine learning algorithms predicts student retention using sociodemographic and academic data from a Philippine university, with XGBoost achieving highest accuracy."
-problem_and_motivation: "Student dropout is a persistent challenge in higher education, especially in developing regions with limited resources for intervention. Traditional approaches based on subjective assessments are insufficient to capture attrition complexity. There is a need for accurate predictive models using machine learning on institutional data."
+  - 4.A
+  - 5.C
+  - 6.A
+  - 6.B
+  - 12.A
+  - 12.B
+tldr: Comparative evaluation of ten machine learning models for predicting student dropout using sociodemographic and academic data, with XGBoost achieving the highest cross-validated accuracy.
+problem_and_motivation: Student attrition in higher education, particularly in developing regions, remains a persistent challenge due to limited institutional intervention resources and high socioeconomic disparities. Existing approaches often rely on short-term datasets or limited algorithm selection, leaving a gap for context-specific, scalable early warning systems.
 approach:
-  - "Data from Mindanao State University (482 students, 146 variables over 2012–2022) was preprocessed using CRISP-DM and Power BI."
-  - "Ten algorithms were evaluated: XGBoost, Gradient Boosting, ANN, Decision Tree, Random Forest, MLP, Logistic Regression, KNN, SVM, and Naïve Bayes."
-  - "Models were assessed with train-test split and 5-fold cross-validation using accuracy, precision, recall, F1, MSE, and log loss."
-  - "Multicollinearity was reduced via Spearman correlation with a 0.7 threshold, retaining 79 features."
+  - Secondary data from 482 student records spanning 2012-2022 was sourced from Mindanao State University.
+  - Data was preprocessed using Power BI and modeled in Jupyter Notebook following the CRISP-DM methodology.
+  - Ten supervised machine learning algorithms were evaluated, including XGBoost, Gradient Boosting, ANN, and Decision Tree.
+  - Models were assessed using a 70/30 train-test split and 5-fold cross-validation.
+  - Six evaluation metrics were applied: Accuracy, Precision, Recall, F1 Score, MSE, and Log Loss.
 findings:
-  - "num: XGBoost achieved 90.66% cross-validated accuracy and 90.72 F1 score, outperforming all other models."
-  - "num: Gradient Boosting had 89.42% accuracy and the lowest log loss (0.25), while ANN reached 88.39% accuracy and 91.48% recall."
-  - "Naïve Bayes had high recall (97.21%) but excessive false positives (31), limiting practical use."
-  - "Decision Tree overfitted, dropping from 90.34% to 84.44% accuracy after cross-validation."
-  - "XGBoost produced the lowest misclassifications: 4 false negatives and 5 false positives."
+  - XGBoost outperformed all models with the highest cross-validated accuracy of 90.66% and F1 Score of 90.72.
+  - XGBoost also achieved low error values with MSE of 9.34 and Log Loss of 0.26.
+  - Gradient Boosting and ANN followed closely, demonstrating strong balance between precision and recall.
+  - Naïve Bayes showed high recall but excessive false positives, limiting practical use.
+  - Ensemble methods like XGBoost and Gradient Boosting proved more stable and generalizable than individual classifiers like Decision Tree.
 key_figures_tables:
-  - "Figure 2: Literature review frequency of factors, models, and metrics → gender and decision trees are most common."
-  - "Figure 6: Confusion matrices for all ten models → XGBoost has the most balanced predictions."
-  - "Table 6: Dropout detection rates → XGBoost achieved 94.5% recall, highest among models."
-  - "Figure 7: 5-fold cross-validation results → XGBoost remains top performer across all metrics."
+  - Figure 2a: Sociodemographic factors used in retention studies → Gender and marital status are the most frequently used predictors.
+  - Figure 2b: Academic factors used in retention studies → Expected graduation year and GPA are the most common academic predictors.
+  - Figure 6: Confusion matrices for each model → XGBoost had the lowest total misclassification (9 errors out of 145 test instances).
+  - Figure 7: Model performance with 5-fold cross-validation → XGBoost maintained the highest accuracy and lowest error across all metrics.
+  - Table 6: Confusion matrix components → XGBoost achieved the highest dropout detection rate (94.5%).
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
-  - term: "EDM"
-    definition: "Educational Data Mining, applying ML to institutional data to predict student outcomes."
   - term: "XGBoost"
-    definition: "Extreme Gradient Boosting, an optimized gradient boosting algorithm with regularization."
+    definition: "Extreme Gradient Boosting, an optimized implementation of gradient boosting with built-in regularization and early stopping."
   - term: "CRISP-DM"
-    definition: "Cross-Industry Standard Process for Data Mining, a six-phase methodology for data projects."
-  - term: "MLP"
-    definition: "Multilayer Perceptron, a feedforward artificial neural network with multiple hidden layers."
+    definition: "Cross-Industry Standard Process for Data Mining, a six-phase methodology for data mining projects."
+  - term: "EDM"
+    definition: "Educational Data Mining, the application of machine learning to educational data to predict student outcomes."
+  - term: "ITE"
+    definition: "Information Technology Education, the academic program from which student data was drawn."
 critical_citations:
-  - "[Baker & Yacef, 2009] — Foundational review of educational data mining."
-  - "[Romero & Ventura, 2020] — Updated survey of EDM and learning analytics."
-  - "[Niyogisubizo et al., 2022] — Stacked ensemble for dropout prediction with XGBoost."
+  - "[Alhazmi & Sheneamer, 2023] — Benchmark for XGBoost in large-scale student performance prediction."
+  - "[Niyogisubizo et al., 2022] — Reference for two-layer ensemble ML approach in dropout prediction."
+  - "[Rodríguez-Hernández et al., 2021] — Reference for ANN implementation in academic prediction."
+  - "[Ghorbani & Ghousi, 2020] — Reference for comparing resampling methods in student performance prediction."
 relevance:
   topics:
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      justification: "Paper compares ten ML algorithms using multiple metrics and cross-validation, providing a template for evaluating PFMS models."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      justification: "Rigorous benchmarking identifies XGBoost as top performer, guiding algorithm selection for financial prediction tasks."
-  contribution: "The study's comparative evaluation framework can directly inform Odin's system evaluation module for testing spending forecasting or anomaly detection algorithms. The finding that XGBoost outperforms other models on structured tabular data justifies its selection for Odin's predictive components. The use of 5-fold cross-validation to prevent overfitting provides a best practice for Odin's model validation pipeline. The dataset preprocessing methodology (CRISP-DM) offers a structured approach for handling real-world financial data."
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Provides a comparative benchmarking methodology applicable to financial systems.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: contextual
+      justification: Demonstrates classification model evaluation, transferable to financial profile classification.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: contextual
+      justification: Establishes a predictive modeling framework for risk identification, analogous to spending forecasting.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: contextual
+      justification: Evaluates sequential and non-sequential ML algorithms, relevant to forecasting module design.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: contextual
+      justification: Provides a structured evaluation framework with multiple metrics and cross-validation.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: contextual
+      justification: Offers a comparative evaluation methodology for selecting optimal algorithms.
+  contribution: "The paper offers a reproducible comparative methodology for evaluating machine learning models on structured demographic and performance data. Its approach to cross-validation and multi-metric evaluation is directly transferable to Odin's algorithmic modules for forecasting, anomaly detection, and user profiling. The study also emphasizes interpretability and institutional deployment, aligning with Odin's goal of practical, action-oriented system design."
   directly_justifies:
-    - "XGBoost achieves higher accuracy (90.66%) than other models on imbalanced tabular data."
-    - "Cross-validation is necessary to avoid overestimation of model performance from single train-test splits."
-    - "Ensemble methods like Gradient Boosting produce more stable generalization than single decision trees."
+    - "XGBoost demonstrates superior performance on structured tabular data with both categorical and numeric features."
+    - "Cross-validation is essential to correct overestimation from single train-test splits in ML evaluations."
+    - "Ensemble methods like Gradient Boosting provide better generalization than individual classifiers like Decision Tree."
   limits:
-    - "Data from a single institution limits generalizability to other populations."
-    - "Only academic and sociodemographic features used; behavioral data not included."
-    - "Model interpretability not addressed, which is important for deployment in sensitive domains."
-    - "The balanced class distribution (50/50) may not reflect real-world dropout rates."
-  mapping_rationale: "The paper focuses on predicting student dropout using machine learning, which is not directly within Odin's financial domains. However, its methodological contributions to algorithm evaluation and model selection are directly applicable to Odin's system evaluation module (12.A) and evaluation of algorithmic modules (12.B). Topics related to user retention (11.A, 11.B) were considered but rejected because the paper addresses educational retention, not financial app engagement dynamics. Behavioral profiling (5.A) was rejected due to lack of financial behavior focus. The paper's rigorous comparative framework and cross-validation practices provide citable justification for how Odin should evaluate its own predictive models."
+    - "Single-institution dataset limits external generalizability."
+    - "No behavioral or engagement features were included, which are known significant predictors."
+    - "Model interpretability remains a challenge for high-stakes deployment."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes identified the following relevant domains: Existing Systems & Gaps, Behavioral Profiling & Classification, Spending Forecasting, and System Evaluation. From these, topic codes 4.A, 5.C, 6.A, 6.B, 12.A, and 12.B were selected as contextual, as the paper provides methodological framing rather than direct financial insights. Domains such as Filipino Cultural Context, Expense Categorization, Budget Recommendation, and Data Privacy were rejected as the paper does not address financial behaviors, budget allocation, or privacy. Overall, the paper is relevant to Odin primarily for its rigorous model evaluation methodology and comparative analysis of ML algorithms, which can inform the selection and validation of predictive modules."
 limitations:
-  - "Data sourced from a single institution may limit external validity."
+  - "Data sourced from a single institution, limiting external validity."
   - "Behavioral and psychosocial dimensions (e.g., LMS engagement, motivation) were not included."
-  - "Model interpretability remains a challenge for deployment in education and finance."
-  - "The dataset's balanced class distribution (50% dropout, 50% retained) does not reflect real-world attrition rates, which are typically imbalanced."
+  - "Model interpretability remains a challenge for sensitive domains like education. [unacknowledged]"
+  - "Only a 5-fold cross-validation was used; more advanced strategies like stratified nested CV could strengthen generalization. [unacknowledged]"
 remember_this:
-  - "XGBoost achieved 90.66% cross-validated accuracy for dropout prediction."
-  - "Ensemble models like Gradient Boosting consistently outperform single classifiers."
-  - "Cross-validation is essential to avoid overfitting in educational data mining."
-  - "Naïve Bayes produces excessive false positives despite high recall."
+  - "XGBoost achieved the highest cross-validated accuracy at 90.66%."
+  - "Cross-validation corrects overestimation from single train-test splits."
+  - "Ensemble methods provide better generalization than individual classifiers."
+  - "Model evaluation requires multiple metrics: accuracy, F1, precision, recall, and error."
+  - "Context-specific institutional data is vital for effective predictive modeling."
 ```

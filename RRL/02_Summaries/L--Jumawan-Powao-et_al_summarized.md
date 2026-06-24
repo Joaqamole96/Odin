@@ -1,90 +1,113 @@
 ```yaml
-paper_id: 10.11594/ijmaber.05.08.03
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
 designation: local
 title: Family Income in Relation to Budgeting of Accounting Students in A University
 authors: Jumawan-Powao, A. R.; Tubat, K. T.; Cellero, R. C. L.; Alibangbang, A. D. C.; Capilitan, M. K. T.
 year: 2024
 venue: International Journal of Multidisciplinary: Applied Business and Education Research
 odin_topics:
-  - 3.A
-  - 5.A
+  - 1.C
+  - 2.D
   - 7.A
-  - 13.A
-shorthand_tags:
-  - /expense-categorization
-  - /behavioral-profiles
-  - /budgeting-strategies
-  - /savings-management
-tldr: Family income positively correlates with allowance but inversely relates to budgeting among accounting students, with no significant sex difference in budgeting practices.
-problem_and_motivation: College students face growing financial management challenges, yet the relationship between family income and student budgeting remains underexplored, especially for dependents. Previous studies failed to highlight students as non‑earners while addressing sex differences. This study investigates how family income affects budgeting behavior and whether sex moderates this relationship.
+  - 7.B
+  - 12.A
+  - 3.B
+  - 3.C
+  - 4.A
+  - 4.B
+  - 5.A
+tldr: Students from lower-income families demonstrate stronger budgeting practices, with a significant inverse relationship between family income and student budgeting skills.
+problem_and_motivation: The economic challenges faced by students, particularly those from lower-income families, threaten their financial success. Existing literature presents mixed findings on the relationship between family income and student budgeting. This study aims to clarify this relationship, focusing on accounting students as dependents.
 approach:
-  - Quantitative descriptive‑correlation design with random sampling using Slovin’s formula.
-  - Sample of 269 accounting students from Jose Rizal Memorial State University.
-  - Modified survey questionnaire with 4‑point Likert scale measuring budgeting across fixed expenses, flexible expenses, and savings.
-  - Philippine Institute for Development Studies income brackets used for family income classification.
-  - Statistical tests: Spearman Rho, Pearson correlation, and Mann‑Whitney U‑test.
+  - A quantitative descriptive-correlational research design was employed.
+  - The study surveyed 269 accounting students from Jose Rizal Memorial State University.
+  - Data were collected using a modified questionnaire and analyzed using descriptive statistics.
+  - Spearman Rho and Pearson Correlation Coefficient were used for relationship tests.
+  - Mann Whitney U-test was used to test for differences based on sex.
 findings:
-  - num: Students from lower‑income families demonstrate stronger budgeting practices than those from higher‑income families.
-  - No significant difference in budgeting between male and female respondents (p = 0.709).
-  - Allowance amount is significantly related to budgeting behavior, with lower allowance associated with more careful budgeting (p = 0.001).
-  - Family income shows a significant positive correlation with student allowance (r = 0.265, p = 0.001).
-  - Overall mean budgeting literacy is 2.92 (“often”), indicating high budgeting practice frequency.
-  - Students prioritize savings over flexible expenses like entertainment and luxury items.
-  - All accounting programs (BSA, BSMA, BSAIS, BSIA) show similar budgeting frequency (weighted means 2.51–2.64).
+  - num: 269 accounting students were surveyed, with the majority belonging to poor family households.
+  - Students exhibit good budgeting practices, with an overall mean of 2.92 on a 4-point scale.
+  - There is no significant difference in budgeting practices between male and female students.
+  - A significant positive correlation exists between student allowance and budgeting.
+  - An inverse relationship exists between family income and student budgeting practices.
 key_figures_tables:
-  - Table 2: Summary of budgeting literacy (fixed expenses 3.19, flexible 2.63, savings 2.93) → Students often budget across all categories.
-  - Table 5: Allowance vs. budgeting correlation (rho=0.196, p=0.001) → Significant positive relationship but text infers inverse direction.
-  - Table 6: Family income vs. budgeting correlation (rho=0.194, p=0.001) → Significant relationship; lower income links to better budgeting.
-  - Table 4: Mann‑Whitney U‑test (p=0.709) → No sex difference in budgeting behavior.
+  - "Table 2: Summary of Level of Budget Literacy → Overall mean of 2.92 indicates good budgeting."
+  - "Table 4: Test of Difference on Budgeting by Sex → No significant difference (p=0.709)."
+  - "Table 5: Allowance vs Budgeting → Significant positive correlation (p=0.001)."
+  - "Table 6: Family Income vs Budgeting → Significant positive correlation (p=0.001)."
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
-  - term: Fixed expenses
-    definition: Regular costs such as food, transportation, and school expenses (50% of budget guideline).
-  - term: Flexible expenses
-    definition: Discretionary spending on entertainment, luxury, and leisure (30% of budget guideline).
-  - term: 50/30/20 rule
-    definition: Budgeting guideline allocating 50% to needs, 30% to wants, 20% to savings.
+  - term: "Budgeting"
+    definition: "A process of allocating financial resources to meet specific expenditure plans."
+  - term: "Allowance"
+    definition: "A sum of money given to someone, used as a tool for teaching money management."
 critical_citations:
-  - "[Kwatiah, 2017] — Income shifts budget line parallelly."
-  - "[Nano et al., 2015] — Lower family income improves financial attitude."
-  - "[Labito & Supramono, 2017] — Allowance and budgeting inversely related."
+  - "[Naoi et al., 2017] — Family income affects educational spending and allowance."
+  - "[Kwatiah, 2017] — Consumer income shifts budget lines."
+  - "[Labito & Supramono, 2017] — Allowance and budgeting are significant predictors."
+  - "[Ninan & Kurian, 2021] — Family income is the first factor in spending habits."
 relevance:
   topics:
-    - code: 3.A
-      name: Expense Categorization Frameworks
-      justification: Uses 50/30/20 rule and classifies expenses into fixed, flexible, and savings.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      justification: Finds lower income correlates with stronger budgeting, informing user profiling based on income level.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly examines budgeting behavior of Filipino college students in relation to family income.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: Mentions spending on leisure and luxury but does not focus on cyclical patterns.
     - code: 7.A
       name: Budgeting Strategies as Domain Knowledge
-      justification: Documents student budgeting practices and the inverse income‑budgeting relationship as a behavioral strategy.
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      justification: Measures savings as a budget category and finds students prioritize savings over flexible expenses.
-  contribution: This paper provides empirical evidence that family income inversely affects student budgeting, with lower‑income students exhibiting more disciplined budgeting. It confirms that allowance size directly influences budgeting diligence, supporting the need for income‑aware budgeting modules in PFMS. The absence of sex differences simplifies user modeling, while the prioritization of savings over wants informs savings goal design. These findings can guide Odin’s behavioral profiling and budget recommendation algorithms to adjust for income‑based behavioral variation.
+      relevance: high
+      justification: The core of the study is about students' budgeting strategies and skills.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: contextual
+      justification: Provides background on budgeting rules but no recommendation system.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: low
+      justification: The study's methodology is a general evaluation but not of a PFMS.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: medium
+      justification: Discusses fixed and flexible expenses, relevant for designing categories.
+    - code: 3.C
+      name: User-Defined Allocation Constraints
+      relevance: medium
+      justification: Explores how students allocate budgets (needs, wants, savings).
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: Provides context on student financial challenges but not a system landscape.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: low
+      justification: The paper identifies a gap in focusing on dependents, but not a system gap.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: The study profiles students based on their budgeting behavior.
+  contribution: "The paper provides empirical evidence for Odin's budgeting module (7.A) by showing that students from lower-income families budget more effectively. This finding supports the need for tailored budgeting recommendations (7.B) that account for a user's financial background. The study also highlights the importance of expense categorization (3.B) in understanding student spending, relevant for Odin's classification features. The methodology (12.A) offers a framework for evaluating user budgeting literacy. The findings on the relationship between allowance and budgeting (3.C) can inform constraint handling in Odin."
   directly_justifies:
-    - Family income is inversely related to student budgeting diligence.
-    - Allowance amount positively predicts budgeting strictness among dependents.
-    - Sex does not moderate budgeting behavior in this student population.
-    - Students from lower‑income households allocate more to savings than to flexible expenses.
+    - "Students from lower-income families demonstrate stronger budgeting practices."
+    - "There is a significant relationship between student allowance and budgeting behavior."
+    - "No significant difference in budgeting exists between male and female students."
   limits:
-    - Sample limited to accounting students at a single Philippine university.
-    - Self‑reported budgeting data may be subject to social desirability bias.
-    - Cross‑sectional design prevents causal inference.
-    - Ambiguity in reported correlation directions between tables and text.
-  mapping_rationale: The paper was screened against all Odin functional domains. Spending forecasting, anomaly detection, mobile design, data privacy, retention, and system evaluation were rejected as absent. Behavioral profiling (5.A) was selected because the paper directly links income level to budgeting behavior, a key input for user classification. Expense categorization (3.A) applies due to the use of fixed/flexible/savings categories and the 50/30/20 rule. Budgeting strategies (7.A) fits the paper's core focus on how students plan spending. Savings management (13.A) is included because savings behavior is measured as a distinct budget category. Topics related to Filipino young professionals (1.A‑1.C) were rejected because the sample is students, not working professionals, though findings may partially generalize. Borderline case 2.C (user‑declared preferences) was rejected as no preference elicitation occurred.
+    - "The study is limited to accounting students, limiting generalizability to other demographics."
+    - "The study does not explore other factors like financial literacy in depth."
+    - "The correlational design does not allow for causal inference."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The domains 'Filipino Cultural Context' (2.A, 2.B, 2.C, 2.D), 'Expense Categorization' (3.A, 3.B, 3.C), 'Existing Systems & Gaps' (4.A, 4.B), 'Behavioral Profiling & Classification' (5.A, 5.B, 5.C), 'Spending Forecasting' (6.A, 6.B), 'Budget Recommendation' (7.A, 7.B, 7.C, 7.D), and 'Evaluation' (12.A, 12.B, 12.C) were considered. The paper was highly relevant to 1.C (Financial Behavior), 7.A (Budgeting Strategies), and 7.B (Budget Recommendation) as it is a direct study of student budgeting. It provides medium relevance to 3.B and 3.C for its discussion of expense categories, and to 5.A for behavioral profiling. Relevance to 2.D (Filipino Spending Cycles) was considered and rejected as the paper does not focus on seasonal or cyclical spending. The domains related to forecasting, anomaly detection, mobile design, data privacy, engagement, savings, and debt management were rejected as the paper does not address them. The overall relevance is moderate, providing foundational insights into budgeting behavior."
 limitations:
-  - Sample confined to accounting students, limiting generalizability to non‑accounting majors. [unacknowledged]
-  - Self‑reported Likert scale data may not reflect actual spending behavior. [unacknowledged]
-  - No longitudinal tracking of budgeting changes over time.
-  - Contradictory reporting of correlation directions in results vs. conclusion.
+  - "The study is limited to accounting students of a single university, limiting generalizability."
+  - "Reliance on self-reported data may introduce bias."
+  - "The correlational design cannot establish causation." 
 remember_this:
-  - Lower family income correlates with stronger student budgeting.
-  - Sex does not affect budgeting behavior in this sample.
-  - Students prioritize savings over flexible spending.
-  - Allowance size inversely relates to budgeting diligence.
-  - All accounting programs show similar budgeting frequency.
+  - "Students from poor families exhibit better budgeting practices."
+  - "There is a significant inverse relationship between family income and student budgeting."
+  - "Accounting students generally have good budgeting literacy."
+  - "No significant difference in budgeting was found between male and female students."
+  - "Allowance is positively correlated with student budgeting."
 ```

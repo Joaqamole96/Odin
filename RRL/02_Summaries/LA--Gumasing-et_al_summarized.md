@@ -1,93 +1,145 @@
 ```yaml
 paper_id: 10.1016/j.heliyon.2023.e20644
-designation: international
+designation: local-algorithm-specific
 title: A machine learning ensemble approach to predicting factors affecting the intention and usage behavior towards online groceries applications in the Philippines
 authors: Gumasing, M.J.J.; Ong, A.K.S.; Sy, M.A.P.C.; Prasetyo, Y.T.; Persada, S.F.
 year: 2023
 venue: Heliyon
 odin_topics:
-  - 1.C
+  - 1.A
+  - 1.B
+  - 2.A
+  - 2.B
+  - 2.D
   - 5.A
+  - 5.B
+  - 5.C
   - 6.A
+  - 6.B
   - 11.A
+  - 11.B
+  - 12.A
   - 12.B
-shorthand_tags:
-  - /financial-behavior
-  - /behavioral-profile
-  - /predictive-modeling
-  - /engagement
-  - /ml-evaluation
-tldr: A machine learning ensemble of random forest and artificial neural network predicts that perceived benefits, perceived vulnerability, behavioral intention, performance expectancy, and perceived severity strongly influence online grocery app usage among Filipino consumers during COVID-19.
-problem_and_motivation: Despite the rise of online grocery shopping in the Philippines during COVID-19, factors driving consumer intention and usage behavior remain underexplored. Existing studies using traditional statistical methods have limitations in capturing complex, nonlinear relationships. A holistic measurement integrating health concerns and technology acceptance is needed.
+  - 12.C
+tldr: Filipino consumers' intention and usage of online grocery apps during COVID-19 are driven by perceived benefits, vulnerability, behavioral intention, performance expectancy, and severity.
+problem_and_motivation: Existing studies on online grocery acceptance show inconsistent results, often lacking a holistic measure of behavioral intention when health concerns are present. No prior study in the Philippines has established a comprehensive model for online grocery acceptance during a pandemic.
 approach:
-  - Data from 373 Filipino online grocery consumers collected via 5-point Likert survey.
-  - Integrated Protection Motivation Theory (PMT) and Unified Theory of Acceptance and Use of Technology (UTAUT2) with 11 latent variables.
-  - Used Random Forest Classifier (optimized over 6400 runs with depth 6, 90:10 train-test split, 96% accuracy).
-  - Used Artificial Neural Network with Tanh/Softmax activation, Adam optimizer, 150 epochs, 90 hidden nodes, 96.63% accuracy.
-  - Evaluated feature importance via score of importance and Taylor diagram for consistency.
+  - A conceptual framework integrating UTAUT2 and Protection Motivation Theory (PMT) was developed.
+  - A 67-item survey was administered to 373 Filipino online grocery users via convenience sampling from August to December 2021.
+  - Data preprocessing included correlation analysis, aggregation, and normalization.
+  - A Random Forest Classifier was optimized across 6,400 runs with varying parameters and training-test splits.
+  - An Artificial Neural Network (ANN) was optimized with Tanh/Softmax activations and Adam optimizer at 150 epochs.
 findings:
-  - "num: Random Forest achieved 96% accuracy with 0.00 standard deviation at depth 6."
-  - "num: Artificial Neural Network achieved 96.63% average testing accuracy."
-  - Perceived benefit is the most significant factor (importance score 0.270), followed by perceived vulnerability (0.265) and behavioral intention (0.258).
-  - All ten constructs (performance expectancy, effort expectancy, social influence, hedonic motivation, facilitating conditions, perceived benefit, perceived vulnerability, perceived severity, perceived susceptibility, response efficacy) significantly affect behavioral intention or usage behavior.
-  - High usage behavior is driven by perceived benefits, perceived vulnerability, performance expectancy, behavioral intention, and perceived severity.
+  - The ANN achieved a high average accuracy of 96.63% with no overfitting.
+  - The Random Forest Classifier achieved a high average accuracy of 96% with 0.00 standard deviation.
+  - num: 96.63% accuracy from ANN and 96% from Random Forest Classifier were consistent.
+  - Perceived Benefit was the most significant factor, followed by Perceived Vulnerability and Behavioral Intention.
+  - Performance Expectancy was a top factor, indicating efficiency and time savings are key drivers.
+  - All ten constructs were found to be significant predictors of behavioral intention and usage.
 key_figures_tables:
-  - "Figure 4: Decision tree from random forest classifier showing perceived benefit as parent node → perceived vulnerability and performance expectancy lead to very high usage."
-  - "Table 6: Importance scores ranking perceived benefit highest (100%) and facilitating conditions lowest (58.6%)."
-  - "Figure 6: Taylor diagram showing correlation and standard deviation within acceptable 20% RMSE threshold → consistent ensemble."
+  - Figure 1: E-commerce growth rate by sector → Food/beverage grew 170.8% during the pandemic.
+  - Figure 2: Conceptual framework → Integrated UTAUT2 and PMT with 12 hypotheses.
+  - Figure 4: Decision tree from Random Forest → Perceived Benefit is the root node for usage behavior.
+  - Figure 5: Optimum ANN model → Achieved 96.63% accuracy with Tanh/Softmax and Adam optimizer.
+  - Table 6: Score of importance → Perceived Benefit is the most influential factor at 100% score.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
   - term: UTAUT2
-    definition: Unified Theory of Acceptance and Use of Technology, an extension with hedonic motivation, price value, and habit.
+    definition: Unified Theory of Acceptance and Use of Technology 2, a model for technology acceptance.
   - term: PMT
-    definition: Protection Motivation Theory, a health behavior model focusing on threat and coping appraisal.
+    definition: Protection Motivation Theory, a model for health-related behavior.
   - term: ANN
-    definition: Artificial Neural Network, a supervised machine learning algorithm mimicking biological neurons.
-  - term: RFC
-    definition: Random Forest Classifier, an ensemble decision tree algorithm.
+    definition: Artificial Neural Network, a supervised machine learning algorithm.
+  - term: Random Forest Classifier
+    definition: A classification tool using an ensemble of decision trees.
+  - term: Perceived Benefit
+    definition: Belief that a course of action reduces disease risk and leads to positive results.
 critical_citations:
-  - "[Venkatesh et al., 2003] — Unified theory of technology acceptance."
-  - "[Venkatesh et al., 2012] — Extended UTAUT2 with hedonic motivation."
-  - "[Janz & Becker, 1984] — Health belief model foundation for PMT."
-  - "[Ong, 2022] — Machine learning ensemble for behavior prediction."
+  - "[Venkatesh et al., 2012] — Introduced UTAUT2 and its core constructs."
+  - "[Chuenyindee et al., 2022] — Justified integrating PMT for health-related technology acceptance."
+  - "[Ong et al., 2022] — Demonstrated machine learning ensemble for behavioral prediction."
 relevance:
   topics:
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      justification: Paper analyzes Filipino consumers' behavioral intention and usage of online groceries, informing financial behavior patterns.
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: The study directly surveys Filipino consumers, establishing baseline demographics.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Provides income and spending data on groceries, relevant to financial structure.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: high
+      justification: Addresses the shift to online grocery in the Philippines, a culturally driven behavior.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: Mentions pandemic-induced changes in grocery spending patterns.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: medium
+      justification: Directly relevant to Filipino spending behavior during the pandemic.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: Identifies key factors (perceived benefits, vulnerability, etc.) that distinguish user profiles for adoption.
+      relevance: high
+      justification: Predicts factors affecting consumer behavior, directly contributing to profile understanding.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: contextual
+      justification: Provides a framework for understanding initial behavioral intention.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Uses machine learning classification to categorize behavioral predictors.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Uses machine learning (ANN and Random Forest) to predict usage behavior, applicable to spending forecasting.
+      relevance: high
+      justification: Employs predictive modeling (ANN and Random Forest) to forecast usage behavior.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: medium
+      justification: The modeling approach could be extended to forecasting spending.
     - code: 11.A
       name: Engagement Dynamics in Personal Finance Applications
-      justification: Behavioral intention and usage behavior are direct measures of user engagement with the application.
+      relevance: medium
+      justification: Directly addresses behavioral intention and usage, key engagement metrics.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: contextual
+      justification: The findings can inform design for retention (e.g., highlighting benefits).
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Uses a systematic methodological framework for evaluation.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: Evaluates accuracy and feature importance of two ML algorithms for behavior classification.
-  contribution: This paper's machine learning ensemble approach could be adapted for Odin's behavioral profiling module to predict user engagement based on perceived benefits and vulnerability. The ranking of factors (perceived benefit > vulnerability > intention > performance expectancy) directly informs spending forecasting by weighting these predictors. The high accuracy of ANN and Random Forest (96%+) validates using such algorithms for Odin's classification tasks, such as anomaly detection or budget recommendation. The integration of PMT with UTAUT2 provides a framework for understanding how health concerns (or financial security concerns) drive app usage, relevant to user retention strategies.
+      relevance: high
+      justification: Specifically evaluates the performance of ANN and Random Forest classifiers.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: contextual
+      justification: The evaluation methodology is relevant but not directly about budget recommendations.
+  contribution: This study provides a validated machine learning ensemble framework for predicting behavioral intention and usage in the context of online grocery applications. It directly justifies the use of ANN and Random Forest classifiers for Odin's behavioral profiling and prediction modules. The integration of UTAUT2 and PMT offers a robust theoretical foundation for understanding user motivation, which can inform engagement strategies. The identification of perceived benefit and vulnerability as top predictors can guide Odin's user onboarding and feature prioritization. The high accuracy of the models demonstrates the feasibility of using similar techniques for Odin's forecasting and classification tasks.
   directly_justifies:
-    - Using Random Forest Classifier and Artificial Neural Network together achieves over 96% accuracy in predicting technology usage behavior.
-    - Perceived benefit is the most influential factor (importance 0.270) in predicting usage behavior of online applications.
-    - Perceived vulnerability and behavioral intention together explain high usage behavior when performance expectancy is also high.
-    - All ten constructs from UTAUT2 and PMT significantly affect behavioral intention or usage behavior in a Filipino consumer context.
+    - "Machine learning ensembles can achieve high accuracy (>96%) in predicting consumer behavior."
+    - "Perceived benefit and vulnerability are the most significant drivers of behavioral intention."
+    - "UTAUT2 and PMT can be effectively integrated to model technology acceptance in a health context."
+    - "Filipino consumers are highly receptive to online services, indicating a strong market for PFMS."
   limits:
-    - Study focuses on online grocery apps, not general PFMS, limiting direct transfer to budgeting or savings features.
-    - Sample majority from highly urbanized cities, potentially overrepresenting tech-literate users.
-    - Lack of consideration of socio-economic factors like income or education as segmentation variables [unacknowledged].
-    - No longitudinal data to assess behavioral change over time [unacknowledged].
-  mapping_rationale: The paper was screened against Odin's functional domains: Behavioral profiling, spending forecasting, user retention, and system evaluation were flagged. Topic codes 1.C (Financial Behavior) was selected because the paper empirically measures Filipino consumer intentions and usage. 5.A (Behavioral Profiles) applies as the factor ranking can define distinct user personas. 6.A (Predictive Modeling) applies due to the use of ANN and RFC for classification, which can be repurposed for spending prediction. 11.A (Engagement Dynamics) applies as behavioral intention directly correlates with app usage frequency. 12.B (Evaluation) applies because the paper rigorously evaluates algorithm accuracy and consistency. Rejected codes (e.g., 3.A Expense Categorization, 8.A Anomaly Detection) because the paper does not address transaction categorization or outlier detection. Borderline case 2.A (Cultural Practices) was rejected as the study's Philippine context is demographic rather than culturally specific financial practices.
+    - "Respondents were predominantly from highly urbanized areas, limiting generalizability to rural populations."
+    - "The study did not consider socio-economic factors for clustering, which could refine user segmentation."
+    - "Data was collected during the COVID-19 pandemic, which may not reflect post-pandemic baseline behavior."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant for domains related to Filipino context (2.A, 2.D), behavioral profiling (5.A, 5.C), predictive modeling (6.A, 6.B), and system evaluation (12.B). The paper's focus on machine learning for prediction directly justifies high relevance for 5.C, 6.A, 12.A, and 12.B. The integration of UTAUT2 and PMT provides a strong framework relevant to 5.A and 5.B. The study's context of Filipino consumer behavior is directly applicable to 2.A and 2.D. Domains like 1.A, 1.B were considered relevant as they provide demographic and financial structure data, assigned medium relevance. Domains like expense categorization (3.A, 3.B), anomaly detection (8.A, 8.B), and savings/debt (13.A, 13.B) were rejected as the paper does not address these specific functionalities. The overall relevance is high, as the paper provides a validated methodological approach for predicting user behavior, which is central to Odin's core functions.
 limitations:
-  - Respondents majorly reside in highly urbanized cities, affecting technological literacy representation.
-  - Lack of consideration of socio-economic factors for customer segmentation.
-  - No validation of model generalizability to other types of financial apps [unacknowledged].
+  - "The majority of respondents reside in highly urbanized cities, affecting generalizability to rural consumers."
+  - "Lack of consideration of socio-economic factors (e.g., income, employment) for customer segmentation."
+  - "Data was collected during COVID-19 lockdowns, which may not reflect behavior under normal conditions."
 remember_this:
-  - Perceived benefit is the strongest predictor of app usage behavior at 100% importance.
-  - Random Forest and ANN both achieved over 96% accuracy in predicting user behavior.
-  - Integration of health belief model with technology acceptance improves prediction for pandemic contexts.
-  - Filipino consumers' online grocery usage is driven by vulnerability and performance expectancy.
+  - "Perceived benefit was the most significant driver of online grocery usage behavior."
+  - "The Artificial Neural Network achieved a high accuracy of 96.63% for predicting usage behavior."
+  - "The Random Forest Classifier achieved a consistent 96% accuracy with zero standard deviation."
+  - "Filipino consumers were highly receptive to online grocery during the COVID-19 pandemic."
 ```

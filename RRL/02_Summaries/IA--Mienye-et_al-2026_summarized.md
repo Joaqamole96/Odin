@@ -1,114 +1,168 @@
 ```yaml
-paper_id: 10.3390/info17040395
-designation: international
-title: Deep Learning for Credit Risk Prediction: A Survey of Methods, Applications, and Challenges
-authors: Mienye, I. D.; Esenogho, E.; Modisane, C.
+paper_id: "10.3390/info17040395"
+designation: "international"
+title: "Deep Learning for Credit Risk Prediction: A Survey of Methods, Applications, and Challenges"
+authors: "Mienye, I. D.; Esenogho, E.; Modisane, C."
 year: 2026
-venue: Information
+venue: "Information"
 odin_topics:
-  - 3.A
-  - 5.C
-  - 6.B
-  - 8.B
-  - 10.A
-  - 12.B
-shorthand_tags:
-  - /expense-categorization
-  - /behavioral-profile
-  - /spending-forecast
-  - /anomaly-detection
-  - /data-privacy
-  - /evaluation
-tldr: Deep learning architectures including MLPs, RNNs, transformers, and GNNs improve credit risk prediction over traditional models when large, rich datasets are available, but face challenges in interpretability, fairness, and operational deployment.
-problem_and_motivation: Traditional credit risk models like logistic regression fail to capture nonlinear interactions and temporal dynamics in borrower data. Deep learning offers architectures that can model complex patterns, but a systematic review focusing on borrower-level prediction across model families was missing.
+  - "4.A"
+  - "4.B"
+  - "5.C"
+  - "6.A"
+  - "6.B"
+  - "10.A"
+  - "10.B"
+tldr: "A systematic survey of deep learning architectures for credit risk prediction, covering MLP, CNN, RNN, Transformer, and GNN models across tabular, sequential, and relational borrower data."
+problem_and_motivation: "Traditional credit risk models like logistic regression and tree-based ensembles struggle to capture nonlinearities, temporal dynamics, and relational dependencies in modern financial datasets. While deep learning offers a path forward, the review literature has lacked a unified synthesis that maps model families to data modalities and credit-risk objectives for borrower-level prediction."
 approach:
-  - Searched IEEE Xplore, Scopus, ACM, ScienceDirect, SpringerLink, Web of Science, and Google Scholar using credit-risk and deep learning terms.
-  - Screened 380 records via PRISMA flow, retaining 140 deep learning application studies and 18 surveys.
-  - Extracted data on data modality (tabular, sequential, textual, relational), model architecture (MLP, CNN, RNN/LSTM/GRU, Transformer, GNN, hybrid), credit product segment, and evaluation metrics.
-  - Synthesized findings across model families, highlighting performance comparisons and reporting gaps such as limited use of time-ordered validation.
+  - "Searched IEEE Xplore, Scopus, ACM Digital Library, ScienceDirect, SpringerLink, Web of Science, and Google Scholar using credit-risk and deep learning keywords."
+  - "Restricted to journal articles and conference papers from 2015 to 2025, with foundational earlier studies added via citation tracking."
+  - "Screened 380 initial records through de-duplication, title/abstract screening, and full-text assessment to retain 140 application studies and 18 survey papers."
+  - "Organised reviewed studies by model class: tabular MLP, sequential RNN/LSTM/GRU, CNN, Transformer, GNN, and hybrid architectures."
+  - "Extracted data modality, architecture, credit product segment, prediction target, and evaluation metrics for each included study."
 findings:
-  - "num: LSTM reduced MAE from 0.095 to 0.072 and RMSE from 0.119 to 0.093 for peer-to-peer default rate forecasting."
-  - "num: TabNet-Stacking ensemble achieved accuracy 0.979 and AUC 0.941 on the Tianchi credit dataset."
-  - "num: Residual-enhanced BiLSTM with multi-head attention achieved AUC 0.982 and F1 0.958 on Freddie Mac data."
-  - Deep models outperform traditional scorecards and ensembles only when trained on sufficiently large, temporally representative datasets.
-  - GNNs capture relational risk propagation in SME supply chains and interbank networks, achieving AUC improvements of 0.85-2.5% over continuous-time baselines.
-  - Most studies rely on random splits rather than time-ordered validation, limiting external validity and causing over-optimistic performance estimates.
+  - "num: MLPs with L1–L2 regularisation achieved 80.12% accuracy for corporate credit risk, outperforming logistic regression (AUC 0.717) and SVM (AUC 0.738)."
+  - "num: LSTM networks reduced MAE from 0.095 to 0.072 and RMSE from 0.119 to 0.093 for monthly default rate forecasting versus ARIMA and SVM."
+  - "num: TabNet-Stacking ensemble reached 97.9% accuracy and 0.941 AUC on a large-scale credit dataset with 800,000 cases."
+  - "num: Residual-enhanced BiLSTM with multi-head attention achieved AUC 0.982 and F1 0.958 on the Freddie Mac Single-Family dataset."
+  - "num: Weighted-loss TabTransformer increased accuracy on the German Credit dataset from 93% to 95% with SHAP-based explanations."
+  - "num: Relational graph attention networks achieved AUC 0.799 and KS 0.528 for SME default prediction using shared-director and business-interaction graphs."
+  - "Deep tabular models are competitive with tree-based ensembles on large datasets with high-cardinality categorical features but offer modest gains on small benchmarks."
+  - "Sequential architectures like LSTM and GRU excel at dynamic behavioural scoring when rich post-origination histories are available."
+  - "Transformers unify behavioural sequences, categorical embeddings, textual narratives, and graph-structured relationships within a single modelling interface."
+  - "GNNs capture contagion and correlated risk in interconnected portfolios that tabular and sequential models cannot represent structurally."
 key_figures_tables:
-  - "Table 1: Summary of related reviews on credit risk modelling → Highlights gaps in deep learning coverage for borrower-level credit risk."
-  - "Table 3: Summary of deep learning architectures for credit risk → MLP for tabular, LSTM/GRU for sequences, Transformers for global dependencies, GNNs for relational data."
-  - "Figure 1: PRISMA flowchart of literature search → 380 initial records, 140 application studies after screening."
+  - "Table 1: Summary of related reviews on credit risk modelling → Positions this survey as the first unified synthesis of DL model families for borrower-level credit risk."
+  - "Figure 1: PRISMA flowchart of literature search and screening → Documents the systematic selection of 140 application studies and 18 survey papers."
+  - "Figure 2: Basic structure of a feed-forward neural network for tabular credit data → Illustrates MLP architecture with hidden layers for default prediction."
+  - "Figure 3: Architecture of the LSTM network showing gating mechanisms → Visualises forget, input, and output gates for long-term temporal pattern preservation."
+  - "Figure 4: Architecture of the GRU network with update and reset gates → Shows simplified recurrent structure for efficient behavioural sequence modelling."
+  - "Figure 5: Basic CNN architecture adapted for one-dimensional financial sequences → Depicts convolutional and pooling layers for local repayment pattern extraction."
+  - "Figure 6: Message passing mechanism in a GNN for borrower networks → Illustrates neighbour aggregation for relational credit risk propagation."
+  - "Table 2: Summary of benchmark datasets commonly used in credit risk prediction → Lists German Credit, Australian Credit, Taiwan Credit Card Default, Home Credit, and LendingClub datasets."
+  - "Table 3: Summary of deep learning architectures for credit risk modelling → Compares MLP, CNN, RNN, Transformer, GNN, and hybrid models by mechanism, strengths, and limitations."
+  - "Table 4: Summary of deep learning applications in credit risk prediction → Consolidates 25 peer-reviewed studies across tabular, sequential, transformer-based, and GNN-based models."
+  - "Table 5: Challenges in deep learning credit risk modelling and aligned research directions → Maps evaluation integrity, imbalance, interpretability, robustness, and governance issues to emerging research directions."
 key_equations:
-  - equation: "EL = PD \\times LGD \\times EAD"
-    explanation: "Expected loss as product of probability of default, loss given default, and exposure at default."
-  - equation: "P(y=1|x) = \\sigma(w^{\\top}x + b) = \\frac{1}{1+\\exp(-w^{\\top}x - b)}"
-    explanation: "Logistic regression for probability of default."
-  - equation: "h_t = \\tanh(W_h h_{t-1} + W_x x_t + b)"
-    explanation: "RNN hidden state update for temporal sequences."
-  - equation: "\\text{Attention}(Q,K,V) = \\text{softmax}\\left(\\frac{QK^{\\top}}{\\sqrt{d_k}}\\right)V"
-    explanation: "Scaled dot-product attention for global dependency modelling."
+  - equation: "EL = PD × LGD × EAD"
+    explanation: "Expected loss decomposes into probability of default, loss given default, and exposure at default."
+  - equation: "P(y=1|x) = σ(w^T x + b) = 1/(1 + exp(-w^T x - b))"
+    explanation: "Logistic regression models default probability as a linear log-odds function."
+  - equation: "h_t = ϕ(W h_{t-1} + U x_t + b)"
+    explanation: "RNN hidden state update with nonlinear activation over sequential input."
+  - equation: "f_t = σ(W_f [h_{t-1}, x_t] + b_f), i_t = σ(W_i [h_{t-1}, x_t] + b_i), C_t = f_t ⊙ C_{t-1} + i_t ⊙ C̃_t"
+    explanation: "LSTM forget and input gates regulate memory cell updates for long-term dependencies."
+  - equation: "Attention(Q,K,V) = softmax(QK^T / √d_k) V"
+    explanation: "Scaled dot-product attention enables global dependency modelling across sequences or features."
+  - equation: "h_v^{(l+1)} = σ(∑_{u∈N(v)} 1/c_{vu} W^{(l)} h_u^{(l)})"
+    explanation: "GNN message passing updates borrower embeddings by aggregating neighbour representations."
 definitions:
-  - term: DL
-    definition: Deep learning, neural networks with multiple hidden layers.
-  - term: MLP
-    definition: Multi-layer perceptron, feed-forward neural network for tabular data.
-  - term: RNN
-    definition: Recurrent neural network for sequential data.
-  - term: LSTM
-    definition: Long short-term memory network with gating to capture long-range dependencies.
-  - term: GRU
-    definition: Gated recurrent unit, simplified LSTM with two gates.
-  - term: TCN
-    definition: Temporal convolutional network using dilated convolutions for sequences.
-  - term: GNN
-    definition: Graph neural network for relational data via message passing.
-  - term: PD
-    definition: Probability of default, likelihood a borrower fails to meet repayment obligations.
-  - term: AUC
-    definition: Area under the receiver operating characteristic curve, ranking performance metric.
+  - term: "AUC"
+    definition: "Area under the receiver operating characteristic curve, a threshold-agnostic measure of ranking performance."
+  - term: "AUPRC"
+    definition: "Area under the precision-recall curve, sensitive to minority-class performance in imbalanced datasets."
+  - term: "BiLSTM"
+    definition: "Bidirectional long short-term memory network that processes sequences in both forward and backward directions."
+  - term: "CNN"
+    definition: "Convolutional neural network using shared-weight filters to extract local temporal or spatial patterns."
+  - term: "DL"
+    definition: "Deep learning, a subfield of machine learning using multi-layered neural networks for representation learning."
+  - term: "EAD"
+    definition: "Exposure at default, the total outstanding amount a lender is exposed to when default occurs."
+  - term: "EL"
+    definition: "Expected loss, the product of PD, LGD, and EAD used in regulatory capital calculations."
+  - term: "GNN"
+    definition: "Graph neural network, a model that learns representations by message passing over graph-structured relational data."
+  - term: "GRU"
+    definition: "Gated recurrent unit, a simplified recurrent architecture with update and reset gates for sequence modelling."
+  - term: "LGD"
+    definition: "Loss given default, the proportion of exposure not recovered after a borrower defaults."
+  - term: "LR"
+    definition: "Logistic regression, a linear model for binary classification with a sigmoid output."
+  - term: "LSTM"
+    definition: "Long short-term memory, a recurrent network with gating mechanisms for preserving long-range temporal dependencies."
+  - term: "ML"
+    definition: "Machine learning, algorithms that learn patterns from data without explicit programming."
+  - term: "MLP"
+    definition: "Multi-layer perceptron, a feed-forward neural network with multiple hidden layers and nonlinear activations."
+  - term: "MLOps"
+    definition: "Machine learning operations, practices for versioning, monitoring, and governing ML models in production."
+  - term: "PD"
+    definition: "Probability of default, the likelihood that a borrower fails to meet repayment obligations."
+  - term: "RNN"
+    definition: "Recurrent neural network, a model with cyclic connections for processing sequential data."
+  - term: "RWA"
+    definition: "Risk-weighted asset, a measure of asset risk used in Basel regulatory capital requirements."
+  - term: "SHAP"
+    definition: "SHapley Additive exPlanations, a game-theoretic approach for interpreting model predictions."
+  - term: "SME"
+    definition: "Small and medium enterprise, a business segment frequently targeted in credit risk studies."
+  - term: "TCN"
+    definition: "Temporal convolutional network, a dilated convolutional architecture for sequence modelling with parallel computation."
+  - term: "XAI"
+    definition: "Explainable artificial intelligence, methods for making model decisions interpretable to humans."
 critical_citations:
-  - "[Vaswani et al., 2017] — Introduced transformer self-attention for sequence modelling."
-  - "[LeCun et al., 2015] — Foundational review of deep learning."
-  - "[Lessmann et al., 2015] — Benchmarking study for credit scoring evaluation."
-  - "[Rudin, 2019] — Argues for interpretable models over black-box explanations."
+  - "[LeCun et al., 2015] — Foundational paper establishing deep learning as a transformative approach."
+  - "[Vaswani et al., 2017] — Introduced the Transformer architecture with self-attention for sequence modelling."
+  - "[Lessmann et al., 2015] — Benchmarking study highlighting limitations of small public credit datasets."
+  - "[Thomas et al., 2017] — Comprehensive text on credit scoring and probability of default modelling."
+  - "[Rudin, 2019] — Argues for interpretable models over black-box explanations in high-stakes decisions."
+  - "[Hardt et al., 2016] — Established equalised odds as a fairness criterion for supervised learning."
+  - "[Bergmeir and Benítez, 2012] — Critical analysis of cross-validation for time-series evaluation."
 relevance:
   topics:
-    - code: 3.A
-      name: Expense Categorization Frameworks
-      justification: "MLP and transformer architectures for tabular data can categorize financial transactions."
-    - code: 5.C
-      name: Financial Behavioral Profile Classification Algorithm
-      justification: "Recurrent and transformer models for behavioural sequence modeling support dynamic user profiling."
-    - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: "Sequential models like LSTM, GRU, and TCN for time series forecasting are directly applicable to predicting future spending."
-    - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: "Deep learning methods for detecting unusual patterns in borrower data can be adapted for expense anomaly detection."
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      justification: "Paper discusses differentially private training and privacy-preserving collaborative learning for financial models."
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: "Discussion of AUC, calibration metrics (Brier score, ECE), and temporally valid evaluation (out-of-time splits) informs Odin's module testing."
-  contribution: "The survey's taxonomy of deep learning architectures for sequential data (LSTM, GRU, TCN) directly supports Odin's spending forecasting module by identifying state-of-the-art temporal models and their evaluation protocols. For anomaly detection, the paper reviews autoencoder-based and LSTM-based approaches that can flag irregular spending patterns, as well as cost-sensitive learning for imbalanced data. The discussion of graph neural networks suggests potential for modeling relational spending behaviors among user groups or shared financial goals. Additionally, the critical assessment of evaluation integrity (out-of-time validation, calibration metrics like Brier score and expected calibration error) provides a blueprint for Odin's system evaluation framework, while the coverage of privacy-preserving techniques (differential privacy, federated learning) informs data security design."
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Reviews the broader credit risk modelling landscape but not PFMS specifically."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "contextual"
+      justification: "Discusses limitations of statistical and ML credit models that parallel gaps in PFMS."
+    - code: "5.C"
+      name: "Classification Approaches for Financial Behavioral Profiles"
+      relevance: "low"
+      justification: "Covers classification methods for credit scoring that could inform user profiling in Odin."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Provides a comprehensive review of DL predictive models applicable to spending and risk forecasting."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "medium"
+      justification: "Reviews LSTM, GRU, and TCN architectures for behavioural sequence forecasting."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "low"
+      justification: "Discusses differential privacy and federated learning as deployment considerations."
+    - code: "10.B"
+      name: "User Trust in Personal Finance Systems"
+      relevance: "low"
+      justification: "Addresses interpretability, fairness, and governance as trust-enabling factors."
+  contribution: "This paper surveys deep learning architectures that can inform Odin's predictive modules, particularly spending forecasting and user behavioural classification. The synthesis of sequential models provides methodological grounding for Odin's 6.A and 6.B forecasting components. The critical assessment of evaluation integrity, including out-of-time validation and calibration-aware reporting, guides how Odin's algorithmic modules should be assessed. The discussion of privacy-preserving techniques and interpretability frameworks supports Odin's data privacy and user trust design principles. The taxonomy linking model families to data structures offers a conceptual map for selecting appropriate techniques for Odin's heterogeneous user data."
   directly_justifies:
-    - "Deep models outperform traditional methods only when trained on sufficiently large, temporally representative datasets."
-    - "Recurrent architectures like LSTM maintain superior temporal sensitivity for behavioural scoring."
-    - "Most deep credit risk studies rely on random splits, which leak future information and overestimate performance."
-    - "Probability calibration is rarely assessed, even though poorly calibrated scores lead to unstable approval rates and mis-priced risk."
+    - "LSTM and GRU networks outperform static classifiers for behavioural sequence forecasting when rich post-origination histories are available."
+    - "Out-of-time validation is essential to avoid temporal leakage and obtain faithful deployment performance estimates."
+    - "Calibration-aware reporting using Brier score and expected calibration error should accompany AUC-based evaluation."
+    - "Tabular deep models with attention mechanisms improve discrimination on high-cardinality categorical features."
+    - "GNNs capture relational dependencies in interconnected financial networks that tabular models cannot represent."
   limits:
-    - "Paper focuses on credit default prediction in lending, not personal spending behavior or PFMS-specific tasks."
-    - "Datasets reviewed are loan application and repayment records (e.g., Home Credit, LendingClub), not individual transaction streams from young professionals."
-    - "No discussion of mobile-first design principles or user engagement mechanisms central to Odin."
-  mapping_rationale: "This survey on deep learning for credit risk prediction was screened against Odin's functional domains. The paper provides citeable claims about algorithmic modules: sequential models (LSTM, GRU, TCN) for time-series forecasting (domain 6), anomaly detection via deep architectures (domain 8), and tabular deep learning for categorization tasks (domain 3). It also covers behavioral profiling via sequence models (domain 5), data privacy techniques like differential privacy (domain 10), and evaluation methodologies including calibration metrics and time-ordered validation (domain 12). Codes related to Filipino demographics (1.A-1.C), culturally specific practices (2.A-2.B), PFMS landscape (4.A-4.B), budgeting strategies (7.A-7.C), user retention (11.A-11.B), and savings/debt management (13.A-13.B) were rejected because the paper does not address these topics. Borderline cases like anomaly detection (8.B) were included because the paper's discussion of detecting unusual borrower behaviour directly maps to spending anomaly detection in PFMS, even though the context is credit risk."
+    - "Survey focuses on credit risk prediction in lending, not on personal finance management or spending behaviour."
+    - "Reviewed studies rely heavily on small public benchmarks that understate uncertainty and overestimate generalisability."
+    - "Interpretability and fairness are discussed as challenges but few reviewed studies implement fairness-aware training objectives."
+    - "Privacy-preserving techniques like differential privacy are mentioned but not empirically evaluated in the covered credit risk studies."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The following domains were flagged as relevant: Existing Systems & Gaps (4.A, 4.B) as contextual because the paper reviews the credit risk modelling landscape and its limitations, though not PFMS specifically. Behavioral Profiling & Classification (5.C) as low because the classification approaches for credit scoring have methodological overlap with user profiling. Spending Forecasting (6.A, 6.B) as medium because the paper provides a comprehensive review of predictive models and sequential forecasting algorithms directly applicable to Odin's forecasting modules. Data Privacy & User Trust (10.A, 10.B) as low because privacy and interpretability are discussed as deployment challenges but are not central to the survey. The following domains were considered and rejected: Filipino Cultural Context (no Philippine or cultural content), Expense Categorization (no expense taxonomy), Budget Recommendation (no budget allocation methods), Anomaly Detection (only passing mention), Mobile-First Design (not addressed), User Retention & Engagement (not addressed), System Evaluation (evaluation is for credit risk, not PFMS), Savings & Debt Management (credit default is tangentially related to debt but the paper does not address debt management strategies). The paper's overall relevance to Odin is methodological rather than domain-specific, providing techniques and evaluation principles that can inform Odin's predictive modules and design choices."
 limitations:
-  - "Survey limited to peer-reviewed English-language studies indexed in major databases; does not cover proprietary implementations or regulatory grey literature."
-  - "Non-trivial portion of deep credit risk studies relies on random splits instead of time-ordered validation, weakening external validity. [unacknowledged]"
-  - "Interpretability and fairness are often treated as add-ons rather than integrated into training objectives. [unacknowledged]"
-  - "Probability calibration is rarely assessed despite being central to decision quality. [unacknowledged]"
+  - "The survey relies on English-language peer-reviewed studies indexed in major databases, excluding proprietary implementations and regulatory grey literature. [unacknowledged]"
+  - "Performance comparisons across studies are not standardised due to heterogeneous datasets, targets, and evaluation horizons. [unacknowledged]"
+  - "No formal risk-of-bias scoring protocol was applied, limiting the ability to assess study quality systematically. [unacknowledged]"
+  - "The survey focuses on borrower-level credit risk and does not cover market risk, liquidity risk, or portfolio optimisation without borrower-level labels."
+  - "Small public benchmarks dominate the reviewed studies, limiting generalisability to real-world portfolios with macroeconomic dynamics."
 remember_this:
-  - "Deep learning improves credit risk prediction on large, rich datasets."
-  - "Time-ordered validation is essential to avoid over-optimistic performance estimates."
-  - "Calibration metrics like Brier score matter more than AUC alone."
-  - "GNNs capture relational risk propagation beyond tabular models."
+  - "LSTM and GRU networks excel at behavioural sequence forecasting for dynamic credit scoring."
+  - "Out-of-time validation avoids temporal leakage and yields more faithful performance estimates."
+  - "Deep tabular models with attention compete with tree ensembles on large, high-cardinality datasets."
+  - "GNNs capture relational risk propagation in interconnected borrower networks."
+  - "Calibration-aware evaluation using Brier score should accompany AUC-based reporting."
 ```

@@ -1,32 +1,39 @@
 ```yaml
-paper_id: 10.62225/2583049X.2024.4.3.2862
+paper_id: https://doi.org/10.62225/2583049X.2024.4.3.2862
 designation: local
-title: "Navigating Financial Struggle: The Ripple Effect of Inflation Rates on Working Students"
-authors: "D, Althea Grace; R, Valerie Mae; G, Lazaro Bryan Louis"
+title: Navigating Financial Struggle: The Ripple Effect of Inflation Rates on Working Students
+authors: Althea Grace D.; Valerie Mae R.; Lazaro Bryan Louis G.
 year: 2024
-venue: "International Journal of Advanced Multidisciplinary Research and Studies"
+venue: International Journal of Advanced Multidisciplinary Research and Studies
 odin_topics:
-  - "1.C"
-  - "7.A"
-  - "13.A"
-shorthand_tags:
-  - "#financial-behavior"
-  - "#budgeting-strategies"
-  - "#savings-management"
-tldr: "Inflation increases financial strain on working students, forcing budget adjustments, prioritizing necessities, and seeking government aid."
-problem_and_motivation: "Rising inflation rates disproportionately burden working students who balance academic and financial obligations. Limited research examines how this demographic navigates escalating costs and what coping strategies they employ. Understanding these dynamics is essential for designing targeted support systems."
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.D
+  - 4.A
+  - 7.A
+  - 7.B
+  - 10.A
+  - 11.A
+  - 13.A
+tldr: Rising inflation increases financial strain on Filipino working students, impacting their budgeting, academic performance, and overall well-being.
+problem_and_motivation: Rising inflation creates a significant barrier for working students who must juggle academic and financial obligations. The financial strain from increasing costs affects their stability, academic achievement, and well-being. There is a need to understand these unique challenges to design targeted support systems.
 approach:
-  - "Qualitative phenomenological study with 6 interviewees and 10 quantitative participants."
-  - "Convenience sampling of working students from Noveleta Senior High School, Philippines."
-  - "Data collected via open-ended questionnaires to explore financial struggles and coping mechanisms."
-  - "Thematic analysis identified themes: financial support, budgeting, effects of inflation, balancing work and study, daily life adjustment, purchasing strategies, and financial responsibilities."
+  - A phenomenological study design was used to investigate the ripple effect of inflation rates on working students.
+  - Data was collected using a questionnaire with open-ended questions to gather extensive qualitative information.
+  - Six interviewees served as participants for the qualitative part, and ten served for the quantitative part.
+  - Respondents were selected using an accidental or convenience sampling technique.
+  - The study analyzed how working students respond to inflation and what coping strategies they employ.
 findings:
-  - "Working students experience disqualification or slot shortages when accessing government financial aid."
-  - "Budgeting and prioritizing necessities (food, bills, tuition) are primary coping strategies."
-  - "Students pack lunch or eat at carinderia to save money."
-  - "Inflation reduces purchasing power and increases stress, forcing students to work more hours."
-  - "Balancing work and study decreases time for academics and proper nutrition."
-  - "Government financial assistance programs are perceived as insufficient and difficult to access."
+  - num: 8% of the total college population in the Philippines, around 216,000 students, work while studying.
+  - Working students face challenges in accessing financial support due to disqualification or limited slots for beneficiaries.
+  - Budgeting and prioritization are key strategies for managing finances amidst inflation.
+  - Inflation heightens students' awareness of financial stability and economic inequality within society.
+  - Students employ strategies such as eating at carinderias or packing food to save money.
+  - Balancing academic goals and work is difficult due to limited time for studying caused by work demands.
+  - Inflation forces daily life adjustments, limiting the purchase of necessities due to rising costs.
+  - Working students often have no time or money for personal wants due to financial responsibilities like paying bills.
 key_figures_tables:
   - "None."
 key_equations:
@@ -34,40 +41,81 @@ key_equations:
     explanation: ""
 definitions:
   - term: "Inflation"
-    definition: "General increase in prices and fall in purchasing power."
-  - term: "Financial support"
-    definition: "Monetary assistance from government or institutions including scholarships and allowances."
+    definition: "A measure of the overall impact of price changes for a diversified set of products and services over a specified time."
+  - term: "Financial Support"
+    definition: "Any sort of monetary assistance provided to an individual, institution, or government."
 critical_citations:
-  - "[CHED, 2021] — 216,000 working students, 8% of college population."
-  - "[Bakhtiari, 2021] — government aid increases firm financing propensity."
+  - "[Tumin, et al., 2020] — Challenges of working students in higher education."
+  - "[Bakhtiari, 2021] — Impact of government financial assistance on firms."
+  - "[Sharma, et al., 2020] — Discussion of debt burdens and consumerism."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Describes spending adjustments, saving strategies, and financial stress responses under inflation."
-    - code: "7.A"
-      name: "Budgeting Strategies as Domain Knowledge"
-      justification: "Documents prioritization of essentials and budget cuts (e.g., packing lunch) as coping mechanisms."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Reveals that inflation erodes savings value and forces students to adopt strict saving behaviors."
-  contribution: "This paper informs Odin's budget recommendation module by showing that inflation-driven price changes require dynamic budget adjustments. It highlights the need for savings goal management that accounts for rising costs and reduced purchasing power. The coping strategies documented (e.g., prioritizing necessities, seeking government aid) can be integrated into behavioral profiling to identify financially stressed users. The findings also underscore the importance of accessible financial support information within a PFMS for young professionals facing economic shocks."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: medium
+      justification: "Focuses on working students, a subset of young professionals, within the Philippine context."
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: "Details the financial structure of working students, including income and expenses."
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: "Directly examines financial behavior, coping mechanisms, and budgeting strategies of working students."
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: "Discusses culturally relevant practices like 'pagbabadyet' and seeking government support."
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: "Mentions seasonal spending indirectly through the impact of inflation on daily and educational expenses."
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: "References government financial support programs as existing systems for students."
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: high
+      justification: "Highlights budgeting and prioritization as a core strategy for coping with inflation."
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: contextual
+      justification: "Provides user experiences with budgeting, which can inform the design of budget recommendation features."
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: "No direct discussion on data privacy."
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: contextual
+      justification: "The coping mechanisms and stress described are relevant to user engagement and motivation."
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: medium
+      justification: "Discusses strategies for saving money, which is relevant to savings goal management."
+  contribution: "This study provides qualitative insights into the financial behaviors and challenges of Filipino working students, which can inform Odin's design for young professionals. The findings on budgeting practices, coping mechanisms, and the impact of inflation are directly relevant to developing behavioral profiles and budget recommendation modules. The paper's emphasis on financial stress and the need for support systems highlights the importance of user trust and engagement in a PFMS. It also offers a real-world context for understanding the financial structure and priorities of Odin's target demographic."
   directly_justifies:
-    - "Inflation forces working students to reduce discretionary spending and prioritize essentials like food and tuition."
-    - "Accessing government financial aid is hindered by bureaucratic barriers and limited slots."
-    - "Balancing work and study during inflation reduces academic time and increases stress."
+    - "Working students prioritize essentials like food and bills over personal wants when budgeting."
+    - "Inflation directly leads to increased financial stress and reduced academic time for working students."
+    - "Seeking government financial support is a common coping strategy for working students."
+    - "Budgeting and reducing unnecessary expenses are primary strategies for managing inflation."
   limits:
-    - "Small sample size (16 participants) limits generalizability."
-    - "Convenience sampling from a single high school may not represent all working students."
-    - "No longitudinal data to assess how coping strategies evolve over time."
-  mapping_rationale: "The paper was screened against Odin's functional domains. Behavioral profiling (domain 5) applies because it details financial behaviors and coping under inflation. Budget recommendation (domain 7) applies due to explicit budgeting strategies. Savings and debt management (domain 13) applies as students adopt saving tactics and face eroded savings. Topics like expense categorization (3.A) and anomaly detection (8.A) were rejected because the paper does not discuss labeling transactions or identifying outliers. Algorithm-specific topics (e.g., 7.C) were excluded as no model is proposed. The paper is local (Philippine high school) and contextual for Filipino young professionals despite the student focus."
+    - "The study is based on a small, non-random sample from a single senior high school, limiting generalizability."
+    - "It relies on self-reported data, which may be subject to recall bias and social desirability bias."
+    - "The study does not evaluate any specific personal finance system, limiting its direct applicability to system design. [unacknowledged]"
+    - "The quantitative component lacks rigorous statistical analysis, reducing the strength of its quantitative findings."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. Domains flagged as relevant include Filipino Cultural Context (2.A, 2.D), Expense Categorization (implicitly via budgeting), Behavioral Profiling (5.A, 5.B), Budget Recommendation (7.A, 7.B), and Savings & Debt Management (13.A). The paper is rated 'high' for 1.C and 7.A as it directly discusses the financial behavior and budgeting strategies of working students. It is rated 'medium' for 1.A, 1.B, 2.A, and 13.A because it provides contextual information on the demographic and its financial practices. Other topics like 3.A (Expense Categorization Frameworks) and 6.A (Predictive Modeling) were considered but rejected as the paper does not discuss computational or systematic approaches to these areas. The overall relevance to Odin lies in providing a qualitative foundation for understanding the target user's financial struggles and coping behaviors."
 limitations:
-  - "Qualitative design with small sample size limits statistical generalizability. [unacknowledged]"
-  - "No comparison group of non-working students to isolate inflation effects. [unacknowledged]"
-  - "Convenience sampling may introduce selection bias. [unacknowledged]"
+  - "Small sample size from a single educational institution limits generalizability."
+  - "Reliance on self-reported data may introduce bias."
+  - "Lack of rigorous quantitative analysis for the quantitative data."
+  - "The study does not propose or evaluate any algorithmic or system-based solution. [unacknowledged]"
+  - "Does not examine the long-term impact of inflation on financial well-being. [unacknowledged]"
 remember_this:
-  - "Inflation forces working students to prioritize essentials over wants."
-  - "Budgeting and packing lunch are common coping strategies."
-  - "Accessing government financial aid faces bureaucratic barriers."
-  - "Balancing work and study reduces time for academics."
+  - "8% of Filipino college students work while studying."
+  - "Budgeting and prioritization are key strategies for managing inflation."
+  - "Inflation increases financial stress and reduces time for academics."
+  - "Students rely on government support and personal savings strategies to cope."
+  - "Inflation heightens awareness of economic inequality among students."
 ```

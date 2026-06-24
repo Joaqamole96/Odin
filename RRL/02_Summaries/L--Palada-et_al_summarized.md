@@ -1,88 +1,122 @@
 ```yaml
-paper_id: "10.47772/IJRISS.2024.8080177"
-designation: "local"
-title: "Uncovering the Challenges and Opportunities of Gig Economy for Small Businesses"
-authors: "Palada, M.; Pamor, P. C. B.; Sulit, J. R. B.; Villegas, R. L. C."
+paper_id: 10.47772/IJRISS.2024.8080177
+designation: local
+title: Uncovering the Challenges and Opportunities of Gig Economy for Small Businesses
+authors: Palada, M.; Pamor, P.C.B.; Sulit, J.R.B.; Villegas, R.C.
 year: 2024
-venue: "International Journal of Research and Innovation in Social Science (IJRISS)"
+venue: International Journal of Research and Innovation in Social Science (IJRISS)
 odin_topics:
-  - "1.C"
-  - "2.B"
-  - "4.B"
-  - "13.B"
-shorthand_tags:
-  - "/1.C"
-  - "/2.B"
-  - "/4.B"
-  - "/13.B"
-tldr: "The gig economy offers small businesses reduced costs and access to talent but introduces legal, financial, and quality control challenges requiring strategic management."
-problem_and_motivation: "Small businesses struggle to navigate legal, financial, and quality issues when engaging gig workers. The rapid growth of the gig economy in the Philippines lacks adequate frameworks. This study identifies strategies to balance benefits and risks."
+  - 2.A
+  - 2.B
+  - 4.A
+  - 4.B
+  - 5.A
+  - 7.C
+  - 8.C
+  - 9.A
+  - 10.A
+  - 11.A
+tldr: The gig economy offers small businesses reduced costs and talent access but introduces legal, financial, and quality control challenges requiring supportive policies and risk management.
+problem_and_motivation: Small businesses face a gap in understanding how to navigate the gig economy's benefits and risks, especially in the Philippine context where legal frameworks are nascent and worker protections are insufficient. This knowledge gap hinders small businesses from effectively leveraging gig workers while managing operational and legal uncertainties.
 approach:
-  - "Conducted thematic analysis following Braun and Clarke's method on literature from 2020-2024."
-  - "Selected sources from scholarly databases and online resources using keywords 'gig economy', 'business', 'freelance', and 'gig workers'."
-  - "Employed exploratory research design to investigate challenges and opportunities for small businesses."
-  - "Synthesized findings from 74 references including peer-reviewed articles, reports, and policy documents."
-  - "Organized results into four thematic tables covering strategies, operational tactics, complexities, and policies."
+  - This study employs an exploratory research design using thematic analysis of literature from 2020 to 2024.
+  - Data was sourced from scholarly articles and online resources using keywords like "gig economy," "business," and "gig workers."
+  - The study analyzes literature to identify key themes related to challenges, opportunities, regulations, and strategies for small businesses in the gig economy.
+  - Findings are contextualized using existing theoretical frameworks to provide practical recommendations.
+  - The methodology focuses on a Philippine context, drawing insights from local policy discussions and worker protection acts.
 findings:
-  - "num: 35% higher freelancing earnings in the Philippines compared to previous levels."
-  - "num: 58% of independent contractors in Southeast Asia experience non-payment from clients."
-  - "num: 70% of gig workers express preference for gig work over traditional employment."
-  - "Gig economy provides cost savings by eliminating employee benefits, office space, and equipment expenses."
-  - "Legal and tax classification of gig workers as independent contractors creates administrative burdens and misclassification risks."
-  - "Income instability and unpredictable cash flow challenge small business financial management and planning."
-  - "Hybrid workforce management integrating regular and gig workers requires new business models and coordination strategies."
-  - "Clear communication, flexible schedules, training, and performance incentives improve gig worker partnership outcomes."
-  - "Anti-discrimination policies, minimum wage standards, and benefit access promote freelancer rights and economic stability."
+  - num: The Philippines is the seventh fastest-growing freelancing market, with gig workers earning 35% more than before.
+  - The gig economy provides small businesses with reduced operational costs, access to a diverse talent pool, and increased productivity.
+  - Key challenges include legal and tax compliance issues, financial risks from income instability, and quality control of gig workers.
+  - The lack of an appropriate legal framework in the Philippines leaves gig workers without formal protection and social welfare benefits.
+  - Strategies for success include enhancing digital literacy, implementing comprehensive risk management, and developing supportive policies.
+  - Fair compensation and professional development opportunities are crucial for attracting and retaining top gig talent.
+  - Effective management of a hybrid workforce requires new business models and integration strategies.
+  - Transparent and fair rating systems on digital platforms are essential for accurate representation of gig workers' quality.
 key_figures_tables:
-  - "Table I: Strategies for fair and ethical business environment → Flexible work and fair compensation benefit both workers and employers."
-  - "Table II: Operational strategies to cultivate gig worker partnerships → Clear communication and training improve service quality and loyalty."
-  - "Table III: Complexities of gig economy on business operations → Regulatory inflexibility and worker misclassification pose legal and financial risks."
-  - "Table IV: Policies to protect freelancer rights → Minimum wage, benefit access, and platform transparency promote economic stability."
+  - Table I: Strategies for fostering a fair business environment → Benefits include improved work-life balance and reduced turnover.
+  - Table II: Operational strategies for cultivating partnerships with gig workers → Leads to higher customer satisfaction and loyalty.
+  - Table III: Business operations and decision-making complexities → Highlights cost savings and legal risks of misclassification.
+  - Table IV: Policies to protect freelancers → Includes fair wages, anti-discrimination, and legal recourse for non-payment.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "None."
-    definition: ""
+  - term: Gig Economy
+    definition: A labor market characterized by short-term, flexible jobs mediated by digital platforms.
+  - term: Gig Workers
+    definition: Independent contractors or freelancers who perform temporary work on a per-job basis.
+  - term: Freelancers
+    definition: Self-employed individuals offering services to clients without long-term employment contracts.
+  - term: Misclassification
+    definition: Incorrectly designating workers as independent contractors instead of employees, affecting their rights and benefits.
 critical_citations:
-  - "[Mia & Habaradas, 2020] — Overview of Philippine gig economy and platform work."
-  - "[Winegarden, 2021] — Benefits of gig economy for small business growth."
-  - "[Joshi et al., 2024] — Legal and tax challenges in gig worker classification."
-  - "[Bayudan-Dacuycuy et al., 2020] — COVID-19 and ICT driving gig economy expansion."
+  - "[Mia & Habaradas, 2020] — Foundational overview of gig economy in the Philippines."
+  - "[Winegarden, 2021] — Key source on gig economy's benefits for small business growth."
+  - "[Roy & Shrivastava, 2020] — Core analysis of opportunities and challenges."
+  - "[Thakur et al., 2022] — Identifies financial and management challenges for SMMEs."
+  - "[Bayudan-Dacuycuy et al., 2020] — Links ICT infrastructure and pandemic to gig economy rise."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Paper describes income instability and financial risks of gig workers, many of whom are young professionals."
-    - code: "2.B"
-      name: "Seasonal and Cyclical Spending Patterns"
-      justification: "Irregular gig income creates volatile cash flows and cyclical spending relevant to forecasting."
-    - code: "4.B"
-      name: "Limitations and Gaps in Existing Systems"
-      justification: "Identifies missing legal frameworks, tax policies, and worker protections for gig employment."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Financial instability from gig work may increase debt reliance; paper discusses cash flow challenges."
-  contribution: "This paper's findings on income instability inform Odin's spending forecasting module (6.B) by highlighting irregular cash flow patterns among gig workers. The legal and tax challenges identified justify Odin's data privacy and user trust modules (10.A, 10.B) to ensure compliant financial advice for users with non-traditional income. The discussion of gig workers' financial vulnerability supports Odin's debt management (13.B) and savings goal (13.A) modules for young professionals who supplement income through gig work."
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: contextual
+      justification: Discusses the Philippine gig market and cultural norms around work.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: Mentions gig work as a response to demand fluctuations.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: Provides context on the broader economic landscape for Filipino workers.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Highlights the lack of legal and social safety nets for gig workers in the Philippines.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Discusses the financial behavior and income instability of gig workers.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: low
+      justification: Relates to constraints in managing costs with an unpredictable workforce.
+    - code: 8.C
+      name: Cold-Start Baseline Strategies for Anomaly Detection
+      relevance: contextual
+      justification: Mentions the challenge of managing financial risks and income unpredictability.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: low
+      justification: Implicitly relies on mobile platforms for gig work.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: Mentions digital platforms connecting workers and clients.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: contextual
+      justification: Discusses strategies for engaging and retaining gig workers.
+  contribution: The paper provides a comprehensive overview of the gig economy's dual impact on Filipino small businesses, validating Odin's need to address income instability and legal gaps. It justifies Odin's design focus on flexible budget management for young professionals with variable incomes. The findings on worker classification and legal protections inform Odin's risk assessment and data privacy considerations. The emphasis on transparency and fair compensation aligns with Odin's goal of building user trust through ethical design.
   directly_justifies:
-    - "Gig workers face unpredictable income that complicates personal budgeting."
-    - "Small businesses using gig workers must manage cash flow volatility."
-    - "Legal misclassification of gig workers creates financial risks for both parties."
-    - "Access to benefits like health insurance is lacking for Filipino freelancers."
+    - The absence of a formal legal framework for gig workers in the Philippines highlights the need for personal finance tools to manage income unpredictability.
+    - Strategies like enhancing digital literacy and risk management are directly relevant to Odin's user support features.
+    - The challenges of worker misclassification underscore the importance of Odin's privacy and security modules in tracking income sources.
+    - The need for transparent hiring practices parallels Odin's need for clear expense categorization and user-declared preferences.
   limits:
-    - "Focuses on small business perspective, not gig worker perspective [unacknowledged]."
-    - "No primary data collection; relies entirely on existing secondary sources [unacknowledged]."
-    - "Philippine context but draws heavily from international literature with limited local empirical validation [unacknowledged]."
-    - "Does not address specific PFMS design or algorithmic implementation [unacknowledged]."
-  mapping_rationale: "The paper was screened against Odin's functional domains. Behavioral profiling (5.A-C) was rejected as the paper does not classify user financial behaviors. Spending forecasting (6.A-B) was partially supported by evidence of irregular income patterns. Budget recommendation (7.A-C) was rejected as no budgeting strategies are discussed. Anomaly detection (8.A-B) was considered but no algorithm is presented. Expense categorization (3.A-B) is absent. Mobile-first design (9.A-B) and data privacy (10.A-B) have no direct claims but legal compliance is relevant. User retention (11.A-B) and evaluation (12.A-B) are not addressed. Savings and debt management (13.A-B) are relevant due to financial instability. Topic 1.C (Filipino young professionals) is supported as many gig workers fall into this demographic. Topic 2.B (seasonal spending) is relevant due to gig income volatility. Topic 4.B (limitations of existing systems) is directly supported by the paper's critique of legal frameworks. Topic 13.B (debt management) is justified by the paper's discussion of financial risks and cash flow challenges. Borderline cases like 11.A (engagement) were rejected because the paper focuses on business operations, not app engagement."
+    - The study is a literature review and lacks primary empirical data on small business experiences in the Philippines.
+    - Focuses on general challenges without offering specific algorithmic or system-level solutions for a PFMS.
+  mapping_rationale: A systematic scan across all 12 functional domains was conducted. The domain of 'Existing Systems & Gaps' was highly relevant (topic 4.B) due to the paper's explicit discussion of legal and social protection gaps for Filipino gig workers. 'Behavioral Profiling' (5.A) was medium relevance as it details the financial behavior and income volatility of this demographic. 'Budget Recommendation' (7.C) was considered low because while it discusses cost constraints, it doesn't address algorithmic budget allocation. 'Anomaly Detection' (8.C) was contextual, as income instability is a risk, but the paper doesn't propose detection methods. 'Mobile-First Design' (9.A) and 'Data Privacy' (10.A) were low due to general mentions of digital platforms. 'Filipino Cultural Context' (2.A) was contextual for framing the local labor market. The domain of 'Savings & Debt Management' was rejected as the paper does not discuss these financial modules. Overall, the paper is highly relevant as contextual background for Odin's target user group and the economic environment they operate in, but it does not offer algorithmic solutions directly applicable to the system's core modules.
 limitations:
-  - "Literature review design lacks empirical validation of causal claims [unacknowledged]."
-  - "Geographic focus on Philippines but many cited studies are from other countries [unacknowledged]."
-  - "Does not evaluate the effectiveness of proposed policies or strategies [unacknowledged]."
-  - "Ignores potential positive impacts of gig economy on individual financial resilience [unacknowledged]."
+  - The study does not include primary empirical data from Filipino small businesses or gig workers. [unacknowledged]
+  - The findings are based on a literature review from a specific period (2020-2024), potentially limiting generalizability.
+  - The paper does not address specific algorithmic or computational techniques for personal finance management.
+  - The analysis is qualitative and does not provide statistical correlations or predictive models.
 remember_this:
-  - "Gig workers in the Philippines earn 35% more than before."
-  - "Income instability is a core challenge for gig economy participants."
-  - "Clear contracts and anti-discrimination policies protect freelancers."
-  - "Hybrid workforces need new management models and coordination."
+  - The Philippines is the seventh fastest-growing freelancing market globally.
+  - Gig workers earn 35% more on average but face significant income instability.
+  - A major gap is the lack of legal and social protection for Filipino gig workers.
+  - Small businesses benefit from gig economy flexibility but struggle with legal compliance.
+  - Fair compensation and training are critical for retaining gig talent and ensuring service quality.
 ```

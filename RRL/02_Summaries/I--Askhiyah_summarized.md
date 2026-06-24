@@ -1,102 +1,145 @@
 ```yaml
 paper_id: 10.59784/journaljoae.v1i1.37
-designation: international
+designation: local
 title: Digital Finance Usage and Its Impact on Consumer Economic Behavior Based on National Data
 authors: Askhiyah, U. M.
 year: 2026
 venue: Journal of Applied Econometric
 odin_topics:
-  - 1.C
+  - 3.A
+  - 3.B
+  - 4.A
   - 5.A
-  - 7.A
-  - 13.A
-  - 13.B
-shorthand_tags:
-  - /financial-behavior
-  - /behavioral-profiles
-  - /budgeting-strategies
-  - /savings-goal-management
-  - /debt-management
-tldr: Digital finance adoption increases household consumption by 8.7% and financial literacy by 1.4 points but reduces savings balances by 5.8% and raises debt-to-income ratios, with heterogeneous effects by age and income.
-problem_and_motivation: The comprehensive impact of digital finance on consumer economic behavior remains inadequately understood despite widespread adoption. Existing research produces mixed findings on whether digital finance promotes prudent behavior or encourages overconsumption and overindebtedness. Robust causal evidence using nationally representative data is needed to inform policy and mitigate risks for vulnerable populations.
+  - 5.B
+  - 6.A
+  - 6.B
+  - 7.B
+  - 7.D
+  - 8.A
+  - 9.A
+  - 10.A
+tldr: Digital finance adoption increases household consumption by 8.7% and financial literacy by 1.4 points but reduces savings balances by 5.8% and raises debt-to-income ratios, with risks concentrated among young lower-middle-income households.
+problem_and_motivation: The comprehensive impact of digital finance on consumer economic behavior remains inadequately understood despite its rapid proliferation. Existing research has produced mixed findings, creating ambiguity for policy formulation and raising concerns about potential negative consequences for financially vulnerable populations.
 approach:
-  - Data from 45,678 households in a national survey with stratified random sampling.
-  - Propensity score matching with kernel and radius algorithms to control selection bias.
-  - Instrumental variable estimation using regional digital infrastructure density as instrument.
-  - Panel fixed effects models for subsample with longitudinal observations (8,234 households).
-  - Outcomes include consumption expenditure, savings balances, debt-to-income ratios, financial literacy scores, and planning behaviors.
+  - This study uses nationally representative household survey data from 45,678 respondents.
+  - It employs a multidimensional digital finance usage intensity index reflecting breadth and depth of engagement.
+  - Propensity score matching with sensitivity analysis constructs comparable treatment and control groups to mitigate selection bias.
+  - Instrumental variable estimation leverages regional digital infrastructure density as an instrument for causal identification.
+  - Panel data fixed-effects methods are applied to a longitudinal subsample of 8,234 households to control for time-invariant unobserved heterogeneity.
 findings:
-  - "num: Digital finance users show 8.7% higher consumption expenditure (ATT=742k Rupiah, p<0.001)."
-  - "num: Savings balances are 5.8% lower for digital finance users despite higher formal savings account ownership."
-  - "num: Financial literacy scores increase by 1.4 points (on 10-point scale) post-adoption."
-  - "num: Debt-to-income ratio is 6.4 percentage points higher for digital finance users (34.7% vs 28.3%)."
-  - "num: Late payment rate is 6.3 percentage points higher among digital finance users (14.7% vs 8.4%)."
-  - Digital finance users are 3.5 times more likely to use financial planning tools and 2.4 times more likely to have explicit financial goals.
-  - Heterogeneous effects: strongest consumption increase in middle-income households (10-12%) and young adults (13.6%).
+  - num: Digital finance adoption increases total household consumption expenditure by 8.7%.
+  - num: Digital finance users have a 12.4 percentage point higher probability of having a formal savings account.
+  - num: Users' average savings balance is 5.8% lower than that of comparable non-users.
+  - num: Financial literacy scores rise by 1.4 points on a 10-point scale for digital finance users.
+  - num: Digital finance users are 18.7 percentage points more likely to have access to formal credit.
+  - num: Users show a debt-to-income ratio 6.4 percentage points higher than non-users.
+  - num: Late payment rates are 6.3 percentage points higher among digital finance users.
+  - num: 54.7% of digital credit users borrow for consumption, compared to 32.4% of traditional credit users.
+  - num: The financial wellbeing composite index is 8.5 points higher for digital finance users.
+  - The positive consumption effect is strongest for discretionary goods, with electronics spending increasing by 18.5%.
 key_figures_tables:
-  - "Table 1: Demographic comparison of digital finance users vs non-users → Users younger, more educated, urban."
-  - "Table 2: Impact on consumption by category → Largest increases in discretionary goods (14-18%)."
-  - "Table 3: Savings behavior and financial management → Users have higher budgeting but lower balances."
-  - "Table 4: Digital credit utilization → Higher debt burden and late payments, especially for young lower-middle-income."
-  - "Table 5: Financial literacy and wellbeing → Literacy +1.4 points, financial wellbeing index +8.5 points."
-  - "Figure 2: Heterogeneous consumption effects → Young and middle-income households show largest gains."
+  - Table 1: Demographic comparison of users vs. non-users → Digital finance users are younger, more urban, and more educated.
+  - Table 2: Impact on consumption by category → Discretionary spending increases more than basic needs.
+  - Table 3: Savings and financial management indicators → Digital finance improves financial planning practices.
+  - Table 4: Digital credit utilization and debt profile → Users have higher debt burdens and late payment rates.
+  - Table 5: Financial literacy and wellbeing outcomes → Users show higher literacy, confidence, and planning behavior.
+  - Figure 1: Distribution of usage intensity → Most users have low-to-moderate intensity, with only 18.7% high-intensity.
+  - Figure 2: Heterogeneous consumption effects → Young and urban households show the largest consumption increases.
+  - Figure 3: Savings behavior comparison → Users have better access but lower balances than non-users.
+  - Figure 4: Credit risk indicators → Vulnerable subgroups face the highest overleveraging risks.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: Digital finance usage intensity index
-    definition: Multidimensional score (0-100) reflecting breadth and depth of engagement across mobile banking, payments, e-wallets, digital credit.
-  - term: PSM
-    definition: Propensity score matching, a method to reduce selection bias by matching treatment and control groups on observable characteristics.
-  - term: IV estimation
-    definition: Instrumental variable estimation using regional digital infrastructure density to address endogeneity.
   - term: ATT
-    definition: Average Treatment Effect on the Treated, the causal impact for those who adopted digital finance.
+    definition: Average Treatment Effect on the Treated, measuring the impact on those who adopted digital finance.
+  - term: PSM
+    definition: Propensity Score Matching, a technique to reduce selection bias by matching treated and control units on observables.
+  - term: IV
+    definition: Instrumental Variable estimation, used to address endogeneity by leveraging exogenous variation.
+  - term: OLS
+    definition: Ordinary Least Squares, a standard linear regression method.
+  - term: FE
+    definition: Fixed Effects, a panel data method controlling for time-invariant unobserved heterogeneity.
 critical_citations:
-  - "[Li et al., 2020] — Documented 7-9% consumption increase from mobile payments."
-  - "[Batista & Vicente, 2020] — Found positive mobile money effect on savings in Africa."
-  - "[Danisman & Tarazi, 2020] — Raised concerns about digital credit expansion risks."
-  - "[See-To & Ngai, 2019] — Showed digital payments reduce pain of paying."
+  - "[Li et al., 2020] — Found 7-9% consumption increase from mobile payment adoption."
   - "[Banna & Alam, 2021] — Linked digital finance to banking stability in ASEAN."
+  - "[Batista & Vicente, 2020] — Documented positive savings effects of mobile money in Africa."
+  - "[Danisman & Tarazi, 2020] — Raised concerns about rapid digital credit expansion risks."
 relevance:
   topics:
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      justification: Paper analyzes consumption, savings, debt, and literacy changes due to digital finance.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: The study categorizes consumption into basic needs and discretionary goods, providing empirical categories.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: medium
+      justification: The heterogeneity in spending effects by category informs how Odin should weight or present different expense types.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Provides a broad context on digital finance penetration and usage patterns across demographics.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: Heterogeneous effects across age, income, and location support need for behavioral profiling.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      justification: Digital finance users show 51.8% budget creation vs 32.4% non-users, informing budget recommendation.
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      justification: Documents autosave feature usage (28.5%) and goal-based saving (47.3%) among digital finance users.
-    - code: 13.B
-      name: Debt Management in PFMS
-      justification: Provides evidence on debt-to-income ratios (34.7%), late payments (14.7%), and overleveraging risks.
-  contribution: This paper provides empirical evidence that digital finance adoption increases consumption expenditure by 8.7% and financial literacy scores by 1.4 points, which can inform Odin's spending forecasting and behavioral profiling modules. The documented reduction in savings balances (5.8%) and increase in debt-to-income ratios (6.4 percentage points) directly supports Odin's savings goal management and debt management modules with quantitative benchmarks. The heterogeneity analysis identifying young lower-middle-income households as vulnerable guides targeted anomaly detection and user retention strategies. The finding that digital finance users are 3.5 times more likely to use planning tools justifies integrating budgeting and planning features into Odin's mobile-first design.
+      relevance: high
+      justification: Directly profiles users based on consumption, savings, and credit behavior, highlighting different subpopulations.
+    - code: 5.B
+      name: Profile Dynamics and the Cold-Start Problem
+      relevance: medium
+      justification: The variation in adoption and behavioral responses provides evidence for how profiles evolve with technology.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: low
+      justification: The paper documents spending patterns that could be used as input features for forecasting models.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: Although no specific algorithm is tested, the spending data patterns are relevant for forecasting contexts.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: medium
+      justification: The consumption and savings trade-offs directly relate to how budgets might be recommended to different user types.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: contextual
+      justification: The heterogeneous impacts on vulnerable groups suggest the need for flexible budget recommendations.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: The documented shifts in spending and debt patterns provide a baseline for what constitutes normal vs. anomalous behavior.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: low
+      justification: The high adoption rates and usage frequency underscore the importance of mobile-first design for engagement.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: The reliance on digital platforms for financial data highlights the critical need for privacy and security measures.
+  contribution: This study provides robust empirical evidence on the causal effects of digital finance on consumption, savings, and credit behavior using multiple identification strategies, directly justifying Odin's need for dynamic financial behavior modeling. The finding that digital finance improves financial literacy and planning behavior supports the integration of educational and goal-setting features within Odin. The documented trade-off between consumption and savings informs how Odin's budget recommendation module should balance spending and saving goals. The heterogeneous effects across demographic groups, especially young households, justify Odin's cold-start problem and the need for personalized behavioral profiles. The identification of overleveraging risks for vulnerable groups supports the implementation of anomaly detection and user trust mechanisms to alert users to potential financial distress.
   directly_justifies:
-    - Digital finance adoption increases household consumption by 8.7% compared to non-users.
-    - Digital finance users have 5.8% lower savings balances despite higher financial inclusion.
-    - Financial literacy scores improve by 1.4 points after digital finance adoption.
-    - Young lower-middle-income households face highest debt service ratios and late payment risks.
-    - Autosave features increase structured saving behavior, with 28.5% of users adopting them.
+    - The consumption increase of 8.7% from digital finance adoption justifies modeling spending shifts as a function of platform usage.
+    - Financial literacy improvements of 1.4 points after adoption support embedding educational content within Odin's interface.
+    - Higher savings access but lower balances suggests Odin should promote structured saving features like autosave.
+    - The elevated debt-to-income ratios for users justify proactive debt management features and alerts.
+    - Heterogeneous effects by age and income justify personalized budget recommendations.
   limits:
-    - Observational data with potential residual confounding despite multiple identification strategies.
-    - Short-term horizon (maximum 24 months post-adoption) limits long-term impact assessment.
-    - No measurement of individual psychological factors like self-control or risk preferences.
-    - Single country context (Indonesia) may limit generalizability to other populations.
-  mapping_rationale: The paper was screened against Odin's functional domains. It directly addresses financial behavior (domain Behavioral profiling) via heterogeneous consumption and savings patterns, thus selecting 1.C and 5.A. It provides citeable claims on budgeting behavior (domain Budget recommendation), selecting 7.A. It extensively covers savings goals and debt management (domains Savings & debt management), selecting 13.A and 13.B. Topics related to expense categorization, anomaly detection, mobile design, data privacy, retention, and system evaluation were rejected as the paper does not address these. Borderline case: spending forecasting (6.A) was rejected because the paper does not propose a forecasting model but rather estimates average treatment effects. The selected topics capture the paper's core contributions to PFMS design.
+    - The observational data and self-report surveys may contain biases despite econometric controls.
+    - The study only examines short-term effects up to 24 months, leaving long-term wealth impacts unknown.
+    - Individual psychological factors like self-control and risk preferences were not deeply measured.
+    - Spillover effects at the community or financial system level were not examined.
+    - The findings are limited to a specific country and time period.
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated 34 topic codes was conducted. The domains flagged as relevant were Expense Categorization (3.A, 3.B), Existing Systems (4.A), Behavioral Profiling (5.A, 5.B), Spending Forecasting (6.A, 6.B), Budget Recommendation (7.B, 7.D), Anomaly Detection (8.A), Mobile-First Design (9.A), and Data Privacy (10.A). The paper was assigned high relevance for Behavioral Profiling (5.A) and Anomaly Detection (8.A) due to its detailed causal analysis of financial behavior changes and identification of vulnerable groups. Medium relevance was given to Expense Categorization (3.A, 3.B), Budget Recommendation (7.B), and Data Privacy (10.A) because the findings provide empirical grounding for category design, personalized budgets, and the need for trust safeguards. Low relevance was assigned to Predictive Modeling (6.A, 6.B) and Mobile-First Design (9.A) as the paper describes behavior patterns rather than testing forecasting algorithms or design principles directly. Contextual relevance was assigned to Existing Systems (4.A) and Infeasibility Handling (7.D) for providing background landscape and highlighting the need for flexible systems. Borderline cases included the consumption-savings trade-off touching both spending forecasting (6.A) and budget recommendation (7.B), which was resolved by assigning relevance to both but with different levels. Domains such as Filipino Cultural Context (2.A-2.D), User Retention (11.A-11.B), and System Evaluation (12.A-12.C) were considered but rejected as the paper does not address cultural practices, retention mechanisms, or evaluation frameworks. The Savings & Debt Management domain (13.A-13.C) was deemed relevant via the specific findings on savings balances and debt ratios, though not as a primary topic code. Overall, the paper offers strong empirical evidence for behavioral dynamics in Odin's core modules.
 limitations:
-  - "Cross-sectional and short-term panel data (max 24 months) cannot assess long-term wealth effects. [unacknowledged]"
-  - Self-reported survey data may introduce recall and social desirability bias.
-  - No direct measurement of impulse spending or self-control mechanisms.
-  - Findings may not generalize beyond Indonesian context due to cultural and economic differences.
+  - The study uses observational data and self-report surveys, which may contain biases despite instrumental variables and panel data. [unacknowledged]
+  - The analysis only examines short-term effects up to 24 months, so the long-term impact on wealth accumulation remains unknown. [unacknowledged]
+  - Individual psychological factors such as self-control and risk preferences were not deeply measured. [unacknowledged]
+  - Spillover effects at the community level and the financial system were not examined. [unacknowledged]
+  - The findings are limited to a specific country and time period, requiring cross-country validation.
 remember_this:
-  - Digital finance increases consumption by 8.7% but reduces savings by 5.8%.
-  - Financial literacy improves by 1.4 points after digital finance adoption.
-  - Young lower-middle-income users face highest debt and late payment risks.
-  - Autosave features boost structured saving behavior by 25 percentage points.
-  - Digital finance users are 3.5 times more likely to use planning tools.
+  - Digital finance adoption increases consumption by 8.7% but reduces savings by 5.8%.
+  - Financial literacy scores rise by 1.4 points after adopting digital finance.
+  - Young lower-middle-income households face the highest overleveraging risks.
+  - Digital finance improves financial planning and management practices substantially.
+  - The consumption-savings trade-off is a key behavioral paradox in digital finance.
 ```

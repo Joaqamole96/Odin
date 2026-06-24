@@ -6,89 +6,123 @@ authors: Koskelainen, T.; Kalmi, P.; Scornavacca, E.; Vartiainen, T.
 year: 2023
 venue: Journal of Consumer Affairs
 odin_topics:
+  - 1.B
+  - 1.C
+  - 3.A
+  - 4.A
   - 5.A
+  - 7.A
+  - 9.B
   - 10.A
   - 10.B
-  - 13.A
-  - 13.B
-shorthand_tags:
-  - /financial_behavior
-  - /data_privacy
-  - /user_trust
-  - /savings_management
-  - /debt_management
-tldr: Digitalization transforms financial services and consumer behavior, requiring updated financial literacy to address new risks like data privacy and digital nudging.
-problem_and_motivation: Digital finance offers convenience but also risks that traditional financial literacy does not cover. There is limited understanding of how digitalization affects financial literacy and capability. This gap motivated a systematic review to propose a research agenda.
+  - 11.A
+  - 11.B
+  - 12.A
+tldr: Digitalization transforms financial services and personal money management, requiring a redefinition of financial literacy to include digital competencies, new behavioral risks, and novel interventions.
+problem_and_motivation: Traditional financial literacy frameworks, developed for an analog world, are inadequate in the current complex digital financial landscape. The pervasive diffusion of digital financial services (DFS) creates both opportunities and new risks that users must navigate. There is a critical gap in understanding how digitalization affects financial literacy and capability.
 approach:
-  - Applied an integrative literature review to explore how digitalization affects financial literacy and capability.
-  - Searched ProQuest, EBSCO, ACM Digital Library, and Google Scholar using terms like “financial literacy” AND “digital”.
-  - Initial screening of 603 papers, narrowed to 29 peer-reviewed papers after excluding off-topic or analog-only studies.
-  - Classified selected papers into three themes: Fintech, financial behavior in digital environments, and behavioral interventions.
-  - Synthesized findings to propose a conceptual framework for digital financial literacy and capability.
+  - Used an integrative literature review methodology following Torraco (2005).
+  - Systematic search conducted in ProQuest, EBSCO, ACM Digital Library, and Google Scholar during fall 2020.
+  - Applied a two-stage selection process, starting with 603 papers and narrowing to 29 peer-reviewed papers.
+  - Adopted a concept-centric approach for analysis, categorizing papers into three themes: Fintech, Financial behavior in digital environments, and Behavioral interventions.
+  - Analyzed papers from finance, economics, and information systems disciplines.
 findings:
-  - “num: 80% of millennial smartphone owners use their device for transactional financial purposes.”
-  - Smartphone apps that track spending and compare loan interest improve financial resilience after shocks.
-  - Digital nudging via mobile apps can increase salience of credit card transactions and reduce spending.
-  - Financial literacy helps mitigate the effect of mobile payment use on account overdrafts.
-  - Digitalization creates risks including data confidentiality breaches, digital profiling, and algorithmic governance.
-  - Digital nudging can be used both to improve financial well-being and to drive sales against consumer interests.
+  - Digital financial literacy requires updating financial literacy curricula with new skills like cybersecurity awareness and understanding of algorithmic influence.
+  - Digital nudging can both help (e.g., via smartphone apps for tracking spending) and potentially harm (e.g., via persuasive design for sales) consumer financial outcomes.
+  - Loss of tangibility in digital payments tends to increase spending, as evidenced by literature starting from the 1980s.
+  - Older, lower-income, and disabled consumers are less likely to use mobile payment apps, risking digital exclusion.
+  - The use of digital financial management services makes consumers less aware of their spending.
 key_figures_tables:
-  - "Figure 1: Conceptual description of financial literacy vs. financial capability → Financial capability adds opportunity to act."
-  - "Figure 2: Conceptual description of digital financial literacy and capability → Digitalization affects knowledge, skills, and tools."
-  - "Table 1: Research on digital financial literacy organized by Fintech, financial behavior, and behavioral interventions → Three core themes."
+  - Figure 1: Conceptual description of financial literacy and capability → Foundation for the paper's proposed digital framework.
+  - Figure 2: Conceptual description of digital financial literacy and capability → Illustrates how digitalization affects all elements of financial literacy.
+  - Table 1: Research on digital financial literacy → Categorizes literature into Fintech, financial behavior, and behavioral interventions.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
   - term: Fintech
-    definition: Technologically enabled financial innovation creating new business models, applications, or products.
-  - term: Digital nudging
+    definition: Technologically enabled financial innovation resulting in new business models, applications, processes, or products.
+  - term: Digital Financial Literacy
+    definition: The knowledge, skills, and awareness needed to use digital financial services and understand their risks and benefits.
+  - term: Financial Capability
+    definition: Broader concept than financial literacy, including the ability and opportunity to act and gain access to financial products.
+  - term: Digital Nudging
     definition: Influencing choices through algorithms and user-interface design in digital environments.
-  - term: Financial capability
-    definition: Broader than literacy, includes both ability and opportunity to act in financial markets.
-  - term: DFS
-    definition: Digital financial services such as online banking, mobile payments, and digital money.
-  - term: Digital financial literacy
-    definition: Traditional financial literacy complemented by digital literacy to manage digital finance risks.
 critical_citations:
-  - "[Lusardi & Mitchell, 2014] — Foundational financial literacy measurement and economic importance."
-  - "[Thaler & Sunstein, 2008] — Origin of nudging concept used in behavioral interventions."
-  - "[OECD, 2018] — Documents digital finance risks and need for updated financial education."
+  - "[Lusardi & Mitchell, 2014] — Foundational work on financial literacy measurement and economic importance."
+  - "[Thaler & Sunstein, 2008] — Introduced the concept of nudging, central to the behavioral interventions theme."
+  - "[Gomber et al., 2017] — Key paper on digital finance and Fintech research directions."
+  - "[OECD, 2018] — Provides policy guidance on digitalisation and financial literacy."
+  - "[Huston, 2010] — Seminal paper on measuring financial literacy."
 relevance:
   topics:
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: contextual
+      justification: Discusses how digitalization changes access and structure of financial services.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: medium
+      justification: Directly addresses how digital environments alter financial behaviors like spending.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: low
+      justification: Mentions personal finance apps for account management, implying categorization.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Reviews Fintech and mobile banking apps, providing a landscape overview.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: Reviews how digital environments and nudging influence financial behavior.
+      relevance: contextual
+      justification: Discusses behavioral economics and psychological biases influencing financial decisions.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Highlights digital tools and nudges that can assist in budgeting and keeping track of finances.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: medium
+      justification: Reviews research on mobile banking usage, noting that design can influence engagement and financial decisions.
     - code: 10.A
       name: Data Privacy and Security in Personal Finance Systems
-      justification: Highlights risks of data breaches, digital profiling, and algorithm governance.
+      relevance: high
+      justification: Extensively discusses risks including data confidentiality, digital profiling, and cybersecurity threats.
     - code: 10.B
       name: User Trust in Personal Finance Systems
-      justification: Discusses transparency, ethical concerns of nudging, and consumer vulnerability.
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      justification: Mentions automatic savings tools and encouraging saving via mobile apps.
-    - code: 13.B
-      name: Debt Management in PFMS
-      justification: Addresses over-indebtedness, digital debt collection, and easy credit access.
-  contribution: "Odin's behavioral profiling module can integrate digital nudging findings to gently guide user spending without restricting choice. The paper’s emphasis on data privacy and digital profiling justifies adding explicit transparency features in Odin's design. For savings and debt management, the review supports building automated nudges (e.g., saving reminders) and spending salience tools. The framework also informs Odin’s evaluation metrics, such as measuring user resilience to financial shocks after using digital tools."
+      relevance: high
+      justification: Highlights how use, perceived security, and ethical issues relate to user trust in digital financial services.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Discusses how digital nudging and app features can influence user engagement and behavior.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: medium
+      justification: Explores how tools like smartphone apps and text messages can be used for sustained behavioral change.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: low
+      justification: Critiques of nudging suggest a need for evaluating outcomes and ethical frameworks.
+  contribution: "This review paper provides a foundational framework for understanding digital financial literacy, which is essential for designing the educational and behavioral components of Odin. It directly informs the need for a 'digital' component in Odin's behavioral profiling, as traditional financial literacy metrics are insufficient in a digital-first app. The paper's analysis of Fintech and digital behaviors provides the context for Odin's core functionalities, such as expense tracking, budgeting, and anomaly detection, by outlining the new risks and opportunities in the digital financial landscape. Its discussion of digital nudging and behavioral interventions offers a theoretical basis for Odin's user engagement and retention strategies. The explicit call for updated measurement frameworks for digital financial literacy justifies Odin's approach to classifying user financial behavior based on digital interactions rather than solely on static knowledge tests."
   directly_justifies:
-    - "Digital payment methods increase spending due to loss of tangibility compared to cash."
-    - "Smartphone apps that compare loan interest and track spending improve financial resilience."
-    - "Digital nudging can reduce credit card spending by increasing transaction salience."
-    - "Financial literacy mitigates the risk of account overdrafts from mobile payment use."
-    - "Digital profiling and algorithmic governance pose privacy risks that PFMS must address."
+    - "Traditional financial literacy measures are insufficient for a digital world, necessitating new approaches to user profiling."
+    - "Digitalization changes the financial behavior of young professionals, making them less aware of spending."
+    - "Data privacy and security are primary concerns in personal finance apps, requiring robust design."
+    - "Digital nudging can be used to improve financial behavior and should be incorporated into app design."
   limits:
-    - "Review only includes papers from finance, economics, and information systems journals; conference proceedings excluded."
-  mapping_rationale: "The paper does not focus on Filipino young professionals (domains 1.A–2.C) or algorithmic modules (6–8). However, it directly informs behavioral profiling (5.A) through its review of digital financial behavior and nudging. Data privacy (10.A) and user trust (10.B) are central to its discussion of Fintech risks. Savings (13.A) and debt (13.B) appear in sections on automatic savings, over-indebtedness, and digital collection. Mobile-first design (9) is mentioned but not as a design principle, so omitted. No coverage of expense categorization (3), forecasting (6), budget recommendation (7), anomaly detection (8), retention (11), or evaluation frameworks (12)."
+    - "The paper is a literature review and does not present new empirical data on digital financial literacy interventions."
+    - "Focuses on papers from finance, economics, and information systems, potentially missing relevant HCI or design literature."
+    - "Provides high-level themes but not specific algorithmic or implementation details for a PFMS."
+  mapping_rationale: "All 12 functional domains were systematically scanned against the paper's content. The paper was flagged as highly relevant to Data Privacy & User Trust (10.A, 10.B) due to its extensive discussion of risks like data profiling and fraud. It was also deemed highly relevant to User Retention & Engagement (11.A, 11.B) because of its detailed exploration of behavioral interventions and digital nudging. Medium relevance was assigned to Expense Categorization (3.A, as part of PFMS landscape), Existing Systems (4.A, providing a landscape of Fintech), Behavioral Profiling (5.A, discussing behavioral economics), Budget Recommendation (7.A, mentioning tools for saving and budgeting), and Mobile-First Design (9.B, reviewing mobile banking usage). The domains of Forecasting (6.A, 6.B) and Anomaly Detection (8.A-C) were rejected as the paper does not discuss predictive algorithms. The Savings & Debt Management domains (13.A-C) were considered contextual due to mentions of over-indebtedness and saving, but the paper does not provide specific management strategies. Overall, the paper provides a broad contextual and motivational framework for Odin, justifying the need for a comprehensive, digitally-aware PFMS that addresses user behavior, trust, and engagement."
 limitations:
-  - "Only peer-reviewed journal articles from finance, economics, and IS disciplines were included."
-  - "Conference proceedings, which may contain emerging technologies, were excluded. [unacknowledged]"
-  - "The review may miss newer digital finance developments published after 2020."
+  - "The literature review is limited to papers published only in finance, economics, and information systems. [unacknowledged]"
+  - "Excluding conference proceedings may have led to missing new technological developments. [acknowledged]"
+  - "The sample is from 2020, and the digital finance landscape changes rapidly, so some findings may be less current. [unacknowledged]"
 remember_this:
-  - "80% of millennials use smartphones for transactional financial tasks."
-  - "Digital nudging can reduce credit card spending through salience."
-  - "Loss of cash tangibility increases spending in digital payments."
-  - "Financial literacy helps prevent overdrafts from mobile payments."
-  - "Digital profiling and algorithmic governance raise privacy risks."
+  - "Digital payments reduce spending tangibility and can increase consumption."
+  - "Fintech innovations introduce new risks like data profiling and fraud."
+  - "Digital nudging can improve financial behaviors but raises ethical concerns."
+  - "80% of millennial smartphone owners use their device for transactional financial purposes."
+  - "Financial literacy measurement must evolve to include digital competencies."
 ```

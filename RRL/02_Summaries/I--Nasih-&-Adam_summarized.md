@@ -1,91 +1,176 @@
 ```yaml
-paper_id: c8c9e9b8-4c3a-4b2a-9a1a-2b3c4d5e6f7a
+paper_id: 3b8e5a1c-8c3d-5791-a3f5-8b2c9d1e4f7a
 designation: international
 title: How do young people perceive financial literacy, and what role do they believe it plays in their future success?
 authors: Nasih, M.; Adam, A. S.
 year: 2025
 venue: International Journal of Emerging Issues in Management, Accounting and Technology
 odin_topics:
+  - 1.A
+  - 1.B
   - 1.C
   - 2.A
+  - 2.D
+  - 4.A
   - 5.A
+  - 7.A
+  - 7.D
+  - 10.A
   - 11.A
-  - 13.A
-shorthand_tags:
-  - /financial-behavior
-  - /financial-literacy
-  - /youth-perceptions
-  - /systematic-review
-  - /cultural-context
-tldr: Young adults universally recognize financial literacy as important for future success but exhibit an awareness-confidence paradox, overestimating their competence while acknowledging knowledge gaps.
-problem_and_motivation: Despite extensive research on youth financial knowledge, limited systematic evidence exists on how young people perceive financial literacy and its role in future success, particularly in developing countries. Understanding these perceptions is critical because they shape engagement with financial education and subsequent financial behaviors.
+  - 12.A
+  - 13.B
+tldr: Young adults universally recognize financial literacy's importance for future success but exhibit a knowledge-confidence paradox, with family socialization dominating formal education and digital finance creating both opportunities and risks.
+problem_and_motivation: While extensive research exists on youth financial knowledge and behavior, systematic evidence on how young people perceive financial literacy and its connection to future success is fragmented, particularly in developing countries. The rapid digital transformation of financial services and recent economic crises have created new dynamics that existing reviews have not adequately addressed.
 approach:
-  - Systematic literature review following PRISMA 2020 guidelines across seven databases (JSTOR, ERIC, Scopus, Google Scholar, OECD iLibrary, World Bank, ProQuest).
-  - Included 47 peer-reviewed empirical studies from 25 countries published 2015-2025, with participants aged 18-30 (total n>250,000).
-  - Used thematic synthesis with three-stage approach: line-by-line coding, descriptive theme development, and analytical theme generation.
-  - Quality assessment used adapted Newcastle-Ottawa Scale for quantitative and CASP for qualitative studies.
-  - Conducted subgroup analyses by geographic context (developing vs. developed), gender, education level, and methodology.
+  - Systematic literature review following PRISMA 2020 guidelines.
+  - Searched seven academic databases (JSTOR, ERIC, Scopus, Google Scholar, OECD iLibrary, World Bank, ProQuest) for studies published 2015-2025.
+  - Included 47 empirical studies from 25 countries with over 250,000 participants aged 18-30.
+  - Employed two-stage screening with inter-rater reliability (κ=0.82 for abstracts, 0.91 for full-text).
+  - Used thematic synthesis (Thomas & Harden, 2008) with subgroup analyses by geographic context, gender, and educational level.
 findings:
-  - "num: 78% of university students rated financial knowledge as good/excellent but only 34% could answer basic literacy questions (Germany)."
-  - "num: Pandemic experiences increased financial literacy awareness scores by 28% (US longitudinal study)."
-  - "num: Young women 40% more likely to respond 'don't know' to financial questions despite equal knowledge (15-country study)."
-  - Family financial socialization dominates formal education, with open family discussions correlating with 45% higher financial confidence.
-  - Youth in developing nations show greater realism about knowledge gaps but face structural barriers including limited access to formal financial education.
-  - "num: Only 15-20% of youth who plan to learn about investing take concrete steps within a year, revealing intention-action gap."
-  - Gender stereotypes widen confidence gaps by 35% when tasks framed as mathematical vs. life planning.
-  - Social media serves as primary financial information source for 76% of youth but also promotes get-rich-quick schemes and FOMO-driven decisions.
+  - num: 78% of German university students rated their financial knowledge as "good" but only 34% answered basic questions correctly.
+  - Family financial discussions correlated with 45% higher financial confidence scores regardless of parents' actual literacy.
+  - num: 71% of EU youth felt "paralyzed by too many options" when learning about investments.
+  - num: 76% of youth across studies used social media for financial information but expressed skepticism about reliability.
+  - num: Youth from high-income families showed "financial cushion confidence"; low-income youth showed heightened awareness with fatalism.
+  - num: Young women were 40% more likely to respond "don't know" to financial questions they could answer correctly.
+  - num: 85% of participants planned to learn more about investing, but only 15-20% took concrete steps.
+  - num: Crisis experiences increased financial literacy awareness scores by 28% in a U.S. longitudinal study.
+  - Gender gaps narrowed by 35% when financial tasks were framed as "life planning" rather than "mathematical tests."
+  - num: Having one close friend who invests increased an individual's likelihood of opening an investment account by 340%.
 key_figures_tables:
-  - "Table 1: PRISMA flow diagram showing 1,847 records identified, 47 included → demonstrates rigorous systematic review process."
-  - "Table 2: Summary of included studies by region and methodology → majority from developed countries (45%) with growing representation from developing nations."
+  - Table 1: PRISMA flow diagram showing study selection from 1,847 records to 47 included studies.
+  - Table 2: Summary of included studies by region and methodology, showing 38% from developing nations and 17% multi-country.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "PRISMA"
-    definition: "Preferred Reporting Items for Systematic Reviews and Meta-Analyses, a guideline for systematic review reporting."
-  - term: "CASP"
-    definition: "Critical Appraisal Skills Programme checklist for qualitative study quality assessment."
-  - term: "Awareness-confidence paradox"
-    definition: "Youth recognize financial knowledge gaps while overestimating their own competence."
+  - term: PFMS
+    definition: Personal Finance Management System
+  - term: PRISMA
+    definition: Preferred Reporting Items for Systematic Reviews and Meta-Analyses
+  - term: FOMO
+    definition: Fear of missing out
+  - term: CASP
+    definition: Critical Appraisal Skills Programme
+  - term: PICOS
+    definition: Population, Intervention, Comparison, Outcomes, Study design
 critical_citations:
-  - "[Lusardi & Mitchell, 2014] — foundational framework for financial literacy importance."
-  - "[Gudmunson & Danes, 2011] — family financial socialization theory."
-  - "[Page et al., 2021] — PRISMA 2020 guidelines used for methodology."
+  - "[Lusardi & Mitchell, 2014] — Foundational theory on financial literacy and economic importance."
+  - "[Gudmunson & Danes, 2011] — Core framework for family financial socialization."
+  - "[OECD, 2020] — Key international survey on adult financial literacy."
+  - "[Shim et al., 2010] — Established role of parents in youth financial socialization."
+  - "[Kaiser et al., 2021] — Major meta-analysis on financial education effectiveness."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Paper documents awareness-confidence paradox and behavioral intention gaps relevant to understanding Filipino YP financial behavior."
-    - code: "2.A"
-      name: "Culturally Specific Financial Practices"
-      justification: "Cross-cultural comparisons reveal how collectivist vs. individualist values shape financial success perceptions."
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Identifies distinct profiles (achievement-oriented, security-oriented, freedom-oriented) and the awareness-confidence paradox."
-    - code: "11.A"
-      name: "Engagement Dynamics in Personal Finance Applications"
-      justification: "Discusses barriers to financial learning engagement including financial anxiety, time constraints, and trust issues."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Youth prioritize financial security and emergency preparedness, directly relevant to savings goal features."
-  contribution: "This review provides empirical grounding for Odin's behavioral profiling module by documenting the awareness-confidence paradox and identifying distinct financial goal orientations (achievement, security, freedom). It justifies the need for family-inclusive financial education features, as family socialization dominates formal learning. The findings on gender confidence gaps and stereotype threat inform Odin's design to mitigate bias in user interfaces. The documented intention-action gap supports Odin's behavioral nudges and action-oriented prompts. Finally, the review's emphasis on experiential learning and digital literacy requirements directly informs Odin's educational content strategy."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: Systematic review of youth (18-30) financial perceptions directly informs understanding of the target demographic.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Discusses income, debt, and financial challenges relevant to understanding financial structures.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly examines youth financial behavior, including confidence-action gaps and risk-taking.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: high
+      justification: Reveals cultural variations in financial perceptions, family socialization, and success conceptualizations.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: contextual
+      justification: Mentions cultural factors and family obligations influencing financial behavior, relevant to spending cycles.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Reviews existing financial education systems and their limitations in shaping youth perceptions.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Identifies gaps in formal financial education and the dominance of informal family influences.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Documents awareness-confidence paradox and behavioral intention patterns essential for profiling.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: low
+      justification: Mentions how financial shocks trigger learning, relevant to dynamic profile changes.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: low
+      justification: Discusses digital tools but not predictive modeling specifically.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Examines youth perceptions of budgeting skills and their importance for financial security.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: contextual
+      justification: Mentions how youth feel "paralyzed by too many options" when making financial decisions, relevant to constraint handling.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: Not directly addressed; no discussion of anomaly detection.
+    - code: 9.A
+      name: Mobile‑First Design Principles and Rationale
+      relevance: medium
+      justification: Digital natives' comfort with financial apps and need for explainable AI are highly relevant to mobile-first design.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: Discusses youth's trust issues with financial education sources and need for digital literacy.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: high
+      justification: Reveals engagement patterns: intention-action gaps, social influence, and crisis-driven behavior changes.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: medium
+      justification: Findings on gamification and social proof inform retention strategies.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Critiques existing evaluation methods (knowledge vs. perceptions) and suggests new assessment approaches.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: low
+      justification: Not directly discussed; no algorithmic evaluation.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: medium
+      justification: Discusses youth's emphasis on financial literacy for debt avoidance and security.
+    - code: 13.C
+      name: End‑of‑Period Surplus as a Savings Input
+      relevance: contextual
+      justification: Mentions savings goals and family security, indirectly relevant to surplus management.
+  contribution: This systematic review provides foundational evidence on youth financial literacy perceptions, directly justifying Odin's user research and behavioral profiling modules. The awareness-confidence paradox informs the design of confidence-building features and personalized financial education. The dominance of family socialization supports Odin's need for social and collaborative features, while the digital dual nature guides UX design for transparency and explainability.
   directly_justifies:
-    - "Financial literacy perceptions among young adults are characterized by an awareness-confidence paradox where knowledge gaps coexist with overconfidence."
-    - "Family financial socialization has stronger influence on youth financial capability than formal education."
-    - "Gender stereotypes widen financial confidence gaps, with young women 40% more likely to respond 'don't know' despite equal knowledge."
-    - "Only 15-20% of youth who intend to improve financial literacy take concrete action within a year."
+    - "Young adults universally recognize financial literacy's importance but overestimate their competence."
+    - "Family financial socialization dominates formal education in shaping youth financial perceptions."
+    - "Digital finance creates both opportunities and risks requiring dedicated digital financial literacy."
+    - "Structural inequalities along gender, socioeconomic, and geographic lines persist in financial perceptions."
+    - "Crisis-driven learning suggests reactive rather than proactive financial capability development."
   limits:
-    - "Systematic review based on English-language publications may underrepresent non-English speaking contexts, particularly in Asia and Latin America."
-    - "Heterogeneity of financial literacy definitions and measures across studies complicated synthesis."
-    - "Cross-sectional studies dominate; longitudinal evidence on perception development over time is limited."
-  mapping_rationale: "The paper was screened against Odin's functional domains. Behavioral profiling (5.A) was selected due to the awareness-confidence paradox and profile typologies. Financial behavior (1.C) applies because the review directly examines how young people behave financially. Culturally specific practices (2.A) were selected given the cross-cultural comparative findings on collectivist vs. individualist financial values. Engagement dynamics (11.A) apply due to detailed analysis of barriers (financial anxiety, time constraints, trust) and enablers (social proof, crisis-driven change). Savings and debt management (13.A) is relevant through the security-oriented perspective prioritizing emergency funds. Domains not selected include spending forecasting, budget recommendation, anomaly detection, mobile-first design, data privacy, and system evaluation because the paper does not address algorithmic or technical design aspects. The paper is a systematic literature review, not an algorithm-specific study, so no code from 6-8 or 12 applied."
+    - "English-language publication bias may underrepresent research from non-English speaking countries."
+    - "Heterogeneity of financial literacy definitions and measures complicates synthesis."
+    - "Rapid financial innovation may render some findings outdated quickly."
+    - "Most studies are cross-sectional, limiting understanding of perception evolution over time."
+    - "Limited intervention effectiveness studies with perception outcomes."
+  mapping_rationale: The systematic scan across all 12 functional domains and their associated topic codes identified the paper as highly relevant to Odin. The paper directly informs domains like Filipino Cultural Context (themes of family socialization and cultural variation), Existing Systems & Gaps (critique of formal education), Behavioral Profiling (awareness-confidence paradox), and User Retention (engagement patterns). Borderline cases included the paper's relevance to Budget Recommendation (youth perceptions of budgeting importance) and Mobile Design (digital natives' use of financial apps). Domains considered but rejected included Predictive Modeling and Anomaly Detection, as the paper does not discuss algorithmic techniques. The paper offers strong foundational justification for Odin's user-centered design and behavioral insights.
 limitations:
-  - "English-language publication bias may exclude relevant research from non-English speaking countries. [unacknowledged]"
-  - "Heterogeneity in financial literacy measures across studies limits comparability. [acknowledged]"
-  - "Rapid digital financial innovation may outdate some findings. [unacknowledged]"
+  - "English-language publication bias may underrepresent research from non-English speaking countries. [unacknowledged]"
+  - "Heterogeneity of financial literacy definitions and measures complicates synthesis. [acknowledged]"
+  - "Rapid financial innovation may render some findings outdated quickly. [acknowledged]"
+  - "Most studies are cross-sectional, limiting understanding of perception evolution over time. [acknowledged]"
+  - "Limited intervention effectiveness studies with perception outcomes. [acknowledged]"
 remember_this:
-  - "Young adults show an awareness-confidence paradox: high self-rated but low actual financial literacy."
-  - "Family discussions about money increase financial confidence by 45% regardless of parents' knowledge."
-  - "Only 15-20% of youth who plan to learn about finances actually take action within a year."
-  - "Gender stereotypes cause 40% higher 'don't know' responses from young women despite equal knowledge."
+  - "Young adults recognize financial literacy's importance but overestimate their competence."
+  - "Family financial socialization dominates formal education in shaping youth financial perceptions."
+  - "Digital finance creates both opportunities and risks for youth financial capability."
+  - "Structural inequalities along gender and socioeconomic lines persist in financial perceptions."
+  - "Only 15-20% of youth who plan to learn about finance actually take concrete steps."
 ```

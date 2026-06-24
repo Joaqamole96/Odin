@@ -1,77 +1,96 @@
 ```yaml
 paper_id: 10.61424/rjbe.v3.i3.574
 designation: local
-title: The Impact of Personal Budgeting Skills on College Students’ Financial Stability
-authors: Dela Torre, J. M. Y.; Jangao, J. P. P.; Maghilum, J. T.; Man-onan, R. J. H.; Pepito Jr, S. G.; Rapirap Jr, G. P.; Cervantes, J. Z.
+title: The Impact of Personal Budgeting Skills on College Students' Financial Stability
+authors: Dela Torre, J. M. Y.; Jangao, J. P. P.; Maghilum, J. T.; Man-onan, R. J. H.; Pepito, S. G.; Rapirap, G. P.; Cervantes, J. Z.
 year: 2025
-venue: Research Journal in Business and Economics RJBE
+venue: Research Journal in Business and Economics
 odin_topics:
-  - 5.A
+  - 1.A
+  - 1.B
+  - 1.C
+  - 3.A
   - 7.A
+  - 12.A
   - 13.A
-shorthand_tags:
-  - /financial-behavioral-profiles
-  - /budgeting-strategies
-  - /savings-goal-management
-tldr: Personal budgeting skills in planning, goal setting, and expense tracking strongly correlate with college students' financial stability, reducing stress and increasing savings.
-problem_and_motivation: College students face rising living costs and economic uncertainties yet many lack adequate financial education, leading to financial stress and poor spending choices. Existing research shows gaps in understanding how specific budgeting practices directly impact financial stability. This study addresses the need to quantify the relationship between budgeting skills and financial outcomes among students.
+tldr: Personal budgeting skills, particularly in planning, goal setting, and expense tracking, strongly correlate with improved financial stability among college students.
+problem_and_motivation: College students frequently face financial stress and instability due to limited resources and inadequate financial management skills. The specific relationship between structured budgeting practices and financial stability for students managing daily expenses remains underexplored.
 approach:
-  - Surveyed 213 randomly selected college students from a Philippine higher education institution using a structured questionnaire.
-  - Measured budgeting skills across three dimensions: budget planning, financial goal setting, and expense tracking.
-  - Assessed financial stability via financial stress, savings, and monthly expense management using a four-point Likert scale.
-  - Used Pearson correlation to test relationship between budgeting skills and financial stability.
-  - Applied T-test and ANOVA to examine differences across demographic groups (age, sex, year, allowance).
+  - The study used a descriptive-correlational design with 213 randomly sampled students from a total population of 457 at a Philippine higher education institution.
+  - Data were collected using a structured questionnaire adapted from Bhovi (2024) assessing budget planning, financial goal setting, and expense tracking.
+  - Financial stability was measured through self-reported financial stress, savings, and monthly expense management using a four-point Likert scale.
+  - Correlation analysis (Pearson R) was performed to test the relationship between budgeting skills and financial stability.
+  - T-Test and ANOVA were used to examine differences in the effect of budgeting skills based on demographic profiles.
 findings:
-  - "num: 0.7247 correlation coefficient (p < 0.01) indicates strong positive relationship between budgeting skills and financial stability."
-  - Students demonstrated very high levels of budgeting skills (mean 3.45/4.00) and financial stability (mean 3.49/4.00).
-  - Most students (86%) have monthly allowance below ₱1,000, yet effective budgeting enables savings and reduced financial stress.
-  - Significant differences in budgeting impact exist across age, year level, program, and monthly allowance.
+  - num: 86% of respondents have an average monthly allowance of ₱1,000.00 or below.
+  - Students demonstrate very high competency in budget planning (mean 3.49), financial goal setting (mean 3.52), and expense tracking (mean 3.45).
+  - The study found a strong positive correlation (r = 0.7247, p < 0.01) between personal budgeting skills and financial stability.
+  - Students who practice better budgeting habits report lower financial stress and greater savings.
+  - Significant differences in financial management capacity were observed across age, year level, program, and average monthly allowance.
 key_figures_tables:
-  - "Table 2: Budgeting skills means (3.45-3.52) all 'Very High' → students report strong planning, goal setting, tracking."
-  - "Table 4: Correlation 0.7247 with p<0.01 → strong significant relationship between budgeting and stability."
-  - "Table 1: 86% have allowance below ₱1,000 → most students operate under severe budget constraints."
+  - Table 1: Respondent demographic profile → Majority are female with monthly allowance below ₱1,000.
+  - Table 2: Assessment of budgeting skills → Students show very high skills in all three subscales.
+  - Table 3: Assessment of financial stability → Students report very high financial stability across all measures.
+  - Table 4: Correlation analysis → Strong significant relationship between budgeting and financial stability.
+  - Table 5: Demographic differences → Significant differences exist based on age, year, program, and allowance.
 key_equations:
-  - equation: None.
-    explanation: ""
+  - equation: r = 0.7247
+    explanation: Pearson correlation coefficient for budgeting skills and financial stability.
 definitions:
-  - term: Budget planning
-    definition: Process of setting spending limits and allocating funds for essential needs.
-  - term: Financial stability
-    definition: State of having reduced financial stress, consistent savings, and managed monthly expenses.
-  - term: Expense tracking
-    definition: Regular recording and monitoring of personal expenditures.
+  - term: Financial Stability
+    definition: The ability to manage expenses, maintain savings, and experience low financial stress.
+  - term: Personal Budgeting Skills
+    definition: Competency in budget planning, goal setting, and expense tracking.
 critical_citations:
   - "[Xiao & O'Neill, 2019] — Budgeting enables efficient resource allocation and debt avoidance."
-  - "[Lusardi & Mitchell, 2023] — Financial literacy is essential for young individuals facing economic uncertainties."
-  - "[Yeo et al., 2023] — Financial Planning Behavior Theory links knowledge and control to outcomes."
+  - "[Galperti, 2019] — Self-regulation and disciplined planning improve financial outcomes."
 relevance:
   topics:
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      justification: Budgeting skill level is a key behavioral trait differentiating financially stable students.
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: medium
+      justification: Focuses on college students, a precursor demographic to young professionals in the Philippines.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Provides local data on student allowances and financial constraints relevant to future professionals.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly investigates budgeting behaviors and their link to financial stability among students.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: contextual
+      justification: Mentions tracking expenses but does not propose a specific categorization framework.
     - code: 7.A
       name: Budgeting Strategies as Domain Knowledge
-      justification: Paper provides empirical evidence that planning, goal setting, and tracking are effective budgeting strategies.
+      relevance: high
+      justification: Validates the importance of structured budgeting strategies for financial stability.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: low
+      justification: Uses a survey-based evaluation approach applicable to system design.
     - code: 13.A
       name: Savings Goal Management in PFMS
-      justification: Findings show budgeting directly improves savings behavior and reduces financial stress.
-  contribution: This paper confirms that structured budgeting practices (planning, goal setting, expense tracking) are strong predictors of financial stability. For Odin's budget recommendation module, it provides domain knowledge that effective budgeting reduces financial stress and increases savings. The correlation strength (0.7247) quantifies the relationship, supporting the design of personalized budget plans. Additionally, the finding that even students with very low allowances (₱1,000 below) can achieve stability through budgeting informs savings goal setting features.
+      relevance: medium
+      justification: Links effective budgeting to improved savings behavior.
+  contribution: This paper provides empirical evidence that strong budgeting skills correlate with reduced financial stress, which supports Odin's focus on behavior-tracking modules. The findings justify the development of budget planning and expense tracking features in a PFMS like Odin. The strong correlation between planning and stability highlights the need for personalized budgeting tools.
   directly_justifies:
-    - Personal budgeting skills have a strong positive correlation (r=0.7247) with financial stability among college students.
-    - Budget planning, financial goal setting, and expense tracking are key dimensions of effective budgeting.
-    - Students with better budgeting habits save more and experience less financial stress.
+    - Budget planning, goal setting, and expense tracking are key determinants of financial stability for users with limited income.
+    - A strong positive relationship exists between structured budgeting practices and reduced financial stress.
+    - Students who engage in consistent budgeting maintain small but consistent savings even with minimal income.
   limits:
-    - Sample limited to one Philippine higher education institution, not generalizable to all Filipino young professionals.
-    - Self-reported survey data may introduce response bias.
-    - Cross-sectional design cannot establish causality, only correlation.
-  mapping_rationale: The paper was screened against Odin's functional domains. Budgeting strategies directly map to domain 'Budget recommendation' (topic 7.A) as it provides empirical support for planning, goal setting, and tracking as effective strategies. Savings outcomes map to 'Savings & debt management' (13.A). Although the paper studies college students rather than young professionals, the behavioral insight that budgeting skill correlates with stability supports 'Behavioral profiling' (5.A) as a trait. Domains like spending forecasting, anomaly detection, and mobile design were rejected as the paper does not address predictive modeling or system features. Borderline case: The paper's local Philippine context was considered for 1.C but rejected because the demographic is college students, not professionals.
+    - The study's context is a single higher education institution in Baungon, limiting generalizability to other socioeconomic groups.
+    - Reliance on self-administered questionnaires may introduce response bias.
+  mapping_rationale: A systematic scan across all 12 functional domains was performed. The domains of "Filipino Cultural Context," "Expense Categorization," "Budget Recommendation," and "Savings & Debt Management" were flagged as relevant due to the paper's focus on local student financial behaviors and budgeting practices. Specifically, topics 1.A, 1.B, and 1.C were assigned high relevance as the paper directly addresses the financial demographics and behavior of Filipino students. Topic 7.A was also deemed highly relevant as it validates budgeting strategies as essential domain knowledge. Topics 3.A and 13.A were assigned contextual and medium relevance respectively, as the paper touches on expense tracking and savings but does not propose novel frameworks. The domains of "Forecasting," "Anomaly Detection," "Mobile-First Design," and "Data Privacy" were considered and rejected as the paper does not address algorithmic, predictive, or technical design aspects. Overall, the paper provides foundational behavioral evidence for Odin's user profiling and budgeting modules.
 limitations:
-  - Study limited to a single institution in Baungon, Bukidnon; findings may not generalize. [unacknowledged]
-  - Reliance on self-administered questionnaires may introduce response bias. [acknowledged in paper]
-  - Cross-sectional design prevents causal inference. [unacknowledged]
+  - The study is limited to one higher education institution in Baungon, which may not represent the broader Filipino young professional demographic. [unacknowledged]
+  - The findings rely on self-reported data, which may be subject to social desirability bias. [unacknowledged]
+  - The study does not account for external factors like family support or part-time employment that could influence financial stability. [unacknowledged]
 remember_this:
-  - Budgeting skills correlate strongly (r=0.72) with financial stability.
-  - Even very low-income students can save through disciplined budgeting.
-  - Three key skills: planning, goal setting, and expense tracking.
-  - Budgeting reduces financial stress and improves spending control.
+  - Budgeting skills show a strong positive correlation with financial stability among Filipino students.
+  - Students with better budgeting habits experience less financial stress and save more.
+  - Most students manage a monthly allowance of ₱1,000 or below.
+  - Effective budget planning and goal setting are key to financial well-being.
+  - The findings support the integration of financial literacy programs in educational curricula.
 ```

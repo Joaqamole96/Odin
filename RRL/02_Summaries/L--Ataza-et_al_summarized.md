@@ -1,81 +1,127 @@
 ```yaml
-paper_id: "d1c9f8e7-6a5b-4c3d-2e1f-0a9b8c7d6e5f"
-designation: "local"
-title: "THE IMPACT OF PSYCHOLOGICAL, ECONOMIC, SOCIAL ASPECTS, AND INTEREST RATE VARIATIONS ON WORKING MILLENNIALS' SAVING PATTERNS THROUGH DIGITAL BANKING"
-authors: "Ataza, C.; Porcel, M.; Resabal, L.; Sandoval, A.; Bragas, C."
+paper_id: 10.XXXX/290
+designation: local
+title: The Impact of Psychological, Economic, Social Aspects, and Interest Rate Variations on Working Millennials' Saving Patterns Through Digital Banking
+authors: Ataza, C.; Porcel, M.; Resabal, L.; Sandoval, A.; Bragas, C.
 year: 2024
-venue: "Sachetas"
+venue: Sachetas
 odin_topics:
-  - "1.C"
-  - "5.A"
-  - "13.A"
-shorthand_tags:
-  - "/financial-behavior"
-  - "/behavioral-profiles"
-  - "/savings-management"
-tldr: "Psychological aspects and interest rate variations positively affect working millennials' saving patterns through digital banking, while social aspects have a negative effect."
-problem_and_motivation: "Understanding the saving patterns of working millennials in the Philippines through digital banking is limited. Psychological, economic, social, and interest rate factors may interact in complex ways. This gap hinders banks from optimizing personalized offers and promoting financial literacy."
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.B
+  - 3.A
+  - 4.B
+  - 5.A
+  - 10.A
+  - 11.B
+  - 13.A
+tldr: Psychological aspects and interest rate variations significantly positively affect the saving patterns of working millennials through digital banking in the Philippines.
+problem_and_motivation: The financial behavior of Filipino working millennials using digital banking is not fully understood. There is a gap in knowledge regarding how psychological, social, and economic factors, along with interest rates, collectively influence their saving patterns. Understanding these dynamics is crucial for banks and policymakers to design effective financial products and inclusion strategies.
 approach:
-  - "Data collected from 51 working millennials aged 26-42 in Metro Manila with digital bank accounts."
-  - "Questionnaire measured psychological, economic, social aspects and interest rate variations using 5-point Likert scale."
-  - "Cronbach's alpha values ranged from 0.804 to 0.926 indicating good internal consistency."
-  - "Multiple linear regression was used to test hypotheses and derive a predictive equation."
+  - A quantitative, descriptive-correlational research design was employed.
+  - Survey questionnaires were administered to a stratified random sample of 51 working millennials aged 26-42 in Metro Manila who have bank accounts.
+  - The instrument used a 5-point Likert scale to measure psychological, economic, social, and interest rate factors.
+  - Reliability was assessed using Cronbach's alpha, with all variables showing good to excellent internal consistency (0.804 to 0.926).
+  - Data were analyzed using descriptive statistics and multiple linear regression to determine predictors of saving patterns.
 findings:
-  - "num: Psychological aspects had a positive effect on saving patterns (Beta=0.430, p<0.05)."
-  - "num: Interest rate variations showed the strongest positive effect (Beta=0.878, p<0.05)."
-  - "num: Social aspects had a negative effect (Beta=-0.182, p<0.05)."
-  - "num: The full model explained 75.34% of variance in saving patterns (R²=0.7534)."
-  - "Economic aspects did not significantly predict saving patterns (p>0.05)."
+  - num: Psychological aspects (Beta = 0.430, p = 0.006) and interest rate variations (Beta = 0.878, p = 0.000) were significant positive predictors of saving patterns.
+  - num: Social aspects had a significant negative effect on saving patterns (Beta = -0.182, p = 0.016).
+  - num: Economic aspects did not significantly predict saving patterns (Beta = -0.130, p = 0.293).
+  - num: The overall model explained 75.34% of the variance in saving patterns (R² = 0.7534).
+  - The largest age group of respondents (84.3%) was 26-31 years old, and the majority were female (58.8%) and single (86.3%).
+  - Most respondents (58.8%) used both digital and traditional banks, while 31.4% used only digital banks.
 key_figures_tables:
-  - "Table 4: Multiple linear regression results → Psychological and interest rate variations are significant predictors."
-  - "Figure 10: Bar chart of standardized coefficients → Interest rate variations have highest positive impact."
-  - "Table 3: R-square values → All factors combined explain 75% of variance."
+  - Table 2: Descriptive statistics show economic aspects had the highest mean (4.22) and social aspects the lowest (3.73). → Social factors show most variability and lowest perceived impact.
+  - Table 3: Model summary shows interest rate variations have the highest R² (0.7006), followed by psychological aspects (0.3102). → Interest rates are the strongest single predictor.
+  - Figure 10: Graphical representation of regression coefficients. → Interest rate variations have the strongest positive impact on saving patterns.
 key_equations:
-  - equation: "Y = (0.430)P + (-0.130)E + (-0.182)S + (0.878)I + (-0.01)"
-    explanation: "Regression equation for saving patterns through digital banking."
+  - equation: Y = (0.430)P + (-0.130)E + (-0.182)S + (0.878)I + (-0.01)
+    explanation: Regression model predicting saving patterns through digital banking.
 definitions:
-  - term: "Digital banking"
-    definition: "Banking services delivered through online and mobile platforms without physical branches."
-  - term: "Millennials"
-    definition: "Working individuals aged 26-42 in this study."
-  - term: "Psychological aspects"
-    definition: "Individual attitudes, self-control, financial anxiety, and risk tolerance affecting saving decisions."
-  - term: "Interest rate variations"
-    definition: "Changes in the percentage return paid by banks on savings accounts."
+  - term: Digital Banking
+    definition: The use of digital technologies and platforms to conduct banking and financial transactions.
+  - term: Working Millennials
+    definition: Individuals aged 26-42 who are employed and engaged in income-generating activities.
+  - term: Psychological Aspects
+    definition: Internal factors like financial anxiety, risk tolerance, and self-efficacy influencing financial decisions.
+  - term: Interest Rate Variations
+    definition: Fluctuations in the rate banks pay depositors for keeping money in savings accounts.
 critical_citations:
-  - "[Ricardo, J.S. Mill, Marshall, Pigou, n.d.] — Classical interest theory foundation."
-  - "[Ajzen, 1991] — Theory of Planned Behavior framework."
-  - "[Co & Centeno, 2023] — Filipino financial behavior context."
+  - "[Co & Centeno, 2023] — Found social factors influence banking preferences."
+  - "[Jünger & Mietzner, 2020] — Examined FinTech adoption by German households."
+  - "[Felici et al., 2023] — Studied consumer savings at low/negative interest rates."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Paper analyzes saving patterns of working millennials in Philippines."
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Psychological factors as significant predictor informs behavioral profiling."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Directly studies saving patterns through digital banking and interest rate effects."
-  contribution: "This paper justifies Odin's savings management module (13.A) by quantifying the positive effect of interest rate variations on saving behavior. It supports behavioral profiling (5.A) by demonstrating that psychological aspects significantly predict saving patterns. The negative effect of social aspects informs design of social features in Odin's mobile app to avoid peer pressure. The regression model can guide personalized budget recommendations (7.B) by incorporating interest rate sensitivity. Digital banking platforms like Odin can use these findings to optimize interest offers and psychological nudges."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: The study specifically focuses on Filipino working millennials, a core Odin user group.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Provides demographic data on income, employment, and banking modes of the target group.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly investigates saving behavior and its psychological and economic determinants.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: contextual
+      justification: The study is situated in Metro Manila, providing a local context for financial behavior.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: low
+      justification: Tangentially addresses income cycles through employment stability, but not explicit seasonal spending.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: low
+      justification: Mentions income allocation between needs and wants, but does not focus on categorization.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: contextual
+      justification: Highlights the need for digital banks to offer better tools and personalized offers.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Explores psychological profiles affecting saving, relevant to behavioral classification.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: The methodology states compliance with the Data Privacy Act of the Philippines.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: medium
+      justification: Findings on interest rates and psychological tools inform engagement and retention.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: medium
+      justification: Discusses incentives and barriers to saving, relevant for goal management features.
+  contribution: This study provides empirical evidence on the key drivers of saving behavior among Filipino millennials using digital banking, directly informing Odin's design of personalized financial management tools. The strong influence of psychological factors validates the need for behavioral profiling and confidence-building features within the app. The significant impact of interest rates highlights the importance of competitive rates and transparent communication to encourage saving. The negative effect of social aspects suggests that Odin should focus on internal user goals rather than social comparison, although social features could be designed carefully to avoid unintended negative consequences. The identified demographic and income distribution data helps in tailoring features and user onboarding experiences for the target Filipino user base.
   directly_justifies:
-    - "Psychological aspects positively affect saving patterns of working millennials through digital banking."
-    - "Interest rate variations are the strongest predictor of saving behavior in digital banking."
-    - "Social aspects have a negative effect on saving patterns via digital banking."
-    - "The full regression model explains 75% of variance in saving patterns."
+    - Interest rates are a significant predictor of saving behavior in digital banking.
+    - Psychological factors like self-efficacy and risk tolerance are critical in shaping saving habits.
+    - Social influences can have a negative effect on saving patterns.
+    - Digital banking platforms should offer personalized financial tools to address diverse user needs.
+    - Economic stability fosters confidence in saving, while downturns may reduce it.
   limits:
-    - "Small sample size (n=51) limits generalizability. [unacknowledged]"
-    - "Focus only on Metro Manila, not representative of all Filipino millennials. [unacknowledged]"
-    - "Cross-sectional design cannot establish causality. [unacknowledged]"
-  mapping_rationale: "The paper directly addresses savings behavior (13.A) and financial behavior of Filipino young professionals (1.C). Psychological aspects as significant predictors support inclusion of behavioral profiling (5.A). Economic aspects were not significant, so topics related to economic forecasting (6.A, 6.B) were rejected. No discussion of budgeting algorithms (7.A-C), anomaly detection (8.A-B), expense categorization (3.A-B), mobile design (9.A-B), data privacy (10.A-B), retention (11.A-B), or system evaluation (12.A-B). Social aspects were significant but negative, which may inform user trust (10.B) indirectly, but not directly justified, so excluded."
+    - The sample size of 51 respondents is relatively small, limiting generalizability.
+    - The study focuses on Metro Manila, which may not represent the entire Philippine population.
+    - The use of purposive sampling may introduce selection bias.
+    - The research relies on self-reported data, which can be subject to social desirability bias.
+    - The cross-sectional design captures behavior at a single point in time.
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The domains of Filipino Cultural Context, Behavioral Profiling, Savings & Debt Management, and User Retention were flagged as highly relevant. Topic 1.C (Financial Behavior) and 1.A (Demographic) were assigned high relevance due to the paper's direct focus on Filipino millennial saving patterns and its demographic profile data. Topic 13.A (Savings Goal Management) and 5.A (Behavioral Profiles) received medium relevance as the paper provides evidence for the psychological drivers and interest-rate sensitivity relevant to these modules. The domain of Expense Categorization was considered and rejected as the paper does not propose or evaluate categorization frameworks, only touching on income allocation. The mobile-first design domain was rejected as the paper does not address UX principles. The paper's modeling of behavior using survey data and regression provides a foundational understanding of user motivation, directly informing Odin's design for behavioral profiling and retention strategies.
 limitations:
-  - "Potential sample bias due to purposive sampling."
-  - "Dynamic nature of digital banking may affect future applicability."
-  - "Sample size of 51 is relatively small [unacknowledged]."
-  - "Findings may not generalize beyond Metro Manila [unacknowledged]."
+  - Small sample size (n=51) and use of purposive sampling may limit generalizability.
+  - Focus on Metro Manila may not represent the broader Filipino population.
+  - Reliance on self-reported survey data is susceptible to biases.
+  - The cross-sectional design captures a snapshot in time and does not reveal causal relationships. [unacknowledged]
+  - The model does not account for all potential confounding variables like financial literacy levels. [unacknowledged]
 remember_this:
-  - "Interest rate variations have the strongest positive effect on saving patterns (Beta=0.878)."
-  - "Psychological aspects positively influence saving behavior through digital banking."
-  - "Social aspects negatively affect saving patterns, unlike psychological factors."
-  - "The full regression model explains 75% of variance in millennials' savings."
+  - Psychological aspects and interest rates are the strongest predictors of millennial saving.
+  - Social aspects had a significant negative effect on saving patterns.
+  - The regression model explained over 75% of the variance in saving behavior.
+  - Most digital bank users also maintain traditional bank accounts.
+  - Higher interest rates serve as a strong incentive for increased savings.
 ```

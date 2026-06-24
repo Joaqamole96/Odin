@@ -6,98 +6,119 @@ authors: Chen, J.; Chen, T.; Wang, Y.; Wang, L.
 year: 2024
 venue: Journal of Basic and Applied Research International
 odin_topics:
+  - 3.A
+  - 4.A
   - 6.A
   - 6.B
+  - 7.A
+  - 8.A
+  - 8.B
   - 12.A
-  - 12.B
-shorthand_tags:
-  - /spending-forecast
-  - /predictive-modeling
-  - /eval-framework
-  - /eval-algorithm
-tldr: Surveys deep learning methods for time series forecasting including RNN, LSTM, GRU, and Transformer, and compares their performance on public datasets.
-problem_and_motivation: Traditional statistical models for time series forecasting require extensive manual feature engineering and struggle with large-scale data. Deep learning offers automatic feature extraction but faces challenges like vanishing gradients and difficulty capturing long-range dependencies. This survey systematically reviews deep learning methods to identify strengths and weaknesses for forecasting tasks.
+tldr: A survey comparing RNN, LSTM, GRU, and Transformer models for time series forecasting, with experimental evaluation on public datasets.
+problem_and_motivation: Traditional machine learning methods struggle with massive time series datasets due to temporal dependence and seasonality. Deep learning offers an alternative with minimal manual feature engineering.
 approach:
-  - Reviews common time series features, datasets (ETT, ECL, Traffic, Weather, ILI, TE), and evaluation metrics (MSE, MAE, RMSE, MAPE, SMAPE, R²).
-  - Describes RNN structure and its vanishing/exploding gradient problem.
-  - Explains LSTM gating mechanism (forget, input, output gates) to address gradient issues.
-  - Introduces GRU as a simplified LSTM with update and reset gates.
-  - Presents Bi-LSTM for bidirectional sequence processing.
-  - Details Transformer self-attention, multi-head attention, and positional encoding.
-  - Conducts univariate forecasting experiments on ETTm2, Electricity, Traffic, Weather with input length 24 and prediction length 1 using PyTorch.
-  - Compares RNN, LSTM, GRU, Transformer, LSTM-RNN using MSE and MAE.
+  - Reviews common features, datasets, and evaluation metrics for time series forecasting.
+  - Surveys deep learning models including RNN, LSTM, GRU, Bi-LSTM, and Transformer.
+  - Conducts univariate prediction experiments on ETTm2, Electricity, Weather, and Traffic datasets.
+  - Uses input sequence length of 24 and prediction length of 1 with MSE and MAE as metrics.
+  - Compares performance of RNN, LSTM, GRU, Transformer, and LSTM-RNN models.
 findings:
-  - "num: Transformer achieved best performance on ETTm2 with MSE=3.418, MAE=1.399."
-  - "num: LSTM achieved minimum MAE on Electricity (1.848) and Traffic (0.020)."
-  - "num: GRU achieved minimum MSE on Electricity (19.524) and Traffic (0.00110)."
-  - "num: RNN achieved best performance on Weather with MSE=0.007, MAE=0.060."
-  - LSTM-RNN generally outperforms standard RNN and shows better results on some datasets.
-  - Deep learning models require less manual engineering but need large datasets and are less interpretable.
+  - num: Transformer achieved the best performance on ETTm2 with MSE 3.418 and MAE 1.399.
+  - num: LSTM achieved minimum MAE on Electricity (1.848) and Traffic (0.020) datasets.
+  - num: GRU achieved minimum MSE on Electricity (19.524) and Traffic (0.00110) datasets.
+  - num: RNN achieved best performance on Weather with MSE 0.007 and MAE 0.060.
+  - The LSTM-RNN hybrid generally outperforms standard RNN and LSTM in some cases.
+  - Deep learning models accurately identify complex patterns with lower human resource requirements.
 key_figures_tables:
-  - "Figure 10: Prediction curves on ETTm2 dataset → Transformer fits best."
-  - "Figure 11: Prediction curves on ECL dataset → LSTM and GRU perform well."
-  - "Figure 12: Prediction curves on Weather dataset → RNN best."
-  - "Figure 13: Prediction curves on Traffic dataset → GRU lowest MSE."
-  - "Table 1: Univariate prediction performance comparison → Transformer best on ETTm2, RNN best on Weather."
+  - Table 1: Comparison of MSE and MAE for five models across four datasets → Transformer best on ETTm2, GRU best on Electricity/Traffic MSE.
+  - Figure 10: Prediction curves on ETTm2 dataset → Transformer shows closest fit to actual values.
+  - Figure 11: Prediction curves on ECL dataset → GRU and Transformer capture patterns effectively.
+  - Figure 12: Prediction curves on Weather dataset → RNN performs surprisingly well on meteorological data.
+  - Figure 13: Prediction curves on Traffic dataset → GRU demonstrates strong performance on occupancy data.
 key_equations:
-  - equation: "MSE = (1/n) Σ(y_i - ŷ_i)^2"
-    explanation: "Average squared prediction error."
-  - equation: "Attention(Q,K,V) = softmax(QK^T / √d_k) V"
-    explanation: "Self-attention mechanism for weighting values."
-  - equation: "PE(t)_i = sin(t / 10000^{2i/d}) or cos"
-    explanation: "Positional encoding for sequence order."
+  - equation: MSE = (1/n) ∑(y_i - ŷ_i)^2
+    explanation: Average squared difference between predicted and actual values.
+  - equation: MAE = (1/n) ∑|y_i - ŷ_i|
+    explanation: Mean absolute difference between predicted and actual values.
+  - equation: Attention(Q,K,V) = softmax(QK^T/√d_k)V
+    explanation: Self-attention mechanism computes weighted sum of values.
+  - equation: PE(t,i) = sin(t/10000^(2k/d)) for i=2k
+    explanation: Positional encoding using sine functions for even dimensions.
 definitions:
-  - term: "TSF"
-    definition: "Time Series Forecasting, predicting future values from historical patterns."
-  - term: "RNN"
-    definition: "Recurrent Neural Network, processes sequences with cyclic connections."
-  - term: "LSTM"
-    definition: "Long Short-Term Memory, RNN variant with gating to manage long-term dependencies."
-  - term: "GRU"
-    definition: "Gated Recurrent Unit, simplified LSTM with update and reset gates."
-  - term: "Transformer"
-    definition: "Deep learning architecture based on self-attention, not recurrence."
-  - term: "MSE"
-    definition: "Mean Squared Error, average of squared prediction errors."
-  - term: "MAE"
-    definition: "Mean Absolute Error, average of absolute prediction errors."
+  - term: TSF
+    definition: Time Series Forecasting, predicting future values from historical patterns.
+  - term: RNN
+    definition: Recurrent Neural Network, processes sequential data with hidden states.
+  - term: LSTM
+    definition: Long Short-Term Memory, RNN variant with gating mechanisms for long dependencies.
+  - term: GRU
+    definition: Gated Recurrent Unit, simplified LSTM with update and reset gates.
+  - term: MSE
+    definition: Mean Squared Error, evaluation metric measuring average squared error.
+  - term: MAE
+    definition: Mean Absolute Error, evaluation metric measuring average absolute error.
+  - term: ETT
+    definition: Electricity Transformer Temperature, dataset of transformer oil temperatures.
 critical_citations:
-  - "[Vaswani et al., 2017] — Introduced Transformer self-attention."
-  - "[Hochreiter & Schmidhuber, 1997] — Proposed LSTM to solve gradient issues."
-  - "[Elman, 1990] — Foundational RNN structure."
+  - "[Vaswani et al., 2017] — Introduced Transformer with self-attention mechanism."
+  - "[Hochreiter & Schmidhuber, 1997] — Proposed LSTM for long-term dependencies."
+  - "[Wu et al., 2021] — Introduced Autoformer with decomposition architecture."
+  - "[Liu et al., 2022] — Proposed non-stationary Transformers for time series."
 relevance:
   topics:
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      justification: "Reviews deep learning models for time series forecasting applicable to spending prediction."
-    - code: "6.B"
-      name: "Spending Forecasting Algorithm"
-      justification: "Compares algorithms (RNN, LSTM, GRU, Transformer) for univariate forecasting tasks."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      justification: "Discusses evaluation metrics (MSE, MAE) and experimental protocols."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      justification: "Provides quantitative performance comparisons across multiple datasets."
-  contribution: "This survey provides a structured comparison of deep learning forecasting algorithms relevant to Odin's spending forecasting module. The evaluation metrics and experimental protocol (MSE, MAE on multiple datasets) inform Odin's evaluation framework for algorithmic modules. The discussion of LSTM and Transformer strengths guides algorithm selection for spending prediction. The identification of hybrid models (LSTM-RNN) suggests potential performance improvements."
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: Survey discusses feature extraction relevant to categorization.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Provides context on deep learning models applicable to PFMS.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Directly surveys forecasting models applicable to spending prediction.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Compares RNN, LSTM, GRU, and Transformer for sequential forecasting.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Forecasting accuracy underpins budget recommendation systems.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: medium
+      justification: Forecasting models are foundational for anomaly detection baselines.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: Compares algorithms applicable to anomaly detection in spending.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Provides evaluation metrics (MSE, MAE) directly applicable to PFMS modules.
+  contribution: This survey establishes a comparative benchmark of deep learning forecasting models, which directly informs Odin's spending forecasting module. The evaluation framework using MSE and MAE provides a template for assessing Odin's predictive accuracy. The discussion of model strengths and weaknesses guides architecture selection for Odin's forecasting engine. The Transformer and LSTM performance comparisons offer empirical evidence for algorithm selection. The survey's experimental methodology can be adapted for evaluating Odin's forecasting and anomaly detection components.
   directly_justifies:
-    - "Deep learning models can automatically extract temporal features from time series data."
-    - "Transformer self-attention captures long-range dependencies better than RNNs."
-    - "No single model dominates all datasets; model selection depends on data characteristics."
-    - "Evaluation should use both MSE and MAE to capture different error aspects."
+    - "Transformers achieve superior performance on the ETTm2 dataset for univariate forecasting."
+    - "LSTM and GRU models are effective for electricity and traffic prediction tasks."
+    - "MSE and MAE are standard evaluation metrics for time series forecasting models."
+    - "RNN variants are foundational for capturing temporal dependencies in sequential data."
   limits:
-    - "Paper is a survey, not an original algorithm; no novel contribution."
-    - "Experiments are univariate only, not multivariate spending data."
-    - "Only four datasets used; others excluded due to insufficient periodicity."
-  mapping_rationale: "The paper focuses on time series forecasting using deep learning, which directly maps to Odin's spending forecasting domain (6.A, 6.B). It also extensively discusses evaluation metrics and comparative experiments, supporting evaluation frameworks (12.A, 12.B). No coverage of behavioral profiling, expense categorization, mobile design, privacy, retention, savings, or debt management. Budget recommendation (7) is not addressed because the paper does not prescribe budget amounts or strategies; it only forecasts future values. Anomaly detection (8) is not covered. Thus only codes 6.A, 6.B, 12.A, 12.B are selected."
+    - "The survey focuses on univariate prediction only, not multivariate spending patterns."
+    - "Experiments use short prediction horizons (length 1), not long-term forecasting."
+    - "No comparison on financial transaction datasets specific to personal finance."
+    - "Limited discussion of computational efficiency or deployment constraints."
+  mapping_rationale: All 12 functional domains and associated topic codes were systematically scanned. The paper's primary relevance is to 6.A and 6.B (predictive modeling and forecasting algorithms) at high relevance, as it directly surveys and compares deep learning models for time series forecasting. Topic 12.A (evaluation frameworks) is also high relevance due to detailed discussion of MSE and MAE metrics. Topics 3.A, 4.A, 7.A, 8.A, and 8.B are medium relevance as the forecasting methods and metrics are foundational to categorization, system landscape, budgeting, and anomaly detection but are not directly addressed. Topics related to Filipino cultural context, behavioral profiling, mobile design, privacy, retention, and debt management were considered and rejected as the paper contains no relevant content. The overall relevance is high for Odin's algorithmic forecasting modules.
 limitations:
-  - "Survey format; no novel algorithm proposed."
-  - "Univariate experiments may not generalize to multivariate spending data [unacknowledged]."
-  - "Excluded datasets with insufficient periodicity, limiting generalizability."
-  - "No discussion of real-time forecasting constraints or deployment considerations [unacknowledged]."
+  - "Prediction experiments limited to univariate time series only."
+  - "No evaluation on financial transaction data."
+  - "Short prediction horizon may not generalize to monthly budget cycles."
+  - "Does not address real-time forecasting constraints or model interpretability."
 remember_this:
-  - "Transformer achieved lowest MAE (1.399) on ETTm2 dataset."
-  - "No single deep learning model dominates all time series forecasting tasks."
-  - "Deep learning automates feature extraction but requires large training data."
-  - "Evaluation metrics MSE and MAE are standard for comparing forecasting models."
+  - "Transformer achieved MAE of 1.399 on ETTm2, best among compared models."
+  - "GRU achieved minimum MSE of 19.524 on Electricity and 0.00110 on Traffic."
+  - "LSTM-RNN hybrid generally improves over standalone RNN models."
+  - "MSE and MAE are the standard evaluation metrics for forecasting."
+  - "Deep learning models capture complex patterns with minimal manual feature engineering."
 ```

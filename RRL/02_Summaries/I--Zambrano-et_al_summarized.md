@@ -6,89 +6,105 @@ authors: Zambrano, A.F.; Giraldo, L.F.; Perdomo, M.T.; Hernández, I.D.; Godoy, 
 year: 2023
 venue: World Development Sustainability
 odin_topics:
-  - 1.C
   - 2.A
-  - 5.A
-  - 11.A
   - 13.A
   - 13.B
-shorthand_tags:
-  - /financial-behavior
-  - /cultural-practices
-  - /behavioral-profiles
-  - /engagement
-  - /savings-goals
-  - /debt-management
-tldr: A scoping review of 96 papers on Rotating Savings and Credit Associations finds financial and non‑financial benefits, risks like defection, and opportunities for technological support and formalization.
-problem_and_motivation: Despite decades of research on ROSCAs worldwide, no systematic scoping review has synthesized recent findings on their benefits, risks, and operational mechanisms. Understanding these informal financial arrangements is crucial for leveraging them in development and financial inclusion. The lack of a structured overview limits evidence‑based interventions.
+  - 5.A
+  - 4.A
+  - 4.B
+  - 7.A
+tldr: A scoping review of ROSCA research finds these informal savings groups provide financial access and social capital, and suggests design improvements like diversification and reputation systems.
+problem_and_motivation: Informal financial cooperation, like ROSCAs, is vital for low-income communities, but a systematic synthesis of recent findings on their structure, benefits, and risks has been lacking to inform design and policy.
 approach:
-  - Used the PRISMA‑ScR protocol to systematically map ROSCA research from January 2000 to July 2022.
-  - Searched Scopus and Web of Science, screening 227 publications to include 96 peer‑reviewed journal or conference papers in English.
-  - Extracted data on continent/country of the studied ROSCA, methodological approaches, keywords, and key conclusions.
-  - Analyzed keyword occurrence and co‑occurrence after grouping synonyms into concepts.
-  - Categorized findings into: origin/participants/beneﬁts, operation/control, risks/disadvantages, performance improvements, and technological applications.
+  - Conducted a scoping review using the PRISMA-ScR protocol on 96 peer-reviewed articles from 2000-2022.
+  - Extracted data on study location, methodological approaches, and keywords for trend analysis.
+  - Grouped findings into categories including origin, participants, benefits, risks, operation, and penalties.
+  - Analyzed the co-occurrence of keywords to identify thematic connections within the literature.
+  - Reviewed mathematical, computational, and technological applications for modeling and supporting ROSCAs.
 findings:
-  - num: 96 papers were included in the scoping review.
-  - Asia and Africa are the most studied continents; South America and Oceania have no primary data studies since 2000.
-  - ROSCAs provide non‑financial benefits including social capital, health improvements, and women’s empowerment beyond pure financial gains.
-  - Defection risk is mitigated by social sanctions, reputation mechanisms, and heavy economic penalties; without sanctions, sustainability is theoretically impossible.
-  - Computational models show that promoting altruism, reciprocity, and diversification across multiple small ROSCAs increases resilience.
-  - Mobile and web applications improve transparency and security, helping members register transactions and receive investment advice.
+  - Asia and Africa are the most studied continents for ROSCAs, with limited research in South America.
+  - ROSCAs provide non-financial benefits like social capital, empowerment, and improved health for members.
+  - Defection of members, driven by loss of motivation, is a primary risk factor for ROSCA failure.
+  - Strategies like diversification (joining multiple ROSCAs) and smaller groups can increase resilience.
+  - num: Multi-agent simulations and web applications are emerging to test improvements and support ROSCA operations.
 key_figures_tables:
-  - "Figure 1: Bar chart of studies per continent (Asia 34, Africa 28) → Asia and Africa dominate ROSCA research."
-  - "Figure 4: Counts of methodological approaches (interviews/surveys 48) → Qualitative case studies are most common."
-  - "Figure 6: Keyword occurrence (ROSCA 65, Finance 26) → Financial and social concepts co‑occur frequently."
-  - "Figure 7: Network of keyword co‑occurrence → ROSCA connects strongly to micro‑enterprise and women/immigrants."
+  - Figure 1: Continent of data collection → Asia and Africa are the most studied regions.
+  - Figure 2: Country of data collection → Kenya, India, and Japan are frequently studied.
+  - Figure 3: Published year and continent → An increasing trend in publications until 2019, with a recent decline.
+  - Figure 4: Methodological approaches → Interviews and surveys are the most common methods.
+  - Figure 6: Number of occurrences of most common keywords → ROSCA, Finance, and Social are the most frequent concepts.
 key_equations:
   - equation: None.
     explanation: ""
 definitions:
   - term: ROSCA
-    definition: Rotating Savings and Credit Association; an informal group where members periodically contribute a fixed sum and one member receives the total pot each cycle.
-  - term: PRISMA-ScR
-    definition: Preferred Reporting Items for Systematic Reviews and Meta‑Analyses extension for Scoping Reviews.
+    definition: Rotating Savings and Credit Association, an informal group where members contribute periodically to a pot allocated to one member each cycle.
+  - term: Bidding ROSCA
+    definition: A type where the pot is allocated to members who bid the highest premium for early turns.
+  - term: Fixed ROSCA
+    definition: A type where the order of receiving the pot remains fixed across cycles.
+  - term: Random ROSCA
+    definition: A type where the order of receiving the pot is randomly determined each cycle.
 critical_citations:
-  - "[Besley, Coate & Loury, 1993] — Foundational economic model of ROSCAs."
-  - "[Geertz, 1962] — Early ethnographic definition of rotating credit associations."
-  - "[Tricco et al., 2018] — PRISMA‑ScR protocol used for this review."
+  - "[Anderson et al., 2009] — ROSCAs are unsustainable without external sanctions."
+  - "[Besley et al., 1993] — Foundational economics of ROSCAs."
+  - "[Geertz, 1962] — Early influential description of ROSCAs as development tools."
+  - "[Levenson & Besley, 1996] — Key analysis of ROSCA participation determinants."
+  - "[Sedai et al., 2021] — Links ROSCAs to women's empowerment in India."
 relevance:
   topics:
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      justification: "Reviews self‑control, commitment devices, and saving discipline in ROSCAs."
     - code: 2.A
       name: Culturally Specific Financial Practices
-      justification: "ROSCAs are informal, culturally embedded savings/credit mechanisms across many countries."
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      justification: "Discusses member motivations (patience vs. impatience, trust, altruism) that shape financial behavior."
-    - code: 11.A
-      name: Engagement Dynamics in Personal Finance Applications
-      justification: "Highlights social pressure, embarrassment, and reciprocity as drivers of sustained participation."
+      relevance: high
+      justification: ROSCAs are a quintessential example of culturally embedded financial practices studied globally.
     - code: 13.A
       name: Savings Goal Management in PFMS
-      justification: "ROSCAs function as forced savings devices that help members accumulate lump sums for goals."
+      relevance: high
+      justification: Directly analyzes ROSCAs as a mechanism for collective savings and achieving financial goals.
     - code: 13.B
       name: Debt Management in PFMS
-      justification: "ROSCAs provide credit access without formal interest, useful for debt consolidation or emergency needs."
-  contribution: "This scoping review informs Odin’s savings and debt management modules by showing how forced savings through social commitment improve saving discipline. It provides evidence that non‑financial incentives (social capital, reputation) drive engagement, which can be adapted for retention features. The review also identifies risks of defection and the value of transparency tools, directly relevant to Odin’s anomaly detection and user trust design. Finally, technological applications (mobile registers, reminders) offer a blueprint for mobile‑first group saving features in Odin."
+      relevance: high
+      justification: Examines ROSCAs as an alternative to formal debt for financing needs.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Discusses member motivations like self-control and trust, which relate to behavioral profiles.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Maps the landscape of informal finance (ROSCAs) as an alternative to formal systems.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: medium
+      justification: Identifies gaps in formal finance that ROSCAs fill, and limitations of ROSCAs themselves.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: contextual
+      justification: Provides background on savings strategies but does not detail algorithmic budgeting.
+  contribution: This paper provides a comprehensive review of ROSCAs, offering validated domain knowledge for Odin's design. Its findings on savings discipline, social capital, and default risks directly inform the design of Odin's savings and social features. The review's emphasis on community trust and cultural specificity justifies Odin's focus on Filipino cultural practices. The identified strategies for increasing ROSCA resilience, such as diversification and reputation systems, can be adapted for Odin's recommendation and anomaly detection modules.
   directly_justifies:
-    - "ROSCAs help members overcome self‑control problems by using social pressure to enforce periodic saving."
-    - "Participation in ROSCAs increases social capital, which improves psychological and physical health among members."
-    - "Defection risk is lower when associations use reputation‑based member selection and economic penalties."
-    - "Mobile applications that record contributions and schedule reminders increase transparency and trust in informal savings groups."
+    - "ROSCAs help members save money by imposing discipline and social pressure."
+    - "Participation in ROSCAs provides non-financial benefits like social capital and empowerment."
+    - "Defection and loss of motivation are primary risks that can be mitigated by reputation and economic penalties."
+    - "Diversifying participation across multiple small groups reduces risk for members."
+    - "Technological tools can improve transparency and security in informal savings groups."
   limits:
-    - "Scoping review does not quantitatively meta‑analyze effect sizes of ROSCA interventions."
-    - "Most included studies are descriptive case studies, limiting causal inference on what improves ROSCA outcomes."
-    - "Few studies test proposed interventions in real ROSCAs; recommendations remain largely theoretical or simulated."
-  mapping_rationale: "This paper was screened against Odin’s functional domains. It strongly aligns with Savings & Debt Management (13.A, 13.B) because ROSCAs are direct analogs for goal‑based saving and credit access. Behavioral profiling (5.A) and financial behavior (1.C) apply due to detailed discussions of self‑control, patience, and social motivators. Culturally specific practices (2.A) capture the informal, community‑embedded nature of ROSCAs. Engagement dynamics (11.A) are relevant due to findings on social pressure and reciprocity as retention drivers. Rejected codes include spending forecasting (6), budget recommendation (7), and anomaly detection (8) because the paper does not model predictive algorithms or outlier detection. Mobile‑first design (9) is partially supported but not a primary focus; only a few technological applications are mentioned, so it was omitted from topics."
+    - "Scoping review, not a meta-analysis; does not quantify effect sizes of strategies."
+    - "The review excludes non-English literature, potentially missing regional insights."
+    - "Focuses on ROSCAs, which are distinct from typical PFMS, limiting direct applicability."
+    - "Proposed computational models are theoretical and not validated with real user data."
+    - "Does not address the specific financial landscape or user behaviors of Filipino young professionals."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to domains of Culturally Specific Financial Practices (2.A) and Savings & Debt Management (13.A, 13.B) as it directly analyzes ROSCAs as informal financial tools used in various cultures. Medium relevance was assigned to Behavioral Profiling (5.A) and Existing Systems & Gaps (4.A, 4.B) due to its discussion of participant motivations, limitations of formal finance, and the role of social capital. Contextual relevance was noted for Budget Recommendation (7.A) as it provides domain knowledge but not algorithmic approaches. Other domains like Anomaly Detection (8.A, 8.B, 8.C) and Mobile-First Design (9.A, 9.B) were considered and rejected because the paper does not touch on these topics. Overall, the paper offers valuable background on informal savings behavior and community-based financial management, which can inform Odin's design by highlighting the importance of social features, trust, and culturally relevant savings mechanisms.
 limitations:
-  - "Only peer‑reviewed articles in English from Scopus and Web of Science were included, potentially missing grey literature or non‑English studies. [unacknowledged]"
-  - "No primary data from South America or Oceania, limiting generalizability to those regions (acknowledged by authors as a research gap)."
-  - "Few intervention studies exist; most findings are observational or simulation‑based, reducing actionable causal claims (acknowledged in future directions)."
+  - "Limited to studies published in English."
+  - "Data collection from real-world ROSCAs was restricted due to pandemic conditions after 2020."
+  - "The review does not include a meta-analysis to quantify the effectiveness of strategies like diversification."
+  - "Computational models and technological applications discussed are mostly theoretical and not tested at scale."
+  - "Findings are synthesized from a broad global context, which may not be directly generalizable to the Philippines."
 remember_this:
-  - "96 papers on ROSCAs from 2000‑2022 show both financial and social benefits."
-  - "Social pressure and embarrassment enforce saving discipline better than interest rates."
-  - "Defection risk is minimized by reputation screening and mobile transparency tools."
-  - "Participating in multiple small ROSCAs reduces overall financial risk."
+  - "ROSCAs provide both financial access and social capital to underprivileged communities."
+  - "Discipline and social pressure are key mechanisms for successful savings in ROSCAs."
+  - "Defection is a major risk, but diversification across groups can increase resilience."
+  - "Non-financial benefits like empowerment and health are significant for members."
+  - "num: 96 articles reviewed from 2000 to 2022 to synthesize ROSCA knowledge."
 ```

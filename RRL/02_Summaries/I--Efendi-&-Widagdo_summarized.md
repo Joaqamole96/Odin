@@ -4,109 +4,119 @@ designation: international
 title: Simple Financial Management in Housewife Communities: A Qualitative Study on Daily Financial Management Patterns
 authors: Efendi, M. I.; Widagdo, C. S.
 year: 2025
-venue: International Journal of Applied Economics, Accounting and Management (IJAEAM)
+venue: International Journal of Applied Economics, Accounting and Management
 odin_topics:
-  - 1.C
   - 2.A
   - 2.B
   - 3.A
+  - 4.A
+  - 4.B
   - 5.A
   - 7.A
+  - 9.A
+  - 10.A
+  - 11.A
   - 13.A
   - 13.B
-shorthand_tags:
-  - /financial-behavior
-  - /cultural-finance
-  - /cyclical-spending
-  - /expense-categorization
-  - /budgeting
-  - /savings
-  - /debt
-tldr: Housewives in Salatiga develop adaptive financial strategies including informal recording, expenditure prioritization, community-based savings groups, and risk management despite limited formal literacy.
-problem_and_motivation: Housewives manage daily household finances but have lower formal financial literacy (36.1% vs 40.6% for men) and face structural disadvantages. Research overlooks their sophisticated adaptive strategies and community-based financial systems.
+tldr: Housewives in Salatiga develop sophisticated financial management practices including nuanced recording, community-based risk management, and social networks that challenge conventional financial literacy narratives.
+problem_and_motivation: Housewives in Indonesia manage daily finances despite lower formal financial literacy rates, yet their sophisticated adaptive strategies remain understudied and undervalued. This research addresses the gap in understanding the daily financial management practices of housewives in resource-constrained communities.
 approach:
-  - Qualitative case study in Salatiga, Central Java, involving 25 housewives as primary financial managers.
-  - Data collection through semi-structured interviews (60-90 minutes), non-participant observation of community activities, and document analysis.
-  - Analysis using ATLAS.ti with open, axial, and selective coding, plus member checking for validation.
-  - Fieldwork conducted July–August 2024, capturing normal household financial cycles.
+  - This qualitative case study was conducted in Salatiga, Central Java, involving 25 housewives as primary financial managers.
+  - Data was collected through in-depth semi-structured interviews, non-participant observation, and document analysis over two months.
+  - Analysis was performed using ATLAS.ti software with open, axial, and selective coding procedures.
+  - Member checking was employed to validate findings and ensure accurate representation of participants' experiences.
+  - The study focused on daily financial practices, adaptation strategies, and community interactions within a middle to lower-income demographic.
 findings:
-  - num: 5 of 8 informants perform routine manual expense recording; others use mental envelopes or digital apps inconsistently.
-  - Housewives prioritize primary needs (food, school fees, bills) over secondary and tertiary needs using mental accounting.
-  - Strategies include gradual purchasing, cash buffers (e.g., Rp50,000), and informal shop credit for liquidity gaps.
-  - Income diversification through home-based activities yields Rp300,000–Rp500,000 monthly additional income.
-  - Community systems include arisan (ROSCAs), jimpitan (daily micro-savings), and collective buying for price discounts.
-  - Emergency funds are micro-scale (e.g., Rp5,000–10,000 daily or Rp200,000 reserve) for short-term risks.
-  - Social networks act as informal insurance; members borrow from neighbors and relatives during crises.
-  - Savings diversification includes cash in hidden locations and small gold holdings (e.g., 1 to 3 grams).
+  - num: 60% of informants perform routine expense recording using simple manual books, while 40% rely on mental monitoring systems.
+  - num: Income diversification activities generate an additional Rp300,000 to Rp500,000 per month for some housewives.
+  - num: Daily emergency fund contributions range from Rp5,000 to Rp10,000, held in physical containers like tins or envelopes.
+  - Housewives develop sophisticated "mental accounting" strategies for prioritizing primary over secondary and tertiary needs.
+  - Communities function as informal financial institutions through ROSCAs, jimpitan, and collective purchasing arrangements.
+  - Financial communication patterns range from open collaborative to minimal, influenced by education and gender dynamics.
+  - Social networks serve as informal insurance mechanisms, providing support during emergencies like illness or hospitalization.
+  - Some housewives practice micro-scale savings diversification, including cash in multiple locations and small gold investments.
 key_figures_tables:
-  - None.
+  - "None."
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
   - term: ROSCA
-    definition: Rotating Savings and Credit Association; group where members contribute regularly and take turns receiving the lump sum.
-  - term: Arisan
-    definition: Indonesian rotating savings group combining social and financial functions.
-  - term: Jimpitan
-    definition: Daily collection of rice or small change for community social funds.
-  - term: Mental accounting
-    definition: Cognitive categorization of money by purpose, even when physically pooled.
-  - term: OJK
-    definition: Financial Services Authority of Indonesia.
-  - term: PKK
-    definition: Family Welfare Empowerment (Indonesian community organization).
-  - term: PKH
-    definition: Family Hope Program (Indonesian social assistance).
+    definition: "Rotating Savings and Credit Association; a community-based savings mechanism where members contribute and receive a lump sum in rotation."
+  - term: jimpitan
+    definition: "A community-based micro-savings practice involving daily collection of rice or small change for social funds."
+  - term: mental accounting
+    definition: "The cognitive process of categorizing and mentally budgeting funds for specific purposes without physical segregation."
 critical_citations:
-  - "[Palupiningtyas et al., 2023] — Documents lower financial literacy among Indonesian women."
-  - "[Kabeer via Bustani et al., 2022] — Introduces 'bounded power' concept for women's agency."
+  - "[Palupiningtyas et al., 2023] — Establishes women's role in domestic financial management despite structural disadvantages."
+  - "[Siregar, 2019] — Defines housewives' role in family financial management as a key research area."
+  - "[Rutherford] — Introduces concept of 'shadow banking' in community financial systems."
 relevance:
   topics:
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      justification: Paper details adaptive spending, saving, and risk management behaviors applicable to financial behavior modeling.
     - code: 2.A
       name: Culturally Specific Financial Practices
-      justification: Describes arisan, jimpitan, and collective buying rooted in Indonesian community norms.
+      relevance: high
+      justification: "Documents specific practices like arisan (ROSCAs) and jimpitan as culturally embedded financial mechanisms."
     - code: 2.B
       name: Seasonal and Cyclical Spending Patterns
-      justification: Identifies financial rhythms aligned with income cycles, religious celebrations, and community events.
+      relevance: medium
+      justification: "Describes financial cycles synchronized with income patterns and community events, though not explicitly seasonal."
     - code: 3.A
       name: Expense Categorization Frameworks
-      justification: Reveals three-tier prioritization (primary/secondary/tertiary) and manual recording systems.
+      relevance: high
+      justification: "Provides detailed insights into how housewives prioritize and categorize expenses into primary, secondary, and tertiary needs."
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: "Maps the landscape of informal financial systems (ROSCAs, jimpitan) used alongside formal systems in the community."
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: medium
+      justification: "Highlights the gap between formal financial education and the practical needs of housewives."
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: Documents distinct profiles like mental accountants, envelope users, and community-reliant savers.
+      relevance: medium
+      justification: "Identifies behavioral profiles based on financial recording, communication, and risk management patterns."
     - code: 7.A
       name: Budgeting Strategies as Domain Knowledge
-      justification: Shows mental budgeting heuristics (proportional, temporal matching, expenditure bundling).
+      relevance: high
+      justification: "Provides a real-world case of budgeting strategies, including mental accounting and expenditure prioritization."
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: low
+      justification: "Briefly mentions the potential for mobile applications but does not focus on design principles."
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: "Mentions trust in informal community systems but does not address digital data privacy."
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: low
+      justification: "Discusses community engagement but not engagement with digital PFMS."
     - code: 13.A
       name: Savings Goal Management in PFMS
-      justification: Illustrates micro emergency funds, hidden cash, gold savings, and forced saving via arisan.
+      relevance: medium
+      justification: "Documents micro-savings practices and goal-oriented savings like emergency funds and gold accumulation."
     - code: 13.B
       name: Debt Management in PFMS
-      justification: Covers informal shop credit, neighbor borrowing, and community norms against consumption debt.
-  contribution: "This paper informs Odin's expense categorization module by providing a naturalistic three-tier priority framework used by resource-constrained users. It validates the need for a community-layer feature in savings goal management, showing how rotating savings groups create forced discipline. The adaptive strategies described—mental accounting, cash buffers, and informal credit—directly shape budgeting heuristics and anomaly detection thresholds for irregular income patterns."
+      relevance: medium
+      justification: "Describes rotation debt systems and community norms around borrowing for productive vs. consumptive needs."
+  contribution: "This paper contributes to Odin's design by validating the sophistication of informal financial practices that a PFMS can build upon. It informs Odin's expense categorization module by demonstrating real-world mental accounting strategies. The findings on community-based financial networks justify Odin's potential for social or community features. The paper also highlights the importance of user trust and accessibility, aligning with Odin's mobile-first and data privacy considerations."
   directly_justifies:
-    - "Housewives use mental accounting to separate funds for primary needs, secondary needs, and emergencies."
-    - "Community-based rotating savings groups (arisan) function as forced saving mechanisms with social accountability."
-    - "Informal shop credit is used to bridge short-term liquidity gaps, repaid immediately after income arrives."
-    - "Housewives diversify savings across hidden cash and small gold to reduce temptation and mitigate risk."
+    - "Housewives in resource-constrained environments develop sophisticated mental accounting systems that formal PFMS can emulate."
+    - "Financial literacy in such contexts is experiential and embedded, requiring PFMS to be contextually adaptive."
+    - "Community-based financial systems like ROSCAs demonstrate the value of social features within a PFMS."
   limits:
-    - "Qualitative study with 25 participants in one Indonesian city; not generalizable to Filipino young professionals."
-    - "No evaluation of formal digital tools; findings may not translate to mobile PFMS interfaces."
-    - "Focus on housewives excludes single or male-headed households."
-  mapping_rationale: "This paper was screened against Odin's functional domains. It strongly supports Behavioral profiling (5.A) via detailed financial practice descriptions, Spending forecasting indirectly (cyclical patterns, 2.B), Expense categorization (3.A) directly, Budget recommendation (7.A) through mental budgeting heuristics, Savings & debt management (13.A, 13.B) via community systems. Domains Anomaly detection, Mobile-first design, Data privacy, User retention, and System evaluation were rejected because the paper contains no algorithmic, digital, or evaluation content. Topic 1.C (Financial Behavior) was selected for general behavioral insights despite demographic mismatch, as patterns may transfer. Topic 2.A (Culturally specific practices) and 2.B (Cyclical spending) were included for their direct relevance to Filipino contexts with similar community structures."
+    - "The study is specific to Salatiga, Indonesia, and findings may not be generalizable to other cultural or economic contexts."
+    - "Findings are based on self-reported data, which may be subject to social desirability bias."
+    - "The study focuses on daily management and does not address long-term financial planning or investment." [unacknowledged]
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant for domains on Filipino Cultural Context (specifically 2.A), Expense Categorization (3.A), and Budget Recommendation (7.A) due to its detailed documentation of real-world financial practices. Medium relevance was assigned to Existing Systems & Gaps (4.A, 4.B), Behavioral Profiling (5.A), Savings & Debt Management (13.A, 13.B) as these are addressed indirectly. Low relevance was noted for Mobile-First Design (9.A) and Engagement Dynamics (11.A) as the paper does not discuss digital applications. Contextual relevance was assigned to Data Privacy (10.A) due to trust in informal systems. Domains related to Forecasting (6.A, 6.B), Anomaly Detection (8.A, 8.B, 8.C), and System Evaluation (12.A, 12.B, 12.C) were rejected as the paper does not address algorithmic or predictive modeling. Overall, the paper provides strong qualitative evidence for the design of user-centric and community-aware PFMS features."
 limitations:
-  - "Small sample (25 housewives) from one city limits external validity."
-  - "Self-reported financial practices may suffer from social desirability bias. [unacknowledged]"
-  - "No longitudinal data to assess stability of adaptive strategies over time. [unacknowledged]"
-  - "Lacks comparison with formal financial literacy metrics beyond cited OJK statistics."
+  - "The study does not acknowledge the potential for technology to support or replace the manual systems observed." [unacknowledged]
+  - "The sample size of 25 housewives limits the generalizability of the findings." [unacknowledged]
 remember_this:
-  - "num: 5 of 8 housewives manually record expenses; others use envelope systems."
-  - "Community arisan groups act as forced savings with social discipline."
-  - "Housewives create micro emergency funds of Rp50,000 to Rp200,000."
-  - "Informal shop credit bridges liquidity gaps until next income."
-  - "Mental accounting and proportional budgeting replace formal financial skills."
+  - "Housewives use mental accounting and physical segregation to manage daily finances."
+  - "Community systems like ROSCAs act as informal financial institutions for saving and credit."
+  - "Income diversification provides additional autonomy and financial resilience for housewives."
+  - "num: 60% of housewives perform routine expense recording using simple manual books."
 ```

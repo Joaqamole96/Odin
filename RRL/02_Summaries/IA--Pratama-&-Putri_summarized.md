@@ -1,88 +1,120 @@
 ```yaml
 paper_id: 10.47738/ijaim.v4i4.92
-designation: algorithm-specific
+designation: international-algorithm-specific
 title: User Profiling Based on Financial Transaction Patterns: A Clustering Approach for User Segmentation
 authors: Pratama, S. F.; Putri, N. A.
 year: 2024
 venue: International Journal for Applied Information Management
 odin_topics:
   - 5.A
+  - 5.B
   - 5.C
-shorthand_tags:
-  - /behavioral-profiles
-  - /clustering
-tldr: K-means clustering on transaction amounts, times, and types identifies three user segments with distinct spending behaviors, achieving a moderate Silhouette Score of 0.33.
-problem_and_motivation: Traditional user segmentation methods rely on predefined categories or historical data, missing nuanced behavioral patterns. The increasing complexity and diversity of transaction data require advanced techniques to capture hidden patterns. Without such techniques, financial institutions cannot fully personalize services or target marketing effectively.
+  - 6.A
+  - 7.A
+  - 7.B
+  - 8.A
+  - 8.B
+  - 12.B
+tldr: Clustering financial transaction data by amount, time, and type reveals three user segments with distinct spending behaviors, supporting personalized financial services.
+problem_and_motivation: Traditional user segmentation methods relying on historical data fail to capture evolving behaviors and the nuances of transaction patterns. This limits the effectiveness of personalized financial services and fraud detection. More advanced, data-driven techniques are needed to uncover hidden behavioral segments from transaction data.
 approach:
-  - Data source: Simulated financial transaction dataset from Kaggle, generated with Python Faker, containing transaction ID, amount, type, customer ID, and timestamp.
-  - Preprocessing: Imputed missing numerical values using mean/median, categorical with mode; removed rows with excessive missingness.
-  - Feature extraction: Derived hour, day of week, and month from transaction_time; scaled amount via Min-Max; encoded transaction_type using one-hot or label encoding.
-  - Method: K-means clustering with Euclidean distance, initialized via K-Means++, optimized to minimize within-cluster sum of squares (WCSS).
-  - Number of clusters selected using Silhouette Score evaluated for different K values, with K=3 maximizing average score.
-  - Evaluation: Silhouette Score (0.33) and visual inspections via PCA and t-SNE projections.
+  - Data from a Kaggle financial transactions dataset was preprocessed and features were extracted.
+  - K-means clustering was applied using transaction amount, time, and type as key features.
+  - Feature scaling and encoding were performed on numerical and categorical variables.
+  - The Silhouette Score was used to evaluate cluster quality and the optimal number of clusters.
+  - Clusters were visualized using 3D plots, PCA, and t-SNE projections for interpretation.
 findings:
-  - num: Silhouette Score of 0.33 indicates moderate cluster separation with some overlap.
-  - Three clusters identified: Cluster 0 (mean amount 1876.92, purchases, early week, ~11:15 AM), Cluster 1 (mean amount 4147.06, transfers, mid-week, ~1:35 PM), Cluster 2 (mean amount 1970.00, purchases, late week, ~11:20 AM).
-  - num: Cluster 2 has the highest transaction count (just over 20), followed by Cluster 1 (~17), then Cluster 0 (under 15).
-  - Transaction day of week distinguishes purchase behavior: Mondays (Cluster 0), Wednesdays (Cluster 1), Fridays (Cluster 2).
-  - PCA and t-SNE visualizations show clear but not perfect separation among the three clusters.
+  - num: The clustering analysis revealed three distinct user clusters with a Silhouette Score of 0.33.
+  - Cluster 0 performs moderate-value purchases (~1876.92) early in the week, around 11:15 AM.
+  - Cluster 1 performs high-value transfers (~4147.06) mid-week, around 1:35 PM.
+  - Cluster 2 performs moderate-value purchases (~1970.00) later in the week, around 11:20 AM.
+  - The 3D, PCA, and t-SNE visualizations showed clear separation between the three clusters.
+  - The moderate Silhouette Score indicates some overlap, suggesting room for improved clustering methodology.
+  - The single-month dataset limits the generalizability of the findings to long-term trends.
 key_figures_tables:
-  - Figure 2: 3D clustering of users with hour vs amount vs cluster ID → Clusters separate by amount and time.
-  - Figure 3: Bar chart of cluster distribution → Cluster 2 has most transactions, Cluster 0 the fewest.
-  - Figure 4: PCA projection of clusters → Moderate separation along principal components.
-  - Figure 5: t-SNE projection of clusters → Clusters show internal cohesion but some boundary overlap.
-  - Table 1: Cluster characteristics (mean amount, std, hour, day_of_week) → Quantitative summary of three segments.
-  - Table 2: Statistical summary including transaction type → Cluster 1 exclusively transfers; others purchases.
+  - "Table 1: Cluster characteristics summary showing mean amount, hour, and day of week for each cluster → Three distinct behavioral segments identified."
+  - "Figure 2: 3D clustering of users based on transaction patterns → Clusters are distinct in amount and time dimensions."
+  - "Figure 3: Cluster distribution bar chart → Cluster 2 has the highest transaction volume, Cluster 0 the least."
+  - "Figure 4: PCA projection of clustering results → Clusters show separation in reduced dimensional space."
+  - "Figure 5: t-SNE projection of clustering results → Clusters demonstrate distinct groupings in a 2D space."
 key_equations:
-  - equation: d(x_i, C_j) = sqrt( sum_{k=1}^{n} (x_{i,k} - c_{j,k})^2 )
-    explanation: Euclidean distance between data point and centroid.
+  - equation: d(x_i, C_j) = sqrt(sum_{k=1}^{n} (x_{i,k} - c_{j,k})^2)
+    explanation: Euclidean distance used for K-means assignment.
   - equation: WCSS = sum_{i=1}^{K} sum_{x_i in C_k} (x_i, c_k)^2
-    explanation: Within-cluster sum of squares minimized by K-means.
+    explanation: Objective function minimized by K-means.
 definitions:
-  - term: K-means
-    definition: Unsupervised clustering algorithm partitioning data into K clusters by minimizing intra-cluster distances.
+  - term: K-Means
+    definition: A clustering algorithm that partitions data into K distinct clusters based on mean distances to centroids.
   - term: Silhouette Score
-    definition: Metric from -1 to +1 measuring how similar a point is to its own cluster vs others.
-  - term: PCA
-    definition: Principal Component Analysis, a linear dimensionality reduction technique.
-  - term: t-SNE
-    definition: t-Distributed Stochastic Neighbor Embedding for nonlinear dimensionality reduction.
+    definition: A metric evaluating cluster quality, ranging from -1 (poor) to 1 (excellent).
   - term: WCSS
-    definition: Within-Cluster Sum of Squares, the objective function of K-means.
+    definition: Within-Cluster Sum of Squares, the objective function minimized in K-means.
+  - term: PCA
+    definition: Principal Component Analysis, a dimensionality reduction technique.
+  - term: t-SNE
+    definition: t-Distributed Stochastic Neighbor Embedding, a nonlinear dimensionality reduction technique.
 critical_citations:
-  - "[Zhao et al., 2021] — extended regularized K-means for customer segmentation."
-  - "[Zhang et al., 2020] — DBSCAN for fraud detection using transaction patterns."
-  - "[Komati, 2025] — ML architectures for real-time financial decision systems."
-  - "[Martinovska et al., 2021] — clustering algorithms for business user profiling."
+  - "[Zhao et al., 2021] — Proposes K-means for customer segmentation using transaction data."
+  - "[Zhang et al., 2020] — Uses DBSCAN for fraud detection based on transaction patterns."
+  - "[Komati, 2025] — Highlights the role of ML in real-time financial decision-making and segmentation."
 relevance:
   topics:
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: "Paper segments users based on transaction amount, time, and type into behavioral clusters."
+      relevance: high
+      justification: Directly segments users into behavioral profiles based on transaction patterns.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: low
+      justification: Discusses limitations of historical data, tangentially related to the cold-start issue.
     - code: 5.C
-      name: Financial Behavioral Profile Classification Algorithm
-      justification: "K-means clustering is the algorithm used to classify users into three distinct profiles."
-  contribution: "Clustering on transaction features provides a direct method for constructing financial behavioral profiles in Odin. The identified segments (purchase-dominant early/late week and transfer-dominant mid-week) can inform cold-start personalization when little user history exists. The moderate Silhouette Score of 0.33 establishes a baseline for evaluating Odin's own clustering modules and highlights the need for refinement before deployment."
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Uses K-means clustering, a key classification approach for behavioral profiling.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: medium
+      justification: Segmentation insights can inform predictive models for spending forecasting.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: low
+      justification: Findings on spending patterns could inform budgeting strategies.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: medium
+      justification: User segmentation is a prerequisite for personalized budget recommendations.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: Clustering can help establish baseline behaviors for anomaly detection.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: low
+      justification: Mentions fraud detection, but focuses on clustering, not anomaly detection specifically.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: Evaluates the K-means clustering algorithm using the Silhouette Score.
+  contribution: The paper provides a practical demonstration of K-means clustering for segmenting users based on financial transaction features, which directly supports the development of Odin's behavioral profiling module. Its findings on distinct spending patterns (e.g., high-value transfers vs. moderate purchases) offer a baseline for designing personalized budget recommendations and targeted financial advice. The identified limitations, such as the moderate Silhouette Score and single-month dataset, highlight areas for methodological improvement in Odin's clustering algorithms. This work justifies the use of unsupervised learning for initial user segmentation to overcome the cold-start problem in a PFMS.
   directly_justifies:
-    - "Transaction amount, time, and type are sufficient features to distinguish user spending segments."
-    - "K-means clustering achieves a Silhouette Score of 0.33, indicating moderate but improvable cluster separation."
-    - "Users with transfer behaviors tend to have higher transaction amounts and occur mid-week."
-    - "Purchase transactions cluster into early-week and late-week subgroups with similar average amounts."
+    - "Transaction amount, time, and type are key features for distinguishing user spending behavior."
+    - "Clustering techniques like K-means can identify distinct user segments without predefined labels."
+    - "A Silhouette Score of 0.33 indicates moderate cluster quality, suggesting a need for refinement."
+    - "Limitations in clustering accuracy highlight the importance of exploring alternative algorithms like DBSCAN."
+    - "Segmentation by transaction behavior enables the tailoring of personalized financial products and marketing."
   limits:
-    - "Dataset limited to a single month, missing seasonal or long-term behavioral changes."
-    - "Simulated data (Faker) may not fully capture real-world financial transaction noise or fraud patterns."
-    - "Silhouette Score of 0.33 suggests significant overlap between clusters, limiting practical segmentation accuracy."
-    - "No comparison with alternative clustering algorithms (e.g., DBSCAN, hierarchical) to justify K-means choice."
-  mapping_rationale: "The paper directly addresses behavioral profiling (Domain: Behavioral profiling & classification) by clustering users based on transaction patterns, selecting 5.A (Financial Behavioral Profiles) and 5.C (Classification Algorithm). Topics under spending forecasting (6.A,6.B) were rejected because the paper does not predict future spending; it only segments observed behavior. Anomaly detection (8.A,8.B) is mentioned only in background, not the core contribution. Expense categorization (3.A,3.B) is partially relevant via transaction types, but the paper's primary contribution is user segmentation, not category design. No coverage of privacy, retention, evaluation frameworks, or savings/debt management, so those topics were omitted."
+    - "The dataset's single-month duration limits the capture of seasonal or long-term behavior trends."
+    - "The moderate Silhouette Score (0.33) suggests overlap between clusters and potential misclassification."
+    - "The use of synthetic data from Kaggle may not fully represent real-world user behavior."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their topic codes was performed. The paper was flagged as highly relevant to 'Behavioral Profiling & Classification' (5.A, 5.C) due to its primary contribution of user segmentation via K-means. It shows medium relevance to 'Spending Forecasting' (6.A) and 'Budget Recommendation' (7.B) as segmentation is foundational for these tasks. Low relevance was assigned to 'Anomaly Detection' (8.A, 8.B) because clustering is discussed for segmentation, not for identifying outliers. The 'Evaluation' domain (12.B) is relevant as the study uses the Silhouette Score to assess its algorithmic module. Topics related to the Filipino cultural context, mobile design, data privacy, and debt management were considered and rejected, as the paper uses a generic international dataset and does not address these specific aspects. Overall, the paper is most valuable as a practical example of applying a specific clustering algorithm for user profiling, justifying its use in Odin's user onboarding and segmentation modules."
 limitations:
-  - "The dataset is simulated and limited to one month, which may not generalize to real-world multi-year transaction histories. [unacknowledged]"
-  - "Moderate Silhouette Score (0.33) indicates clusters are not well-separated, but the paper acknowledges this as a limitation."
-  - "No validation with external criteria (e.g., user survey or downstream task performance) to confirm cluster utility."
-  - "Only K-means was tested; other algorithms might yield better separation, but the paper acknowledges this as future work."
+  - "The dataset is limited to a single month, restricting the analysis of long-term trends and seasonality."
+  - "The moderate Silhouette Score suggests cluster overlap and potential for improved separation."
+  - "The study does not compare K-means with other clustering algorithms like DBSCAN or hierarchical clustering. [unacknowledged]"
+  - "The use of synthetic data may limit the real-world applicability of the findings. [unacknowledged]"
 remember_this:
-  - "K-means clustering achieved a Silhouette Score of 0.33."
-  - "Cluster 1 had highest mean transaction amount at 4147.06."
-  - "Transaction day of week distinguishes purchase from transfer behavior."
-  - "Single-month dataset limits generalization to seasonal spending."
-  - "Simulated data may not reflect real-world financial noise."
+  - "K-means clustering on transaction features reveals three distinct user spending segments."
+  - "The Silhouette Score of 0.33 indicates moderate cluster quality, requiring methodological refinement."
+  - "Transaction amount, time, and type are strong predictors of user behavior for segmentation."
+  - "Segmentation by transaction patterns enables personalized financial services and marketing strategies."
 ```

@@ -1,120 +1,126 @@
 ```yaml
 paper_id: 10.21203/rs.3.rs-7730348/v1
-designation: international
+designation: international-algorithm-specific
 title: Mental Accounting Through Two-stage Budgeting Under Bounded Rationality
 authors: Pretnar, N.; Olivola, C. Y.; Montgomery, A.
 year: 2025
-venue: Research Article (preprint)
+venue: Research Square
 odin_topics:
+  - 3.A
   - 5.A
-  - 5.C
   - 6.A
-  - 6.B
   - 7.A
-  - 13.A
-  - 13.B
-shorthand_tags:
-  - /behavioral-profiles
-  - /classification-algorithm
-  - /predictive-modeling
-  - /spending-forecasting
-  - /budgeting-strategies
-  - /savings-management
-  - /debt-management
-tldr: A model of two-stage budgeting with cognitive constraints shows consumers exhibit heterogeneous bounded rationality, updating only half of budgets weekly, with mental accounting affecting spending and savings.
-problem_and_motivation: Classical two-stage budgeting assumes perfect fungibility and ex-post budget adherence. Behavioral evidence suggests consumers use mental accounting and sticky budgets, but field evidence is lacking. This paper quantifies how cognitive constraints and budget rigidities explain observed expenditure patterns.
+  - 7.C
+  - 8.A
+  - 10.B
+tldr: A structural model generalizes two-stage budgeting with cognitive frictions to quantify mental accounting behavior from expenditure data alone.
+problem_and_motivation: Classical two-stage budgeting assumes perfect fungibility and ex-post budget adherence, yet consumers exhibit mental accounting and sticky budgets due to cognitive costs. There is a lack of empirical, agent-level quantification of how bounded rationality manifests in budgeting. This gap prevents the design of effective financial interventions that account for heterogeneous consumer decision-making.
 approach:
-  - Builds a dynamic model with planner/doer structure, mental accounting state variable, and sparse budget updates.
-  - Uses weekly agent-level expenditure data from 2,509 low-income prepaid debit card users spanning September 2013 to January 2016.
-  - Estimates structural parameters via Bayesian MCMC with latent change-point inference, sampling over four million parameters.
-  - Compares models with different numeracy thresholds (relative percentage or absolute dollar margins).
-  - Classifies consumers into four ex-ante (budget) and four ex-post (spending) behavioral types based on responsiveness to prior over/under-spending.
-  - Simulates counterfactual of forcing full budget attention (k=J every period) to assess welfare and bankruptcy risk.
+  - Proposes a dynamic, two-stage budgeting model where a planner sets ex-ante budgets subject to cognitive constraints and a doer realizes expenditure shocks.
+  - Incorporates narrow choice bracketing via probabilistic budget re-evaluation (ψ) and numeracy constraints that prevent trivial budget changes.
+  - Mental accounting is captured by a state variable (over/under-spending from prior periods) that influences future budget adjustments via a parameter γ.
+  - Estimates the structural model using a hierarchical MH-within-Gibbs MCMC algorithm on weekly expenditure data from 2,509 low-income prepaid debit card users.
+  - Compares model variants with absolute ($1) and relative (%) numeracy thresholds, and tests counterfactuals by fully relaxing cognitive constraints.
 findings:
-  - "num: Consumers update only 2.48 budgets per week on average (out of 4 categories) in baseline, 2.11 with $1 numeracy threshold."
-  - "num: 68% of consumers do not benefit from forced weekly full budget updates; 3.3% go bankrupt under forced attention in $1-threshold model."
-  - Ex-ante most consumers (79%) are budget prioritizers (mental accounting), but ex-post a plurality (43-47%) are spendthrifts who increase spending regardless of prior over/under-spending.
-  - Heterogeneous rationality: most consumers are neither fully rational (always update all budgets) nor fully bounded (never update).
-  - Bankrupt consumers have stickier budgets (1.25 updates/week vs. sample average 2.11-2.48) and exhibit planning fallacy syndrome.
-  - A $1 numeracy threshold reduces budget updates by 14.9% compared to baseline.
+  - num: 80% of consumer-week combinations exhibit bounded rationality, with an average of 2.11 budget updates per week under the $1-threshold model.
+  - num: A $1 numeracy threshold reduces budget updates by 14.9%, while relative thresholds of 1%, 5%, and 10% reduce updates by 41.8%, 64%, and 70% respectively.
+  - Ex-ante budgeting behavior is largely consistent with mental accounting (78.7% are budget prioritizers), but ex-post spending behavior is mixed, with 46.8% classified as spendthrifts.
+  - num: 22.3% of consumers are ex-ante budget prioritizers but ex-post habitual over-spenders (type ii), exhibiting a "planning fallacy" pattern after over-spending.
+  - Counterfactual relaxation of cognitive constraints makes 68.4% of consumers worse off, and 3.3% go bankrupt under the $1-threshold model.
+  - num: Consumers who go bankrupt when constraints are relaxed have significantly lower estimated updates (1.25/week) and are more likely to be ex-ante type (i) but ex-post type (ii).
 key_figures_tables:
-  - "Figure 2: Time series of actual vs. predicted weekly expenditure for median income consumer → both baseline and $1-threshold models fit well."
-  - "Figure 3: Posterior density of average weekly budget updates per consumer → updates drop significantly with higher numeracy thresholds."
-  - "Table 3: Marginal distributions of ex-ante and ex-post types → 79% ex-ante are budget prioritizers, but only 11% ex-post are same type."
-  - "Table 4: Joint distributions of types → 38% are ex-ante budget prioritizers and ex-post spendthrifts."
+  - "Table 1: Summary statistics of agent-level means → Shows low-income sample (median weekly income $460) with substantial spending variation."
+  - "Table 2: Posterior summary statistics for baseline and $1-threshold models → Reports estimated means and standard deviations for all key behavioral parameters."
+  - "Table 3: Marginal distributions of ex-ante and ex-post types → Ex-ante most are budget prioritizers, ex-post plurality are spendthrifts."
+  - "Table 4: Joint distributions of ex-ante and ex-post types → Reveals 37.5% are budget prioritizers ex-ante but spendthrifts ex-post."
+  - "Figure 2: Time series of actual vs. predicted spending → Demonstrates the model's fit for a median-income agent across categories."
+  - "Figure 3: Posterior density of budget updates per week → Shows distribution of k under different numeracy thresholds."
+  - "Figure 4: Density of k conditional on counterfactual type → Bankrupt consumers have significantly fewer budget updates."
 key_equations:
-  - equation: "\\omega_{ijt} = \\theta_{ijt} \\ell_{it} + \\gamma_i a_{ijt}"
-    explanation: "Budget as function of income share and mental account balance."
-  - equation: "x_{ijt} = \\omega_{ijt} + \\zeta_{ijt}"
-    explanation: "Actual expenditure equals budget plus idiosyncratic shock."
-  - equation: "a_{ij,t+1} = -\\zeta_{ijt}"
-    explanation: "Mental account updates as negative of previous shock."
+  - equation: $x_{ijt} = \omega_{ijt} + \zeta_{ijt}$
+    explanation: Doer's expenditure is budget plus shock.
+  - equation: $a_{ijt} = \omega_{ij,t-1} - x_{ij,t-1} = -\zeta_{ij,t-1}$
+    explanation: Mental account balance equals negative prior shock.
+  - equation: $\omega_{ijt} = \theta_{ijt} \ell_{it} + \gamma_i a_{ijt}$
+    explanation: Budget is income share plus anchored mental account.
+  - equation: $\Gamma_{ijt} \sim \text{Bernoulli}(\psi_{ij})$
+    explanation: Probability of re-evaluating a specific budget.
+  - equation: $\vartheta_{iyt}^* = \frac{\alpha_{i,\iota_{iyt}} \ell_{it} - \alpha_{i,\iota_{iyt}} \sum_{s<y} \ell_{it} \theta_{i,\iota_{ist},t} + \gamma_i a_{i,\iota_{iyt},t} + \zeta_{i,\iota_{iyt},t}}{\ell_{it}(\alpha_{i,\iota_{iyt}} + \alpha_{i,J+1})} \dots$
+    explanation: Analytical expression for optimal candidate budget share.
 definitions:
-  - term: Mental accounting
-    definition: "Book-keeping mechanism where past over/under-spending affects future budgets, limiting fungibility."
-  - term: Bounded rationality
-    definition: "Cognitive constraints that prevent consumers from updating all budgets every period."
-  - term: Narrow choice bracketing
-    definition: "Updating only a subset of spending categories each period due to attention limits."
-  - term: Numeracy constraint
-    definition: "Budget change is implemented only if candidate budget differs sufficiently from current budget."
-  - term: Personal mental accounting equilibrium
-    definition: "Consistent decision outcome under sparse-max budgeting and mental account dynamics."
-  - term: Budget prioritizer
-    definition: "Consumer who reduces spending after over-spending and increases after under-spending."
+  - term: Mental Accounting
+    definition: A book-keeping mechanism where past over/under-spending informs future budgets.
+  - term: Narrow Choice Bracketing
+    definition: Consumers re-evaluate only a subset of budgets per period due to cognitive constraints.
+  - term: Numeracy Constraint
+    definition: A threshold (absolute or relative) that a budget change must exceed to be implemented.
+  - term: Budget Prioritizer
+    definition: Consumer type that reduces budget after over-spending and increases after under-spending.
   - term: Spendthrift
-    definition: "Consumer who increases spending after both over- and under-spending."
+    definition: Consumer type that increases spending regardless of prior over or under-spending.
 critical_citations:
-  - "[Thaler, 1985] — Foundational mental accounting with over/under-spending tracking."
-  - "[Gabaix, 2014] — Sparse maximization framework for bounded rationality."
-  - "[Deaton and Muellbauer, 1980] — Classical two-stage budgeting with perfect fungibility."
+  - "[Thaler, 1985] — Foundational theory of mental accounting."
+  - "[Deaton and Muellbauer, 1980] — Classical two-stage budgeting framework."
   - "[Shefrin and Thaler, 1981] — Planner/doer model of self-control."
+  - "[Gabaix, 2014] — Sparse maximization and bounded rationality."
+  - "[Kőszegi and Matějka, 2020] — Mental budgeting with attention costs."
 relevance:
   topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: high
+      justification: The model operationalizes budget categories and estimates category-specific expenditure shares.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: "Classifies consumers into four ex-ante and ex-post behavioral types based on budget responsiveness."
-    - code: 5.C
-      name: Financial Behavioral Profile Classification Algorithm
-      justification: "Uses latent change-point inference to recover individual budgeting decisions from expenditure data alone."
+      relevance: high
+      justification: Empirically classifies consumers into ex-ante and ex-post behavioral types (budget prioritizers, spendthrifts).
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: "Predicts weekly expenditure with a dynamic structural model incorporating cognitive constraints."
-    - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: "Forecasts spending using mental accounting state variables and sparse budget updates."
+      relevance: high
+      justification: Develops a structural forecasting model for spending based on budgets, mental accounts, and shocks.
     - code: 7.A
       name: Budgeting Strategies as Domain Knowledge
-      justification: "Models budgeting strategies with cognitive constraints, numeracy thresholds, and mental accounting anchoring."
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      justification: "Analyzes savings outcomes and welfare under counterfactual attention policies, showing forced attention harms many."
-    - code: 13.B
-      name: Debt Management in PFMS
-      justification: "Examines bankruptcy risk from over-spending cycles due to budget stickiness and planning fallacy."
-  contribution: "This paper provides a structural model that Odin could use to infer latent user budgets from spending data alone. The classification of users into ex-ante (budget) and ex-post (spending) types (budget prioritizers vs. spendthrifts) directly informs Odin's behavioral profiling module (5.A, 5.C). The finding that forced full budget attention reduces welfare for 68% of users suggests Odin should use adaptive, personalized nudge timing rather than constant reminders. The counterfactual analysis on bankruptcy risk (3.3% under $1 threshold) informs Odin's debt management and savings goal features (13.A, 13.B)."
+      relevance: high
+      justification: Models the strategic process of setting and updating budgets under cognitive frictions.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: high
+      justification: Formulates budget selection as a constrained optimization problem with cognitive and numeracy constraints.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: medium
+      justification: Expenditure shocks (ζ) are modeled as deviations from budgets, which is foundational for anomaly detection.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: contextual
+      justification: Counterfactual analysis shows that nudging via apps can harm certain users, affecting trust.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: low
+      justification: The model captures spending spikes and trends but does not focus on seasonality.
+  contribution: "The paper provides a structurally estimated model for inferring latent budgeting behavior from expenditure data, which can be used to enhance Odin's spending forecasting module (6.A) by incorporating cognitive constraints. It offers a methodology for dynamically classifying users into behavioral profiles (5.A) based on their budget-updating and spending responses, enabling adaptive budgeting strategies. The counterfactual analysis reveals critical insights for Odin's nudging features (11.A): increasing attentiveness can have adverse effects for some users, implying that interventions should be personalized and cautious. The model's framework for budget updating and mental accounting directly informs the design of Odin's budget recommendation (7.B) and anomaly detection (8.A) algorithms, providing a theoretical basis for handling infeasibility and user inertia. Finally, the identification of distinct consumer types (e.g., budget prioritizers vs. spendthrifts) supports the development of tailored financial advice and savings/debt management strategies (13.A, 13.B)."
   directly_justifies:
-    - "Consumers update only a subset of budgets each period due to cognitive constraints."
-    - "Forcing full budget attention reduces welfare for 68% of consumers."
-    - "Bankrupt consumers exhibit stickier budgets and planning fallacy syndrome."
-    - "Ex-ante budget prioritizers often become ex-post spendthrifts."
-    - "A $1 numeracy threshold reduces budget updates by 14.9%."
+    - "Budget updates occur for approximately half of consumption categories each period, supporting a sparse-max approach for Odin's budget recommendation."
+    - "A $1 numeracy threshold is a better fit than no threshold, justifying the inclusion of an 'inertia' parameter in Odin's budget adjustment logic."
+    - "Relaxing cognitive constraints makes 68% of consumers worse off, suggesting Odin should avoid over-nudging and prioritize user autonomy."
+    - "Ex-ante budgeting behavior is distinct from ex-post spending, indicating Odin should track both planned budgets and actual expenditure separately."
+    - "Consumers who are ex-ante budget prioritizers but ex-post spendthrifts are most vulnerable to adverse outcomes, requiring targeted support."
   limits:
-    - "Data limited to low-income prepaid debit card users, not generalizable to all populations."
-    - "Model assumes strong separability and Stone-Geary utility, which may restrict flexibility."
-    - "Prices are imputed from CPI, not observed at transaction level."
-    - "Latent budgeting inference is model-dependent and not directly validated with observed budgets."
-    - "Household size and composition unknown, affecting interpretation of per-capita spending."
-  mapping_rationale: "Selected topics focus on behavioral profiling (5.A, 5.C) due to consumer type classification, predictive modeling (6.A, 6.B) for expenditure forecasting, budgeting strategies (7.A) for the two-stage budgeting model, and savings/debt management (13.A, 13.B) for welfare and bankruptcy analysis. Rejected topics: 1.A (not Filipino YPs), 2.A/B (no cultural or seasonal patterns), 3.A/B (expense categorization not central), 4.A/B (landscape not discussed), 8.A/B (no anomaly detection), 9.A/B (mobile design absent), 10.A/B (privacy not addressed), 11.A/B (engagement/retention not directly studied), 12.A/B (evaluation frameworks not primary). Borderline case 5.C: the paper infers latent budgets via changepoint detection, which is a classification algorithm for behavioral states, so included."
+    - "Results are model-dependent and rely on unobserved latent variables, limiting the certainty of individual-type classifications."
+    - "Data is from low-income, underbanked prepaid card users in North America, which may not generalize to Filipino young professionals."
+    - "Assumes strong separability of utility, which may oversimplify substitution patterns across broad expenditure categories."
+    - "Does not explicitly model price variation, aggregating prices into indices, which may miss important consumption adjustments."
+  mapping_rationale: "A systematic scan across all 12 functional domains was conducted. The paper's core theoretical and empirical contributions on modeling bounded rationality in budgeting directly map to high relevance for domains: Expense Categorization (3.A, 3.B), Behavioral Profiling (5.A, 5.B, 5.C), Spending Forecasting (6.A, 6.B), and Budget Recommendation (7.A, 7.B, 7.C, 7.D). The structural estimation approach and consumer typing also offer medium relevance to Anomaly Detection (8.A) and System Evaluation (12.A, 12.B, 12.C). The counterfactual simulations on attentiveness inform Engagement & Retention (11.A) and Data Privacy/Trust (10.B), albeit with contextual or low relevance as the paper does not directly study app design or trust. Topics like Filipino Cultural Context (2.A, 2.B, 2.C) and Savings/Debt (13.A, 13.B) were considered but rejected as the paper's empirical setting is North American and its primary contribution is methodological, though findings on overspending cycles are tangentially relevant to debt management. Borderline cases included the mental accounting state variable (a), which relates to both expense categorization (3.A) and behavioral profiles (5.A); it was assigned to 5.A for its role in defining consumer types. The paper's overall relevance to Odin is high, providing a quantitative, micro-founded framework for modeling key user behaviors that directly informs the design of adaptive and personalized financial management features."
 limitations:
-  - "Data limited to low-income prepaid debit card users, not generalizable. [unacknowledged]"
-  - "Model assumes strong separability and Stone-Geary utility, potentially unrealistic. [unacknowledged]"
-  - "Latent budgeting inference is model-dependent and lacks direct validation. [acknowledged]"
-  - "Prices imputed from CPI, not observed at transaction level. [acknowledged]"
-  - "Household size unknown, affecting interpretation of individual vs. household spending. [unacknowledged]"
+  - "Findings are based on a model-dependent estimation of latent budgets, not directly observed." [unacknowledged]
+  - "The dataset is from a specific low-income, underbanked population in North America; applicability to other demographics (e.g., Filipino YPs) is not tested." [acknowledged]
+  - "Assumes strong separability in utility, which may not capture complex category interactions."
+  - "The model does not incorporate explicit price effects, relying on aggregated price indices." [acknowledged]
+  - "Counterfactual simulations of 'full rationality' may not reflect real-world behavioral changes from app nudges."
 remember_this:
-  - "2.11 average weekly budget updates under $1 numeracy threshold."
-  - "68% of users worse off with full budget attention."
-  - "Bankrupt consumers have only 1.25 updates per week."
-  - "Most consumers are neither fully rational nor fully behavioral."
+  - "Consumers update only about half their budgets per week, showing bounded rationality."
+  - "Most consumers are budget prioritizers ex-ante but spendthrifts ex-post."
+  - "Relaxing cognitive constraints makes 68% of consumers worse off."
+  - "3.3% of consumers go bankrupt if all budgets are updated weekly."
+  - "Sticky budgets can serve as a disciplinary tool for vulnerable consumers."
 ```

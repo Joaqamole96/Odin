@@ -565,8 +565,6 @@ https://www.scribbr.com/methodology/correlational-research/
 Binaluyo,  J.  P.,  Agustin,  N.  B.,  &  Santos,  A.  R.  (2025).  MICROFINANCE  INSTITUTIONS  AND  SERVICES:
 STANDARDIZED
 
-PERSPECTIVES
-
 PATH
 
 AND
@@ -577,6 +575,8 @@ TO
 
 CONSUMER
 GUIDELINES. Institutions, 15(2), 80-91.
+
+PERSPECTIVES
 
 Capistrano, E. P. (2021). Trust, acceptance, and use of online banking services in the Philippines (Professorial Chair
 Pilipinas.
@@ -675,6 +675,8 @@ Kaur,  P.,  &  Arora,  S.  (2021).  Evolution  of  Internet  banking:  Past,  pr
 
 in  Commerce,  Management  &
 
+Research
+
 Science,
 
 Social
@@ -683,8 +685,6 @@ Social
 
 Advanced
 https://www.researchgate.net/publication/350149505
-
-Research
 
 Mancone, S., et al. (2024). Technology-enabled solutions for student financial wellness: A narrative review. Frontiers
 

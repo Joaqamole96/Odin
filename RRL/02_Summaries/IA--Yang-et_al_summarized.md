@@ -1,7 +1,7 @@
 ```yaml
 paper_id: 10.60087/jklst.vol3.n3.p53-62
-designation: algorithm-specific
-title: ENHANCING FINANCIAL SERVICES THROUGH BIG DATA AND AI-DRIVEN CUSTOMER INSIGHTS AND RISK ANALYSIS
+designation: international-algorithm-specific
+title: Enhancing Financial Services Through Big Data and AI-Driven Customer Insights and Risk Analysis
 authors: Yang, T.; Xin, Q.; Zhan, X.; Zhuang, S.; Li, H.
 year: 2024
 venue: Journal of Knowledge Learning and Science Technology
@@ -10,104 +10,77 @@ odin_topics:
   - 5.C
   - 6.A
   - 8.A
-  - 8.B
-  - 11.A
-  - 11.B
-  - 12.A
-  - 12.B
-shorthand_tags:
-  - /behavioral-profiles
-  - /classification-algorithm
-  - /predictive-modeling
-  - /anomaly-detection
-  - /fraud-detection
-  - /churn-prediction
-  - /retention-mechanisms
-  - /evaluation-frameworks
-  - /algorithm-evaluation
-tldr: Supervised learning with XGBoost and face recognition enables customer profiling, profit prediction, fraud detection, and churn analysis in financial services.
-problem_and_motivation: Financial institutions need accurate customer identification and risk analysis to improve loan approval and risk management. Traditional statistical models struggle with massive data and complex financial behaviors. Machine learning offers advantages in processing large datasets and discovering hidden patterns.
+  - 10.A
+tldr: Integrates big data and AI, using supervised learning and XGBoost, for customer profiling, risk analysis, and profit prediction in financial services.
+problem_and_motivation: Financial institutions lack accurate methods for customer identification and risk assessment using vast, complex data. Traditional models fail to capture non-linear relationships and profit dynamics, limiting effective risk management and loan approval.
 approach:
-  - Constructed six feature systems from customer attributes, debit/credit card transactions, loan applications, trends, and page visit behavior.
-  - Used supervised learning as basis for AI pricing model to combine man-machine decision making.
-  - Applied XGBoost for profit modeling at account level, modeling revenue, default probabilities, and loss rates.
-  - Used grid search with 5x cross-validation and early stopping to tune hyperparameters like tree depth and learning rate.
-  - Employed face recognition deep learning for identity verification and relationship graphs with community discovery algorithms (LOUVAIN, LPA) for fraud detection.
-  - Analyzed 150,000 loans from 2012 to 2015, classifying banks as high liquidity, high finance charge, or middle.
+  - Constructs six feature systems including customer attributes, debit/credit transactions, loan applications, trend characteristics, and page visit behavior.
+  - Uses supervised learning for pricing models to combine human-machine decision-making and identify target customers.
+  - Employs XGBoost for profit modeling, balancing detailed submodels for transparency against aggregated models for performance.
+  - Uses grid search for hyperparameter tuning (tree depth, learning rate) with 5x cross-validation and early stopping for AUC.
+  - Classifies banks and accounts into liquidity and finance charge types for portfolio-specific analysis.
 findings:
-  - "num: Profit quartile spread across risk ranges increases with risk level, indicating challenge in high-risk areas."
-  - "num: Learning rate limited to 0.001-0.01 with thousands of trees to prevent overfitting."
-  - Revenue model and total profit model show poor forecasting performance but better ranking performance.
-  - Hump-shaped relationship between profit component and risk is retained between predicted and actual curves.
-  - Ranking by profit score yields significantly higher average profitability than using risk score alone.
+  - num: Spender banks consist of wealthier, higher credit quality borrowers than weekly transition banks.
+  - num: Model performance for revenue and total profit forecasting is poor, but ranking performance is better.
+  - num: Profit quartile spread across risk ranges increases with risk level, indicating challenges in high-risk areas.
+  - Profit-based modeling provides more information than risk-based modeling, especially in higher risk ranges.
+  - The hump-shaped relationship between profit components and risk is retained between predicted and actual curves.
 key_figures_tables:
-  - "Figure 1: Machine learning face recognition principle → Features from same person cluster together in feature space."
-  - "Figure 2: Profit curve hump shape most pronounced in spender portfolios → Risk-independent profit understanding crucial for such portfolios."
-  - "Table 1: Hyperparameter search results → Best hyperparameters selected via out-of-sample MSE and classification error."
+  - Figure 1: Principle of machine learning face recognition technology → Different faces are composed of different features in feature space.
+  - Figure 2: Experimental data and profit graph → Hump-shaped curve shows risk 'sweet spot' in turnover.
+  - Table 1: Results of hyperparameter searches for XGBoost submodels.
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
   - term: XGBoost
-    definition: Extreme Gradient Boosting, a scalable tree boosting algorithm.
+    definition: Extreme Gradient Boosting, a machine learning algorithm used for regression and classification.
   - term: AUC
-    definition: Area under the ROC curve, measures classification performance.
-  - term: MSE
-    definition: Mean squared error, measures regression prediction error.
-  - term: NPV
-    definition: Net present value, discounted future cash flows.
+    definition: Area Under the Curve, a performance metric for classification models.
 critical_citations:
-  - "[Thomas, 2000] — Automated underwriting using credit scoring models."
-  - "[Finlay, 2008] — Risk and profit not monotonically correlated."
-  - "[Fitzpatrick and Mues, 2021] — Profitability prediction in P2P lending."
-  - "[Verbraken et al., 2014] — Profit-based modeling enables optimal threshold."
+  - "[Thomas, 2000] — Foundation for automated underwriting systems."
+  - "[Finlay, 2008; 2010] — Compares linear and ML approaches for financial behavior."
+  - "[Fitzpatrick and Mues, 2021] — Extends algorithms for profitability prediction in P2P lending."
 relevance:
   topics:
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: Classifies accounts into spender, revolver, or middle based on transaction behavior.
+      relevance: medium
+      justification: Profiles customers (e.g., spender, revolver) based on transaction behavior.
     - code: 5.C
-      name: Financial Behavioral Profile Classification Algorithm
-      justification: Uses XGBoost for multi-class classification of account types.
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Uses XGBoost for multi-class classification to predict account types.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Builds profit and risk prediction models using account-level data.
+      relevance: high
+      justification: Directly applies supervised learning and XGBoost to predict financial behaviors and profits.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: Detects data forgery and gang fraud using relationship graphs.
-    - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Employs LOUVAIN, LPA, and label propagation for community discovery.
-    - code: 11.A
-      name: Engagement Dynamics in Personal Finance Applications
-      justification: Customer churn prediction model informs retention strategies.
-    - code: 11.B
-      name: Retention Mechanisms and Engagement Design
-      justification: Churn prediction enables proactive retention interventions.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      justification: Uses cross-validation, AUC, MSE, and out-of-sample error for model evaluation.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: Compares profit-based vs risk-based model ranking performance.
-  contribution: "This paper provides an XGBoost-based profit prediction module that can be integrated into Odin's spending forecasting and anomaly detection pipelines. The feature engineering approach (six customer attribute systems) directly informs Odin's expense categorization and behavioral profiling components. The fraud detection method using relationship graphs and community discovery algorithms offers a blueprint for Odin's anomaly detection subsystem. The churn prediction framework supports Odin's user retention and engagement mechanisms."
+      relevance: low
+      justification: Mentions fraud detection via relationship graphs and community discovery algorithms.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Briefly addresses fraud prevention and data security in the context of risk analysis.
+  contribution: Provides a framework for integrating supervised learning and XGBoost for customer profiling and profit prediction, applicable to Odin's behavioral profiling module. The approach for modeling revenue and default probabilities can inform Odin's spending forecasting and anomaly detection. The emphasis on feature engineering from transaction data is directly relevant to Odin's expense categorization and user profiling. The discussion on model transparency and overfitting offers considerations for Odin's system evaluation.
   directly_justifies:
-    - "Supervised learning on debit/credit transactions and loan applications enables accurate customer profiling."
-    - "Profit-based modeling yields higher average profitability than risk-only scoring."
-    - "Community discovery algorithms effectively detect gang fraud in credit applications."
-    - "Churn prediction from account transaction data supports retention interventions."
+    - "Supervised learning can effectively profile customers using transaction and behavioral data."
+    - "XGBoost is suitable for predicting non-linear relationships in financial profit models."
+    - "Feature engineering from debit/credit transactions is crucial for accurate customer segmentation."
+    - "Profit-based modeling provides more actionable insights than risk-based modeling alone."
   limits:
-    - "Revenue and total profit models have poor forecasting performance, especially in high-risk ranges."
-    - "Model cannot fully capture experiential profit changes within risk ranges."
-    - "Profit forecasting reliability is limited without richer account performance data."
-  mapping_rationale: "The paper was screened against Odin's functional domains. Behavioral profiling (5.A, 5.C) is directly supported by account classification into spender/revolver/middle using XGBoost. Predictive modeling (6.A) appears in profit and risk forecasting. Anomaly detection (8.A, 8.B) is present via face recognition, data forgery checks, and gang fraud community algorithms. User retention (11.A, 11.B) is addressed through customer churn prediction. System evaluation (12.A, 12.B) appears in cross-validation and hyperparameter tuning. Topics related to expense categorization (3.A, 3.B), mobile design (9.A, 9.B), data privacy (10.A, 10.B), and savings/debt (13.A, 13.B) were rejected because the paper does not address them. The algorithm-specific designation reflects the focus on XGBoost and deep learning models."
+    - "Model performance for revenue and profit forecasting is poor due to data limitations."
+    - "The model has difficulty capturing changes in experiential profits within the risk range."
+    - "Generalizability to the Filipino context is untested as the study uses unspecified datasets."
+  mapping_rationale: A systematic scan across all 12 functional domains and associated topic codes was performed. The paper was flagged as relevant for the 'Behavioral Profiling & Classification' domain due to its focus on customer profiling and classification (5.A, 5.C) using XGBoost. It is highly relevant to 'Spending Forecasting' (6.A) because it directly applies predictive modeling to financial behavior and profit. 'Anomaly Detection' (8.A) received a low relevance score as fraud detection is only briefly mentioned. 'Data Privacy & User Trust' (10.A) is contextual, as the paper mentions security in passing but does not focus on privacy. Domains like 'Filipino Cultural Context', 'Expense Categorization', 'Budget Recommendation', and 'Mobile-First Design' were rejected as they are not addressed. The paper's overall relevance to Odin is medium, providing specific algorithmic techniques and considerations for predictive modeling and user profiling modules.
 limitations:
-  - "Model performance is poor for revenue and total profit forecasting at high risk levels."
-  - "No discussion of data privacy implications for customer profiling. [unacknowledged]"
-  - "Lacks validation on non-US or Filipino demographic data. [unacknowledged]"
+  - "Generalizability to other regions or demographics is not established. [unacknowledged]"
+  - "The paper does not address real-time processing or mobile-first design constraints."
+  - "The reliance on historical data for model training may not capture evolving financial behaviors."
 remember_this:
-  - XGBoost profit models outperform risk-only models in ranking profitability.
-  - Profit and risk have a non-monotonic hump-shaped relationship.
-  - Community discovery algorithms effectively detect gang fraud in credit data.
-  - "num: Learning rates below 0.01 and thousands of trees prevent overfitting."
+  - "Supervised learning and XGBoost can predict customer financial behavior and profitability."
+  - "Feature engineering from transaction data is essential for accurate customer profiling."
+  - "Profit-based modeling offers advantages over risk-only models for financial institutions."
+  - "Model overfitting is a significant risk when using complex algorithms with high-dimensional data."
 ```

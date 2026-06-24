@@ -1,76 +1,110 @@
 ```yaml
-paper_id: c6a8b9e0-1f2d-4c3a-9e5b-7d8f9a0b1c2d
+paper_id: 7ad48f82-1c9f-5238-93f8-8878e2720d96
 designation: local
-title: INFLUENCE OF DIGITAL WALLETS ON THE FINANCIAL BEHAVIOR OF HEI’S STUDENTS
-authors: Bongado, M. B.; Magallanes, A. R.; Semaña, C. M.
-year: 0
+title: Influence of Digital Wallets on the Financial Behavior of HEI’s Students
+authors: Bongado, M. B. B.; Magallanes, A. R.; Semaña, C. M.
+year: 2025
 venue: Unknown
 odin_topics:
-  - 1.C
+  - 2.A
   - 5.A
-  - 7.A
-shorthand_tags:
-  - /financial-behavior
-  - /behavioral-profiles
-  - /budgeting-strategies
-tldr: Digital wallet usage positively influences financial behavior of HEI students, explaining 45.4% of variance in cash management and budgeting practices.
-problem_and_motivation: The influence of digital wallet usage on financial behavior among higher education students remains underexplored, particularly in the Philippine context. While digital wallets offer convenience, evidence suggests they may encourage impulsive spending and hinder long-term financial planning. This study addresses the gap by examining determinants of adoption and their effect on cash management and budgeting.
+  - 9.A
+  - 10.A
+tldr: Digital wallet usage positively influences financial behavior among Filipino HEI students, explaining 45.4% of variance in financial practices.
+problem_and_motivation: The influence of digital wallet usage on financial behavior, particularly cash management and budgeting, remains underexplored among Filipino HEI students despite widespread adoption. Understanding this relationship is critical to determining whether digital financial tools support or hinder responsible financial habits among young Filipinos.
 approach:
-  - Data were collected from 219 randomly selected HEI students at Bukidnon State University – Talisayan Campus using stratified random sampling.
-  - A quantitative descriptive-correlational design was employed with a validated 4-point Likert scale questionnaire adapted from Belmonte et al. (2024).
-  - Independent variables were seven TAM-based determinants (e.g., perceived ease of use, trust); dependent variables were cash management and financial planning/budgeting.
-  - Descriptive statistics (means, SDs) and Pearson correlation were computed, followed by regression analysis at α=0.05.
+  - A quantitative descriptive-correlational design was employed with 219 randomly selected students from a Philippine state university.
+  - Data were collected using a validated structured questionnaire adapted from Belmonte et al. (2024) measuring determinants of digital wallet adoption and financial behavior.
+  - Determinants included perceived ease of use, perceived usefulness, perceived value, social influence, attractiveness of alternatives, perceived trust, perceived security, and intention to use.
+  - Financial behavior was assessed through cash management and financial planning and budgeting dimensions using a 4-Point Likert scale.
+  - Pearson correlation and regression analysis were used to test the influence of digital wallet usage on financial behavior at a 0.05 significance level.
 findings:
-  - num: Digital wallet usage explains 45.4% of the variance in financial behavior (R²=0.454, F=180.136, p<.001).
-  - Students agree on all adoption determinants (means 2.91–2.99), with perceived trust showing the highest variability (SD=1.24).
-  - Financial behavior is generally responsible (overall M=2.99, SD=0.68), with financial planning and budgeting scoring highest (M=3.00).
-  - Regression beta coefficient (β=0.673, p<.001) indicates a significant positive effect of digital wallet usage on financial behavior.
+  - Students perceived digital wallet determinants positively, with mean scores ranging from 2.91 to 2.99 across all factors.
+  - Perceived trust exhibited the highest variability (SD = 1.24), indicating diverse opinions on platform reliability.
+  - Financial behavior scores were high (M = 2.99), with strong agreement on responsible cash management and budgeting practices.
+  - num: Digital wallet usage significantly predicted financial behavior, accounting for 45.4% of the variance (R² = 0.454, F = 180.136, p < .001).
+  - num: The beta coefficient (β = 0.673) indicates a positive relationship between digital wallet usage and improved financial behavior.
+  - The regression model confirmed digital wallet usage as a significant predictor of financial behavior among student respondents.
 key_figures_tables:
-  - Table 1: Means and SDs of digital wallet determinants → all factors agreed upon (2.91–2.99), trust most variable (SD=1.24).
-  - Table 2: Means and SDs of financial behavior → cash management (2.97) and budgeting (3.00) both agreed, overall 2.99.
-  - Table 3: Regression analysis results → digital wallet usage significantly predicts financial behavior (β=0.673, R²=0.454).
+  - Table 1: Determinants of digital wallet usage means and SDs → Students generally agree on all adoption factors, with trust showing most variability.
+  - Table 2: Financial behavior determinants means and SDs → Students demonstrate responsible financial practices with moderate consensus on cash management and budgeting.
+  - Table 3: Regression analysis results → Digital wallet usage significantly influences financial behavior, explaining 45.4% of variance.
 key_equations:
-  - equation: None.
-    explanation: ""
+  - equation: "R² = 0.454"
+    explanation: "45.4% of financial behavior variance explained by digital wallet usage."
 definitions:
-  - term: HEI
-    definition: Higher Education Institution
+  - term: FinTech
+    definition: Financial technology that revolutionizes payment systems and financial services through digital innovations.
+  - term: Digital Wallet
+    definition: A digital substitute for cash and bank accounts allowing users to store, transfer, and pay through mobile devices.
   - term: TAM
-    definition: Technology Acceptance Model
-  - term: SD
-    definition: Standard Deviation
+    definition: Technology Acceptance Model explaining user adoption based on perceived usefulness and ease of use.
+  - term: HEI
+    definition: Higher Education Institution offering tertiary education programs.
+  - term: PFMS
+    definition: Personal Finance Management System for tracking and managing individual finances.
 critical_citations:
-  - "[Ali & Ali, 2020] — TAM factors influence student adoption of digital tools."
-  - "[Sharma et al., 2020] — Financial planning correlates with responsible behavior."
-  - "[Linge & Afrizal, 2023] — Mobile wallet intention improves financial decision-making."
+  - "[Belmonte et al., 2024] — Validated TAM instrument for Filipino e-wallet adoption context."
+  - "[Scheresberg et al., 2020] — Found mobile payment users overspend and save less."
+  - "[Amanda et al., 2023] — Digital wallets promote impulsive spending among Generation Z."
 relevance:
   topics:
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      justification: Studies financial behavior (cash management, budgeting) of HEI students as proxy for young professionals.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: high
+      justification: Examines digital wallet adoption and financial behavior specifically among Filipino HEI students.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: Assesses responsible financial practices and their variability, supporting profile construction.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      justification: Explicitly measures financial planning and budgeting, showing digital wallets improve these practices.
-  contribution: "This paper validates Odin's financial behavior profiling module by quantifying how digital wallet usage predicts responsible cash management and budgeting (R²=45.4%). It supports Odin's budgeting recommendation features by demonstrating that digital tools enhance financial planning among young users. The regression model provides empirical justification for integrating transaction-driven behavioral predictors into Odin's spending forecasting and anomaly detection modules. Additionally, the high agreement on perceived usefulness and ease of use informs mobile-first design decisions for student-centered PFMS interfaces."
+      relevance: high
+      justification: Assesses financial behavior dimensions including cash management and budgeting practices.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: medium
+      justification: Digital wallets are mobile-first platforms; findings inform design for student financial management.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: Perceived trust and security were significant determinants of adoption and usage.
+    - code: 2.C
+      name: User-Declared Financial Preferences
+      relevance: low
+      justification: Touchs on financial behavior but does not deeply explore user-declared preferences.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: contextual
+      justification: Mentioned in financial planning and budgeting context but not focused on categorization frameworks.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: References digital wallets as existing systems but does not survey the landscape.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: contextual
+      justification: Budgeting is a dimension of financial behavior but no recommendation system is evaluated.
+  contribution: This study provides empirical evidence that digital wallet usage positively influences financial behavior among Filipino HEI students, directly informing Odin's user profiling and behavioral classification modules. The validated TAM-based instrument offers a framework for understanding adoption determinants that can be adapted for Odin's onboarding and personalization features. The significant relationship between digital wallet usage and responsible financial practices supports the development of mobile-first financial management tools that promote budgeting and cash management. The findings on perceived trust and security variability highlight the importance of Odin's data privacy and user trust components. The study's focus on Filipino young professionals aligns with Odin's target demographic and validates the need for culturally relevant financial behavior assessment.
   directly_justifies:
-    - "Digital wallet usage significantly predicts financial behavior among students (β=0.673, p<.001)."
-    - "Students generally exhibit responsible financial behavior in cash management (M=2.97) and budgeting (M=3.00)."
-    - "Perceived trust shows the highest variability (SD=1.24), indicating divided opinions on platform reliability."
+    - "Digital wallet usage positively predicts financial behavior among Filipino students."
+    - "Perceived ease of use and usefulness are key determinants of financial tool adoption."
+    - "Financial behavior includes cash management and budgeting as measurable dimensions."
+    - "Trust and security perceptions vary among users and affect adoption rates."
   limits:
-    - "Sample limited to one state university campus in a rural area, limiting generalizability to urban or diverse populations. [unacknowledged]"
-    - "Cross-sectional design cannot establish causality or long-term effects of digital wallet usage. [unacknowledged]"
-    - "Self-reported financial behavior may be subject to social desirability bias. [unacknowledged]"
-  mapping_rationale: "The paper was screened against Odin's functional domains. It directly addresses financial behavior (Domain: Behavioral profiling) via responsible cash management and budgeting. Topic 1.C was selected because the sample consists of Filipino HEI students, a key demographic for Odin. Topic 5.A applies as the paper quantifies behavioral agreement and variability, supporting profile classification. Topic 7.A fits because budgeting strategies are a core measured outcome. Topics related to spending forecasting (6.A/B), anomaly detection (8.A/B), and debt management (13.B) were rejected as no predictive modeling or anomaly analysis was performed. Privacy (10.A) and retention (11.A) are not discussed. The borderline case of mobile-first design (9.A) was rejected because the paper uses TAM but does not address mobile UX principles specifically."
+    - "Focus on a single university in one municipality limits generalizability to broader Filipino young professional populations."
+    - "Cross-sectional design cannot establish causal relationships between digital wallet usage and financial behavior."
+    - "Self-reported survey data may be subject to social desirability bias."
+    - "Does not control for income level, digital literacy, or parental influence on financial behavior."
+    - "Financial behavior assessment limited to cash management and budgeting, excluding savings and debt management."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The domains flagged as relevant include: Filipino Cultural Context (2.A, 2.B, 2.C, 2.D) due to the study's focus on Filipino HEI students and their specific financial practices; Behavioral Profiling & Classification (5.A, 5.B, 5.C) as the paper directly assesses financial behavior dimensions; Mobile-First Design (9.A, 9.B) because digital wallets are mobile platforms; and Data Privacy & User Trust (10.A, 10.B) through its examination of perceived trust and security. Topic codes selected with high relevance: 2.A (culturally specific practices), 5.A (financial behavioral profiles). Medium relevance: 9.A (mobile-first principles), 10.A (data privacy). Low relevance: 2.C (user-declared preferences). Contextual relevance: 3.A (expense categorization), 4.A (existing systems landscape), 7.B (budget recommendation). Borderline cases included the paper's coverage of both 2.A and 2.C, resolved by assigning 2.A as the primary code since the focus is on actual practices rather than stated preferences. Domains rejected included Expense Categorization (3.A, 3.B, 3.C) as the paper does not examine categorization frameworks; Existing Systems & Gaps (4.A, 4.B) as it does not survey the PFMS landscape; Spending Forecasting (6.A, 6.B) as no predictive modeling is conducted; Anomaly Detection (8.A, 8.B, 8.C) as no anomaly detection is evaluated; Engagement & Retention (11.A, 11.B) as the study does not examine engagement dynamics; System Evaluation (12.A, 12.B, 12.C) as no system evaluation framework is used; and Savings & Debt Management (13.A, 13.B, 13.C) as these are not assessed. Overall, the paper provides moderate to high relevance for Odin's behavioral profiling and cultural contextualization modules, while offering contextual insights for design and trust considerations.
 limitations:
-  - "Cross-sectional design cannot infer causation; only association is shown. [unacknowledged]"
-  - "Reliance on self-reported Likert scales may introduce response bias. [unacknowledged]"
-  - "The study does not control for income level, digital literacy, or parental influence. [unacknowledged]"
+  - "Convenience sampling may limit representativeness of all Filipino HEI students."
+  - "Cross-sectional design prevents establishing causality between digital wallet usage and financial behavior."
+  - "Self-reported measures may be subject to response bias and overestimation of responsible behavior."
+  - "Study limited to one geographic location (Talisayan, Misamis Oriental), reducing generalizability. [unacknowledged]"
+  - "No qualitative data to capture deeper motivations and challenges in digital wallet usage. [unacknowledged]"
+  - "Does not account for income or parental influence as confounding variables. [unacknowledged]"
 remember_this:
-  - "Digital wallet usage explains 45.4% of financial behavior variance."
-  - "Students agree on all adoption determinants with means from 2.91 to 2.99."
-  - "Perceived trust shows the widest disagreement (SD=1.24)."
-  - "Financial planning and budgeting score highest at mean 3.00."
+  - "Digital wallet usage explains 45.4% of financial behavior variance in Filipino students."
+  - "Perceived trust shows the widest variation among adoption determinants."
+  - "Students demonstrate responsible cash management and budgeting practices."
+  - "Digital wallets serve as enablers of financial discipline beyond transactional tools."
+  - "Security and trust perceptions significantly affect digital wallet adoption."
 ```

@@ -1,104 +1,179 @@
 ```yaml
-paper_id: 10.69569/jip.2026.065
-designation: local
-title: Beyond Awareness: Examining Financial Behaviors Among Public School Teachers in the Philippines
-authors: Am-una, A.
+paper_id: "10.69569/jip.2026.065"
+designation: "local"
+title: "Beyond Awareness: Examining Financial Behaviors Among Public School Teachers in the Philippines"
+authors: "Am-una, A."
 year: 2026
-venue: Journal of Interdisciplinary Perspectives
+venue: "Journal of Interdisciplinary Perspectives"
 odin_topics:
-  - 1.C
-  - 2.A
-  - 5.A
-  - 7.A
-  - 13.A
-  - 13.B
-shorthand_tags:
-  - /financial-behavior-filipino
-  - /cultural-financial-practices
-  - /behavioral-profile-constraint
-  - /budgeting-strategies
-  - /savings-goal-management
-  - /debt-management
-tldr: Public school teachers in Baguio exhibit moderately positive financial behaviors driven by conscious constraint under limited income and heavy debt, with budgeting most difficult despite frequent practice.
-problem_and_motivation: A knowledge-action gap persists in understanding how financial knowledge translates into everyday behavior, especially under economic constraint. Public school teachers have stable employment but face escalating financial pressures and debt, yet existing studies focus on knowledge rather than behavioral enactment and perceived difficulty. Understanding this gap is critical because teachers serve as financial role models for learners.
+  - "1.A"
+  - "1.B"
+  - "1.C"
+  - "2.A"
+  - "2.D"
+  - "3.A"
+  - "3.B"
+  - "4.A"
+  - "4.B"
+  - "5.A"
+  - "5.B"
+  - "7.A"
+  - "7.B"
+  - "10.A"
+  - "11.A"
+  - "11.B"
+  - "12.A"
+  - "12.C"
+  - "13.A"
+  - "13.B"
+tldr: "Public school teachers demonstrate moderately positive financial behaviors driven by necessity rather than security, with budgeting being the most frequent yet most difficult practice due to structural income constraints and heavy debt burdens."
+problem_and_motivation: "The knowledge-action gap in financial behavior is underexplored in occupational groups with stable employment but constrained disposable income. Existing studies focus on financial knowledge while neglecting how structural constraints shape everyday financial practices. This study addresses that gap by examining both the frequency and perceived difficulty of financial behaviors among public school teachers."
 approach:
-  - Explanatory sequential mixed-methods design with quantitative survey (N=335) followed by semi-structured interviews (N=9).
-  - Participants were regular public school teachers in Baguio City, Philippines, with at least one year of experience.
-  - Survey measured frequency of financial behaviors (4-point Likert) and perceived difficulty across five domains: budgeting, saving, goals, making ends meet, and choosing products.
-  - Statistical tests included one-way ANOVA, t-tests, Welch’s t-test, Friedman test with Nemenyi post hoc, and thematic analysis for qualitative data.
-  - No machine learning or predictive algorithms were used; the study is descriptive and inferential.
+  - "An explanatory sequential mixed-methods design was used with 335 public school teachers in Baguio City, Philippines."
+  - "Quantitative data were collected using a modified OECD/INFE survey instrument measuring financial behavior frequency and perceived difficulty."
+  - "Qualitative data were gathered through semi-structured interviews with nine purposively selected teachers to explain quantitative patterns."
+  - "One-way ANOVA, independent samples t-tests, and Welch's t-test examined differences by marital status, employment rank, and seminar attendance."
+  - "The Friedman test with Nemenyi post hoc comparisons analyzed perceived difficulty differences across behavioral domains."
+  - "Inductive thematic analysis was applied to interview transcripts to contextualize behavioral patterns and paradoxes."
 findings:
-  - "num: General weighted mean for financial behaviors was 2.69 (moderately positive), with making ends meet highest (M=2.90) and active saving lowest (M=2.43)."
-  - "num: No significant difference in financial behaviors between teachers who attended financial literacy seminars and those who did not (p=.991)."
-  - "num: Married teachers had significantly lower financial behavior scores than single teachers (p=.034)."
-  - "num: Master Teachers scored higher (M=3.00) than non-Master Teachers (M=2.65, p=.002)."
-  - "num: Budgeting was rated most difficult (M=2.17) and choosing financial products easiest (M=4.15); Friedman test p<.001."
-  - Qualitative findings reveal a gap between behavioral frequency and difficulty: budgeting is often done but considered hardest due to scarce resources.
-  - Teachers rely on routine loans as a compensatory strategy, indicating financial endurance rather than security.
-  - Choosing financial products is perceived as easy despite low ownership, suggesting overconfidence from limited exposure (Dunning-Kruger effect).
+  - "Teachers demonstrated moderately positive financial behaviors (M = 2.69), with making ends meet being the strongest domain (M = 2.90) and active saving the weakest (M = 2.43)."
+  - "num: Single teachers exhibited significantly more positive financial behaviors than married teachers, F(2, 332) = 4.15, p = .017."
+  - "num: Master Teachers reported significantly higher financial behavior scores (M = 3.00) than non-Master Teachers (M = 2.65), t(333) = -3.83, p = .002."
+  - "Financial literacy seminar attendance showed no significant effect on financial behaviors, t(233) = -0.01, p = .991."
+  - "Budgeting was the most difficult behavior (M = 2.17) despite being frequently performed, revealing a friction-based performance gap."
+  - "Choosing financial products was perceived as the easiest behavior (M = 4.15), yet ownership of multiple products remained low (M = 2.45)."
+  - "Teachers' financial behaviors are shaped more by structural constraints and household obligations than by lack of financial knowledge."
+  - "Qualitative evidence indicates that meeting financial obligations relies on loans and compensatory strategies rather than genuine financial security."
 key_figures_tables:
-  - "Table 1: Weighted means for financial behavior domains → Budgeting M=2.68, making ends meet M=2.90, active saving M=2.43, choosing products M=2.77."
-  - "Table 5: Difference by seminar attendance → No effect (p=.991), confirming knowledge-action gap."
-  - "Table 6: Perceived difficulty means → Budgeting most difficult (M=2.17), choosing products very easy (M=4.15)."
-  - "Table 8: Nemenyi post hoc → Budgeting and choosing products differ significantly from all other domains (p<.001)."
+  - "Table 1: Level of financial behaviors across domains → Budgeting (M=2.68), saving (M=2.43), and making ends meet (M=2.90) reflect moderate performance under constraint."
+  - "Table 2: ANOVA by marital status → Single teachers outperform married teachers (p = .017), indicating household structure matters."
+  - "Table 4: t-test by employment rank → Master Teachers (M=3.00) outperform non-Master Teachers (M=2.65), p = .002."
+  - "Table 5: t-test by seminar attendance → No significant difference (M=2.69 both groups), p = .991."
+  - "Table 6: Perceived difficulty ratings → Budgeting most difficult (M=2.17), choosing products easiest (M=4.15)."
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
-  - term: Conscious constraint
-    definition: Disciplined management of limited resources under structural income constraints without financial flexibility.
-  - term: Knowledge-action gap
-    definition: Disconnect between financial knowledge and its translation into everyday practice.
-  - term: OECD/INFE
-    definition: Organisation for Economic Co-operation and Development International Network on Financial Education.
+  - term: "Conscious constraint"
+    definition: "The disciplined management of limited resources in the absence of financial flexibility."
+  - term: "Knowledge-action gap"
+    definition: "The disconnect between financial knowledge and the actual enactment of sound financial behaviors."
+  - term: "OECD/INFE"
+    definition: "Organisation for Economic Co-operation and Development International Network on Financial Education."
+  - term: "GSIS"
+    definition: "Government Service Insurance System, the mandatory pension fund for Philippine government employees."
+  - term: "Pag-IBIG"
+    definition: "Philippine government housing and savings fund for employees."
 critical_citations:
-  - "[Lusardi & Mitchell, 2014] — Establishes financial literacy’s link to economic security and planning."
-  - "[Kaiser & Menkhoff, 2017] — One-off seminars yield limited behavioral change without sustained support."
+  - "[Kaiser & Menkhoff, 2017] — Financial education has limited behavioral impact without sustained intervention."
+  - "[Lusardi & Mitchell, 2014] — Financial literacy is critical for long-term planning and avoiding high-cost credit."
   - "[OECD/INFE, 2023] — Philippines scores below global average in financial literacy."
-  - "[Modigliani & Brumberg, 1954] — Life-cycle hypothesis explains marital status effects on saving."
+  - "[Grohmann et al., 2018] — Financial literacy improves inclusion but structural barriers remain."
 relevance:
   topics:
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      justification: Paper directly measures financial behaviors (budgeting, saving, debt) of employed Filipino teachers, a subset of professionals.
-    - code: 2.A
-      name: Culturally Specific Financial Practices
-      justification: Documents reliance on cooperatives, informal loans, and institutional endorsement as financial norms.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      justification: Proposes 'conscious constraint' as a behavioral profile distinguishing necessity-driven from mastery-driven practices.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      justification: Provides empirical evidence on budgeting frequency vs. perceived difficulty under income scarcity.
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      justification: Finds constrained saving and postponed goal-setting due to immediate household needs.
-    - code: 13.B
-      name: Debt Management in PFMS
-      justification: Reveals routine loan dependence as a coping mechanism, highlighting need for debt-restructuring support.
-  contribution: Odin's behavioral profiling module can incorporate the concept of conscious constraint to distinguish users who perform positive behaviors under duress from those with genuine financial flexibility. The budgeting recommendation module should account for perceived difficulty and structural income constraints, not just behavioral frequency. The debt management module can use the finding that married and lower-ranked teachers need family-based budgeting and debt restructuring mechanisms. The savings goal module should address the gap between goal-setting and action by integrating automated, friction-reducing tools. The evaluation of financial literacy interventions within Odin must recognize that one-off seminars have no measurable impact without embedded structural supports.
+    - code: "1.A"
+      name: "Filipino Young Professionals as a Demographic"
+      relevance: "contextual"
+      justification: "Teachers are a professional demographic but not young professionals specifically."
+    - code: "1.B"
+      name: "Financial Structure of Filipino Young Professionals"
+      relevance: "medium"
+      justification: "Documents income constraints, loan dependence, and bill prioritization patterns."
+    - code: "1.C"
+      name: "Financial Behavior of Filipino Young Professionals"
+      relevance: "high"
+      justification: "Directly examines financial behavior frequency and difficulty among Filipino professionals."
+    - code: "2.A"
+      name: "Culturally Specific Financial Practices"
+      relevance: "medium"
+      justification: "Shows reliance on loans, cooperatives, and institutional financial mechanisms typical in Filipino context."
+    - code: "2.D"
+      name: "Filipino Spending Cycles and 'Occasions'"
+      relevance: "medium"
+      justification: "Teachers face recurring expenses and unexpected costs that shape cyclical financial behavior."
+    - code: "3.A"
+      name: "Expense Categorization Frameworks"
+      relevance: "medium"
+      justification: "Budgeting is the most frequent but most difficult behavior, informing expense categorization design."
+    - code: "3.B"
+      name: "Expense Category Design Considerations"
+      relevance: "medium"
+      justification: "Teachers track bills and expenses manually, suggesting design needs for digital tools."
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "medium"
+      justification: "Identifies institutional financial tools (cooperatives, GSIS, Pag-IBIG) used by teachers."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "high"
+      justification: "Financial literacy seminars have no measurable impact, revealing systemic gaps in support."
+    - code: "5.A"
+      name: "Financial Behavioral Profiles in Personal Finance"
+      relevance: "high"
+      justification: "The conscious constraint pattern directly informs behavioral profiling of Filipino professionals."
+    - code: "5.B"
+      name: "Profile Dynamics and the Cold-Start Problem"
+      relevance: "contextual"
+      justification: "Behavioral differences by rank and marital status suggest profile dynamics, but not cold-start specific."
+    - code: "7.A"
+      name: "Budgeting Strategies as Domain Knowledge"
+      relevance: "high"
+      justification: "Budgeting is the most frequent yet most difficult behavior, directly informing budgeting strategy design."
+    - code: "7.B"
+      name: "Budget Recommendation in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Teachers need salary-aligned, friction-reducing budgeting tools as recommended interventions."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "low"
+      justification: "Study follows Data Privacy Act procedures but does not analyze privacy concerns."
+    - code: "11.A"
+      name: "Engagement Dynamics in Personal Finance Applications"
+      relevance: "low"
+      justification: "Study mentions reluctance to adopt digital tools but does not deeply examine engagement."
+    - code: "11.B"
+      name: "Retention Mechanisms and Engagement Design"
+      relevance: "contextual"
+      justification: "Suggests just-in-time interventions but does not test retention mechanisms."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Mixed-methods design provides evaluation approach but not system-specific frameworks."
+    - code: "12.C"
+      name: "Evaluation Methodologies for Budget Recommendation Systems"
+      relevance: "low"
+      justification: "Study does not evaluate a budget recommendation system."
+    - code: "13.A"
+      name: "Savings Goal Management in PFMS"
+      relevance: "high"
+      justification: "Active saving is the weakest domain; teachers postpone goal-setting due to income constraints."
+    - code: "13.B"
+      name: "Debt Management in PFMS"
+      relevance: "high"
+      justification: "Loan dependence is a primary coping mechanism, directly informing debt management system design."
+  contribution: "The conscious constraint framework provides a behavioral model for Odin's financial profiling module, distinguishing necessity-driven behavior from financially secure behavior. The finding that financial literacy seminars have no effect validates Odin's need for behavioral infrastructure rather than just educational content. The perceived difficulty-budgeting paradox informs the design of friction-reducing budget recommendation interfaces. Marital status and employment rank differences establish demographic moderators that Odin's personalization engine must account for. The study validates that debt management and automated savings mechanisms are critical features for Filipino professionals."
   directly_justifies:
-    - "Financial literacy seminars without structural support do not improve financial behavior among constrained populations."
-    - "Married teachers exhibit lower financial behavior scores due to household obligations rather than lack of knowledge."
-    - "Budgeting is performed frequently but experienced as the most difficult financial task under income scarcity."
-    - "Employment rank is a stronger predictor of financial behavior than seminar attendance in low-disposable-income settings."
-    - "Positive financial behavior scores can mask financial fragility when behaviors are necessity-driven."
+    - "Budgeting is performed under high cognitive friction, requiring Odin to reduce perceived difficulty through automation."
+    - "Financial literacy seminars alone do not improve behavior, so Odin must provide structural supports not just education."
+    - "Active saving is constrained by income, so Odin's savings module must work with small, automatic contributions."
+    - "Loan dependence is a routine coping mechanism, so Odin must integrate debt management as a core feature."
+    - "Demographic differences require Odin's personalization to account for marital status and income rank."
   limits:
-    - "Sample limited to one highly urbanized city (Baguio), limiting generalizability to rural or other urban areas."
-    - "Cross-sectional design cannot establish causality or track behavioral changes over time. [unacknowledged]"
-    - "Self-reported survey data may introduce social desirability bias, especially for financial behaviors. [unacknowledged]"
-    - "Exclusion of non-permanent teachers (contractual, substitute) omits a potentially more vulnerable subgroup."
-  mapping_rationale: This paper was assessed against Odin's functional domains. It provides citeable claims for behavioral profiling (5.A) through the concept of 'conscious constraint', budgeting strategies (7.A) via the divergence between frequency and difficulty, and savings/debt management (13.A, 13.B) through constrained saving and loan dependence. Cultural practices (2.A) are reflected in reliance on cooperatives and institutional endorsement. Financial behavior of Filipino professionals (1.C) is directly studied, though teachers are not exclusively 'young'; the behavioral patterns remain relevant. Rejected topics include algorithmic modules (5.C, 7.C, 8.B) as no ML models were used, expense categorization frameworks (3.A) as the paper does not propose a taxonomy, and mobile UX (9) as not addressed. Borderline cases like 2.B (seasonal spending) were rejected due to absence of cyclical pattern analysis.
+    - "Study focuses on public school teachers in one city, limiting generalizability to other Filipino professional groups."
+    - "Cross-sectional design cannot establish causal relationships between demographics and financial behavior."
+    - "Relies on self-reported behavior, which may be subject to social desirability bias."
+    - "Perceived difficulty measures are subjective and not validated against objective difficulty metrics."
+  mapping_rationale: "Systematic scan across all 12 functional domains and their associated topic codes flagged the following as relevant: Filipino Cultural Context (2.A, 2.D) due to loan and cooperative reliance; Expense Categorization (3.A, 3.B) for the budgeting paradox; Existing Systems (4.A, 4.B) for the seminar ineffectiveness and institutional tools; Behavioral Profiling (5.A, 5.B) for conscious constraint and demographic differences; Budget Recommendation (7.A, 7.B) for friction reduction and salary-aligned tools; Savings and Debt (13.A, 13.B) as the weakest and most compensatory behaviors. Borderline cases: seasonal spending (2.B) was considered but rejected because the study treats unexpected expenses as general constraints rather than cyclical occasions; mobile-first design (9.A, 9.B) was rejected as the study only mentions tool adoption in passing; evaluation frameworks (12.A, 12.C) were rated contextual as the study provides mixed-methods evaluation but not system-specific. Overall, this paper is highly relevant for Odin's behavioral profiling, budget recommendation, and debt management modules, with moderate relevance for expense categorization and cultural context."
 limitations:
-  - "Sample limited to one city (Baguio), not representative of all Philippine public school teachers. [unacknowledged]"
-  - "Cross-sectional design prevents causal inference about seminar attendance or marital status effects. [unacknowledged]"
-  - "Self-reported financial behavior data may overestimate positive practices due to social desirability. [unacknowledged]"
-  - "Exclusion of non-permanent teachers (contractual, substitute) omits a financially vulnerable group. [unacknowledged]"
-  - "The study does not validate the perceived difficulty measure beyond internal consistency. [unacknowledged]"
+  - "The study's focus on teachers in a single city limits generalizability to other Filipino professional populations."
+  - "The cross-sectional design precludes causal inference about the effects of demographics or seminars on financial behavior. [unacknowledged]"
+  - "Self-reported financial behavior may be inflated due to social desirability bias."
+  - "Perceived difficulty ratings are subjective and may not reflect actual cognitive or practical effort. [unacknowledged]"
+  - "The study does not measure objective financial outcomes such as net worth, savings amount, or debt-to-income ratio."
 remember_this:
-  - "num: Seminar attendance had zero effect on financial behavior scores (p=.991)."
-  - "Conscious constraint explains moderate behaviors as endurance, not mastery."
-  - "Budgeting is most difficult due to scarce resources, not skill deficit."
-  - "Married and lower-ranked teachers need differentiated financial support."
-  - "Choosing financial products is easy only because teachers rely on familiar offerings."
+  - "Financial literacy seminars show no effect on actual financial behavior among teachers."
+  - "Budgeting is the most frequent yet most difficult financial behavior under conscious constraint."
+  - "Single and higher-ranked teachers exhibit significantly stronger financial behaviors than married and lower-ranked counterparts."
+  - "Loan dependence is a routine coping mechanism, not an exceptional measure, for Filipino professionals."
+  - "Num: 49% of adults globally meet minimum financial behavior standards, yet teachers exceed this benchmark under constraint."
 ```

@@ -1,144 +1,150 @@
 ```yaml
-paper_id: c3b5c3d0-8f3a-5a1c-9e2a-4f7b8c9d0e1f
-designation: algorithm-specific
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+designation: international
 title: AI-Powered Financial Insights Platform
-authors: Reddy, S. T.; C., S.; G., T.; BG, D.; Gupta, S.
+authors: Reddy, S. T.; Soniya, C.; Thanushree, G.; Darshan, B. G.; Gupta, S.
 year: 2024
 venue: Unknown
 odin_topics:
   - 3.A
-  - 3.B
+  - 4.A
+  - 4.B
   - 6.A
   - 6.B
+  - 7.A
   - 7.B
-  - 7.C
+  - 9.A
+  - 9.B
   - 10.A
   - 10.B
+  - 11.A
   - 12.A
   - 12.B
-  - 13.A
-  - 13.B
-shorthand_tags:
-  - /expense-categorization
-  - /category-design
-  - /predictive-modeling
-  - /spending-forecast
-  - /budget-recommendation
-  - /budget-algorithm
-  - /data-privacy
-  - /user-trust
-  - /evaluation-frameworks
-  - /algorithm-evaluation
-  - /savings-goal
-  - /debt-management
-tldr: A full-stack AI personal finance platform with conversational CA advisor, receipt scanner, portfolio tracker, EMI calculator, and LSTM spending forecast.
-problem_and_motivation: Indian working-class and students lack affordable, personalized financial advisory. Existing apps like Mint are US-only, and Indian investment platforms lack budgeting and AI advice. No unified system covers budgeting, investment, EMI, tax planning with user-specific data.
+tldr: Develops an AI-powered personal finance platform integrating a conversational advisor, receipt scanner, portfolio tracker, EMI manager, and dashboard to unify financial management.
+problem_and_motivation: Individuals in India lack access to personalized, affordable financial advisory services despite widespread digital banking adoption. Existing commercial solutions fail to offer comprehensive, unified platforms that combine budgeting, investment, EMI tracking, and tax planning. This absence of a single, intelligent system leaves users without context-aware guidance tailored to their actual financial data.
 approach:
-  - Built Next.js 15 full-stack with PostgreSQL, Prisma, and Clerk authentication.
-  - Conversational AI uses Groq LLAMA 3.1 8B/70B for intent parsing, investment advice, and CA Arjun persona.
-  - Receipt scanner uses Google Gemini 1.5 Flash with multimodal prompt extracting amount, merchant, category.
-  - LSTM prediction microservice on FastAPI/TensorFlow forecasts cash flow trajectories.
-  - Live portfolio tracker pulls stock prices from Yahoo Finance and mutual fund NAVs from MFAPI.in.
-  - EMI calculator evaluates reducing-balance formula client-side; server generates amortization schedule.
-  - Dashboard analytics with Recharts, SSR initial load ~420ms.
-  - Security includes JWT, per-IP rate limiting with Arcjet, and in-memory receipt processing.
+  - Builds a full-stack web application using Next.js 15, React 18, and Tailwind CSS with a serverless architecture.
+  - Implements a conversational AI advisor "CA Arjun" using Groq's LLAMA 3.1 (8B for intent, 70B for investments) with user financial context injection.
+  - Integrates an automated receipt scanner using Google Gemini 1.5 Flash for multimodal OCR extraction of transaction details.
+  - Develops a live portfolio tracker pulling real-time stock and mutual fund data from Yahoo Finance and MFAPI.in APIs.
+  - Creates an EMI calculator and tracker with server-side amortization schedule generation stored in PostgreSQL via Prisma.
+  - Designs a comprehensive analytics dashboard with interactive charts using Recharts and a CA-generated financial health report.
+  - Employs a dedicated LSTM prediction microservice (FastAPI/TensorFlow) for forecasting spending and cash flow trajectories.
 findings:
-  - "num: Dashboard initial load 420ms to first meaningful content."
-  - "num: Receipt scan average 2.1 seconds with >92% accuracy (citing prior research)."
-  - "num: Live portfolio fetch for 10 holdings in 1.4 seconds."
-  - "num: EMI schedule creation for 60 months takes 180ms DB round-trip."
-  - "num: CA report generation averages 1.8 seconds, investment recommendation 3.2 seconds."
-  - Gemini 1.5 Flash successfully extracts structured JSON from receipt images.
-  - LLAMA 3.1 8B correctly classifies six intent categories with sub-200ms latency.
-  - System gracefully falls back when LSTM service or Arcjet key is missing.
+  - num: Dashboard initial load achieves approximately 420ms to first meaningful content using SSR with Suspense.
+  - num: CA Report generation with parallel database fetches and Groq inference averages approximately 1.8 seconds.
+  - num: Investment recommendations using the LLAMA 3.1 70B model average a response time of approximately 3.2 seconds.
+  - num: Receipt scanning with Gemini 1.5 Flash averages approximately 2.1 seconds and achieves over 92% accuracy.
+  - num: Live portfolio fetch for 10 holdings executes in approximately 1.4 seconds using parallel API calls.
+  - num: Creation of a 60-month EMI schedule requires a database round-trip time of approximately 180ms.
+  - The system successfully handles blurry or non-receipt images with graceful error fallbacks.
+  - The platform demonstrates architectural resilience by gracefully handling offline LSTM services and missing API keys.
+  - The platform consolidates budgeting, investment tracking, EMI management, and tax planning into a single application.
 key_figures_tables:
-  - "Figure 1: Operational workflow from user query to Masumi verification layer → System uses Cardano indexer and LLM with cryptographic proof."
+  - Figure 1: Operational workflow showing the four layers (User, Blockchain Data Access, Backend & AI Reasoning, Masumi Verification) → Visualizes the end-to-end data and verification flow.
+  - Table: Database schema diagram showing central User model with cascading relations to Accounts, Transactions, Budgets, Goals, Loans, and Holdings → Defines the core relational data structure.
+  - Visual: DashboardCharts component with "6M Trend", "Categories", and "Daily" tabs → Showcases the multi-dimensional financial charting capabilities.
+  - Diagram: Future Smart Automated Financial Ecosystem with Inngest workers for proactive alerts → Illustrates planned extension for automated monitoring and notifications.
 key_equations:
-  - equation: $P \times r \times (1+r)^{n} / ((1+r)^{n} - 1)$
-    explanation: "Reducing-balance EMI calculation for loan installments."
+  - equation: EMI = P × r × (1+r)^n / ((1+r)^n - 1)
+    explanation: Standard reducing-balance formula for monthly EMI calculation.
 definitions:
-  - term: LLM
-    definition: Large Language Model, used for conversational AI and intent parsing.
   - term: LSTM
-    definition: Long Short-Term Memory network for time-series forecasting.
-  - term: EMI
-    definition: Equated Monthly Installment for loan repayment.
-  - term: NAV
-    definition: Net Asset Value of a mutual fund.
+    definition: Long Short-Term Memory, a recurrent neural network architecture for time-series forecasting.
+  - term: NLG
+    definition: Natural Language Generation, translating structured data into human-readable summaries.
   - term: RAG
-    definition: Retrieval-Augmented Generation, enriching LLM prompts with context.
+    definition: Retrieval-Augmented Generation, enhancing LLM responses with retrieved external knowledge.
   - term: OCR
-    definition: Optical Character Recognition for extracting text from images.
+    definition: Optical Character Recognition, extracting text from images.
   - term: JWT
-    definition: JSON Web Token for authentication.
-  - term: SSR
-    definition: Server-Side Rendering in Next.js.
+    definition: JSON Web Token, a compact standard for secure information transmission.
 critical_citations:
-  - "[Chen et al., 2023] — LLM financial advisory accuracy with RAG."
-  - "[Reddy et al., 2022] — OCR >92% accuracy using multimodal transformers."
-  - "[Zhang et al., 2021] — LSTM-based spending prediction in personal finance."
+  - "[Chen et al., 2023] — Demonstrates LLM-based financial advisory accuracy with RAG/prompt engineering."
+  - "[Reddy et al., 2022] — Shows OCR for receipt processing using multimodal transformers exceeds 92% accuracy."
+  - "[Zhang et al., 2021] — Validates LSTM-based time-series forecasting for personal finance applications."
 relevance:
   topics:
     - code: 3.A
       name: Expense Categorization Frameworks
-      justification: "Receipt scanner assigns 15 predefined categories using Gemini vision."
-    - code: 3.B
-      name: Expense Category Design Considerations
-      justification: "Enum-based categories (e.g., food, transport) tailored to Indian users."
+      relevance: medium
+      justification: Uses predefined enum categories for receipts and transactions.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: Explicitly reviews and compares Mint, YNAB, Zerodha Kite, and Groww.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Identifies lack of AI advisory, geographic restrictions, and lack of integration in existing solutions.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: "LSTM microservice forecasts cash flow and liquidity risk."
+      relevance: medium
+      justification: Implements LSTM microservice for spending and cash flow forecasting.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: "TensorFlow/Keras LSTM model trained on user spending time series."
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: medium
+      justification: Uses LSTM networks for time-series prediction, referencing Zhang et al. (2021).
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Includes budget tracking with alert thresholds and spending limits.
     - code: 7.B
       name: Budget Recommendation in Personal Finance Systems
-      justification: "CA Arjun provides budget analysis and savings advice via LLM."
-    - code: 7.C
-      name: Budget Recommendation Algorithm
-      justification: "LLAMA 3.1 prompts with user spending context generate priority actions."
+      relevance: medium
+      justification: AI advisor provides budget analysis and actionable recommendations.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: contextual
+      justification: Discusses web app UI with responsive design but primarily desktop focus.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: contextual
+      justification: Mentions dark-mode-first design and intuitive interface, but mobile-specific evaluation is limited.
     - code: 10.A
       name: Data Privacy and Security in Personal Finance Systems
-      justification: "In-memory receipt processing, JWT auth, and optional rate limiting."
+      relevance: high
+      justification: Details JWT authentication, data isolation, rate limiting, and in-memory receipt processing.
     - code: 10.B
       name: User Trust in Personal Finance Systems
-      justification: "Cryptographic proofs via Masumi protocol and transparent audit trails."
+      relevance: medium
+      justification: Masumi verification layer provides cryptographic proof, enhancing auditability and trust.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Conversational AI and comprehensive dashboard aim to increase user engagement.
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      justification: "Functional testing and performance metrics (load times, latency)."
+      relevance: high
+      justification: Conducts functional testing across all modules with PASS results and performance metrics.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: "Measured accuracy of receipt scanner, speed of EMI generation, LLM latency."
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      justification: "Savings goals table with target amounts and monthly calculations."
-    - code: 13.B
-      name: Debt Management in PFMS
-      justification: "EMI calculator, amortization schedule, and payment tracking."
-  contribution: "Odin's expense categorization module can adopt the multi-modal receipt scanner achieving >92% accuracy. The spending forecasting module can integrate the LSTM-based cash flow prediction microservice. The budget recommendation engine can leverage CA Arjun's conversational AI with user-specific context injection via parallel fetching. The debt management feature can implement the EMI calculator and atomic amortization schedule generator. The system evaluation framework can reference performance metrics like 420ms dashboard load and 1.8s report generation."
+      relevance: high
+      justification: Reports specific latency and accuracy benchmarks for AI inference, receipt scanning, and API fetches.
+  contribution: "The Welth platform's modular architecture integrating a conversational AI advisor, multi-modal receipt scanner, and live portfolio tracker provides a blueprint for consolidating fragmented PFMS functionalities. Its use of Groq's LPU infrastructure for sub-second LLM inference demonstrates a practical path to real-time, context-aware financial advice in consumer applications. The documented performance benchmarks and graceful fallback strategies offer valuable design patterns for building resilient, AI-driven financial tools. The explicit evaluation of the LSTM prediction service and its integration as a separate microservice informs modular predictive module deployment. This work directly justifies Odin's architectural decisions, particularly the need for a unified, AI-augmented system that addresses the gaps identified in existing platforms."
   directly_justifies:
-    - "Multi-modal transformer models like Gemini achieve >92% OCR accuracy for receipts."
-    - "LSTM networks can forecast cash flow trajectories in personal finance apps."
-    - "LLAMA 3.1 70B with structured JSON prompts reduces hallucination for investment recommendations."
-    - "Serverless Next.js architecture with React Server Components achieves 420ms initial load."
-    - "Atomic database creation of EMI schedules ensures data consistency in 180ms."
+    - "Users lack access to personalized, affordable financial advisory services, justifying AI-driven assistance in Odin."
+    - "Existing platforms like Mint and YNAB lack advanced AI advisory and are geographically restricted, supporting a localized PFMS."
+    - "Manual expense logging leads to poor tracking accuracy, validating the need for automated receipt scanning."
+    - "LSTM networks can effectively forecast cash flow trajectories, supporting predictive spending analytics in Odin."
+    - "Conversational AI with user-specific context provides highly contextual and actionable financial advice."
   limits:
-    - "Geographical focus on Indian market (SEBI guidelines, INR localization) limits international applicability."
-    - "Heavy dependency on external APIs (Yahoo Finance, MFAPI.in, Gemini) that may change or go offline."
-    - "Requires at least 3 months of user data for accurate CA Advisor insights (cold-start problem)."
-    - "LSTM prediction service implemented as separate microservice; if offline, dashboard shows placeholder."
-    - "Requires stable high-speed internet for real-time AI inference and blockchain indexing."
-  mapping_rationale: "This paper provides citeable claims for expense categorization (receipt scanner with enum categories), spending forecasting (LSTM microservice), budget recommendation (LLM-based CA Arjun), data privacy (in-memory processing, JWT), system evaluation (quantitative latency and accuracy metrics), and savings/debt management (EMI amortization, savings goals). It does not address behavioral profiling (5.A-C) because user profiles are not modeled beyond aggregated spending. Mobile-first design (9.A-B) is not the focus as the platform is web-based. Anomaly detection (8.A-B) is not explicitly implemented beyond liquidity risk forecasting. User retention (11.A-B) is not evaluated. Borderline case: the LSTM service qualifies as both predictive modeling (6.A) and algorithm-specific (6.B). I selected both because the paper describes the algorithm's architecture and its application to spending data."
+    - "Geographical and regulatory focus on the Indian market (SEBI guidelines), limiting direct applicability to the Philippines."
+    - "Heavy dependency on third-party APIs (Yahoo Finance, MFAPI.in, Gemini) introduces potential service reliability risks."
+    - "The platform requires a stable, high-speed internet connection, which may not be universally available."
+    - "The LSTM prediction service is a separate microservice without an explicit high-availability strategy beyond a fallback."
+    - "The AI advisor requires at least 3 months of aggregated data for accurate insights, posing a cold-start challenge."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was conducted. The paper's primary contribution—a comprehensive AI-powered PFMS with conversational advisory, receipt scanning, and portfolio tracking—directly aligns with Domain 4 (Existing Systems & Gaps) as it explicitly reviews and identifies limitations in platforms like Mint and YNAB, and Domain 10 (Data Privacy & User Trust) through its detailed security architecture. High relevance was assigned to 4.A, 4.B, 10.A, 12.A, and 12.B due to direct, actionable insights on system gaps, privacy implementation, and rigorous performance evaluation. Medium relevance was assigned to 3.A (expense categorization enums), 6.A/6.B (LSTM forecasting), 7.A/7.B (budgeting and recommendations), 10.B (verification for trust), and 11.A (engagement via AI). Contextual relevance was assigned to 9.A and 9.B as the paper discusses a web app with responsive design but lacks dedicated mobile-first evaluation. Borderline cases included 2.B (seasonal patterns) and 2.D (Filipino spending cycles), which were rejected as the paper's context is strictly Indian and does not address cultural spending nuances. Topics like 1.A, 1.B, 1.C (Filipino demographics), 5.A, 5.B, 5.C (behavioral profiling), 7.C/7.D (constrained optimization), 8.A/8.B/8.C (anomaly detection), 11.B (retention mechanisms), 12.C (specific budget recommendation evaluation), and 13.A/13.B/13.C (savings/debt specifics) were considered but rejected as they are not the focus or are not addressed in sufficient detail. Overall, the paper provides a strong proof-of-concept and architectural benchmarks that justify several Odin design decisions, particularly around system integration, AI advisory, and performance evaluation."
 limitations:
-  - "Geographical and regulatory focus on India limits external validity. [unacknowledged]"
-  - "Dependency on third-party APIs (Yahoo Finance, MFAPI.in) introduces failure risk. [acknowledged]"
-  - "Requires 3 months of user financial context for AI to provide accurate advice (cold-start). [acknowledged]"
-  - "Experimental LSTM service may be unavailable; fallback only shows placeholder. [acknowledged]"
-  - "No formal user study or A/B testing on engagement or retention. [unacknowledged]"
+  - "Geographical and regulatory focus is specifically on the Indian market and SEBI guidelines, which may limit direct utility for Filipino users. [unacknowledged]"
+  - "The platform relies heavily on external third-party APIs (Yahoo Finance, MFAPI.in, Google Gemini), introducing potential points of failure. [acknowledged]"
+  - "As a serverless web application requiring live data and AI inference, a stable, high-speed internet connection is a prerequisite. [unacknowledged]"
+  - "The LSTM prediction service is implemented as a separate microservice without a specified high-availability failover beyond a graceful fallback. [unacknowledged]"
+  - "The conversational AI advisor requires at least 3 months of aggregated user data to provide accurate insights, limiting immediate value for new users. [acknowledged]"
 remember_this:
-  - "Receipt scanner achieves sub-2.1s processing with >92% accuracy."
-  - "LLAMA 3.1 8B delivers sub-200ms intent classification."
-  - "Dashboard initial load at 420ms using SSR and Suspense."
-  - "EMI schedule generation for 60 months completes in 180ms."
-  - "Platform combines budgeting, investment, EMI, tax in one unified app."
+  - "Welth unifies budgeting, investments, EMI, and tax planning into one platform."
+  - "CA Arjun provides contextual financial advice using real user transaction data."
+  - "The automated receipt scanner achieves over 92% accuracy using Gemini 1.5 Flash."
+  - "Groq's LPU enables sub-second latency for the 70B parameter LLM inference."
+  - "Dashboard initial load is approximately 420ms, with most AI features under 3.2 seconds."
 ```

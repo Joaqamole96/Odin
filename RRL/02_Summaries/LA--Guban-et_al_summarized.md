@@ -1,88 +1,97 @@
 ```yaml
-paper_id: a1b2c3d4-e5f6-5123-89ab-cdef01234567
+paper_id: 13523fe0-2a2d-5e2f-9a5c-5b8c9d2e4f3a
 designation: local
 title: WEKA-BASED DECISION-TREE MODEL FOR USER SUBSCRIPTION PLAN PREDICTION
 authors: Guban, J. C. R.; Menderico, C. D. R.; Montalban, D. M. G.
 year: 2025
-venue: Unknown
+venue: Technological University of the Philippines - Manila
 odin_topics:
+  - 4.A
+  - 4.B
   - 5.A
   - 5.C
   - 6.A
-  - 12.A
-  - 12.B
-shorthand_tags:
-  - /behavioral-profile
-  - /classification
-  - /predictive-modeling
-  - /evaluation
-tldr: A J48 decision tree model predicts streaming subscription plans from user demographics and behaviors, achieving 72% accuracy with country as the strongest predictor.
-problem_and_motivation: Streaming platforms lack interpretable models to understand how user attributes like age, device, and country jointly influence subscription plan selection. This gap hinders targeted marketing and plan optimization. The study addresses this by developing a transparent decision-tree classifier.
+tldr: A J48 decision-tree model achieves 72% accuracy predicting streaming subscription plans from user demographics and behavioral attributes, identifying country as the strongest predictor.
+problem_and_motivation: Streaming platforms lack interpretable models to predict how demographic and behavioral attributes jointly influence subscription plan selection. This limits data-driven personalization and targeted marketing strategies. An accessible, rule-based approach is needed to bridge user behavior with platform optimization.
 approach:
-  - Used 2,500 anonymized user records with five attributes: country, age, gender, device type, subscription start month.
-  - Applied J48 algorithm in WEKA with an 80/20 train-test split.
-  - Evaluated using accuracy, Kappa statistic, precision, recall, F-measure, and ROC area.
-  - Derived interpretable decision rules from the tree structure.
+  - A supervised classification model using the J48 decision-tree algorithm was developed in WEKA.
+  - The dataset comprised 2,500 anonymized user records with six attributes: country, age, gender, device type, subscription start month, and target plan.
+  - An 80/20 train-test split was applied to evaluate out-of-sample performance.
+  - Performance was assessed using accuracy, Kappa statistic, precision, recall, F-measure, and ROC area.
+  - The model was validated against a held-out test set of 500 instances.
 findings:
-  - "num: 72% overall accuracy on the test set."
-  - "num: Kappa statistic of 0.5797 indicates moderate agreement."
-  - Country identified as most influential predictor, followed by age and device type.
-  - Younger smartphone users subscribing later in the year tend to choose Premium plans in the US.
-  - All United Kingdom users consistently select Standard plan regardless of attributes.
+  - num: The model achieved an overall accuracy of 72% on the test set.
+  - Country was identified as the most influential predictor of subscription type, followed by age and device type.
+  - The decision tree generated interpretable rules showing that younger smartphone users subscribing later in the year often chose Premium plans.
+  - Older users on Smart TVs tended toward Standard or Basic tiers.
+  - The Standard category achieved the highest precision (0.793) and ROC area (0.871), indicating reliable identification.
+  - Confusion matrix showed balanced performance across classes with 123 Basic, 119 Standard, and 118 Premium correct predictions.
 key_figures_tables:
-  - "Table 1: Performance metrics including accuracy 72% → Model achieves solid predictive power."
-  - "Table 3: Per-class precision, recall, F-measure, ROC area → Standard class performs best (ROC 0.871)."
-  - "Table 4: Confusion matrix with diagonal counts 123,119,118 → Balanced classification across three plans."
+  - Table 1: Performance summary on test set → Accuracy 72%, Kappa 0.5797, MAE 0.2216.
+  - Table 2: User profile combinations for each country → Country-specific rules reveal distinct segmentation patterns.
+  - Table 3: Class-level metrics → Standard has highest precision (0.793) and ROC (0.871); all plans show balanced F-measures.
+  - Table 4: Confusion matrix → Diagonal values (123,118,119) show balanced correct classifications across tiers.
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
   - term: J48
-    definition: An implementation of the C4.5 decision tree algorithm in WEKA.
+    definition: An open-source Java implementation of the C4.5 decision-tree algorithm in WEKA.
   - term: WEKA
-    definition: Waikato Environment for Knowledge Analysis, a machine learning software suite.
-  - term: ROC
-    definition: Receiver Operating Characteristic curve for classifier performance evaluation.
-  - term: Kappa statistic
-    definition: Measure of inter-rater agreement for classification tasks.
+    definition: Waikato Environment for Knowledge Analysis, a suite of machine learning software.
+  - term: ROC Area
+    definition: Area under the Receiver Operating Characteristic curve, measuring classification discrimination ability.
+  - term: Kappa Statistic
+    definition: A measure of agreement between predicted and actual classifications, correcting for chance.
+  - term: Confusion Matrix
+    definition: A table showing correct and incorrect classifications for each class.
 critical_citations:
-  - "[Chaurasia & Pal, 2019] — Netflix subscription prediction using data mining."
-  - "[Aouad et al., 2023] — Large decision trees generalize with proper validation."
-  - "[Hsiao, 2023] — 70% accuracy benchmark for commercial applications."
+  - "[Aouad et al., 2023] — Validates large decision trees can generalize with proper validation."
+  - "[Hsiao, 2023] — Establishes 70% accuracy benchmark for commercial predictive models."
+  - "[Garcia & Lee, 2022] — Supports use of decision trees for subscription plan prediction."
+  - "[Orozco-Arias, 2020] — Provides rationale for using ROC area as a performance metric."
 relevance:
   topics:
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Demonstrates a classification approach applicable to PFMS user segmentation.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: low
+      justification: Recommends incorporating behavioral indicators beyond demographics to improve prediction.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: Paper segments users into subscription plan profiles based on demographics.
+      relevance: medium
+      justification: Shows how demographic and behavioral attributes can profile user groups.
     - code: 5.C
-      name: Financial Behavioral Profile Classification Algorithm
-      justification: J48 decision tree classifies user subscription choices as a proxy for financial behavior.
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Directly applies decision-tree classification to predict user plan choices from profile attributes.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Predicts subscription plan choice using supervised learning.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      justification: Uses accuracy, precision, recall, and ROC area to assess model performance.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: Evaluates J48 tree via confusion matrix and per-class metrics.
-  contribution: This paper demonstrates that an interpretable decision tree can predict user subscription plan choices from demographic and behavioral attributes, offering a template for Odin's user profiling module. The feature importance ranking (country, age, device) provides a heuristic for cold-start profiling when behavioral data is sparse. The evaluation methodology using multi-class metrics (precision, recall, ROC) directly informs Odin's algorithmic validation pipeline.
+      relevance: high
+      justification: Demonstrates a predictive model for user behavior that can be adapted for spending forecasting.
+  contribution: The paper's decision-tree methodology provides a template for Odin's behavioral profiling module, enabling interpretable classification of users based on demographic and behavioral attributes. The feature importance analysis (country, age, device) informs which user attributes are most predictive for segmentation. The validation approach with an 80/20 split and multi-metric evaluation (precision, recall, ROC) offers a framework for Odin's system evaluation module. The interpretable rule extraction supports transparent decision-making for budget recommendation and anomaly detection modules.
   directly_justifies:
-    - A decision tree with 72% accuracy can reliably predict subscription plan from five user attributes.
-    - Country is the strongest predictor of plan choice, explaining most variance.
-    - Younger smartphone users are more likely to select premium plans when subscribing later in the year.
+    - "Decision trees can predict user plan choices with 72% accuracy from demographic and behavioral attributes."
+    - "Country, age, and device type are the most influential predictors of user classification."
+    - "Interpretable decision rules reveal how attribute combinations map to specific user segments."
+    - "An 80/20 train-test split with multi-metric evaluation provides reliable model validation."
   limits:
-    - Dataset limited to five attributes, excluding behavioral signals like watch time or frequency.
-    - Model trained on streaming subscription data, not personal finance spending.
-    - No cross-validation or hyperparameter tuning reported.
-  mapping_rationale: This paper maps to behavioral profiling (5.A, 5.C) because it classifies users into discrete subscription plan categories based on attributes, analogous to financial behavior profiles. Predictive modeling (6.A) applies as it forecasts user choices. Evaluation frameworks (12.A, 12.B) are relevant due to detailed performance metrics. Topics related to budgeting, anomaly detection, and savings were rejected as the paper does not address those. Borderline case of 7.B (budget recommendation) was excluded because subscription plan prediction is not budget recommendation per se, though it could inform plan selection.
+    - "Dataset was limited to five user attributes, excluding behavioral indicators like watch time or session frequency."
+    - "The model was validated on a single dataset; cross-validation or external validation was not performed."
+    - "Ensemble methods were not explored, potentially missing complex nonlinear interactions."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The domains flagged as relevant were: Existing Systems & Gaps (4.A, 4.B), Behavioral Profiling & Classification (5.A, 5.C), and Spending Forecasting (6.A). Topic 5.C was assigned high relevance because the paper directly applies a decision-tree classifier to predict user plan choices from profile attributes—a technique transferable to financial behavioral profile classification in Odin. Topic 6.A received high relevance as the paper demonstrates a predictive modeling approach for user behavior that can be adapted for spending forecasting. Topic 4.A was deemed contextual, as the paper illustrates a classification approach applicable to PFMS user segmentation. Topic 4.B was low relevance, as limitations were acknowledged but not deeply explored. Topic 5.A was medium relevance, as the paper profiles user groups based on demographic attributes, aligning with behavioral profiling goals. Other domains (e.g., Cultural Context, Mobile-First Design, Data Privacy, User Retention) were considered and rejected because the paper does not address Filipino cultural practices, mobile design considerations, privacy concerns, or engagement dynamics. The paper's overall relevance to Odin lies in its provision of a validated, interpretable classification framework and a feature importance analysis that can inform user segmentation and predictive modeling modules.
 limitations:
-  - Dataset limited to five user attributes, excluding behavioral indicators such as watch time or session frequency.
-  - Only J48 algorithm tested; ensemble methods not explored.
-  - Model not validated on a different dataset or in a real-time setting.
+  - "The dataset was limited to five user attributes, excluding behavioral indicators such as watch time, session frequency, or genre preferences, which may improve prediction accuracy."
+  - "The model was validated using a single 80/20 split; k-fold cross-validation was not employed to assess variance in performance [unacknowledged]."
+  - "Ensemble methods like Random Forests or Gradient Boosted Trees were not explored, potentially missing complex nonlinear interactions [unacknowledged]."
+  - "The model was not tested on a different dataset or in a real-time deployment setting to assess generalizability and operational value."
 remember_this:
-  - J48 decision tree predicts subscription plans with 72% accuracy.
-  - Country is the strongest predictor, followed by age and device.
-  - All United Kingdom users consistently choose Standard plan.
-  - Younger smartphone users who subscribe late tend to pick Premium plans.
+  - "A decision tree achieved 72% accuracy predicting subscription plans from six user attributes."
+  - "Country was the strongest predictor, followed by age and device type."
+  - "The model generated interpretable rules linking user profiles to Basic, Standard, or Premium plans."
+  - "Standard plan classification performed best with precision of 0.793 and ROC area of 0.871."
+  - "Feature importance from decision trees can inform targeted user segmentation in personal finance systems."
 ```

@@ -1,90 +1,179 @@
 ```yaml
-paper_id: 10.1257/jep.37.4.137
-designation: international
+paper_id: 10.3886/E193204V1
+designation: international-algorithm-specific
 title: The Importance of Financial Literacy: Opening a New Field
 authors: Lusardi, A.; Mitchell, O. S.
 year: 2023
 venue: Journal of Economic Perspectives
 odin_topics:
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.C
+  - 3.A
+  - 3.B
+  - 4.A
+  - 4.B
   - 5.A
+  - 5.B
+  - 5.C
+  - 7.A
+  - 10.A
+  - 11.A
+  - 12.A
+  - 12.B
   - 13.A
   - 13.B
-shorthand_tags:
-  - /financial-behavioral-profiles
-  - /savings-goal-management
-  - /debt-management
-tldr: Financial literacy, measured by the “Big Three” questions, is strikingly low globally, varies by demographics, and strongly predicts saving, debt management, and wealth accumulation.
-problem_and_motivation: People face complex financial decisions at all life stages but often lack basic knowledge of interest, inflation, and risk. No nationally representative dataset measured financial literacy before 2004, leaving a gap in understanding its economic impact. This paper quantifies financial literacy and demonstrates its critical role in financial outcomes and wealth inequality.
+tldr: Financial literacy is strikingly low globally, with only 43% of Americans answering three basic financial questions correctly, and this knowledge strongly predicts wealth accumulation and financial wellbeing.
+problem_and_motivation: People face increasingly complex financial decisions with long-lasting consequences, yet lack fundamental financial knowledge. This knowledge gap limits individuals' ability to utilize resources effectively, contributes to wealth inequality, and creates macroeconomic vulnerabilities. The financial literacy field emerged to measure this knowledge and understand its impact on economic outcomes.
 approach:
-  - Designed and fielded the “Big Three” financial literacy questions (interest, inflation, risk diversification) in the 2004 Health and Retirement Study.
-  - Extended the measure to the “Big Five” and the 28‑question P‑Fin Index, adopted in over 40 countries and 140‑nation S&P Global survey.
-  - Used median regressions on 2019 Survey of Consumer Finances data (N=5,777) to correlate literacy with net, financial, and non‑financial wealth.
-  - Developed a life‑cycle model where financial literacy is an endogenous investment that depreciates over time.
-  - Reviewed a meta‑analysis of 76 randomized controlled trials of financial education across 33 countries.
+  - Developed and fielded the "Big Three" financial literacy questions in the Health and Retirement Study in 2004.
+  - Extended measurement to the "Big Five" and 28-question Personal Finance Index (P-Fin Index) in nationally representative US surveys.
+  - Analyzed data from the Survey of Consumer Finances (2019) with N=5,777 to examine financial literacy levels and associations.
+  - Conducted cross-country comparisons using data from over 140 countries in the S&P Global Financial Literacy Survey.
+  - Developed a life-cycle theoretical model with endogenous financial literacy investment and depreciation.
+  - Estimated median regressions of wealth measures on financial literacy indices controlling for demographics.
+approach:
+  - The model quantifies the contribution of financial literacy to wealth inequality using counterfactual simulations.
 findings:
-  - “num: Only 43% of Americans answer all three Big Three questions correctly.”
-  - “num: 29% of women vs. 48% of men answer all three correctly; women are more likely to say ‘do not know’.”
-  - “num: Financial literacy follows a hump‑shaped age pattern, peaking at 50–59 years with ~50% correct, and is lowest among those under 30 (32%).”
-  - “num: One additional correct answer on the FinLit index is associated with 13% higher median net wealth, 24% higher financial wealth, and a 15% higher wealth/income ratio.”
-  - “num: 30–40% of wealth inequality near retirement is accounted for by financial literacy.”
-  - Financial literacy positively affects stock market participation and debt management.
-  - Financial education RCTs show positive effects on knowledge and behavior, three to five times larger than earlier studies suggested.
+  - num: 43.3% of Americans answer all Big Three questions correctly in the 2019 Survey of Consumer Finances.
+  - num: Only 29% of women versus 48% of men answer all three questions correctly.
+  - num: Financial literacy peaks at 51% correct for ages 50-59, declining to 44% for ages 70+.
+  - num: 65% of college graduates answer all three correctly versus 18% of high school dropouts.
+  - num: 50% of Whites answer all three correctly versus 26% of Blacks and 22% of Hispanics.
+  - num: One additional correct answer on the FinLit index is associated with 13% higher median net wealth.
+  - num: 30-40% of wealth inequality near retirement can be accounted for by financial literacy.
+  - Financial literacy positively affects both financial knowledge and behavior in randomized control trials.
+  - The impact of financial education is three to five times larger than found by older studies.
+  - Financial literacy has grown more unequal over time, with the literate subgroups improving most.
 key_figures_tables:
-  - “Table 2: Percent correct on Big Three in US (2019 SCF) → Only 43% get all three correct; risk diversification is hardest (60.7%).”
-  - “Figure 1, Panel A: Gender differences → 48% of men vs. 29% of women answer all three correctly.”
-  - “Figure 2: Age patterns → Young adults (18‑29) have only 32% correct; knowledge peaks at 50‑59 (51%).”
-  - “Figure 3: Education gradients → 65% of college+ correct vs. 18% of high school dropouts.”
-  - “Figure 4: Race/ethnicity gaps → 50% of Whites correct vs. 26% of Blacks and 22% of Hispanics.”
-  - “Figure 5: International comparisons → Even high‑income countries (Germany, Netherlands) have <50% all correct.”
+  - Table 1: The Big Three financial literacy questions with correct answers → Measures understanding of interest, inflation, and risk.
+  - Table 2: US financial literacy levels showing 43% all correct → Basic knowledge cannot be taken for granted.
+  - Figure 1: Gender differences showing 29% women vs 48% men all correct → Women are less financially literate and more likely to say "do not know."
+  - Figure 2: Age patterns with peak at 50-59 and decline after → Financial literacy hump-shaped with age.
+  - Figure 3: Education gradient with 65% college vs 18% dropout correct → Higher education insufficient for financial literacy.
+  - Figure 4: Race/ethnicity gaps with 50% White vs 22% Hispanic correct → Financial literacy differences contribute to wealth inequality.
+  - Figure 5: Cross-country comparisons showing low literacy even in high-income countries → Financial literacy is low globally.
+  - Table 3: Median regressions showing FinLit index coefficient 0.161 for net wealth → Financial literacy strongly associated with wealth accumulation.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "Big Three"
-    definition: "Three survey questions measuring knowledge of interest compounding, inflation, and risk diversification."
-  - term: "P‑Fin Index"
-    definition: "28‑question Personal Finance Index measuring financial literacy across eight topics."
-  - term: "Financial literacy"
-    definition: "Knowledge of and ability to use fundamental financial concepts in economic decision‑making."
-  - term: "HRS"
-    definition: "Health and Retirement Study, a longitudinal US survey of older adults."
-  - term: "SCF"
-    definition: "Survey of Consumer Finances, a triennial US survey of household wealth."
+  - term: Financial literacy
+    definition: People's knowledge of and ability to use fundamental financial concepts in their economic decision-making.
+  - term: Big Three
+    definition: Three core financial literacy questions measuring understanding of interest rates, inflation, and risk diversification.
+  - term: P-Fin Index
+    definition: Personal Finance Index containing 28 questions across eight financial topics.
+  - term: FinLit index
+    definition: A measure of financial literacy used in regressions, based on the number of correct answers.
+  - term: HRS
+    definition: Health and Retirement Study, a longitudinal US survey of older adults.
+  - term: SCF
+    definition: Survey of Consumer Finances, a US survey on wealth and financial behavior.
+  - term: FLAT World
+    definition: Financial Literacy around the World project comparing financial literacy across countries.
 critical_citations:
-  - "[Lusardi & Mitchell, 2011a] — Introduced and validated the Big Three questions."
-  - "[Lusardi, Michaud, & Mitchell, 2017] — Life‑cycle model showing financial literacy explains 30‑40% of wealth inequality."
-  - "[Kaiser et al., 2022] — Meta‑analysis of 76 RCTs establishing causal effects of financial education."
+  - "[Lusardi & Mitchell, 2011a] — Introduced the Big Three questions."
+  - "[Lusardi, Michaud, & Mitchell, 2017] — Modeled financial literacy and wealth inequality."
+  - "[Kaiser et al., 2022] — Meta-analysis of financial education randomized trials."
+  - "[Bernheim, Garrett, & Maki, 2001] — Found long-term effects of high school financial mandates."
+  - "[van Rooij, Lusardi, & Alessi, 2011] — Linked financial literacy to stock market participation."
 relevance:
   topics:
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Paper demonstrates that financial literacy levels create distinct behavioral profiles (saving, investing, debt management)."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Paper directly links financial literacy to retirement saving, wealth accumulation, and planning behavior."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Paper finds more financially literate individuals manage debt better and carry less financial vulnerability."
-  contribution: "This paper justifies integrating a financial literacy assessment module into Odin’s user onboarding to create behavioral profiles (5.A). It provides causal evidence that literacy predicts saving behavior, enabling Odin to personalize savings goal recommendations (13.A). The finding that literacy improves debt management supports tailoring debt reduction advice (13.B). Additionally, the paper’s validation of the ‘Big Three’ questions offers a low‑burden, validated instrument for user assessment. Finally, the result that 30‑40% of wealth inequality is linked to literacy highlights the importance of tracking literacy as a key user attribute for long‑term outcome evaluation."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Provides general framework for measuring financial literacy in working-age populations.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Documents how financial literacy affects savings, debt, and wealth accumulation.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly examines how financial literacy predicts retirement planning, investing, and debt management.
+    - code: 2.C
+      name: User-Declared Financial Preferences
+      relevance: contextual
+      justification: The Big Three questions measure understanding of concepts relevant to user preferences.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: low
+      justification: Implicitly relevant as financial literacy helps with budgeting, but not the focus.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: low
+      justification: Not addressed, but literacy affects ability to use categories.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Reviews the landscape of financial literacy surveys and measurement tools.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: medium
+      justification: Identifies gaps in consumer financial knowledge that systems must address.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Directly examines how financial literacy creates distinct profiles with different behaviors.
+    - code: 5.B
+      name: Profile Dynamics and the Cold-Start Problem
+      relevance: contextual
+      justification: Documents that literacy changes with age and education, relevant to profile dynamics.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: The Big Three provides a classification tool for financial literacy levels.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Shows that financial literacy is necessary for effective budgeting.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: Not addressed, though it notes the role of trust.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: low
+      justification: Not addressed, but suggests financial education improves engagement.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Provides the Big Three as an evaluation metric for financial knowledge.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: The P-Fin Index is an evaluation instrument for financial literacy modules.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: medium
+      justification: Shows financial literacy is a strong predictor of retirement planning and wealth.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: medium
+      justification: Finds that financially literate people are better able to manage debt.
+  contribution: "This paper provides the foundational measurement framework for financial literacy (the Big Three) that Odin can adopt for user profiling. It establishes that financial literacy is a strong predictor of savings, investment, debt management, and wealth accumulation—all core Odin functions. The regression results provide quantitative benchmarks (e.g., 13% higher wealth per correct answer) that justify including financial literacy as a key variable in Odin's behavioral models. The theoretical model of endogenous financial literacy investment informs Odin's approach to user education and engagement. The documented demographic disparities underscore the need for Odin to tailor its financial advice to different user segments."
   directly_justifies:
-    - "Financial literacy is a strong predictor of retirement planning and wealth (Lusardi & Mitchell, 2007)."
-    - "Only 43% of US adults understand basic interest, inflation, and risk concepts (Lusardi & Mitchell, 2023)."
-    - "Financial literacy accounts for 30‑40% of wealth inequality near retirement (Lusardi, Michaud, & Mitchell, 2017)."
-    - "Financial education RCTs produce positive effects on both knowledge and downstream behaviors (Kaiser et al., 2022)."
-    - "Women and minorities have significantly lower financial literacy, with only 29% of women answering all Big Three correctly."
+    - "Financial literacy is a strong predictor of retirement planning and wealth accumulation."
+    - "The Big Three questions provide a validated measure of financial knowledge for user profiling."
+    - "Women and minorities have significantly lower financial literacy, requiring tailored approaches."
+    - "Financial education programs have positive impacts on both knowledge and behavior."
+    - "30-40% of wealth inequality near retirement can be accounted for by financial literacy."
   limits:
-    - "Cross‑sectional data cannot distinguish age from cohort effects in the hump‑shaped literacy pattern."
-    - "The Big Three may not capture all dimensions of financial literacy, especially advanced topics."
-    - "Self‑reported ‘do not know’ responses may reflect lack of confidence as much as lack of knowledge."
-  mapping_rationale: "The paper was screened against Odin’s functional domains. It contains no algorithmic or PFMS‑specific content, so domains like spending forecasting, anomaly detection, and mobile design were rejected. However, it provides foundational evidence for behavioral profiling (5.A) by showing that financial literacy correlates with saving, investing, and debt behaviors. It directly justifies savings goal management (13.A) and debt management (13.B) through quantitative links between literacy and wealth/debt outcomes. Topics specific to Filipino young professionals (1.A‑1.C) were rejected because the paper uses US and international samples. No other codes (e.g., expense categorization, privacy) had any citeable claim. Borderline cases like evaluation frameworks (12.A) were rejected because the paper evaluates education programs, not PFMS."
+    - "Data are from the US and cross-national comparisons are limited to 140 countries but do not include the Philippines."
+    - "The causal relationship between financial literacy and wealth relies on theoretical modeling."
+    - "The Big Three measures only basic concepts and may not capture more complex financial knowledge."
+  mapping_rationale: "During the systematic scan across all 12 functional domains, this paper was flagged as highly relevant to the Behavioral Profiling & Classification (5.A, 5.C), Spending Forecasting (6.A, 6.B contextual), System Evaluation (12.A, 12.B), and Savings & Debt Management (13.A, 13.B) domains. The paper directly provides a validated measurement instrument (the Big Three) for classifying users by financial literacy, which is foundational for behavioral profiling. It also provides quantitative evidence that financial literacy predicts wealth accumulation (13% higher net wealth per correct answer) and savings behavior, justifying Odin's inclusion of financial literacy in its models. The paper was considered but rejected for the Culturally Specific Financial Practices domain (2.A, 2.B, 2.D) because it does not address Filipino-specific practices. The document was also not selected for the Anomaly Detection (8.A-C) or Mobile-First Design (9.A-B) domains, as those topics are not addressed. The borderline case was the coverage of existing survey instruments (4.A-B), which was deemed medium relevance because it describes the landscape of measurement but is not central to PFMS design. Overall, the paper is highly relevant to Odin for its validated measurement framework and behavioral insights."
 limitations:
-  - "Cross‑sectional data cannot distinguish age vs. cohort effects. [unacknowledged]"
-  - "Potential reverse causality: wealthier people may acquire more financial literacy. [unacknowledged]"
-  - "The Big Three may oversimplify financial knowledge, missing numeracy or advanced risk concepts."
-  - "US‑centric analysis; international comparisons use different surveys and time periods."
+  - "Data are primarily from the United States, limiting generalizability to the Philippines. [unacknowledged]"
+  - "The cross-sectional nature of most data cannot distinguish age from cohort effects. [unacknowledged]"
+  - "The paper does not address digital or mobile-first financial literacy measurement. [unacknowledged]"
+  - "The theoretical model assumes rational investment in literacy, which may not hold for all populations. [unacknowledged]"
 remember_this:
-  - "Only 43% of US adults answer all three basic financial literacy questions correctly."
-  - "Financial literacy explains 30‑40% of wealth inequality near retirement."
-  - "Women and minorities have persistently lower financial literacy scores."
-  - "Financial education RCTs improve both knowledge and behavior, with cost‑effectiveness similar to other education programs."
+  - "Only 43% of Americans understand basic interest, inflation, and risk concepts."
+  - "Women have 29% financial literacy versus 48% for men, with larger 'do not know' responses."
+  - "Each correct financial literacy answer associates with 13% higher median net wealth."
+  - "Financial literacy explains 30-40% of wealth inequality near retirement."
+  - "Financial education impacts knowledge three to five times more than older studies found."
 ```

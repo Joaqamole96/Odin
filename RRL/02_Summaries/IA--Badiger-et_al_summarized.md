@@ -1,127 +1,104 @@
 ```yaml
-paper_id: e5c5f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5a
-designation: algorithm-specific
+paper_id: 10.17148/IJARCCE.2025.14364
+designation: international-algorithm-specific
 title: Next.js-Powered AI Platform for Smart Expense Tracking, Budgeting and Insights
-authors: Badiger, R.; Robin, R.; Moraas, T.; Naik, V. G.; Karthikeyan, A. N.
-year: 0
-venue: Unknown
+authors: Badiger, R.; Robin, R.; Moraas, T.; Naik, V. G.; Karthikeyan A N, P.
+year: 2025
+venue: International Journal of Advanced Research in Computer and Communication Engineering
 odin_topics:
   - 3.A
-  - 3.B
+  - 4.A
+  - 4.B
   - 6.A
-  - 6.B
-  - 7.A
-  - 7.B
-  - 7.C
   - 8.A
-  - 8.B
   - 12.A
-  - 12.B
-shorthand_tags:
-  - /ml-categorization
-  - /time-series-forecast
-  - /llm-budget-insights
-  - /anomaly-detection
-  - /system-evaluation
-tldr: A Next.js-based AI platform integrates XGBoost transaction categorization, Gemini LLM insights, and Prophet forecasting, achieving 91.3% F1-score and reducing manual effort by 78%.
-problem_and_motivation: Digital payment growth in India produces vast personal financial data, but individuals lack effective tools to interpret and act on it. Traditional budgeting methods fail to provide real-time, context-aware insights. Existing AI-driven systems suffer from limited personalization, opaque recommendations, and poor multi-channel support.
+tldr: An AI-powered personal finance platform integrating machine learning categorization, large language model insights, and time-series forecasting within a Next.js full-stack architecture.
+problem_and_motivation: Existing personal finance tools lack automated real-time categorization, personalized natural-language insights, and predictive budgeting capabilities. This gap is particularly acute for users navigating multi-channel digital payment ecosystems, leading to poor financial decision-making.
 approach:
-  - System built on Next.js 14 with Clerk authentication, Supabase PostgreSQL, and Prisma ORM.
-  - XGBoost classifier maps transactions to 18 categories using merchant, amount, and temporal features.
-  - Gemini LLM generates insights via RAG prompting with user spending summaries and anomaly scores.
-  - Prophet time-series model forecasts monthly expenses by category with 90% credible intervals.
-  - Evaluation on 4,200 transactions achieving 0.913 weighted F1-score and 78% reduction in manual logging effort.
+  - The system is built on Next.js 14, Prisma ORM, Supabase PostgreSQL, and Clerk authentication.
+  - Automated transaction categorization uses an XGBoost classifier trained on labelled transaction data.
+  - Natural-language financial insights are generated using Google's Gemini LLM with a RAG pattern.
+  - Expense forecasting is implemented using Meta's Prophet time-series model per spending category.
+  - The platform supports multi-modal data ingestion including manual entry, CSV import, and receipt scanning.
+  - Evaluation was performed on a held-out test set of 4,200 transactions from anonymized datasets.
 findings:
-  - "num: Weighted F1-score of 0.913 across 18 spending categories."
-  - "num: Manual expense-logging effort reduced by approximately 78% compared to conventional approaches."
-  - High-frequency categories (Food & Dining, Transport, Utilities) achieve F1 above 0.95.
-  - 84% of pilot users found AI-generated insights useful or very useful.
-  - Server dashboard loads average 420ms, AI insight generation adds 800-1400ms.
+  - "num: The XGBoost categorization model achieves a weighted F1-score of 0.913 across 18 spending categories."
+  - "num: Server response times average 420ms for dashboard loads, with AI insight generation adding 800-1,400ms."
+  - "num: The system reduces manual expense-logging effort by approximately 78% compared to conventional approaches."
+  - Categories with high linguistic diversity show lower precision, while frequent categories achieve F1-scores above 0.95.
+  - User feedback indicated that 84% of participants found the AI-generated insights useful for guiding financial decisions.
 key_figures_tables:
-  - "Figure 1: End-to-end user workflow of Spend AI → Shows stages from authentication to alerts."
-  - "Figure 2: Five-layer system architecture → Presentation, business, AI, data, authentication layers."
-  - "Figure 3: Technology stack overview → Next.js, Prisma, Supabase, Clerk, Gemini, XGBoost, Prophet."
-  - "Figure 4: AI insight generation pipeline using RAG → Structured prompts with user data to Gemini."
-  - "Figure 5: XGBoost transaction categorization F1-scores → Weighted F1=0.913, misc category lower."
+  - "Figure 1: End-to-End User Workflow of Spend AI → visualizes the seven-stage process from authentication to budget alerts."
+  - "Figure 2: Five-Layer System Architecture of Spend AI → illustrates the modular presentation, business, AI, data, and authentication layers."
+  - "Figure 3: Technology Stack Overview → summarizes the complete technology stack from frontend to AI components."
+  - "Figure 4: AI Insight Generation Pipeline (RAG Pattern) → shows the RAG-based prompt construction for the Gemini LLM."
+  - "Figure 5: XGBoost Transaction Categorisation F1-Scores → displays per-category performance of the classification model."
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
-  - term: LLM
-    definition: Large language model for text generation.
-  - term: UPI
-    definition: Unified Payments Interface, India's real-time payment system.
-  - term: XGBoost
-    definition: Gradient-boosted tree ensemble algorithm.
-  - term: RAG
-    definition: Retrieval-augmented generation, grounding LLM outputs in retrieved data.
-  - term: ORM
-    definition: Object-relational mapping for database access.
-  - term: RLS
-    definition: Row-level security, database-level access control.
+  - term: "LLM"
+    definition: "Large Language Model, used for natural-language insight generation."
+  - term: "RAG"
+    definition: "Retrieval-Augmented Generation, a pattern for grounding LLM responses in specific data."
+  - term: "XGBoost"
+    definition: "Extreme Gradient Boosting, a gradient-boosted tree classifier used for transaction categorization."
+  - term: "UPI"
+    definition: "Unified Payments Interface, India's real-time payment system."
+  - term: "RLS"
+    definition: "Row-Level Security, a database feature for enforcing per-user data isolation."
 critical_citations:
-  - "[Hean et al., 2025] — Gemini competitive for personal finance."
-  - "[Kotios et al., 2022] — Hybrid deep learning with XAI."
-  - "[Pancholi et al., 2026] — Multi-agent AI for personal finance."
-  - "[Verma et al., 2024] — Next.js finance tracker without AI."
-  - "[Aishwarya and Hemalatha, 2024] — ML expense tracking."
+  - "[Verma et al., 2024] — demonstrated Next.js viability but lacked AI categorization."
+  - "[Kotios et al., 2022] — provided benchmarks for hybrid transaction classification."
+  - "[Hean et al., 2025] — evaluated Gemini's capability for personal finance tasks."
+  - "[Pancholi et al., 2026] — proposed multi-agent AI system for personal finance."
 relevance:
   topics:
     - code: 3.A
       name: Expense Categorization Frameworks
-      justification: Presents XGBoost-based transaction categorization achieving 91.3% F1.
-    - code: 3.B
-      name: Expense Category Design Considerations
-      justification: Defines 18 spending categories with user override feedback.
+      relevance: high
+      justification: "Implements an XGBoost model achieving 91.3% F1-score for transaction categorization."
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: "Reviews existing PFM systems and identifies gaps in automation and personalization."
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: "Explicitly addresses limitations of prior systems and motivates the development of Spend AI."
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Uses Prophet time-series for monthly expense forecasting.
-    - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Implements Prophet with trend, seasonality, holiday decomposition.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      justification: Provides budget alerts at 80% and 100% thresholds.
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      justification: Gemini LLM generates personalized budget tips.
-    - code: 7.C
-      name: Budget Recommendation Algorithm
-      justification: RAG prompting with user aggregates for budget recommendations.
+      relevance: high
+      justification: "Uses Prophet for time-series forecasting of monthly expenses by category."
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: Detects transactions exceeding 2.5 standard deviations.
-    - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Statistical anomaly scoring per category.
+      relevance: medium
+      justification: "Includes anomaly detection as a core feature, flagging transactions exceeding statistical thresholds."
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      justification: Evaluates with F1-score and user feedback (84% useful).
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: Benchmarks XGBoost categorization and system response times.
-  contribution: Spend AI contributes an end-to-end AI pipeline combining ML categorization, LLM-generated insights, and time-series forecasting in a production-grade web platform. The system's modular architecture with Next.js Server Actions and Supabase RLS demonstrates how to build secure, scalable personal finance management for multi-channel Indian payment data. The evaluation provides benchmarks for XGBoost categorization (91.3% F1) and user-perceived usefulness of LLM insights, directly informing Odin's expense categorization and budget recommendation modules.
+      relevance: medium
+      justification: "Evaluates system performance through categorization accuracy and user experience feedback."
+  contribution: "The paper's architecture for integrating ML categorization, LLM insights, and time-series forecasting directly informs Odin's design for the Categorization Engine, AI Insight Module, and Forecasting Module. Its use of a full-stack framework with row-level security provides a production-ready template for Odin's Mobile-First Design and Data Privacy & User Trust considerations. The experimental evaluation methodology offers a framework for evaluating Odin's algorithmic modules."
   directly_justifies:
-    - XGBoost with temporal features achieves 91.3% weighted F1-score for transaction categorization.
-    - LLM-generated insights using RAG are rated useful by 84% of users.
-    - Prophet forecasting requires at least 3 months of historical data for reliable predictions.
-    - Manual expense-logging effort reduces by 78% compared to conventional methods.
+    - "A gradient-boosted tree classifier can achieve over 91% accuracy for transaction categorization tasks."
+    - "LLM-based insights grounded in user data via RAG can generate useful and validated financial guidance."
+    - "Time-series forecasting with Prophet is feasible for personal spending prediction using limited historical data."
+    - "Row-level security is a critical architectural property for systems handling sensitive financial data."
   limits:
-    - Cold-start problem: categorization accuracy lower for new users with fewer than 50 transactions.
-    - LLM hallucination risk: Gemini may generate imprecise guidance despite RAG.
-    - Manual data entry dependency: users may not maintain complete records without banking API.
-    - Privacy and regulatory compliance (DPDP Act) require further attention.
-    - Forecasting requires at least 3 months of historical data for reliable predictions.
-  mapping_rationale: This paper was screened against Odin's functional domains. It directly contributes to Expense Categorization (3.A, 3.B) through its XGBoost classifier and category design. Spending Forecasting (6.A, 6.B) via Prophet time-series model. Budget Recommendation (7.A, 7.B, 7.C) through threshold alerts and Gemini LLM prompts. Anomaly Detection (8.A, 8.B) via statistical outlier detection. System Evaluation (12.A, 12.B) via F1 scores and user feedback. Topics related to behavioral profiling (5.A-C) were rejected as the paper does not model user financial profiles. Mobile-first design (9.A-B) and data privacy (10.A-B) were mentioned but not central contributions. User retention (11.A-B) and savings/debt (13.A-B) are absent. The paper's algorithm-specific nature (XGBoost, Prophet, Gemini) justifies algorithm-specific designation.
+    - "Categorization accuracy is lower for new users with fewer than 50 historical transactions (cold-start problem)."
+    - "LLM hallucination risk remains, though mitigated by RAG-style prompting."
+    - "Forecasting accuracy requires at least 3 months of historical data for reliable predictions."
+    - "Data residency and regulatory compliance (e.g., DPDP Act) require further attention. [unacknowledged]"
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes flagged four domains as highly relevant: Expense Categorization (3.A), Existing Systems & Gaps (4.A, 4.B), Spending Forecasting (6.A), and Anomaly Detection (8.A). The paper's core contribution is algorithmic, justifying the 'algorithm-specific' designation, with direct implications for Odin's predictive and categorization modules. The System Evaluation domain (12.A) was considered relevant as the paper provides a performance evaluation framework. The Behavioral Profiling & Classification (5.A) domain was considered but rejected as the paper does not develop or utilize user financial profiles. The Savings & Debt Management domain (13.A, 13.B) was also considered but rejected as the paper's primary focus is on expense tracking and budgeting rather than savings or debt-specific features. Overall, the paper provides strong, directly applicable evidence for building an AI-powered PFMS, particularly its core algorithmic components."
 limitations:
-  - Cold-start problem: categorization accuracy lower for new users with fewer than 50 transactions.
-  - LLM hallucination risk: Gemini may generate imprecise guidance despite RAG.
-  - Manual data entry dependency: users may not maintain complete records without banking API.
-  - Privacy and regulatory compliance (DPDP Act) require further attention.
-  - Forecasting requires at least 3 months of historical data for reliable predictions.
+  - "LLM hallucination risk remains; critical recommendations should be verified."
+  - "Manual data entry dependency persists in the absence of direct banking API integration."
+  - "Data residency and regulatory compliance require further attention. [unacknowledged]"
+  - "Forecasting accuracy requires at least 3 months of historical data for reliable predictions."
 remember_this:
-  - XGBoost achieves 91.3% F1-score for transaction categorization.
-  - LLM insights rated useful by 84% of pilot users.
-  - Manual expense logging effort reduced by 78%.
-  - Cold-start requires at least 50 transactions for good accuracy.
+  - "XGBoost achieved 91.3% F1-score for transaction categorization across 18 categories."
+  - "Platform reduces manual expense-logging effort by approximately 78%."
+  - "84% of pilot users found Gemini-generated insights useful for financial decisions."
+  - "System architecture separates presentation, business, AI, data, and authentication layers."
+  - "RAG-based prompting grounds LLM insights in verifiable user data to reduce hallucination."
 ```

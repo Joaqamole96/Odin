@@ -6,85 +6,89 @@ authors: Majumder, R. Q.
 year: 2025
 venue: International Journal of Advanced Research in Science, Communication and Technology
 odin_topics:
-  - 4.B
   - 8.A
   - 8.B
-shorthand_tags:
-  - /anomaly-detection
-  - /ml-review
-  - /fraud-detection
-tldr: A review of machine learning methods for financial fraud detection, covering supervised, unsupervised, and graph-based techniques, and highlighting challenges like imbalanced data and adversarial attacks.
-problem_and_motivation: Traditional fraud detection methods lack adaptability to evolving fraudulent techniques, causing significant economic losses. Machine learning offers improved detection but faces challenges in imbalanced data, interpretability, and real-time processing. This gap motivates the need for a systematic review of ML approaches for financial fraud.
+  - 10.A
+  - 10.B
+  - 12.A
+  - 12.B
+  - 5.A
+  - 5.C
+tldr: A review of machine learning methods for financial fraud detection, covering supervised, unsupervised, and graph-based techniques, with a focus on challenges like imbalanced data and adversarial attacks.
+problem_and_motivation: Financial fraud has increased significantly with digital payments, undermining institutional integrity and causing economic losses. Traditional fraud detection methods are not adaptable to contemporary dishonest methods. There is a need for robust, transparent, and privacy-preserving machine learning systems for anomaly identification.
 approach:
-  - Conducts a literature review of ML-based anomaly detection for financial fraud.
-  - Covers supervised, semi-supervised, and unsupervised learning methods.
-  - Examines algorithms including logistic regression, SVM, decision trees, random forest, KNN, and autoencoders.
-  - Discusses graph neural networks and adversarial learning as advanced techniques.
-  - Identifies challenges: imbalanced datasets, adversarial attacks, scalability, and real-time processing.
-  - Surveys future trends like explainable AI, continuous learning, hybrid models, and blockchain.
+  - This is a review paper that surveys machine learning methodologies for anomaly detection in finance.
+  - It categorizes techniques into supervised, semi-supervised, and unsupervised learning approaches.
+  - The review examines specific algorithms including Logistic Regression, Support Vector Machines, Decision Trees, Random Forest, K-Nearest Neighbors, and Graph Neural Networks.
+  - It evaluates challenges associated with imbalanced data distributions, adversarial attacks, and real-time processing.
+  - The study also explores future directions such as Explainable AI, continuous learning, and hybrid models.
 findings:
-  - "num: Fraud detection models using deep learning and GNNs outperform traditional ML on complex fraud patterns."
-  - "num: Autoencoder-based anomaly detection with XGBoost achieves effective fraud classification."
-  - "num: Training on over 12 million records with IF, LOF, and AE enables anomaly alerts before transaction confirmation."
-  - Unsupervised methods like Isolation Forest and autoencoders can detect new fraud patterns without labeled data.
-  - Imbalanced data and adversarial attacks remain major obstacles to detection performance.
-  - Explainable AI and hybrid models are promising future directions.
+  - num: The paper references a study that trained an anomaly detection model on over 12 million financial records.
+  - Machine learning enables faster and more efficient detection of fraudulent patterns compared to manual review.
+  - Graph Neural Networks show superior performance in capturing complex relationships in financial transactions for fraud detection.
+  - Key challenges include imbalanced datasets, adversarial fraudulent activities, and scalability for real-time processing.
 key_figures_tables:
-  - "Figure 1: Anomaly detection techniques (supervised, unsupervised, semi-supervised) → taxonomy of ML approaches."
-  - "Figure 2: Types of anomalies (identity theft, payment fraud, credit card fraud, investment fraud) → fraud categories."
-  - "Figure 3: Machine learning models (LR, SVM, DT, RF, KNN) → common algorithms for fraud detection."
-  - "Figure 4: Challenges (imbalanced data, adversarial activities, scalability) → key obstacles in fraud detection."
-  - "Table 1: Summary of anomaly detection studies → comparative overview of methods, findings, and limitations."
+  - Figure 1: Classification of anomaly detection techniques (Supervised, Semi-supervised, Unsupervised) → Provides a taxonomy for selecting appropriate methods.
+  - Figure 3: Overview of common machine learning models for fraud detection → Lists standard algorithms used in the field.
+  - Table 1: Summary of recent studies on anomaly detection in financial fraud → Offers a structured comparison of approaches, findings, and future directions.
 key_equations:
   - equation: None.
     explanation: ""
 definitions:
-  - term: Anomaly detection
-    definition: Identification of patterns that deviate from expected transactional behavior, indicating potential fraud.
-  - term: Supervised anomaly detection
-    definition: Uses labeled normal and anomalous instances to train a classifier.
-  - term: Unsupervised anomaly detection
-    definition: Assumes anomalies are rare and finds them without labeled data.
-  - term: Semi-supervised anomaly detection
-    definition: Uses only normal labeled data to detect deviations.
-  - term: GNN
-    definition: Graph Neural Network; captures relationships in financial transaction networks.
   - term: XAI
-    definition: Explainable AI; makes model decisions transparent.
+    definition: Explainable Artificial Intelligence; aims to make AI model decisions transparent and understandable.
 critical_citations:
-  - "[Ashtiani and Raahemi, 2022] — Systematic review of ML for financial statement fraud."
-  - "[Pourhabibi et al., 2020] — Graph-based anomaly detection approaches."
-  - "[Ali et al., 2022] — Systematic literature review on ML for financial fraud."
-  - "[Geng and Zhang, 2023] — Adversarial learning for credit card fraud detection."
+  - "[Ashtiani and Raahemi, 2022] — Systematic literature review on intelligent fraud detection."
+  - "[Al-Hashedi and Magalingam, 2021] — Comprehensive review of data mining for financial fraud."
+  - "[Pourhabibi et al., 2020] — Systematic literature review of graph-based anomaly detection."
 relevance:
   topics:
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      justification: Paper comprehensively reviews limitations of traditional fraud detection and ML challenges.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: Provides taxonomy and techniques for anomaly detection directly applicable to Odin.
+      relevance: high
+      justification: Core focus of the paper is on anomaly detection techniques for financial fraud.
     - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Reviews specific algorithms (Isolation Forest, autoencoders, GNNs) for anomaly detection.
-  contribution: "This review directly informs Odin's anomaly detection module by providing a structured taxonomy of supervised, unsupervised, and graph-based methods. It highlights the importance of handling imbalanced datasets and adversarial attacks, guiding algorithm selection. The discussion of real-time processing and explainable AI shapes Odin's design for user trust and performance. Finally, future trends like hybrid models and federated learning suggest architectural directions."
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: The paper reviews various algorithms (e.g., Isolation Forest, Autoencoders, GNNs) applicable to spending data.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: Discusses privacy preservation as a future direction for fraud detection systems.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: medium
+      justification: Highlights the importance of transparency (XAI) to foster trust among users and regulators.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Provides an overview of challenges (e.g., imbalanced data) that impact evaluation.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: Reviews performance of different ML algorithms (LR, SVM, RF, GNN) in fraud detection contexts.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: contextual
+      justification: Anomaly detection is used to identify deviant behavior, which is foundational for profiling.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: contextual
+      justification: Discusses classification techniques (e.g., logistic regression) that can be used for behavioral classification.
+  contribution: This review paper supports Odin's anomaly detection module by providing a comprehensive overview of applicable machine learning techniques (8.B). It identifies key challenges like imbalanced data and adversarial attacks, informing the design of robust detection algorithms. The discussion of Explainable AI (10.B) is relevant for building user trust in Odin's alerts. The review's analysis of real-time processing requirements is critical for Odin's mobile-first design.
   directly_justifies:
-    - "Anomaly detection in financial transactions requires handling imbalanced data distributions."
-    - "Graph neural networks can capture complex relationships between transactions for fraud detection."
-    - "Unsupervised methods like autoencoders are effective when labeled fraud data is scarce."
-    - "Explainable AI is necessary to maintain user trust in anomaly detection systems."
+    - "Machine learning enables faster detection of anomalous financial patterns than manual review."
+    - "Graph Neural Networks are effective for capturing complex relationships in transactional data."
+    - "Addressing imbalanced datasets is crucial for improving fraud detection model performance."
   limits:
-    - "Paper is a review, not an empirical study; no original algorithm evaluation."
-    - "Focuses on general financial fraud, not specifically personal finance systems of young professionals."
-    - "Does not address mobile-first design constraints or resource limitations."
-  mapping_rationale: "The paper squarely addresses anomaly detection (domains 8.A and 8.B) by reviewing ML algorithms for identifying fraudulent transactions. It also maps to domain 4.B because it extensively discusses limitations of existing fraud detection systems and gaps in current research. Topics like behavioral profiling (5.A-C) and spending forecasting (6.A-B) are not covered. The paper is international and algorithmic in scope, making it relevant for Odin's technical design."
+    - None identified.
+  mapping_rationale: A systematic scan across all 12 functional domains was performed. The most direct relevance is to the "Anomaly Detection" domain, where topics 8.A and 8.B are assigned `high` relevance because the paper is centered on reviewing algorithms and techniques for this purpose. Topic 8.C is also indirectly supported. The domain "Data Privacy & User Trust" (10.A, 10.B) is marked `medium` as the paper touches on privacy-preserving methods and the need for transparent AI, which is key for building user trust in systems like Odin. Similarly, "System Evaluation" (12.A, 12.B) is `medium` because the review discusses challenges that affect evaluation. Topics like 5.A and 5.C are only `contextual` as the paper discusses behavioral patterns in the context of fraud, not personal finance profiling per se. Domains such as "Budget Recommendation," "Spending Forecasting," and "Filipino Cultural Context" were considered and rejected because the paper does not address savings, budgeting, forecasting, or culturally specific financial practices. The paper is internationally focused and provides foundational knowledge for implementing a robust anomaly detection module within Odin.
 limitations:
-  - "Review does not include empirical benchmarks comparing algorithm performance. [unacknowledged]"
-  - "Lacks discussion of computational cost for real-time deployment on mobile devices. [unacknowledged]"
-  - "Privacy-preserving techniques like federated learning are mentioned as future work but not evaluated. [unacknowledged]"
+  - None.
 remember_this:
-  - "Deep learning and GNNs outperform traditional ML on complex fraud patterns."
-  - "Imbalanced data and adversarial attacks are major challenges for detection systems."
-  - "Unsupervised methods like autoencoders work without labeled fraud data."
-  - "Explainable AI is critical for user trust in anomaly detection."
+  - Supervised, unsupervised, and graph-based learning are key approaches for financial anomaly detection.
+  - Data imbalance remains a major challenge for training effective fraud detection models.
+  - Future systems will integrate real-time analysis with Explainable AI for greater transparency.
+  - num: One cited study trained an anomaly detection model on over 12 million records.
+  - Graph Neural Networks are particularly effective for detecting fraud in linked transaction networks.
 ```

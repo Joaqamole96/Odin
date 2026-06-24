@@ -2,79 +2,120 @@
 paper_id: 10.69569/jip.2025.015
 designation: local
 title: The Role of Financial Literacy in Supporting Employee Work-Life Balance
-authors: Bancoro, J. C. M.; Barillo, R. M. L.; Buhian, D. L. C.
+authors: Bancoro, J.C.; Barillo, R.M.; Buhian, D.L.
 year: 2025
 venue: Journal of Interdisciplinary Perspectives
 odin_topics:
+  - 1.A
+  - 1.B
   - 1.C
-  - 5.A
+  - 2.A
+  - 2.D
+  - 3.A
+  - 4.A
+  - 4.B
+  - 11.A
   - 13.A
-shorthand_tags:
-  - /fin-behavior-filipino
-  - /behavioral-profiling
-  - /savings-goal
-tldr: Financial literacy among Filipino state university employees is moderately high but does not significantly correlate with work-life balance, though qualitative data suggest it reduces financial stress and supports personal priorities.
-problem_and_motivation: Balancing work and family responsibilities is difficult due to workplace dynamics and economic factors. Financial stress exacerbates these challenges, but limited empirical research examines how financial literacy directly affects work-life balance. This gap motivates the study to explore the relationship.
+  - 13.B
+tldr: Financial literacy correlates weakly with work-life balance, yet employees show positive financial attitudes and behaviors, with qualitative findings suggesting indirect stress-reduction benefits.
+problem_and_motivation: Financial stress from low literacy undermines work-life balance, but empirical evidence directly linking literacy to balance outcomes is scarce. Understanding this relationship is critical for designing workplace interventions that improve employee well-being and productivity.
 approach:
-  - Descriptive correlational design with quantitative survey (n=140) and qualitative interviews (n=8) at a Philippine state university.
-  - Survey measured financial knowledge (13 items), attitudes (10 items, 5-point Likert), and behaviors (23 items), plus work-life balance (11 items).
-  - Cronbach's alpha for attitude (0.83), behavior (0.85), and work-life balance (0.84) indicated high internal consistency.
-  - Spearman correlation used due to non-normality of data (p<0.001); significance tested at α=0.05.
-  - Qualitative responses triangulated quantitative findings via thematic analysis of interview transcripts.
+  - A correlational descriptive design was used with 140 faculty and staff from a Philippine state university.
+  - Quantitative surveys assessed financial knowledge, attitudes, behaviors, and work-life balance perceptions.
+  - Semi-structured interviews with eight employees provided qualitative depth on financial management experiences.
+  - Spearman correlation (rho) tested the relationship between financial literacy and work-life balance.
+  - Cronbach's alpha (0.83-0.85) confirmed high internal consistency for survey dimensions.
 findings:
-  - num: Mean financial knowledge score 8.35/13 (SD=3.13), indicating moderate knowledge with high variability.
-  - Employees have positive financial attitudes (M=3.99, SD=0.73) and positive financial behaviors (M=3.94, SD=0.58).
-  - num: Correlation between financial literacy and work-life balance is weak and not significant (rho=0.11, p=0.191).
-  - Qualitative findings indicate financial literacy reduces financial stress, improves focus, and enables better time management for personal priorities.
-  - Employees report positive work-life balance overall (M=4.06, SD=0.60), with flexibility and supervisor support as key contributors.
+  - num: Financial knowledge mean score was 8.35 out of 13 (SD = 3.13), indicating moderate literacy with high variability.
+  - num: The correlation between financial literacy and work-life balance was weak and non-significant (rho = 0.11, p = 0.191).
+  - Employees demonstrated positive financial attitudes (M = 3.99, SD = 0.73) and behaviors (M = 3.94, SD = 0.58).
+  - Employees reported good work-life balance (M = 4.06, SD = 0.60), with flexibility and supervisor support as key contributors.
+  - Qualitative data revealed that financial literacy reduces financial stress, enabling better focus on personal and professional priorities.
 key_figures_tables:
-  - Table 1: Summary of financial knowledge, attitudes, behaviors → knowledge moderate, attitudes/behaviors positive.
-  - Table 4: Work-life balance perceptions → overall good (M=4.06) with highest rating for family time (M=4.33).
-  - Table 5: Correlation between financial literacy and work-life balance → weak non-significant relationship.
+  - Table 1: Summary of financial knowledge, attitudes, and behaviors → shows moderate knowledge with positive attitudes and behaviors.
+  - Table 5: Correlation between financial literacy and work-life balance → indicates no significant relationship (rho = 0.11, p = 0.191).
 key_equations:
   - equation: None.
     explanation: ""
 definitions:
-  - term: Financial literacy
-    definition: Sound financial decision-making including budgeting, saving, investing, and planning for future security.
-  - term: Work-life balance
-    definition: Relationship between work obligations and outside activities affecting well-being and job satisfaction.
-  - term: COR Theory
-    definition: Conservation of Resources theory; individuals seek to protect resources to minimize stress.
+  - term: Financial Literacy
+    definition: The ability to make sound financial decisions, including budgeting, saving, investing, and planning for future security.
+  - term: Work-Life Balance
+    definition: The relationship between work obligations and activities outside work, impacting well-being, job satisfaction, and effectiveness.
+  - term: Conservation of Resources (COR) Theory
+    definition: A theory positing that individuals seek to obtain, protect, and build resources to minimize stress and handle challenges.
 critical_citations:
-  - "[Hu et al., 2024] — Financial literacy reduces mortgage stress by 60%."
-  - "[Setiawan et al., 2020] — Digital financial literacy positively affects saving behavior."
-  - "[Eloriaga et al., 2022] — Financial literacy influences young professionals' well-being in Metro Manila."
+  - "[Ryu & Fan, 2022] — Establishes link between financial worries and psychological distress."
+  - "[Hu et al., 2024] — Shows financial literacy reduces mortgage stress by 60%."
+  - "[Galapon & Bool, 2022] — Finds financial behavior, not literacy, predicts well-being."
 relevance:
   topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: The study focuses on Filipino university employees, a core demographic for Odin.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Provides data on income, savings, and spending behaviors of Filipino employees.
     - code: 1.C
       name: Financial Behavior of Filipino Young Professionals
-      justification: Measures financial behaviors, attitudes, and knowledge of Philippine state university employees.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      justification: Profiles employees across financial knowledge, attitude, and behavior dimensions.
+      relevance: high
+      justification: Directly measures financial behaviors (budgeting, saving, spending) of Filipino employees.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Discusses Filipino-specific financial practices like Pag-IBIG MP2 savings and cooperative loans.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: Mentions financial constraints and spending pressures, indirectly touching on spending cycles.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: low
+      justification: Implicitly involves expense tracking and budgeting behaviors, foundational to categorization.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: Mentions financial tools and apps (Mint, YNAB) as part of the financial management landscape.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: low
+      justification: Identifies gaps in financial education and support, relevant to system design limitations.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: contextual
+      justification: Suggests financial literacy workshops and tools, touching on user engagement mechanisms.
     - code: 13.A
       name: Savings Goal Management in PFMS
-      justification: Detailed measurement of saving behaviors, goal-setting, and long-term financial planning.
-  contribution: This paper informs Odin's behavioral profiling module by providing empirical data on how Filipino employees score on financial knowledge, attitudes, and behaviors. It highlights that while financial literacy is present, it does not strongly predict work-life balance, suggesting that PFMS should focus on practical financial behaviors rather than knowledge alone. The qualitative findings support the integration of financial planning tools and savings goal features to reduce user stress. Additionally, the weak correlation indicates that Odin's anomaly detection or engagement features should consider external factors like workload and organizational support.
+      relevance: low
+      justification: Relates to saving behaviors and goals (e.g., children's education, retirement) which are core to savings management.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: low
+      justification: Mentions avoiding debt and managing loans, relevant to debt management features.
+  contribution: This paper provides empirical evidence on the weak direct link between financial literacy and work-life balance, suggesting that Odin should prioritize behavioral interventions over purely educational content. It highlights the importance of supportive workplace policies, which can inform Odin's design for user engagement and retention. The findings underscore the need for Odin to integrate financial education with practical tools that facilitate behavior change, such as automated savings and spending trackers. The study also validates the use of COR Theory as a framework for understanding how financial resources reduce stress, which can guide Odin's approach to user trust and data privacy.
   directly_justifies:
-    - Financial literacy reduces financial stress, allowing more time for personal activities (Bancoro et al., 2025).
-    - Employees with positive financial behaviors save regularly for long-term goals such as children's education and retirement.
-    - Financial knowledge alone does not guarantee work-life balance; practical application matters.
+    - Financial literacy alone does not strongly predict work-life balance outcomes.
+    - Positive financial behaviors are more closely associated with well-being than knowledge alone.
+    - Work-life balance policies are insufficient without addressing financial stress and workload.
+    - Tailored financial education programs should focus on behavioral change and personalized coaching.
+    - Providing financial planning tools and resources can empower users to manage finances effectively.
   limits:
-    - Sample limited to one state university in the Philippines, not generalizable to all Filipino young professionals.
-    - Correlational design cannot establish causality.
-    - Self-reported measures may introduce social desirability bias.
-    - No control for organizational culture or workload variables that may moderate the relationship.
-  mapping_rationale: The paper was screened against Odin's functional domains. Behavioral profiling (5.A) applies because the paper measures financial knowledge, attitudes, and behaviors as distinct profile dimensions. Spending forecasting (6.A) and budget recommendation (7.A) are not addressed, as the paper does not model spending or provide recommendations. Savings and debt management (13.A) applies due to detailed measurement of saving behaviors and goal-setting. The demographic domain 1.C is selected because the sample consists of Filipino employees, including young professionals, and the paper discusses culturally relevant financial practices like Pag-IBIG MP2. Anomaly detection and mobile-first design are rejected. Borderline cases: work-life balance as an outcome is not a PFMS topic, but the paper's insights on financial stress reduction indirectly support engagement and retention. No algorithm-specific content, so designation remains 'local'.
+    - The study is cross-sectional, limiting causal inferences about financial literacy and work-life balance.
+    - The sample is confined to one state university in the Philippines, reducing generalizability.
+    - Reliance on self-reported data may introduce social desirability or recall bias.
+    - The weak correlation may reflect the specific measures used, which may not capture all dimensions of financial literacy or work-life balance.
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was conducted to map this paper to Odin's RRL. The domain of Filipino Cultural Context was flagged as highly relevant, with topics 1.A, 1.B, and 1.C receiving high relevance due to the paper's focus on Filipino employees' financial knowledge, attitudes, and behaviors. Topics 2.A and 2.D were assigned medium and low relevance, respectively, for their discussion of culturally specific practices and spending constraints. Expense Categorization (3.A) received low relevance due to implicit expense tracking behaviors. Existing Systems & Gaps (4.A, 4.B) were rated low for mentioning financial tools and gaps in financial education. User Retention & Engagement (11.A) was deemed contextual for its suggestion of financial workshops. Savings & Debt Management (13.A, 13.B) were rated low for discussing saving behaviors and debt avoidance. Domains such as Behavioral Profiling (5.A-C), Spending Forecasting (6.A-B), Budget Recommendation (7.A-D), Anomaly Detection (8.A-C), Mobile-First Design (9.A-B), Data Privacy (10.A-B), and System Evaluation (12.A-C) were rejected as the paper does not address these algorithmic, design, or evaluation concerns. The paper's overall relevance to Odin is moderate, providing foundational insights into Filipino financial behaviors and the indirect role of literacy in stress reduction, which informs feature design for engagement and savings management.
 limitations:
-  - Reliance on self-reported data may introduce bias [unacknowledged].
-  - Small qualitative sample (n=8) limits depth of thematic saturation [unacknowledged].
-  - Cross-sectional design prevents causal inference (acknowledged via correlational analysis).
-  - Financial literacy instrument was researcher-developed and not validated across broader populations [unacknowledged].
+  - Cross-sectional design precludes causal conclusions.
+  - Sample limited to one state university, limiting generalizability.
+  - Self-reported data may be subject to bias.
+  - Weak correlation may reflect measurement limitations for financial literacy or work-life balance.
 remember_this:
-  - Financial literacy does not significantly predict work-life balance (rho=0.11).
-  - Employees have positive financial behaviors but struggle with complex concepts.
-  - Financial literacy reduces stress and supports personal priorities qualitatively.
-  - Saving for long-term goals like children's education is common.
+  - Financial literacy shows a weak, non-significant correlation with work-life balance.
+  - Employees demonstrate positive financial attitudes but moderate and variable knowledge.
+  - Work-life balance is more strongly tied to workplace flexibility and support.
+  - Qualitative data suggests financial literacy reduces stress, indirectly aiding balance.
+  - Tailored financial education and behavioral tools are recommended over generic literacy programs.
 ```

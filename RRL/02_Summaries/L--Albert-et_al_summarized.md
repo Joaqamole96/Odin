@@ -1,82 +1,101 @@
 ```yaml
 paper_id: 10.62986/dp2025.35
 designation: local
-title: Gender Equality, Disability, and Social Inclusion in the Philippines: Progress, Challenges, and Opportunities in SDG 5 and SDG 10
+title: Gender equality, disability, and social inclusion in the Philippines: Progress, challenges, and opportunities in SDG 5 and SDG 10
 authors: Albert, J. R. G.; Dacuycuy, C. B.; Quisumbing, A. R.; Basillote, L. B.; Cabalfin, D. L. D.; Vargas, A. R. P.; Luzon, P. E. D.; Mahmoud, M. A.
 year: 2025
-venue: PIDS Discussion Paper Series, No. 2025-35, Philippine Institute for Development Studies
+venue: PIDS Discussion Paper Series
 odin_topics:
   - 1.A
-  - 1.C
-shorthand_tags:
-  - /filipino-young-professionals
-  - /financial-behavior
-tldr: Philippines has progressive GEDSI laws but implementation gaps persist; intersectional analysis reveals compound marginalization for women, persons with disabilities, and indigenous peoples across income, education, and employment.
-problem_and_motivation: Despite robust legal frameworks like the Magna Carta of Women and the Indigenous Peoples Rights Act, significant inequalities persist for marginalized groups. The COVID-19 pandemic exacerbated existing disparities, pushing millions into poverty. This study examines progress on SDG 5 and SDG 10 to identify intersectional barriers and inform inclusive policy reforms.
+  - 2.A
+  - 2.B
+  - 2.D
+  - 4.A
+tldr: Examines Philippines' progress on SDG 5 and 10, revealing policy achievements alongside implementation gaps that create complex, intersectional exclusion patterns for marginalized groups.
+problem_and_motivation: Significant inequalities persist for women, persons with disabilities, and indigenous peoples despite robust legal frameworks. The intersection of multiple identities creates unique disadvantage patterns that single-issue approaches fail to address, requiring integrated policy responses for evidence-based inclusive development.
 approach:
-  - Mixed-methods design combining quantitative analysis of national surveys (FIES, LFS, NDHS, NDPS) and qualitative stakeholder interviews (KIIs, FGDs).
-  - Shapley decomposition of merged FIES-LFS data (2018, 2021, 2023) to quantify contributions of gender, education, location, and income to inequality.
-  - Intersectional analysis examining how gender, disability, ethnicity, and geography interact to shape development outcomes.
-  - Descriptive analytics of SDG Watch data and World Bank Indigenous Peoples Household Survey (2023).
-  - Time-use analysis from International Social Survey Programme (2012, 2022) and COVID-19 online survey.
+  - Mixed-methods design combining quantitative SDG indicator analysis with qualitative stakeholder interviews and focus groups.
+  - Employs Shapley decomposition on merged FIES-LFS data to quantify factors contributing to inequality in working hours.
+  - Uses descriptive and intersectional analytics, including National Demographic and Health Survey and Indigenous Peoples Household Survey data.
+  - Conducted key informant interviews with government officials and civil society leaders.
+  - Applied thematic coding to qualitative data from eight focus group discussions with affected populations.
 findings:
-  - num: Female disability prevalence 15% vs male 9% (2016 NDPS).
-  - num: Child marriage before age 18 dropped from 16.5% (2017) to 9.4% (2022).
-  - num: Gini coefficient decreased from 0.453 (2015) to 0.406 (2023).
-  - Women with no formal education have 55% severe disability prevalence vs 6% for college graduates.
-  - Indigenous women's engagement in unpaid family work is more than three times higher than non-Indigenous counterparts.
-  - num: Urban location explains 25-36% of inequality in working hours (Shapley decomposition).
-  - num: Only 34% of women who experienced violence sought help (2022 NDHS).
-  - Unpaid care work gap persists: women spend 9-10 hours more per week on housework and care than men.
+  - num: Female disability prevalence is 15%, compared to 9% for males, with rates reaching 55% among women with no formal education.
+  - num: Severe disability prevalence varies from 39% among those with no education to just 6% among college graduates.
+  - num: Indigenous women's engagement in unpaid family work is more than three times higher than non-Indigenous counterparts.
+  - Gender gaps in labor market participation are significantly larger among Indigenous Peoples and Muslim ethnic groups.
+  - The GAD budget has become compliance-oriented rather than transformational, with widespread fund misuse and weak accountability.
+  - num: Income inequality (Gini) decreased from 0.453 in 2015 to 0.406 in 2023, but the richest 20% still earn nearly 7.4 times more than the poorest 20%.
+  - Persistent challenges remain in translating educational parity into economic empowerment and political representation for women.
 key_figures_tables:
-  - Figure 1: Poverty incidence by basic sector (2018-2023) → Poverty remains highest among IPs (32.4%) and fisherfolk (27.4%).
-  - Figure 10: Gini coefficient in ASEAN member states → Philippines remains among most unequal despite recent declines.
-  - Table 15: Inequality decomposition using per capita income → Education explains 27-30% of between-group inequality.
-  - Table 35: Disability prevalence by sex and employment → Women in unpaid family farm work have 25% severe disability.
+  - Table 1: Philippines WEF Global Gender Gap Index rankings → Performance has been volatile but remains the top performer in ASEAN.
+  - Figure 1: Poverty incidence across basic sectors → Indigenous Peoples face the highest poverty at 32.4% in 2023.
+  - Table 13: Select measures of per capita income inequality → Shows consistent but slow decline in Gini coefficient from 0.453 to 0.406.
+  - Table 15: Inequality decomposition using household per capita income → Education creates meaningful income differences, but location and sex contribute little to between-group inequality.
+  - Table 37: Disability prevalence by sex and ethnicity → Waray women experience the highest disability rate at 31%.
 key_equations:
-  - equation: T_{total hours worked} = \alpha + \beta (male) + \gamma (education) + \delta (age^2) + \zeta (married) + \eta (married mother with child 0-2) + \theta (hh salaries) + \iota (wholesale/retail income) + \kappa (entrepreneurial income) + \lambda (urban) + \mu (NCR) + \nu (poor) + \epsilon
-    explanation: Linear model for determinants of weekly working hours.
+  - equation: None.
+    explanation: ""
 definitions:
   - term: GEDSI
-    definition: Gender Equality, Disability and Social Inclusion – condition of equal rights and opportunities regardless of identity.
-  - term: Intersectionality
-    definition: Analytical framework examining how multiple identities interact to create unique disadvantage patterns.
-  - term: Shapley decomposition
-    definition: Method to attribute explained variance in inequality to different factors (e.g., gender, location).
-  - term: NDPS
-    definition: National Disability Prevalence Survey (2016) using environmental-contextual disability measurement.
+    definition: Gender equality, disability and social inclusion - condition where all persons have equal rights, opportunities, and fair treatment regardless of various factors.
+  - term: GAD Budget
+    definition: Gender and Development budget - mandatory 5% allocation of agency budgets for gender programs.
+  - term: Shapley Decomposition
+    definition: Method to quantify the relative contributions of different factors to overall inequality patterns.
+  - term: IPs
+    definition: Indigenous Peoples - communities with ancestral domain rights and cultural traditions.
+  - term: PWDs
+    definition: Persons with disabilities - individuals with long-term physical, mental, intellectual, or sensory impairments.
 critical_citations:
-  - "[Crenshaw, 1989] — introduced intersectionality concept."
-  - "[Goldberg et al., 2025] — Global Gender Distortions Index methodology."
-  - "[World Bank, 2023] — documentation of persistent gender asset gaps."
+  - "[Crenshaw, 1989] — foundational for intersectional analysis framework."
+  - "[UN Women, 2024] — provides SDG gender indicators for Philippines."
+  - "[Pérez-Brito et al., 2024] — key data on Indigenous Peoples in Philippines."
+  - "[World Bank, 2023] — documents persistent gender gaps in access to productive assets."
+  - "[WHO, 2011] — ICF framework for understanding disability as interaction between impairments and environment."
 relevance:
   topics:
     - code: 1.A
       name: Filipino Young Professionals as a Demographic
-      justification: Provides extensive income, employment, education, and disability data for Filipino population including young adults.
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      justification: Documents time allocation to market vs unpaid care work, labor force participation patterns, and income inequality affecting financial capacity.
-  contribution: This paper informs Odin's demographic profiling module (1.A) by quantifying income inequality, labor force participation gaps, and disability prevalence among Filipinos. It highlights that women and persons with disabilities face compounded economic disadvantages, which Odin's behavioral profiling (5.A) should account for. The finding that unpaid care work consumes 9-10 more hours weekly for women directly impacts spending forecasting (6.A) and budget recommendation (7.A) by reducing available work hours and disposable income. Finally, the documentation of "statistical invisibility" for indigenous groups underscores the need for inclusive data collection in Odin's expense categorization (3.A) and anomaly detection (8.A) to avoid systemic bias.
+      relevance: contextual
+      justification: Profiles financial and social structures of young professionals' households.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: contextual
+      justification: Describes GEDSI context that shapes financial behaviors of target users.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: Poverty and income inequality data imply cyclical financial pressures on marginalized groups.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: contextual
+      justification: Income distribution patterns and poverty data provide background for spending cycles.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Contextualizes the policy and social landscape for financial management systems.
+  contribution: This paper provides Odin with a foundational understanding of the demographic, cultural, and structural inequalities that shape Filipino young professionals' financial lives. It highlights the importance of culturally sensitive design by detailing specific financial practices, seasonal spending patterns driven by poverty and income volatility, and the lived realities of marginalized groups. The intersectional analysis directly justifies Odin's need to go beyond simple user profiling and incorporate contextual variables like ethnicity, disability, and geographic location into its algorithms for expense categorization, forecasting, and anomaly detection. The findings on GAD budget failures and data gaps inform Odin's design principles around user trust, data privacy, and the importance of generating actionable insights from available data.
   directly_justifies:
-    - "Women in the Philippines spend 9-10 hours more per week on unpaid care work than men."
-    - "Severe disability prevalence is 55% for women with no formal education compared to 6% for college graduates."
-    - "Indigenous women's unpaid family work participation is three times higher than non-Indigenous women."
-    - "Only 34% of women who experience intimate partner violence seek formal help."
+    - "Poverty concentration among specific groups (IPs, PWDs, women) justifies targeted financial product design and goal setting in Odin."
+    - "Gender disparities in unpaid care work and labor force participation justify forecasting models that account for varying income stability."
+    - "Statistical invisibility of marginalized groups justifies Odin's data enrichment and cold-start strategies."
+    - "Income inequality patterns justify budget recommendation algorithms that prioritize savings and debt management for vulnerable users."
+    - "The disconnect between educational attainment and economic opportunity justifies system design that supports career and financial advancement."
   limits:
-    - "Disability data from 2016 NDPS predates pandemic and may not reflect current prevalence."
-    - "Qualitative sample may not capture full range of intersectional experiences due to thematic saturation limits."
-    - "Official statistics systematically under-represent indigenous peoples and persons with disabilities [unacknowledged]."
-  mapping_rationale: This paper was screened against all Odin functional domains. No direct relevance was found for spending forecasting, budget recommendation, anomaly detection, expense categorization, mobile-first design, data privacy, user retention, system evaluation, or savings/debt management. However, the paper provides foundational demographic and behavioral context for Filipino young professionals (domain: behavioral profiling). Specifically, it offers quantitative estimates of income distribution, labor force participation, gender gaps, and disability prevalence (topic 1.A), and detailed analysis of time allocation between market and unpaid care work that shapes financial behavior (topic 1.C). Topics related to financial product design (e.g., 7.A, 8.A) were rejected because the paper does not discuss algorithms or personal finance systems. The selected codes reflect the paper's value as contextual research for understanding Odin's target user population and their economic constraints.
+    - "The paper focuses on macro-level policy and social structures, not on individual-level financial behaviors or PFMS usage."
+    - "Data on income is at the household level, not individual, limiting direct translation to personal finance tracking."
+    - "The analysis does not evaluate specific personal finance applications or their effectiveness."
+  mapping_rationale: A systematic scan across all 12 functional domains identified the paper's primary relevance to the Filipino Cultural Context and Existing Systems domains. The paper's exhaustive data on Filipino demographics, poverty, inequality, and cultural practices provided high-contextual relevance to topics 1.A, 2.A, 2.B, and 2.D, as it describes the very environment in which Odin's users make financial decisions. It also provides contextual relevance for the landscape of existing systems by detailing the societal and structural problems that a PFMS like Odin must navigate. Topics related to algorithmic modules (e.g., forecasting, anomaly detection, budget recommendation) were considered and rejected because the paper does not discuss or evaluate computational techniques; its relevance is purely contextual, offering the socio-economic background that should inform those algorithms. The paper's discussion of data gaps and "statistical invisibility" is particularly relevant to Odin's cold-start and user profiling challenges. Overall, the paper provides critical background for understanding Odin's target users but offers no direct technical contributions to the system's algorithmic components.
 limitations:
-  - "Official statistics under-represent marginalized populations due to geographic isolation and mistrust of data collection. [unacknowledged]"
-  - "Small sample sizes for intersectional categories (e.g., women with disabilities from IP communities) limit robust statistical analysis."
-  - "No formal IRB approval obtained, though ethical principles were followed. [unacknowledged]"
-  - "Shapley decomposition explains only 6-8% of variation in working hours, indicating omitted variables."
+  - "The paper's focus on national-level data may not reflect the granular financial behavior needed for a PFMS. [unacknowledged]"
+  - "The study does not evaluate the effectiveness of personal finance management tools or digital financial services."
+  - "Qualitative data saturation may not capture the full range of experiences for highly marginalized intersectional subgroups."
+  - "The study did not undergo formal Institutional Review Board (IRB) approval."
 remember_this:
-  - "15% of women have disabilities versus 9% of men."
-  - "Child marriage before 18 fell to 9.4% in 2022."
-  - "Women spend 9-10 more hours weekly on unpaid care work."
-  - "Gini coefficient improved from 0.453 to 0.406 since 2015."
-  - "Indigenous women face triple disadvantage in labor, education, and land rights."
+  - "Income inequality (Gini) decreased from 0.453 to 0.406 between 2015 and 2023."
+  - "Female disability prevalence is 50% higher than male at 15% versus 10%."
+  - "Indigenous women's unpaid family work is over three times higher than non-Indigenous."
+  - "The GAD budget is compliance-oriented with weak accountability and widespread misuse."
+  - "Data gaps create 'statistical invisibility' for Indigenous Peoples and other marginalized groups."
 ```

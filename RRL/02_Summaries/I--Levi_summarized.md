@@ -1,92 +1,111 @@
 ```yaml
-paper_id: "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"
-designation: "international"
-title: "Personal Financial Information Presentation and Consumer Spending"
-authors: "Levi, Y."
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+designation: international-algorithm-specific
+title: Personal Financial Information Presentation and Consumer Spending
+authors: Levi, Y.
 year: 2025
-venue: "Unknown"
+venue: Unknown
 odin_topics:
-  - "5.A"
-  - "7.A"
-  - "7.B"
-  - "11.A"
-  - "13.A"
-shorthand_tags:
-  - "/behavioral-profiles"
-  - "/budgeting-strategies"
-  - "/budget-recommendation"
-  - "/engagement"
-  - "/savings-goals"
-tldr: "Presenting net worth as a monthly cash flow under a consumption frame with a salient spending comparison reduces discretionary spending by 15% in a field experiment."
-problem_and_motivation: "Consumers exhibit strong spending habits and inertia, yet existing savings tools like financial education and tax subsidies are costly or benefit only the wealthy. It is unclear whether simple changes in information presentation within online financial apps can influence spending without altering economic variables."
+  - 2.B
+  - 5.B
+  - 6.B
+  - 7.B
+  - 8.B
+  - 9.B
+  - 11.A
+  - 12.B
+tldr: Consumers exposed to a consumption-oriented frame and a salient comparison of a personalized net-worth index with past spending reduced discretionary spending by 15%.
+problem_and_motivation: Individuals interact with finances digitally, but the influence of information presentation on spending behavior is underexplored. A gap exists in understanding if simple design changes can overcome strong spending habits. This study tests if framing and salience of financial information can prompt consumers to adjust spending.
 approach:
-  - "Randomized field experiment with 3,138 users of an online account aggregation app over 25 months."
-  - "Users received a personalized index converting net worth to inflation-protected lifetime monthly cash flow."
-  - "Treatments varied index framing (Financial Sustainability Index with fear appeal vs. neutral Life Annuity Index) and salience (context plot comparing index to historical spending vs. no plot)."
-  - "Outcome variables include discretionary spending, spending categories, cash withdrawals, and login frequency."
-  - "Analysis uses individual and time fixed effects with standard errors clustered at consumer level."
+  - Randomized field experiment with 3,138 users of an online account aggregation app.
+  - Personalized index presented net worth as lifetime monthly cash flow from an annuity.
+  - Treatments varied index name: Financial Sustainability Index (FSI, consumption frame) vs. Life Annuity Index (LAI, neutral frame).
+  - Salience manipulated by providing a context plot comparing the index to historical monthly spending.
+  - Difference-in-differences analysis with individual and event-month fixed effects.
 findings:
-  - "num: Users exposed to consumption frame (FSI) and context plot reduced discretionary spending by 15% relative to control."
-  - "num: Effect persisted for 8 months after experiment removal, with gradual convergence after 9 months."
-  - "num: Restaurant spending fell 14%, clothing 20%, entertainment 14%, travel 24%, and cash withdrawals 25%."
-  - "No significant change in non-discretionary categories (gas, groceries, utilities)."
-  - "Login frequency increased similarly across all treated groups, ruling out attention as the driver."
+  - num: FSI-Plot group reduced discretionary spending by 15% relative to control during the 8-month experiment.
+  - num: Effect persisted for 8 months after treatment removal, with a gradual return to baseline.
+  - num: Spending decreased in restaurants (14%), clothing (20%), entertainment (14%), travel (24%), and cash withdrawals (25%).
+  - No significant change in non-discretionary spending categories like gas, groceries, and utilities.
+  - No effect from the index name or context plot alone; both consumption frame and salient context were necessary.
+  - Login frequency increased similarly across all treated groups, controlling for attention effects.
 key_figures_tables:
-  - "Figure 4: Monthly discretionary spending coefficients by treatment → FSI-Plot groups diverge immediately and remain lower throughout."
-  - "Table 5: Treatment effects on discretionary spending → FSI-Plot and FSI-Plot-inf show 15% reduction vs. control; other groups not significant."
-  - "Table 7: Treatment effects by spending category → Largest reductions in restaurants, clothing, entertainment, travel, and cash."
+  - Figure 3: Monthly logins by treatment group → All treated groups increased logins similarly.
+  - Figure 4: Monthly discretionary spending by treatment group → FSI-Plot groups diverged lower immediately at experiment start.
+  - Table 5: Treatment effects on discretionary spending → FSI-Plot groups show 15% decrease during intra period.
+  - Table 7: Spending category effects → Reductions largest in restaurants, clothing, entertainment, travel, and cash.
 key_equations:
-  - equation: "y_{i,t} = \\sum_{j=2}^{5} \\beta_j TG_{j,i} \\text{Intra}_t + \\sum_{j=2}^{5} \\gamma_j TG_{j,i} \\text{Post}_t + \\delta_i + \\theta_j + \\epsilon_{i,t}"
-    explanation: "Fixed effects regression with treatment interactions for experiment and post periods."
+  - equation: y_{i,t} = \sum_{j=2}^{5} \beta_j TG_{j,i} Intra_t + \sum_{j=2}^{5} \gamma_j TG_{j,i} Post_t + \delta_i + \theta_j + \epsilon_{i,t}
+    explanation: Main diff-in-diff specification with individual and month fixed effects.
 definitions:
-  - term: "FSI"
-    definition: "Financial Sustainability Index – consumption-framed name of the personalized index."
-  - term: "LAI"
-    definition: "Life Annuity Index – neutral-framed name of the personalized index."
-  - term: "Discretionary spending"
-    definition: "Spending on categories like entertainment, restaurants, clothing, travel; easy to adjust."
-  - term: "Context plot"
-    definition: "Time series plot comparing index level to user's historical monthly spending."
+  - term: FSI
+    definition: Financial Sustainability Index, the consumption-framed name for the personalized index.
+  - term: LAI
+    definition: Life Annuity Index, the neutral-framed name for the personalized index.
+  - term: Personalized Index
+    definition: Net worth presented as the equivalent inflation-protected lifetime monthly cash flow.
+  - term: Context Plot
+    definition: Time series plot directly comparing the index level with the user's historical monthly spending.
 critical_citations:
-  - "[Goldstein, Hershfield, Benartzi, 2016] — Illusion of wealth when net worth is a lump sum."
-  - "[Benartzi, Previtero, Thaler, 2011] — Framing affects annuity valuation and demand."
+  - "[Benartzi et al., 2011] — Annuitization puzzles and framing effects on annuity valuation."
+  - "[Goldstein et al., 2016] — Illusion of wealth from lump-sum vs. cash-flow presentation."
   - "[Karlan et al., 2016] — Salient reminders promote staying within means."
+  - "[Sussman and Alter, 2012] — Underestimation of exceptional expenses leads to overspending."
 relevance:
   topics:
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Paper shows different spending responses based on framing and salience, informing behavioral classification."
-    - code: "7.A"
-      name: "Budgeting Strategies as Domain Knowledge"
-      justification: "Personalized annuitized net worth provides a benchmark for sustainable spending."
-    - code: "7.B"
-      name: "Budget Recommendation in Personal Finance Systems"
-      justification: "The index acts as an implicit budget recommendation that users follow."
-    - code: "11.A"
-      name: "Engagement Dynamics in Personal Finance Applications"
-      justification: "Treatments increased login frequency, showing information design affects engagement."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Reducing discretionary spending directly increases savings, supporting goal achievement."
-  contribution: "Odin's budget recommendation module can adopt a personalized annuitized net worth as a dynamic spending benchmark. The behavioral profiling module should incorporate framing effects (consumption vs. neutral) and salience (context plots) to predict user responses. Engagement design can leverage salient comparisons to increase attention and prompt action without changing economic incentives. Savings goal management can benefit from showing users the trade-off between current spending and lifetime monthly cash flow."
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: medium
+      justification: Provides evidence of spending adjustments in response to information, not seasonal drivers.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: low
+      justification: Results suggest behavioral response to a reference point, but not directly profile classification.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: Uses historical spending data, but does not develop or test forecasting algorithms.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: high
+      justification: Directly tests how presenting a benchmark (the index) influences spending, a core budget recommendation mechanism.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: low
+      justification: Examines spending changes in categories, but not anomaly detection methods.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: medium
+      justification: Tests information presentation within a digital (app) environment, relevant to UX design choices.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Measures login behavior as a proxy for attention, relevant to engagement.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Provides a rigorous experimental evaluation framework (RCT, diff-in-diff) applicable to evaluating Odin's modules.
+  contribution: This paper provides a rigorous experimental framework for testing information presentation effects, directly applicable to evaluating Odin's budget recommendation module. The finding that a salient benchmark reduces spending offers a design principle for Odin's interface to encourage savings. The persistence of the effect beyond treatment exposure informs retention strategies for Odin. The detailed spending category analysis can guide Odin's expense categorization and anomaly detection design by highlighting responsive categories.
   directly_justifies:
-    - "Presenting net worth as monthly cash flow under a consumption frame reduces discretionary spending by 15%."
-    - "A salient comparison between the index and past spending is necessary for the framing effect to work."
-    - "The spending reduction persists for months after the treatment is removed."
-    - "Cash withdrawals decrease by 25%, indicating additional savings beyond observed discretionary categories."
+    - A consumption-oriented frame combined with a salient context can reduce discretionary spending by 15%.
+    - Information design can influence spending behavior without changing economic variables.
+    - Effects persist for months after treatment removal, suggesting habit formation.
+    - Non-discretionary spending is less responsive to information interventions.
   limits:
-    - "Data may be incomplete if users did not link all accounts, biasing net worth and index calculation."
-    - "Sample consists of relatively wealthy users (average net worth $1.1M), limiting generalizability."
-    - "Real assets like real estate are not included in the app's net worth."
-  mapping_rationale: "The paper directly addresses behavioral responses to information design (5.A), provides a benchmark that functions as a budget recommendation (7.B) and budgeting strategy (7.A), demonstrates increased app logins (11.A), and shows spending reduction that increases savings (13.A). Codes related to expense categorization (3.A), anomaly detection (8.A), and debt management (13.B) were rejected because the paper does not address those. Algorithm-specific codes (6.B, 7.C) were rejected as the intervention is a field experiment, not an ML model."
+    - Sample consists of relatively wealthy users (top 20% income), limiting generalizability to lower-income Filipino young professionals.
+    - Data may be incomplete if users did not link all financial accounts to the app.
+    - The experiment was conducted in 2014, before pre-registration became common.
+    - The study population is U.S.-based, which may not fully reflect Filipino cultural and financial contexts.
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated canonical topic codes was conducted. The paper was flagged as relevant primarily for the "Budget Recommendation" (7.B) and "System Evaluation" (12.B) domains, receiving a 'high' relevance assignment, as the experimental design directly tests a benchmark-based spending adjustment mechanism and provides a rigorous evaluation framework. It also touches on "User Retention & Engagement" (11.A) and "Mobile UX Design" (9.B) with a 'medium' relevance, as the study measures attention effects and manipulates in-app information presentation. Topics related to "Seasonal Spending" (2.B) and "Profile Dynamics" (5.B) were considered but assigned 'low' relevance, as the paper does not directly model seasonality or user profiles. Domains like "Anomaly Detection" (8.B) and "Forecasting" (6.B) were rejected for direct inclusion, as the paper does not propose or evaluate algorithms in these areas. The paper's overall relevance is moderate, providing a foundational experimental paradigm and evidence of behavioral responsiveness to information design, but its U.S.-based, high-income sample limits direct applicability to the Filipino young professional demographic.
 limitations:
-  - "Data may not include all consumer accounts, potentially offsetting spending changes in unobserved accounts."
-  - "Net worth estimation omits real estate and some retirement or debt accounts, biasing the personalized index."
-  - "Sample is wealthier than average U.S. population, limiting generalizability to lower-income users."
-  - "Experiment was conducted in 2014 before pre-registration became common."
+  - Sample consists of relatively wealthy U.S. users, limiting generalizability to Filipino young professionals. [unacknowledged]
+  - Potential incompleteness of transaction data from account aggregation. [unacknowledged]
+  - Experiment was conducted in 2014, before pre-registration became common.
+  - The study does not explore the exact psychological mechanism (e.g., anchoring vs. reference point updating).
 remember_this:
-  - "A 15% reduction in discretionary spending lasted 8 months after treatment removal."
-  - "Consumption frame and salient context together drive behavior change."
-  - "Effect strongest on tempting categories like restaurants and clothing."
-  - "Login frequency increased but did not explain spending differences."
+  - Presenting a consumption-framed benchmark with a context plot reduced discretionary spending by 15%.
+  - The spending reduction persisted for eight months after the intervention was removed.
+  - Largest decreases occurred in restaurants, clothing, entertainment, travel, and cash withdrawals.
+  - Information design effects require both a relevant frame and a salient comparison context.
+  - Login frequency increased similarly across all treatments, ruling out attention as the primary driver.
 ```

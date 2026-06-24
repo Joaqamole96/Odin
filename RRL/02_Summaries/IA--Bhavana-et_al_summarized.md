@@ -1,165 +1,122 @@
 ```yaml
-paper_id: "10.15662/IJARCST.2025.0805004"
-designation: "international"
-title: "AI-Based Wealth Advisory System using Machine Learning and Predictive Analytics for Personalized Budget Planning"
-authors: "Bhavana, B. R.; Pavan, D.; Darshan, T. H. Guru"
+paper_id: 10.15662/IJARCST.2025.0805004
+designation: international-algorithm-specific
+title: AI-Based Wealth Advisory System using Machine Learning and Predictive Analytics for Personalized Budget Planning
+authors: Bhavana, B. R.; Pavan, D.; Darshan, T. H. G.
 year: 2025
-venue: "International Journal of Advanced Research in Computer Science & Technology"
+venue: International Journal of Advanced Research in Computer Science & Technology (IJARCST)
 odin_topics:
-  - "3.A"
-  - "3.B"
-  - "6.A"
-  - "6.B"
-  - "7.A"
-  - "7.B"
-  - "7.C"
-  - "8.A"
-  - "8.B"
-  - "10.A"
-  - "10.B"
-  - "12.A"
-  - "12.B"
-  - "13.A"
-shorthand_tags:
-  - "/expense-categorization"
-  - "/spending-forecast"
-  - "/budget-recommendation"
-  - "/anomaly-detection"
-  - "/privacy"
-  - "/user-trust"
-  - "/system-evaluation"
-  - "/savings-management"
-tldr: "An AI wealth advisory system integrates classification, forecasting, anomaly detection, and explainable AI to deliver personalized budget planning, achieving 95% anomaly detection accuracy and a 22% improvement in savings."
-problem_and_motivation: "Most personal finance applications are reactive, limited to expense tracking without proactive wealth management or personalized AI-driven advice. A gap exists in consumer-centric financial advisory systems that are both predictive and interpretable, particularly for users with low financial literacy. This paper addresses the need for an intelligent system that combines forecasting, anomaly detection, and explainable recommendations to improve financial outcomes."
+  - 3.A
+  - 3.B
+  - 5.C
+  - 6.A
+  - 6.B
+  - 7.B
+  - 8.A
+  - 8.B
+  - 10.A
+  - 10.B
+tldr: Integrates classification, forecasting, anomaly detection, and XAI into a single advisory system for personalized budget planning and financial goal setting.
+problem_and_motivation: Existing personal finance applications are primarily reactive and rule-based, lacking predictive and adaptive capabilities to proactively manage wealth. A gap exists for consumer-centric AI systems that combine forecasting, anomaly detection, and explainability to bridge advanced analytics with practical usability.
 approach:
-  - "Data sources include transaction logs, household expenditure surveys, and macroeconomic indicators from World Bank/IMF."
-  - "Preprocessing involves cleaning, normalization, NLP-based categorization (BERT), anonymization, and KNN imputation."
-  - "Classification uses XGBoost, Random Forest, and BERT; forecasting uses ARIMA, Prophet, LSTM, and Transformers in an ensemble."
-  - "Anomaly detection employs Isolation Forest, Autoencoders, and GAN-based detectors."
-  - "Recommendation engine uses contextual bandits and reinforcement learning to adapt suggestions based on user feedback."
-  - "Explainability integrated via SHAP and LIME with rule-based summaries for non-technical users."
-  - "Privacy safeguards include AES-256 encryption, TLS 1.3, differential privacy, and federated learning."
-  - "Evaluation metrics: accuracy, F1-score, MAE, RMSE, AUC, adoption rate, and System Usability Scale."
-  - "Pilot study conducted with 100 users to measure real-world performance."
+  - Uses a multi-model architecture integrating XGBoost, BERT, and Random Forests for expense classification.
+  - Employs ARIMA, Prophet, LSTM, and Transformers in an ensemble for expenditure forecasting.
+  - Detects anomalies using Isolation Forests, Autoencoders, and GAN-based detectors.
+  - Generates recommendations via Contextual Bandits and Reinforcement Learning.
+  - Integrates SHAP and LIME for explainability and NLG for user-friendly output.
+  - Implements AES-256, TLS 1.3, differential privacy, and federated learning for security.
 findings:
-  - "num: 95% anomaly detection accuracy achieved in pilot testing."
-  - "num: 22% improvement in savings among participants."
-  - "num: 78% of participants reported enhanced financial literacy."
-  - "num: Expense classification achieved 91% F1-score."
-  - "num: Forecasting error MAE of $43 per user per month."
-  - "num: Recommendation adoption rate was 41%."
-  - "Explainable AI summaries improved user trust and transparency."
-  - "Ensemble forecasting reduced error rates compared to single models."
+  - num: Achieved 95% anomaly detection accuracy in a pilot study with 100 users.
+  - num: Demonstrated a 22% improvement in savings among pilot participants.
+  - num: Enhanced financial literacy for 78% of participants in the pilot study.
+  - num: Reported expense classification F1-score of 91% and forecasting MAE of $43/month.
+  - num: Recommendation adoption rate of 41% was observed during pilot testing.
 key_figures_tables:
-  - "Table 1: Summary of prior work on AI in finance → Provides foundation for multi-model architecture."
+  - "Table II: Literature review summary → Organizes key prior work on AI in finance by technique and result."
+  - "Figure 2: System architecture diagram → Shows integration of data sources, models, and XAI components."
+  - "Figure 3: Pilot study results dashboard → Visualizes 95% anomaly detection accuracy and 22% savings improvement."
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
-  - term: "AI"
-    definition: "Artificial Intelligence"
-  - term: "ML"
-    definition: "Machine Learning"
-  - term: "XAI"
-    definition: "Explainable Artificial Intelligence"
-  - term: "NLG"
-    definition: "Natural Language Generation"
-  - term: "LSTM"
-    definition: "Long Short-Term Memory network"
-  - term: "SHAP"
-    definition: "SHapley Additive exPlanations for feature importance"
-  - term: "LIME"
-    definition: "Local Interpretable Model-agnostic Explanations"
-  - term: "BERT"
-    definition: "Bidirectional Encoder Representations from Transformers"
-  - term: "GAN"
-    definition: "Generative Adversarial Network"
-  - term: "MAE"
-    definition: "Mean Absolute Error"
-  - term: "RMSE"
-    definition: "Root Mean Square Error"
-  - term: "AUC"
-    definition: "Area Under the Curve"
-  - term: "SUS"
-    definition: "System Usability Scale"
-  - term: "PSD2"
-    definition: "Payment Services Directive 2"
-  - term: "GDPR"
-    definition: "General Data Protection Regulation"
-  - term: "CCPA"
-    definition: "California Consumer Privacy Act"
+  - term: XAI
+    definition: Explainable AI, methods that make model predictions interpretable.
+  - term: NLG
+    definition: Natural Language Generation, converting data into human-readable text.
+  - term: SHAP
+    definition: SHapley Additive exPlanations, a method for explaining feature importance.
+  - term: LIME
+    definition: Local Interpretable Model-agnostic Explanations, a model-agnostic explanation method.
+  - term: GAN
+    definition: Generative Adversarial Network, used here for anomaly detection.
 critical_citations:
-  - "[Mohammed et al., 2021] — 96% fraud detection with autoencoders+Isolation Forest."
-  - "[Zhang et al., 2022] — Hybrid ARIMA+GBDT reduces forecasting error by 18%."
-  - "[Lundberg & Lee, 2017] — SHAP provides consistent feature attributions for model interpretability."
-  - "[Ribeiro et al., 2016] — LIME enables model-agnostic explanations for black-box models."
-  - "[Li et al., 2021] — Contextual bandits increase user engagement by 25% in personalized recommendations."
+  - "[Lundberg & Lee, 2017] — Provides SHAP framework for model explainability."
+  - "[Ribeiro et al., 2016] — Provides LIME framework for model-agnostic interpretability."
+  - "[Abadi et al., 2016] — Provides differential privacy mechanism for data protection."
+  - "[Barocas et al., 2019] — Addresses fairness-aware ML methods for mitigating bias."
 relevance:
   topics:
-    - code: "3.A"
-      name: "Expense Categorization Frameworks"
-      justification: "Uses BERT and XGBoost to classify transaction descriptions into spending categories."
-    - code: "3.B"
-      name: "Expense Category Design Considerations"
-      justification: "Predefined categories (housing, transport, food) align with common PFMS taxonomies."
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      justification: "Employs ARIMA, Prophet, LSTM, and Transformers for expenditure forecasting."
-    - code: "6.B"
-      name: "Spending Forecasting Algorithm"
-      justification: "Ensemble forecasting combines multiple models to reduce error rates."
-    - code: "7.A"
-      name: "Budgeting Strategies as Domain Knowledge"
-      justification: "Uses financial ratios and behavioral patterns to inform budget planning."
-    - code: "7.B"
-      name: "Budget Recommendation in Personal Finance Systems"
-      justification: "Recommendation engine provides personalized budget and savings suggestions."
-    - code: "7.C"
-      name: "Budget Recommendation Algorithm"
-      justification: "Contextual bandits and reinforcement learning adapt recommendations dynamically."
-    - code: "8.A"
-      name: "Anomaly Detection in Personal Finance Systems"
-      justification: "Flags unusual spending using Isolation Forest, Autoencoders, and GANs."
-    - code: "8.B"
-      name: "Anomaly Detection Algorithm"
-      justification: "Achieves 95% detection accuracy in pilot study on transaction data."
-    - code: "10.A"
-      name: "Data Privacy and Security in Personal Finance Systems"
-      justification: "Implements AES-256 encryption, differential privacy, and federated learning."
-    - code: "10.B"
-      name: "User Trust in Personal Finance Systems"
-      justification: "Explainable AI (SHAP, LIME) and transparency reports build user trust."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      justification: "Evaluates using accuracy, F1, MAE, AUC, adoption rate, and SUS score."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      justification: "Separate metrics for classification, forecasting, anomaly detection, and recommendations."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Reports 22% savings improvement and includes savings-to-income ratio analysis."
-  contribution: "This paper directly supports Odin's budget recommendation and spending forecasting modules by demonstrating an integrated multi-model architecture that achieves 95% anomaly detection accuracy and 22% savings improvement. The use of explainable AI (SHAP, LIME) provides a template for building user trust, which Odin requires for adoption. The pilot evaluation framework (F1, MAE, adoption rate) offers concrete metrics for Odin's system evaluation. Finally, the paper's handling of privacy via differential privacy and federated learning informs Odin's data privacy design."
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: high
+      justification: Paper explicitly uses classification models (XGBoost, BERT) for categorizing expenses.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: medium
+      justification: Discusses categorization via merchant codes and NLP but does not focus on category design itself.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Uses classification for expense patterns, which directly supports profile classification.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Core contribution is predictive modeling using ARIMA, Prophet, LSTM, and Transformers.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Directly evaluates and proposes forecasting algorithms for sequential financial data.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: high
+      justification: System's primary purpose is personalized budget planning and recommendation.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Dedicated anomaly detection module with high reported accuracy.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Implements Isolation Forests, Autoencoders, and GANs for spending data.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: high
+      justification: Explicitly addresses privacy with encryption, differential privacy, and federated learning.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Directly addresses trust through XAI integration and transparency reports.
+  contribution: "This paper validates an integrated AI architecture for personal finance that combines classification, forecasting, anomaly detection, and XAI, directly informing Odin's algorithmic module design. The reported metrics (e.g., 95% anomaly detection accuracy, 22% savings improvement) provide quantitative benchmarks for evaluating similar components in Odin. The emphasis on explainability and privacy offers a template for building user trust, critical for Odin's adoption. The proposed system addresses key Odin functions including budget recommendation, spending forecasting, and anomaly flagging. The pilot study methodology offers a framework for evaluating Odin's effectiveness before full deployment."
   directly_justifies:
-    - "AI-based wealth advisory systems can achieve 95% anomaly detection accuracy on personal transaction data."
-    - "Explainable AI methods like SHAP and LIME enhance user trust in personal finance systems."
-    - "Personalized budget recommendations using contextual bandits achieve 41% user adoption rate."
-    - "Ensemble forecasting reduces expenditure prediction error to MAE of $43 per user per month."
-    - "Integration of classification, forecasting, and anomaly detection improves savings by 22%."
+    - "Combining forecasting and anomaly detection in one system improves user savings by 22%."
+    - "XAI methods like SHAP and LIME are essential for building trust in financial advisory systems."
+    - "Ensemble forecasting reduces prediction error compared to single-model approaches."
+    - "Anomaly detection using Isolation Forests and Autoencoders achieves high accuracy on transaction data."
+    - "Federated learning and differential privacy are viable approaches for data privacy in PFMS."
   limits:
-    - "Pilot study limited to 100 users, may not generalize to larger or more diverse populations."
-    - "Reliance on synthetic or anonymized datasets due to privacy restrictions on real financial records."
-    - "Long-term scalability and performance under real-world usage not fully validated."
-    - "Potential algorithmic bias acknowledged but fairness-aware methods only proposed, not empirically validated."
-  mapping_rationale: "The paper spans multiple Odin domains: spending forecasting (predictive models for expenditure), budget recommendation (contextual bandits, RL), anomaly detection (Isolation Forest, autoencoders), expense categorization (BERT, XGBoost), data privacy (encryption, differential privacy), user trust (XAI), system evaluation (metrics), and savings management (22% improvement). Topic codes 5.A (behavioral profiling) and 5.B (cold-start) were rejected because the paper does not model user profiles dynamically. Codes 2.A (culturally specific practices) and 2.B (seasonal patterns) were omitted as the paper focuses on general financial behaviors without cultural specificity. Code 13.B (debt management) is not addressed. The borderline case of topic 11.A (engagement dynamics) is partially covered via adoption rate but lacks longitudinal engagement analysis, so excluded."
+    - "Pilot study used only 100 participants, which may not generalize to all user demographics."
+    - "Privacy-preserving methods (differential privacy) were described but not empirically evaluated for their impact on model accuracy. [unacknowledged]"
+    - "Paper provides limited details on the specific dataset used for evaluation, hindering reproducibility."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper's strongest relevance is to Expense Categorization (3.A), Predictive Modeling (6.A/6.B), Budget Recommendation (7.B), Anomaly Detection (8.A/8.B), and Data Privacy & User Trust (10.A/10.B), all rated 'high' due to the paper's direct focus on implementing and evaluating these modules. Medium relevance was assigned to 3.B (category design) and 5.C (profile classification) as the paper uses categorization and classification but does not deeply explore the design rationale or profile dynamics. Domains like Behavioral Profiling (5.A/5.B), Spending Cycles (2.B), Mobile-First Design (9.A/9.B), and System Evaluation (12.A/12.B/12.C) were considered but rejected as the paper does not provide substantial insights into these specific Odin concerns. The paper's comprehensive AI architecture makes it broadly relevant, particularly for Odin's algorithmic justification and user trust strategies."
 limitations:
-  - "Small pilot sample (100 users) limits statistical power and generalizability. [unacknowledged]"
-  - "Paper does not specify the exact composition of transaction datasets, raising reproducibility concerns. [unacknowledged]"
-  - "Potential bias in recommendation algorithms mentioned but not empirically mitigated. [acknowledged]"
-  - "Privacy-preserving techniques like differential privacy may degrade model accuracy, but trade-offs not quantified. [unacknowledged]"
+  - "Pilot study with only 100 users limits generalizability of reported metrics."
+  - "Privacy-preserving techniques' impact on predictive accuracy was not empirically assessed. [unacknowledged]"
+  - "Paper lacks a detailed description of the specific dataset used for training and evaluation."
+  - "No comparison against a fully non-AI baseline to isolate the effect of AI components on user outcomes."
 remember_this:
-  - "Anomaly detection accuracy reached 95% in pilot testing."
-  - "Savings improved by 22% among system users."
-  - "Expense classification achieved 91% F1-score."
-  - "Explainable AI summaries built user trust and transparency."
-  - "Personalized recommendations had 41% adoption rate."
+  - "Anomaly detection accuracy of 95% was achieved using a multi-model approach."
+  - "A 22% savings improvement was observed in a pilot study with the integrated system."
+  - "SHAP and LIME are integrated to provide explainable financial recommendations."
+  - "Federated learning and differential privacy are proposed to protect user financial data."
+  - "The system combines forecasting, classification, and anomaly detection in one architecture."
 ```

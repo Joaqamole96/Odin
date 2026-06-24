@@ -7,87 +7,116 @@ year: 2024
 venue: BIO Web of Conferences
 odin_topics:
   - 1.A
+  - 1.B
   - 1.C
+  - 2.A
+  - 2.B
+  - 2.D
   - 5.A
-shorthand_tags:
-  - /filipino-young-professionals
-  - /financial-behavior
-  - /behavioral-profiles
-tldr: Survey of 431 Filipino millennials finds strong positive correlations among financial literacy, attitude, and efficacy, and a negative correlation between spending behavior and financial attitude.
-problem_and_motivation: Existing literature often examines financial literacy, attitude, and efficacy in isolation or paired combinations, leaving a gap in comprehensive understanding. Filipino millennials face economic uncertainties and lack financial acumen, making them financially vulnerable. A holistic exploration of these variables together is needed to inform targeted interventions.
+  - 11.A
+tldr: Filipino millennials' spending behavior shows a significant negative correlation with financial attitude, while financial literacy, attitude, and efficacy are strongly interrelated.
+problem_and_motivation: Filipino millennials face financial vulnerability due to economic uncertainties, high education costs, and a perceived lack of financial acumen, yet their significant workforce presence makes their financial behavior crucial. Existing research often studies financial literacy, attitude, and efficacy in isolation, leaving a gap in understanding their combined effect on spending behavior.
 approach:
-  - Online survey of 431 millennials in Laguna, Philippines using Google Forms.
-  - Measured financial literacy (7 items), attitude (8 items), efficacy (10 items), and spending behavior (9 categories) via Likert scales.
-  - Used Structural Equation Modeling (SEM) and Confirmatory Factor Analysis (CFA) in Jamovi.
-  - Evaluated model fit with RMSEA, CFI, TLI, SRMR, AIC, BIC.
-  - Reported Cronbach’s alpha (0.656–0.917) and VIF to check multicollinearity.
+  - Surveyed 431 millennials in Laguna, Philippines, via Google Forms.
+  - Measured financial literacy, attitude, efficacy, and spending behavior using a custom questionnaire with Likert scales.
+  - Employed Confirmatory Factor Analysis (CFA) to validate the measurement model for each latent variable.
+  - Used Structural Equation Modeling (SEM) in Jamovi to test hypothesized relationships among the latent variables.
+  - Evaluated model fit using RMSEA, TLI, CFI, and SRMR, and checked for multicollinearity using VIF.
 findings:
-  - "num: Strong positive correlations: financial efficacy ↔ literacy (β=0.614, p<.001), attitude ↔ literacy (β=0.578, p<.001), attitude ↔ efficacy (β=0.888, p<.001)."
-  - "num: Negative relationship between spending behavior and financial attitude (β=-0.176, p=0.034)."
-  - "num: 42% of respondents spend 41% or more of their income (S1)."
-  - "num: 93.7% spend 10% or less of income on beer and wine (S9, SD=0.521)."
-  - Financial literacy and efficacy showed no statistically significant direct effect on spending.
-  - CFA fit indices indicated adequate model fit for all latent variables (RMSEA 0.092–0.163).
-  - Most respondents had moderate financial literacy (mean=3.42) and positive attitudes (mean=3.69).
+  - num: Strong positive correlations were found between financial efficacy and literacy (β = 0.61, p < .001), and between financial attitude and literacy (β = 0.58, p < .001).
+  - num: A significant negative correlation was identified between spending behavior and financial attitude (β = -0.18, p = 0.034).
+  - num: 42% of respondents reported spending 41% or more of their income, indicating high variability in total spending.
+  - num: 93.7% of respondents allocated 10% or less of their income to beer and wine, showing high consistency in this spending category.
+  - The study did not find a statistically significant relationship between spending behavior and financial literacy or financial efficacy.
+  - Millennials with a more positive financial attitude tend to exhibit more responsible spending behaviors.
+  - Financial literacy, attitude, and efficacy are interdependent, suggesting a comprehensive strategy for financial well-being.
 key_figures_tables:
-  - "Table 1: Categorical socio-demographics of 431 respondents → Majority male (62.9%), aged 26-27 (45.5%), monthly income P20k-27k (50.8%)."
-  - "Table 3: Spending construct frequency → Highest variability in total spent income, lowest in beer/wine."
-  - "Table 4: CFA baseline comparison indices → Acceptable to moderate fit (RMSEA 0.092-0.163, CFI 0.810-0.955)."
-  - "Figure 1: SEM path diagram with standard coefficients → Visualizes strong positive paths among literacy, attitude, efficacy."
+  - Table 1: Socio-demographic characteristics of respondents → Shows sample is predominantly male, aged 26-27, earning PHP 20,000-26,999.
+  - Table 2: List of latent variables and constructs → Details the observed variables for each financial construct, all with acceptable Cronbach's alpha.
+  - Table 3: Spending construct observed variables frequency → Highlights variability in overall spending and consistency in alcohol spending.
+  - Table 4: CFA fit indices for latent variables → Indicates a reasonable to good fit for the measurement models.
+  - Table 5: Parameter estimates of structural paths → Quantifies the strength and direction of relationships among constructs.
+  - Figure 1: Path diagram of the proposed SEM framework → Visually depicts the relationships among financial literacy, attitude, efficacy, and spending.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: SEM
-    definition: Structural Equation Modeling, a multivariate technique for testing complex variable relationships.
   - term: CFA
-    definition: Confirmatory Factor Analysis, validates latent variable measurement models.
+    definition: Confirmatory Factor Analysis
+  - term: SEM
+    definition: Structural Equation Modeling
   - term: TPB
-    definition: Theory of Planned Behavior, links attitudes, norms, and control to behavioral intentions.
+    definition: Theory of Planned Behavior
   - term: RMSEA
-    definition: Root Mean Square Error of Approximation, a model fit index (lower is better).
-  - term: CFI
-    definition: Comparative Fit Index, measures model improvement over null (≥0.90 acceptable).
+    definition: Root Mean Square Error of Approximation
   - term: TLI
-    definition: Tucker-Lewis Index, a non-normed fit index.
+    definition: Tucker-Lewis Coefficient
+  - term: CFI
+    definition: Comparative Fit Index
   - term: SRMR
-    definition: Standardized Root Mean Square Residual, absolute fit index (<0.08 good).
+    definition: Standardized Root Mean Square Residual
+  - term: VIF
+    definition: Variance Inflation Factor
 critical_citations:
-  - "[Ajzen, 1991] — Foundation for Theory of Planned Behavior used."
-  - "[Yanto et al., 2021] — Social media’s role in financial literacy among millennials."
-  - "[Dewi et al., 2020] — Links financial literacy, attitude, and behavior."
-  - "[Sotiropoulos & d'Astous, 2013] — Supports financial attitude preventing overspending."
+  - "[Ajzen, 1991] — Foundational theory for the study's framework."
+  - "[Yanto et al., 2021] — Links social media to financial literacy development."
+  - "[Sotiropoulos & d'Astous, 2013] — Supports link between financial attitude and spending."
 relevance:
   topics:
     - code: 1.A
       name: Filipino Young Professionals as a Demographic
-      justification: Studies millennials (ages 26–42) in Laguna, many employed in finance-related jobs.
+      relevance: high
+      justification: Directly studies Filipino millennials, a core demographic for Odin.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Provides data on income levels, employment, and primary financial goals of the target demographic.
     - code: 1.C
       name: Financial Behavior of Filipino Young Professionals
-      justification: Directly measures spending behavior and its correlates (literacy, attitude, efficacy).
+      relevance: high
+      justification: Core focus of the paper is on spending behavior, a key financial behavior.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Investigates financial attitudes and behaviors within the Filipino cultural context.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: Discusses general spending variability but does not explicitly analyze seasonal patterns.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: Provides a breakdown of spending categories but does not specifically address spending cycles or occasions.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: Identifies interdependencies among literacy, attitude, and efficacy, shaping spending patterns.
-  contribution: "This paper provides empirical evidence on how financial literacy, attitude, and efficacy interrelate and affect spending behavior among Filipino millennials, directly informing Odin’s behavioral profiling module (5.A). The negative relationship between financial attitude and spending supports the design of budget recommendation algorithms that prioritize attitudinal interventions (7.B). The detailed breakdown of spending categories (e.g., groceries, dining, credit payments) offers a foundation for expense categorization frameworks (3.A) and spending forecasting features (6.A)."
+      relevance: medium
+      justification: The findings on the interplay of literacy, attitude, and efficacy can inform the development of behavioral profiles.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Recommendations for using social media and peer influence for financial education are relevant for user engagement.
+  contribution: |
+    This paper provides direct empirical evidence that financial attitude is a more significant predictor of spending behavior than financial literacy for Filipino millennials. This finding is directly relevant to Odin's user profiling module, suggesting that attitudinal metrics should be weighted heavily. The study's recommendation for tailored financial education programs that leverage social media can inform Odin's user retention and engagement strategies. The identified spending variability and consistency across categories can guide the design of Odin's expense categorization and anomaly detection features.
   directly_justifies:
-    - "Financial attitude has a significant negative relationship with spending behavior among Filipino millennials (β=-0.176, p=0.034)."
-    - "Financial literacy and financial attitude are strongly positively correlated (β=0.578, p<0.001), suggesting they reinforce each other."
-    - "Most Filipino millennials (42%) spend 41% or more of their income, indicating high spending propensity."
+    - "A positive financial attitude is significantly correlated with responsible spending behavior in Filipino millennials."
+    - "Financial literacy, attitude, and efficacy are strongly interrelated and should be considered together."
+    - "Tailored financial education programs that leverage social media can improve financial literacy and engagement."
   limits:
-    - "Self-reported data may introduce recall and social desirability bias."
-    - "Cross-sectional design limits causal inference and temporal tracking."
-    - "Sample from only Laguna, Philippines, not generalizable to all Filipino millennials [unacknowledged]."
-    - "Overrepresentation of respondents in finance-related jobs may inflate financial literacy scores."
-  mapping_rationale: "The paper squarely targets Filipino millennials (1.A) and their spending behavior (1.C), making it highly relevant to Odin’s demographic and behavioral domains. The identification of interdependencies among literacy, attitude, and efficacy directly supports financial behavioral profiling (5.A). Topics related to algorithms (e.g., 6.B, 7.C, 8.B) are rejected because the paper uses SEM/CFA, not predictive or anomaly detection models. Expense categorization (3.A) is borderline; the paper reports spending by category but does not propose a classification framework, so it was excluded. Similarly, no mobile design, privacy, retention, or savings/debt management content appears, so those codes are omitted."
+    - "Self-reported data may be subject to recall and social desirability bias."
+    - "The sample is skewed towards respondents with jobs requiring financial skills."
+    - "The cross-sectional design limits the ability to track changes in financial behavior over time."
+    - "The study is geographically limited to Laguna, Philippines."
+  mapping_rationale: |
+    A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as high relevance for 'Filipino Cultural Context' (2.A) as it directly studies a Filipino demographic, and for 'Behavioral Profiling & Classification' (5.A) due to its analysis of financial attitudes and behaviors. It was also deemed high relevance for 'User Retention & Engagement' (11.A) because its recommendations for social media-based education can inform engagement strategies. The topics 1.A and 1.C were assigned high relevance as the paper directly addresses the demographic and its financial behavior. Topic 1.B was medium due to providing supporting demographic data. Topic 2.B was considered contextual as seasonal spending is not examined. Topic 2.D was low because while spending categories are broken down, the paper does not analyze spending cycles or occasions. Other domains like 'Spending Forecasting', 'Budget Recommendation', 'Anomaly Detection', and 'Data Privacy' were rejected as they are not addressed by the paper. The paper's overall relevance to Odin is medium, primarily informing the user profiling and engagement modules.
 limitations:
-  - "Reliance on self-reported Likert scales may introduce bias."
-  - "Cross-sectional design prevents observation of behavioral changes over time."
-  - "Sample predominantly from Laguna, limiting geographic generalizability [unacknowledged]."
-  - "High proportion of finance-related job respondents may skew financial knowledge measures."
-  - "Cronbach’s alpha for spending construct (0.656) is below conventional thresholds [unacknowledged]."
+  - "Self-reported data may be prone to recall and social desirability bias. [unacknowledged]"
+  - "The sample is skewed towards respondents with jobs requiring financial skills, limiting generalizability."
+  - "The cross-sectional design limits the ability to track changes in financial behavior over time. [unacknowledged]"
+  - "The study is geographically limited to Laguna, Philippines. [unacknowledged]"
 remember_this:
-  - "Financial attitude negatively predicts spending behavior (β=-0.176)."
-  - "42% of Filipino millennials spend over 41% of their income."
-  - "Financial literacy and attitude are strongly correlated (β=0.578)."
-  - "93.7% allocate 10% or less of income to alcohol."
+  - "Financial attitude, not literacy, is the strongest predictor of spending behavior."
+  - "Millennials show high consistency in spending on alcohol, with 93.7% spending 10% or less."
+  - "Financial literacy, attitude, and efficacy are strongly interdependent."
+  - "Tailored programs using social media can improve financial literacy and engagement."
+  - "42% of respondents spent 41% or more of their income, indicating high spending variability."
 ```

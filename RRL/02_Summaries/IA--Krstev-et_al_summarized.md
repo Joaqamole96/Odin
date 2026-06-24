@@ -1,84 +1,113 @@
 ```yaml
-paper_id: "10.17559/TV-20220430111309"
-designation: "international"
-title: "An Overview of Forecasting Methods for Monthly Electricity Consumption"
-authors: "Krstev, S.; Forcan, J.; Krneta, D."
+paper_id: 10.17559/TV-20220430111309
+designation: international-algorithm-specific
+title: An Overview of Forecasting Methods for Monthly Electricity Consumption
+authors: Krstev, S.; Forcan, J.; Krneta, D.
 year: 2023
-venue: "Tehnički vjesnik (Technical Gazette)"
+venue: Technical Gazette
 odin_topics:
-  - "6.A"
-  - "6.B"
-  - "12.A"
-shorthand_tags:
-  - "/spending-forecasting"
-  - "/forecast-algorithm"
-  - "/eval-framework"
-tldr: "Compares twelve forecasting methods for monthly electricity consumption, finding neural network autoregression (MAPE 2.67%) outperforms classical time series and machine learning methods."
-problem_and_motivation: "Mid-term electricity consumption forecasting is crucial for energy companies but receives less research attention than short-term forecasting. The paper addresses the gap by systematically comparing classical statistical methods against modern machine learning approaches for monthly data. It also investigates whether machine learning provides equal accuracy to traditional time series methods when data is limited."
+  - 6.A
+  - 6.B
+  - 12.A
+  - 12.B
+  - 12.C
+  - 2.B
+  - 5.A
+  - 5.B
+tldr: Compares twelve statistical and machine learning forecasting models for monthly electricity consumption, finding neural network autoregression achieves the highest accuracy.
+problem_and_motivation: Accurate mid-term electricity load forecasting is crucial for utility operations and deregulated markets, yet research on this time horizon is limited compared to short-term forecasting. The challenge is compounded by the influence of both consumption habits and external random factors.
 approach:
-  - "Data from DSO in Bosnia and Herzegovina: monthly consumption (Jan 2000 – Mar 2020), 228 training months, 15 test months."
-  - "Classical methods: seasonal naïve, ARIMA(1,0,1)(1,1,1), ETS(A,N,A), basic structural model with Kalman filter."
-  - "Machine learning methods: linear regression, elastic net, KNN, random forest, XGBM, linear SVM, radial SVM, and neural network autoregression NNAR(3,1,6)."
-  - "Feature selection using lm (t-test significance) and PCA on 24 lagged variables."
-  - "Evaluation metric: mean absolute percentage error (MAPE); resampling via time-series cross-validation for some models."
+  - Data is monthly electricity consumption (kWh) from 60,000 metering points in Bosnia and Herzegovina from 2000 to 2020.
+  - Classical time series models include seasonal naïve, ARIMA, ETS, and structural models with Kalman filter.
+  - Machine learning methods include linear regression, elastic net, KNN, random forest, XGBM, and SVM with lm and PCA feature selection.
+  - A neural network autoregression (NNAR) with lagged values and a three-layer architecture is also applied.
+  - Model performance is evaluated using Mean Absolute Percentage Error (MAPE) on a hold-out test set of the last 15 months.
 findings:
-  - "NNAR(3,1,6) achieved the lowest MAPE of 2.67%."
-  - "num: ETS(A,N,A) gave MAPE 3.28%, ARIMA 3.36%, BSM 3.87%, seasonal naïve 4.16%."
-  - "num: Among machine learning methods, PCA+KNN performed best with MAPE 4.38%."
-  - "Classical time series methods generally outperformed most machine learning methods due to small sample size."
-  - "For specific months (e.g., April and August 2019), ETS achieved absolute relative error below 1%."
+  - "num: Neural network autoregression (NNAR) achieves the lowest MAPE of 2.67%."
+  - "num: Classical time series methods (ETS at 3.28%, ARIMA at 3.36%) outperform most machine learning models."
+  - "num: The best machine learning model, PCA+KNN, achieves a MAPE of 4.38%."
+  - "num: The seasonal naïve method serves as a baseline with a MAPE of 4.16%."
+  - Classical methods are more accurate than machine learning methods for this small sample size dataset.
 key_figures_tables:
-  - "Figure 4: Forecasts from SNAIVE, ARIMA, ETS, BSM → ETS tracks actual consumption most closely."
-  - "Figure 8: Bar chart of MAPE by method → NNAR has lowest error, seasonal naïve highest."
-  - "Table 2: Accuracy of ML methods with lm/PCA feature selection → PCA+KNN gives 4.38% MAPE."
-  - "Table 3: Monthly absolute relative errors for ETS, PCA+KNN, NNAR → NNAR has smallest error for 9 of 15 months."
+  - "Figure 4: Forecasts from classical models → ETS shows best fit visually."
+  - "Figure 5 & 6: Forecasts from ML with lm and PCA → PCA feature selection slightly improves performance."
+  - "Figure 7: Forecast from NNAR → Predictions closely follow the test data pattern."
+  - "Figure 8: MAPE comparison bar chart → NNAR has the lowest MAPE, followed by ETS."
+  - "Table 2: MAPE for ML methods → PCA+KNN is the best ML approach at 4.38%."
+  - "Table 3: Monthly absolute relative errors → NNAR is most accurate for the majority of test months."
 key_equations:
-  - equation: "None."
-    explanation: ""
+  - equation: "y'_{T+h|T} = y_{T+h-m(k+1)}"
+    explanation: "Seasonal naive forecast equals value from previous season."
+  - equation: "MAPE = 100/n * Σ(|(y_t - y'_t) / y_t|)"
+    explanation: "Mean absolute percentage error as accuracy measure."
 definitions:
+  - term: "MTLF"
+    definition: "Mid-term load forecast, for a time horizon from two weeks to two years."
   - term: "MAPE"
-    definition: "Mean absolute percentage error, measures forecast accuracy as average absolute percent deviation."
-  - term: "ARIMA"
-    definition: "Autoregressive integrated moving average, a classical time series model."
-  - term: "ETS"
-    definition: "Exponential smoothing state-space model (Error, Trend, Seasonal)."
-  - term: "BSM"
-    definition: "Basic structural model with trend, seasonal, and noise components estimated via Kalman filter."
+    definition: "Mean absolute percentage error, a measure of prediction accuracy."
+  - term: "DSO"
+    definition: "Distribution System Operator, the utility company managing the distribution network."
   - term: "NNAR"
-    definition: "Neural network autoregression, a feedforward network with lagged inputs."
+    definition: "Neural network autoregression, a model using lagged values as inputs to a neural network."
 critical_citations:
-  - "[Makridakis et al., 2018] — statistical vs ML forecasting on univariate series."
-  - "[Cerqueira et al., 2019] — sample size determines whether ML outperforms statistics."
+  - "[Makridakis et al., 2018] — Classical methods outperform ML for univariate series."
+  - "[Cerqueira et al., 2019] — Sample size influences performance of statistical vs ML methods."
+  - "[Hyndman & Athanasopoulos, 2014] — Source for time series forecasting methodologies."
 relevance:
   topics:
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      justification: "Compares forecasting algorithms (ARIMA, ETS, NNAR) applicable to spending prediction."
-    - code: "6.B"
-      name: "Spending Forecasting Algorithm"
-      justification: "Evaluates neural network autoregression and classical time series for monthly forecasting."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      justification: "Uses MAPE and cross-validation to compare model performance, directly relevant to evaluating forecasting modules."
-  contribution: "The paper provides a comparative benchmark of twelve forecasting methods, demonstrating that for small-sample monthly time series, classical methods (ETS, ARIMA) often outperform complex machine learning. This informs Odin's spending forecast module design: a hybrid approach using ETS for cold-start or low-data scenarios and NNAR when sufficient historical data accumulates. The rigorous evaluation framework (MAPE, rolling origin validation) sets a standard for assessing Odin’s predictive algorithms. Additionally, the finding that feature selection (PCA) improves ML accuracy guides preprocessing choices in the forecasting pipeline."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: "Compares multiple predictive models for a sequential time series forecasting problem."
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: "Evaluates classical and ML forecasting algorithms on monthly consumption data, a parallel to spending."
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: "Provides a structured evaluation framework using MAPE and out-of-sample testing."
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: "Provides a benchmark of algorithmic performance for forecasting modules."
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: low
+      justification: "The comparative methodology for selecting a forecasting model can inform budget recommendation evaluation."
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: "The electricity consumption data demonstrates strong seasonality, analogous to spending cycles."
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: low
+      justification: "Briefly touches on consumption habits as a factor but does not profile users."
+    - code: 5.B
+      name: Profile Dynamics and the Cold-Start Problem
+      relevance: low
+      justification: "The challenge of limited data for MTLF is analogous to the cold-start problem in profiling."
+  contribution: "This paper provides a direct comparison of twelve forecasting models, which can guide the selection of a predictive engine for Odin's spending forecast module. The finding that neural networks excel with sufficient data supports the choice of algorithm for a core Odin feature. The rigorous evaluation using MAPE and a rolling forecast origin offers a template for testing Odin's own forecasting accuracy. The conclusion that data quality and pre-processing are critical validates the emphasis on data cleaning in Odin's pipeline."
   directly_justifies:
-    - "Neural network autoregression achieves 2.67% MAPE for monthly time series forecasting."
-    - "ETS and ARIMA produce MAPE below 4% on monthly consumption data with 228 training points."
-    - "Classical statistical methods are more accurate than machine learning when sample size is small."
-    - "PCA feature selection improves MAPE for KNN from 6.34% to 4.38%."
+    - "Neural network autoregression is a high-accuracy method for monthly time series forecasting."
+    - "Classical time series models like ETS are strong baselines for data with seasonal patterns."
+    - "A rolling forecasting origin is a robust evaluation technique for time series models."
+    - "For small datasets, classical methods can outperform more complex machine learning approaches."
   limits:
-    - "Dataset is electricity consumption, not financial spending; behavioral and seasonal patterns may differ."
-    - "Univariate forecasting only; Odin requires multivariate (income, past spending, user declarations)."
-    - "Small sample size (228 months) limits generalizability to longer or more granular time series."
-  mapping_rationale: "The paper is algorithm-focused, comparing forecasting methods and evaluation metrics. Domains screened: spending forecasting (6.A, 6.B) directly apply because the techniques (ARIMA, ETS, NNAR) are identical to those used in personal finance for predicting future expenditures. Evaluation frameworks (12.A) apply due to the use of MAPE and resampling validation. Behavioral profiling (5.A) and categorization (3.A) are irrelevant as no user behavior or expense labels are analyzed. Budget recommendation (7.A) and anomaly detection (8.A) are not addressed. The paper is international (no Philippine context), so local topics (1.A-2.C) are rejected. Borderline case: mobile-first design (9.A) and data privacy (10.A) are absent. Thus only 6.A, 6.B, and 12.A are selected."
+    - "The paper focuses on a single dataset (electricity) and may not generalize to all spending patterns."
+    - "It does not address the integration of forecasting into a broader personal finance management system."
+    - "The study does not explore real-time or user-interactive forecasting, which is key for Odin."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper's primary relevance is to the 'Spending Forecasting' domain (6.A, 6.B), as its core contribution is comparing forecasting methods for monthly data. It also provides a methodological framework for 'System Evaluation' (12.A, 12.B, 12.C), specifically for comparing algorithmic performance. The paper's mention of seasonal patterns (2.B) and consumption habits (5.A, 5.B) is contextual but does not provide actionable insights for user profiling. Domains like 'Expense Categorization' (3.A), 'Budget Recommendation' (7.A), and 'Anomaly Detection' (8.A) were considered but rejected as the paper focuses solely on forecasting, not on categorization, optimization, or anomaly identification. The paper's overall relevance is high for the forecasting module, medium for evaluation methodologies, and low or contextual for other domains. This contributes primarily to the technical design and evaluation strategy for Odin's predictive components."
 limitations:
-  - "Results based on a single utility’s data; may not generalize to other regions or consumption types."
-  - "No multivariate or exogenous variables (e.g., weather, price) were included."
-  - "The paper does not compare against state-of-the-art deep learning (e.g., LSTM) beyond basic NNAR."
-  - "Small sample size may bias ML performance; acknowledged in discussion."
+  - "Small sample size (228 training points) limits generalizability to data-rich environments. [unacknowledged]"
+  - "The study does not compare hybrid models, which current research suggests may improve accuracy."
+  - "Data is limited to a single geographic region and type of consumption, which may not represent PFMS spending data."
+  - "The paper does not address computational cost, a key constraint for mobile-first systems."
+  - "It does not evaluate the explainability of the models, crucial for user trust in PFMS."
 remember_this:
-  - "NNAR achieved the lowest MAPE of 2.67% for monthly forecasting."
-  - "Classical time series methods outperformed most machine learning methods on small datasets."
-  - "MAPE below 4% is achievable with ETS and ARIMA for mid-term forecasting."
-  - "PCA feature selection improved KNN MAPE from 6.34% to 4.38%."
+  - "NNAR achieved the best forecasting accuracy with a MAPE of 2.67%."
+  - "Classical time series models like ETS are robust baselines for seasonal data."
+  - "Model performance is highly dependent on data quality and pre-processing."
+  - "For small datasets, simpler models can outperform complex neural networks."
+  - "Seasonal patterns are a critical component of monthly consumption forecasting."
 ```

@@ -1,109 +1,155 @@
 ```yaml
 paper_id: 10.20944/preprints202508.0349.v1
-designation: local
+designation: local-algorithm-specific
 title: Analysis of the Food and Income Expenditure Survey 2023 Among Filipino Households
-authors: Ama, Nathan Andrie
+authors: Ama, N. A.
 year: 2025
 venue: Preprints.org
 odin_topics:
+  - 2.A
+  - 2.B
+  - 2.D
   - 3.A
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.B
   - 6.A
-  - 6.B
   - 7.A
-  - 7.B
-shorthand_tags:
-  - /expense-categorization-frameworks
-  - /predictive-modeling
-  - /spending-forecasting
-  - /budgeting-strategies
-  - /budget-recommendation
-tldr: Analysis of 163,268 Filipino households shows food expenditure is income inelastic (elasticity 0.58), rural households spend more on food than urban, and bread and meat dominate food spending.
-problem_and_motivation: Food constitutes the largest household expenditure in the Philippines, yet understanding how income, geography, and household characteristics drive food spending patterns is limited. Existing studies lack integrated spatial and predictive analysis of food insecurity. This gap hinders targeted food security and poverty policies.
+  - 8.A
+  - 12.A
+  - 13.A
+tldr: Filipino household food spending is income-inelastic, spatially clustered, and higher in rural areas, with household size, income, and location as key nonlinear predictors of food insecurity.
+problem_and_motivation: Understanding drivers of food expenditure among Filipino households is fundamental to shaping effective social, agricultural, and economic policies, yet detailed analysis of 2023 FIES data remains limited. This study addresses the gap by using advanced statistical methods to assess how income, geography, livelihood sources, and household characteristics shape food spending patterns and food insecurity.
 approach:
-  - Data from 2023 Family Income and Expenditure Survey (FIES) of 163,268 Filipino households.
-  - Principal Component Analysis (PCA) identified dominant income sources: retail, transport, farming, and remittances.
-  - Spatial mapping at province level revealed clustering of food expenditure across regions.
-  - Mann-Whitney U test compared rural vs urban food expenditure and per capita income.
-  - Generalized Additive Model (GAM) predicted food insecurity using smooth terms for income, household size, and income sources.
-  - Log-log Engel curve estimated income elasticity of food expenditure.
-  - Beta regression modeled proportion of food spending outside home against income, urbanicity, and household size.
+  - Data from 163,268 households in the 2023 Philippine Family Income and Expenditure Survey (FIES) were analyzed using RStudio v4.5.1.
+  - Principal Component Analysis (PCA) identified dominant income sources, supported by scree plots and loading scores.
+  - Spatial clustering was evaluated via regional mapping using GADM shapefiles and visualizations.
+  - Rural-urban differences were tested using the non-parametric Mann-Whitney U test due to normality violations.
+  - A Generalized Additive Model (GAM) was employed to predict food insecurity, incorporating smooth terms for continuous predictors and a parametric term for urban-rural residence.
+  - Log-log Engel curves and a beta regression model were used to analyze income elasticity and the proportion of food spent outside the home, respectively.
 findings:
-  - "num: Income elasticity of food expenditure is 0.58, indicating food is a necessity good."
-  - "num: Rural households spend a median of ₱102,467 on food vs urban ₱80,700 (p<.001)."
-  - "num: GAM explained 27.2% deviance in food insecurity, with per capita income as strongest predictor (edf=6.71, χ²=16,981.31, p<.001)."
-  - Bread accounts for 29.5% of food spending, followed by meat (14.8%) and fish (14.2%).
-  - Spatial clustering shows Leyte and Bohol have highest food expenditure (₱120,000+).
-  - "num: Higher-income households allocate larger proportion to food outside home (β=0.72, p<.001)."
+  - num: Food expenditure has an income elasticity of 0.58, confirming food as a necessity good under Engel's Law.
+  - num: Rural households spend more on food (Median = ₱102,467) than urban households (Median = ₱80,700).
+  - PCA identified retail, transport, and agriculture as dominant income source clusters.
+  - Spatial clustering shows Leyte and Bohol have the highest mean food expenditure (≥₱120,000).
+  - The GAM explained 27.2% of deviance in food insecurity, with RPCINC as the strongest nonlinear predictor.
+  - num: The GAM achieved 90.02% accuracy and an AUC of 0.86 in predicting food insecurity.
+  - Urban residence (β = -0.51) was associated with a lower likelihood of food insecurity.
+  - Household size showed a significant nonlinear positive association with food insecurity risk.
+  - Bread (29.5%) and meat (14.8%) account for the largest shares of food expenditure.
+  - Higher-income and rural households spend a larger proportion of food outside the home.
 key_figures_tables:
-  - "Figure 1: Lorenz curve for food expenditure → Gini 0.277, more equal than income."
-  - "Figure 2: Histogram of food expenditure per member → Right-skewed, most households spend low."
-  - "Figure 3: Scree plot of PCA variances → Five components explain 55.33% of variance."
-  - "Figure 5: Spatial map of mean food expenditure → Leyte and Bohol highest spending clusters."
-  - "Figure 6: Ternary plot for bread, meat, fish → Households prefer bread and meat over fish."
-  - "Figure 7: Pie chart of food categories → Bread largest share at 29.5%."
-  - "Figure 8: GAM partial effects → Income shows sharp decline in food insecurity at low levels."
-  - "Figure 10: Engel curve log-log plot → Positive inelastic relationship."
+  - Figure 1: Lorenz curve of food expenditure → Food spending is more evenly distributed than income.
+  - Figure 2: Histogram of food expenditure per member → Distribution is right-skewed with concentration at lower values.
+  - Figure 5: Spatial map of mean food expenditure → High-spending clusters in Leyte and Bohol.
+  - Figure 8: GAM partial effect plots → Income and household size show strong nonlinear effects on food insecurity.
+  - Figure 10: Engel curve log-log plot → Positive but inelastic relationship between income and food spending.
 key_equations:
-  - equation: \log(FOOD_i) = \beta_0 + \beta_1 \log(TINC_i) + \epsilon_i
-    explanation: Income elasticity of food expenditure.
-  - equation: g(E(Y)) = \beta_0 + f_1(x_1) + \ldots + f_m(x_m)
-    explanation: Additive smooth predictors for food insecurity.
-  - equation: \text{logit}(\mu_i) = \beta_0 + \beta_1 \log(INCOME_i) + \beta_2 URB_i + \beta_3 FSIZE_i
-    explanation: Models proportion of food spent outside home.
+  - equation: U = n1 * n2 + (n1(n1+1))/2 - R1
+    explanation: Mann-Whitney U test statistic for group comparisons.
+  - equation: g(E(Y)) = β0 + f1(x1) + ... + fm(xm)
+    explanation: Generalized Additive Model with logit link function.
+  - equation: log(FOOD_i) = β0 + β1 * log(TINC_i) + ε_i
+    explanation: Log-log Engel curve for estimating income elasticity.
+  - equation: logit(μ_i) = β0 + β1 * log(INCOME_i) + β2 * URB_i + β3 * FSIZE_i
+    explanation: Beta regression model for proportion of food spent outside home.
 definitions:
   - term: FIES
-    definition: Family Income and Expenditure Survey conducted by Philippine Statistics Authority.
-  - term: PSA
-    definition: Philippine Statistics Authority.
-  - term: GAM
-    definition: Generalized Additive Model for nonlinear regression.
+    definition: Family Income and Expenditure Survey conducted by the Philippine Statistics Authority.
   - term: PCA
-    definition: Principal Component Analysis for dimensionality reduction.
+    definition: Principal Component Analysis, a dimensionality reduction technique.
+  - term: GAM
+    definition: Generalized Additive Model, a flexible regression framework for nonlinear effects.
   - term: RPCINC
-    definition: Real per capita income.
+    definition: Real per capita income, adjusted for household size.
+  - term: Engel's Law
+    definition: As income rises, the proportion of income spent on food declines.
+  - term: Beta regression
+    definition: A regression model for proportions bounded between 0 and 1.
 critical_citations:
-  - "[Valera et al., 2022] — QUAIDS model for Philippine food demand."
-  - "[Briones, 2022] — Impact of price shocks on nutrient intake."
-  - "[Bairagi et al., 2022] — Rural-urban food basket composition differences."
-  - "[Smithson & Verkuilen, 2006] — Beta regression transformation."
+  - "[Valera et al., 2022] — Found inelastic demand for rice and flexible preferences for meat and dairy."
+  - "[Briones, 2022] — Examined food price shocks and cash transfer effects on nutrient intake."
+  - "[Bairagi et al., 2022] — Identified structural shifts in rural vs. urban food basket composition."
+  - "[Cigaral, 2025] — Reported food as the largest expenditure share (57.2%) in 2021."
 relevance:
   topics:
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Highlights dominance of bread and meat in spending, reflecting local dietary patterns.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: medium
+      justification: Spatial and rural-urban spending variations suggest cyclical/geographic influences.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: Mentions spending outside home, but not explicitly tied to festive occasions.
     - code: 3.A
       name: Expense Categorization Frameworks
-      justification: Paper categorizes food into bread, meat, fish, vegetables, fruit with proportional shares.
+      relevance: medium
+      justification: Provides empirical distribution of spending across major food categories.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: References BSP survey and PSA FIES as data sources for understanding spending.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: low
+      justification: Acknowledges cross-sectional nature and lack of dietary/nutritional detail.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: PCA-based livelihood segmentation offers a proxy for behavioral profiles.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: contextual
+      justification: Segmentation by income sources can inform initial profile estimation.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Uses GAM to predict food insecurity from household characteristics.
-    - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Estimates income elasticity (0.58) for forecasting food expenditure changes.
+      relevance: high
+      justification: GAM and Engel curve analysis demonstrate predictive modeling of food spending.
     - code: 7.A
       name: Budgeting Strategies as Domain Knowledge
-      justification: Confirms Engel's law: food is a necessity, informing budget allocation.
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      justification: Provides empirical basis for recommending food budget shares based on income.
-  contribution: This paper informs Odin's spending forecasting module by providing income elasticity of food expenditure (0.58) from Philippine household data. The GAM approach for predicting food insecurity can be adapted for Odin's anomaly detection or risk profiling. The expense categorization framework (bread, meat, fish, vegetables, fruit) offers a starting point for Odin's expense categorization module. The rural-urban spending differences can guide personalized budget recommendations based on user location.
+      relevance: medium
+      justification: Income elasticity and food share patterns inform budget allocation strategies.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: Identifies spending clusters and outliers in food expenditure distribution.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Uses accuracy, AUC, and R² to evaluate GAM classification performance.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: contextual
+      justification: Food spending patterns indirectly relate to surplus available for savings.
+  contribution: "The paper provides empirical benchmarks for income elasticity of food (0.58) and food expenditure distributions that can calibrate Odin's budget recommendation module. Its GAM framework for predicting food insecurity offers a methodological template for Odin's behavioral risk assessment. The PCA-derived livelihood segmentation can inform Odin's cold-start profiling for new users. The rural-urban spending differences provide contextual data for Odin's geographic customization. The beta regression for out-of-home food spending supports Odin's expense categorization logic."
   directly_justifies:
-    - Food expenditure has income elasticity 0.58, meaning a 1% income increase leads to 0.58% more food spending.
-    - Rural households spend more on food (median ₱102,467) than urban (₱80,700) in the Philippines.
-    - Bread accounts for 29.5% of Filipino household food expenditure, the largest single category.
-    - Higher-income households allocate a larger proportion of food spending to eating outside the home.
+    - "Income elasticity of 0.58 establishes food as a necessity for Filipino households."
+    - "Rural households exhibit higher median food spending (₱102,467) than urban (₱80,700)."
+    - "Household size and income are significant nonlinear predictors of food insecurity."
+    - "Bread and meat account for 29.5% and 14.8% of food expenditure, respectively."
+    - "GAM models can achieve 90% accuracy in predicting household financial vulnerability."
   limits:
-    - The paper studies general households, not specifically young professionals, limiting direct applicability.
-    - Cross-sectional data prevents causal inference for spending behavior changes over time.
-    - Lacks granular nutritional or dietary quality measures needed for comprehensive financial health assessment.
-    - No evaluation of algorithmic modules or user interaction data.
-  mapping_rationale: The paper was screened against Odin's functional domains. It directly contributes to expense categorization (3.A) through its breakdown of food categories and spending shares. Predictive modeling (6.A) and spending forecasting (6.B) are supported by the GAM for food insecurity and Engel curve elasticity estimation. Budgeting strategies (7.A) and recommendation (7.B) are informed by Engel's law and income elasticity findings. Topics related to behavioral profiling (5.A-C) were rejected because the paper does not classify financial behaviors or profiles. Anomaly detection (8.A-B) and retention (11.A-B) were not addressed. The paper's focus on food expenditure as a necessity provides domain knowledge for budget allocation algorithms in Odin.
+    - "Cross-sectional FIES data limits causal inference on spending dynamics. [unacknowledged]"
+    - "Lack of nutritional/dietary diversity measures restricts analysis of food quality."
+    - "Provincial-level aggregation obscures intra-regional disparities."
+    - "Self-reported income may suffer from recall bias, especially in informal sectors."
+    - "No detailed evaluation of algorithmic modules for budget recommendation is provided."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes identified relevant connections. Domains flagged as relevant include Filipino Cultural Context (2.A, 2.B, 2.D), Expense Categorization (3.A), Existing Systems (4.A, 4.B), Behavioral Profiling (5.A, 5.B), Forecasting (6.A), Budget Recommendation (7.A), Anomaly Detection (8.A), and Evaluation (12.A). High relevance was assigned to 6.A due to the predictive GAM and Engel curve modeling. Medium relevance was assigned to 2.A, 2.B, 3.A, 5.A, 7.A, 12.A, and 13.A based on empirical spending patterns. Borderline cases include 2.D (spending cycles) and 7.C (constrained optimization) — the paper discusses Engel curves but not optimization, so 7.C was rejected. Domains 9.A, 9.B, 10.A, 10.B, 11.A, 11.B, and 13.C were rejected as the paper does not address mobile design, privacy, retention, or surplus mechanisms. Overall, the paper provides strong empirical grounding for Odin's core financial understanding modules."
 limitations:
-  - Cross-sectional design limits causal interpretation.
-  - Lacks dietary diversity and nutritional status measures [unacknowledged] in relation to PFMS.
-  - Spatial analysis only at province level, obscuring intra-provincial disparities.
-  - Self-reported income/expenditure may introduce recall bias.
-  - No validation of predictive model on separate test set [unacknowledged].
+  - "Cross-sectional design cannot establish causal relationships between income and food spending. [unacknowledged]"
+  - "Lack of detailed nutritional and dietary diversity measures limits holistic food security assessment. [unacknowledged]"
+  - "Spatial analysis limited to provincial aggregates, hiding intra-provincial disparities."
+  - "Reliance on self-reported data may introduce recall bias among informal sector households."
+  - "Beta regression pseudo-R² of 0.1403 indicates limited explanatory power for out-of-home food spending. [unacknowledged]"
 remember_this:
-  - Food spending elasticity is 0.58, confirming Engel's law for Filipino households.
-  - Rural households spend more on food than urban households despite lower expectations.
-  - Bread and meat dominate Filipino food budgets, accounting for over 44% of food spending.
-  - Household size and per capita income are the strongest nonlinear predictors of food insecurity.
+  - "Food expenditure income elasticity is 0.58, confirming Engel's Law for Filipino households."
+  - "Rural households spend more on food and face higher food insecurity risk."
+  - "GAM achieved 90% accuracy in predicting food insecurity from household characteristics."
+  - "Bread (29.5%) and meat (14.8%) dominate Filipino household food spending."
+  - "Household size and income exhibit strong nonlinear associations with food insecurity."
 ```

@@ -1,132 +1,138 @@
 ```yaml
 paper_id: 10.51903/jtie.v4i3.466
-designation: international
+designation: international-algorithm-specific
 title: A Constrained, Data-Driven Budgeting Framework Integrating Macro Demand Forecasting and Marketing Response Modeling
 authors: Lu, Y.; Zhou, H.; Zhang, Y.
 year: 2025
-venue: Journal of Technology Informatics and Engineering
+venue: Journal of Technology Informatics and Engineering (JTIE)
 odin_topics:
   - 6.A
   - 6.B
   - 7.A
   - 7.B
   - 7.C
+  - 7.D
+  - 12.A
   - 12.B
-shorthand_tags:
-  - /spending-forecast
-  - /forecasting-algo
-  - /budget-strategies
-  - /budget-recommendation
-  - /budget-algo
-  - /eval-algo
-tldr: Integrates macro demand forecasting, marketing response with diminishing returns, and accounting constraints into a budget optimization framework under uncertainty.
-problem_and_motivation: Budgeting must combine macroeconomic signals, channel-level marketing effectiveness, and hard accounting constraints. Existing approaches treat these components separately and ignore uncertainty, leading to suboptimal or constraint-violating allocations.
+  - 12.C
+tldr: A framework integrating macro demand forecasting, marketing response modeling, and constrained optimization allocates marketing spend under SG&A and cash-flow constraints, demonstrating that optimal budgets often fall below ratio caps due to diminishing returns and demand uncertainty.
+problem_and_motivation: Budgeting requires combining heterogeneous signals (macro demand, marketing effectiveness, accounting constraints) into a single auditable decision process. Existing approaches treat these components separately, leading to plans that violate ratio constraints under demand uncertainty. A unified pipeline linking forecasting, response modeling, and optimization is needed to produce defensible and constraint-aware recommendations.
 approach:
-  - Uses quarterly PCE components (durable, nondurable, services) from FRED as macro demand proxy.
-  - Compares seasonal naïve, SARIMAX, gradient boosting, and VAR in rolling backtest (2018Q1-2025Q3).
-  - Estimates marketing response from Advertising dataset (TV, radio, newspaper) using OLS, ridge, lasso, GBR, and Hill saturation model.
-  - Calibrates financial constraints (gross margin, SG&A ratio, cash flow) from Apple Inc. FY2025 Form 10-K.
-  - Solves constrained portfolio optimization with Monte Carlo evaluation over budget allocations.
+  - Quarterly Personal Consumption Expenditures components from FRED (2010Q1-2025Q3) serve as macro demand proxy.
+  - Four forecasting models are compared in a rolling backtest: seasonal naïve, SARIMAX, gradient boosting, and multivariate VAR.
+  - Marketing response is estimated from the Advertising dataset (TV, radio, newspaper spend) using OLS, ridge, lasso, gradient boosting, and a Hill saturation model.
+  - Constraints (gross margin, SG&A ratio, operating cash-flow coverage) are calibrated from Apple Inc.'s FY2025 Form 10-K.
+  - Budget allocation is solved via grid search over channel shares and budget utilization, evaluated with 500 Monte Carlo scenarios under demand uncertainty.
+  - Risk aversion is incorporated via a mean-risk objective with parameter λ to trade off expected profit and volatility.
 findings:
-  - num: Multivariate VAR improves aggregate demand accuracy with ≈2.85% MAPE.
-  - num: Newspaper spend has near-zero marginal ROI; radio saturates quickly, TV saturates slowly.
-  - Optimal marketing spend lies below the SG&A ratio cap due to diminishing returns.
-  - num: Spending at the deterministic cap yields ≈40% violation probability under demand uncertainty.
-  - num: Risk-aversion parameter λ=2 reduces budget utilization from 0.97% to 0.60% of revenue.
-  - Hill model provides interpretable saturation curves while gradient boosting gives best predictive fit (CV_RMSE=0.661).
-  - Channel shares (25% TV, 75% radio) remain stable across ±5% macro scenarios.
-  - Tighter marketing cap (1.0% of revenue) reduces SG&A satisfaction rate to 94.8%.
-  - Higher assumed marketing effectiveness (5% revenue lift) pushes spend to cap but drops satisfaction to 59.8%.
-  - Operating profit objective uses gross margin minus non-marketing expenses (≈33.5% of incremental revenue).
+  - "num: Multivariate VAR achieves ≈2.85% MAPE for aggregate demand, outperforming seasonal naïve (≈6.06% MAPE)."
+  - "num: The Hill saturation model identifies newspaper spend as having near-zero marginal return (coefficient ≈0)."
+  - "num: The risk-neutral optimizer allocates 25% to TV and 75% to radio, spending ≈0.97% of revenue, below the 1.5% SG&A cap."
+  - "num: Spending at the deterministic cap would violate the SG&A constraint in ≈40% of scenarios due to revenue uncertainty, while the optimized spend maintains 100% satisfaction."
+  - Marketing response curves exhibit strong diminishing returns, with radio saturating quickly and TV providing moderate marginal returns.
 key_figures_tables:
-  - Table 7: Demand forecasting accuracy by category → VAR lowest RMSE for durables and services.
-  - Table 8: Total demand proxy accuracy → VAR achieves 2.85% MAPE, improving over seasonal naïve.
-  - Figure 2: Total demand actual vs VAR forecasts → errors widen around 2020 but recover.
-  - Figure 4: Hill-model response curves → diminishing returns for TV and radio, flat for newspaper.
-  - Figure 5: Marginal response curves → radio highest initial ROI, TV moderate, newspaper near zero.
-  - Table 9: Baseline optimal budget (λ=0) → $1,016M spend, 25% TV, 75% radio, $5,735M incremental revenue.
-  - Table 11: Risk-aversion sensitivity → λ≥1 reduces spend to $938M, slightly lower profit and std.
+  - "Table 7: Category-level forecast accuracy shows VAR achieves lowest RMSE for durables (97.24) and services (731.35) → multivariate models improve over seasonal baseline."
+  - "Table 4: Marketing model comparison shows gradient boosting best predictive fit (CV_RMSE=0.661), but Hill model provides interpretable saturation curves."
+  - "Figure 5: Hill-model marginal response curves show radio has highest marginal ROI at low spend, newspaper near-zero → allocate initial dollars to radio, then diversify."
+  - "Figure 6: Profit-risk frontier under demand uncertainty shows trade-off between expected profit and volatility, with risk-neutral point highlighted."
+  - "Table 12: Sensitivity to marketing cap shows optimizer spend unchanged for caps ≥1.5% due to diminishing returns binding before cap."
 key_equations:
-  - equation: "\\Pi(b) = (g - o)(R + \\Delta R(b)) - \\sum b_i"
-    explanation: Operating profit after incremental revenue and marketing spend.
-  - equation: "\\sum b_i \\leq \\kappa R"
-    explanation: SG&A constraint limits marketing spend to fixed revenue share.
-  - equation: "\\mathbb{P}(B \\leq \\kappa R) \\geq 1 - \\delta"
-    explanation: Chance constraint for ratio-based cap under uncertain revenue.
-  - equation: "Sales(s) = \\beta_0 + \\sum_i \\beta_i h(s_i; \\alpha_i, \\gamma_i)"
-    explanation: Hill saturation model for diminishing marketing returns.
-  - equation: "\\hat{R}_{t+1} = \\rho \\frac{\\hat{P}_{t+1}}{4}"
-    explanation: Maps macro demand forecast to quarterly firm revenue.
+  - equation: "Sales(s) = β0 + Σ_i β_i h(s_i; α_i, γ_i)"
+    explanation: Hill saturation function for diminishing returns per channel.
+  - equation: "Π(b) = (g - o)(R + ΔR(b)) - Σ_i b_i"
+    explanation: Operating profit equals margin on incremental revenue minus marketing spend.
+  - equation: "ℙ(B ≤ κ R) ≥ 1 - δ"
+    explanation: Chance constraint bounds violation probability for ratio-based caps.
 definitions:
-  - term: FP&A
-    definition: Financial Planning and Analysis, budgeting and forecasting function.
   - term: PCE
-    definition: Personal Consumption Expenditures, a measure of consumer spending.
-  - term: VAR
-    definition: Vector Autoregression, multivariate time series model.
-  - term: SG&A
-    definition: Selling, General and Administrative expenses.
-  - term: Hill function
-    definition: Saturation curve modeling diminishing returns in marketing response.
+    definition: Personal Consumption Expenditures
+  - term: FRED
+    definition: Federal Reserve Economic Data
   - term: SARIMAX
-    definition: Seasonal ARIMA with exogenous regressors.
-  - term: SAAR
-    definition: Seasonally Adjusted Annual Rate, quarterly data scaled to annual.
-  - term: CFO
-    definition: Cash Flow from Operations.
+    definition: Seasonal Autoregressive Integrated Moving Average with eXogenous regressors
+  - term: VAR
+    definition: Vector Autoregression
+  - term: SG&A
+    definition: Selling, General and Administrative expenses
+  - term: FP&A
+    definition: Financial Planning and Analysis
+  - term: MMM
+    definition: Marketing Mix Modeling
+  - term: ROI
+    definition: Return on Investment
   - term: MAPE
-    definition: Mean Absolute Percentage Error, scale-free accuracy metric.
-  - term: Chance constraint
-    definition: Constraint that must hold with a minimum probability.
+    definition: Mean Absolute Percentage Error
+  - term: RMSE
+    definition: Root Mean Squared Error
+  - term: CFO
+    definition: Cash Flow from Operations
 critical_citations:
-  - "[Box et al., 2015] — Foundational time series forecasting methods."
-  - "[Hanssens et al., 2001] — Market response models with saturation."
-  - "[Markowitz, 1952] — Mean-variance optimization for portfolio allocation."
-  - "[Bertsimas & Sim, 2004] — Robust optimization framework for uncertainty."
-  - "[James et al., 2021] — Source of Advertising dataset and linear models."
+  - "[Box et al., 2015] — Foundational time series forecasting reference."
+  - "[Hanssens et al., 2001] — Marketing response and saturation modeling."
+  - "[Markowitz, 1952] — Mean-variance optimization for risk-return trade-off."
+  - "[Bertsimas & Sim, 2004] — Robust optimization under uncertainty."
+  - "[James et al., 2021] — Source of Advertising dataset and regression methods."
 relevance:
   topics:
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Compares multiple forecasting models for demand, applicable to spending prediction.
+      relevance: high
+      justification: Compares SARIMAX, VAR, and gradient boosting for sequential demand forecasting.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Rolling backtest of VAR and gradient boosting for macro demand forecasting.
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Evaluates rolling-window forecasting algorithms with explicit accuracy metrics.
     - code: 7.A
       name: Budgeting Strategies as Domain Knowledge
-      justification: Introduces chance constraints and buffers for ratio-based budget caps.
+      relevance: high
+      justification: Directly addresses FP&A budgeting with constrained resource allocation.
     - code: 7.B
       name: Budget Recommendation in Personal Finance Systems
-      justification: End-to-end constrained optimization for marketing spend allocation.
+      relevance: high
+      justification: Provides an optimization framework that outputs recommended budget allocations.
     - code: 7.C
-      name: Budget Recommendation Algorithm
-      justification: Grid search with Monte Carlo evaluation under demand uncertainty.
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: high
+      justification: Solves a constrained portfolio problem with SG&A and cash-flow guardrails.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: medium
+      justification: Discusses chance constraints and buffers but does not implement a formal reduction hierarchy.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Uses rolling backtests and Monte Carlo evaluation to assess forecast and recommendation performance.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: Compares multiple forecasting and response models with RMSE, MAPE, R².
-  contribution: This paper provides a framework for budget recommendation under uncertainty that combines demand forecasting, response modeling, and accounting constraints. For Odin's budget recommendation module (7.B), it demonstrates how to treat spending caps as feasibility boundaries rather than targets, using chance constraints to buffer against revenue volatility. The rolling backtest methodology (12.B) offers a template for evaluating forecasting algorithms on spending data. The use of saturation functions (Hill model) for diminishing returns directly informs how Odin might model non-linear effects of budget changes on financial outcomes.
+      relevance: medium
+      justification: Compares forecasting and response models using cross-validation and RMSE/MAPE.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: medium
+      justification: Evaluates budget recommendations via constraint satisfaction rates and profit-risk trade-offs.
+  contribution: For Odin's forecasting module (6.A/6.B), the paper provides a comparison of SARIMAX, VAR, and gradient boosting on quarterly time series, demonstrating that multivariate models improve accuracy over seasonal baselines. For the budget recommendation module (7.A/7.B/7.C), the paper offers a constrained optimization framework with explicit accounting constraints (SG&A ratio, cash-flow coverage) and shows that optimal budgets may fall below caps due to diminishing returns and demand uncertainty. For evaluation (12.A/12.B/12.C), the paper's rolling backtest protocol and Monte Carlo constraint-satisfaction analysis provide a template for assessing model performance and recommendation robustness. The paper's use of audited financial statements (Apple 10-K) to calibrate constraints also informs how Odin might incorporate user-specific financial ratios.
   directly_justifies:
-    - "Optimal budgets may be below ratio caps due to diminishing returns."
-    - "Spending at a deterministic cap yields 40% violation probability under demand uncertainty."
-    - "Multivariate forecasting improves aggregate demand accuracy over univariate baselines."
-    - "Risk-averse optimization reduces budget utilization to create constraint buffers."
-    - "Channel shares remain stable across macro scenarios, simplifying execution."
+    - "Multivariate VAR forecasting improves aggregate demand accuracy over seasonal naïve (≈2.85% vs 6.06% MAPE)."
+    - "Marketing response curves exhibit strong diminishing returns; newspaper spend shows near-zero marginal ROI."
+    - "Optimal budget may be below a ratio cap because spending at the cap violates constraints under demand uncertainty in ≈40% of scenarios."
+    - "A risk-neutral optimizer allocates 25% to TV and 75% to radio under a 1.5% SG&A cap."
+    - "Sensitivity to marketing effectiveness shows that higher ROI leads to cap-level spending, reducing SG&A satisfaction to ≈60%."
   limits:
-    - "Data sources are not internally consistent (macro PCE vs small cross-sectional marketing dataset)."
-    - "Marketing response assumed contemporaneous; no adstock or carryover effects modeled."
-    - "Constraint calibration uses Apple Inc. data, which may not generalize to other firms."
-    - "Normalization mapping response units to dollars is stylized, not empirically estimated."
-  mapping_rationale: This paper was screened against Odin's functional domains. Budget recommendation (domain 7) is the primary match because the paper proposes a constrained optimization framework for allocating spend under accounting constraints. Spending forecasting (domain 6) applies due to the demand forecasting module comparing multiple time series models. System evaluation (domain 12) applies from the rolling backtest and cross-validation comparisons. Behavioral profiling (5), anomaly detection (8), categorization (3), mobile design (9), privacy (10), retention (11), and savings/debt (13) are not addressed. Selected codes 6.A, 6.B, 7.A, 7.B, 7.C, 12.B capture the full methodological contribution.
+    - "Data sources (PCE, Advertising.csv, Apple 10-K) are not internally consistent; sales-to-revenue normalization is stylized."
+    - "Marketing response is treated as contemporaneous; real advertising carryover effects are omitted."
+    - "The Advertising dataset is cross-sectional and small (N=200), limiting generalizability of response curves."
+    - "Forecast evaluation uses latest-vintage PCE data, which may overstate real-time performance."
+    - "Fiscal vs calendar quarter alignment is abstracted away."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The following domains were flagged as relevant: Spending Forecasting (6.A, 6.B) with high relevance because the paper compares four forecasting models (SARIMAX, VAR, gradient boosting) on sequential time series data and reports accuracy; Budget Recommendation (7.A, 7.B, 7.C) with high relevance because the paper directly addresses budget allocation optimization under constraints and evaluates recommended budgets; System Evaluation (12.A, 12.B, 12.C) with medium relevance because the paper uses rolling backtests, cross-validation, and Monte Carlo evaluation to assess models and recommendations. Topic 7.D (Infeasibility Handling) was assigned medium relevance because the paper discusses chance constraints and buffers but does not implement a formal reduction hierarchy. The following domains were considered and rejected: Filipino Cultural Context (2.A-2.D) because the paper is set in a generic corporate FP&A context with no Philippine focus; Expense Categorization (3.A-3.C) because it deals with marketing channels rather than personal expense categories; Behavioral Profiling (5.A-5.C) because no user behavior profiling is present; Mobile-First Design (9.A-9.B) and Data Privacy (10.A-10.B) are absent; Retention (11.A-11.B) is not addressed; Savings and Debt Management (13.A-13.C) is not relevant. Overall, the paper provides high relevance for forecasting and budget optimization modules, and medium relevance for evaluation methodologies.
 limitations:
-  - "Macro PCE and Advertising datasets are not internally consistent; response-to-dollar normalization is arbitrary. [acknowledged]"
-  - "No adstock or carryover effects in marketing response, limiting dynamic budgeting. [acknowledged]"
-  - "Constraint calibration uses a single firm (Apple); results may not transfer to other sectors. [acknowledged]"
-  - "Grid search scales poorly with more than three channels. [unacknowledged]"
-  - "Assumes constant market share parameter ρ, which may drift over time. [unacknowledged]"
+  - "Data sources (PCE, Advertising.csv, Apple 10-K) are not internally consistent; sales-to-revenue normalization is stylized."
+  - "Marketing response is treated as contemporaneous; real advertising carryover effects are omitted."
+  - "The Advertising dataset is cross-sectional and small (N=200), limiting generalizability of response curves."
+  - "Forecast evaluation uses latest-vintage PCE data, which may overstate real-time performance."
+  - "Fiscal vs calendar quarter alignment is abstracted away."
 remember_this:
-  - "Optimal budgets often sit below ratio caps due to diminishing returns."
-  - "VAR forecasting achieved 2.85% MAPE for aggregate demand proxy."
-  - "Newspaper spend showed near-zero marginal ROI in the Advertising dataset."
-  - "Spending at the deterministic cap violates constraints 40% of the time under uncertainty."
-  - "Risk aversion reduces budget utilization to create safety buffers against revenue shortfalls."
+  - "num: Multivariate VAR achieves ≈2.85% MAPE for aggregate demand forecasting."
+  - "num: Optimal spend is ≈0.97% of revenue, below the 1.5% SG&A cap due to diminishing returns."
+  - "num: Spending at the deterministic cap violates SG&A constraints in ≈40% of scenarios under demand uncertainty."
+  - "Marketing response curves show radio has highest marginal ROI at low spend, newspaper near-zero."
 ```

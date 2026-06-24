@@ -6,111 +6,107 @@ authors: Balcazar-Paiva, E. S.; Haro-Sarango, A. F.; Villanueva-Calderón, J. A.
 year: 2026
 venue: International Journal of Financial Studies
 odin_topics:
-  - 4.A
   - 4.B
   - 5.A
   - 10.A
   - 10.B
   - 11.A
   - 12.A
-shorthand_tags:
-  - /existing-systems
-  - /gaps
-  - /behavioral-profiles
-  - /data-privacy
-  - /user-trust
-  - /engagement
-  - /evaluation-frameworks
-tldr: AI integration in financial education enables personalization and virtual tutoring but lacks longitudinal evidence and standardized metrics, with ethical concerns over privacy and bias.
-problem_and_motivation: The convergence of AI and financial education lacks integrative synthesis despite rapid growth. Existing literature is fragmented without unifying frameworks articulating pedagogical principles with technical capabilities. Ethical and social implications remain underexplored, especially in vulnerable settings.
+tldr: A systematic review of AI in financial education finds AI enables personalization and learning gains, but sustained behavioral impact remains unproven and ethical risks require robust governance.
+problem_and_motivation: The literature on AI and financial education is fragmented, lacking integrative synthesis and robust theoretical frameworks that connect pedagogy, technology, and governance. Evidence on sustained behavioral change is scarce, and ethical implications in vulnerable settings are underexplored. This review addresses these gaps by systematically mapping applications, theoretical foundations, and ethical tensions.
 approach:
-  - Systematic review following PRISMA 2020 guidelines.
-  - Searched Scopus, ScienceDirect, and Taylor & Francis (388 initial records, 50 included).
-  - Combined bibliometric mapping (VOSviewer) with NLP sentiment analysis.
-  - Used three sentiment methods: VADER, TextBlob, and XLM-RoBERTa transformer.
-  - Computed continuous sentiment_index and text metrics (length, lexical diversity, energy).
-  - Quality appraisal adapted to heterogeneous study designs.
+  - A PRISMA-2020 systematic review was conducted across Scopus, ScienceDirect, and Taylor & Francis, retrieving 388 records and including 50 empirical studies after screening.
+  - Bibliometric mapping with VOSviewer generated keyword co-occurrence networks to identify thematic structure and temporal evolution of the field.
+  - A computational NLP pipeline applied VADER, TextBlob, and a multilingual transformer (XLM-RoBERTa) to abstract-level sentiment, polarity, and subjectivity analysis.
+  - Sentence-aware chunking and token-weighted aggregation ensured robust transformer scoring for long abstracts.
+  - Text metrics (length, lexical diversity, punctuation intensity) were correlated with sentiment signals to examine framing and stylistic patterns.
+  - Term extraction with bilingual stopword filtering identified dominant unigrams and bigrams to contextualize sentiment and topic clusters.
 findings:
-  - "num: 388 initial records reduced to 50 included studies."
-  - AI acts as central organizing axis connecting education, finance, and health.
-  - "num: Sentiment analysis shows predominantly neutral technical tone with slight positive tilt (sentiment_index mean 0.049)."
-  - Longer abstracts correlate with more methodological caution and negativity.
-  - Higher lexical diversity associates with opportunity-oriented framing.
-  - Field lacks longitudinal studies, standardized metrics, and cultural diversity.
+  - num: The sentiment_index averaged 0.049, indicating a slightly positive tone, but with wide variability (interquartile range -0.0155 to 0.0749).
+  - num: Transformer-based classification showed neutrality dominates (mean neutral probability 0.539), with positive (0.255) and negative (0.206) components.
+  - Longer abstracts are associated with higher negativity and lower sentiment_index, reflecting greater methodological caution and inclusion of limitations.
+  - Higher lexical diversity correlates with positive framing and opportunity-oriented language, independent of abstract length.
+  - Keyword networks position AI as the central hub connecting financial literacy, education, health, management, and generative AI, with financial literacy emerging as a recent growth node.
+  - The field is shifting from pandemic-driven digitalization toward generative AI and conversational systems for personalized tutoring and decision support.
+  - Critical gaps include lack of longitudinal controlled studies, standardized metrics, model transparency, and geographic/cultural diversity in research.
 key_figures_tables:
-  - "Figure 2: Keyword co-occurrence map shows AI as central hub connecting education, finance, health → AI integrates multiple domains."
-  - "Figure 3: Temporal overlay shows shift from pandemic-era themes to generative AI and financial literacy → Field evolving toward conversational AI."
-  - "Figure 4: Sentiment histogram shows most abstracts cluster near zero polarity → Neutral technical register dominates."
-  - "Figure 5: Correlation matrix shows sentiment_index aligns with transformer positivity, length correlates with negativity → Abstract length biases sentiment interpretation."
-  - "Table 1: Summary statistics report mean sentiment_index 0.049, mean word count 218 → Quantitative framing of discourse."
+  - Figure 1: PRISMA flow diagram from 388 records to 50 included studies → rigorous selection process ensures traceable evidence base.
+  - Figure 2: Keyword co-occurrence map showing AI as central hub connecting education, finance, health, and generative AI → AI functions as interdisciplinary organizing axis.
+  - Figure 3: Temporal overlay reveals shift from COVID-19/health terms to ChatGPT, LLMs, and financial literacy → field evolving toward generative AI and educational applications.
+  - Figure 4: Histogram of sentiment_index shows neutral mass centered near zero with slight positive tilt → discourse is technical and measured, not emotionally charged.
+  - Figure 5: Correlation matrix links sentiment, length, and lexical diversity → longer abstracts carry more caution; lexical diversity signals positive framing.
 key_equations:
   - equation: None.
     explanation: ""
 definitions:
   - term: AI
-    definition: Artificial Intelligence, technologies performing tasks associated with human intelligence.
+    definition: Artificial Intelligence; constellation of technologies performing tasks traditionally requiring human intelligence.
   - term: NLP
-    definition: Natural Language Processing, computational analysis of human language.
+    definition: Natural Language Processing; computational methods for analyzing and generating human language.
   - term: PRISMA
-    definition: Preferred Reporting Items for Systematic Reviews and Meta-Analyses.
+    definition: Preferred Reporting Items for Systematic Reviews and Meta-Analyses; guideline for transparent review reporting.
+  - term: LLM
+    definition: Large Language Model; deep learning model trained on vast text data for language generation and understanding.
   - term: VADER
-    definition: Valence Aware Dictionary and sEntiment Reasoner, lexicon-based sentiment tool.
+    definition: Valence Aware Dictionary and sEntiment Reasoner; lexicon-based sentiment analysis tool.
   - term: XLM-RoBERTa
-    definition: Cross-lingual RoBERTa transformer model for multilingual sentiment.
-  - term: SDG
-    definition: Sustainable Development Goals (UN).
+    definition: Cross-lingual RoBERTa; multilingual transformer model for sentiment classification.
 critical_citations:
-  - "[Zhu, 2025] — Defines machine learning for financial literacy detection."
-  - "[Leal & Oliveira, 2024] — Introduces hypernudging in AI financial behavior."
-  - "[Wahyudi et al., 2025] — Notes scarcity of longitudinal studies."
-  - "[AL-Ghuribi et al., 2025] — Emphasizes privacy and bias as structural conditions."
+  - "[Zhu, 2025] — Positions machine learning as key to unlocking financial literacy and advancing personal finance research."
+  - "[Leal & Oliveira, 2024] — Defines hypernudging and ethical frameworks for AI in financial behavior."
+  - "[AL-Ghuribi et al., 2025] — Emphasizes privacy, fairness, and bias as structural conditions for responsible AI."
+  - "[Wahyudi et al., 2025] — Highlights scarcity of longitudinal studies and standardized metrics as major gaps."
 relevance:
   topics:
-    - code: 4.A
-      name: Landscape of Existing Personal Finance Systems
-      justification: Systematically maps AI tools applied to financial education.
     - code: 4.B
       name: Limitations and Gaps in Existing Systems
-      justification: Identifies lack of longitudinal studies and standardized metrics.
+      relevance: contextual
+      justification: "Identifies research gaps (longitudinal, metrics) that inform system evaluation, but does not directly analyze PFMS systems."
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: Discusses AI-assisted nudging and behavioral personalization.
+      relevance: medium
+      justification: "Discusses AI-assisted nudging and hyper-personalization, supporting behavioral profiling for adaptive financial education."
     - code: 10.A
       name: Data Privacy and Security in Personal Finance Systems
-      justification: Highlights privacy, fairness, and algorithmic bias as structural conditions.
+      relevance: high
+      justification: "Explicitly calls privacy a structural condition for responsible AI adoption, directly relevant to data governance."
     - code: 10.B
       name: User Trust in Personal Finance Systems
-      justification: Reviews transparency and trust determinants in robo-advisors.
+      relevance: medium
+      justification: "Transparency and trust are highlighted as determinants of adoption and effective use of automated financial technologies."
     - code: 11.A
       name: Engagement Dynamics in Personal Finance Applications
-      justification: Covers chatbots, recommender systems, and user interaction.
+      relevance: medium
+      justification: "Personalization and virtual tutoring are linked to immediate gains in comprehension and motivation, supporting engagement design."
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      justification: Provides methodological template combining bibliometrics and NLP sentiment analysis.
-  contribution: "This systematic review offers Odin a comprehensive landscape of AI applications in financial education, directly informing the existing systems analysis (4.A). It identifies critical gaps including the shortage of longitudinal studies, lack of standardized metrics, and limited cultural diversity, which Odin must address in its gap analysis (4.B). The review's emphasis on privacy, fairness, transparency, and algorithmic bias provides actionable requirements for Odin's data privacy (10.A) and user trust (10.B) modules. Its methodological combination of bibliometric mapping and NLP sentiment analysis offers a transferable evaluation framework for Odin's system assessment (12.A). The discussion of behavioral AI and nudging supports Odin's behavioral profiling considerations (5.A)."
+      relevance: medium
+      justification: "Calls for standardized metrics, longitudinal designs, and controlled studies, directly relevant to evaluating Odin's modules."
+  contribution: "This systematic review provides a comprehensive evidence synthesis that justifies Odin's adoption of AI for personalization and behavioral nudging, as it shows AI can improve comprehension and motivation. Its emphasis on privacy, fairness, and algorithmic bias informs Odin's data governance, transparency, and accountability requirements. The identification of evaluation gaps—lack of longitudinal studies and standardized metrics—directly supports Odin's need for robust impact assessment for its budget recommendation, savings, and anomaly detection modules. The review's call for cultural and linguistic adaptation reinforces Odin's localization for Filipino young professionals, ensuring contextual relevance."
   directly_justifies:
-    - "AI enables personalization and virtual tutoring in financial education."
-    - "Evidence of sustained behavioral change from AI financial education remains nascent."
-    - "Privacy, fairness, and algorithmic bias are structural conditions for responsible adoption."
-    - "Longitudinal and controlled studies are scarce in AI financial education research."
-    - "Sentiment analysis of academic abstracts can reveal discursive framing biases."
+    - "AI can personalize financial education and improve comprehension and motivation, but evidence of sustained behavioral change remains nascent."
+    - "Privacy, fairness, and algorithmic bias are structural conditions for responsible adoption in financial education systems."
+    - "Transparency is a decisive determinant of adoption and trust in automated financial technologies."
+    - "The field lacks longitudinal controlled studies and standardized metrics to measure lasting financial behavior change."
+    - "Digital financial literacy requires critical competencies to evaluate AI-generated information and preserve agency over decisions."
   limits:
-    - "Systematic review does not provide causal evidence of AI effectiveness."
-    - "Sentiment analysis applied only to abstracts, not full texts."
-    - "Geographic diversity limited by English/Spanish database search."
-    - "No meta-analysis due to methodological heterogeneity of included studies."
-  mapping_rationale: "The paper was screened against Odin's functional domains. Landscape (4.A) and gaps (4.B) directly apply as the paper systematically maps existing AI tools and identifies research gaps. Behavioral profiling (5.A) was selected because the paper discusses AI-assisted nudging and behavioral personalization, though not classification algorithms. Data privacy (10.A) and user trust (10.B) are strongly supported by sections on ethics, regulation, bias, and transparency. Engagement (11.A) applies via discussion of user interaction with chatbots and recommender systems. Evaluation frameworks (12.A) apply due to the paper's methodological contribution of combining bibliometrics and NLP sentiment analysis. Rejected topics include expense categorization (3.A/B), spending forecasting (6.A/B), budget recommendation (7.A/B/C), anomaly detection (8.A/B), mobile-first design (9.A/B), and savings/debt management (13.A/B) as the paper does not address these specific PFMS modules."
+    - "The review synthesizes existing research but does not provide primary empirical evidence on effectiveness of specific AI tools."
+    - "The NLP sentiment analysis is applied to abstracts only, not full texts, and does not measure pedagogical effectiveness or behavioral outcomes."
+    - "The search was restricted to three databases, English and Spanish languages, and excluded gray literature, potentially missing relevant studies."
+    - "No meta-analysis was possible due to methodological heterogeneity and absence of comparable effect-size reporting across included studies."
+    - "The transformer-based sentiment model was trained on social media text, which may not fully capture academic writing conventions."
+  mapping_rationale: "All 12 functional domains and their associated topic codes were systematically scanned against the paper's content. The domain 'Behavioral Profiling & Classification' was flagged as relevant because the paper extensively discusses AI-assisted nudging, personalization, and detection of financial literacy deficits, leading to selection of 5.A (medium). 'Data Privacy & User Trust' was selected with high relevance (10.A) and medium (10.B) because privacy, fairness, and transparency are repeatedly emphasized as structural conditions. 'User Retention & Engagement' (11.A) was flagged medium for its discussion of motivation and personalization. 'System Evaluation' (12.A) was selected medium due to explicit calls for standardized metrics and longitudinal designs. 'Existing Systems & Gaps' (4.B) was included as contextual because the paper identifies research gaps that inform evaluation but does not analyze PFMS systems. Borderline cases: the paper's mention of cultural context (e.g., Latin America) touches 2.A but was rejected because it does not address Filipino-specific practices; its discussion of financial behavior broadly touches 1.C but lacks specificity to Filipino young professionals. Domains related to expense categorization (3.A-C), spending forecasting (6.A-B), budgeting (7.A-D), anomaly detection (8.A-C), mobile design (9.A-B), and savings/debt (13.A-C) were considered and rejected because the paper does not address these operational functions. Overall, the paper provides strong background justification for AI personalization, ethics, and evaluation, but limited direct evidence for specific PFMS modules."
 limitations:
-  - "Search restricted to three databases, missing gray literature and manual reference searching [acknowledged]."
-  - "Sentiment analysis tools (VADER, TextBlob) less reliable in Spanish [acknowledged]."
-  - "Lack of standardized metrics across studies prevents meta-analysis [acknowledged]."
-  - "Transformer model trained on social media text may not fully generalize to academic writing [acknowledged]."
-  - "No direct measurement of pedagogical effectiveness from sentiment analysis [acknowledged]."
-  - "Exclusion of non-English/non-Spanish literature may introduce language bias [unacknowledged]."
+  - "The review is restricted to three databases and excludes gray literature, potentially missing relevant studies not indexed in these sources. [unacknowledged]"
+  - "Language bias toward English and Spanish may limit generalizability to non-Western contexts. [unacknowledged]"
+  - "No manual reference searching was performed, which could have captured additional relevant studies. [unacknowledged]"
+  - "The NLP sentiment analysis does not directly estimate pedagogical effectiveness; it captures discursive framing rather than causal impact. [acknowledged]"
+  - "The transformer model was trained on social media text, which may affect calibration on academic abstracts despite chunking mitigation. [acknowledged]"
+  - "Methodological heterogeneity across the 50 included studies prevented meta-analysis and limited statistical assessment of publication bias. [acknowledged]"
 remember_this:
-  - "AI in financial education shows neutral technical tone with slight optimism."
-  - "Longer abstracts include more caution about ethics and risks."
-  - "Sentiment_index mean 0.049 indicates mild positive framing."
-  - "Field lacks longitudinal evidence of sustained financial behavior change."
-  - "Privacy and bias are structural conditions, not afterthoughts."
+  - "The sentiment index averaged 0.049, indicating a slightly positive tone but with wide variability across abstracts."
+  - "Longer abstracts tend to include more methodological caution, lowering sentiment scores."
+  - "Greater lexical diversity signals opportunity-oriented framing, while lower diversity correlates with risk-focused language."
+  - "The field is shifting from pandemic-driven digitalization toward generative AI and conversational systems for financial education."
+  - "Privacy, fairness, and bias are not secondary concerns but structural conditions for responsible AI adoption in finance."
 ```

@@ -1,95 +1,138 @@
 ```yaml
 paper_id: 10.63282/3050-9262.IJAIDSML-V6I1P118
-designation: algorithm-specific
+designation: international-algorithm-specific
 title: Credit Card Customer Profiling Using Self-Supervised Representation Learning on Multi-Source Financial Data
 authors: Yachamaneni, T.; Kotadiya, U.; Arora, A. S.
 year: 2025
 venue: International Journal of Artificial Intelligence, Data Science, and Machine Learning
 odin_topics:
   - 5.A
+  - 5.B
   - 5.C
   - 6.A
-  - 11.B
+  - 6.B
+  - 8.A
+  - 8.B
+  - 12.A
   - 12.B
-shorthand_tags:
-  - /behavioral-profiling
-  - /ssl-classification
-  - /predictive-modeling-finance
-  - /churn-retention
-  - /algorithm-evaluation
-tldr: Self-supervised representation learning on multi-source financial data (transactions, demographics, credit, web activity) outperforms K-Means and XGBoost in customer profiling, credit risk prediction, and churn detection.
-problem_and_motivation: Traditional supervised customer profiling requires costly labeled data and fails to leverage unlabeled multi-source data. Static feature engineering cannot capture temporal dynamics or generalize across behavioral shifts. There is a need for scalable, privacy-friendly profiling that extracts rich representations from heterogeneous financial data without manual labels.
+tldr: Self-supervised learning on multi-source financial data creates robust customer representations that outperform supervised models in profiling, credit risk, and churn prediction.
+problem_and_motivation: Traditional supervised customer profiling requires costly labeled data and fails to capture complex patterns from heterogeneous financial sources. The emergence of self-supervised learning enables label-efficient representation learning from unlabeled data, addressing privacy and scalability concerns.
 approach:
-  - A multi-source dataset of 100,000 customers with transaction logs, demographics, credit bureau reports, and web activity was collected.
-  - Separate encoders handle each modality: temporal encoders for sequences, feedforward layers for static features, and embeddings for categorical variables.
-  - SSL pretext tasks include masked attribute prediction, temporal order prediction, and augmented view prediction.
-  - Contrastive learning maximizes cosine similarity between augmented views of the same customer while minimizing similarity to others in the batch.
-  - A Transformer encoder with self-attention processes sequential data to capture long-range dependencies.
-  - Feature aggregation via attention mechanisms fuses multi-modal representations into a unified customer embedding.
-  - Downstream heads perform clustering (K-Means), credit risk classification, and churn prediction.
-  - Evaluation uses Silhouette score, AUC, F1, and ablation studies to measure module importance.
+  - Integrates transaction logs, demographics, credit bureau reports, and web activity from 100,000 records into a single model.
+  - Uses separate encoders per modality, including temporal encoders for sequences and feedforward layers for static features.
+  - Employs a transformer encoder with self-attention to capture temporal dependencies in sequential data.
+  - Trains on pretext tasks: masked attribute forecasting, temporal order prediction, and augmented view prediction.
+  - Applies contrastive learning to maximize similarity between augmented views and minimize similarity between different instances.
 findings:
-  - "num: Proposed SSL achieves Silhouette score of 0.56, compared to K-Means (0.35) and XGBoost (0.41)."
-  - "num: SSL attains AUC of 0.91 for credit risk prediction, outperforming XGBoost (0.84)."
-  - "num: SSL reaches F1 of 0.81 for churn prediction, versus XGBoost (0.69)."
-  - "num: Removing temporal encoding causes a 4.2% drop in AUC, the largest decrease among ablated components."
-  - "num: Removing web activity features reduces AUC by 3.8%, and removing pretext tasks reduces AUC by 2.7%."
-  - SSL learns coherent customer clusters without labeled data, enabling interpretable segmentation.
-  - Contrastive learning on multi-source data improves generalization over single-source or hand-crafted features.
+  - "num: The proposed SSL model achieved a Silhouette Score of 0.56, compared to 0.35 for K-Means and 0.41 for XGBoost."
+  - "num: The model attained an AUC of 0.91 for credit risk prediction, versus 0.71 for K-Means and 0.84 for XGBoost."
+  - "num: For churn prediction, the SSL model achieved an F1-score of 0.81, outperforming K-Means (0.58) and XGBoost (0.69)."
+  - "num: Removing temporal encoding caused the largest performance drop of 4.2% in AUC, underscoring its importance."
+  - "num: Web activity features contributed a 3.8% AUC drop when removed, while pretext tasks contributed a 2.7% drop."
 key_figures_tables:
-  - "Table 1: Quantitative comparison of baseline K-Means, XGBoost, and proposed SSL → SSL outperforms on all metrics."
-  - "Figure 9: Bar chart comparing Silhouette, AUC, and F1 → SSL highest across all three."
-  - "Figure 10: Ablation study showing AUC drop when removing temporal encoding, web activity, or pretext task → temporal encoding is most critical."
+  - "Figure 1: Credit Card Fraud Detection System → conceptual framework for fraud scoring."
+  - "Figure 2: Emergence of Self-Supervised Learning → SSL principles and benefits for financial data."
+  - "Figure 3: Challenges in Traditional Approaches → data labeling, isolated sources, limited generalization."
+  - "Figure 4: System Architecture → end-to-end pipeline from preprocessing to downstream tasks."
+  - "Figure 5: Data Sources → transaction logs, demographics, credit reports, web activity."
+  - "Figure 6: Feature Engineering → temporal encoding, normalization, categorical embeddings."
+  - "Figure 7: Self-Supervised Learning Design → contrastive objective and pretext tasks."
+  - "Figure 8: Model Architecture → transformer encoder, MLP head, clustering layer."
+  - "Table 1: Quantitative Results → performance comparison across all methods and metrics."
+  - "Table 2: Ablation Study Results → AUC drop from removing each module."
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
   - term: SSL
-    definition: Self-Supervised Learning, a paradigm that learns representations from unlabeled data via pretext tasks.
-  - term: Contrastive learning
-    definition: A technique that pulls positive pairs together and pushes negative pairs apart in embedding space.
+    definition: Self-Supervised Learning - a paradigm that learns representations from unlabeled data using pretext tasks.
   - term: AUC
-    definition: Area Under the ROC Curve, a threshold-independent measure of ranking quality.
+    definition: Area Under the Receiver Operating Characteristic Curve - a threshold-free measure of classification performance.
+  - term: PFMS
+    definition: Personal Finance Management System - a software application for managing personal finances.
+  - term: K-Means
+    definition: A clustering algorithm that partitions data into K distinct, non-overlapping subgroups.
+  - term: XGBoost
+    definition: Extreme Gradient Boosting - an optimized distributed gradient boosting library for supervised learning.
 critical_citations:
-  - "[Chen et al., 2020] — momentum contrastive learning baseline for visual representations."
-  - "[Devlin et al., 2019] — masked language modeling pretext task adapted for tabular data."
-  - "[Chen & Guestrin, 2016] — XGBoost used as supervised baseline for comparison."
+  - "[Chen et al., 2020] — foundation for contrastive learning (SimCLR)."
+  - "[Devlin et al., 2019] — BERT-style masked prediction pretext task inspiration."
+  - "[MacQueen, 1967] — original K-Means algorithm used as baseline."
+  - "[Chen & Guestrin, 2016] — XGBoost baseline implementation."
 relevance:
   topics:
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: "Paper profiles credit card customers via SSL on multi-source behavior data."
+      relevance: high
+      justification: Directly proposes customer profiling using SSL to identify behavioral patterns from financial data.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: high
+      justification: SSL addresses cold-start by learning representations from unlabeled data without requiring initial labels.
     - code: 5.C
-      name: Financial Behavioral Profile Classification Algorithm
-      justification: "Proposes contrastive learning and transformer-based algorithm for profile classification."
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Compares SSL against supervised baselines (XGBoost) for classification of customer profiles.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: "Evaluates credit risk and churn prediction as downstream tasks."
-    - code: 11.B
-      name: Retention Mechanisms and Engagement Design
-      justification: "Churn prediction directly informs retention strategies in PFMS."
+      relevance: medium
+      justification: Demonstrates predictive modeling for credit risk and churn, relevant to Odin's forecasting needs.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: medium
+      justification: Uses temporal encoding and transformer architectures suitable for sequential spending data.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: medium
+      justification: The SSL framework can be adapted for anomaly detection through learned representations.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: Provides a basis for anomaly detection via contrastive learning and reconstruction-based pretext tasks.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Uses standard evaluation metrics (Silhouette, AUC, F1) applicable to Odin's evaluation needs.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: "Uses ablation studies and clustering metrics to assess algorithmic components."
-  contribution: "Odin's behavioral profiling module can adopt self-supervised learning to classify users without expensive labeled data. The spending forecasting module could benefit from temporal encoding of transaction sequences as demonstrated by the 4.2% AUC drop when removed. Churn prediction via SSL directly supports Odin's retention mechanisms, enabling proactive interventions. The evaluation framework can incorporate ablation studies to validate which algorithmic modules (e.g., temporal encoding, web activity features) most impact performance."
+      relevance: medium
+      justification: Conducts ablation studies to evaluate the contribution of each module, relevant to Odin's modular evaluation.
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: General customer profiling framework not specific to Filipino young professionals.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Reviews traditional and supervised approaches but does not survey PFMS specifically.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: contextual
+      justification: Identifies general limitations of supervised learning but not specific to PFMS gaps.
+  contribution: "The self-supervised learning framework provides a label-efficient approach for customer profiling that can be adapted for Odin's behavioral profiling module (5.A, 5.C). The multi-modal integration strategy informs Odin's data aggregation design across heterogeneous financial sources. The ablation study's emphasis on temporal encoding directly supports Odin's forecasting module (6.B) by showing the critical role of sequential patterns. The evaluation metrics (Silhouette, AUC, F1) provide a template for Odin's system evaluation framework (12.B). The demonstrated outperformance of SSL over supervised methods justifies Odin's adoption of self-supervised techniques for cold-start scenarios (5.B)."
   directly_justifies:
-    - "Self-supervised learning on multi-source financial data achieves 0.91 AUC for credit risk prediction."
-    - "Removing temporal encoding reduces predictive performance by 4.2%, indicating its critical role."
-    - "SSL-based representations yield Silhouette score 0.56, demonstrating coherent customer clusters."
-    - "Web activity features contribute a 3.8% AUC drop, justifying their inclusion in profiling."
+    - "Self-supervised learning can generate robust customer profiles from unlabeled financial data without manual annotation."
+    - "Integrating temporal encoding significantly improves predictive performance for financial behavior modeling."
+    - "Web activity logs provide valuable behavioral signals that enhance profiling accuracy beyond transactional data."
+    - "Contrastive learning objectives yield more coherent and separable customer clusters than traditional clustering."
+    - "The transformer architecture effectively captures long-range dependencies in sequential spending data."
   limits:
-    - "Dataset comes from a single private bank, limiting generalizability to other institutions or populations. [unacknowledged]"
-    - "Interpretability of SSL-generated embeddings remains low, which is critical for regulated financial decisions (acknowledged in gaps)."
-    - "Model complexity and computational cost (two A100 GPUs) may exceed practical constraints for smaller PFMS deployments. [unacknowledged]"
-  mapping_rationale: "The paper directly addresses behavioral profiling (5.A) via a self-supervised classification algorithm (5.C). Predictive modeling for credit risk and churn falls under 6.A, and churn prediction specifically supports retention mechanisms (11.B). The experimental methodology includes ablation studies and clustering metrics, aligning with evaluation of algorithmic modules (12.B). Topics such as spending forecasting (6.B), anomaly detection (8.A), expense categorization (3.A/3.B), mobile design (9.A/9.B), and data privacy (10.A/10.B) are not covered. Cold-start problem (5.B) is not discussed, so that code was rejected. Borderline case of user trust (10.B) is mentioned only in labeling privacy concerns but not as a core finding, thus excluded."
+    - "Paper uses a proprietary dataset from a private banking company, limiting reproducibility."
+    - "The study focuses on credit card customers, not general PFMS users, limiting direct applicability."
+    - "Interpretability of SSL representations remains a challenge for regulated financial applications."
+    - "No explicit handling of infeasibility or budget constraints, which are core to Odin's recommendation module."
+    - "Evaluation does not include user satisfaction or engagement metrics, only algorithmic performance."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant for Behavioral Profiling & Classification (5.A, 5.B, 5.C) because it directly proposes a novel SSL-based customer profiling framework with empirical validation. It shows medium relevance for Spending Forecasting (6.A, 6.B) due to its temporal modeling components, and for Anomaly Detection (8.A, 8.B) through its representation learning approach suitable for outlier detection. System Evaluation (12.A, 12.B) was rated medium because it provides a comprehensive evaluation setup with ablation studies and standard metrics. Borderline cases included 2.B (Seasonal Patterns) and 2.D (Spending Cycles), which the paper does not explicitly address; these were rejected as purely contextual. The domains of Filipino Cultural Context, Expense Categorization, Budget Recommendation, Mobile-First Design, Data Privacy, User Retention, and Savings/Debt Management were considered and rejected as they are not addressed by the paper. Overall, the paper is highly relevant to Odin's core algorithmic modules for profiling and forecasting."
 limitations:
-  - "Single private bank dataset may not generalize across diverse Filipino young professionals. [unacknowledged]"
-  - "Interpretability of SSL representations is not addressed, limiting regulatory acceptance. [acknowledged as gap]"
-  - "No comparison to other SSL methods (e.g., SimCLR, MoCo) on financial data. [unacknowledged]"
-  - "Computational requirements (2×A100 GPUs) are high for real-time mobile deployment. [unacknowledged]"
+  - "The dataset is from a single private bank, which may not generalize to the Philippine financial context."
+  - "Interpretability of SSL-generated representations is not addressed, a key requirement for regulated PFMS."
+  - "Does not address real-time deployment considerations or latency requirements for mobile-first applications."
+  - "The paper does not discuss infeasibility handling or constrained optimization, central to Odin's budget recommendation."
+  - "Privacy-preserving aspects of the SSL framework are not explored, despite multi-source data integration. [unacknowledged]"
 remember_this:
-  - "SSL outperforms XGBoost by 7 points in AUC for credit risk prediction."
-  - "Temporal encoding is the most critical component, causing a 4.2% drop."
-  - "Multi-source data including web activity boosts profiling accuracy by 3.8%."
-  - "Self-supervised learning eliminates need for expensive labeled financial data."
+  - "SSL achieved 0.91 AUC for credit risk, outperforming XGBoost's 0.84."
+  - "Temporal encoding contributed the largest performance gain of 4.2%."
+  - "Multi-source data integration significantly improves customer profiling quality."
+  - "Contrastive learning produces more coherent and separable customer clusters."
+  - "Self-supervised learning reduces dependence on costly labeled financial data."
 ```

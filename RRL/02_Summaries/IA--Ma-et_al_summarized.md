@@ -2,103 +2,133 @@
 paper_id: 10.3390/en16155809
 designation: international
 title: Review of Family-Level Short-Term Load Forecasting and Its Application in Household Energy Management System
-authors: Ma, P.; Cui, S.; Chen, M.; Zhou, S.; Wang, K.
+authors: "Ma, P.; Cui, S.; Chen, M.; Zhou, S.; Wang, K."
 year: 2023
 venue: Energies
 odin_topics:
   - 6.A
   - 6.B
+  - 7.A
+  - 7.B
+  - 9.A
+  - 12.A
   - 12.B
-shorthand_tags:
-  - /predictive-modeling
-  - /spending-forecasting
-  - /algorithm-evaluation
-tldr: Deep learning methods (LSTM, CNN, hybrid) improve short-term household load forecasting accuracy; probabilistic forecasting addresses uncertainty; these enable home energy management system scheduling.
-problem_and_motivation: Household electricity consumption is rising and lacks consistent patterns due to human behavior, making system-level forecasting methods inadequate. Accurate short-term load forecasting is essential for home energy management systems to optimize energy use and reduce costs. Existing methods have limitations in accuracy, uncertainty handling, and real-time adaptability.
+  - 12.C
+  - 13.A
+  - 13.B
+tldr: Reviews deep learning and probabilistic methods for short-term household load forecasting, emphasizing their role in home energy management system scheduling and optimization.
+problem_and_motivation: Individual household loads lack clear consistent patterns due to human behavior and weather variability, making system-level forecasting methods inadequate for household-level applications. Accurate short-term load forecasting is essential for effective home energy management and demand response, yet current approaches face challenges in accuracy, uncertainty quantification, and computational efficiency.
 approach:
-  - Surveys deep learning models (LSTM, CNN, hybrid) for load forecasting with emphasis on sequence learning and feature extraction.
-  - Analyzes feature extraction techniques including wavelet decomposition, principal component analysis, and mutual information.
-  - Discusses adaptive online learning methods to handle dynamic load patterns and concept drift.
-  - Reviews probabilistic forecasting methods such as quantile regression, Bayesian deep learning, and scenario-based approaches.
-  - Explores ultra-short-term and appliance-level bottom-up forecasting using LSTM and Kalman filters.
-  - Examines application of load forecasting in home energy management systems for electricity scheduling and demand response.
-  - Identifies challenges: data quality, overfitting, generalization, uncertainty, and model interpretability.
-  - Proposes future directions including multi-source data fusion, model integration, multi-task learning, and improved interpretability.
+  - Surveys deep learning architectures including LSTM, CNN, and hybrid LSTM-CNN models for household load forecasting.
+  - Reviews feature extraction techniques such as wavelet decomposition, PCA, and mutual information to improve prediction accuracy.
+  - Examines adaptive learning methods including online learning and transfer learning for dynamic load pattern changes.
+  - Discusses probabilistic forecasting methods using quantile regression and Bayesian deep learning to quantify uncertainty.
+  - Explores bottom-up appliance-level forecasting and ultra-short-term (hourly) load prediction challenges.
+  - Analyzes the integration of load forecasting with HEMS optimization and scheduling.
 findings:
-  - "num: SVR-LSTM hybrid achieved correlation coefficient 0.9901, outperforming traditional SVR and LSTM."
-  - "num: CNNGRU with attention mechanism reached 92.06% accuracy in small-range load prediction and reduced prediction time by 75%."
-  - "num: Principal component analysis reduced 12 weather factors to 3 dimensions with 93.93% cumulative contribution rate."
-  - Bottom-up forecasting by aggregating appliance-level predictions improves accuracy over direct household-level forecasting.
-  - Probabilistic forecasting captures load uncertainty but traditional statistical methods struggle with complex nonlinear problems.
-  - Ultra-short-term forecasting often misses consumption peaks despite accurate switch state prediction for appliances.
-  - Hybrid models combining LSTM and CNN learn both short-term and long-term dependencies better than single models.
-  - Adaptive online learning enables models to update with new data, addressing concept drift in household consumption patterns.
+  - LSTM networks effectively capture long-term dependencies in sequential load data, outperforming traditional methods like ARIMA and SVR.
+  - num: Hybrid LSTM-CNN models achieve 92.06% accuracy for small-range load prediction and reduce prediction time by 75%.
+  - Probabilistic forecasting provides comprehensive uncertainty information essential for robust HEMS decision-making.
+  - Bottom-up appliance-level forecasting improves accuracy over direct household-level prediction but faces efficiency challenges.
+  - Adaptive online learning enables models to capture dynamic changes in consumption patterns, improving real-world performance.
+  - Load prediction errors increase HEMS uncertainty and affect scheduling performance, requiring efficient forecasting modules.
 key_figures_tables:
-  - "Figure 1: LSTM block structure with memory cell and gates → LSTM solves gradient problems in time series."
-  - "Figure 2: LSTM-based forecasting framework → LSTM outperforms several advanced machine learning algorithms."
-  - "Table 1: Comparison of classical time series, LSTM, and CNN models → Each model has distinct trade-offs between simplicity and handling nonlinearity."
-  - "Figure 5: Probabilistic load forecasting frameworks → Probabilistic methods model uncertainty essential for stochastic decision-making."
-  - "Figure 6: Appliance-level deep learning framework → Bottom-up forecasting via device disaggregation reduces error."
+  - Figure 1: LSTM block structure and unrolled sequential architecture → illustrates memory cell and gate mechanisms.
+  - Figure 2: LSTM-based load forecasting framework → shows workflow from input to prediction.
+  - Figure 3: Weekly consumption load of a clothes washer → demonstrates appliance load variability across days.
+  - Figure 4: Forecasting framework with preprocessing and feature extraction → highlights DWT and CRT for feature engineering.
+  - Figure 5: Probabilistic and conditional probabilistic load forecasting frameworks → shows uncertainty quantification approach.
+  - Figure 6: Appliance-level deep learning forecasting framework → illustrates bottom-up prediction architecture.
+  - Figure 7: Load prediction results for different appliances → shows data-driven model performance on device-level peaks.
+  - Figure 8: Home energy management system schematic → depicts HEMS components and data flow.
+  - Table 1: Comparison of forecasting models → summarizes advantages and shortcomings of classical, LSTM, and CNN.
+  - Table 2: Smart meter data segment → shows active power, reactive power, voltage, current, and total load samples.
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
-  - term: "HEMS"
-    definition: "Home Energy Management System, a hub connecting users and grid for energy optimization."
-  - term: "STLF"
-    definition: "Short-Term Load Forecasting, typically hours to days ahead."
-  - term: "LSTM"
-    definition: "Long Short-Term Memory, a recurrent neural network that avoids gradient problems."
-  - term: "CNN"
-    definition: "Convolutional Neural Network, used for automatic feature extraction from time series."
-  - term: "RNN"
-    definition: "Recurrent Neural Network, designed for sequence data."
-  - term: "EMD"
-    definition: "Empirical Mode Decomposition, transforms nonlinear data into stationary components."
-  - term: "SVR"
-    definition: "Support Vector Regression, a machine learning method for regression."
-  - term: "ARIMA"
-    definition: "Autoregressive Integrated Moving Average, a classical time series model."
-  - term: "PCA"
-    definition: "Principal Component Analysis, a dimensionality reduction technique."
-  - term: "NILM"
-    definition: "Non-Intrusive Load Monitoring, disaggregates total load into appliance-level usage."
-  - term: "AMI"
-    definition: "Advanced Metering Infrastructure, smart meter systems for granular data collection."
+  - term: HEMS
+    definition: Home Energy Management System; optimizes household energy use through scheduling and demand response.
+  - term: STLF
+    definition: Short-Term Load Forecasting; predicts electricity demand for time horizons from hours to days ahead.
+  - term: LSTM
+    definition: Long Short-Term Memory; recurrent neural network architecture for sequence learning with memory cells.
+  - term: CNN
+    definition: Convolutional Neural Network; deep learning model for feature extraction from spatial or temporal data.
+  - term: NILM
+    definition: Non-Intrusive Load Monitoring; disaggregates total household load into appliance-level consumption.
+  - term: AMI
+    definition: Advanced Metering Infrastructure; smart metering system for real-time energy data collection.
 critical_citations:
-  - "[Hochreiter and Schmidhuber, 1997] — Introduced LSTM solving gradient problems in RNNs."
-  - "[Hong and Fan, 2016] — Tutorial review on probabilistic electric load forecasting methods."
+  - "[Hochreiter and Schmidhuber, 1997] — foundational LSTM architecture for sequence learning."
+  - "[Kong et al., 2023] — LSTM outperforms other ML algorithms for load prediction."
+  - "[Zheng et al., 2019] — Kalman filter bottom-up approach outperforms LSTM in efficiency."
 relevance:
   topics:
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      justification: "Reviews deep learning models for forecasting household electricity consumption, analogous to spending forecasting."
-    - code: "6.B"
-      name: "Spending Forecasting Algorithm"
-      justification: "Compares LSTM, CNN, hybrid, and probabilistic methods for short-term load prediction."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      justification: "Discusses accuracy metrics, model comparisons, and evaluation challenges for forecasting algorithms."
-  contribution: "This review informs Odin's spending forecasting module by benchmarking deep learning approaches (LSTM, CNN, hybrid) for short-term prediction from irregular household data. It highlights the need for probabilistic forecasting to capture uncertainty, which can improve budget recommendation robustness. The bottom-up appliance-level forecasting approach suggests a design where Odin could disaggregate spending categories for better accuracy. Adaptive online learning methods enable models to update with new data, addressing cold-start and concept drift. The paper also identifies evaluation metrics and common pitfalls that guide module testing."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: "Comprehensive review of predictive models for household load forecasting."
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: "Detailed analysis of LSTM, CNN, and hybrid algorithms for time-series load data."
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: "Discusses scheduling and optimization strategies informed by load forecasts."
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: medium
+      justification: "HEMS scheduling uses forecasts for cost optimization and demand response."
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: contextual
+      justification: "Edge computing and real-time forecasting imply mobile-friendly system requirements."
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: "Systematically evaluates forecasting models using accuracy metrics like R, MAE, and RMSE."
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: "Compares performance of LSTM, CNN, ARIMA, SVR, and hybrid models."
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: medium
+      justification: "Discusses evaluation of forecasting accuracy and its impact on HEMS scheduling performance."
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: low
+      justification: "HEMS optimization indirectly supports energy cost savings and efficiency."
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: low
+      justification: "Load forecasting supports cost reduction but does not directly address debt."
+  contribution: "This review paper directly informs Odin's forecasting module (Topic 6.A/6.B) by surveying state-of-the-art deep learning methods for time-series prediction. It supports the evaluation framework (Topic 12.A/12.B) by documenting accuracy metrics and comparative benchmarks. The discussion of HEMS scheduling (Topic 7.A/7.B) provides domain knowledge for budget recommendation systems. The analysis of adaptive learning and probabilistic forecasting offers insights for handling uncertainty and cold-start scenarios (Topic 8.C/6.A). The bottom-up forecasting framework (Topic 4.A/4.B) provides a methodological foundation for appliance-level prediction in personal finance applications."
   directly_justifies:
-    - "LSTM networks effectively capture long-term dependencies in sequential household load data."
-    - "Hybrid CNN-LSTM models improve accuracy over single-model approaches for irregular time series."
-    - "Probabilistic forecasting provides uncertainty intervals essential for robust decision-making under variability."
-    - "Bottom-up forecasting by appliance disaggregation reduces prediction error compared to direct household-level forecasting."
+    - "LSTM networks are effective for load prediction due to memory units and forget gates."
+    - "Probabilistic forecasting quantifies uncertainty essential for robust optimization in HEMS."
+    - "Hybrid LSTM-CNN models improve accuracy by capturing both local and long-term patterns."
+    - "Bottom-up appliance-level forecasting significantly reduces prediction errors compared to direct household-level forecasting."
+    - "Adaptive online learning enables models to dynamically adjust to changing consumption patterns."
   limits:
-    - "The paper is a review, not an empirical study, so no direct validation on PFMS data."
-    - "Focuses on electricity load, not general financial spending, though methods may transfer."
-    - "Deep learning models require large training data, which may be unavailable for new users (cold-start)."
-  mapping_rationale: "The paper focuses on short-term load forecasting using deep learning and probabilistic methods, which directly map to Odin's spending forecasting domain (6.A, 6.B). The review compares algorithm performance and evaluation metrics, supporting module 12.B for evaluating algorithmic modules. Topics related to behavioral profiling (5.A), budgeting (7.A), anomaly detection (8.A), and mobile design (9.A) are not addressed because the paper does not discuss user classification, budget rules, outlier detection, or UX. Borderline case: uncertainty handling could relate to anomaly detection, but the paper treats it as forecasting confidence intervals, not identifying anomalous transactions, so it is excluded."
+    - "Review paper does not present original experimental validation or novel algorithm contributions."
+    - "Focus on electricity load forecasting, not directly on personal finance spending data."
+    - "Discussion of HEMS scheduling does not address user-defined budget constraints or allocation optimization."
+    - "No specific analysis of Philippine or Southeast Asian consumption patterns."
+    - "Limited treatment of mobile-first design and user experience considerations."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to Spending Forecasting (Domain 6) and System Evaluation (Domain 12) because it comprehensively reviews prediction algorithms (6.A, 6.B) and evaluation methodologies (12.A, 12.B, 12.C). Medium relevance was assigned to Budget Recommendation (Domain 7) due to the HEMS scheduling and optimization discussion, and to Mobile-First Design (Domain 9) for edge computing implications. Low relevance was noted for Savings & Debt Management (Domain 13) as energy cost reduction is a secondary benefit. Borderline cases included the overlap between 6.B (algorithmic forecasting) and 12.B (algorithm evaluation) which were both selected as high relevance. Domains such as Filipino Cultural Context (2), Expense Categorization (3), Behavioral Profiling (5), Anomaly Detection (8), Data Privacy (10), and User Retention (11) were considered and rejected as the paper does not address behavioral patterns, spending categories, privacy, or engagement. Overall, this paper provides strong foundational knowledge for forecasting and evaluation modules but is not directly applicable to cultural or behavioral aspects."
 limitations:
-  - "Data quality issues (missing values, noise) affect prediction accuracy."
-  - "Deep learning models risk overfitting, especially with small datasets."
-  - "Real-time performance and uncertainty from user behavior remain challenging."
-  - "Model interpretability is rarely addressed; deep learning is treated as a black box."
+  - "Limited discussion of real-time implementation constraints and computational costs of deep learning models."
+  - "Does not address integration with user-defined financial constraints or spending goals."
+  - "Focus on electricity data, not financial transaction data, limiting direct applicability to PFMS."
+  - "Lack of analysis on forecasting performance in resource-constrained mobile environments."
+  - "No validation of methods on Philippine or Southeast Asian household data. [unacknowledged]"
 remember_this:
-  - "LSTM with empirical mode decomposition improves household load prediction accuracy."
-  - "Hybrid CNN-LSTM models outperform single models on irregular time series data."
-  - "Probabilistic forecasting captures uncertainty missed by point forecasts."
-  - "Bottom-up appliance-level forecasting reduces error compared to direct household prediction."
-  - "Adaptive online learning addresses concept drift in consumption patterns."
+  - "LSTM networks effectively model long-term dependencies in sequential load data."
+  - "Hybrid LSTM-CNN models achieve 92.06% accuracy with 75% time reduction for small-range loads."
+  - "Probabilistic forecasting provides essential uncertainty quantification for robust HEMS scheduling."
+  - "Bottom-up appliance-level forecasting reduces errors but requires efficient lightweight algorithms."
+  - "Adaptive online learning enables models to capture dynamic changes in consumption patterns."
 ```

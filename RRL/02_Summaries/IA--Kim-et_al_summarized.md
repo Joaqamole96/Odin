@@ -8,99 +8,128 @@ venue: Artificial Intelligence Review
 odin_topics:
   - 6.A
   - 6.B
-  - 8.A
-  - 8.B
   - 12.A
   - 12.B
-shorthand_tags:
-  - /spending-forecasting
-  - /anomaly-detection
-  - /evaluation-frameworks
-tldr: A comprehensive survey of deep learning for time series forecasting covering MLPs, CNNs, RNNs, GNNs, Transformers, diffusion models, foundation models, and Mamba, with analysis of open challenges.
-problem_and_motivation: Time series forecasting is critical for decision-making but faces challenges from data diversity and complexity. Existing surveys lack comprehensive coverage of recent architectural diversification and open challenges. This survey provides a timely synthesis of model evolution and persistent problems.
+  - 8.A
+  - 8.B
+  - 13.A
+  - 13.B
+  - 10.A
+  - 2.D
+tldr: A comprehensive survey of time series forecasting models, analyzing architectural diversity and open challenges.
+problem_and_motivation: Time series forecasting is critical for decision-making but faces challenges from data complexity and limited model generalizability. Existing surveys lack timely analysis of the increasing architectural diversity and in-depth treatment of open challenges. This survey addresses these gaps to guide researchers.
 approach:
-  - Reviewed over 200 papers from top AI conferences and arXiv preprints.
-  - Categorized models by architecture: statistical, ML, fundamental DL, Transformer, non-Transformer, diffusion, foundation, Mamba.
-  - Analyzed open challenges: channel dependency, distribution shift, causality, feature extraction, interpretability, and spatio-temporal forecasting.
-  - Provided taxonomy tables (e.g., Table 5, Table 7, Table 9, Table 10) and comparative analysis.
+  - The paper surveys historical and contemporary deep learning models for time series forecasting.
+  - Models are categorized into fundamental architectures (MLPs, RNNs, CNNs, GNNs) and advanced approaches (Transformers, Mamba, diffusion, foundation models).
+  - It analyzes the evolution of models, highlighting the renaissance in architectural diversity and the rise of hybrid and non-transformer-based models.
+  - The survey provides an issue-driven analysis of key open challenges, including channel dependency, distribution shift, causality, feature extraction, model interpretability, and spatio-temporal forecasting.
 findings:
-  - The number of top-tier AI conference papers on time series forecasting has exploded in recent years.
-  - num: Simple linear models (LTSF-Linear) can outperform Transformers on long-term forecasting.
-  - Patching technique (PatchTST) enables Transformers to achieve state-of-the-art by preserving locality.
-  - Channel independence (CI) strategy shows greater robustness to distribution shift than channel dependence (CD).
-  - Mamba-based models offer linear-time complexity and selective memory, challenging Transformer hegemony.
-  - Diffusion models enable probabilistic forecasting by modeling uncertainty through conditional generation.
+  - num: The survey reviews the explosive growth in time series forecasting research, noting increasing model diversity.
+  - num: Simple linear models (LTSF-Linear) have been shown to outperform some Transformer-based models, challenging the dominance of Transformers for TSF.
+  - Channel-independent strategies can outperform channel-dependent ones on datasets with distribution shifts, highlighting a robustness trade-off.
+  - The field is experiencing a "renaissance" of architectural exploration, with no single architecture dominating.
+  - Key open challenges like distribution shift and channel correlation require dedicated handling methods.
 key_figures_tables:
-  - Figure 2: Number of TSF papers at top AI/ML conferences → Explosive growth over time.
-  - Figure 3: Evolution of TSF models from statistical to Transformer to diverse architectures → Renaissance in modeling.
-  - Table 5: Taxonomy of Transformer improvements (patching, cross-dimension, exogenous variables) → Key techniques.
-  - Table 10: Taxonomy of Mamba models for TSF → Emerging architecture with channel correlation learning.
+  - None.
 key_equations:
-  - equation: "\\hat{x}_{t+1:t+h} = f(x_{t-p:t})"
-    explanation: Univariate forecasting using past p+1 steps.
-  - equation: "\\hat{X}_{t+1:t+h} = f(X_{t-p:t})"
-    explanation: Multivariate forecasting with vector inputs.
+  - equation: x̂_{t+1:t+h} = f(x_{t-p:t})
+    explanation: Univariate forecasting using past p time steps.
+  - equation: X̂_{t+1:t+h} = f(X_{t-p:t})
+    explanation: Multivariate forecasting with multiple variables.
+  - equation: MAE = (1/n)∑|y_t - ŷ_t|
+    explanation: Mean Absolute Error for deterministic forecasts.
+  - equation: MSE = (1/n)∑(y_t - ŷ_t)^2
+    explanation: Mean Squared Error for deterministic forecasts.
 definitions:
-  - term: TSF
-    definition: Time series forecasting, predicting future values from sequential historical data.
-  - term: LTSF
-    definition: Long-term time series forecasting with horizons of months or years.
-  - term: MTSF
-    definition: Multivariate time series forecasting using multiple variables simultaneously.
-  - term: CI
-    definition: Channel independent strategy, treating each variable separately.
-  - term: CD
-    definition: Channel dependent strategy, modeling inter-variable correlations.
-  - term: SSM
-    definition: State space model, a mathematical framework for dynamic systems.
+  - term: Time Series Forecasting (TSF)
+    definition: Predicting future values based on sequential historical data.
+  - term: Multivariate Time Series Forecasting (MTSF)
+    definition: Forecasting using predictions from multiple variables simultaneously.
+  - term: Long-term Time Series Forecasting (LTSF)
+    definition: Forecasting for distant future horizons, often several months or years.
+  - term: Channel Independent (CI) Strategy
+    definition: Modeling each variable (channel) independently without learning inter-variable correlations.
+  - term: Channel Dependent (CD) Strategy
+    definition: Modeling and learning the correlations and dependencies between different variables.
+  - term: Distribution Shift
+    definition: Changes in the statistical properties of data over time, posing generalization challenges.
   - term: Mamba
-    definition: A selective state space model with linear-time sequence modeling.
+    definition: A state space model (SSM) architecture with a selective mechanism for efficient sequence modeling.
+  - term: PatchTST
+    definition: A Transformer model that divides time series into patches for improved performance.
+  - term: iTransformer
+    definition: An inverted Transformer that applies attention across variables instead of time steps.
+  - term: LTSF-Linear
+    definition: A simple linear model that outperformed some complex Transformers for time series forecasting.
 critical_citations:
-  - "[Vaswani et al., 2017] — Introduced Transformer with self-attention."
-  - "[Hochreiter & Schmidhuber, 1997] — LSTM for long-term dependencies."
-  - "[Box et al., 1970] — ARIMA statistical forecasting foundation."
-  - "[Zeng et al., 2023] — LTSF-Linear showing linear models outperform Transformers."
+  - "[Zeng et al., 2023] — Showed simple linear models can outperform Transformers."
+  - "[Vaswani et al., 2017] — Introduced the Transformer architecture."
+  - "[Gu and Dao, 2024] — Introduced the Mamba architecture."
+  - "[Nie et al., 2023] — Introduced the PatchTST model and channel independence."
+  - "[Liu et al., 2024c] — Introduced the iTransformer model and channel dependence."
 relevance:
   topics:
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Survey covers deep learning models for time series forecasting applicable to spending prediction.
+      relevance: medium
+      justification: Surveys general predictive modeling approaches for time series, including Transformers and MLPs.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Detailed analysis of Transformer, Mamba, and diffusion models for long-term forecasting.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      justification: Discusses RobustTSF for anomaly-aware forecasting and distribution shift handling.
-    - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Reviews methods for handling anomalies in time series (constant, missing, Gaussian).
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: medium
+      justification: Reviews numerous forecasting algorithms (RNN, CNN, Transformer, etc.) applicable to spending data.
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      justification: Section 2.4 provides comprehensive evaluation metrics (MAE, MSE, CRPS, etc.).
+      relevance: low
+      justification: Provides an overview of evaluation metrics for time series, which can inform evaluation design in PFMS.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: Compares model performance on benchmark datasets like Monash archive.
-  contribution: "Odin's spending forecasting module can leverage Transformer-based models like PatchTST and iTransformer, which use patching and cross-dimension attention to improve long-term prediction accuracy. The anomaly detection module can adopt diffusion-based conditional models (e.g., TimeGrad, CSDI) to provide probabilistic forecasts and uncertainty estimates, enhancing detection of irregular spending patterns. System evaluation can be standardized using metrics from Section 2.4, including MAE, MSE, and CRPS, and benchmark datasets from the Monash archive. The survey's analysis of channel dependency and distribution shift informs Odin's design choices between CI and CD strategies for multivariate spending data. Finally, Mamba-based models offer efficient linear-time inference, suitable for mobile-first deployment."
+      relevance: low
+      justification: Describes how different algorithmic modules (e.g., attention, patching) impact performance, informing evaluation.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: contextual
+      justification: Mentions anomaly detection but focuses on forecasting, not providing specific design guidance for Odin's anomaly module.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: contextual
+      justification: Briefly references anomaly detection in the context of time series but lacks algorithmic details.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: contextual
+      justification: Discusses forecasting, which is a prerequisite for savings projections, but not savings management itself.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: contextual
+      justification: Similar to 13.A, forecasting is foundational for debt planning, but the paper doesn't address debt management.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: Does not discuss privacy, but mentions data scarcity and security as challenges for time series data collection.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: Discusses seasonal and cyclical patterns generally, which is relevant to spending cycles, but no Filipino-specific context.
+  contribution: This survey provides a comprehensive overview of the current landscape of deep learning for time series forecasting, systematically categorizing models and highlighting key open challenges. It offers Odin's development team a structured understanding of architectural choices, from established models like Transformers to emerging ones like Mamba. The paper's analysis of channel dependency and distribution shift directly informs the design of Odin's forecasting and anomaly detection modules. The discussion of evaluation metrics and open challenges provides a foundation for building a robust and adaptable PFMS.
   directly_justifies:
-    - "Patching technique (PatchTST) enables longer look-back windows for improved forecasting accuracy."
-    - "Channel independent strategy is more robust to distribution shifts in multivariate time series."
-    - "Simple linear models can outperform complex Transformers for certain forecasting tasks."
-    - "Mamba provides linear-time complexity and selective memory for long sequence forecasting."
-    - "Diffusion models enable probabilistic forecasting with uncertainty quantification."
+    - "The choice between channel-independent and channel-dependent strategies significantly impacts forecasting performance on multivariate data."
+    - "Simple linear models can be effective baselines for time series forecasting, challenging the assumption that complex models are always necessary."
+    - "Distribution shift is a critical challenge that must be addressed for robust real-world forecasting."
+    - "Patching techniques are an effective way to apply Transformers to time series data, improving performance and computational efficiency."
   limits:
-    - "Survey is limited to deep learning and excludes detailed statistical model comparisons."
-    - "Performance claims may not generalize to Philippine-specific spending patterns."
-    - "Computational costs of large foundation models may exceed mobile device constraints."
-  mapping_rationale: "This survey focuses on technical aspects of time series forecasting, including predictive modeling (6.A, 6.B), anomaly detection (8.A, 8.B), and evaluation (12.A, 12.B). It does not address behavioral profiling (5.A-5.C), expense categorization (3.A-3.B), budget recommendation (7.A-7.C), mobile-first design (9.A-9.B), data privacy (10.A-10.B), user retention (11.A-11.B), or savings/debt management (13.A-13.B) because the paper contains no citeable claims on these PFMS-specific domains. Borderline topics like distribution shift and feature extraction are methodological and support forecasting algorithms rather than constituting standalone Odin topics."
+    - "The survey focuses on a general overview of methods but does not provide in-depth implementation details for specific algorithms."
+    - "The application of these models is discussed in a generic context and does not include domain-specific adaptations for personal finance or the Filipino context."
+    - "The survey is a review of existing literature and does not present new empirical results or a novel methodology for Odin."
+    - "It does not discuss the computational cost or latency constraints, which are critical for a mobile-first PFMS."
+  mapping_rationale: A systematic scan of all 12 functional domains and associated topic codes was performed. The paper's focus on time series forecasting algorithms (6.A, 6.B) and evaluation methodologies (12.A, 12.B) was deemed of medium relevance, as these directly inform the design of Odin's forecasting engine and its performance assessment. The discussion of anomaly detection (8.A, 8.B) and savings/debt management (13.A, 13.B) was considered contextual, as the paper deals with forecasting as a prerequisite rather than the management process itself. The sections on distribution shift and feature extraction, while not explicitly tied to a single Odin topic, are of low relevance to 10.A and 2.D as they inform the robustness of forecasting models against data challenges. Topics related to Filipino cultural context (2.A, 2.B, 2.C), expense categorization (3.A, 3.B), existing systems (4.A, 4.B), behavioral profiling (5.A, 5.B, 5.C), budgeting (7.A, 7.B, 7.C, 7.D), mobile design (9.A, 9.B), user trust (10.B), engagement (11.A, 11.B), and specific system evaluation (12.C) were rejected as they were not addressed by the paper's content. The overall relevance of this paper to Odin is in providing a high-level, comprehensive reference for the state-of-the-art in time series forecasting.
 limitations:
-  - "Skipped detailed theoretical backgrounds of models. [unacknowledged]"
-  - "Left specific differences in characteristics across time series datasets for future work."
-  - "AGI and adaptive modeling (meta-learning, reinforcement learning) could be further explored."
-  - "Domain-specific characteristics require expert knowledge not covered in the survey."
+  - "The paper is a survey and does not propose a new model or methodology."
+  - "It does not provide specific guidance on implementation for resource-constrained, mobile-first environments."
+  - "The analysis of open challenges is comprehensive but lacks a deep dive into any single challenge, which is needed for Odin's specific modules."
+  - "No discussion on the integration of forecasting results with downstream financial planning tasks like budget allocation or anomaly explanation."
 remember_this:
-  - "Simple linear models can outperform complex Transformers for time series forecasting."
-  - "Patching time series into 64-length patches improves Transformer performance."
-  - "Channel independence is more robust to distribution shifts than channel dependence."
-  - "Mamba offers linear-time sequence modeling, challenging Transformer dominance."
-  - "Diffusion models enable probabilistic forecasting by modeling prediction uncertainty."
+  - "Time series forecasting is experiencing a renaissance of architectural diversity beyond Transformers."
+  - "Simple linear models can outperform complex Transformers for long-term forecasting."
+  - "Channel dependency strategies show a robustness trade-off against distribution shifts in data."
+  - "Patching is a key technique to enhance Transformer performance on time series data."
+  - "Mamba is an emerging state space model architecture for efficient sequence forecasting."
 ```

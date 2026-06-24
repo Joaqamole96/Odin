@@ -1,70 +1,80 @@
 ```yaml
-paper_id: c5b2a8f0-3d4e-4a1b-9c6d-7e8f9a0b1c2d
+paper_id: 4a5d7b1c-0c8f-5d2e-9a4b-3f6d1e8c7b2a
 designation: local
 title: The Impact of AUP-CES Livelihood Initiatives, Leadership and Management in Buklod Bahayan
 authors: Carpizo, E. M.; Balitar, J. E.; Balila, J. S.
 year: 2024
 venue: 11th ISC 2024 (Universitas Advent Indonesia, Indonesia)
 odin_topics:
+  - 2.D
+  - 4.B
   - 13.A
   - 13.B
-shorthand_tags:
-  - /savings
-  - /debt
-tldr: Community cooperatives provide economic benefits (dividends, loans, discounts), social benefits (camaraderie, security), and organizational benefits (leadership and accounting skills) from AUP-CES training.
-problem_and_motivation: Poverty persists in the Philippines, limiting economic opportunities for marginalized communities. Community cooperatives offer alternative income sources but require effective leadership and management to succeed. The impact of structured training on cooperative sustainability remains underexplored.
+tldr: Community cooperatives in the Philippines provide economic, social, and organizational benefits, with leadership training and institutional support being critical for sustainability and resilience.
+problem_and_motivation: Poverty remains a persistent challenge in the Philippines, particularly affecting marginalized communities with limited access to income-generating opportunities. While cooperatives are recognized as a tool for economic empowerment, there is a gap in understanding the specific impact of leadership and management training on their long-term sustainability. This study addresses the need for actionable insights on how structured training and organizational support contribute to cooperative resilience and member benefits.
 approach:
-  - Qualitative study using Focus Group Discussions (FGDs) and individual interviews with cooperative members from Buklod Bahayan Subdivision.
-  - Three guiding questions were validated by research consultants and translated into Filipino for participant responses.
-  - Participants were selected based on availability and willingness; no random sampling was used.
-  - Thematic analysis was applied to transcribed interview and FGD recordings to identify economic, social, and organizational themes.
+  - The study used a qualitative approach with Focus Group Discussions (FGDs) and individual interviews.
+  - Participants were members of community cooperatives in Buklod Bahayan Subdivision, selected based on availability and willingness.
+  - Data was collected using three validated, Filipino-translated guiding questions regarding cooperative origins, AUP support, and perceived benefits.
+  - Thematic analysis was applied to transcribed interview and FGD data to identify recurring themes.
+  - The study is grounded in a literature review covering poverty, alternative income, and the role of leadership in cooperatives.
 findings:
-  - Members receive dividends on share investments, e.g., Php 5,580 on an initial Php 3,300 share.
-  - num: The cooperative grew from 5 to 20 members over ten years after reorganizing.
-  - Members access loans up to Php 10,000 payable within a year, providing emergency financial security.
-  - Social benefits include camaraderie, mutual help, and a sense of security during crises.
-  - Leadership and accounting seminars provided by AUP-CES equipped members with skills to reorganize after a previous cooperative failure.
-  - Members attributed the cooperative's ten-year resilience directly to the training and organizational support from AUP-CES.
+  - "num: Members reported dividends from a Php 3,300 share investment, with one member receiving Php 5,580 in dividends."
+  - Members value the cooperative as a reliable source of loans for emergencies, up to Php 10,000.
+  - Socially, the cooperative fosters camaraderie, unity, and a sense of security, especially during crises.
+  - Organizationally, members gained practical skills in accounting, leadership, and management from AUP-CES training.
+  - The initiative and training provided by AUP-CES were cited as crucial for the initial formation and subsequent reorganization of the successful cooperative.
+  - The study confirms earlier research on the critical role of leadership and management training in cooperative sustainability.
 key_figures_tables:
-  - None.
+  - "None."
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
-  - term: AUP-CES
-    definition: Adventist University of the Philippines Community Extension Services
-  - term: CDA
-    definition: Cooperative Development Authority
-  - term: FGD
-    definition: Focus Group Discussion
+  - term: "AUP-CES"
+    definition: "Adventist University of the Philippines Community Extension Services"
+  - term: "FGD"
+    definition: "Focus Group Discussion"
 critical_citations:
-  - "[Garcia and Reyes, 2018] — Training bolsters cooperative effectiveness and sustainability."
-  - "[Quizon and Ballesteros, 2016] — Cooperatives enhance income generation and poverty reduction."
+  - "[Garcia and Reyes, 2018] — Confirms leadership training's role in cooperative sustainability."
+  - "[Cruz and Garcia, 2017] — Establishes link between alternative income and poverty reduction."
+  - "[Quizon and Ballesteros, 2016] — Highlights cooperatives' role in income generation."
 relevance:
   topics:
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: contextual
+      justification: "Discusses cooperatives as a source of funds for emergencies and crises, aligning with Filipino financial coping mechanisms."
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: medium
+      justification: "Highlights the gap between poverty and structured financial support, which community-based systems like cooperatives attempt to fill."
     - code: 13.A
       name: Savings Goal Management in PFMS
-      justification: Paper details dividend earnings and share accumulation as a savings mechanism.
+      relevance: low
+      justification: "Discusses cooperative shares and dividends as a form of collective savings, but not individual goal management."
     - code: 13.B
       name: Debt Management in PFMS
-      justification: Paper describes loan access and repayment terms as key cooperative benefits.
-  contribution: The paper shows that structured training in accounting and leadership empowers community members to manage pooled savings and loan funds, directly informing Odin's savings goal management module. The finding that members value emergency loan access with flexible repayment supports Odin's debt management feature design. The documented ten-year cooperative resilience after initial failure highlights the importance of user education and organizational support, which Odin can embed as onboarding and financial literacy components.
+      relevance: low
+      justification: "Mentions loan opportunities within the cooperative as a benefit, providing an alternative to high-interest formal debt."
+  contribution: "This paper contributes evidence that community-based financial initiatives, when supported by leadership and management training, can deliver economic and social benefits to low-income Filipino communities. The findings on member dividends and emergency loan access provide qualitative benchmarks for measuring the impact of financial inclusion programs. For Odin, this study offers a case study on how informal financial structures function, highlighting the importance of social capital and organizational support in financial resilience. It underscores the need for PFMS to consider community-based savings and loan mechanisms when designing features for users in similar socioeconomic contexts."
   directly_justifies:
-    - Community cooperatives provide dividend returns on member shares (e.g., Php 5,580 on Php 3,300).
-    - Cooperative members gain financial security during emergencies through loan access.
-    - Leadership and management seminars equip members with accounting skills for cooperative sustainability.
+    - "Community cooperatives provide an alternative income source through dividends, loans, and discounts."
+    - "Members gain relevant knowledge and skills from leadership and management training."
+    - "Institutional support is crucial for the formation and sustainability of community cooperatives."
   limits:
-    - Small sample from a single subdivision limits generalizability to other populations.
-    - Qualitative design cannot establish causal impact of training on outcomes.
-    - No longitudinal follow-up to assess whether skills persist over time.
-  mapping_rationale: The paper was screened against Odin's nine functional domains. Only Savings & Debt Management (13.A, 13.B) showed direct relevance because the study focuses exclusively on cooperative savings (share dividends, accumulation) and debt (loans, repayment). No claims supported behavioral profiling, spending forecasting, budget recommendation, anomaly detection, expense categorization, mobile-first design, data privacy, user retention, or system evaluation. Borderline topics like Financial Behavior (1.C) were rejected because the study does not specifically target Filipino young professionals or their individual financial patterns.
+    - "Qualitative study with a small sample size from a single community, limiting generalizability."
+    - "Findings are based on self-reported perceptions, which may introduce bias."
+    - "The study does not provide a quantitative analysis of the cooperative's financial performance or long-term economic impact. [unacknowledged]"
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was conducted. The domains flagged as relevant were 'Filipino Cultural Context' (topic 2.D, contextual), 'Existing Systems & Gaps' (topic 4.B, medium), and 'Savings & Debt Management' (topics 13.A and 13.B, both low). The paper's focus on community-based financial support for crises maps to Filipino spending cycles and financial coping mechanisms (2.D). Its discussion of the limitations of formal systems in addressing poverty (4.B) is central to Odin's rationale. The benefits of cooperative shares and loans relate tangentially to savings and debt management (13.A, 13.B). Domains like 'Expense Categorization,' 'Behavioral Profiling,' 'Forecasting,' and 'Mobile-First Design' were rejected as the paper does not address algorithmic, technical, or user-interface design aspects. Overall, the paper provides contextual and supporting evidence for Odin's mission, particularly in highlighting the importance of community-level financial support and the need to address gaps in formal financial inclusion."
 limitations:
-  - Small sample size from single community limits generalizability. [unacknowledged]
-  - Lack of control group for training impact prevents causal inference. [unacknowledged]
-  - Qualitative findings may be subject to recall bias. [unacknowledged]
+  - "The study is qualitative and does not quantify the long-term economic impact of the cooperative."
+  - "The research is limited to a single community, which restricts the generalizability of the findings."
+  - "Potential for social desirability bias in participant responses during FGDs and interviews. [unacknowledged]"
 remember_this:
-  - Member received Php 5,580 dividend on Php 3,300 share investment.
-  - Leadership training enabled cooperative to survive 10 years after initial failure.
-  - Cooperatives provide emergency loans and social support during crises.
-  - Free accounting seminars from AUP-CES built organizational skills.
+  - "Leadership and management training are critical for cooperative sustainability."
+  - "Members received Php 5,580 in dividends from a Php 3,300 share investment."
+  - "Community cooperatives provide vital emergency loans and social support."
+  - "Institutional initiative is key to forming resilient community cooperatives."
+  - "Skills in accounting and leadership directly benefit cooperative members."
 ```

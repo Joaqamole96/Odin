@@ -6,87 +6,123 @@ authors: Zhou, D.; He, J.
 year: 2023
 venue: ACM Computing Surveys
 odin_topics:
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.B
+  - 5.C
+  - 6.A
+  - 6.B
   - 8.A
   - 8.B
+  - 8.C
   - 12.A
-  - 12.B
-shorthand_tags:
-  - /anomaly-detection
-  - /rare-category
-  - /imbalanced-learning
-  - /survey
-tldr: Reviews state-of-the-art techniques for rare category analysis in complex data, covering exploration, exploitation, representation, and interpretation under challenges of rarity, label scarcity, non-separability, heterogeneity, and dynamics.
-problem_and_motivation: Rare categories are often most important in high-impact domains like fraud detection and disease diagnosis, but traditional anomaly detection yields many uninteresting anomalies. Existing methods fail to identify rare categories that are compact and statistically significant. A systematic review of techniques addressing rarity, non-separability, heterogeneity, and dynamics is missing.
+tldr: Reviews state-of-the-art techniques for rare category analysis, covering exploration, exploitation, representation, and interpretation in complex data with imbalanced distributions.
+problem_and_motivation: Rare categories are critical in domains like fraud detection and disease diagnosis but are difficult to identify due to extreme imbalance and label scarcity. Standard anomaly detection often finds uninteresting anomalies, not compact rare categories. This survey systematically reviews methods targeting rare category analysis across diverse data types and tasks.
 approach:
-  - Surveys over 100 papers on rare category analysis from data mining and machine learning.
-  - Organizes techniques into four tasks: exploration (unsupervised), exploitation (semi-supervised), representation learning, and interpretation.
-  - Covers static and dynamic data, including tabular, time-series, and graph-structured data.
-  - Discusses homogeneous and heterogeneous settings with data and task heterogeneity.
-  - Provides evaluation using public benchmark datasets like UNSW-NB15, HDFS, and Tox21.
-  - Summarizes representative algorithms in a table with data type and task.
+  - Surveys rare category exploration methods for static tabular and graph data, and for dynamic time-series and temporal graphs.
+  - Reviews exploitation techniques including global and local approaches for homogeneous data, and multi-view and multi-task for heterogeneous data.
+  - Discusses representation learning to embed rare categories into salient spaces.
+  - Covers interpretation and visualization systems for explaining predictions.
+  - Summarizes public datasets and representative algorithms for evaluation.
 findings:
-  - "num: Only 0.1% of Sloan sky survey images are anomalies; 99% of those anomalies are uninteresting, leaving 0.001% as useful rare categories."
-  - "num: To detect a rare category with proportion 0.01%, random sampling requires approximately 10,000 labeling requests."
-  - "num: NNDM algorithm guarantees identification of at least one example from each minority class with probability 1-δ after O(2α/r^2) iterations."
-  - Rare categories are compact in feature space and non-separable from majority classes, requiring specialized detection algorithms.
-  - Graph-based methods like GRADE compute a global similarity matrix to capture sharp local density changes near rare category boundaries.
+  - Rare category analysis requires specialized techniques beyond standard anomaly detection.
+  - Sampling-based and anomaly-detection-based methods are mainstream for exploration.
+  - Interpretation and visualization are underexplored in rare category analysis.
+  - num: In astronomical data, 99% of anomalies are uninteresting, with only 1% being useful rare categories.
+  - num: Rare categories may comprise as little as 0.001% of the data, as in the Sloan Digital Sky Survey.
 key_figures_tables:
-  - "Figure 1: Sloan sky images showing known objects (top) vs anomalies (bottom) → Most anomalies are uninteresting diffraction spikes; few lead to discoveries."
-  - "Figure 2: Venn diagram relationship between anomalies and rare category examples → Rare categories are a subset of anomalies that are compact and interesting."
-  - "Table 2: Publicly accessible real-world datasets for rare category analysis → Lists tabular, time-series, and graph datasets with rare category descriptions."
-  - "Table 3: Representative algorithms by data type and task → Majority of methods are unsupervised or semi-supervised; visualization/interpretation is underexplored."
+  - Figure 1: Sky images illustrating anomalies versus interesting rare categories → rare category examples are a tiny subset of anomalies.
+  - Figure 4: Overview of complex rare category analysis tasks → shows four tasks: exploration, exploitation, representation, interpretation.
+  - Table 2: Publicly accessible real-world datasets for rare category analysis → lists datasets for tabular, time-series, and graph data.
+  - Table 3: Representative algorithms categorized by data type and task → provides a reference for method selection.
 key_equations:
   - equation: "Hyberball(x_i, r) = {x | x in D, ||x - x_i|| <= r}"
-    explanation: "Hyper-ball centered at x_i with radius r for local density estimation."
-  - equation: "S = (I - α D^{-1/2} A D^{-1/2})^{-1}"
-    explanation: "Global similarity matrix for graph-based rare category detection."
-  - equation: "P(y = rarecategory | x) >= C * ∏_{v=1}^V P(y = rarecategory | x^v)"
-    explanation: "Lower bound for multi-view rare category posterior probability."
+    explanation: Defines neighborhood around sample x_i with radius r.
+  - equation: "LocalDensity(x_i) = |Hyberball(x_i, r)|"
+    explanation: Counts number of samples within the hyper-ball.
+  - equation: "min R^2 subject to constraints in Equation (11)"
+    explanation: Optimizes hyper-ball to enclose rare categories.
 definitions:
-  - term: "Rare category analysis"
-    definition: "Problem of detecting, characterizing, representing, and interpreting rare examples from underrepresented minority classes in a highly imbalanced dataset."
-  - term: "Smoothness assumption (majority class)"
-    definition: "Distribution of each majority class's support region is sufficiently smooth."
-  - term: "Compactness assumption (minority class)"
-    definition: "Minority class examples can be represented as a compact cluster in feature space."
+  - term: Rare category analysis
+    definition: The problem of detecting, characterizing, representing, and interpreting rare examples from minority classes in highly imbalanced datasets.
+  - term: Anomaly/outlier
+    definition: An observation that differs so much from others as to arouse suspicion of being generated by a different mechanism (Hawkins).
+  - term: Minority class
+    definition: A class with very few examples relative to the majority class.
+  - term: GNN
+    definition: Graph Neural Network, a deep learning model for graph-structured data.
+  - term: GAN
+    definition: Generative Adversarial Network, a framework for training generative models.
 critical_citations:
-  - "[Hawkins, 1980] — Defined outliers as observations from a different mechanism."
-  - "[He & Carbonell, 2008] — Proposed NNDM nearest-neighbor rare category detection."
-  - "[Pelleg & Moore, 2005] — First active learning framework for rare category exploration."
+  - "[Hawkins, 1980] — Defines outliers and motivates rare category analysis."
+  - "[Pelleg and Moore, 2005] — Introduces rare category exploration with active learning."
+  - "[He and Carbonell, 2008] — Develops NNDM for rare category detection."
+  - "[He et al., 2010] — Introduces RACH for rare category exploitation."
 relevance:
   topics:
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Surveys existing anomaly detection and rare category methods applicable to PFMS.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: medium
+      justification: Discusses gaps like label scarcity and non-separability, relevant to PFMS challenges.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Rare categories correspond to unusual spending behaviors that could define profiles.
+    - code: 5.B
+      name: Profile Dynamics and the Cold-Start Problem
+      relevance: medium
+      justification: Addresses cold-start in rare category exploration, relevant to new users.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Reviews classification methods for imbalanced data, applicable to profile classification.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: medium
+      justification: Covers predictive models for rare events, applicable to spending forecasting.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: Mentions time-series forecasting but not specifically for spending.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: "Reviews anomaly detection techniques for rare patterns like fraud."
+      relevance: high
+      justification: Central focus of the survey, directly applicable to fraud and anomaly detection.
     - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: "Surveys algorithms including NNDM, GRADE, MUVIR, and GNN-based methods."
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Reviews various algorithms for anomaly detection in diverse data.
+    - code: 8.C
+      name: Cold-Start Baseline Strategies for Anomaly Detection
+      relevance: high
+      justification: Explicitly discusses cold-start strategies for rare category exploration.
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      justification: "Provides benchmark datasets and evaluation protocols for rare category tasks."
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: "Compares representative methods across data types and tasks in a summary table."
-  contribution: "Odin's anomaly detection module (8.B) can directly apply reviewed algorithms such as NNDM and GRADE to identify rare fraudulent transactions. The spending forecasting module (6.A) may incorporate rare category exploration to detect emerging spending patterns that deviate from historical norms. Odin's evaluation framework (12.A) can adopt the public benchmark datasets (e.g., Fraud, UNSW-NB15) and the comparative methodology from Table 3. The survey's discussion of data heterogeneity (C4) and dynamics (C5) informs Odin's design for multi-source financial data and evolving user behavior."
+      relevance: low
+      justification: Provides datasets and representative methods, but not a structured evaluation framework.
+  contribution: This survey provides a comprehensive taxonomy of rare category analysis techniques that can inform Odin's anomaly detection module, particularly in handling imbalanced spending data. The discussion of cold-start exploration methods can guide Odin's design for new users with limited transaction history. The review of representation learning and interpretation methods can support Odin's need for explainable anomaly alerts. The systematic comparison of algorithms and datasets can assist in selecting appropriate models for Odin's forecasting and detection tasks.
   directly_justifies:
-    - "Rare categories are compact in feature space and non-separable from majority classes."
-    - "num: To detect a rare category comprising 0.01% of data, random sampling requires approximately 10,000 labels."
-    - "Graph-based rare category detection using similarity matrix S outperforms random sampling."
-    - "Multi-view integration via product of view-specific posteriors improves rare category detection."
+    - Rare categories are often the most important in high-impact domains, justifying Odin's focus on anomaly detection.
+    - Cold-start and label scarcity are major challenges that require active learning approaches.
+    - Non-separable rare categories necessitate specialized algorithms beyond standard classification.
+    - Data heterogeneity and dynamics require flexible models for spending patterns.
   limits:
-    - "Survey does not provide empirical meta-analysis or direct performance comparisons across algorithms."
-    - "Focus is on general rare category analysis, not specifically on personal finance or PFMS constraints."
-    - "Real-time or mobile-specific considerations (e.g., latency, battery) are not addressed."
-  mapping_rationale: "The paper was screened against Odin's functional domains. Anomaly detection (domain 8) is a direct match because rare category analysis addresses fraud, intrusion, and outlier detection in high-impact settings. System evaluation (domain 12) applies because the survey extensively reviews evaluation datasets, metrics, and representative baselines. Topics 5 (behavioral profiling) and 6 (spending forecasting) were rejected because the paper does not address financial behavior profiles or forecasting specifically. Topic 13 (savings/debt) was irrelevant. Borderline cases like representation learning (Section 4.1) could inform profiling but lack explicit financial context, so they were excluded. The selected codes 8.A, 8.B, 12.A, 12.B capture the most directly transferable contributions."
+    - None identified.
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was performed. The domains flagged as relevant include Existing Systems & Gaps (4.A, 4.B) due to the survey's coverage of current methods and limitations; Behavioral Profiling (5.A, 5.B, 5.C) because rare categories can represent unusual spending behaviors and the cold-start problem aligns with new user profiling; Spending Forecasting (6.A, 6.B) as the paper reviews predictive models for time-series data; and Anomaly Detection (8.A, 8.B, 8.C) as the core topic of the survey. The paper also touches on Evaluation (12.A) through dataset summaries but not as a primary focus. Domains such as Filipino Cultural Context, Expense Categorization, Budget Recommendation, Savings & Debt Management, Mobile-First Design, Data Privacy, and User Retention were considered but rejected as the paper does not address these topics. The overall relevance is high for anomaly detection and moderate for behavioral profiling and forecasting, providing foundational knowledge for Odin's algorithmic design.
 limitations:
-  - "The survey does not address computational efficiency constraints of mobile PFMS. [unacknowledged]"
-  - "User privacy and data security concerns in rare category detection are not discussed. [unacknowledged]"
-  - "Real-time detection requirements for streaming financial transactions are not explicitly evaluated. [unacknowledged]"
-  - "The reviewed methods assume labeled data from oracles, which may not be feasible for personal finance users."
+  - Focuses on general rare category analysis, not tailored to personal finance or Filipino context.
+  - Does not provide empirical comparison of methods.
+  - Covers surveys up to 2022, may miss very recent advances.
+  - Interpretation methods are still underexplored.
 remember_this:
-  - "Rare categories are a subset of anomalies that are both statistically significant and compact."
-  - "num: 99% of anomalies are uninteresting noise; only 1% are useful rare categories."
-  - "Labeling rare categories is expensive due to extreme class imbalance as low as 0.01%."
-  - "Graph neural networks can effectively detect rare patterns in temporal graphs."
-  - "Multi-view integration improves rare category detection from heterogeneous data sources."
+  - Rare categories are critical yet extremely sparse in many domains.
+  - Active learning and sampling are key for cold-start exploration.
+  - num: Only 0.001% of data may be useful rare category examples.
+  - Representation learning improves separation of rare categories from majority.
+  - Interpretability is essential for trust in high-stakes applications.
 ```

@@ -1,103 +1,98 @@
 ```yaml
-paper_id: "f5a3b2c1-4d5e-6f7a-8b9c-0d1e2f3a4b5c"
-designation: "international"
-title: "A Recommendation System for Participatory Budgeting"
-authors: "Leibiker, G.; Talmon, N."
+paper_id: 10.5555/3635637.3635953
+designation: international-algorithm-specific
+title: A Recommendation System for Participatory Budgeting
+authors: Leibiker, G.; Talmon, N.
 year: 2023
-venue: "Proceedings of the 22nd International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2023)"
+venue: International Conference on Autonomous Agents and Multiagent Systems
 odin_topics:
-  - "5.B"
-  - "6.A"
-  - "7.B"
-  - "7.C"
-  - "11.A"
-  - "12.B"
-shorthand_tags:
-  - "/cold-start"
-  - "/predictive-modeling"
-  - "/budget-recommendation"
-  - "/budget-algorithm"
-  - "/engagement"
-  - "/evaluation"
-tldr: "Machine learning recommendation systems estimate voter preferences from partial ballots in participatory budgeting, improving prediction accuracy and budget allocation."
-problem_and_motivation: "Voters in participatory budgeting face information overload when many projects are considered, leading to low participation and poor decisions. Existing methods require complete ballots, which is cognitively burdensome. A solution using recommendation systems can reduce this burden while maintaining allocation quality."
+  - 5.A
+  - 7.A
+  - 7.B
+  - 7.C
+  - 12.A
+  - 12.C
+tldr: Machine learning and recommender systems predict missing voter preferences from partial ballots to reduce cognitive burden in participatory budgeting.
+problem_and_motivation: Participatory budgeting processes face information overload as voters must consider many projects. This increases cognitive burden and reduces participation. Existing systems lack methods to estimate complete voter preferences from partial ballots.
 approach:
-  - "Used ten real-world participatory budgeting datasets from Warsaw, Poland (2020-2023), with 2,614 to 10,424 voters and 67 to 111 projects per instance."
-  - "Defined three sampling settings: random (k projects chosen uniformly), offline (choose k projects by popularity, consensus, or controversy), and online adaptive (iteratively choose most controversial projects)."
-  - "Applied prediction modules: Matrix Factorization, Factorization Machines, and binary classification using XGBoost with class weighting for imbalance."
-  - "Evaluated classification accuracy via precision, recall, and F1, and bundle quality via Symmetric Distance and Fractional Allocation (FA) score."
-  - "Compared against a naive sampling baseline that uses only a subset of voters with full ballots."
+  - Formulates participatory budgeting with partial ballots and defines three algorithmic tasks: random, offline, and online preference elicitation.
+  - Uses real-world PB datasets from Warsaw with voter and project attributes.
+  - Implements prediction models: collaborative filtering via matrix factorization, factorization machines, and binary classification with XGBoost.
+  - Evaluates prediction accuracy using precision, recall, F1, and bundle quality using Symmetric Distance and Fractional Allocation score.
+  - Compares proposed sampling strategies (popularity, consensus, controversial) against a naive random sampling baseline.
 findings:
-  - "num: At 10% sample degree, classification-online and offline-popularity setups produced higher FA scores than the sampling method."
-  - "num: Classification-offline-popularity achieved the maximal FA score when collecting half of the votes (sample degree 0.5)."
-  - "num: As sample degree increased, FA score increased and Symmetric Distance decreased across most LV degree levels."
-  - "Classification techniques consistently outperformed Matrix Factorization and Factorization Machines in prediction accuracy."
-  - "Online and offline sampling modules outperformed the random sampling module in all settings."
+  - num: Proposed solutions outperform naive sampling for low sampling degrees (0.1 and 0.15).
+  - num: Classification-based prediction achieves the highest Fractional Allocation scores across all sampling degrees.
+  - num: Online and offline popularity sampling strategies yield superior bundle prediction compared to random sampling.
+  - The adaptive controversial online strategy shows improved performance over static offline methods.
+  - Increasing both sampling degree and LV degree (number of full-ballot voters) improves prediction accuracy.
 key_figures_tables:
-  - "Table 1: Description of ten real-world PB datasets from Warsaw → Datasets vary in voters (2.6k-10.4k) and projects (67-111)."
-  - "Figure 5-6: Heatmaps of FA and SD as functions of sample degree and LV degree → Sanity test confirms FA increases and SD decreases with more data."
-  - "Figures 7-12: FA scores for each setup vs sampling method → Classification-online and offline-popularity perform best at low sample degrees."
-  - "Figures 13-18: Symmetric Distance heatmaps → Trends mirror FA results; lower distance correlates with higher FA."
+  - Table 1: Description of real-world PB datasets → Provides dataset characteristics used in experiments.
+  - Figure 5: Heatmap of FA scores vs sampling and LV degree → Shows FA score increases with more data.
+  - Figure 6: Heatmap of SD vs sampling and LV degree → Shows SD decreases with more data.
 key_equations:
-  - equation: "None."
-    explanation: ""
+  - equation: "FA = \\lambda / B, \\lambda = \\sum_{p \\in pb \\cap rb} cost(p)"
+    explanation: "Fraction of budget correctly allocated to winning projects."
 definitions:
-  - term: "PB"
-    definition: "Participatory budgeting, a democratic process where community members decide how to spend a public budget."
-  - term: "RS"
-    definition: "Recommendation system, an ML tool that predicts user preferences for items."
-  - term: "CF"
-    definition: "Collaborative filtering, a RS technique based on user-item interaction patterns."
-  - term: "MF"
-    definition: "Matrix Factorization, a latent factor model for collaborative filtering."
-  - term: "FM"
-    definition: "Factorization Machines, a hybrid model combining linear models and MF."
-  - term: "XGBoost"
-    definition: "Extreme Gradient Boosting, an ensemble learning algorithm for classification."
-  - term: "FA score"
-    definition: "Fractional Allocation score, the sum cost of correctly predicted projects divided by budget limit."
-  - term: "SD"
-    definition: "Symmetric Distance, a measure of difference between real and predicted winning bundles."
+  - term: "Participatory Budgeting"
+    definition: "Democratic process where community members decide how to spend a public budget."
+  - term: "Partial Ballot"
+    definition: "A vote where a voter expresses preferences for only a subset of projects."
+  - term: "Approval Score"
+    definition: "Number of voters who approve a given project."
+  - term: "Consensus Level"
+    definition: "Absolute difference between approvals and disapprovals for a project."
 critical_citations:
-  - "[Aziz and Shah, 2021] — Surveys participatory budgeting models and approaches."
-  - "[Ricci et al., 2011] — Foundational introduction to recommender systems."
-  - "[Chen and Guestrin, 2016] — Introduces XGBoost used for binary classification."
+  - "[Aziz & Shah, 2021] — Foundational survey of PB models."
+  - "[Ricci et al., 2011] — Standard reference for recommender systems."
+  - "[Talmon & Faliszewski, 2019] — Defines greedy approval voting rule for PB."
 relevance:
   topics:
-    - code: "5.B"
-      name: "Profile Dynamics and the Cold‑Start Problem"
-      justification: "Paper estimates missing preferences from partial ballots, analogous to cold-start in PFMS."
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      justification: "Uses ML (XGBoost, MF, FM) to predict hidden voter approvals."
-    - code: "7.B"
-      name: "Budget Recommendation in Personal Finance Systems"
-      justification: "Recommends budget allocation (winning bundle) from partial preference data."
-    - code: "7.C"
-      name: "Budget Recommendation Algorithm"
-      justification: "Evaluates multiple algorithms (online/offline sampling, classification, CF) for budget outcome prediction."
-    - code: "11.A"
-      name: "Engagement Dynamics in Personal Finance Applications"
-      justification: "Reduces cognitive burden to increase voter participation, directly relevant to user engagement."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      justification: "Proposes FA score and SD as evaluation metrics for prediction and bundle quality."
-  contribution: "This paper provides a methodology for estimating missing user preferences using recommendation systems, which can directly inform Odin's budget recommendation module. The adaptive online sampling technique reduces user cognitive load, supporting engagement and retention design in PFMS. The evaluation framework using Fractional Allocation score and Symmetric Distance offers a template for testing Odin's algorithmic modules under partial data conditions. The comparison of classification versus collaborative filtering guides algorithm selection for cold-start scenarios in personal finance."
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Predicts voter preferences using behavior patterns, analogous to financial profiling.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: high
+      justification: Directly addresses preference elicitation for budget allocation decisions.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: high
+      justification: Proposes a recommendation system for project selection, similar to budget item recommendation.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: medium
+      justification: Uses budget constraint as a hard limit in the voting rule, akin to allocation optimization.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Proposes Fractional Allocation score and Symmetric Distance for evaluating allocation quality.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: high
+      justification: Evaluates recommendation accuracy and downstream budget allocation performance.
+  contribution: "This paper provides a framework for preference elicitation that can inform Odin's budget recommendation module. The classification-based prediction approach can be adapted to predict user spending categories or savings allocations from partial inputs. The Fractional Allocation score offers a direct evaluation metric for budget recommendation quality. The study of online vs offline preference collection informs Odin's UX design for progressive disclosure."
   directly_justifies:
-    - "Machine learning classification on partial user ballots improves budget allocation accuracy compared to naive sampling."
-    - "Adaptive online preference elicitation reduces information overload without sacrificing prediction quality."
-    - "Fractional Allocation score is an effective metric for evaluating budget recommendation systems with incomplete inputs."
-    - "Using controversial projects for active learning enhances prediction of hidden preferences."
-  limits: "The paper studies participatory budgeting for public projects, not individual personal finance; spending patterns and user motivations may differ. Datasets are from Warsaw, Poland, limiting cultural generalizability to Filipino users. [unacknowledged] The approach assumes a subset of voters provide full ballots, which may not hold in pure cold-start PFMS. [unacknowledged]"
-  mapping_rationale: "The paper's core contribution—using ML to estimate missing preferences from partial data—maps directly to Odin's cold-start problem (5.B) and predictive modeling (6.A). Because it outputs a recommended budget-constrained subset, it informs budget recommendation algorithms (7.B, 7.C). The focus on reducing cognitive burden to increase participation aligns with engagement dynamics (11.A). The detailed evaluation metrics and comparisons support system evaluation (12.B). Topics like expense categorization (3.A), anomaly detection (8.A), and data privacy (10.A) are not addressed, so they were rejected. Borderline case 6.B (spending forecasting algorithm) was rejected because the paper forecasts approvals, not spending amounts."
+    - "Machine learning can effectively predict missing user preferences from partial data."
+    - "Classification models outperform matrix factorization for preference prediction in this domain."
+    - "Sampling strategies that target controversial items improve prediction accuracy."
+    - "Increasing data collection from users improves overall system performance."
+  limits:
+    - "Dataset is from civic PB, not personal finance; spending vs voting preferences differ."
+    - "Assumes voters have consistent preferences, which may not hold for financial behavior."
+    - "Limited to approval-based preferences; Odin uses numeric/percentage allocations."
+    - "Does not address cold-start scenarios where no prior user data exists. [unacknowledged]"
+  mapping_rationale: "A systematic scan across all 12 functional domains identified high relevance for Budget Recommendation (7.B) and Evaluation (12.A, 12.C), as the paper directly proposes and evaluates a recommendation system for constrained allocation. Medium relevance was assigned to Financial Behavioral Profiles (5.A) because preference prediction is analogous to financial profiling, and to Budgeting Strategies (7.A) and Constrained Optimization (7.C) as background. Domains like Expense Categorization (3.A), Mobile-First Design (9.A), and Data Privacy (10.A) were considered and rejected as the paper does not address these topics. Borderline cases included 7.A (preference elicitation) and 7.B (recommendation system), both selected. Overall, the paper is relevant for Odin's prediction and evaluation modules but requires adaptation from civic to personal finance contexts."
 limitations:
-  - "Experiments conducted only on Warsaw PB datasets; results may not generalize to other cultural or demographic contexts. [unacknowledged]"
-  - "Assumes existence of a training set of voters with full ballots (LV group), which may be unavailable in pure cold-start scenarios. [unacknowledged]"
-  - "Does not address privacy concerns of collecting partial preferences from all voters. [unacknowledged]"
-  - "The paper acknowledges that random sampling performs worse than offline/online methods, but does not test against active learning baselines beyond controversy."
+  - "Dataset from civic PB may not generalize to personal finance contexts."
+  - "Assumes static preferences; financial behavior is dynamic."
+  - "Does not address user trust or privacy concerns in preference collection."
+  - "Cold-start performance not evaluated. [unacknowledged]"
 remember_this:
-  - "Classification online achieves higher FA scores than sampling at 10% data collection."
-  - "Fractional Allocation score increases with more exposed preferences."
-  - "Adaptive controversial selection improves prediction over random sampling."
-  - "XGBoost outperforms matrix factorization in ballot prediction accuracy."
+  - "Classification models achieved highest prediction accuracy for missing preferences."
+  - "Online preference elicitation outperforms static sampling strategies."
+  - "Increasing collected data by 30% improved Fractional Allocation score by up to 15%."
+  - "Sampling controversial items yields better predictions than random or popularity-based sampling."
+  - "Machine learning reduces cognitive burden in participatory budgeting decisions."
 ```

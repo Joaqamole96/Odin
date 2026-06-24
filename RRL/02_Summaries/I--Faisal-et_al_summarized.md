@@ -1,103 +1,119 @@
 ```yaml
-paper_id: c3e5d6f7-8a9b-4c2d-9e1f-0a1b2c3d4e5f
-designation: international
-title: The Role of Digital Banking Features in Bank Selection: An Analysis of Customer Preferences for Online and Mobile Banking
-authors: Faisal, N.; Nahar, J.; Waliullah, M.; Borna, R. S.
+paper_id: "10.69593/faet.v1i01.NA"
+designation: "international"
+title: "The Role of Digital Banking Features in Bank Selection an Analysis of Customer Preferences for Online and Mobile Banking"
+authors: "Faisal, N.; Nahar, J.; Waliullah, M.; Borna, R. S."
 year: 2024
-venue: Frontiers in Applied Engineering and Technology
+venue: "Frontiers in Applied Engineering and Technology"
 odin_topics:
-  - 9.A
-  - 9.B
-  - 10.A
-  - 10.B
-  - 11.A
-  - 11.B
-shorthand_tags:
-  - /mobile-first-design
-  - /mobile-ux
-  - /data-privacy
-  - /user-trust
-  - /engagement-dynamics
-  - /retention-mechanisms
-tldr: A systematic review of 112 articles identifies convenience, security, personalization, competitive innovation, and pandemic resilience as key drivers of digital banking adoption and customer satisfaction.
-problem_and_motivation: Prior research on digital banking focuses on general adoption drivers but lacks deeper insights into evolving customer expectations across demographics and cultures. Understanding how specific features like usability, security, and personalization influence bank selection is critical for financial institutions to remain competitive. This gap is addressed by synthesizing existing literature to provide actionable guidance for digital banking design.
+  - "9.A"
+  - "9.B"
+  - "10.A"
+  - "10.B"
+  - "7.B"
+  - "4.A"
+  - "4.B"
+tldr: "A systematic review of 112 articles identifies convenience, security, personalization, and competitive innovation as key drivers of customer satisfaction and loyalty in digital banking."
+problem_and_motivation: "Financial institutions need to understand which digital banking features most influence customer preferences to remain competitive. Prior literature lacked a consolidated synthesis of key drivers across convenience, security, and personalization. This review addresses the gap by systematically aggregating findings on customer preferences for online and mobile banking features."
 approach:
-  - Systematic literature review following PRISMA guidelines.
-  - Searched Scopus, Web of Science, ProQuest, and Google Scholar using keyword combinations like "digital banking" AND "customer preferences".
-  - Initial identification of 3,284 articles, screened to 112 peer-reviewed studies published between 2012 and 2023.
-  - Duplicates removed with EndNote X20; titles, abstracts, and full texts screened for relevance.
-  - Data extracted and synthesized qualitatively across themes: convenience, security, personalization, competition, and pandemic impact.
+  - "Conducted a systematic literature review following PRISMA guidelines to ensure transparency and rigor."
+  - "Searched Scopus, Web of Science, ProQuest, and Google Scholar using combinations of keywords such as 'digital banking,' 'customer preferences,' 'online banking,' 'mobile banking,' 'blockchain,' and 'AI.'"
+  - "Identified 3,284 initial articles, removed 326 duplicates, and screened 947 after title/abstract review."
+  - "Full-text review of 947 articles resulted in a final selection of 112 peer-reviewed studies published between 2012 and 2023."
+  - "Extracted and synthesized findings related to convenience, security, personalization, competitive innovation, and pandemic-driven adoption."
 findings:
-  - "num: 47 out of 112 articles emphasize convenience (ease of use, 24/7 availability, fast transactions) as primary adoption driver."
-  - "num: 42 articles highlight security and privacy (encryption, MFA, fraud detection) as critical for customer trust."
-  - "num: 36 articles identify personalization (AI-driven recommendations, tailored interfaces) as transformative for satisfaction and loyalty."
-  - "num: 29 articles show competitive pressure drives adoption of blockchain, AI, and biometrics to differentiate offerings."
-  - "num: 31 articles demonstrate COVID-19 accelerated digital adoption, forcing rapid infrastructure scaling and remote support."
+  - "num: 47 articles consistently highlighted ease of use and 24/7 availability as primary drivers of adoption."
+  - "num: 38 studies identified mobile banking as the preferred platform due to intuitive interfaces."
+  - "num: 42 articles emphasized security and privacy, with encryption and fraud detection as key trust-building factors."
+  - "num: 36 studies found that personalization, driven by AI and data analytics, enhances customer satisfaction and retention."
+  - "num: 29 articles highlighted competitive pressure as a driver of innovation, including blockchain and biometric authentication."
+  - "num: 31 studies showed the COVID-19 pandemic accelerated digital adoption and reshaped customer expectations."
+  - "Customers value transparency in data usage policies and proactive communication about security measures."
+  - "Personalization must be balanced with privacy concerns, as excessive data collection can erode trust."
+  - "Traditional banks adopting AI, blockchain, and biometrics are better positioned to compete with fintech firms."
+  - "Strategic partnerships between banks and fintech companies, such as API integrations, can drive mutual growth."
 key_figures_tables:
-  - "Figure 4: Technological determinants of digital banking adoption (TAM, user-friendliness, security) → Key factors influencing adoption."
-  - "Figure 5: Security and privacy as key determinants → Encryption and transparency build customer trust."
-  - "Figure 6: Personalization in digital banking → Tailored services enhance engagement but raise privacy concerns."
-  - "Table 1: Identified research gaps → Elderly/rural populations, long-term impact, privacy trade-offs, collaboration, crisis resilience."
+  - "None."
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
   - term: "TAM"
-    definition: "Technology Acceptance Model; perceived usefulness and ease of use drive adoption."
-  - term: "AI"
-    definition: "Artificial Intelligence; used for chatbots, personalization, fraud detection."
+    definition: "Technology Acceptance Model, which posits that perceived usefulness and ease of use affect adoption."
   - term: "MFA"
-    definition: "Multi-Factor Authentication; requires multiple credentials for account access."
+    definition: "Multi-factor authentication, a security measure requiring multiple credentials."
   - term: "GDPR"
-    definition: "General Data Protection Regulation; EU data privacy law."
-  - term: "PRISMA"
-    definition: "Preferred Reporting Items for Systematic Reviews and Meta-Analyses; guidelines for review transparency."
+    definition: "General Data Protection Regulation, a data privacy regulation in the EU."
+  - term: "API"
+    definition: "Application Programming Interface, enabling software applications to communicate."
 critical_citations:
-  - "[Davis, 1989] — Introduced TAM, foundation for technology adoption studies."
-  - "[Chauhan et al., 2022] — Defines digital banking evolution and customer experience."
-  - "[Venkatesh et al., 2003] — Unified theory of acceptance and use of technology (UTAUT)."
+  - "[Davis, 1989] — Foundational TAM theory for technology adoption."
+  - "[Venkatesh et al., 2003] — Unified theory of acceptance and use of technology."
+  - "[Chauhan et al., 2022] — Comprehensive review of customer experience in digital banking."
+  - "[Gigante et al., 2022] — Analysis of digital banking preferences in Metro Manila."
+  - "[Taylor et al., 2020] — Systematic review of blockchain cybersecurity in digital banking."
 relevance:
   topics:
-    - code: 9.A
-      name: Mobile-First Design Principles and Rationale
-      justification: "Paper shows mobile banking as preferred platform with 24/7 availability and intuitive interfaces."
-    - code: 9.B
-      name: Mobile UX Design for Personal Finance
-      justification: "Discusses user-friendly interfaces, real-time notifications, and accessibility features."
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      justification: "Highlights encryption, MFA, fraud detection as essential for customer trust."
-    - code: 10.B
-      name: User Trust in Personal Finance Systems
-      justification: "Transparency in data policies and proactive communication build trust."
-    - code: 11.A
-      name: Engagement Dynamics in Personal Finance Applications
-      justification: "Identifies ease of use, reliability, and personalization as drivers of satisfaction."
-    - code: 11.B
-      name: Retention Mechanisms and Engagement Design
-      justification: "Features like AI advisors, real-time alerts, and comprehensive service access improve retention."
-  contribution: "This systematic review justifies Odin's mobile-first design (9.A, 9.B) by confirming that users prioritize intuitive, always-available interfaces. It supports Odin's data privacy (10.A) and user trust (10.B) modules by showing encryption and transparency directly influence adoption. The findings on personalization and real-time notifications inform Odin's retention mechanisms (11.A, 11.B) to boost engagement. Additionally, the paper validates that competitive pressure and crisis resilience (pandemic) shape feature expectations, guiding Odin's continuous innovation strategy."
+    - code: "9.A"
+      name: "Mobile-First Design Principles and Rationale"
+      relevance: "high"
+      justification: "Paper highlights mobile banking as the preferred platform due to intuitive interfaces."
+    - code: "9.B"
+      name: "Mobile UX Design for Personal Finance"
+      relevance: "high"
+      justification: "Discusses user-friendly interfaces and 24/7 availability as key drivers of satisfaction."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "high"
+      justification: "Paper emphasizes encryption, MFA, and fraud detection as critical determinants of trust."
+    - code: "10.B"
+      name: "User Trust in Personal Finance Systems"
+      relevance: "high"
+      justification: "Transparency in data policies and proactive security communication foster trust."
+    - code: "7.B"
+      name: "Budget Recommendation in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Personalization and data analytics enable tailored financial advice, relevant to budgeting."
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "medium"
+      justification: "Provides an overview of digital banking features and competitive landscape."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "medium"
+      justification: "Identifies gaps in research on underserved demographics and long-term loyalty."
+    - code: "2.A"
+      name: "Culturally Specific Financial Practices"
+      relevance: "contextual"
+      justification: "Mentions cultural influences on preferences but does not focus on Filipino context."
+    - code: "11.A"
+      name: "Engagement Dynamics in Personal Finance Applications"
+      relevance: "low"
+      justification: "Tangentially touches on engagement through personalization but not as a primary focus."
+  contribution: "This review directly justifies the need for Odin's mobile-first design by showing that user-friendly interfaces and 24/7 availability are primary adoption drivers. It supports Odin's security module by confirming that encryption, MFA, and transparent data policies are critical for user trust. The findings on personalization and competitive innovation inform Odin's budget recommendation and anomaly detection modules, highlighting the importance of AI-driven insights and continuous improvement."
   directly_justifies:
-    - "Mobile banking users prioritize intuitive interfaces and 24/7 availability over complex features."
-    - "Robust encryption and multi-factor authentication significantly increase customer trust in digital platforms."
-    - "Personalized financial recommendations and real-time alerts enhance user retention and satisfaction."
-    - "The COVID-19 pandemic forced banks to rapidly scale digital infrastructure, validating crisis-resilient design."
+    - "User-friendly interfaces and 24/7 availability are primary drivers of customer satisfaction and loyalty."
+    - "Robust security measures, including encryption and multi-factor authentication, foster user trust."
+    - "Personalization via AI and data analytics enhances user experience and retention in digital banking."
+    - "Market competition drives innovation, including AI, blockchain, and biometrics in banking."
+    - "The COVID-19 pandemic accelerated digital adoption, reshaping customer expectations for flexibility."
   limits:
-    - "Paper is a literature review, not primary empirical research; no specific algorithm or model evaluated."
-    - "Findings are not specific to Filipino young professionals or PFMS contexts."
-    - "Does not address cold-start problems or behavioral profiling for financial predictions."
-    - "Lacks quantitative comparison of personalization vs. privacy trade-offs in real systems."
-  mapping_rationale: "The paper was screened against Odin's functional domains. Mobile-first design (9.A, 9.B) was strongly supported by extensive discussion of mobile banking adoption, user-friendly interfaces, and 24/7 availability. Data privacy and user trust (10.A, 10.B) were selected because security and transparency are central themes across 42 articles. Engagement and retention (11.A, 11.B) were flagged due to detailed coverage of satisfaction drivers, loyalty, and features like AI advisors and real-time alerts. Topics such as behavioral profiling (5.A-C), spending forecasting (6.A-B), budget recommendation (7.A-C), anomaly detection (8.A-B), expense categorization (3.A-B), system evaluation (12.A-B), and savings/debt management (13.A-B) were rejected as the paper does not address them. Borderline cases like personalization could relate to behavioral classification but lacked explicit profile dynamics."
+    - "Findings are based on a broad international literature review; may not be fully generalizable to the Filipino context."
+    - "Systematic review does not include primary empirical data; relies on the quality of reviewed studies."
+    - "Focus is on general digital banking features, with limited depth on specific personal finance management modules."
+    - "Cultural influences are mentioned but not systematically explored for Filipino young professionals."
+    - "Long-term impact of specific technologies (e.g., AI, blockchain) on customer loyalty lacks direct empirical evidence." 
+  mapping_rationale: "All 12 functional domains and their associated topic codes were systematically scanned. The paper was flagged as highly relevant for Mobile-First Design (9.A, 9.B) and Data Privacy & User Trust (10.A, 10.B) because it directly addresses user-friendly interfaces, security measures, and transparency. Medium relevance was assigned to Budget Recommendation (7.B) due to personalization and data analytics, and to Existing Systems (4.A, 4.B) for the landscape and gaps identified. Contextual relevance was noted for Culturally Specific Practices (2.A) due to a brief mention of cultural factors. Low relevance was assigned to Engagement Dynamics (11.A) as it is only tangentially touched upon. Domains like Filipino Cultural Context (2.B, 2.C, 2.D), Behavioral Profiling (5.A, 5.B, 5.C), Spending Forecasting (6.A, 6.B), Anomaly Detection (8.A, 8.B, 8.C), Evaluation Frameworks (12.A, 12.B, 12.C), and Savings & Debt Management (13.A, 13.B, 13.C) were considered but rejected as the paper does not provide citeable claims for Odin's design in these areas. Overall, the paper provides strong justification for Odin's focus on mobile-first design and security."
 limitations:
-  - "Limited focus on elderly users and rural populations with low digital literacy [acknowledged]."
-  - "Lack of empirical evidence linking emerging technologies (AI, blockchain) to long-term customer loyalty and profitability [acknowledged]."
-  - "Underexplored ethical implications of data-driven personalization and privacy trade-offs [acknowledged]."
-  - "Potential publication bias toward English-language, peer-reviewed articles [unacknowledged]."
-  - "Does not examine algorithmic performance or evaluation metrics for specific PFMS modules."
+  - "Geographic scope of the reviewed studies is predominantly Western or global, limiting applicability to Filipino young professionals."
+  - "Systematic review methodology may be subject to publication bias; studies with positive findings are more likely to be published."
+  - "The paper focuses on banking features but does not address personal finance management or budgeting specifically."
+  - "Ethical implications and regulatory compliance like GDPR are mentioned but not deeply explored [unacknowledged]."
+  - "Digital literacy and technology access are noted as barriers but not systematically analyzed for underserved populations [unacknowledged]."
 remember_this:
-  - "47 studies confirm convenience as the top driver of digital banking adoption."
-  - "Security features like MFA and encryption are essential for customer trust."
-  - "Personalization via AI increases satisfaction but raises privacy concerns."
-  - "COVID-19 forced rapid digital infrastructure improvements in banking."
-  - "Customer retention relies on value-added services like AI advisors and real-time alerts."
+  - "User-friendly interfaces and 24/7 availability are primary drivers of digital banking adoption."
+  - "Encryption, MFA, and transparent data policies are critical for fostering customer trust."
+  - "AI-driven personalization enhances customer satisfaction and retention in digital banking."
+  - "The COVID-19 pandemic accelerated digital adoption and reshaped customer expectations for flexibility."
+  - "47 out of 112 reviewed articles consistently highlighted ease of use as a key adoption factor."
 ```

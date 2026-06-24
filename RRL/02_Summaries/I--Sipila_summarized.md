@@ -1,92 +1,119 @@
 ```yaml
-paper_id: "5c3a2f1e-4b6d-4c8e-9a7b-2d1f3e4a5b6c"
-designation: "international"
-title: "Proof of concept of centralized personal finance application"
-authors: "Sipilä, M."
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+designation: international
+title: Proof of concept of centralized personal finance application
+authors: Sipilä, M.
 year: 2025
-venue: "Aalto University"
+venue: Unknown
 odin_topics:
-  - "3.A"
-  - "3.B"
-  - "4.A"
-  - "4.B"
-  - "12.A"
-shorthand_tags:
-  - "/expense-categorization"
-  - "/category-design"
-  - "/existing-systems"
-  - "/system-gaps"
-  - "/evaluation"
-tldr: "Design and development of a centralized personal finance proof-of-concept application using DSRM, consolidating asset tracking, cash flow visualization, and automated reporting to reduce manual effort and errors for a stakeholder."
-problem_and_motivation: "Personal finance management is hindered by fragmented tools and manual processes that cause errors and scalability issues. Existing applications focus on narrow functions and lack centralized data integration. A proof-of-concept is needed to automate updates and provide unified financial oversight."
+  - 3.A
+  - 3.B
+  - 4.A
+  - 4.B
+  - 9.A
+  - 10.A
+  - 11.A
+  - 12.A
+tldr: A proof-of-concept personal finance application was developed using DSRM to consolidate fragmented financial tracking, automate data retrieval, and generate integrated reports for a stakeholder.
+problem_and_motivation: Stakeholders managing finances over a decade rely on fragmented tools like spreadsheets and third-party apps, leading to scalability issues, high manual effort, and error-prone reporting. Existing PFM tools lack comprehensive integration and automation, failing to meet the needs of sophisticated users with specific asset tracking requirements.
 approach:
-  - "Followed Design Science Research Methodology (DSRM) with stakeholder questionnaire and iterative feedback."
-  - "Developed a Flutter frontend, .NET backend, and MongoDB database for asset tracking, cash flow, and PDF reports."
-  - "Integrated Google Sheets API for stock prices and HexaRate API for daily exchange rates."
-  - "Evaluated via task-based user testing, structured questionnaire, and comparison to the stakeholder's baseline spreadsheet system."
+  - The Design Science Research Methodology (DSRM) was followed, involving six iterative phases from problem identification to evaluation.
+  - A structured questionnaire identified stakeholder challenges, including complexity, lack of automation, and reporting inefficiencies.
+  - The application was built using Flutter for a cross-platform UI, ASP.NET Core for the backend API, and MongoDB for data storage.
+  - Key features include asset tracking (shares, cash, real estate), categorized cash flow monitoring, and automated PDF report generation.
+  - External integrations were implemented using Google Sheets API for stock prices and HexaRate API for exchange rates, with a focus on automating data retrieval.
 findings:
-  - "The proof-of-concept eliminated manual spreadsheet formula errors and reduced repetitive data entry."
-  - "Stakeholder reported high satisfaction with automated visualizations and PDF report generation."
-  - "All 'must have' functional requirements were met except authentication, which was deferred."
-  - "System improved data reliability and user confidence compared to fragmented baseline tools."
+  - num: The PoC application significantly reduced manual work and human error by centralizing financial data and automating calculations.
+  - num: The stakeholder reported a reduction in manual effort and increased trust in data accuracy, validated through task-based user testing.
+  - num: The system successfully replaced a multi-step manual reporting process with one integrated, automated PDF report generation feature.
+  - The stakeholder found the interface intuitive and the visualizations (pie charts, trend graphs) clear and informative for gaining financial insights.
+  - The application effectively addressed the core "Must have" requirements, such as data visualization and asset tagging, as defined in the design phase.
+  - User feedback highlighted the need for refinements in tooltips, label clarity, and a clearer definition of the cash flow module's purpose.
 key_figures_tables:
-  - "Figure 3: User's shares in doughnut chart → Visualizes asset allocation by category."
-  - "Figure 5: Net worth over time line chart → Shows historical trend and growth."
-  - "Figure 10: Generated financial report PDF → Consolidates income, expenses, and net worth."
+  - Figure 3: Interactive doughnut chart of shares → Visualizes portfolio distribution.
+  - Figure 4: Editable tables of assets with summary stats → Enables data review and modification.
+  - Figure 5: User net worth over time → Tracks historical asset growth trends.
+  - Figure 7: Multi-layered pie charts of share distribution → Shows categorization by type, country, and subcategory.
+  - Figure 9: Cash flow tracking charts and timeline → Compares monthly income and expenses.
+  - Figure 10: User-generated financial report → Consolidates key metrics into a PDF.
+  - Table 9: Baseline vs. PoC system comparison → Highlights improvements in automation and centralization.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "DSRM"
-    definition: "Design Science Research Methodology, a six-step framework for artifact development."
-  - term: "PFM"
-    definition: "Personal Finance Management, systems for tracking and planning finances."
-  - term: "PoC"
-    definition: "Proof-of-concept, a prototype demonstrating feasibility of core features."
-  - term: "UI"
-    definition: "User interface, the visual and interactive layer of the application."
-  - term: "API"
-    definition: "Application Programming Interface, for external data integration."
+  - term: DSRM
+    definition: Design Science Research Methodology
+  - term: PFM
+    definition: Personal Finance Management
+  - term: PoC
+    definition: Proof-of-concept
+  - term: FR
+    definition: Functional Requirement
+  - term: QA
+    definition: Quality Attribute
 critical_citations:
-  - "[Peffers et al., 2007] — Foundational DSRM process model used."
-  - "[Cederberg, 2013] — User preferences for automated PFM features."
-  - "[Torno et al., 2021] — Taxonomy highlighting fragmentation in PFM apps."
+  - "[Cederberg, 2013] — Highlights user preference for automation and visual clarity."
+  - "[Torno et al., 2021] — Identifies lack of holistic integration in PFM apps."
+  - "[Stefanov et al., 2024] — Notes need for localized and centralized PFM solutions."
+  - "[Herrala et al., 2023] — Links tool complexity to user stress and distrust."
 relevance:
   topics:
-    - code: "3.A"
-      name: "Expense Categorization Frameworks"
-      justification: "Implements tagged cash flow transactions and asset categories."
-    - code: "3.B"
-      name: "Expense Category Design Considerations"
-      justification: "Discusses multi-level categories for shares, real estate, and cash flow."
-    - code: "4.A"
-      name: "Landscape of Existing Personal Finance Systems"
-      justification: "Literature review covers Mint, Spendee, and other PFM tools."
-    - code: "4.B"
-      name: "Limitations and Gaps in Existing Systems"
-      justification: "Identifies fragmentation, manual effort, and lack of holistic integration."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      justification: "Uses DSRM with task-based testing and stakeholder questionnaires."
-  contribution: "The paper's centralized data model directly informs Odin's expense categorization module by demonstrating a flexible tagging system for assets and transactions. The automated fetching of exchange rates and stock prices provides a template for Odin's data integration layer. The DSRM-based evaluation methodology offers a validated approach for assessing Odin's system evaluation module, particularly task-based user testing. The focus on reducing manual effort aligns with Odin's goal of improving user retention through automation."
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: The system implements categorization for transactions and assets, aligning with this topic.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: medium
+      justification: User tagging and categorization of cash flow and assets are core to the design.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: The thesis provides a detailed literature review and analysis of PFM landscape limitations.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Directly addresses fragmentation, manual effort, and scalability gaps in current tools.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: contextual
+      justification: Flutter was used for cross-platform support, but mobile optimization was not completed.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: The lack of authentication is identified as a major limitation, highlighting its importance.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Discusses how automation and visualization can improve user engagement and motivation.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Used a structured DSRM evaluation with task-based testing and stakeholder questionnaires.
+  contribution: "This research contributes a practical proof-of-concept that demonstrates how centralized financial data, automated retrieval, and integrated reporting can significantly reduce manual workload and errors for a sophisticated user. The application's design directly informs Odin's architecture for asset tracking and reporting modules. The DSRM-based iterative development and stakeholder evaluation provide a validated framework for building user-centric PFM tools. The findings on automation and data centralization justify Odin's focus on these features to address similar gaps in the Filipino context."
   directly_justifies:
-    - "Manual financial tracking systems are prone to errors and do not scale."
-    - "Automated data retrieval reduces user workload and improves data reliability."
-    - "Task-based testing is an effective evaluation method for PFM prototypes."
-    - "Visual dashboards and PDF reports increase user trust and decision confidence."
+    - "A centralized platform can solve the problem of fragmented financial data from multiple sources."
+    - "Automating data retrieval for share prices and exchange rates significantly reduces manual effort and errors."
+    - "Integrated reporting replaces time-consuming manual processes with on-demand summaries."
+    - "User-centered design and iterative feedback are critical for developing effective PFM tools."
+    - "Stakeholders value systems that are reliable, automated, and provide clear visual insights."
   limits:
-    - "Authentication and authorization not implemented, limiting real-world deployment."
-    - "Full automation of bank and broker data fetching not achieved due to API constraints."
-    - "Evaluation based on a single stakeholder, limiting generalizability."
-  mapping_rationale: "The paper was screened against Odin's functional domains. Expense categorization (3.A, 3.B) applies because the app implements tagged transactions and asset classification. Landscape and gaps (4.A, 4.B) apply due to extensive literature review and problem analysis of existing tools. System evaluation (12.A) applies because the paper uses DSRM with structured evaluation methods. Topics related to behavioral profiling (5.A-C), forecasting (6.A-B), budgeting algorithms (7.A-C), anomaly detection (8.A-B), mobile-first design (9.A-B), data privacy (10.A-B), retention (11.A-B), algorithmic evaluation (12.B), and savings/debt management (13.A-B) were rejected because the paper does not provide citeable claims on those specific subtopics; it focuses on artifact development and integration rather than algorithms or behavioral models."
+    - "The study is based on a single stakeholder, limiting generalizability to broader populations."
+    - "Full automation through bank and broker APIs was not achieved, relying on manual entry and workarounds."
+    - "No authentication or authorization mechanisms were implemented, posing data security risks."
+    - "Mobile-specific UI optimization was not completed, focusing primarily on desktop and web platforms."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. Domains directly relevant to the thesis's core contribution (expense categorization, existing systems/gaps, and system evaluation) were flagged as high priority. The paper's literature review and problem analysis strongly support topics like 3.A, 3.B, 4.A, and 4.B (high). Its practical evaluation using a DSRM framework provides a direct contribution to 12.A (high). The discussion on user engagement and motivation links to 11.A (medium). The mention of mobile-first design (9.A) and data security (10.A) is purely contextual, as these were not primary implementation focuses due to the PoC scope. Topics related to Filipino cultural context (2.A-D), behavioral profiling (5.A-C), forecasting (6.A-B), budget recommendation (7.A-D), anomaly detection (8.A-C), and savings/debt management (13.A-C) were considered but rejected as the thesis does not address these specific problem domains. The paper's overall relevance to Odin is high as it provides a validated blueprint for a centralized PFM system with automated reporting, addressing gaps found in many existing tools."
 limitations:
-  - "No user authentication or authorization implemented, a critical security gap for financial data."
-  - "Full automation of bank/broker data fetching not achieved; still requires manual CSV or form input for transactions."
-  - "Evaluated with only one stakeholder, limiting external validity."
-  - "Customizable dashboards and mobile layout optimizations were not implemented due to scope."
+  - "The system was only tested with one stakeholder, limiting generalizability of usability findings. [unacknowledged]"
+  - "User authentication and data privacy were not implemented, making it unsuitable for multi-user deployment."
+  - "Full automation via bank/broker APIs was not achieved, requiring manual data entry for some transactions."
+  - "Mobile UI optimization was not completed, limiting the 'mobile-first' aspect of the design."
+  - "Performance was not formally tested under load, and no unit/integration tests were documented."
+  - "The study's findings may be biased due to the stakeholder's high financial literacy."
 remember_this:
-  - "Centralized PFM reduces error-prone manual consolidation across tools."
-  - "Automated stock price and exchange rate fetching saves significant time."
-  - "DSRM provides an effective structured process for prototype development."
-  - "Visual dashboards and PDF reports improve user trust and decision confidence."
+  - "Centralized PFM tools reduce manual work and improve data reliability."
+  - "Automated reporting saves significant time compared to manual quarterly reviews."
+  - "Stakeholder feedback confirmed a reduction in manual effort and increased trust in data."
+  - "The PoC addressed core requirements but lacked authentication and mobile optimization."
+  - "DSRM provides an effective framework for developing user-centered financial applications."
 ```

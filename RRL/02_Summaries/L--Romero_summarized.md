@@ -1,99 +1,154 @@
 ```yaml
-paper_id: "b3c5d7e9-f1a2-4b6c-8d0e-9f1a2b3c4d5e"
-designation: "local"
-title: "Buy-Now-Pay-Later Adoption, Debt Stress, and Repurchase Intention among Filipinos Gen Z Consumers: The Mediating Role of Budgeting Self-Efficacy"
-authors: "Romero, M. A."
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+designation: local
+title: Buy-Now-Pay-Later Adoption, Debt Stress, and Repurchase Intention among Filipinos Gen Z Consumers: The Mediating Role of Budgeting Self-Efficacy
+authors: Romero, M. A.
 year: 2025
-venue: "Oikonomia Review: Journal of Economics, Management, and Accounting"
+venue: Oikonomia Review: Journal of Economics, Management, and Accounting
 odin_topics:
-  - "1.C"
-  - "5.A"
-  - "11.A"
-  - "11.B"
-  - "13.B"
-shorthand_tags:
-  - "/fin-behavior-filipino"
-  - "/behavioral-profile"
-  - "/repurchase-intention"
-  - "/retention"
-  - "/debt-stress"
-tldr: "BNPL adoption among Filipino Gen Z consumers increases repurchase intention but also raises debt stress, while budgeting self-efficacy and transparency mitigate negative outcomes."
-problem_and_motivation: "BNPL services expand rapidly in Southeast Asia but create tension between purchase convenience and consumer welfare risks. Gen Z consumers face high digital shopping frequency and limited financial buffers, yet mechanisms linking BNPL adoption to stress and repurchase are unclear. This study identifies debt stress and budgeting self-efficacy as explanatory pathways for Filipino youth."
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.C
+  - 3.C
+  - 5.A
+  - 5.B
+  - 5.C
+  - 7.A
+  - 7.B
+  - 7.D
+  - 8.A
+  - 11.A
+  - 11.B
+  - 13.A
+  - 13.B
+tldr: BNPL adoption among Filipino Gen Z is driven by convenience and promotions, increasing repurchase intention but also debt stress, while budgeting self-efficacy and transparency reduce negative outcomes.
+problem_and_motivation: BNPL services can simultaneously drive commerce growth and create consumer welfare risks, yet the psychological mechanisms linking adoption to repurchase intention remain unclear. Understanding how debt stress and budgeting self-efficacy mediate this relationship is essential for designing platforms that support sustainable use. The role of transparency in fostering self-efficacy and reducing stress has not been adequately examined in the Filipino Gen Z context.
 approach:
-  - "Survey of 602 Filipino Gen Z BNPL users who had used the service at least twice in three months."
-  - "Constructs measured: perceived convenience, promotional attractiveness, transparency, adoption intensity, budgeting self-efficacy, debt stress, repurchase intention."
-  - "Partial Least Squares Structural Equation Modeling (PLS-SEM) with bootstrapping for mediation analysis."
-  - "Hypotheses tested for direct effects, mediation, and serial mediation."
+  - Quantitative explanatory design using cross-sectional survey data from 602 Filipino Gen Z consumers aged 18-27 who had used BNPL at least twice in three months.
+  - Partial Least Squares Structural Equation Modeling (PLS-SEM) tested direct and mediated effects among perceived convenience, promotional attractiveness, transparency, BNPL adoption intensity, debt stress, budgeting self-efficacy, and repurchase intention.
+  - All constructs measured with validated multi-item five-point Likert scales; bootstrapping supported inference for indirect effects.
 findings:
-  - "Perceived convenience, promotional attractiveness, and transparency are positively associated with BNPL adoption intensity."
-  - "BNPL adoption intensity is positively associated with repurchase intention and also positively associated with debt stress."
-  - "Debt stress is negatively associated with repurchase intention."
-  - "Budgeting self-efficacy reduces debt stress and strengthens repurchase intention."
-  - "Transparency strengthens budgeting self-efficacy."
-  - "Budgeting self-efficacy mediates the relationship between transparency and debt stress."
-  - "Debt stress partially mediates the relationship between BNPL adoption intensity and repurchase intention."
-  - "Serial mediation via budgeting self-efficacy and debt stress is supported."
+  - Perceived convenience and promotional attractiveness positively associated with BNPL adoption intensity.
+  - Perceived transparency positively associated with BNPL adoption intensity and budgeting self-efficacy.
+  - BNPL adoption intensity positively associated with repurchase intention and debt stress.
+  - Debt stress negatively associated with repurchase intention.
+  - Budgeting self-efficacy negatively associated with debt stress and positively associated with repurchase intention.
+  - Budgeting self-efficacy mediates the transparency-debt stress relationship; debt stress partially mediates the adoption-repurchase intention relationship; serial mediation via self-efficacy and stress is supported.
 key_figures_tables:
-  - "Table 1: Measurement model summary → All constructs show convergent and discriminant validity."
-  - "Table 2: Hypothesis testing summary → All 12 hypotheses supported or partially supported."
-  - "Table 3: Mechanism summary → Convenience/promotions drive adoption; adoption increases stress; transparency builds self-efficacy."
-  - "Figure 1: SEM path diagram → Theory-driven structure linking design perceptions to adoption, stress, self-efficacy, and repurchase intention."
-  - "Figure 2: Mediation model → Dual pathways from adoption to repurchase via direct positive and stress-mediated negative routes."
+  - Table 1: Measurement model summary establishing reliability, convergent validity, and discriminant validity for all constructs.
+  - Table 2: Hypotheses testing summary confirming all direct and mediated relationships, with partial mediation for debt stress.
+  - Table 3: Mechanism summary interpreting convenience/promotions, adoption-stress-repurchase, and transparency-self-efficacy-stress pathways.
+  - Figure 1: SEM path diagram specifying the theory-driven structure of BNPL adoption, stress, self-efficacy, and repurchase intention relationships.
+  - Figure 2: Mediation model illustrating dual pathways from adoption to repurchase intention via debt stress, with transparency and budgeting self-efficacy as protective levers.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "BNPL"
-    definition: "Buy-Now-Pay-Later, a short-term consumer credit service embedded at digital checkout."
-  - term: "PLS-SEM"
-    definition: "Partial Least Squares Structural Equation Modeling, a variance-based multivariate analysis method."
-  - term: "Gen Z"
-    definition: "Individuals born between approximately 1997 and 2012."
-  - term: "Debt stress"
-    definition: "Psychological burden from repayment obligations and perceived loss of financial control."
-  - term: "Budgeting self-efficacy"
-    definition: "Confidence in tracking installments, planning spending, and resisting impulsive BNPL use."
-  - term: "Transparency"
-    definition: "Clarity of fees, due dates, penalty rules, and total repayment amounts."
+  - term: BNPL
+    definition: Buy-Now-Pay-Later, a short-term consumer credit embedded in digital checkout.
+  - term: Debt Stress
+    definition: Psychological burden from repayment obligations, late fees, and perceived loss of financial control.
+  - term: Budgeting Self-Efficacy
+    definition: Confidence in tracking installments, planning cashflow, and resisting impulsive use.
+  - term: Perceived Transparency
+    definition: Clarity of fees, due dates, penalties, and total repayment amounts.
+  - term: PLS-SEM
+    definition: Partial Least Squares Structural Equation Modeling, a variance-based SEM method.
 critical_citations:
-  - "[Bisht & Al Aflak, 2025] — BNPL reduces salience of borrowing."
-  - "[Schomburgk & Hoffmann, 2023] — BNPL can increase impulsive spending and debt stress."
-  - "[Widayati et al., 2024] — Promotions increase BNPL perceived value."
+  - "[Schomburgk & Hoffmann, 2023] — Mindfulness reduces BNPL usage and improves well-being."
+  - "[Simiyu et al., 2025] — Self-efficacy and facilitating conditions influence BNPL borrowing."
+  - "[Widayati et al., 2024] — Promotions and design features drive Gen Z BNPL behavior."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Paper directly examines BNPL adoption, debt stress, and repurchase intention among Filipino Gen Z."
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Identifies debt stress and budgeting self-efficacy as distinct psychological states shaping BNPL outcomes."
-    - code: "11.A"
-      name: "Engagement Dynamics in Personal Finance Applications"
-      justification: "Repurchase intention is a core engagement metric studied as an outcome of BNPL use."
-    - code: "11.B"
-      name: "Retention Mechanisms and Engagement Design"
-      justification: "Discusses how transparency and self-efficacy protect repurchase intention, informing retention design."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Debt stress and its reduction via budgeting self-efficacy are central to the paper's mechanism."
-  contribution: "For Odin's debt management module, this paper justifies tracking debt stress as a key user state that influences retention. For behavioral profiling, the validated distinction between budgeting self-efficacy and debt stress provides measurable constructs for user segmentation. For engagement analytics, the dual pathways from adoption to repurchase (direct positive vs. stress-mediated negative) inform retention intervention design. For PFMS feature design, transparency as a driver of self-efficacy supports the inclusion of clear fee disclosure and repayment planning tools."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: Focuses specifically on Filipino Gen Z consumers aged 18-27, a core Odin demographic.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: Examines income irregularity, liquidity constraints, and short-term smoothing needs of young Filipinos.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly investigates spending behavior, BNPL usage, repurchase intention, and debt stress in the target segment.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Provides empirical data on BNPL use within the Filipino cultural and digital commerce context.
+    - code: 2.C
+      name: User-Declared Financial Preferences
+      relevance: medium
+      justification: Captures self-reported perceptions of convenience, transparency, and promotional appeal, informing preference modeling.
+    - code: 3.C
+      name: User-Defined Allocation Constraints
+      relevance: medium
+      justification: Budgeting self-efficacy reflects user-perceived ability to allocate and constrain spending, relevant to constraint handling.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Identifies behavioral profiles via stress and self-efficacy levels, relevant to classification.
+    - code: 5.B
+      name: Profile Dynamics and the Cold-Start Problem
+      relevance: contextual
+      justification: Discusses heterogeneity and segmentation; provides background for profile dynamics but no cold-start methods.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: low
+      justification: Uses PLS-SEM for hypothesis testing, not classification; tangential to classification approaches.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: high
+      justification: Budgeting self-efficacy is a core construct, providing domain knowledge on how confidence affects financial outcomes.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: medium
+      justification: Findings on transparency and self-efficacy can inform design of budget recommendations that reduce stress and support healthy use.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: contextual
+      justification: Discusses infeasibility when repayment congestion occurs; provides context but not algorithmic handling methods.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: Tangential; debt stress and repayment congestion could inform anomaly signals but not directly about detection.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: high
+      justification: Repurchase intention and stress-driven avoidance directly relate to engagement dynamics and sustainability.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: high
+      justification: Transparency and self-efficacy are identified as mechanisms to reduce churn and support retention, directly informing engagement design.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: low
+      justification: Tangential; budgeting self-efficacy relates to spending control, not explicit savings goal management.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: high
+      justification: Directly studies debt stress and strategies to manage BNPL obligations, informing debt management features.
+  contribution: The paper's mechanism-based account of BNPL behavior provides empirical justification for Odin's design to incorporate budgeting self-efficacy as a protective factor. The finding that transparency strengthens self-efficacy directly supports Odin's need for clear, legible information displays. The dual pathway model (adoption→repurchase vs. adoption→stress→reduced repurchase) informs Odin's anomaly detection and engagement modules by highlighting stress as a predictor of churn. The emphasis on micro-interventions and contextual nudges justifies Odin's mobile-first approach to delivering decision aids at the point of purchase.
   directly_justifies:
-    - "BNPL adoption intensity increases repurchase intention directly but also increases debt stress."
-    - "Budgeting self-efficacy reduces debt stress and strengthens repurchase intention."
-    - "Perceived transparency strengthens budgeting self-efficacy and indirectly reduces debt stress."
+    - "Budgeting self-efficacy reduces debt stress and supports healthier repurchase behavior."
+    - "Transparency strengthens budgeting self-efficacy and reduces harmful outcomes."
+    - "BNPL adoption increases repurchase intention but also elevates debt stress, which reduces future engagement."
+    - "Micro-interventions embedded in app interfaces can strengthen self-efficacy and reduce stress."
   limits:
-    - "Cross-sectional design limits causal inference about stress accumulation over time."
-    - "Self-reported adoption and stress measures may be biased by social desirability."
-    - "Sample limited to Filipino Gen Z; generalizability to other age groups or countries requires validation."
-  mapping_rationale: "The paper was screened against Odin's functional domains. Behavioral profiling was selected because debt stress and budgeting self-efficacy are psychological profile components. Engagement and retention domains applied due to the focus on repurchase intention as a behavioral outcome. Debt management domain applied due to stress as a direct measure of debt burden. Domains for spending forecasting, budget recommendation, anomaly detection, and mobile design were rejected because the paper does not model spending trajectories, prescribe budgets, flag irregularities, or test UI features. Expense categorization was not addressed. Data privacy and user trust were not central. Topic 1.C (Filipino young professional financial behavior) was included because the sample is explicitly Filipino Gen Z. Topic 5.A (behavioral profiles) was included for stress/self-efficacy. Topics 11.A and 11.B (engagement/retention) were included for repurchase intention. Topic 13.B (debt management) was included for debt stress."
+    - "Cross-sectional design restricts temporal inference; stress may accumulate over time [unacknowledged]."
+    - "Self-reported adoption intensity may not align with objective transaction data [unacknowledged]."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to domains related to Filipino Cultural Context (Topic 2.A), Expense Categorization (3.C via self-efficacy), Behavioral Profiling (5.A), Budget Recommendation (7.A), Engagement (11.A, 11.B), and Debt Management (13.B). It provides medium relevance to Seasonal Patterns (2.B, 2.D) and User Preferences (2.C) through its discussion of promotions and transparency, though not directly addressing cyclicality. Domain 6 (Forecasting) and Domain 12 (Evaluation) were rejected as the paper does not address predictive modeling or system evaluation frameworks. Borderline cases included Topic 7.D (infeasibility handling), which was marked contextual because the paper discusses repayment congestion but not algorithmic reduction hierarchies. Topic 5.B (profile dynamics) was also marked contextual as it mentions segmentation but does not address cold-start issues. Topic 8.A (anomaly detection) was marked low due to tangential relevance to stress as an outcome signal. The overall relevance is high for informing Odin's behavioral, engagement, and debt management modules, though the paper is primarily a behavioral study rather than a computational systems paper.
 limitations:
-  - "Cross-sectional design restricts temporal inference about how debt stress accumulates over repeated BNPL use. [acknowledged]"
-  - "Reliance on self-reported measures may introduce common method bias. [acknowledged]"
-  - "No objective transaction data to validate adoption intensity. [acknowledged]"
-  - "Sample limited to Filipino Gen Z; findings may not generalize to other Southeast Asian youth segments. [unacknowledged]"
+  - "Cross-sectional design restricts temporal causal inference. [unacknowledged]"
+  - "Self-reported adoption and stress measures may introduce common method bias. [unacknowledged]"
+  - "Sample limited to university and online panel networks, may not fully represent all Filipino Gen Z consumers. [unacknowledged]"
+  - "No objective transaction data to validate self-reported BNPL adoption intensity. [unacknowledged]"
 remember_this:
-  - "Survey of 602 Filipino Gen Z consumers shows BNPL adoption increases repurchase intention and debt stress."
-  - "Budgeting self-efficacy buffers debt stress and supports healthier repurchase behavior."
-  - "Transparency in fees and due dates strengthens self-efficacy and reduces harmful outcomes."
-  - "BNPL can simultaneously drive commerce growth and create consumer welfare risks."
+  - "BNPL adoption increases repurchase intention but also elevates debt stress."
+  - "Budgeting self-efficacy reduces stress and supports healthier BNPL use."
+  - "Transparency strengthens self-efficacy, serving as a protective mechanism."
+  - "Debt stress partially mediates the adoption-repurchase intention relationship."
+  - "Micro-interventions can enhance self-efficacy and reduce repayment congestion."
 ```

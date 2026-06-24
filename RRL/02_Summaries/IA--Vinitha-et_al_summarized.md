@@ -1,8 +1,8 @@
 ```yaml
-paper_id: 2c3d4e5f-6a7b-8c9d-0e1f-2a3b4c5d6e7f
-designation: algorithm-specific
+paper_id: 1b4e3c2d-5a6f-7b8c-9d0e-1f2a3b4c5d6e
+designation: international-algorithm-specific
 title: AI-Driven Personal Finance Management: Predictive Expense Forecasting and Behavioural Clustering
-authors: Vinitha, C.; Krishna, A.H.; Reddy, E.M.; Javari, P.
+authors: Vinitha, C.; Krishna, A. H.; Reddy, E. M.; Javari, P.
 year: 2026
 venue: International Journal of Data Science and IoT Management System
 odin_topics:
@@ -12,93 +12,101 @@ odin_topics:
   - 6.A
   - 6.B
   - 7.B
-  - 7.C
-shorthand_tags:
-  - /expense-categorization
-  - /behavioral-profiles
-  - /clustering
-  - /predictive-modeling
-  - /spending-forecast
-  - /budget-recommendation
-tldr: Combines LSTM for expense forecasting and K-Means for spending behavior clustering with VADER sentiment analysis, achieving 99.93% prediction accuracy.
-problem_and_motivation: Manual financial tracking is complex, time-consuming, and error-prone. Traditional tools store transactions but lack advanced analytics for future expense prediction. Users struggle to interpret spending patterns and link qualitative feelings to quantitative data.
+  - 8.A
+  - 12.B
+  - 13.A
+tldr: Combines LSTM forecasting and K-Means clustering to provide personalized expense predictions and spending behavior insights for improved financial decision-making.
+problem_and_motivation: Manual financial tracking and basic budgeting tools fail to capture complex temporal dependencies and spending patterns, making accurate future expense prediction difficult. This leads to inefficient financial decisions and a lack of personalized, actionable insights for users. There is a need for an intelligent system that analyzes historical data to forecast expenses and understand underlying spending behavior.
 approach:
-  - System built with Django, MySQL, and OTP authentication via SMTP for secure access.
-  - LSTM model with MSE loss and Adam optimizer trained on historical daily expenses over 1000 epochs.
-  - K-Means clustering groups expenses by category and amount to reveal spending patterns.
-  - VADER sentiment analysis classifies user feedback as positive, negative, or neutral.
-  - Budget recommendation computes surplus from predicted expenses and approximated income.
+  - Developed a Django-based web application with a MySQL database and email OTP authentication for secure access.
+  - Applied K-Means clustering to expense categories and amounts to group similar spending behaviors and identify financial patterns.
+  - Implemented an LSTM deep learning model to analyze historical daily expense data and generate future expense predictions, addressing non-linear trends and temporal dependencies.
+  - Integrated VADER sentiment analysis to evaluate user feedback, classifying it as positive, negative, or neutral for continuous system improvement.
+  - Used the predicted expenses to compute a surplus against a generated income approximation, providing investment or savings recommendations.
 findings:
-  - "num: LSTM achieved 99.93% accuracy and MSE of 35.41 on expense prediction."
-  - K-Means clustering visualizes distinct spending behavior patterns across expense categories.
-  - Budget recommendation suggests investment amounts from predicted surplus (e.g., 8,661 units surplus).
-  - VADER sentiment analysis enables continuous system improvement based on user feedback.
+  - num: The LSTM model achieved an accuracy of 99.93% with a Mean Squared Error of 35.41 for predicting future expenses.
+  - num: K-Means clustering successfully grouped transaction records into distinct expense behavior patterns based on category and amount.
+  - The combined approach of prediction and clustering enables users to make informed budgeting and investment planning decisions.
+  - The proposed system automates financial insights and provides personalized recommendations, addressing limitations of traditional financial tools.
 key_figures_tables:
-  - "Figure 4: K-means clustering visualization → shows expense distribution across clusters."
-  - "Figure 5: LSTM prediction vs actual → model closely tracks real expense patterns."
-  - "Figure 6: Budget recommendation screen → suggests investment from predicted surplus."
-  - "Figure 7: Feedback sentiment analysis → classifies user feedback as neutral."
+  - Figure 4: K-Means clustering results for expense behavior patterns → Identifies distinct spending clusters for better financial understanding.
+  - Figure 5: LSTM model evaluation comparing predicted vs. actual expenses → Demonstrates high accuracy in forecasting.
+  - Figure 6: Budget recommendation screen showing surplus calculation → Provides actionable investment suggestions based on predictions.
+  - Figure 7: VADER sentiment analysis of user feedback → Classifies feedback to improve user interaction.
 key_equations:
-  - equation: "None."
-    explanation: ""
+  - equation: "MSE = \\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2"
+    explanation: Loss function for evaluating LSTM prediction accuracy.
 definitions:
   - term: LSTM
-    definition: Long Short-Term Memory, a recurrent neural network that captures long-term dependencies in time-series data.
-  - term: K-Means
-    definition: Clustering algorithm that groups data points into k distinct clusters based on feature similarity.
+    definition: Long Short-Term Memory, a recurrent neural network capable of learning long-term dependencies in sequential data.
+  - term: K-Means Clustering
+    definition: An unsupervised learning algorithm that groups data points into k distinct clusters based on similarity.
   - term: VADER
-    definition: Valence Aware Dictionary and Sentiment Reasoner, a lexicon-based sentiment analysis tool.
-  - term: MSE
-    definition: Mean Squared Error, a loss function measuring average squared difference between predicted and actual values.
-  - term: OTP
-    definition: One-Time Password, used for two-factor authentication.
+    definition: Valence Aware Dictionary and sEntiment Reasoner, a rule-based sentiment analysis tool.
   - term: SMTP
-    definition: Simple Mail Transfer Protocol, used for sending email-based OTPs.
+    definition: Simple Mail Transfer Protocol, used for sending OTP authentication emails.
+  - term: OTP
+    definition: One-Time Password, a temporary passcode for user verification.
 critical_citations:
-  - "None."
+  - "[Sirisha et al., 2022] — Benchmarks LSTM for profit prediction."
+  - "[Shiyyab et al., 2023] — Discusses AI adoption and financial performance."
 relevance:
   topics:
     - code: 3.A
       name: Expense Categorization Frameworks
-      justification: K-Means clusters expenses into meaningful categories.
+      relevance: medium
+      justification: Uses K-Means clustering to categorize and group expenses.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: Clustering identifies distinct spending behavior patterns.
+      relevance: medium
+      justification: Clustering analysis identifies distinct spending behavior patterns.
     - code: 5.C
-      name: Financial Behavioral Profile Classification Algorithm
-      justification: K-Means algorithm classifies user spending behavior unsupervised.
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: K-Means is applied to classify expenses and uncover user financial profiles.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: LSTM models future expenses from historical time-series data.
+      relevance: high
+      justification: Core contribution is the LSTM model for expense prediction.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: LSTM provides accurate daily expense forecasts.
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: LSTM is specifically used for time-series forecasting of daily expenses.
     - code: 7.B
       name: Budget Recommendation in Personal Finance Systems
-      justification: System recommends investment surplus from predicted expenses.
-    - code: 7.C
-      name: Budget Recommendation Algorithm
-      justification: Surplus calculation (income minus predicted expenses) drives recommendations.
-  contribution: "The paper provides an LSTM-based spending forecasting algorithm that Odin can directly integrate into its predictive module. It demonstrates K-Means clustering for expense categorization, supporting Odin's behavioral profiling and cold-start mitigation. The budget recommendation logic (income minus predicted expenses) offers a simple but citable method for automated savings suggestions. Sentiment analysis on user feedback enables iterative system improvement and engagement tracking."
+      relevance: medium
+      justification: System provides a budget recommendation based on predicted expenses and estimated income.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: Mentions detecting anomalies but does not focus on it as a primary feature.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Reports performance metrics (MSE and accuracy) for the LSTM module.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: medium
+      justification: Surplus from predicted expenses is recommended as potential savings or investment.
+  contribution: This paper provides a practical implementation of an LSTM model for expense forecasting, which can directly inform the design of Odin's predictive engine. The use of K-Means clustering for expense categorization offers a viable approach for behavioral profiling. The integration of these predictive and clustering techniques demonstrates a feasible pipeline for generating personalized financial insights and recommendations. The sentiment analysis module provides a model for incorporating user feedback into system iteration. The evaluation metrics presented validate the accuracy of the algorithmic components.
   directly_justifies:
-    - "LSTM models can achieve 99.93% accuracy in predicting daily expenses from historical data."
-    - "K-Means clustering groups expenses into distinct spending behavior patterns from transaction records."
-    - "Combining expense prediction with income estimation enables automated savings recommendations."
-    - "VADER sentiment analysis classifies user feedback to guide system improvements."
+    - An LSTM model can accurately forecast daily expenses, achieving 99.93% accuracy on test data.
+    - K-Means clustering is effective for categorizing expenses into meaningful behavioral groups.
+    - Combining expense prediction with surplus calculation can generate actionable investment or savings recommendations.
+    - Secure authentication (OTP via SMTP) is a necessary feature for a personal finance management system.
   limits:
-    - "Dataset size and source not specified, limiting generalizability. [unacknowledged]"
-    - "No comparison against baseline forecasting methods like ARIMA or SARIMA. [unacknowledged]"
-    - "Assumes user income is provided and static; does not handle income variability. [unacknowledged]"
-    - "Cold-start problem for new users not addressed. [unacknowledged]"
-  mapping_rationale: "The paper directly addresses spending forecasting (LSTM) and budget recommendation, mapping to codes 6.A, 6.B, 7.B, and 7.C. The K-Means clustering for expense grouping supports expense categorization (3.A) and behavioral profiling (5.A, 5.C). Predictive modeling and algorithm-specific claims justify the 'algorithm-specific' designation. Topics like mobile-first design (9), data privacy (10) are only tangentially present via OTP authentication but not central. User retention (11) and system evaluation (12) are minimally covered, so omitted. Anomaly detection (8) is not present. Savings management (13.A) appears indirectly via investment suggestion but without goal tracking, so excluded."
+    - The evaluation is performed on a single dataset; generalizability to diverse spending patterns may be limited.
+    - The paper does not thoroughly discuss the handling of infeasible budget recommendations or user-defined constraints.
+    - The system's recommendation is based on a simple surplus calculation, lacking nuanced optimization strategies.
+  mapping_rationale: A systematic scan across all 12 functional domains was performed. The domains of Spending Forecasting (6), Behavioral Profiling & Classification (5), Budget Recommendation (7), and System Evaluation (12) were flagged as highly relevant due to the paper's focus on LSTM forecasting, K-Means clustering, and the reporting of model accuracy. The Expense Categorization (3) and Savings & Debt Management (13) domains were marked as medium, as the paper addresses expense grouping and mentions savings recommendations. The Anomaly Detection (8) domain was considered low because it is only briefly referenced. Domains related to Filipino Cultural Context (2), Mobile-First Design (9), Data Privacy (10), and User Retention (11) were rejected as they were not addressed in the paper. The paper's overall relevance to Odin is high as it provides concrete, algorithm-specific evidence for building a predictive and profiling system.
 limitations:
-  - "Evaluation uses only accuracy and MSE; no real-world user study or longitudinal validation. [unacknowledged]"
-  - "Potential overfitting of LSTM with 1000 epochs on small dataset not discussed. [unacknowledged]"
-  - "No baseline comparison to traditional statistical methods (e.g., ARIMA). [unacknowledged]"
-  - "Sentiment analysis limited to VADER, which may not capture nuanced financial feedback. [unacknowledged]"
+  - The paper does not discuss the model's performance on irregular spending patterns or its robustness to data sparsity. [unacknowledged]
+  - The integration of sentiment analysis is superficial and not directly linked to improving the core predictive modules. [unacknowledged]
+  - The budget recommendation is simplistic and does not account for user-defined allocation constraints.
 remember_this:
-  - "LSTM predicts daily expenses with 99.93% accuracy."
-  - "K-Means reveals hidden spending patterns from transaction data."
-  - "Budget recommendation uses predicted surplus for investment advice."
-  - "Sentiment analysis enables adaptive system improvement from user feedback."
+  - LSTM achieved 99.93% accuracy for financial expense prediction.
+  - K-Means clustering groups expenses into meaningful behavioral categories.
+  - Predictive insights are used to generate investment or savings recommendations.
+  - System integrates secure OTP authentication via SMTP for user access.
+  - User feedback is analyzed with VADER for continuous system improvement.
 ```

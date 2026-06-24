@@ -1,90 +1,139 @@
 ```yaml
-paper_id: f0e1d2c3-b4a5-6c7d-8e9f-0a1b2c3d4e5f
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
 designation: local
 title: A Phenomenological Reflection on Ubos-Biyaya and Petsa de Peligro: Capitalism’s Impact on Filipino Attitude of Spending and Church’s Proposition for an Inclusive Economy
 authors: Canete, J. J. O.; Liwanag, L. A. L.
 year: 2024
 venue: Mabini Review
 odin_topics:
+  - 1.A
   - 1.C
   - 2.A
   - 2.B
+  - 2.D
+  - 3.B
+  - 4.A
+  - 4.B
   - 5.A
-shorthand_tags:
-  - /young-professionals
-  - /cultural-practices
-  - /cyclical-spending
-  - /behavioral-profiles
-tldr: Ubos-biyaya, the Filipino tendency to spend all resources impulsively, leads to petsa de peligro (pre-payday financial distress) as a consequence of capitalism's planned obsolescence and consumer culture.
-problem_and_motivation: The paper identifies a gap in understanding the root causes of Filipino spending behaviors ubos-biyaya (resource depletion) and petsa de peligro (pre-payday financial strain). It argues that these are not mere individual failings but preconditioned outcomes of capitalism’s planned obsolescence and consumer culture. The motivation is to advocate for an inclusive economy from a Catholic social teaching perspective.
+  - 10.A
+  - 10.B
+  - 11.A
+  - 13.C
+tldr: Filipino spending behavior is characterized by ubos-biyaya and petsa de peligro, driven by capitalist consumerism and planned obsolescence, contrasting with Church's call for an inclusive economy.
+problem_and_motivation: Filipino spending patterns are characterized by ubos-biyaya and petsa de peligro. These phenomena are often seen as individual failures, but the study argues they are preconditioned outcomes of capitalism. The paper critiques this framing and explores the Church's alternative vision of an inclusive economy.
 approach:
-  - Phenomenological reflection on Filipino spending behaviors using literature review and personal interviews.
-  - Connects ubos-biyaya to planned obsolescence and cathedrals of consumption via theoretical synthesis.
-  - Examines Church teachings (Pope Francis, John Paul II) on capitalism and the economy of exclusion.
-  - Proposes an economy of inclusion as an alternative framework.
+  - This is a phenomenological study that interprets the concepts of ubos-biyaya and petsa de peligro using social theory.
+  - The paper analyzes the connection between ubos-biyaya, planned obsolescence, and the cathedrals of consumption.
+  - It critiques capitalism's role in creating a consumerist culture and an economy of exclusion.
+  - The study incorporates Church teachings, particularly from Pope Francis and John Paul II, to propose an economy of inclusion.
+  - The analysis relies on secondary sources, including interviews, to illustrate Filipino spending behaviors.
+  - The paper is structured to define the two key concepts, analyze their relationship, and then critique capitalism.
+  - The final part of the paper outlines the Church's position and offers practical recommendations.
 findings:
-  - "num: 87% of Filipinos buy more than planned compared to 75% of Americans."
-  - Ubos-biyaya is a preconditioned outcome of planned obsolescence designed by capitalism.
-  - Petsa de peligro emerges as an upshot of ubos-biyaya and impulsive buying behavior.
-  - Capitalism creates an economy of exclusion that reduces persons to commodities.
-  - The Church advocates for an economy of inclusion based on solidarity.
+  - num: 87% of Filipinos buy more than planned when shopping, compared to 75% of Americans.
+  - Capitalism creates planned obsolescence to stimulate consumption, contributing to ubos-biyaya.
+  - Ubos-biyaya is a preconditioned outcome designed by neo-capitalism to control and exploit consumers.
+  - Impulsive buying is the form or animating force of ubos-biyaya, leading to petsa de peligro.
+  - The economy of exclusion, driven by capitalism, reduces human relationships to utility and commodities.
+  - Pope Francis argues that an economy of exclusion and inequality "kills."
+  - Petsa de peligro is an accident dependent on a person's existence, resulting from ubos-biyaya.
+  - The paper advocates for an economy of inclusion grounded in solidarity and service to the human person.
 key_figures_tables:
-  - None.
+  - "None."
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
   - term: Ubos-biyaya
-    definition: Filipino term for depleting both tangible and intangible resources, often through impulsive spending on pseudo-needs.
+    definition: The state of having depleted both tangible and intangible resources, often through impulsive or lavish spending.
   - term: Petsa de Peligro
-    definition: Filipino expression for the period before payday when financial constraints intensify.
-  - term: Planned obsolescence
-    definition: Designing products with a limited useful life to stimulate repeat consumption.
-  - term: Cathedrals of consumption
-    definition: Spaces (e.g., malls) designed to enchant consumers and encourage spending.
-  - term: Economy of exclusion
-    definition: Capitalist system that prioritizes profit and commodifies human relationships, discarding the poor.
-  - term: Economy of inclusion
-    definition: Alternative framework promoting solidarity, equitable resource allocation, and the common good.
-  - term: Impulsive buying
-    definition: Purchasing without premeditation, often driven by emotion rather than need.
+    definition: The "day of danger," signifying the period before payday when financial constraints intensify.
+  - term: Cathedral of Consumption
+    definition: Any sphere where trade and consumption are regulated and monopolized by a capitalist.
+  - term: Planned Obsolescence
+    definition: The policy of designing objects with a verifiably limited useful life to hasten consumption.
+  - term: Economy of Exclusion
+    definition: An economy that prioritizes profit and consumerism, marginalizing and exploiting the poor.
+  - term: Economy of Inclusion
+    definition: An economic framework that promotes solidarity, equitable resource allocation, and the common good.
 critical_citations:
-  - "[Pope Francis, 2013] — defines economy of exclusion."
-  - "[John Paul II, 1991] — critiques consumerism as idolatry."
-  - "[Beatty & Ferrell, 1998] — defines impulsive buying."
-  - "[Ritzer, 2001] — introduces cathedrals of consumption."
+  - "[Ewen, 2001] — Defines capitalism's desire to control people through consumption."
+  - "[Pope Francis, 2013] — Condemns the economy of exclusion and inequality."
+  - "[John Paul II, 1991] — Critiques the idolatry of the market."
 relevance:
   topics:
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      justification: Describes Filipino impulsive buying and payday spending behaviors characteristic of young professionals.
-    - code: 2.A
-      name: Culturally Specific Financial Practices
-      justification: Analyzes culturally specific terms ubos-biyaya and petsa de peligro.
-    - code: 2.B
-      name: Seasonal and Cyclical Spending Patterns
-      justification: Discusses payday cycles (15th/30th) as triggers for spending and subsequent financial distress.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      justification: Profiles impulsive buying behavior as a distinct financial behavioral pattern.
-  contribution: Odin's behavioral profiling module can incorporate the identified ubos-biyaya tendency as a behavioral marker for impulsive spending. The cyclical pattern of petsa de peligro can inform spending forecasting by using payday cycles as a predictor of low-balance periods. The critique of planned obsolescence suggests that expense categorization should distinguish between pseudo-needs and basic needs. The paper's emphasis on culturally specific practices justifies localized design in Odin's user interfaces.
+    - code: "1.A"
+      name: "Filipino Young Professionals as a Demographic"
+      relevance: "medium"
+      justification: "Discusses Filipino spending behavior relevant to young professionals."
+    - code: "1.C"
+      name: "Financial Behavior of Filipino Young Professionals"
+      relevance: "high"
+      justification: "Directly analyzes Filipino spending attitudes and impulsive buying."
+    - code: "2.A"
+      name: "Culturally Specific Financial Practices"
+      relevance: "high"
+      justification: "Examines the culturally specific concept of ubos-biyaya."
+    - code: "2.B"
+      name: "Seasonal and Cyclical Spending Patterns"
+      relevance: "medium"
+      justification: "Discusses the cyclical nature of spending tied to payday."
+    - code: "2.D"
+      name: "Filipino Spending Cycles and 'Occasions'"
+      relevance: "high"
+      justification: "Explores petsa de peligro as a spending cycle phenomenon."
+    - code: "3.B"
+      name: "Expense Category Design Considerations"
+      relevance: "low"
+      justification: "Touches on distinguishing needs from pseudo-needs."
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "low"
+      justification: "Provides background on Filipino financial behavior."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "medium"
+      justification: "Highlights gaps in financial planning among Filipinos."
+    - code: "5.A"
+      name: "Financial Behavioral Profiles in Personal Finance"
+      relevance: "medium"
+      justification: "Profiles the impulsive buying behavior of Filipinos."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Provides contextual framing for user trust and financial systems."
+    - code: "10.B"
+      name: "User Trust in Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Contextual background on how financial systems affect user behavior."
+    - code: "11.A"
+      name: "Engagement Dynamics in Personal Finance Applications"
+      relevance: "low"
+      justification: "Relates to behavior patterns in financial engagement."
+    - code: "13.C"
+      name: "End-of-Period Surplus as a Savings Input"
+      relevance: "low"
+      justification: "Addresses petsa de peligro as a consequence of surplus depletion."
+  contribution: "This paper provides a culturally grounded understanding of Filipino spending behavior (ubos-biyaya and petsa de peligro) that can inform Odin's behavioral profiling and classification modules. It justifies the need for expense categorization that accounts for culturally specific spending cycles and pseudo-needs. The critique of capitalism's influence on spending behavior supports Odin's approach to financial wellness rather than consumerist engagement. The recommendations for ethical spending and solidarity are relevant for Odin's goals of promoting financial health and social cohesion."
   directly_justifies:
-    - Filipinos exhibit higher impulsive buying rates (87%) than Americans (75%).
-    - Ubos-biyaya spending behavior leads to petsa de peligro financial distress before next payday.
-    - Capitalist consumer culture conditions users to prioritize pseudo-needs over basic needs.
+    - "Filipinos exhibit impulsive buying behavior, with 87% buying more than planned."
+    - "Petsa de peligro is a direct consequence of ubos-biyaya, impacting financial planning."
+    - "Capitalism creates pseudo-needs that can influence user spending patterns."
+    - "The economy of exclusion leads to the commodification of relationships."
   limits:
-    - No empirical validation of the causal link between planned obsolescence and ubos-biyaya beyond theoretical argument.
-    - Lacks quantitative data on petsa de peligro prevalence among Filipino young professionals.
-    - Focuses on general Filipino population, not specifically young professionals.
-  mapping_rationale: The paper was screened against Odin's functional domains. Behavioral profiling (5.A) was selected because it describes impulsive buying as a distinct behavioral pattern. Culturally specific practices (2.A) and cyclical spending (2.B) directly map to the concepts of ubos-biyaya and petsa de peligro tied to payday cycles. Topic 1.C was included as the behaviors are characteristic of Filipino young professionals, though not exclusively. Topics related to algorithms, system design, or evaluation were rejected as the paper provides no technical contributions. Borderline cases like expense categorization (3.A) were rejected because the paper does not propose a classification framework.
+    - "The study is a qualitative phenomenological reflection, lacking quantitative causal analysis."
+    - "The paper does not propose a specific algorithmic or technical solution."
+    - "The research primarily relies on secondary sources and theoretical arguments. [unacknowledged]"
+  mapping_rationale: "A systematic scan of all 12 functional domains revealed primary relevance to topics related to Filipino cultural context and financial behavior. The paper directly discusses the culturally specific practices of ubos-biyaya and petsa de peligro, leading to high relevance for topics 1.C, 2.A, and 2.D. It also touches on systemic economic issues, lending medium relevance to topics on existing systems and gaps (4.B) and behavioral profiles (5.A). Low relevance was found for topics like mobile-first design (9.A) and algorithmic forecasting (6.A, 6.B), as the paper does not engage with technology. The critique of capitalism and the Church's response provide contextual background for understanding user behavior, trust, and engagement, but these are not the paper's primary focus. Overall, the paper is highly relevant for understanding the cultural and behavioral context of Filipino young professionals, which is foundational for Odin's design."
 limitations:
-  - The paper's phenomenological method lacks generalizable empirical evidence. [unacknowledged]
-  - It does not address potential individual differences in spending behavior. [unacknowledged]
-  - The proposed economy of inclusion is not operationalized for practical implementation.
+  - "The phenomenological methodology relies on interpretation and may have subjective bias."
+  - "The study does not provide empirical data to substantiate the causal link between capitalism and ubos-biyaya. [unacknowledged]"
+  - "The proposed economy of inclusion is a general framework without specific implementation details for a financial management system. [unacknowledged]"
 remember_this:
-  - 87% of Filipinos exhibit impulsive buying behavior.
-  - Ubos-biyaya is preconditioned by planned obsolescence.
-  - Petsa de peligro follows payday spending sprees.
-  - Capitalism creates an economy of exclusion.
-  - Inclusive economy requires solidarity and ethical spending.
+  - "87% of Filipinos buy more than planned when shopping."
+  - "Ubos-biyaya is a preconditioned outcome of capitalism's planned obsolescence."
+  - "Petsa de peligro is the day of danger before payday."
+  - "The economy of inclusion prioritizes solidarity and the common good."
+  - "The Church critiques consumerism as a form of exclusion."
+
 ```

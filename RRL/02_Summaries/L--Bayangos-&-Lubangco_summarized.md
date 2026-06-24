@@ -1,119 +1,184 @@
 ```yaml
-paper_id: d4f8c2a1-5e6b-4c7d-9a8b-1f2e3d4c5b6a
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
 designation: local
-title: Do Remittances Boost Household Spending: New Evidence from Migrants’ Household Survey
+title: Do Remittances Boost Household Spending: New Evidence from Migrants' Household Survey
 authors: Bayangos, V. B.; Lubangco, C. K.
-year: 2024
-venue: Bangko Sentral ng Pilipinas Discussion Paper
+year: 2026
+venue: BSP Discussion Paper
 odin_topics:
+  - 1.A
+  - 1.B
   - 1.C
+  - 2.A
+  - 2.B
+  - 2.D
   - 3.A
-  - 5.A
+  - 3.C
+  - 4.A
+  - 4.B
   - 6.A
+  - 6.B
+  - 7.D
+  - 8.A
+  - 10.A
+  - 10.B
+  - 12.A
+  - 12.B
+  - 12.C
   - 13.A
-  - 13.B
-shorthand_tags:
-  - /financial-behavior
-  - /expense-categorization
-  - /behavioral-profiles
-  - /spending-forecasting
-  - /savings-goals
-  - /debt-management
-tldr: Remittances increase household spending in the Philippines, but financial constraints limit welfare gains for poorer households, while macroeconomic factors like exchange rates and transfer costs drive remittance flows.
-problem_and_motivation: Understanding how remittances affect household consumption and the factors driving remittance flows is critical for maximizing development impact in remittance-dependent economies like the Philippines. Prior research leaves gaps in the nuanced relationship between remittances, consumption patterns, and macroeconomic determinants. This study provides new evidence using household surveys and financial sector data.
+tldr: Remittances increase household spending in the Philippines, but financial constraints limit welfare gains for poorer households; remittance growth is driven by OFW numbers, unemployment, and peso depreciation, while higher wages and transfer costs deter flows.
+problem_and_motivation: The relationship between remittance inflows, household consumption patterns, and the macroeconomic factors shaping these flows remains insufficiently understood. Prior research has established a positive link between remittances and consumption, but the specific mechanisms and the factors driving remittance flows require further investigation. This study addresses these gaps using new evidence from the Philippines, a major remittance-receiving country.
 approach:
-  - Analyzed Survey on Overseas Filipinos (SOF) 2007-2022 (nationally representative, 1.96M OFWs in 2022) and Family Income and Expenditure Survey (FIES) 2018/2021.
-  - Used logistic regressions (odds ratios) to assess determinants of saving vs investing behavior of migrant households.
-  - Applied propensity score matching (PSM) to estimate average treatment effects of remittances on consumption shares for poor vs non-poor households.
-  - Estimated panel generalized method of moments (GMM) for regional remittance inflows using 17 regions, 2007-2022.
-  - Incorporated annual survey (2015-2023) of remittance transfer costs from 44 universal/commercial banks and 15 non-bank entities.
-  - Controlled for region, year, household head age, gender composition, education, and family size.
-  - Compared OFW vs immigrant households and high vs low education migrants.
-  - Tested spillover effects using remittance density at province level.
+  - Analysis of Survey on Overseas Filipinos (SOF) data from 2007-2022 and Family Income and Expenditure Survey (FIES) data from 2018 and 2021.
+  - Logistic regressions to assess the determinants of saving and investing behavior among OFW households.
+  - Propensity score matching (PSM) to estimate the average treatment effect of remittances on household expenditure patterns.
+  - Panel generalized method of moments (GMM) estimation to identify macroeconomic and financial drivers of regional remittance inflows.
+  - Data on financial costs of sending remittances from 44 banks and 15 non-bank entities from 2015-2023.
 findings:
-  - "num: OFW households allocated 9.9% of cash remittances to savings on average (2008-2022), while 75% allocated nothing to investments."
-  - "num: 57.2% of cash remittances were sent through banks in 2022; telegraphic transfer fees average 6-7% of remittance value."
-  - "num: A 1% increase in telegraphic transfer fees reduces cash remittances by approximately 12.5%."
-  - Poor remittance-receiving households show smaller shifts in expenditure shares (e.g., food reduction -1.28% vs -1.48% for non-poor).
-  - Remittances increase education, health, and housing spending only for non-poor households; poor households see no change in education or durables.
-  - Higher regional unemployment rates increase remittance receipts, supporting the altruistic motive.
-  - OFW households save significantly more (10.35%) than immigrant households (7.40%).
-  - Migrants with higher education have higher saving rates (10.58% vs 7.31%).
-  - Exchange rate depreciation increases cash remittance receipts.
-  - Financial development (bank deposit liabilities) positively correlates with cash remittances.
+  - num: OFW households allocate on average 9.9% of cash remittances to savings and 7.0-8.0% to investments from 2008-2022.
+  - num: Remittance-receiving households reduce food expenditure share by 1.28-1.48 percentage points compared to non-recipients.
+  - num: Non-poor remittance-receiving households increase education expenditure share by 0.40 percentage points and health by 0.50 percentage points.
+  - Remittances have a procyclical relationship with regional economic development, suggesting an investment motive.
+  - Higher regional unemployment rates and lower regional wages are associated with increased remittance receipts, indicating an altruistic motive.
+  - Higher telegraphic transfer fees significantly reduce remittance inflows, with fees representing 6-7% of average remittances.
+  - Financial development, measured by bank deposit liabilities, is positively associated with remittance receipts.
 key_figures_tables:
-  - "Figure 4: Saving and investing rates of OFW households (2008-2022) → Saving peaked at 13.1% in 2009, investing at 10.6% in 2021."
-  - "Table 3: Consumption behavior of remittance-receiving poor vs non-poor households → Non-poor increase education share by 0.40%, poor show no significant change."
-  - "Table 5: Determinants of cash and personal remittances (panel GMM) → Transfer fees have large negative effect (-12.46 coefficient), exchange rate positive."
-  - "Figure 5: Pooled distribution of OFW households' allocation → 50% save nothing, 75% invest nothing, >50% consume ≥90% of remittances."
+  - Figure 4: Average saving and investing rates of OFW households from 2008-2022 → Saving rates peaked at 13.1% in 2009 and have since declined to 9-10%.
+  - Figure 5: Pooled distribution of OFW households' allocation rates → 50% do not save, 75% do not invest, while over 50% allocate 90%+ to immediate consumption.
+  - Figure 6: Average household expenditures in 2018 and 2021 → Migrant households have higher expenditures across all categories than non-migrant households.
+  - Figure 7-8: Average financial costs of sending remittances → Telegraphic transfer fees for incoming remittances comprise 6-7% of average remittances.
+  - Table 3: Consumption behavior of remittance-receiving households → Poor households show weaker shifts away from food and towards education, health, and housing.
+  - Table 5: Determinants of remittances → Exchange rate depreciation increases remittances, while higher transfer costs decrease them.
 key_equations:
-  - equation: "Y_{ij} = \\beta_0 + \\beta_1 \\ln cons_j + \\mathbf{X}^T_i \\gamma + \\theta R_{dj} + \\varepsilon_{ij}"
-    explanation: "Working-Leser model for budget share of good i."
-  - equation: "Remit_{it} = \\beta_1 + \\beta_2 Remit_{i,t-1} + \\beta_3 GRDPpc_{it} + \\beta_4 OFW_{it} + \\beta_5 wage_{it} + \\beta_6 \\pi_{it} + \\beta_7 unemployment_{it} + \\beta_8 forex_t + \\beta_9 cost_t + \\varepsilon_{it}"
-    explanation: "Panel GMM for remittance determinants."
+  - equation: Y_{ij} = β_0 + β_1 ln cons_j + X^T_i γ + θ R_{dj} + ε_{ij}
+    explanation: Working-Leser model for household budget share estimation.
+  - equation: Remit_{it} = β_1 + β_2 Remit_{it-1} + β_3 GRDPpc_{it} + β_4 OFW_{it} + β_5 wage_{it} + β_6 π_{it} + β_7 unemployment_{it} + β_8 forex_t + β_9 cost_t + ε_{it}
+    explanation: Panel GMM specification for remittance determinants.
 definitions:
   - term: OFW
-    definition: Overseas Filipino Worker – Filipino working abroad with or without contract.
+    definition: Overseas Filipino Worker, a Filipino working abroad with or without a contract.
   - term: SOF
-    definition: Survey on Overseas Filipinos – annual PSA survey of migrant households.
+    definition: Survey on Overseas Filipinos, a nationally representative annual migrant household survey.
   - term: FIES
-    definition: Family Income and Expenditure Survey – triennial household survey.
-  - term: GRDP
-    definition: Gross Regional Domestic Product.
+    definition: Family Income and Expenditure Survey, a nationally representative household survey on income and expenditure.
   - term: PSM
-    definition: Propensity Score Matching – method to estimate treatment effects.
+    definition: Propensity Score Matching, a statistical technique to estimate treatment effects by matching treated and control units.
   - term: GMM
-    definition: Generalized Method of Moments – dynamic panel estimation.
-  - term: BSP
-    definition: Bangko Sentral ng Pilipinas (central bank of the Philippines).
+    definition: Generalized Method of Moments, an econometric estimation technique.
+  - term: GRDP
+    definition: Gross Regional Domestic Product, a measure of regional economic output.
+  - term: RTGS
+    definition: Real-Time Gross Settlement, a funds transfer system for instantaneous settlement.
+  - term: PDDTS
+    definition: Philippine Domestic Dollar Transfer System, a system for dollar fund transfers within the Philippines.
 critical_citations:
-  - "[Docquier & Rapoport, 2006] — theoretical framework for remittance motives."
-  - "[Randazzo & Piracha, 2019] — PSM methodology for remittance expenditure effects."
-  - "[Tuaño-Amador et al., 2022] — remittance resilience during COVID-19 in Philippines."
-  - "[Mishra et al., 2022] — comparative remittance expenditure analysis."
+  - "[Docquier & Rapoport, 2006] — Foundational theory on remittance motives."
+  - "[Rosenzweig & Stark, 1989] — Key theory on consumption smoothing and remittances."
+  - "[Mandelman & Zlate, 2012] — Establishes business cycle response of remittances."
+  - "[Randazzo & Piracha, 2019] — Provides methodological framework for PSM approach."
 relevance:
   topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Provides background on OFWs as a key Filipino demographic.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: Directly analyzes income sources and expenditure patterns of OFW households.
     - code: 1.C
       name: Financial Behavior of Filipino Young Professionals
-      justification: "Paper analyzes spending, saving, and investing behavior of Filipino OFW households."
+      relevance: high
+      justification: Provides empirical evidence on saving, investment, and consumption allocation behavior.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Documents remittance allocation patterns reflective of Filipino household practices.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: medium
+      justification: Discusses consumption smoothing and business cycle response of remittances.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: Mentions spending on food, housing, and education but not specifically "occasions."
     - code: 3.A
       name: Expense Categorization Frameworks
-      justification: "Provides detailed expenditure shares for food, education, health, housing, durables, clothing."
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      justification: "Identifies distinct saving/investing behaviors by migrant status, education, and poverty level."
+      relevance: medium
+      justification: Uses FIES to categorize expenditures into food, education, health, housing, and durables.
+    - code: 3.C
+      name: User-Defined Allocation Constraints
+      relevance: low
+      justification: Does not address user-defined constraints; focuses on observed spending shares.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: Provides macroeconomic context for remittance flows but not specific PFMS systems.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: contextual
+      justification: Highlights limitations of informal remittance channels and high transaction costs.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: "Quantifies macroeconomic drivers (exchange rates, unemployment, transfer costs) of remittance inflows."
+      relevance: contextual
+      justification: Uses panel GMM for forecasting remittance determinants; not predictive modeling for spending.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: Does not use forecasting algorithms for spending; uses panel regression.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: low
+      justification: No direct discussion of budget infeasibility handling.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: contextual
+      justification: Identifies transaction costs as a barrier, relevant for anomaly context but not detection algorithms.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Discusses de-risking and AML compliance affecting remittance flows.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: low
+      justification: Not directly addressed.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Uses rigorous econometric evaluation (PSM, panel GMM) relevant to system evaluation.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: low
+      justification: Does not evaluate specific algorithms; focuses on econometric models.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: low
+      justification: No direct relevance to budget recommendation systems.
     - code: 13.A
       name: Savings Goal Management in PFMS
-      justification: "Reports saving rates and constraints, showing 50% of OFW households save nothing."
-    - code: 13.B
-      name: Debt Management in PFMS
-      justification: "Finds 17% of households used remittances for debt payments (Q4 2023 data)."
-  contribution: "This paper directly informs Odin's expense categorization module by demonstrating how remittances shift spending shares across food, education, health, and housing, with clear differences by poverty status. It supports behavioral profiling by identifying how household poverty status, migrant status (OFW vs immigrant), and educational attainment affect saving versus immediate consumption decisions. The findings on remittance determinants (exchange rates, transfer costs, unemployment, financial development) provide empirical inputs for Odin's spending forecasting module. The analysis of binding financial constraints highlights design considerations for savings goal management and debt management features for lower-income users. The quantifiable impact of transfer fees (6-7% of remittance value) also informs UX decisions around transaction cost transparency."
+      relevance: medium
+      justification: Provides evidence on household saving behavior and constraints relevant to savings goals.
+  contribution: This paper provides empirical benchmarks for understanding Filipino household spending patterns, which can inform Odin's expense categorization and budget recommendation modules. Its findings on the binding financial constraints for poorer households directly justify Odin's need for user-defined allocation constraints and infeasibility handling. The analysis of remittance determinants, including transaction costs and unemployment, offers contextual insight for Odin's predictive modeling of user income and spending. The study's methodological approach, using PSM and panel GMM, validates evaluation frameworks for algorithmic modules in personal finance systems. Finally, the discussion of de-risking and financial inclusion highlights the importance of data privacy and user trust considerations for Odin's design.
   directly_justifies:
-    - "Poor remittance-receiving households do not increase education or durable goods spending due to binding financial constraints."
-    - "OFW households save more than immigrant households, with a saving rate of 10.35% vs 7.40%."
-    - "A 1% increase in telegraphic transfer fees reduces cash remittances by about 12.5%."
-    - "Higher regional unemployment rates increase remittance receipts, supporting altruistic motives."
-    - "50% of OFW households allocate no cash remittances to savings, and 75% allocate nothing to investments."
+    - "Remittance-receiving households allocate remittances primarily to immediate consumption over savings and investments."
+    - "Financial constraints limit the welfare gains from remittances for poorer households."
+    - "Higher transaction costs significantly reduce remittance inflows through formal channels."
+    - "Unemployment and wage rates are significant determinants of household income, affecting spending behavior."
   limits:
-    - "Cross-sectional household surveys cannot fully resolve endogeneity between remittances and consumption."
-    - "SOF lacks itemized consumption categories for the direct remittance allocation question, requiring FIES linkage."
-    - "Small sample size for immigrant households (n=522) limits statistical power for some comparisons."
-    - "Sea-based OFW remittance determinants were inconclusive due to data limitations."
-  mapping_rationale: "The paper was screened against Odin's functional domains. Behavioral profiling (5.A) applies because it compares saving/investing rates by migrant status and education. Expense categorization (3.A) applies due to detailed expenditure share analysis (food, education, health, housing, durables). Spending forecasting (6.A) applies from the panel GMM identifying macroeconomic drivers. Savings and debt management (13.A, 13.B) apply from explicit saving/investment allocation data and debt payment usage. Topics related to algorithm-specific modules (anomaly detection, budget recommendation) were rejected because the paper uses econometrics (logit, PSM, GMM) not ML models. Mobile-first design and user retention were irrelevant. Topic 1.C (financial behavior of Filipino young professionals) was selected even though the sample is all OFW households, as many are young professionals; the behavioral patterns are generalizable."
+    - "The study uses aggregated regional data for macroeconomic analysis, limiting granularity."
+    - "Endogeneity concerns remain despite PSM and GMM approaches."
+    - "Survey data on remittance allocation relies on self-reported percentages, which may be imprecise."
+    - "The analysis does not distinguish between different types of non-food expenditures beyond broad categories."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to Domain 1 (Filipino Cultural Context) due to its focus on OFW households and Domain 3 (Expense Categorization) for its detailed expenditure analysis. It shows medium relevance to Domain 2 (Seasonal Spending) via consumption smoothing evidence and Domain 13 (Savings & Debt) via saving rate analysis. It provides contextual relevance to Domains 10 (Data Privacy) via de-risking discussion and Domain 12 (System Evaluation) via its econometric methodology. Topics 1.B and 1.C were assigned high relevance because the paper directly quantifies income sources and spending behaviors. Topics 3.A and 13.A received medium relevance as the paper categorizes expenses and measures saving behavior. Topics 6.A and 6.B were considered but rejected for high relevance because the paper uses regression for inference, not algorithmic forecasting. Topics 7.B and 7.C were rejected as the paper does not address budget recommendation or optimization. Overall, the paper is highly relevant for informing Odin's understanding of Filipino spending patterns and income dynamics, particularly for expense categorization and savings module design.
 limitations:
-  - "Endogeneity between remittances and consumption may bias OLS results, though PSM partially addresses this. [unacknowledged]"
-  - "The SOF question on remittance allocation only started in 2008 and lacks itemized non-food categories."
-  - "Small sample of immigrant households (n=522) limits generalizability of comparisons."
-  - "No analysis of migration costs or debt-financed migration, which could affect remittance behavior. [unacknowledged]"
-  - "Regional panel GMM may mask household-level heterogeneity in remittance motives."
+  - "Data limitations in the SOF hinder granular analysis of land- and sea-based OFW motivations. [unacknowledged]"
+  - "The study does not address the heterogeneity of spending across different Filipino regions beyond broad controls. [unacknowledged]"
+  - "The analysis of financial literacy is proxied by educational attainment, which is an imperfect measure."
+  - "The paper does not explore the impact of digital financial services on remittance behavior."
 remember_this:
-  - "OFW households save 9.9% of cash remittances on average, but 50% save nothing."
-  - "Transfer fees of 6-7% significantly reduce remittance flows."
-  - "Remittances increase non-food spending only for non-poor households."
-  - "Financial constraints limit welfare gains for poor remittance recipients."
-  - "Higher unemployment in the Philippines increases remittance receipts altruistically."
+  - "OFW households allocate only 9.9% of remittances to savings on average."
+  - "50% of OFW households allocate nothing to savings from remittances."
+  - "Remittances increase non-food spending for non-poor households but not for poor households."
+  - "Remittance transfer fees of 6-7% significantly reduce formal remittance inflows."
+  - "Remittances serve both altruistic and investment motives in the Philippines."
 ```

@@ -6,93 +6,91 @@ authors: Gerzon, R. A.; Lopena, G. L.
 year: 2023
 venue: Philippine Social Science Journal
 odin_topics:
+  - 1.A
+  - 1.B
   - 1.C
-  - 5.A
-  - 7.A
-  - 13.A
-  - 13.B
-shorthand_tags:
-  - /filipino-professionals
-  - /financial-behavior
-  - /financial-literacy
-  - /savings
-  - /debt
-  - /budgeting
-tldr: Financial literacy of public health nurses in a Philippine province is high, and financial well-being is great, with a strong positive correlation between them.
-problem_and_motivation: Filipino nurses face low pay and financial stress, yet little is known about their financial literacy and well-being. Understanding these factors is crucial for improving their financial health and work performance. This study addresses the gap by assessing literacy and well-being among public health nurses.
+  - 2.A
+  - 10.A
+  - 11.A
+tldr: Financial literacy correlates strongly with financial well-being among Filipino public health nurses, with higher monthly income linked to greater financial literacy.
+problem_and_motivation: Filipino nurses face low pay, financial stress, and poor work performance, yet their financial literacy and well-being are underexplored. Understanding these factors is critical for designing targeted financial programs to improve their economic resilience and job outcomes.
 approach:
-  - Data from 178 randomly stratified public health nurses in a first-class Philippine province.
-  - Descriptive-correlational design using a researcher-made 52-item questionnaire with four-point Likert scale.
-  - Financial literacy measured via financial knowledge and behavior; financial well-being via discipline, security, and resiliency.
-  - Descriptive analysis used frequency, percentage, mean, and standard deviation.
-  - Correlational analysis used Pearson, Point Biserial, Rank Biserial, and Spearman Rank Correlation.
+  - Descriptive-correlational design with 178 randomly stratified public health nurses from a first-class Philippine province.
+  - Researcher-made 52-item questionnaire measuring financial literacy (knowledge and behavior) and financial well-being (discipline, security, resilience) on a four-point Likert scale.
+  - Instrument validity (Lawshe's CVR=0.91) and reliability (Cronbach's alpha: financial literacy=0.945, financial well-being=0.904) were established.
+  - Data collected via web-based and printed surveys with informed consent and ethical clearance.
+  - Pearson, Point Biserial, Rank Biserial, and Spearman Rank correlations used for analysis.
 findings:
-  - "num: Overall financial literacy was high (M=3.22, SD=0.39) and financial well-being great (M=3.03, SD=0.46)."
-  - "num: Monthly income significantly correlated with financial literacy (r=0.223, p=0.003)."
-  - "num: Strong positive correlation between financial literacy and financial well-being (rs=0.660, p=0.000)."
-  - Age, sex, civil status, and number of dependents showed no significant relationship with financial literacy or well-being.
-  - Nurses with higher monthly income demonstrated very high financial knowledge and behavior.
-  - Financial well-being components: discipline (M=3.26), security (M=2.96), resiliency (M=2.88), all rated as great.
+  - num: Overall financial literacy was high (M=3.22, SD=0.39), with financial knowledge (M=3.22, SD=0.43) and behavior (M=3.21, SD=0.40) both rated high.
+  - num: Financial well-being was rated as great (M=3.03, SD=0.46), with discipline (M=3.26, SD=0.52) very great, security (M=2.96, SD=0.55) great, and resilience (M=2.88, SD=0.55) great.
+  - num: Monthly income had a significant positive correlation with financial literacy (r=0.223, p=0.003), while age, sex, civil status, and dependents did not.
+  - num: No demographic factor significantly correlated with financial well-being.
+  - num: Financial literacy and financial well-being showed a strong positive correlation (rs=0.660, p=0.000), supporting the conceptual model.
+  - Higher-income nurses demonstrated very high financial knowledge and behavior.
+  - Nurses with 2 or more dependents had very high financial knowledge.
 key_figures_tables:
-  - "Table 1: Financial literacy levels by demographics → older, higher-income nurses with dependents have very high literacy."
-  - "Table 2: Financial well-being by demographics → all groups rate financial discipline as very great."
-  - "Table 3: Correlation between literacy and demographics → only monthly income significant."
-  - "Table 4: Correlation between well-being and demographics → none significant."
-  - "Table 5: Correlation between literacy and well-being → strong positive relationship."
+  - Table 1: Financial literacy levels by demographics → Older, higher-income nurses with more dependents have higher knowledge.
+  - Table 2: Financial well-being levels by demographics → Discipline is very great across all groups.
+  - Table 3: Correlation between demographics and financial literacy → Only monthly income is significantly related.
+  - Table 4: Correlation between demographics and financial well-being → No significant relationships found.
+  - Table 5: Correlation between financial literacy and well-being → Strong positive relationship.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "Financial literacy"
-    definition: "Mix of financial knowledge and behaviors crucial for making healthy monetary decisions."
-  - term: "Financial well-being"
-    definition: "State of financial discipline, security, and resilience to absorb setbacks."
-  - term: "Financial discipline"
-    definition: "Ability to control financial affairs and meet present obligations."
-  - term: "Financial security"
-    definition: "Confidence in current and future financial status."
-  - term: "Financial resilience"
-    definition: "Capacity to handle financial shocks and recover from setbacks."
+  - term: Financial Literacy
+    definition: Combination of financial knowledge and financial behaviors essential for sound monetary decisions.
+  - term: Financial Well-Being
+    definition: State of financial discipline, security, and resilience enabling present and future financial satisfaction.
 critical_citations:
-  - "[Joo, 1998] — Conceptual model of personal financial wellness."
-  - "[Parcia & Estimo, 2017] — Foundation for questionnaire and financial literacy measurement."
-  - "[CFPB, 2018] — Definition of financial well-being components."
+  - "[Joo, 1998] — Conceptual model for personal financial wellness."
+  - "[Parcia & Estimo, 2017] — Financial literacy, behavior, stress, and wellness among employees."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Paper assesses financial behavior and literacy of Filipino nurses."
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Measures financial literacy and well-being as profile components."
-    - code: "7.A"
-      name: "Budgeting Strategies as Domain Knowledge"
-      justification: "Includes budgeting knowledge as part of financial literacy assessment."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Financial well-being includes savings discipline and savings buffer."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Covers borrowing practices and debt management in financial behavior."
-  contribution: "This paper provides empirical evidence that financial literacy strongly predicts financial well-being, directly informing Odin's behavioral profiling module. The finding that monthly income correlates with literacy suggests Odin should incorporate income data for personalization of budget recommendations. The validated questionnaire items on financial discipline, security, and resilience can guide Odin's survey design for Filipino young professionals. The lack of correlation with other demographics indicates that literacy-focused interventions may be universally applicable across age and gender."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: Directly studies Filipino public health nurses as a professional demographic.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: Provides income, dependency, and financial behavior data for this demographic.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Assesses financial knowledge and behaviors of nurses.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: contextual
+      justification: Highlights financial practices like savings and debt management in Philippine context.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: Mentions Data Privacy Act compliance but no system design implications.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: low
+      justification: Implies engagement through financial literacy programs but no UX/engagement study.
+  contribution: This paper provides baseline evidence that financial literacy is a significant predictor of financial well-being among Filipino public health nurses. It directly informs Odin's behavioral profiling module (5.A, 5.B) by demonstrating demographic and income-related variations in financial literacy and well-being. The strong correlation supports Odin's design assumption that improving financial literacy via personalized recommendations can enhance user financial health. The findings also justify the inclusion of income and dependency status as critical features for user profiling and budget recommendation systems. However, the paper does not address algorithmic or system-specific aspects.
   directly_justifies:
-    - "Financial literacy and financial well-being are strongly correlated among Filipino public health nurses (rs=0.660)."
-    - "Monthly income is a significant predictor of financial literacy in this population (r=0.223)."
-    - "Demographic factors like age, sex, and marital status do not significantly affect financial literacy among Filipino nurses."
+    - "Financial literacy significantly predicts financial well-being among Filipino nurses."
+    - "Monthly income is positively correlated with financial literacy level."
+    - "Demographic factors like age, sex, and civil status do not significantly affect financial well-being."
+    - "Higher financial literacy is associated with better financial discipline, security, and resilience."
   limits:
-    - "Sample limited to one province and only nurses, limiting generalizability to other occupations."
-    - "Cross-sectional design prevents causal inference between literacy and well-being."
-    - "Self-reported data may introduce response bias."
-    - "Only five demographic variables considered; other factors like education or financial socialization not included."
-  mapping_rationale: "The paper addresses financial literacy and well-being among Filipino nurses, which directly maps to Odin's interest in financial behavior (1.C) and behavioral profiling (5.A). Budgeting strategies (7.A) are embedded in the literacy construct. Savings and debt management (13.A, 13.B) appear as components of financial well-being and behavior. Topics related to algorithms (6,8), design (9), privacy (10), retention (11), and evaluation (12) were rejected because the paper uses descriptive-correlational methods without predictive models or system design. The demographic focus (age, income) aligns with Odin's user modeling needs, though the paper found only income significant."
+    - "Sample restricted to nurses in one province, limiting generalizability."
+    - "Self-reported measures may introduce response bias."
+    - "Cross-sectional design prevents causal inference."
+    - "Demographic variables limited to age, sex, civil status, income, and dependents."
+  mapping_rationale: Systematic scan of all 12 functional domains and their associated topic codes was performed. Domains flagged as relevant: Filipino Cultural Context (2.A, 2.B, 2.C, 2.D) for the cultural and demographic setting; Behavioral Profiling (5.A, 5.B, 5.C) for financial literacy and well-being measures; Existing Systems (4.A, 4.B) considered but rejected as no system comparison is made; Budget Recommendation (7.A–7.D) rejected as no algorithmic or budget allocation content; Anomaly Detection (8.A–8.C) rejected; Mobile-First Design (9.A, 9.B) rejected; Data Privacy (10.A) considered low due to methodological mention only; User Retention (11.A, 11.B) considered low due to no engagement study; System Evaluation (12.A–12.C) rejected; Savings/Debt (13.A–13.C) considered contextual due to discussion of savings and debt behaviors. Overall relevance is high for demographic and behavioral profiling domains, contextual for culturally specific practices, and low for privacy/engagement. The paper provides foundational evidence for Odin's behavioral and demographic modules.
 limitations:
-  - "Sample size is limited (n=178) and restricted to one province."
-  - "Only nurses were surveyed; results may not generalize to other Filipino young professionals."
-  - "Quantitative design limits depth of insight into financial behaviors."
-  - "Only five demographic variables were examined; other determinants like education level were omitted."
+  - "Sample size limits generalizability beyond one province."
+  - "Self-reported questionnaire may be subject to social desirability bias."
+  - "No qualitative data to explain quantitative findings."
 remember_this:
-  - "Higher monthly income is linked to better financial literacy among nurses."
-  - "Financial literacy strongly predicts financial well-being (rs=0.66)."
-  - "Nurses show great financial discipline but lower financial resilience (M=2.88)."
-  - "Demographics like age and sex do not affect financial literacy in this sample."
+  - "Financial literacy strongly predicts financial well-being among Filipino nurses."
+  - "Monthly income is the only demographic factor linked to financial literacy."
+  - "Nurses reported high financial literacy and great financial well-being overall."
+  - "The correlation between literacy and well-being is r=0.660, indicating a strong relationship."
+  - "Higher-income nurses demonstrate very high financial knowledge and behavior."
 ```

@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.3390/s25010190
-designation: international
+designation: international-algorithm-specific
 title: A Survey of Deep Anomaly Detection in Multivariate Time Series: Taxonomy, Applications, and Directions
 authors: Wang, F.; Jiang, Y.; Zhang, R.; Wei, A.; Xie, J.; Pang, X.
 year: 2025
@@ -10,96 +10,113 @@ odin_topics:
   - 6.B
   - 8.A
   - 8.B
+  - 10.A
+  - 10.B
   - 12.A
-shorthand_tags:
-  - /predictive-modeling
-  - /spending-forecast
-  - /anomaly-detection
-  - /anomaly-algorithm
-  - /eval-framework
-tldr: A comprehensive survey categorizing deep learning methods for multivariate time series anomaly detection into forecasting, reconstruction, and contrastive approaches, with analysis of datasets and future directions.
-problem_and_motivation: Traditional anomaly detection methods face limitations in handling high-dimensional multivariate time series with complex temporal and inter-variable dependencies. Deep learning offers powerful representation learning but lacks a structured taxonomy for multivariate time series anomaly detection. This survey addresses the gap by organizing recent deep learning methods and identifying open challenges.
+  - 12.B
+tldr: Comprehensive survey classifying deep learning MTSAD methods into forecasting, reconstruction, and contrastive paradigms with a taxonomy of anomaly types and application domains.
+problem_and_motivation: Multivariate time series anomaly detection requires modeling complex temporal and inter-variable dependencies, which traditional statistical and machine learning methods struggle with. Deep learning offers powerful tools but lacks a unified, structured overview of techniques, paradigms, and applications to guide researchers and practitioners.
 approach:
-  - Conducted a structured review of deep learning for multivariate time series anomaly detection.
-  - Proposed a taxonomy based on learning paradigms (unsupervised, semi-supervised, self-supervised) and model architectures (CNN, RNN, GNN, Transformer, etc.).
-  - Organized methods into three strategies: forecasting-based, reconstruction-based, and contrastive-based.
-  - Compiled public datasets from multiple domains including aerospace, cybersecurity, healthcare, and finance.
-  - Discussed evaluation metrics and open research directions.
+  - Proposes a new taxonomy for MTSAD methods based on learning paradigms (unsupervised, semi-supervised, self-supervised) and deep learning architectures.
+  - Organizes methods into three primary strategies: forecasting-based, reconstruction-based, and contrastive-based anomaly detection.
+  - Reviews and discusses 46 deep learning models including CNN, RNN, GNN, Transformer, VAE, GAN, and Diffusion-based approaches.
+  - Compiles and organizes public MTSAD datasets, detailing their source, samples, dimensions, anomaly rate, and application domains.
+  - Identifies open research issues, including contrastive learning, domain knowledge integration, benchmarking, and leveraging LLMs.
 findings:
-  - "num: 46 deep learning models are reviewed and categorized."
-  - Forecasting methods using Transformers outperform others in handling long-range dependencies.
-  - Reconstruction methods using VAEs and GANs struggle with subtle anomalies and mode collapse.
-  - Contrastive learning, especially with LLMs, shows promise for few-shot anomaly detection.
-  - Public datasets vary widely in anomaly rates, from 0.03% to 36%.
+  - num: Transformers, GNNs, and hybrid models show superior performance in capturing spatio-temporal dependencies in MTS data.
+  - num: Forecasting and reconstruction are the most common anomaly detection strategies, each with distinct advantages and drawbacks.
+  - num: The survey covers 46 deep learning models across 10 application domains, highlighting the field's rapid expansion.
+  - num: Contrastive learning and LLM-based methods are emerging as promising directions for improving anomaly detection accuracy and interpretability.
+  - The taxonomy provides a structured framework that helps in selecting appropriate models based on data characteristics and application requirements.
 key_figures_tables:
-  - "Figure 1: Classification framework for multivariate time series anomaly types → Anomalies split into intra-metric and inter-metric categories."
-  - "Figure 2: Examples of point-wise and pattern-wise anomalies → Point anomalies are spikes; pattern anomalies are discordant subsequences."
-  - "Figure 4: General pipeline for deep MTSAD → Data processing, anomaly detection strategy, application domains."
-  - "Table 1: Overview of 46 deep anomaly detection models → Models categorized by backbone, learning paradigm, and input type."
-  - "Table 2: Public datasets for MTSAD → Anomaly rates range from 0.03% to 36% across domains."
+  - Figure 1: Classification of MTS anomaly types into intra-metric (temporal) and inter-metric anomalies → Anomalies occur within or between metrics.
+  - Figure 2: Examples of point-wise and pattern-wise anomalies in MTS → Anomalies can be single-point spikes or unusual subsequences.
+  - Figure 3: Examples of global and local inter-metric anomalies → Inter-metric anomalies involve broken correlations between variables.
+  - Figure 4: General pipeline for MTSAD using deep learning models → Pipeline includes data processing, representation learning, and anomaly scoring.
+  - Table 1: Overview of 46 deep learning models for MTSAD → Models are categorized by backbone, learning paradigm, and input type.
+  - Table 2: Comprehensive list of public MTSAD datasets with application domains → Datasets span aerospace, cybersecurity, healthcare, and finance.
 key_equations:
-  - equation: "|x_t - \\hat{x}_t| > \\delta"
-    explanation: "Threshold for global point anomaly detection."
-  - equation: "X_k = \\sum_{t=0}^{T-1} x_t e^{-i2\\pi k t / T}"
-    explanation: "Discrete Fourier Transform for frequency domain analysis."
+  - equation: X = (x1, x2, ..., xC)
+    explanation: MTS X is defined as a collection of C univariate time series.
+  - equation: S = (s1, s2, ..., sT)
+    explanation: Anomaly scores S are computed for each time point t.
+  - equation: |x_t - \hat{x}_t| > \delta
+    explanation: Global point anomaly detection where deviation exceeds threshold.
+  - equation: X_k = \sum_{t=0}^{T-1} x_t e^{-i2\pi kt/T}
+    explanation: Discrete Fourier Transform for frequency domain analysis.
 definitions:
   - term: MTSAD
-    definition: Multivariate Time Series Anomaly Detection
-  - term: CNN
-    definition: Convolutional Neural Network
-  - term: RNN
-    definition: Recurrent Neural Network
-  - term: GNN
-    definition: Graph Neural Network
-  - term: VAE
-    definition: Variational Autoencoder
-  - term: GAN
-    definition: Generative Adversarial Network
-  - term: LLM
-    definition: Large Language Model
-  - term: DFT
-    definition: Discrete Fourier Transform
-  - term: FFT
-    definition: Fast Fourier Transform
+    definition: Multivariate Time Series Anomaly Detection, identifying unusual patterns in multi-dimensional time series data.
+  - term: Forecasting-based
+    definition: Anomaly detection by comparing predicted future values with actual observations.
+  - term: Reconstruction-based
+    definition: Anomaly detection by measuring the error in reconstructing input data from a latent representation.
+  - term: Contrastive-based
+    definition: Anomaly detection by learning representations that maximize similarity between normal instances and dissimilarity with anomalies.
+  - term: Intra-metric anomaly
+    definition: Temporal anomaly occurring within a single metric or variable.
+  - term: Inter-metric anomaly
+    definition: Anomaly arising from broken relationships or correlations between multiple metrics.
 critical_citations:
-  - "[Hundman et al., 2018] — Pioneered LSTM with nonparametric thresholding."
-  - "[Zong et al., 2018] — First deep AE-GMM for anomaly detection."
-  - "[Xu et al., 2022] — Introduced association discrepancy for Transformers."
+  - "[Hundman et al., 2018] — Introduced LSTM-NDT for spacecraft anomaly detection."
+  - "[Deng & Hooi, 2021] — Proposed GDN using GNNs for MTS anomaly detection."
+  - "[Xu et al., 2022] — Developed AnomalyTransformer with association discrepancy."
+  - "[Su et al., 2019] — Proposed OmniAnomaly for robust MTS anomaly detection."
+  - "[Audibert et al., 2020] — Introduced USAD for fast unsupervised MTS anomaly detection."
 relevance:
   topics:
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Survey covers forecasting-based anomaly detection methods applicable to spending prediction.
+      relevance: high
+      justification: Reviews forecasting-based anomaly detection methods directly applicable to predicting spending anomalies.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Detailed review of RNN, Transformer forecasting models.
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Evaluates RNN, Transformer, and GNN models for sequential data forecasting.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: Comprehensive taxonomy of deep anomaly detection techniques directly relevant to fraud or outlier detection in PFMS.
+      relevance: high
+      justification: Provides a comprehensive taxonomy and methods for anomaly detection in multivariate time series.
     - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Compares algorithms across reconstruction, forecasting, and contrastive paradigms.
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Reviews deep learning algorithms (VAE, GAN, Transformer) applicable to spending pattern anomalies.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Mentions privacy in cybersecurity datasets but does not focus on user financial data privacy.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: contextual
+      justification: Discusses interpretability via XAI but not user trust specifically.
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      justification: Discusses public datasets, evaluation metrics, and benchmarking challenges.
-  contribution: "Odin's anomaly detection module (8.A, 8.B) can leverage forecasting-based methods like LSTM and Transformer to identify unusual spending patterns by comparing predicted vs. actual transactions. The reconstruction-based approaches (e.g., VAE, GAN) reviewed in this paper inform Odin's ability to detect subtle anomalies in multivariate financial time series without labeled data. The survey's evaluation framework insights (12.A) guide Odin's benchmarking strategy for anomaly detection accuracy and false positive rates. Contrastive learning techniques, including LLM-based methods, suggest future enhancements for Odin's cold-start anomaly detection."
+      relevance: medium
+      justification: Reviews benchmarking datasets and evaluation metrics for anomaly detection.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: Compares performance of various deep learning models on public datasets.
+  contribution: "This survey directly informs Odin's predictive modeling and anomaly detection modules by providing a structured taxonomy of state-of-the-art deep learning methods for multivariate time series. The review of forecasting, reconstruction, and contrastive approaches offers design choices for implementing spending prediction and anomaly detection. The compiled dataset list and evaluation metrics can guide Odin's system evaluation framework. The discussion of open challenges, such as leveraging LLMs and integrating domain knowledge, suggests future enhancements for Odin's algorithmic modules."
   directly_justifies:
-    - "Deep learning models outperform statistical methods for multivariate time series anomaly detection in high-dimensional data."
-    - "Transformer-based anomaly detectors capture long-range temporal dependencies better than RNNs."
-    - "Reconstruction error alone is insufficient for detecting subtle anomalies in noisy data."
-    - "Public benchmark datasets for anomaly detection have anomaly rates ranging from 0.03% to 36%."
+    - "Forecasting-based models can predict future spending and flag deviations as anomalies."
+    - "Reconstruction-based models can detect anomalies by identifying patterns that do not conform to normal spending behavior."
+    - "Contrastive learning can improve anomaly detection by learning discriminative representations of normal versus abnormal spending."
+    - "LLMs can be adapted for time series anomaly detection in PFMS with appropriate prompting and fine-tuning."
   limits:
-    - "Survey does not provide empirical comparisons or benchmark results across methods."
-    - "Focus on general MTSAD rather than personal finance domain specifically."
-    - "Limited discussion of real-time or resource-constrained deployment considerations."
-  mapping_rationale: "The survey was screened against Odin's functional domains. The anomaly detection domain (8) is directly relevant as the paper provides a comprehensive taxonomy of deep learning methods for multivariate time series anomaly detection. Spending forecasting (6) is also relevant because forecasting-based methods are a major category reviewed. System evaluation (12) applies due to the survey's detailed coverage of public datasets and evaluation metrics. Behavioral profiling (5), budget recommendation (7), expense categorization (3), mobile-first design (9), data privacy (10), user retention (11), and savings/debt management (13) were rejected as the paper does not address these topics. Borderline case: predictive modeling (6.A) is included because forecasting errors directly indicate anomalies, which Odin can use for spending anomaly detection."
+    - "Survey does not provide empirical comparisons or performance benchmarks across all reviewed models."
+    - "Focuses on general MTSAD without specific application to personal finance or spending data."
+    - "Limited discussion on real-time deployment considerations and computational resource constraints for mobile PFMS."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. High relevance was assigned to Predictive Modeling (6.A, 6.B) and Anomaly Detection (8.A, 8.B) because the paper's core contribution is a comprehensive review of deep learning methods for these tasks in MTS data. Medium relevance was assigned to System Evaluation (12.A, 12.B) as the paper reviews datasets and benchmarking practices. Contextual relevance was assigned to Data Privacy (10.A) and User Trust (10.B) due to passing mentions of security and interpretability, but no direct focus on user financial data or trust mechanisms. Domains like Filipino Cultural Context (2.A–2.D), Expense Categorization (3.A–3.C), Behavioral Profiling (5.A–5.C), and Savings/Debt Management (13.A–13.C) were considered but rejected as the paper does not address cultural, behavioral, or PFMS-specific financial management aspects. The paper's overall relevance to Odin lies in providing a foundational review of anomaly detection algorithms that can be adapted for spending anomaly detection and forecasting."
 limitations:
-  - "Focuses on general MTSAD without personal finance-specific validation [unacknowledged]."
-  - "Deep learning models require large training datasets, limiting applicability to users with sparse transaction history [unacknowledged]."
-  - "Evaluation metrics are not standardized across studies, making comparisons difficult (acknowledged as future direction)."
+  - "Survey does not provide empirical comparisons or performance benchmarks across all reviewed models."
+  - "Focuses on general MTSAD without specific application to personal finance or spending data."
+  - "Limited discussion on real-time deployment considerations and computational resource constraints for mobile PFMS. [unacknowledged]"
+  - "Does not address the integration of user-declared financial preferences or constraints in anomaly detection. [unacknowledged]"
 remember_this:
-  - "Survey reviews 46 deep learning models for multivariate time series anomaly detection."
-  - "Transformer-based methods outperform RNNs in capturing long-range temporal dependencies."
-  - "Contrastive learning and LLMs offer promising few-shot anomaly detection capabilities."
-  - "Anomaly rates in public datasets vary from 0.03% to 36% across domains."
+  - "MTSAD methods are classified into forecasting, reconstruction, and contrastive paradigms."
+  - "Transformers and GNNs are leading architectures for capturing complex spatio-temporal dependencies."
+  - "Contrastive learning and LLMs are emerging trends for improved anomaly detection."
+  - "Anomalies can be point-wise, pattern-wise, or inter-metric, requiring diverse detection strategies."
+  - "46 deep learning models reviewed across 10 application domains."
 ```

@@ -1,101 +1,99 @@
 ```yaml
 paper_id: 10.4898/jener.v2i3.a32
 designation: local
-title: "Budgeting Practices and Challenges of Micro-Entrepreneurs in Maria Aurora Public Market: Toward a Strategic Management Plan"
-authors: "Delos Santos, D.T.; Austria, M.G.P.; Candelario, C.C.; Garcia, L.E.B.; Gonaranao, B.S."
+title: Budgeting Practices and Challenges of Micro-Entrepreneurs in Maria Aurora Public Market: Toward a Strategic Management Plan
+authors: Delos Santos, D. T.; Austria, M. G. P.; Candelario, C. C.; Garcia, L. E. B.; Gonaranao, B. S.
 year: 2026
-venue: "JENER Journal of Empirical and Non-Empirical Research"
+venue: JENER Journal of Empirical and Non-Empirical Research
 odin_topics:
-  - 3.A
-  - 3.B
-  - 7.A
-  - 13.A
-  - 13.B
-shorthand_tags:
-  - "/expense-categorization"
-  - "/category-design"
-  - "/budgeting-strategies"
-  - "/savings-goals"
-  - "/debt-management"
-tldr: "Micro-entrepreneurs in Maria Aurora Public Market exhibit high financial discipline in income utilization, expense tracking, savings, and financial planning but face major challenges from debt burdens, inflation, and irregular income."
-problem_and_motivation: "Micro-entrepreneurs in rural Philippine public markets often lack structured budgeting systems, hindering their sustainability and growth despite being economic backbones. Existing research does not focus specifically on Maria Aurora's vendors, leaving a gap in localized understanding of their financial practices and barriers."
+  - "1.C"
+  - "3.A"
+  - "4.A"
+  - "4.B"
+  - "7.A"
+  - "13.A"
+tldr: Micro-entrepreneurs exhibit high discipline in budgeting but face major challenges from financial liabilities and income volatility.
+problem_and_motivation: Micro-entrepreneurs in developing economies often lack formal budgeting systems, hindering growth and increasing vulnerability to economic shocks. In the Philippines, MSMEs are vital to the economy, yet many do not use formal budgeting despite recognizing its importance. A specific gap exists in understanding the financial practices and challenges of micro-entrepreneurs in local public markets like Maria Aurora.
 approach:
-  - "Descriptive quantitative design with 68 micro-entrepreneurs sampled via simple random lottery from a population of 82 stall owners, food vendors, and retailers."
-  - "Self-constructed Likert-scale survey covering four budgeting dimensions (income utilization, expense tracking, savings, financial planning) and two challenge dimensions (financial liability, income generation)."
-  - "Data analyzed using frequency counts, average weighted means (AWM), and verbal interpretation scales (Never to Always for practices; Not a Challenge to Major Challenge for obstacles)."
-  - "No baseline comparisons or inferential statistics; findings reported as descriptive means and ranks."
+  - A quantitative research design using a structured survey questionnaire was employed.
+  - Data were gathered from 68 randomly sampled micro-entrepreneurs in the Maria Aurora Public Market.
+  - The survey measured budgeting practices across four dimensions: income utilization, expense tracking, savings, and financial planning.
+  - Challenges were assessed in terms of financial liability and income generation.
+  - Descriptive statistics, including frequency, percentage, and weighted means, were used for analysis.
 findings:
-  - "num: Overall income utilization AWM=3.63 (Always), expense tracking AWM=3.48 (Always), savings AWM=3.49 (Always), financial planning AWM=3.57 (Always)."
-  - "num: Financial liability AWM=3.27 (Major Challenge), income generation AWM=3.40 (Major Challenge)."
-  - "num: Highest-ranked practice: setting financial goals (AWM=3.77)."
-  - "num: Lowest-ranked practice: categorizing expenses into fixed vs variable costs (AWM=3.20)."
-  - "num: Managing multiple financial obligations is the top challenge (AWM=3.42)."
-  - "num: Only 3.22 AWM for depositing savings in banks or cooperatives, indicating low formal financial integration."
-  - "Economic changes (inflation, fuel prices) rank highest among income generation challenges (AWM=3.48)."
-  - "Reinvestment of income for business expansion is strongly practiced (AWM=3.67)."
-  - "Debt repayments reduce capital for business needs (AWM=3.36)."
-  - "Lack of access to affordable financing (AWM=3.38) is a major barrier."
+  - "num: Overall budgeting practices were rated as Always with an AWM of 3.63 for income utilization."
+  - "num: Financial planning had an AWM of 3.57, indicating a proactive and goal-oriented approach."
+  - "num: The highest-ranked practice was setting financial goals for the business (AWM 3.77)."
+  - "num: The lowest-ranked budgeting practice was depositing savings in a bank or cooperative (AWM 3.22)."
+  - "num: Expense tracking showed an AWM of 3.48, with a gap in categorizing costs into fixed and variable (AWM 3.20)."
+  - "num: Financial liability was a major challenge (AWM 3.27), with managing multiple obligations being the most pressing (AWM 3.42)."
+  - "num: Income generation was also a major challenge (AWM 3.40), primarily due to economic changes like inflation (AWM 3.48)."
+  - Micro-entrepreneurs excel at separating business and personal funds but struggle with formal banking and cost categorization.
+  - External economic pressures and lack of affordable financing are significant barriers to growth.
 key_figures_tables:
-  - "Table 1: Income utilization practices (10 indicators) → Highest AWM=3.77 for allocating income properly, overall discipline is Always."
-  - "Table 2: Expense tracking practices → Overall AWM=3.48 (Always), but cost categorization lowest at 3.20."
-  - "Table 3: Savings practices → Overall AWM=3.49 (Always), bank deposits lowest at 3.22."
-  - "Table 4: Financial planning practices → Overall AWM=3.57 (Always), goal setting highest at 3.77."
-  - "Table 5: Financial liability challenges → Overall AWM=3.27 (Major Challenge), managing multiple obligations top at 3.42."
-  - "Table 6: Income generation challenges → Overall AWM=3.40 (Major Challenge), economic changes top at 3.48."
-  - "Table 7: Strategic plan with five strategies (cost classification, formal banking, forecasting, debt snowball, salary method/two-wallet system)."
+  - "Table 1: Budgeting practices in terms of income utilization → High discipline with an overall AWM of 3.63."
+  - "Table 2: Budgeting practices in terms of expense tracking → Diligent recording but weak cost categorization."
+  - "Table 3: Budgeting practices in terms of savings → Strong saving culture, but low engagement with formal banks."
+  - "Table 4: Budgeting practices in terms of financial planning → Strong goal-setting, but weaker forecasting skills."
+  - "Table 5: Challenges in financial liability → Multi-indebtedness is a major hindrance to budgeting."
+  - "Table 6: Challenges in income generation → Economic volatility is the primary concern."
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
   - term: "AWM"
-    definition: "Average Weighted Mean, a descriptive statistic used to summarize Likert-scale responses."
-  - term: "MC"
-    definition: "Major Challenge, verbal interpretation for scores 3.26-4.00 in challenge scales."
-  - term: "Paluwagan"
-    definition: "Informal rotating savings group common among Filipino micro-entrepreneurs."
+    definition: "Average Weighted Mean, a descriptive statistic used to interpret survey responses."
   - term: "MSMEs"
-    definition: "Micro, small, and medium enterprises."
+    definition: "Micro, Small, and Medium Enterprises, which form the backbone of the Philippine economy."
+  - term: "Paluwagan"
+    definition: "An informal rotating savings group common in the Philippines."
 critical_citations:
-  - "[Barbosa, 2022] — National study on Filipino micro-entrepreneurs' lack of formal budgeting."
-  - "[Dela Cerna, 2025] — Budgeting practices for micro and small business sustainability."
-  - "[World Bank, 2019] — Credit exclusion and weak documentation as leading financial constraints."
-  - "[Asian Development Bank, 2021] — Debt and high-interest loans as major barriers in Southeast Asia."
+  - "[Barbosa, 2022] — Highlights the gap between awareness and practice of formal budgeting among Filipino micro-entrepreneurs."
+  - "[Dela Cerna, 2025] — Provides a framework for assessing budgeting practices of micro-business owners."
+  - "[World Bank, 2019] — Identifies limited credit access as a leading cause of financial exclusion."
 relevance:
   topics:
+    - code: "1.C"
+      name: "Financial Behavior of Filipino Young Professionals"
+      relevance: "contextual"
+      justification: "Focuses on micro-entrepreneurs, not young professionals, but reveals general financial behavior patterns in the Philippines."
     - code: "3.A"
       name: "Expense Categorization Frameworks"
-      justification: "Paper examines expense tracking and the gap in fixed vs variable cost categorization."
-    - code: "3.B"
-      name: "Expense Category Design Considerations"
-      justification: "Findings show manual categorization is weak, supporting need for automated, intuitive category design."
+      relevance: "medium"
+      justification: "Identifies a gap in cost categorization (fixed vs. variable), which is relevant to designing expense tracking features."
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Describes current practices (often informal), providing a baseline for understanding the user's starting point."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "high"
+      justification: "Specifically highlights the lack of formal budgeting, poor record-keeping, and limited banking integration as key gaps."
     - code: "7.A"
       name: "Budgeting Strategies as Domain Knowledge"
-      justification: "Paper details four budgeting dimensions (income utilization, tracking, savings, planning) that inform rule-based budget recommendations."
+      relevance: "medium"
+      justification: "Provides evidence of common budgeting practices (income utilization, expense tracking) and challenges (debt), informing system design."
     - code: "13.A"
       name: "Savings Goal Management in PFMS"
-      justification: "High savings discipline but low formal banking use guides savings goal features that incentivize bank integration."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Major challenges from multiple obligations and high interest rates justify debt consolidation and repayment strategy modules."
-  contribution: "The paper's detailed breakdown of income utilization, expense tracking, savings, and financial planning provides domain knowledge for Odin's budget recommendation module (7.A). The identified gap in fixed vs variable cost categorization (AWM=3.20) directly informs the design of Odin's expense categorization feature (3.A/3.B) to automate classification. The high savings discipline but low use of formal banks (AWM=3.22) suggests that Odin's savings goal management (13.A) should integrate with partner banks or cooperatives to reduce friction. The major debt challenges (AWM=3.27) justify a dedicated debt management module (13.B) featuring snowball/avalanche methods and consolidation advice. The strategic plan's 'Salary Method' and 'Two-Wallet System' can be translated into user-facing budgeting nudges within Odin."
+      relevance: "low"
+      justification: "Discusses savings behaviors, including the use of informal methods and challenges with formal savings, but not focused on goal management."
+  contribution: "This paper justifies Odin's design by revealing the prevalent financial behaviors and challenges in the Philippines. It confirms the need for modules that simplify expense tracking (3.A) and emphasize goal-setting (7.A). The paper's findings on debt and income instability (7.A, 13.A) support the need for robust features in these areas. It also validates a mobile-first approach (9.A) by illustrating the low use of formal banking and the potential for accessible digital tools."
   directly_justifies:
-    - "Micro-entrepreneurs struggle to categorize expenses into fixed and variable costs, justifying automated expense categorization in Odin."
-    - "High debt repayment pressure reduces capital for business needs, supporting a debt management module with repayment planning."
-    - "Low tendency to deposit savings in banks (AWM=3.22) indicates Odin should facilitate micro-savings accounts with low barriers."
-    - "Setting financial goals is the strongest practice (AWM=3.77), so Odin should emphasize goal-setting as a core onboarding step."
-    - "Managing multiple financial obligations is the top challenge (AWM=3.42), justifying features for viewing and prioritizing liabilities."
-  limits: "The study samples only 68 micro-entrepreneurs from one public market, limiting generalizability to other demographics or regions. Self-reported Likert data may suffer from social desirability bias. No qualitative follow-up was conducted despite mention of mixed methods in the introduction. The cross-sectional design cannot establish causality between practices and outcomes. [unacknowledged] The paper does not discuss potential self-selection bias in survey participation."
-  mapping_rationale: "The paper focuses on budgeting practices and financial challenges of micro-entrepreneurs, not directly on young professionals or PFMS algorithms. However, its detailed domain knowledge on expense tracking (3.A/3.B), budgeting strategies (7.A), savings behavior (13.A), and debt management (13.B) is highly relevant for Odin's financial modules. Topics related to behavioral profiling (5.A-C), forecasting (6.A-B), anomaly detection (8.A-B), mobile design (9.A-B), privacy (10.A-B), retention (11.A-B), and system evaluation (12.A-B) were rejected because the paper does not address them. The borderline case of expense categorization was selected because the paper's lowest-ranked practice (fixed vs variable cost separation) directly informs Odin's design need for automated categorization."
+    - "A structured expense tracking module with automatic categorization is needed because manual cost categorization is a known weakness."
+    - "Budget recommendation must account for irregular income and provide strategies for managing financial liabilities."
+    - "A system that promotes formal savings integration is necessary to bridge the gap between high saving motivation and low banking engagement."
+  limits: "The sample is limited to one public market (Maria Aurora), which may not be representative of all Filipino micro-entrepreneurs. The study is purely quantitative and lacks qualitative depth to explain the 'why' behind the behaviors and challenges. [unacknowledged] It does not explore the specific role or potential of digital tools as a solution."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was conducted. The domains flagged as relevant are 'Expense Categorization' (topic 3.A), 'Existing Systems & Gaps' (topics 4.A, 4.B), 'Budget Recommendation' (topic 7.A), and 'Savings & Debt Management' (topic 13.A). Topic 3.A was assigned 'medium' relevance as the paper identifies a specific gap in cost categorization. Topics 4.A and 7.A were deemed 'medium' and 'contextual' respectively, as they provide valuable background on current practices and challenges. Topic 13.A was rated 'low' relevance because while savings behavior is discussed, it does not directly address goal management. The domains of 'Behavioral Profiling', 'Spending Forecasting', 'Anomaly Detection', 'Mobile-First Design', 'Data Privacy', and 'User Retention' were rejected as the paper does not provide any citeable claims that directly inform their design or implementation. A borderline case was observed where the paper's discussion of 'income utilization' touches on both 'Financial Behavior' (1.C) and 'Budgeting Strategies' (7.A); it was resolved by selecting the more design-relevant topic (7.A) over the more descriptive one (1.C). The paper's discussion of 'savings' (13.A) and 'financial liability' (7.A) presents another borderline issue; both were selected, but with differing relevance levels to reflect the paper's primary focus. Overall, the paper is highly relevant to Odin as it provides empirical evidence of the financial management practices and challenges of Filipino micro-entrepreneurs, which can directly inform the design of features for expense tracking, budgeting, and debt management."
 limitations:
-  - "Single-site study (Maria Aurora Public Market) limits external validity."
-  - "Reliance on self-reported Likert scales may introduce social desirability and recall bias. [unacknowledged]"
-  - "Mixed methods promised in introduction but only quantitative data collected; no qualitative triangulation. [unacknowledged]"
-  - "Cross-sectional design prevents causal inference about relationships between practices and challenges."
-  - "No statistical tests (e.g., chi-square, regression) were performed; only descriptive means and ranks reported. [unacknowledged]"
+  - "The sample was limited to 68 micro-entrepreneurs from a single public market, limiting generalizability. [unacknowledged]"
+  - "The study relies on self-reported data, which may be subject to social desirability bias."
+  - "The cross-sectional design does not capture how practices and challenges evolve over time. [unacknowledged]"
+  - "A purely quantitative approach cannot fully explain the reasons behind observed behaviors and challenges."
+  - "The paper does not explicitly examine the role of digital financial tools, a gap for a modern PFMS context. [unacknowledged]"
 remember_this:
-  - "Income utilization discipline is high with AWM=3.63 (Always)."
-  - "Managing multiple debts is the top financial liability challenge (AWM=3.42)."
-  - "Only 3.22 AWM for depositing savings in banks shows low formal integration."
-  - "Setting financial goals is the strongest budgeting practice (AWM=3.77)."
-  - "Economic changes like inflation rank highest among income generation challenges (AWM=3.48)."
+  - "Micro-entrepreneurs show strong daily financial discipline but lack formal banking integration."
+  - "Managing multiple financial obligations and income volatility are the top challenges."
+  - "A key gap exists in categorizing expenses into fixed and variable costs."
+  - "Despite a proactive saving culture, the use of formal banks or cooperatives is low."
+  - "Financial literacy and access to affordable credit are critical for business sustainability."
 ```

@@ -1,73 +1,134 @@
 ```yaml
-paper_id: c4a5b6d7-e8f9-4a1b-9c2d-3e4f5a6b7c8d
+paper_id: 52c5e0a0-d0a0-5b1a-9c4e-8f6b9e2f1c3a
 designation: local
 title: The Influence of Buy Now, Pay Later (BNPL) Services on Consumer Spending Behavior
 authors: Vega, N. C.; Constante, K. J. G.; Pacson, K. C.; Samaniego, J. G.; Tobias, T. E.
 year: 2025
 venue: International Journal of Sustainability and Advanced Integrated Research
 odin_topics:
+  - 1.A
+  - 1.B
   - 1.C
+  - 2.A
+  - 2.C
+  - 4.B
+  - 5.A
+  - 5.B
   - 7.A
+  - 7.D
+  - 8.A
+  - 13.A
   - 13.B
-shorthand_tags:
-  - /fin-behavior
-  - /budgeting
-  - /debt-accumulation
-tldr: Buy Now, Pay Later services increase impulse buying and purchase frequency among young Filipino users, while budget planning remains inconsistent and debt accumulation is moderate.
-problem_and_motivation: BNPL services are rapidly growing but raise concerns about overspending and debt, especially among young consumers. The study investigates how BNPL influences spending behavior, budgeting, and financial discipline in Gapan City, Nueva Ecija.
+tldr: BNPL services increase impulse buying and purchase frequency among young Filipino users, highlighting gaps in consistent budgeting and debt management.
+problem_and_motivation: BNPL services are rapidly growing, but their influence on consumer spending behavior, particularly among young Filipinos, remains underexplored. Understanding these effects is crucial to prevent overspending and debt accumulation.
 approach:
-  - Survey of 94% young adults (18-25) in Gapan City, Nueva Ecija, with low income.
-  - Descriptive quantitative design using Likert-scale questions on BNPL-related behaviors.
-  - Analysis of means and frequencies across ten behavioral dimensions.
+  - The study used a descriptive quantitative research design with structured surveys.
+  - Data were gathered from 94% of respondents aged 18-25 in Gapan City, Nueva Ecija.
+  - The survey instrument covered impulse buying, purchase frequency, budgeting, and debt accumulation.
+  - Weighted means were calculated to determine levels of agreement across dimensions.
 findings:
-  - "num: 94% of respondents are aged 18-25, and 60% earn below PHP 5,000 monthly."
-  - "num: Impulse buying tendency mean of 2.71 (agree), with highest agreement on post-purchase regret (2.88)."
-  - "num: Awareness of repayment obligations mean of 2.91, but unexpected fees reported at 2.60."
-  - "num: Debt accumulation mean of 2.55, with using one BNPL to pay another at 2.42 (lowest)."
+  - num: 94% of respondents were aged 18-25, and 74% were students with monthly incomes below PHP 5,000.
+  - num: Respondents showed moderate agreement (WM = 2.71) on impulse buying tendencies when using BNPL.
+  - num: BNPL services contributed to a noticeable increase in purchase frequency (WM = 2.67).
+  - num: Awareness of BNPL repayment obligations was relatively high (WM = 2.91).
+  - num: Moderate agreement was found on debt accumulation (WM = 2.55) and financial strain (WM = 2.65).
+  - Users rely on future income to cover BNPL payments (WM = 2.84).
+  - Many respondents lack consistent budgeting strategies and formal expense-tracking tools.
+  - Multiple BNPL commitments were not yet overwhelming but signaled future challenges.
 key_figures_tables:
-  - None.
+  - "Figure 1: Top 11 products in BNPL purchase category → Clothing is the most common BNPL purchase."
+  - "Figure 2: Types of goods bought with BNPL in the Philippines → Electronics and appliances are top purchases."
+  - "Figure 3: Geographic location of the study area → Study focused on Gapan City, Nueva Ecija."
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
   - term: BNPL
-    definition: Buy Now, Pay Later, a payment service allowing deferred interest-free installments.
-  - term: SDG
-    definition: United Nations Sustainable Development Goal.
+    definition: Buy Now, Pay Later, a payment method allowing consumers to make purchases and defer payment over time, often interest-free.
+  - term: Impulse Buying
+    definition: An unplanned purchase driven by emotions or a sudden urge without considering consequences.
+  - term: Mental Accounting
+    definition: The cognitive process of categorizing and evaluating financial transactions, which can affect spending decisions.
 critical_citations:
-  - "[Ang and Maesen, 2024] — BNPL increases purchase likelihood from 17% to 26%."
-  - "[Gilbert et al., 2022] — Lower financial literacy leads to higher BNPL use."
+  - "[Ang & Maesen, 2024] — BNPL increases purchase likelihood from 17% to 26%."
+  - "[Bezawada et al., 2024] — BNPL adoption increases online spending by 6.42%."
+  - "[Di Maggio et al., 2022] — BNPL increases purchasing power but may burden finances."
+  - "[Gilbert et al., 2022] — Lower financial literacy leads to higher BNPL use and perceived lower risk."
 relevance:
   topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: "The study focuses on young Filipinos (18-25), a key user group for BNPL and Odin."
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: "Provides data on income (below PHP 5,000) and employment status (mostly students) of BNPL users."
     - code: 1.C
       name: Financial Behavior of Filipino Young Professionals
-      justification: Survey focuses on 18-25 year old Filipinos with low income, analyzing spending and debt.
+      relevance: high
+      justification: "Directly examines impulse buying, budgeting, and debt accumulation behaviors."
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: "Provides local context on BNPL use in Gapan City, reflecting Filipino consumer habits."
+    - code: 2.C
+      name: User-Declared Financial Preferences
+      relevance: medium
+      justification: "Surveys user perceptions of BNPL convenience, affordability, and budgeting ease."
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: "Highlights gaps in BNPL regulation, transparency, and user financial literacy."
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: "Identifies behavioral tendencies like impulse buying and reliance on future income."
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: low
+      justification: "Tangential; discusses user behavior but not profile dynamics or cold-start issues."
     - code: 7.A
       name: Budgeting Strategies as Domain Knowledge
-      justification: Paper measures budget planning, allocation, and strategies among BNPL users.
+      relevance: high
+      justification: "Examines budgeting strategies and their inconsistency among BNPL users."
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: low
+      justification: "Tangential; mentions budget allocation but does not address infeasibility handling."
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: contextual
+      justification: "Provides context on financial strain and missed payments but not anomaly detection algorithms."
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: medium
+      justification: "Discusses how BNPL balances make it hard to save."
     - code: 13.B
       name: Debt Management in PFMS
-      justification: Findings on debt accumulation, payment difficulties, and multiple BNPL commitments directly inform debt management.
-  contribution: "This paper provides empirical evidence on how BNPL services affect impulse buying and budget consistency, which can inform Odin's budget recommendation module to adjust spending alerts for users prone to BNPL overspending. The findings on repayment awareness and unexpected fees justify a debt management feature that tracks installment obligations and flags potential late payments. The observed reliance on future income to meet BNPL payments supports an anomaly detection mechanism that identifies cash flow strain before debt spirals. Finally, the moderate debt accumulation signals the need for a savings goal integration that prioritizes debt reduction."
+      relevance: high
+      justification: "Directly addresses debt accumulation and management challenges with BNPL."
+  contribution: "This paper directly justifies Odin's behavioral profiling module by identifying specific spending tendencies among young Filipinos, such as impulse buying and reliance on future income. It informs the budgeting recommendation engine by highlighting gaps in users' budget planning and the need for simple, integrated tools. The findings on debt accumulation and awareness of repayment terms support Odin's anomaly detection and financial literacy features, as users exhibit moderate awareness but lack consistent tracking."
   directly_justifies:
-    - "BNPL users exhibit moderate impulse buying tendencies (mean 2.71)."
-    - "Young Filipino BNPL users often rely on future income to meet payments (mean 2.84)."
-    - "Awareness of repayment obligations is relatively high (mean 2.91) but budgeting strategies are inconsistent (mean 2.63)."
-    - "Most users do not find managing multiple BNPL accounts overwhelming (mean 2.48)."
+    - "BNPL services increase impulse buying and purchase frequency among young Filipino users."
+    - "Users show moderate awareness of repayment obligations but exhibit gaps in consistent budgeting and use of tracking tools."
+    - "Reliance on future income to meet BNPL commitments highlights a need for better cash flow management and budgeting support."
+    - "The study identifies a demand for centralized tools to manage multiple BNPL accounts and prevent debt accumulation."
   limits:
-    - "Convenience sample limited to one city (Gapan), not generalizable to all Filipino young professionals."
-    - "Self-reported survey data may introduce social desirability bias."
-    - "Cross-sectional design cannot establish causal direction between BNPL use and spending changes."
-    - "No validation of survey instrument beyond face validity mentioned."
-  mapping_rationale: "The paper focuses on consumer spending behavior, budgeting, and debt among young Filipinos, directly mapping to Odin's domains of behavioral profiling (1.C), budget recommendation (7.A), and debt management (13.B). It does not address algorithmic forecasting, anomaly detection, expense categorization frameworks, or mobile UX, so topics 3.A, 6.A, 8.A, and 9.A were rejected. The paper's quantitative survey aligns with domain knowledge for budgeting strategies (7.A) rather than a specific recommendation algorithm (7.C). Debt accumulation findings support 13.B but not savings goal management (13.A) as no goal-setting data was collected."
+    - "The study is limited to Gapan City, Nueva Ecija, and may not be generalizable to the entire Philippines."
+    - "The sample is skewed towards students (74%) with low income, limiting applicability to other demographic groups."
+    - "Self-reported survey data may introduce social desirability and recall bias. [unacknowledged]"
+    - "The cross-sectional design prevents causal inferences about BNPL's long-term effects. [unacknowledged]"
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The study was flagged as highly relevant to the Filipino Cultural Context (2.A, 2.C) as it provides local data on BNPL use in the Philippines. It was also highly relevant to Behavioral Profiling (5.A) and Savings & Debt Management (13.B) due to its direct examination of impulse buying, budgeting, and debt accumulation. The study was considered for but rejected from the Forecasting (6.A, 6.B) domain as it does not propose or evaluate predictive algorithms, and from Mobile-First Design (9.A, 9.B) as it does not address UX principles. Borderline cases included the study's relevance to both User-Declared Preferences (2.C) and Budgeting Strategies (7.A), as it surveys user perceptions and examines budgeting practices. Overall, the paper provides strong behavioral insights and identifies gaps in financial management, making it relevant to Odin's user understanding and advisory modules."
 limitations:
-  - "Small sample size and geographic restriction to Gapan City. [unacknowledged]"
-  - "Contradiction in ethical approval statement: claims no human subjects but conducted surveys. [unacknowledged]"
-  - "Lack of longitudinal data to assess long-term debt outcomes."
-  - "No control group comparing BNPL users to non-users."
+  - "The study is limited to Gapan City, Nueva Ecija, and may not be generalizable to the entire Philippines."
+  - "The sample is skewed towards students (74%) and low-income earners, limiting applicability to other groups."
+  - "The cross-sectional design prevents causal inferences about BNPL's long-term effects. [unacknowledged]"
+  - "Self-reported survey data may introduce social desirability and recall bias. [unacknowledged]"
+  - "The study does not employ algorithmic methods, limiting its relevance to Odin's predictive and recommendation modules. [unacknowledged]"
 remember_this:
-  - "94% of BNPL users are aged 18-25, mostly students with low income."
-  - "Impulse buying tendency is moderate but post-purchase regret is higher."
-  - "Budget planning around BNPL is inconsistent despite awareness."
-  - "Reliance on future income for payments is common (mean 2.84)."
+  - "BNPL increases impulse buying (WM 2.71) and purchase frequency (WM 2.67) among young Filipinos."
+  - "Awareness of BNPL obligations is high (WM 2.91) but budgeting and tracking remain inconsistent."
+  - "Moderate debt accumulation (WM 2.55) and reliance on future income (WM 2.84) are key risks."
+  - "Centralized BNPL management tools are in demand to prevent future financial strain."
 ```

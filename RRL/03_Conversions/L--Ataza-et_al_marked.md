@@ -848,22 +848,22 @@ Magendans, J., Gutteling, J. M., & Zebel, S. (2016). Psychological determinants 
 1076–1093.
 Journal
 
+regulatory
+
 Research,
 
 20(8),
 
 Risk
 
+and
+
 of
 
 tolerance
 https://doi.org/10.1080/13669877.2016.1147491
 
-regulatory
-
 focus.
-
-and
 
 Montalto Catherine, P. (2000). The  effect of family  life cycle and  financial management practices  on  household  saving  patterns.
 

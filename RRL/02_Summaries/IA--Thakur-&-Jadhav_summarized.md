@@ -1,100 +1,140 @@
 ```yaml
 paper_id: 10.14744/sigma.2025.00119
-designation: algorithm-specific
+designation: international-algorithm-specific
 title: Expense tracker management system using machine learning
 authors: Thakur, R. S.; Jadhav, A.
 year: 2025
 venue: Sigma Journal of Engineering and Natural Sciences
 odin_topics:
+  - 3.A
+  - 3.B
   - 6.A
   - 6.B
+  - 7.A
+  - 7.B
+  - 7.C
+  - 8.A
+  - 8.B
+  - 9.A
+  - 9.B
   - 12.A
   - 12.B
-shorthand_tags:
-  - /predictive-modeling
-  - /spending-forecasting
-  - /evaluation-frameworks
-  - /algorithm-evaluation
-tldr: Predicts future expenses using machine learning on household transaction data, finding a voting ensemble regressor achieves 78.11% R-squared.
-problem_and_motivation: Manual expense tracking is time-consuming and error-prone, while existing apps lack predictive capabilities. There is a need for automated expense prediction to help users manage budgets. This paper addresses the gap by applying machine learning to forecast expenses from past spending patterns.
+  - 12.C
+tldr: An expense tracker system using machine learning and ensemble methods to predict future expenses based on historical transaction data.
+problem_and_motivation: Manual expense tracking is time-consuming and error-prone, and existing digital tools often lack predictive analytics for proactive financial management. A system that automates expense tracking and forecasts spending can help users make better financial decisions.
 approach:
-  - Dataset: Daily Household Transactions (date, mode, category, subcategory, note, amount, income/expense, currency).
-  - Preprocessing: MinMax scaling, log1p transformation of amount, TF-IDF vectorization of text fields (min_df=3).
-  - Models: Individual (XGBoost, Random Forest, SVM, MLP, KNN, Decision Tree, Extra Tree, CatBoost) and ensemble (bagging, boosting, stacking, voting, blending).
-  - Evaluation: 70/30 train-test split, metrics R2, MAE, MSE, relative absolute error (RAE).
-  - Baseline comparison across all models using hit-and-trial hyperparameter tuning.
+  - Used the "Daily Household Transactions" dataset from Kaggle with fields like date, category, amount, and income/expense flags.
+  - Preprocessed data using MinMax scaling, log1p transformation for the amount, and TF-IDF vectorization for text fields.
+  - Evaluated individual models: XGBoost, Random Forest, SVM, MLP, KNN, Decision Tree, Extra Tree, and CatBoost.
+  - Evaluated ensemble models: Bagging, Boosting, Stacking, Voting, and Blending.
+  - Evaluated performance using R-squared, Mean Absolute Error, Mean Square Error, and Relative Absolute Error.
 findings:
-  - num: XGBoost achieves R-squared of 77.89%, highest among individual models.
-  - num: Voting ensemble regressor achieves highest R-squared of 78.11% and lowest relative absolute error of 0.1765.
-  - Voting ensemble outperforms bagging, boosting, stacking, and blending.
-  - RAE is the deciding factor due to similar R2 values across models.
+  - XGBoost achieved the highest R-squared (77.89%) among individual models.
+  - The Voting Ensemble Regressor outperformed all other models with an R-squared of 78.11%.
+  - num: The Voting Ensemble Regressor achieved the lowest Relative Absolute Error of 0.1765.
+  - num: The Voting Ensemble Regressor achieved the lowest Mean Absolute Error of 0.6121.
+  - The system's web application is built with Django and PostgreSQL, featuring interactive dashboards and expense categorization.
 key_figures_tables:
-  - Table 2: Performance metrics of individual and ensemble models → Voting ensemble has highest R2 78.11%.
+  - Table 1: Summary of prior expense tracking systems → Highlights gaps like manual entry and limited analysis.
+  - Table 2: Performance comparison of machine learning models → Shows Voting Ensemble as the best performer.
+  - Figure 3: Expense summary dashboard → Displays total expenses, category breakdown, and monthly trends.
+  - Figure 7: Expense categorization interface → Shows predefined categories like food, rent, and shopping.
 key_equations:
-  - equation: R^2 = 1 - \frac{SS_{res}}{SS_{tot}}
-    explanation: Proportion of variance explained by the model.
-  - equation: MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y}_i|
-    explanation: Average absolute prediction error.
-  - equation: MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2
-    explanation: Average squared prediction error.
-  - equation: RAE = \frac{\sum_{i=1}^{n}|y_i - \hat{y}_i|}{\sum_{i=1}^{n}|y_i - \bar{y}|}
-    explanation: Normalized measure of prediction accuracy.
+  - equation: R^2 = 1 - (SS_res / SS_tot)
+    explanation: Measures variance explained by the model.
+  - equation: MAE = (1/n) * Σ|y_i - ŷ_i|
+    explanation: Average magnitude of prediction errors.
+  - equation: MSE = (1/n) * Σ(y_i - ŷ_i)^2
+    explanation: Average squared difference between actual and predicted.
 definitions:
   - term: XGBoost
-    definition: Extreme Gradient Boosting, an efficient sequential tree ensemble method.
+    definition: Extreme Gradient Boosting, an efficient sequential decision tree ensemble.
   - term: Ensemble Learning
-    definition: Combining multiple models to improve predictive performance.
-  - term: R-squared
-    definition: Coefficient of determination measuring model fit.
-  - term: MAE
-    definition: Mean Absolute Error, average magnitude of errors.
-  - term: MSE
-    definition: Mean Squared Error, average squared difference.
-  - term: RAE
-    definition: Relative Absolute Error, total absolute error relative to a simple predictor.
-  - term: log1p
-    definition: Natural logarithm of (1 + x), used to transform skewed amounts.
+    definition: Combining multiple models to improve overall predictive performance.
   - term: TF-IDF
-    definition: Term frequency-inverse document frequency for text vectorization.
+    definition: Term Frequency-Inverse Document Frequency, a text vectorization technique.
 critical_citations:
-  - "[Doan and Kalita, 2015] — Provides regression model selection methodology."
-  - "[Odegua, 2019] — Empirical study of ensemble techniques (bagging, boosting, stacking)."
-  - "[Mienye and Sun, 2022] — Survey of ensemble learning concepts and algorithms."
+  - "[Doan & Kalita, 2015] — Provides context on selecting ML algorithms."
+  - "[Mienye & Sun, 2022] — Surveys ensemble learning concepts and applications."
+  - "[Jadhav et al., 2023] — Discusses data transformation as a preprocessing stage."
 relevance:
   topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: high
+      justification: Directly proposes and implements an expense categorization system.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: medium
+      justification: Discusses predefined categories like food, transport, and custom categories.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Benchmarks multiple ML models for expense prediction.
+      relevance: high
+      justification: Core contribution is using ML for expense prediction.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Voting ensemble regressor as a spending forecasting algorithm.
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Evaluates multiple forecasting algorithms on spending data.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Mentions budget forecasting and overspending alerts.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: low
+      justification: Touches on budget forecasting but not on optimization.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: contextual
+      justification: Not a focus; the paper is on prediction, not allocation.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: Mentions deviation alerts but does not implement anomaly detection.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: contextual
+      justification: Not a focus; system only flags deviations.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: low
+      justification: Mentions cross-device access but does not focus on mobile-first design.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: low
+      justification: Web application focus, not mobile UX.
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      justification: Uses R2, MAE, MSE, RAE to compare models.
+      relevance: medium
+      justification: Uses standard regression metrics (R2, MAE, MSE, RAE).
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: Systematic comparison of individual and ensemble regressors.
-  contribution: The paper directly informs Odin's spending forecasting module by demonstrating that voting ensemble regression achieves 78.11% R2 for expense prediction. The evaluation metrics (R2, MAE, RAE) provide a benchmark for Odin's algorithmic evaluation framework. The preprocessing steps (log1p transformation, TF-IDF vectorization) are applicable to Odin's expense categorization and forecasting pipelines. The comparison of individual vs. ensemble methods guides algorithm selection for Odin's predictive modules.
+      relevance: high
+      justification: Systematic evaluation of individual and ensemble models.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: low
+      justification: More about prediction accuracy than budget recommendation evaluation.
+  contribution: This paper demonstrates that ensemble methods, particularly voting regressors, outperform individual models for expense prediction, providing a basis for Odin's forecasting module. Its application of data transformation techniques (e.g., log1p) and text vectorization can inform data preprocessing for Odin's categorization and prediction algorithms. The web application architecture built with Django offers a reference for Odin's backend design, especially in handling user authentication and expense entry. The evaluation framework using R-squared and MAE provides a template for assessing Odin's predictive performance.
   directly_justifies:
-    - Voting ensemble regressor outperforms individual models for expense prediction on household transaction data.
-    - XGBoost achieves 77.89% R-squared for expense forecasting, second only to voting ensemble.
-    - Relative absolute error of 0.1765 is the lowest among all tested models.
-    - Manual expense entry remains necessary in the proposed system.
+    - Voting ensemble regressors improve expense prediction accuracy over single models.
+    - Data transformations like log1p and TF-IDF are effective preprocessing steps for spending data.
+    - R-squared and Mean Absolute Error are appropriate metrics for evaluating spending forecast models.
   limits:
-    - Dataset is specific to Indian household transactions; generalizability to Filipino young professionals is untested. [unacknowledged]
-    - Rely on manual expense entry via forms; no automated bank synchronization. [acknowledged in future work]
-    - No comparison with deep learning methods beyond MLP. [unacknowledged]
-    - Evaluation metrics show small absolute differences; practical significance not discussed. [unacknowledged]
-  mapping_rationale: The paper focuses on machine learning for expense prediction, directly supporting spending forecasting (6.A, 6.B). Its systematic evaluation of multiple models and metrics aligns with evaluation frameworks (12.A, 12.B). Topics related to behavioral profiling (5.A-5.C), budget recommendation (7.A-7.C), anomaly detection (8.A-8.B), and mobile design (9.A-9.B) are not addressed. Categorization (3.A) is mentioned only as a basic feature without novel framework, so excluded. The paper is algorithm-specific and international, hence designation algorithm-specific.
+    - Dataset is from India, which may not generalize to Filipino cultural or spending contexts. [unacknowledged]
+    - Does not address the cold-start problem or behavioral profiling for new users. [unacknowledged]
+    - No comparison with deep learning methods like LSTMs for sequential data. [unacknowledged]
+    - The system relies on manual expense entry, not automated bank transaction syncing.
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. High relevance was assigned to domains directly addressed by the paper's core contribution of ML-based expense prediction and categorization (6.A, 6.B, 3.A, 12.B). Medium relevance was assigned to broader budgeting and evaluation topics (7.A, 12.A). Low relevance was assigned to anomaly detection and mobile design, as these are only superficially mentioned. The topic of constrained optimization (7.C) was considered but rejected as the paper does not address allocation algorithms. The topic of Filipino cultural context (2.A, 2.B) was considered and rejected as the paper uses a non-Philippine dataset. Overall, the paper provides strong empirical justification for using ensemble regression for spending forecasting, which directly supports Odin's algorithmic design.
 limitations:
-  - Manual data entry required, no automatic transaction fetching. [acknowledged]
-  - Limited to expense prediction; does not provide budget recommendations. [unacknowledged]
-  - R2 values around 78% leave substantial unexplained variance. [unacknowledged]
-  - No user study or real-world deployment evaluation. [unacknowledged]
+  - The dataset is from India, which may not generalize to Filipino cultural or spending contexts. [unacknowledged]
+  - Does not address the cold-start problem or behavioral profiling for new users. [unacknowledged]
+  - No comparison with deep learning methods like LSTMs for sequential data. [unacknowledged]
+  - The system relies on manual expense entry, not automated bank transaction syncing. [unacknowledged]
 remember_this:
-  - Voting ensemble regressor achieves 78.11% R-squared for expense prediction.
-  - XGBoost outperforms other individual models with 77.89% R2.
-  - Manual expense entry remains a limitation of the system.
-  - Preprocessing uses log1p and TF-IDF for financial text data.
-  - Relative absolute error of 0.1765 is the best among all models.
+  - Voting ensemble regressor achieved the highest R-squared of 78.11%.
+  - The voting ensemble achieved the lowest relative absolute error of 0.1765.
+  - XGBoost outperformed other individual models with an R-squared of 77.89%.
+  - Data preprocessing with log1p and TF-IDF is crucial for expense prediction.
+  - The system uses Django for backend and PostgreSQL for database management.
 ```

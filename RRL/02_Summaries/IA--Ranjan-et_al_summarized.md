@@ -1,32 +1,27 @@
 ```yaml
 paper_id: 10.59256/ijsreat.20250505011
-designation: algorithm-specific
+designation: international
 title: Online Payment Fraud Detection Using Decission Tree and LSTM Neural Network
-authors: Ranjan, A.; Jangir, A. K.; Abrol, K.; Saurav, S.
+authors: Ranjan, A.; Jangir, A.K.; Abrol, K.; Saurav, S.
 year: 2025
 venue: International Journal of Scientific Research in Engineering & Technology
 odin_topics:
   - 8.A
   - 8.B
-  - 12.B
-shorthand_tags:
-  - /anomaly-detection
-  - /fraud-detection-hybrid
-  - /evaluation-metrics
-tldr: Online payment fraud detection using a hybrid of Decision Tree for interpretable rule-based screening and LSTM for temporal sequence analysis, evaluated on imbalanced transaction datasets.
-problem_and_motivation: Traditional rule-based fraud detection systems cannot adapt to evolving fraud patterns. The surge in online payment fraud demands real-time, adaptive solutions. A hybrid approach combining interpretable models and temporal deep learning is needed.
+tldr: A hybrid fraud detection system combines Decision Trees for rapid, interpretable screening with LSTM networks for sequential transaction analysis and temporal pattern recognition.
+problem_and_motivation: Online payment fraud is escalating in sophistication, rendering traditional rule-based systems obsolete. There is a critical need for adaptive, data-driven frameworks that can learn evolving fraud patterns. Existing approaches lack the capacity to combine static, interpretable rules with the temporal intelligence required for modern fraud detection.
 approach:
-  - Data from IEEE-CIS and Kaggle credit card datasets with extreme class imbalance.
-  - Preprocessing uses SMOTE for oversampling, time-window aggregates, and sequential encoding for LSTM inputs.
-  - Two-stage hybrid: Decision Trees for rapid rule-based screening, then LSTM with attention for temporal analysis.
-  - Evaluation metrics include precision, recall, F1-score, and ROC-AUC with cross-validation.
-  - Visualization via Matplotlib, Seaborn, and Power BI dashboards for real-time monitoring.
+  - The study conducts a systematic literature review of machine learning and deep learning techniques for online payment fraud detection.
+  - It synthesizes findings from peer-reviewed papers, focusing on Decision Trees, Random Forests, and LSTM neural networks.
+  - The review analyzes common preprocessing steps including SMOTE for class imbalance and feature engineering for temporal data.
+  - It describes a two-stage hybrid architecture where Decision Trees flag high-risk transactions for subsequent LSTM analysis.
+  - The paper evaluates models using standard metrics such as precision, recall, F1-score, and ROC-AUC from the reviewed literature.
 findings:
-  - Hybrid Decision Tree-LSTM models outperform standalone classifiers in fraud detection.
-  - LSTM networks capture long-term behavioral changes missed by static classifiers.
-  - Decision Trees provide interpretable rules and sub-millisecond latency per transaction.
-  - SMOTE and class weighting significantly improve sensitivity to fraudulent transactions.
-  - Attention mechanisms in LSTM enhance interpretability of fraud predictions.
+  - Decision Trees and Random Forests provide fast, interpretable baselines for fraud screening, often executing in less than one millisecond per transaction.
+  - LSTM networks significantly outperform baseline models by effectively modeling temporal sequences and capturing long-term behavioral changes.
+  - Hybrid models combining tree-based methods and LSTMs achieve superior results compared to standalone approaches by leveraging the strengths of each.
+  - Addressing class imbalance via SMOTE is critical for improving model sensitivity to fraudulent transactions.
+  - Feature engineering, including time-window aggregates and sequential encoding, substantially improves deep learning model accuracy.
 key_figures_tables:
   - None.
 key_equations:
@@ -34,45 +29,43 @@ key_equations:
     explanation: ""
 definitions:
   - term: LSTM
-    definition: Long Short-Term Memory, a recurrent neural network for sequence modeling.
+    definition: Long Short-Term Memory, a recurrent neural network architecture designed to model sequential data and long-term dependencies.
   - term: SMOTE
-    definition: Synthetic Minority Oversampling Technique to balance class distribution.
-  - term: PCA
-    definition: Principal Component Analysis for dimensionality reduction.
+    definition: Synthetic Minority Oversampling Technique, a method for addressing class imbalance by generating synthetic samples for the minority class.
   - term: ROC-AUC
-    definition: Receiver Operating Characteristic - Area Under Curve for classifier performance.
+    definition: Receiver Operating Characteristic - Area Under the Curve, a performance metric for binary classification that measures the model's ability to distinguish between classes.
 critical_citations:
-  - "[Jurgovsky et al., 2018] — LSTM for credit card fraud detection."
-  - "[Breiman, 2001] — Random Forest ensemble method."
-  - "[Hochreiter & Schmidhuber, 1997] — LSTM architecture."
-  - "[Chawla et al., 2002] — SMOTE oversampling technique."
+  - "[Jurgovsky et al., 2018] — Foundational for LSTM use in fraud detection."
+  - "[Roy et al., 2018] — Key comparison of Decision Tree and Random Forest."
+  - "[Nashaat and Khorasgani, 2021] — Key hybrid model architecture."
+  - "[Fiore et al., 2019] — Key study on LSTM and feature engineering."
 relevance:
   topics:
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: Paper directly addresses fraud as anomalous transactions.
+      relevance: low
+      justification: Provides general background on fraud as an anomaly detection problem.
     - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Proposes hybrid Decision Tree and LSTM algorithm for fraud detection.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: Uses precision, recall, F1, ROC-AUC to evaluate detection models.
-  contribution: This paper justifies implementing an anomaly detection module in Odin using a hybrid Decision Tree-LSTM architecture. The two-stage screening and temporal analysis approach can be adapted for spending anomaly detection. Preprocessing techniques like SMOTE and time-window feature engineering directly inform Odin's data pipeline. The evaluation framework with precision-recall metrics provides a template for validating Odin's detection algorithms.
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: low
+      justification: Surveys algorithms like LSTM and Decision Trees applicable to anomaly detection.
+  contribution: The paper surveys hybrid ML techniques for fraud detection, which could inform Odin's anomaly detection module (8.A, 8.B) for identifying unusual spending patterns. While the context is general online payments, the core algorithms (LSTM, Decision Trees) are transferable to personal finance transaction data. The review of SMOTE and feature engineering offers practical preprocessing strategies that could be adapted for Odin's spending data. The emphasis on real-time processing aligns with Odin's need for responsive anomaly detection.
   directly_justifies:
-    - Hybrid models combining rule-based and deep learning methods improve anomaly detection accuracy.
-    - LSTM networks effectively model temporal patterns in transaction sequences for fraud detection.
-    - Decision Trees offer interpretable, low-latency screening suitable for real-time PFMS.
-    - Class imbalance handling via SMOTE is critical for training fraud detection models.
+    - LSTM networks are effective for modeling temporal sequences in transaction data.
+    - Hybrid models combining interpretable rules and deep learning achieve superior detection performance.
+    - SMOTE is a standard technique to handle class imbalance in fraud detection.
   limits:
-    - Paper presents a survey and system design, not empirical validation of a deployed implementation.
-    - No specific performance metrics (e.g., precision/recall values) from the authors' own experiments.
-  mapping_rationale: The paper focuses on online payment fraud detection using machine learning, which directly maps to Odin's anomaly detection domain (8.A and 8.B). The hybrid Decision Tree-LSTM algorithm and its evaluation metrics align with algorithmic and evaluation topics. Topics related to behavioral profiling, spending forecasting, or budget recommendation were rejected as the paper does not address those. The paper is algorithm-specific, hence designation 'algorithm-specific'. The use of LSTM for sequence classification justifies inclusion of temporal anomaly detection. Borderline case: 12.B was selected because the paper emphasizes evaluation metrics and cross-validation for model comparison.
+    - The paper is a survey and does not present original empirical results or a novel model.
+    - The review is specific to fraud detection, which may not directly translate to all aspects of financial anomaly detection for personal budgeting.
+    - The focus is on general online payments, not the specific spending patterns of a PFMS user.
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was performed. The primary domain flagged as relevant was Anomaly Detection, as the paper focuses on a core problem of that domain (fraud identification). Within this domain, topic codes 8.A and 8.B were selected with a 'low' relevance level because the paper provides a broad survey of general algorithms (LSTM, Decision Trees) applicable to anomaly detection, but does not address the specific challenges of a PFMS like Odin. The domain was selected because the foundational concepts of fraud detection, such as identifying outliers and using temporal patterns, are directly transferable. All other functional domains (e.g., Filipino Cultural Context, Expense Categorization, Behavioral Profiling, etc.) were considered and rejected because the paper does not address cultural factors, user financial behavior, budgeting, system evaluation, or any other Odin-specific domain. The paper's focus is purely technical and domain-agnostic, providing only a general algorithmic background that could be a starting point for designing Odin's anomaly detection module but lacks any specific contextual or user-centric insights. Overall, the paper's relevance to Odin is limited to providing a high-level overview of potential algorithmic approaches for anomaly detection.
 limitations:
-  - No empirical results from the authors' own implementation are reported; the paper is primarily a literature review and conceptual architecture. [unacknowledged]
-  - The proposed hybrid model's real-time performance on production-scale data is not validated. [unacknowledged]
+  - The paper is a survey, not a primary research study with novel contributions. [unacknowledged]
+  - It does not address the specific characteristics of personal finance data in a PFMS context. [unacknowledged]
+  - The review does not cover the integration of anomaly detection with other PFMS modules like budgeting or forecasting. [unacknowledged]
 remember_this:
-  - Decision Trees execute in less than one millisecond per transaction.
-  - LSTM networks capture evolving fraud patterns across transaction sequences.
-  - Hybrid models balance interpretability and temporal intelligence.
-  - SMOTE oversampling improves detection of rare fraudulent transactions.
+  - Hybrid models combining Decision Trees and LSTMs are effective for fraud detection.
+  - LSTM networks excel at capturing temporal patterns in sequential transaction data.
+  - SMOTE is a standard technique for handling class imbalance in fraud detection.
+  - Decision Trees offer fast, interpretable screening for real-time applications.
 ```

@@ -1,100 +1,168 @@
 ```yaml
-paper_id: "b1c2d3e4-f5a6-4b7c-8d9e-0f1a2b3c4d5e"
-designation: "international"
+paper_id: 0e6b8a1c-6c3c-53df-9b34-a8fa8b7f9d91
+designation: international-algorithm-specific
 title: "Clustering and Similarity Learning in Financial Markets: A Tutorial for the Practitioners"
-authors: "Mehta, D.; Thompson, J. R. J.; Lee, H.; Lee, Y."
+authors: "Mehta, D.; Thompson, J.R.J.; Lee, H.; Lee, Y."
 year: 2025
-venue: "Unknown"
+venue: Unknown
 odin_topics:
-  - "5.A"
-  - "8.A"
-  - "8.B"
-  - "12.A"
-  - "12.B"
-shorthand_tags:
-  - "/behavioral-profiles"
-  - "/anomaly-detection"
-  - "/anomaly-algorithm"
-  - "/evaluation-frameworks"
-  - "/evaluation-algorithms"
-tldr: "Reviews clustering and similarity learning methods for financial markets, covering metric learning, graph methods, and LLMs to build adaptive peer groups for bonds, funds, companies, and investors, with emphasis on operational evaluation and multimodal data fusion."
-problem_and_motivation: "Traditional peer-grouping methods such as industry codes or style boxes provide only coarse and rigid notions of similarity, failing to capture actual risk and thematic exposures. Financial applications require adaptive, data-driven similarity systems that quantify closeness based on real economic attributes. However, similarity has no universal ground truth, making evaluation and governance challenging under regulatory scrutiny."
+  - 1.A
+  - 2.A
+  - 2.B
+  - 3.A
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.B
+  - 5.C
+  - 6.A
+  - 6.B
+  - 7.A
+  - 7.B
+  - 7.C
+  - 8.A
+  - 8.B
+  - 9.A
+  - 9.B
+  - 10.A
+  - 12.B
+tldr: This tutorial synthesizes clustering and similarity learning methods, demonstrating their application in investment workflows to build adaptive neighborhoods of securities, funds, companies, and investors for improved decision-making.
+problem_and_motivation: Traditional peer-grouping methods such as industry codes or static style boxes are coarse, rigid, and fail to capture actual risk and thematic exposures. There is a need for adaptive, data-driven similarity systems that can integrate heterogeneous data to support real-world financial decision-making.
 approach:
-  - "Surveys clustering methods (partitioning, hierarchical, density-based, model-based) and distance metrics for tabular, time-series, text, graph, and image data."
-  - "Reviews similarity learning techniques including metric learning, random forest proximities, Siamese networks, contrastive learning, graph neural networks, and multimodal fusion."
-  - "Presents case studies on corporate bonds (random forest proximities for substitution), municipal bonds (CatBoost), MBS/ABS (hazard models), funds (category reproducibility, open-set recognition), companies (multimodal pipelines), and investors (behavioral clustering)."
-  - "Discusses evaluation shifting from academic metrics (Silhouette, ARI) to operational validity: substitution fidelity, neighborhood stability, segment utility, and interpretability for compliance."
-  - "Provides practical guidelines for practitioners: define metrics first, start simple, match distances to data, check stability, document under SR 11-7."
+  - Reviews clustering methods across modalities: tabular (k-means, hierarchical), time-series, text, graphs, and images.
+  - Covers similarity learning methods including metric learning, random forest proximities, Siamese networks, graph neural networks, and multimodal fusion.
+  - Focuses on methodologies for fixed income, mutual funds, companies, and investors, emphasizing supervised and semi-supervised learning approaches.
+  - Discusses evaluation protocols like substitution fidelity, neighborhood stability, and segment utility to align with fiduciary objectives.
+  - Provides practical guidelines for design choices, including metric selection, normalization, and ensuring interpretability through feature importance or SHAP values.
 findings:
-  - "Traditional peer-grouping methods (industry codes, style boxes) are coarse and rigid; modern similarity learning enables adaptive, data-driven neighborhoods."
-  - "num: Nearly 20% of U.S. investment-grade bond volume trades in baskets, requiring portfolio similarity metrics like STRAPSim for ETF alignment."
-  - "num: Analysis of 5.5 million households using K-Modes clustering identified five distinct ESG investor types."
-  - "Supervised similarity via random forest proximities improves bond substitution fidelity and fund category reproducibility."
-  - "Multimodal fusion of tabular, time-series, text, graph, and image data yields more robust peer discovery across asset classes."
-  - "Evaluation must shift from abstract academic metrics to operational validity: substitution fidelity, neighborhood stability, and segment utility."
+  - Supervised similarity frameworks allow funds to be quantified against their declared categories and flag outliers transparently.
+  - Random forest proximities enable bond substitution by aligning distances with desk use cases like relative value and surveillance.
+  - Multimodal pipelines that combine tabular, text, and graph data produce robust company similarity comparable sets for valuation and strategy.
+  - Graph neural networks using fund-bond bipartite structures improve price and yield prediction, supporting peer retrieval.
+  - num: Nearly one-fifth of U.S. investment-grade volume now trades in baskets, necessitating robust portfolio-level similarity metrics like STRAPSim.
+  - The tutorial identifies that traditional academic metrics like Silhouette or ARI are insufficient; practitioner validation (e.g., substitution fidelity) is critical.
 key_figures_tables:
-  - "Exhibit 2: Common distance metrics for clustering by data type → Choose distance metric based on data modality (numeric, categorical, time series, text, graphs, images)."
-  - "Exhibit 3: Clustering methods across data modalities in finance → Partitioning methods for tabular, density-based for anomalies, time-series clustering for co-movement."
-  - "Exhibit 4: Similarity learning methods (supervised and semi-supervised) → Metric learning, Siamese networks, GNNs, contrastive learning each suited to different data types and applications."
-  - "Exhibit 5: Evaluation methodologies: academic vs. practitioner metrics → Practitioner metrics focus on substitution fidelity, category reproducibility, and segment utility."
+  - "Exhibit 1: Usecases of Clustering and Similarity Learning in Financial Markets → Highlights broad applications from risk to personalization."
+  - "Exhibit 5: Evaluation methodologies: academic vs. practitioner perspectives → Shows shift from abstract metrics to operational validity."
+  - "Exhibit 10: Clustering and similarity applications for investors across data modalities → Illustrates how transaction and profile data create client segments."
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
-  - term: "KYC"
-    definition: "Know Your Client, regulatory requirement to assess client risk tolerance and suitability."
-  - term: "GICS"
-    definition: "Global Industry Classification Standard, a static industry taxonomy."
-  - term: "DTW"
-    definition: "Dynamic Time Warping, a similarity measure for time series."
-  - term: "GNN"
-    definition: "Graph Neural Network, a method for learning from graph-structured data."
-  - term: "LLM"
-    definition: "Large Language Model, transformer-based model for text."
   - term: "SR 11-7"
-    definition: "Federal Reserve guidance on model risk management."
+    definition: "A regulatory guidance emphasizing model risk management, requiring documentation and reproducibility."
+  - term: "GICS"
+    definition: "Global Industry Classification Standard, a common but static taxonomy for company sectors."
+  - term: "DTW"
+    definition: "Dynamic Time Warping, a distance metric for measuring similarity between two time series with varying speeds."
+  - term: "KYC"
+    definition: "Know-Your-Client, a regulatory process involving client identification and risk profiling."
 critical_citations:
-  - "[Jain et al., 1999] — Foundational review of data clustering."
-  - "[Kulis, 2013] — Comprehensive survey of metric learning."
-  - "[Breiman, 2001] — Introduced random forest proximities."
-  - "[Mehta et al., 2020] — Machine learning fund categorizations."
+  - "[Jeyapaulraj et al., 2022] — Demonstrates supervised similarity for corporate bonds."
+  - "[Mehta et al., 2020] — Shows fund categories are reproducible using supervised learning."
+  - "[Barberis et al., 2005] — Documents return co-movement being better explained by data than GICS/SIC."
+  - "[Thompson et al., 2021] — Applies clustering to understand investor behavioral types."
 relevance:
   topics:
+    - code: "1.A"
+      name: "Filipino Young Professionals as a Demographic"
+      relevance: "contextual"
+      justification: "Paper discusses general investor profiling, applicable but not specific to Filipino context."
+    - code: "2.A"
+      name: "Culturally Specific Financial Practices"
+      relevance: "low"
+      justification: "General financial behavior analysis; lacks cultural specificity to Filipino customs."
+    - code: "2.B"
+      name: "Seasonal and Cyclical Spending Patterns"
+      relevance: "medium"
+      justification: "Discusses regime identification and time-series patterns, applicable to seasonal spending."
+    - code: "3.A"
+      name: "Expense Categorization Frameworks"
+      relevance: "low"
+      justification: "Focuses on financial securities clustering, not transactional expense categorization."
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "medium"
+      justification: "Provides overview of traditional financial data analysis methods, informing system landscape."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "high"
+      justification: "Directly critiques static taxonomies and heuristic peer groups, justifying data-driven systems."
     - code: "5.A"
       name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Paper clusters investors by transaction behavior and risk tolerance, identifying distinct profiles such as ESG types."
+      relevance: "high"
+      justification: "Provides methodologies for classifying investor types based on behavior and risks."
+    - code: "5.B"
+      name: "Profile Dynamics and the Cold-Start Problem"
+      relevance: "medium"
+      justification: "Addresses regime shifts and adaptability in profiles but does not explicitly solve cold-start."
+    - code: "5.C"
+      name: "Classification Approaches for Financial Behavioral Profiles"
+      relevance: "high"
+      justification: "Reviews supervised and unsupervised classification methods (e.g., K-means, metric learning)."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "high"
+      justification: "Discusses time-series forecasting and regime prediction using clustering."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "high"
+      justification: "Covers DTW, correlation, and deep learning methods for sequential data."
+    - code: "7.A"
+      name: "Budgeting Strategies as Domain Knowledge"
+      relevance: "medium"
+      justification: "Provides context on how expert input (e.g., risk tolerance) shapes similarity models."
+    - code: "7.B"
+      name: "Budget Recommendation in Personal Finance Systems"
+      relevance: "low"
+      justification: "Does not directly address budget recommendation, but uses constraints in related domains."
+    - code: "7.C"
+      name: "Constrained Optimization Approaches for Budget Allocation"
+      relevance: "contextual"
+      justification: "Mentions scenario reduction and constraints implicitly but not directly for budgets."
     - code: "8.A"
       name: "Anomaly Detection in Personal Finance Systems"
-      justification: "Paper discusses open-set similarity and outlier detection for funds and bonds, applicable to spending anomalies."
+      relevance: "high"
+      justification: "Discusses open-set recognition and outlier detection for funds and transactions."
     - code: "8.B"
-      name: "Anomaly Detection Algorithm"
-      justification: "Reviews algorithms like random forest with distance-based rules for anomaly flagging."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      justification: "Proposes operational validity metrics (substitution fidelity, stability) over academic indices."
+      name: "Anomaly Detection Algorithms for Personal Spending Data"
+      relevance: "high"
+      justification: "Reviews density-based clustering and open-set learning, applicable to detecting fraudulent transactions."
+    - code: "9.A"
+      name: "Mobile-First Design Principles and Rationale"
+      relevance: "contextual"
+      justification: "Focuses on algorithmic and analytical workflows, not UI/UX design."
+    - code: "9.B"
+      name: "Mobile UX Design for Personal Finance"
+      relevance: "contextual"
+      justification: "Not a focus of the paper."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Mentions governance but does not address specific security or privacy algorithms."
     - code: "12.B"
       name: "Evaluation of Algorithmic Modules"
-      justification: "Details practitioner validation methods for clustering and similarity modules."
-  contribution: "The paper's clustering and similarity learning methods can directly inform Odin's behavioral profiling module by providing investor segmentation techniques (e.g., K-modes clustering on transaction data) to identify distinct financial behavior profiles. Its anomaly detection algorithms, such as open-set random forest recognition, enable Odin to flag unusual spending patterns or categorization outliers. The evaluation protocols emphasizing substitution fidelity and neighborhood stability offer a framework for validating Odin's algorithmic modules against user needs. Additionally, multimodal similarity fusion (e.g., combining transaction histories with text notes) can enhance Odin's personalization and retention mechanisms."
+      relevance: "high"
+      justification: "Dedicated section on evaluating similarity models with operational criteria (substitution fidelity, stability)."
+  contribution: "This tutorial provides a comprehensive framework for building adaptive similarity systems that can be directly adapted for Odin's behavioral profiling module. Its detailed review of evaluation methodologies, particularly the shift from academic to operational validity, justifies Odin's focus on user-validated performance metrics. The integration of multimodal data (transactions, user profiles, and text) informs Odin's architecture for constructing robust user profiles and forecasting spending. Furthermore, the discussion of open-set recognition directly supports Odin's anomaly detection capabilities."
   directly_justifies:
-    - "Clustering investors by transaction behavior reveals misalignments between self-assessed risk and actual decisions."
-    - "Random forest proximities improve substitution fidelity in bond selection, applicable to expense substitution in PFMS."
-    - "Open-set recognition can detect outlier transactions or categories without retraining."
-    - "Evaluation must use operational metrics like stability and utility, not just silhouette scores."
+    - "Adaptive, data-driven similarity systems are required to replace coarse, rigid peer-grouping methods."
+    - "Evaluation of financial algorithms must focus on substitution fidelity and neighborhood stability, not abstract indices."
+    - "Multimodal pipelines (tabular, text, graph) are essential for robust peer discovery in sparse data environments."
+    - "Supervised and semi-supervised learning frameworks provide transparent mechanisms for flagging outliers and category drift."
   limits:
-    - "Similarity definitions are inherently subjective and depend on task, data modality, and market regime. [unacknowledged]"
-    - "Many advanced methods (deep learning) operate as black boxes, complicating accountability and compliance."
-    - "Outputs can shift with parameter choices; stability across time requires careful rolling-window validation."
-    - "The tutorial does not address computational constraints of real-time personal finance applications on mobile devices. [unacknowledged]"
-  mapping_rationale: "The paper was screened against Odin's functional domains. Behavioral profiling (domain 1) applies because the paper extensively clusters investors by transaction and risk data, directly supporting topic 5.A. Anomaly detection (domain 4) applies via open-set similarity and outlier detection methods for funds and bonds, covering topics 8.A and 8.B. System evaluation (domain 7) applies because the paper proposes a shift from academic to operational validity metrics, covering topics 12.A and 12.B. Domains such as spending forecasting, budget recommendation, and mobile-first design were rejected because the paper does not address personal spending prediction, budget allocation, or mobile UX. The selected topics align with the paper's core contributions on clustering/similarity algorithms and their evaluation in financial contexts."
+    - "The tutorial focuses on investment and securities, not direct personal expense management."
+    - "The evaluation metrics discussed (e.g., substitution fidelity) are not directly transferable to PFMS without adaptation."
+    - "Many advanced models (e.g., GNNs) sacrifice interpretability, a key requirement for Odin's user-facing analytics."
+  mapping_rationale: "A systematic scan of all 12 functional domains was performed. The paper's core contribution on adaptive similarity and clustering directly aligns with high relevance to Behavioral Profiling (5.A, 5.C), Spending Forecasting (6.A, 6.B), and Anomaly Detection (8.A, 8.B), as it provides the theoretical and algorithmic foundation for these modules. The domain of Existing Systems (4.A, 4.B) is highly relevant due to the paper's strong critique of static heuristic methods, justifying Odin's data-driven approach. Evaluation (12.B) is directly supported. For domains like Expense Categorization (3) and Budget Recommendation (7), the paper offers context (e.g., on constrained optimization) but lacks specific application to PFMS, hence relevance is low/contextual. The paper's focus on financial instruments, rather than Filipino young professionals, means topics under Domain 1 are contextual. Borderline cases like seasonal spending (2.B) are touched upon via regime detection, but the paper does not focus on personal cycles. Overall, the paper is highly relevant for Odin's core algorithmic modules but only contextual or not applicable to UI/UX, privacy, or cultural specifics."
 limitations:
-  - "Similarity definitions are inherently subjective and depend on task, data modality, and market regime. [unacknowledged]"
-  - "Many advanced methods (deep learning) operate as black boxes, complicating accountability and compliance."
-  - "Outputs can shift with parameter choices; stability across time requires careful rolling-window validation."
-  - "The tutorial does not address computational constraints of real-time personal finance applications on mobile devices. [unacknowledged]"
+  - "Paper is a tutorial and thus does not present a novel algorithm or empirical validation of a specific system."
+  - "The applicability of the discussed 'operational validity' metrics to a PFMS like Odin is not explicitly explored. [unacknowledged]"
+  - "Does not address the specific cold-start problem of a new user in a PFMS, despite mentioning similar challenges."
 remember_this:
-  - "Similarity learning enables adaptive peer groups based on actual risk, not static labels."
-  - "num: Nearly 20% of bond trading volume is in baskets, requiring portfolio similarity metrics."
-  - "Evaluation must prioritize operational validity over academic indices."
-  - "Multimodal fusion of text, graphs, and time series improves financial similarity."
+  - "Static peer groups are obsolete; adaptive data-driven similarity systems are required for modern analytics."
+  - "Evaluation of similarity systems must prioritize operational validity over academic metrics."
+  - "Multimodal data integration is the key to achieving robust peer discovery and user profiling."
+  - "Supervised similarity frameworks can transparently flag outliers and category drift in user behavior."
+  - "Deep learning methods often sacrifice interpretability, necessitating governance frameworks like SR 11-7."
 ```

@@ -6,77 +6,164 @@ authors: Velez, G.
 year: 2025
 venue: Journal of Interdisciplinary Perspectives
 odin_topics:
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.B
+  - 2.D
+  - 3.A
+  - 3.B
   - 4.A
   - 4.B
-shorthand_tags:
-  - /fintech
-  - /mobile-banking
-  - /financial-inclusion
-  - /philippines
-tldr: A systematic review of 26 studies finds that mobile banking platforms like GCash reduced cash dependency by 41% in urban areas but persistent digital divide, gender gaps, and low financial literacy limit inclusion in marginalized Filipino communities.
-problem_and_motivation: Digital financial inclusion can reduce economic disparities, but the Philippines had 68% unbanked adults in 2021. Despite mobile banking growth, structural inequities like the digital divide, low financial literacy, and regulatory fragmentation persist. A synthesis of evidence on mobile banking, fintech, and regulatory gaps is missing for marginalized communities.
+  - 5.A
+  - 5.C
+  - 7.B
+  - 9.A
+  - 9.B
+  - 10.A
+  - 10.B
+  - 11.A
+  - 12.A
+  - 13.A
+tldr: Mobile banking and fintech have expanded financial access in the Philippines but persistent digital, gender, and literacy gaps continue to exclude marginalized populations.
+problem_and_motivation: Financial inclusion in the Philippines remains low, with 68% of adults unbanked, despite the growth of mobile banking and fintech. A comprehensive synthesis of how these technologies, along with regulatory frameworks, affect marginalized communities is lacking. This review addresses that gap to inform more equitable policy and design.
 approach:
-  - This systematic review followed PRISMA guidelines using ProQuest and Google Scholar databases.
-  - Search strings combined terms for digital financial inclusion, mobile banking, fintech, and the Philippines.
-  - Inclusion criteria required peer-reviewed articles, policy papers, or grey literature from 2014–2024 focusing on the Philippines.
-  - Of 1,296 initial records, 26 studies (16 journal articles, 6 policy papers, 3 institutional reports, 1 thesis) were included.
-  - Synthesis used narrative synthesis and thematic analysis to identify recurring themes.
+  - The study conducted a systematic literature review following PRISMA guidelines.
+  - Searches were performed in ProQuest and Google Scholar using Boolean strings for digital financial inclusion in the Philippines.
+  - Inclusion criteria covered peer-reviewed articles, policy papers, and grey literature from 2014 to 2024 focusing on the Philippines.
+  - Data extraction and synthesis used narrative synthesis and thematic analysis to identify recurring themes.
+  - The review analyzed 26 studies meeting quality criteria, comprising journal articles, policy papers, institutional reports, and a thesis.
 findings:
-  - num: Mobile banking adoption surged 18-35% post-2019, driven by GCash and pandemic digitization.
+  - num: Mobile banking adoption surged 18-35% post-2019, driven by platforms like GCash and pandemic-induced digitization.
   - num: GCash reduced cash dependency by 41% in urban and 29% in rural areas.
-  - num: Only 34% of low-income users fully understand digital payment security features.
-  - num: Women-owned MSMEs represent 22% of fintech borrowers despite comprising 39% of entrepreneurs.
-  - num: Rural areas account for less than 15% of digital transactions, with adoption rates 1.8 times lower than urban.
-  - Regulatory fragmentation and overlapping policies hinder fintech scalability, especially in rural regions.
-  - The National Retail Payment System increased transaction volumes by 19% but struggled with rural implementation.
-  - Cross-sectional designs dominate (80% of studies), limiting understanding of long-term causal effects.
+  - num: Women-owned MSMEs comprise only 22% of fintech borrowers despite being 39% of entrepreneurs.
+  - num: Only 34% of low-income users understand digital payment security features.
+  - The National Retail Payment System drove a 19% increase in digital transaction volumes but struggles with fragmentation and rural implementation.
+  - Rural adoption rates are 1.8 times lower than urban areas due to infrastructure and connectivity gaps.
+  - The pandemic accelerated digitization but increased exclusion for 28% of low-literacy users.
 key_figures_tables:
-  - Figure 1: PRISMA flow diagram of study selection → 1,296 records reduced to 26 included studies.
-  - Table 4: Summary of 26 studies on digital financial inclusion → Key findings include adoption rates, gender gaps, and regulatory barriers.
+  - Table 4: Summary of 26 studies on digital financial inclusion → Highlights key findings on access, barriers, and demographic disparities.
+  - Figure 1: PRISMA flow diagram of study selection → Documents the systematic review process from 1,296 records to 26 included studies.
 key_equations:
   - equation: None.
     explanation: ""
 definitions:
-  - term: PRISMA
-    definition: Preferred Reporting Items for Systematic Reviews and Meta-Analyses, a guideline for reporting systematic reviews.
-  - term: MSME
+  - term: MSMEs
     definition: Micro, small, and medium-sized enterprises.
   - term: NRPS
-    definition: National Retail Payment System, a Philippine regulatory framework for digital payments.
-  - term: TAM
-    definition: Technology Acceptance Model, which explains user adoption based on perceived usefulness and ease of use.
+    definition: National Retail Payment System, a Philippine regulatory framework for digital transactions.
+  - term: PRISMA
+    definition: Preferred Reporting Items for Systematic Reviews and Meta-Analyses, a guideline for conducting systematic reviews.
+  - term: Fintech
+    definition: Financial technology used to deliver financial services digitally.
 critical_citations:
-  - "[BSP, 2023] — Reports 68% of Filipino adults were unbanked in 2021."
-  - "[Demirgüç-Kunt et al., 2022] — Global Findex database on financial inclusion and digital payments."
-  - "[Suri & Jack, 2016] — Landmark study on mobile money's poverty and gender impacts in Kenya."
+  - "[BSP, 2023] — Provides baseline unbanked rate of 68% for the Philippines."
+  - "[Molina, 2024] — Documents specific cash dependency reductions by GCash."
+  - "[ADB, 2024] — Reports gender disparity in fintech borrowing among women-owned MSMEs."
 relevance:
   topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: medium
+      justification: Provides demographic context on unbanked adults and digital adoption trends.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Discusses income, urbanization, and remittance factors influencing financial access.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: low
+      justification: Touches on adoption behaviors but not specifically for young professionals.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Identifies gender norms and remittance reliance as cultural financial practices.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: Mentions weather-related income fluctuations in fishing communities but not a central focus.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: contextual
+      justification: References remittance-driven financial behavior but does not detail spending cycles.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: low
+      justification: Discusses digital payments broadly, without specific categorization frameworks.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: low
+      justification: Not directly addressed; the focus is on access, not categorization.
     - code: 4.A
       name: Landscape of Existing Personal Finance Systems
-      justification: Reviews mobile banking platforms (GCash, Maya) and fintech adoption trends in the Philippines.
+      relevance: high
+      justification: Reviews the Philippine fintech landscape, specifically platforms like GCash and Maya.
     - code: 4.B
       name: Limitations and Gaps in Existing Systems
-      justification: Documents digital divide, gender disparities, low financial literacy, and regulatory fragmentation.
-  contribution: The paper provides a comprehensive landscape of digital financial inclusion barriers that directly inform Odin's design for Filipino young professionals. Its findings on low digital literacy (34% understand security) justify simplified in-app education modules. The documented gender gap (women-owned MSMEs only 22% of fintech borrowers) supports gender-responsive features in spending categorization and savings goals. Regulatory fragmentation findings highlight the need for Odin to integrate with multiple payment systems seamlessly.
+      relevance: high
+      justification: Documents persistent digital divide, gender gaps, and literacy barriers as system limitations.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: low
+      justification: Mentions demographic and socioeconomic factors but does not construct behavioral profiles.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Discusses fintech use of alternative data for credit scoring, a form of behavioral classification.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: low
+      justification: Implicitly relevant through financial inclusion but not focused on budget recommendation.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: high
+      justification: Highlights smartphone penetration and mobile banking as primary access channels.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: medium
+      justification: Notes that low-literacy users struggle with digital interfaces, implying UX gaps.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: Reports that only 34% of low-income users understand digital security features.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Security, trust, and reliability are identified as key factors for adoption and continued use.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: low
+      justification: Mentions adoption surge but does not analyze engagement dynamics.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: contextual
+      justification: Uses systematic review methodology rather than evaluating a specific system.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: low
+      justification: Remittances and bank account holding are mentioned but not savings goal management.
+  contribution: This review provides a comprehensive evidence base on the barriers to digital financial inclusion in the Philippines, which can inform Odin's design for targeting underserved demographics. It directly justifies the need for mobile-first solutions that address the digital divide, particularly for rural and low-income users. The findings on gender disparities and low financial literacy support the development of inclusive behavioral profiling and personalized financial education within Odin. The documented limitations of existing regulatory frameworks and fintech platforms highlight opportunities for Odin to differentiate itself through better user support and trust-building mechanisms.
   directly_justifies:
-    - Low digital literacy (only 34% understand security) requires simplified in-app financial education.
-    - Gender-neutral fintech designs under-serve women entrepreneurs, necessitating gender-responsive spending profiles.
-    - Rural areas have 1.8x lower digital adoption, mandating offline-capable and low-data PFMS features.
-    - Regulatory fragmentation requires Odin to support multiple payment rails and transaction standards.
+    - Rural adoption rates are 1.8 times lower than urban areas, necessitating mobile-first design for low-connectivity environments.
+    - Only 34% of low-income users understand digital security, justifying simplified security communication in app interfaces.
+    - Women-owned MSMEs represent only 22% of fintech borrowers despite comprising 39% of entrepreneurs, supporting gender-sensitive product design.
+    - The digital divide in regions like Visayas and Mindanao creates unique challenges for financial behavior profiling.
   limits:
-    - The review is cross-sectional (80% of included studies), so causal claims about intervention effectiveness are weak.
-    - Paywall restrictions (158 inaccessible articles) may have excluded relevant grey literature.
-    - The paper does not focus specifically on young professionals, limiting direct applicability to Odin's target demographic.
-  mapping_rationale: The paper addresses functional domains of user retention (digital literacy gaps), data privacy (only 34% understand security), and system evaluation (dominance of cross-sectional designs). Topic codes 4.A (landscape) and 4.B (gaps) are selected because the paper synthesizes existing PFMS and fintech platforms (GCash, Maya) and their limitations. Codes related to behavioral profiling (5.A-C) and forecasting (6.A-B) are rejected as the paper does not model individual behavior or predict spending. The gender and rural disparities are captured under limitations of existing systems rather than as direct user profiling claims.
+    - The review primarily synthesizes cross-sectional studies (80%), limiting causal inference for Odin's forecasting modules. [unacknowledged]
+    - The review does not evaluate specific algorithms for expense categorization, anomaly detection, or budget recommendation. [unacknowledged]
+    - The focus on financial inclusion may not directly translate to behavioral profiling or spending forecasting for young professionals.
+  mapping_rationale: A systematic scan across all 12 functional domains identified the strongest relevance to Existing Systems & Gaps (high), Mobile-First Design (high), and User Trust (high), as the paper directly reviews the Philippine fintech landscape, documents adoption barriers, and identifies trust as a key adoption factor. Medium relevance was assigned to Filipino Cultural Context for its discussion of gender norms and remittance reliance, and to Behavioral Profiling for its mention of alternative credit scoring. Low relevance was assigned to Expense Categorization and Budget Recommendation due to the absence of specific frameworks. Contextual relevance was assigned to Seasonal Spending and Evaluation Frameworks, as these are mentioned but not central. Domains such as Anomaly Detection, Forecasting, and Savings/Debt Management were considered but rejected due to lack of direct coverage. The paper's overall relevance to Odin is moderate, providing foundational context on user demographics and systemic gaps rather than algorithmic or design-specific insights.
 limitations:
-  - Cross-sectional designs dominate (80% of studies), limiting causal inference. [unacknowledged]
-  - 158 articles were inaccessible due to paywalls or language restrictions. [acknowledged]
-  - Lack of longitudinal studies on long-term impacts of digital financial inclusion. [acknowledged]
-  - No specific focus on Filipino young professionals, reducing direct applicability to Odin's target users. [unacknowledged]
+  - The review relies on secondary sources, not primary data collection.
+  - A small number of studies (26) were included after screening.
+  - The methodological quality of included studies varies.
+  - The focus is on financial inclusion broadly, not specifically on young professionals or PFMS. [unacknowledged]
+  - The review does not provide a detailed analysis of specific fintech algorithms or system architectures. [unacknowledged]
 remember_this:
-  - Mobile banking reduced urban cash dependency by 41%.
-  - Only 34% of low-income users understand digital security.
-  - Women-owned MSMEs hold only 22% of fintech loans.
-  - Regulatory fragmentation hinders rural fintech scalability.
-  - Rural digital adoption is 1.8 times lower than urban.
+  - Mobile banking adoption surged 18-35% post-2019 in the Philippines.
+  - Women-owned MSMEs are underrepresented in fintech borrowing at 22%.
+  - Only 34% of low-income users understand digital payment security.
+  - Rural adoption rates are 1.8 times lower than in urban areas.
+  - The digital divide and low literacy are key barriers to financial inclusion.
 ```

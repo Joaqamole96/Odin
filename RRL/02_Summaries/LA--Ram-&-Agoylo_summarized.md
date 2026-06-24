@@ -1,92 +1,104 @@
 ```yaml
 paper_id: 10.54554/jtec.2025.17.02.004
-designation: algorithm-specific
+designation: local-algorithm-specific
 title: Optimized Random Forest Classifier for Students Lifestyle Prediction Using Behavioral Data: A Machine Learning Approach
 authors: Ram, M. L.; Agoylo, J. C. Jr.
 year: 2025
 venue: Journal of Telecommunication, Electronic and Computer Engineering
 odin_topics:
+  - 5.A
   - 5.C
   - 12.B
-shorthand_tags:
-  - /profile-classification
-  - /algorithm-evaluation
-tldr: Random Forest classifier predicts lifestyle categories from behavioral data with 75.07% accuracy, validated on 93 students.
-problem_and_motivation: Machine learning for lifestyle classification remains underexplored despite its potential. Balancing accuracy and generalization is a key challenge. Parameter optimization is needed to mitigate overfitting in behavioral analytics.
+tldr: Random Forest classifier predicts lifestyle categories from behavioral data with 75.07% accuracy, highlighting the importance of parameter tuning and feature selection in behavioral analytics.
+problem_and_motivation: Lifestyle classification using machine learning remains underexplored, with a gap in comprehensive approaches. The complexity and high dimensionality of behavioral data pose challenges for accurate categorization. This research addresses the gap by employing a Random Forest classifier to predict lifestyle categories from a large behavioral dataset.
 approach:
-  - Data source: Half a Million Lifestyle Dataset from Kaggle with 500,000 records.
-  - Preprocessing removed missing values, selected 9 behavioral features, and encoded gender numerically.
-  - Random Forest classifier trained with 40 decision trees to balance overfitting and generalizability.
-  - Model evaluated using accuracy, precision, recall, and F1 score on a train-test split.
-  - Real-world validation on 93 students via a Python-based input program with anonymous responses.
-  - Oversampling and fairness metrics applied to mitigate classification bias.
+  - The study utilized the Half a Million Lifestyle Dataset from Kaggle, containing 500,000 lifestyle entries.
+  - Data preprocessing included deleting missing values and selecting relevant columns for lifestyle prediction.
+  - Gender was converted to numerical values for effective model training.
+  - A Random Forest classifier was implemented in Python, generating multiple decision trees and using majority voting for classification.
+  - The model was evaluated on a test set and further validated using behavioral data from 93 students.
 findings:
-  - "num: Accuracy of 75.07% on test data, with precision 75.16%, recall 75.07%, and F1 score 74.40%."
-  - Training accuracy reaches 100% with 30+ trees, indicating overfitting despite strong memorization.
-  - Testing accuracy stabilizes around 75% beyond 20 trees, with optimal tree count 30-40.
-  - Real-world classification of 93 students: 41 Fitness Enthusiast, 50 Health-Conscious, 1 Eco-Friendly, 1 Social Media Influencer.
-  - Model maintains 75.07% accuracy on real-world user inputs, matching test performance.
+  - num: The model achieved an accuracy of 75.07%, precision of 75.16%, recall of 75.07%, and an F1 score of 74.40%.
+  - Training accuracy reached 100% with 30 trees, indicating overfitting, while testing accuracy stabilized around 75%.
+  - num: Among 93 students, the model classified 41 as Fitness Enthusiasts and 50 as Health-Conscious.
+  - Model performance remained consistent when tested on real-world participant data.
+  - The optimal number of trees for balancing performance and efficiency was found to be 30-40.
 key_figures_tables:
-  - "Figure 1: Causal paradigm linking behavioral patterns (independent) to lifestyle categories (dependent) → ML maps behavior to lifestyle."
-  - "Figure 2: Random Forest classifier with multiple decision trees and majority voting → Ensemble method for lifestyle prediction."
-  - "Figure 3: Accuracy vs number of trees shows training accuracy 100% after 30 trees, test accuracy ~75% → Overfitting observed beyond optimal tree count."
-  - "Table 1: Performance metrics accuracy 0.7507, precision 0.7516, recall 0.7507, F1 0.7440 → Balanced classification performance."
-  - "Table 2: Prediction results on 93 students show majority as Health-Conscious (50) and Fitness Enthusiast (41) → Most respondents exhibit active, health-aware behaviors."
+  - Figure 1: Causal paradigm of behavioral patterns influencing lifestyle prediction → Framework for behavioral classification.
+  - Figure 2: Diagram of the Random Forest classifier model architecture → Visual representation of the voting mechanism.
+  - Figure 3: Model accuracy by number of trees → Shows overfitting and stabilization of testing accuracy at 75%.
+  - Table 1: Model performance metrics (Accuracy, Precision, Recall, F1 Score) → Provides quantitative evaluation results.
+  - Table 2: Prediction results from 93 students by lifestyle category → Demonstrates real-world classification distribution.
 key_equations:
-  - equation: "Accuracy = (TP + TN) / (TP + TN + FP + FN)"
-    explanation: "Proportion of correct predictions over total."
-  - equation: "Precision = TP / (TP + FP)"
-    explanation: "Correct positive predictions among all positive predictions."
-  - equation: "Recall = TP / (TP + FN)"
-    explanation: "Correct positive predictions among actual positives."
+  - equation: "Accuracy = (TP+TN) / (TP+TN+FP+FN)"
+    explanation: Accuracy is the ratio of correct predictions to total predictions.
+  - equation: "Precision = TP / (TP+FP)"
+    explanation: Precision measures the accuracy of positive predictions.
+  - equation: "Recall = TP / (TP+FN)"
+    explanation: Recall measures the ability to identify all positive instances.
   - equation: "F1 Score = 2 * (Precision * Recall) / (Precision + Recall)"
-    explanation: "Harmonic mean of precision and recall."
+    explanation: F1 Score is the harmonic mean of precision and recall.
   - equation: "O(T * N * log N * F)"
-    explanation: "Time complexity of Random Forest with T trees, N samples, F features."
+    explanation: Time complexity of the Random Forest algorithm.
 definitions:
-  - term: Random Forest (RF)
-    definition: Ensemble of decision trees that votes by majority for classification.
-  - term: TP
-    definition: True positive – correctly predicted positive sample.
-  - term: TN
-    definition: True negative – correctly predicted negative sample.
-  - term: FP
-    definition: False positive – incorrectly predicted positive sample.
-  - term: FN
-    definition: False negative – incorrectly predicted negative sample.
+  - term: Random Forest Classifier
+    definition: An ensemble learning method that constructs multiple decision trees and outputs the majority class vote for classification.
+  - term: Behavioral Analytics
+    definition: The analysis of behavioral data to identify patterns and predict outcomes.
+  - term: Overfitting
+    definition: A modeling error where a model learns the training data too well, failing to generalize to new data.
+  - term: Precision
+    definition: The ratio of correctly predicted positive observations to the total predicted positives.
+  - term: Recall
+    definition: The ratio of correctly predicted positive observations to all actual positives.
 critical_citations:
-  - "[Jayaprakash et al., 2020] — Improved RF for academic performance prediction."
-  - "[Chaturvedi et al., 2021] — Ensemble learning for student lifestyle query classification."
-  - "[Nachouki et al., 2023] — RF for student grade prediction with feature importance analysis."
+  - "[Jayaprakash et al., 2020] — Predicts academic performance using improved Random Forest."
+  - "[Nachouki et al., 2023] — Course grade prediction with Random Forest."
+  - "[Nachouki & Naaj, 2022] — Student performance prediction using Random Forest."
+  - "[Rani & Gupta, 2024] — Predicts student anxiety and depression using Random Forest."
+  - "[Ram et al., 2025] — Clustering student performance using machine learning."
 relevance:
   topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: The study uses students, a demographic relevant to young professionals, but not specifically Filipino young professionals.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Demonstrates a machine learning framework for classifying behavioral patterns into distinct lifestyle profiles.
     - code: 5.C
-      name: Financial Behavioral Profile Classification Algorithm
-      justification: "Paper presents a Random Forest algorithm for classifying behavioral lifestyles, directly applicable to profile classification methods."
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Directly employs a Random Forest classifier for behavioral classification, a key technique for financial profiling.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: "Provides accuracy, precision, recall, F1, and overfitting analysis for the classification module."
-  contribution: "This paper offers a validated Random Forest classifier that Odin can adapt for financial behavioral profiling. Its parameter tuning approach (optimal tree count 30-40) directly informs how to balance overfitting and generalizability in Odin's classification modules. The evaluation framework with fairness metrics provides a template for assessing algorithmic modules. The real-world deployment on 93 students demonstrates a practical pipeline for user input collection and prediction, which Odin can replicate for mobile-first behavioral classification."
+      relevance: medium
+      justification: Provides a methodology for evaluating the performance of a classification algorithm on real-world data.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: Mentions the potential for AI-driven categorization in wellness but not specifically personal finance systems.
+  contribution: The paper provides a validated machine learning framework for behavioral classification that can be adapted for financial behavior profiling in Odin. The approach demonstrates how to process raw behavioral data into actionable lifestyle categories, which is directly relevant to Odin's goal of user classification. The emphasis on parameter tuning to mitigate overfitting is crucial for developing robust predictive models. The real-world validation with 93 students offers a template for testing Odin's algorithmic modules on local populations.
   directly_justifies:
-    - "Random Forest achieves 75% accuracy on behavioral classification tasks with balanced precision and recall."
-    - "Using more than 30-40 decision trees causes overfitting without improving test accuracy."
-    - "Predefined lifestyle categories may not capture full behavioral complexity."
-    - "Self-reported behavioral data introduces potential bias that requires mitigation techniques."
+    - The Random Forest classifier is effective for behavioral classification tasks, achieving 75.07% accuracy.
+    - Parameter tuning is essential to balance model accuracy and generalization in classification algorithms.
+    - Machine learning models can generalize from large datasets to make predictions on new, real-world inputs.
+    - Behavioral features such as health consciousness and stress management are predictive of lifestyle categories.
   limits:
-    - "Predefined lifestyle categories (Fitness Enthusiast, Health-Conscious, etc.) may not generalize to financial behavior profiles."
-    - "Self-reported data introduces response bias; no objective behavioral measurement."
-    - "Real-world validation limited to 93 students from a single Philippine university."
-    - "Model not tested on longitudinal or temporally varying behavioral data."
-  mapping_rationale: "The paper was screened against Odin's functional domains. It does not address spending forecasting, budget recommendation, anomaly detection, expense categorization, mobile design, privacy, retention, savings, or debt management. It falls squarely under Behavioral Profiling & Classification (Domain 5) because it classifies individuals into lifestyle categories using behavioral features. Specifically, it provides a classification algorithm (5.C) with evaluation metrics (12.B). Topics 5.A (profiles themselves) and 5.B (profile dynamics) were rejected because the paper defines non-financial lifestyle categories and does not address cold-start or temporal dynamics. Borderline case: the algorithm could inform financial profile classification, so 5.C was retained."
+    - The study's lifestyle categories are predefined and may not fully capture the complexity of individual behaviors.
+    - Behavioral data was self-reported, introducing potential bias.
+    - The model was tested on a relatively small sample (93 students) for real-world validation.
+  mapping_rationale: A systematic scan across all 12 functional domains was performed. The paper's core contribution is algorithmic, placing it primarily within the Behavioral Profiling & Classification and System Evaluation domains. Topic 5.A was flagged as high relevance because the study provides a framework for classifying individuals into behavioral profiles. Topic 5.C received high relevance as it directly tests and validates a classification approach (Random Forest) applicable to financial behavioral profiling. Topic 12.B was marked medium as the evaluation metrics (accuracy, precision, recall, F1) provide a methodology for assessing algorithmic modules. Topic 1.A was considered contextual as the student demographic is somewhat related to young professionals, but the study does not focus on Filipino financial behaviors. Topic 4.A was considered low, as the research mentions general wellness applications but not PFMS or expense categorization. Domains like Expense Categorization, Spending Forecasting, Budget Recommendation, Anomaly Detection, Mobile-First Design, Data Privacy, User Retention, Savings & Debt Management, and Filipino-specific cultural practices (2.A, 2.B, etc.) were rejected as the paper does not address these areas. Overall, the paper is highly relevant for informing Odin's approach to behavioral classification and algorithm evaluation.
 limitations:
-  - "Lifestyle categories are predefined and may not capture the full spectrum of individual behaviors."
-  - "Self-reported behavioral data introduces potential bias. [unacknowledged]"
-  - "Real-world test sample of 93 students is small and from a single institution, limiting generalizability. [unacknowledged]"
-  - "No temporal validation or assessment of classification stability over time. [unacknowledged]"
+  - The study relies on predefined lifestyle categories that may not encompass all behavioral variations.
+  - The use of self-reported behavioral data introduces the potential for bias. [unacknowledged]
+  - The sample of 93 students for real-world validation may not be representative of the broader population.
+  - Generalizability is limited by the specific demographic (students) used for testing.
 remember_this:
-  - "Random Forest accuracy of 75.07% on lifestyle prediction."
-  - "Overfitting occurs with more than 30 decision trees."
-  - "Optimal tree count between 30 and 40 balances accuracy and efficiency."
-  - "Most students classified as health-conscious or fitness enthusiasts."
-  - "Self-reported behavioral data requires bias mitigation."
+  - Random Forest achieved 75.07% accuracy in lifestyle classification.
+  - Overfitting occurs with excessive decision trees, requiring careful tuning.
+  - Behavioral patterns can be effectively generalized to classify new individuals.
+  - Parameter optimization balances accuracy and computational efficiency.
+  - Real-world validation confirms model predictive capability on new inputs.
 ```

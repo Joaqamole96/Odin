@@ -1,135 +1,131 @@
 ```yaml
 paper_id: 10.15276/aait.07.2024.24
-designation: algorithm-specific
+designation: international-algorithm-specific
 title: Recommendation system for financial decision-making using Artificial intelligence
 authors: Shuryhin, K. A.; Zinovatna, S. L.
 year: 2024
 venue: Applied Aspects of Information Technology
 odin_topics:
-  - 2.C
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.B
   - 6.A
   - 6.B
-  - 7.B
-  - 7.C
   - 8.A
   - 8.B
   - 10.A
   - 10.B
-shorthand_tags:
-  - /user-preferences
-  - /predictive-modeling
-  - /spending-forecast
-  - /budget-recommendation
-  - /recommendation-algorithm
-  - /anomaly-detection
-  - /anomaly-algorithm
-  - /data-privacy
-  - /user-trust
-tldr: Combines Isolation Forest for anomaly detection, ARIMA and LSTM for budget forecasting, and large language models to generate personalized financial recommendations while addressing ethical concerns like privacy and user autonomy.
-problem_and_motivation: Cognitive biases lead to irrational financial decisions, and AI-enhanced marketing can manipulate consumer behavior. Existing recommendation systems in finance often lack personalization, fail to account for user autonomy, or ignore ethical considerations. There is a need for an intelligent system that provides unbiased, personalized financial advice without manipulation.
+tldr: An AI-driven financial management system uses Isolation Forest for anomaly detection, ARIMA and LSTM for forecasting, and an LLM to generate personalized, ethically-grounded recommendations.
+problem_and_motivation: Cognitive biases lead to irrational spending, and AI-enhanced marketing can manipulate consumer behavior. Existing financial recommendation systems often lack personalization, fail to address user autonomy, and do not adequately consider ethical principles like transparency and fairness. There is a need for a system that helps users make more rational financial decisions without imposing specific choices.
 approach:
-  - Input data includes user transaction history, spending anomalies, budget forecasts, and user parameters like risk tolerance and financial goals.
-  - Isolation Forest isolates anomalies by building binary trees and calculating path lengths; anomaly score near 1 indicates anomalous expense.
-  - ARIMA(p,d,q) models short-term dependencies with autoregressive and moving average components after differencing for stationarity.
-  - LSTM captures long-term dependencies using forget, input, and output gates with cell state updates.
-  - Final forecast is a weighted average of ARIMA and LSTM predictions, with alpha controlling model influence.
-  - Large language model (LLaMa 3.1) receives preprocessed data and generates personalized recommendations through context formation and evaluation against user characteristics.
-  - System architecture follows event-driven microservices with AWS SageMaker for model deployment, Spring Cloud Gateway for routing, and OAuth 2.0 for authentication.
-  - Ethical principles include confidentiality, fairness, transparency, and preserving user autonomy without manipulation.
-  - No quantitative evaluation metrics are reported; system is described as a design and prototype implementation.
+  - Isolation Forest isolates anomalous transactions by measuring path lengths in binary trees.
+  - ARIMA models short-term spending trends after determining optimal p, d, q parameters.
+  - LSTM captures long-term dependencies in spending data using memory cells and gating mechanisms.
+  - Forecasts from ARIMA and LSTM are combined using a weighted average to improve accuracy.
+  - A large language model (LLaMa 3.1) generates personalized advice from transaction history, anomalies, and forecasts.
 findings:
-  - Isolation Forest effectively identifies atypical financial actions by isolating deviations from normal spending patterns.
-  - Combining ARIMA (short-term) and LSTM (long-term) improves budget forecast stability and accuracy.
-  - LLM-generated recommendations adapt to different income levels and user-specific risk levels, goals, and preferences.
-  - The system promotes responsible financial behavior without imposing decisions, enhancing user awareness and autonomy.
-  - Ethical safeguards include OAuth 2.0, OWASP Top 10 principles, and rejection of manipulative or judgemental advice.
+  - num: The combination of ARIMA and LSTM enhances forecast accuracy by considering both short-term and long-term trends.
+  - num: Isolation Forest effectively identifies anomalies by calculating anomaly scores where values near 1 indicate outliers.
+  - The system architecture uses a modular, event-driven design with AWS services for scalability and reliability.
+  - The system promotes responsible financial behavior by enhancing user awareness without imposing decisions.
 key_figures_tables:
-  - Figure 1: Diagram of request to LLM for personalized financial recommendation → LLM input includes transaction history, forecasts, anomalies.
-  - Figure 2: Example LLM response providing structured advice on expense reduction → Recommendations are actionable and contextual.
-  - Figure 3: Interaction of AI components within system → Isolation Forest, ARIMA+LSTM, and LLM feed into each other.
-  - Figure 4: ERD for recommendation system → Database schema covers users, transactions, budgets, goals, subscriptions, categories.
-  - Figure 5: Main page screenshot → User interface shows financial overview and AI-driven insights.
-  - Figure 6: Use of AI models for anomaly detection → Visualization of anomaly scores and flagged transactions.
+  - Figure 1: Diagram of LLM request process for personalized financial advice → Shows data flow from input to recommendation.
+  - Figure 2: Example of LLM response based on provided context → Demonstrates a specific instance of generated advice.
+  - Figure 3: Interaction of AI components within the system → Illustrates the overall AI module architecture.
+  - Figure 4: ERD for the recommendation system → Details the database schema for user financial data.
+  - Figure 5: Main page of the system interface → Shows the user-facing application layout.
+  - Figure 6: Use of AI models for anomaly detection → Visualizes the anomaly detection workflow.
 key_equations:
-  - equation: E(h(x)) = c(n) + \frac{2(ln(n-1) - \frac{n-1}{n})}{n}
-    explanation: Expected path length in Isolation Forest.
-  - equation: s(x,n) = 2^{-\frac{E(h(x))}{c(n)}}
-    explanation: Anomaly score; near 1 for anomalies, 0.5 for normal.
-  - equation: y_t = c + \phi_1 y_{t-1} + ... + \phi_p y_{t-p} + \theta_1 \epsilon_{t-1} + ... + \theta_q \epsilon_{t-q} + \epsilon_t
-    explanation: ARIMA(p,d,q) model equation.
-  - equation: f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
-    explanation: Forget gate in LSTM.
-  - equation: \hat{y}_t = \alpha \cdot \hat{y}_t^{ARIMA} + (1-\alpha) \cdot \hat{y}_t^{LSTM}
-    explanation: Weighted average combination of forecasts.
+  - equation: s(x,n) = 2^{-E(h(x))/c(n)}
+    explanation: Anomaly score where values near 1 indicate an anomaly.
+  - equation: y_t = c + φ_1 y_{t-1} + ... + φ_p y_{t-p} + θ_1 ε_{t-1} + ... + θ_q ε_{t-q} + ε_t
+    explanation: ARIMA model equation defining the time series forecast.
+  - equation: f_t = σ(W_f ⋅ [h_{t-1}, x_t] + b_f)
+    explanation: LSTM forget gate equation controlling information retention.
+  - equation: \hat{y}_t = α⋅\hat{y}^{ARIMA}_t + (1−α)⋅\hat{y}^{LSTM}_t
+    explanation: Weighted average combining ARIMA and LSTM forecasts.
 definitions:
-  - term: ARIMA
-    definition: AutoRegressive Integrated Moving Average, a time series forecasting model.
-  - term: LSTM
-    definition: Long Short-Term Memory, a recurrent neural network for long-term dependencies.
   - term: Isolation Forest
-    definition: Anomaly detection algorithm that isolates outliers via random binary trees.
+    definition: An anomaly detection algorithm that isolates outliers rather than profiling normal points.
+  - term: ARIMA
+    definition: AutoRegressive Integrated Moving Average model for time series forecasting.
+  - term: LSTM
+    definition: Long Short-Term Memory, a recurrent neural network for learning long-term dependencies.
   - term: LLM
-    definition: Large Language Model, used here to generate personalized financial advice.
-  - term: RS
-    definition: Recommender System, provides personalized item or action suggestions.
-  - term: AIC
-    definition: Akaike Information Criterion, used for model selection.
+    definition: Large Language Model, used here to generate natural language financial advice.
+  - term: Cognitive biases
+    definition: Systematic patterns of deviation from norm or rationality in judgment.
 critical_citations:
-  - "[Zibriczky, 2016] — Surveys recommender systems in finance."
-  - "[Milano et al., 2020] — Analyzes ethical challenges of recommender systems."
-  - "[Chua et al., 2023] — Model for user acceptance of AI investment advice."
-  - "[Fieberg et al., 2023] — GPT-4 can provide personalized investment portfolios."
+  - "[Milano et al., 2020] — Survey of ethical challenges in recommender systems."
+  - "[Chua et al., 2023] — Model for user acceptance of AI-generated investment advice."
+  - "[Zatevakhina et al., 2019] — Recommender systems as foundation for intelligent financial platforms."
+  - "[del Valle & Lara, 2024] — Analysis of personal autonomy in AI-powered recommender systems."
 relevance:
   topics:
-    - code: 2.C
-      name: User-Declared Financial Preferences
-      justification: System uses user risk level, goals, and preferences as input context.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Provides an overview of financial recommendation systems and their applications.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: medium
+      justification: Identifies gaps such as lack of personalization and ethical considerations in current systems.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Uses user characteristics like risk level and goals to personalize recommendations.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: contextual
+      justification: Discusses general user profiling but does not directly address cold-start.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: ARIMA and LSTM models forecast future spending.
+      relevance: high
+      justification: Applies ARIMA and LSTM to forecast user spending.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Weighted combination of ARIMA and LSTM is the forecasting algorithm.
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      justification: LLM generates personalized budget advice based on forecasts and anomalies.
-    - code: 7.C
-      name: Budget Recommendation Algorithm
-      justification: LLM with context formation and evaluation steps constitutes the recommendation algorithm.
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Specifically compares and combines ARIMA and LSTM for spending forecasts.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: Isolation Forest detects anomalous expenses to flag irrational spending.
+      relevance: high
+      justification: Uses Isolation Forest to detect anomalous expenses.
     - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Isolation Forest with path length calculation is the implemented algorithm.
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Implements Isolation Forest as the core anomaly detection algorithm.
     - code: 10.A
       name: Data Privacy and Security in Personal Finance Systems
-      justification: System uses OAuth 2.0, OWASP principles, and AWS security practices.
+      relevance: high
+      justification: Emphasizes privacy and security using OAuth 2.0 and OWASP principles.
     - code: 10.B
       name: User Trust in Personal Finance Systems
-      justification: Ethical design, transparency, and autonomy support build user trust.
-  contribution: This paper provides an end-to-end architecture for a PFMS recommendation engine that combines anomaly detection, hybrid time-series forecasting, and LLM-based personalization. For Odin, the anomaly detection module (Isolation Forest) can directly flag irregular spending patterns among Filipino young professionals. The weighted ARIMA+LSTM forecasting module offers a robust baseline for predicting seasonal and cyclic spending unique to the Philippine context. The ethical framework described—emphasizing user autonomy and transparent advice—directly informs Odin's design for data privacy and user trust modules.
+      relevance: high
+      justification: Stresses transparency and user autonomy to build trust.
+  contribution: "This paper provides a blueprint for integrating multiple AI models (anomaly detection, forecasting, and LLM-based generation) into a modular financial advisory system. The architecture supports the development of Odin's recommendation and anomaly detection modules. The emphasis on ethical design, including user autonomy and transparency, aligns with Odin's need for user trust. The system's ability to generate personalized advice based on user-specific data directly informs Odin's budget recommendation and behavioral profiling components."
   directly_justifies:
-    - Isolation Forest can identify atypical financial transactions by isolating deviations from normal behavior.
-    - Weighted combination of ARIMA and LSTM improves budget forecast accuracy over either model alone.
-    - LLMs can generate personalized financial recommendations that adapt to user income level and risk tolerance.
-    - Ethical recommendation systems must preserve user autonomy and avoid manipulative advice.
-    - OAuth 2.0 and OWASP principles are suitable for securing personal financial data in a PFMS.
+    - "Combining ARIMA and LSTM improves forecast accuracy for user spending."
+    - "Isolation Forest can effectively identify anomalous financial transactions."
+    - "LLMs can generate personalized financial recommendations from structured user data."
+    - "Ethical design principles are essential for user acceptance of AI financial advice."
+    - "A modular architecture facilitates integration of different AI components."
   limits:
-    - No empirical evaluation or quantitative performance metrics are reported for any module.
-    - The paper does not address cold-start scenarios for new users with limited transaction history.
-    - User testing on actual financial decision outcomes is absent.
-    - The system is designed for general users, not specifically for Filipino young professionals or their cultural financial practices.
-  mapping_rationale: The paper was screened against Odin’s functional domains. Spending forecasting (domains 6.A, 6.B) and anomaly detection (8.A, 8.B) are directly addressed by ARIMA+LSTM and Isolation Forest. Budget recommendation (7.B, 7.C) is covered by the LLM-based advice generation. User-declared preferences (2.C) appear as input parameters. Data privacy and user trust (10.A, 10.B) are explicitly discussed in the ethics section. Domains such as behavioral profiling (5.A–C), expense categorization (3.A–B), mobile-first design (9.A–B), user retention (11.A–B), system evaluation (12.A–B), and savings/debt management (13.A–B) were rejected because the paper provides no substantive claims about them – it mentions financial goals but no goal management algorithm, and no evaluation framework beyond architecture description.
+    - "The study does not provide empirical evaluation metrics (e.g., RMSE, F1-score) for the models used."
+    - "User testing and validation of the recommendation system's effectiveness are not reported."
+    - "The system's performance across diverse income levels is claimed but not empirically demonstrated."
+    - "The LLM component's recommendation quality is not compared against other baselines."
+    - "The paper lacks a discussion on the system's scalability with a large number of users."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. Domains flagged as relevant include 'Existing Systems & Gaps' (4.A, 4.B) due to the paper's review of financial RS and identified limitations; 'Behavioral Profiling & Classification' (5.A, 5.B) because it uses user characteristics for personalization; 'Spending Forecasting' (6.A, 6.B) as a core contribution; 'Anomaly Detection' (8.A, 8.B) as another core algorithmic contribution; and 'Data Privacy & User Trust' (10.A, 10.B) because of the strong ethical focus. The paper was considered and rejected for 'Filipino Cultural Context' (2.A-D) as it is international and does not discuss Filipino-specific practices. 'Budget Recommendation' (7.A-D) was noted as contextual because the LLM generates advice but does not formulate it as a constrained optimization problem. The paper is highly relevant for informing Odin's algorithmic design and ethical framework, providing concrete methods for forecasting and anomaly detection."
 limitations:
-  - No quantitative validation of forecasting or anomaly detection accuracy. [unacknowledged]
-  - The system's LLM component is described only conceptually; no ablation study or comparison with rule-based baselines. [unacknowledged]
-  - Ethical claims are not operationalized or measured (e.g., how to verify user autonomy). [unacknowledged]
-  - The paper does not address scalability or latency constraints for real-time mobile use. [unacknowledged]
+  - "No quantitative evaluation of the system's performance is provided. [unacknowledged]"
+  - "The effectiveness of the LLM-generated recommendations is not empirically validated with users. [unacknowledged]"
+  - "The system is tested but results are not shared, limiting reproducibility. [unacknowledged]"
+  - "The paper does not address potential biases in the AI models or training data. [unacknowledged]"
 remember_this:
-  - Anomaly detection uses Isolation Forest with path length scoring.
-  - Forecasts combine ARIMA for short-term and LSTM for long-term trends.
-  - Large language model generates personalized financial advice from transaction and forecast data.
-  - System explicitly designed to avoid manipulation and preserve user autonomy.
-  - Ethical safeguards include OAuth 2.0, OWASP, and transparent recommendations.
+  - "Combines Isolation Forest, ARIMA, LSTM, and LLMs for financial advice."
+  - "Emphasizes user autonomy and ethical AI design principles."
+  - "Modular architecture ensures independence of AI and core modules."
+  - "Aims to counter cognitive biases and manipulative marketing."
+  - "Does not provide quantitative performance metrics for its models."
 ```

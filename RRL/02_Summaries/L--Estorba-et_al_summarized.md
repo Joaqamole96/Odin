@@ -1,98 +1,145 @@
 ```yaml
 paper_id: 10.47772/IJRISS.2025.91200252
 designation: local
-title: "Ka-abag o Babag? Exploring the Lived Experiences in the Context of Financial Well-being of Microfinance Borrowers"
-authors: "Estorba, V. L.; Relativo, J. L. C.; Rellon, S. B. S.; Regis, K. J. M."
-year: 2026
-venue: "International Journal of Research and Innovation in Social Science (IJRISS)"
+title: Ka-abag o Babag? Exploring the Lived Experiences in the Context of Financial Well-being of Microfinance Borrowers
+authors: Estorba, V. L.; Relativo, J. L. C.; Rellon, S. B. S.; Regis, K. J. M.
+year: 2025
+venue: International Journal of Research and Innovation in Social Science
 odin_topics:
-  - "1.C"
-  - "2.A"
-  - "2.B"
-  - "13.B"
-shorthand_tags:
-  - "/financial-behavior"
-  - "/cultural-practices"
-  - "/cyclical-spending"
-  - "/debt-management"
-tldr: "Microfinance borrowers in rural Philippines experience debt as both a source of short-term relief and capability expansion, and as a persistent stressor that can trap them in cycles of over-indebtedness and emotional strain."
-problem_and_motivation: "Existing literature on microfinance focuses on quantitative measures of financial well-being, failing to capture borrowers' subjective lived experiences. This gap is critical because understanding how borrowers interpret and cope with debt is essential for designing interventions that address both financial and psychological dimensions of poverty."
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.D
+  - 4.A
+  - 5.A
+  - 5.C
+  - 7.A
+  - 7.D
+  - 10.A
+  - 10.B
+  - 11.B
+  - 13.A
+  - 13.B
+tldr: Microfinance provides short-term financial relief and promotes discipline but can also perpetuate debt cycles, stress, and psychological strain for female borrowers in the Philippines.
+problem_and_motivation: Existing literature relies heavily on quantitative measures of borrower financial well-being, failing to capture the subjective lived experiences and meaning-making of how microfinance impacts financial and psychological health. This gap hinders the development of holistic interventions that address both financial and emotional needs of borrowers.
 approach:
-  - "Qualitative transcendental phenomenological design guided by Moustakas (1994) and Colaizzi's seven-step analysis method."
-  - "Fifteen female microfinance borrowers in Argao, Cebu, purposively selected based on three+ years borrowing and three+ active loan cycles."
-  - "Semi-structured interviews adapted from the CFPB Financial Well-Being Scale, conducted in Cebuano, lasting 30-45 minutes each."
-  - "Data analysis involved extracting significant statements, formulating meanings, clustering into themes, and member checking for verification."
-  - "Theoretical framework integrated Lazarus & Folkman's Transactional Model of Stress and Coping with Sen's Capability Approach."
+  - A transcendental phenomenological qualitative design was used to explore the lived experiences of fifteen female microfinance borrowers in Argao, Cebu.
+  - Purposive criterion sampling selected participants with at least three years of borrowing experience and three active loan cycles.
+  - Data were collected via semi-structured interviews adapted from the CFPB Financial Well-Being Scale, conducted in Cebuano.
+  - Colaizzi's seven-step phenomenological method was used for data analysis.
+  - The study is grounded in Lazarus and Folkman's Transactional Model of Stress and Coping and Sen's Capability Approach.
 findings:
-  - "Nine major themes emerged, ranging from 'Living on the Edge of Survival' to 'Microfinance as a Source of Continuing Burden'."
-  - "num: All 15 participants reported both relief (ka-abag) and hindrance (babag) from microfinance; 7 described suicidal ideation linked to debt pressure."
-  - "num: Borrowing histories spanned 3 to 20 years, with most participants holding 3 to 7 simultaneous loan accounts."
-  - "Microfinance insurance (e.g., ₱25,000 death benefit) provided critical psychological security during crises."
-  - "Aggressive collection practices (late-night visits, threats) eroded peace of mind and caused shame."
-  - "Coping strategies included budgeting, income diversification, positive thinking, family support, and prayer."
-  - "Some borrowers achieved tangible progress (children's education, home improvements); others remained trapped in cyclical debt."
+  - Microfinance has a dual nature, acting as both support and hindrance to financial well-being.
+  - Borrowers experienced significant pre-borrowing financial difficulties, including poverty and unstable livelihoods.
+  - Microfinance provided immediate resources and improved capabilities but also introduced repayment pressures and psychological strain.
+  - Effective coping strategies included budgeting, income diversification, positive thinking, and reliance on faith.
+  - num: 47% of Filipino adults maintain outstanding debt, predominantly for daily consumption.
 key_figures_tables:
-  - "Table 1: Financial difficulties before microfinance → Highlights poverty as daily reality and family burden."
-  - "Table 2: Effects of microfinance → Shows dual pathway: relief vs. psychological strain."
-  - "Table 3: Coping strategies → Lists adaptive financial management, emotional resilience, and spiritual anchoring."
-  - "Table 4: Outcomes → Transformation through endurance vs. paradox of relief and regret."
+  - Table 1: Financial difficulties before microfinance → Shows poverty as persistent challenge.
+  - Table 2: Effects of microfinance → Shows dual impact of relief and burden.
+  - Table 3: Coping strategies → Shows adaptive and emotional management techniques.
+  - Table 4: Outcomes of debt strategies → Shows transformation and cyclical entrapment.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "MFI"
-    definition: "Microfinance Institution"
-  - term: "CFPB"
-    definition: "Consumer Financial Protection Bureau"
-  - term: "ka-abag"
-    definition: "Support or help in Cebuano"
-  - term: "babag"
-    definition: "Hindrance or obstacle in Cebuano"
-  - term: "Colaizzi's method"
-    definition: "Phenomenological analysis framework with seven steps from familiarization to verification"
+  - term: Ka-abag
+    definition: Support or assistance.
+  - term: Babag
+    definition: Hindrance or obstacle.
+  - term: PFMS
+    definition: Personal Finance Management System.
 critical_citations:
-  - "[Lazarus & Folkman, 1984] — Foundational stress and coping theory for debt appraisal."
-  - "[Sen, 1999] — Capability approach frames well-being as freedom, not just income."
-  - "[Moustakas, 1994] — Transcendental phenomenology method with bracketing."
-  - "[Colaizzi, 1978] — Seven-step analytical framework for lived experiences."
-  - "[CFPB, 2015] — Financial well-being scale adapted for interview guide."
+  - "[Lazarus & Folkman, 1984] — Foundational theory for stress and coping."
+  - "[Sen, 1999] — Foundational theory for capability and well-being."
+  - "[De Silva & Gunawardana, 2023] — Highlights microfinance-induced debt cycles."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Describes debt-driven survival behaviors, budgeting, and income hustling among Filipino borrowers."
-    - code: "2.A"
-      name: "Culturally Specific Financial Practices"
-      justification: "Documents informal lending (5-6, turko), prayer as coping, and family support networks."
-    - code: "2.B"
-      name: "Seasonal and Cyclical Spending Patterns"
-      justification: "Shows how unstable livelihoods and seasonal income drive repeated borrowing cycles."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Provides rich qualitative evidence on debt traps, overlapping loans, and repayment stress."
-  contribution: "This paper directly justifies Odin's debt management module (13.B) by demonstrating how borrowers fall into overlapping loan cycles without visibility tools. It informs the behavioral profiling module (5.A) by identifying distinct coping strategies (e.g., emotional resilience, faith anchoring) that could be used for user segmentation. The findings also support savings goal management (13.A) by showing how small insurance payouts and savings provide psychological security. Additionally, the paper highlights the need for culturally adapted financial literacy content (2.A) and seasonal spending forecasts (2.B) to preempt repayment crises. Finally, the documented emotional toll of aggressive collection practices underlines Odin's requirement for non‑intrusive, trust‑preserving communication design."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Focuses on female borrowers, not specifically young professionals.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: low
+      justification: Provides context on financial fragility but not structure.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: medium
+      justification: Details coping and financial management behaviors.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: high
+      justification: Explores Filipino cultural practices like informal lending.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: high
+      justification: Describes how emergencies and family obligations drive spending.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: Contextualizes microfinance as an existing system.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Profiles borrowers based on coping and stress responses.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Thematic classification can inform profile development.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: high
+      justification: Reveals real-world budgeting strategies and constraints.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: medium
+      justification: Shows how borrowers prioritize essential needs over loans.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Not directly addressed.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: medium
+      justification: Reveals borrower distrust due to aggressive collection.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: low
+      justification: Highlights debt dependency, a retention challenge.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: medium
+      justification: Shows difficulty in saving due to debt.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: high
+      justification: Provides direct evidence on debt management challenges.
+  contribution: This paper directly informs Odin's development by highlighting the emotional and psychological burden of debt, which is critical for designing empathetic and user-centered PFMS features. It underscores the need for integrated financial literacy and psychosocial support within budgeting tools. The findings on coping mechanisms (budgeting, income diversification) can guide the design of practical, actionable features for users. The dual nature of microfinance as both support and hindrance validates the need for systems that can handle financial volatility and user stress.
   directly_justifies:
-    - "Microfinance provides short-term relief but can perpetuate debt cycles without financial literacy support."
-    - "Repayment pressures and aggressive collection practices erode borrowers' peace of mind and increase suicidal ideation."
-    - "Overlapping loans (3-7 accounts) are common and trap borrowers in circular debt."
-    - "Coping strategies include prayer, positive thinking, and family support, not just financial adjustments."
-    - "Microfinance insurance (e.g., death benefits) offers critical psychological security during crises."
+    - "Odin should incorporate features that help users manage financial stress."
+    - "Budgeting tools must account for irregular income and emergency spending."
+    - "Debt management modules should offer flexible repayment planning."
+    - "Systems must support users in distinguishing between survival and investment spending."
+    - "User trust is eroded by aggressive collection practices, informing UX design."
   limits:
-    - "Small sample of 15 female borrowers from one municipality limits statistical generalizability."
-    - "Cross-sectional design cannot track how debt dynamics evolve over multiple loan cycles."
-    - "Excludes male borrowers, so findings reflect a gendered, caregiving perspective."
-    - "Self-reported narratives subject to memory and social desirability bias."
-  mapping_rationale: "The paper focuses on financial behavior (1.C) of Filipino borrowers, including culturally specific practices (2.A) like informal lending and prayer. Seasonal income instability (2.B) drives repeated borrowing. The strongest match is debt management (13.B), as the core phenomenon is how borrowers experience and cope with over-indebtedness. Algorithm‑specific topics (e.g., 5.C, 6.B, 7.C) were rejected because the paper is qualitative and not about ML models. Mobile‑first (9.A/B), privacy (10.A/B), and retention (11.A/B) were irrelevant. Savings goal management (13.A) was considered but only peripherally mentioned. Thus, only 1.C, 2.A, 2.B, and 13.B were selected."
+    - "The study is geographically bounded to Argao, Cebu, limiting generalizability."
+    - "The sample consists exclusively of women, excluding male perspectives."
+    - "Self-reported narratives may be subject to social desirability bias."
+    - "The cross-sectional design cannot capture long-term financial trajectories."
+    - "Excludes perspectives of microfinance officers and institutional representatives."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was conducted. The paper's primary relevance falls under Behavioral Profiling (5.A, 5.C), Savings & Debt Management (13.B), and Filipino Cultural Context (2.A, 2.D), rated high due to direct qualitative evidence on borrower psychology and culturally embedded practices like informal lending and family obligations. Medium relevance was assigned to topics like 1.C (financial behavior), 7.A (budgeting), and 10.B (trust), as the paper provides supporting evidence. Domains like Mobile-First Design (9.A, 9.B) and Algorithmic topics (6.A, 6.B) were rejected as the paper is qualitative and non-algorithmic. The paper strongly supports Odin's need for empathy-driven features and holistic financial health tracking.
 limitations:
-  - "Sample limited to 15 women from Argao, Cebu; not generalizable to urban or male borrowers."
-  - "Cross-sectional design captures a single point in time; cannot observe long-term debt trajectories."
-  - "Relies on self-reported narratives, which may be affected by recall bias or social desirability."
-  - "Excludes institutional perspectives (microfinance officers), so lending policies are not analyzed."
-  - "No comparison of interest rates or repayment structures across different MFIs. [unacknowledged]"
+  - "Findings are not generalizable beyond the specific rural context of Argao. [unacknowledged]"
+  - "Excludes male borrower perspectives, limiting understanding of gender differences in financial stress."
+  - "Relies on self-reported narratives, which may be influenced by memory and social desirability."
+  - "Cross-sectional design cannot observe how financial well-being evolves over multiple loan cycles."
+  - "The dual role of women as financial managers and caretakers may create unique psychological burdens not explored in other demographics."
 remember_this:
-  - "Debt caused suicidal ideation among 7 of 15 microfinance borrowers."
-  - "Microfinance acts as both support (ka-abag) and hindrance (babag) simultaneously."
-  - "Borrowers use prayer, positive thinking, and family support to cope with debt."
-  - "Overlapping loans (3-7 accounts) create cyclical debt traps without visibility tools."
-  - "Small insurance payouts from MFIs provide critical psychological security during crises."
+  - "Microfinance provides short-term relief but can create long-term debt dependency."
+  - "Borrowers use budgeting, hustling, and faith to cope with financial stress."
+  - "Debt stress spills into family relationships and erodes peace of mind."
+  - "Many borrowers regret reliance on loans due to persistent debt cycles."
+  - "Effective interventions must address both financial and emotional well-being."
 ```

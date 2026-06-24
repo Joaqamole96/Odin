@@ -2,78 +2,120 @@
 paper_id: 10.34001/jmer.2025.12.06.4-80
 designation: international
 title: Behavioral Shifts in Digital Finance: How E-Payment Influences Consumer Spending and Financial Literacy
-authors: Yuttama, F. R.
+authors: Yuttama, F.
 year: 2025
 venue: Journal of Management and Entrepreneurship Research
 odin_topics:
   - 1.C
+  - 2.A
+  - 2.B
+  - 5.B
+  - 5.C
+  - 6.B
   - 7.A
-shorthand_tags:
-  - /financial-behavior
-  - /budgeting-strategies
-tldr: E-payment usage increases consumer spending but also improves cash management, with financial literacy moderating both effects: higher literacy reduces impulsive spending and enhances use of digital tracking tools.
-problem_and_motivation: Prior studies on e-payment's behavioral effects are inconclusive, with some finding increased impulsive spending and others improved financial tracking. The role of financial literacy as a boundary condition shaping these dual outcomes remains underexplored, particularly in emerging markets like Indonesia. This gap limits the ability to design effective digital finance policies and consumer education programs.
+  - 7.B
+  - 10.B
+  - 11.A
+tldr: E-payment adoption in Indonesia exerts a dual effect on financial behavior, increasing spending propensity while enhancing cash management, with financial literacy moderating these effects.
+problem_and_motivation: The influence of e-payment on consumer spending and financial discipline is inconclusive, with studies suggesting both impulsive spending and improved financial tracking. Existing research often treats e-payment as a direct driver without examining conditional factors like financial literacy. This gap is critical in emerging markets where digital payment adoption is rapidly transforming financial behavior.
 approach:
-  - Surveyed 400 active e-payment users in Central Java, Indonesia, using a structured Likert-scale questionnaire.
-  - Measured e-payment usage, consumer spending behavior, cash management, and financial literacy with validated multi-item scales.
-  - Analyzed relationships using PLS-SEM with bootstrapping (5,000 resamples) to test direct and moderation effects.
-  - Assessed measurement model via factor loadings, Cronbach's alpha (>0.87), and AVE (>0.65), confirming convergent and discriminant validity.
-  - Tested hypotheses for H1 (e-payment→spending), H2 (e-payment→cash management), H3 (literacy weakens spending effect), H4 (literacy strengthens cash management effect).
+  - A quantitative survey was administered to 400 active e-payment users in Central Java, Indonesia.
+  - Constructs for e-payment usage, consumer behavior, cash management, and financial literacy were measured using validated Likert-scale items.
+  - The hypothesized relationships were analyzed using Partial Least Squares Structural Equation Modeling (PLS-SEM) with SmartPLS 4.
+  - Moderation analysis via PLS-SEM assessed the interactive effect of financial literacy on the relationships between e-payment usage and both consumer behavior and cash management.
+  - Bootstrapping with 5,000 resamples was used to determine the statistical significance of path coefficients and moderation effects.
 findings:
-  - "num: E-payment usage positively affects consumer spending (β=0.731, p<0.000)."
-  - "num: E-payment usage positively affects cash management (β=0.493, p<0.000)."
-  - "num: Financial literacy weakens the positive effect of e-payment on spending (β=-0.082, p<0.000)."
-  - "num: Financial literacy strengthens the positive effect of e-payment on cash management (β=-0.065, p<0.005)."
-  - "num: The model explains 87.7% of variance in consumer behavior and 83.1% in cash management (R²)."
+  - num: E-payment usage has a significant positive effect on consumer behavior (β = 0.731, p < 0.000).
+  - num: E-payment usage has a significant positive effect on cash management (β = 0.493, p < 0.000).
+  - num: Financial literacy significantly attenuates the positive relationship between e-payment and consumer behavior (β = -0.082, p < 0.000).
+  - num: Financial literacy significantly strengthens the positive relationship between e-payment and cash management (β = -0.065, p = 0.005).
+  - E-payment facilitates impulsive spending by lowering the psychological friction of payment.
+  - Built-in transaction records and dashboards in e-payment systems improve expense tracking and budgeting.
+  - The impact of e-payment is contingent on users' financial knowledge and self-regulation.
 key_figures_tables:
-  - "Figure 1: E-payment transaction value growth in Central Java (2023-2024) → QRIS transactions grew 385% year-on-year."
-  - "Figure 2: PLS-SEM structural model results → Path coefficients show significant direct and moderation effects."
-  - "Table 4: Reliability and validity metrics → All constructs meet thresholds (Cronbach's α >0.87, AVE >0.65)."
+  - Figure 1: E-payment transaction value growth in Central Java → shows rapid adoption of digital payments like QRIS and e-wallets.
+  - Figure 2: PLS-SEM structural model results → illustrates significant paths and moderation effects of financial literacy.
+  - Table 2: Demographic profile of respondents → shows majority are female, aged 25-34, with a bachelor's degree.
+  - Table 4: Reliability and validity of measurement model → confirms all constructs meet thresholds for Cronbach's alpha and AVE.
+  - Table 6: Structural model path coefficients → details the t-statistics and p-values for all hypothesized relationships.
 key_equations:
-  - equation: None.
-    explanation: ""
+  - equation: \eta = \frac{N}{1 + N e^2}
+    explanation: Slovin's formula for determining sample size.
 definitions:
   - term: PLS-SEM
-    definition: Partial Least Squares Structural Equation Modeling, a variance-based SEM method.
+    definition: Partial Least Squares Structural Equation Modeling, a variance-based method for analyzing complex cause-effect relationships.
   - term: AVE
     definition: Average Variance Extracted, a measure of convergent validity.
   - term: HTMT
-    definition: Heterotrait-Monotrait ratio, a criterion for discriminant validity.
-  - term: QRIS
-    definition: Quick Response Code Indonesian Standard, a national QR code payment system.
-  - term: MSME
-    definition: Micro, Small, and Medium Enterprises.
+    definition: Heterotrait-Monotrait ratio, a criterion for assessing discriminant validity.
 critical_citations:
-  - "[Lusardi & Mitchell, 2014] — Financial literacy theory foundation."
-  - "[Thaler & Sunstein, 2008] — Pain of paying concept."
-  - "[Hampson et al., 2021] — E-payment increases impulsive spending."
+  - "[Hampson et al., 2021] — e-payment lowers psychological barriers, boosting impulse spending."
+  - "[Liu & Zhang, 2021] — e-payment tools enhance financial tracking and management."
+  - "[Lusardi & Mitchell, 2014] — financial literacy improves self-control and planning."
+  - "[Thaler & Sunstein, 2008] — concept of 'pain of paying' in digital transactions."
 relevance:
   topics:
     - code: 1.C
       name: Financial Behavior of Filipino Young Professionals
-      justification: Examines how e-payment usage influences consumer spending and cash management behaviors, moderated by financial literacy in an emerging market.
+      relevance: medium
+      justification: Paper examines financial behavior in an emerging market context, providing comparative insights.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: low
+      justification: Focuses on Indonesian context, offering limited but relevant cultural parallels for SE Asia.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: low
+      justification: Touch on spending cycles but not a core focus of the study.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: medium
+      justification: Financial literacy is treated as a key moderating variable that differentiates user behavior.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Demonstrates how financial literacy can be used to classify and predict user responses to e-payment systems.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: Provides behavioral data (spending patterns) that could inform forecasting models, but no algorithms are proposed.
     - code: 7.A
       name: Budgeting Strategies as Domain Knowledge
-      justification: Shows that e-payment enhances cash management through tracking and budgeting features, with financial literacy strengthening this effect.
-  contribution: This paper justifies Odin's use of financial literacy as a moderating factor in spending forecasting and budget recommendation modules. It supports the inclusion of in-app nudges (spend alerts, category caps) to curb impulsive spending, particularly for low-literacy users. The dual-effect finding (e-payment increases both spending and cash management) informs Odin's anomaly detection by distinguishing between beneficial and harmful spending patterns. The moderation effect validates personalizing budget recommendations based on user financial literacy levels.
+      relevance: high
+      justification: Paper directly investigates how e-payment tools and financial literacy facilitate budgeting and cash management.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: high
+      justification: Findings directly support the need for in-app budgeting and monitoring features in PFMS like Odin.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: medium
+      justification: Implications discuss building trust through features that promote financial discipline and user well-being.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Suggests features like spending alerts and goal tracking to maintain user engagement and financial discipline.
+  contribution: This paper validates the dual nature of e-payment adoption, which Odin can leverage to design behavioral nudges and budgeting features. It emphasizes the crucial moderating role of financial literacy, informing Odin's user profiling and personalization engine. The study's empirical evidence from an emerging market supports Odin's mobile-first design for Filipino users, showing that app features can both encourage spending and aid cash management. The findings justify integrating financial literacy assessments to tailor budget recommendations and anomaly detection for users.
   directly_justifies:
-    - E-payment usage increases consumer spending propensity by reducing psychological friction at checkout.
-    - E-payment usage improves cash management through automated transaction tracking and budgeting features.
-    - Higher financial literacy weakens the positive relationship between e-payment and impulsive spending.
-    - Higher financial literacy strengthens the positive relationship between e-payment and cash management.
+    - "E-payment usage significantly increases consumer spending propensity."
+    - "E-payment tools enhance users' ability to monitor and plan finances."
+    - "Higher financial literacy attenuates the positive effect of e-payment on spending."
+    - "Financially literate individuals use e-payment features more effectively for financial discipline."
   limits:
-    - Geographical focus on Central Java, Indonesia, limiting generalizability to other regions.
-    - Reliance on self-reported survey data may introduce social desirability bias.
-    - Cross-sectional design cannot establish causality or capture behavioral dynamics over time.
-  mapping_rationale: The paper was screened against Odin's functional domains. Behavioral profiling (5.A-C) was rejected because the paper does not classify users into distinct profiles but uses financial literacy as a continuous moderator. Spending forecasting (6.A-B) was rejected as no predictive modeling is performed. Budget recommendation (7.A-C) was partially selected: 7.A (budgeting strategies) applies because the paper empirically demonstrates that e-payment's tracking features support budgeting, and financial literacy enhances this. 7.B and 7.C were rejected as no recommendation algorithm is proposed. Expense categorization (3.A-B) and anomaly detection (8.A-B) were not relevant. Savings & debt (13.A-B) was rejected as savings are mentioned only peripherally. The selected codes 1.C (financial behavior) and 7.A (budgeting strategies) capture the paper's core contribution on how digital payment affects spending and cash management with financial literacy as a boundary condition.
+    - "Findings are based on a survey in Central Java, Indonesia, which may not be generalizable to other developing countries like the Philippines."
+    - "Reliance on self-reported data may introduce social desirability bias."
+    - "Study focuses on financial literacy as a moderator, excluding other contextual variables."
+  mapping_rationale: A systematic scan across all 12 functional domains was performed for this paper. The domain of 'Budget Recommendation' (7) was flagged as high relevance because the paper directly examines how e-payment tools and financial literacy enable effective budgeting and cash management. 'Behavioral Profiling' (5) was assigned medium relevance, as financial literacy is shown to differentiate user behavior, which is crucial for the cold-start problem. 'Spending Forecasting' (6) and 'User Retention' (11) received low to medium relevance, as the behavioral patterns and feature suggestions (e.g., goal tracking, alerts) provide supporting evidence. Other domains like 'Expense Categorization' (3), 'Anomaly Detection' (8), and 'Data Privacy' (10) were considered but rejected as the paper does not directly address these technical aspects. The paper's overall relevance to Odin is moderate, providing valuable behavioral and cognitive evidence to inform budgeting, user profiling, and engagement strategies for the Filipino context.
 limitations:
-  - Geographical focus on Central Java, Indonesia, limiting generalizability.
-  - Self-reported data may introduce social desirability bias.
-  - Cross-sectional design cannot establish causality.
-  - Excludes other moderators such as income and digital literacy [unacknowledged].
+  - "Geographic focus on Central Java limits generalizability to the Philippines."
+  - "Self-reported data may introduce social desirability bias."
+  - "Excludes other behavioral and contextual variables like digital literacy or income."
+  - "Cross-sectional design captures behavior at a single point in time. [unacknowledged]"
+  - "Does not differentiate between types of e-payment (e.g., bank transfer vs. e-wallet) in the analysis. [unacknowledged]"
 remember_this:
-  - E-payment increases spending (β=0.731) but also improves cash management (β=0.493).
-  - Financial literacy weakens e-payment's spending effect (β=-0.082).
-  - Financially literate users leverage digital tracking for better budgeting.
-  - The model explains 87.7% of spending behavior variance.
+  - "E-payment adoption both increases spending and improves financial tracking."
+  - "Financial literacy is a critical buffer against impulsive digital spending."
+  - "Higher literacy strengthens the positive link between e-payment and cash management."
+  - "In-app features like budgets and alerts can promote financial discipline."
+  - "Moderation effect of literacy on spending is significant (β = -0.082, p < 0.000)."
 ```

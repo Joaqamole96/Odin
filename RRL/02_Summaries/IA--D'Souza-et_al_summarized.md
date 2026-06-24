@@ -1,130 +1,142 @@
 ```yaml
-paper_id: b9c5f2d1-3a4e-4b5c-8d6e-7f8a9b0c1d2e
-designation: international
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+designation: international-algorithm-specific
 title: A Comprehensive Review of Machine Learning Techniques for Intelligent Personal Finance Management Systems
 authors: D'Souza, M.; Bhegade, P.; Bhalekar, P.; Bhavsar, Y.
 year: 0
 venue: Unknown
 odin_topics:
+  - 3.A
+  - 3.B
+  - 4.A
+  - 4.B
   - 5.A
   - 6.A
   - 6.B
   - 7.A
   - 7.B
-  - 7.C
   - 8.A
   - 8.B
-  - 12.A
+  - 9.A
   - 12.B
-shorthand_tags:
-  - /behavioral-profile
-  - /predictive-modeling
-  - /spending-forecast
-  - /budgeting-strategies
-  - /budget-recommendation
-  - /budget-algorithm
-  - /anomaly-detection-framework
-  - /anomaly-algorithm
-  - /eval-framework
-  - /eval-algorithm
-tldr: Reviews machine learning techniques for intelligent personal finance management across budgeting, forecasting, anomaly detection, and group expense management, highlighting a shift from rule-based to adaptive, data-driven systems.
-problem_and_motivation: Current research on PFMS is fragmented across budgeting, forecasting, anomaly detection, and group expense management, limiting cohesive intelligent solutions. Most traditional systems lack adaptability and personalization, relying on rigid rules. A systematic review comparing machine learning models across these components is missing.
+tldr: A review of machine learning techniques for personal finance management systems, covering budgeting, forecasting, anomaly detection, and group expense management.
+problem_and_motivation: Research on intelligent PFMS is fragmented across components like budgeting, forecasting, anomaly detection, and group finance, limiting cohesive solution development. Existing systems lack adaptability and predictive insights due to reliance on rigid, rule-based mechanisms. This fragmentation hinders the creation of integrated, explainable, and user-friendly intelligent finance systems.
 approach:
-  - Conducts a qualitative literature survey of personal finance management systems from 1997 to 2021.
-  - Compares statistical methods (ARIMA, EWMA), machine learning (Isolation Forest, clustering), and deep learning (LSTM, GRU).
-  - Evaluates techniques across four dimensions: budgeting, forecasting, anomaly detection, and group expense management.
-  - Provides a taxonomy and comparative tables based on data requirements, interpretability, scalability, and adaptability.
-  - Does not implement or evaluate models empirically; synthesizes existing findings.
+  - Conducts a qualitative literature survey of PFMS components, including expense tracking, bill splitting, predictive budgeting, financial anomaly detection, and explainable AI methods.
+  - Analyzes a range of approaches, including statistical methods, machine learning, deep learning, and hybrid techniques.
+  - Offers a structured taxonomy of PFMS components and provides comparative insights across various learning methods.
+  - Identifies gaps in current research to guide future work toward integrated intelligent finance systems.
 findings:
-  - Rule-based budgeting is transparent but cannot adapt to non-linear spending changes.
-  - LSTM captures long-term dependencies but requires large historical data and lacks interpretability.
-  - Isolation Forest efficiently detects anomalies in unlabeled data and scales well.
-  - Hybrid ARIMA-LSTM models combine linear trend modeling with non-linear residual learning.
-  - Explainable AI is critical for user trust in anomaly detection systems.
+  - Rule-based budgeting systems are transparent but lack adaptability to changing spending patterns.
+  - EWMA and ARIMA models are effective for stable trends but struggle with non-linear changes and seasonal variations.
+  - LSTM networks capture long-term dependencies but require substantial data and computational resources.
+  - Hybrid ARIMA-LSTM frameworks improve forecasting robustness by combining linear and non-linear modeling.
+  - Isolation Forest is effective for unsupervised anomaly detection but lacks inherent explanatory context.
+  - num: The reviewed literature indicates a transition from static rule enforcement to adaptive and predictive budgeting formulations.
 key_figures_tables:
-  - "Figure 1: Actual vs predicted values using LSTM → LSTM smooths noisy spending data to capture underlying trends."
-  - "Figure 3: Conceptual architecture of budgeting pipeline → Illustrates data preprocessing, feature engineering, temporal modeling, and adaptive budget formulation."
-  - "Figure 4: Visualization of budgeting techniques → EWMA, ARIMA, and LSTM provide complementary temporal perspectives on spending."
-  - "Figure 5: Comparison of ARMA, ARIMA, SARIMA → Seasonal ARIMA handles periodic spending patterns better."
-  - "Figure 6: Anomaly detection using One-Class SVM → One-Class SVM has low interpretability and scalability."
-  - "Table 1: Qualitative comparison of budgeting techniques → EWMA is interpretable but low adaptability; LSTM is adaptable but opaque."
-  - "Table 2: Qualitative comparison of forecasting techniques → Hybrid models offer very high adaptability at medium interpretability."
-  - "Table 3: Qualitative comparison of anomaly detection techniques → Isolation Forest scales well and is feature-agnostic."
+  - Figure 1: Actual vs Predicted Values using LSTM → LSTM smooths volatile financial data to capture underlying trends.
+  - Figure 3: Conceptual Architecture of the Budgeting Pipeline → Pipeline from data input to adaptive budget formulation with uncertainty buffer.
+  - Figure 4: Visualization of budgeting techniques → EWMA, ARIMA, and LSTM provide complementary perspectives on spending data.
+  - Figure 6: Anomaly detection using One-Class SVM → Visualization of anomaly detection through boundary-based classification.
+  - Table 1: Qualitative Comparison of Budgeting Techniques → Trade-offs between interpretability, scalability, and adaptability for budgeting methods.
 key_equations:
-  - equation: "s(x,ψ) = 2^{-E(h(x))/c(ψ)}"
-    explanation: "Isolation Forest anomaly score; higher score indicates more anomalous."
-  - equation: "Y_t = φ_1 Y_{t-1} + ... + φ_p Y_{t-p} + θ_1 ϵ_{t-1} + ... + θ_q ϵ_{t-q} + ϵ_t"
-    explanation: "ARIMA model combining autoregressive and moving average terms."
-  - equation: "f_t = σ(W_f · [h_{t-1}, x_t] + b_f)"
-    explanation: "LSTM forget gate controls retention of past memory."
+  - equation: Y_t = φ_1 Y_{t-1} + ... + θ_1 ϵ_{t-1} + ϵ_t
+    explanation: ARIMA model combining autoregressive and moving average components.
+  - equation: s(x,ψ) = 2^{-E(h(x))/c(ψ)}
+    explanation: Isolation Forest anomaly score based on average path length.
 definitions:
   - term: PFMS
-    definition: Personal Finance Management System, software for tracking and managing finances.
-  - term: LSTM
-    definition: Long Short-Term Memory, a recurrent neural network for sequential data.
-  - term: ARIMA
-    definition: Autoregressive Integrated Moving Average, a statistical time-series model.
+    definition: Personal Finance Management Systems
   - term: EWMA
-    definition: Exponentially Weighted Moving Average, a smoothing technique for recent data.
-  - term: Isolation Forest
-    definition: Anomaly detection algorithm that isolates outliers via random partitioning.
+    definition: Exponentially Weighted Moving Averages
+  - term: LSTM
+    definition: Long Short-Term Memory networks
+  - term: GRU
+    definition: Gated Recurrent Units
   - term: XAI
-    definition: Explainable Artificial Intelligence, methods to make model decisions interpretable.
+    definition: Explainable Artificial Intelligence
 critical_citations:
-  - "[Hochreiter & Schmidhuber, 1997] — Introduced LSTM architecture for sequential modeling."
-  - "[Box & Jenkins, 1970] — Established ARIMA time-series forecasting framework."
-  - "[Liu et al., 2008] — Proposed Isolation Forest for unsupervised anomaly detection."
-  - "[Zhang, 2003] — Pioneered hybrid ARIMA-neural network forecasting."
+  - "[Hochreiter and Schmidhuber, 1997] — Foundational LSTM architecture paper."
+  - "[Liu, Ting, and Zhou, 2008] — Introduces Isolation Forest for anomaly detection."
+  - "[Box and Jenkins, 1970] — Foundational text on ARIMA time series modeling."
+  - "[Zhang, 2003] — Hybrid ARIMA-neural network model for forecasting."
 relevance:
   topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: Review discusses expense categorization as part of PFMS pipelines.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: medium
+      justification: Mentions category-level forecasting for structured resource allocation.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: Provides a comprehensive overview of existing PFMS and their limitations.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Identifies fragmentation, lack of integration, and rule-based rigidity as key gaps.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: Reviews behavior-oriented budgeting and clustering of spending patterns.
+      relevance: medium
+      justification: Discusses behavior-oriented budgeting and clustering of spending patterns.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Compares ARIMA, LSTM, and hybrid models for expenditure forecasting.
+      relevance: high
+      justification: Reviews predictive modeling approaches for forecasting and budgeting.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Discusses LSTM and GRU as forecasting algorithms with temporal dependencies.
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Analyzes ARIMA, LSTM, and hybrid methods for expenditure forecasting.
     - code: 7.A
       name: Budgeting Strategies as Domain Knowledge
-      justification: Surveys rule-based, EWMA, clustering, and LSTM budgeting strategies.
+      relevance: high
+      justification: Reviews rule-based, EWMA, and behavior-oriented budgeting strategies.
     - code: 7.B
       name: Budget Recommendation in Personal Finance Systems
-      justification: Adaptive budgets derived from LSTM predictions support recommendation.
-    - code: 7.C
-      name: Budget Recommendation Algorithm
-      justification: LSTM-based budgeting with safety margin δ as an algorithmic approach.
+      relevance: medium
+      justification: Discusses adaptive budgeting aligned with evolving financial behavior.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: Covers unsupervised anomaly detection for spending irregularities.
+      relevance: high
+      justification: Provides a comprehensive review of anomaly detection in PFMS.
     - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Details Isolation Forest and autoencoder algorithms for anomaly detection.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      justification: Provides comparative tables evaluating techniques across interpretability, scalability, and adaptability.
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Compares Isolation Forest, One-Class SVM, and autoencoder-based methods.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: low
+      justification: Briefly mentions mobile deployment constraints for computationally intensive models.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: Benchmarks budgeting, forecasting, and anomaly detection modules qualitatively.
-  contribution: This review informs Odin's budget recommendation module by comparing LSTM, EWMA, and clustering for adaptive budgeting. For spending forecasting, it highlights hybrid ARIMA-LSTM as a robust approach to combine linear and non-linear patterns. The anomaly detection module can leverage Isolation Forest for unsupervised identification of irregular spending, while the system evaluation framework can adopt the comparative dimensions of interpretability, scalability, and adaptability from the review's tables.
+      relevance: medium
+      justification: Provides comparative analysis across budgeting, forecasting, and anomaly detection techniques.
+  contribution: This comprehensive review provides a structured taxonomy of PFMS components, offering a systematic scan of machine learning applications across budgeting, forecasting, anomaly detection, and group expense management. The comparative analysis of techniques directly supports Odin's architectural decisions by highlighting trade-offs between interpretability, scalability, and adaptability for each module. The paper's identification of fragmentation in existing research justifies Odin's goal of creating an integrated PFMS platform. The review of unsupervised anomaly detection methods informs Odin's approach to identifying irregular spending without labeled data. The discussion of explainable AI requirements supports Odin's focus on user trust and transparency.
   directly_justifies:
-    - "LSTM-based budgeting adapts to non-linear spending patterns better than static thresholds."
-    - "Isolation Forest provides efficient anomaly detection without labeled spending data."
-    - "Hybrid ARIMA-LSTM forecasting improves robustness across varying financial conditions."
-    - "Explainable AI mechanisms are necessary for user trust in PFMS anomaly detection."
+    - "A transition from static rule enforcement to adaptive and predictive budgeting formulations."
+    - "Hybrid ARIMA-LSTM frameworks improve forecast robustness across diverse financial conditions."
+    - "Isolation Forest achieves superior detection capability relative to density-based alternatives."
+    - "Explainable AI is a critical requirement for user trust in financial decision-support systems."
+    - "There is a need for cohesive intelligent PFMS frameworks integrating multiple analytical components."
   limits:
-    - "No empirical validation or benchmark dataset comparisons are performed."
-    - "Does not address real-world deployment constraints such as mobile processing or API latency."
-    - "Group expense management analysis lacks machine learning model comparisons."
-  mapping_rationale: Screening Odin's functional domains flagged budget recommendation, spending forecasting, anomaly detection, system evaluation, and behavioral profiling as directly supported. Selected codes 5.A (behavioral profiles via clustering), 6.A/6.B (predictive modeling and forecasting via ARIMA/LSTM/hybrid), 7.A/7.B/7.C (budgeting strategies and algorithms via EWMA, LSTM, clustering), 8.A/8.B (anomaly detection and algorithms via Isolation Forest), and 12.A/12.B (evaluation frameworks and algorithmic evaluation via comparative tables). Rejected codes: 3.A/3.B (expense categorization not a focus), 9.A/9.B (no mobile design), 10.A/10.B (data privacy only briefly mentioned), 11.A/11.B (retention not discussed), 13.A/13.B (savings/debt absent). Group expense management lacks Odin topic mapping, so omitted.
+    - "The review is qualitative and does not provide empirical benchmarks comparing techniques on standard datasets."
+    - "The paper does not address cold-start problems in user profiling and anomaly detection."
+    - "Data privacy and security concerns in PFMS are mentioned but not examined in detail."
+    - "The review does not cover specific mobile-first design guidelines or UX considerations."
+    - "Evaluation frameworks for budget recommendation systems are not discussed. [unacknowledged]"
+  mapping_rationale: A systematic scan was performed across all 12 functional domains and their associated topic codes. The paper was flagged as highly relevant to domains related to expense categorization (3.A, 3.B), existing systems and gaps (4.A, 4.B), forecasting (6.A, 6.B), budgeting strategies (7.A, 7.B), and anomaly detection (8.A, 8.B). Medium relevance was assigned to behavioral profiling (5.A) and evaluation of algorithmic modules (12.B) due to the paper's comparative analysis. Low relevance was assigned to mobile-first design (9.A) as it was only mentioned in passing. The paper's discussion of group expense management touches on 4.A and 4.B as a system gap but does not directly address 3.C (user-defined constraints) or 7.C/7.D (optimization and infeasibility), so these were rejected. The paper provides an overview of existing PFMS but lacks depth on savings and debt management (13.A, 13.B), and does not address privacy and trust (10.A, 10.B) or retention mechanisms (11.A, 11.B), which were considered and rejected due to lack of actionable content. Overall, the paper is highly relevant to Odin's core analytical modules, serving as a foundational review that justifies the need for an integrated, intelligent PFMS.
 limitations:
-  - "Qualitative survey without quantitative meta-analysis or statistical significance testing."
-  - "Lacks systematic search protocol and inclusion/exclusion criteria [unacknowledged]."
-  - "Does not address data privacy, security, or regulatory compliance in depth [unacknowledged]."
+  - "The paper is a survey and does not provide empirical validation of the discussed techniques."
+  - "The review focuses on algorithmic techniques but does not deeply address user-centric design considerations. [unacknowledged]"
+  - "Data quality and availability challenges are acknowledged but not systematically analyzed."
+  - "The paper does not discuss evaluation methodologies for user-facing system components. [unacknowledged]"
 remember_this:
-  - "LSTM captures long-term spending patterns but is opaque and data-hungry."
-  - "Isolation Forest is efficient for unsupervised anomaly detection without labels."
-  - "Hybrid ARIMA-LSTM models balance linear and non-linear forecasting strengths."
-  - "Explainability is essential for user trust in PFMS anomaly detection."
+  - "Machine learning enables PFMS transition from descriptive reporting to adaptive decision support."
+  - "Hybrid ARIMA-LSTM frameworks balance linear trend modeling with non-linear behavioral flexibility."
+  - "Unsupervised anomaly detection is preferred in PFMS due to the absence of labeled spending data."
+  - "Explainable AI is essential for maintaining user trust in complex financial systems."
+  - "Research fragmentation across PFMS components justifies Odin's integrated architecture."
 ```

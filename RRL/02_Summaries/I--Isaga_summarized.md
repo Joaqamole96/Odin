@@ -1,74 +1,88 @@
 ```yaml
-paper_id: "10.20525/ijrbs.v14i7.4383"
-designation: "international"
-title: "Financial literacy and financial wellbeing of youth entrepreneurs: The mediating role of financial behaviour"
-authors: "Isaga, N."
+paper_id: 10.20525/ijrbs.v14i7.4383
+designation: international
+title: Financial literacy and financial wellbeing of youth entrepreneurs: The mediating role of financial behaviour
+authors: Isaga, N.
 year: 2025
-venue: "International Journal of Research in Business and Social Science"
+venue: International Journal of Research in Business and Social Science
 odin_topics:
-  - "5.A"
-  - "7.A"
-  - "13.A"
-  - "13.B"
-shorthand_tags:
-  - "/financial-behavioral-profiles"
-  - "/budgeting-strategies"
-  - "/savings-goal-management"
-  - "/debt-management"
-tldr: "Financial literacy positively affects financial well-being of youth entrepreneurs in Tanzania, with financial behaviour partially mediating this relationship."
-problem_and_motivation: "The relationship between financial literacy and financial well-being is well established, but the mediating role of financial behaviour among youth entrepreneurs in developing economies remains underexplored. Understanding this mediation is crucial for designing effective financial interventions. This study addresses that gap by focusing on Tanzanian youth entrepreneurs."
+  - 1.A
+  - 1.C
+  - 5.A
+  - 5.B
+  - 7.A
+  - 13.B
+tldr: Financial literacy positively affects financial well-being of youth entrepreneurs, with financial behaviour partially mediating this relationship.
+problem_and_motivation: Financial well-being among youth entrepreneurs in developing economies is critical yet understudied. The mechanisms linking financial literacy to financial well-being, particularly the role of financial behaviour, remain unclear.
 approach:
-  - "A cross-sectional design was used with 455 youth entrepreneurs in urban Tanzania."
-  - "Data were collected via structured questionnaires measuring financial literacy, financial behaviour, and financial well-being."
-  - "Structural Equation Modelling (SEM) was employed to test direct and indirect relationships."
+  - Data were collected from 455 youth entrepreneurs in urban Tanzania using structured questionnaires.
+  - The study employed a cross-sectional design and utilized Structural Equation Modelling (SEM) for analysis.
+  - The research model examined direct and indirect relationships between financial literacy, financial behaviour, and financial well-being.
+  - Financial behaviour was assessed as a mediating variable between financial literacy and financial well-being.
+  - The study draws on human capital theory and behavioural economics as theoretical frameworks.
 findings:
-  - "Financial literacy has a significant positive direct effect on financial well-being."
-  - "Financial literacy significantly influences financial behaviour."
-  - "Financial behaviour partially mediates the relationship between financial literacy and financial well-being."
+  - Financial literacy significantly and positively affects the financial well-being of youth entrepreneurs.
+  - Financial literacy significantly influences financial behaviour.
+  - Financial behaviour partially mediates the relationship between financial literacy and financial well-being.
 key_figures_tables:
   - "None."
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
-  - term: "SEM"
-    definition: "Structural Equation Modelling, a multivariate statistical analysis technique."
-  - term: "SDG"
-    definition: "Sustainable Development Goals, a UN framework for global development."
+  - term: Financial Well-Being
+    definition: A multidimensional construct reflecting objective indicators and subjective ability to manage finances and plan for the future.
+  - term: Financial Literacy
+    definition: The ability to understand, process, and apply financial information for effective decision-making.
+  - term: Financial Behaviour
+    definition: Daily financial practices including budgeting, saving, and debt management that apply financial knowledge.
+  - term: SEM
+    definition: Structural Equation Modelling, a statistical technique for analyzing structural relationships between variables.
 critical_citations:
-  - "[Lusardi & Messy, 2023] — Defines financial well-being as multidimensional."
-  - "[Lusardi & Mitchell, 2014] — Links financial literacy to positive outcomes."
+  - "[Lusardi & Mitchell, 2014] — Foundational work on financial literacy and behavior."
+  - "[Lusardi & Messy, 2023] — Links financial literacy to positive financial outcomes."
 relevance:
   topics:
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Demonstrates that financial behaviour mediates literacy and well-being."
-    - code: "7.A"
-      name: "Budgeting Strategies as Domain Knowledge"
-      justification: "Includes budgeting as a key financial behaviour affecting outcomes."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Savings behaviour is a component of the mediating variable."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Debt management behaviour is part of the mediation pathway."
-  contribution: "This paper provides empirical evidence that financial behaviour, including budgeting, saving, and debt management, partially mediates the effect of financial literacy on financial well-being. For Odin, this justifies the development of behavioral profiling modules (5.A) to capture user financial actions. It also supports the inclusion of budgeting strategy recommendations (7.A) and features for savings goal management (13.A) and debt management (13.B). The findings emphasize that knowledge alone is insufficient; Odin must encourage positive financial behaviours."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Provides context on youth entrepreneurs in developing economies, analogous to young professionals.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: medium
+      justification: Directly investigates financial behaviour and its link to financial well-being.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: The study's core focus is on financial behaviour and its mediating role, informing profile design.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: medium
+      justification: Findings on behaviour as a mediator support the need for dynamic profiles based on behaviour.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Emphasizes budgeting as a key financial behaviour linked to positive outcomes.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: low
+      justification: Mentions debt management as part of financial behaviour, providing secondary support.
+  contribution: This paper provides empirical evidence that financial behaviour mediates the link between financial literacy and financial well-being, which can inform Odin's behavioral profiling module. It justifies the need for Odin to track not just financial knowledge but also users' actual budgeting, saving, and debt management practices. The findings support the design of Odin's engagement mechanisms, as reinforcing positive behavior is shown to improve financial outcomes. This contributes to Odin's evaluation framework by highlighting behavioural metrics as key indicators of success. The study also reinforces the importance of educational content within Odin, linking knowledge to practice.
   directly_justifies:
-    - "Financial literacy significantly improves financial behaviour among youth entrepreneurs."
     - "Financial behaviour partially mediates the relationship between financial literacy and financial well-being."
-    - "Improving financial behaviour leads to better financial well-being beyond the effect of literacy alone."
+    - "Consistent application of financial knowledge through daily practices leads to improved financial outcomes."
+    - "Financial literacy is foundational for enhancing economic decision-making among youth."
   limits:
-    - "Cross-sectional design prevents causal inference."
-    - "Sample limited to urban Tanzania, limiting generalizability to Filipino young professionals."
-    - "Self-reported financial behaviour may be subject to social desirability bias."
-  mapping_rationale: "The paper focuses on financial literacy, behaviour, and well-being. Relevant functional domains for Odin include behavioral profiling (since financial behaviour is a key construct), budgeting strategies (budgeting is a behaviour studied), and savings/debt management (both are specific behaviours measured). Topics explicitly mentioning 'Filipino' (1.A, 1.B, 1.C) were rejected because the sample is Tanzanian. No algorithmic or forecasting topics (6.A, 6.B, etc.) apply. Anomaly detection, mobile design, privacy, retention, and evaluation are not addressed. Borderline case: 5.A is included because financial behaviour is central to profiling, though the paper does not define distinct profiles."
+    - "Cross-sectional design limits causal inferences about behaviour and well-being."
+    - "Sample limited to urban areas in Tanzania may not generalize to other contexts." [unacknowledged]
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was conducted. The paper was flagged as relevant to the 'Behavioral Profiling & Classification' domain (codes 5.A, 5.B) due to its focus on financial behaviour as a mediator, with 5.A assigned high relevance and 5.B medium. It also touches on 'Filipino Cultural Context' (codes 1.A, 1.C) through its study of youth entrepreneurs, with 1.A contextual and 1.C medium. 'Budget Recommendation' (7.A) and 'Savings & Debt Management' (13.B) were assigned medium and low relevance respectively, as budgeting and debt management are key behaviours discussed. Domains such as 'Expense Categorization', 'Spending Forecasting', 'Anomaly Detection', and 'Mobile-First Design' were considered and rejected as the paper does not address these technical or design aspects. The paper's overall relevance to Odin is moderate, providing theoretical and empirical justification for the importance of behavioural tracking and reinforcement.
 limitations:
-  - "Cross-sectional design cannot establish causality."
-  - "Sample from Tanzania only, not representative of Filipino young professionals. [unacknowledged]"
-  - "No objective measures of financial behaviour; reliance on self-reports."
+  - "Cross-sectional design limits causal inferences about behaviour and well-being."
+  - "Self-reported data may introduce response bias."
+  - "Focus on Tanzanian youth entrepreneurs may limit generalizability to Filipino young professionals." [unacknowledged]
 remember_this:
-  - "Financial literacy alone is insufficient without positive financial behaviour."
-  - "Budgeting, saving, and debt management mediate financial well-being."
-  - "Partial mediation means literacy has both direct and indirect effects."
-  - "Interventions should target behaviour change, not just knowledge."
+  - "Financial literacy alone is insufficient without consistent financial behaviour."
+  - "Behaviour mediates the link between financial knowledge and well-being."
+  - "Budgeting, saving, and debt management are key practices linking literacy to outcomes."
+  - "Partial mediation confirms knowledge and practice together enhance financial well-being."
 ```

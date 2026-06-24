@@ -1,77 +1,93 @@
 ```yaml
-paper_id: "10.32996/ijaas.2023.2.2.1"
-designation: "local"
-title: "Passionate Online Shoppers"
-authors: "Pagobo, M. C. P.; Sumicad, R. P.; Arciete, D. C.; Salve, J. D.; Marabiles, K.; Rivera, C."
+paper_id: 10.32996/ijaas.2023.2.2.1
+designation: local
+title: Passionate Online Shoppers
+authors: Pagobo, M. C. P.; Sumicad, R. P.; Arciete, D. C.; Salve, J. D.; Marabiles, K.; Rivera, C.
 year: 2023
-venue: "International Journal of Asian and African Studies"
+venue: International Journal of Asian and African Studies
 odin_topics:
-  - "1.C"
-  - "13.A"
-  - "13.B"
-shorthand_tags:
-  - "#financial-behavior"
-  - "#savings-management"
-  - "#debt-management"
-tldr: "Online shopping addiction among Filipino college students is driven by psychological, marketing, social, and convenience factors, leading to overspending, financial problems, and distraction, with self-assessment, budgeting, and app uninstallation as coping mechanisms."
-problem_and_motivation: "The rapid growth of e-commerce and promotional offers have increased online shopping addiction, yet research on passionate online shoppers' experiences, challenges, and coping strategies among Filipino college students remains limited. Understanding these factors is important for addressing financial and psychological consequences."
+  - 5.A
+  - 5.B
+  - 5.C
+  - 2.A
+  - 9.A
+  - 9.B
+tldr: A qualitative study on Filipino college students identifies psychological, marketing, and social factors driving online shopping addiction, leading to overspending, financial problems, and distraction, with self-assessment, budgeting, and app uninstallation as coping mechanisms.
+problem_and_motivation: Compulsive online shopping is a growing concern, yet research on the lived experiences of passionate online shoppers in the Philippine context, specifically among college students, remains limited. This gap is significant as it hinders the development of targeted interventions for a demographic highly susceptible to e-commerce platforms.
 approach:
-  - "Qualitative phenomenological study with 16 Filipino college students from University of Cebu Main Campus."
-  - "Participants screened using Bergen Shopping Addiction Scale (BSAS) to identify passionate online shoppers."
-  - "Semi-structured open-ended interviews conducted face-to-face after obtaining informed consent."
-  - "Data analyzed using Brikci and Green's thematic approach: coding, significant statements, cluster themes, emergent themes."
+  - A phenomenological qualitative research design was used to explore the experiences of 16 passionate online shoppers.
+  - Participants were selected using purposive sampling, identified via the Bergen Shopping Addiction Scale (BSAS).
+  - Data was gathered through face-to-face interviews using semi-structured, open-ended questions.
+  - Thematic analysis, following Brikci and Green's approach, was applied to transcribe and code the data.
+  - The analysis generated 160 significant statements which were grouped into 19 cluster themes and 10 emergent themes.
 findings:
-  - "Four influencing factor themes: psychological (motivation, attitude, positive emotions, perception, escape), marketing (appearance, promotional offers), social (family, friends), and convenience."
-  - "Three challenge themes: overspending, financial problems (including debt and borrowing), and distraction from duties."
-  - "Three coping mechanism themes: self-assessment (checking emotions and deservingness), budgeting (separating money for shopping vs savings), and temporarily uninstalling shopping apps."
-  - "Participants experienced regret, worry, and stress after online purchases, consistent with prior research."
+  - "num: 5% of the world's population is affected by shopping addiction, with global e-commerce sales exceeding 4.2 trillion dollars."
+  - "num: Shopee garnered 73.65 million monthly site visits, while Lazada had 39.43 million in the Philippines."
+  - Psychological factors including motivation, positive emotions, perception, and escape mechanisms influence online shopping behavior.
+  - Marketing factors such as product appearance and promotional offers like discounts and free shipping are primary drivers.
+  - Social factors, particularly influence from friends and family, play a significant role in purchasing decisions.
+  - Convenience is a key factor, making online shopping preferable to physical stores for these students.
+  - The primary challenges of being a passionate online shopper are overspending, resulting financial problems, and distraction from responsibilities.
+  - Coping mechanisms include self-assessment to control impulses, budgeting finances, and temporarily uninstalling shopping apps.
+  - The participants often experience negative feelings like regret and worry after making purchases.
+  - Customers rely heavily on product reviews and ratings to form perceptions and make purchasing decisions.
 key_figures_tables:
-  - "None."
+  - "Table 1: Thematic Analysis Results → Shows 10 emergent themes across 3 overarching categories."
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
-  - term: "Passionate online shopper"
-    definition: "Consumer characterized by uncontrollable purchasing urge affecting life aspects (Andreassen et al., 2015)."
-  - term: "BSAS"
-    definition: "Bergen Shopping Addiction Scale, a 28-item screening test for shopping addiction."
-  - term: "Impulse buying"
-    definition: "Unplanned purchase driven by external stimuli such as visuals or promotions (Stern, 1962)."
+  - term: "Passionate Online Shopper"
+    definition: "A consumer exhibiting an uncontrollable purchasing urge, characterized by repetitive, excessive, and impulsive buying behavior that can lead to psychological, social, and financial consequences."
+  - term: "Compulsive Buying"
+    definition: "A chronic, recurrent purchasing behavior that occurs as a response to unfavorable events or sentiments, often used as an escape mechanism."
 critical_citations:
-  - "[Howard & Sheth, 1969] — Foundation for psychological, social, marketing factors."
-  - "[Stern, 1962] — Explains impulse buying categories driving purchases."
-  - "[Baumeister & Vohs, 2007] — Escape theory for shopping as stress relief."
-  - "[Ajzen, 1991] — Attitude and intention predict online shopping behavior."
+  - "[Sheth, 1969] — Foundation for psychological, social, and marketing influences."
+  - "[Stern, 1962] — Explains impulse buying triggered by external forces."
+  - "[Baumeister & Vohs, 2007] — Supports shopping as an escape from stress."
+  - "[Ajzen, 1991] — Links positive attitude to purchase intention and behavior."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Paper describes online shopping spending behavior, motivations, and financial consequences among Filipino young adults."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Participants use budgeting and savings separation as coping mechanisms for overspending."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Paper documents debt from borrowing money to pay for online purchases due to excessive spending."
-  contribution: "This paper informs Odin's spending forecasting module by identifying psychological and social triggers for unplanned purchases. It justifies anomaly detection for overspending patterns linked to promotional events. The budgeting coping strategy supports Odin's budget recommendation feature that encourages users to separate savings. The findings on debt from borrowing validate Odin's debt management alerts for users who consistently overspend."
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: "This paper profiles passionate online shoppers, identifying key behavioral drivers and triggers like positive emotions and social influence, which can inform behavioral profiling in a PFMS."
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: medium
+      justification: "The identified factors (e.g., overspending, reliance on reviews) can serve as initial data points for building a new user's spending behavior profile, helping to address the cold-start problem."
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: "The study's qualitative findings on psychological and social factors provide a basis for defining features (e.g., impulse buying tendency, social susceptibility) that could classify users into financial behavior profiles."
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: low
+      justification: "The study highlights the popularity of Shopee and Lazada in the Philippines and the role of 'envy' (masuya) in purchasing, which are culturally specific drivers of spending behavior."
+    - code: 9.A
+      name: Mobile‑First Design Principles and Rationale
+      relevance: contextual
+      justification: "Discusses app usage (Shopee, Shein) and their features (live selling, ads) that influence behavior, providing context for how PFMS design can be tailored on mobile platforms."
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: contextual
+      justification: "The use of mobile apps for shopping and the coping mechanism of uninstalling them demonstrates the powerful role of mobile UX in shaping and regulating financial behavior."
+  contribution: "This paper directly justifies Odin's behavioral profiling module by identifying key psychological and social drivers of spending. It supports the need for a budgeting module by highlighting user struggles with overspending. The findings on distraction and app usage inform Odin's mobile-first engagement strategies. The paper validates the design of an alert system for overspending and the inclusion of social features that influence user behavior."
   directly_justifies:
-    - "Psychological factors like positive emotions and escape from stress drive online spending among Filipino young adults."
-    - "Promotional offers (discounts, free shipping) trigger impulse purchases and overspending."
-    - "Passionate online shoppers experience financial problems including borrowing money to pay for orders."
-    - "Self-assessment of emotions before purchasing helps reduce impulsive online spending."
-  limits:
-    - "Small sample size (16 participants) from one university limits generalizability. [unacknowledged]"
-    - "Qualitative design without quantitative validation of coping effectiveness. [unacknowledged]"
-    - "Focus on students may not generalize to working young professionals. [unacknowledged]"
-  mapping_rationale: "This paper examines online shopping addiction among Filipino college students, not PFMS directly. However, it provides citeable claims about financial behavior (1.C) through spending patterns and motivations. The coping mechanisms include budgeting and saving separation, relevant to savings goal management (13.A). Documented debt from borrowing to pay for purchases directly supports debt management (13.B). No other Odin domains (behavioral profiling, forecasting, anomaly detection, categorization, UX, privacy, retention, evaluation) are addressed because the paper is qualitative and focused on addiction psychology rather than algorithmic or system design."
+    - "A PFMS should incorporate behavioral profiling based on psychological, social, and marketing influences to understand user spending drivers."
+    - "Budgeting and self-assessment tools are essential features to help users manage overspending and financial problems."
+    - "Mobile UX design can both drive (via promotions) and mitigate (via app uninstallation) problematic spending behavior."
+  limits: "None identified."
+  mapping_rationale: "A systematic scan of all 12 functional domains was performed. The paper was flagged as relevant for the Behavioral Profiling & Classification domain, specifically codes 5.A, 5.B, and 5.C, with medium relevance because it provides direct qualitative evidence for the drivers of spending behavior and suggests initial profile features. The Filipino Cultural Context domain was marked as low relevance for 2.A due to the cultural context of Shopee/Lazada and the concept of 'masuya'. The Mobile-First Design domain was deemed contextual for 9.A and 9.B as it discusses app usage and distraction, informing UX considerations. Domains like Expense Categorization, Spending Forecasting, and Data Privacy were rejected as they are not addressed. Borderline cases like seasonal spending (2.B) were rejected as the paper does not discuss cyclical patterns. The overall relevance is moderate, providing a foundational understanding of user behavior but lacking algorithmic or system design specifics."
 limitations:
-  - "Small sample size (16 participants) from one university limits generalizability. [unacknowledged]"
-  - "Qualitative design without quantitative validation of coping effectiveness. [unacknowledged]"
-  - "Contradictory statement about gender focus: claims both genders but conclusion says exclusively female. [acknowledged in paper as limitation]"
-  - "Does not examine working professionals, only students. [acknowledged as future research direction]"
+  - "The study focused exclusively on college students, limiting generalizability to other demographics like working professionals. [unacknowledged]"
+  - "The sample comprised only 16 participants from a single university in Cebu, which may not represent the entire population of Filipino online shoppers."
+  - "The research relied on self-reported data, which is subject to social desirability and recall bias."
+  - "The study did not investigate the long-term consequences of online shopping addiction, such as chronic debt."
 remember_this:
-  - "Promotional offers triple daily shopping frequency among passionate online shoppers."
-  - "Sixteen Filipino college students reported overspending and debt from online shopping addiction."
-  - "Self-assessment before purchasing reduces impulsive online spending."
-  - "Uninstalling shopping apps temporarily helps break the cycle of distraction."
+  - "Psychological and marketing factors are primary drivers of compulsive online shopping behavior."
+  - "Online shopping addiction leads to overspending, financial problems, and distraction from daily duties."
+  - "Self-assessment, budgeting, and app uninstallation are effective coping mechanisms for shoppers."
+  - "User reviews and promotional offers heavily influence the purchasing decisions of passionate online shoppers."
+  - "5% of the global population is affected by shopping addiction, underscoring a widespread behavioral issue."
 ```

@@ -1,87 +1,109 @@
 ```yaml
-paper_id: "8c4a3b2d-1e5f-4a6b-9d7c-8e0f1a2b3c4d"
-designation: "local"
-title: "NURSING CAREER TOWARDS FINANCIAL INDEPENDENCE"
-authors: "Nduka, P.; Benedicto, E.G."
+paper_id: 67cfa1c1-53c3-52e5-a18b-7e1b0aa936ce
+designation: local
+title: Nursing Career Towards Financial Independence
+authors: Nduka, P.; Benedicto, E.G.
 year: 2026
-venue: "IJRDO - Journal Of Health Sciences And Nursing"
+venue: IJRDO - Journal of Health Sciences and Nursing
 odin_topics:
-  - "1.C"
-  - "13.A"
-  - "13.B"
-shorthand_tags:
-  - "/fin-behavior-ph"
-  - "/savings"
-  - "/debt"
-tldr: "Nurses in the Philippines experience a mismatch between income and expenses, with most unable to save, perceiving financial independence as essential for personal security, job satisfaction, and family obligations."
-problem_and_motivation: "Filipino nurses face financial insecurity due to low wages and rising living costs, yet limited research focuses specifically on their financial independence. This gap affects workforce retention and healthcare system stability."
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 4.A
+  - 4.B
+  - 5.A
+  - 10.A
+  - 11.A
+tldr: Nurses in the Philippines perceive financial independence as essential for security and motivation, yet income-expense mismatches and family breadwinner roles severely limit savings and long-term planning.
+problem_and_motivation: Filipino nurses face a critical gap between essential professional roles and inadequate compensation, which undermines financial stability. Rising living costs and heavy family obligations further strain their economic resilience, yet institutional support mechanisms are largely absent. This study addresses the lack of focused research on nursing as a pathway to financial independence in the Philippine context.
 approach:
-  - "Qualitative phenomenological study conducted with 28 registered nurses from three government Level III specialty hospitals in Metro Manila."
-  - "Data collected via semi-structured interviews lasting 40-60 minutes, audio-recorded and transcribed verbatim."
-  - "Interview guide validated using Aiken’s V (0.8 to 1.0), ensuring content validity."
-  - "Thematic analysis using Colaizzi’s (1978) method to identify themes from lived experiences."
-  - "Proposed Nurse Financial Empowerment and Resilience Program (N-FERP) based on four phases: financial literacy, supplementary income, institutional support, and affordable financial services."
+  - A qualitative phenomenological design was used to explore the lived financial experiences of 28 registered nurses in Metro Manila.
+  - Data were collected through one-on-one semi-structured interviews lasting 40-60 minutes, with a validated instrument achieving Aiken's V scores of 0.8 to 1.0.
+  - Participants were purposively sampled from three government-owned Level III specialty hospitals, ensuring diversity in demographics and financial roles.
+  - Thematic analysis was conducted using Colaizzi's phenomenological method to extract themes from verbatim transcripts.
+  - The study adhered to the Philippines' Data Privacy Act of 2012 (RA 10173) for data storage and destruction.
 findings:
-  - "num: 64.29% of nurse participants are female, 35.71% male."
-  - "num: 53.57% aged 33-39 years, 28.57% aged 26-32 years."
-  - "num: 50.0% hold government salary grades 2-6, only 17.85% reach grades 7-10."
-  - "num: 53.57% have master’s degrees, 10.71% doctorates, but financial returns remain limited."
-  - "num: 53.57% support four or more dependents, and 89.29% are family breadwinners."
-  - "Nurses perceive financial independence as essential for personal security, professional motivation, family support, career development, stress reduction, autonomy, and retirement planning."
-  - "Single nurses living alone cover basic daily needs but cannot save for long-term security."
-  - "Single nurses as adult breadwinners experience greater financial strain and psychological stress due to dependent care."
-  - "Majority of participants report monthly deficits, indicating limited savings capacity and financial vulnerability."
-  - "Proposed N-FERP includes financial literacy workshops, regulated supplementary income platforms, cooperative savings and loan schemes, and mentorship networks."
+  - "num: 53.57% of nurses were in the 33-39 age bracket, while 50% held lower government salary grades (SG 2-6)."
+  - "num: 53.57% of nurses held master's degrees and 10.71% held doctorates, indicating high educational attainment despite wage stagnation."
+  - "num: 89.29% of participants identified as family breadwinners, and 53.57% supported four or more dependents."
+  - Seven key themes emerged regarding the importance of financial independence: personal security, professional motivation, family support, career development, stress reduction, empowerment, and retirement planning.
+  - A clear income-expense mismatch was identified, with most nurses experiencing monthly deficits and limited savings capacity.
+  - Single nurses living alone can cover basic needs but struggle to save, while single breadwinners face greater financial strain and psychological stress.
+  - The proposed Nurse Financial Empowerment and Resilience Program (N-FERP) is structured around financial literacy, supplementary income, institutional support, and access to affordable financial services.
 key_figures_tables:
-  - "Table 1: Demographic profile of 28 nurse participants → workforce is predominantly female, young to mid-career, low salary grades, highly educated, with many dependents."
-  - "Figure 3: Nurse Financial Empowerment and Resilience Program (N-FERP) → four-phase framework combining education, income, institutional support, and financial services."
+  - "Table 1: Demographic profile of 28 nurse-participants → Workforce is predominantly female, young to middle-aged, and highly educated but in lower salary grades."
+  - "Figure 3: Nurse Financial Empowerment and Resilience Program (N-FERP) framework → Integrated strategy combining education, income, support, and financial tools."
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "N-FERP"
-    definition: "Nurse Financial Empowerment and Resilience Program, a proposed intervention with four phases to improve nurses' financial independence."
-  - term: "SG"
-    definition: "Government salary grade, a numeric level determining public sector pay in the Philippines."
-  - term: "Colaizzi's method"
-    definition: "A seven-step phenomenological analysis procedure for interpreting qualitative interview data."
+  - term: N-FERP
+    definition: Nurse Financial Empowerment and Resilience Program, a proposed framework for improving nurses' financial independence.
+  - term: PFMS
+    definition: Personal Financial Management System, a digital tool for managing personal finances.
 critical_citations:
-  - "[Lopez & Malagum, 2024] — Documents compensation mismatch for Filipino nurses."
-  - "[Ortiga & Macabasag, 2021] — Details rising cost of living in Metro Manila."
-  - "[Cubelo et al., 2024] — Links financial insecurity to nurse migration and turnover."
-  - "[Gerzon & Lopena, 2023] — Associates financial security with psychological assurance among Filipino nurses."
+  - "[Lopez & Malagum, 2024] — Compensation mismatch with nursing work complexity."
+  - "[Ortiga & Macabasag, 2021] — Rising cost of living in urban centers like Metro Manila."
+  - "[Cubelo et al., 2024] — Financial insecurity linked to migration and turnover."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Paper details income-expense mismatches, savings deficits, and financial decision-making among Filipino nurses, a professional cohort."
-    - code: "13.A"
-      name: "Savings Goal Management"
-      justification: "Finds most nurses cannot save for emergencies or retirement, directly relevant to savings goal challenges."
-    - code: "13.B"
-      name: "Debt Management"
-      justification: "Proposed program includes debt management strategies; participants describe financial strain from deficits."
-  contribution: "This paper provides empirical evidence on the financial behavior of Filipino professional nurses, including their savings deficits and dependency burdens. For Odin, it validates the need for savings goal management and debt tracking modules tailored to users with multiple dependents. The qualitative themes on financial stress and autonomy directly inform user retention strategies that address economic insecurity. The proposed N-FERP framework offers design inspiration for in-app financial literacy content and cooperative savings features."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: Focuses on Filipino nurses, a key subset of Filipino young professionals.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: Provides detailed data on income, salary grades, and living costs for nurses.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Explores nurses' financial practices, including budgeting and saving behaviors.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Discusses extended-family financial obligations, a culturally specific practice.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Contextualizes the lack of institutional financial support for nurses.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Identifies gaps in compensation and institutional financial programs for nurses.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Differentiates financial profiles of single nurses living alone versus breadwinners.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Mentions compliance with the Philippines' Data Privacy Act (RA 10173) in the methodology.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: low
+      justification: Tangentially related through the proposal of financial literacy workshops.
+  contribution: This paper contributes to Odin's design by establishing the foundational financial realities and constraints of Filipino nurses as a target user demographic. It validates the need for modules that account for income-expense mismatches, culturally embedded family obligations, and distinct financial profiles. The findings directly inform Odin's expense categorization and behavioral profiling by highlighting the socio-economic factors that shape spending behaviors. The proposed N-FERP framework offers a reference point for Odin's budget recommendation and savings management functionalities.
   directly_justifies:
-    - "Single nurses living alone can cover basic needs but cannot accumulate savings for long-term security."
-    - "Financial independence reduces work-related stress and improves job satisfaction among professionals."
-    - "Nurses with four or more dependents experience monthly deficits and psychological strain."
-    - "Structured financial literacy programs and accessible savings schemes are needed to improve economic resilience."
+    - "The nurse workforce shows a clear income-expense mismatch, with monthly salaries often below living costs."
+    - "Single nurses serving as adult breadwinners experience heightened financial strain and psychological stress."
+    - "Structured financial literacy programs are a key strategy for improving financial resilience."
   limits:
-    - "Sample limited to 28 nurses from three Metro Manila hospitals, not representative of all Filipino professionals."
-    - "Qualitative design does not permit statistical generalization or causal inference."
-    - "Findings focus on nurses; applicability to other young professional demographics requires validation. [unacknowledged]"
-    - "Paper does not compare financial independence across different income levels or regions. [unacknowledged]"
-  mapping_rationale: "The paper was screened against Odin’s functional domains. It provides citeable claims about financial behavior (Domain: Behavioral profiling & classification, topic 1.C) because it describes income-expense mismatches, savings patterns, and financial stress among Filipino nurses. It also addresses savings and debt management (Domains: Savings & debt management, topics 13.A and 13.B) through findings on inability to save and proposed debt management strategies. Topics related to algorithmic modules (forecasting, anomaly detection, budget recommendation) were rejected because the paper contains no predictive models or computational methods. Behavioral profiling (5.A, 5.B, 5.C) was rejected as the paper does not classify users into financial profiles. Mobile-first design and data privacy topics were irrelevant. Borderline case: topic 7.A (Budgeting Strategies) appears in the proposed program but is not a central finding, so it was excluded."
+    - "Study is confined to three government hospitals in Metro Manila, limiting generalizability to private or provincial settings."
+    - "The qualitative design provides depth but does not quantify the prevalence of identified financial challenges."
+    - "The proposed N-FERP framework has not been empirically tested for effectiveness."
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was performed. Domains flagged as relevant include Filipino Cultural Context (2.A, medium), Existing Systems & Gaps (4.A, contextual; 4.B, high), Behavioral Profiling (5.A, medium), and Data Privacy (10.A, contextual). High relevance was assigned to topics 1.A, 1.B, 1.C, and 4.B due to the paper's detailed demographic and financial analysis. Medium relevance was assigned to 2.A for culturally specific practices and 5.A for behavioral profiling. Low relevance was assigned to 11.A for tangential mention of engagement. Contextual relevance was assigned to 4.A and 10.A as they provide background without actionable design insights. Domains such as Forecasting, Anomaly Detection, and Mobile Design were considered and rejected as the paper does not address computational or algorithmic aspects. The overall relevance is high for understanding Odin's target user financial behavior and systemic gaps.
 limitations:
-  - "Small sample size (n=28) limits generalizability."
-  - "No longitudinal data; financial status reported cross-sectionally."
-  - "Potential social desirability bias in self-reported financial perceptions. [unacknowledged]"
-  - "Does not quantify the exact income-expense gap or savings deficit amounts. [unacknowledged]"
+  - "The study sample size of 28 is sufficient for qualitative saturation but not for statistical generalization."
+  - "The study only included nurses from government hospitals, thus findings may not apply to private-sector nurses."
+  - "The financial data are self-reported and may be subject to social desirability bias."
+  - "No longitudinal data are provided to assess changes in financial status over time. [unacknowledged]"
+  - "The study does not compare nurses with other professional groups to isolate occupation-specific financial challenges. [unacknowledged]"
 remember_this:
-  - "64.29% of nurse participants are female."
-  - "53.57% support four or more dependents."
-  - "Most nurses cannot save due to monthly deficits."
-  - "Financial independence reduces work stress and improves job satisfaction."
-  - "Single breadwinner nurses face greater strain than those living alone."
+  - "Nurses perceive financial independence as essential for personal security, professional motivation, and family support."
+  - "A clear income-expense mismatch exists, with most nurses experiencing monthly deficits."
+  - "Single breadwinner nurses face greater financial strain and limited savings compared to those living alone."
+  - "Structured financial literacy, supplementary income, and institutional support are key strategies for empowerment."
+  - "The proposed N-FERP framework aims to enhance economic resilience and reduce nurse vulnerability."
 ```

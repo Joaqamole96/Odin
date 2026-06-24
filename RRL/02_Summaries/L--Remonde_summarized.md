@@ -1,87 +1,92 @@
 ```yaml
-paper_id: f47ac10b-58cc-4372-a567-0e02b2c3d479
-designation: local
-title: The Effectiveness of Financial Literacy Program on Financial Management Skills of Millennial Teachers
-authors: Remonde, E. A.
+paper_id: "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+designation: "local"
+title: "The Effectiveness of Financial Literacy Program on Financial Management Skills of Millennial Teachers"
+authors: "Remonde, E. A."
 year: 2025
-venue: Slongan Multidisciplinary Research Journal (SMRJ)
+venue: "Slongan Multidisciplinary Research Journal"
 odin_topics:
-  - 1.C
-  - 7.A
-  - 13.A
-  - 13.B
-shorthand_tags:
-  - /filipino-young-professionals
-  - /budgeting-strategies
-  - /savings-goal-management
-  - /debt-management
-tldr: A financial literacy program significantly improved financial management skills of millennial teachers in Digos City, increasing overall proficiency from approaching proficient to advanced.
-problem_and_motivation: Millennial teachers lack basic financial literacy, leading to difficulties in budgeting, saving, investing, and debt management. Little research addresses their specific financial challenges in the local context of Digos City. This study assesses a targeted financial literacy program to equip them with necessary skills.
+  - "1.A"
+  - "1.C"
+  - "13.A"
+  - "13.B"
+  - "12.A"
+  - "2.A"
+tldr: "Financial literacy program significantly improves financial management skills of millennial teachers across savings, budgeting, investing, debt, emergency funds, insurance, loans, expenditure, tax, and retirement."
+problem_and_motivation: "Millennial teachers often lack financial literacy, leading to financial stress and poor decision-making. Existing research does not address the specific challenges of Senior High School teachers in Digos City. A tailored financial literacy program is needed to equip them with essential financial management skills."
 approach:
-  - A descriptive pre-experimental design with pre-test and post-test surveys was used.
-  - Participants were 36 millennial teachers from Senior High Schools in Digos City, selected via purposive sampling.
-  - The financial literacy program covered ten areas: savings, budgeting, investing, debt management, emergency funds, insurance, loan management, expenditure management, tax planning, and retirement planning.
-  - A validated 47-item multiple-choice questionnaire measured proficiency before and after the program.
-  - Paired samples t-test was used to determine significant differences.
+  - "Pre-experimental design with pre-test and post-test assessments on 36 purposively selected millennial teachers."
+  - "Intervention comprised a Financial Literacy Program with ten modules covering savings, budgeting, investing, debt, emergency funds, insurance, loans, expenditure, tax, and retirement planning."
+  - "Data collected via validated multiple-choice survey questionnaires administered before and after the program."
+  - "Statistical analysis employed mean, standard deviation, and paired samples t-test to compare pre-test and post-test scores."
 findings:
-  - Pre-test overall mean score was 32.22 (approaching proficient), with lowest in investing skill (3.14).
-  - Post-test overall mean score increased to 43.19 (advanced), with all areas reaching advanced level.
-  - num: Paired t-test showed a statistically significant improvement (p < .001).
-  - Debt management had the highest post-test mean (4.00) and investing skill the lowest (4.28) among advanced scores.
+  - "num: Pre-test overall mean score was 32.22 (approaching proficient), and post-test mean rose to 43.19 (advanced)."
+  - "num: Paired samples t-test yielded a significance value of .000, indicating a statistically significant improvement (p < .05)."
+  - "All ten financial management areas showed post-test mean scores in the 'Advance' range, with retirement planning scoring highest (4.75) and investing lowest (4.28)."
+  - "Emergency funds had the highest pre-test mean (3.53), while investing had the lowest (3.14), both approaching proficient or developing."
 key_figures_tables:
-  - Table 1: Pre-test scores across ten financial areas → Baseline shows approaching proficient overall with investing lowest.
-  - Table 2: Post-test scores → All areas advanced, significant gains from pre-test.
-  - Table 3: Paired t-test results → Significant difference (p=.000) confirms program effectiveness.
+  - "Table 1: Pre-test mean scores by financial skill → baseline shows approaching proficiency overall, with gaps in investing and tax planning."
+  - "Table 2: Post-test mean scores by financial skill → all skills advanced, indicating mastery across all areas."
+  - "Table 3: Comparison of pre- and post-test means → t-test confirms significant improvement with p < .001."
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
-  - term: Millennial
-    definition: Individuals born from early 1980s to mid-1990s.
-  - term: Financial literacy program
-    definition: Structured intervention teaching financial concepts and skills.
-  - term: Pre-experimental design
-    definition: Research design measuring changes before and after intervention without control group.
+  - term: "Financial Literacy"
+    definition: "Knowledge and skills to manage personal finances and make sound financial decisions."
+  - term: "Millennial"
+    definition: "Individuals born from the early 1980s to the mid-1990s."
+  - term: "Pre-experimental design"
+    definition: "Research design measuring changes before and after intervention without a control group."
 critical_citations:
-  - "[Lusardi & Mitchell, 2014] — Foundational work on financial literacy's economic importance."
-  - "[Miraj et al., 2023] — Showed effectiveness of financial literacy programs for millennials in Pakistan."
-  - "[Schindler & Cardona, 2023] — Demonstrated improvements in teachers' financial knowledge post-program."
+  - "[Lusardi and Mitchell, 2014] — foundational framework for financial literacy importance."
+  - "[Miraj et al., 2023] — evidence of program effectiveness in similar context."
+  - "[Wagner, 2015] — highlights millennial financial challenges."
 relevance:
   topics:
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      justification: Studies financial management skills of millennial teachers in the Philippines.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      justification: Program improved budgeting skills, relevant for budget recommendation.
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      justification: Shows improvement in savings and emergency funds management.
-    - code: 13.B
-      name: Debt Management in PFMS
-      justification: Demonstrates debt management skill gains from financial education.
-  contribution: This paper justifies integrating financial literacy education within Odin's budgeting and savings modules. It provides evidence that structured financial training improves users' debt management and emergency fund planning. The findings support building educational components into a PFMS to enhance user financial capability. Odin can leverage these results to design in-app financial literacy content for young professionals.
+    - code: "1.A"
+      name: "Filipino Young Professionals as a Demographic"
+      relevance: "high"
+      justification: "Paper focuses on Filipino millennial teachers, a subset of young professionals."
+    - code: "1.C"
+      name: "Financial Behavior of Filipino Young Professionals"
+      relevance: "high"
+      justification: "Directly measures financial management behaviors including savings, budgeting, and investing."
+    - code: "13.A"
+      name: "Savings Goal Management in PFMS"
+      relevance: "high"
+      justification: "Covers savings, emergency funds, and retirement planning."
+    - code: "13.B"
+      name: "Debt Management in PFMS"
+      relevance: "high"
+      justification: "Includes debt and loan management as key assessment areas."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "medium"
+      justification: "Uses pre-test/post-test evaluation methodology applicable to system evaluation."
+    - code: "2.A"
+      name: "Culturally Specific Financial Practices"
+      relevance: "low"
+      justification: "Conducted in the Philippines but does not address specific cultural practices like paluwagan."
+  contribution: "The study validates the need for targeted financial education modules on savings, debt, and budgeting, which inform Odin's user onboarding and educational content. Its pre-experimental evaluation design offers a model for assessing Odin's intervention impact. Findings on baseline proficiency gaps support Odin's cold-start user profiling and personalized recommendation features. The significant improvement post-training underscores the potential of structured financial literacy programs to enhance user financial behaviors within Odin."
   directly_justifies:
-    - Financial literacy programs significantly improve budgeting skills among millennial teachers.
-    - Debt management skills increase substantially after targeted financial education.
-    - Investment knowledge remains the lowest area even after training, indicating need for focused content.
-    - Emergency fund management can be enhanced through structured financial interventions.
+    - "Millennial teachers in Digos City have approaching proficiency in financial management before training."
+    - "A structured financial literacy program can elevate financial management skills from approaching proficient to advanced."
+    - "Significant improvements were observed across all ten financial management areas after the program."
   limits:
-    - Pre-experimental design lacks a control group, limiting causal inference.
-    - Sample limited to 36 teachers in one city, reducing generalizability.
-    - Self-reported multiple-choice measures may not reflect real-world financial behaviors.
-    - Long-term retention of skills was not assessed. [unacknowledged]
-  mapping_rationale: The paper directly addresses financial behavior of Filipino young professionals (1.C) as it studies millennial teachers in Digos City. The intervention improved budgeting (7.A), savings (13.A), and debt management (13.B), making these topics relevant. Topics like anomaly detection (8.A) or mobile design (9.A) were rejected as the paper does not discuss them. Borderline case 4.B (limitations of existing systems) was considered but not selected because the paper focuses on program effectiveness rather than system gaps. The selected topics align with Odin's need for evidence on financial education efficacy.
+    - "No control group limits causal attribution of improvements solely to the program."
+    - "Self-reported survey data may introduce bias."
+    - "Findings are geographically limited to Digos City and may not generalize."
+    - "Long-term retention of skills was not assessed."
+  mapping_rationale: "Systematic scan across all 12 functional domains identified relevance in Filipino cultural context (Domain 2), financial behavior (Domain 1), savings and debt management (Domain 13), and evaluation frameworks (Domain 12). Topics 1.A and 1.C were flagged high due to direct focus on Filipino millennial teachers' financial behaviors. Topics 13.A and 13.B were flagged high because the paper measures savings, emergency funds, debt, and loan management – core modules in Odin. Topic 12.A was medium as the evaluation methodology (pre-test/post-test) could inform Odin's system evaluation but is not algorithm-specific. Topic 2.A was low because although Philippine-based, it does not explore culturally specific practices like paluwagan. Domains such as expense categorization (3), existing systems (4), behavioral profiling (5), forecasting (6), budget recommendation (7), anomaly detection (8), mobile-first (9), privacy (10), and retention (11) were rejected as the paper does not address algorithmic or system design aspects. Overall, the paper provides empirical evidence on financial literacy gaps and intervention effectiveness, which supports Odin's educational and behavioral modules."
 limitations:
-  - No control group, so improvements could be due to maturation or testing effects.
-  - Small sample size from a single geographic area limits external validity.
-  - Reliance on self-reported multiple-choice tests may not capture actual financial behavior change.
-  - Long-term follow-up was not conducted. [unacknowledged]
-  - Exclusion of qualitative depth limits understanding of how teachers apply skills. [unacknowledged]
+  - "Limited generalizability due to geographic and demographic constraints."
+  - "Self-reporting bias may affect accuracy of financial skill assessment. [unacknowledged]"
+  - "No control group; pre-experimental design weakens causal inference."
+  - "Short-term measurement; long-term effects not examined. [unacknowledged]"
 remember_this:
-  - Financial literacy program raised overall proficiency from 32.22 to 43.19.
-  - Investing skills remained the weakest area even after training.
-  - Debt management showed the highest post-test mean score.
-  - Targeted financial education effectively improves teacher financial management.
-  - Pre-experimental design limits causal claims but shows strong association.
+  - "Financial literacy program raised overall mean score from 32.22 to 43.19."
+  - "Millennial teachers showed greatest improvement in retirement planning and loan management."
+  - "Investing skill had the lowest post-test mean, indicating persistent need for investment education."
+  - "Significant p < .001 confirms program effectiveness across all financial domains."
 ```

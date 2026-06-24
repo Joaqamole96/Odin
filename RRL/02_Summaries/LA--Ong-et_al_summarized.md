@@ -1,88 +1,122 @@
 ```yaml
 paper_id: 10.3390/wevj14080227
-designation: algorithm-specific
+designation: international-algorithm-specific
 title: Purchasing Intentions Analysis of Hybrid Cars Using Random Forest Classifier and Deep Learning
 authors: Ong, A.K.S.; Cordova, L.N.Z.; Longanilla, F.A.B.; Caprecho, N.L.; Javier, R.A.V.; Borres, R.D.; German, J.D.
 year: 2023
 venue: World Electric Vehicle Journal
 odin_topics:
-  - 5.C
+  - 1.A
+  - 1.C
+  - 2.A
   - 6.A
+  - 6.B
+  - 7.A
+  - 8.A
+  - 12.A
   - 12.B
-shorthand_tags:
-  - /behavioral-classification
-  - /predictive-modeling
-  - /algorithm-evaluation
-tldr: Random forest classifier (94% accuracy) and deep learning neural network (96.6% accuracy) predict Filipino drivers’ hybrid car purchase intentions, with perceived environmental concern and attitude as top factors.
-problem_and_motivation: Hybrid cars are not widely adopted in the Philippines despite their environmental benefits. Limited studies use machine learning to analyze purchasing intentions for hybrid cars in developing countries. Understanding these intentions can guide automakers and support sustainable transportation goals.
+tldr: Filipino drivers' purchasing intentions for hybrid cars are predicted using random forest and deep learning, revealing that environmental concern, attitude, perceived control, and performance expectancy are the most influential factors.
+problem_and_motivation: Hybrid cars are essential for reducing carbon emissions, yet their adoption in developing countries like the Philippines remains low. There is a need to understand the behavioral factors driving purchasing intentions to support sustainable transportation transitions.
 approach:
-  - Surveyed 1048 Filipino drivers with a driver’s license using convenience and snowball sampling.
-  - Adapted questionnaire from prior hybrid car intention study with 12 latent variables from PEPB and UTAUT2 frameworks.
-  - Applied Decision Tree, Random Forest Classifier (RFC), and Deep Learning Neural Network (DLNN) to predict behavioral intention.
-  - Optimized hyperparameters for each algorithm using different train-test splits and criteria (Gini, entropy).
-  - Validated models using Taylor diagram comparing root mean square error and correlation.
+  - Data were gathered from 1048 Filipino drivers using an online survey employing convenience and snowball sampling.
+  - The study developed the Sustainability Theory of Planned Behavior (STPB) by integrating PEPB and UTAUT2 frameworks.
+  - Machine learning algorithms including Decision Tree, Random Forest Classifier, and Deep Learning Neural Network were applied.
+  - Model optimization involved testing various training-testing ratios, tree depths, activation functions, and optimizers.
+  - A Taylor diagram was used to validate the accuracy of the different MLA models.
 findings:
-  - num: Deep learning neural network achieved 96.60% accuracy in predicting behavioral intention.
-  - num: Random forest classifier achieved 94% accuracy at 90:10 train-test split with Gini and best splitter.
-  - Perceived environmental concern (PENC) was the most important factor (100% normalized importance), followed by attitude (96.32%) and perceived behavioral control (94.50%).
-  - Basic decision tree produced much lower accuracy (max 72.32%) due to random tree generation per iteration.
-  - DLNN with tanh hidden layers and sigmoid output layer outperformed RFC.
-  - Habit was the least significant factor (70.90% normalized importance).
+  - The Deep Learning Neural Network achieved the highest accuracy at 96.60% for predicting purchasing intentions.
+  - Perceived Environmental Concern was the most important factor, followed by Attitude, Perceived Behavioral Control, and Subjective Norm.
+  - The random forest classifier generated an accuracy of 94% with the optimum tree output.
+  - Machine learning approaches provided more accurate results than Structural Equation Modeling for the large, complex STPB model.
+  - Facilitating Conditions, Effort Expectancy, and Habit were found to be significant factors, contrasting with SEM results which deemed them insignificant.
 key_figures_tables:
-  - Figure 2: Optimum random forest tree with PENC as root node → PENC and attitude dominate prediction.
-  - Figure 3: DLNN architecture with three hidden layers (50,50,20 nodes) → 96.6% accuracy.
-  - Figure 4: Taylor diagram validating all MLAs except basic decision tree → DLNN and RFC acceptable.
-  - Table 5: Normalized importance scores ranking all 12 factors → PENC highest, habit lowest.
+  - Figure 3: Deep learning neural network model architecture with 3 hidden layers → Achieved 96.60% accuracy.
+  - Table 6: MLA versus SEM results for latent variables → MLA provided a clearer ranking, with PENC as 1st vs. 5th in SEM.
+  - Table 2: Decision Tree summarized results → Highest accuracy of 72.32% with depth 5 and 90:10 split.
+  - Table 3: Random Forest Classifier summarized results → Highest accuracy of 94% with Gini and best splitter.
+  - Figure 4: Taylor Diagram for validation → Confirmed MLA outputs were acceptable with RMSE within 20%.
 key_equations:
-  - equation: "tanh(x) = \\frac{2}{1+e^{-2x}} - 1"
-    explanation: Activation function for hidden layers enabling nonlinear mapping.
-  - equation: "sigmoid(x) = \\frac{1}{1+e^{-x}}"
-    explanation: Output layer activation for probability prediction.
+  - equation: tanh(x) = 2/(1+e^{-2x}) - 1
+    explanation: Activation function for hidden layers enabling nonlinear relationships.
+  - equation: sigmoid(x) = 1/(1+e^{-x})
+    explanation: Output layer activation for probability-based classification.
 definitions:
-  - term: PEPB
-    definition: Pro-environmental Theory of Planned Behavior, extending TPB with environmental concern and authority support.
-  - term: UTAUT2
-    definition: Unified Theory of Acceptance and Use of Technology 2, including hedonic motivation, price value, and habit.
   - term: STPB
-    definition: Sustainability Theory of Planned Behavior, integrating PEPB, sustainability domains, and UTAUT2.
+    definition: Sustainability Theory of Planned Behavior, integrating PEPB, UTAUT2, and economic concerns.
+  - term: PEPB
+    definition: Pro-Environmental Theory of Planned Behavior, adding environmental and authority support to TPB.
+  - term: UTAUT2
+    definition: Unified Theory of Acceptance and Use of Technology 2, explaining technology acceptance.
+  - term: PENC
+    definition: Perceived Environmental Concern, an individual's worry about environmental issues.
   - term: RFC
-    definition: Random Forest Classifier, an ensemble method that builds multiple decision trees and selects the best.
+    definition: Random Forest Classifier, an ensemble learning method for classification.
   - term: DLNN
     definition: Deep Learning Neural Network, a neural network with multiple hidden layers.
 critical_citations:
-  - "[German et al., 2022] — Developed PEPB framework used in this study."
-  - "[Venkatesh et al., 2012] — Originated UTAUT2 model for technology acceptance."
-  - "[Ong et al., 2023] — Previous SEM study on hybrid car intentions, used for comparison."
+  - "[Ong et al., 2023] — Basis for adopted survey instrument and STPB framework."
+  - "[Venkatesh et al., 2012] — Foundational work for UTAUT2 model used."
+  - "[German et al., 2022] — Source of PEPB model and integration approach."
+  - "[Fan et al., 2016] — Justifies using MLA over SEM for large nonlinear models."
 relevance:
   topics:
-    - code: 5.C
-      name: Financial Behavioral Profile Classification Algorithm
-      justification: Uses RFC and DLNN to classify significant latent factors affecting purchase intention.
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: The study focuses on Filipino drivers, with a majority being young professionals aged 23-36 and employed.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: medium
+      justification: Analyzes factors influencing purchasing decisions, including economic concerns and price value.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: contextual
+      justification: Provides background on hybrid car adoption in the Philippine context, referencing local market conditions.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Applies predictive modeling (classification) to forecast behavioral intention from latent variables.
+      relevance: high
+      justification: Demonstrates the application of predictive MLAs to model behavioral intentions, a core module for Odin.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Uses RFC and DLNN for classification and prediction, relevant to forecasting user behavior.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Findings on PBC and PE (performance expectancy) can inform how users interact with budgeting strategies.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: The classification approach could be analogous to detecting anomalous spending patterns.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Uses Taylor diagrams and accuracy metrics (94%, 96.60%) for system evaluation, relevant to Odin.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: Compares accuracy of DT, RFC, and DLNN using Taylor diagram and normalized importance scores.
-  contribution: "This paper demonstrates that ensemble machine learning methods (random forest and deep learning) can achieve over 94% accuracy in predicting purchase intentions from psychosocial and environmental factors. For Odin, similar ML approaches could be applied to forecast spending behavior or classify financial profiles of Filipino young professionals. The study also provides a methodology for comparing multiple algorithms (DT, RFC, DLNN) and validating them with correlation and error metrics, which directly informs Odin’s evaluation of algorithmic modules. The finding that perceived environmental concern and attitude are top predictors suggests that non-financial attitudes may be important inputs for behavioral models in PFMS."
+      relevance: high
+      justification: Compares SEM vs. MLA performance, providing evidence for using MLA in Odin's modules.
+  contribution: This paper validates the use of MLAs like Random Forest Classifier and Deep Learning Neural Network for predicting consumer behavior, which can be directly applied to Odin's behavioral profiling and forecasting modules. It provides a methodology for evaluating and comparing algorithmic modules (SEM vs. MLA) and identifies key latent factors (PENC, AT, PBC, PE) that are likely analogous to user engagement drivers. The framework developed (STPB) offers a structured approach to modeling complex behavioral and sustainability factors relevant to Odin's user financial contexts. The study's findings on factor importance ranking provide a potential template for prioritizing features in Odin's recommendation and anomaly detection systems.
   directly_justifies:
-    - "Random forest classifier achieved 94% accuracy in predicting behavioral intentions from 12 latent variables."
-    - "Deep learning neural network with tanh activation outperformed random forest with 96.6% accuracy."
-    - "Perceived environmental concern is the most important predictor (100% normalized importance)."
-    - "Habit was the least significant factor (70.9%), suggesting it may not strongly predict intention for novel products."
+    - "Machine learning algorithms are superior to SEM for analyzing large, nonlinear behavioral models."
+    - "Perceived environmental concern is the most significant predictor of behavioral intention in the Filipino context."
+    - "Both Random Forest and Deep Learning can achieve high accuracy (>94%) in classification tasks."
+    - "The integration of UTAUT2 and PEPB provides a comprehensive framework for evaluating technology acceptance."
   limits:
-    - "Study focuses on hybrid car purchase intention, not personal financial management or spending behavior."
-    - "Convenience and snowball sampling may limit generalizability to all Filipino young professionals."
-    - "Only drivers with licenses and active on social media were included, potentially biasing results toward younger, digitally connected demographics."
-  mapping_rationale: "This paper is algorithm-specific, focusing on RFC and DLNN for behavioral prediction. It does not address expense categorization (3.A, 3.B), budget recommendation (7.A–C), anomaly detection (8.A–B), mobile design (9.A–B), privacy (10.A–B), retention (11.A–B), or savings/debt management (13.A–B). However, its use of ML to classify influential factors aligns with financial behavioral profile classification (5.C). The predictive modeling approach (6.A) is transferable to spending forecasting in Odin. The systematic evaluation of multiple algorithms with accuracy and correlation metrics directly supports evaluation of algorithmic modules (12.B). Codes 5.A and 5.B were rejected because the paper does not define dynamic profiles or address cold-start problems. Code 6.B (spending forecasting algorithm) was rejected because the target is purchase intention, not spending amounts over time."
+    - "The study uses convenience and snowball sampling, which may introduce bias and limit generalizability."
+    - "The research only focuses on Filipino drivers, so its findings may not be directly transferable to other cultures."
+    - "The model's accuracy was validated for a specific prediction task, but its robustness for other financial behaviors is unknown."
+    - "Reliance on self-administered surveys may introduce common method bias."
+  mapping_rationale: The systematic scan across all 12 functional domains identified the paper as highly relevant to Predictive Modeling (6.A, 6.B) and System Evaluation (12.A, 12.B) due to its core focus on applying and validating MLAs for behavior prediction. The study's Filipino context and demographic focus mapped directly to 1.A (Filipino Young Professionals) and tangentially to 1.C (Financial Behavior) and 2.A (Cultural Practices). The paper was also considered for Behavioral Profiling (5.A-C) and Forecasting (6.A-B) but was classified under predictive modeling and evaluation as it primarily demonstrates the application and comparison of algorithms rather than defining a new profiling taxonomy or forecasting method. The relevance was considered 'high' for topics related to algorithm application and evaluation (6.A, 6.B, 12.A, 12.B) and 'medium' or 'contextual' for topics like budgeting (7.A) or anomaly detection (8.A) due to the indirect applicability of its findings. Overall, the paper's primary value to Odin lies in its methodological demonstration of MLA efficacy and its identification of key behavioral drivers, providing a strong justification for using similar approaches in Odin's algorithm modules.
 limitations:
-  - "Limited constructs from adapted questionnaire; self-administered online survey may introduce response bias. [unacknowledged]"
-  - "Only drivers with a license and social media presence were sampled, excluding non-digital or non-licensed populations."
-  - "Only two machine learning algorithms (RFC and DLNN) were used; other algorithms like Naïve Bayes or k-NN were not tested."
-  - "Cross-sectional design cannot confirm causal relationships among latent variables."
+  - "The survey instrument had limited constructs, which may constrain the depth of behavioral insight."
+  - "The sample was skewed towards millennials and those active on social media, limiting generational diversity."
+  - "The study only used two MLAs (RFC and DLNN); other algorithms like Naïve Bayes or K-Means could provide additional insights."
+  - "The absence of qualitative interviews restricts a complete understanding of the motivations behind purchasing intentions."
 remember_this:
-  - "Deep learning achieved 96.6% accuracy for predicting purchase intentions."
-  - "Perceived environmental concern was the most important factor."
-  - "Random forest classifier reached 94% accuracy with Gini and best splitter."
-  - "Habit was the weakest predictor of behavioral intention."
+  - "Deep Learning Neural Network achieved 96.60% accuracy in predicting purchasing intentions."
+  - "PENC and Attitude were the two strongest predictors of hybrid car adoption."
+  - "Machine learning outperformed SEM for the complex, nonlinear STPB framework."
+  - "Young Filipino professionals are environmentally conscious and influence the green market."
+  - "The STPB framework integrates environmental, behavioral, and technological factors."
 ```

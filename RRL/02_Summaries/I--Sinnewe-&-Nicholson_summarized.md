@@ -1,98 +1,101 @@
 ```yaml
-paper_id: 10.1111/joca.12512
-designation: international
-title: Healthy financial habits in young adults: An exploratory study of the relationship between subjective financial literacy, engagement with finances, and financial decision-making
-authors: Sinnewe, E.; Nicholson, G.
+paper_id: "10.1111/joca.12512"
+designation: "international"
+title: "Healthy financial habits in young adults: An exploratory study of the relationship between subjective financial literacy, engagement with finances, and financial decision-making"
+authors: "Sinnewe, E.; Nicholson, G."
 year: 2023
-venue: Journal of Consumer Affairs
+venue: "Journal of Consumer Affairs"
 odin_topics:
-  - 1.C
-  - 5.A
-  - 5.B
-  - 13.A
-  - 13.B
-shorthand_tags:
-  - /young-professionals-behavior
-  - /behavioral-profiles
-  - /profile-dynamics
-  - /savings-goals
-  - /debt-management
-tldr: Social context and financial hardship drive young adults' financial habits more than subjective financial literacy, with romantic partnerships shifting focus to long-term goals.
-problem_and_motivation: Young adults face rising non-discretionary costs and housing unaffordability, yet evidence that financial education improves behavior is mixed. Understanding how financial habits form during the transition to full-time work is critical for designing effective interventions. Prior work overlooks the role of social context and motivation relative to literacy.
+  - "1.C"
+  - "5.A"
+  - "7.A"
+  - "11.A"
+  - "13.A"
+tldr: "Young adults' financial habits are more strongly influenced by social context and motivation than by subjective financial literacy, with romantic partnerships shifting focus to long-term goals and budgeting."
+problem_and_motivation: "Financial education yields mixed results and fails to improve behavior consistently. Understanding how financial habits form during the transition to full-time work is critical, yet the roles of social context, motivation, and literacy remain unclear. This study addresses the gap by exploring the determinants of financial habits in young adults entering the workforce."
 approach:
-  - Conducted 28 semi-structured interviews with Australian university graduates aged 21-31 who entered full-time work within the last 5 years.
-  - Used grounded theory with iterative open, axial, and selective coding guided by Theory of Planned Behavior and Family Financial Socialization.
-  - Interviews lasted 16.1 hours total, transcribed and coded by multiple researchers with debriefing sessions.
-  - Identified themes: influences (parents, partners, hardship), attitudes (present vs future utility), perceived norms, control (subjective literacy), intentions, habits, outcomes.
-  - Sample: 15 male, 13 female; average age 25.5; 71.8% held bachelor's degree; work experience from <12 months to 5 years.
+  - "Conducted 28 semi‑structured interviews with Australian university graduates aged 21–31 who had entered full‑time work within the last five years."
+  - "Used grounded theory methodology with iterative open, axial, and selective coding by multiple coders."
+  - "Applied Theory of Planned Behavior and Family Financial Socialization as theoretical lenses."
+  - "Collected 16.1 hours of interview data, transcripts averaged 4,929 words each, totaling 252 pages."
+  - "Coding involved constant comparison between data and theory, with debriefing sessions to mitigate researcher bias."
 findings:
-  - "num: Participants in committed romantic relationships reported future-focused financial goals and formal budgeting, while singles focused on short-term wants."
-  - "num: Average subjective financial literacy self-rating was 6.4/10, yet literacy had minimal association with daily spending habits; motivation was the primary driver of engagement."
-  - "num: 21 of 28 participants saved money, 10 used a formal budget, and 21 had investments in shares or property."
-  - "num: Average financial satisfaction rating was 7.3/10, with satisfaction linked to having a budgeting system."
-  - Romantic partnership changes money attitude from present utility (funding current lifestyle) to future utility (saving for home, family).
-  - Experience of financial hardship (childhood or recent) led to greater financial control and savings discipline.
-  - Participants observed poor spending in peers but rarely admitted it in themselves; debt (credit cards, buy-now-pay-later) was perceived as undesirable.
-  - Lack of confidence in investing knowledge inhibited investment behavior even when funds were available.
+  - "num: 21 of 28 participants reported actively saving money."
+  - "num: 10 of 28 used a formal budget; many others used bucket systems or expense tracking."
+  - "num: 20 of 28 had investments in shares or property."
+  - "Romantic partnerships were strongly associated with future‑oriented goals, formal budgeting, and strict bucket systems."
+  - "Subjective financial literacy (mean self‑rating 6.4/10) did not predict daily financial engagement; motivation was the primary driver."
+  - "Participants who experienced financial hardship exercised greater control over their finances."
+  - "Parents served as primary financial role models; peers were rarely sources of advice."
+  - "Debt avoidance (credit cards, buy‑now‑pay‑later) was a common perceived norm instilled by parents."
+  - "num: Average financial satisfaction rating was 7.3 out of 10, with budgeting linked to higher satisfaction."
+  - "Transition to work increased disposable income, often leading to more spending, but relationship status moderated this effect."
 key_figures_tables:
-  - "Table 1: Participant demographics (age, gender, education, work experience, living situation, relationship status) → Heterogeneous sample allows comparison across life stages."
-  - "Table 2: Major themes with occurrences (e.g., partner influences decision-making: 13/28) → Social context factors dominate over literacy in habit formation."
+  - "Table 1: Participant demographics and living situations → Sample is highly educated, mostly university graduates."
+  - "Table 2: Major themes with occurrence counts → Socialization, attitudes, perceived norms, and habits form interconnected influences."
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
-  - term: "TPB"
-    definition: "Theory of Planned Behavior; links attitudes, norms, and perceived control to behavioral intention."
-  - term: "FFS"
-    definition: "Family Financial Socialization theory; integrates family influences on financial values and behaviors."
+  - term: "Financial habits"
+    definition: "Patterns of action over time such as earning, saving, spending, and gifting; automated, cue‑prompted behaviors with minimal cognitive load."
   - term: "Subjective financial literacy"
-    definition: "Self-reported confidence in one's financial knowledge, distinct from objective test scores."
+    definition: "Self‑reported assessment of one's financial knowledge and confidence, as opposed to objective test scores."
+  - term: "Theory of Planned Behavior (TPB)"
+    definition: "Behavioral intention is predicted by attitude, perceived social norms, and perceived behavioral control."
+  - term: "Family Financial Socialization (FFS)"
+    definition: "Process of acquiring values, attitudes, norms, and behaviors that contribute to financial well‑being, primarily through family influences."
 critical_citations:
-  - "[Fernandes et al., 2014] — Financial education explains only 0.1% of behavior variation."
-  - "[Lusardi et al., 2010] — Young adults have low financial literacy nationally."
-  - "[Santini et al., 2019] — Meta-analysis finds no link between literacy and discretionary spending reduction."
-  - "[Danes et al., 2016] — Financial literacy changes behavior via beliefs underlying TPB constructs."
+  - "[Gudmunson & Danes, 2011] — Foundational framework for family financial socialization."
+  - "[Ajzen & Fishbein, 2005] — Core theory of planned behavior underpinning motivation constructs."
+  - "[Fernandes et al., 2014] — Meta‑analysis showing limited impact of financial education on behavior."
+  - "[Mandell & Klein, 2009] — Evidence that financial literacy education does not improve financial behavior."
 relevance:
   topics:
     - code: "1.C"
       name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Paper examines savings, spending, budgeting, and debt behaviors in young adults entering workforce."
+      relevance: "high"
+      justification: "Directly studies financial habits and decision‑making of young adults entering the workforce."
     - code: "5.A"
       name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Identifies present-focused vs future-focused money attitudes linked to relationship status and hardship."
-    - code: "5.B"
-      name: "Profile Dynamics and the Cold-Start Problem"
-      justification: "Shows how romantic partnership shifts financial time horizon, a dynamic profile change."
+      relevance: "high"
+      justification: "Provides behavioral profiles based on relationship status, motivation, and financial socialization."
+    - code: "7.A"
+      name: "Budgeting Strategies as Domain Knowledge"
+      relevance: "medium"
+      justification: "Observes real‑world budgeting practices (formal budgets, bucket systems) used by young adults."
+    - code: "11.A"
+      name: "Engagement Dynamics in Personal Finance Applications"
+      relevance: "high"
+      justification: "Examines motivation and engagement with finances, showing that motivation outweighs literacy."
     - code: "13.A"
       name: "Savings Goal Management in PFMS"
-      justification: "Documents goal setting (house, emergency fund) and use of bucket systems for savings."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Reports debt avoidance norms, negative perception of credit cards and buy-now-pay-later."
-  contribution: "Odin's behavioral profiling module can incorporate relationship status and financial hardship history as key features to predict present vs future orientation. The savings goal management module should leverage life transitions (e.g., entering a partnership) to trigger personalized goal-setting nudges. For debt management, Odin can reinforce social norms around debt avoidance by highlighting peer comparisons. Engagement strategies should prioritize motivation-triggering interventions (e.g., future-self visualization) over pure literacy content, especially for single users. The finding that subjective literacy only matters for event-like decisions (investing) suggests Odin should offer just-in-time education at those moments."
+      relevance: "high"
+      justification: "Links relationship status and future orientation to explicit savings goals and goal setting."
+  contribution: "This paper directly informs Odin's user profiling module by showing that relationship status and financial hardship experience are key behavioral drivers. It justifies a motivation‑first approach in engagement design, suggesting that budget recommendation should adapt to life‑stage changes. The findings support savings goal management features that leverage future‑oriented triggers, such as partnership milestones. Additionally, the emphasis on social context (parents, peers) guides the design of social features and norm‑based nudges. The evidence that subjective literacy does not drive daily engagement implies that Odin should focus on simplifying complex financial decisions rather than on literacy education."
   directly_justifies:
-    - "Young adults in committed romantic partnerships adopt future-oriented financial goals and formal budgeting."
-    - "Subjective financial literacy does not predict daily spending habits; motivation from social context is more influential."
-    - "Experience of financial hardship increases financial self-efficacy and savings discipline."
-    - "Only 10 of 28 young adults use a formal budget; most rely on expense tracking and bucket systems."
-    - "Lack of investment knowledge inhibits action even when savings exist, indicating a need for guided, low-risk entry points."
+    - "Romantic partnerships significantly increase future‑oriented financial behavior and formal budgeting."
+    - "Motivation, not financial literacy, is the primary driver of day‑to‑day financial engagement."
+    - "Financial hardship experience enhances perceived control and leads to more disciplined saving."
+    - "Parents are the dominant role model for financial norms and debt avoidance."
+    - "Present‑biased individuals benefit more from automatic saving mechanisms than from education."
   limits:
-    - "Highly educated sample (71.8% bachelor's degree) not representative of general young adult population."
-    - "Self-selection bias: participants with debt or poor habits may have avoided the study."
-    - "Self-reported financial literacy and behaviors may suffer from social desirability and recall bias."
-    - "Australian context may limit generalizability to other countries with different financial systems."
-  mapping_rationale: "This paper maps to behavioral profiling (5.A, 5.B) because it identifies distinct financial attitudes (present vs future utility) and their dynamics triggered by relationship status. It directly informs savings and debt management (13.A, 13.B) through detailed observations of goal setting, bucket systems, and debt avoidance norms. Topic 1.C (financial behavior) is included as the overarching domain. Codes related to spending forecasting, anomaly detection, expense categorization, mobile design, privacy, retention, and system evaluation were rejected because the paper is qualitative and does not address algorithms, UX, or evaluation metrics. The borderline case of engagement (11.A) was excluded because the paper discusses general financial engagement, not app-specific retention mechanisms."
+    - "Sample is homogenous (university graduates), limiting generalizability to broader populations."
+    - "Self‑selection bias may exclude individuals with poor financial habits or high debt."
+    - "Self‑reported behavior may suffer from social desirability and recall bias."
+    - "Qualitative design does not establish causality; findings are exploratory."
+    - "Australian context may not directly transfer to Filipino cultural settings."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. Domains flagged as relevant include: Financial Behavior (1.C) due to direct focus on habits and spending patterns; Behavioral Profiling (5.A) for relationship‑based profiles and motivation drivers; Budgeting Strategies (7.A) for observed budgeting practices; Engagement Dynamics (11.A) for motivation and engagement; and Savings Goal Management (13.A) for future‑oriented savings. Relevance levels: high for 1.C, 5.A, 11.A, 13.A; medium for 7.A because it describes practices but does not propose new strategies. Borderline cases: 2.C (user‑declared preferences) was considered because money attitudes were reported, but these are not framed as user preferences for system design; rejected. 13.B (debt management) was considered but the paper focuses on avoidance rather than active management, so rejected. Domains like forecasting, anomaly detection, mobile design, privacy, and evaluation were not addressed and thus rejected. Overall, the paper provides strong behavioral insights relevant to user modeling, engagement, and savings features, though it is not directly algorithmic or Philippines‑specific."
 limitations:
-  - "Small sample size (n=28) and homogeneous (university graduates) limit generalizability."
-  - "Self-selection bias: individuals with poor financial habits or high debt may have declined participation. [unacknowledged]"
-  - "Subjective financial literacy measure may not correlate strongly with objective literacy. [acknowledged in endnote 1]"
-  - "Cross-sectional design cannot establish causality between relationship status and behavior change."
-  - "Interviews conducted during COVID-19 pandemic may have artificially reduced discretionary spending."
+  - "Sample is homogenous (university graduates), limiting generalizability. [unacknowledged]"
+  - "Self‑selection bias may exclude those with poor habits or high debt. [unacknowledged]"
+  - "Self‑reported spending may be biased by social desirability. [unacknowledged]"
+  - "Qualitative design prevents causal inference."
+  - "Australian context may not generalize to Filipino young professionals."
 remember_this:
-  - "Romantic partnerships shift financial time horizon from present to future."
-  - "Subjective financial literacy has minimal effect on daily spending habits."
-  - "Only 10 of 28 young adults use a formal budget."
-  - "Financial hardship experience increases savings discipline and control."
-  - "Motivation from social context outranks literacy for financial engagement."
-
+  - "Romantic partnerships drive formal budgeting and long‑term savings goals."
+  - "Motivation, not financial literacy, predicts daily financial engagement."
+  - "Financial hardship experience increases financial control and saving discipline."
+  - "Average financial satisfaction was 7.3 out of 10 among participants."
+  - "Parents are the primary influence on financial norms and debt avoidance."
 ```

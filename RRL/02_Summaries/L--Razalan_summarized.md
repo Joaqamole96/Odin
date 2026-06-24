@@ -1,92 +1,132 @@
 ```yaml
-paper_id: f7c9e5d3-1a2b-4c3d-8e9f-0a1b2c3d4e5f
+paper_id: 65f7a3c1-8b4a-5c2e-9d1f-6e8b7a4c2d1f
 designation: local
-title: "Scaling the Frame of Mind: Money Attitude and Financial Well-Being of Generation Zoomers (Gen-Zs) in Rizal Province"
-authors: "Razalan, D."
+title: Scaling the Frame of Mind: Money Attitude and Financial Well-Being of Generation Zoomers (Gen-Zs) in Rizal Province
+authors: Razalan, D. C.
 year: 2024
-venue: "Unknown"
+venue: Unknown
 odin_topics:
-  - "1.C"
-  - "5.A"
-  - "13.A"
-  - "13.B"
-shorthand_tags:
-  - "/filipino-young-professionals-financial-behavior"
-  - "/financial-behavioral-profiles"
-  - "/savings-goal-management"
-  - "/debt-management"
-tldr: "Gen-Zs in Rizal Province show a great extent of positive money attitudes in power-prestige and retention-time dimensions, which significantly correlate with their financial well-being across autonomy, competence, and relatedness."
-problem_and_motivation: "Gen-Zs face unique financial challenges and low financial literacy, yet limited research examines their money attitudes and financial well-being in the Philippine education sector. Understanding these attitudes is crucial for developing targeted financial education."
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.D
+  - 3.A
+  - 4.A
+  - 5.A
+  - 5.B
+  - 12.A
+tldr: Gen-Zs in Rizal Province show moderately developed financial mindsets with positive money attitudes that significantly correlate with their financial well-being across autonomy, competence, and relatedness.
+problem_and_motivation: Gen-Zs have the lowest financial literacy among generations yet face unique financial hurdles including high inflation and job market uncertainty. Existing research lacks focus on money attitudes within the Philippine education sector for this demographic. Understanding these attitudes is crucial for designing targeted financial education interventions.
 approach:
-  - "Mixed methods with quantitative survey of 364 Gen-Z teaching and non-teaching personnel from public and private schools in Rizal Province."
-  - "Used Money Attitude Scale (MAS) measuring power-prestige, retention-time, distrust, anxiety and financial well-being based on Self-Determination Theory (autonomy, competence, relatedness)."
-  - "Qualitative interviews and focus group discussions to identify financial challenges and coping strategies."
-  - "Correlation analysis to test relationships between money attitude dimensions and financial well-being components."
-  - "Thematic analysis for qualitative data on how Gen-Zs manage finances and overcome difficulties."
+  - Mixed-methods design combining quantitative survey with qualitative interviews and focus groups.
+  - Survey employed the Money Attitude Scale (MAS) measuring power-prestige, retention-time, distrust, and anxiety dimensions.
+  - Sample comprised 364 teaching and non-teaching personnel from public/private schools and university campuses in Rizal Province.
+  - Quantitative data analyzed using descriptive statistics and correlation analysis for relationship testing.
+  - Qualitative data analyzed through thematic analysis to identify financial challenges and coping mechanisms.
 findings:
-  - "num: Significant positive correlation between overall money attitudes and overall financial well-being (r=0.679, p<0.05)."
-  - "num: Highest correlation observed between controlling finances (anxiety dimension) and competence (r=0.631)."
-  - "Gen-Zs exhibit great extent in power-prestige (spending and saving), retention-time (financial planning), and anxiety (financial protection and control)."
-  - "Gen-Zs show moderate extent in financial education (mean 3.35/5) and distrust dimensions (borrowing mean 3.21/5, donations mean 3.30/5)."
-  - "num: Nearly half of employed Gen-Zs struggle with unplanned purchases due to buy-now-pay-later services."
-  - "Gen-Zs prioritize paying bills on time (mean 4.48/5) and have specific savings goals (mean 4.14/5)."
-  - "Financial well-being is at great level across autonomy (mean 4.05), competence (3.83), and relatedness (3.99)."
-  - "Budgeting, saving, and planning are primary strategies Gen-Zs use to address financial challenges."
+  - Gen-Zs scored highest on power-prestige spending behavior (weighted mean 3.89) and lowest on distrust borrowing money (weighted mean 3.21).
+  - num: All money attitude dimensions showed significant positive correlations with financial well-being components at p < 0.05.
+  - num: The strongest correlation was between controlling finances and competence (r = 0.631).
+  - num: The grand mean correlation between overall money attitudes and financial well-being was r = 0.679.
+  - Financial education scores were moderate (weighted mean 3.35), with low engagement in formal programs.
+  - Gen-Zs demonstrated high awareness of cybersecurity measures (4.40) but low emergency fund maintenance (3.32).
+  - Qualitative findings revealed unplanned purchases and difficulty saving as primary financial challenges.
+  - Respondents addressed challenges through budgeting, prioritization, and leveraging technology while avoiding scams.
+  - Gen-Zs showed strong relatedness, with supportive networks positively influencing financial management.
+  - Positive money attitudes holistically impacted financial well-being across all Self-Determination Theory dimensions.
 key_figures_tables:
-  - "Table 8: Correlation matrix of all money attitude dimensions and financial well-being components → All relationships are significant and positive, with overall r=0.679."
-  - "Table 1: Spending behavior weighted mean 3.89 (Great Extent) → Gen-Zs afford basic needs and make conscious spending decisions."
-  - "Table 4: Financial protection mean 3.51 (Great Extent) → Gen-Zs are highly aware of scams (4.40) but have moderate emergency funds (3.32)."
+  - Table 1: Money attitudes by power-prestige dimension → Spending and saving behaviors scored "Great Extent" overall.
+  - Table 2: Retention-time dimension → Financial planning scored "Great Extent"; financial education scored "Moderate Extent".
+  - Table 3: Distrust dimension → Borrowing and donation behaviors scored "Moderate Extent".
+  - Table 4: Anxiety dimension → Financial protection and control both scored "Great Extent".
+  - Table 5-7: Financial well-being → Autonomy, competence, and relatedness all scored "Great Extent".
+  - Table 8: Correlation matrix → All money attitude dimensions significantly correlated with financial well-being (p < 0.05).
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "Money Attitude Scale (MAS)"
-    definition: "A psychometric tool by Yamauchi & Templer (1982) measuring attitudes toward money across power-prestige, retention-time, distrust, and anxiety."
-  - term: "Self-Determination Theory (SDT)"
-    definition: "A psychological framework focusing on innate needs for autonomy, competence, and relatedness."
-  - term: "Generation Z (Gen-Z)"
-    definition: "Individuals aged 18-26 in 2023, born roughly between 1997 and 2012."
-  - term: "Financial Well-Being"
-    definition: "Multidimensional concept including financial stability, security, and ability to meet goals, measured here via autonomy, competence, and relatedness."
+  - term: Money Attitude
+    definition: An individual's beliefs, feelings, and behaviors related to money.
+  - term: Money Attitude Scale (MAS)
+    definition: Instrument developed by Yamauchi & Templer to assess power-prestige, retention-time, distrust, and anxiety dimensions.
+  - term: Financial Well-Being
+    definition: Multidimensional concept including financial stability, security, and ability to meet financial goals.
+  - term: Self-Determination Theory
+    definition: Psychological framework focusing on innate needs for autonomy, competence, and relatedness.
+  - term: Generation Z (Gen-Z)
+    definition: Individuals aged 18-26 in 2023.
 critical_citations:
-  - "[Yamauchi & Templer, 1982] — Developed the Money Attitude Scale used throughout the paper."
-  - "[Deci et al., 2022] — Provides Self-Determination Theory framework for financial well-being."
-  - "[Lusardi & Mitchell, 2014] — Foundational for financial literacy's impact on financial behaviors."
+  - "[Yamauchi & Templer, 1982] — Foundational Money Attitude Scale development."
+  - "[Lusardi & Mitchell, 2014] — Financial literacy influences financial behaviors."
+  - "[Alampay et al., 2014] — Money attitude predicts financial behaviors in Filipino students."
+  - "[Lown et al., 2018] — Millennials show positive credit attitudes but high debt."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Paper analyzes spending, saving, borrowing, and planning behaviors of Gen-Zs in Philippine education sector."
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Uses Money Attitude Scale to profile Gen-Zs across power-prestige, retention-time, distrust, and anxiety dimensions."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Examines savings goals, emergency funds, and regular saving practices with quantitative measures."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Investigates borrowing behavior, debt repayment, credit card use, and loan management among Gen-Zs."
-  contribution: "This paper validates the Money Attitude Scale for Filipino Gen-Zs, directly informing Odin's behavioral profiling module. The significant correlation between money attitudes and financial well-being supports Odin's spending forecasting and anomaly detection by linking attitudes to observable behaviors. The detailed findings on savings goals, emergency fund maintenance, and debt repayment provide empirical grounding for Odin's savings and debt management features. The application of Self-Determination Theory offers a framework for designing user engagement that fosters autonomy, competence, and relatedness in financial decision-making."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: Directly studies Gen-Z teaching and non-teaching personnel in Rizal Province.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: Examines spending, saving, borrowing, and planning behaviors of employed Gen-Zs.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Provides detailed behavioral data on budgeting, saving, and financial planning.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Donation behaviors reflect Filipino cultural values of helping and giving.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: contextual
+      justification: Mentions seasonality implicitly through spending patterns but not explicitly analyzed.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: Uses MAS framework that categorizes attitudes into four dimensions.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: Reviews financial education programs and systems but focuses on attitudes rather than systems.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Profiles Gen-Z behaviors across spending, saving, borrowing, and planning.
+    - code: 5.B
+      name: Profile Dynamics and the Cold-Start Problem
+      relevance: low
+      justification: Mentions initial financial literacy gaps but does not address cold-start in systems.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Provides evaluative data on money attitudes and financial well-being.
+  contribution: "This study provides empirical evidence on the positive relationship between money attitudes and financial well-being among Filipino Gen-Zs. The findings justify Odin's need for behavioral profiling modules to capture attitude dimensions like power-prestige and anxiety. The correlation data support Odin's forecasting and recommendation modules by establishing that attitudes predict financial behaviors. The qualitative insights on budgeting and saving strategies inform Odin's user engagement and retention mechanisms. The study's emphasis on financial education gaps justifies Odin's educational content and feedback systems."
   directly_justifies:
-    - "Positive money attitudes significantly correlate with higher financial well-being among Gen-Zs (r=0.679)."
-    - "Gen-Zs with strong financial planning attitudes exhibit greater financial competence and autonomy."
-    - "Anxiety about financial protection is mitigated by awareness of scams and cybersecurity measures."
-    - "Budgeting and saving are the primary coping strategies Gen-Zs use to overcome financial challenges."
+    - "Positive money attitudes significantly correlate with financial well-being (r = 0.679)."
+    - "Financial planning attitudes strongly correlate with competence in financial management (r = 0.523)."
+    - "Controlling finances shows the strongest correlation with overall financial well-being (r = 0.625)."
+    - "Gen-Zs struggle with unplanned purchases and saving enough money."
+    - "Financial education engagement is moderate, indicating a need for accessible learning resources."
   limits:
-    - "Sample limited to education sector employees in Rizal Province, not representative of all Filipino Gen-Zs."
-    - "Cross-sectional design prevents causal inference between money attitudes and financial well-being."
+    - "Cross-sectional design limits causal inference about money attitudes affecting financial well-being."
+    - "Sample limited to education sector in Rizal Province, reducing generalizability to other sectors."
     - "Self-reported survey data may introduce social desirability bias."
-    - "Does not account for socioeconomic heterogeneity within Gen-Z sample [unacknowledged]."
-  mapping_rationale: "The paper directly addresses financial behavior of Filipino young professionals (1.C) through detailed analysis of spending, saving, borrowing, and planning. It contributes to behavioral profiling (5.A) by using the Money Attitude Scale to identify distinct attitude dimensions (power-prestige, retention-time, distrust, anxiety). The explicit measurement of savings goals, emergency funds, and regular saving practices aligns with savings goal management (13.A). Borrowing behavior, debt repayment, and loan management map to debt management (13.B). Topics such as expense categorization, spending forecasting, budget recommendation, anomaly detection, mobile design, data privacy, user retention, and system evaluation were rejected because the paper does not discuss them. Borderline cases like financial education were considered but do not map cleanly to existing codes; it remains as part of behavioral profiling rather than a separate topic."
+    - "Quantitative correlations do not explain the mechanisms behind attitude-behavior relationships."
+    - "No longitudinal tracking to assess how money attitudes evolve over time."
+  mapping_rationale: "The systematic scan across all 12 functional domains identified relevance primarily in Filipino Cultural Context (2.A, 2.D), Expense Categorization (3.A), Existing Systems (4.A), Behavioral Profiling (5.A, 5.B), and System Evaluation (12.A). The paper directly addresses topics 1.A, 1.B, and 1.C with high relevance as it specifically studies Filipino Gen-Z professionals' financial behaviors. Topics 2.A and 2.D received medium/contextual relevance because donation behaviors reflect cultural practices, while seasonal spending is only implicit. Topic 3.A is medium relevance as the MAS provides a categorization framework. Topic 4.A is low because while it reviews existing financial education systems, it does not evaluate specific PFMS. Topics 5.A and 5.B are high/medium because the paper profiles behaviors but does not address cold-start. Topic 12.A is medium as the study provides evaluative methodology. Algorithmic domains (6.A, 6.B, 7.A-7.D, 8.A-8.C) and design domains (9.A, 9.B, 10.A, 10.B, 11.A, 11.B, 13.A-13.C) were rejected as the paper is not algorithmic or system-design focused. Overall, the paper provides foundational behavioral insights for Odin's profiling and evaluation modules, despite not directly addressing computational aspects."
 limitations:
-  - "Sample limited to education sector in one province, reducing generalizability [unacknowledged]."
-  - "No causal inference due to cross-sectional design."
-  - "Potential self-report bias in financial attitude and well-being measures."
-  - "Does not examine long-term stability of money attitudes or financial well-being [unacknowledged]."
+  - "Cross-sectional design limits causal inference. [unacknowledged]"
+  - "Sample restricted to education sector in Rizal Province only. [unacknowledged]"
+  - "Self-reported measures may be subject to social desirability bias."
+  - "No qualitative data on how attitudes change with financial shocks."
+  - "No comparison with other generational cohorts in the same context."
 remember_this:
-  - "Money attitudes correlate strongly with financial well-being (r=0.679)."
-  - "Gen-Zs prioritize paying bills on time and saving for specific goals."
-  - "Financial education among Gen-Zs is only moderate in extent."
-  - "Budgeting and saving are key coping strategies for financial challenges."
-  - "Anxiety about finances is offset by awareness of scams and controls."
+  - "Positive money attitudes strongly correlate with financial well-being among Filipino Gen-Zs."
+  - "Gen-Zs score highest on power-prestige spending behavior and lowest on financial education engagement."
+  - "The grand correlation between money attitudes and financial well-being is 0.679."
+  - "Gen-Zs address financial challenges through budgeting, saving, and using technology."
+  - "Financial protection awareness is high but emergency fund maintenance remains low."
 ```

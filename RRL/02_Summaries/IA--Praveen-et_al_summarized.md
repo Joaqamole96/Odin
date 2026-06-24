@@ -1,102 +1,121 @@
 ```yaml
-paper_id: c4a8b6d2-f3e5-4a7c-9b1d-2e3f4a5b6c7d
+paper_id: e8a6b3e8-0b4d-563b-9f1f-8c1f5a4b9c7d
 designation: international
 title: Enhancing Financial Literacy and Personal Investment Decisions Through AI and Machine Learning
-authors: Praveen, R. V. S.; Vemuri, H. K.; Peri, S. S. S. R. G.; Sista, S.; Saxena, V.; Saxena, P.
+authors: Praveen, R.V.S.; Vemuri, H.K.; Peri, S.S.S.R.G.; Sista, S.; Saxena, V.; Saxena, P.
 year: 2025
 venue: Journal of Marketing & Social Research
 odin_topics:
-  - 4.A
-  - 4.B
+  - 1.C
+  - 2.D
+  - 5.A
+  - 6.A
+  - 7.A
+  - 8.A
+  - 9.A
   - 10.A
-  - 10.B
   - 11.A
   - 12.A
-shorthand_tags:
-  - /fintech-landscape
-  - /system-gaps
-  - /privacy
-  - /trust
-  - /user-engagement
-  - /evaluation-framework
-tldr: AI and ML tools significantly improve financial literacy and investment confidence, with higher engagement and usage frequency yielding greater gains.
-problem_and_motivation: A substantial portion of the global population lacks basic financial literacy, making them vulnerable to poor investment choices. Traditional financial education methods fail to produce lasting behavioral change. AI and ML offer personalized, adaptive solutions, but their integration into personal finance faces gaps in explainability, trust, and ethical design.
+tldr: AI and machine learning tools significantly improve financial literacy and investment confidence by providing personalized, interactive, and data-driven insights for individual financial decision-making.
+problem_and_motivation: Many individuals lack the financial literacy needed to make sound investment decisions, leading to mismanagement and insecurity. Traditional financial education has largely failed to produce lasting behavioral changes. AI and ML offer a scalable way to bridge this knowledge gap by providing personalized and accessible financial guidance.
 approach:
-  - Mixed-methods design with three phases: tool analysis of 20 AI-driven financial platforms, survey of 524 users (aged 18-50, minimum 3 months usage), and semi-structured interviews with 33 participants.
-  - Quantitative measures included pre/post financial literacy scores (OECD/INFE framework), investment confidence (5-point Likert), and AI engagement scores.
-  - Analytical techniques: paired t-tests, Pearson correlation, regression, and cluster analysis using SPSS and Python.
-  - Qualitative thematic analysis of interview transcripts using NVivo to extract themes on trust, usability, and ethical concerns.
-  - Tool categorization into robo-advisors, budgeting assistants, investment simulators, and financial tutors.
+  - A mixed-methods approach combined a tool analysis of 20 AI financial platforms with a survey of 524 users and 33 qualitative interviews.
+  - The study assessed financial literacy using adapted OECD/INFE core competencies and measured investment confidence on a 5-point Likert scale.
+  - Quantitative analysis used paired t-tests, regression, and cluster analysis in SPSS and Python to evaluate literacy score changes and behavioral impacts.
+  - Qualitative data from interviews was thematically analyzed using NVivo to extract themes on trust, usability, and learning outcomes.
+  - The research design included pre- and post-intervention measurements to directly compare the effect of AI tool usage on financial knowledge.
 findings:
-  - num: Mean financial literacy score increased 1.1 points (from 5.5 to 6.6, p < 0.01) after AI tool use.
-  - num: Over 65% of users reported high investment confidence (levels 4 or 5) post-intervention.
-  - num: Correlation between AI engagement and literacy gain was r = 0.31 (moderate positive).
-  - num: Users with >5 weekly sessions achieved the highest literacy gain of 1.46 points.
-  - AI engagement and usage frequency showed moderate correlation (r = 0.44).
-  - Qualitative feedback indicated that explainability and transparency are critical for user trust.
+  - "num: Participants showed a statistically significant mean increase of 1.1 points in financial literacy scores on a 10-point scale (p < 0.01)."
+  - "num: Over 65% of users reported high post-intervention investment confidence, rating themselves at level 4 or 5."
+  - "num: A moderate positive correlation (r = 0.31) was observed between AI engagement levels and literacy score gains."
+  - "num: Users with high AI engagement (71-100 range) achieved a mean score gain of 1.38, compared to 0.72 for low engagement users."
+  - "num: Frequent users with more than 5 weekly sessions experienced an average literacy gain of 1.46 points."
+  - AI-driven tools act as effective educational supplements by providing personalized and interactive learning environments.
+  - Higher engagement and usage frequency are key predictors of greater learning outcomes and behavioral improvement.
+  - Investment confidence improved notably, particularly for frequent users of AI financial tools.
 key_figures_tables:
-  - Table 4.1: Financial literacy scores pre/post → Mean gain of 1.1 points.
-  - Figure 1: Distribution of literacy scores → Post-scores shift right versus pre-scores.
-  - Table 4.2: Investment confidence ratings → 33.4% rated confidence as 5 (Very High).
-  - Table 4.3: Correlation matrix → AI engagement correlates 0.31 with post-literacy score.
-  - Figure 5: Score gain by usage frequency → Higher frequency yields higher gains.
+  - "Table 2: Participant demographics → Shows the sample was predominantly younger (26-35), educated, and experienced with AI tools."
+  - "Table 4.1: Financial Literacy Score Summary → Literacy scores improved from a mean of 5.5 to 6.6 post-AI tool use."
+  - "Table 4.2: Investment Confidence Ratings → 65.1% of participants reported confidence levels of 4 or 5 after using AI tools."
+  - "Table 4.3: Correlation Matrix → Positive correlations among AI engagement, usage frequency, and literacy scores (r up to 0.44)."
+  - "Figure 3: Engagement vs Score Gain → Higher AI engagement correlates with a greater improvement in literacy scores."
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
-  - term: Artificial Intelligence (AI)
-    definition: Computer systems that simulate human intelligence to perform tasks such as learning and decision-making.
-  - term: Machine Learning (ML)
-    definition: A subset of AI where algorithms improve automatically through experience and data analysis.
-  - term: Robo-advisor
-    definition: An automated digital platform that provides algorithm-driven financial planning and investment advice.
-  - term: Financial literacy
-    definition: The ability to understand and apply financial skills like budgeting, investing, and risk evaluation.
+  - term: "AI"
+    definition: "Artificial Intelligence"
+  - term: "ML"
+    definition: "Machine Learning"
+  - term: "FinTech"
+    definition: "Financial Technology"
+  - term: "XAI"
+    definition: "Explainable Artificial Intelligence"
 critical_citations:
-  - "[Fernandes, Lynch, & Netemeyer, 2014] — Meta-analysis of financial literacy effects."
-  - "[Williams & Das, 2019] — Robo-advisors as disruptive innovation in finance."
-  - "[Gupta & Lopez, 2020] — Reinforcement learning optimizes portfolio selection."
-  - "[Jones & Kwon, 2022] — Mobile AI tutors yield 23% higher knowledge gains."
+  - "[Fernandes, Lynch, & Netemeyer, 2014] — Found financial literacy significantly affects financial behaviors."
+  - "[Gupta and Lopez, 2020] — Demonstrated reinforcement learning optimizes portfolio selection based on user risk preferences."
+  - "[Williams and Das, 2019] — Highlighted robo-advisors as a disruptive, accessible innovation."
 relevance:
   topics:
-    - code: 4.A
-      name: Landscape of Existing Personal Finance Systems
-      justification: Reviews robo-advisors, budgeting assistants, and investment simulators.
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      justification: Identifies gaps in explainability, trust, and ethical design.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: contextual
+      justification: Discusses general financial behavior and decision-making challenges relevant to this demographic.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: Does not specifically address Filipino spending cycles but notes AI can identify spending patterns.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Discusses how AI-driven tools can influence user financial behavior and decision-making confidence.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Directly evaluates the use of predictive analytics and ML models for investment forecasting.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Mentions AI budgeting assistants that use pattern recognition, which relates to budgeting strategies.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: AI tools for risk assessment are mentioned, which is tangentially related to anomaly detection.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: contextual
+      justification: The study focuses on digital tools, but does not specifically analyze mobile-first design.
     - code: 10.A
       name: Data Privacy and Security in Personal Finance Systems
-      justification: Discusses data privacy as a key ethical concern in AI financial tools.
-    - code: 10.B
-      name: User Trust in Personal Finance Systems
-      justification: Finds that explainability and transparency are critical for user trust.
+      relevance: medium
+      justification: Actively addresses data privacy and algorithmic transparency as key concerns for AI adoption.
     - code: 11.A
       name: Engagement Dynamics in Personal Finance Applications
-      justification: Analyzes correlation between usage frequency, AI engagement, and learning outcomes.
+      relevance: high
+      justification: Provides empirical data on how AI engagement and usage frequency correlate with positive financial outcomes.
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      justification: Uses pre/post testing, correlation, and regression to evaluate AI tool effectiveness.
-  contribution: This paper justifies Odin’s need for an engagement analytics module by demonstrating a positive correlation between usage frequency and literacy gains (1.46 points for >5 weekly sessions). It supports Odin’s transparency component, as users value explainable AI recommendations to build trust. The mixed-methods evaluation framework (pre/post tests, correlation analysis, thematic coding) directly informs Odin’s system evaluation protocols. Findings on data privacy and algorithmic bias reinforce Odin’s ethical design requirements.
+      relevance: contextual
+      justification: The mixed-methods study provides a framework for evaluating AI tools but is not the paper's primary focus.
+  contribution: "This paper provides empirical evidence that AI-powered tools can enhance financial literacy and investment confidence, justifying the development of similar modules in Odin. It validates the use of predictive analytics and personalized feedback to improve user engagement and decision-making. The findings support Odin's design for interactive, data-driven financial education. The study's mixed-methods approach offers a template for evaluating the effectiveness of Odin's algorithmic modules. It underscores the importance of addressing ethical concerns like transparency to build user trust."
   directly_justifies:
-    - Higher AI engagement leads to greater financial literacy improvement (r = 0.31).
-    - Users who interact with AI tools more than five times per week show the highest knowledge gains (1.46 points).
-    - Over 65% of users report high investment confidence after using AI-driven financial tools.
-    - Explainability and transparency are critical determinants of user trust in AI financial systems.
+    - "AI-driven financial tools significantly improve financial literacy scores."
+    - "Higher AI engagement correlates with greater learning outcomes and investment confidence."
+    - "Frequent use of AI financial platforms is a strong predictor of knowledge gain."
+    - "Users show a high receptiveness to AI as a co-pilot in financial planning."
   limits:
-    - Sample was digitally literate and may not represent older or tech-averse demographics.
-    - Financial literacy and confidence were measured shortly after engagement; no longitudinal follow-up.
-    - Self-reported metrics (confidence, usage frequency) may introduce response bias.
-  mapping_rationale: Screening against Odin’s functional domains flagged relevance for system evaluation (12.A), user trust (10.B), data privacy (10.A), engagement dynamics (11.A), and landscape/gap analysis (4.A, 4.B). Topics related to behavioral classification (5.A-C), spending forecasting (6.A-B), budget recommendation (7.A-C), anomaly detection (8.A-B), mobile design (9.A-B), and savings/debt (13.A-B) were rejected because the paper does not address these specific subtopics. Borderline case 5.A (behavioral profiles) was excluded as the paper measures general confidence and engagement, not classification into distinct financial profiles.
+    - "Sample was primarily digitally literate, which may not reflect the experiences of older or tech-averse demographics."
+    - "Financial literacy and confidence were assessed shortly after engagement, not long-term. [unacknowledged]"
+    - "Confidence levels and some usage statistics were self-reported, which could introduce response bias. [unacknowledged]"
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The study's core contribution to predictive modeling and user engagement flagged topics 6.A and 11.A as high relevance. Domains 5.A (behavioral profiles), 10.A (data privacy), and 7.A (budgeting) were assessed as medium relevance, as the paper provides supporting evidence but not a core contribution. Topic 1.C and 9.A were marked contextual, as the study focuses on general users, not specifically Filipino young professionals, and does not address mobile design specifically. Topics like 2.A (cultural practices), 3.A (categorization), and 13.A (savings) were rejected as they are not addressed. The study is broadly relevant to Odin for its empirical validation of AI's educational and behavioral impact, though it is international and non-algorithmic in its primary contribution."
 limitations:
-  - Sample bias toward digitally literate users, limiting generalizability to older or tech-averse populations. [unacknowledged]
-  - Short-term measurement of literacy and confidence; no longitudinal assessment of retention or real-world behavior.
-  - Self-reported metrics (confidence, usage frequency) may introduce response bias.
-  - Lack of comparison across different ML algorithm types for personalization.
+  - "Sample was primarily digitally literate, not reflecting the experiences of older or tech-averse demographics. [unacknowledged]"
+  - "Financial literacy and confidence were assessed shortly after engagement; long-term retention and behavior were not measured. [unacknowledged]"
+  - "Self-reported confidence and some usage metrics may introduce response bias. [unacknowledged]"
 remember_this:
-  - AI tools improved financial literacy scores by 1.1 points on average.
-  - Higher usage frequency (5+ sessions/week) yields 1.46 point literacy gain.
-  - Over 65% of users reported high investment confidence post-intervention.
-  - User trust and explainability are critical for adoption of AI financial systems.
-  - Engagement correlates moderately (r = 0.31) with learning outcomes.
+  - "AI tools increased financial literacy scores by an average of 1.1 points."
+  - "Over 65% of users reported high investment confidence after using AI tools."
+  - "Higher AI engagement directly correlates with better learning outcomes."
+  - "Frequent platform use is a strong predictor of financial knowledge gains."
+  - "Responsible AI integration requires attention to transparency and data privacy."
 ```

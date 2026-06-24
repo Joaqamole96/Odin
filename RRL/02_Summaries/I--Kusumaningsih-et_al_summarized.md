@@ -1,83 +1,109 @@
 ```yaml
-paper_id: f47ac10b-58cc-4372-a567-0e02b2c3d479
+paper_id: 4d9f4f3e-8c8e-5f7e-a6c7-b7c8e9f0a1b2
 designation: international
-title: "EMPOWERING YOUNG ADULTS THROUGH FINANCIAL MANAGEMENT: IMPLICATIONS FOR ACHIEVING THE SDGS AMONG INDONESIAN STUDENTS IN THE PHILIPPINES"
-authors: "Kusumaningsih, A.; Mariana; Handayani, S."
+title: EMPOWERING YOUNG ADULTS THROUGH FINANCIAL MANAGEMENT: IMPLICATIONS FOR ACHIEVING THE SDGS AMONG INDONESIAN STUDENTS IN THE PHILIPPINES
+authors: Kusumaningsih, A.; Mariana,; Handayani, S.
 year: 2024
-venue: "The 2nd International Conference on Economic Issues (ICONES 2024)"
+venue: The 2nd International Conference on Economic Issues (ICONES 2024)
 odin_topics:
-  - "1.C"
-  - "3.A"
-  - "7.A"
-  - "13.A"
-shorthand_tags:
-  - "/financial-behavior"
-  - "/expense-categorization"
-  - "/budgeting-strategies"
-  - "/savings-goals"
-tldr: "Indonesian students in the Philippines prioritize long-term savings and use digital tools for budgeting but face uncontrolled spending and peer pressure, revealing gaps between financial knowledge and practice."
-problem_and_motivation: "International students encounter unique financial challenges such as currency fluctuations, unfamiliar banking systems, and social pressures that hinder effective money management. Poor financial handling can lead to stress and academic difficulties, yet tailored interventions for this demographic are lacking. Understanding these factors is essential to support financial well-being and contribute to poverty reduction and responsible consumption (SDGs)."
+  - 1.C
+  - 2.A
+  - 2.D
+  - 4.A
+  - 5.A
+  - 9.A
+  - 10.A
+  - 11.A
+  - 13.A
+tldr: Indonesian students in the Philippines prioritize long-term savings but struggle with budget adherence due to peer pressure and uncontrolled spending.
+problem_and_motivation: International students face unique financial challenges from currency fluctuations and new social environments. A gap exists between their financial knowledge and practical application. This gap threatens their financial stability and academic success.
 approach:
-  - "Qualitative descriptive design using online surveys and semi-structured interviews with Indonesian students enrolled in Philippine universities."
-  - "Purposive sampling captured diversity in age, gender, and academic background; 88% of respondents aged 18-24, 65% female."
-  - "Surveys included closed and open questions on budgeting, saving, investment, and technology use; interviews explored personal financial philosophies and challenges."
-  - "Thematic analysis followed Braun and Clarke’s method, with triangulation, member checking, and a reflective journal to ensure reliability."
+  - Qualitative descriptive study using surveys and semi-structured interviews.
+  - Purposeful sampling of Indonesian students in Philippine universities.
+  - Data collection combined structured online questionnaires with in-depth interviews.
+  - Thematic analysis was used to identify patterns in financial management practices.
+  - Triangulation and member checking were employed to ensure research validity.
 findings:
-  - "num: 92% of students have long-term financial goals (savings 31.6%, investment 22.8%, further education 19.3%)."
-  - "num: Only 26.9% stick to their budget despite 85% rating financial planning as very important."
-  - "num: 46.2% save 10% of monthly income, and 42.3% have tried investing, but 61.5% have not invested further."
-  - "num: 63.9% use digital tools for financial management, yet only 23.1% rate them as very effective."
-  - "num: Uncontrolled spending (29.8%) and peer influence (23.4%) are the top barriers; 14.9% cite low income, 12.8% lack financial knowledge."
-  - "96% are aware of financial planning, and 84% feel sufficiently supported in managing finances."
+  - 96% of respondents are aware of financial planning, and 85% consider it very important.
+  - 92% have long-term financial goals, including saving (31.6%), investing (22.8%), and further education (19.3%).
+  - Only 26.9% of students adhere to their budgets, indicating an intention-behavior gap.
+  - 46.2% of respondents save 10% of their monthly income.
+  - Uncontrolled spending (29.8%) and peer influence (23.4%) are the top barriers to financial management.
+  - 53.8% of students use digital tools for financial management, but only 23.1% find them very effective.
 key_figures_tables:
   - "None."
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
-  - term: "Theory of Planned Behavior (TPB)"
-    definition: "A framework linking attitudes, subjective norms, and perceived behavioral control to behavioral intentions."
-  - term: "Social Cognitive Theory (SCT)"
-    definition: "Bandura’s theory emphasizing reciprocal interactions between personal, behavioral, and environmental factors, including self-efficacy."
-  - term: "Sustainable Development Goals (SDGs)"
-    definition: "UN global goals including No Poverty (SDG 1) and Responsible Consumption (SDG 12)."
+  - term: SDG
+    definition: Sustainable Development Goals, a collection of global goals set by the UN.
+  - term: TPB
+    definition: Theory of Planned Behavior, a psychological framework explaining behavioral intention.
+  - term: SCT
+    definition: Social Cognitive Theory, a framework emphasizing observational learning and self-efficacy.
 critical_citations:
-  - "[Lusardi & Mitchell, 2020] — Foundational link between financial literacy and retirement well-being."
-  - "[Ajzen, 2020] — Core TPB framework used to analyze financial intentions vs. behavior."
-  - "[Bandura, 2018] — SCT concepts of self-efficacy and observational learning applied to financial habits."
+  - "[Lusardi & Mitchell, 2020] — Foundational for financial literacy impact on wellbeing."
+  - "[Ajzen, 2019] — Core theory for behavioral intention in finance."
+  - "[Bandura, 2018] — Framework for self-efficacy in financial behavior."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Documents spending habits, budgeting adherence, and peer influence among young adults."
-    - code: "3.A"
-      name: "Expense Categorization Frameworks"
-      justification: "Highlights challenges students face in ordering and categorizing expenses in a foreign system."
-    - code: "7.A"
-      name: "Budgeting Strategies as Domain Knowledge"
-      justification: "Provides empirical data on budget creation vs. adherence, and barriers like uncontrolled spending."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Quantifies long-term savings goals (92%) and saving rates (46.2% save 10% of income)."
-  contribution: "The paper validates the need for an expense categorization module that adapts to cross‑border spending contexts, as students struggle to classify expenses under unfamiliar economic systems. Its finding that only 26.9% of budgeters adhere to their plan justifies a budget recommendation module that incorporates behavioral nudges and real‑time feedback. The low perceived effectiveness of digital tools (23.1%) informs mobile UX design for Odin, emphasizing simplicity and financial literacy support. Finally, the prominence of peer pressure (23.4%) suggests adding social accountability features to savings goal management."
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly examines the financial behavior, priorities, and challenges of young adults in a foreign context.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Provides a comparative context for understanding how financial practices adapt to a new culture (Philippines).
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: contextual
+      justification: Discusses the social environment and peer influences in the Philippines that may shape spending behavior.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: Mentions technology (digital tools/apps) for financial management, but does not evaluate specific systems.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Directly identifies behavioral patterns like budget adherence, saving, and technology adoption among young adults.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: medium
+      justification: Highlights the use of digital tools for financial management, but focuses on usage, not design principles.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: Does not address data privacy or security concerns in financial tech use.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Implicitly addresses engagement through the study of technology usage and its perceived (low) effectiveness.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: high
+      justification: Examines savings as a primary financial priority and identifies a gap between saving intentions and actual budget adherence.
+  contribution: This paper provides a qualitative baseline on financial management behaviors among young adults in a cross-border setting. It informs Odin's user profiling module by identifying key financial behaviors and challenges like the intention-behavior gap and the role of social pressure. The findings on technology usage and perceived effectiveness can guide the design of Odin's budgeting and savings tools to better support user engagement. The study's emphasis on financial literacy and discipline reinforces the need for educational and behavioral features within Odin.
   directly_justifies:
-    - "Only 26.9% of young adults stick to their budget despite 85% acknowledging its importance."
-    - "Peer influence affects 23.4% of students' spending decisions, often overriding financial plans."
-    - "63.9% use digital tools but only 23.1% find them very effective, indicating a usability and literacy gap."
-    - "46.2% save 10% of monthly income, but 61.5% have never invested, showing untapped potential for automated savings and investment features."
+    - "A significant gap exists between young adults' financial literacy and their practical budget adherence."
+    - "Peer influence is a major driver of uncontrolled spending among young adults."
+    - "Digital tools for financial management are widely adopted but perceived as ineffective."
+    - "Long-term savings and investment are top financial priorities for this demographic."
   limits:
-    - "Qualitative design with small, purposive sample limits generalizability to all Filipino young professionals. [unacknowledged]"
-    - "Focus on Indonesian students in the Philippines; cultural and economic differences may reduce direct applicability to local Filipinos. [unacknowledged]"
-    - "Does not compare multiple PFMS or test specific algorithmic interventions. [unacknowledged]"
-  mapping_rationale: "The paper was screened against Odin’s functional domains. Behavioral profiling (5.A‑5.C) was rejected because no classification or profile dynamics are presented. Spending forecasting (6.A‑6.B) and anomaly detection (8.A‑8.B) are absent. Mobile‑first design (9.A‑9.B), data privacy (10.A‑10.B), and retention (11.A‑11.B) are not addressed. Expense categorization (3.A‑3.B) was selected because students explicitly report difficulty ordering and categorizing expenses. Budget recommendation (7.A) was selected due to detailed budgeting practices and adherence gaps. Savings goal management (13.A) was selected because 92% have long‑term savings goals and saving rates are quantified. Financial behavior (1.C) was selected as an overarching category for spending habits and peer influence. Borderline cases like 2.B (seasonal spending) were rejected due to lack of temporal pattern data."
+    - "The study is limited to Indonesian students in the Philippines, not Filipino young professionals."
+    - "The qualitative method provides rich insight but does not quantify causal relationships. [unacknowledged]"
+    - "The analysis does not evaluate specific financial applications or their features. [unacknowledged]"
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The domains flagged as relevant include Filipino Cultural Context (topics 2.A, 2.D), Behavioral Profiling (5.A), Mobile-First Design (9.A), Data Privacy (10.A), User Retention (11.A), and Savings & Debt (13.A). Topic 1.C (Financial Behavior) is assigned 'high' relevance as the paper's core focus. Topics 2.A and 5.A are also 'high' as they directly examine cultural adaptation and behavioral patterns. Topics 9.A, 11.A, and 13.A are 'medium' for their insights on technology use, engagement, and savings. Topic 2.D is 'contextual' as it provides background on the Philippines' social environment. Domains like Expense Categorization (3.A-C), Existing Systems & Gaps (4.B), Forecasting (6.A-B), Budget Recommendation (7.A-D), Anomaly Detection (8.A-C), and System Evaluation (12.A-C) were considered but rejected due to the paper's lack of algorithmic or system design focus. The paper offers qualitative insights into user behavior and needs, providing a valuable behavioral foundation for Odin's design, particularly for profiling and engagement strategies.
 limitations:
-  - "Qualitative design with limited sample size; findings may not be statistically representative. [unacknowledged]"
-  - "No longitudinal data to assess whether financial behaviors change over time. [unacknowledged]"
-  - "Relies on self‑reported data, which may be subject to social desirability bias. [unacknowledged]"
+  - "Sample is limited to Indonesian students, not representative of Filipino young professionals."
+  - "The study does not propose or evaluate any algorithmic solution or system."
+  - "Findings on technology use are based on self-reported data. [unacknowledged]"
+  - "The study provides cross-sectional data, limiting insights into behavioral changes over time. [unacknowledged]"
 remember_this:
-  - "Only 26.9% of young adults follow their budget."
-  - "Peer pressure is a top barrier for 23.4% of students."
-  - "Digital tool effectiveness is perceived as low at 23.1%."
-  - "92% have long-term savings goals, but adherence lags."
-  - "46.2% save 10% of income, yet 61.5% never invest."
+  - "Only 26.9% of young adults adhere to their budgets despite high financial awareness."
+  - "Peer pressure is a leading cause of uncontrolled spending for young adults."
+  - "Over half of young adults use fintech tools, but most do not find them effective."
+  - "Saving and investing are top long-term goals for young professionals."
+  - "There is a significant intention-behavior gap in personal financial management."
 ```

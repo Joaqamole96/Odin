@@ -1,106 +1,122 @@
 ```yaml
-paper_id: 10.1109/ACCESS.2025.3602791
-designation: international
-title: A Review of Time Series Prediction Models Based on Deep Learning
-authors: Ao, X.; Gong, Y.; He, A.
+paper_id: "10.1109/ACCESS.2025.3602791"
+designation: "international-algorithm-specific"
+title: "A Review of Time Series Prediction Models Based on Deep Learning"
+authors: "Ao, X.; Gong, Y.; He, A."
 year: 2025
-venue: IEEE Access
+venue: "IEEE Access"
 odin_topics:
-  - 6.A
-  - 6.B
-  - 8.A
-  - 8.B
-  - 12.A
-  - 12.B
-shorthand_tags:
-  - /spending-forecasting
-  - /anomaly-detection
-  - /model-evaluation
-tldr: Reviews deep learning models for time series prediction, including CNNs, RNNs/LSTM/GRU, Transformers, GNNs, and hybrids, with a task-driven model selection framework.
-problem_and_motivation: Traditional time series methods like ARIMA struggle with nonlinear, non-stationary, and seasonal real-world data. Deep learning offers powerful nonlinear modeling and automatic feature extraction, but existing surveys lack practical model selection guidelines, deep cross-comparisons, and systematic coverage of emerging challenges like interpretability and efficiency.
+  - "6.A"
+  - "6.B"
+  - "8.A"
+  - "8.B"
+  - "12.A"
+  - "12.B"
+tldr: "Reviews deep learning time series models (CNNs, RNNs, Transformers, GNNs, hybrids) and provides a task-oriented selection framework based on sequence length, multivariate support, and efficiency."
+problem_and_motivation: "Real-world time series are nonlinear and non-stationary, making traditional statistical models inadequate. Deep learning offers nonlinear modeling and feature extraction but lacks systematic, application-oriented selection guidelines. This survey addresses the gap by structuring model comparison and selection based on task requirements."
 approach:
-  - Systematically analyzes CNN-based models (TCN, SCINet, Kmeans-CNN) and their trade-offs in long-range dependency capture versus computational cost.
-  - Reviews RNN family (vanilla RNN, LSTM, GRU) focusing on gating mechanisms that solve vanishing gradients for long sequences.
-  - Examines Transformer variants (Informer, Autoformer, iTransformer, Conformer, Scaleformer, CrossFormer) with emphasis on self-attention complexity and efficiency innovations.
-  - Covers Graph Neural Networks (GNNs) including spatial-temporal integrated methods (STGCN, MTGNN, HGCN-MA, STAN) for multivariate interdependencies.
-  - Discusses hybrid models that combine deep learning with statistical methods (ARIMA-RNN, ETSformer, N-BEATS, PatchTST) and domain constraints.
-  - Provides a comparative analysis across categories based on sequence length, multivariate support, interpretability, computational efficiency, and real-time performance.
-  - Proposes a task-driven model selection framework mapping problem characteristics to optimal model classes.
-  - Meta-analysis of cross-dataset trends identifying which architectures dominate under specific data conditions.
+  - "Systematically reviews prominent DL model families: CNNs, RNNs (LSTM/GRU), Transformer variants (Informer, Autoformer, iTransformer), GNNs, and hybrid models."
+  - "Analyzes core principles, strengths, limitations, and key architectural innovations (e.g., dilated convolutions in TCN, gating in LSTM/GRU, ProbSparse attention in Informer)."
+  - "Proposes a task-oriented framework evaluating models across sequence length handling, multivariate support, interpretability, computational efficiency, and real-time performance."
+  - "Provides in-depth comparative analysis of model categories using tabulated attributes and cross-model trend analysis from benchmark studies."
+  - "Discusses emerging challenges: interpretability, efficiency optimization, and integration of multi-source data/domain knowledge."
 findings:
-  - num: ARIMA-RNN hybrid achieved 15% MAE reduction on electricity load dataset compared to standalone models.
-  - num: ETSformer reduced inference latency by 37% versus Autoformer on ETT data while maintaining accuracy.
-  - num: PatchTST achieved 23% lower MSE than Informer with 60% less GPU memory consumption.
-  - Transformer variants with ProbSparse attention (Informer) reduce time complexity from O(L^2) to O(L log L).
-  - GNN-based models (STGCN, MTGNN) outperform channel-independent methods when strong spatial or relational dependencies exist between variables.
-  - iTransformer inverts tokenization (variables as tokens, time points as features) for superior multivariate forecasting without predefined graphs.
-  - Decomposition-based hybrids (Autoformer, N-BEATS) consistently top benchmarks for data with strong seasonality and trends.
+  - "num: Informer reduces self-attention complexity from O(L^2) to O(L log L)."
+  - "num: ETSformer reduces inference latency by 37% compared to Autoformer on ETT data."
+  - "num: PatchTST achieves 23% lower MSE than Informer with 60% less GPU memory."
+  - "num: ARIMA-RNN hybrid achieved 15% MAE reduction on Electricity Load Dataset compared to standalone models."
+  - "Transformer variants dominate ultra-long horizon forecasting (>1000 steps) in multivariate settings."
+  - "GNNs excel when strong spatial/relational dependencies exist (e.g., traffic, supply chains)."
+  - "Hybrid models (e.g., N-BEATS, ETSformer) enhance accuracy and interpretability by combining statistical decomposition with deep learning."
+  - "iTransformer's inverted architecture (variables as tokens) shows strong multivariate generalization."
+  - "Model selection depends on trade-offs between modeling power, efficiency, sequential fidelity, and interpretability."
+  - "Emerging trend: simpler unified architectures (iTransformer, PatchTST) reduce complex, custom-designed components."
 key_figures_tables:
-  - Figure 1: Structure of one-dimensional convolutional network → Basic CNN architecture for time series.
-  - Figure 2: Structure of dilated causal convolution → TCN expands receptive field without increasing depth.
-  - Figure 5: Structure of LSTM → Three-gate mechanism (forget, input, output) for long-term dependency capture.
-  - Figure 7: Structure of Transformer → Encoder-decoder with multi-head self-attention and feed-forward networks.
-  - Figure 12: Task-driven model selection framework → Maps sequence length, multivariate needs, and constraints to optimal model class.
-  - Table 6: Comparative analysis of model categories → Summarizes strengths and limitations across CNN, RNN, Transformer, GNN, Hybrid.
+  - "Figure 1: Structure of one-dimensional CNN → CNN extracts local spatial patterns via convolution and pooling."
+  - "Figure 2: Dilated causal convolution in TCN → Expands receptive field without increasing depth."
+  - "Figure 3: TCN residual block → Residual connections improve training stability in deep networks."
+  - "Table 1: Analysis of CNN-based algorithms → Compares CNN, TCN, WaveNet-CNN, Kmeans-CNN, SCINet."
+  - "Table 6: Comparative analysis of model categories → Summarizes strengths and limitations of CNN, RNN, Transformer, GNN, Hybrid models."
+  - "Figure 12: Task-driven model selection framework → Matches problem characteristics (sequence length, dependencies) to optimal model classes."
 key_equations:
-  - equation: TCN = 1DFCN + causal convolutions
-    explanation: TCN combines fully convolutional network with causality constraint.
+  - equation: "TCN = 1DFCN + causal convolutions"
+    explanation: "Simplified formula for Temporal Convolutional Network structure."
 definitions:
-  - term: TCN
-    definition: Temporal Convolutional Network using dilated causal convolutions and residual connections for sequence modeling.
-  - term: LSTM
-    definition: Long Short-Term Memory network with forget, input, and output gates to control information flow.
-  - term: GRU
-    definition: Gated Recurrent Unit merging LSTM's input and forget gates into an update gate.
-  - term: ProbSparse Self-Attention
-    definition: Attention mechanism reducing complexity from O(L^2) to O(L log L) by selecting dominant query-key pairs.
-  - term: Auto-Correlation Mechanism
-    definition: Replaces self-attention with period-based dependencies in Autoformer.
+  - term: "CNN"
+    definition: "Convolutional Neural Network, excels at extracting local spatial features."
+  - term: "TCN"
+    definition: "Temporal Convolutional Network, uses dilated causal convolutions for long-range dependencies."
+  - term: "RNN"
+    definition: "Recurrent Neural Network, processes sequential data with hidden state memory."
+  - term: "LSTM"
+    definition: "Long Short-Term Memory, RNN variant with gating mechanisms for long-term dependencies."
+  - term: "GRU"
+    definition: "Gated Recurrent Unit, simplified LSTM with update and reset gates."
+  - term: "GNN"
+    definition: "Graph Neural Network, models relational dependencies using graph structures."
+  - term: "GCN"
+    definition: "Graph Convolutional Network, performs convolution on graph data for spatial dependencies."
+  - term: "STGCN"
+    definition: "Spatio-Temporal Graph Convolutional Network, joint spatial and temporal modeling."
+  - term: "MTGNN"
+    definition: "Multivariate Time Series Graph Neural Network, learns dynamic graph structures."
+  - term: "ARIMA"
+    definition: "Autoregressive Integrated Moving Average, classical statistical model for linear time series."
 critical_citations:
-  - "[Hochreiter & Schmidhuber, 1997] — Introduced LSTM gating to solve vanishing gradients."
-  - "[Vaswani et al., 2017] — Transformer with self-attention enabling parallel sequence processing."
-  - "[Zhou et al., 2021] — Informer with ProbSparse attention for long-sequence forecasting."
+  - "[Vaswani et al., 2017] — Introduced Transformer with self-attention, foundational for many models."
+  - "[Hochreiter & Schmidhuber, 1997] — Introduced LSTM, solving gradient vanishing for long sequences."
+  - "[Bai et al., 2018] — Proposed TCN for efficient sequence modeling with causal convolutions."
+  - "[Zhou et al., 2021] — Informer with ProbSparse attention for efficient long-sequence forecasting."
+  - "[Wu et al., 2021] — Autoformer integrating series decomposition and auto-correlation."
 relevance:
   topics:
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      justification: Surveys deep learning models for spending pattern prediction.
-    - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Compares LSTM, GRU, Transformer variants for long-sequence forecasting tasks.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      justification: Reviews CNN-based methods for ECG abnormality and power consumption anomalies.
-    - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Discusses Kmeans-CNN and TCN for detecting irregular patterns in time series.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      justification: Provides comparative analysis across model categories on multiple benchmarks.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: Proposes task-driven selection framework based on sequence length, latency, and dependencies.
-  contribution: This review directly informs Odin's spending forecasting module by benchmarking LSTM, GRU, and Transformer variants on long-sequence prediction tasks. For anomaly detection, the survey identifies CNN-based models (TCN, Kmeans-CNN) as effective for irregular pattern detection. The task-driven selection framework provides a systematic evaluation methodology for Odin's algorithmic modules, matching problem characteristics (sequence length, real-time constraints) to optimal model classes. Hybrid models like ARIMA-RNN and PatchTST offer paths for balancing accuracy and computational efficiency in resource-constrained mobile environments.
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "high"
+      justification: "Core survey on deep learning predictive models directly applicable to Odin's forecasting modules."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "high"
+      justification: "Reviews RNNs, Transformers, and hybrids specifically for sequential data forecasting."
+    - code: "8.A"
+      name: "Anomaly Detection in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Discusses models (e.g., CNN, LSTM) applicable to anomaly detection in spending sequences."
+    - code: "8.B"
+      name: "Anomaly Detection Algorithms for Personal Spending Data"
+      relevance: "medium"
+      justification: "Provides algorithmic foundations (TCN, LSTM) that can be adapted for anomaly detection."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "medium"
+      justification: "Provides comparative analysis framework and task-driven selection relevant for evaluation."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "medium"
+      justification: "Discusses evaluation across dimensions (accuracy, efficiency, interpretability) relevant to module assessment."
+  contribution: "This survey directly informs Odin's predictive modeling and anomaly detection modules by providing a structured comparison of DL algorithms suitable for spending data. The task-oriented selection framework helps choose models (e.g., LSTM/GRU for sequential spending, GNN for multivariate dependencies, hybrids for accuracy) based on Odin's specific requirements. The analysis of efficiency trade-offs informs mobile-first implementation choices and real-time constraints. The discussion on model interpretability guides Odin's need for explainable predictions to build user trust. The coverage of emerging challenges like computational efficiency and domain knowledge integration aligns with Odin's practical deployment needs."
   directly_justifies:
-    - LSTM and GRU are suitable for long-sequence prediction tasks such as power load forecasting.
-    - Gated Recurrent Units offer lower computational cost than LSTM with comparable performance.
-    - Transformer variants like Informer achieve O(L log L) complexity for efficient long-sequence processing.
-    - Decomposition-based hybrids (N-BEATS, Autoformer) excel when data contains strong seasonal and trend components.
-    - TCN captures long-range dependencies using dilated convolutions without gradient issues.
+    - "LSTM and GRU effectively capture long-term dependencies in sequential spending data."
+    - "Transformer variants like Informer enable efficient long-sequence forecasting for spending patterns."
+    - "Hybrid models combining statistical methods with DL improve forecasting accuracy and robustness."
+    - "Model selection should match sequence length, multivariate dependencies, and efficiency constraints."
+    - "Attention mechanisms provide a basis for model interpretability in financial predictions."
   limits:
-    - The review focuses on general time series prediction, not specifically on personal finance or spending data.
-    - No empirical validation on Filipino young professional financial data. [unacknowledged]
-    - Mobile-first constraints (latency, memory, battery) are mentioned but not deeply evaluated for each model. [unacknowledged]
-    - User trust and data privacy implications of deep learning models are not discussed. [unacknowledged]
-  mapping_rationale: The paper was screened against Odin's functional domains. Spending forecasting (domains 6.A, 6.B) is directly supported by extensive coverage of RNNs, Transformers, and hybrid models for long-sequence prediction. Anomaly detection (8.A, 8.B) is supported by CNN variants (TCN, Kmeans-CNN) applied to irregular pattern detection. System evaluation (12.A, 12.B) maps to the paper's comparative analysis and task-driven selection framework. Topics related to behavioral profiling (5.A-C), budget recommendation (7.A-C), mobile UX (9.A-B), data privacy (10.A-B), retention (11.A-B), and savings/debt (13.A-B) were rejected because the paper does not address these domains. The paper's international designation is appropriate as it is not authored by a Philippine institution.
+    - "Focuses on algorithmic capabilities without addressing financial domain-specific constraints (e.g., user allocation rules)."
+    - "Does not evaluate models on PFMS-specific data like Philippine spending cycles. [unacknowledged]"
+    - "Lacks detailed discussion on cold-start scenarios common in personal finance apps. [unacknowledged]"
+    - "Computational benchmarks are not directly applicable to mobile-device resource constraints. [unacknowledged]"
+  mapping_rationale: "A systematic scan across all 12 functional domains was conducted. The paper was flagged as highly relevant to the Predictive Modeling (6.A) and Forecasting Algorithms (6.B) domains because it is a comprehensive review of DL models for time series prediction, directly applicable to Odin's spending forecasting. It also provided medium relevance to Anomaly Detection (8.A, 8.B) as the reviewed models can be adapted for this purpose, and to System Evaluation (12.A, 12.B) through its proposed comparison framework. Borderline cases included the discussion of GNNs for multivariate dependencies, which primarily supports 6.B but also touches on 8.B for network-based anomaly detection. Domains related to user behavior (1.A-C, 5.A-C), cultural context (2.A-D), expense categorization (3.A-C), system landscape (4.A-B), budgeting (7.A-D), mobile design (9.A-B), privacy (10.A-B), retention (11.A-B), and savings/debt (13.A-C) were considered and rejected as the paper is purely algorithmic and does not address user, cultural, design, or financial domain-specific constraints. Overall, the paper provides strong foundational knowledge for Odin's predictive and detection algorithms but requires supplementation with domain-specific and contextual research."
 limitations:
-  - The paper is a survey, not an empirical study; claims about model performance are aggregated from cited primary research.
-  - Comparative tables lack statistical significance testing across different datasets. [unacknowledged]
-  - Real-time performance metrics are discussed qualitatively without standardized benchmarks. [unacknowledged]
+  - "Interpretability remains challenging across all Transformer variants."
+  - "High computational complexity demands substantial resources for large-scale data. [unacknowledged]"
+  - "The performance of specialized models depends on matching design assumptions to data characteristics."
+  - "General models need more data to achieve robustness compared to specialized ones. [unacknowledged]"
+  - "Decomposition-based hybrids incur computational redundancy from iterative operations. [unacknowledged]"
 remember_this:
-  - LSTM and GRU solve vanishing gradients for medium-length sequence forecasting.
-  - Transformer variants achieve O(L log L) complexity for sequences over 1000 steps.
-  - PatchTST reduces GPU memory by 60% via sub-series tokenization.
-  - Hybrid models combine statistical decomposition with deep learning for interpretability.
-  - GNNs outperform other methods when variables have strong spatial or relational dependencies.
+  - "Informer reduces self-attention complexity to O(L log L) for long sequences."
+  - "ETSformer cuts inference latency by 37% versus Autoformer."
+  - "PatchTST achieves 23% lower MSE than Informer with 60% less memory."
+  - "Model selection must balance modeling power, efficiency, and interpretability."
+  - "Hybrid models combining statistics and deep learning enhance accuracy and explainability."
 ```

@@ -1,66 +1,90 @@
 ```yaml
-paper_id: b9c7a3d4-5e6f-4a7b-8c9d-0e1f2a3b4c5d
+paper_id: 3a5c6d8e-9f0b-4a2c-8b3d-6e7f8a9b0c1d
 designation: local
 title: Predictors of Investment Decision among Selected Individuals in Key Cities of Laguna: An Extended Theory of Planned Behavior Approach
-authors: Lantin-Magana, L.; Espelita, C. A. M. H.; Calingasan-Habana, C. A.; Atento, A. G. B.; Atento, R. G. O.
+authors: Lantin-Magana, L.; Espelita, C.A.M.H.; Calingasan-Habana, C.A.; Atento, A.G.B.; Atento, R.G.O.
 year: 2026
 venue: Journal of Enterprise Strategy and Management Innovation
 odin_topics:
-  - 5.A
-shorthand_tags:
-  - /financial-behavior-profiles
-tldr: Investment decision among individuals in Laguna cities is associated with capital market knowledge and attitude toward investment, with attitude and monthly salary explaining 16.2% of variance.
-problem_and_motivation: Investment participation in the Philippines remains limited, and decisions to invest are shaped not only by financial capacity but also by evaluative beliefs, risk appraisal, institutional trust, and perceived readiness. An exclusive focus on financial capacity is insufficient for explaining observed differences in investment participation and decision patterns.
+  - "1.A"
+  - "1.C"
+  - "5.A"
+  - "5.B"
+tldr: Investment decisions among Filipino urban professionals are associated with attitudes toward investing, monthly salary, capital market knowledge, and sex, with attitude and salary being the strongest predictors in a TPB-extended model.
+problem_and_motivation: Investment participation in the Philippines remains limited, and decisions to invest are shaped not only by financial capacity but also by evaluative beliefs, risk appraisal, institutional trust, and perceived readiness. An exclusive focus on financial capacity is insufficient for explaining observed differences in investment participation. The study addresses the gap by examining how individual perceptions and demographic attributes relate to investment decisions.
 approach:
-  - A descriptive, cross-sectional online survey was administered to 483 respondents from Calamba, Santa Rosa, and Biñan, Laguna.
-  - Constructs measured risk tolerance, attitude toward capital markets, capital market knowledge (financial literacy), government trust, attitude toward investment, and self-reported investment decision using a six-point scale.
-  - Descriptive statistics, independent t-tests, ANOVA, Pearson correlations, and stepwise multiple regression were used for analysis.
+  - Data were collected via an online survey from 483 respondents in Calamba, Santa Rosa, and Biñan, Laguna.
+  - The questionnaire measured risk tolerance, attitude toward capital markets, capital market knowledge, government trust, and attitude toward investment using a 6-point scale.
+  - Investment decision was self-reported using a six-point scale.
+  - Descriptive statistics, group comparisons (t-test and ANOVA), Pearson correlation, and stepwise multiple regression were used to analyze associations and identify predictors.
 findings:
-  - num: Attitude toward investment (coefficient 0.345) and monthly salary (0.368) were significant predictors in stepwise regression, with R² = 0.162, p < .001.
-  - num: Investment decision differed significantly by sex (p = .002) and monthly salary bracket (p < .001).
-  - num: Capital market knowledge showed the highest correlation with investment decision (r = 0.210, p = .001), followed by attitude toward investment (r = 0.179, p = .003).
-  - Risk tolerance received the highest mean rating (M = 4.81, SD = 1.19), while government trust received the lowest (M = 3.85, SD = 1.33).
+  - Risk tolerance received the highest rating (M=4.81), while government trust received the lowest (M=3.85).
+  - num: Investment decision scores differed significantly by sex (p=0.002) and by monthly salary bracket (p<0.001).
+  - num: Capital market knowledge showed the highest correlation with investment decision (r=0.210, p=0.001), followed by attitude toward investment (r=0.179, p=0.003).
+  - num: Attitude toward investment (coefficient 0.345) and monthly salary (coefficient 0.368) jointly explained 16.2% of variance in investment decision (R²=0.162, p<0.001).
 key_figures_tables:
-  - Table 1: Mean ratings of risk tolerance (4.81), attitude toward capital markets (4.60), capital market knowledge (4.10), government trust (3.85) → favorable risk attitudes but weaker institutional trust.
-  - Table 2: Stepwise regression coefficients for attitude toward investment (0.345) and monthly salary (0.368) → both positively predict investment decision.
+  - Table 1: Mean and standard deviation of risk tolerance (4.81, 1.19), attitude toward capital markets (4.60, 1.23), knowledge (4.10, 1.32), and government trust (3.85, 1.33) → Perceptions vary, with risk tolerance highest and trust lowest.
+  - Table 2: Stepwise regression coefficients for attitude toward investment (0.345) and monthly salary (0.368), R²=0.162 → Attitude and salary jointly predict investment decision.
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
-  - term: Theory of Planned Behavior
-    definition: A framework emphasizing evaluative beliefs, perceived control, and social influences as determinants of behavioral intention.
-  - term: Financial literacy
-    definition: Knowledge and understanding of financial concepts and products that enable informed decision-making.
-  - term: Risk tolerance
-    definition: An individual's disposition or capacity to accept uncertainty and potential loss in investment contexts.
+  - term: "TPB"
+    definition: "Theory of Planned Behavior, a framework emphasizing evaluative beliefs, perceived control, and social influences."
+  - term: "PSE"
+    definition: "Philippine Stock Exchange."
+  - term: "Risk tolerance"
+    definition: "Disposition or capacity to accept risk exposure in investment."
+  - term: "Attitude toward capital markets"
+    definition: "Favorable evaluation of market participation and its benefits."
+  - term: "Government trust"
+    definition: "Confidence in government institutions and political climate regarding investment."
+  - term: "Investment decision"
+    definition: "Self-reported decision to engage in investing, measured on a six-point scale."
 critical_citations:
-  - "[Parsai & Chandok, 2025] — financial literacy impacts investment decisions."
-  - "[Mahardhika & Zakiyah, 2020] — TPB predicts stock investment intention."
-  - "[Espelita et al., 2025] — monetary policy awareness correlates with investment behavior."
+  - "Parsai & Chandok (2025) — financial literacy review in investment decision."
+  - "Salampessy & Krisnawati (2025) — influence of literacy, risk perception on investment."
+  - "Akhtar & Das (2019) — predictors of investment intention in stock markets."
 relevance:
   topics:
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      justification: Paper examines predictors of investment decision using extended TPB, directly relevant to profiling user financial behavior.
-  contribution: This paper provides evidence that attitude toward investment and monthly salary are significant predictors of investment decision, which can inform Odin's behavioral profiling module. The positive association between capital market knowledge and investment decision justifies incorporating financial literacy assessments into user models. The modest explained variance (16.2%) indicates that Odin's prediction systems should include additional behavioral and access-related variables beyond basic demographics and attitudes.
+    - code: "1.A"
+      name: "Filipino Young Professionals as a Demographic"
+      relevance: "medium"
+      justification: "The sample is drawn from urban Filipino populations, providing demographic context for young professionals."
+    - code: "1.C"
+      name: "Financial Behavior of Filipino Young Professionals"
+      relevance: "high"
+      justification: "Directly examines financial behavior related to investment decisions among Filipino respondents."
+    - code: "5.A"
+      name: "Financial Behavioral Profiles in Personal Finance"
+      relevance: "high"
+      justification: "Identifies predictors (attitude, salary, knowledge) that can inform behavioral profiling in PFMS."
+    - code: "5.B"
+      name: "Profile Dynamics and the Cold-Start Problem"
+      relevance: "medium"
+      justification: "The identified predictors could serve as initial inputs for profiling new users, addressing cold-start."
+  contribution: "The paper's identification of attitude toward investment and monthly salary as key predictors informs Odin's behavioral profiling module by highlighting which user attributes are most associated with investment decisions. The correlations between capital market knowledge and investment decisions support the inclusion of financial literacy assessments in user onboarding. The significant differences by sex and income suggest that Odin's recommendation engine should consider demographic factors when tailoring financial advice. The finding that government trust is low underscores the need for trust-building features in the app."
   directly_justifies:
-    - Attitude toward investment predicts investment decision (coefficient 0.345).
-    - Monthly salary predicts investment decision (coefficient 0.368).
-    - Capital market knowledge correlates positively with investment decision (r = 0.210).
+    - "Attitude toward investment is a significant predictor of investment decision (coefficient 0.345)."
+    - "Monthly salary is a significant predictor of investment decision (coefficient 0.368)."
+    - "Capital market knowledge is positively correlated with investment decision (r=0.210)."
+    - "Investment decisions differ significantly by sex (p=0.002)."
   limits:
-    - Cross-sectional design prevents causal inference.
-    - Purposive and online sampling limits generalizability to broader Philippine population.
-    - Model explains only 16.2% of variance, suggesting omitted variables.
-    - Stepwise regression may be sensitive to sample-specific patterns.
-  mapping_rationale: The paper focuses on investment decision predictors among Filipino individuals, which directly relates to Odin's interest in understanding financial behavioral profiles (topic 5.A). It does not address spending forecasting, budget recommendation, anomaly detection, expense categorization, mobile design, data privacy, retention, system evaluation, or savings/debt management. The use of stepwise regression could be considered evaluation methodology, but the paper is not evaluating a PFMS system. Therefore only 5.A is selected.
+    - "Cross-sectional design prevents causal inference."
+    - "Purposive sampling and online data collection may limit generalizability."
+    - "Self-reported measures may be subject to social desirability bias."
+    - "The model explains only 16.2% of variance, indicating omitted variables."
+    - "Stepwise regression may be sensitive to sample-specific patterns."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The domains of Behavioral Profiling & Classification and Filipino Cultural Context were flagged as relevant. Specifically, topics 1.A (demographic context), 1.C (financial behavior), 5.A (behavioral profiles), and 5.B (profile dynamics) were selected with high or medium relevance. Borderline cases included the overlap between 1.A and 1.C, both retained due to their complementary value. Domains such as Expense Categorization, Spending Forecasting, Budget Recommendation, Anomaly Detection, Mobile-First Design, Data Privacy, User Retention, System Evaluation, and Savings & Debt Management were rejected because the paper does not address those topics. The paper provides moderate overall relevance to Odin by offering empirical evidence on behavioral predictors that can be used in profiling and personalization."
 limitations:
-  - Cross-sectional design cannot establish causality.
-  - Purposive and online sampling via Google Forms may exclude individuals with limited digital access. [unacknowledged]
-  - Self-reported ratings may be influenced by social desirability or response styles.
-  - Modest R² (0.162) indicates important determinants are missing from the model.
+  - "Cross-sectional design prevents causal inference."
+  - "Purposive sampling and online data collection may limit generalizability."
+  - "Self-reported measures may be subject to social desirability bias."
+  - "The model explains only 16.2% of variance, indicating omitted variables."
+  - "Stepwise regression may be sensitive to sample-specific patterns."
 remember_this:
-  - Attitude and salary explain 16.2% of investment decision variance.
-  - Risk tolerance rated highest (4.81/6), government trust lowest (3.85/6).
-  - Male respondents had higher investment decision scores than females.
-  - Capital market knowledge shows modest positive correlation with investment decision.
+  - "Attitude toward investment and monthly salary are the strongest predictors of investment decision."
+  - "Capital market knowledge shows the highest correlation with investment decision among measured constructs."
+  - "Investment decisions differ by sex and income, with males and higher earners scoring higher."
+  - "The model explains 16.2% of variance, indicating other determinants also matter."
 ```

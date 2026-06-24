@@ -1,121 +1,147 @@
 ```yaml
-paper_id: "c3d4e5f6-7890-4a5b-9cde-f01234567890"
-designation: "international"
-title: "Digital Persona Modeling for Context-Aware Financial Decisioning"
-authors: "R, Sai Sanhosh; Singh, Ashuosh Kumar"
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+designation: international
+title: Digital Persona Modeling for Context-Aware Financial Decisioning
+authors: Sanhosh, S. R.; Singh, A. K.
 year: 2025
-venue: "International Journal of Research in Mulidisciplinary Technology"
+venue: International Journal of Research in Mulidisciplinary Technology
 odin_topics:
-  - "5.A"
-  - "5.C"
-  - "6.A"
-  - "7.B"
-  - "8.A"
-  - "10.A"
-  - "12.A"
-  - "12.B"
-shorthand_tags:
-  - "/behavioral-profile"
-  - "/classification"
-  - "/predictive-modeling"
-  - "/budget-recommendation"
-  - "/anomaly-detection"
-  - "/data-privacy"
-  - "/evaluation-framework"
-  - "/algorithm-evaluation"
-tldr: "Digital persona modeling integrates behavioral, contextual, and intent-driven attributes to enable context-aware financial decisioning for personalized budgeting, investment, and fraud detection."
-problem_and_motivation: >-
-  Static demographic profiles fail to capture dynamic user behavior and context in digital finance.
-  Existing systems lack real-time adaptability to individual intent and situational factors.
-  A unified framework for digital persona modeling is needed to enable personalized, trustworthy financial guidance.
+  - 5.A
+  - 6.A
+  - 9.A
+  - 10.A
+  - 10.B
+  - 7.B
+  - 8.A
+  - 1.A
+  - 2.A
+  - 2.B
+  - 3.A
+  - 4.A
+  - 4.B
+  - 12.A
+  - 12.B
+  - 13.A
+tldr: Digital Persona Modeling integrates behavioral and contextual data to enable adaptive, context-aware financial decisioning systems.
+problem_and_motivation: Static demographic profiles are insufficient for addressing real-time and contextual financial needs. There is a need for intelligent systems that can understand and adapt to individual user behaviors and contexts. This paper proposes a digital persona framework to fill this gap.
 approach:
-  - "Proposes a five‑layer architecture: data acquisition, context engine, persona builder, decisioning model layer, and decision delivery with feedback."
-  - "Uses a simulated hybrid dataset of transactional logs, mobile contextual logs, user profiles, and feedback labels to mimic mobile banking journeys."
-  - "Implements Random Forest for classification, LSTM for sequential pattern analysis, and K‑Means for persona grouping."
-  - "Defines a persona similarity score and a context‑aware risk function incorporating location, time, device, and transaction amount."
-  - "Evaluates models on accuracy, precision, recall, F1‑score, and privacy leakage ratio using multi‑metric radar plots."
-  - "Embeds federated learning and local processing to preserve privacy while enabling collaborative learning."
+  - The system architecture has five layers: Data Acquisition, Context Engine, Persona Builder, Decisioning Model, and Decision Delivery & Feedback.
+  - A simulated hybrid dataset was used, combining transactional logs, mobile contextual logs, user profiles, and feedback labels.
+  - Random Forest is used for interpretable classification of financial decisions based on contextual features.
+  - LSTM Neural Network captures sequential patterns in user behavior for personalized decision-making.
+  - K-Means Clustering segments users into distinct persona groups based on contextual traits.
 findings:
-  - "num: LSTM Neural Net achieved 93.6% accuracy, 94.4% precision, 91.8% recall, and 92.9% F1‑score on the simulated dataset."
-  - "num: Random Forest achieved 91.2% accuracy, 90.4% precision, 89.9% recall, and 90.1% F1‑score."
-  - "num: K‑Means clustering had 75.0% accuracy, showing lower suitability for classification tasks."
-  - "LSTM outperforms other models due to its ability to model temporal dependencies in user behavior and context shifts."
-  - "Context‑aware risk function adapts decisions based on real‑time user states (location, time, device, transaction amount)."
-  - "Federated learning and local processing reduce privacy leakage while maintaining personalization quality."
+  - num: LSTM achieved the highest accuracy of 93.6% and F1-score of 92.9%.
+  - num: Random Forest achieved 91.2% accuracy and a 90.1% F1-score.
+  - num: K-Means Clustering performed lower with 75.0% accuracy and a 71.8% F1-score.
+  - The LSTM model's superiority is due to its ability to model temporal dependencies in user behavior.
+  - The proposed framework demonstrates that contextual integration improves decision relevance and user alignment.
 key_figures_tables:
-  - "Table 2: Model performance comparison (Accuracy, Precision, Recall, F1) → LSTM best overall, K‑Means weakest."
-  - "Figure 2: System architecture with five layers → data flows from acquisition to context engine to persona builder to decisioning to delivery."
+  - Table 2: Model Performance Comparison → Shows LSTM outperforms Random Forest and K-Means on all metrics.
+  - Figure 2: System Architecture of Proposed Framework → Visualizes the five-layer data flow from acquisition to feedback.
 key_equations:
-  - equation: "S(u,p) = \\frac{1}{n} \\sum_{i=1}^{n} \\frac{|x_{u,i} - x_{p,i}|}{\\max(x_i)}"
-    explanation: "Persona similarity score between user u and persona p."
-  - equation: "R = \\alpha_1 C_{\\text{location}} + \\alpha_2 C_{\\text{time}} + \\alpha_3 C_{\\text{device}} + \\beta T"
-    explanation: "Context‑aware risk function for real‑time decision risk."
+  - equation: S(u,p) = (1/n) * Σ_{i=1}^{n} ( |x_{u,i} - x_{p,i}| / max(x_i) )
+    explanation: Similarity score matching a user to a persona group.
+  - equation: R = α1*C_location + α2*C_time + α3*C_device + β*T
+    explanation: Real-time decision risk function based on context and transaction amount.
 definitions:
-  - term: "DPM"
-    definition: "Digital Persona Modeling – dynamic representation of user behavior, context, and intent for financial decisioning."
-  - term: "Context‑aware"
-    definition: "System adapts to real‑time user state (location, time, device, activity)."
-  - term: "Federated learning"
-    definition: "Decentralized training where models learn from local data without sharing raw user information."
+  - term: DPM
+    definition: Digital Persona Modeling
+  - term: XAI
+    definition: Explainable Artificial Intelligence
 critical_citations:
-  - "None."
+  - "[Richardson, 2024] — Foundational for real-time payment system challenges."
+  - "[Rautaray & Tayagi, 2023] — Supports AI applications in telecom and finance."
+  - "[De Roure, 2024] — Provides basis for AI in industrial and financial IoT."
 relevance:
   topics:
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Defines digital personas as dynamic behavioral profiles integrating telemetry and psychographics."
-    - code: "5.C"
-      name: "Financial Behavioral Profile Classification Algorithm"
-      justification: "Uses K‑Means clustering and LSTM to classify and predict user behavior for persona building."
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      justification: "Implements LSTM and Random Forest for sequential pattern analysis and decision classification."
-    - code: "7.B"
-      name: "Budget Recommendation in Personal Finance Systems"
-      justification: "Applies personas to automated budgeting and micro‑investment recommendations."
-    - code: "8.A"
-      name: "Anomaly Detection in Personal Finance Systems"
-      justification: "Includes fraud intent detection as a use case of context‑aware risk scoring."
-    - code: "10.A"
-      name: "Data Privacy and Security in Personal Finance Systems"
-      justification: "Embed privacy‑preserving modeling via federated learning and local processing."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      justification: "Proposes multi‑metric evaluation (accuracy, F1, privacy leakage) with radar plots."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      justification: "Compares Random Forest, LSTM, and K‑Means using standard classification metrics."
-  contribution: >-
-    This paper provides a framework for dynamic digital personas using multi‑source data fusion and explainable ML.
-    It directly supports Odin's behavioral profiling module by enabling real‑time user state capture from mobile and transactional data.
-    The context‑aware risk function and federated learning approach inform anomaly detection and privacy‑preserving design for Odin.
-    The evaluation metrics (accuracy, F1, privacy leakage) offer benchmarks for Odin's algorithmic modules, especially for spending forecasting and budget recommendation.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Core focus on modeling dynamic behavioral profiles.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Uses LSTM and other models for predictive financial decisions.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: medium
+      justification: Discusses data from mobile apps and device context.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: high
+      justification: Addresses privacy via federated learning and local processing.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: medium
+      justification: Highlights explainability and interpretability for trust.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: medium
+      justification: Mentions automated budgeting as a key use case.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: medium
+      justification: Lists fraud intent detection as a use case.
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Mentions underserved entrepreneurs but not Filipino-specific.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: contextual
+      justification: Discusses diversity but not culturally specific practices.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: Temporal analysis could inform cyclical patterns.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: contextual
+      justification: Persona modeling could support categorization.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: Mentions gaps in static systems.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: medium
+      justification: Explicitly addresses limitations of static profiles.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Provides a multi-metric evaluation (accuracy, F1, PRL).
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: Compares RF, LSTM, and K-Means.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: low
+      justification: Mentions investment recommendations tangentially.
+  contribution: The paper provides a conceptual and architectural foundation for DPM in intelligent finance. This directly supports Odin's development of dynamic user profiles. The proposed multi-layered architecture can inform Odin's system design for real-time personalization. The privacy-preserving modeling approach using federated learning is relevant to Odin's data governance. The integration of behavioral and contextual data can enhance Odin's decision support modules.
   directly_justifies:
-    - "LSTM models capture temporal dependencies in financial behavior with 93.6% accuracy."
-    - "Context‑aware risk function can adapt decisions to location, time, and device for fraud detection."
-    - "Federated learning enables privacy‑preserving persona modeling without centralizing user data."
-    - "Digital personas improve personalization for underserved segments like emerging digital consumers."
+    - Dynamic user profiles can improve financial recommendation relevance.
+    - Integrating contextual data enhances real-time financial decision accuracy.
+    - Privacy-preserving techniques are essential for user trust in PFMS.
+    - LSTM models are effective for capturing sequential spending behaviors.
   limits:
-    - "Dataset is synthetic and may lack diversity across geography, culture, and financial behavior."
-    - "Deep learning models (LSTM) present interpretability challenges for regulatory audits."
-    - "Context drift over time requires continuous learning mechanisms not fully addressed."
-    - "Privacy risks remain because context‑aware systems rely on sensitive behavioral and location data."
-  mapping_rationale: >-
-    The paper focuses on dynamic user modeling for financial decisions, directly mapping to behavioral profiling (5.A, 5.C) and predictive modeling (6.A).
-    Automated budgeting and micro‑investment align with budget recommendation (7.B), while fraud detection maps to anomaly detection (8.A).
-    Strong emphasis on federated learning and local processing justifies data privacy (10.A).
-    The empirical comparison of models and use of multi‑metric evaluation support system evaluation codes (12.A, 12.B).
-    Topics related to Filipino demographics (1.*), expense categorization (3.*), mobile design principles (9.*), user retention (11.*), and debt management (13.B) are not addressed, so they are rejected.
-    Spending forecasting (6.B) is implied by LSTM's sequential analysis but not explicitly tested, so only 6.A is selected.
+    - The paper uses a synthetic dataset, not real-world data.
+    - Model generalizability may be limited across diverse populations.
+    - Interpretability challenges remain for deep learning components.
+    - Context drift over time is not fully addressed.
+    - No specific implementation or deployment details are provided.
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. High relevance was found for Behavioral Profiling (5.A) and Predictive Modeling (6.A), as the paper's core is modeling dynamic digital personas for financial decisions. Medium relevance was assigned to Mobile-First Design (9.A) due to its mobile data focus, Data Privacy (10.A) for its emphasis on privacy-preserving modeling, and User Trust (10.B) via explainability. Other topics like 1.A, 2.A, 2.B, 3.A, 4.A, 4.B, 7.B, 8.A, 12.A, 12.B, and 13.A received low, contextual, or medium relevance due to being tangential but cited in the paper. The paper was considered and rejected for topics like 2.C, 3.C, 6.B, 7.A, 7.C, 7.D, 8.B, 8.C, 9.B, 11.A, 11.B, 12.C, 13.B, and 13.C due to a lack of specific discussion on those aspects. Overall, the paper is highly relevant to Odin's goal of building a dynamic user model.
 limitations:
-  - "Data privacy concerns: heavy reliance on sensitive user data increases breach risk. [acknowledged]"
-  - "Limited dataset diversity: synthetic data may introduce bias and reduce cross‑population applicability. [acknowledged]"
-  - "Model generalizability: LSTM may not generalize to fast‑evolving financial ecosystems. [acknowledged]"
-  - "Interpretability challenges: deep learning models act as black boxes, reducing trust. [acknowledged]"
-  - "Context drift over time: user behavior evolves; framework lacks continuous adaptation. [acknowledged]"
+  - Data Privacy Concerns: Heavy reliance on sensitive user data increases breach risk. [unacknowledged]
+  - Limited Dataset Diversity: Synthetic data may introduce bias and limit generalizability. [unacknowledged]
+  - Model Generalizability: Models may not generalize well to unseen patterns in evolving ecosystems. [unacknowledged]
+  - Interpretability Challenges: Deep learning models like LSTM can act as black boxes. [unacknowledged]
+  - Context Drift Over Time: User behavior evolves, requiring continuous adaptation not fully addressed. [unacknowledged]
 remember_this:
-  - "LSTM achieved 93.6% accuracy for context‑aware financial decisions."
-  - "Digital personas integrate behavioral, contextual, and intent‑driven attributes."
-  - "Federated learning preserves user privacy while enabling personalization."
-  - "Context drift requires continuous model adaptation beyond the current framework."
+  - LSTM achieved the highest accuracy at 93.6% for decision classification.
+  - Digital personas enable context-aware adaptation beyond static profiles.
+  - Privacy-preserving modeling via federated learning is a key design focus.
+  - Multi-source data fusion is essential for creating accurate user personas.
+  - The proposed architecture supports real-time, personalized financial decisions.
 ```

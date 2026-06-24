@@ -1,95 +1,123 @@
 ```yaml
-paper_id: "3f2a1b4c-5d6e-7f8a-9b0c-1d2e3f4a5b6c"
-designation: "local"
-title: "How does financial literacy affect financial behavior over the life cycle? Evidence from Filipino households"
-authors: "Cacnio, F. Q.; Romarate, M. E. G."
+paper_id: 939c1ae8-aa25-5e25-9b00-831bbd3cbb3c
+designation: local
+title: How does financial literacy affect financial behavior over the life cycle? Evidence from Filipino households
+authors: Cacnio, F. Q.; Romarate, M. E. G.
 year: 2024
-venue: "Bangko Sentral ng Pilipinas Discussion Paper Series No. 2024-13"
+venue: Bangko Sentral ng Pilipinas Discussion Paper Series
 odin_topics:
-  - "1.C"
-  - "5.A"
-  - "7.A"
-  - "13.A"
-  - "13.B"
-shorthand_tags:
-  - "/fin-behavior"
-  - "/behavioral-profile"
-  - "/budget-strategy"
-  - "/savings-goal"
-  - "/debt-mgmt"
-tldr: "Financial literacy, particularly financial aptitude, positively correlates with having retirement plans and insurance, while higher financial attitude improves loan timeliness; young adults show higher literacy than older cohorts."
-problem_and_motivation: "Prior studies focus on developed countries, leaving a gap in developing country contexts. The Philippines has low financial literacy, yet no research examines age-dependent effects on short- and long-term behaviors. Understanding this link can inform targeted financial education programs."
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.B
+  - 2.D
+  - 5.A
+  - 5.B
+  - 13.A
+  - 13.B
+tldr: Financial literacy, particularly financial aptitude, is positively linked to long-term financial behaviors like having retirement plans and insurance, with effects differing across age groups.
+problem_and_motivation: There is limited evidence on how financial literacy affects financial behavior across different age groups in developing countries like the Philippines. Understanding this relationship is crucial for designing effective financial education programs.
 approach:
-  - "Data from 2018 BSP Consumer Finance Survey covers 7,084 Filipino households with annual income ≥₱10,000 and expenditure ≥₱1,000."
-  - "Financial literacy index combines financial attitude (spending attitude, risk attitude, time discounting) and financial aptitude (loan, deposit, surplus scores), each equally weighted."
-  - "OLS regression identifies determinants of financial literacy including age, gender, income, education, children, and remittances."
-  - "Logit regression models five binary outcomes: spending ≤ income, on-time loan payment, loan-to-income ≤1, having pension/retirement plan, having insurance."
-  - "Age groups: young adult (18-39, reference), middle-aged (40-59), senior (60+)."
+  - Used data from the 2018 BSP Consumer Finance Survey, filtering to 7,084 households.
+  - Constructed a financial literacy index (FLI) from two components: financial attitude and financial aptitude.
+  - Applied ordinary least squares (OLS) regression to identify determinants of financial literacy.
+  - Applied logistic regression to assess the effect of financial literacy and age on five specific financial behaviors.
 findings:
-  - "num: Young adults have mean financial literacy index 0.392, higher than middle-aged (0.387) and seniors (0.370)."
-  - "num: Higher financial attitude increases likelihood of paying loans on time (odds ratio 4.011, p<0.05)."
-  - "num: Higher financial aptitude strongly predicts having pension/retirement plan (OR 85.478) and insurance (OR 46.808)."
-  - "Higher financial literacy (both attitude and aptitude) is associated with lower likelihood of spending within income (OR 0.435 and 0.051 respectively)."
-  - "Middle-aged individuals are less likely than young adults to have loan-to-income ratio ≤1 (OR 0.280)."
+  - num: Young adults display higher financial literacy than middle-aged and senior cohorts.
+  - num: Income and education are positively related to financial literacy; females have slightly lower financial aptitude.
+  - num: Those with higher financial attitude scores are more likely to pay loans on time.
+  - num: Individuals with higher financial aptitude and who are middle-aged or seniors are more likely to have retirement or pension plans and insurance.
+  - num: Middle-aged persons are less likely to have a loan-to-income ratio of less than one compared to young adults.
+  - num: Higher financial literacy is associated with a lower likelihood of spending less than or equal to income.
 key_figures_tables:
-  - "Figure 1: Conceptual model linking financial knowledge to well-being via literacy and behavior → financial literacy mediates behavior."
-  - "Table 2: Summary of financial literacy index scores → Mean FLI 0.386, financial aptitude much lower (0.099) than attitude (0.673)."
-  - "Table 6: Logit odds ratios for financial behaviors → Financial aptitude strongly predicts retirement and insurance."
+  - Table 1: Sample demographics showing 38.9% young adults, 45.2% middle-aged, and 16% seniors → Majority of respondents are middle-aged.
+  - Table 2: Summary of FLI scores showing mean of 0.386 → Financial aptitude component is low at 0.099.
+  - Table 5: OLS regression results showing young adults have higher financial literacy than older groups → Age is a significant determinant.
+  - Table 6: Logit regression odds ratios for financial behaviors → Financial aptitude strongly predicts having retirement plans (OR=85.478) and insurance (OR=46.808).
+  - Table 7: Average savings by age group, seniors have the highest at PHP 36,722 → Retirement savings accumulate with age.
 key_equations:
-  - equation: "FLI_i = 1/2 ∑_j x_{ij} γ_{j1} + 1/2 ∑_j x_{ij} γ_{j2}, γ_{j1}=1/n, γ_{j2}=1/n"
-    explanation: "Weighted sum of financial attitude and aptitude sub-components."
+  - equation: FLI_i = 1/2 ∑_j x_ij γ_j1 + 1/2 ∑_j x_ij γ_j2 ∈ [0,1]
+    explanation: Financial literacy index from attitude and aptitude components.
 definitions:
-  - term: "FLI"
-    definition: "Financial Literacy Index, range [0,1], higher means more literate."
-  - term: "Financial attitude"
-    definition: "Component measuring spending attitude, risk appetite, and time discounting."
-  - term: "Financial aptitude"
-    definition: "Component measuring loan, deposit, and surplus money activities."
-  - term: "Life cycle"
-    definition: "Age-based stages: young adult (18-39), middle-aged (40-59), senior (60+)."
+  - term: Financial Literacy Index (FLI)
+    definition: A composite score measuring financial attitude and aptitude, ranging from 0 to 1.
+  - term: Financial Attitude
+    definition: Component of FLI reflecting attitudes towards money, spending, risk, and time discounting.
+  - term: Financial Aptitude
+    definition: Component of FLI reflecting financial activities like holding loans, deposits, and managing surplus.
+  - term: BSP CFS
+    definition: Bangko Sentral ng Pilipinas Consumer Finance Survey, a triennial household survey.
 critical_citations:
-  - "[Lusardi & Mitchell, 2014] — Established link between literacy and behavior."
-  - "[Huston, 2010] — Framework for measuring literacy as knowledge+application."
-  - "[Agarwal et al., 2009] — Age affects financial decision quality."
+  - "[Lusardi & Mitchell, 2014] — foundational review of financial literacy's economic importance."
+  - "[Agarwal et al., 2009] — establishes age-based financial decision-making patterns."
+  - "[Huston, 2010] — provides framework linking financial knowledge, literacy, and behavior."
+  - "[Magante et al., 2023] — used for constructing the FLI methodology."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Directly measures spending, debt, retirement, and insurance behaviors."
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Shows distinct financial literacy and behavior patterns across age groups."
-    - code: "7.A"
-      name: "Budgeting Strategies as Domain Knowledge"
-      justification: "Analyzes spending vs. income as a budgeting behavior influenced by literacy."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Examines retirement plan ownership as a long-term savings outcome."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Models loan payment timeliness and loan-to-income ratio."
-  contribution: "This paper provides empirical baselines for Odin's spending forecasting module by quantifying how financial literacy reduces the likelihood of spending within income, suggesting high-literacy users may have higher consumption. It directly informs debt management features by showing that financial attitude improves on-time loan payment and that middle-aged users have higher loan-to-income ratios. For savings and retirement planning, the strong positive effect of financial aptitude on having pension plans justifies integrating literacy metrics into user profiles. The age-group comparisons support personalized budgeting and debt advice based on life stage."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: medium
+      justification: Focuses on Filipino households and age cohorts including young adults (18-39).
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Provides data on income, loans, and savings structures across age groups.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly studies financial behaviors like spending, borrowing, and saving.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: contextual
+      justification: Mentions remittances and inter-generational transfers common in the Philippines.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: low
+      justification: Not a primary focus, but mentions spending variations due to life events.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: Not directly addressed; study uses annual expenditure data.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Empirically profiles behaviors based on financial literacy and age.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: medium
+      justification: Shows how financial behavior changes over the life cycle, informing profile dynamics.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: medium
+      justification: Examines savings and retirement planning behaviors across age groups.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: medium
+      justification: Studies loan-to-income ratio and timely loan payments.
+  contribution: This paper provides empirical evidence on the relationship between financial literacy and financial behavior across age groups in the Philippines. Its findings on age-specific behavior (e.g., young adults having higher literacy but older groups engaging in more long-term planning) can directly inform Odin's behavioral profiling (module 5). The study's methodology for constructing a financial literacy index and its findings on the importance of financial aptitude for long-term behaviors (like retirement and insurance) can guide Odin's approach to user segmentation and predictive modeling. The results on how financial literacy affects spending, borrowing, and saving behaviors offer actionable insights for designing personalized budget recommendations and savings goals (modules 7 and 13). Furthermore, the paper's identification of gaps in retirement planning among Filipino adults highlights a key opportunity for Odin's engagement and retention mechanisms (module 11).
   directly_justifies:
-    - "Young adults have higher financial literacy than middle-aged and senior Filipinos."
-    - "Higher financial attitude scores increase the probability of paying loans on time."
-    - "Financial aptitude is a strong predictor of having a retirement or pension plan."
-    - "Middle-aged individuals are less likely to have a loan-to-income ratio below 1 compared to young adults."
-    - "Higher financial literacy correlates with lower odds of spending within income."
+    - "Young adults have higher financial literacy than middle-aged and senior cohorts."
+    - "Financial aptitude is a strong predictor of having retirement or pension plans."
+    - "Higher financial attitude scores increase the likelihood of paying loans on time."
+    - "Middle-aged individuals are less likely to have a loan-to-income ratio below 1."
+    - "Being married or having children is associated with different financial behaviors."
   limits:
-    - "Financial literacy measurement may not fully capture true understanding."
-    - "Causality may run from behavior to literacy (reverse causation)."
-    - "Survey lacks detailed financial knowledge and numeracy questions."
-    - "Potential endogeneity between literacy and behavior."
-  mapping_rationale: "The paper directly addresses financial behavior of Filipino households (1.C) and examines age-based differences that inform behavioral profiling (5.A). Spending vs. income analysis is core budgeting domain knowledge (7.A). Findings on retirement plans and insurance map to savings goal management (13.A), while loan payment timeliness and loan-to-income ratio map to debt management (13.B). Excluded codes: no algorithm-specific content (e.g., no ML models), no mobile design, no privacy, no retention mechanics. Borderline cases like 2.C (user preferences) were rejected because the paper measures observed behavior, not stated preferences."
+    - "Study is correlational and does not establish causality between financial literacy and behavior."
+    - "The 2018 CFS data lacks detailed questions on financial knowledge and numeracy."
+    - "Potential endogeneity between financial literacy and financial behavior is recognized."
+    - "Measurement of financial literacy may not fully capture an individual's true understanding."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as relevant for the 'Filipino Cultural Context' domain (topics 2.A, 2.B, 2.D) because it directly studies Filipino households and their financial behaviors, though the focus is more on demographic effects than cultural practices per se. High relevance was assigned to 'Behavioral Profiling & Classification' (5.A, 5.B) as the paper provides empirical evidence on how financial literacy and age shape financial behavior, directly informing user profiling. Medium relevance was assigned to 'Savings & Debt Management' (13.A, 13.B) due to its detailed analysis of loans, savings, and retirement planning. Topics like 3.A (Expense Categorization), 4.A (Existing Systems), and all algorithmic topics (6.A, 7.B, 8.B, etc.) were considered and rejected because the paper is an empirical economic study, not a systems or algorithm design paper. The paper is most valuable for its descriptive findings on Filipino financial behavior across the life cycle, providing a foundational basis for Odin's behavioral models and feature design.
 limitations:
-  - "Financial literacy index excludes knowledge questions due to survey constraints. [unacknowledged]"
-  - "Data from 2018 may not reflect post-pandemic financial behavior. [unacknowledged]"
-  - "Small sample for loan payment regression (n=1,743) limits statistical power."
-  - "Reverse causality between literacy and behavior not fully resolved."
-  - "Self-reported savings amounts may be underestimated."
+  - "Study is correlational, not causal."
+  - "Data from 2018 may not reflect recent changes in financial behavior."
+  - "Lacks detailed financial knowledge metrics, limiting the depth of the financial literacy index."
+  - "Potential endogeneity between financial literacy and financial behavior."
+  - "Sample size for some financial behaviors (e.g., loan payment) is limited."
 remember_this:
-  - "Young adults in the Philippines have higher financial literacy than older cohorts."
-  - "Financial aptitude is a far stronger predictor of retirement plans than financial attitude."
-  - "Higher financial literacy correlates with spending beyond income, possibly due to higher consumption."
-  - "Middle-aged Filipinos are less likely to have low loan-to-income ratios than young adults."
+  - "Young Filipino adults show higher financial literacy than older age groups."
+  - "Financial aptitude strongly predicts having retirement plans and insurance."
+  - "Higher financial literacy is associated with higher consumption and spending."
+  - "Middle-aged Filipinos are more likely to have higher loan-to-income ratios."
+  - "Financial education programs should be tailored to life cycle stages."
 ```

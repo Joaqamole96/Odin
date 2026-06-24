@@ -1,87 +1,98 @@
 ```yaml
 paper_id: 10.69569/jip.2025.758
 designation: local
-title: A Systematic Literature Review: Present Bias versus Financial Literacy as Determinants of Savings Behavior Among Entrepreneurs
-authors: Aquino, E. J.; Sealmoy, R.; Mandap, O.
+title: "A Systematic Literature Review: Present Bias versus Financial Literacy as Determinants of Savings Behavior Among Entrepreneurs"
+authors: "Aquino, E. J.; Sealmoy, R.; Mandap, O."
 year: 2026
-venue: Journal of Interdisciplinary Perspectives
+venue: "Journal of Interdisciplinary Perspectives"
 odin_topics:
-  - 5.A
-  - 7.A
-  - 13.A
-shorthand_tags:
-  - /behavioral-profiles
-  - /budgeting-strategies
-  - /savings-management
-tldr: Present bias consistently predicts poor savings behavior among entrepreneurs, while financial literacy’s impact is conditional on self-control.
-problem_and_motivation: The gap between financial knowledge and actual savings behavior among entrepreneurs is persistent and puzzling. Prior research has not systematically compared the relative influence of financial literacy versus present bias on entrepreneurial savings. This review addresses that gap to inform more effective interventions.
+  - "5.A"
+  - "13.A"
+  - "1.C"
+  - "7.A"
+tldr: "Present bias consistently predicts lower savings among entrepreneurs, while financial literacy's impact is conditional on self-control, according to a systematic review of 20 studies (2020-2025)."
+problem_and_motivation: "Despite policy emphasis on financial literacy, entrepreneurs often fail to save, indicating behavioral barriers may outweigh knowledge. Prior reviews have not systematically compared the relative predictive power of financial literacy and present bias on entrepreneurial savings. This review addresses that gap by synthesizing evidence from 2020 to 2025."
 approach:
-  - A systematic literature review following PRISMA 2020 guidelines.
-  - Searches conducted in Google Scholar, Scopus, and Web of Science with Boolean keywords.
-  - Inclusion criteria: peer-reviewed articles in English (2020–2025), Journal Impact Factor ≥1.5, focused on entrepreneurs or SME owners.
-  - Two independent reviewers screened titles and abstracts; 20 studies met all criteria.
-  - Data were synthesized thematically to compare predictive strength of financial literacy versus present bias.
+  - "The review followed PRISMA 2020 guidelines for transparency and reproducibility."
+  - "Searches were conducted in Google Scholar, Scopus, and Web of Science using Boolean keywords."
+  - "Inclusion criteria required peer-reviewed English articles with JIF ≥1.5, focused on entrepreneurs or entrepreneurial populations."
+  - "Two independent reviewers screened titles and abstracts, with disagreements resolved through discussion."
+  - "Methodological quality was appraised using JBI and CASP checklists."
+  - "Data extraction covered financial literacy measures, present-bias indicators, savings outcomes, and sample characteristics."
+  - "Findings were synthesized thematically to compare predictive strength of literacy versus bias."
 findings:
-  - num: Financial literacy’s impact on savings is conditional and often negligible without self-control (Mpaata et al., 2021).
-  - num: Present bias consistently leads to impulsive spending and reduced savings, even among financially literate individuals.
-  - Behavioral factors frequently override financial knowledge in shaping entrepreneurial savings.
-  - num: 78% of reviewed studies used primary data, mostly cross-sectional surveys in Asian contexts.
-  - The Behavioral Bias Pathway (present bias) more strongly predicts savings outcomes than the Financial Literacy Pathway.
+  - "Financial literacy's impact on savings is conditional and often negligible without self-control."
+  - "Present bias consistently leads to impulsive spending and reduced savings among entrepreneurs."
+  - "Behavioral factors frequently override financial knowledge in savings decisions."
+  - "Self-control moderates the relationship between financial literacy and savings behavior."
+  - "The review includes 20 peer-reviewed studies with a majority using primary data and regression analysis."
 key_figures_tables:
-  - Figure 1: Theoretical framework contrasting Financial Literacy Pathway vs. Behavioral Bias Pathway → Present bias directly reduces savings, overriding knowledge.
-  - Figure 2: PRISMA flow diagram showing 20 included studies after screening → Transparent and reproducible selection.
-  - Table 1: Journal impact factors of source journals (range 1.5–7.8) → High-quality peer-reviewed evidence base.
-  - Table 2: Distribution of 20 articles by year (2020–2025) → Growing research interest since 2022.
-  - Table 3: Data sources (primary: 78%, secondary: 22%) → Strong empirical and people-oriented approach.
-  - Table 4: Statistical treatments (regression 37%, SEM 17%, descriptive 17%) → Quantitative methods dominate.
+  - "Figure 1: Theoretical framework contrasting Financial Literacy and Behavioral Bias pathways → present bias directly reduces savings."
+  - "Figure 2: PRISMA flow diagram showing study selection process → 20 studies included after screening."
+  - "Table 1: Journal impact factors of source journals → included journals have high impact factors (up to 8.6)."
+  - "Table 2: Distribution of sampled articles by journal and year → research peaks in 2022 with 5 articles."
+  - "Table 3: Sources of data (primary/secondary, sample sizes) → 78% of studies used primary data."
+  - "Table 4: Statistical treatments used → regression analysis is most common (37% of studies)."
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
-  - term: Present bias
-    definition: The tendency to prioritize immediate rewards over future benefits, leading to impulsive spending.
-  - term: Financial literacy
-    definition: Knowledge of financial concepts such as savings, loans, and investments.
-  - term: Self-control
-    definition: The capacity to override immediate impulses in favor of long-term goals, framed as an emotional struggle.
-  - term: PRISMA
-    definition: Preferred Reporting Items for Systematic Reviews and Meta-Analyses (2020 guidelines).
+  - term: "PRISMA"
+    definition: "Preferred Reporting Items for Systematic Reviews and Meta-Analyses"
+  - term: "JBI"
+    definition: "Joanna Briggs Institute"
+  - term: "CASP"
+    definition: "Critical Appraisal Skills Programme"
+  - term: "RCT"
+    definition: "Randomized Controlled Trial"
+  - term: "SEM"
+    definition: "Structural Equation Modeling"
+  - term: "SME"
+    definition: "Small and Medium Enterprise"
 critical_citations:
-  - "[Loewenstein & Carbone, 2024] — Reframes self-control as emotional conflict, not cognitive trade-off."
-  - "[Mpaata et al., 2021] — Demonstrates self-control moderates literacy-savings relationship."
-  - "[McKenzie et al., 2022] — Experimental evidence of present bias in Filipino entrepreneurs."
-  - "[Alshebami & Al Marri, 2022] — Literacy affects saving behavior which mediates entrepreneurial intention."
+  - "[Loewenstein & Carbone, 2024] — reframes self-control as emotional struggle."
+  - "[Mpaata et al., 2021] — literacy improves savings only with high self-control."
+  - "[McKenzie et al., 2022] — present bias drives impulsive spending."
+  - "[Alshebami & Al Marri, 2022] — literacy predicts entrepreneurial intention but not savings directly."
 relevance:
   topics:
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      justification: Present bias is a behavioral profile that directly predicts poor savings.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      justification: Savings behavior is a core budgeting outcome; paper compares knowledge vs. bias.
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      justification: Paper systematically reviews determinants of entrepreneurial savings, directly informing savings goal design.
-  contribution: This review provides strong evidence that present bias undermines savings more than financial literacy does, which directly justifies Odin’s need for behavioral profiling (topic 5.A) to detect present bias. It shows that knowledge-based budgeting advice (topic 7.A) is insufficient without self-control mechanisms, supporting Odin’s integration of behavioral tools like commitment devices. The conditional effectiveness of literacy also informs savings goal management (topic 13.A), suggesting that Odin should prioritize real-time bias mitigation over pure education.
+    - code: "5.A"
+      name: "Financial Behavioral Profiles in Personal Finance"
+      relevance: "high"
+      justification: "The paper directly compares present bias and financial literacy as predictors of savings, informing behavioral profiling."
+    - code: "13.A"
+      name: "Savings Goal Management in PFMS"
+      relevance: "high"
+      justification: "Savings behavior is the primary outcome variable, with implications for goal management."
+    - code: "1.C"
+      name: "Financial Behavior of Filipino Young Professionals"
+      relevance: "medium"
+      justification: "The review includes multiple Philippine studies on entrepreneurs and millennials, providing local behavioral insights."
+    - code: "7.A"
+      name: "Budgeting Strategies as Domain Knowledge"
+      relevance: "medium"
+      justification: "Financial literacy is a form of budgeting knowledge, and the paper shows its conditional effectiveness."
+  contribution: "The paper justifies integrating behavioral interventions such as commitment devices and automated savings into Odin's savings module (13.A). It supports the use of behavioral profiling (5.A) to tailor interventions based on present bias. The finding that financial literacy alone is insufficient informs the design of budget recommendation (7.A) that incorporates self-control cues. The paper also underscores the need for user engagement strategies to overcome present bias."
   directly_justifies:
-    - Present bias is a stronger predictor of poor savings than financial literacy among entrepreneurs.
-    - Financial literacy only improves savings when combined with high self-control.
-    - Behavioral factors frequently override financial knowledge in savings decisions.
-    - Cross-sectional surveys dominate the literature, limiting causal claims about bias interventions.
+    - "Present bias consistently leads to impulsive spending and reduced savings among entrepreneurs."
+    - "Financial literacy improves savings only when combined with high self-control."
+    - "Behavioral factors frequently override financial knowledge in savings decisions."
+    - "Self-control moderates the relationship between financial literacy and savings behavior."
   limits:
-    - Most reviewed studies are cross-sectional, preventing causal inference about present bias vs. savings.
-    - Geographical focus is heavily Asian (56% of studies), limiting generalizability to other regions.
-    - The JIF≥1.5 cutoff may exclude relevant lower-impact but methodologically sound studies.
-  mapping_rationale: The paper’s core comparison of present bias (behavioral) and financial literacy (knowledge) directly maps to Odin’s behavioral profiling (5.A) and budgeting strategies (7.A). Savings outcomes map to savings goal management (13.A). Topics related to Filipino young professionals (1.A) were rejected because the review is not Philippines‑specific. Algorithm-specific topics (5.C, 6.B, 7.C, 8.B) were rejected as this is a systematic review, not an algorithm paper. Engagement and retention topics (11.A, 11.B) were considered but not directly supported because the paper does not address app engagement.
+    - "Reliance on cross-sectional studies limits causal inference."
+    - "Most studies are concentrated in Asian contexts, reducing generalizability."
+    - "Few studies directly compare financial literacy and present bias within a single analytical framework."
+    - "The review did not include experimental designs beyond the few RCTs."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The domains of Behavioral Profiling & Classification (5.A, 5.B, 5.C) and Savings & Debt Management (13.A, 13.B, 13.C) were flagged as highly relevant because the paper directly examines predictors of savings behavior and provides evidence for behavioral profiling. The Filipino Cultural Context domains (2.A, 2.B, 2.C, 2.D) were considered; 2.D (spending cycles) was borderline due to impulsive spending discussions but not explicitly about cyclical occasions, so only 1.C (Financial Behavior) was selected as medium due to inclusion of Philippine studies. Expense Categorization (3.A-C) and Existing Systems (4.A-B) were rejected as the paper does not address categorization or system evaluation. Forecasting (6.A-B) and Anomaly Detection (8.A-C) were not applicable. Mobile-First Design (9.A-B) and Data Privacy (10.A-B) were also not relevant. The paper's focus on behavioral versus knowledge factors directly supports Odin's need for behavioral interventions, making it highly relevant for modules 5.A and 13.A."
 limitations:
-  - The review only includes English-language articles, potentially missing relevant non-English research. [unacknowledged]
-  - Most primary studies are cross-sectional and focused on Asia, limiting causality and generalizability. [acknowledged]
-  - The minimum Journal Impact Factor of 1.5 may exclude methodologically sound studies with lower impact. [unacknowledged]
-  - Few studies directly modeled financial literacy and present bias within a single analytical framework. [acknowledged]
+  - "Most studies are cross-sectional, limiting causal inference."
+  - "Geographic concentration in Asia reduces generalizability to other regions."
+  - "Few studies directly compare financial literacy and present bias in a single analytical framework."
+  - "The review relies on self-reported measures of financial literacy and savings behavior."
 remember_this:
-  - Present bias is a stronger savings predictor than financial literacy for entrepreneurs.
-  - Financial literacy requires high self-control to improve savings.
-  - 78% of reviewed studies used primary survey data.
-  - Combine financial education with behavioral tools like automatic savings.
-  - Cross-sectional Asian data dominate; causal studies are needed.
+  - "Present bias is a stronger predictor of poor savings than financial literacy."
+  - "Financial literacy requires self-control to translate into savings."
+  - "Integrated behavioral and educational interventions are more effective."
+  - "Most evidence is cross-sectional and Asian, limiting causality."
+  - "Knowledge alone is insufficient to change savings behavior."
 ```

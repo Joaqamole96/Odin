@@ -1,103 +1,100 @@
 ```yaml
-paper_id: "5e1f5b6d-4b3a-4c2e-8f7a-1d2c3b4a5e6f"
-designation: "international"
-title: "Recurrent Neural Networks and Long Short-Term Memory Networks: Tutorial and Survey"
-authors: "Ghojogh, B.; Ghodsi, A."
+paper_id: 7b8c9d0e-1f2a-3b4c-5d6e-7f8a9b0c1d2e
+designation: international-algorithm-specific
+title: Recurrent Neural Networks and Long Short-Term Memory Networks: Tutorial and Survey
+authors: Ghojogh, B.; Ghodsi, A.
 year: 2022
-venue: "Unknown"
+venue: Unknown
 odin_topics:
-  - "5.C"
-  - "6.A"
-  - "6.B"
-  - "8.A"
-  - "8.B"
-shorthand_tags:
-  - "rnn-lstm"
-  - "sequence-modeling"
-  - "time-series-forecasting"
-  - "anomaly-detection"
-  - "classification"
-tldr: "A tutorial and survey of recurrent neural networks, long short-term memory networks, and their variants including GRU, bidirectional processing, and ELMo."
-problem_and_motivation: "Standard RNNs suffer from gradient vanishing or explosion when learning long-term dependencies in sequences. This makes it difficult for the network to remember information from distant past time steps. LSTM and its variants address this by introducing gating mechanisms that learn when to retain or forget information."
+  - 6.A
+  - 6.B
+  - 8.B
+  - 5.C
+tldr: This tutorial surveys RNNs and LSTM networks, covering BPTT, gradient issues, architectural variants, and bidirectional processing for sequence modeling.
+problem_and_motivation: RNNs suffer from vanishing and exploding gradients during backpropagation, which hinders learning long-term dependencies. A robust architecture was needed to control information flow and selectively retain or forget past states.
 approach:
-  - "Introduces RNN as a dynamical system with parameter sharing and backpropagation through time (BPTT) for training."
-  - "Analyzes gradient vanishing and explosion in long-term dependencies, linking to eigenvalues of the weight matrix."
-  - "Presents solutions: close-to-identity weight matrix, long delays, leaky units, and echo state networks."
-  - "Describes LSTM gates: input gate, forget gate, output gate, new memory cell, and final memory calculation."
-  - "Reviews LSTM history: original LSTM (no forget gate), vanilla LSTM (with forget gate and peepholes), and variants."
-  - "Introduces Gated Recurrent Units (GRU) with reset gate, update gate, and new memory cell, plus minimal gated unit."
-  - "Explains bidirectional RNN and LSTM for offline sequence processing."
-  - "Covers ELMo network as a deep bidirectional LSTM language model."
+  - Defines RNN as a dynamical system with parameter sharing and describes BPTT for training.
+  - Analyzes gradient vanishing/explosion through eigenvalue decomposition of the state transition matrix.
+  - Reviews solutions like close-to-identity weight matrices, long delays, leaky units, and echo state networks.
+  - Presents LSTM with input, forget, and output gates, peepholes, and memory cells to control information flow.
+  - Describes GRU as a simplified LSTM variant with reset and update gates, and the minimal gated unit.
+  - Introduces bidirectional RNNs and LSTMs that process sequences in both directions, and the ELMo network.
 findings:
-  - "Gradient vanishing occurs when the largest eigenvalue of the weight matrix is less than one; gradient explosion when greater than one."
-  - "LSTM gates allow the network to learn when to clear the state, enabling both short-term and long-term dependency handling."
-  - "Bidirectional LSTM outperforms unidirectional LSTM for offline tasks where future context is available."
-  - "GRU simplifies LSTM by merging gates while achieving comparable performance on many sequence tasks."
-  - "ELMo uses deep bidirectional LSTM layers to produce context-aware word embeddings."
+  - num: Gradient vanishing is more common than exploding in RNNs with long sequences.
+  - num: Using a weight matrix with largest eigenvalue slightly less than one (λ ≲ 1) helps mitigate gradient issues.
+  - num: GRU simplifies LSTM without significant performance loss for many tasks.
+  - The forget gate in LSTM allows the network to learn when to clear the state.
+  - Bidirectional processing outperforms unidirectional LSTM for offline tasks like speech recognition.
 key_figures_tables:
-  - "Figure 5: LSTM cell with input, forget, output gates and conveyor belt → Gates control information flow through the cell."
-  - "Figure 6: GRU cell with reset and update gates → Simplified cell with fewer parameters than LSTM."
-  - "Figure 9: ELMo network with stacked bidirectional LSTMs → Deep contextualized representations from both directions."
+  - Figure 1: Folded/unfolded RNN structure showing parameter sharing across time steps → RNN processes sequences via recurrent connections.
+  - Figure 5: LSTM cell with input, forget, output gates and memory cell → Gating controls information retention and update.
+  - Figure 6: GRU cell with reset and update gates → Simplified gating mechanism for sequence learning.
+  - Figure 9: ELMo architecture with multiple bidirectional LSTM layers → Deep contextualized word representations.
 key_equations:
-  - equation: "h_t = tanh(W h_{t-1} + U x_t + b_i)"
-    explanation: "RNN state update at time t."
-  - equation: "i_t = sig(W_i h_{t-1} + U_i x_t + p_i ⊙ c_{t-1} + b_i)"
-    explanation: "LSTM input gate with peephole connection."
-  - equation: "c_t = f_t ⊙ c_{t-1} + i_t ⊙ \\tilde{c}_t"
-    explanation: "LSTM final memory update."
-  - equation: "h_t = (1 - z_t) ⊙ h_{t-1} + z_t ⊙ \\tilde{h}_t"
-    explanation: "GRU hidden state update using update gate."
+  - equation: h_t = tanh(W h_{t-1} + U x_t + b_i)
+    explanation: RNN state update uses input and previous hidden state.
+  - equation: c_t = (f_t ⊙ c_{t-1}) + (i_t ⊙ \tilde{c}_t)
+    explanation: LSTM memory combines old and new controlled by gates.
+  - equation: h_t = (1 - z_t) ⊙ h_{t-1} + z_t ⊙ \tilde{h}_t
+    explanation: GRU hidden state uses update gate to merge old and new.
 definitions:
-  - term: "RNN"
-    definition: "Recurrent Neural Network; a neural network with recurrent connections for sequence processing."
-  - term: "LSTM"
-    definition: "Long Short-Term Memory; an RNN variant with gating mechanisms to handle long-term dependencies."
-  - term: "GRU"
-    definition: "Gated Recurrent Unit; a simplified LSTM cell with reset and update gates."
-  - term: "BPTT"
-    definition: "Backpropagation Through Time; algorithm for training RNNs by unfolding the network over time."
-  - term: "Gradient vanishing"
-    definition: "Phenomenon where gradients become extremely small, preventing learning of long-range dependencies."
+  - term: RNN
+    definition: Recurrent Neural Network; a neural network with connections forming cycles to process sequences.
+  - term: LSTM
+    definition: Long Short-Term Memory; a type of RNN with gated cells to learn long-term dependencies.
+  - term: GRU
+    definition: Gated Recurrent Unit; a simplified LSTM variant with fewer gates.
+  - term: BPTT
+    definition: Backpropagation Through Time; the training algorithm for RNNs that unrolls the network across time steps.
+  - term: Gradient Vanishing
+    definition: Problem where gradients become very small during backpropagation, preventing learning of long-term dependencies.
 critical_citations:
-  - "[Hochreiter & Schmidhuber, 1997] — Introduced the LSTM architecture."
-  - "[Bengio et al., 1994] — Identified gradient vanishing as a fundamental difficulty in RNNs."
-  - "[Cho et al., 2014] — Proposed the GRU as a simplified LSTM variant."
-  - "[Graves & Schmidhuber, 2005] — Developed bidirectional LSTM for framewise phoneme classification."
+  - "[Hochreiter & Schmidhuber, 1997] — Introduced LSTM with input and output gates."
+  - "[Gers et al., 2000] — Added forget gate and peephole connections to LSTM."
+  - "[Cho et al., 2014] — Proposed GRU as a simplified LSTM variant."
+  - "[Graves & Schmidhuber, 2005a] — Developed bidirectional LSTM and vanilla LSTM."
 relevance:
   topics:
-    - code: "5.C"
-      name: "Financial Behavioral Profile Classification Algorithm"
-      justification: "RNN/LSTM can classify sequential spending behavior into profiles."
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      justification: "The tutorial covers sequence prediction models applicable to spending forecasting."
-    - code: "6.B"
-      name: "Spending Forecasting Algorithm"
-      justification: "LSTM and GRU are standard algorithms for time-series forecasting like future expenditures."
-    - code: "8.A"
-      name: "Anomaly Detection in Personal Finance Systems"
-      justification: "RNN-based sequence models can identify anomalous transaction patterns."
-    - code: "8.B"
-      name: "Anomaly Detection Algorithm"
-      justification: "Describes recurrent architectures that can be adapted for anomaly detection."
-  contribution: "This tutorial provides foundational knowledge on RNN, LSTM, and GRU architectures that can power Odin's spending forecasting module by capturing long-term spending patterns. The bidirectional LSTM and ELMo approaches can enhance anomaly detection by leveraging both past and future transaction context. The GRU's computational efficiency makes it suitable for real-time behavioral classification on mobile devices. The analysis of gradient problems informs robust training of Odin's predictive models."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Covers RNN/LSTM architectures essential for forecasting financial sequences.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Discusses algorithms (LSTM, GRU) suitable for predicting sequential spending patterns.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: LSTM can be used to model normal spending patterns for anomaly detection.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: RNNs can classify sequences of transactions into behavioral profiles.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: RNNs are designed to capture temporal patterns, applicable to seasonality.
+  contribution: |
+    The paper provides a comprehensive theoretical foundation for RNN and LSTM architectures, including their training dynamics and variants. This directly informs the choice of sequence models for Odin's spending forecasting module (Topic 6.B). The analysis of gradient issues and gating mechanisms justifies the adoption of LSTM/GRU over vanilla RNNs for capturing long-term financial dependencies. The survey of bidirectional processing suggests potential improvements for offline analysis of transaction histories.
   directly_justifies:
-    - "Recurrent neural networks are effective for sequence prediction tasks such as spending forecasting."
-    - "LSTM networks mitigate gradient vanishing, enabling learning of long-term dependencies in financial time series."
-    - "Bidirectional processing improves accuracy when future transaction data is available for offline analysis."
-    - "Gated Recurrent Units offer a simpler, faster alternative to LSTM with comparable performance."
+    - "RNNs can model sequential spending data due to their recurrent structure."
+    - "LSTM's forget gate allows the model to learn when to ignore past spending patterns."
+    - "GRU provides a simpler alternative with comparable performance to LSTM."
+    - "Bidirectional LSTM can leverage future transaction context in offline analysis."
   limits:
-    - "No empirical evaluation on financial or personal spending data."
-    - "Does not address privacy, security, or mobile implementation constraints."
-    - "Tutorial focuses on algorithmic description, not comparative benchmarking against PFMS-specific baselines."
-  mapping_rationale: "The paper is a general ML tutorial on RNN/LSTM, not personal finance specific. However, Odin's predictive modeling (6.A), spending forecasting (6.B), anomaly detection (8.A/8.B), and behavioral classification (5.C) can directly leverage these architectures. No topics related to Filipino demographics, cultural practices, privacy, or UX were selected because the paper does not address them. Borderline topics like 7.C (budget recommendation) were rejected because the paper does not discuss recommendation or optimization of budgets; it only covers generic sequence prediction."
+    - "The paper is a tutorial/survey and does not provide new empirical results."
+    - "No specific evaluation on financial time-series data is presented."
+  mapping_rationale: |
+    A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper's primary contribution to sequence modeling algorithms was deemed highly relevant to Predictive Modeling (6.A) and Forecasting Algorithms (6.B), as it provides the theoretical basis for using RNNs/LSTMs for sequential data, which is directly applicable to spending forecasts. It was also considered medium relevance to Anomaly Detection (8.B) and Behavioral Classification (5.C), as these modules can leverage sequence models for identifying outliers or classifying user behavior patterns. The paper touches on seasonal spending (2.B) and mobile design (9.A) only in a contextual manner, as these are not the focus; no concrete design principles or Filipino-specific insights are offered. Topics related to privacy (10), evaluation frameworks (12), and savings/debt (13) were considered and rejected, as the paper does not address these areas. Overall, this paper serves as a core algorithmic reference for Odin's forecasting and detection modules.
 limitations:
-  - "The paper is a tutorial and survey, not original research; no new empirical results are presented. [unacknowledged]"
-  - "It does not compare LSTM variants on financial datasets, limiting direct applicability to PFMS. [unacknowledged]"
-  - "Discussion of computational complexity and mobile feasibility is absent. [unacknowledged]"
+  - "The tutorial focuses on conceptual explanations and does not include empirical comparisons on specific datasets. [unacknowledged]"
+  - "The paper does not address the computational efficiency or deployability on mobile devices. [unacknowledged]"
+  - "Limited discussion on handling missing data or irregularly sampled time series, common in personal finance. [unacknowledged]"
 remember_this:
-  - "LSTM gates learn when to remember or forget information over long sequences."
-  - "Gradient vanishing is controlled by keeping weight matrix eigenvalues near one."
-  - "Bidirectional processing uses future context for better offline sequence understanding."
-  - "GRU reduces LSTM complexity with comparable performance on many tasks."
+  - "RNN training faces gradient vanishing or explosion for long sequences."
+  - "LSTM gates enable learning when to retain or forget information."
+  - "GRU is a simplified LSTM variant with comparable performance."
+  - "Bidirectional processing improves sequence modeling for offline tasks."
+  - "Largest eigenvalue of weight matrix should be slightly less than one."
 ```

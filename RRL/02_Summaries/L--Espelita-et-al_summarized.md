@@ -1,85 +1,166 @@
 ```yaml
-paper_id: 3c6e0b8a-9c1d-5f2a-9e3b-4d7f8a9b0c1d
-designation: international
-title: "Understanding Monetary Policy: Student Awareness, Perceptions, and Financial Behaviors in the Philippine Context"
-authors: "Atento, R. G.; Espelita, C. A. M.; Rao, L.; Tian, Y."
+paper_id: 9a7d8c3e-5b2f-4a8e-9c1d-6f3a8e2b7c5d
+designation: local
+title: Understanding Monetary Policy: Student Awareness, Perceptions, and Financial Behaviors in the Philippine Context
+authors: Atento, R. G.; Espelita, C. A. M.; Rao, L.; Tian, Y.
 year: 2025
-venue: "International Journal of Health and Business Analytics"
+venue: International Journal of Health and Business Analytics
 odin_topics:
-  - "1.C"
-  - "13.A"
-shorthand_tags:
-  - "/financial-behavior"
-  - "/savings-management"
-tldr: "Filipino students show moderate monetary policy awareness, with graduate and business students more knowledgeable; awareness correlates positively with saving and investment but not spending."
-problem_and_motivation: "Limited research examines how young Filipinos understand monetary policy despite its critical role in economic stability and personal financial decisions. Students, as future economic stewards, need literacy to navigate policy impacts on saving, investing, and spending. Without this understanding, policy effectiveness may be undermined and financial behaviors misaligned."
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.D
+  - 4.B
+  - 5.A
+  - 5.B
+  - 5.C
+  - 6.A
+  - 7.A
+  - 8.A
+  - 9.A
+  - 10.A
+  - 12.A
+  - 13.A
+tldr: Filipino students show moderate monetary policy awareness, with graduate and business students exhibiting higher understanding, and this awareness positively correlates with saving and investment behaviors.
+problem_and_motivation: Limited research examines young Filipinos' understanding of monetary policy, a critical gap given its role in economic stability and the youth's future role as economic stewards. The study addresses this by investigating how awareness and perceptions vary across educational levels and fields of study.
 approach:
-  - "Descriptive-correlational survey of 200 Filipino senior high, undergraduate, and graduate students using stratified random sampling."
-  - "Instrument measured monetary policy awareness (10 items), perceptions (10 items), and financial behaviors (saving, investing, spending) on 5-point Likert scales."
-  - "Data analyzed with ANOVA, t-tests, Pearson correlations, and multiple regression using Jamovi and SPSS."
-  - "Cronbach's alphas: awareness .82, perception .85, saving .78, investment .76, spending .74."
+  - Descriptive-correlational survey design with 200 respondents from senior high, undergraduate, and graduate levels in Philippine institutions.
+  - Stratified random sampling ensured representation across educational levels, academic programs, and demographic groups.
+  - Structured questionnaire measured awareness of monetary policy, perceptions of effectiveness, and financial behaviors using Likert scales.
+  - Validation included expert review and pilot testing with 30 students; Cronbach's alpha for subscales ranged from .74 to .85.
+  - Data analyzed using ANOVA, t-tests, Pearson correlations, and multiple regression with Jamovi and SPSS.
 findings:
-  - "num: Awareness correlates moderately with perception of policy effectiveness (r = 0.48, p < .001)."
-  - "num: Awareness positively correlated with saving behavior (r = 0.31, p < .001) and investment behavior (r = 0.24, p = .001)."
-  - "num: Awareness not significantly correlated with spending behavior (r = -0.07, p = .310)."
-  - "num: Regression shows awareness and perceptions predict saving (R² = .22) and investment (R² = .15) but not spending (R² = .04)."
-  - "Graduate students highest awareness (M = 3.75), senior high lowest (M = 2.80), F = 47.83, p < .001."
-  - "Business/economics students highest awareness (M = 3.48), others significantly lower (F = 11.22, p < .001)."
-  - "No significant gender difference in awareness (t(198) = 0.31, p = .756)."
+  - num: Overall awareness of monetary policy is moderate, with graduate students scoring significantly higher (M=3.75) than undergraduates (M=3.25) and senior high students (M=2.80).
+  - num: Business/economics students exhibited higher awareness (M=3.48) than students in other fields, F(4,195)=11.22, p<.001.
+  - num: Awareness was positively correlated with perception of policy effectiveness (r=0.48, p<.001), saving behavior (r=0.31, p<.001), and investment behavior (r=0.24, p=.001).
+  - No significant relationship was found between awareness and spending behavior (r=-0.07, p=.310).
+  - num: Regression models showed awareness and perception significantly predicted saving (R²=.22) and investment (R²=.15) but not spending (R²=.04).
+  - Students perceive monetary policy as effective in controlling inflation but are more cautious about its role in employment and long-term growth.
+  - Gender did not significantly differentiate awareness levels, t(198)=0.31, p=.756.
+  - Older students (23-30 years) demonstrated higher awareness (M=3.48) compared to younger groups (16-18 years, M=2.85).
+  - Awareness levels differed significantly by educational level, F=47.83, p<.001, with all pairwise differences significant.
+  - Students in "Other" programs (education, health sciences) had the lowest awareness (M=3.02), highlighting a curricular gap.
 key_figures_tables:
-  - "Table 5: Gender difference test → awareness similar across genders."
-  - "Table 6: Awareness by educational level → graduate highest, senior high lowest."
-  - "Table 7: Awareness by program → business/economics highest, education/health lowest."
-  - "Table 8: Correlation awareness and perception → moderate positive association."
-  - "Table 9-11: Correlations with saving, investment, spending → significant for saving/investment, not for spending."
-  - "Table 12: Regression results → awareness and perception jointly predict saving and investment."
+  - "Table 4: Difference in awareness by age → Older students show higher awareness, F=14.62, p<.001."
+  - "Table 5: Difference in awareness by gender → No significant difference found, t(198)=0.31, p=.756."
+  - "Table 6: Difference in awareness by educational level → Graduate students highest, senior high lowest."
+  - "Table 7: Difference in awareness by program → Business/economics highest, others lowest."
+  - "Table 8: Correlation between awareness and perception → Positive moderate correlation, r=0.48."
+  - "Table 9: Correlation between awareness and saving → Positive significant, r=0.31."
+  - "Table 10: Correlation between awareness and investment → Positive significant, r=0.24."
+  - "Table 11: Correlation between awareness and spending → No significant relationship, r=-0.07."
+  - "Table 12: Regression results → Awareness and perception predict saving and investment, not spending."
 key_equations:
-  - equation: "None."
-    explanation: ""
+  - equation: "R² = .22 for saving behavior model"
+    explanation: "Awareness and perception explain 22% of saving variance."
+  - equation: "R² = .15 for investment behavior model"
+    explanation: "Awareness and perception explain 15% of investment variance."
+  - equation: "R² = .04 for spending behavior model"
+    explanation: "Awareness and perception explain negligible spending variance."
 definitions:
-  - term: "BSP"
-    definition: "Bangko Sentral ng Pilipinas, the central bank of the Philippines."
   - term: "TRA"
-    definition: "Theory of Reasoned Action, a framework linking attitudes and subjective norms to behavioral intentions."
+    definition: "Theory of Reasoned Action, positing behavior is shaped by behavioral intentions influenced by attitudes and subjective norms."
   - term: "TPB"
-    definition: "Theory of Planned Behavior, extends TRA with perceived behavioral control."
-  - term: "HEIs"
-    definition: "Higher Education Institutions."
+    definition: "Theory of Planned Behavior, extends TRA by adding perceived behavioral control as a predictor of intentions."
+  - term: "Monetary Policy"
+    definition: "Central bank actions to regulate money supply and credit to achieve macroeconomic objectives like price stability."
+  - term: "BSP"
+    definition: "Bangko Sentral ng Pilipinas, the central monetary authority of the Philippines."
 critical_citations:
-  - "[Blinder et al., 2008] — public expectations shape policy effectiveness."
-  - "[Ajzen, 1991] — Theory of Planned Behavior framework."
-  - "[Mishkin, 2019] — monetary policy definition and role."
-  - "[OECD, 2020] — financial literacy low among Filipino youth."
+  - "[Blinder et al., 2008] — Public expectations influence policy effectiveness."
+  - "[Ajzen, 1991] — Foundational theory on planned behavior."
+  - "[OECD, 2020] — Philippine financial literacy below global average."
+  - "[Mishkin, 2019] — Definition and scope of monetary policy."
+  - "[Lusardi & Mitchell, 2020] — Financial literacy interacts with contextual factors."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Paper examines saving and investment behaviors of Filipino students in relation to monetary policy awareness."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Paper finds awareness positively associated with saving behavior (r=0.31) and justifies savings-focused modules."
-  contribution: "The paper supports Odin's savings goal management module by demonstrating that monetary policy awareness directly correlates with increased saving behavior. It informs behavioral profiling by showing that educational level and academic program significantly differentiate awareness and financial behaviors, enabling targeted user segmentation. The findings also justify spending forecasting enhancements by revealing that awareness alone does not predict spending, highlighting the need for incorporating social and psychological factors into consumption models."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: "Directly examines Filipino students as future young professionals and economic actors."
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: "Investigates saving, spending, and investment behaviors of Filipino students."
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: "Analyzes financial behaviors (saving, investing, spending) in relation to policy awareness."
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: "Discusses cultural factors like extended family support and collectivist spending."
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: contextual
+      justification: "Mentions cultural spending patterns but does not focus on cyclical occasions."
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: "Identifies gaps in financial literacy and policy communication in the Philippines."
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: "Examines how awareness shapes saving and investing profiles."
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: contextual
+      justification: "Does not address cold-start, but profiles vary by educational background."
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: low
+      justification: "Does not discuss classification algorithms for behavioral profiles."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: low
+      justification: "Does not focus on predictive modeling; examines awareness-behavior correlations."
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: "Findings on saving behavior inform budget recommendation systems."
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: "No direct discussion of anomaly detection; mentions spending patterns."
+    - code: 9.A
+      name: Mobile‑First Design Principles and Rationale
+      relevance: contextual
+      justification: "Recommends digital platforms and OERs for financial education."
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: "Mentions data security in methodology but not a core finding."
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: "Provides empirical evaluation framework for financial literacy interventions."
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: high
+      justification: "Awareness positively correlates with saving behavior, informing savings goal features."
+  contribution: "This paper directly informs Odin's behavioral profiling module by identifying how monetary policy awareness shapes saving and investment behaviors among Filipino students. The findings validate the need for personalized financial education in Odin's onboarding, as awareness levels vary significantly by educational background. The correlation between awareness and saving behavior (r=0.31) supports Odin's savings goal management features that adapt to user knowledge levels. The negative correlation with spending (r=-0.07) suggests that behavioral nudges in Odin must go beyond information provision to influence consumption habits. The study's grounded theory approach using TRA/TPB provides a theoretical foundation for Odin's user segmentation and intervention design."
   directly_justifies:
-    - "Monetary policy awareness positively correlates with saving behavior (r=0.31, p<.001)."
-    - "Graduate students have higher awareness than senior high students (M=3.75 vs 2.80)."
-    - "Business and economics students are more aware of monetary policy than non-business peers."
-    - "Awareness does not significantly influence spending behavior (r=-0.07, p=.310)."
-    - "Awareness and perceptions predict 22% of variance in saving behavior."
+    - "Graduate and business students exhibit higher monetary policy awareness, justifying educational-level segmentation in Odin."
+    - "Awareness correlates with saving behavior (r=0.31), supporting savings goal features in Odin."
+    - "Awareness does not significantly influence spending, necessitating behavioral nudges beyond information."
+    - "Gender did not differentiate awareness, suggesting gender-neutral financial education design in Odin."
+    - "Students perceive monetary policy as effective in inflation control but not employment, indicating communication gaps to address."
   limits:
-    - "Cross-sectional design prevents causal inference."
-    - "Self-reported data may include social desirability and recall biases."
-    - "Sample limited to selected institutions in the Philippines, limiting generalizability."
-    - "Scope excludes trust in government, media exposure, and cultural attitudes toward debt [unacknowledged]."
-  mapping_rationale: "The paper was screened against Odin's functional domains. No relevance was found for spending forecasting, budget recommendation, anomaly detection, expense categorization, mobile-first design, data privacy, user retention, or system evaluation. The strongest alignment is with Savings & Debt Management (13.A) due to the paper's focus on saving behavior and its correlation with monetary policy awareness. Additionally, the paper's examination of financial behaviors among Filipino students maps directly to topic 1.C (Financial Behavior of Filipino Young Professionals). Topics related to behavioral classification (5.A-5.C) were rejected because the paper does not propose or validate a classification algorithm. Topics on budgeting strategies (7.A-7.C) were rejected because the paper does not address budget recommendation. The borderline case of spending behavior was considered for spending forecasting (6.A), but the paper only reports a null correlation and no predictive model, so it was excluded."
+    - "Cross-sectional design prevents causal inference about awareness-behavior relationships."
+    - "Self-reported data may introduce social desirability and recall biases."
+    - "Sample restricted to selected institutions, limiting generalizability to all Filipino students."
+    - "Scope excludes variables like trust in government and media exposure that may influence literacy."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was conducted. The 'Filipino Cultural Context' domain was flagged as highly relevant because the paper directly examines Filipino students' financial behaviors and cultural spending patterns, with topic 2.A (culturally specific practices) rated medium and 2.D (spending cycles) rated contextual due to only tangential mention. The 'Behavioral Profiling' domain was highly relevant, with topics 5.A (behavioral profiles) rated high based on the awareness-behavior correlations, 5.B (cold-start) rated contextual as the study mentions educational gaps that resemble cold-start conditions, and 5.C (classification) rated low as no classification algorithms are discussed. The 'Expense Categorization' domain was considered but rejected entirely (3.A, 3.B, 3.C) as the paper does not address expense frameworks. The 'Spending Forecasting' domain (6.A, 6.B) was rated low to contextual because the paper discusses spending behavior but not predictive models. The 'Budget Recommendation' domain (7.A) was rated medium as saving behavior findings can inform budget features. The 'Anomaly Detection' domain (8.A, 8.B, 8.C) was rejected due to no algorithmic discussion. The 'Mobile-First Design' domain (9.A) was rated contextual based on digital learning recommendations. The 'Data Privacy' domain (10.A) was rated low due to only methodological mention. The 'System Evaluation' domain (12.A) was rated medium for the empirical framework. The 'Savings & Debt Management' domain (13.A) was rated high for the direct saving behavior correlation, while 13.B and 13.C were rejected due to no debt or surplus discussion. Overall, the paper is moderately relevant to Odin, providing empirical grounding for behavioral profiling and savings features, but with limited direct algorithmic or system design implications."
 limitations:
-  - "Cross-sectional design prevents causal inference."
+  - "Cross-sectional design prevents causal inference; longitudinal research needed."
   - "Self-reported data may introduce social desirability bias."
-  - "Sampling restricted to selected Philippine HEIs and senior high schools, limiting generalizability to all Filipino students."
-  - "Potential cultural factors (e.g., collectivist spending norms) not examined [unacknowledged]."
-  - "External environment (post-COVID recovery, geopolitical shocks) may have influenced responses [unacknowledged]."
+  - "Sample restricted to selected HEIs and senior high schools; findings may not generalize."
+  - "Does not examine trust in government institutions or media exposure as variables."
 remember_this:
-  - "Awareness correlates with saving (r=0.31) but not spending."
-  - "Graduate students show highest monetary policy knowledge."
-  - "Business students more aware than non-business peers."
-  - "Awareness alone does not change daily spending habits."
+  - "Graduate and business students show highest monetary policy awareness."
+  - "Awareness correlates positively with saving and investment behaviors."
+  - "Awareness does not influence spending behavior, highlighting behavioral gaps."
+  - "Students perceive inflation control effectiveness but doubt employment impact."
+  - "Targeted financial education across disciplines is urgently needed."
 ```

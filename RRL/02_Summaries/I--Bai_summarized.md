@@ -1,80 +1,91 @@
 ```yaml
-paper_id: 10.1371/journal.pone.0294466
-designation: international
-title: Impact of financial literacy, mental budgeting and self control on financial wellbeing: Mediating impact of investment decision making
-authors: Bai, R.
+paper_id: "10.1371/journal.pone.0294466"
+designation: "international"
+title: "Impact of financial literacy, mental budgeting and self control on financial wellbeing: Mediating impact of investment decision making"
+authors: "Bai, R."
 year: 2023
-venue: PLOS ONE
+venue: "PLOS ONE"
 odin_topics:
-  - 3.A
-  - 5.A
-shorthand_tags:
-  - /expense-categorization
-  - /behavioral-profiles
-tldr: Financial literacy, mental budgeting, and self-control positively affect subjective financial wellbeing, with investment decision making partially mediating these relationships.
-problem_and_motivation: Financial stress harms mental health and productivity. Understanding cognitive factors like financial literacy, mental budgeting, and self-control that influence subjective financial wellbeing is needed. The mediating role of investment decision making in these relationships has not been fully examined.
+  - "1.C"
+  - "3.A"
+  - "5.A"
+  - "7.A"
+tldr: "Financial literacy, mental budgeting, and self-control positively influence financial wellbeing, partially mediated by investment decision-making behavior."
+problem_and_motivation: "Financial stress is a public health concern, and understanding cognitive factors that improve financial wellbeing is critical. While financial literacy is known to help, the roles of mental budgeting and self-control, and the mediating mechanism of investment decisions, remain underexplored. This study investigates these relationships to inform interventions."
 approach:
-  - Data were collected from 449 Chinese university students via convenience sampling using physical and electronic channels.
-  - The study employed Partial Least Squares Structural Equation Modeling (PLS-SEM) for path analysis and mediation testing.
-  - Financial literacy was measured with 7 items, mental budgeting with 4 items, and self-control with 5 items from the Brief Self-Control Scale.
-  - Investment decision making behavior was measured with 9 items, and financial wellbeing with 7 items covering financial anxiety and security.
-  - Hypotheses were tested for direct effects and mediation following Baron and Kenny's approach.
+  - "Convenience sample of 449 Chinese university students (55% male, 60% business majors)."
+  - "Used validated scales for financial wellbeing, financial literacy, mental budgeting, self-control, and investment decision-making behavior."
+  - "Employed PLS-SEM to test direct and indirect effects via path analysis and mediation."
+  - "Assessed measurement model via factor loadings, composite reliability, and AVE; structural model via path coefficients."
 findings:
-  - num: Financial literacy has a direct positive effect on financial wellbeing (beta = 0.299, p < 0.001).
-  - num: Mental budgeting has a direct positive effect on financial wellbeing (beta = 0.102, p < 0.001).
-  - num: Self-control has a direct positive effect on financial wellbeing (beta = 0.182, p < 0.001).
-  - num: Investment decision making partially mediates the effect of financial literacy on financial wellbeing (indirect effect = 0.017, p = 0.034).
-  - num: Investment decision making partially mediates the effect of mental budgeting on financial wellbeing (indirect effect = 0.016, p = 0.035).
-  - num: Investment decision making partially mediates the effect of self-control on financial wellbeing (indirect effect = 0.019, p = 0.036).
+  - "num: Financial literacy has a direct positive effect on financial wellbeing (β=0.299, p<0.001)."
+  - "num: Mental budgeting has a direct positive effect (β=0.102, p<0.001)."
+  - "num: Self-control has a direct positive effect (β=0.182, p<0.001)."
+  - "num: Investment decision-making partially mediates the effects of all three independent variables (indirect effects: 0.017, 0.016, 0.019)."
+  - "All constructs met reliability and validity criteria (CR>0.70, AVE>0.50)."
 key_figures_tables:
-  - Figure 1: Conceptual model of financial literacy, mental budgeting, self-control, investment decision making, and financial wellbeing → All hypothesized paths were supported.
-  - Table 3: Path coefficients for direct effects → All direct effects significant except DMB->FWB at p=0.059.
+  - "Table 1: Demographic distribution of sample → Majority male and business majors."
+  - "Table 2: Factor loadings, CR, alpha, AVE → All constructs are reliable and valid."
+  - "Table 3: Path coefficients and significance → All direct effects are significant except DMB→FWB at p=0.059."
+  - "Table 4: Mediation analysis results → Partial mediation for all three paths."
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
-  - term: PLS-SEM
-    definition: Partial Least Squares Structural Equation Modeling, a variance-based SEM method.
-  - term: Financial wellbeing
-    definition: Subjective evaluation of one's present and future financial situation.
-  - term: Mental budgeting
-    definition: Cognitive process of mentally classifying and monitoring income and expenses.
-  - term: Self-control
-    definition: Ability to manage impulses and behaviors to achieve long-term goals.
-  - term: Financial literacy
-    definition: Knowledge of financial concepts and ability to make informed financial decisions.
-  - term: Investment decision making
-    definition: Process of choosing financial investments influenced by knowledge, attitude, and behavior.
+  - term: "Financial literacy"
+    definition: "Knowledge of financial concepts and ability to make informed financial decisions."
+  - term: "Mental budgeting"
+    definition: "Cognitive process of categorizing and tracking income and expenses mentally."
+  - term: "Self-control"
+    definition: "Ability to regulate impulses and behavior to achieve long-term goals."
+  - term: "Investment decision-making"
+    definition: "Process of making choices about financial investments influenced by various factors."
+  - term: "Financial wellbeing"
+    definition: "Subjective evaluation of one's present and future financial situation."
+  - term: "PLS-SEM"
+    definition: "Partial Least Squares Structural Equation Modeling, a variance-based SEM technique."
 critical_citations:
-  - "[Thaler, 1999] — Introduced mental accounting theory underpinning mental budgeting."
-  - "[Tangney et al., 2004] — Provided the Brief Self-Control Scale used in this study."
-  - "[Baron & Kenny, 1986] — Established the mediation testing framework applied here."
+  - "[Thaler, 1999] — introduced mental accounting theory."
+  - "[Shefrin & Thaler, 1988] — proposed behavioral life-cycle hypothesis."
+  - "[Tangney et al., 2004] — developed Brief Self-Control Scale."
+  - "[Baron & Kenny, 1986] — established mediation testing framework."
 relevance:
   topics:
-    - code: 3.A
-      name: Expense Categorization Frameworks
-      justification: Mental budgeting involves mentally categorizing expenses into budgets.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      justification: Self-control and mental budgeting are behavioral traits linked to financial wellbeing.
-  contribution: This paper justifies Odin's use of mental budgeting as a cognitive expense categorization mechanism for user profiling. It supports incorporating self-control measures into behavioral profile classification to predict financial wellbeing. The mediation via investment decision making suggests that Odin's recommendation modules should consider investment behavior as an intermediate outcome.
+    - code: "1.C"
+      name: "Financial Behavior of Filipino Young Professionals"
+      relevance: "low"
+      justification: "Paper studies general financial behavior but not Filipino-specific."
+    - code: "3.A"
+      name: "Expense Categorization Frameworks"
+      relevance: "contextual"
+      justification: "Mental budgeting involves categorization but is not a system framework."
+    - code: "5.A"
+      name: "Financial Behavioral Profiles in Personal Finance"
+      relevance: "low"
+      justification: "Identifies self-control and financial literacy as behavioral traits relevant to profiling."
+    - code: "7.A"
+      name: "Budgeting Strategies as Domain Knowledge"
+      relevance: "medium"
+      justification: "Directly examines mental budgeting as a strategy influencing wellbeing."
+  contribution: "This paper supports Odin's budgeting module by emphasizing mental budgeting as a behavior that improves financial wellbeing. It informs user profiling by linking self-control and financial literacy to financial outcomes. The mediating role of investment decisions suggests that Odin's decision support features could enhance user trust and engagement. Additionally, the findings justify incorporating financial education content within the app to boost literacy and self-control."
   directly_justifies:
-    - Individuals with higher self-control achieve better financial outcomes.
-    - Mental budgeting practice improves subjective financial wellbeing.
-    - Financial literacy positively influences investment decisions.
-    - Investment decision making partially transmits the effects of cognitive factors to financial wellbeing.
+    - "Mental budgeting practice is positively associated with financial wellbeing."
+    - "Self-control is a significant predictor of financial security and wellbeing."
+    - "Investment decision-making mediates the effect of cognitive factors on financial wellbeing."
+    - "Financial literacy directly improves financial wellbeing."
   limits:
-    - Student sample limits generalizability to young professionals.
-    - Cross-sectional design prevents causal inference.
-    - Self-reported measures may introduce response bias.
-  mapping_rationale: The paper focuses on cognitive-behavioral factors (financial literacy, mental budgeting, self-control) and their impact on subjective financial wellbeing. It does not address Filipino young professionals specifically, nor algorithmic implementation. Topic 3.A is selected because mental budgeting directly involves mental categorization of expenses, relevant to Odin's expense categorization module. Topic 5.A is selected because self-control and mental budgeting are behavioral profile attributes that can inform user classification. Topics related to forecasting, anomaly detection, system design, or mobile UX were rejected as the paper does not discuss them. The paper is international and non-algorithm-specific.
+    - "Sample of Chinese university students limits generalizability to Filipino young professionals. [unacknowledged]"
+    - "Cross-sectional design prevents causal inference (acknowledged)."
+    - "Self-reported measures may introduce social desirability bias (acknowledged)."
+  mapping_rationale: "A systematic scan of all 12 functional domains and associated topic codes was performed. The domains of Financial Behavior, Expense Categorization, Behavioral Profiling, and Budgeting Strategies were flagged as relevant. Specifically, topic 1.C (Financial Behavior) was assigned low relevance because the paper studies general financial behavior but not Filipino context. Topic 3.A (Expense Categorization) was contextual because mental budgeting is a cognitive categorization process, not a system framework. Topic 5.A (Behavioral Profiles) received low relevance as it identifies traits (self-control, literacy) but does not classify profiles. Topic 7.A (Budgeting Strategies) was medium relevance because mental budgeting is a core budgeting strategy directly studied. Domains such as Forecasting, Anomaly Detection, Mobile Design, Privacy, and Retention were rejected as the paper contains no content on those topics. Overall, the paper provides background behavioral insights but limited direct applicability to Odin's algorithmic modules."
 limitations:
-  - Student sample limits generalizability to broader populations.
-  - Cross-sectional design cannot establish causality.
-  - Self-reported measures may be subject to social desirability bias.
+  - "Sample comprised solely of Chinese university students, limiting generalizability."
+  - "Cross-sectional design restricts causal inferences."
+  - "Reliance on self-reported measures may introduce response biases."
+  - "The study does not examine cultural or contextual factors relevant to Filipino users. [unacknowledged]"
 remember_this:
-  - Financial literacy has direct beta 0.299 on financial wellbeing.
-  - Mental budgeting directly improves financial wellbeing.
-  - Self-control influences financial wellbeing via investment decisions.
-  - Investment decision making partially mediates all three relationships.
+  - "Mental budgeting directly improves financial wellbeing (β=0.102)."
+  - "Self-control is a strong predictor of financial security (β=0.182)."
+  - "Investment decisions partially mediate cognitive effects on wellbeing."
+  - "Financial literacy has the largest direct effect on wellbeing (β=0.299)."
 ```

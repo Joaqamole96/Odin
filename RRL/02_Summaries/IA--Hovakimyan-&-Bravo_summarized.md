@@ -1,131 +1,145 @@
 ```yaml
-paper_id: 10.3390/info15120786
-designation: international
-title: Evolving Strategies in Machine Learning: A Systematic Review of Concept Drift Detection
-authors: Hovakimyan, G.; Bravo, J.M.
+paper_id: "10.3390/info15120786"
+designation: "international"
+title: "Evolving Strategies in Machine Learning: A Systematic Review of Concept Drift Detection"
+authors: "Hovakimyan, G.; Bravo, J.M."
 year: 2024
-venue: Information
+venue: "Information"
 odin_topics:
-  - 5.B
-  - 5.C
-  - 6.A
-  - 6.B
-  - 8.A
-  - 8.B
-  - 12.A
-  - 12.B
-shorthand_tags:
-  - /concept-drift
-  - /online-learning
-  - /adaptive-windowing
-  - /ensemble-methods
-  - /anomaly-detection
-  - /evaluation-frameworks
-tldr: A systematic review of concept drift detection methods categorizes them into DDMs, WBMs, USSMs, ensembles, and neural networks, highlighting trade-offs between accuracy and computational cost.
-problem_and_motivation: Machine learning models typically assume static data distributions, but real-world streams undergo concept drift, causing performance degradation. This affects domains like fraud detection, finance, healthcare, and recommendation systems. A comprehensive, up-to-date synthesis of drift detection methodologies was missing to guide researchers and practitioners.
+  - "2.B"
+  - "5.C"
+  - "6.A"
+  - "6.B"
+  - "8.A"
+  - "8.B"
+  - "12.A"
+  - "12.B"
+tldr: "A systematic review of concept drift detection methods over two decades, categorizing them into drift detection, window-based, unsupervised, ensemble, and neural network approaches, and highlighting strengths, weaknesses, and future challenges."
+problem_and_motivation: "Machine learning models often assume static data distributions, yet real-world streams exhibit concept drift that degrades accuracy. Despite numerous methods, there is no unified synthesis of their strengths and weaknesses across diverse drift types and application domains. This review systematically categorizes existing detection strategies to provide a resource for researchers and practitioners."
 approach:
-  - PRISMA guidelines used to screen 490 studies from IEEE and ScienceDirect APIs, narrowing to 65 high-impact papers.
-  - T5 NLP model applied to summarize abstracts for efficient screening and data extraction.
-  - Quality assessment using adapted Newcastle-Ottawa Scale and CASP checklists, rating studies on methodology, validation, and reproducibility.
-  - Methods categorized into drift detection mechanisms (DDMs), window-based (WBMs), unsupervised/semi-supervised (USSMs), ensembles (EMs), and neural networks (NNs).
-  - Comparison criteria include prequential error, handling imbalanced data, speed (training/prediction time, throughput, latency), and dataset characteristics.
-  - Evaluation on synthetic (SEA, Hyperplane, RBF) and real-world (Elec2, Airlines, KDDCup, CreditCardFraud) datasets.
+  - "Followed PRISMA guidelines for systematic review process and reporting."
+  - "Searched IEEE and ScienceDirect APIs, identifying 490 studies, with 40 added from reference lists."
+  - "Used T5 model for abstract screening to assess relevance, narrowing to 254 studies."
+  - "Conducted full-text eligibility assessment and quality assessment using adapted Newcastle-Ottawa Scale and CASP checklists."
+  - "Synthesized 65 high-impact studies, categorizing methods into DDM, WBM, USSM, EM, and NN categories."
 findings:
-  - "num: 45% of studies were high quality (score 4-5), 41% moderate, 14% low."
-  - "DDMs offer high accuracy with low computational cost, suitable for real-time applications."
-  - "Ensemble methods and neural networks provide very high accuracy but at high computational cost."
-  - "Window-based methods balance accuracy and efficiency, effective for streaming environments."
-  - "Unsupervised methods excel at novel class detection but are prone to false positives in noisy data."
-  - "Key evaluation metrics include prequential error, F1 score, detection delay, and throughput."
-  - "Common challenges remain: imbalanced data, computational efficiency, and application to non-tabular data."
+  - "DDMs are cost-effective and easy to apply in real-time, but may produce false positives in noisy environments."
+  - "WBMs balance accuracy and computational cost, with ADWIN being sensitive to noise but effective for sudden drift."
+  - "USSMs excel in novel class detection but are computationally expensive and prone to false positives."
+  - "Ensemble methods and neural networks achieve very high accuracy but incur high computational costs."
+  - "num: 45% of reviewed studies are of high methodological quality, 41% moderate, and 14% low."
+  - "Challenges include handling imbalanced data, computational efficiency, regression tasks, and non-tabular data."
+  - "Common evaluation metrics include prequential error, detection delay, and false alarm rates."
 key_figures_tables:
-  - "Figure 1: Distribution-based drift types (virtual, real, novel class) → visual taxonomy of statistical changes."
-  - "Figure 2: Pattern-based drift types (sudden, incremental, gradual, recurrent) → temporal evolution patterns."
-  - "Table 4: Comparison of DDM, WBM, USSM, EM, NN on accuracy and cost → ensembles and NNs most accurate but expensive."
-  - "Table 5: Datasets for drift detection (SEA, Hyperplane, Elec2, etc.) → synthetic and real benchmarks."
+  - "Figure 1: Distribution-based drift types (virtual, real, novel class) → illustrates changes in data distribution and class relationships."
+  - "Figure 2: Pattern-based drift types (sudden, incremental, gradual, recurrent) → shows how data distribution changes over time."
+  - "Figure 3: PRISMA flow diagram → summarizes study selection stages and reasons for exclusion."
+  - "Table 2: Summary of concept drift types with real-world examples → provides a taxonomy of drift types."
+  - "Table 3: Characteristics of included studies (drift type, method, findings) → overview of key studies and their contributions."
+  - "Table 4: Comparison of methods (accuracy, cost, applicability) → highlights trade-offs between accuracy and computational efficiency."
+  - "Table 5: Summary of datasets used for concept drift detection → lists synthetic and real-world benchmark datasets."
 key_equations:
-  - equation: "p_t + s_t \\geq p_{min} + 3 \\times s_{min}"
-    explanation: "Drift level threshold for DDM algorithm."
-  - equation: "Acc_{t+1} = (t \\times Acc_t + \\delta_{t+1}) / (t+1)"
+  - equation: "$CR = \\frac{\\text{Total Citations}}{\\text{Years Since Publication}}$"
+    explanation: "Adjusted citation rate to measure impact."
+  - equation: "$p_t + s_t \\ge p_{\\min} + 2 s_{\\min}$"
+    explanation: "DDM warning level for potential drift."
+  - equation: "$p_t + s_t \\ge p_{\\min} + 3 s_{\\min}$"
+    explanation: "DDM drift level confirming concept drift."
+  - equation: "$Acc_{t+1} = \\frac{t \\times Acc_t + \\delta_{t+1}}{t+1}$"
     explanation: "Incremental prequential accuracy calculation."
-  - equation: "Adjusted\\ Citation\\ Rate = Total\\ Citations / Years\\ Since\\ Publication"
-    explanation: "Citation impact normalization."
 definitions:
-  - term: Concept drift
-    definition: Change in the statistical properties of the target variable over time, degrading model performance.
-  - term: Virtual drift
-    definition: Change in input feature distribution P(X) without altering P(Y|X).
-  - term: Real drift
-    definition: Change in conditional probability P(Y|X), directly affecting model accuracy.
-  - term: Sudden drift
-    definition: Abrupt, instantaneous change in data distribution.
-  - term: Gradual drift
-    definition: Slow, continuous change in data distribution over time.
-  - term: DDM
-    definition: Drift detection mechanism using error rate monitoring and control charts.
-  - term: WBM
-    definition: Window-based mechanism using sliding or adaptive windows to compare historical and new data.
-  - term: USSM
-    definition: Unsupervised or semi-supervised method using clustering or density estimation for drift detection.
-  - term: EM
-    definition: Ensemble method combining multiple models to improve detection accuracy and robustness.
-  - term: NN
-    definition: Neural network approach, especially extreme learning machines (ELMs) and LSTMs.
-  - term: Prequential error
-    definition: Sequential evaluation metric updating model accuracy incrementally after each prediction.
+  - term: "Concept Drift"
+    definition: "Change in the statistical properties of the target variable over time, degrading model performance."
+  - term: "Virtual Drift"
+    definition: "Changes in input feature distribution without affecting the target variable."
+  - term: "Real Drift"
+    definition: "Changes in the conditional probability P(Y|X), impacting model accuracy."
+  - term: "Sudden Drift"
+    definition: "Abrupt, instantaneous change in data distribution."
+  - term: "Gradual Drift"
+    definition: "Slow, continuous change over an extended period."
+  - term: "Incremental Drift"
+    definition: "Progressive evolution of data distribution over time."
+  - term: "Recurrent Drift"
+    definition: "Cyclical changes in data distribution that reappear."
+  - term: "DDM"
+    definition: "Drift Detection Method, monitors error rate using statistical process control."
+  - term: "WBM"
+    definition: "Window-Based Mechanism, uses sliding or adaptive windows to compare historical and current data."
+  - term: "USSM"
+    definition: "Unsupervised and Semi-Supervised Methods, detect drift via clustering or density estimation with sparse labels."
+  - term: "EM"
+    definition: "Ensemble Method, combines multiple models to improve detection robustness and accuracy."
+  - term: "NN"
+    definition: "Neural Network, uses deep learning architectures like ELM and LSTM for drift detection."
+  - term: "PRISMA"
+    definition: "Preferred Reporting Items for Systematic Reviews and Meta-Analyses, a guideline for systematic reviews."
+  - term: "T5"
+    definition: "Text-to-Text Transfer Transformer, an NLP model used for abstract screening."
+  - term: "MOA"
+    definition: "Massive Online Analysis, an open-source framework for data stream mining."
 critical_citations:
-  - "[Gama et al., 2004] — Introduced DDM, foundation for many drift detectors."
-  - "[Bifet & Gavalda, 2007] — ADWIN adaptive windowing method."
-  - "[Brzezinski & Stefanowski, 2014] — OAUE ensemble for concept drift."
-  - "[Lu et al., 2019] — Comprehensive review on learning under concept drift."
+  - "[Gama et al., 2004] — Introduced the foundational DDM algorithm."
+  - "[Bifet, 2007] — Proposed ADWIN for adaptive windowing."
+  - "[Brzezinski & Stefanowski, 2014] — Developed OAUE ensemble method."
+  - "[Barros et al., 2018] — Conducted large-scale comparison of drift detectors."
 relevance:
   topics:
-    - code: 5.B
-      name: Profile Dynamics and the Cold‑Start Problem
-      justification: "Concept drift methods address changing user behavior over time, key for profile dynamics."
-    - code: 5.C
-      name: Financial Behavioral Profile Classification Algorithm
-      justification: "Drift detection algorithms can update classification models as financial behaviors evolve."
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      justification: "Maintaining predictive accuracy under distribution shifts is essential for spending forecasts."
-    - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: "Window-based and ensemble methods reviewed are directly applicable to spending forecast models."
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      justification: "Paper cites fraud detection as a key application, directly relevant to transaction anomaly detection."
-    - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: "DDMs and isolation forest methods are evaluated for detecting anomalous patterns in streams."
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      justification: "Paper discusses prequential error, detection delay, throughput as evaluation metrics."
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: "Comparative analysis of drift detectors provides a template for evaluating Odin's algorithmic modules."
-  contribution: "This systematic review informs Odin's spending forecasting module by providing a taxonomy of drift detection methods (DDMs, WBMs, ensembles, NNs) and their trade-offs. For anomaly detection, it highlights techniques like isolation forest and statistical process control that can flag unusual spending patterns. The evaluation metrics discussed (prequential error, detection delay, throughput) directly support Odin's system evaluation framework. The review's findings on handling imbalanced data and computational efficiency guide algorithm selection for mobile-first deployment."
+    - code: "2.B"
+      name: "Seasonal and Cyclical Spending Patterns"
+      relevance: "contextual"
+      justification: "Discusses recurrent drift as cyclical changes, relevant to seasonal spending."
+    - code: "5.C"
+      name: "Classification Approaches for Financial Behavioral Profiles"
+      relevance: "medium"
+      justification: "Reviews classification methods that handle drift, applicable to behavioral profiling."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Concept drift affects predictive models; reviews adaptive modeling techniques."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "medium"
+      justification: "Reviews forecasting algorithms like LSTM and ELM for time-series with drift."
+    - code: "8.A"
+      name: "Anomaly Detection in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Drift detection methods are closely related to anomaly detection; surveys detection techniques."
+    - code: "8.B"
+      name: "Anomaly Detection Algorithms for Personal Spending Data"
+      relevance: "medium"
+      justification: "Reviews algorithms like isolation forest and statistical tests for anomaly detection with drift."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "medium"
+      justification: "Discusses evaluation metrics such as accuracy, detection delay, and false alarm rates."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "medium"
+      justification: "Compares methods based on accuracy, computational cost, and applicability for module evaluation."
+  contribution: "The systematic review provides a comprehensive taxonomy of drift detection methods, which can guide the selection of forecasting (6.A) and anomaly detection (8.B) modules in Odin. The comparison of ensemble and neural network methods informs trade-offs between accuracy and computational cost for adaptive spending forecasting (6.B). The discussion of evaluation metrics like detection delay and false alarm rate directly supports the design of evaluation frameworks (12.A) for algorithmic modules. The identification of recurrent drift patterns (2.B) justifies incorporating seasonal adjustment in spending prediction. Overall, the review offers a methodological foundation for handling evolving user spending behaviors."
   directly_justifies:
-    - "Concept drift detection methods can maintain spending forecast accuracy as user behavior changes over time."
-    - "Ensemble methods offer high adaptability to gradual and recurring drifts but require careful resource management."
-    - "Window-based techniques balance accuracy and computational cost, suitable for real-time anomaly detection on mobile devices."
-    - "Prequential error and detection delay are critical metrics for evaluating adaptive personal finance algorithms."
+    - "Window-based methods like ADWIN are effective for real-time drift detection."
+    - "Ensemble methods provide high accuracy but are computationally expensive."
+    - "Unsupervised methods are suitable for novel class detection with sparse labels."
+    - "DDMs offer cost-effective real-time detection with minimal overhead."
+    - "Neural networks like LSTM excel in detecting drift in sequential data."
   limits:
-    - "Paper is a systematic review, not an empirical evaluation of a specific algorithm on financial data."
-    - "None of the reviewed studies focus on Filipino young professionals or culturally specific spending patterns."
-    - "Real-world validation in personal finance contexts is not provided; benchmarks are general (Elec2, credit card fraud)."
-  mapping_rationale: "The paper addresses concept drift in machine learning streams, which is foundational to several Odin domains. For behavioral profiling (5.B, 5.C), drift detection enables models to adapt as user financial habits change. For spending forecasting (6.A, 6.B) and anomaly detection (8.A, 8.B), the reviewed methods (window-based, ensembles, NNs) are directly transferable. Evaluation frameworks (12.A, 12.B) are supported by the paper's detailed comparison metrics. Rejected topics include 1.A (no Filipino focus), 2.B (seasonal spending not examined), 3.A (expense categorization absent), and 7.A (budgeting strategies not covered). The review is international in scope but methodologically relevant."
+    - "The review focuses on classification tasks, with limited coverage of regression."
+    - "Most methods are designed for tabular data; non-tabular data like images are underexplored."
+    - "Computational efficiency remains a challenge for ensemble and neural methods."
+    - "The review identifies a lack of standardized evaluation protocols."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was found relevant to algorithmic domains: predictive modeling (6.A, 6.B), anomaly detection (8.A, 8.B), and evaluation (12.A, 12.B), all assigned medium relevance because the paper provides methodological surveys but not finance-specific applications. The domain of Filipino cultural context (2) was considered: recurrent drift types (2.B) are mentioned as cyclical changes, providing contextual framing for seasonal spending, hence contextual. Behavioral profiling (5.C) was flagged as medium because classification under drift directly applies to user profile classification. Domains related to expense categorization (3), existing systems (4), budget recommendation (7), mobile design (9), privacy (10), retention (11), and savings/debt (13) were rejected as the paper does not address these topics. Overall, the paper's systematic review of drift detection methods is broadly relevant to Odin's adaptive algorithm modules."
 limitations:
-  - "Handling imbalanced data in streaming environments remains a significant challenge."
-  - "Computational efficiency of ensembles and neural networks limits real-time deployment."
-  - "Application of drift detection to non-tabular data (images, complex time-series) is underexplored."
-  - "Most evaluations use synthetic or controlled datasets, which may not fully represent real-world noise."
-  - "Regression tasks for concept drift have received less attention than classification."
-  - "Unsupervised drift detection methods are less developed and prone to false positives. [unacknowledged]"
+  - "The review does not address personal finance or Filipino context directly."
+  - "It relies on synthetic and controlled datasets, which may not capture real-world spending complexities."
+  - "The comparison of methods is qualitative rather than a quantitative meta-analysis."
+  - "Some limitations like computational efficiency are acknowledged, but the review does not propose solutions."
+  - "The use of T5 for screening may introduce language model biases."
 remember_this:
-  - "45% of reviewed drift detection studies were high quality."
-  - "Ensembles and neural networks offer highest accuracy but high cost."
-  - "Window-based methods balance accuracy and efficiency for streams."
-  - "Prequential error and detection delay are key evaluation metrics."
-  - "Imbalanced data and non-tabular data remain open challenges."
+  - "DDMs provide cost-effective real-time drift detection with minimal overhead."
+  - "Ensemble and neural methods achieve high accuracy but require substantial computational resources."
+  - "45% of reviewed studies are of high methodological quality."
+  - "Challenges persist with imbalanced data and non-tabular data types."
+  - "Recurrent drift patterns motivate handling seasonal spending changes."
 ```

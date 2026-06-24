@@ -1,5 +1,5 @@
 ```yaml
-paper_id: d3b5c6e7-f8a9-4b0c-91d2-e3f4a5b6c7d8
+paper_id: 10.1051/itmconf/20268402004
 designation: international
 title: Research Progress and Trends of Deep Learning in Stock Price Prediction: A Systematic Review from LSTM to Transformer
 authors: Gong, H.
@@ -11,94 +11,99 @@ odin_topics:
   - 8.A
   - 8.B
   - 12.A
-shorthand_tags:
-  - predictive-modeling
-  - spending-forecast
-  - anomaly-detection
-  - anomaly-algorithm
-  - evaluation-framework
-tldr: Systematically reviews deep learning models for stock price prediction from LSTM to Transformer, comparing architectures, datasets, and evaluation metrics.
-problem_and_motivation: Traditional statistical and machine learning methods fail to capture the non-linear, non-stationary dynamics of stock markets. Deep learning models like LSTM and Transformer have shown superior performance, but a systematic review tracing their evolution from LSTM to hybrid architectures is missing. This gap makes it difficult for researchers to select appropriate models for financial time series forecasting.
+  - 12.B
+tldr: A systematic review of deep learning models for stock prediction, tracing the evolution from LSTM to Transformer and hybrid architectures, with empirical comparisons and future research directions.
+problem_and_motivation: Stock price prediction remains challenging due to high volatility and non-linearity, and traditional methods are insufficient. Deep learning models like LSTM and Transformer have shown promise, but a comprehensive review linking their evolution from LSTM to hybrid architectures is lacking. This review aims to systematically summarize these methods, compare their performance, and identify challenges and future trends.
 approach:
-  - Conducts a systematic literature review of deep learning models for stock price prediction.
-  - Analyzes recurrent models (RNN, LSTM, GRU), convolutional models (CNN), Transformer variants, and hybrid models.
-  - Compares datasets including S&P 500, NIFTY 50, Moroccan market, and limit order book data.
-  - Evaluates models using RMSE, MAE, MAPE, directional accuracy, Sharpe ratio, and R².
-  - Discusses empirical results from Fischer & Krauss (2018), Wang et al. (2022), Zhao et al. (2025), and others.
-  - Identifies challenges in data noise, overfitting, interpretability, and computational efficiency.
-  - Outlines future directions: multimodal fusion, explainable AI, real-time adaptive learning, and state space models.
+  - Systematically reviews the evolution of stock prediction models from RNNs and LSTM to Transformer and hybrid architectures.
+  - Classifies and analyzes mainstream deep learning models, detailing their characteristics, advantages, and limitations.
+  - Compares empirical studies on different datasets, focusing on evaluation metrics like RMSE, MAE, and Sharpe Ratio.
+  - Discusses current challenges in data, model, and deployment, and proposes future research directions.
+  - Synthesizes findings from prior research to provide a complete technical roadmap for applying deep learning to stock price prediction.
 findings:
-  - "num: LSTM achieved 0.46% daily return on S&P 500 constituents (1992-2015) with Sharpe ratio up to 2.34."
-  - "num: Transformer reduced MAE by 20.73%, MSE by 34.84%, and MAPE by 25.63% compared to LSTM in new energy vehicle stock prediction."
-  - "num: LSTM-Transformer hybrid reduced MAE and RMSE by over 50% relative to parent models and attained R² of 0.9618 (LSTM: 0.8430, Transformer: 0.7763)."
-  - Deep learning models consistently outperform traditional statistical methods and shallow machine learning.
-  - Hybrid models and multimodal fusion are the dominant development trend in time series forecasting.
+  - num: LSTM achieved a 0.46% daily return on S&P 500 constituents, outperforming DNN (0.32%) and logistic regression (0.26%).
+  - num: LSTM generated trading signals with a Sharpe ratio up to 2.34, while other models were far less than 1.0.
+  - num: Transformer models reduced MAE by 20.73%, MSE by 34.84%, and MAPE by 25.63% compared to LSTM in some studies.
+  - num: The LSTM-Transformer hybrid model showed MAE and RMSE reductions of over 50% compared to the parent models.
+  - num: The hybrid model achieved an R² value of 0.9618, higher than LSTM (0.8430) and Transformer (0.7763).
+  - LSTM is advantageous for short-term prediction and generating trading signals with high Sharpe ratios.
+  - Transformer excels in long-range dependency and cross-asset modeling, improving overall prediction accuracy.
+  - The evolution of models shows a trend towards hybrid and multimodal fusion for better performance and interpretability.
 key_figures_tables:
-  - None.
+  - "Table 1: Summary of evaluation criteria (RMSE, MAE, MAPE, DA, R2, Sharpe Ratio) used in empirical studies."
+  - "Table 2: Comparison of empirical results for LSTM, Transformer, and hybrid models, showing performance metrics and improvements."
+  - "Figure 1: Schematic diagram of the Transformer architecture, highlighting its self-attention mechanism for time series prediction."
+  - "Figure 2: Framework of the LSTM-Transformer dual-branch hybrid model for stock price prediction."
+  - "Figure 3: Trends in deep learning model evolution for stock prediction, from LSTM to multimodal fusion models."
 key_equations:
-  - equation: None.
-    explanation: ""
+  - equation: "MAE = \\frac{1}{n} \\sum_{i=1}^{n} |y_i - \\hat{y}_i|"
+    explanation: "Average absolute error between predicted and actual values."
+  - equation: "RMSE = \\sqrt{\\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2}"
+    explanation: "Square root of average squared errors, sensitive to large deviations."
+  - equation: "Sharpe Ratio = \\frac{R_p - R_f}{\\sigma_p}"
+    explanation: "Risk-adjusted return, higher values indicate better performance."
 definitions:
-  - term: LSTM
-    definition: Long Short-Term Memory, a recurrent neural network with gating mechanisms to avoid vanishing gradients.
-  - term: GRU
-    definition: Gated Recurrent Unit, a simplified variant of LSTM with fewer gates.
-  - term: Transformer
-    definition: Architecture based solely on self-attention, no recurrence or convolution.
-  - term: CNN
-    definition: Convolutional Neural Network, uses local receptive fields for feature extraction.
-  - term: GNN
-    definition: Graph Neural Network, operates on graph-structured data.
-  - term: RMSE
-    definition: Root Mean Square Error, sensitive to large deviations.
-  - term: MAE
-    definition: Mean Absolute Error, average absolute deviation.
-  - term: MAPE
-    definition: Mean Absolute Percentage Error, relative error metric.
-  - term: DA
-    definition: Directional Accuracy, correctness of predicted price movement direction.
+  - term: "LSTM"
+    definition: "Long Short-Term Memory, an RNN variant with gating mechanisms to handle long-term dependencies."
+  - term: "Transformer"
+    definition: "Model architecture using self-attention mechanisms for processing sequences, avoiding recurrence."
+  - term: "MAE"
+    definition: "Mean Absolute Error, measures average magnitude of errors."
+  - term: "RMSE"
+    definition: "Root Mean Square Error, measures error magnitude with a higher penalty for large errors."
+  - term: "Sharpe Ratio"
+    definition: "Metric for risk-adjusted return, calculated as excess return over risk-free rate per unit of volatility."
 critical_citations:
-  - "[Fischer & Krauss, 2018] — First large-scale LSTM stock prediction with Sharpe ratio evidence."
-  - "[Wang et al., 2022] — Transformer outperforms LSTM by 20-25% in error metrics."
-  - "[Zhao et al., 2025] — LSTM-Transformer hybrid reduces error over 50% with R² 0.96."
-  - "[Lahebb & Benaly, 2024] — Comparison of ARIMA, LSTM, Transformer on Moroccan market."
+  - "[Fischer & Krauss, 2018] — LSTM outperforms memoryless models in predicting S&P 500 returns."
+  - "[Wang et al., 2022] — Transformer model shows significant error reduction compared to LSTM."
+  - "[Zhao et al., 2025] — LSTM-Transformer hybrid model achieves superior performance over parent models."
 relevance:
   topics:
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Reviews time-series forecasting models applicable to spending prediction.
+      relevance: medium
+      justification: Reviews predictive models applicable to financial forecasting.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: LSTM and Transformer algorithms can forecast future spending patterns.
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Systematically evaluates LSTM, Transformer, and hybrid models for time series forecasting.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: Discusses anomaly detection in financial time series (e.g., market jumps, outliers).
+      relevance: contextual
+      justification: Discusses challenges like data noise and overfitting relevant to anomaly detection.
     - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Self-attention and hybrid models for detecting unusual transactions.
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: contextual
+      justification: Mentions CNN for feature extraction and noise filtering, relevant to detection.
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      justification: Comprehensive evaluation metrics (RMSE, MAE, Sharpe ratio) inform system benchmarking.
-  contribution: "Odin's spending forecasting module can directly adopt LSTM-Transformer hybrid models to improve prediction accuracy, as evidenced by over 50% error reduction. The anomaly detection system can leverage self-attention mechanisms from Transformers to identify unusual spending patterns with higher sensitivity. Evaluation frameworks within Odin should incorporate directional accuracy and Sharpe ratio metrics from this review to assess both predictive fit and economic value. The cold-start problem in behavioral profiling may benefit from transfer learning techniques discussed in future trends, enabling rapid adaptation to new users."
+      relevance: high
+      justification: Compares models using standard metrics like RMSE, MAE, and Sharpe Ratio.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Provides empirical comparisons and performance benchmarks for various deep learning modules.
+  contribution: "This review provides a comprehensive benchmarking of time series forecasting models, offering a direct evaluation framework for Odin's predictive modules. The empirical comparisons of LSTM and Transformer models, including their hybrid variations, justify the choice of foundational algorithms for spending forecasting. The detailed analysis of model strengths (e.g., LSTM for short-term patterns) and weaknesses (e.g., Transformer's computational cost) informs architectural decisions. The identified challenges, such as overfitting and interpretability, align with Odin's design constraints for a robust and trustworthy system."
   directly_justifies:
-    - "LSTM-Transformer hybrid reduces prediction error by over 50% compared to single models."
-    - "Transformer models achieve 20-25% lower error than LSTM in long-range dependency tasks."
-    - "Deep learning models consistently outperform traditional methods in financial time series forecasting."
-    - "Directional accuracy and Sharpe ratio are essential for evaluating real-world usability."
+    - "LSTM is a reliable benchmark for medium and short-term prediction tasks."
+    - "Transformer models provide better prediction accuracy, with lower MAE, MSE, and MAPE."
+    - "Hybrid LSTM-Transformer models achieve higher accuracy and stability than parent models."
+    - "The choice of evaluation metrics (RMSE, MAE, DA) is critical for assessing prediction models."
+    - "Interpretability and computational efficiency are key challenges for deploying deep learning in finance."
   limits:
-    - "Paper focuses on stock market data, not personal transaction histories or spending behavior."
-    - "Results may not generalize to lower-frequency, irregular individual spending patterns."
-    - "No discussion of privacy-preserving techniques or mobile-first constraints."
-  mapping_rationale: "The paper is a systematic review of deep learning for stock price prediction, not personal finance. However, its methods for time series forecasting and anomaly detection are directly transferable to Odin's spending forecasting (6.A, 6.B) and anomaly detection (8.A, 8.B). The evaluation metrics discussed (12.A) inform Odin's system evaluation framework. Rejected topics include behavioral profiling (5.A-C) because the paper does not address user financial behavior or profiles. Data privacy (10) and mobile design (9) are absent. Borderline cases like user retention (11) were rejected as no engagement dynamics are discussed."
+    - "The review does not propose a new model or application in personal finance."
+    - "Findings are based on stock market data and may not directly transfer to spending data."
+    - "Lacks specific guidance on handling cold-start problems in personal finance systems."
+  mapping_rationale: "A systematic scan across all 12 functional domains and 43 topic codes was conducted. Domains most relevant to this paper are Spending Forecasting (6.A, 6.B) and System Evaluation (12.A, 12.B) due to its focus on predictive modeling and empirical performance comparisons. The paper also provides contextual value for Anomaly Detection (8.A, 8.B) through discussions on data noise. Topics related to Filipino Cultural Context, Expense Categorization, and Behavioral Profiling were considered but rejected as the paper is a general technical review without specific application to personal finance or Filipino users. The relevance is high for forecasting algorithms and evaluation frameworks, medium for predictive modeling, and contextual for anomaly detection. Overall, the paper's strength lies in its comprehensive review of forecasting techniques and evaluation metrics, making it highly relevant for designing and assessing Odin's algorithmic modules."
 limitations:
-  - "Systematic review without original empirical validation; relies on cited studies. [unacknowledged]"
-  - "Focus on stock markets limits direct applicability to personal spending data. [unacknowledged]"
-  - "Does not address real-time deployment constraints or latency requirements for mobile apps."
-  - "No discussion of model interpretability methods like SHAP or LIME in depth."
+  - "The review focuses on stock price prediction, not personal spending forecasting. [unacknowledged]"
+  - "Does not address the cold-start problem or how to profile users with limited data. [unacknowledged]"
+  - "Limited discussion on mobile-first design or user trust implications. [unacknowledged]"
+  - "The paper is a review and does not introduce a novel algorithm or empirical dataset. [unacknowledged]"
 remember_this:
-  - "LSTM achieves 0.46% daily return with Sharpe ratio 2.34 on S&P 500."
-  - "Transformer reduces MAE by 20.73% compared to LSTM in stock prediction."
-  - "LSTM-Transformer hybrid reduces error by over 50% and achieves R² 0.96."
-  - "Hybrid and multimodal models are the dominant trend in time series forecasting."
-  - "Directional accuracy and Sharpe ratio are critical for real-world financial systems."
+  - "LSTM excels in short-term prediction and generating high Sharpe ratio trading signals."
+  - "Transformer models reduce prediction errors by over 20% compared to LSTM."
+  - "Hybrid LSTM-Transformer models can reduce MAE and RMSE by more than 50%."
+  - "Deep learning models outperform traditional methods in financial time series forecasting."
+  - "Interpretability and real-time adaptation remain critical challenges for deployment."
 ```

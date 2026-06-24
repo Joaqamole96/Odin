@@ -6,80 +6,116 @@ authors: Chowdhury, A. R.; Paul, R.; Rozony, F. Z.
 year: 2025
 venue: International Journal of Scientific Interdisciplinary Research
 odin_topics:
+  - 4.A
+  - 4.B
   - 6.A
   - 6.B
-  - 12.A
   - 12.B
-shorthand_tags:
-  - /predictive-modeling
-  - /spending-forecasting
-  - /evaluation
-  - /algorithm-evaluation
-tldr: A systematic review of 72 studies finds machine learning and deep learning models outperform traditional statistical methods for demand forecasting in retail e-commerce, especially with volatile data and external variables.
-problem_and_motivation: Retail e-commerce faces volatile demand and complex logistics, requiring accurate forecasting. Existing literature lacks a comprehensive synthesis of forecasting models for inventory and delivery planning. This review addresses that gap by evaluating 72 studies to guide model selection.
+tldr: A systematic review of 72 studies categorizes demand forecasting models for e-commerce into statistical, machine learning, deep learning, and hybrid approaches, assessing their impact on inventory and delivery planning.
+problem_and_motivation: Retail e-commerce demand forecasting faces challenges from volatile consumer behavior and complex logistics. Despite growing academic interest, there is a lack of comprehensive synthesis on the comparative effectiveness of various forecasting models. This gap hinders decision-makers in selecting appropriate models to improve inventory accuracy and delivery efficiency.
 approach:
-  - Followed PRISMA guidelines for systematic review of 72 peer-reviewed articles from Scopus, Web of Science, IEEE Xplore, and ScienceDirect (2010–2024).
-  - Used keyword combinations including “demand forecasting,” “retail e-commerce,” “machine learning,” and “deep learning” to identify relevant studies.
-  - Categorized forecasting models into four groups: traditional statistical, machine learning, deep learning, and hybrid approaches.
-  - Evaluated performance using accuracy metrics such as MAPE, RMSE, and MAE across diverse e-commerce datasets.
-  - Extracted data on dataset characteristics, operational focus (inventory/logistics), and external variables (weather, sentiment, promotions).
+  - A systematic review was conducted following PRISMA guidelines to ensure transparency and rigor.
+  - A comprehensive search across Scopus, Web of Science, IEEE Xplore, and ScienceDirect identified 284 articles published between 2010 and 2024.
+  - Studies were screened based on relevance to e-commerce forecasting and inclusion of empirical performance evaluations, resulting in 72 eligible studies.
+  - Data was extracted using a structured coding framework covering forecasting technique, dataset characteristics, and operational focus.
+  - The synthesis categorized models into traditional statistical, machine learning, deep learning, and hybrid frameworks.
 findings:
-  - Traditional statistical models (ARIMA, Holt-Winters) remain relevant for stable, seasonal demand but fail under nonlinearity and promotional spikes.
-  - num: Machine learning models (random forests, gradient boosting) improve forecast accuracy by up to 20% over statistical methods in high‑SKU environments.
-  - Deep learning models (LSTM, GRU, CNN) capture long‑range dependencies and outperform other methods for erratic and intermittent demand.
-  - Hybrid ARIMA‑ML/DL models balance interpretability and accuracy, reducing forecasting error during flash sales and disruptions.
-  - Integration of external data (weather, social media sentiment, clickstream) consistently improves forecast precision in volatile categories.
+  - num: Traditional statistical models (ARIMA, SARIMA, Holt-Winters) were used in 21 of 72 reviewed studies, performing well for stable, seasonal demand.
+  - num: Machine learning models appeared in 31 studies, improving forecast accuracy metrics like RMSE and MAPE by up to 20% over statistical methods.
+  - num: Deep learning models (LSTM, GRU, CNN) were featured in 22 studies, excelling at capturing nonlinear patterns in high-volume e-commerce data.
+  - num: Hybrid models (ARIMA + ML/DL) were the focus of 18 studies, combining interpretability with enhanced accuracy during promotional periods.
+  - num: Integrating external data (weather, sentiment, social media) in 27 studies significantly improved forecast accuracy in volatile categories.
+  - num: A 10% improvement in forecast accuracy is associated with a potential 25% reduction in inventory costs.
+  - num: Deep learning models reduced overstock rates in high-SKU environments by up to 15% compared to traditional baselines.
+  - Advanced machine learning models demonstrate high adaptability for short-term and medium-term forecasting.
+  - Ensemble and hybrid strategies enhance robustness across volatile demand cycles and promotional events.
 key_figures_tables:
-  - "Figure 3: Major Techniques Used in Demand Forecasting → categorizes models into statistical, ML, DL, hybrid."
-  - "Figure 5: Machine Learning Models for Nonlinear Demand Forecasting → tree‑based methods adapt well to promotions and seasonality."
-  - "Figure 9: Impact of Forecasting Accuracy on Inventory Replenishment Decisions → better accuracy reduces stockouts and overstock."
-  - "Table 1: Summary of findings → shows study counts, citations, and key contributions per model category."
+  - Figure 1: Components of global e-commerce forecasting operations → Highlights integrated data sources and logistics synchronization.
+  - Figure 2: Classical time series methods for retail forecasting → Shows application of ARIMA and smoothing techniques.
+  - Figure 3: Major forecasting techniques used in demand forecasting → Categorizes traditional, ML, and hybrid models.
+  - Figure 4: Foundational time series forecasting models → Illustrates ARIMA and exponential smoothing structures.
+  - Figure 5: Machine learning models for nonlinear demand forecasting → Lists decision trees, random forests, and SVR.
+  - Figure 6: Deep learning networks in retail forecasting → Shows LSTM, GRU, and CNN architectures.
+  - Figure 7: Hybrid and ensemble forecasting approaches → Depicts ARIMA and ML/DL combination strategies.
+  - Figure 8: Incorporating external signals in demand forecasting → Shows integration of weather and social media data.
+  - Figure 9: Impact of forecasting accuracy on inventory replenishment decisions → Links forecast accuracy with inventory costs.
+  - Figure 10: PRISMA methodology flowchart for study selection → Outlines the systematic review process.
 key_equations:
-  - equation: None.
-    explanation: ""
+  - equation: "RMSE = sqrt( (1/n) * sum_{t=1}^{n} (y_t - ŷ_t)^2 )"
+    explanation: Measures forecast error, heavily penalizing large deviations.
+  - equation: "MAPE = (1/n) * sum_{t=1}^{n} |(y_t - ŷ_t) / y_t| * 100"
+    explanation: Scale-independent accuracy metric, useful for comparing products.
 definitions:
   - term: ARIMA
-    definition: AutoRegressive Integrated Moving Average, a linear time series model.
+    definition: AutoRegressive Integrated Moving Average, a statistical model for time series forecasting.
+  - term: SARIMA
+    definition: Seasonal ARIMA, extends ARIMA to account for seasonality in time series data.
   - term: LSTM
-    definition: Long Short‑Term Memory, a recurrent neural network for sequence forecasting.
+    definition: Long Short-Term Memory, a recurrent neural network capable of learning long-term dependencies.
+  - term: GRU
+    definition: Gated Recurrent Unit, a simpler recurrent neural network variant compared to LSTM.
+  - term: CNN
+    definition: Convolutional Neural Network, a deep learning model effective for detecting local patterns in data.
+  - term: RMSE
+    definition: Root Mean Squared Error, a metric that penalizes larger forecast errors.
   - term: MAPE
-    definition: Mean Absolute Percentage Error, a scale‑independent forecast accuracy metric.
+    definition: Mean Absolute Percentage Error, a scale-independent forecast accuracy metric.
+  - term: SVR
+    definition: Support Vector Regression, a machine learning model for nonlinear regression tasks.
+  - term: TFT
+    definition: Temporal Fusion Transformer, an attention-based model for interpretable time-series forecasting.
   - term: SKU
-    definition: Stock Keeping Unit, a unique product identifier for inventory management.
+    definition: Stock Keeping Unit, a unique identifier for each distinct product and service.
 critical_citations:
-  - None.
+  - "[Bandara et al., 2019] — Highlights e-commerce demand differs from traditional retail."
+  - "[Mosavi et al., 2020] — Deep learning methods show superior performance in economics."
+  - "[Goedhart et al., 2023] — Modeling influence of returns for omni-channel retailers."
+  - "[Gong, 2023] — Digital transformation of supply chain in retail and e-commerce."
+  - "[Frei et al., 2022] — Mapping product returns processes in multichannel retailing."
 relevance:
   topics:
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Provides a landscape of forecasting models relevant to PFMS systems.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: medium
+      justification: Identifies limitations of traditional models in volatile e-commerce settings.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Review evaluates predictive models (ARIMA, ML, DL) applicable to spending forecasts.
+      relevance: high
+      justification: Directly reviews predictive modeling techniques for forecasting demand.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Directly examines forecasting algorithms and their comparative performance.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      justification: Uses MAPE, RMSE, MAE as evaluation metrics for model accuracy.
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Comprehensively evaluates forecasting algorithms including LSTM and ARIMA.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: Benchmarks multiple model categories across real‑world datasets.
-  contribution: This systematic review provides a taxonomy of forecasting models that can directly inform the design of Odin’s spending forecasting module. Its comparative performance results (e.g., ML models improving accuracy by 20%) justify selecting hybrid architectures over pure statistical baselines. The evaluation metrics and benchmarking methodology offer a framework for testing Odin’s predictive algorithms. Insights on external data integration (weather, sentiment) suggest adding contextual features (e.g., Philippine holidays, remittance cycles) to improve personal spending forecasts.
+      relevance: high
+      justification: Emphasizes empirical evaluation of forecasting models using metrics like RMSE and MAPE.
+  contribution: This paper provides a structured taxonomy of forecasting models (statistical, ML, DL, hybrid) that Odin can directly adopt for its spending forecasting module. The comparative analysis of model performance under different data conditions (volatility, seasonality, promotional events) informs Odin's algorithm selection strategy for different user segments. Furthermore, the review's emphasis on hybrid models and external data integration offers a blueprint for Odin to enhance its forecasting accuracy and robustness. The discussion on practical evaluation metrics guides Odin's system evaluation framework for algorithmic performance.
   directly_justifies:
-    - Machine learning models improve forecasting accuracy by up to 20% over statistical methods in volatile demand environments.
-    - Integration of external data like weather and social media sentiment enhances demand forecast precision.
-    - Hybrid ARIMA‑ML models balance interpretability and accuracy for short‑term forecasts.
-    - Deep learning models (LSTM) capture long‑term dependencies and outperform baselines on intermittent demand.
+    - "Machine learning models improve forecast accuracy by up to 20% over statistical methods."
+    - "Hybrid models combining ARIMA and LSTM reduce forecasting error during volatile periods."
+    - "Integrating external variables like weather and sentiment significantly enhances forecast precision."
+    - "Deep learning models capture nonlinearities and long-term dependencies in financial data."
+    - "A 10% increase in forecast accuracy can reduce inventory costs by up to 25%."
   limits:
-    - The review focuses on retail e‑commerce product demand, not personal financial spending behavior.
-    - Most reviewed studies use proprietary e‑commerce datasets, limiting reproducibility for PFMS contexts.
-    - Deep learning models require substantial computational infrastructure, which may not scale for lightweight PFMS.
-  mapping_rationale: The paper was screened against Odin’s functional domains. Spending forecasting (6.A, 6.B) directly matches because the paper evaluates predictive models for demand. Evaluation frameworks (12.A, 12.B) apply due to extensive use of accuracy metrics and benchmarking. Behavioral profiling (5.A‑C) was rejected as the paper does not classify users. Anomaly detection (8.A‑B) and budget recommendation (7.A‑C) were rejected because the paper focuses on forecasting, not outlier detection or budget allocation. Mobile design and privacy topics were irrelevant.
+    - "The review focuses on retail e-commerce, not personal finance, so direct transferability of findings requires validation."
+    - "The performance of advanced models (DL) depends on large datasets, which may not be available for new Odin users."
+    - "Complexity and computational demands of deep learning models may hinder their deployment in mobile-first environments."
+  mapping_rationale: A systematic scan across all 12 functional domains was performed. The paper was flagged as highly relevant for the Spending Forecasting domain (topics 6.A, 6.B) because it directly reviews and compares various forecasting algorithms. It was considered relevant for Evaluation (topic 12.B) due to its detailed discussion of performance metrics. It provides contextual information for the Landscape of Existing Systems (4.A) and their Limitations (4.B), though these are not the paper's primary focus. Domains like Filipino Cultural Context, Expense Categorization, and Behavioral Profiling were considered and rejected as the paper does not address user behavior, cultural spending, or PFMS-specific categorization. Overall, the paper is highly relevant as an authoritative source on forecasting algorithms, offering insights into model selection, evaluation, and integration with external data.
 limitations:
-  - The review only includes English‑language peer‑reviewed studies, potentially missing relevant industry reports. [unacknowledged]
-  - Performance comparisons across studies use different datasets and evaluation protocols, making direct aggregation difficult. [acknowledged in discussion]
-  - The paper does not address real‑time deployment constraints or inference latency for forecasting models.
+  - "The study's scope is limited to e-commerce retail, making direct application to personal finance forecasting an extrapolation."
+  - "The review does not address the cold-start problem, a critical issue for personal finance applications with new users."
+  - "The analysis of deep learning models focuses on accuracy without deeply exploring computational costs for mobile deployment."
+  - "The systematic review synthesizes existing studies but does not present novel empirical experiments in the PFMS context."
+  - "The review may underrepresent studies on interpretability and user trust, which are crucial for financial applications. [unacknowledged]"
 remember_this:
-  - Forecasting accuracy can reduce inventory costs by up to 25%.
-  - Machine learning models beat statistical methods by 20% in volatile settings.
-  - Deep learning captures long‑term spending patterns better than ARIMA.
-  - Hybrid models offer interpretability without sacrificing forecast precision.
+  - "A 10% improvement in forecast accuracy can yield a 25% reduction in inventory costs."
+  - "Machine learning models can cut forecasting error by up to 20% compared to traditional methods."
+  - "Hybrid models balance interpretability and accuracy effectively for dynamic financial data."
+  - "Integrating external data like sentiment and seasonality significantly improves forecasting robustness."
+  - "Deep learning excels at capturing complex patterns in high-volume sequential transaction data."
 ```

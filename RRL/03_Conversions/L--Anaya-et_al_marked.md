@@ -554,10 +554,10 @@ https://doi.org/10.5555/ijosmas.v3i2.121
 Brown, A., Smith, J., & Johnson, R. (2022). The impact of social media on impulsive buying
 Journal  of  Adolescent  Psychology,  45(3),  217-232.
 
-adolescents.
-
 among
 https://doi.org/10.31580/ijer.v2i2.907
+
+adolescents.
 
 Chang, L. Y., Lim, P. M., Teo, Y. Y., Yau, Y. Y., & Yeoh, Y. L. (2019). Spending behaviour
 among university students: Case of Universiti Tunku Abdul Rahman (Kampar) (Doctoral

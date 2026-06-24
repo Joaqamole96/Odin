@@ -1,98 +1,95 @@
 ```yaml
-paper_id: "8a7b6c5d-4e3f-2a1b-9c8d-7e6f5a4b3c2d"
-designation: "algorithm-specific"
-title: "Use of Boosting Algorithms in Household-Level Poverty Measurement: A Machine Learning Approach to Predict and Classify Household Wealth Quintiles in the Philippines"
-authors: "Salvador, E. L. V."
-year: 2024
-venue: "Unknown"
+paper_id: 3f7a1c8e-9b2d-5a4f-8e7c-1d2f3a4b5c6d
+designation: local-algorithm-specific
+title: Use of Boosting Algorithms in Household-Level Poverty Measurement: A Machine Learning Approach to Predict and Classify Household Wealth Quintiles in the Philippines
+authors: Salvador, E. L. V.
+year: 2022
+venue: Unknown
 odin_topics:
-  - "5.C"
+  - "5.A"
   - "6.A"
-  - "12.B"
-shorthand_tags:
-  - "/boosting-algorithm-comparison"
-  - "/wealth-quintile-classification"
-  - "/philippines-household-data"
-  - "/predictive-accuracy"
-tldr: "Boosting algorithms, especially CatBoost, accurately classify household wealth quintiles using Philippine DHS data, with CatBoost achieving 90.93% accuracy."
-problem_and_motivation: "Poverty measurement often oversimplifies multidimensional aspects or relies on limited features. Conventional econometric methods may overlook important data relationships. Machine learning, particularly boosting algorithms, offers advantages in handling high-dimensional data but remains underutilized for poverty prediction in the Philippines."
+tldr: CatBoost achieved 90.93% accuracy in predicting Philippine household wealth quintiles, outperforming XGBoost, GBM, LightGBM, and AdaBoost using DHS data.
+problem_and_motivation: Conventional econometric poverty measurements oversimplify poverty's multidimensional nature by relying on pre-selected features like income. Accurate poverty data is crucial for effective policy interventions, yet a gap exists in applying diverse machine learning methods to extensive Philippine household datasets.
 approach:
-  - "Data from 2022 Philippine DHS, originally 2,099 features and 30,372 households, cleaned to 396 features and 20,679 households."
-  - "Applied five boosting algorithms: AdaBoost, CatBoost, GBM, LightGBM, and XGBoost to classify households into five wealth quintiles."
-  - "Used SMOTE to handle class imbalance, hyperparameter tuning via grid search and manual trial, and 80/20 train-test split with 10% validation."
-  - "Evaluated performance using accuracy, precision, recall, F1-score, AUC-ROC, training time, testing time, and model size."
+  - Data from the 2022 Philippine Demographic and Health Survey was cleaned, reducing features from 2,099 to 396 and households from 30,372 to 20,679.
+  - The dataset was split into 80% training and 20% testing, with 10% of training used for validation and hyperparameter tuning via manual and grid search.
+  - Five boosting algorithms (AdaBoost, CatBoost, GBM, LightGBM, XGBoost) were implemented to classify wealth into five quintiles.
+  - Feature selection using SelectFromModel identified 66 key features, with multicollinearity checked via Pearson correlation.
+  - SMOTE addressed class imbalance, and models were evaluated on accuracy, precision, recall, F1-score, AUC-ROC, and computational efficiency metrics.
 findings:
-  - "num: CatBoost achieved highest accuracy at 90.93%, followed by XGBoost (89.41%), GBM (89.05%), and LightGBM (88.52%)."
-  - "num: AdaBoost had lowest accuracy at 80.39% and significantly lower AUC-ROC scores for poorer classes."
-  - "num: CatBoost had longest training time (69.29s) but fastest testing (0.01s); AdaBoost fastest training (4.48s) but slowest testing (0.23s)."
-  - "AUC-ROC scores near 0.99-1.00 for CatBoost, GBM, LightGBM, XGBoost across most wealth classes."
-  - "Feature selection identified 36 key features including drinking water source, toilet type, television, refrigerator, and others."
+  - "num: CatBoost achieved the highest accuracy at 90.93%, followed by XGBoost (89.41%), GBM (89.05%), and LightGBM (88.52%)."
+  - "num: AdaBoost performed significantly lower across all metrics, with an accuracy of 80.39% and F1-score of 80.15%."
+  - CatBoost, GBM, LightGBM, and XGBoost achieved near-perfect AUC-ROC scores (0.98-1.00) for most wealth classes, effectively distinguishing poverty levels.
+  - AdaBoost showed lower discriminative ability, especially for the "Poorest" and "Poorer" classes with AUC scores of 0.90 and 0.73 respectively.
+  - "num: LightGBM and XGBoost exhibited a strong balance of performance and computational efficiency, with training times of 2.17 and 2.58 seconds and model sizes of 2.50 MB and 3.10 MB."
+  - "num: CatBoost had the longest training time (69.29 seconds) and largest model size (30.50 MB) but was the most efficient during testing (0.01 seconds)."
+  - AdaBoost had the shortest training time (4.48 seconds) but the longest testing time (0.23 seconds).
+  - Feature selection highlighted household assets (e.g., television, refrigerator, vehicle) and housing characteristics as the most important predictors.
 key_figures_tables:
-  - "Figure 1: Distribution of missing values across features with threshold 3,050 → Most features had fewer missing values."
-  - "Table 1: Description of 36 selected features → Key asset and housing indicators predict wealth quintiles."
-  - "Table 3: Performance metrics for five boosting models → CatBoost top performer across all metrics."
-  - "Table 4: AUC-ROC scores per class → CatBoost, GBM, LightGBM, XGBoost near perfect for middle and richer classes."
-  - "Table 5: Computational efficacy metrics → Trade-offs between training time, testing time, and model size."
-  - "Figures 2.1-2.5: Confusion matrices → AdaBoost shows more misclassifications than others."
+  - "Figure 1: Distribution of missing values across features with threshold of 3,050 → Features with missing values exceeding the threshold were removed."
+  - "Table 1: Description of 36 key features selected for poverty prediction → Key predictors include assets, housing materials, and utilities."
+  - "Table 3: Performance metrics (Accuracy, Precision, Recall, F1) for five boosting models → CatBoost consistently outperformed all models across all metrics."
+  - "Table 4: AUC-ROC scores per wealth class for each model → CatBoost, GBM, LightGBM, and XGBoost achieved near-perfect scores for most classes."
+  - "Table 5: Computational efficacy (Training time, Testing time, Model size) → LightGBM and XGBoost offer the best balance of speed and size."
 key_equations:
   - equation: "Accuracy = (TP + TN) / (TP + TN + FP + FN)"
-    explanation: "Proportion of correct predictions."
+    explanation: "Calculates overall correct predictions proportion."
   - equation: "Precision = TP / (TP + FP)"
-    explanation: "Proportion of predicted positives that are correct."
+    explanation: "Proportion of correct positive predictions."
   - equation: "Recall = TP / (TP + FN)"
     explanation: "Proportion of actual positives correctly identified."
-  - equation: "F1 = 2 * (Precision * Recall) / (Precision + Recall)"
+  - equation: "F1 Score = 2 * (Precision * Recall) / (Precision + Recall)"
     explanation: "Harmonic mean of precision and recall."
 definitions:
-  - term: "DHS"
-    definition: "Demographic and Health Survey, a national household survey program."
-  - term: "SMOTE"
-    definition: "Synthetic Minority Over-sampling Technique for class imbalance."
-  - term: "AUC-ROC"
-    definition: "Area Under the Receiver Operating Characteristic curve, measures discriminative ability."
   - term: "AdaBoost"
-    definition: "Adaptive Boosting algorithm."
+    definition: "Adaptive Boosting, an ensemble method that combines weak learners sequentially."
   - term: "CatBoost"
-    definition: "Categorical Boosting algorithm."
+    definition: "Gradient boosting algorithm designed to handle categorical features efficiently."
+  - term: "DHS"
+    definition: "Demographic and Health Survey, a nationally representative household survey."
   - term: "GBM"
-    definition: "Gradient Boosting Machine."
+    definition: "Gradient Boosting Machine, an ensemble method building models sequentially."
   - term: "LightGBM"
-    definition: "Light Gradient Boosting Machine."
+    definition: "Light Gradient Boosting Machine, a fast, distributed gradient boosting framework."
+  - term: "SMOTE"
+    definition: "Synthetic Minority Over-sampling Technique, addresses class imbalance by creating synthetic samples."
   - term: "XGBoost"
-    definition: "Extreme Gradient Boosting."
+    definition: "Extreme Gradient Boosting, a scalable and efficient gradient boosting implementation."
 critical_citations:
-  - "[Bentéjac et al., 2021] — Comparative analysis of boosting algorithms."
-  - "[Li et al., 2022] — Poverty predictability with machine learning."
-  - "[Usmanova et al., 2022] — Review of AI in poverty prediction, low boosting usage."
+  - "[Li et al., 2022] — Identified underutilization of boosting in poverty prediction."
+  - "[Tingzon et al., 2019] — Used machine learning with geospatial data for Philippine poverty mapping."
+  - "[Bentéjac et al., 2021] — Comparative analysis shows boosting algorithms have improved speed and accuracy."
+  - "[Alkire et al., 2015] — Supports multidimensional nature of poverty."
 relevance:
   topics:
-    - code: "5.C"
-      name: "Financial Behavioral Profile Classification Algorithm"
-      justification: "Paper compares boosting algorithms for wealth quintile classification, applicable to user profiling."
+    - code: "5.A"
+      name: "Financial Behavioral Profiles in Personal Finance"
+      relevance: "low"
+      justification: "Paper focuses on general household wealth classification, not financial behavior profiles."
     - code: "6.A"
       name: "Predictive Modeling in Personal Finance Systems"
-      justification: "Uses machine learning to predict household wealth levels, a form of predictive modeling."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      justification: "Provides comprehensive evaluation metrics and computational efficiency analysis of five boosting models."
-  contribution: "The paper benchmarks five boosting algorithms on household wealth classification, offering accuracy and efficiency trade-offs. For Odin, the comparative analysis informs selection of classification algorithms for financial behavioral profiling. The feature importance insights suggest which household characteristics predict economic status. The evaluation framework (accuracy, precision, recall, F1, AUC-ROC, and computational metrics) provides a template for testing Odin's algorithmic modules. Results indicate CatBoost as top performer, while LightGBM and XGBoost balance speed and accuracy."
+      relevance: "low"
+      justification: "Demonstrates use of boosting algorithms for classification, a technique transferable to spending prediction."
+  contribution: "This paper's comparative evaluation of boosting algorithms (CatBoost, XGBoost) for household classification provides a methodological reference for Odin's predictive modules. The use of SMOTE for class imbalance and feature selection techniques (SelectFromModel) can inform Odin's approach to handling sparse user data. The study's consideration of computational efficiency (training/testing time, model size) is directly relevant to Odin's mobile-first deployment constraints. However, the paper's application to poverty measurement, not personal finance, limits its direct applicability to Odin's forecasting or behavioral profiling tasks."
   directly_justifies:
-    - "CatBoost achieves 90.93% accuracy in five-class wealth classification on Philippine household data."
-    - "Boosting algorithms can effectively handle high-dimensional feature sets for poverty prediction."
-    - "LightGBM and XGBoost offer good balance of high performance and computational efficiency."
+    - "Boosting algorithms like CatBoost and XGBoost demonstrate high accuracy in classification tasks with structured data."
+    - "Computational efficiency metrics are critical for selecting models for mobile-first applications."
+    - "Feature selection and SMOTE can improve model performance on imbalanced datasets."
   limits:
-    - "Relies on DHS data from 2022, which may not generalize to other years or populations."
-    - "Wealth quintiles are proxies for poverty, not direct measures of income or spending."
-    - "Model interpretability is limited; feature effects on classification are not explicitly modeled."
-  mapping_rationale: "The paper focuses on algorithmic comparison for classification tasks, not directly on personal finance management for young professionals. However, the boosting algorithms and evaluation methodology are directly transferable to Odin's financial behavioral profile classification (5.C) and predictive modeling (6.A) modules. The detailed performance metrics and computational efficiency analysis inform system evaluation (12.B). Topics related to spending forecasting, anomaly detection, budget recommendation, and mobile UX were rejected because the paper does not address those domains. Borderline topic 1.C (financial behavior) was rejected as the paper uses asset-based wealth quintiles rather than spending or income patterns of young professionals specifically."
+    - "Paper predicts static wealth quintiles, not dynamic spending patterns or financial behaviors."
+    - "The model is trained on DHS survey data, which differs significantly from app-generated transaction data."
+    - "Analysis is for poverty classification, not regression-based forecasting of spending amounts."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. Domains related to Filipino cultural context (2.A-2.D), expense categorization (3.A-3.C), and user behavioral profiling (5.A-5.C) were considered. The paper was flagged as relevant for topic 5.A (Financial Behavioral Profiles) and 6.A (Predictive Modeling) due to its use of machine learning classification algorithms, but assigned a 'low' relevance because it addresses general poverty classification, not financial behavior. Domains such as budgeting (7.A-7.D), anomaly detection (8.A-8.C), and mobile-first design (9.A-9.B) were rejected as the paper does not address these areas. The overall relevance to Odin is contextual, providing methodological insights for model selection and evaluation rather than domain-specific knowledge."
 limitations:
-  - "Data cleaning removed many features and households, potentially introducing bias."
-  - "Only five boosting algorithms compared; other ML methods not included."
-  - "Hyperparameter tuning may not be optimal across all models."
-  - "Model size and testing time measured in controlled environment; real-world deployment may vary. [unacknowledged]"
+  - "Reliance on DHS data limits generalizability to other contexts."
+  - "Further validation using alternative datasets is needed."
+  - "Manual removal of interview-related features may introduce bias."
+  - "Hyperparameter tuning was limited to manual and grid search."
+  - "No error analysis for misclassifications per wealth class."
 remember_this:
-  - "CatBoost achieved 90.93% accuracy for wealth quintile classification."
-  - "LightGBM and XGBoost balance high accuracy with fast training and small model size."
-  - "AdaBoost had lowest accuracy (80.39%) and higher misclassification for poorer classes."
-  - "Top predictors include toilet type, water source, television, refrigerator, and motorcycle."
+  - "CatBoost achieved the highest accuracy at 90.93%."
+  - "LightGBM and XGBoost offer the best balance of speed and size."
+  - "CatBoost had the longest training time but fastest testing."
+  - "AdaBoost performed significantly worse than other boosting algorithms."
+  - "Feature selection identified assets and housing as key poverty predictors."
 ```

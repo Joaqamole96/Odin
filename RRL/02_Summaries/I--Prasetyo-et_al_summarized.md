@@ -1,83 +1,112 @@
 ```yaml
-paper_id: "d3c9a1e7-4b5f-4c2d-9e8a-6f7b1c3d5e9f"
-designation: "local"
-title: "Integrating Financial Management and Gamification: A Systematic Literature Review and Future Research Agenda"
-authors: "Prasetyo, A. P.; Santoso, H. B.; Putra, P. O. H."
+paper_id: 9f0b6d7c-8a3b-5e1f-9c4d-2a7e8b3c5d1f
+designation: local
+title: Integrating Financial Management and Gamification: A Systematic Literature Review and Future Research Agenda
+authors: Prasetyo, A. P.; Santoso, H. B.; Putra, P. O. H.
 year: 2023
-venue: "Indonesian Journal of Computer Science"
+venue: Indonesian Journal of Computer Science
 odin_topics:
-  - "1.C"
-  - "11.A"
-  - "11.B"
-shorthand_tags:
-  - "/financial-behavior"
-  - "/engagement-dynamics"
-  - "/retention-mechanisms"
-tldr: "A systematic literature review of 53 articles synthesizes research on financial behavior and gamification-related behavioral intention, identifying theories, contexts, characteristics, and methodologies with future research directions."
-problem_and_motivation: "Low levels of public financial behavior lead to poor long-term financial outcomes. Gamification can motivate positive financial actions, but research has focused mainly on education, not finance. A systematic review is needed to synthesize existing knowledge and identify gaps."
+  - 4.A
+  - 4.B
+  - 5.A
+  - 11.A
+  - 11.B
+  - 12.A
+tldr: A systematic literature review synthesizing research on financial behavior and gamification-related behavioral intention using the TCCM framework.
+problem_and_motivation: Low public financial behavior levels cause long-term problems, yet gamification research in finance is limited. This review bridges the gap between financial behavior and gamification to inform future design and research.
 approach:
-  - "Conducted a systematic literature review following Kitchenham’s guidelines, using the TCCM framework for analysis."
-  - "Searched four databases (Emerald Insights, IEEE Xplore, Science Direct, Taylor & Francis) for articles published between 2018 and 2022."
-  - "Included English, empirical studies presenting research models or hypotheses, excluding literature reviews."
-  - "Selected 53 articles (27 on financial behavior, 29 on gamification-related behavioral intention) after title/abstract and full-text screening."
-  - "Extracted data on theories, contexts, characteristics (constructs), and methodologies, plus limitations and future research suggestions."
+  - Utilized the Theory, Context, Characteristics, and Methodology (TCCM) framework for a systematic literature review.
+  - Searched four databases for articles published between 2018 and 2022.
+  - Analyzed 53 articles on financial behavior and gamification-related behavioral intention.
+  - Extracted data on theories, contexts, characteristics, and methodologies from the selected studies.
+  - Synthesized findings into integrated conceptual models of financial behavior and gamification-related behavioral intention.
 findings:
-  - "num: Theory of Planned Behavior used in 50% of financial behavior studies."
-  - "num: 25 distinct theories identified in gamification research, with Self-Determination Theory most frequent (14.3%)."
-  - "Financial behavior contexts include general behavior, literacy, satisfaction, well-being, saving, spending, and retirement."
-  - "Gamification contexts: education (20.7%), finance (17.2%), health/fitness (17.2%), and general games (17.2%)."
-  - "Common gamification elements: badges (9.7%), points (9.7%), leaderboards (6.4%), monitoring (6.4%)."
-  - "Most studies use quantitative methods with questionnaires; PLS-SEM and SEM dominate data analysis."
-  - "Gamification research focuses on behavioral intention rather than observed behavior."
-  - "Integrated conceptual models show antecedents (financial literacy, attitude, psychological factors) and consequences (financial well-being, continued use)."
+  - Theory of Planned Behavior is the most used theory in financial behavior research (50%), while Self-Determination Theory is prominent in gamification research (14.3%).
+  - Gamification research in finance is limited, with most studies focusing on education or general contexts.
+  - Financial contexts studied include general behavior, literacy, satisfaction, and well-being, while gamification contexts include finance, education, and health.
+  - Antecedents of financial behavior include financial literacy, socio-demographics, and psychological traits; gamification antecedents include psychological and gamification-related constructs.
+  - The review identifies habit as a key mediator in financial behavior and attitudinal factors as key mediators in gamification-related behavioral intention.
+  - Gamification elements like badges and points are widely investigated, but research on elements like narrative and cooperation is sparse.
+  - Quantitative methods dominate both fields, with questionnaires and SEM being the primary tools.
+  - num: The global PFM application market is expected to reach $3,338 million by 2025 with an annual growth rate of 12.65%.
 key_figures_tables:
-  - "Figure 3: Integrated conceptual model of financial behavior → Antecedents, mediators, moderators, behavior, and consequences."
-  - "Figure 4: Integrated conceptual model of gamification-related behavioral intention → Technology adoption and gamification constructs."
-  - "Table 7: Gamification elements investigated → Badges, points, leaderboards are most studied."
+  - Figure 1: Study selection process flowchart → 53 articles were analyzed after a multi-step screening.
+  - Figure 2: Number of articles by year of publication → Research interest in both domains has been increasing from 2018 to 2022.
+  - Figure 3: Integrated conceptual model of financial behavior → Synthesizes antecedents, mediators, moderators, and consequences.
+  - Figure 4: Integrated conceptual model of gamification-related behavioral intention → Synthesizes antecedents, mediators, moderators, and consequences.
+  - Table 3: Theories used in financial behavior research → Theory of Planned Behavior is the most frequent (50%).
+  - Table 4: Theories used in gamification-related behavioral intention research → Self-Determination Theory is the most frequent (14.3%).
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "PFM"
-    definition: "Personal financial management"
-  - term: "TCCM"
-    definition: "Theory, Context, Characteristics, Methodology framework"
-  - term: "Gamification"
-    definition: "Implementation of game features in non-game contexts"
+  - term: TCCM
+    definition: Theory, Context, Characteristics, and Methodology framework used for systematic literature reviews.
+  - term: PFM
+    definition: Personal Financial Management, apps designed to help individuals manage their finances.
+  - term: SDT
+    definition: Self-Determination Theory, a theory of motivation focusing on autonomy, competence, and relatedness.
+  - term: TPB
+    definition: Theory of Planned Behavior, a theory predicting behavioral intention based on attitudes, norms, and perceived control.
+  - term: PLS-SEM
+    definition: Partial Least Squares Structural Equation Modeling, a statistical technique for analyzing complex cause-effect relationships.
 critical_citations:
-  - "[Goyal et al., 2021] — Comprehensive review of PFM behavior antecedents and consequences."
-  - "[Koivisto & Hamari, 2019] — Foundational gamification review identifying research gaps."
-  - "[Bitrián et al., 2021] — Empirical study on gamification in PFM app Mint."
+  - "[Goyal et al., 2021] — Reviews antecedents and consequences of personal financial management behavior."
+  - "[Koivisto & Hamari, 2019] — Reviews gamification research and suggests future directions."
+  - "[Bitrián et al., 2021] — Examines the gamification of personal financial management apps."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Reviews financial behavior antecedents (saving, spending, retirement) relevant to young professionals."
-    - code: "11.A"
-      name: "Engagement Dynamics in Personal Finance Applications"
-      justification: "Gamification directly targets engagement and behavioral intention in PFM apps."
-    - code: "11.B"
-      name: "Retention Mechanisms and Engagement Design"
-      justification: "Review highlights continuance intention and retention via gamification elements."
-  contribution: "This systematic review provides Odin with a synthesized understanding of how gamification can drive user engagement and retention in PFM apps. It identifies key theories (Self-Determination Theory, Theory of Planned Behavior) that inform the design of retention mechanisms. The integrated conceptual models offer a blueprint for building engagement dynamics modules. The review also highlights under-explored gamification elements (e.g., narrative, social feedback) that Odin could leverage. Finally, it recommends experimental and longitudinal methods to evaluate such features."
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Reviews existing research on PFM apps and gamification in finance.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Explicitly identifies the gap in gamification research within the financial domain.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Synthesizes research on financial behavior, including antecedents like psychological traits.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: high
+      justification: Directly investigates gamification as a tool to enhance user engagement and behavioral intention.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: high
+      justification: Reviews gamification elements and their impact on continuance intention and retention.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Reviews methodologies used to evaluate behavioral models, providing a framework for system evaluation.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: contextual
+      justification: Mentions financial behavior contexts but does not focus on categorization frameworks.
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Provides general demographic findings but is not specific to Filipino young professionals.
+  contribution: This review provides a synthesized understanding of the research landscape at the intersection of financial behavior and gamification. It offers integrated conceptual models that can inform the design of PFM systems like Odin. The identified theories, constructs, and methodologies provide a foundation for building Odin's behavioral profiling, engagement, and evaluation modules. The paper directly justifies the need for gamification to improve user engagement in PFM apps. It also highlights the importance of considering psychological and demographic antecedents for personalized financial systems.
   directly_justifies:
-    - "Gamification can increase behavioral intention toward positive financial actions."
-    - "Implementing gamification in PFM apps fosters continuance intention and reduces discontinuance."
-    - "Badges, points, and leaderboards are effective engagement elements in financial contexts."
-    - "Self-Determination Theory underpins user motivation for sustained app usage."
+    - Gamification in PFM apps can foster behavioral intention toward positive financial behaviors.
+    - Self-Determination Theory and Theory of Planned Behavior are relevant for understanding user motivation in financial contexts.
+    - PFM apps should investigate gamification elements beyond common ones like badges and points.
+    - Understanding psychological and socio-demographic antecedents is key to designing effective behavioral interventions.
+    - There is a need for more research on gamification in the financial domain, providing an opportunity for Odin to contribute.
   limits:
-    - "Limited direct applicability to Filipino young professionals due to non-Filipino samples."
-    - "Most reviewed studies focus on behavioral intention, not actual observed financial behavior."
-  mapping_rationale: "The paper primarily addresses financial behavior (topic 1.C) and gamification's role in driving engagement and retention (topics 11.A, 11.B). It does not cover algorithmic modules (forecasting, anomaly detection, budget recommendation), expense categorization design, mobile-first UX, data privacy, or savings/debt management specifics. Therefore, codes 3.A, 6.A, 7.A, 8.A, 9.A, 10.A, 13.A were rejected. Borderline case 4.B (limitations of existing systems) was omitted because the paper focuses on research gaps rather than PFMS system limitations per se."
+    - The review is limited to articles published between 2018 and 2022, potentially excluding older relevant work.
+    - The analysis is based on the TCCM framework, which may not capture all nuances of the research domain.
+    - The review focuses on behavioral intention rather than actual observed financial behavior for gamification studies.
+  mapping_rationale: A systematic scan was performed across all 12 functional domains and their associated canonical topic codes. The paper was flagged as highly relevant for topics related to engagement dynamics (11.A), retention mechanisms (11.B), and financial behavioral profiles (5.A), as it directly synthesizes research on these areas. It was deemed medium relevance for the landscape of existing systems (4.A) and system evaluation (12.A), as it provides a broad overview and methodological insights. Contextual relevance was assigned to topics like expense categorization (3.A) and the Filipino demographic (1.A), as the paper's context is general and not specific to the Philippines. Topics such as budget recommendation (7.A-D), anomaly detection (8.A-C), and debt management (13.A-C) were rejected because they are not covered in the paper. The review provides a foundational understanding of the intersection of financial behavior and gamification, which is directly applicable to Odin's design for engagement and behavioral profiling.
 limitations:
-  - "Only articles from 2018-2022, potentially missing earlier foundational work."
-  - "Search limited to four databases and English-language articles only."
-  - "No meta-analysis or quantitative synthesis of effect sizes."
+  - The review does not include a meta-analysis of the effect sizes of gamification on financial behavior. [unacknowledged]
+  - The search was limited to four databases and specific search terms, which might have introduced selection bias. [unacknowledged]
 remember_this:
-  - "53 articles were reviewed on financial behavior and gamification."
-  - "Gamification in finance is under-researched compared to education."
-  - "Theory of Planned Behavior dominates financial behavior studies."
-  - "Badges and points are the most studied gamification elements."
-  - "Future work should explore negative consequences of gamification."
-
+  - Gamification research in personal finance is an emerging field with significant potential.
+  - Self-Determination Theory is the most frequently used theory in gamification research.
+  - Theory of Planned Behavior is the dominant theory in financial behavior research.
+  - The global PFM market is projected to reach $3.338 billion by 2025.
+  - Future research should explore dynamic gamification and negative consequences.
 ```

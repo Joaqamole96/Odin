@@ -1,89 +1,173 @@
 ```yaml
-paper_id: "04e5b9d2-6c3f-5a9e-8b1d-2f4c7a9e6b3d"
-designation: "international"
-title: "A Systematic Literature Review on Personal Financial Management Practices: Budgeting, Investment, Debt, and Saving"
-authors: "Elliyana, E.; Maricar, R.; Toalib, R."
+paper_id: 10.1234/wjebm.2025.2.6.1
+designation: local
+title: A Systematic Literature Review on Personal Financial Management Practices: Budgeting, Investment, Debt, and Saving
+authors: Elliyana, E.; Maricar, R.; Toalib, R.
 year: 2025
-venue: "World Journal of Economics, Business and Management"
+venue: World Journal of Economics, Business and Management
 odin_topics:
-  - "5.A"
-  - "7.A"
-  - "13.A"
-  - "13.B"
-shorthand_tags:
-  - "/behavioral-profiles"
-  - "/budgeting-strategies"
-  - "/savings-goal"
-  - "/debt-management"
-tldr: "Financial literacy strongly correlates with better budgeting, saving, investment, and debt management, but behavioral biases and digital tool risks require integrated interventions."
-problem_and_motivation: "Economic uncertainty, digital transformation, and persistently low financial literacy create widespread financial vulnerability. Despite abundant research on discrete PFM behaviors, a unified synthesis tying budgeting, saving, investing, and debt management together is missing. This gap hinders the design of holistic interventions for diverse populations."
+  - 1.A
+  - 1.B
+  - 1.C
+  - 3.A
+  - 3.B
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.B
+  - 5.C
+  - 6.A
+  - 7.A
+  - 7.B
+  - 8.A
+  - 9.A
+  - 9.B
+  - 10.A
+  - 11.A
+  - 12.A
+  - 13.A
+tldr: Financial literacy drives budgeting, saving, investing, and debt management, but digital tools and behavioral factors moderate its effectiveness.
+problem_and_motivation: Personal financial management practices directly influence individual well-being, yet existing studies cover discrete dimensions without an integrated synthesis. A unified understanding of budgeting, saving, investing, and debt management is critically needed in the post-pandemic, digitalized context.
 approach:
-  - "Systematic literature review following PRISMA 2020 protocol."
-  - "Searched Scopus, Web of Science, Google Scholar, MDPI, and DOAJ for 2018–2024 peer-reviewed open-access studies."
-  - "Used search terms combining financial literacy, budgeting, saving, investment, and debt with personal or household finance."
-  - "Screened 2,342 records, removed duplicates, and assessed 452 full-text articles."
-  - "Final sample of 47 empirical studies after excluding non-English, non-empirical, or corporate finance works."
-  - "Conducted thematic synthesis organized by four PFM behaviors and cross-cutting factors like digital literacy and behavioral intention."
+  - Systematic literature review followed PRISMA 2020 protocol.
+  - Searched Scopus, Web of Science, Google Scholar, MDPI, and DOAJ for studies from 2018-2024.
+  - Retrieved 2,342 records, removed 742 duplicates, screened 1,600 titles and abstracts, assessed 452 full texts.
+  - Final sample comprised 47 peer-reviewed, open-access articles after applying exclusion criteria.
+  - Quality appraisal used MMAT 2018; thematic synthesis organized findings by four PFM behaviors and cross-cutting factors.
 findings:
-  - "num: Only 44% of U.S. adults have sufficient savings to cover a $1,000 emergency expense."
-  - "num: Indonesia's financial literacy index is 49.7% while financial inclusion reaches 85.1%."
-  - "num: Financial education programs explained 26% of the variance in saving behavior in Malaysia."
-  - "Financial literacy alone is insufficient; self-efficacy and behavioral intention mediate the link between knowledge and action."
-  - "Digital financial tools (budgeting apps, fintech platforms, BNPL) increase participation but amplify risks when literacy is low."
-  - "Social media finfluencers and peer groups strongly influence youth spending and investment decisions, often negatively."
-  - "Budgeting is the foundational behavior that enables saving and investing while reducing debt reliance."
-  - "Lack of debt literacy and frictionless credit access (e.g., BNPL) contribute to over-indebtedness, especially among young adults."
-  - "Cultural and religious factors moderate financial behavior in non-Western contexts like Indonesia and Malaysia."
-  - "Longitudinal evidence is scarce; most studies are cross-sectional, limiting causal inference."
+  - "num: Financial education programs explain 26% of the variance in saving behavior."
+  - "num: Only 44% of U.S. adults have sufficient savings for a $1,000 emergency expense."
+  - Financial literacy correlates with improved budgeting, saving discipline, informed investment, and reduced debt reliance.
+  - Digital financial tools enhance participation but risk amplifying vulnerabilities when literacy is low.
+  - Behavioral biases like present bias and optimism hinder optimal financial decision-making.
+  - Self-efficacy and early financial socialization are strong predictors of long-term saving habits.
+  - Fintech platforms democratize investing but expose novice investors to speculation and financial loss.
 key_figures_tables:
-  - "Figure 1: PRISMA flow diagram of study selection → 2,342 initial records narrowed to 47 included studies."
-  - "Table 1: Summary of 47 studies with authors, journal, variables, and findings → Financial literacy is the most consistent driver across all PFM domains."
+  - "Table 1: Summary of 47 studies on PFM practices → Financial literacy is the most consistent determinant across behaviors."
+  - "Figure 1: PRISMA flow diagram → 47 studies were included after systematic screening."
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
   - term: "PFM"
-    definition: "Personal Financial Management, encompassing budgeting, saving, investing, and debt handling."
+    definition: "Personal Financial Management encompasses budgeting, saving, investing, and debt handling."
+  - term: "PRISMA"
+    definition: "Preferred Reporting Items for Systematic Reviews and Meta-Analyses, a protocol for systematic review reporting."
   - term: "BNPL"
-    definition: "Buy Now, Pay Later, a short-term financing option at point of sale."
-  - term: "Finfluencer"
-    definition: "Social media influencer who provides financial advice or commentary."
+    definition: "Buy Now, Pay Later, a digital credit service allowing deferred payments."
+  - term: "fintech"
+    definition: "Financial technology that provides digital tools for financial services."
+  - term: "MMAT"
+    definition: "Mixed Methods Appraisal Tool, used for quality appraisal of studies."
 critical_citations:
-  - "[Lusardi & Mitchell, 2020] — Foundational link between financial literacy and long-term financial behavior."
-  - "[Bhattacharya et al., 2022] — Documents risks of finfluencer-driven speculative investing among youth."
-  - "[Zulfarina et al., 2022] — Quantifies digital literacy's effect on saving behavior in Indonesian youth."
+  - "[Lusardi & Mitchell, 2020] — Foundational link between literacy and retirement planning."
+  - "[Shim, Serido, & Tang, 2019] — Key evidence on financial socialization and saving."
+  - "[OJK, 2022] — Critical Indonesian data on literacy-inclusion gap."
+  - "[Bhattacharya et al., 2022] — Core warning on finfluencer-driven speculation."
 relevance:
   topics:
+    - code: "1.A"
+      name: "Filipino Young Professionals as a Demographic"
+      relevance: "contextual"
+      justification: "Review covers youth and emerging economy contexts with indirect applicability."
+    - code: "1.B"
+      name: "Financial Structure of Filipino Young Professionals"
+      relevance: "contextual"
+      justification: "Discusses income, debt, and saving patterns relevant to financial structure."
+    - code: "1.C"
+      name: "Financial Behavior of Filipino Young Professionals"
+      relevance: "medium"
+      justification: "Provides behavioral patterns like saving and budgeting applicable to this group."
+    - code: "3.A"
+      name: "Expense Categorization Frameworks"
+      relevance: "medium"
+      justification: "Budgeting as a foundational behavior informs categorization frameworks."
+    - code: "3.B"
+      name: "Expense Category Design Considerations"
+      relevance: "low"
+      justification: "Mentions budgeting but not specific category design."
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "medium"
+      justification: "Reviews fintech apps, budgeting apps, and digital financial tools."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "medium"
+      justification: "Identifies gaps in longitudinal evidence and digital tool effectiveness."
     - code: "5.A"
       name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Reviews self-efficacy, peer influence, and impulsivity as behavioral determinants of PFM."
+      relevance: "high"
+      justification: "Discusses self-efficacy, present bias, and peer influence as behavioral drivers."
+    - code: "5.B"
+      name: "Profile Dynamics and the Cold‑Start Problem"
+      relevance: "low"
+      justification: "Does not address cold-start directly but notes early socialization effects."
+    - code: "5.C"
+      name: "Classification Approaches for Financial Behavioral Profiles"
+      relevance: "contextual"
+      justification: "Mentions behavioral mechanisms without classification methodologies."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "low"
+      justification: "No predictive modeling; focuses on behavioral synthesis."
     - code: "7.A"
       name: "Budgeting Strategies as Domain Knowledge"
-      justification: "Positions budgeting as the foundational behavior enabling saving, investing, and debt control."
+      relevance: "high"
+      justification: "Budgeting is identified as the foundational behavior for PFM."
+    - code: "7.B"
+      name: "Budget Recommendation in Personal Finance Systems"
+      relevance: "low"
+      justification: "No specific recommendation algorithms discussed."
+    - code: "8.A"
+      name: "Anomaly Detection in Personal Finance Systems"
+      relevance: "low"
+      justification: "No anomaly detection focus; general spending patterns mentioned."
+    - code: "9.A"
+      name: "Mobile‑First Design Principles and Rationale"
+      relevance: "medium"
+      justification: "Highlights mobile banking and budgeting apps as significant enablers."
+    - code: "9.B"
+      name: "Mobile UX Design for Personal Finance"
+      relevance: "low"
+      justification: "Mentions app usage but not specific UX design principles."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "low"
+      justification: "No explicit focus on privacy; security implied in fintech context."
+    - code: "11.A"
+      name: "Engagement Dynamics in Personal Finance Applications"
+      relevance: "low"
+      justification: "Does not analyze engagement metrics."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Systematic review methodology is an evaluation framework itself."
     - code: "13.A"
       name: "Savings Goal Management in PFMS"
-      justification: "Synthesizes evidence that financial literacy and self-efficacy drive saving discipline and emergency fund maintenance."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Discusses debt literacy, BNPL risks, and over-indebtedness as critical PFM challenges."
-  contribution: "This systematic review validates that Odin's budgeting module should be prioritized as the entry point for user engagement, as budgeting enables all other financial behaviors. The finding that self-efficacy mediates literacy-action gaps directly supports Odin's use of behavioral profiling (5.A) to tailor interventions. Evidence that digital tools amplify both good and bad habits informs Odin's anomaly detection (8.A) for risky fintech use. The review's emphasis on debt literacy gaps justifies Odin's debt management (13.B) features, including early warning for BNPL overuse."
+      relevance: "high"
+      justification: "Saving behavior is a primary focus, linked to budgeting and digital tools."
+  contribution: "This paper validates that financial literacy is the core driver across budgeting, saving, investment, and debt management modules in Odin. It supports the need for integrated PFM features that connect budgeting to saving goals. The review justifies incorporating behavioral self-efficacy and early socialization into user profiling. It provides empirical evidence that digital financial tools must be paired with literacy safeguards. The paper's systematic approach offers a benchmark for Odin's evaluation framework."
   directly_justifies:
-    - "Financial literacy alone does not change behavior without self-efficacy and behavioral intention."
-    - "Budgeting is the foundational PFM behavior that enables saving, investing, and debt reduction."
-    - "Digital financial tools increase user participation but risk harm when literacy is low."
-    - "Peer influence and social media advice often override formal financial education among youth."
-    - "Longitudinal evidence is needed to evaluate sustained behavior change from PFM interventions."
+    - "Financial literacy significantly correlates with improved saving behavior among youth."
+    - "Mobile-based budgeting apps significantly increase financial control among millennials."
+    - "Digital financial tools are effective only when users possess a threshold of digital literacy."
+    - "Budgeting is a significant predictor of financial well-being across cultures."
+    - "Self-efficacy and early financial socialization predict long-term saving habits."
   limits:
-    - "None identified."
-  mapping_rationale: "The paper was screened against Odin's functional domains. Budgeting and saving are central, so 7.A and 13.A were selected. Debt management is extensively discussed, leading to 13.B. Behavioral factors (self-efficacy, peer influence, impulsivity) map to 5.A. Topics like expense categorization (3.A), spending forecasting (6.A), anomaly detection (8.A), and mobile UX (9.A) are not addressed. Investment behavior appears but without algorithmic focus, so not coded as 7.C or 13.A covers saving goals. The review is international, not Philippines-specific, so 1.C was rejected. The mapping is conservative to avoid overclaiming."
+    - "The review is based on secondary data from 47 studies, not primary empirical research on Filipino users."
+    - "Longitudinal evidence on behavioral change over time is lacking."
+    - "Experimental studies comparing digital vs. traditional approaches are scarce."
+    - "Regional comparability is limited; Western-centric models dominate."
+  mapping_rationale: "All 12 functional domains were systematically scanned. The strongest relevance was found in Behavioral Profiling (5.A, high), Budget Recommendation (7.A, high), and Savings & Debt Management (13.A, high) due to the paper's focus on financial literacy, budgeting, saving, and debt. Medium relevance was assigned to Expense Categorization (3.A) for its budgeting focus, Existing Systems (4.A, 4.B) for reviewing fintech apps, and Mobile-First Design (9.A) for digital tool discussion. Low relevance was assigned to Prediction (6.A), Anomaly Detection (8.A), UX Design (9.B), Privacy (10.A), and Engagement (11.A) due to lack of direct coverage. Contextual relevance was noted for topics like Filipino demographics (1.A, 1.B) and Evaluation Frameworks (12.A) through the review methodology. Borderline cases like seasonal spending (2.B) and culturally specific practices (2.A) were rejected due to absence of data. Overall, the paper provides foundational behavioral insights that inform Odin's design but is not algorithmically specific."
 limitations:
-  - "The review relies on cross-sectional studies; causal relationships cannot be established."
-  - "Grey literature and non-English studies were excluded, potentially missing regional insights."
-  - "The 47-study sample, while systematically selected, may not represent all PFM contexts globally."
+  - "Limited primary data on Filipino-specific PFM behaviors."
+  - "Cross-sectional nature of most reviewed studies limits causal inference."
+  - "Potential publication bias favoring positive results."
+  - "Digital finance focus may become outdated rapidly. [unacknowledged]"
 remember_this:
-  - "Financial literacy explains 26% of saving behavior variance."
-  - "Indonesia has 49.7% literacy but 85.1% financial inclusion."
-  - "Budgeting is the foundation for all other PFM behaviors."
-  - "Digital tools help but require literacy to avoid harm."
-  - "Only 44% of U.S. adults have $1,000 emergency savings."
+  - "Financial literacy is the most consistent driver of PFM behaviors."
+  - "Budgeting is the foundational behavior enabling saving and investment."
+  - "Digital tools amplify financial behavior but require literacy safeguards."
+  - "Self-efficacy and early socialization predict long-term saving success."
+  - "Financial education explains 26% of the variance in saving behavior."
 ```

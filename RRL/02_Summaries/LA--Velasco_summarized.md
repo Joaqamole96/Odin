@@ -6,30 +6,29 @@ authors: Velasco, A.
 year: 2026
 venue: Preprints.org
 odin_topics:
+  - 4.A
+  - 4.B
   - 6.A
   - 6.B
+  - 7.A
   - 8.A
   - 8.B
   - 12.A
   - 12.B
-shorthand_tags:
-  - /predictive-modeling
-  - /spending-forecasting
-  - /anomaly-detection
-  - /anomaly-detection-algorithm
-  - /evaluation-frameworks
-  - /evaluation-algorithmic
-tldr: Reviews 17 Philippine policy analytics studies (2019-2025), showing progression from descriptive statistics and classical forecasting toward machine learning, deep learning, Benford-based anomaly detection, and explainable AI.
-problem_and_motivation: Government resource allocation under uncertainty requires quantitative analytics, but no systematic review of applied methods in Philippine policy existed. Understanding methodological progress and gaps across education, energy, agriculture, health, and finance is necessary to guide future analytics infrastructure.
+tldr: Reviews Philippine policy analytics across sectors, showing a progression from descriptive models toward machine learning, Benford-based anomaly detection, and explainable AI.
+problem_and_motivation: Governments must allocate scarce resources under uncertainty, and while quantitative analytics is central to this, the application and maturation of these methods in the Philippine context across key policy sectors has not been systematically synthesized.
 approach:
-  - Structured narrative review of 17 studies from 2019-2025, coded by domain, dataset, modeling approach, validation strategy, and policy contribution.
-  - Comparison with international literature on dropout research, electricity forecasting, crop-yield analytics, epidemiological surveillance, Benford auditing, and explainable ML.
+  - A structured narrative review of a core corpus of 17 Philippine studies from 2019 to 2025 was conducted.
+  - Studies were coded on five dimensions: domain, dataset, modeling approach, validation strategy, and policy contribution.
+  - The sectors covered include education, energy, agriculture, health, and finance.
+  - External comparison literature was used to position the corpus against broader international developments in the respective fields.
+  - The review identifies cross-cutting methodological trends and gaps in validation and integration.
 findings:
-  - Early studies use descriptive statistics and univariate ARIMA/SARIMA/Holt-Winters; later studies adopt comparative machine learning, neural networks, and LSTM.
-  - Benford-based anomaly detection screens public health and agricultural data quality as a policy tool.
-  - Validation rigor is uneven: some studies use holdout splits and error metrics, others rely on residual diagnostics due to short samples.
-  - Interpretability appears via SHAP in diabetes prediction and theory-guided embedding in stock-index forecasting.
-  - Random forests performed best for rice and corn forecasting; NNAR best for measles incidence.
+  - The literature shows a clear progression from descriptive diagnostics and classical time-series models toward machine learning, deep learning, and explainable AI.
+  - A distinct forensics strand emerged through Benford-based anomaly detection for data quality assessment in agriculture and health.
+  - Forecasting studies have moved from univariate ARIMA to comparative machine learning, including random forests, neural networks, and LSTM.
+  - Validation rigor is uneven, ranging from explicit holdout sets to residual diagnostics and significance testing.
+  - num: The machine-learning study on rice and corn forecasting reported the best overall performance for random forests.
 key_figures_tables:
   - None.
 key_equations:
@@ -37,66 +36,78 @@ key_equations:
     explanation: ""
 definitions:
   - term: ARIMA
-    definition: Autoregressive Integrated Moving Average, a classical time-series forecasting model.
+    definition: Autoregressive Integrated Moving Average, a class of statistical models for time series forecasting.
   - term: SARIMA
-    definition: Seasonal ARIMA, extending ARIMA with seasonal components.
+    definition: Seasonal Autoregressive Integrated Moving Average, an extension of ARIMA that supports seasonal data.
   - term: LSTM
-    definition: Long Short-Term Memory, a recurrent neural network for sequence prediction.
-  - term: RMSE
-    definition: Root Mean Square Error, a forecast accuracy metric.
-  - term: MAE
-    definition: Mean Absolute Error, a forecast accuracy metric.
-  - term: MAPE
-    definition: Mean Absolute Percentage Error, a scale-independent forecast accuracy metric.
-  - term: SHAP
-    definition: SHapley Additive exPlanations, a method for model interpretability.
+    definition: Long Short-Term Memory, a type of recurrent neural network architecture capable of learning long-term dependencies.
   - term: NNAR
-    definition: Neural Network AutoRegressive, a neural network for time series.
+    definition: Neural Network Autoregression, a time series forecasting model using a neural network.
+  - term: SHAP
+    definition: SHapley Additive exPlanations, a method for interpreting the output of machine learning models.
+  - term: Benford's Law
+    definition: An observation that in many naturally occurring datasets, the leading digit is likely to be small.
 critical_citations:
-  - "[Rumberger & Lim, 2008] — Foundational review of dropout causes."
-  - "[Deyle & Sugihara, 2011] — Generalized theorems for nonlinear state-space reconstruction."
-  - "[van Klompenburg et al., 2020] — Systematic review of crop yield prediction ML."
-  - "[World Health Organization, 2021] — Routine health data monitoring during COVID-19."
+  - "[Rumberger & Lim, 2008] — Foundational review of dropout research."
+  - "[van Klompenburg et al., 2020] — Systematic review of ML for crop yield prediction."
+  - "[World Health Organization, 2021] — Guide on using routine data for health monitoring."
 relevance:
   topics:
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Provides a methodological landscape for applied analytics in the Philippines.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Identifies specific gaps like limited multivariate modeling and uneven validation.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Reviews forecasting methods (ARIMA, ML, LSTM) applicable to spending prediction.
+      relevance: high
+      justification: Reviews forecasting methods applicable to spending prediction.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Compares classical and machine learning forecast models for time-series policy problems.
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Discusses ARIMA, machine learning, and deep learning for time-series forecasting.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Reviews forecasting as a basis for planning and resource allocation.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: Benford-based statistical forensics detects data anomalies in health and agriculture.
+      relevance: high
+      justification: Reviews Benford-based anomaly detection for data quality and fraud screening.
     - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Newcomb-Benford analysis provides a low-cost screening mechanism for unusual patterns.
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: Forensics strand using Benford's law provides a methodological example.
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      justification: Discusses validation practices including holdout splits, error metrics, and benchmarking.
+      relevance: high
+      justification: Critiques validation practices, noting uneven rigor and advocating for better methods.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: Compares model performance (RMSE, MAE, MAPE) across sectors and methods.
-  contribution: The paper validates that Odin's spending forecasting module should support both classical time-series baselines (ARIMA, SARIMA) and machine learning benchmarks (random forests, LSTM) for robustness. It justifies including a Benford-based anomaly detection module to screen transaction or aggregate data for quality issues before analysis. The review also informs Odin's evaluation framework by emphasizing transparent validation (holdout sets, error metrics) and the need for uncertainty quantification.
+      relevance: high
+      justification: Discusses model benchmarking, error metrics, and the need for external validation.
+  contribution: "This paper provides a systematic review of forecasting, anomaly detection, and predictive modeling techniques applied to Philippine data, which directly informs Odin's algorithmic module selection and validation framework. Its critique of univariate models and uneven validation justifies Odin's investment in multivariate forecasting and rigorous holdout evaluation. The review of Benford-based forensics supports Odin's anomaly detection approach, and its call for integrated analytics architectures aligns with Odin's goal of combining forecasting, budgeting, and anomaly detection. The identified gaps, such as limited uncertainty quantification and operational deployment, serve as cautionary points for Odin's development roadmap."
   directly_justifies:
-    - "Forecasting performance improves when nonlinear models like LSTM are compared against linear ARIMA baselines."
-    - "Benford-based anomaly detection can screen routine data for unusual reporting behavior at low cost."
-    - "Validation for time-series forecasting should use holdout splits or rolling-origin evaluation, not only residual diagnostics."
-    - "Interpretability methods like SHAP make predictive models more actionable for users."
+    - "The progression from ARIMA to machine learning supports selecting LSTM or random forest for spending forecasting."
+    - "Benford-based anomaly detection is a valid, low-cost method for screening financial data."
+    - "Explicit train-validation splits and error metrics are necessary for evaluating Odin's forecasting module."
+    - "External validation across user cohorts is a critical gap that Odin should address."
   limits:
-    - "Paper reviews general policy analytics, not personal finance specifically."
-    - "No direct evaluation of user-facing PFMS algorithms or behavioral profiling."
-    - "Quantitative performance numbers are not reported in this review, only comparative statements."
-  mapping_rationale: The paper strongly supports forecasting (domains 6.A,6.B) through extensive discussion of ARIMA, SARIMA, Holt-Winters, random forests, neural networks, and LSTM applied to time-series problems. Anomaly detection (8.A,8.B) is directly addressed via Newcomb-Benford analysis for health and agricultural data. Evaluation frameworks (12.A,12.B) appear throughout the validation comparisons. Topics related to behavioral profiling (5.A-5.C), budgeting (7.A-7.C), expense categorization (3.A-3.B), mobile design (9.A-9.B), privacy (10.A-10.B), retention (11.A-11.B), and savings/debt (13.A-13.B) have no coverage and were rejected. The paper is a review, not an algorithm-specific study, so designation is local due to Philippine institutional affiliation.
+    - "The paper is a review and does not provide original empirical findings for Odin to directly cite for specific model performance."
+    - "The financial sector review is limited to stock-index prediction, not personal spending patterns."
+    - "Recommendations are high-level and require translation into specific implementation details for a PFMS."
+  mapping_rationale: "All 12 functional domains and their associated topic codes were systematically scanned. The domains of 'Spending Forecasting' (6.A, 6.B), 'Anomaly Detection' (8.A, 8.B), and 'System Evaluation' (12.A, 12.B) were flagged as high relevance due to the paper's detailed review of forecasting methods, Benford-based forensics, and validation practices. The 'Existing Systems & Gaps' domain (4.A, 4.B) was selected as high/contextual because the paper provides a landscape of applied analytics and explicitly lists methodological limitations. 'Budget Recommendation' (7.A) was medium relevance as it provides domain knowledge on resource allocation. The paper was considered and rejected for 'Financial Behavioral Profiles' (5.A-C), 'Filipino Cultural Context' (2.A-D), and 'Data Privacy & User Trust' (10.A, 10.B) as it does not discuss these specific topics. The overall relevance is high for informing the design and evaluation of Odin's algorithmic core."
 limitations:
-  - "Corpus is heterogeneous (journal articles, preprints, SSRN papers) with differing data frequencies, sample sizes, and validation maturity."
-  - "Some study characteristics had to be reconstructed from metadata when full texts were not equally accessible. [unacknowledged]"
-  - "Direct numerical comparison across sectors is neither appropriate nor intended by the author."
-  - "External validation and operational deployment evidence are largely absent from the reviewed studies. [unacknowledged]"
+  - "The corpus is heterogeneous, mixing journal articles and preprints with varying validation designs. [unacknowledged]"
+  - "Direct numerical comparison across sectors is not intended due to differences in data frequency and sample size. [acknowledged]"
+  - "Limited evidence of operational deployment or external validation of the models reviewed. [acknowledged]"
+  - "The review focuses on sectoral policy and does not cover personal finance or behavioral profiling. [unacknowledged]"
 remember_this:
-  - "Reviewed 17 Philippine policy analytics studies from 2019 to 2025."
-  - "Forecasting evolved from ARIMA to machine learning and LSTM."
-  - "Benford's law detects anomalies in health and agricultural data."
-  - "Validation practices remain uneven across sectors."
-  - "Interpretability via SHAP is a growing priority."
+  - "Philippine applied analytics progressed from descriptive models to machine learning and anomaly detection."
+  - "Validation practices are uneven; explicit holdout sets are not universal."
+  - "Benford-based law is used for data quality audits in health and agriculture."
+  - "Future work requires integrated, multivariate, and uncertainty-aware analytics."
 ```

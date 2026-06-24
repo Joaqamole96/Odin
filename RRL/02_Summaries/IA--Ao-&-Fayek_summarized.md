@@ -6,115 +6,127 @@ authors: Ao, S.-I.; Fayek, H.
 year: 2023
 venue: Sensors
 odin_topics:
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.B
   - 6.A
   - 6.B
   - 8.A
   - 8.B
+  - 9.A
   - 12.A
   - 12.B
-shorthand_tags:
-  - /predictive-modeling
-  - /spending-forecasting
-  - /anomaly-detection
-  - /anomaly-algorithm
-  - /evaluation-framework
-  - /algorithm-evaluation
-tldr: Surveys deep learning for sensor time series, highlighting non-stationarity challenges and continual learning methods to mitigate catastrophic forgetting.
-problem_and_motivation: Real-world time series often exhibit non-stationary distributions, causing deep learning models to suffer catastrophic forgetting. Traditional methods assume stationarity, limiting deployment in dynamic environments. This survey identifies the gap in applying continual learning to time series forecasting and anomaly detection.
+tldr: A systematic review of deep learning applications for sensor time series, highlighting the need for preprocessing and continual learning to address non-stationary data and catastrophic forgetting.
+problem_and_motivation: Real-world time series data often exhibit non-stationary distributions, causing deep learning models to suffer from catastrophic forgetting. This limits the practical deployment of these models in dynamic environments where data distributions shift over time. A systematic review of techniques to address these challenges is needed to guide the development of more robust systems.
 approach:
-  - Conducts systematic review of deep learning for sensor time series from 2018-2023.
-  - Categorizes methods into deep learning architectures (MLP, RNN, LSTM, CNN, GNN) and preprocessing techniques.
-  - Evaluates continual learning approaches (regularization, replay, parameter isolation) for time series tasks.
-  - Uses case studies from water treatment, healthcare, traffic, and manufacturing domains.
-  - Compares performance of DL models with and without preprocessing on benchmark datasets like UCR, SWaT, and WADI.
+  - Surveys recent deep learning methods (MLP, RNN, LSTM, CNN, GNN) for sensor time series classification and forecasting.
+  - Reviews advanced preprocessing techniques including EMD, wavelet transform, and data augmentation.
+  - Examines continual learning strategies (regularization, replay, parameter isolation) to mitigate catastrophic forgetting.
+  - Evaluates the performance and applicability of these methods across diverse sensor time series datasets.
+  - Discusses limitations of current CL research, including a focus on classification over regression and scalability issues.
 findings:
-  - "num: CNN with direct multi-step procedure improved prediction accuracy by 22.6% over seasonal ARIMAX for building load forecasting."
-  - "num: Graph Deviation Network achieved 54% better F-measure than the next best baseline for anomaly detection in water treatment systems."
-  - "num: LSTM achieved mean absolute percentage error of 4.82% for traffic flow forecasting versus 20.97% for ARIMA and 9.06% for BPNN."
-  - "num: Empirical mode decomposition preprocessing improved gesture classification accuracy from 94.22% to 99.73% using CNN."
-  - "num: MC-SGD continual learning reduced catastrophic forgetting by 29% for activity recognition on wearable sensors."
-  - "num: 2-layer Bi-LSTM achieved 98.7% overall accuracy for land use classification from Sentinel-2 time series data."
-  - "num: Attention and deep convolutional networks performed best with wavelet and FFT preprocessing for wind prediction."
-  - Continual learning approaches (replay, EWC, LwF) mitigate forgetting but only replay accumulates knowledge over time.
-  - No single deep learning method fits all time series anomaly detection tasks; domain knowledge remains necessary.
-  - Simple machine learning models with feature engineering can outperform frontier deep learning methods without preprocessing.
+  - "num: LSTM achieved superior forecasting performance with 4.82% MAPE vs. 20.97% for ARIMA on traffic flow data."
+  - "num: Attention and DCN models work best with wavelet and FFT preprocessing for wind prediction."
+  - "num: MC-SGD reduced forgetting by nearly 29% compared to joint-task training for activity recognition."
+  - "num: Bidirectional LSTM achieved 94.75% accuracy for classifying resting vs. working states using EEG data."
+  - "num: ConvLSTM outperformed persistence, SVR, and LSTM models for SST prediction."
+  - "num: 2D CNN was the most reliable model for structural damage detection from raw time series data."
+  - "num: Preprocessing with EMD improved CNN validation accuracy from 94.22% to 99.73% for gesture classification."
 key_figures_tables:
-  - "Figure 1: Tree diagram of deep learning methods for sensor time series classification and forecasting → Groups MLP, RNN, LSTM, CNN, GNN, and hybrids."
-  - "Figure 2: Tree diagram of preprocessing methods for sensor time series → Covers EMD, wavelet, ICA, segmentation, and data augmentation."
-  - "Figure 3: Taxonomy of continual learning methods for sensor time series → Divides into regularization, replay, and parameter isolation."
-  - "Table 1: Summary of DL technique advances for sensor time series applications → Lists 18 studies with accuracy and details."
-  - "Table 2: Importance of advanced preprocessing for real-world sensor DL applications → Shows 14 studies where preprocessing improved results."
-  - "Table 3: Advances in continual learning techniques for time series applications → Summaries 12 CL studies with motivations and results."
+  - "Table 1: Summary of DL techniques for sensor time series → Shows a wide variety of models and their applications."
+  - "Table 2: Advanced preprocessing for DL applications → Demonstrates that preprocessing can significantly boost performance."
+  - "Table 3: Continual learning techniques for time series → Highlights CL as a solution for non-stationary data."
+  - "Figure 1: Tree diagram of DL methods for sensor time series → Provides a taxonomy of key DL architectures."
+  - "Figure 2: Tree diagram of popular preprocessing methods → Categorizes techniques like EMD and wavelet transform."
+  - "Figure 3: Taxonomy of continual learning methods → Groups CL strategies into regularization, replay, and isolation."
 key_equations:
-  - equation: "E(y_t) = E(y_{t-1}) = \\mu, \\quad Var(y_t) = \\sigma^2 < \\infty, \\quad Cov(y_t, y_{t-k}) = \\gamma(k)"
-    explanation: Weak stationarity conditions for time series.
-  - equation: "L_i = \\frac{1}{N} \\sum_{r=1}^{N} L(y_{i,r}, \\hat{y}_{i,r}; \\theta_i) + \\frac{q}{(i-1)N} \\sum_{j=1}^{i-1} \\sum_{r=1}^{N} L(y_{j,r}, M(\\hat{x}_{j,r}; \\theta_i); \\theta_i)"
-    explanation: Continual learning objective balancing current and previous tasks.
+  - equation: "E(y_t) = E(y_{t-1}) = μ, Var(y_t) = σ^2 < ∞, Cov(y_t, y_{t-k}) = γ(k)"
+    explanation: "Definition of weak stationarity for a time series."
+  - equation: "L_i = (1/N_i) Σ_{r=1}^{N_i} L(y_{i,r}, ŷ_{i,r}; θ_i) + (q/( (i-1)N )) Σ_{j=1}^{i-1} Σ_{r=1}^{N_j} L( y_{j,r}, M(x̂_{j,r}; θ_i); θ_i )"
+    explanation: "Continual learning objective combining current and previous task losses."
 definitions:
-  - term: CL
-    definition: Continual learning, a paradigm for sequential learning without catastrophic forgetting.
-  - term: CF
-    definition: Catastrophic forgetting, abrupt loss of previously learned knowledge when learning new tasks.
-  - term: DL
-    definition: Deep learning, multi-layer neural networks for hierarchical feature extraction.
-  - term: RNN
-    definition: Recurrent neural network, designed for sequence data with internal state.
-  - term: LSTM
-    definition: Long short-term memory, RNN variant with gates to handle long-term dependencies.
-  - term: CNN
-    definition: Convolutional neural network, uses filters to extract local patterns.
-  - term: GNN
-    definition: Graph neural network, processes data with graph structure.
-  - term: EMD
-    definition: Empirical mode decomposition, decomposes signal into intrinsic mode functions.
-  - term: EWC
-    definition: Elastic weight consolidation, regularization method for continual learning.
+  - term: "Continual Learning (CL)"
+    definition: "A machine learning paradigm to handle non-stationary data by learning sequentially without forgetting."
+  - term: "Catastrophic Forgetting (CF)"
+    definition: "The abrupt loss of previously learned knowledge when a neural network is trained on new data."
+  - term: "Non-stationary Time Series"
+    definition: "A time series whose statistical properties, like mean and variance, change over time."
+  - term: "Empirical Mode Decomposition (EMD)"
+    definition: "A preprocessing technique that decomposes a signal into intrinsic mode functions (IMFs)."
 critical_citations:
-  - "[Kirkpatrick, 2017] — Introduced elastic weight consolidation for overcoming catastrophic forgetting."
-  - "[Hochreiter & Schmidhuber, 1997] — Proposed LSTM to address vanishing gradient in RNNs."
-  - "[Goodfellow et al., 2016] — Standard deep learning textbook cited for foundational concepts."
-  - "[French, 1999] — Early work defining catastrophic forgetting in connectionist networks."
+  - "[Kirkpatrick et al., 2017] — Introduced Elastic Weight Consolidation (EWC) to overcome catastrophic forgetting."
+  - "[Hochreiter & Schmidhuber, 1997] — Developed the LSTM architecture to handle long-term dependencies."
+  - "[LeCun et al., 2015] — Provided a foundational overview of deep learning and its capabilities."
+  - "[De Lange et al., 2022] — Offered a comprehensive survey on continual learning for classification."
 relevance:
   topics:
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      justification: Reviews deep learning for time series forecasting (load, traffic, solar, rainfall).
-    - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Compares LSTM, CNN, and hybrid models for sequence prediction tasks.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      justification: Covers multivariate time series anomaly detection with DL and continual learning.
-    - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Evaluates graph neural networks and variational autoencoders for anomaly detection.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      justification: Systematically compares DL models against traditional methods and baselines.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: Assesses preprocessing, feature engineering, and continual learning impacts on performance.
-  contribution: "This survey provides a systematic evaluation framework for comparing deep learning architectures (LSTM, CNN, GNN) against traditional time series methods, directly applicable to Odin's spending forecasting module. The review of anomaly detection algorithms, including graph deviation networks and variational autoencoders, informs the design of Odin's anomaly detection system. The analysis of preprocessing techniques (EMD, wavelet, ICA) and data augmentation offers guidance for improving Odin's expense categorization accuracy. The continual learning taxonomy (regularization, replay, parameter isolation) supports Odin's need to adapt to changing user spending patterns without catastrophic forgetting."
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Provides a general overview of DL/CL applications but not specific PFMS."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "medium"
+      justification: "Directly discusses limitations of DL (forgetting, non-stationarity) and gaps in CL research."
+    - code: "5.A"
+      name: "Financial Behavioral Profiles in Personal Finance"
+      relevance: "contextual"
+      justification: "Focuses on technical modeling rather than financial behavior itself."
+    - code: "5.B"
+      name: "Profile Dynamics and the Cold-Start Problem"
+      relevance: "low"
+      justification: "CL addresses dynamic data, but not explicitly user profile cold-start."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "high"
+      justification: "Reviews many forecasting models (LSTM, CNN, etc.) directly applicable to spending prediction."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "high"
+      justification: "Evaluates algorithms (LSTM, GRU, etc.) for time series forecasting tasks."
+    - code: "8.A"
+      name: "Anomaly Detection in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Reviews DL and CL methods for anomaly detection in time series."
+    - code: "8.B"
+      name: "Anomaly Detection Algorithms for Personal Spending Data"
+      relevance: "medium"
+      justification: "Discusses specific algorithms like Graph Deviation Networks and VAE for anomaly detection."
+    - code: "9.A"
+      name: "Mobile-First Design Principles and Rationale"
+      relevance: "contextual"
+      justification: "Mentions resource constraints for embedded/mobile sensing, informing design trade-offs."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "medium"
+      justification: "Provides evaluation approaches for DL and CL models, including accuracy and forgetting metrics."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "medium"
+      justification: "Empirically compares different DL and CL algorithms on various tasks and datasets."
+  contribution: "This paper provides a foundational review of deep learning and continual learning techniques for time series modeling. It informs Odin's forecasting module by comparing the performance of various models like LSTM and CNN. The review of continual learning is crucial for Odin's anomaly detection and personalization, as it highlights methods to adapt to changing user behavior. The discussion of preprocessing techniques is relevant for ensuring data quality in Odin's expense categorization pipeline. Finally, the analysis of mobile and embedded sensing constraints can guide Odin's mobile-first design choices."
   directly_justifies:
-    - "CNN with direct multi-step procedure can improve forecasting accuracy by 22.6% over ARIMAX."
-    - "No single deep learning method fits all time series anomaly detection tasks."
-    - "Simple models with feature engineering can outperform deep learning without preprocessing."
-    - "Continual learning with replay buffers accumulates knowledge over time while mitigating forgetting."
-    - "Empirical mode decomposition as preprocessing increased classification accuracy from 94.22% to 99.73%."
+    - "LSTM networks are a strong choice for sequential spending forecasting due to their superior performance over ARIMA."
+    - "Continual learning is necessary to prevent catastrophic forgetting when adapting to a user's evolving financial patterns."
+    - "Advanced preprocessing, like wavelet transforms and EMD, can significantly improve the accuracy of DL models on time series data."
+    - "Replay-based continual learning methods are effective for mobile/embedded devices, balancing performance and resource use."
+    - "Graph neural networks can be used for anomaly detection by modeling relationships between different spending categories."
   limits:
-    - "Survey focuses on sensor time series (wearables, satellites, industrial) not personal finance transaction data."
-    - "Most reviewed studies assume closed-world stationarity; real-world PFMS data may have different properties."
-    - "Computational and memory requirements of continual learning methods for mobile devices are underexplored."
-    - "None identified."
-  mapping_rationale: "This paper is a methodological survey on deep learning and continual learning for time series forecasting and anomaly detection. It does not address Filipino young professionals or cultural financial practices, so topics 1.A-2.C are rejected. The core contributions fall under predictive modeling (6.A) and spending forecasting algorithms (6.B) due to extensive coverage of LSTM, CNN, and hybrid models for time series prediction. Anomaly detection (8.A and 8.B) is covered via graph neural networks and variational autoencoders. Evaluation frameworks (12.A and 12.B) are relevant because the paper systematically compares algorithms and preprocessing techniques. Topics like behavioral profiling (5.A-C), budget recommendation (7.A-C), or UX design (9.A-B) are not addressed. The mapping prioritizes algorithmic modules that Odin could directly implement."
+    - "The survey focuses on sensor time series, which may not perfectly replicate the noise and patterns of financial transaction data."
+    - "Most reviewed CL methods are evaluated on classification tasks, with less focus on regression problems like spending prediction [unacknowledged]."
+    - "The paper does not address the unique challenges of personal finance data, such as user privacy and sparse, irregular transactions [unacknowledged]."
+    - "Specific guidance on integrating CL with constraint-based budget optimization is not provided [unacknowledged]."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The domains most directly relevant were 'Spending Forecasting' (6.A, 6.B) and 'Anomaly Detection' (8.A, 8.B) due to the paper's central focus on time series modeling techniques. 'System Evaluation' (12.A, 12.B) was also relevant as the paper compares different algorithms. 'Behavioral Profiling' (5.A) and 'Existing Systems' (4.A, 4.B) were assessed as medium or contextual because the paper discusses model limitations but not financial behavior or systems specifically. Domains like 'Filipino Cultural Context' (2.A-D), 'Savings & Debt Management' (13.A-C), and 'User Retention' (11.A-B) were considered and rejected as the paper provides no direct claims or evidence for these areas. The overall relevance is high for Odin's technical modules (forecasting, anomaly detection) but contextual for its domain-specific aspects, as the paper is a general methodology review."
 limitations:
-  - "Survey primarily synthesizes existing literature without new empirical experiments. [unacknowledged]"
-  - "Focus on sensor time series limits generalizability to financial transaction sequences. [unacknowledged]"
-  - "Computational cost of continual learning on mobile devices is not quantitatively assessed. [unacknowledged]"
+  - "The survey focuses on sensor time series, which may not perfectly replicate the noise and patterns of financial transaction data."
+  - "Most reviewed CL methods are evaluated on classification tasks, with less focus on regression problems like spending prediction. [unacknowledged]"
+  - "The paper does not address the unique challenges of personal finance data, such as user privacy and sparse, irregular transactions. [unacknowledged]"
+  - "Specific guidance on integrating CL with constraint-based budget optimization is not provided. [unacknowledged]"
 remember_this:
-  - "LSTM achieved 4.82% MAPE for traffic forecasting versus 20.97% for ARIMA."
-  - "Empirical mode decomposition preprocessing raised accuracy from 94.22% to 99.73%."
-  - "No single deep learning method works for all anomaly detection tasks."
-  - "Replay-based continual learning accumulates knowledge over time better than regularization."
-  - "Feature engineering can make simple models outperform deep learning without preprocessing."
+  - "Continual learning is essential for adapting to non-stationary time series data."
+  - "LSTM and CNN are strong baselines for time series forecasting tasks."
+  - "Preprocessing can significantly enhance deep learning model performance, with up to 99.73% accuracy."
+  - "Deep learning models without CL suffer from catastrophic forgetting in dynamic environments."
+  - "Replay-based CL methods balance performance and resource constraints for mobile deployment."
 ```

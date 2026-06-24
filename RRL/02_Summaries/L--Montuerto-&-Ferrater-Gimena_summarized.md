@@ -7,87 +7,97 @@ year: 2026
 venue: Unknown
 odin_topics:
   - 1.C
-  - 3.A
+  - 2.A
+  - 4.B
+  - 5.A
   - 7.A
   - 13.A
   - 13.B
-shorthand_tags:
-  - /financial-behavior
-  - /expense-categorization
-  - /budgeting
-  - /savings
-  - /debt-management
-tldr: Public secondary school teachers in San Francisco District, Camotes Island demonstrate moderate financial literacy in budgeting, spending, and credit management, but low literacy in savings and investing.
-problem_and_motivation: Public school teachers in the Philippines face financial difficulties including budget deficits, debt cycles, and reliance on loans. Financial literacy is essential for personal financial management and effective teaching of financial education, yet limited research exists on rural public school teachers' financial literacy.
+tldr: Public secondary school teachers in Camotes, Cebu show moderate financial literacy in budgeting and spending but lower in savings and investing, with debt cycles and demographic influences, prompting a primer.
+problem_and_motivation: Public school teachers in the Philippines face serious financial struggles, often resorting to borrowing to cover budget deficits, yet there is limited understanding of their specific financial literacy levels. The debt problem is escalating, and teachers lack adequate financial management knowledge. A targeted primer is needed to guide teachers in better managing their income and breaking the debt cycle.
 approach:
-  - Descriptive-correlational design with 150 teachers from three national high schools.
-  - Researcher-made survey with two parts: demographic profile and financial literacy items (budgeting, savings, investing, spending, credit/debt).
-  - Cronbach's alpha of 0.885 confirmed reliability.
-  - Analysis used frequency, percentage, weighted mean, Chi-square independence test, and independent t-test.
-  - Ethical principles of beneficence, non-maleficence, justice, and autonomy were followed.
+  - Used a descriptive-correlational design with 150 randomly selected teachers from three national high schools in San Francisco District, Camotes, Cebu.
+  - Administered a researcher-made survey with two parts: demographic profile and financial literacy items on budgeting, savings, investing, spending, and credit/debt management.
+  - The survey had good reliability (Cronbach's alpha = 0.885) after a pilot test with 20 respondents.
+  - Data analyzed using frequency, percentage, weighted mean, Chi‑square test of independence, and independent t‑test.
+  - Ethical principles of beneficence, non‑maleficence, justice, and autonomy were followed.
 findings:
-  - "num: 42% of respondents were aged 24-32 years (mean 36.11), 78.67% female, 68% married, 74% had no other income sources."
-  - "num: Budgeting aggregate mean 2.96 (moderate), savings 2.42 (low), investing 1.98 (low), spending 3.17 (moderate), credit/debt 3.05 (moderate)."
-  - "num: Age significantly related to budgeting (p=0.004), savings (p=0.001), investing (p=0.0001), and credit/debt (p=0.001)."
-  - "num: Educational attainment significantly related to savings (p=0.038) and credit/debt (p=0.001)."
-  - "num: Gender significantly related to investing (p=0.010)."
-  - Teachers prioritize household needs over wants (spending item mean 3.57).
-  - Teachers lack correct investment knowledge (mean 2.21) and avoid Bitcoin/online investments (mean 1.70).
-  - No significant relationship between profile and spending behavior.
-  - Significant differences found in investing by age, gender, length of service, salary step, and other income sources.
+  - "num: 42% of respondents were aged 24‑32 years, 78.67% were female, and 74% had no other income sources."
+  - "num: Aggregate mean for budgeting was 2.96 (moderate), savings 2.42 (less), investing 1.98 (less), spending 3.17 (moderate), and credit/debt 3.05 (moderate)."
+  - "num: Age showed significant relationships with budgeting, savings, investing, and debt management (p ≤ 0.005)."
+  - "num: Gender and other sources of income were significantly related to investing (p ≤ 0.010)."
+  - "num: Highest educational attainment was significantly related to debt management (p = 0.001)."
+  - Teachers prioritize family needs over wants and avoid unnecessary expenses.
+  - Borrowing is typically reserved for emergencies, but many still experience deficit budgeting.
+  - There is no significant difference in overall financial literacy across most demographic groups except age and educational attainment for certain aspects.
 key_figures_tables:
-  - "Table 2: Respondent profile → 42% aged 24-32, 78.67% female, 74% have no other income."
-  - "Table 4: Savings literacy → aggregate mean 2.42 (low), highest saving for emergencies (2.79), lowest using savings for business (1.94)."
-  - "Table 5: Investing literacy → aggregate mean 1.98 (low), highest correct investment knowledge (2.21), lowest Bitcoin (1.70)."
-  - "Table 9-13: Relationship tests → age significantly affects budgeting, savings, investing, debt; education affects savings and debt."
+  - "Table 2: Respondent profile (age, gender, civil status, etc.) → Majority are young, female, married, with no extra income."
+  - "Table 3‑7: Extent of financial literacy in each domain → Budgeting and spending are moderate; savings and investing are low."
+  - "Table 9‑13: Chi‑square tests for relationships → Age and education are significant predictors for several domains."
+  - "Table 14‑18: ANOVA/t‑test for differences → Age, gender, length of service, steps, and other income affect investing; age and education affect debt management."
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "Financial literacy"
-    definition: "Combination of knowledge about financial, credit, and debt management necessary to make informed, financially responsible decisions."
-  - term: "DepEd"
-    definition: "Department of Education of the Philippines."
-  - term: "CSC"
-    definition: "Civil Service Commission of the Philippines."
+  - term: Financial literacy
+    definition: Knowledge about financial, credit, and debt management necessary for making informed, responsible financial decisions.
+  - term: Deficit budgeting
+    definition: Spending money not yet earned, often leading to a cycle of borrowing to cover shortfalls.
 critical_citations:
-  - "[Lusardi & Mitchell, 2011] — Foundational overview of global financial literacy."
-  - "[Casingal & Ancho, 2022] — Financial literacy status of Philippine public school teachers."
-  - "[Tilan & Cabal, 2020] — Financial literacy of Filipino public school teachers and employees."
+  - "[Lusardi & Mitchell, 2011] — Establishes importance of financial literacy globally."
+  - "[Casingal & Ancho, 2022] — Benchmarks financial literacy of Philippine public teachers."
+  - "[Tilan & Cabal, 2020] — Links teachers' low net pay to borrowing behaviors."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Paper describes spending, saving, and debt behaviors of Filipino public school teachers, many of whom are young professionals."
-    - code: "3.A"
-      name: "Expense Categorization Frameworks"
-      justification: "Teachers prioritize essential household commodities over wants, demonstrating a spending categorization framework."
-    - code: "7.A"
-      name: "Budgeting Strategies as Domain Knowledge"
-      justification: "Paper measures budgeting practices including allocation of earnings, record-keeping, and having unspent money."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Paper assesses savings behavior including emergency savings, bank/cooperative savings, and insurance purchasing."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Paper evaluates credit and debt management practices such as loan evaluation, cost calculation, and borrowing only for emergencies."
-  contribution: "This paper provides empirical evidence on the budgeting, spending, savings, investing, and debt management behaviors of Filipino public school teachers, a professional demographic with financial struggles. Odin can use these findings to calibrate its budget recommendation module to prioritize essential expenses and emergency savings. The observed low investment literacy suggests Odin should include simplified investment education features. The debt cycle pattern (borrowing to pay previous debt) justifies an anomaly detection module that flags recurring deficit spending. The lack of correlation between profile and spending behavior indicates that Odin's spending forecasting may rely less on demographic inputs."
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: contextual
+      justification: Teachers are professionals; their behavior may inform similar cohorts.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Describes borrowing and family‑first spending practices common among Filipino teachers.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: medium
+      justification: Highlights the lack of financial literacy and pervasive debt, indicating system gaps.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Profiles teachers by demographics and literacy levels, aiding behavioral segmentation.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Provides empirical data on teachers' budgeting practices and deficits.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: high
+      justification: Directly measures savings behavior and finds low literacy, informing savings features.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: high
+      justification: Assesses credit and debt management, revealing moderate literacy and debt cycles.
+  contribution: This paper empirically documents the financial literacy gaps of Filipino public teachers across budgeting, savings, investing, spending, and debt management. It provides baseline data on demographic correlates that can inform Odin's user profiling and personalization modules. The identified deficit budgeting and debt cycles justify the need for Odin's budget recommendation and debt management features. The proposed primer framework can be adapted for in‑app educational content. The study's findings on spending priorities (family over wants) guide Odin's expense categorization and constraint settings.
   directly_justifies:
-    - "Public school teachers allocate earnings primarily to essential household commodities (weighted mean 3.39)."
-    - "Teachers save only 20% of earnings for emergencies (weighted mean 2.79) and show low savings account use (2.44)."
-    - "Teachers lack correct investment knowledge (2.21) and avoid Bitcoin/online investments (1.70)."
-    - "Teachers borrow only in emergencies (2.89) but calculate borrowing costs before loans (3.14)."
-    - "Age significantly correlates with budgeting, savings, investing, and debt management abilities."
-  limits: "Sample limited to one district (San Francisco, Camotes), rural context may not generalize to urban teachers. Cross-sectional design cannot establish causality. Self-reported data may overstate financial literacy. No measure of actual financial outcomes (e.g., debt levels, savings balances)."
-  mapping_rationale: "Functional domains screened: Behavioral profiling (no profiling algorithm), spending forecasting (no forecasting), budget recommendation (budgeting practices described but no algorithm), anomaly detection (debt cycles suggestive but not anomaly detection), expense categorization (spending priorities provide categorization insights), savings & debt management (directly measured). Selected codes: 1.C (financial behavior of professionals), 3.A (expense categorization framework), 7.A (budgeting strategies), 13.A (savings goals), 13.B (debt management). Rejected codes: 2.A (culturally specific practices not the focus), 5.A (no behavioral profile classification), 6.A (no predictive modeling), 8.A (no anomaly detection algorithm), 10.A (privacy not discussed), 11.A (engagement not discussed). Borderline case 1.B (financial structure) was rejected because the paper profiles teachers but does not analyze financial structure beyond income."
+    - "Teachers show lower savings literacy (mean 2.42), supporting the need for Odin's savings goal tools."
+    - "Credit/debt management is moderate (mean 3.05), but cycles of deficit budgeting are common."
+    - "Age and education significantly affect financial behaviors, informing Odin's adaptive profiling."
+    - "Most teachers (74%) have no additional income, highlighting the importance of managing single income streams."
+  limits:
+    - "Sample limited to three schools in one district, reducing generalizability."
+    - "Self‑reported survey may suffer from social desirability bias."
+    - "Cross‑sectional design prevents causal inference."
+    - "Does not examine actual financial outcomes (e.g., loan defaults, savings balances)."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. Relevant domains flagged were Filipino Cultural Context (2.A), Existing Systems & Gaps (4.B), Behavioral Profiling (5.A), Budget Recommendation (7.A), and Savings & Debt Management (13.A, 13.B). The paper directly measures financial behaviors, making 13.A and 13.B high relevance; it provides supporting evidence for profiling and budgeting strategies (medium), and contextual background for cultural practices. Domains such as Forecasting, Anomaly Detection, Mobile Design, Privacy, Retention, and Evaluation were rejected because the paper does not address predictive models, outliers, UX, privacy, user engagement, or system evaluation. Borderline cases: 2.B (cyclical spending) was considered but only mentioned as a debt cycle without seasonal patterns, so not selected. Overall, the paper is moderately relevant to Odin, offering empirical grounding for savings/debt modules and user behavioral insights.
 limitations:
-  - "Small sample from one rural district; may not represent urban teachers. [unacknowledged]"
-  - "Cross-sectional design; causality cannot be inferred. [unacknowledged]"
-  - "Self-reported survey data may overstate financial literacy due to social desirability bias. [unacknowledged]"
-  - "No validation of reported behaviors against actual financial records."
+  - "Sample limited to one district on Camotes Island, Philippines. [unacknowledged]"
+  - "Self‑reported data may inflate literacy perceptions. [acknowledged in discussion?]"
+  - "Cross‑sectional design cannot establish causality."
+  - "Does not evaluate the actual effectiveness of the proposed primer."
 remember_this:
-  - "Teachers showed low financial literacy in savings (2.42) and investing (1.98)."
-  - "Age significantly correlates with budgeting, savings, investing, and debt management."
-  - "Most teachers (74%) have no other income sources beyond salary."
-  - "Teachers prioritize family needs over wants but lack investment knowledge."
+  - "Teachers have moderate budgeting and spending literacy but low savings and investing literacy."
+  - "Age is the strongest demographic predictor of financial literacy across multiple domains."
+  - "74% of teachers have no income beyond their salary, emphasizing single‑income constraints."
+  - "Debt cycles are common, with teachers using current income to pay past debts."
+  - "Highest educational attainment significantly influences debt management skills."
 ```

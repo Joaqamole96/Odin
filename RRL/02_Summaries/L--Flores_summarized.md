@@ -1,37 +1,39 @@
 ```yaml
-paper_id: d0c5b8a4-3e2f-4a1b-9c7d-6e5f4a3b2c1d
+paper_id: 2b8f6e7a-3c4d-4e5f-8a9b-0c1d2e3f4a5b
 designation: local
 title: Financial freedom of Filipinos in personal finance management
 authors: Flores, C. A. R.
 year: 2025
 venue: Unknown
 odin_topics:
+  - 1.A
+  - 1.B
   - 1.C
   - 2.A
-  - 7.A
+  - 2.C
+  - 3.A
+  - 3.B
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.B
+  - 13.A
   - 13.B
-shorthand_tags:
-  - /financial-behavior
-  - /cultural-practices
-  - /budgeting-strategies
-  - /debt-management
-tldr: Filipinos face financial literacy challenges due to traditional saving methods and debt reliance, hindering effective budgeting and emergency fund preparedness.
-problem_and_motivation: Many Filipinos lack financial literacy, leading to poor cash, debt, risk, and wealth management. Traditional attitudes like the "come-what-may" mindset and reliance on informal savings (alkansya) and debt (utang) perpetuate financial instability. This study evaluates how cash, debt, risk, and wealth management contribute to financial freedom among Filipino corporate employees.
+tldr: Filipino financial behaviors are shaped by traditional saving methods, low literacy, and cultural attitudes, leading to poor emergency preparedness and high debt reliance.
+problem_and_motivation: Most Filipinos lack financial literacy and do not understand the purpose of key financial instruments for achieving true financial wellness. This leads to poor spending habits, reliance on traditional saving methods, and lack of emergency fund preparedness. The study addresses this gap by examining cash, debt, risk, and wealth management practices among Filipino corporate employees.
 approach:
-  - Descriptive study with 150 respondents from ten Philippine Stock Exchange-listed corporations in Metro Manila.
-  - Survey questionnaire assessed demographic and work profiles, plus cash, debt, risk, and wealth management practices.
-  - Weighted means computed for each financial management dimension and overall financial freedom.
-  - Linear regression analysis tested the contribution of the four dimensions to financial freedom.
+  - Descriptive study using survey questionnaires distributed to 150 respondents from 10 major Philippine corporations.
+  - Data collected on demographic profiles, work profiles, and personal finance management practices in four areas.
+  - Weighted mean analysis used to assess the degree of financial freedom in each management area.
+  - Linear regression analysis performed to determine the significant contribution of each finance variable to overall financial freedom.
+  - Respondents included top management, middle management, and rank-and-file staff from companies like SM Prime and Ayala Corporation.
 findings:
-  - num: 57% of respondents are male, 63% married, 43% aged 31-40, 57% have 1-2 children.
-  - num: 40% hold rank-and-file positions, 50% have worked 11-18 years, 40% earn ₱30,000 or above monthly.
-  - Respondents agree that leaving cash at home risks theft or loss (weighted mean 3.73).
-  - Paying off highest-interest debt first and exceeding minimum payments is the top debt management strategy (weighted mean 3.7).
-  - Risk management agreement: lack of health coverage can cause financial ruin (weighted mean 3.7).
-  - Wealth management agreement: early investing builds positive spending habits (weighted mean 3.7).
-  - num: Regression analysis found cash, debt, risk, and wealth management do not significantly contribute to financial freedom (p > 0.05).
-  - Filipinos avoid bank savings due to fear of bankruptcy and inflation, preferring traditional alkansya.
-  - Life insurance is often perceived as unnecessary or an expense, unlike in the U.S.
+  - Most respondents were male (57%), married (63%), aged 31-40 (43%), with 1-2 children (57%).
+  - Majority held rank-and-file positions (40%) with 11-18 years of work experience (50%) and monthly income of ₱30,000 or above (40%).
+  - Respondents agreed on the risks of keeping cash at home (WM=3.73) and the importance of paying high-interest debt first (WM=3.7).
+  - Risk management had the highest overall weighted mean (3.65) among finance variables.
+  - Linear regression showed that cash, debt, risk, and wealth management do not significantly contribute to financial freedom.
+  - Cultural attitudes like the "come-what-may" mindset and reliance on traditional alkansya (bamboo savings) hinder effective financial planning.
 key_figures_tables:
   - None.
 key_equations:
@@ -39,54 +41,90 @@ key_equations:
     explanation: ""
 definitions:
   - term: CDRW
-    definition: Cash management, debt management, risk management, and wealth management.
-  - term: Alkansya
-    definition: Traditional Filipino bamboo or clay jar used for saving money at home.
-  - term: Utang
-    definition: Debt or loan, often informal with high interest.
+    definition: Cash, Debt, Risk, Wealth management – the four areas of personal finance.
+  - term: PDIC
+    definition: Philippine Deposit Insurance Corporation – insures bank deposits.
   - term: NFIS
-    definition: Negative finding information system, affecting personal credit standing.
-  - term: Active income
-    definition: Income earned through direct work or time exchange.
-  - term: Passive income
-    definition: Income generated from assets or others' time.
+    definition: Negative Finding Information System – tracks credit standing.
+  - term: GDP
+    definition: Gross Domestic Product – total value of goods produced in a country.
 critical_citations:
-  - "[Lusardi, 2004] — Savings and effectiveness of financial education."
-  - "[Lusardi & Beeler, 2007] — Planning differences across cohorts."
-  - "[Lusardi et al., 2008] — Social marketing for saving behavior."
+  - "[Lusardi, 2004] — Foundational work on savings and financial education."
+  - "[Lusardi & Beeler, 2007] — Examines saving behavior across cohorts and planning."
+  - "[Lusardi, Keller, & Keller, 2008] — Social marketing approaches to increase savings."
 relevance:
   topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: The study surveys Filipino corporate employees, a key demographic for Odin.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: Details income, work position, and financial practices of this group.
     - code: 1.C
       name: Financial Behavior of Filipino Young Professionals
-      justification: Documents spending habits, debt reliance, and emergency fund neglect.
+      relevance: high
+      justification: Describes spending, saving, and debt behaviors directly relevant to PFMS.
     - code: 2.A
       name: Culturally Specific Financial Practices
-      justification: Describes alkansya usage, utang cycle, and traditional saving mindsets.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      justification: Lists specific budgeting and debt repayment strategies (e.g., pay highest interest first).
+      relevance: high
+      justification: Identifies traditional alkansya and "come-what-may" attitudes shaping Filipino finance.
+    - code: 2.C
+      name: User-Declared Financial Preferences
+      relevance: medium
+      justification: Provides survey-based insights into user attitudes towards cash, debt, and insurance.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: Discusses budgeting and allocation, foundational for expense categorization.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: medium
+      justification: Highlights need for categories like emergency funds and debt payments.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: Provides background on financial practices but not on PFMS systems per se.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: medium
+      justification: Identifies gaps in financial literacy and awareness that PFMS could address.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Directly profiles Filipino financial behaviors (e.g., spending, saving, debt) for behavioral classification.
+    - code: 5.B
+      name: Profile Dynamics and the Cold-Start Problem
+      relevance: contextual
+      justification: Discusses behavioral patterns but does not address cold-start profiling.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: high
+      justification: Emphasizes emergency fund preparedness and saving habits, core to savings goals.
     - code: 13.B
       name: Debt Management in PFMS
-      justification: Provides detailed debt management tactics and highlights high debt reliance.
-  contribution: This paper justifies Odin's need for culturally adaptive budgeting recommendations that respect traditional practices like alkansya while promoting bank-based emergency funds. It supports a debt management module that prioritizes high-interest debt and offers behavioral nudges to break the utang cycle. The findings also inform risk management features that address Filipino-specific perceptions of life insurance.
+      relevance: high
+      justification: Provides specific debt management strategies relevant to Odin's debt modules.
+  contribution: "This paper provides empirical evidence on Filipino financial behaviors that informs Odin's user profiling module. It identifies specific cultural practices, like traditional saving and high debt reliance, that Odin must accommodate in its expense categorization and behavioral models. The findings on emergency fund gaps support Odin's savings goal management features. The identified lack of financial literacy highlights the need for Odin's educational nudges and simplified budget recommendations. Overall, the paper justifies a PFMS that is culturally aware and focuses on foundational financial practices."
   directly_justifies:
-    - Filipinos exhibit a "come-what-may" attitude that hinders effective budgeting.
-    - Traditional alkansya saving is preferred over bank accounts due to trust issues.
-    - Paying highest-interest debt first is a recognized strategy among Filipino employees.
-    - Only 40% of surveyed corporate workers earn ₱30,000 or above monthly.
+    - "Filipinos exhibit low emergency fund preparedness, suggesting Odin should prioritize emergency savings goals."
+    - "Traditional saving methods like alkansya indicate a need for digital alternatives that build trust."
+    - "Debt management strategies like paying highest interest first should be incorporated into Odin's recommendation engine."
+    - "Financial literacy gaps in the Philippines justify Odin's educational and simplified budgeting features."
   limits:
-    - Sample limited to 10 corporations in Metro Manila, not generalizable to all Filipino young professionals.
-    - Cross-sectional design prevents causal inference; regression found no significant contribution of CDRW to financial freedom. [unacknowledged]
-    - Self-reported survey data may be subject to social desirability bias.
-  mapping_rationale: The paper directly addresses financial behaviors (1.C) and culturally specific practices (2.A) through discussion of alkansya and utang. Budgeting strategies (7.A) are explicit in debt management recommendations. Debt management (13.B) is a core focus. Topics like algorithmic classification (5.C), spending forecasting (6.A/B), or mobile design (9.A/B) are absent. Risk management content is general and not specific to PFMS algorithms, so excluded.
+    - "The study is limited to 150 respondents from 10 large corporations, not representative of all Filipino young professionals."
+    - "The linear regression showed no significant contribution of the four finance variables to financial freedom, suggesting other unmeasured factors are at play."
+    - "The study does not evaluate any existing PFMS, only general financial practices."
+  mapping_rationale: "The systematic scan across all 12 functional domains identified strong relevance for domains related to Filipino cultural context, expense categorization, behavioral profiling, and savings/debt management. Topics 1.A, 1.B, 1.C, 2.A, 5.A, 13.A, and 13.B were assigned 'high' relevance as the paper directly characterizes the financial structure, culturally specific practices, and behavioral profiles of Filipino employees, while also offering specific strategies for savings and debt management that directly inform Odin's modules. Topics 2.C and 3.A/B were assigned 'medium' as they provide contextual evidence for user preferences and expense categorization. Topic 4.B was 'medium' for identifying gaps in financial literacy and awareness. The domains related to forecasting (6.A/B), budget recommendation algorithms (7.A-D), anomaly detection (8.A-C), mobile-first design (9.A/B), data privacy (10.A/B), retention (11.A/B), and system evaluation (12.A-C) were rejected as the paper does not address these algorithmic or design topics. The paper's focus is on descriptive analysis of current financial practices, not on building or evaluating PFMS systems."
 limitations:
-  - Sample size small (n=150) and non-random; only Metro Manila corporations.
-  - Regression analysis may suffer from omitted variable bias. [unacknowledged]
-  - No validation of survey instrument beyond face validity.
-  - Does not address digital or mobile financial management tools.
+  - "Sample limited to 150 employees from 10 large corporations, not representative. [unacknowledged]"
+  - "Linear regression showed no significant contribution of the four finance variables to financial freedom. [unacknowledged]"
+  - "Study does not account for regional variations in Filipino financial practices."
 remember_this:
-  - Only 40% of respondents earn ₱30,000 or above monthly.
-  - Paying highest-interest debt first is the top debt management strategy.
-  - Filipinos prefer alkansya over bank savings due to bankruptcy and inflation fears.
-  - Regression found no significant contribution of CDRW to financial freedom.
+  - "Low financial literacy and traditional saving habits characterize Filipino young professionals."
+  - "Emergency fund preparedness is critically low, with most relying on debt for unexpected expenses."
+  - "Paying high-interest debt first is a key strategy for financial freedom."
+  - "Risk management had the highest agreement score, indicating awareness of insurance importance."
+  - "Cash, debt, risk, and wealth management did not significantly predict financial freedom in this sample."
 ```

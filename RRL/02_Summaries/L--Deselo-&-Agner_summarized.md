@@ -1,85 +1,116 @@
 ```yaml
 paper_id: 10.5539/ijef.v15n6p27
-designation: international
+designation: local-algorithm-specific
 title: Financial Inclusion and the Role of Financial Literacy in the Philippines
 authors: Desello, J. M. U.; Agner, M. G. R.
 year: 2023
 venue: International Journal of Economics and Finance
 odin_topics:
+  - 1.A
+  - 1.B
   - 1.C
+  - 2.A
+  - 2.D
+  - 4.A
+  - 4.B
   - 5.A
-shorthand_tags:
-  - /financial-behavior
-  - /behavioral-profile
-tldr: Financial literacy positively predicts financial account ownership and use of financial services among Filipinos, with age, gender, income, and household decision-making role as key drivers.
-problem_and_motivation: Financial inclusion is a national development agenda in the Philippines, but local studies linking financial literacy to inclusion using nationally representative data are scarce. Understanding the drivers of account ownership and service usage is necessary to bridge the inclusion gap and raise financial literacy levels.
+  - 10.A
+tldr: Financial literacy positively drives financial inclusion in the Philippines, increasing account ownership and service use likelihood.
+problem_and_motivation: Philippine-based studies linking financial literacy and financial inclusion via nationally representative surveys are scarce. This gap limits evidence-based policy design to bridge the financial inclusion gap and raise literacy levels.
 approach:
-  - Data from Bangko Sentral ng Pilipinas 2019 Financial Inclusion Survey (n=1,200).
-  - Financial literacy measured with three-item quiz (inflation, simple interest, compound interest).
-  - Dependent variables: ownership of formal accounts (bank, e-money, cooperative, microfinance) and use of financial services (credit, investment, insurance).
-  - Linear probability and probit models estimated with robust standard errors.
-  - Controls include age, gender, employment, education, income, residence, remittance receipt, awareness of BSP programs, and household financial decision-maker role.
+  - Data from the BSP's 2019 Financial Inclusion Survey, n = 1,200 respondents.
+  - Used a three-item financial literacy quiz covering inflation and interest rates.
+  - Applied OLS and probit regression models with robust standard errors.
+  - Proxied financial inclusion via account ownership and use of financial services.
+  - Modeled account types (bank, e-money, cooperative, microfinance) and services (credit, investment, insurance) separately.
 findings:
-  - "num: A one-standard-deviation increase in financial literacy raises likelihood of account ownership by 3.7-4.2 percentage points."
-  - "num: A one-point increase in financial literacy score increases likelihood of availing a financial service by 4.9-6.0 percentage points."
-  - "num: Financial literacy increases bank account ownership by 2.1 percentage points and investment ownership by 3.7-4.2 percentage points."
-  - Awareness of BSP financial education programs and being the main household financial decision-maker are strong positive drivers of inclusion.
-  - Being female positively correlates with account ownership and use of formal credit and insurance, but negatively with investment.
-  - Higher education (college or vocational) and income above 40,000 PHP significantly increase likelihood of owning a bank account and using financial services.
+  - "num: A one-standard-deviation increase in financial literacy scores increased the likelihood of holding at least one account by 3.7 to 4.2 percentage points."
+  - "num: A one-point increase in financial literacy scores improved the likelihood of availing of a financial service by 4.9 to 6.0 percentage points."
+  - "num: Financial literacy increased the likelihood of holding a bank account by 2.1 percentage points."
+  - Age, gender, employment, income above PHP 40,000, and being the main financial decision-maker positively correlate with financial inclusion.
+  - Being unemployed and having low income (below PHP 10,000) negatively correlate with account ownership and service use.
+  - Awareness of BSP programs positively influences account ownership and investment holdings.
+  - The positive effect of financial literacy on financial inclusion is consistent with findings from Cambodia, Vietnam, Kenya, and Tanzania.
 key_figures_tables:
-  - "Table 1: OLS and probit results for owning at least one account → Literacy increases ownership by 3.7-4.2 pp."
-  - "Table 3: Financial literacy effect on any financial service → Increases by 4.9-6.0 pp."
-  - "Table 4: Literacy only significant for accounts and investments → 3.7-4.2 pp for investments."
+  - "Table 1: Financial literacy and ownership of at least one account → Literacy increases likelihood by 3.7-4.2 percentage points."
+  - "Table 2: Financial literacy and ownership of specific accounts → Positive effect only for bank accounts, increasing likelihood by 2.1 percentage points."
+  - "Table 3: Financial literacy and availing of financial services → Literacy increases likelihood by 4.9-6.0 percentage points."
+  - "Table 4: Financial literacy and specific services → Positive effect for account and investment ownership only."
 key_equations:
   - equation: "FA_i = β_0 + β_1 FL_i + β_2 X_i + u_i"
-    explanation: "Financial account ownership as function of literacy and controls."
+    explanation: Models impact of literacy on account ownership.
   - equation: "FS_i = β_0 + β_1 FL_i + β_2 X_i + u_i"
-    explanation: "Financial service usage as function of literacy and controls."
+    explanation: Models impact of literacy on service use.
 definitions:
   - term: BSP
-    definition: "Bangko Sentral ng Pilipinas, the Philippine central bank."
+    definition: Bangko Sentral ng Pilipinas, the Philippine central bank.
   - term: FIS
-    definition: "Financial Inclusion Survey conducted by BSP."
-  - term: Financial literacy
-    definition: "Combination of awareness, knowledge, skill, attitude, and behavior for sound financial decisions."
-  - term: Financial inclusion
-    definition: "Effective access to a wide range of financial services for all, especially vulnerable sectors."
-  - term: GPFI
-    definition: "Global Partnership for Financial Inclusion."
-  - term: OECD/INFE
-    definition: "OECD International Network on Financial Education."
+    definition: Financial Inclusion Survey, a biennial BSP survey.
+  - term: OLS
+    definition: Ordinary Least Squares, a linear regression method.
+  - term: Probit
+    definition: A regression model for binary dependent variables.
 critical_citations:
-  - "[Morgan & Trinh, 2017] — Financial literacy drives inclusion in Cambodia and Vietnam."
-  - "[Grohmann, Klühs, & Menkhoff, 2018] — Cross-country evidence of literacy improving inclusion."
-  - "[Lusardi & Mitchell, 2011] — Financial literacy and retirement planning."
+  - "[Morgan & Trinh, 2017] — Found literacy drives inclusion in Cambodia/Vietnam."
+  - "[Fanta & Kingston, 2021] — Reported literacy strongly predicts inclusion in Kenya/Tanzania."
+  - "[Grohmann & Menkhoff, 2020] — Defined financial inclusion levels."
 relevance:
   topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Provides demographic data on financial inclusion drivers relevant to young professionals.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: low
+      justification: Offers general income and employment data points.
     - code: 1.C
       name: Financial Behavior of Filipino Young Professionals
-      justification: "Paper identifies demographic and literacy drivers of account ownership and service use among Filipinos."
+      relevance: medium
+      justification: Links literacy to account ownership and service use as behavioral outcomes.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Highlights role of household financial decision-making in the Filipino context.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: contextual
+      justification: Mentions remittance flows, which are linked to seasonal and occasion-based spending.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: Reviews existing financial inclusion literature in the Philippines.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Explicitly identifies the scarcity of national-level studies linking literacy and inclusion.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: "Provides empirical determinants (age, gender, income, literacy) that can inform behavioral profile classification."
-  contribution: "This paper justifies using financial literacy scores as a feature in Odin's behavioral profiling module to predict user financial capability. The identified demographic drivers (age, gender, income, employment) inform Odin's spending forecasting and budget recommendation algorithms by providing population-level priors. The finding that household decision-maker role affects financial inclusion supports Odin's design for joint household financial management features. The positive effect of financial literacy on investment uptake directly supports Odin's savings and debt management module design."
+      relevance: medium
+      justification: Literacy is a key determinant of financial behavior (account ownership, service use).
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Uses BSP survey data, implies governance and trust mechanisms.
+  contribution: "This paper directly justifies Odin's financial literacy module by establishing that higher literacy significantly increases financial account ownership in the Philippines. It validates the inclusion of a financial education component within Odin's onboarding or user engagement features. The paper's findings support Odin's behavioral profiling efforts by identifying key demographic drivers of financial inclusion. It provides empirical grounding for Odin's targeting and personalization algorithms, especially for users with lower literacy levels. Finally, it underscores the need for Odin to bridge the gap identified in the Philippine financial inclusion landscape."
   directly_justifies:
-    - "Financial literacy increases the probability of owning a bank account by 2.1 percentage points per standard deviation."
-    - "Being the main household financial decision-maker raises likelihood of using financial services by 24-34 percentage points."
-    - "Awareness of financial education programs positively correlates with account ownership and investment uptake."
-    - "A one-point increase in financial literacy improves financial service uptake by 4.9-6.0 percentage points."
+    - "Financial literacy is a positive driver of financial inclusion in the Philippines."
+    - "Account ownership and financial service use increase with higher financial literacy scores."
+    - "Demographic factors such as age, gender, and income influence financial inclusion."
+    - "Awareness of financial programs correlates with greater financial inclusion."
   limits:
-    - "Only three financial literacy questions may not capture full construct (acknowledged in paper)."
-    - "Cross-sectional design prevents causal inference [unacknowledged]."
-    - "Sample of 1,200 may not fully represent all Filipino subgroups [unacknowledged]."
-  mapping_rationale: "The paper primarily addresses financial behavior of Filipinos (1.C) through empirical analysis of account ownership and service use. It also supports behavioral profiling (5.A) by identifying key determinants such as literacy, age, gender, income, and household decision-making role. Rejected codes include spending forecasting (6.A) as no predictive modeling; budget recommendation (7.A) as no budgeting strategies; anomaly detection (8.A) as no outlier analysis; mobile design (9.A) as no UX; privacy (10.A) as no discussion; retention (11.A) as no engagement metrics; evaluation (12.A) as no system evaluation; savings/debt (13.A) as no goal management. Borderline case 2.B (seasonal spending) not covered."
+    - "The financial literacy measure uses only three quiz items, potentially limiting its robustness."
+    - "The data is from 2019, which may not reflect post-pandemic financial behaviors."
+    - "The study does not explore causality between literacy and inclusion, only correlation."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was flagged as relevant for domains related to Filipino Cultural Context (2.A, 2.D), Existing Systems & Gaps (4.A, 4.B), and Behavioral Profiling (5.A). Topic 4.B was rated 'high' due to the paper's explicit identification of a research gap. Topics 1.C and 2.A were rated 'medium' as they provide supporting evidence for behavioral outcomes and cultural practices. Topics 1.A, 1.B, 4.A, and 10.A were rated 'low' or 'contextual' as they provide background framing or tangential data points. Borderline cases included the paper's mention of remittances (touching 2.B/2.D), which was resolved by assigning 2.D (contextual) and not 2.B. Topics related to algorithm-specific domains (e.g., 6.A, 7.A, 8.A) were considered and rejected because the paper uses standard econometric models (probit/OLS), not advanced PFMS algorithms. Overall, the paper provides foundational evidence for Odin's user education and behavioral profiling modules."
 limitations:
-  - "Uses only three financial literacy questions, which may not capture full construct (acknowledged)."
-  - "Cross-sectional design prevents causal inference [unacknowledged]."
-  - "Sample of 1,200 may not fully represent all Filipino subgroups [unacknowledged]."
-  - "No discussion of potential self-report or social desirability bias [unacknowledged]."
+  - "The financial literacy quiz used only three questions, which may not capture the full construct of financial literacy."
+  - "The study relies on cross-sectional data, precluding causal inference between literacy and inclusion. [unacknowledged]"
+  - "The survey data is from 2019, potentially limiting applicability to current financial behaviors post-pandemic. [unacknowledged]"
 remember_this:
-  - "Financial literacy raises account ownership by 3.7-4.2 percentage points."
-  - "Being main financial decision-maker increases service use by 24-34 percentage points."
-  - "Awareness of BSP programs strongly predicts bank account ownership."
-  - "Women are more likely to own accounts and use formal credit and insurance."
-  - "Income above 40,000 PHP dramatically boosts financial inclusion."
+  - "Financial literacy increases the likelihood of account ownership by 3.7-4.2 percentage points."
+  - "A one-point literacy increase raises financial service use likelihood by 4.9-6.0 percentage points."
+  - "Being the main household financial decision-maker is strongly correlated with financial inclusion."
+  - "Income above PHP 40,000 significantly increases the probability of owning a financial account."
+  - "Awareness of BSP programs positively impacts account ownership and investment participation."
 ```

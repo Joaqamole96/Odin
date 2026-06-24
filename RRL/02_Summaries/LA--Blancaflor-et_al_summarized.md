@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.1145/3698062.3698088
-designation: algorithm-specific
+designation: local-algorithm-specific
 title: Exploring Machine Learning for Credit Card Fraud Detection from a Philippine Perspective
 authors: Blancaflor, E.; Asuncion, K. D.; Reyes, H. J.; Verzosa, M.
 year: 2024
@@ -8,87 +8,88 @@ venue: 2024 The 6th World Symposium on Software Engineering (WSSE)
 odin_topics:
   - 8.A
   - 8.B
-  - 12.B
-shorthand_tags:
-  - /anomaly-detection
-  - /ml-classification
-  - /model-evaluation
-tldr: Evaluates machine learning models (SVM, ANN, k-NN, Naive Bayes, logistic regression) for credit card fraud detection in the Philippines, finding ANN achieves up to 98.44% accuracy.
-problem_and_motivation: Credit card fraud in the Philippines increased 21% since COVID-19, with traditional fraud prevention systems inadequate due to large data volumes, imbalanced distributions, concept drift, and real-time detection needs. There is a need to customize machine learning algorithms to the Philippine economic, technological, and social context to improve fraud detection effectiveness.
+tldr: Examines machine learning techniques for credit card fraud detection tailored to the Philippine context, emphasizing SVM and ANN models.
+problem_and_motivation: Credit card fraud in the Philippines has surged 21% since the pandemic, yet traditional fraud prevention systems are inadequate for securing e-commerce networks. There is a pressing need to evaluate and adapt machine learning models to the country's unique economic, technological, and social milieu to enhance financial security.
 approach:
-  - Data source: credit card transaction data from the Philippines (dataset size not specified).
-  - Methods evaluated: logistic regression, k-Nearest Neighbors, Naive Bayes, Support Vector Machines, and Artificial Neural Networks with GA and SMOTE enhancements.
-  - Evaluation metrics: accuracy, sensitivity, specificity, precision, Matthews Correlation Coefficient, and balanced classification rate.
-  - Baseline comparisons among all models; ANN-SMOTE outperformed others.
+  - Reviews existing literature on fraud detection systems (FDS) and their limitations, such as imbalanced data and concept drift.
+  - Assesses the efficacy of machine learning models including Logistic Regression, k-NN, Naïve Bayes, SVM, and ANN.
+  - Compares the performance of ANN and Logistic Regression enhanced with Genetic Algorithm and SMOTE.
+  - Evaluates models using metrics like accuracy, sensitivity, specificity, precision, Matthews Correlation Coefficient, and balanced classification rate.
+  - Contextualizes findings within the Philippine financial sector, referencing local fraud cases and regulatory responses.
 findings:
-  - "num: ANN-SMOTE achieved the best performance with up to 98.44% accuracy."
-  - "num: k-NN achieved 97.69% accuracy and Naive Bayes 97.92% accuracy."
-  - "num: Logistic regression had the lowest accuracy at 54.86%."
-  - A trade-off exists between model accuracy and explainability; logistic regression is better for regulatory compliance.
-  - Imbalanced data handling via SMOTE and hybrid sampling improves detection performance.
+  - num: Credit card fraud in the Philippines increased by 21% since the COVID-19 outbreak.
+  - num: Online fraud cost Filipino consumers over P540 million in 2021 alone.
+  - num: ANN-SMOTE demonstrated the best performance in accuracy, precision, recall, and F1-score for fraud detection.
+  - num: Logistic regression achieved an accuracy of 54.86%, while k-NN and Naïve Bayes achieved 97.69% and 97.92% respectively.
+  - SVM shows promise for fraud detection, with potential for improved performance through meta-learning.
+  - Machine learning models offer superior pattern detection and scalability, making them the future of fraud detection despite explainability trade-offs.
 key_figures_tables:
-  - "Figure 1: Compares ANN and LR with GA/SMOTE enhancements → ANN-SMOTE has highest precision, recall, and F1."
-  - "Table 1: Lists model accuracies (54.86% to 98.44%) and improvement strategies → hybrid sampling and meta-learning are recommended."
+  - Figure 1: Comparative performance of ANN and LR with GA/SMOTE enhancements → ANN-SMOTE outperforms all other models on key metrics.
+  - Table 1: Evaluation of ML models for credit card fraud detection → Highlights accuracy and improvement strategies for each model.
 key_equations:
-  - equation: "MCC = (TP * TN - FP * FN) / sqrt((TP+FP)(TP+FN)(TN+FP)(TN+FN))"
-    explanation: "Balanced measure for binary classification on imbalanced data."
-  - equation: "f(x) = sgn(x \\cdot w) + b"
-    explanation: "SVM decision function maximizing class separation margin."
+  - equation: "MCC = (TP×TN - FP×FN) / √((TP+FP)(TP+FN)(TN+FP)(TN+FN))"
+    explanation: Balanced measure for binary classification with imbalanced classes.
+  - equation: "BCR = (Sensitivity + Specificity) / 2"
+    explanation: Average recall or balanced accuracy for skewed datasets.
+  - equation: "f(x) = sgn(x.w) + b"
+    explanation: Decision function of SVM for binary classification.
 definitions:
   - term: MCC
-    definition: "Matthews Correlation Coefficient, a balanced metric for binary classification."
+    definition: Matthews Correlation Coefficient, a balanced metric for binary classification.
   - term: BCR
-    definition: "Balanced Classification Rate, average of sensitivity and specificity."
-  - term: Logistic Regression
-    definition: "Statistical model for binary classification predicting event probability."
-  - term: k-NN
-    definition: "K-Nearest Neighbors, non-parametric classifier based on proximity."
-  - term: Naive Bayes
-    definition: "Probabilistic classifier assuming feature independence."
-  - term: SVM
-    definition: "Support Vector Machine, kernel-based classifier maximizing margin."
-  - term: ANN
-    definition: "Artificial Neural Network, deep learning model for pattern recognition."
+    definition: Balanced Classification Rate, the average of sensitivity and specificity.
   - term: SMOTE
-    definition: "Synthetic Minority Over-sampling Technique for imbalanced data."
-  - term: GA
-    definition: "Genetic Algorithm, meta-heuristic for optimization."
+    definition: Synthetic Minority Over-sampling Technique, used to address imbalanced data.
   - term: FPS
-    definition: "Fraud Prevention System, real-time security controls."
+    definition: Fraud Prevention System, a system designed to prevent fraudulent transactions.
   - term: FDS
-    definition: "Fraud Detection System, post-transaction anomaly detection."
+    definition: Fraud Detection System, a system designed to detect fraudulent transactions.
 critical_citations:
-  - "[Awoyemi et al., 2017] — Comparative analysis of ML for credit card fraud."
-  - "[Abdallah et al., 2016] — Survey of fraud detection system challenges."
+  - "[Awoyemi et al., 2017] — Comparative analysis of ML techniques for credit card fraud detection."
+  - "[Abdallah et al., 2016] — Survey of fraud detection systems and their limitations."
 relevance:
   topics:
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: "Credit card fraud detection is a canonical anomaly detection task in financial transaction data."
+      relevance: high
+      justification: Directly addresses fraud detection, a core anomaly detection application for Odin.
     - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: "Paper compares SVM, ANN, k-NN, Naive Bayes, and logistic regression for fraud identification."
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: "Uses accuracy, precision, recall, MCC, and balanced accuracy to benchmark models on imbalanced data."
-  contribution: "For Odin's anomaly detection module (8.B), this paper validates that ANN-SMOTE can effectively identify fraudulent transactions with 98.44% accuracy, supporting algorithm selection. The evaluation framework (12.B) metrics like MCC and balanced accuracy provide robust ways to assess detection performance on imbalanced data, directly informing Odin's testing strategy. The paper's emphasis on real-time detection and adaptive learning guides the design of a real-time anomaly detection subsystem that continuously updates from new transaction patterns."
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Reviews and evaluates algorithms (SVM, ANN) applicable to spending data anomaly detection.
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Provides context on the Philippine digital economy, which includes young professionals.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: low
+      justification: Mentions the Philippine economic and social milieu but does not detail specific practices.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: Briefly discusses existing fraud prevention systems but focuses on security, not personal finance management.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: Discusses data security and privacy concerns in the context of fraud detection.
+  contribution: This paper provides a foundational review of machine learning models for fraud detection, which directly informs Odin's Anomaly Detection module (8.A, 8.B). The comparative analysis of SVM and ANN with techniques like SMOTE offers a benchmark for algorithm selection. The findings on accuracy and performance metrics (MCC, BCR) guide the evaluation framework for Odin's detection capabilities. The emphasis on the Philippine context provides justification for tailoring anomaly detection algorithms to local spending patterns.
   directly_justifies:
-    - "ANN-SMOTE achieves 98.44% accuracy for fraud detection in the Philippine context."
-    - "Logistic regression offers interpretability at the cost of lower accuracy (54.86%)."
-    - "Imbalanced data handling via SMOTE improves detection performance."
-    - "Real-time detection requires models that adapt to concept drift."
+    - "Machine learning models offer superior pattern detection for identifying fraudulent transactions in spending data."
+    - "Support Vector Machines and Artificial Neural Networks are effective for binary classification of fraudulent and non-fraudulent patterns."
+    - "SMOTE and other sampling techniques are crucial for handling imbalanced datasets common in anomaly detection."
+    - "The trade-off between model explainability and accuracy must be considered when deploying fraud detection systems."
   limits:
-    - "Dataset size and exact origin not specified, limiting reproducibility."
-    - "Paper is a literature survey with synthetic examples rather than original experimentation."
-    - "Philippine-specific data may not generalize to other countries."
-  mapping_rationale: "The paper directly addresses anomaly detection (8.A) by framing credit card fraud as an anomaly in transaction streams. It compares multiple algorithms (8.B) including SVM, ANN, and k-NN, which are relevant to Odin's detection module. The evaluation methodology (12.B) using accuracy, MCC, and balanced accuracy on imbalanced data matches Odin's need for robust algorithmic assessment. Topics like behavioral profiling (5.A), spending forecasting (6.A), or budget recommendation (7.A) were rejected because the paper does not discuss user financial behavior or budgeting. Data privacy (10.A) and retention (11.A) are mentioned only peripherally."
+    - "The paper is a literature review and does not present new empirical results from a Philippine dataset."
+    - "The study does not specify the demographic profile (e.g., young professionals) of the fraud victims."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to the Anomaly Detection domain (topics 8.A and 8.B) because it directly evaluates ML algorithms for detecting credit card fraud, which is a key application of anomaly detection in PFMS. It was also flagged as medium relevance to Data Privacy & User Trust (10.A) due to its discussion of security and contextual for Filipino Cultural Context (1.A, 2.A) as it references the Philippine economic setting. Domains like Expense Categorization, Spending Forecasting, and Budget Recommendation were considered and rejected because the paper does not address spending patterns, income allocation, or financial planning. The overall relevance to Odin is primarily for its algorithmic insights into anomaly detection, particularly the choice of ML models and handling of imbalanced data.
 limitations:
-  - "No explicit dataset size or transaction volume provided. [unacknowledged]"
-  - "All reported accuracies are from cited secondary sources, not original experiments. [unacknowledged]"
-  - "Real-time detection challenges mentioned but no latency or throughput benchmarks given."
+  - "The study is a literature review and does not include primary data collection or experimentation on Philippine fraud cases. [unacknowledged]"
+  - "The comparison of model performance (e.g., Table 1) aggregates results from different studies, which may not be directly comparable due to varying datasets. [unacknowledged]"
+  - "The paper does not address the cold-start problem for anomaly detection when user data is sparse. [unacknowledged]"
 remember_this:
-  - "ANN-SMOTE achieves 98.44% accuracy for fraud detection."
-  - "Imbalanced data handling is critical for anomaly detection."
-  - "Explainability trade-off matters for regulatory compliance."
-  - "Real-time detection requires adaptive learning against concept drift."
+  - "Credit card fraud in the Philippines increased by 21% since the pandemic."
+  - "ANN with SMOTE outperformed other models in detecting fraudulent transactions."
+  - "Machine learning models are the future of fraud detection despite accuracy-explainability trade-offs."
+  - "Traditional fraud prevention systems are inadequate for securing e-commerce networks."
 ```

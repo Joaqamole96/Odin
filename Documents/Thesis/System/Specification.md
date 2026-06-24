@@ -29,17 +29,13 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
 # RULES
 
-1. All *italicized statements* (including their subsections) are suggestions that may be modified with justification.
+1. Article flow is hierarchical; if a system module, component, or feature has dependencies, all of those must be discussed fully and completely first before it.
 
-2. Article flow is hierarchical; if a system module, component, or general feature has dependencies, all of those must be discussed fully and completely first before it.
-
-   2.1. The discussion of said dependencies must be as close to the dependent module as possible. For example, three dependency features for dependent feature A must be discussed in order of Article I, II, III (dependencies), then IV (dependent). Feature B whose dependencies are not the exact same must not be Article IV.
+2. The discussion of said dependencies must be as close to the dependent module as possible. For example, three dependency features for dependent feature A must be discussed in order of Article I, II, III (dependencies), then IV (dependent). Feature B whose dependencies are not the exact same must not be Article IV.
 
 3. A system feature or topic merits its own article if it is depended upon by at least two other features or topics. If a feature is used by only one other feature or is self‑contained, it shall be described within that dependent feature's article as a section.
 
 4. Cross‑cutting dependencies, or dependencies with two or more dependents, provided that they qualify as articles, shall be defined in dedicated articles before any module that uses them. These articles appear in order of conceptual dependency (e.g. User → Account → Transaction → Category).
-
-5. Nested statements shall only be a maximum of one indentation
 
 ---
 
@@ -59,31 +55,7 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
 ### Section 1. Acronyms
 
-- FBP: Financial Behavioral Profile
-
-- SHAP: SHapley Additive exPlanations
-
-- BSP: Bangko Sentral ng Pilipinas
-
-- PSA: Philippine Statistics Authority
-
-- RF: Random Forest
-
-- LSTM: Long Short-Term Memory
-
-- IF: Isolation Forest
-
-- LP: Linear Programming
-
-- OOB: Out-of-Bag
-
-- AUC-ROC: Area Under the Receiver Operating Characteristic Curve
-
-- SMOTE: Synthetic Minority Over-sampling Technique
-
-- RFE: Recursive Feature Elimination
-
-- OTP: One-Time Password
+### Section 2. Abbreviations
 
 ---
 
@@ -309,17 +281,17 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
     4. Variable‑Obligated
 
-> NOTE: This should be moved to the FBP module.
-
 ### Section 4. Financial Behavioral Drift
 
-> INFO: Drifting of FBP over time
+> PROP: A user's financial behavioral profile may drift over time. If a user retained a different income stability or obligation weight score for (a set length of time), the system will flag the user for reclassification.
 
 ---
 
 ## ===== Article V. Financial Behavioral Profile Classifiers =====
 
 ### Section 1. Financial Behavioral Profile Classifier
+
+> PROP: The following 
 
 ### Section 2. Data Collection
 

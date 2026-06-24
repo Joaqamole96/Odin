@@ -1,89 +1,132 @@
 ```yaml
-paper_id: 10.11594/ijmaber.04.04.16
-designation: local
-title: Knowledge and Practice of Personal Finance of Non-Teaching Staff in a Private University in Cebu City
-authors: Rico, M. E.; Polinar, M. A. N.; Celada, J. A.
+paper_id: "e3f4c9a2-1b5c-4d8e-9f0a-7c6b5d4e3f2a"
+designation: "local"
+title: "Knowledge and Practice of Personal Finance of Non-Teaching Staff in a Private University in Cebu City"
+authors: "Rico, M. E.; Polinar, M. A. N.; Celada, J. A."
 year: 2023
-venue: International Journal of Multidisciplinary: Applied Business and Education Research
+venue: "International Journal of Multidisciplinary: Applied Business and Education Research"
 odin_topics:
-  - 1.C
-  - 5.A
-  - 7.A
-  - 13.A
-  - 13.B
-shorthand_tags:
-  - /filipino-financial-behavior
-  - /behavioral-profile
-  - /budgeting-domain-knowledge
-  - /savings-management
-  - /debt-management
-tldr: Non-teaching staff at a Philippine private university show moderate knowledge and practice of personal finance, with significant correlations for budgeting, saving, spending, insurance, and investment but not for emergency funds or debt management.
-problem_and_motivation: The COVID-19 pandemic exposed weak financial resilience in the Philippines, where only 25% of adults understand basic financial concepts. Little research focuses on non-teaching staff’s personal finance knowledge and practice. This study examines their financial behavior to identify gaps and recommend improvements.
+  - "1.A"
+  - "1.B"
+  - "1.C"
+  - "2.A"
+  - "3.A"
+  - "3.B"
+  - "4.A"
+  - "4.B"
+  - "5.A"
+  - "5.B"
+  - "13.A"
+  - "13.B"
+tldr: "Non-teaching staff in a Cebu private university demonstrate moderate personal finance knowledge and practice, with weak emergency fund and investment behaviors showing no correlation with knowledge."
+problem_and_motivation: "Filipinos demonstrate low financial literacy, with only 25% understanding basic concepts, and the pandemic has worsened financial instability. Limited research exists on the personal finance practices of non-teaching staff in Philippine universities, leaving a gap in understanding their financial behaviors and needs."
 approach:
-  - Survey of 50 non-teaching staff using simple random sampling at a private university in Cebu City.
-  - Adopted questionnaire from Polinar (2022) measuring knowledge and practice of six indicators on a 4-point Likert scale.
-  - Indicators: budgeting, saving and spending, emergency fund, debt management, insurance, investment.
-  - Descriptive-correlational design using weighted mean and Pearson correlation coefficient.
-  - Data collected via printed and Google Forms questionnaires during the COVID-19 pandemic.
+  - "Descriptive-correlational design with 50 non-teaching staff respondents selected via simple random sampling from a private Cebu university."
+  - "Adopted survey questionnaire measuring knowledge and practice across budgeting, saving/spending, emergency funds, debt, insurance, and investment using a 4-point Likert scale."
+  - "Data collected through printed and Google Forms questionnaires during the COVID-19 pandemic, with ethical protocols followed."
+  - "Statistical analysis employed weighted means for descriptive measures and Pearson correlation for relationships between knowledge and practice."
+  - "Respondents were permanent staff with at least one year of service, ensuring relevant work tenure."
 findings:
-  - num: Grand mean knowledge 3.10 (moderately knowledgeable) and grand mean practice 2.71 (moderately practiced).
-  - num: Budgeting knowledge-practice correlation r=0.939, p=0.002 (significant).
-  - num: Saving and spending correlation r=0.839, p=0.001 (significant).
-  - num: Insurance correlation r=0.969, p=0.001 (significant).
-  - num: Investment correlation r=0.973, p=0.000 (significant).
-  - num: Emergency fund correlation r=0.875, p=0.052 (not significant).
-  - num: Debt management correlation r=0.806, p=0.053 (not significant).
-  - Emergency fund practice mean 2.42 (less practiced); investment practice mean 2.20 (less practiced).
+  - "num: Respondents demonstrated moderate overall personal finance knowledge (grand mean: 3.10) and practice (grand mean: 2.71)."
+  - "Budgeting and saving/spending knowledge were rated 'Highly Knowledgeable' (means: 3.29, 3.32), while investment knowledge was lowest (2.56)."
+  - "Emergency fund and investment practice were 'Less Practiced' (means: 2.42, 2.20), indicating weak behavioral execution."
+  - "Significant positive correlations existed between knowledge and practice for budgeting (r=0.939), saving/spending (r=0.839), insurance (r=0.969), and investment (r=0.973)."
+  - "No significant relationship was found between knowledge and practice for emergency funds (r=0.875, p=0.052) and debt management (r=0.806, p=0.053)."
+  - "The researchers developed an action plan called 'Solidifying Personal Finance in a Teknoy Way' to address weak areas."
+  - "Recommendations include seminars, workshops, and using prior outputs like 'Every Centavo Counts' to enhance financial literacy."
+  - "Potential future research directions include qualitative exploration and studying other variables like money mindset and retirement planning."
 key_figures_tables:
-  - Table 3: Degree of knowledge – budgeting (3.29) and saving/spending (3.32) are highly knowledgeable; emergency fund (3.07), debt (3.25), insurance (3.10), investment (2.56) are moderate → knowledge is uneven.
-  - Table 4: Degree of practice – budgeting (3.07), saving/spending (2.92), debt (3.09), insurance (2.60) moderate; emergency fund (2.42) and investment (2.20) less practiced → emergency and investment are weak.
-  - Table 5: Pearson correlations – significant for budgeting, saving/spending, insurance, investment; not significant for emergency fund and debt management → knowledge does not guarantee practice for these two.
+  - "Table 3: Knowledge means for six indicators → Emergency fund and investment knowledge are moderate, investment knowledge is lowest."
+  - "Table 4: Practice means for six indicators → Emergency fund and investment practice are poor, indicating weak execution."
+  - "Table 5: Pearson correlations for all six variables → Strong correlations for budgeting, saving/spending, insurance, and investment; no correlation for emergency fund and debt management."
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
-  - term: BSP
-    definition: Bangko Sentral ng Pilipinas, the central bank of the Philippines.
+  - term: "BSP"
+    definition: "Bangko Sentral ng Pilipinas, the central bank of the Philippines."
+  - term: "MSMEs"
+    definition: "Micro, Small, and Medium Enterprises."
+  - term: "PFMS"
+    definition: "Personal Finance Management System."
+  - term: "COVID-19"
+    definition: "Coronavirus disease 2019, a global pandemic."
 critical_citations:
-  - "[Polinar et al., 2022] — provided the adopted questionnaire and prior findings."
-  - "[BSP, 2021] — reported low financial literacy among Filipinos."
+  - "[Polinar et al., 2022] — Found significant correlation between financial knowledge and practice among public school teachers."
+  - "[Bangko Sentral ng Pilipinas, 2021] — Revealed low financial literacy rates and poor emergency saving habits in the Philippines."
+  - "[Guliman, 2015] — Showed low financial knowledge among MSME owners, supporting the need for targeted interventions."
+  - "[Mouna & Anis, 2016] — Established that financial literacy significantly influences investment decisions."
 relevance:
   topics:
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      justification: Examines knowledge and practice of non-teaching staff in Cebu City.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      justification: Correlates knowledge and practice to identify behavioral gaps.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      justification: Measures budgeting knowledge and practice with significant correlation.
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      justification: Assesses emergency fund knowledge and practice (weak practice).
-    - code: 13.B
-      name: Debt Management in PFMS
-      justification: Assesses debt management knowledge and practice (non-significant correlation).
-  contribution: "This paper provides empirical evidence on the knowledge-practice gap in personal finance among non-teaching staff, which can inform Odin's behavioral profiling module. The significant correlations for budgeting, saving, insurance, and investment suggest that user knowledge predicts practice, enabling personalized nudges and educational content. The lack of correlation for emergency funds and debt management indicates that these areas require different intervention designs, such as automated savings rules or debt reduction workflows. The paper also identifies specific weak practice areas (emergency funds and investment) that Odin's savings and debt management modules should prioritize."
+    - code: "1.A"
+      name: "Filipino Young Professionals as a Demographic"
+      relevance: "medium"
+      justification: "Studies non-teaching staff, a subset of Filipino professionals, providing demographic context."
+    - code: "1.B"
+      name: "Financial Structure of Filipino Young Professionals"
+      relevance: "medium"
+      justification: "Examines budgeting, saving, and spending behaviors relevant to financial structure."
+    - code: "1.C"
+      name: "Financial Behavior of Filipino Young Professionals"
+      relevance: "medium"
+      justification: "Assesses actual financial practices, offering insights into behavioral patterns."
+    - code: "2.A"
+      name: "Culturally Specific Financial Practices"
+      relevance: "medium"
+      justification: "Discusses Filipino cultural practices like 'paluwagan' and spending-before-saving mentality."
+    - code: "3.A"
+      name: "Expense Categorization Frameworks"
+      relevance: "low"
+      justification: "Mentions budgeting and spending categories but does not propose a categorization framework."
+    - code: "3.B"
+      name: "Expense Category Design Considerations"
+      relevance: "low"
+      justification: "Briefly touches on expense categories without deep design analysis."
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "medium"
+      justification: "References BSP surveys and national financial literacy levels, providing macro-context."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "medium"
+      justification: "Identifies gaps in financial knowledge and practice among non-teaching staff."
+    - code: "5.A"
+      name: "Financial Behavioral Profiles in Personal Finance"
+      relevance: "medium"
+      justification: "Examines knowledge-practice relationships, informing behavioral profiling."
+    - code: "5.B"
+      name: "Profile Dynamics and the Cold-Start Problem"
+      relevance: "low"
+      justification: "Provides baseline knowledge and practice data useful for initial user profiling."
+    - code: "13.A"
+      name: "Savings Goal Management in PFMS"
+      relevance: "medium"
+      justification: "Addresses saving and spending practices, directly relevant to savings goal management."
+    - code: "13.B"
+      name: "Debt Management in PFMS"
+      relevance: "medium"
+      justification: "Includes debt management as a key variable, with findings on knowledge-practice correlation."
+  contribution: "This paper provides empirical baseline data on Filipino non-teaching staff's financial knowledge and practice, directly informing Odin's user profiling and behavioral assessment modules. The finding that knowledge and practice are correlated for budgeting and saving supports Odin's educational feature design, while the weak correlation for emergency funds and investment highlights areas needing behavioral nudges and simplified goal-setting interfaces. The identified gaps in emergency savings and investment practices justify Odin's focus on automated savings features and investment literacy tools. The action plan framework suggests concrete design directions for engagement and retention mechanisms."
   directly_justifies:
-    - "Non-teaching staff have moderate personal finance knowledge (mean 3.10) and practice (mean 2.71)."
-    - "Knowledge and practice of budgeting are significantly correlated (r=0.939, p=0.002)."
-    - "Emergency fund practice is low (mean 2.42) and not significantly correlated with knowledge."
-    - "Investment has the lowest practice (mean 2.20) and knowledge (mean 2.56) among all indicators."
+    - "Knowledge of budgeting and saving is significantly correlated with practice among Filipino non-teaching staff."
+    - "Emergency fund and investment knowledge do not translate to practice, requiring targeted behavioral interventions."
+    - "Financial literacy programs should address both knowledge and behavioral execution for effective PFMS design."
+    - "Non-teaching staff exhibit weak investment practices, justifying simplified investment guidance in PFMS."
   limits:
-    - "Small sample size (n=50) from a single private university in Cebu City limits generalizability."
-    - "Self-reported Likert scale data may overstate knowledge and practice due to social desirability bias."
-    - "Cross-sectional design cannot establish causality between knowledge and practice."
-    - "No validation of the adopted questionnaire beyond prior use [unacknowledged]."
-  mapping_rationale: "The paper was screened against Odin’s functional domains. Behavioral profiling (5.A) applies because it correlates knowledge and practice to identify alignment gaps. Savings & debt management (13.A, 13.B) apply due to explicit measurement of emergency funds, debt, and investment. Budgeting as domain knowledge (7.A) applies because budgeting is a core indicator. Filipino young professional behavior (1.C) applies as the sample is Filipino non-teaching staff in a university. Rejected codes: expense categorization (3.A) – no framework proposed; spending forecasting (6.A) – no prediction; anomaly detection (8.A) – no outliers; mobile-first (9.A) – no UX; data privacy (10.A) – not discussed; retention (11.A) – no engagement metrics; evaluation (12.A) – not an algorithmic evaluation."
+    - "Small sample size (n=50) from a single private university limits generalizability to all Filipino professionals."
+    - "Cross-sectional design prevents causal inference between knowledge and practice."
+    - "Focus on non-teaching staff excludes teaching faculty and other professional groups."
+    - "Self-reported data may introduce social desirability bias in financial responses."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as relevant to the Filipino Cultural Context domain (codes 2.A, 2.B, 2.C, 2.D) due to its focus on Filipino spending practices and cultural financial behaviors. It also maps to Expense Categorization (3.A, 3.B) through its budgeting and spending indicators, and to Existing Systems & Gaps (4.A, 4.B) by referencing national financial literacy surveys. The Behavioral Profiling domain (5.A, 5.B) is relevant given the knowledge-practice correlation analysis. Savings & Debt Management (13.A, 13.B) is directly addressed through emergency fund and debt indicators. The paper was considered for Forecasting (6.A, 6.B) and Anomaly Detection (8.A, 8.B) but rejected as it does not involve predictive algorithms. Similarly, Budget Recommendation (7.A-D) and Mobile-First Design (9.A-B) were rejected due to no discussion of budget optimization or UX. Data Privacy (10.A-B) and Retention (11.A-B) were not addressed. Overall relevance is medium, providing foundational behavioral insights for Odin's profiling and educational modules, though not directly contributing to algorithmic design."
 limitations:
-  - "Small sample size (n=50) from a single private university in Cebu City limits generalizability."
-  - "Self-reported Likert scale data may overstate knowledge and practice due to social desirability bias."
-  - "Cross-sectional design cannot establish causality between knowledge and practice."
-  - "No validation of the adopted questionnaire beyond prior use [unacknowledged]."
+  - "Small sample size from a single university limits generalizability [unacknowledged]."
+  - "Cross-sectional design prevents establishing causation between knowledge and practice."
+  - "Self-reported data may be subject to social desirability bias."
+  - "No qualitative exploration of reasons behind weak emergency fund and investment practices [unacknowledged]."
 remember_this:
-  - "Knowledge-practice correlation is strong for budgeting (r=0.939) but absent for debt."
-  - "Emergency fund practice is less practiced (mean 2.42 out of 4)."
-  - "Investment has lowest practice (2.20) and knowledge (2.56)."
-  - "Overall financial practice is only moderate (2.71)."
+  - "Knowledge and practice are correlated for budgeting, saving, insurance, and investment."
+  - "Emergency fund and investment knowledge do not predict practice among respondents."
+  - "Investment practice was lowest, with a mean score of 2.20 out of 4."
+  - "Moderate financial literacy requires targeted behavioral interventions, not just education."
+  - "Action plans should address the gap between knowledge and execution for emergency funds."
 ```

@@ -8,82 +8,118 @@ venue: Information
 odin_topics:
   - 6.A
   - 6.B
+  - 7.A
+  - 7.B
+  - 8.A
+  - 8.B
   - 12.A
   - 12.B
-shorthand_tags:
-  - /forecasting-models
-  - /spending-prediction
-  - /evaluation-frameworks
-  - /algorithm-evaluation
-tldr: Reviews deep learning architectures for time series forecasting, covering CNNs, RNNs, GNNs, Transformers, and generative models with benchmarks for short-term and long-term prediction.
-problem_and_motivation: Existing surveys on deep learning for time series forecasting lack coverage of recent architectures like Transformers and diffusion models, and do not distinguish between short-term and long-term forecasting. This gap limits practitioners' ability to select appropriate models for different prediction horizons. The paper provides a comprehensive review to address these shortcomings.
+  - 12.C
+tldr: Comprehensive review of deep learning architectures for time series forecasting, covering CNNs, RNNs, GNNs, Transformers, GANs, and diffusion models with benchmarks.
+problem_and_motivation: Existing reviews on deep learning for time series forecasting lack coverage of recent architectures like Transformers, Graph Neural Networks, and diffusion models. They also fail to provide a clear distinction between models suited for short-term versus long-term forecasting.
 approach:
-  - Reviews literature from 2016 onward, focusing on deep learning for time series forecasting.
-  - Covers CNNs, TCNs, RNNs (ESN, LSTM, GRU), GNNs, Deep Gaussian Processes, GANs, and diffusion models for short-term forecasting.
-  - Covers Transformer and its variants (LogTrans, Informer, Autoformer, FEDformer, etc.) for long-term forecasting.
-  - Presents benchmark datasets for short-term (M4) and long-term (ETT, Traffic, Weather, etc.) forecasting.
-  - Compares performance of Transformer variants using MSE/MAE metrics across multiple prediction lengths.
+  - Surveys deep learning architectures for short-term forecasting including CNNs, TCNs, RNNs, GNNs, Deep Gaussian Processes, GANs, and Diffusion Models.
+  - Surveys architectures for long-term forecasting, focusing on the Transformer and its variants like Informer, Autoformer, and FEDformer.
+  - Reviews other heterogeneous models including continuous recurrent units and MLP-based forecasters.
+  - Presents benchmark datasets for both short-term (e.g., M4) and long-term (e.g., ETT, Traffic, Weather) forecasting.
+  - Compares performance of Transformer variants on long-term benchmarks using MSE and MAE metrics.
 findings:
-  - "num: Transformer variants like PatchTST achieve MSE of 0.149 on Weather dataset for 96-step prediction, outperforming LSTM and TCN."
-  - "num: Autoformer and FEDformer show lower MSE than Informer and LogTrans on most long-term benchmarks."
-  - Deep Gaussian Processes can provide confidence intervals, unlike other deep learning methods.
-  - Transformers face memory bottleneck (O(L^2) complexity) and local agnosticism.
-  - Open problems include uncertainty estimation, overfitting, need for long time series, and concept drift.
+  - Transformer variants like PatchTST and Crossformer achieve state-of-the-art performance on long-term forecasting benchmarks.
+  - num: LSTM and GRU networks are widely applied for short-term forecasting but suffer from vanishing gradients and inability to capture very long-range dependencies.
+  - Graph Neural Networks effectively model spatial dependencies in multivariate time series forecasting.
+  - Diffusion models like TimeGrad and ScoreGrad show promise for probabilistic short-term forecasting.
+  - All deep learning models, except Deep Gaussian Processes, lack inherent uncertainty quantification for predictions.
+  - Deep learning models are prone to overfitting, especially with complex architectures, and often require adequately long time series for training.
+  - Many models assume dynamical stationarity, leading to performance degradation under concept drift.
 key_figures_tables:
-  - "Table 13: Multivariate long-term forecasting benchmarks → Crossformer and PatchTST generally achieve lowest MSE across datasets."
-  - "Figure 6: LSTM cell architecture with input, forget, output gates → Gating mechanisms control information flow to capture long-term dependencies."
-  - "Figure 10: Transformer encoder-decoder with attention → Attention replaces recurrence to enable parallelization and long-range dependency capture."
+  - Table 5: LSTM applications on time series forecasting → Widely used for diverse domains like finance, energy, and health.
+  - Table 13: Multivariate long-term forecasting benchmarks among Transformer variants → PatchTST and Crossformer generally achieve lowest MSE and MAE across datasets.
+  - Figure 12: Composition of the M4 dataset → M4-Monthly and M4-Quarterly are the largest components of the benchmark.
 key_equations:
-  - equation: "x_{t+p} = f(x_{t-1},...,x_{t-q}) + \\epsilon_{t+p}"
-    explanation: "Defines time series forecasting as function of past q samples."
-  - equation: "\\text{Attention}(Q,K,V) = \\text{softmax}\\left(\\frac{QK^\\top}{\\sqrt{D_k}}\\right)V"
-    explanation: "Scaled dot-product attention computes weighted sum of values."
+  - equation: y(t) = ∑_{a=1}^{q} w(a)X(t-a)
+    explanation: Definition of causal 1D convolution for TCNs.
+  - equation: Y = softmax(QK^T/√D_k)V
+    explanation: Scaled dot-product attention mechanism in Transformers.
 definitions:
   - term: TCN
-    definition: "Temporal Convolutional Network using causal and dilated convolutions for sequence modeling."
+    definition: Temporal Convolutional Network using causal and dilated convolutions.
   - term: LSTM
-    definition: "Long Short-Term Memory network with gating mechanisms to avoid vanishing gradients."
-  - term: Transformer
-    definition: "Architecture relying solely on attention mechanisms without recurrence."
+    definition: Long Short-Term Memory network with gating mechanisms to control information flow.
+  - term: GNN
+    definition: Graph Neural Network handling spatial dependencies via graph structure.
+  - term: DGP
+    definition: Deep Gaussian Process providing predictive uncertainty.
+  - term: GAN
+    definition: Generative Adversarial Network with generator and discriminator trained adversarially.
   - term: DDPM
-    definition: "Denoising Diffusion Probabilistic Model using forward noise injection and reverse denoising."
+    definition: Denoising Diffusion Probabilistic Model using forward and reverse Markov chains.
+  - term: SDE
+    definition: Stochastic Differential Equation for continuous diffusion processes.
 critical_citations:
-  - "[Vaswani et al., 2017] — Introduced Transformer architecture foundational to long-term forecasting."
-  - "[Hochreiter & Schmidhuber, 1997] — LSTM cell addressing vanishing gradient problem."
-  - "[Makridakis et al., 2020] — M4 competition benchmark for short-term forecasting."
+  - "[Vaswani et al., 2017] — Introduced Transformer architecture with self-attention."
+  - "[Hochreiter & Schmidhuber, 1997] — Proposed LSTM for mitigating vanishing gradients."
+  - "[Goodfellow et al., 2014] — Pioneered Generative Adversarial Networks."
+  - "[Makridakis et al., 2020] — Presented M4 competition benchmark for forecasting."
 relevance:
   topics:
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: "Reviews deep learning models directly applicable to spending forecasting."
+      relevance: high
+      justification: The paper surveys state-of-the-art forecasting models directly applicable to spending prediction.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: "Provides algorithms (LSTM, TCN, Transformer) for time series prediction."
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Reviews specific algorithms like LSTM, TCN, and Transformers for time series forecasting.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Forecasting methods inform budget recommendation by providing future spending estimates.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: medium
+      justification: Accurate forecasting is a prerequisite for effective budget recommendations.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: contextual
+      justification: Forecasting models can be used as a baseline for detecting anomalies in spending.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: contextual
+      justification: Mentions models like LSTM and GANs which are also used for anomaly detection.
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      justification: "Discusses benchmark datasets and metrics for forecasting evaluation."
+      relevance: medium
+      justification: Discusses evaluation metrics (MSE, MAE) and benchmark datasets for forecasting models.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: "Comparative tables (Table 13) evaluate multiple forecasting algorithms."
-  contribution: "This review informs Odin's spending forecasting module by providing a taxonomy of deep learning models suitable for short-term and long-term prediction. The comparative benchmarks (Table 13) directly support algorithm selection for Odin's forecasting engine. The discussion of open problems (uncertainty estimation, concept drift) guides Odin's design choices for robustness. The survey's coverage of attention mechanisms and Transformer variants offers pathways for handling irregular spending patterns."
+      relevance: medium
+      justification: Provides extensive empirical comparison of various forecasting algorithms on standard benchmarks.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: low
+      justification: While not directly about budget recommendation, the forecasting evaluation methods are relevant.
+  contribution: "This paper provides a comprehensive taxonomy of deep learning models for time series forecasting. It systematically categorizes models for short-term and long-term forecasting, which directly informs Odin's architecture selection. The survey of Transformer variants and their benchmarks offers actionable insights for designing Odin's forecasting module. The discussion of open problems like uncertainty quantification and concept drift highlights key challenges for Odin's robustness. Overall, the paper serves as a foundational reference for Odin's predictive analytics engine."
   directly_justifies:
-    - "LSTM and GRU networks effectively capture temporal dependencies in spending data (Casolaro et al., 2023)."
-    - "Transformer-based models achieve superior long-term forecasting accuracy on multivariate time series benchmarks."
-    - "Deep Gaussian Processes can provide prediction intervals, addressing uncertainty in spending forecasts."
-    - "Benchmark datasets like M4 and ETT enable systematic evaluation of forecasting algorithms."
+    - "LSTM and GRU networks are suitable for short-term spending prediction due to their ability to handle sequential data."
+    - "Transformer variants like Informer and Autoformer can be adapted for long-term forecasting of user spending trends."
+    - "Graph Neural Networks can model correlations between different spending categories in multivariate time series."
+    - "Benchmark datasets like M4 and ETT provide standards for evaluating Odin's forecasting accuracy."
+    - "Deep Gaussian Processes can provide uncertainty estimates crucial for Odin's risk-aware budget recommendations."
   limits:
-    - "The paper is a general survey, not specific to personal finance or Filipino young professionals."
-    - "No empirical validation on actual spending data."
-    - "Focuses on accuracy metrics, not on interpretability or computational efficiency for mobile deployment. [unacknowledged]"
-  mapping_rationale: "The paper was screened against Odin's functional domains. Spending forecasting (domains 6.A, 6.B) is the primary match, as the entire paper reviews time series forecasting architectures applicable to predicting user spending. The benchmark discussion (Section 6) aligns with system evaluation (domains 12.A, 12.B), providing evidence for evaluating forecasting modules. Behavioral profiling (5.A, etc.) and anomaly detection (8.A, 8.B) were considered but rejected because the paper does not address user profiling or anomaly detection algorithms specifically for personal finance; its anomaly mentions are generic. Mobile-first design (9) and data privacy (10) are absent. Thus topics 6.A, 6.B, 12.A, 12.B were selected."
+    - "The paper is a survey and does not present empirical results on personal finance-specific data."
+    - "Focus is on general time series forecasting, not specifically tailored to individual-level spending behavior."
+    - "Models reviewed require large amounts of data which may not be available for cold-start users."
+    - "Does not address privacy-preserving or federated learning for forecasting, relevant for Odin."
+  mapping_rationale: "A systematic scan of all 12 Odin functional domains was performed. The paper's primary focus on time series forecasting algorithms maps directly to the 'Spending Forecasting' domain (codes 6.A, 6.B). The review of model evaluation and benchmarks is relevant to the 'System Evaluation' domain (12.A, 12.B, 12.C). It also provides contextual support for 'Budget Recommendation' (7.A, 7.B) as forecasting is a core component, and 'Anomaly Detection' (8.A, 8.B) as forecasting can be used for baseline prediction. The paper is not directly relevant to domains like 'Filipino Cultural Context', 'Mobile-First Design', or 'Data Privacy'. The 'Behavioral Profiling' domain is only tangentially touched upon through forecasting user behavior. The 'Savings & Debt Management' domain is not addressed. Borderline cases included the relevance to 'Budget Recommendation' (medium) because forecasting informs the budget, and 'Anomaly Detection' (contextual) because the paper doesn't explicitly address anomaly detection. Ultimately, the paper offers a high-level technical foundation for Odin's forecasting and evaluation modules but lacks specific application to the Filipino personal finance context."
 limitations:
-  - "Assumes time series stationarity, concept drift remains an open problem. [unacknowledged]"
-  - "Deep learning models require long time series to estimate millions of parameters."
-  - "Most methods cannot estimate prediction confidence intervals except Deep Gaussian Processes."
-  - "Overfitting risk increases with model complexity."
+  - "No specific application to personal finance or Filipino context. [unacknowledged]"
+  - "Does not address cold-start scenarios prevalent in new PFMS users. [unacknowledged]"
+  - "Does not provide guidelines for real-time or resource-constrained forecasting on mobile devices. [unacknowledged]"
+  - "The discussion on concept drift does not provide practical mitigation strategies for personal finance data. [unacknowledged]"
 remember_this:
-  - "PatchTST achieves 0.149 MSE on Weather 96-step forecasting."
-  - "Transformers reduce complexity but suffer from local agnosticism."
-  - "Deep Gaussian Processes uniquely provide uncertainty intervals."
-  - "LSTM and GRU remain strong for short-term forecasting."
+  - "PatchTST and Crossformer are state-of-the-art for long-term forecasting."
+  - "Deep Gaussian Processes uniquely provide uncertainty quantification."
+  - "Forecasting models are prone to overfitting and require adequate data length."
+  - "Concept drift significantly degrades prediction accuracy over time."
+  - "num: Transformer variants can reduce MSE by over 50% compared to simpler RNNs on benchmarks."
 ```

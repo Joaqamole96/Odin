@@ -1,96 +1,124 @@
 ```yaml
 paper_id: 10.1177/09500170241247121
-designation: international
+designation: local-algorithm-specific
 title: Extreme Lockdowns and the Gendered Informalization of Employment: Evidence from the Philippines
 authors: Ramos, V. J.
 year: 2024
 venue: Work, Employment and Society
 odin_topics:
+  - 1.A
+  - 1.B
   - 1.C
   - 2.A
-  - 13.A
-shorthand_tags:
-  - /financial-behavior-filipino
-  - /culturally-specific-practices
-  - /savings-goal-management
-tldr: Extreme lockdowns in the Philippines increased informal employment probability for employed women by 2.2 percentage points, driven by survivalist motives and compositional changes, with strongest effects among mothers of minor children.
-problem_and_motivation: The distinct impact of extreme mobility restrictions on informal employment, separate from pandemic recessionary effects, is understudied. Understanding whether lockdowns cause informalization and whether this is gendered is critical for developing countries with large informal sectors and weak social safety nets. Prior work lacked a conceptual distinction between compositional and survivalist informalization.
+  - 2.B
+  - 2.D
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.B
+  - 10.A
+tldr: Extreme lockdowns in the Philippines increased informal employment probability among employed women by 2.2 percentage points, driven by survivalist motives and compositional changes.
+problem_and_motivation: The impact of extreme mobility restrictions on informal employment, distinct from pandemic recessionary effects, is understudied. Understanding gendered informalization is critical for designing targeted safety nets, especially in developing countries with large informal sectors and limited welfare support.
 approach:
-  - Pooled 16 quarterly Labour Force Survey rounds from the Philippines (2016-2020), covering 525,488 employed individuals aged 15+.
-  - Two-way fixed effects difference-in-differences comparing lockdown regions (NCR, Regions 3, 4B, 7, 8, 10, 11, BARMM) to non-lockdown regions.
-  - Key design uses regional variation in lockdown imposition as a quasi-experiment, restricting to consistent classifications during April-May 2020.
-  - Placebo regressions test parallel trends; robustness checks include alternative definitions of informal employment, age, and period restrictions.
-  - Baseline comparison of informal employment rates pre-lockdown shows parallel trends between treatment and control groups.
+  - Used 16 pooled quarterly Labour Force Survey rounds (2016-2020) from the Philippines.
+  - Applied a two-way fixed effects difference-in-differences design comparing lockdown and non-lockdown regions.
+  - Defined informal employment per ILO guidelines, excluding professional, agricultural, and public sector workers.
+  - Conducted heterogeneous analyses by gender, marital status, and presence of minor children.
+  - Tested robustness using alternative age restrictions, time periods, and informal employment definitions.
 findings:
-  - "num: Extreme lockdowns increased the probability of informal employment by 1.7 percentage points overall (p<0.001)."
-  - "num: For employed women, the lockdown effect was 2.2 percentage points; for men, no significant effect."
-  - "num: Married women with minor children experienced an 8.0 percentage point increase in informal employment probability."
-  - Lockdowns increased the likelihood of informal employment relative to unemployment for males, supporting the survivalist motive.
-  - Formal employment decreased more than informal employment in lockdown regions, creating compositional informalization.
-  - The gendered informalization finding is robust across alternative definitions of informal employment and sample restrictions.
+  - Extreme lockdowns increased the probability of informal employment by 1.7 percentage points overall.
+  - num: The effect was 2.2 percentage points for women and statistically insignificant for men.
+  - num: The informalization effect was strongest for married/cohabiting women with minor children, at 8.0 percentage points.
+  - num: Around 44% of households in lockdown regions engaged in additional income-generating work.
+  - Compositional changes showed formal employment declined more than informal employment in lockdown areas.
+  - Survivalist motives were supported as males were more likely to be informally employed than unemployed.
+  - Women in lockdown regions experienced a steeper increase in informal employment rates than men.
+  - The gendered informalization finding is robust across alternative definitions of informal employment.
 key_figures_tables:
-  - "Figure 3: Informal employment rates by lockdown status and gender → Steepest increase for women in lockdown regions."
-  - "Table 3: Difference-in-differences regression results → Lockdown effect significant only for women at 2.2 pp."
-  - "Figure 4: Event study placebo regressions → Pre-lockdown treatment effects near zero, supporting parallel trends."
-  - "Figure 5: Gender-specific trajectories of formal/informal employment → Compositional changes larger for informally employed females."
-  - "Table 4: Heterogeneous effects among women → Mothers with minor children drive the gendered informalization."
+  - None.
 key_equations:
-  - equation: Y_{i,g,t} = \alpha + \beta LA_g + \gamma LP_t + \delta (LA_g \times LP_t) + \sum \theta_j X_{j,i,g,t} + e_{i,g,t}
-    explanation: Linear probability model for informal employment.
-  - equation: Y_{i,g,t} = \alpha + \beta LA_g + \gamma LP_t + \delta (LA_g \times LP_t) + \sum \theta_j X_{j,i,g,t} + \phi_g + \tau_t + e_{i,g,t}
-    explanation: Two-way fixed effects difference-in-differences.
+  - equation: None.
+    explanation: ""
 definitions:
-  - term: LFS
-    definition: Labour Force Survey, quarterly Philippine household survey.
-  - term: DD
-    definition: Difference-in-differences, causal identification strategy.
-  - term: TWFE
-    definition: Two-way fixed effects, includes region and period fixed effects.
-  - term: IER
-    definition: Informal employment rate, informal employment as share of total employment.
-  - term: pp
-    definition: Percentage points.
   - term: Compositional informalization
-    definition: Increase in informal employment share due to changes in employment composition.
+    definition: Informality induced by changes in the size and composition of overall employment.
   - term: Survivalist informalization
-    definition: Increase in informal employment due to necessity to work despite absent welfare.
+    definition: Informality induced by the need to work due to absent welfare support and low savings.
+  - term: Two-way fixed effects difference-in-differences
+    definition: An econometric method using region and time fixed effects to estimate causal effects.
 critical_citations:
-  - "[ILO, 2020] — Informal employment heavily concentrated in developing countries."
-  - "[Colombo et al., 2019] — Informal employment countercyclical during financial crises."
-  - "[Floro and Meurs, 2009] — Gendered informalization after Asian Financial Crisis."
-  - "[Maurizio et al., 2023] — Informal employment did not play countercyclical role in Latin America."
+  - "[ILO, 2020] — Established informal workers were directly affected by lockdowns."
+  - "[Maurizio, 2021] — Found informal employment did not play its usual countercyclical role in Latin America."
+  - "[Floro and Meurs, 2009] — Demonstrated gendered informalization after the Asian Financial Crisis."
+  - "[Ducanes and Ramos, 2023] — Showed female employment declines in Philippines during lockdowns."
 relevance:
   topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: Directly analyzes labor market outcomes for Filipino workers.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: Discusses low savings rates and lack of social protection as drivers of informalization.
     - code: 1.C
       name: Financial Behavior of Filipino Young Professionals
-      justification: Paper analyzes Filipino workers' employment decisions during lockdowns, revealing how low savings drive informal work.
+      relevance: high
+      justification: Examines survivalist motives and coping mechanisms during crises.
     - code: 2.A
       name: Culturally Specific Financial Practices
-      justification: Survivalist informal employment is a culturally specific coping mechanism in the Philippine context with weak safety nets.
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      justification: Paper cites low household savings rate (~5%) and insufficient precautionary savings as key drivers of employment behavior.
-  contribution: "This paper informs Odin's savings goal management module by quantifying how low precautionary savings force users into informal work during income shocks, highlighting the need for emergency savings features. It validates the importance of behavioral profiling that distinguishes between compositional and survivalist financial behaviors, enabling personalized budget recommendations during crises. The gendered findings support designing targeted nudges for female users with caregiving responsibilities, who are more vulnerable to informalization. The survivalist motive framework directly justifies Odin's anomaly detection for sudden drops in formal income, triggering automated savings withdrawal or debt management suggestions."
+      relevance: medium
+      justification: Describes the survivalist motive as a culturally embedded coping strategy.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: Contextualizes economic shocks but does not directly analyze seasonal spending.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: Mentions crisis-driven spending but not cyclical occasions.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Reviews state social assistance mechanisms as context.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Identifies gaps in social protection and safety nets.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Provides empirical evidence of survivalist behavioral profiles.
+    - code: 5.B
+      name: Profile Dynamics and the Cold-Start Problem
+      relevance: high
+      justification: Demonstrates how crises shift workers into informal profiles.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Relies on survey data but does not address privacy.
+  contribution: "This paper provides a causal framework for understanding how external shocks (lockdowns) drive informalization, which is critical for Odin's behavioral profiling module. The distinction between compositional and survivalist informalization offers a taxonomy for classifying user financial behaviors during crises. The finding that women with minor children are most affected informs Odin's cold-start handling for female users. The documented lack of social protection mechanisms underscores the need for Odin's proactive budgeting and savings features. The survivalist motive evidence supports Odin's design of flexible budget constraints to accommodate crisis-driven financial behaviors."
   directly_justifies:
-    - "Extreme lockdowns increase informal employment probability for employed women by 2.2 percentage points."
-    - "Mothers with minor children experience an 8.0 percentage point higher probability of informal employment during lockdowns."
-    - "Low household savings rates (~5% of disposable income) and absent social assistance make unemployment unaffordable for many Filipino workers."
-    - "Informal employment offers flexibility that allows women to balance paid work and care responsibilities."
+    - "Extreme lockdowns increase informal employment probability among women by 2.2 percentage points."
+    - "Women with minor children faced an 8.0 percentage point higher informalization risk."
+    - "Survivalist motives drive workers to accept informal jobs over unemployment."
+    - "Households with low savings are more likely to engage in informal income-generating work."
+    - "Compositional changes alone cannot explain gendered informalization; survivalist motives matter."
   limits:
-    - "LFS data undercounts informal employment, especially home-based and intermittent work."
-    - "No panel data to track individual transitions between formal and informal employment."
-    - "Lacks information on social security contributions or employer legal status."
-    - "The analysis excludes agriculture and public sectors, limiting generalizability."
-  mapping_rationale: "The paper was screened against Odin's functional domains. Behavioral profiling (5.A-C) was rejected because the paper does not propose or validate user classification algorithms. Spending forecasting (6.A-B) and budget recommendation (7.A-C) are not addressed. Anomaly detection (8.A-B) is indirectly relevant but not directly justified. Expense categorization (3.A-B) and mobile-first design (9.A-B) are absent. Data privacy (10.A-B) and user retention (11.A-B) are not discussed. System evaluation (12.A-B) is not the focus. Savings & debt management (13.A-B) is directly supported by the paper's emphasis on low precautionary savings as a driver of informal employment. The paper's core contribution on Filipino workers' financial behavior under crisis justifies 1.C (Financial Behavior) and 2.A (Culturally Specific Financial Practices) as the pandemic lockdowns triggered culturally specific survival strategies. Borderline case 13.A was included because the paper quantifies savings rates and argues that insufficient savings force employment decisions, directly informing savings goal management in PFMS."
+    - "LFS data undercount informal employment, potentially underestimating the true lockdown effect."
+    - "Absence of panel data prevents tracking individual transitions into informal work."
+    - "Sector-specific differences in informal employment are not analyzed."
+    - "The study does not differentiate between voluntary and involuntary informal employment."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their 28 associated topic codes was conducted. Domains flagged as relevant include Filipino Cultural Context (2.A, 2.B, 2.D), Existing Systems & Gaps (4.A, 4.B), Behavioral Profiling (5.A, 5.B), and Data Privacy (10.A) as contextual. Topic 1.A (Filipino Young Professionals) was assigned high relevance as the paper directly studies Filipino workers. Topic 1.B (Financial Structure) was high due to low savings and welfare gaps. Topic 1.C (Financial Behavior) was high for survivalist motives. Topic 2.A (Cultural Practices) was medium for coping strategies. Topic 2.B (Seasonal Patterns) was contextual, as the paper does not analyze seasonal spending. Topic 2.D (Spending Cycles) was low, with only passing mention. Topic 4.A (Existing Systems) was medium for reviewing social assistance. Topic 4.B (Gaps) was high for identifying welfare shortcomings. Topic 5.A (Behavioral Profiles) was high for demonstrating crisis-induced informal profiles. Topic 5.B (Cold-Start) was high for showing how shocks shift profiles. Topic 10.A (Privacy) was contextual, as privacy is not addressed. Domains like Spending Forecasting (6), Budget Recommendation (7), and Anomaly Detection (8) were rejected as the paper does not address predictive modeling or algorithmic recommendations. The overall relevance is high for Odin's behavioral and contextual modules, providing foundational evidence for crisis-driven financial behavior and gender-sensitive design."
 limitations:
-  - "LFS data undercounts informal employment, especially home-based work. [unacknowledged]"
-  - "No panel data to track individual transitions; causal claims rely on repeated cross-sections."
-  - "Few regions in treatment and control groups (3 lockdown, 5 non-lockdown) lead to small-sample bias in standard errors. [unacknowledged]"
-  - "Exclusion of agriculture and public sectors limits applicability to all informal workers."
+  - "LFS data undercount informal employment in developing countries. [unacknowledged]"
+  - "No panel data to analyze individual transitions. [unacknowledged]"
+  - "Sector-specific differences are not explored. [unacknowledged]"
+  - "The study does not differentiate voluntary from involuntary informal employment. [unacknowledged]"
 remember_this:
-  - "Extreme lockdowns increased women's informal employment probability by 2.2 percentage points."
-  - "Mothers with minor children faced an 8.0 percentage point higher chance of informal work."
-  - "Low household savings (5% of disposable income) force survivalist informal employment during crises."
-  - "Women acted as dual workers and carers of first resort during the pandemic lockdowns."
-  - "Formal employment contracted more than informal employment in lockdown regions."
+  - "Extreme lockdowns increased informal employment by 2.2 percentage points for women."
+  - "Mothers with minor children faced an 8.0 percentage point informalization risk."
+  - "Survivalist motives drove workers to informal jobs over unemployment."
+  - "Low social protection and savings are key drivers of crisis informalization."
+  - "Gendered informalization is robust across alternative definitions and samples."
 ```

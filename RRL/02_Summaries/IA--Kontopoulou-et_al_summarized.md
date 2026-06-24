@@ -1,109 +1,105 @@
 ```yaml
-paper_id: 10.3390/fi15080255
-designation: international
-title: A Review of ARIMA vs. Machine Learning Approaches for Time Series Forecasting in Data Driven Networks
-authors: Kontopoulou, V. I.; Panagopoulos, A. D.; Kakkos, I.; Matsopoulos, G. K.
+paper_id: "10.3390/fi15080255"
+designation: "international"
+title: "A Review of ARIMA vs. Machine Learning Approaches for Time Series Forecasting in Data Driven Networks"
+authors: "Kontopoulou, V.I.; Panagopoulos, A.D.; Kakkos, I.; Matsopoulos, G.K."
 year: 2023
-venue: Future Internet
+venue: "Future Internet"
 odin_topics:
-  - 6.A
-  - 6.B
-  - 7.A
-  - 7.B
-  - 8.A
-  - 8.B
-  - 12.A
-  - 12.B
-shorthand_tags:
-  - /spending-forecast
-  - /budget-recommendation
-  - /anomaly-detection
-  - /evaluation-framework
-tldr: A review comparing ARIMA statistical models with machine learning and hybrid approaches for time series forecasting across finance, health, weather, utilities, and network applications.
-problem_and_motivation: The scientific literature lacks an extensive summary comparing ARIMA with machine learning and deep learning time series forecasting methods. Although machine learning models are increasingly used, their claimed superiority over classical statistical methods is not always systematically evaluated. This review addresses that gap by synthesizing comparative studies across multiple application domains.
+  - "6.A"
+  - "6.B"
+  - "8.A"
+  - "8.B"
+  - "12.A"
+  - "12.B"
+tldr: "Reviews comparisons of ARIMA, machine learning, and hybrid models for time series forecasting across finance, health, weather, utilities, and networks, finding ML generally outperforms ARIMA but with notable exceptions and hybrid models best."
+problem_and_motivation: "The scientific literature lacks a comprehensive comparison of ARIMA and machine learning methods for time series forecasting across diverse applications. There is uncertainty about which approach is superior and under what conditions, hindering informed model selection. This review addresses this gap by systematically comparing performance across multiple domains."
 approach:
-  - Reviewed published literature comparing ARIMA with SVM, decision tree, deep learning (LSTM, GRU, CNN), and hybrid models.
-  - Organized findings by application domain: finance (bitcoin, stocks), healthcare (COVID-19 cases), weather (wind, drought), utilities (energy, water), and network traffic.
-  - Extracted performance metrics including RMSE, MAPE, MAE, MSE, R2, NSE from each comparative study.
-  - Evaluated conditions under which ARIMA outperforms ML models, such as small datasets, linear patterns, or seasonal univariate series.
+  - "Conducted a systematic literature review of studies explicitly comparing ARIMA, machine learning, and hybrid models for time series forecasting."
+  - "Organized selected papers by model category (SVM, decision trees, deep learning) and application domain (finance, health, weather, utilities, networks)."
+  - "Extracted performance metrics (RMSE, MAPE, MAE, etc.) from each study for quantitative comparison."
+  - "Analyzed conditions under which ARIMA outperforms ML, such as small datasets, linear patterns, and specific seasonality."
+  - "Evaluated hybrid models that combine ARIMA and ML, which consistently improve forecasting accuracy."
 findings:
-  - Machine learning and deep learning models generally outperform ARIMA in time series forecasting across most applications reviewed.
-  - num: Deep learning models (LSTM, GRU) achieved RMSE values up to 40 times smaller than ARIMA for COVID-19 case forecasting in several countries (Arun Kumar et al., 2022).
-  - num: ARIMA outperforms machine learning models for small datasets, limited value ranges, or strongly linear and seasonal univariate series (e.g., drought forecasting with R2 >0.9 vs. SVM's 0.83).
-  - Hybrid models combining ARIMA with machine learning (e.g., ARIMA-SVM, ARIMA-NARNN, ARIMA-CNN) consistently outperform both individual approaches.
-  - The optimal forecasting method depends on dataset characteristics: linearity, seasonality, sample size, and geographic region.
+  - "Machine learning models generally outperform ARIMA in forecasting accuracy across most application domains."
+  - "num: Hybrid ARIMA-NARNN reduced RMSE by 35.3% compared to ARIMA alone in COVID-19 case prediction."
+  - "ARIMA is superior when data is linear, small, or has strong seasonality with limited range."
+  - "Deep learning models require larger datasets to achieve their advantage over ARIMA."
+  - "Decision tree-based models like XGBoost often beat ARIMA in competitions and infectious disease forecasting."
+  - "num: In Bitcoin price forecasting, ARIMA achieved MAPE of 2.76% vs LSTM 3.97% in one study, showing ARIMA can be competitive."
 key_figures_tables:
-  - Table 2: Summary of ARIMA vs. SVM comparison studies → SVM often outperforms ARIMA except for linear or drought data.
-  - Table 4: Summary of ARIMA vs. deep learning studies → LSTM generally better but ARIMA wins for small or seasonal univariate data.
-  - Table 5: Summary of ARIMA vs. hybrid models → Hybrid models always outperform pure ARIMA.
-  - Table 6: Advantages and disadvantages of ARIMA vs. AI for forecasting → ARIMA is explainable, low complexity, suitable for small data; AI needs large data, more compute.
+  - "Table 2: Summary of ARIMA vs SVM studies → SVM generally better but ARIMA better in drought forecasting."
+  - "Table 3: ARIMA vs decision tree models → XGBoost often outperforms ARIMA, but ARIMA can be more practical for long-term forecasts."
+  - "Table 4: ARIMA vs deep learning → LSTM usually superior, but ARIMA wins for small, linear, or seasonal datasets."
+  - "Table 5: Hybrid models → consistently outperform individual ARIMA and ML models."
 key_equations:
-  - equation: MSE = (1/N) * Σ(y_t - ŷ_t)^2
-    explanation: Mean squared error for forecast accuracy.
-  - equation: MAPE = (1/N) * Σ|(y_t - ŷ_t)/y_t|
-    explanation: Mean absolute percentage error.
-  - equation: ∇^d x_t = c + Σφ_i ∇^d x_{t-i} + Σθ_i ε_{t-i}
-    explanation: General ARIMA model with differencing.
+  - equation: "MSE = (1/N) ∑ (y_t - ŷ_t)^2"
+    explanation: "Mean squared error for forecast accuracy."
+  - equation: "MAPE = (1/N) ∑ |(y_t - ŷ_t)/y_t|"
+    explanation: "Mean absolute percentage error."
+  - equation: "ARIMA(p,d,q): ∇^d x_t = c + ∑ φ_i ∇^d x_{t-i} + ∑ θ_i ε_{t-i}"
+    explanation: "General ARIMA model with autoregressive and moving average terms."
 definitions:
-  - term: ARIMA
-    definition: AutoRegressive Integrated Moving Average, a statistical time series forecasting model.
-  - term: LSTM
-    definition: Long Short-Term Memory, a recurrent neural network for sequential data.
-  - term: GRU
-    definition: Gated Recurrent Unit, a simplified recurrent neural network.
-  - term: RMSE
-    definition: Root Mean Square Error, a forecast accuracy metric.
-  - term: MAPE
-    definition: Mean Absolute Percentage Error, a scale-independent accuracy metric.
+  - term: "ARIMA"
+    definition: "AutoRegressive Integrated Moving Average, a statistical model for time series forecasting."
+  - term: "SVM"
+    definition: "Support Vector Machine, a supervised learning model used for classification and regression."
+  - term: "LSTM"
+    definition: "Long Short-Term Memory, a recurrent neural network architecture for sequential data."
+  - term: "XGBoost"
+    definition: "Extreme Gradient Boosting, an optimized gradient boosting decision tree algorithm."
+  - term: "SARIMA"
+    definition: "Seasonal ARIMA, an extension of ARIMA that handles seasonality."
 critical_citations:
-  - "[Zhang, 2003] — Proposed hybrid ARIMA-ANN framework for linear and nonlinear modeling."
-  - "[Box & Jenkins, 2015] — Classic text defining ARIMA methodology."
-  - "[Makridakis et al., 2018] — Highlighted concerns about ML forecasting without baseline comparisons."
+  - "[Box et al., 2015] — Standard reference for ARIMA models."
+  - "[Zhang, 2003] — Foundational hybrid ARIMA-NN model."
+  - "[Makridakis et al., 2018] — Raises concerns about ML forecasting methods."
 relevance:
   topics:
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      justification: Reviews forecasting methods directly applicable to spending prediction.
-    - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Compares ARIMA and ML models for time series forecasting, informing algorithm choice.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      justification: Forecasting accuracy underpins budget recommendation strategies.
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      justification: Findings on ML superiority guide budget algorithm selection.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      justification: Includes anomaly detection study (Priyadarshini et al.) where ARIMA outperformed others.
-    - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: ARIMA and SARIMA shown effective for anomaly detection in time series.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      justification: Paper catalogs error metrics (RMSE, MAPE, MAE) for model evaluation.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      justification: Comparative performance assessment of forecasting algorithms.
-  contribution: This review informs Odin's spending forecasting module (6.A/6.B) by establishing that LSTM and hybrid models generally outperform ARIMA, but ARIMA remains viable for small datasets or linear spending patterns. For budget recommendation (7.A/7.B), the review suggests that hybrid ARIMA-ML models provide the highest accuracy. The evaluation framework (12.A/12.B) can adopt the standardized metrics (RMSE, MAPE, MAE) used across reviewed studies. For anomaly detection (8.A/8.B), the paper highlights cases where ARIMA excels, offering a baseline for detecting irregular transactions.
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "high"
+      justification: "Directly compares forecasting algorithms applicable to spending prediction."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "high"
+      justification: "Reviews ARIMA, LSTM, XGBoost, and hybrids for time series, relevant to spending sequences."
+    - code: "8.A"
+      name: "Anomaly Detection in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Includes studies on anomaly detection (e.g., IoT) and discusses outlier handling in time series."
+    - code: "8.B"
+      name: "Anomaly Detection Algorithms for Personal Spending Data"
+      relevance: "medium"
+      justification: "Discusses ARIMA and ML for identifying anomalies; provides comparative performance insights."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "medium"
+      justification: "Summarizes evaluation metrics (RMSE, MAPE) and comparison methodologies."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "medium"
+      justification: "Provides empirical comparisons of forecasting algorithms, useful for module evaluation."
+  contribution: "The review directly informs Odin's selection of forecasting algorithms for spending prediction (6.A) and anomaly detection (8.B) by summarizing comparative performance across diverse datasets. It highlights that hybrid ARIMA-ML models consistently outperform single approaches, suggesting Odin should consider hybrid architectures for budget recommendation. The findings on ARIMA's effectiveness for small or linear datasets guide cold-start strategies and baseline selection. The evaluation metrics discussed (RMSE, MAPE) can be adopted for Odin's system evaluation framework (12.A). The paper also provides evidence that deep learning requires large data, influencing Odin's data acquisition and training plans."
   directly_justifies:
-    - Machine learning models generally provide more accurate time series forecasts than ARIMA for non-linear spending data.
-    - Hybrid ARIMA-ML models consistently outperform pure ARIMA or pure ML models in forecasting tasks.
-    - ARIMA is preferable for small datasets or when spending patterns are linear and seasonal.
-    - Evaluation of forecasting models should use multiple metrics including RMSE, MAPE, and MAE.
+    - "Machine learning models generally outperform ARIMA for nonlinear time series forecasting."
+    - "Hybrid ARIMA-ML models improve prediction accuracy over individual models."
+    - "ARIMA remains competitive for short-term, linear, or small-sample forecasting tasks."
+    - "Evaluation metrics like RMSE and MAPE are standard for assessing forecasting accuracy."
   limits:
-    - Review based on selected studies; comprehensive meta-analysis not performed.
-    - Primary focus on univariate forecasting; multivariate spending patterns less covered.
-    - Real-time or online learning considerations for personal finance apps not addressed.
-  mapping_rationale: This paper directly supports Odin's spending forecasting (6.A,6.B) and budget recommendation (7.A,7.B) domains because time series forecasting of financial variables is core to those modules. The comprehensive comparison of ARIMA, machine learning, and hybrid models provides actionable guidance for algorithm selection. Evaluation frameworks (12.A,12.B) are supported through detailed discussion of error metrics. Anomaly detection (8.A,8.B) was included due to one cited study on smart home IoT where ARIMA outperformed, though the paper does not focus on anomalies. Topics related to behavioral profiling (5.A-C) and savings/debt (13.A,B) were rejected because the paper does not address user behavior or financial goal management.
+    - "The review is based on a selected sample of studies, not exhaustive meta-analysis."
+    - "It does not provide new empirical results or algorithm development."
+    - "Findings may be influenced by publication bias favoring positive ML results."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their canonical topic codes was performed. The domains of Spending Forecasting (6) and Anomaly Detection (8) were flagged as highly relevant because the paper directly compares time series forecasting algorithms applicable to these Odin modules. System Evaluation (12) was also flagged as medium relevance due to the extensive discussion of evaluation metrics and comparison methodologies. The domains of Filipino Cultural Context, Expense Categorization, Existing Systems, Behavioral Profiling, Budget Recommendation (except indirectly), Mobile-First Design, Data Privacy, User Retention, and Savings/Debt Management were rejected as they are not addressed by the paper's focus on algorithmic forecasting. Borderline cases: Budget Recommendation (7.B) could be informed by forecasting accuracy but the paper does not discuss budget allocation; assigned low relevance and not included in odin_topics due to lack of direct evidence. Anomaly Detection (8.A, 8.B) was included as medium because the paper includes some anomaly detection studies, but it is not the main focus. Overall, the paper provides strong empirical evidence for choosing forecasting algorithms, making it highly relevant to Odin's predictive modules."
 limitations:
-  - ARIMA parameter selection depends on forecaster skill and experience.
-  - Machine learning models require large datasets and higher computational resources. [unacknowledged]
-  - Review does not cover real-time forecasting requirements for mobile personal finance applications. [unacknowledged]
-  - Paper does not address data privacy or user trust implications of ML models. [unacknowledged]
+  - "The review does not meta-analyze results across studies, limiting quantitative synthesis."
+  - "Selection criteria may exclude relevant studies not explicitly comparing ARIMA and ML."
+  - "The paper does not discuss computational costs in detail, which is critical for mobile deployment. [unacknowledged]"
+  - "The applicability of findings to personal finance data is inferred, not directly tested. [unacknowledged]"
 remember_this:
-  - Machine learning outperforms ARIMA for most non-linear time series.
-  - Hybrid ARIMA-ML models always beat either method alone.
-  - ARIMA works best for small, linear, or seasonal univariate data.
-  - RMSE values for deep learning can be 40 times lower than ARIMA for some tasks.
+  - "Machine learning models generally beat ARIMA but ARIMA wins on small or linear data."
+  - "Hybrid ARIMA-ML models consistently outperform individual models in forecasting."
+  - "num: Hybrid ARIMA-NARNN reduced RMSE by 35.3% over ARIMA alone."
+  - "Deep learning requires larger datasets to outperform statistical methods."
+  - "Evaluation metrics like RMSE and MAPE are standard for forecasting comparison."
 ```

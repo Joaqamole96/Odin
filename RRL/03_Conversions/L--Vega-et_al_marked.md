@@ -723,13 +723,13 @@ failing.
 
 13(4),
 
-that
-
 is
 
 case
 buy-now-pay-later
 https://doi.org/10.3390/su13041992
+
+that
 
 Jones,  R.  (2021,  October  27).  UK  shoppers  rack  up  £4.1bn  debt  in  ‘buy  now,  pay  later’  deals.  The  Guardian.
 

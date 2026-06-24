@@ -1,124 +1,120 @@
 ```yaml
 paper_id: 10.25140/2411-5363-2025-1(39)-184-195
 designation: international
-title: Systematic review of deep and machine learning for financial modeling
+title: Systematic Review of Deep and Machine Learning for Financial Modeling
 authors: Zlobin, M.; Bazylevych, V.
 year: 2025
 venue: Technical Sciences and Technologies
 odin_topics:
+  - 5.C
   - 6.A
   - 6.B
+  - 7.D
   - 8.A
   - 8.B
-  - 11.A
-  - 11.B
   - 12.A
   - 12.B
-shorthand_tags:
-  - /predictive-modeling
-  - /spending-forecast
-  - /anomaly-detection
-  - /anomaly-algorithm
-  - /engagement
-  - /retention
-  - /eval-framework
-  - /eval-algorithm
-tldr: Systematic review of 41 papers on ML/DL for financial classification and regression tasks including credit scoring, fraud detection, stock prediction, and anomaly detection.
-problem_and_motivation: Financial institutions face datasets that traditional analytical methods cannot process effectively. ML and DL offer improved predictive accuracy but challenges like model interpretability, data quality, and concept drift remain. A systematic synthesis of state-of-the-art methods is needed to identify gaps and guide future research.
+  - 12.C
+tldr: A systematic review of machine and deep learning applications in finance, comparing models for classification and regression tasks, and identifying challenges like interpretability and data quality.
+problem_and_motivation: Financial institutions face challenges processing large datasets and complex market dynamics with traditional methods, necessitating advanced ML/DL for improved predictive accuracy and risk assessment. The rapid evolution of these technologies creates a need for a systematic synthesis of current methodologies and performance comparisons. Existing literature lacks a consolidated analysis of both classification and regression applications, their trade-offs, and practical implementation gaps.
 approach:
-  - Review of 41 peer-reviewed papers on ML/DL applications in finance published up to 2025.
-  - Focus on classification tasks (credit scoring, fraud detection, customer segmentation) and regression tasks (stock price prediction, volatility forecasting, option pricing).
-  - Comparative analysis of model performance using metrics such as AUC, RMSE, accuracy, precision, recall, and F1-score.
-  - Evaluation of traditional ML (logistic regression, decision trees, SVM, random forest, XGBoost) and DL (DBN, CNN, LSTM, GRU, GCN) architectures.
-  - Identification of challenges including data quality, model interpretability, fairness, and computational complexity.
+  - The paper conducts a systematic literature review of 41 studies on ML/DL in financial analytics.
+  - It categorizes financial applications into classification problems like credit scoring and fraud detection.
+  - It also categorizes applications into regression problems such as stock price prediction and option pricing.
+  - The review evaluates model performance using metrics like AUC, accuracy, F1-score, and RMSE across various datasets.
+  - It compares traditional models, deep learning architectures, and hybrid approaches with a focus on interpretability and computational cost.
 findings:
-  - "num: Random forest with ensemble feature selection achieved 99.6% accuracy and 100% precision in credit card fraud detection."
-  - "num: XGBoost consistently outperformed deep neural networks across 10 credit scoring datasets, achieving highest AUC and efficiency."
-  - "num: CNN reduced fraud detection cost of failure by 30% and achieved 87.64% AUC on European dataset."
-  - "num: GCN achieved 94.5% fraud detection accuracy, outperforming CNN (93%) by improving recall by 10% via graph-based user relationship analysis."
-  - "num: AI personalization increased user engagement by 27%, customer retention by 15%, and conversion rates by 20% in fintech applications."
-  - "num: MyFinanceAI pilot with 1,000 users showed 22% increase in monthly savings and 30% improvement in expense forecasting accuracy using LSTM."
-  - "num: GRU-CA hybrid model reduced anomaly detection RMSE from 13.28 to 9.74 on S&P 500 data."
-  - "num: LSTM achieved 93% accuracy in predicting Vietnamese stock price trends, outperforming linear regression."
-  - "num: Hybrid CNN-AdaBoost achieved 96.35% accuracy in electricity theft detection, outperforming standalone models."
-  - "num: Achieving perfect fairness in credit scoring would reduce profitability by over 35%, while reducing fairness violations below 0.2 threshold costs only 4.91% profit loss."
+  - num: Random forest and XGBoost achieve up to 99.6% accuracy in fraud detection, with XGBoost outperforming deep networks in credit scoring.
+  - num: LSTM networks demonstrate 93% accuracy in stock price trend prediction, outperforming linear regression for sequential data.
+  - num: CNN models reduce fraud detection failure cost by 30% and achieve an AUC of 87.64% on benchmark datasets.
+  - num: Hybrid GRU-CA models reduce anomaly detection RMSE from 13.28 to 9.74 on S&P 500 data.
+  - num: Fairness interventions in credit scoring can cause a profit drop of 4.91% to over 35%, highlighting a trade-off between fairness and profitability.
+  - num: GCN models outperform CNN in fraud detection with 94.5% accuracy, improving recall by 10% through graph-based relationship analysis.
+  - Hybrid CNN-AdaBoost models achieve 96.35% accuracy in electricity theft detection, improving upon standalone models.
+  - Traditional Black-Scholes models had lower pricing errors (RMSE 0.385-0.650) than ML models (RMSE 5.097-21.351) for option pricing, but ML models identified mispriced options more profitably.
+  - AI personalization in fintech increases user engagement by 27%, retention by 15%, and conversion rates by 20%.
+  - The MyFinanceAI platform reduced financial stress scores by 43% and increased monthly savings by 22% in a pilot study.
 key_figures_tables:
-  - "Table 1: Comparative analysis of ML/DL models in financial applications → DBN outperforms shallow networks; XGBoost best for credit scoring; random forest 99.6% fraud accuracy."
-  - "Table 2: Comparative analysis for option pricing and anomaly detection → BS-ANN lowest pricing error; GRU-CA reduces RMSE from 13.28 to 9.74."
+  - Table 1: Comparative analysis of ML and DL models for credit scoring, fraud detection, and personalization → Highlights performance metrics and application-specific trade-offs.
+  - Table 2: Comparative analysis of ML/DL models for option pricing and anomaly detection → Shows regression models perform differently from classification models, with traditional methods better for pricing accuracy and ML for profitability.
 key_equations:
-  - equation: None.
-    explanation: ""
+  - equation: RMSE = sqrt((1/n) * sum_{i=1}^{n} (y_i - \hat{y}_i)^2)
+    explanation: Root Mean Square Error evaluates prediction accuracy.
 definitions:
   - term: ML
-    definition: Machine learning, algorithms that learn from data without explicit programming.
+    definition: Machine Learning, algorithms that learn from data.
   - term: DL
-    definition: Deep learning, neural networks with multiple hidden layers for complex pattern recognition.
-  - term: CNN
-    definition: Convolutional neural network, effective for spatial pattern detection in structured data.
-  - term: LSTM
-    definition: Long short-term memory, recurrent neural network that captures long-term temporal dependencies.
-  - term: GCN
-    definition: Graph convolutional network, operates on graph-structured data for relationship-aware learning.
-  - term: GRU
-    definition: Gated recurrent unit, simplified RNN variant that addresses vanishing gradient.
-  - term: RMSE
-    definition: Root mean square error, standard metric for regression prediction accuracy.
+    definition: Deep Learning, neural networks with multiple layers.
   - term: AUC
-    definition: Area under ROC curve, metric for binary classification performance.
-  - term: XGBoost
-    definition: Extreme gradient boosting, ensemble tree method known for high performance.
+    definition: Area Under the Receiver Operating Characteristic Curve.
+  - term: RMSE
+    definition: Root Mean Square Error, measures prediction error.
+  - term: GCN
+    definition: Graph Convolutional Network, processes graph-structured data.
+  - term: LSTM
+    definition: Long Short-Term Memory, a recurrent neural network for sequences.
 critical_citations:
-  - "[Gunnarsson et al., 2021] — Deep learning not superior to XGBoost for credit scoring."
-  - "[Kozodoi et al., 2021] — Fairness-profit tradeoff quantified in credit scoring."
-  - "[Raghavan & Gayar, 2019] — CNN cost reduction in fraud detection."
-  - "[Jiang et al., 2019] — GCN outperforms CNN for fraud detection via graph structures."
+  - "[Gunnarsson et al., 2021] — XGBoost outperforms deep learning for credit scoring."
+  - "[Kozodoi et al., 2021] — Quantifies fairness-profit trade-off in credit scoring."
+  - "[Mienye et al., 2024] — Comprehensive survey of DL applications in finance."
 relevance:
   topics:
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Reviews classification models (DBN, CNN, RF, XGBoost) for credit scoring and fraud detection.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      justification: Reviews ML/DL models for forecasting financial outcomes.
+      relevance: high
+      justification: Provides a comprehensive review of predictive models for financial time series.
     - code: 6.B
-      name: Spending Forecasting Algorithm
-      justification: Cites LSTM improving expense forecasting accuracy by 30% in MyFinanceAI.
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Reviews LSTM and other DL models for stock price and volatility forecasting.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: contextual
+      justification: Discusses concept drift and model adaptability to changing data, relevant to dynamic constraints.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: Surveys fraud detection and financial anomaly detection methods.
+      relevance: high
+      justification: Reviews anomaly detection models, including GCN, GRU-CA, and clustering methods for fraud and risk.
     - code: 8.B
-      name: Anomaly Detection Algorithm
-      justification: Compares GCN, GRU-CA, random forest for anomaly detection performance.
-    - code: 11.A
-      name: Engagement Dynamics in Personal Finance Applications
-      justification: Reports 27% engagement increase from AI personalization in fintech.
-    - code: 11.B
-      name: Retention Mechanisms and Engagement Design
-      justification: Documents 15% retention lift from personalized financial recommendations.
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Compares algorithms like random forest, CNN, and GCN for fraud detection in transactional data.
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      justification: Uses AUC, RMSE, accuracy, F1-score to compare model performance.
+      relevance: high
+      justification: Compares models using standard metrics and discusses evaluation challenges like data imbalance.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      justification: Provides comparative benchmarks across multiple models and datasets.
-  contribution: "This systematic review provides Odin with a benchmark comparison of ML and DL models applicable to spending forecasting, anomaly detection, and user engagement optimization. It validates that XGBoost often outperforms deep learning for credit risk classification, while LSTM and GRU excel at time-series forecasting for expense prediction. The review also quantifies the impact of AI personalization on user retention and engagement, directly informing Odin's retention mechanism design. Finally, it identifies interpretability and fairness challenges that Odin must address when deploying black-box models."
+      relevance: high
+      justification: Provides performance comparisons of various ML/DL modules using AUC, RMSE, and accuracy.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: contextual
+      justification: Discusses trade-offs between accuracy, fairness, and computational cost, relevant to budget system evaluation.
+  contribution: This systematic review provides a comprehensive benchmark of ML/DL models applicable to Odin's core modules. It justifies the selection of XGBoost over deep learning for initial credit scoring and recommends LSTM for spending forecasting. The review's analysis of fraud detection informs Odin's anomaly detection module, while its discussion on model interpretability and fairness sets constraints for Odin's user-facing explanations.
   directly_justifies:
-    - "Random forest with ensemble feature selection achieves 99.6% accuracy for fraud detection, suitable for Odin anomaly detection."
-    - "LSTM improves expense forecasting accuracy by 30% over traditional regression models."
-    - "AI personalization increases user engagement by 27% and retention by 15% in personal finance apps."
-    - "Achieving perfect fairness in credit scoring reduces profitability by over 35%, a trade-off Odin must consider."
-    - "GRU-CA reduces anomaly detection RMSE by 27% compared to baseline RNN."
+    - XGBoost should be preferred for credit scoring tasks due to superior accuracy and efficiency.
+    - LSTM networks are effective for capturing temporal dependencies in sequential financial data.
+    - Graph Convolutional Networks can improve anomaly detection by modeling user relationships.
+    - Model interpretability remains a key challenge for regulated financial applications like Odin.
+    - A trade-off exists between model fairness and profitability in automated decision systems.
   limits:
-    - "Review synthesizes existing literature but does not present original experiments on Filipino young professional data."
-    - "Most cited studies use non-Philippine datasets (European, US, Chinese, Vietnamese), limiting direct generalizability."
-    - "Fairness-profit tradeoffs are quantified for credit scoring, not for spending forecasting or budgeting recommendations."
-  mapping_rationale: "This systematic review spans multiple financial ML/DL applications. The domain screen flagged spending forecasting (6.A,6.B) due to LSTM expense prediction results, anomaly detection (8.A,8.B) due to fraud detection benchmarks, user engagement (11.A,11.B) due to personalization lift statistics, and evaluation frameworks (12.A,12.B) due to comparative model metrics. Topics 3.A (expense categorization) were rejected because the paper does not address category taxonomies. Topics 5.A (behavioral profiling) were rejected as no user clustering or profile dynamics are analyzed. Topics 7.A (budgeting strategies) were rejected because budget recommendation algorithms are not discussed. The paper's findings directly justify Odin's choice of XGBoost over deep learning for certain classification tasks and LSTM for spending forecasting, while highlighting the need for explainable AI in regulated environments."
+    - The review is a high-level synthesis, not a detailed design study for a specific system like Odin.
+    - It covers broad financial domains, not specifically Filipino young professionals' personal finance.
+    - The comparative analysis is aggregated from different studies, not controlled experiments on a unified dataset.
+  mapping_rationale: All 12 functional domains were systematically scanned against the review's content. The paper is a broad survey of ML/DL for financial modeling, making it highly relevant to Odin's algorithmic modules. Domains flagged as high relevance include Expense Categorization (3.A, 3.B), Behavioral Profiling (5.A, 5.C), Spending Forecasting (6.A, 6.B), Anomaly Detection (8.A, 8.B), and System Evaluation (12.A, 12.B, 12.C). It was considered for 7.A and 7.B but rejected as its focus is on model performance for classification/regression, not domain-specific budgeting strategies. Similarly, it was considered for 10.A and 10.B but rejected as the review only touches on data privacy tangentially. The paper's discussion of concept drift and fairness supports 7.D and provides contextual relevance. Overall, the paper is highly relevant as a methodological reference for selecting and evaluating models that will form the backbone of Odin's analytic engine.
 limitations:
-  - "Review primarily cites papers up to 2024; rapid ML/DL advances may render some comparisons outdated. [unacknowledged]"
-  - "Performance metrics are aggregated across heterogeneous datasets, making direct apples-to-apples comparisons difficult. [unacknowledged]"
-  - "The review does not address computational resource constraints of mobile-first deployment, which is critical for Odin. [unacknowledged]"
-  - "Concept drift in financial data is mentioned as a challenge but no longitudinal model updating strategies are evaluated. [acknowledged]"
+  - The review may suffer from publication bias, as it only includes studies from specific databases. [unacknowledged]
+  - It does not provide a unified experimental framework for comparing all models on identical datasets. [unacknowledged]
+  - The applicability of findings to non-Western financial contexts is not addressed. [unacknowledged]
 remember_this:
-  - "XGBoost outperforms deep learning for credit scoring across 10 datasets."
-  - "Random forest achieves 99.6% fraud detection accuracy with feature selection."
-  - "AI personalization lifts user engagement by 27% and retention by 15%."
-  - "LSTM improves expense forecasting accuracy by 30% over regression."
-  - "Perfect fairness in scoring would cut profitability by over 35%."
+  - XGBoost outperforms deep learning for credit scoring with higher efficiency.
+  - LSTM networks achieve 93% accuracy in forecasting financial trends from sequences.
+  - Hybrid CNN-AdaBoost models improve fraud detection accuracy to 96.35%.
+  - A fairness-profit trade-off exists, with a 4.91% profit loss for moderate fairness improvements.
+  - AI personalization increases user engagement by 27% and retention by 15%.
 ```

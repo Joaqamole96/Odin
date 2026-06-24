@@ -1,101 +1,124 @@
 ```yaml
-paper_id: b7e4c5d8-9a2f-4e3c-8b1d-6f7a9c2e5d3b
-designation: local
-title: From Surge to Stability: Digital Payments Driving a Steady Transition
-authors: Mesina-Romero, B. R.; Masangkay, M. C.; Franco, M.; Yambao, M. A. V.; Delgado, K.; Bueno, P. N.; Lingat, P. J.; Natividad, G. M.; Lapus, A. R.; Manuel, R. M.; Yñigo, K. T.
+paper_id: "b7c9a2e1-4f5d-4b8a-9c3e-7d6f1a2b3c4d"
+designation: "local"
+title: "FROM SURGE TO STABILITY: DIGITAL PAYMENTS DRIVING A STEADY TRANSITION"
+authors: "Mesina-Romero, B.; Masangkay, M.; Franco, M.; Yambao, M.; Delgado, K.; Bueno, P.; Lingat, P.; Natividad, G.; Lapus, A.; Manuel, R.; Yñigo, K."
 year: 2024
-venue: Bangko Sentral ng Pilipinas
+venue: "Bangko Sentral ng Pilipinas"
 odin_topics:
-  - 1.C
-  - 4.B
-  - 10.A
-  - 11.A
-shorthand_tags:
-  - /financial-behavior
-  - /system-gaps
-  - /data-privacy
-  - /user-engagement
-tldr: Digital payments accounted for 57.4% of monthly retail payment volume in the Philippines in 2024, up from 52.8% in 2023, driven by merchant, P2P, and B2B transactions.
-problem_and_motivation: Despite growth in digital payments, adoption barriers such as high fees and limited digitalization of government collections (only 24.6% for P2G) persist. Understanding use-case dynamics helps prioritize interventions to achieve financial inclusion. The report measures progress against the Philippine Development Plan target of 52-54% digital share.
+  - "2.A"
+  - "4.A"
+  - "4.B"
+  - "9.A"
+  - "9.B"
+  - "10.A"
+  - "10.B"
+  - "12.A"
+tldr: "Digital retail payments in the Philippines reached 57.4% of volume and 59.0% of value in 2024, driven by merchant, P2P, and B2B transactions, with government disbursements nearly fully digitalized."
+problem_and_motivation: "The Philippines aims to increase digital payment adoption to enhance financial inclusion and economic efficiency. Despite progress, barriers such as high fees and limited consumer trust persist. This report tracks the current state and identifies areas for further digitalization."
 approach:
-  - Identified 24 payment use-cases across government, business, and person categories using a 3x3 payment grid.
-  - Estimated digital share using disaggregated quantitative data from sources like BIR, PSA, BSP, and stakeholder interviews.
-  - Applied critical assumptions to fill data gaps where direct measurements were unavailable.
-  - Computed monthly volume and value of digital and non-digital transactions for each use-case.
-  - Compared year-on-year changes from 2013 to 2024 to track progress.
-  - No baseline models or statistical tests were used; descriptive statistics only.
+  - "Used a measurement model with 24 payment use-cases across government, business, and person categories."
+  - "Estimated digital share using quantitative data from banks, government agencies, and surveys, supplemented by assumptions."
+  - "Analyzed volume and value of digital payments monthly."
+  - "Identified top use-cases and growth rates."
+  - "Assessed policy initiatives and regulatory frameworks."
 findings:
-  - "num: Digital payments reached 57.4% of total monthly retail payment volume in 2024, exceeding the PDP target of 52-54%."
-  - "num: Merchant payments comprised 66.4% of digital transaction volume, growing 29.1% year-on-year."
-  - "num: P2P transfers increased from 19.3% to 20.6% of digital volume, with InstaPay volume rising 67.8%."
-  - "num: B2B supplier payments grew 28.1% to 205.0 million transactions but only 6.2% of digital volume."
-  - "num: Government disbursements are 97.2% digital, but person-to-government collections are only 24.6% digital."
-  - High fees remain a significant barrier to widespread digital payment adoption.
+  - "num: Digital payments account for 57.4% of total monthly retail payment volume and 59.0% in value."
+  - "num: Merchant payments represent 66.4% of digital volume, P2P transfers 20.6%, and B2B supplier payments 6.2%."
+  - "num: Merchant payments grew 29.1% year-on-year, P2P transfers 34.7%, and B2B 28.1%."
+  - "num: Government disbursements are 97.2% digital, while person-to-government collections are only 24.6% digital."
+  - "num: InstaPay transaction volume rose 67.8% from 2023 to 2024."
+  - "Digital payments exceeded the Philippine Development Plan target of 52–54%."
 key_figures_tables:
-  - "Figure 1: Share of digital payments by volume from 2013 to 2024 → Increased from 1% to 57.4%"
-  - "Table 1: Monthly volume by use-case → P2B merchant payments dominate at 3,301M total volume"
-  - "Figure 2: Share of digital payments by value → 59.0% in 2024"
-  - "Table 2: Digitalization rates by payment direction → G2X 97.2%, P2X 72.2%, B2X 19.8%"
+  - "Figure 1: Digital payments share by volume over time (2013–2024) → grew from 10% in 2013 to 57.4% in 2024."
+  - "Figure 2: Digital payments share by value over time (2018–2024) → increased from 26.8% to 59.0%."
+  - "Table 1: Monthly volume per use-case → P2X dominates at 70.5%, B2X at 28.5%, G2X at 0.9%."
+  - "Table 2: Digitalization rates per use-case → G2X 97.2%, P2X 72.2%, B2X 19.8% by volume."
 key_equations:
-  - equation: None.
+  - equation: "None."
     explanation: ""
 definitions:
-  - term: BSP
-    definition: Bangko Sentral ng Pilipinas, the central bank of the Philippines.
-  - term: P2X
-    definition: Person-to-X payments, where a person is the payer.
-  - term: B2X
-    definition: Business-to-X payments.
-  - term: G2X
-    definition: Government-to-X payments.
-  - term: P2P
-    definition: Person-to-person transfers.
-  - term: P2B
-    definition: Person-to-business payments, e.g., merchant payments.
-  - term: B2B
-    definition: Business-to-business payments, e.g., supplier payments.
-  - term: QR Ph
-    definition: National QR code standard for interoperable payments in the Philippines.
-  - term: InstaPay
-    definition: Real-time low-value electronic fund transfer system.
-  - term: PESONet
-    definition: Batch electronic fund transfer system for high-value payments.
+  - term: "BSP"
+    definition: "Bangko Sentral ng Pilipinas (Philippine central bank)"
+  - term: "P2X"
+    definition: "Person-to-anyone payments (from individuals)"
+  - term: "B2X"
+    definition: "Business-to-anyone payments"
+  - term: "G2X"
+    definition: "Government-to-anyone payments"
+  - term: "PESONet"
+    definition: "Philippine Electronic Funds Transfer System (batch, high-value)"
+  - term: "InstaPay"
+    definition: "Real-time electronic fund transfer system"
+  - term: "QR Ph"
+    definition: "National QR code standard for interoperable payments"
+  - term: "PPMI"
+    definition: "Philippine Payments Management, Inc."
+  - term: "AFCS"
+    definition: "Automated Fare Collection System"
+  - term: "CBDC"
+    definition: "Central Bank Digital Currency"
+  - term: "RTGS"
+    definition: "Real Time Gross Settlement"
 critical_citations:
-  - None.
+  - "[Better Than Cash Alliance, 2019] — Provided baseline measurement model."
+  - "[BSP Circular No. 1195, 2024] — Consumer redress for EFTs."
+  - "[BSP Circular No. 1198, 2024] — Regulatory framework for merchant acquiring."
 relevance:
   topics:
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      justification: Provides digital payment adoption rates and use-case preferences of Filipino persons.
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      justification: Identifies high fees as a barrier and low digitalization of P2G collections as gaps.
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      justification: Discusses consumer redress mechanisms (Circular 1195) for electronic fund transfers.
-    - code: 11.A
-      name: Engagement Dynamics in Personal Finance Applications
-      justification: Emphasizes moving from first-time adoption to sustained habitual use across payment needs.
-  contribution: The report's finding that high fees deter adoption justifies Odin's commitment to no-hidden-fee transparency. The emphasis on merchant payments as the dominant use-case suggests Odin should prioritize seamless P2B expense tracking and categorization. The low digitalization of P2G collections (24.6%) indicates an opportunity for Odin to integrate bill payment reminders for government fees. The consumer redress circular supports Odin's design of clear transaction status notifications and dispute resolution workflows.
+    - code: "2.A"
+      name: "Culturally Specific Financial Practices"
+      relevance: "high"
+      justification: "Discusses remittances and P2P transfers, which are culturally significant in the Philippines."
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "high"
+      justification: "Describes InstaPay, PESONet, QR Ph, and other national payment infrastructures."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "high"
+      justification: "Highlights barriers like high fees, low P2G digitalization, and need for consumer protection."
+    - code: "9.A"
+      name: "Mobile-First Design Principles and Rationale"
+      relevance: "medium"
+      justification: "Mentions e-wallets and mobile banking but does not detail UX design principles."
+    - code: "9.B"
+      name: "Mobile UX Design for Personal Finance"
+      relevance: "medium"
+      justification: "References QR code and mobile app usage but lacks specific UX analysis."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "high"
+      justification: "Introduces consumer redress and security regulations (Circulars 1195 and 1198)."
+    - code: "10.B"
+      name: "User Trust in Personal Finance Systems"
+      relevance: "high"
+      justification: "Emphasizes trust and confidence as key to digital payment adoption."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Provides a measurement model for national payment adoption, not specifically for personal finance systems."
+  contribution: "This report provides empirical benchmarks for digital payment adoption in the Philippines, which inform Odin's expense categorization by highlighting dominant transaction types. Its identification of gaps in P2G digitalization suggests areas for user education and feature design. The consumer redress framework offers a model for Odin's trust and security modules. The measurement methodology can be adapted to evaluate Odin's system performance. The focus on merchant and P2P payments aligns with typical user spending patterns in Odin."
   directly_justifies:
-    - High fees remain a significant barrier to widespread adoption of digital payments.
-    - Digital payments account for 57.4% of retail transaction volume in the Philippines.
-    - Moving beyond first-time adoption to sustained habitual use is a key goal.
-    - Consumer trust requires timely resolution of electronic fund transfer issues.
+    - "Digital payments in the Philippines reached 57.4% of retail volume in 2024."
+    - "Merchant payments are the largest digital use-case, accounting for 66.4% of volume."
+    - "P2G digital collection is only 24.6%, indicating a significant gap."
+    - "Consumer redress regulations are critical for building user trust in digital finance."
   limits:
-    - Does not distinguish behavior by age or income segment, limiting applicability to young professionals specifically.
-    - No causality or predictive modeling; descriptive only.
-    - Focuses on payment volume, not personal financial management outcomes.
-    - Assumes digital payment adoption directly translates to financial health, which is not validated. [unacknowledged]
-  mapping_rationale: The report was screened against Odin's functional domains. Behavioral profiling (5.A) rejected because no individual-level classification. Spending forecasting (6) rejected due to lack of predictive models. Budget recommendation (7) absent. Anomaly detection (8) not discussed. Mobile-first design (9) mentioned only in passing. Data privacy (10.A) selected due to consumer redress circular. User retention (11.A) selected due to discussion of habitual use. Expense categorization (3) not directly relevant. Savings/debt (13) absent. Financial behavior (1.C) selected as core macro behavior. System gaps (4.B) selected for barrier identification. Borderline case: 2.B seasonal patterns not present. Thus 1.C, 4.B, 10.A, 11.A.
+    - "Does not address individual spending behaviors or forecasting."
+    - "Provides aggregate data but no segmentation by demographic such as young professionals."
+    - "Lacks analysis of user experience or behavioral drivers."
+    - "The measurement model relies on assumptions that may not capture all informal transactions."
+  mapping_rationale: "A systematic scan across all 12 functional domains was performed. The domains flagged as relevant include: Filipino Cultural Context (topic 2.A, high), Existing Systems & Gaps (4.A high, 4.B high), Mobile-First Design (9.A medium, 9.B medium), Data Privacy & User Trust (10.A high, 10.B high), and System Evaluation (12.A contextual). Borderline cases: the report touches on seasonal spending (2.B) and cyclical patterns (2.D) but only implicitly; these were rejected because the data is aggregate and does not specify seasonal variations. Expense Categorization (3.A–C) was rejected as the report does not discuss category design. Behavioral Profiling (5.A–C), Spending Forecasting (6.A–B), Budget Recommendation (7.A–D), Anomaly Detection (8.A–C), User Retention (11.A–B), and Savings & Debt Management (13.A–C) were rejected because the paper does not address these algorithmic or user-centric topics. Overall, the paper is highly relevant for informing Odin's understanding of the national payment landscape, gaps, and trust considerations, but less so for individual-level financial management features."
 limitations:
-  - Estimates rely on critical assumptions for data gaps, which may introduce bias.
-  - The measurement model does not capture informal economy payments.
-  - No analysis of digital payment impact on household financial health. [unacknowledged]
-  - Does not address security vulnerabilities beyond consumer redress. [unacknowledged]
+  - "Assumptions in estimation may introduce bias and uncertainty in the reported shares."
+  - "Data sources may not cover all transactions, particularly informal or cash-based ones."
+  - "The model does not capture user-level adoption drivers or behavioral factors."
+  - "The report focuses on aggregate trends and does not provide granular insights for specific user segments."
 remember_this:
-  - 57.4% of retail payments are now digital.
-  - Merchant payments drive 66.4% of digital volume.
-  - High fees remain a key adoption barrier.
-  - Government collections are only 24.6% digital.
+  - "Digital payments reached 57.4% volume and 59.0% value in 2024."
+  - "Merchant, P2P, and B2B payments drive 93.2% of digital volume."
+  - "Government disbursements are 97.2% digital, but collections lag at 24.6%."
+  - "Consumer redress and merchant acquiring regulations are key for trust."
+  - "The BSP aims to make digital payments affordable to increase adoption."
 ```

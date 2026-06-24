@@ -1,65 +1,95 @@
 ```yaml
-paper_id: "10.69569/jip.2025.063a"
-designation: "local"
-title: "Knowledge, Attitudes, and Practices in Financial Literacy among Business Administration Students in Urban College in the Philippines"
-authors: "Espiritu, M. J."
+paper_id: 10.69569/jip.2025.063a
+designation: local
+title: Knowledge, Attitudes, and Practices in Financial Literacy among Business Administration Students in Urban College in the Philippines
+authors: Espiritu, M. J.
 year: 2025
-venue: "Journal of Interdisciplinary Perspectives"
+venue: Journal of Interdisciplinary Perspectives
 odin_topics:
-  - "1.C"
-shorthand_tags: []
-tldr: "Business administration students in a Philippine urban college show positive financial attitudes but knowledge varies by age, sex, and year level; financial knowledge, attitudes, and practices are strongly correlated."
-problem_and_motivation: "Financial literacy among Filipinos is low, with only 25% of adults considered literate. Business administration students, as future business leaders, need strong financial skills but may face unique challenges. Prior research has not sufficiently examined the financial knowledge, attitudes, and practices of this demographic in the Philippine urban college context."
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 3.A
+  - 5.A
+  - 10.A
+tldr: Assesses financial knowledge, attitudes, and practices of business students in a Philippine urban college, finding significant links between demographics and financial literacy.
+problem_and_motivation: Filipino young adults, particularly business students, exhibit low financial literacy, yet their specific knowledge, attitudes, and practices remain underexplored. Understanding these factors is critical for designing effective financial education. This study addresses this gap by examining these dimensions within a local urban college context.
 approach:
-  - "Quantitative correlational survey of 2,313 business administration students at a Philippine urban college."
-  - "Instrument measured financial knowledge, attitudes, and practices across income, expenses, debt, credit, and savings."
-  - "Reliability testing showed overall Cronbach's alpha of 0.916; subscales were lower (knowledge 0.459, attitudes 0.172, practices 0.158)."
-  - "Data collected via online and in-person methods; analysis used descriptive statistics and difference tests (p-values)."
+  - Conducted a survey-based quantitative study with 2,313 Business Administration students at a college in Quezon City.
+  - Employed a structured questionnaire to measure financial knowledge, attitudes, and practices across five concepts: income, expenses, debt, credit, and savings.
+  - Used descriptive statistics to assess mean scores and inferential statistics (ANOVA) to analyze differences based on demographic profiles.
+  - Examined the relationship between knowledge, attitudes, and practices using Pearson correlation.
 findings:
-  - "num: 48.9% of respondents were aged 18-20, and 65.9% were male."
-  - "num: Financial knowledge significantly differs by age (p=0.013), sex (p=0.020), and year level (p=0.000)."
-  - "num: Financial attitudes significantly differ by age (p=0.049), monthly family income (p=0.038), and year level (p=0.000)."
-  - "num: Financial practices significantly differ by all demographic variables (p=0.000 each)."
-  - "num: Knowledge, attitude, and practice are strongly correlated (R=0.697, p=0.000)."
+  - num: Students generally agreed on their financial knowledge, with mean scores ranging from 2.98 to 3.13 for income, expenses, debt, credit, and savings.
+  - num: A significant relationship exists between financial knowledge, attitudes, and practices (R=0.697, p=0.000).
+  - Financial knowledge and attitudes varied significantly by age, sex, and year level, but monthly family income showed no significant effect on knowledge.
+  - Financial practices varied significantly across all demographic variables: age, sex, monthly income, and year level.
+  - Monthly family income significantly influenced attitudes but not knowledge, suggesting resource access affects attitudes more than comprehension.
 key_figures_tables:
-  - "Table 1: Respondent demographics by age, sex, monthly income, year level → Most students are male (65.9%), aged 18-20 (48.9%)."
-  - "Table 2: Self-assessed knowledge means (2.98-3.13) → Students agree they understand financial concepts."
-  - "Table 3: Attitude means (3.03-3.12) → Positive attitudes toward financial management."
-  - "Table 4: Practice means (3.00-3.13) → Students report responsible financial practices."
-  - "Table 5: P-values for differences → Demographics affect knowledge, attitudes, practices variably."
-  - "Table 6: R=0.697, p=0.000 → Strong significant relationship among KAP."
+  - Table 1: Distribution of 2,313 respondents by age, sex, income, and year level → Majority are male (65.9%), aged 18-20 (48.9%), with income of 10,001-20,000 PHP.
+  - Table 5: ANOVA results for demographic differences in KAP → Knowledge and attitudes vary by age and year level; practices vary by all demographics.
+  - Table 6: Correlation among knowledge, attitude, and practice → Strong significant relationship, R=0.697, justifying the KAP framework.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "None."
-    definition: ""
+  - term: KAP
+    definition: Knowledge, Attitudes, and Practices framework for assessing financial literacy.
+  - term: PFMS
+    definition: Personal Financial Management System.
 critical_citations:
-  - "[Lusardi, 2019] — Financial literacy essential due to digital banking."
-  - "[Chen & Volpe, 1998] — College students have low financial knowledge."
-  - "[S&P Global Ratings, 2022] — Philippines ranks bottom 30 with 25% literate."
+  - "[Lusardi, 2019] — Highlights the need for financial literacy due to complex financial products."
+  - "[Chen & Volpe, 1998] — Foundational study on low financial literacy among college students."
+  - "[Martinez, 2024] — Reports low financial literacy rates among Filipinos, providing context."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "This paper surveys financial knowledge, attitudes, and practices of business students, directly informing understanding of financial behavior among Filipino young adults."
-  contribution: "This paper provides empirical baseline data on financial knowledge, attitudes, and practices of Filipino young adults, which can inform Odin's behavioral profiling module (5.A) by identifying common knowledge gaps. The finding that knowledge, attitudes, and practices are strongly correlated (R=0.697) justifies incorporating educational components into Odin's retention mechanisms (11.B). The demographic differences in financial practices (significant by age, sex, income, year level) support personalized budgeting recommendations (7.B) based on user profiles."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: Directly studies Filipino college students, a primary demographic for Odin.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Provides baseline data on income, expenses, and debt understanding of students.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Assesses financial practices and attitudes, core to understanding behavior.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Grounds financial literacy in a Philippine urban college context, reflecting local norms.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: contextual
+      justification: The study assesses understanding of fixed/variable expenses, informing category design.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Directly measures financial attitudes and practices, which are key for behavioral profiling.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: Mentioned in introduction regarding cybersecurity risks, but not a focus.
+  contribution: The paper provides empirical evidence on the financial literacy levels of Filipino business students, a key target demographic for Odin. It validates the KAP framework for understanding financial behavior in this population. The findings on demographic differences (age, sex, income) can inform how Odin personalizes its expense categorization and behavioral profiling modules. The strong correlation between knowledge and practices underscores the need for Odin's educational and feedback features to drive better financial outcomes.
   directly_justifies:
-    - "Financial knowledge, attitudes, and practices are strongly correlated among Filipino business students."
-    - "Financial practices differ significantly by age, sex, monthly income, and year level."
-    - "Students generally agree they understand income, expenses, debt, credit, and savings."
+    - "Business students in the Philippines show significant variation in financial knowledge and practices by age and year level, requiring personalized system inputs."
+    - "The strong relationship between financial knowledge, attitudes, and practices supports Odin's integrated approach to education and behavior change."
+    - "Monthly family income significantly affects financial attitudes and practices, indicating a need for adaptive budgeting and savings recommendations in Odin."
   limits:
-    - "Sample limited to business administration students at one urban college, not generalizable to all Filipino young professionals. [unacknowledged]"
-    - "Self-reported measures may overestimate actual financial literacy due to social desirability bias. [unacknowledged]"
-    - "Cross-sectional design cannot establish causality among knowledge, attitudes, and practices. [unacknowledged]"
-  mapping_rationale: "The paper was screened against Odin's functional domains. It does not address algorithmic modules (spending forecasting, anomaly detection, etc.) or system design. However, it provides foundational behavioral data on Filipino young adults' financial knowledge, attitudes, and practices. The topic code 1.C (Financial Behavior) was selected because the paper directly measures and reports these behaviors. Codes related to specific PFMS features (e.g., expense categorization, budget recommendation, savings goal management) were rejected because the paper does not discuss system implementations or algorithms. Borderline case: 13.A (Savings Goal Management) was considered but rejected as the paper discusses savings in general terms without goal management or PFMS context."
+    - "The study uses self-reported data, which may not reflect actual financial behaviors."
+    - "The sample is limited to business administration students, reducing generalizability to all young professionals."
+    - "Focuses on knowledge assessment rather than testing actual financial decision-making skills."
+  mapping_rationale: A systematic scan across all 12 functional domains was conducted. The paper was flagged as highly relevant to the 'Behavioral Profiling & Classification' and 'Filipino Cultural Context' domains due to its direct measurement of financial knowledge, attitudes, and practices among Filipino students. It provides medium relevance to 'Expense Categorization' as it assesses understanding of expense types, and low relevance to 'Data Privacy' due to a brief mention. Domains like 'Spending Forecasting', 'Budget Recommendation', and 'Anomaly Detection' were rejected as the paper does not address predictive modeling or algorithmic approaches. The paper's overall relevance to Odin is high, as it offers foundational behavioral data essential for profiling and personalizing the system for its Filipino user base.
 limitations:
-  - "Internal consistency of subscales for knowledge (0.459), attitudes (0.172), and practices (0.158) is poor, undermining construct validity. [unacknowledged]"
-  - "Sample limited to business administration students at one urban college. [unacknowledged]"
-  - "Self-reported data subject to social desirability bias. [unacknowledged]"
+  - "Self-reported data may not accurately reflect actual financial practices."
+  - "Sample limited to business students in one urban college, limiting generalizability."
+  - "Cross-sectional design captures a snapshot, not longitudinal behavior change."
+  - "The instrument's internal consistency for financial knowledge (0.459) is low, suggesting potential measurement issues [unacknowledged]."
 remember_this:
-  - "Financial knowledge, attitudes, and practices are strongly correlated (R=0.697)."
-  - "Demographic factors significantly affect financial practices across all measured variables."
-  - "Students report positive attitudes but knowledge varies by age, sex, and year level."
-  - "Only 25% of Filipino adults are financially literate per S&P Global Ratings."
+  - "Financial literacy levels among Filipino business students vary significantly by age, sex, and year level."
+  - "Strong correlation exists between financial knowledge, attitudes, and practices in this population."
+  - "Monthly family income affects financial attitudes and practices but not knowledge, highlighting a critical insight for financial education."
+  - "The KAP framework is validated for assessing financial literacy among Filipino students."
 ```

@@ -2,94 +2,85 @@
 paper_id: 10.46827/ejes.v13i5.6659
 designation: local
 title: FINANCIAL HARDSHIPS OF TRICENARIANS EDUCATORS: PREPARING FOR THE FUTURE AMID DEBT CHALLENGES
-authors: Navarro, R.; Bantulo, J.
+authors: Navarro, R. J. L.; Bantulo, J. S.
 year: 2026
 venue: European Journal of Education Studies
 odin_topics:
   - 1.C
   - 2.A
   - 5.A
-  - 7.A
   - 13.A
-  - 13.B
-shorthand_tags:
-  - /fin-behavior
-  - /cultural-practices
-  - /behavioral-profile
-  - /budgeting-strategies
-  - /savings-management
-  - /debt-management
-tldr: Tricenarian Filipino educators face financial strain, mental burden, work disruption, and postponed aspirations, coping through budgeting, emotional outlets, and debt while developing financial discipline and career focus.
-problem_and_motivation: No localized research exists on how tricenarian educators in Kiamba 1 District manage debt while preparing for future stability. Financial hardship affects teacher well-being, job performance, and retention. The study aims to document lived experiences to inform support mechanisms and policy.
+tldr: Tricenarian educators face financial strain, mental burden, and work disruption from debt, yet develop coping strategies like budgeting, seeking support, and gaining insights for financial discipline and career growth.
+problem_and_motivation: Educators in their thirties face significant financial hardships due to low salaries, rising living costs, and student debt, which affect their well-being and professional performance. There is a lack of localized research on how these tricenarian educators manage debt while preparing for future financial stability. This study addresses that gap by documenting their lived experiences to inform support mechanisms and policy development.
 approach:
-  - Qualitative single case study at Platon Esperanza Taguding Elementary School in Philippines.
-  - Five purposively selected educators aged 30-39 with 8-15 years teaching experience.
-  - Semi-structured interviews audio-recorded and transcribed.
-  - Colaizzi thematic analysis method for coding and theme generation.
-  - Member checking and peer debriefing used for validation.
+  - A qualitative single-case study design was used to explore the lived experiences of five tricenarian educators at Platon Esperanza Taguding Elementary School.
+  - Participants were purposively selected, aged 30-39 with 8-15 years of teaching experience, and actively managing loans.
+  - Data was collected through semi-structured interviews, conducted in person or online, and audio-recorded with informed consent.
+  - The Colaizzi method was employed for data analysis, involving familiarization, coding, and thematic synthesis.
+  - Thematic analysis followed Braun and Clarke's framework to identify patterns related to financial strain, coping, and career effects.
 findings:
-  - Major challenges: financial strain, mental burden, work distraction, missed career opportunities, emotional distress, postponed aspirations, persistent debt pressure.
-  - Coping mechanisms include financial planning, controlled spending, emotional release, incurring debt, social support, personal outlets, saving extra income, self-care, budget monitoring.
-  - Insights: empowered financial decisions, financial growth, aspiring for excellence, thinking before spending, career motivation, long-term planning, debt awareness.
+  - Participants reported major challenges including financial strain, mental burden, work distraction, and postponed aspirations.
+  - Coping mechanisms included financial planning, controlled spending, emotional release, and seeking social and family support.
+  - Insights gained included empowered financial decisions, financial growth, career motivation, and long-term planning.
+  - num: All five participants experienced persistent debt-related pressure affecting their teaching performance and personal well-being.
+  - Participants demonstrated resilience through strategic coping and reflective financial awareness despite continuing hardships.
 key_figures_tables:
-  - Table 1: Participant 1’s financial strain leads to disciplined budgeting and career motivation.
-  - Table 2: Participant 2 uses envelope budgeting and loans to manage limited income.
-  - Table 3: Participant 3 tracks expenses digitally and relies on emotional outlets.
-  - Table 4: Participant 4 uses digital tools and prayer to cope with stress.
-  - Table 5: Participant 5 sets weekly budgets and saves extra funds.
+  - Table 1: Challenges, coping, and insights for Participant 1 → Highlights financial strain and the use of budgeting and emotional release.
+  - Table 2: Challenges, coping, and insights for Participant 2 → Shows limited income and reliance on support systems for coping.
+  - Table 3: Challenges, coping, and insights for Participant 3 → Demonstrates emotional exhaustion and the use of digital tracking tools.
+  - Table 4: Challenges, coping, and insights for Participant 4 → Reveals work disruption and the role of prayer and family support.
+  - Table 5: Challenges, coping, and insights for Participant 5 → Indicates persistent burdens and the use of budget monitoring tools.
 key_equations:
   - equation: None.
     explanation: ""
 definitions:
-  - term: tricenarian
-    definition: A person aged 30 to 39 years.
-  - term: Colaizzi method
-    definition: A systematic qualitative analysis approach for lived experiences.
+  - term: Tricenarian educators
+    definition: Teachers aged 30 to 39 years old.
+  - term: PFMS
+    definition: Personal Finance Management System.
 critical_citations:
-  - "[Achtziger, 2022] — Links overspending to debt and poverty."
-  - "[Bradley et al., 2021] — Defines financial hardship screening."
-  - "[Chatterji et al., 2021] — Connects financial hardship to mental health."
+  - "[Moghayedi et al., 2022] — Context for global teacher financial challenges."
+  - "[Olyn, 2023] — Context for global teacher financial challenges."
+  - "[Webber & Burns, 2021] — Context for global teacher financial challenges."
 relevance:
   topics:
     - code: 1.C
       name: Financial Behavior of Filipino Young Professionals
-      justification: Describes spending, debt, and saving behaviors of Filipino educators.
+      relevance: high
+      justification: Directly examines financial behaviors, coping mechanisms, and decision-making of Filipino educators.
     - code: 2.A
       name: Culturally Specific Financial Practices
-      justification: Focuses on Philippine public school teachers' financial coping practices.
+      relevance: medium
+      justification: Describes debt reliance and family support as coping strategies within a Filipino cultural context.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      justification: Identifies profiles like disciplined spenders and debt-dependent individuals.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      justification: Documents envelope budgeting, expense tracking, and need-want differentiation.
+      relevance: medium
+      justification: Provides insights into the financial behavioral profiles and coping strategies of a specific demographic group.
     - code: 13.A
       name: Savings Goal Management in PFMS
-      justification: Reports saving extra income, emergency funds, and future planning.
-    - code: 13.B
-      name: Debt Management in PFMS
-      justification: Details use of loans, cooperative support, and borrowing as survival strategy.
-  contribution: This paper justifies Odin’s debt management module by documenting how tricenarian educators rely on loans and co-op savings to survive. The budgeting strategies reported (envelope system, expense tracking) validate Odin’s budget recommendation feature. The insights on financial discipline and career motivation support Odin’s behavioral profiling for young professionals. The qualitative findings on emotional coping underscore Odin’s need for user trust and engagement design.
+      relevance: medium
+      justification: Highlights challenges in saving and the postponement of financial goals due to debt and limited income.
+  contribution: This paper provides qualitative evidence on the financial behaviors and coping mechanisms of Filipino educators, which can inform the design of behavioral profiling and expense categorization modules in Odin. It highlights the need for culturally sensitive financial support and the importance of understanding user constraints for effective budget recommendation. The findings on debt management and long-term planning are directly relevant to savings and debt management features.
   directly_justifies:
-    - Financial planning and expense tracking help educators reduce stress and improve control.
-    - Debt is used as a survival strategy when income is insufficient.
-    - Career advancement motivation is linked to financial stability goals.
-    - Emotional outlets and social support are key coping mechanisms for financial hardship.
+    - "Financial strain and debt burden directly affect user focus and teaching performance."
+    - "Educators use budgeting tools and financial planning as coping mechanisms."
+    - "Debt is incurred to support family and professional aspirations."
+    - "Financial hardship leads to postponed aspirations and career advancement delays."
+    - "Emotional and social support are key coping strategies for financial stress."
   limits:
-    - Small sample size (n=5) limits generalizability.
-    - Single school setting may not represent all tricenarian educators.
-    - Self-reported data subject to recall and social desirability bias [unacknowledged].
-    - No longitudinal follow-up to assess long-term outcomes [unacknowledged].
-  mapping_rationale: The paper was screened against Odin's functional domains. Behavioral profiling (5.A) applies because participants exhibited distinct coping patterns (budgeting, debt reliance, emotional regulation). Budget recommendation (7.A) applies via documented budgeting strategies. Savings and debt management (13.A, 13.B) strongly supported through findings on saving extra income, emergency funds, and loan reliance. Topic 1.C (financial behavior) and 2.A (culturally specific practices) selected due to Filipino educator context. Rejected topics lacking evidence: expense categorization (3), forecasting (6), anomaly detection (8), mobile design (9), data privacy (10), retention (11), system evaluation (12).
+    - "The study is limited to five educators in a single school district, limiting generalizability."
+    - "The qualitative design provides rich narratives but does not quantify the financial impact."
+    - "The sample is restricted to educators in a rural setting, which may not reflect urban experiences."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The domains flagged as relevant were Filipino Cultural Context, Behavioral Profiling & Classification, and Savings & Debt Management. Topic codes 1.C (Financial Behavior), 2.A (Culturally Specific Financial Practices), 5.A (Financial Behavioral Profiles), and 13.A (Savings Goal Management) were selected. The relevance was assessed as high for 1.C due to the direct focus on financial decision-making, and medium for 2.A, 5.A, and 13.A due to their contextual and supporting evidence. Borderline cases included the paper's discussion of spending cycles (2.B) and user constraints (3.C), but these were rejected as the paper does not provide actionable insight for Odin's design in those specific areas. The paper's overall relevance to Odin is contextual, providing foundational behavioral insights rather than algorithmic or system-specific contributions.
 limitations:
-  - Small sample size (n=5) limits generalizability.
-  - Single school setting may not represent all tricenarian educators.
-  - Self-reported data subject to recall and social desirability bias [unacknowledged].
-  - No longitudinal follow-up to assess long-term outcomes [unacknowledged].
+  - "The study is based on a small sample size of five participants. [unacknowledged]"
+  - "The findings may not be generalizable to other populations or settings. [unacknowledged]"
+  - "The study relies on self-reported data, which may be subject to recall bias. [unacknowledged]"
+  - "The research was conducted in a specific rural context, limiting its applicability to urban educators. [unacknowledged]"
 remember_this:
-  - Tricenarian educators use envelope budgeting and expense tracking to cope.
-  - Debt is both a burden and a survival strategy for Filipino teachers.
-  - Financial discipline and career focus emerge from hardship.
-  - Emotional outlets and social support reduce financial stress.
-  - Saving extra income even in small amounts builds resilience.
+  - "Tricenarian educators use budgeting and financial planning to manage debt."
+  - "Financial hardship causes mental burden and work disruption among educators."
+  - "Coping strategies include seeking social and family support for relief."
+  - "Debt is often incurred to support family and professional development goals."
+  - "Financial literacy is crucial for long-term financial stability and career growth."
 ```

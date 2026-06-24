@@ -1,109 +1,135 @@
 ```yaml
-paper_id: "10.58536/j-hytel.166"
-designation: "international"
-title: "Enhancing Financial Literacy in Young Adults: An Android-Based Personal Finance Management Tool"
-authors: "Imawan, R.; Putra, W. P.; Alqahtani, R.; Milakis, E. D.; Dumchykov, M."
+paper_id: 10.58536/j-hytel.166
+designation: international
+title: Enhancing Financial Literacy in Young Adults: An Android-Based Personal Finance Management Tool
+authors: Imawan, R.; Putra, W. P.; Alqahtani, R.; Milakis, E. D.; Dumchykov, M.
 year: 2025
-venue: "Journal of Hypermedia & Technology-Enhanced Learning"
+venue: Journal of Hypermedia & Technology-Enhanced Learning
 odin_topics:
-  - "3.A"
-  - "3.B"
-  - "9.A"
-  - "9.B"
-  - "11.A"
-  - "11.B"
-  - "12.A"
-  - "13.A"
-shorthand_tags:
-  - "/expense-categorization"
-  - "/expense-category-design"
-  - "/mobile-first"
-  - "/mobile-ux"
-  - "/engagement"
-  - "/retention"
-  - "/system-evaluation"
-  - "/savings-goal"
-tldr: "An Android-based personal finance management app for young adults features income/expense tracking, budgeting, goal setting, and notifications, achieving a 4.6/5 usability score."
-problem_and_motivation: "Young adults face unique financial challenges including limited experience and high online loan usage. Existing financial tools overlook the interactive, mobile-first needs of this demographic. Without targeted intervention, financial illiteracy may perpetuate debt and instability."
+  - 1.A
+  - 1.B
+  - 1.C
+  - 3.A
+  - 3.B
+  - 4.A
+  - 4.B
+  - 5.A
+  - 9.A
+  - 9.B
+  - 11.A
+  - 11.B
+  - 12.A
+  - 13.A
+tldr: An Android PFM app using the Waterfall model achieved a 4.6/5 usability score, demonstrating that targeted digital tools can improve financial habits in young adults.
+problem_and_motivation: Young adults face financial challenges from limited experience, yet existing tools often fail to engage them. There is a practical gap in using mobile-first solutions tailored to this demographic's needs.
 approach:
-  - "Waterfall model used for systematic development with phases: requirements analysis, design, implementation, testing, deployment."
-  - "Requirements gathered via interviews and surveys with Indonesian higher education students to identify key processes like income/expense tracking and budget projection."
-  - "Application built with Laravel backend, Flutter frontend, and local SQLite database for offline functionality."
-  - "Features include secure login, income/expense categorization, financial goal setting with progress bars, budget projection with alerts, and configurable notifications."
-  - "Black-box testing validated each module (login, tracking, goals, budget, reports, notifications) using realistic user scenarios."
-  - "Usability evaluation conducted with 50 university students over two weeks using a 5-point Likert scale across six aspects."
+  - The application was developed using the Waterfall model with Laravel (backend) and Flutter (frontend).
+  - Requirements were gathered via interviews and surveys with young adults in higher education.
+  - Features include income/expense tracking, budget projection, financial goal setting, and notifications.
+  - Black-box testing verified the functionality of core modules including login, tracking, goals, budgets, reports, and notifications.
+  - Usability was evaluated by 50 users on a 5-point Likert scale across six aspects: usability, user satisfaction, functionality, engagement, design, and feedback.
 findings:
-  - "num: Overall application satisfaction score of 4.6/5, rated 'Excellent'."
-  - "num: 78% of users rated likelihood of continued use at 4 or 5 on Likert scale."
-  - "num: Usability aspect scored 4.72, engagement 4.74, and functionality 4.70."
-  - "Users praised intuitive design, accurate tracking, and motivational reminders for consistent engagement."
-  - "Financial goal tracking with progress bars was highlighted as a key motivating feature."
-  - "Users requested additional customization (budget categories) and deeper financial trend analysis."
+  - The application achieved an overall score of 4.6/5, rated 'Excellent'.
+  - Users rated design satisfaction highly, with 74% giving a 5 for visual appeal and 70% for layout clarity.
+  - Engagement was strong, with 78% of users likely to continue using the app and 76% feeling motivated to track finances.
+  - Features like income/expense tracking and budget projections were highly rated for both functionality and satisfaction.
+  - Users requested additional customization options and more detailed financial trend analysis.
 key_figures_tables:
-  - "Figure 10: Average scores per evaluation aspect (range 4.54-4.76) → Overall score 4.6."
-  - "Table 13: Evaluation aspect scores with usability 4.72 and engagement 4.74 → High user acceptance across all dimensions."
-  - "Figure 8(a): Financial goal display with progress bar → Visual tracking increases motivation."
+  - Figure 10: Average scores per evaluation aspect → All six aspects scored above 4.5/5, indicating consistent high performance.
 key_equations:
-  - equation: "\\text{Aspect Score} = \\frac{\\sum(\\text{Indicator Scores})}{\\text{Number of Indicators}}"
-    explanation: "Average of indicator scores per evaluation aspect."
-  - equation: "\\text{Overall Score} = \\frac{\\sum(\\text{Aspect Scores})}{\\text{Number of Aspects}}"
-    explanation: "Average of all aspect scores for overall rating."
+  - equation: Aspect Score = (Sum(Indicator Scores)) / (Number of Indicators)
+    explanation: Calculates average score for each evaluation aspect.
+  - equation: Overall Application Score = (Sum(Aspect Scores)) / (Number of Aspects)
+    explanation: Calculates the total average score across all aspects.
 definitions:
-  - term: "Waterfall model"
-    definition: "Sequential software development methodology with distinct phases: requirements, design, implementation, testing, deployment."
-  - term: "Black-box testing"
-    definition: "Testing functionality from end-user perspective without inspecting internal code."
-  - term: "PFMS"
-    definition: "Personal finance management system."
+  - term: Waterfall Model
+    definition: A linear, sequential software development methodology with distinct phases.
+  - term: Black-box Testing
+    definition: A testing method that evaluates functionality without inspecting internal code.
 critical_citations:
-  - "[Save, 2014] — Mobile-first design is critical for young user engagement."
-  - "[Lusardi, 2019] — Financial literacy is essential for personal financial well-being."
-  - "[Zhang et al., 2021] — Progress indicators and reminders reinforce positive financial habits."
+  - "[Lusardi & Messy, 2023] — Foundational work on financial literacy and wellbeing."
+  - "[Petersen et al., 2009] — Contextualizes the Waterfall model in large-scale development."
 relevance:
   topics:
-    - code: "3.A"
-      name: "Expense Categorization Frameworks"
-      justification: "App includes income/expense categorization by type and method."
-    - code: "3.B"
-      name: "Expense Category Design Considerations"
-      justification: "Users valued category options but requested more customization."
-    - code: "9.A"
-      name: "Mobile-First Design Principles and Rationale"
-      justification: "Android app designed specifically for mobile-first financial tracking."
-    - code: "9.B"
-      name: "Mobile UX Design for Personal Finance"
-      justification: "Usability score 4.72 validates intuitive navigation and interface design."
-    - code: "11.A"
-      name: "Engagement Dynamics in Personal Finance Applications"
-      justification: "Notifications and progress bars drove consistent user engagement."
-    - code: "11.B"
-      name: "Retention Mechanisms and Engagement Design"
-      justification: "78% of users indicated intention to continue using the app long-term."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      justification: "Likert-scale usability evaluation with aspect scores provides a replicable framework."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Financial goal setting with progress tracking and saving recommendations is a core feature."
-  contribution: "This paper justifies Odin's mobile-first design module by demonstrating high usability (4.6/5) and user satisfaction for young adults. The expense categorization feature supports Odin's categorization module, showing users value organized transaction records. The financial goal tracking module validates Odin's savings goal management, with progress bars and notifications driving engagement. The usability evaluation framework provides a template for Odin's system evaluation, using Likert scales and aspect scores. The notification module confirms that automated reminders reinforce consistent financial tracking habits."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: The study focuses on young adults in higher education, analogous to the Filipino target demographic.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: contextual
+      justification: Discusses income and expense structures relevant to young adults.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: contextual
+      justification: The study explicitly addresses financial habits and literacy, similar to the target behavior.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: high
+      justification: The application includes a detailed expense categorization module.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: medium
+      justification: User feedback indicated a need for more customization in categories, directly informing design considerations.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: The introduction reviews existing tools and identifies a gap for young adults, directly mapping to this topic.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: The study explicitly states that existing tools overlook young users' needs, a key gap for Odin to address.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: The application aims to influence financial behaviors through engagement, touching on profiling.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: high
+      justification: The study uses an Android-based app, providing evidence for the efficacy of mobile-first design for financial management.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: high
+      justification: The high usability scores (4.6/5) validate the UX design choices made in the application.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: high
+      justification: The study measures engagement and finds that notifications and progress tracking improve it.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: medium
+      justification: The notification module and goal-tracking features are cited as key retention and engagement mechanisms.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: The study uses a specific evaluation framework (Likert scale across six aspects) to assess its system.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: high
+      justification: The financial goal module is a core feature, enabling users to set and track savings targets.
+  contribution: "This paper provides a validated reference implementation for a mobile-first PFM app targeting young adults. The usability framework (six aspects with a Likert scale) offers a direct evaluation template for Odin's user testing. The findings on engagement drivers (notifications and goal progress) justify Odin's design for retention. The user feedback on customization and trend analysis highlights specific feature gaps that Odin should prioritize."
   directly_justifies:
-    - "Mobile-first design with intuitive navigation achieves excellent usability scores (4.6/5)."
-    - "Automated notifications encourage consistent financial tracking and habit formation."
-    - "Progress bars on financial goals motivate users to set and achieve savings targets."
-    - "Expense categorization improves users' awareness of spending patterns."
+    - "A mobile-first approach is effective for engaging young adults in personal finance management."
+    - "Notification reminders and visual goal progress are key mechanisms for encouraging consistent financial tracking."
+    - "User satisfaction is strongly correlated with intuitive design and accurate transaction recording."
+    - "Young adults in higher education have specific financial management needs that generic tools fail to address."
+    - "High usability scores are achievable with a well-designed PFM app, supporting the feasibility of Odin's development."
   limits:
-    - "Short two-week evaluation period may not capture long-term habit change."
-    - "Sample of 50 Indonesian university students may not generalize to other young adult populations."
-    - "No control group to measure causal impact of app on financial literacy [unacknowledged]."
-  mapping_rationale: "This paper directly addresses mobile-first design (9.A, 9.B) through its Android-based development and usability evaluation. Expense categorization features (3.A, 3.B) are core to the app. Engagement and retention mechanisms (11.A, 11.B) are evidenced by notification reminders and user-reported motivation. Savings goal management (13.A) is a key feature with progress tracking. System evaluation (12.A) is demonstrated via Likert-scale usability testing. Topics related to behavioral profiling (5.A-C), spending forecasting (6.A-B), budget recommendation (7.A-C), anomaly detection (8.A-B), data privacy (10.A-B), and debt management (13.B) are not addressed because the paper focuses on basic tracking and budgeting without predictive algorithms or debt-specific features."
+    - "The study's evaluation period was short (two weeks), potentially not capturing long-term habit formation."
+    - "The sample was limited to 50 university students from one institution, which may not be representative of all young adults."
+    - "The paper does not evaluate the system's ability to handle infeasible budget constraints."
+    - "The study does not incorporate predictive modeling or forecasting algorithms for spending."
+    - "The evaluation was conducted in a beta testing environment, not a live production setting with real-world data."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper's focus on building and evaluating a PFM app made domains 3 (Expense Categorization), 4 (Existing Systems & Gaps), 9 (Mobile-First Design), 11 (User Retention & Engagement), 12 (System Evaluation), and 13 (Savings & Debt Management) highly relevant. Domains related to predictive modeling (6), anomaly detection (8), and data privacy (10) were considered and rejected as the paper does not implement algorithmic forecasting or anomaly detection, nor does it detail privacy mechanisms. The paper's discussion of financial behaviors and target demographics provided contextual support for domains 1 (Filipino Young Professionals) and 5 (Behavioral Profiling). The mapping resolved borderline cases by prioritizing direct feature implementations (e.g., 3.A and 13.A) over behavioral framing (e.g., 5.A), which was assigned a 'medium' or 'contextual' relevance. Overall, the paper is highly relevant for validating Odin's core design and evaluation approach but offers limited insight into its more advanced algorithmic and privacy-focused modules."
 limitations:
-  - "Short two-week evaluation period limits assessment of long-term habit formation."
-  - "Sample of 50 Indonesian university students may not represent all young adult populations."
-  - "No control group to isolate app effects from other factors [unacknowledged]."
-  - "Lack of longitudinal financial outcome data (savings growth, debt reduction)."
+  - "The evaluation was conducted in a controlled environment with a limited time frame, which may not reflect long-term usage patterns."
+  - "The sample of 50 university students from a single institution may not be generalizable across different cultural or economic contexts. [unacknowledged]"
+  - "The study does not assess the application's performance on older devices or under varying network conditions. [unacknowledged]"
+  - "The paper lacks a rigorous statistical analysis of pre- and post-intervention financial literacy. [unacknowledged]"
 remember_this:
-  - "Overall user satisfaction score of 4.6 out of 5."
-  - "Automated notifications reinforce consistent financial tracking habits."
-  - "Progress bars on financial goals increase user motivation."
-  - "Users desire customizable budget categories and trend analysis."
+  - "The app received an overall usability score of 4.6 out of 5."
+  - "Notifications and goal tracking are key drivers for user engagement."
+  - "Users frequently requested more customization and detailed spending analysis."
+  - "A mobile-first design is validated as effective for young adult financial management."
+  - "The evaluation framework covers usability, satisfaction, functionality, engagement, design, and feedback."
 ```

@@ -1,105 +1,184 @@
 ```yaml
-paper_id: "10.12688/f1000research.159085.3"
-designation: "international"
-title: "Financial literacy among young college students: Advancements and future directions"
-authors: "Rodríguez-Correa, P. A.; Arias García, S.; Bermeo-Giraldo, M. C.; Valencia-Arias, A.; Martínez Rojas, E.; Aurora Vigo, E. F.; Gallegos, A."
+paper_id: 10.12688/f1000research.159085.3
+designation: international
+title: Financial literacy among young college students: Advancements and future directions
+authors: Rodriguez-Correa, P. A.; Arias García, S.; Bermeo-Giraldo, M. C.; Valencia-Arias, A.; Martínez Rojas, E.; Aurora Vigo, E. F.; Gallegos, A.
 year: 2025
-venue: "F1000Research"
+venue: F1000Research
 odin_topics:
-  - "1.C"
-  - "2.C"
-  - "5.A"
-  - "7.A"
-  - "13.A"
-  - "13.B"
-shorthand_tags:
-  - "/financial-behavior"
-  - "/user-preferences"
-  - "/behavioral-profiles"
-  - "/budgeting"
-  - "/savings"
-  - "/debt"
-tldr: "A systematic review of 44 studies finds that financial literacy research on college students focuses on financial knowledge and behavior, while budgeting, credit, debt, and digital tools remain underexplored."
-problem_and_motivation: "Young college students face increasing financial responsibilities but lack adequate financial education. Poor financial decision-making can lead to long-term negative outcomes. Existing literature on financial literacy among this population is fragmented and lacks structured guidance on underexplored subtopics."
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.C
+  - 3.A
+  - 3.C
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.B
+  - 5.C
+  - 6.A
+  - 7.A
+  - 8.A
+  - 9.A
+  - 9.B
+  - 10.A
+  - 11.A
+  - 12.A
+tldr: A systematic review of 44 studies identifies financial knowledge and behavior as dominant but unevenly explored themes among college students, with gaps in budgeting, credit, and fintech.
+problem_and_motivation: Young adults face increasing financial responsibilities and are vulnerable to poor financial decisions. Existing research on financial literacy for this group is fragmented and focuses on broad categories. A structured overview of specific subtopics is needed to guide educational and policy interventions.
 approach:
-  - "Searched Scopus and Web of Science using title terms 'Financ* literacy', 'Financ* education' with 'University student*' or 'College student*'."
-  - "Applied inclusion criteria: studies on higher education students with quantitative measures of financial literacy analyzed via statistical methods."
-  - "Used PRISMA 2020 methodology to screen 350 records down to 44 peer-reviewed studies from 2003-2023."
-  - "Extracted variables and classified them into six thematic subtopics: core knowledge, budgeting, credit/debt, FinTech, attitudes/self-efficacy, socio-demographic."
-  - "Conducted bibliometric analysis using VOSviewer to identify keyword trends and research gaps."
+  - A systematic literature review was conducted following the PRISMA-2020 methodology.
+  - The search was performed in Scopus and Web of Science using title-specific keywords.
+  - Inclusion criteria required studies on higher education students with statistical analysis of financial literacy variables.
+  - A quality assessment checklist scored documents from 1 to 3, with only score 3 included.
+  - The analysis synthesized data from 44 peer-reviewed studies published between 2003 and 2023.
 findings:
-  - "num: 34% of studies use regression analysis, 20% factor analysis, and 18% structural equation modeling."
-  - "Financial literacy and financial knowledge are the most frequently assessed constructs, but the terms are often used interchangeably without clear definition."
-  - "Budgeting is considered a core skill, yet globally students show the least interest in budgeting processes."
-  - "Few studies analyze psychological and behavioral effects of credit card use and student loans on college students."
-  - "Research linking financial literacy to digital tools (budgeting apps, digital banking) is emerging but lacks effectiveness assessments."
-  - "Socio-demographic variables like gender and parental education are commonly examined, but cultural and class determinants are overlooked."
+  - num: 44 peer-reviewed studies were analyzed, with 34% using regression analysis.
+  - Financial literacy is the most evaluated construct, but its definition varies widely across studies.
+  - Financial knowledge and financial behavior are the most frequently examined themes.
+  - Budgeting, credit/debt management, and fintech adoption are underexplored subtopics.
+  - Socio-demographic variables like gender and parental education are commonly measured but cultural factors are often overlooked.
+  - Financial self-efficacy emerges as a key moderating factor between knowledge and behavior.
+  - The literature shows a shift towards broader concepts like financial capability and financial well-being.
+  - Emerging economies and Eastern Europe are identified as underrepresented regions in research.
+  - The relationship between fintech and financial literacy is identified as a major research gap.
+  - A future research agenda highlights financial knowledge, behavior, inclusion, and budgeting as key areas.
 key_figures_tables:
-  - "Figure 2: Bar chart of variable frequencies → Financial literacy and knowledge dominate research."
-  - "Figure 3: Thematic map of keyword trends → Financial knowledge, behavior, inclusion, budgeting are rising topics."
-  - "Table 3: Summary of research gaps by category → Gaps include social class, FinTech impact, emerging markets, psychological perspectives."
+  - Figure 1: PRISMA flow diagram showing selection of 44 studies from 350 initial records → Systematic process yielded 44 relevant studies.
+  - Figure 2: Bar chart showing most recurring financial literacy variables → Financial literacy, knowledge, and behavior are the top three constructs.
+  - Figure 3: Research agenda with keyword trends → Financial knowledge and behavior are currently active and future topics.
+  - Table 2: Summary of 44 studies with objectives, methods, and countries → Regression analysis and SEM are dominant methods.
+  - Table 3: Research gaps categorized by theme, geography, and temporality → Social class, fintech impact, and emerging markets need study.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "Financial literacy"
-    definition: "Ability to understand and manage personal finances, including budgeting, saving, credit use, and informed decision-making."
-  - term: "Financial knowledge"
-    definition: "Familiarity with financial terms and concepts needed for daily financial functioning."
-  - term: "Financial behavior"
-    definition: "Actions and patterns in managing finances, including spending, saving, and investing."
-  - term: "Financial attitude"
-    definition: "Individual's state of mind, opinion, and judgment regarding financial decisions."
-  - term: "Financial self-efficacy"
-    definition: "Confidence in one's ability to acquire information and make effective financial decisions."
+  - term: Financial Literacy
+    definition: The ability to understand and manage personal finances, including budgeting, saving, and using credit responsibly.
+  - term: Financial Knowledge
+    definition: Familiarity with financial terms and concepts needed for daily financial functioning.
+  - term: Financial Behavior
+    definition: Actions and patterns exhibited by individuals in managing their financial resources.
+  - term: Financial Attitude
+    definition: An individual's state of mind, opinion, and judgment regarding financial decisions.
+  - term: Financial Self-Efficacy
+    definition: Confidence in one's ability to acquire information and make effective financial decisions.
 critical_citations:
-  - "[Lusardi and Mitchell, 2023] — Defines financial literacy as knowledge and ability for economic decisions."
-  - "[Knoll and Houts, 2012] — Provides definition of financial literacy as using knowledge for well-being."
-  - "[Goyal and Satish, 2021] — Systematic review and bibliometric analysis of financial literacy."
-  - "[Potrich et al., 2016] — Develops financial literacy model integrating knowledge, behavior, attitudes."
+  - "[Lusardi & Mitchell, 2023] — Defines financial literacy's core concepts and importance."
+  - "[Xiao et al., 2022] — Introduces financial capability as an expanded framework."
+  - "[Blanco et al., 2024] — Highlights social determinants and disparities in financial knowledge."
+  - "[Bartholomae & Fox, 2021] — Reviews college student financial behavior and well-being."
+  - "[Goyal & Satish, 2021] — Provides a systematic review and bibliometric analysis of financial literacy."
 relevance:
   topics:
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      justification: "Reviews financial behavior patterns among college students, directly applicable to young professionals."
-    - code: "2.C"
-      name: "User-Declared Financial Preferences"
-      justification: "Examines financial attitudes and self-efficacy as user preferences."
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Identifies factors like knowledge, behavior, attitudes that constitute behavioral profiles."
-    - code: "7.A"
-      name: "Budgeting Strategies as Domain Knowledge"
-      justification: "Discusses budgeting as a core skill and identifies gaps in budgeting education."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Mentions savings behavior and retirement planning as relevant financial outcomes."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Analyzes credit card use and student loan debt among college students."
-  contribution: "This systematic review provides a structured mapping of financial literacy subtopics that can inform Odin's behavioral profiling module by identifying which financial behaviors (budgeting, debt, saving) are most relevant to young adults. The identification of underexplored areas such as FinTech adoption and psychological effects of debt can guide Odin's feature design for digital financial tools and anomaly detection in spending. The paper's emphasis on financial attitudes and self-efficacy supports Odin's approach to user engagement and personalized recommendations based on user confidence levels."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Focuses on college students, a key sub-demographic of young professionals.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: contextual
+      justification: Discusses income sources (scholarships, jobs) and financial responsibilities.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: medium
+      justification: Directly reviews financial behavior patterns in college students.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: contextual
+      justification: Mentions cultural norms but lacks specific focus on Filipino practices.
+    - code: 2.C
+      name: User-Declared Financial Preferences
+      relevance: low
+      justification: Addresses financial attitudes and self-efficacy, not explicit user preferences.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: low
+      justification: Discusses budgeting but not specific categorization frameworks.
+    - code: 3.C
+      name: User-Defined Allocation Constraints
+      relevance: low
+      justification: Mentions budgeting but not user-defined constraints.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Reviews the literature but not specific existing systems.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Systematically identifies research gaps in financial literacy for college students.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Reviews financial behavior as a key variable.
+    - code: 5.B
+      name: Profile Dynamics and the Cold-Start Problem
+      relevance: low
+      justification: Does not address profile dynamics or cold-start issues.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: low
+      justification: Does not focus on classification approaches.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: contextual
+      justification: Mentions predictive approaches but not specific modeling.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Highlights budgeting as a core thematic gap.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: No direct mention of anomaly detection.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: contextual
+      justification: Mentions fintech and digital tools but not mobile-first design specifically.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: contextual
+      justification: Mentions fintech and digital tools but not UX design.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: No direct mention of data privacy.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: low
+      justification: Mentions behavior but not engagement dynamics.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: low
+      justification: Discusses review methodology but not system evaluation.
+  contribution: This paper provides a systematic overview of financial literacy research relevant to young professionals, which can inform Odin's design by identifying key behavioral and knowledge domains. The identification of research gaps in budgeting, credit, and fintech use directly justifies the need for Odin's features in these areas. The findings on financial behavior and attitudes can guide the development of behavioral profiling modules. The paper's emphasis on digital tools and financial self-efficacy supports the rationale for a mobile-first, user-empowering PFMS.
   directly_justifies:
-    - "College students lack adequate budgeting skills and show low interest in budgeting processes."
-    - "Financial knowledge alone is insufficient; financial attitude and self-efficacy moderate behavior."
-    - "Credit card use and student debt among young adults require psychological and behavioral analysis."
-    - "Effectiveness of FinTech tools (budgeting apps, digital banking) in improving financial literacy remains unevaluated."
-    - "Socio-demographic factors like gender, parental education, and income influence financial literacy levels."
+    - "Budgeting skills are a recurring theme, but students are least interested in this process."
+    - "Students with low financial knowledge may misuse credit cards and incur uncontrollable debt."
+    - "Financial self-efficacy emerges as a moderating factor between knowledge and behavior."
+    - "There is a gap in assessing the actual effectiveness of digital financial tools in improving literacy."
+    - "Gender, parental education, and income significantly influence financial literacy levels."
   limits:
-    - "Systematic review may have excluded studies not using exact title search terms."
-    - "Only Scopus and Web of Science databases used, potentially missing relevant research."
-    - "Search did not include 'financial knowledge' or 'financial skills' as separate terms, limiting coverage."
-    - "Focus on college students (18-24) may not fully generalize to young professionals in workforce."
-  mapping_rationale: "The paper was screened against Odin's functional domains. It provides citeable claims for behavioral profiling (domain 5) through its analysis of financial knowledge, behavior, and attitudes as components of user profiles. Budgeting strategies (domain 7) are directly discussed as a core skill with identified gaps. Savings and debt management (domain 13) are covered via credit, student loans, and savings behaviors. Topics related to expense categorization (3), anomaly detection (8), mobile design (9), data privacy (10), and retention (11) were not present, so codes 3.A, 8.A, 9.A, 10.A, 11.A were rejected. The paper's international scope and systematic methodology justify inclusion of 1.C (financial behavior) and 2.C (user preferences) as applicable to Filipino young professionals."
+    - "The search was limited to Scopus and Web of Science, possibly excluding relevant studies."
+    - "Search terms were restricted to titles, potentially missing studies using different keywords."
+    - "The review focuses primarily on financial literacy and may not fully capture financial capability/wellbeing."
+    - "The use of specific bibliometric tools may have constrained the analysis."
+    - "The search did not include related terms like 'financial knowledge' or 'financial skills'."
+  mapping_rationale: A systematic scan across all 12 functional domains was performed. The paper was flagged as relevant primarily for domains related to Behavioral Profiling & Classification, Existing Systems & Gaps, and Budget Recommendation. Topic codes 1.A, 1.B, 1.C, 2.A, 2.C, 3.A, 3.C, 4.A, 4.B, 5.A, 7.A, 9.A, and 9.B were assigned medium or contextual relevance because the paper provides foundational evidence on demographics, behavior, and system gaps but does not directly address Odin's algorithmic or design specifics. Codes 6.A, 8.A, 10.A, 11.A, and 12.A were considered low or contextual as the paper does not cover predictive modeling, anomaly detection, privacy, or engagement mechanics. The borderline case of 2.A (cultural practices) was marked contextual due to the lack of a specific Filipino focus. The overall relevance to Odin is medium, providing a strong literature foundation for several modules, especially behavioral profiling and identifying system gaps.
 limitations:
-  - "Search restricted to title fields only, not abstracts, potentially missing relevant studies."
-  - "Only Scopus and Web of Science databases used; other databases may contain relevant research."
-  - "Non-English publications were excluded, potentially biasing geographic coverage."
-  - "Search equation did not include 'financial knowledge' or 'financial skills' as separate terms."
-  - "Time frame 2003-2023 may not capture very recent trends beyond 2023."
+  - "The search strategy was limited to Scopus and Web of Science."
+  - "Only titles were searched, not abstracts or full texts."
+  - "The review covers up to 2023, missing very recent studies."
+  - "Related terms like 'financial knowledge' were not included in the initial search."
+  - "Only documents with a score of 3 (correlational studies) were included, excluding descriptive works."
+  - "The search did not include 'University' or 'College' as separate terms in the title search."
+  - "Potential language bias exists as only English articles were included."
 remember_this:
-  - "Financial literacy and knowledge are often used interchangeably in research."
-  - "Budgeting skills are critically low among college students globally."
-  - "num: 34% of studies use regression analysis as primary method."
-  - "Debt management and FinTech effectiveness are underexplored areas."
-  - "Financial attitude and self-efficacy moderate the link between knowledge and behavior."
+  - "Financial literacy definitions vary widely across studies."
+  - "Budgeting, credit, and fintech use are key research gaps."
+  - "Financial self-efficacy mediates the knowledge-behavior link."
+  - "Gender and parental education significantly influence financial literacy."
+  - "The field is shifting from literacy to capability and well-being."
 ```

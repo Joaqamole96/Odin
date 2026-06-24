@@ -30,8 +30,8 @@
 #### [X] 1.A.III Financial literacy levels and the gap between knowledge and behavior [/literacy-behavior-gap]
 > *Scholar query: What is the documented level of financial literacy among Filipino young professionals, and what evidence exists that higher financial literacy does not reliably translate into disciplined financial behavior? I am looking for studies that measure both knowledge and actual financial behavior in this demographic — particularly findings that show a gap between what Filipino young adults know about personal finance and what they actually do with their money.*
 
-#### 1.A.IV Prevalence and severity of financial management problems in this demographic [/fin-problem-prevalence]
-> *Scholar query: How prevalent and severe are personal financial management problems — such as insufficient savings, debt reliance, and budget non‑adherence — among Filipino young professionals aged 20 to 40 in Metro Manila? I am looking for quantitative studies or institutional survey data that document the proportion of this demographic experiencing financial difficulty, the specific nature of those difficulties, and how these problems compare across income types.*
+#### [X] 1.A.IV Prevalence and severity of financial management problems in Metro Manila across DOLE employment categories [/fin-problem-prevalence]
+> *Scholar query: How prevalent and severe are personal financial management problems — such as insufficient savings, debt reliance, and budget non‑adherence — among Filipino young professionals aged 20 to 40 specifically in the National Capital Region (Metro Manila), and how do these problems vary across the employment categories defined by the Department of Labor and Employment (regular, independent contract, fixed‑term/project employment)? I am looking for quantitative studies or institutional survey data that report prevalence rates disaggregated by employment type and geographic location, and that discuss how income predictability interacts with financial difficulty.*
 
 ---
 
@@ -89,21 +89,10 @@
 
 ### 2.B Seasonal and Cyclical Spending Patterns [/seasonal-patterns]
 
-#### [X] 2.B.I Calendar‑driven spending spikes and suppression cycles (Occasions) [/calendar-spending-cycles]
+#### [X] 2.B.I Calendar‑driven spending spikes and suppression cycles [/calendar-spending-cycles]
 > *Scholar query: What calendar‑driven spending spikes and suppression cycles are documented among Filipino households and young professionals? I am looking for empirical or observational studies that characterize how spending behavior changes predictably across the calendar year — including the pre‑payday suppression period known as petsa de peligro, the post‑payday spending surge, and the seasonal escalation during the ber months leading to Christmas — and that quantify the magnitude of these fluctuations.*
 
-> **Note – Odin’s term “Occasions”:** This sub‑subtopic covers the following documented Filipino spending cycle events, which Odin treats as *Occasions* (culturally expected spending spikes excluded from anomaly alerting):
-> - *Petsa de peligro*: pre‑payday spending suppression
-> - Payday spree: post‑payday spending spike
-> - 13th month pay effect: bonus‑driven December spending surge
-> - Christmas / Ber Months: September–December seasonal spending escalation
-> - *Semana Santa* / Holy Week: travel and leisure spending spike
-> - School enrollment season: school fees, uniforms, and supplies
-> - *Undas* / All Saints’ Day: travel and family reunion spending
-> - MMFF season: post‑Christmas cinema and leisure spending
-> - Paluwagan contribution cycle: periodic obligation‑driven cash outflow
-> - *Ambag* / community collection cycle: periodic shared‑expense outflow
-> - Summer‑related consumption spike
+> **Note – Odin’s term “Occasions”:** This sub‑subtopic covers documented Filipino spending cycle events, which Odin treats as *Occasions* (culturally expected spending spikes excluded from anomaly alerting). See Topic 2.D for the full treatment.
 
 #### 2.B.II Implications of cyclical patterns for forecasting, anomaly detection, and budget recommendation [/cyclical-pattern-implications]
 > *Scholar query: What are the implications of documented Filipino seasonal and cyclical spending patterns for the design of spending forecasting models, anomaly detection systems, and budget recommendation algorithms? I am looking for research that discusses how failure to account for these patterns produces systematic forecasting errors, anomaly false positives during culturally expected spending spikes, or budget recommendations that are unrealistic during high‑obligation periods.*
@@ -112,13 +101,25 @@
 
 ### 2.C User‑Declared Financial Preferences [/user-preferences]
 
-> **Note:** This subtopic covers preferences that users *declare* at onboarding or configure over time, as opposed to behavioral patterns inferred from transaction data. The RRL grounding is conservative: literature supports the need for systems to accommodate user‑defined priorities rather than prescribing a single allocation logic.
+> **Note:** This subtopic covers preferences that users *declare* at onboarding or configure over time, as opposed to behavioral patterns inferred from transaction data.
 
 #### [X] 2.C.I Protected expense categories: non‑negotiable spending floors declared by users [/protected-categories]
 > *Scholar query: What evidence exists that personal finance systems should allow users to designate certain expense categories as protected or non‑negotiable — meaning the system will not recommend reducing spending in those categories regardless of optimization pressure — and what categories are most commonly treated this way by Filipino users? I am looking for research that grounds protected category logic in documented user financial behavior rather than treating it as a purely technical design decision.*
 
 #### 2.C.II Category and goal prioritization as user‑configurable inputs to recommendation logic [/priority-config]
 > *Scholar query: How have personal finance systems implemented user‑configurable priority hierarchies — such as allowing users to rank their savings goal above discretionary spending, or to treat debt repayment as higher priority than leisure — as direct inputs to budget recommendation or allocation algorithms? I am looking for system design literature or user studies that evaluate the effect of allowing users to declare their own priority structures on recommendation acceptance and adherence.*
+
+---
+
+### 2.D Filipino Spending Cycles and "Occasions" [/occasions]
+
+> **Note:** This topic provides dedicated coverage of the magnitude, predictability, and algorithmic treatment of recurring high‑spending events in Filipino financial life. It directly supports Odin's anomaly whitelisting logic and seasonal forecast adjustments.
+
+#### 2.D.I Magnitude, timing, and predictability of documented Filipino spending cycles [/occasions-magnitude]
+> *Scholar query: What empirical evidence documents the magnitude, timing, and predictability of recurring high‑spending events — such as petsa de peligro, holiday seasons (ber months/Christmas), enrollment periods, fiesta preparations, Undas, and community contribution cycles (paluwagan/ambag) — in Filipino household or personal spending patterns? I am looking for studies that quantify the spending uplift associated with these events and establish their predictable seasonal or calendar‑driven timing, to justify their treatment as expected rather than anomalous outflows.*
+
+#### 2.D.II Algorithmic treatment of expected spending spikes: whitelisting, seasonal adjustment, and event‑based threshold relaxation [/occasions-algorithmic]
+> *Scholar query: What algorithmic strategies have been proposed or implemented to prevent culturally or cyclically expected spending spikes from being flagged as anomalies in personal finance systems — including whitelisting, seasonal adjustment, lookback‑window exclusion, and event‑based threshold relaxation? I am looking for research that evaluates the effectiveness of these techniques in reducing false positive anomaly alerts and improving forecast accuracy during predictable high‑spending periods.*
 
 ---
 
@@ -147,6 +148,18 @@
 
 #### 3.B.III Culturally specific expense categories warranting dedicated treatment: paluwagan, remittances, and religious obligations [/cultural-expense-categories]
 > *Scholar query: What culturally specific expense types in Filipino financial practice warrant dedicated categories in a personal finance management system, rather than being absorbed into generic miscellaneous or social expense buckets? I am looking for literature that documents the financial significance and regularity of paluwagan contributions, family remittances, religious and community donations, and similar obligations — and that makes the case that these represent distinct behavioral and budgeting domains that should be tracked separately.*
+
+---
+
+### 3.C User‑Defined Allocation Constraints [/constraints-domain]
+
+> **Note:** This topic covers the literature basis for allowing users to set spending limits (floors and ceilings) and constraint types (free, protected, locked) on expense categories, which directly feeds into the budget recommendation module's constraint encoding.
+
+#### 3.C.I Encoding hard and soft constraints: protected, locked, and free categories [/constraint-encoding]
+> *Scholar query: How have personal finance systems implemented user‑defined spending constraints — specifically the ability to designate categories as non‑negotiable (hard constraints, such as protected floors or locked fixed amounts) versus adjustable (soft constraints, such as ceilings or flexible ranges) — and what encoding strategies support these distinctions in allocation logic? I am looking for research that formalizes the difference between hard and soft constraints in budget optimization problems, including how violations are prevented or penalized.*
+
+#### 3.C.II Behavioral evidence for user‑set spending floors, ceilings, and category protections [/constraint-behavioral]
+> *Scholar query: What behavioral evidence exists that allowing users to set protected floors, locked amounts, or category ceilings improves budget adherence, user trust, or sustained logging behavior in personal finance applications? I am looking for studies that measure the effect of user‑defined constraints on recommendation acceptance and financial outcomes, and that identify which categories users most frequently protect.*
 
 ---
 
@@ -189,7 +202,7 @@
 > *Scholar query: Why are Western financial behavioral taxonomies and financial personality frameworks inadequate for characterizing Filipino users' financial behavior? I am looking for research that documents the cultural, structural, and institutional differences between Filipino and Western financial contexts — and that argues for locally grounded profile construction rather than applying imported frameworks.*
 
 #### 5.A.III Behavioral dimensions as meaningful profile differentiators: income stability and obligation weight [/profile-dimensions]
-> *Scholar query: What behavioral dimensions — such as income stability and the weight of obligatory versus discretionary spending — are most meaningful for differentiating financial behavioral user profiles? I am looking for research that validates these dimensions as discriminating features rather than arbitrary groupings, and that demonstrates how users who differ along these axes require different budgeting strategies, recommendation logic, or forecasting approaches.*
+> *Scholar query: What evidence supports income stability (the predictability of income frequency and amount) and obligation weight (the proportion of total expenses consumed by essential and obligatory spending) as meaningful and discriminating behavioral dimensions for financial user profiling? I am looking for research that validates these two axes — where obligation weight is operationalized as (Essential Expenses + Obligatory Expenses) / Total Expenses — as distinguishing features that correlate with different budgeting needs, forecasting requirements, and anomaly susceptibility.*
 
 #### 5.A.IV Constructing locally grounded financial profiles from Philippine institutional and behavioral data [/fil-profile-construction]
 > *Scholar query: How can locally grounded financial behavioral profiles or user archetypes be constructed from Philippine institutional data sources such as the FIES and BSP CFS, or from observed transaction behavior? I am looking for methodological literature on deriving user typologies from survey or expenditure datasets — including clustering, segmentation, or expert‑informed classification approaches — applied to data that captures Filipino household financial structure.*
@@ -204,23 +217,27 @@
 #### 5.B.II Behavioral signals that should trigger profile reassessment [/profile-triggers]
 > *Scholar query: What behavioral signals in a personal finance system should trigger a reassessment or reclassification of a user's financial behavioral profile? I am looking for research on change‑point detection, sustained behavioral shifts, or threshold‑based triggers in adaptive user modeling — applied to signals such as sustained income level changes, shifts in the proportion of obligatory versus discretionary spending, or consistent departures from the patterns used to initially classify the user.*
 
-#### 5.B.III Cold‑start problem: profile‑average fallback for users without behavioral history [/profiling-cold-start]
-> *Scholar query: How is the cold‑start problem handled in personalized financial systems for new users who have no behavioral transaction history? I am looking for research on profile‑average or population prior fallback strategies — where a new user is initially assigned to a default profile based on onboarding input or demographic similarity — and on how quickly systems can transition from generic to personalized behavior as user data accumulates.*
+#### 5.B.III Cold‑start handling for financial behavioral profiles [/profiling-cold-start]
+> *Scholar query: What strategies exist for assigning an initial financial behavioral profile to a new user who has not yet generated any transaction history? I am looking for research on questionnaire‑based classification, demographic proxy assignment, and profile‑average fallback — with attention to how onboarding surveys can provide sufficient signal to avoid a true cold‑start problem.*
+
+> **Note – Odin's approach:** Odin's FBP classifier does **not** require a cold‑start fallback because the onboarding questionnaire provides sufficient initial features for classification. Thus, while general cold‑start literature for profiling is reviewed, Odin's specific implementation relies on the questionnaire as the primary input at registration.
 
 ---
 
-### 5.C Random Forest Classification Algorithm for Behavioral Profiles [/profile-classification-algo]
+### 5.C Classification Approaches for Financial Behavioral Profiles [/profile-classification]
+
+> **Note:** This section surveys *classification methods in general* as applied to user profiling tasks. The literature reviewed here may cover any classification algorithm (Random Forest, SVM, logistic regression, gradient boosting, etc.) applied to similar profile‑assignment problems.
 
 #### [X] 5.C.I Supervised classification versus clustering for predefined profile categories [/classification-vs-clustering]
 > *Scholar query: When should supervised classification be chosen over clustering for assigning users to financial behavioral profiles, particularly when the profile categories are predefined by domain knowledge rather than discovered from data? I am looking for research that discusses the suitability of supervised versus unsupervised approaches in the context of fixed profile taxonomies — arguing that classification is appropriate when profiles are already specified and the task is to assign users, not to discover new groupings.*
 
-#### 5.C.II Candidate classification algorithms for behavioral and financial user profiling [/classifier-candidates]
-> *Scholar query: What classification algorithms have been applied to behavioral or financial user profiling tasks — including Random Forest, logistic regression, support vector machines, and gradient boosting classifiers — and what results do they produce in terms of accuracy, interpretability, and feature importance? I am looking for comparative studies that benchmark multiple classifiers on user profile or customer segmentation tasks using behavioral or financial feature sets.*
+#### 5.C.II Classification algorithms applied to behavioral and financial user profiling [/classifier-candidates]
+> *Scholar query: What classification algorithms have been applied to behavioral or financial user profiling tasks — including tree‑based methods, logistic regression, support vector machines, and ensemble approaches — and what results do they produce in terms of accuracy, interpretability, and feature importance? I am looking for comparative studies that benchmark multiple classifiers on user profile or customer segmentation tasks using behavioral or financial feature sets.*
 
 #### 5.C.III Feature selection: onboarding questionnaire data versus accumulated transaction behavioral data [/classifier-features]
 > *Scholar query: What features are most appropriate for classifying a user's financial behavioral profile — questionnaire responses collected during onboarding, early transaction behavioral data, or a combination of both? I am looking for research on feature selection and feature engineering for financial user profiling classifiers, including evidence on which input types produce more accurate profile assignments and how the feature set should evolve as behavioral data accumulates.*
 
-#### 5.C.IV Cold‑start classification: training a classifier without labeled real user data at launch [/classifier-cold-start]
+#### 5.C.IV Training a profile classifier without labeled real user data at launch [/classifier-training-cold-start]
 > *Scholar query: How can a supervised user profile classifier be trained when no labeled real user data exists at system launch? I am looking for research on approaches such as synthetic data generation, expert‑defined feature distributions, or simulation‑based training that allow a classification model to be deployed before the system has acquired real behavioral data from actual users.*
 
 #### 5.C.V Progressive reclassification: periodic, continuous, and drift‑triggered profile update strategies [/progressive-reclassification]
@@ -229,13 +246,13 @@
 #### 5.C.VI Tradeoffs across candidate classifiers: predictive accuracy, interpretability, and mobile feasibility [/classifier-tradeoffs]
 > *Scholar query: What are the tradeoffs among candidate classification algorithms for financial user profiling when evaluated along dimensions of predictive accuracy, interpretability of predictions, and mobile deployment feasibility? I am looking for comparative analyses that show how algorithms differ when the deployment environment is a resource‑constrained mobile application and when the classification decision must be explainable or auditable.*
 
-> **Cross‑reference:** Mobile feasibility constraints are detailed in Topic 9.A.III (Technical constraints for ML models on mobile). The findings there should inform this tradeoff analysis.
+> **Cross‑reference:** Mobile feasibility constraints are detailed in Topic 9.A.III. The findings there should inform this tradeoff analysis.
 
 #### 5.C.VII Evaluation metrics for profile classification: accuracy, precision, recall, and F1‑score [/classifier-eval-metrics]
 > *Scholar query: What evaluation metrics are appropriate for assessing the performance of a supervised classification model applied to financial behavioral user profiling, and how are accuracy, precision, recall, and F1‑score interpreted and applied in this context? I am looking for research that discusses metric selection for multi‑class classification tasks where class imbalance may exist and where the cost of misclassification differs across profile types.*
 
-#### 5.C.VIII Explainability for profile classification: SHAP values and feature importance [/classifier-explainability]
-> *Scholar query: How are SHAP (SHapley Additive exPlanations) or similar model‑agnostic explainability methods applied to Random Forest classifiers in financial user profiling, and what evidence exists that providing feature‑importance explanations increases user trust or acceptance of profile recommendations?*
+#### 5.C.VIII Explainability for profile classification: feature‑contribution explanations and their effect on user acceptance [/classifier-explainability]
+> *Scholar query: What methods exist for explaining profile classification decisions to end‑users — including feature‑importance visualizations, counterfactual explanations, and natural‑language justifications — and what evidence exists that providing such explanations increases user trust, acceptance, or willingness to accept the assigned profile? I am looking for studies that evaluate explainability techniques in financial or behavioral profiling contexts, including cases where explanations reduced trust or created confusion.*
 
 ---
 
@@ -244,7 +261,7 @@
 ### 6.A Predictive Modeling in Personal Finance Systems [/predictive-modeling-domain]
 
 #### [X] 6.A.I Survey of forecasting methods applied to personal or household spending data [/forecasting-methods-survey]
-> *Scholar query: What forecasting methods have been applied to personal spending or household expenditure data, and how do they compare in accuracy and practical suitability? I am looking for comparative studies that benchmark approaches such as ARIMA, exponential smoothing, LSTM, GRU, gradient boosting, and other time‑series or regression models against personal finance or consumer spending datasets — with attention to which methods handle irregular spending patterns, categorical breakdowns, and small individual‑level datasets most effectively. Also include literature on specific training techniques: Huber loss, early stopping, and walk‑forward validation.*
+> *Scholar query: What forecasting methods have been applied to personal spending or household expenditure data, and how do they compare in accuracy and practical suitability? I am looking for comparative studies that benchmark approaches such as statistical time‑series models (ARIMA, exponential smoothing), tree‑based methods, and sequence‑based models (RNN, LSTM, GRU) against personal finance or consumer spending datasets — with attention to which methods handle irregular spending patterns, categorical breakdowns, and small individual‑level datasets most effectively. Also include literature on specific training techniques: Huber loss, early stopping, and walk‑forward validation.*
 
 #### 6.A.II Temporal dependency in spending data: prior periods as predictors of subsequent periods [/temporal-dependency]
 > *Scholar query: What empirical evidence exists that personal spending behavior exhibits temporal dependency — that is, that spending in prior periods is predictive of spending in subsequent periods? I am looking for studies that quantify autocorrelation or lag effects in household or individual‑level expenditure data, and that use this evidence to justify the application of sequential models, particularly in contexts where spending patterns repeat across daily, weekly, or monthly cycles.*
@@ -253,7 +270,7 @@
 > *Scholar query: How have researchers approached the problem of forecasting spending across multiple expense categories simultaneously, rather than predicting total spending as a single aggregate figure? I am looking for studies that use multi‑output or multi‑variate forecasting models applied to disaggregated household or personal expenditure data organized by category, and that report results on per‑category prediction accuracy.*
 
 #### 6.A.IV Cold‑start fallback strategies for forecasting with insufficient transaction history [/forecast-cold-start]
-> *Scholar query: What cold‑start fallback strategies are used in forecasting systems when a user does not yet have sufficient transaction history to generate a reliable personalized prediction? I am looking for research on how personal finance or recommender systems handle new users — including population average priors, profile‑based initialization, and conservative default forecasts — and what evidence exists for the appropriateness of each fallback approach.*
+> *Scholar query: What cold‑start fallback strategies are used in forecasting systems when a user does not yet have sufficient transaction history to generate a reliable personalized prediction? I am looking for research that compares **profile‑based initialization** (using the user's newly assigned financial behavioral profile to fetch population‑average spending patterns for that profile) against **generic threshold‑based fallback** (e.g., assuming spending equals a fixed percentage of income). What evidence exists on which approach produces lower initial forecast error and faster convergence to personalized accuracy as transaction data accumulates?*
 
 #### 6.A.V Mobile deployment constraints and their effect on forecasting algorithm selection [/mobile-forecast-constraints]
 > *Scholar query: How do mobile deployment constraints — such as limited memory, processing power, and battery life — affect the practical selection of a spending forecasting algorithm in personal finance applications? I am looking for research that evaluates the feasibility of running forecasting models on‑device or with minimal server dependency, and that discusses how model size, inference latency, and retraining frequency factor into algorithm selection for mobile‑first deployments.*
@@ -262,7 +279,9 @@
 
 ---
 
-### 6.B Spending Forecasting Algorithm (LSTM) [/forecasting-algo]
+### 6.B Forecasting Algorithms for Sequential Spending Data [/forecasting-algo]
+
+> **Note:** This section surveys *forecasting methods in general* as applied to personal spending time series. The literature reviewed may cover statistical, tree‑based, or deep learning approaches, and should focus on the forecasting problem rather than advocating for a specific algorithm.
 
 #### [X] 6.B.I Candidate forecasting algorithms for sequential personal spending data [/forecast-algo-candidates]
 > *Scholar query: What algorithms are most commonly applied to sequential personal or household spending forecasting tasks, and what are the documented strengths and weaknesses of each? I am looking for comparative literature covering statistical approaches such as ARIMA and exponential smoothing, tree‑based methods such as gradient boosting, and deep learning approaches such as LSTM and GRU — with attention to how each handles non‑linearity, temporal dependency, and sparse individual‑level data.*
@@ -278,11 +297,11 @@
 
 > **Cross‑reference:** Mobile feasibility constraints are detailed in Topic 9.A.III.
 
-#### 6.B.V Evaluation metrics for spending forecasting: MAE, RMSE, SMAPE, and MDA [/forecast-eval-metrics]
+#### 6.B.V Evaluation metrics for spending forecasting: MAE, RMSE, SMAPE, and mean directional accuracy [/forecast-eval-metrics]
 > *Scholar query: What evaluation metrics are most appropriate for assessing the performance of a spending forecasting model in a personal finance context, and how are MAE, RMSE, SMAPE, and mean directional accuracy interpreted and applied? I am looking for research that justifies metric selection for personal expenditure forecasting tasks — particularly the choice between scale‑dependent and scale‑independent metrics, and the relevance of directional accuracy for user‑facing forecast display.*
 
-#### 6.B.VI Explainability for LSTM forecasts: feature perturbation and attention‑based methods [/forecast-explainability]
-> *Scholar query: What methods exist for explaining LSTM or recurrent neural network forecasts to end‑users in financial or personal budgeting applications, and what are the tradeoffs between feature perturbation, SHAP for time series, and attention mechanisms in terms of computational cost and user comprehension?*
+#### 6.B.VI Explainability for sequence‑based forecasts: perturbation, attention, and counterfactual methods [/forecast-explainability]
+> *Scholar query: What methods exist for explaining forecasts to end‑users in financial or personal budgeting applications — including feature perturbation, temporal attention visualization, and counterfactual scenario comparisons — and what are the tradeoffs between these approaches in terms of computational cost and user comprehension? I am looking for studies that evaluate explainability techniques specifically for time‑series or sequence‑based forecasting in consumer or personal finance contexts.*
 
 ---
 
@@ -310,8 +329,8 @@
 #### [X] 7.B.I Approaches to budget recommendation in existing systems: rule‑based, optimization‑based, and data‑driven [/budget-rec-approaches]
 > *Scholar query: What approaches to budget recommendation have been implemented in personal finance management systems, and how do they compare? I am looking for research that describes rule‑based systems with fixed allocation proportions, constraint‑based optimization approaches that maximize savings subject to spending floors, and data‑driven or ML‑based recommendation engines — with attention to the tradeoffs between simplicity, adaptability, and user acceptance.*
 
-#### 7.B.II Constraint‑based allocation: income floors, spending caps, and protected category logic [/constraint-allocation]
-> *Scholar query: How is constraint‑based allocation implemented in budget recommendation systems — specifically the logic of income‑based spending caps, minimum spending floors for essential categories, and the protection of non‑negotiable expense categories from optimization pressure? I am looking for research or system design literature that describes how these constraints are encoded and solved, and what happens to recommendation quality when constraints are violated or infeasible.*
+#### 7.B.II Constraint‑based allocation: encoding hard and soft constraints, protected categories, and feasibility [/constraint-allocation-encoding]
+> *Scholar query: How is constraint‑based allocation implemented in budget recommendation systems — specifically the logic of encoding user‑defined constraints such as minimum spending floors (protected categories), fixed amounts (locked categories), and maximum spending caps, and distinguishing between hard constraints (must not be violated) and soft constraints (may be violated with penalty)? I am looking for research or system design literature that describes how these constraints are encoded and solved, what optimization formulations support them, and what happens to recommendation quality when constraints are infeasible or must be reduced.*
 
 #### 7.B.III Behavioral evidence for the effectiveness of automated budget recommendations [/budget-rec-evidence]
 > *Scholar query: What behavioral evidence exists that automated or algorithmic budget recommendations — as opposed to self‑directed budgeting — improve financial outcomes such as savings rates, budget adherence, and debt reduction? I am looking for experimental or quasi‑experimental studies that isolate the effect of recommendation system output on user financial behavior.*
@@ -321,21 +340,40 @@
 
 ---
 
-### 7.C Budget Recommendation Algorithm (Linear Programming) [/budget-rec-algo]
+### 7.C Constrained Optimization Approaches for Budget Allocation [/budget-rec-optimization]
 
-#### [X] 7.C.I Problem formulation: resource allocation, constrained optimization, or hybrid recommendation [/budget-rec-formulation]
+> **Note:** This section surveys *optimization techniques in general* that have been applied to personal or household budget allocation problems. The literature may cover linear programming, goal programming, heuristic search, or other mathematical programming methods.
+
+#### 7.C.I Problem formulation: resource allocation, constrained optimization, or hybrid recommendation [/budget-rec-formulation]
 > *Scholar query: How is the budget recommendation problem formally framed in the research literature — as a resource allocation problem, a constrained optimization problem, a ranking task, or a hybrid recommendation problem? I am looking for work that explicitly characterizes the computational structure of budget generation and evaluates how different problem formulations affect the tractability, explainability, and user‑facing output of the recommendation system.*
 
-#### 7.C.II Candidate algorithms for budget distribution and financial resource allocation [/budget-rec-algo-candidates]
-> *Scholar query: What algorithmic solutions have been applied to the problem of distributing a limited financial resource across competing spending categories? I am looking for research on linear programming, multi‑objective optimization, goal programming, reinforcement learning, and related techniques as applied to household or personal budget allocation — with attention to how constraints such as minimum essential spending, savings targets, and category caps are encoded and solved.*
+#### 7.C.II Optimization techniques applied to household or personal budget allocation [/budget-rec-algo-candidates]
+> *Scholar query: What optimization techniques have been applied to the problem of distributing a limited financial resource across competing spending categories — including linear programming, multi‑objective optimization, goal programming, and heuristic allocation methods? I am looking for research that describes how constraints such as minimum essential spending, savings targets, and category caps are encoded and solved, and that reports on solution quality, computational performance, and practical suitability for personal finance applications.*
 
-#### 7.C.III Tradeoffs across candidate algorithms: mobile feasibility, explainability, adaptability, and cold‑start performance [/budget-rec-algo-tradeoffs]
-> *Scholar query: What are the key tradeoffs among candidate budget recommendation algorithms when evaluated along dimensions of mobile deployment feasibility, user‑facing explainability, adaptability to changing user circumstances, and cold‑start performance with limited historical data? I am looking for comparative studies or design analyses that assess these tradeoffs specifically in the context of personal finance systems serving users with variable income and limited transaction history.*
+> **Note – Scope limitation:** Literature on supply chain or enterprise resource allocation will be included **only if** the paper explicitly draws a parallel to household/personal finance or provides a mathematically generic constraint‑solving framework that is commonly cited in personal finance system design.
+
+#### 7.C.III Tradeoffs across optimization approaches: mobile feasibility, explainability, adaptability, and cold‑start performance [/budget-rec-algo-tradeoffs]
+> *Scholar query: What are the key tradeoffs among candidate budget recommendation or allocation approaches when evaluated along dimensions of mobile deployment feasibility, user‑facing explainability, adaptability to changing user circumstances, and cold‑start performance with limited historical data? I am looking for comparative studies or design analyses that assess these tradeoffs specifically in the context of personal finance systems serving users with variable income and limited transaction history.*
 
 > **Cross‑reference:** Mobile feasibility constraints are detailed in Topic 9.A.III.
 
-#### 7.C.IV Evaluation metrics for budget recommendation: MAPE, RMSE, variance analysis, and adherence rate [/budget-rec-eval-metrics]
-> *Scholar query: What evaluation metrics are appropriate for assessing the performance of a budget recommendation algorithm in a personal finance context — specifically the use of MAPE, RMSE, variance analysis, and adherence rate (percentage of users whose actual spending stays within a defined tolerance of recommended allocations) to measure how closely algorithmic recommendations match optimal or user‑validated allocations? I am looking for research that justifies these metrics for recommendation evaluation tasks and discusses how to construct a ground truth or reference allocation for comparison.*
+#### 7.C.IV Evaluation metrics for budget recommendation: allocation error, adherence rate, and feasibility rate [/budget-rec-eval-metrics]
+> *Scholar query: What evaluation metrics are appropriate for assessing the quality of a budget recommendation or allocation system — including allocation error measures (such as MAPE or RMSE against a reference allocation), adherence rate (the proportion of users whose actual spending stays within a defined tolerance of recommended allocations), and feasibility rate (the proportion of recommended budgets that are executable given resource constraints)? I am looking for research that justifies these metrics for recommendation evaluation tasks and discusses how to construct a ground truth or reference allocation for comparison.*
+
+---
+
+### 7.D Infeasibility Handling and Reduction Hierarchies in Budget Recommendations [/budget-infeasibility]
+
+> **Note:** This section covers algorithmic strategies for when a recommended budget exceeds available resources — an unavoidable scenario for some users. The literature review should focus on reduction logic, prioritization, and the behavioral sensitivity required when delivering such news.
+
+#### 7.D.I Reduction hierarchies: which categories get cut first and by how much [/reduction-hierarchies]
+> *Scholar query: What algorithmic strategies exist for handling budget infeasibility — where a recommended allocation exceeds available resources — including reduction hierarchies (e.g., cutting discretionary before essential, or reducing categories in reverse priority order), proportional cutting across all categories, and fallback warnings? I am looking for research that formalizes reduction rules, evaluates the tradeoffs between fairness and adherence to user‑set priorities, and discusses how the order of reductions is determined.*
+
+#### 7.D.II Strategies when all legal reductions are insufficient [/reduction-fallback]
+> *Scholar query: What strategies are recommended or implemented when, after applying all permissible reductions (e.g., cutting discretionary spending to zero), the budget still exceeds available resources? I am looking for research that discusses escalation protocols — such as recommending income‑side interventions, suggesting debt counseling, or framing the situation as a planning challenge rather than a failure — with attention to the psychological impact of delivering infeasibility messages to users experiencing financial stress.*
+
+#### 7.D.III Communicating infeasibility to users without inducing panic or despair [/infeasibility-communication]
+> *Scholar query: What evidence exists on how to frame and deliver budget infeasibility notifications to users in a way that preserves motivation and encourages constructive action rather than inducing panic, despair, or abandonment? I am looking for research on message framing, behavioral economics principles (e.g., loss aversion, agency preservation), and user studies that evaluate different communication strategies for negative financial feedback in personal finance applications.*
 
 ---
 
@@ -344,7 +382,7 @@
 ### 8.A Anomaly Detection in Personal Finance Systems [/anomaly-domain]
 
 #### 8.A.I Definition and taxonomy of financial anomalies in personal spending data [/anomaly-taxonomy]
-> *Scholar query: How do researchers define and classify the types of anomalies that are detectable in personal spending or financial transaction data? I am looking for literature that develops or applies a taxonomy of financial anomalies at the individual or household level — distinguishing between sudden spending spikes, unusual category patterns, behavioral deviations from a user's established baseline, and budget overage events — and that discusses which detection approaches are appropriate for each type. Include specific anomaly types such as merchant novelty and category velocity where discussed.*
+> *Scholar query: How do researchers define and classify the types of anomalies that are detectable in personal spending or financial transaction data? I am looking for literature that develops or applies a taxonomy of financial anomalies at the individual or household level — distinguishing between sudden spending spikes, unusual category patterns, behavioral deviations from a user's established baseline, and budget overage events — and that discusses which detection approaches are appropriate for each type. Include specific anomaly types such as merchant novelty, category velocity, and temporal pattern deviations where discussed.*
 
 #### 8.A.II Threshold‑based overage alerting versus behavioral baseline deviation detection [/overage-vs-deviation]
 > *Scholar query: What is the conceptual and technical distinction between threshold‑based budget overage alerting and behavioral baseline deviation detection in personal finance systems? I am looking for research that separates these two mechanisms — where overage alerting fires when a user exceeds a predefined budget limit, and baseline deviation detection fires when spending departs from the user's own historical norm regardless of a budget — and that discusses the appropriate scope and limitations of each approach.*
@@ -358,21 +396,25 @@
 #### 8.A.V Culturally expected high‑value spending events (Occasions) and their treatment in anomaly detection [/cultural-spending-anomaly]
 > *Scholar query: How should a personal finance anomaly detection system handle culturally specific high‑value spending events that are expected and planned by Filipino users — such as paluwagan contributions, Christmas gift spending, or family remittances — but that might appear anomalous by statistical measures? I am looking for research on protecting or whitelisting culturally normative spending from anomaly detection, and on how systems can distinguish between planned extraordinary expenses and genuine deviations.*
 
+> **Cross‑reference:** Topic 2.D provides the dedicated literature on Filipino spending cycles and whitelisting strategies.
+
 ---
 
-### 8.B Anomaly Detection Algorithm (Isolation Forest) [/anomaly-algo]
+### 8.B Anomaly Detection Algorithms for Personal Spending Data [/anomaly-algo]
+
+> **Note:** This section surveys *anomaly detection methods in general* as applied to personal finance or financial transaction data. The literature may cover isolation‑based, density‑based, statistical, reconstruction‑based, or other approaches, and should address multiple anomaly types (monetary, merchant, category, temporal).
 
 #### 8.B.I Anomaly detection as an ML problem: unsupervised, semi‑supervised, and supervised families [/anomaly-ml-families]
 > *Scholar query: How is anomaly detection framed as a machine learning problem, and what are the structural differences between unsupervised, semi‑supervised, and supervised approaches? I am looking for survey or overview literature that explains when each family is appropriate — particularly the case for unsupervised methods when labeled anomaly examples are unavailable, as is typical in personal finance contexts where individual users cannot be expected to annotate their own abnormal transactions.*
 
 #### 8.B.II Candidate anomaly detection algorithms for personal spending data [/anomaly-algo-candidates]
-> *Scholar query: What anomaly detection algorithms have been applied to personal finance or financial transaction data, and what results have they produced? I am looking for comparative or applied studies that implement methods such as Isolation Forest, One‑Class SVM, Local Outlier Factor, statistical threshold models, or autoencoder‑based detection on personal spending records — reporting detection accuracy, false positive rates, and practical suitability for real‑world financial monitoring.*
+> *Scholar query: What anomaly detection algorithms have been applied to personal finance or financial transaction data, and what results have they produced? I am looking for comparative or applied studies that implement methods such as isolation‑based detection, one‑class classification, density‑based outlier detection, statistical threshold models, or reconstruction‑based approaches on personal spending records — with specific attention to detecting **multiple anomaly types**: monetary spikes, merchant novelty (unusual payees), category velocity (unusual frequency shifts), and temporal pattern deviations. Studies should report detection accuracy, false positive rates, and practical suitability for real‑world financial monitoring.*
 
 #### 8.B.III Per‑user baseline learning without labeled training data [/anomaly-unsupervised-baseline]
 > *Scholar query: How do unsupervised anomaly detection algorithms learn a normal baseline for each individual user without requiring labeled training examples, and what mechanisms make this per‑user calibration robust to behavioral variation? I am looking for foundational and applied literature that explains isolation‑based, density‑based, and reconstruction‑based approaches to individual baseline modeling — particularly in settings where the definition of normal behavior is user‑specific and cannot be predetermined.*
 
 #### 8.B.IV Tradeoffs across candidate algorithms: false positive control, explainability, and mobile feasibility [/anomaly-algo-tradeoffs]
-> *Scholar query: What are the tradeoffs among candidate anomaly detection algorithms for personal finance applications — particularly with respect to control of the false positive rate to avoid unnecessary user alerts, the ability to explain flagged anomalies in user‑facing language, and computational feasibility on mobile hardware? I am looking for research that evaluates these dimensions for methods such as Isolation Forest, One‑Class SVM, and autoencoder‑based approaches in financial or resource‑constrained contexts.*
+> *Scholar query: What are the tradeoffs among candidate anomaly detection algorithms for personal finance applications — particularly with respect to control of the false positive rate to avoid unnecessary user alerts, the ability to explain flagged anomalies in user‑facing language, and computational feasibility on mobile hardware? I am looking for research that evaluates these dimensions for methods such as isolation‑based detection, one‑class classification, density‑based methods, and reconstruction‑based approaches in financial or resource‑constrained contexts.*
 
 > **Cross‑reference:** Mobile feasibility constraints are detailed in Topic 9.A.III.
 
@@ -380,7 +422,19 @@
 > *Scholar query: What evaluation metrics are most appropriate for assessing the performance of an anomaly detection model in a personal finance context — specifically the interpretation and application of accuracy, precision, recall, and F1‑score when anomalous spending events are rare relative to normal transactions? I am looking for research that addresses class imbalance in anomaly evaluation and justifies the preference for recall‑oriented metrics in contexts where missing a genuine overage carries higher cost than a false alert.*
 
 #### 8.B.VI Explainability for anomaly alerts: feature‑deviation explanations and baseline comparisons [/anomaly-explainability]
-> *Scholar query: How do anomaly detection systems in personal finance applications explain flagged transactions to users using feature deviation (e.g., amount above typical median), and what evidence exists about user comprehension and appropriate response to such explanations?*
+> *Scholar query: How do anomaly detection systems in personal finance applications explain flagged transactions to users — using feature deviation (e.g., amount above typical median, unusual merchant, frequency change) and baseline comparisons — and what evidence exists about user comprehension and appropriate response to such explanations? I am looking for studies that evaluate the effectiveness of different explanation formats in helping users understand why a transaction was flagged and what action to take.*
+
+---
+
+### 8.C Cold‑Start Baseline Strategies for Anomaly Detection [/anomaly-cold-start]
+
+> **Note:** This section covers the specific challenge of establishing a "normal" baseline for a new user who has no transaction history. It directly compares the two candidate strategies (profile‑based and generic) and lets the literature inform the design choice.
+
+#### 8.C.I Profile‑based versus generic threshold initialization for new users [/anomaly-baseline-comparison]
+> *Scholar query: What strategies have been documented for establishing an anomaly detection baseline for new users with no transaction history — comparing **profile‑based initialization** (using the user's newly assigned financial behavioral profile to fetch population‑average spending distributions or threshold values for that profile) against **generic threshold‑based setting** (using fixed percentages of income or static alert rules)? I am looking for research that evaluates which approach minimizes false positive rates during the cold‑start period, reduces the time to convergence toward personalized detection, and produces anomaly alerts that users perceive as reasonable rather than erroneous.*
+
+#### 8.C.II Adaptive baseline refinement as transaction data accumulates [/anomaly-baseline-adaptation]
+> *Scholar query: What mechanisms exist for progressively refining an initially assigned anomaly detection baseline as a user accumulates transaction history — including moving windows, incremental learning, and drift‑detection methods? I am looking for research that discusses how quickly detection systems should transition from fallback baselines to user‑specific models, and what signals indicate that the transition is complete.*
 
 ---
 
@@ -399,8 +453,8 @@
 
 > **Note – Consolidated discussion:** This sub‑subtopic serves as the primary reference for all mobile‑feasibility discussions across forecasting (6.A.V, 6.B.IV), anomaly detection (8.B.IV), and budgeting (7.C.III). Researchers should cite this section when evaluating algorithmic tradeoffs.
 
-#### 9.A.IV Responsive web as a complement to mobile‑first: when a centered desktop layout is required [/responsive-web]
-> *Scholar query: What design and technical considerations apply when a mobile‑first application also provides a responsive web version with a centered desktop layout, and what literature discusses the tradeoffs between maintaining a single codebase versus separate native and web implementations?*
+#### 9.A.IV Native Android deployment constraints: APK size, memory, battery, and Google Play policies [/native-android-constraints]
+> *Scholar query: What specific deployment constraints apply to native Android applications — including APK size limits, memory and battery consumption guidelines, and Google Play Store policies — and how do these constraints affect the feasibility of deploying intelligent or ML‑driven features in a personal finance application? I am looking for research or technical documentation that discusses the practical limits of Android‑based deployment for systems that include on‑device inference or model storage, and how these constraints inform architectural decisions.*
 
 ---
 
@@ -440,8 +494,8 @@
 #### 10.B.I User trust in personal finance applications and its effect on data‑sharing and logging behavior [/user-trust-behavior]
 > *Scholar query: How does user trust in a personal finance application affect their willingness to share financial data and maintain consistent transaction logging behavior? I am looking for empirical studies that measure the relationship between perceived trustworthiness — including privacy policy clarity, data security assurances, and brand reputation — and users' actual data‑sharing behavior in PFMS applications.*
 
-#### 10.B.II Explainability of algorithmic outputs as a trust‑building mechanism [/explainability-trust]
-> *Scholar query: How does the explainability of algorithmic outputs — such as budget recommendations, spending forecasts, and anomaly alerts — affect user trust in personal finance applications? I am looking for research that measures the relationship between the provision of explanations for system‑generated advice and users' trust, acceptance, and adherence to that advice — including studies where explanation backfired or decreased trust.*
+#### 10.B.II Explainability of allocation reductions and anomaly flags as a trust‑building mechanism [/explainability-trust-reductions]
+> *Scholar query: How does the explainability of algorithmic outputs — specifically explanations for **budget allocation reductions** (why a category was cut) and **anomaly flags** (why a transaction was marked as unusual) — affect user trust in personal finance applications? I am looking for research that measures the relationship between the provision of explanations for system‑generated decisions and users' trust, acceptance, and subsequent action — including studies where explanation backfired or decreased trust, and how framing mitigates this.*
 
 #### 10.B.III Privacy concern as a driver of inconsistent or withheld transaction logging [/privacy-logging-behavior]
 > *Scholar query: Is there evidence that privacy concern drives users to withhold or inconsistently log transactions in personal finance applications? I am looking for research that documents the relationship between perceived data sensitivity and logging completeness, and that discusses how privacy anxiety leads to gaps in the transaction record that degrade ML‑driven personalization and forecasting.*
@@ -458,8 +512,8 @@
 #### 11.A.II Drop‑off patterns in personal finance apps: when users stop logging and why [/drop-off-patterns]
 > *Scholar query: What are the documented drop‑off and attrition patterns in personal finance applications — specifically, at what point in their usage journey users stop logging transactions, and what factors predict early abandonment? I am looking for longitudinal studies or user behavior analyses that track when engagement falls off and identify the motivational or usability triggers that cause users to stop maintaining their financial records.*
 
-#### 11.A.III Manual data entry as the primary engagement friction point in PFMS [/entry-friction]
-> *Scholar query: Is manual transaction data entry the primary source of engagement friction and user abandonment in personal finance management systems? I am looking for usability research and user studies that identify data entry burden as the dominant barrier to sustained engagement and that measure its specific contribution to drop‑off rates relative to other friction sources.*
+#### 11.A.III Manual data entry as the primary engagement friction point and documented mitigation strategies [/entry-friction-mitigation]
+> *Scholar query: Is manual transaction data entry the primary source of engagement friction and user abandonment in personal finance management systems? I am looking for usability research and user studies that identify data entry burden as the dominant barrier to sustained engagement — and that evaluate specific mitigation strategies such as **transaction templates**, **smart defaults**, **recurring transaction scheduling**, and **category prediction** as documented approaches to reducing this friction. What evidence exists on the effectiveness of these strategies in improving logging consistency?*
 
 ---
 
@@ -495,7 +549,7 @@
 #### 12.A.V ISO 25010 and SUS applied in PFMS or comparable financial application evaluations [/eval-pfms-applied]
 > *Scholar query: What examples exist of ISO/IEC 25010 and the System Usability Scale being applied to evaluate personal finance management systems or comparable financial applications? I am looking for applied evaluation studies that report how quality characteristics were operationalized, what SUS scores were obtained, and how the findings supported conclusions about system fitness for purpose.*
 
-> **Note – ML‑specific metrics:** The evaluation of Odin also includes algorithm‑specific metrics (MAE, SMAPE, precision, recall, F1‑score, adherence rate) which are covered in Topic 12.B. This sub‑topic should reference those.
+> **Note – ML‑specific metrics:** The evaluation of Odin also includes module‑specific metrics (forecast accuracy, classification performance, anomaly precision/recall, budget adherence) which are covered in Topics 5.C.VII, 6.B.V, 7.C.IV, and 8.B.V.
 
 ---
 
@@ -511,7 +565,19 @@
 > *Scholar query: What sample size and respondent profile recommendations exist for conducting a valid SUS‑based usability evaluation, and what sample sizes do comparable studies use in practice? I am looking for research on the statistical properties of SUS that inform minimum sample size decisions and the sample sizes reported in published SUS evaluations of mobile or personal finance applications.*
 
 #### 12.B.IV Evaluating explainability in intelligent PFMS: comprehension checks, trust scales, and behavioral follow‑up [/eval-explainability]
-> *Scholar query: What methodologies have been used to evaluate the effectiveness of explainable AI features in personal finance or budgeting applications, and what metrics (comprehension, trust, action taken) are most meaningful?*
+> *Scholar query: What methodologies have been used to evaluate the effectiveness of explainable AI features in personal finance or budgeting applications, and what metrics (comprehension, trust, action taken) are most meaningful? I am looking for studies that report both quantitative (survey‑based) and qualitative (think‑aloud, interview) evaluations of explainability features, and how these relate to user behavior.*
+
+---
+
+### 12.C Evaluation Methodologies for Budget Recommendation Systems [/eval-budget-rec]
+
+> **Note:** This section focuses specifically on the evaluation of budget allocation and recommendation modules, complementing the broader ISO/SUS frameworks with module‑specific metrics and validation strategies.
+
+#### 12.C.I Module‑specific metrics for budget recommendation quality [/budget-rec-module-metrics]
+> *Scholar query: What evaluation metrics are appropriate for assessing the quality of a budget recommendation or allocation system — including allocation error measures (such as MAPE or RMSE against a reference allocation), adherence rate (the proportion of users whose actual spending stays within a defined tolerance of recommended allocations), and feasibility rate (the proportion of recommended budgets that are executable given resource constraints)? I am looking for research that justifies these metrics for recommendation evaluation tasks and discusses how to construct a ground truth or reference allocation for comparison.*
+
+#### 12.C.II Evaluating user acceptance and behavioral impact of budget recommendations [/budget-rec-behavioral-eval]
+> *Scholar query: What methodologies have been used to evaluate the behavioral impact of automated budget recommendations on users' actual financial decisions — including longitudinal tracking of spending patterns, survey‑based acceptance measures, and comparisons against self‑directed budgeting? I am looking for studies that report both quantitative (adherence rate, savings change) and qualitative (user satisfaction, perceived usefulness) outcomes.*
 
 ---
 
@@ -540,6 +606,21 @@
 
 #### 13.B.III Hardship detection and creditor contact recommendations [/debt-hardship]
 > *Scholar query: What literature discusses hardship detection mechanisms in personal finance systems — such as detecting when a user's available balance falls below total minimum payments — and the ethics or effectiveness of recommending creditor contact or debt counselling services?*
+
+---
+
+### 13.C End‑of‑Period Surplus as a Savings Input [/surplus-savings-input]
+
+> **Note:** This topic covers the algorithmic logic for directing budget surplus at the end of a budget period toward savings goals, framed as a contribution source rather than a general discussion of savings strategies.
+
+#### 13.C.I Carry‑forward versus reset logic for budget surplus [/surplus-carryforward]
+> *Scholar query: What algorithmic approaches exist for handling budget surplus at the end of a budget period — specifically carry‑forward logic (adding unused funds to the next period's available balance) versus reset logic (returning unused funds to a general balance account) — and what evidence exists on how each approach affects future spending behavior and savings accumulation? I am looking for research that evaluates the behavioral consequences of each strategy, particularly for users with variable income who may experience lean periods following flush ones.*
+
+#### 13.C.II Zero‑based framework and priority‑based surplus allocation to savings [/surplus-zero-based]
+> *Scholar query: How do personal finance systems algorithmically direct end‑of‑period surplus toward savings goals, and what evidence supports the zero‑based budgeting principle of prioritizing deficit reduction or priority‑ranked savings goals as the default surplus allocation strategy? I am looking for research that formalizes surplus distribution rules — such as allocating to the highest‑priority savings goal first, or distributing proportionally across goals — and that evaluates the effectiveness of these rules in accelerating goal completion.*
+
+#### 13.C.III Behavioral impact of automatic surplus redirection on savings outcomes [/surplus-behavioral]
+> *Scholar query: What behavioral evidence exists that automatically redirecting budget surplus to savings goals — rather than leaving it in the user's primary balance or requiring manual action — improves savings outcomes, reduces discretionary spending leakage, and increases user satisfaction with the budgeting system? I am looking for studies that compare automatic versus opt‑in surplus allocation mechanisms in personal finance applications.*
 
 ---
 

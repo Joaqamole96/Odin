@@ -1,108 +1,137 @@
 ```yaml
 paper_id: 10.1007/s44196-025-00899-0
-designation: international
-title: "Analyzing and Rewarding Credit Card Spending Habits in India: a Machine Learning Approach"
-authors: "Agrawal, R.; Khanna, A.; Hamdare, S."
+designation: international-algorithm-specific
+title: Analyzing and Rewarding Credit Card Spending Habits in India: a Machine Learning Approach
+authors: Agrawal, R.; Khanna, A.; Hamdare, S.
 year: 2025
-venue: "International Journal of Computational Intelligence Systems"
+venue: International Journal of Computational Intelligence Systems
 odin_topics:
-  - "3.A"
-  - "5.A"
-  - "5.C"
-  - "11.A"
-  - "11.B"
-  - "12.B"
-shorthand_tags:
-  - "/expense-categorization"
-  - "/behavioral-profile"
-  - "/profile-classification"
-  - "/user-engagement"
-  - "/retention-mechanisms"
-  - "/system-evaluation"
-tldr: "K-Means clustering segments credit card users by spending habits, and a multi-factor reward points formula optimized with Random Forest achieves R2=0.99."
-problem_and_motivation: "Credit card reward programs in India use static, one-size-fits-all structures that fail to incentivize high-value discretionary spending or retain affluent customers. Existing methods lack real-time adaptability and personalization, especially during peak seasons like festivals. A data-driven framework is needed to align rewards with individual spending behaviors."
+  - 5.A
+  - 5.B
+  - 5.C
+  - 6.A
+  - 6.B
+  - 7.A
+  - 7.B
+  - 7.C
+  - 12.A
+  - 12.B
+  - 12.C
+tldr: Machine learning segments users and predicts spending to optimize credit card reward allocation, achieving an R2 of 0.99.
+problem_and_motivation: Traditional credit card reward programs use static, one-size-fits-all structures that fail to personalize incentives for diverse spending behaviors. This lack of adaptability misses opportunities to retain high-value customers and encourage discretionary spending in profitable categories. A tailored, data-driven system is needed to optimize reward allocation and enhance customer engagement.
 approach:
-  - "Used original Kaggle dataset and generated synthetic dataset with Faker library to add features like income category, attrition risk, and expense type."
-  - "Applied K-Means clustering to segment users into four clusters (Platinum, Gold, Silver, Signature) based on monthly spend, transaction frequency, and credit utilization."
-  - "Engineered features including card promotion bonus, expense type bonus, income category bonus, and penalties for multiple cards to calculate reward points."
-  - "Calculated reward points as (scored_points * amount_spent)/500, where scored_points sum six factors (RCT, CPD, ET, IC, NoC, AR)."
-  - "Trained Linear Regression, Random Forest, and XGBoost to predict reward points and validate the formula."
-  - "Evaluated models using R2, RMSE, and MAE on synthetic dataset."
+  - K-Means clustering segments users by spending behavior and card type (Platinum, Gold, Silver, Signature) using features like monthly spend and transaction frequency.
+  - Synthetic data generation using Faker and feature engineering creates a rich dataset with attributes such as expense type, income, and attrition risk.
+  - A custom reward points formula incorporates card type, promotion date, expense type, income, number of cards, and attrition risk to calculate personalized points.
+  - Linear Regression, Random Forest, and XGBoost models predict reward points to validate the proposed formula's effectiveness.
+  - Model performance is evaluated using R2, RMSE, and MAE to compare predictive accuracy.
 findings:
-  - "num: Random Forest achieved R2=0.99, lowest RMSE and MAE among models."
-  - "num: Mean reward points increased to approximately 1000 using synthetic dataset with additional features versus 400 in original."
-  - "K-Means clustering achieved silhouette score 0.42, outperforming DBSCAN, Hierarchical, and GMM."
-  - "Clusters clearly separated Platinum (high spending/luxury/travel) from Silver (low spending/essentials)."
-  - "Synthetic dataset enabled broader reward point distribution (0-3500) compared to original (0-1000)."
+  - "num: K-Means achieved a Silhouette Score of 0.42, outperforming DBSCAN and GMM for user segmentation by card type."
+  - "num: Random Forest and XGBoost achieved an R2 value of 0.99, indicating near-perfect fit for reward point prediction."
+  - "num: The synthetic dataset's reward points distribution ranged from 0 to 3500, compared to 0 to 1000 for the limited original dataset."
+  - Clustering analysis clearly separated users into four distinct groups corresponding to Platinum, Gold, Silver, and Signature cardholders.
+  - The proposed personalized reward formula allocated higher points for discretionary spending like travel and luxury, incentivizing profitable categories.
+  - Including additional features like attrition risk and income category led to a more systematic and justified reward calculation process.
 key_figures_tables:
-  - "Figure 2: Distribution of transaction amounts and expense types → Original data shows limited features for reward calculation."
-  - "Figure 3: Monthly spending trends over 15 months → Festive seasons (Diwali, Christmas) show increased spending."
-  - "Figure 5: 2D visualization of K-Means clusters → Clear separation of four card types validates clustering."
-  - "Figure 6: Distribution of reward points → Synthetic dataset gives wider range (0-3500) than original."
-  - "Table 6: Expense type bonuses → Travel/Dining get +3 points, luxury +2, groceries +0.5."
+  - "Figure 5: 3D visualization of K-Means clusters → Clear separation of four card-type based user segments."
+  - "Figure 6: Reward point distribution comparison → Synthetic data enables broader and more justified point allocation."
+  - "Figure 7: Cumulative distribution of reward points → Spending type influences reward allocation systematically."
+  - "Table 4: Base reward points by card type → Platinum earns 5 points, Silver earns 2 points per 500 spent."
+  - "Table 6: Expense type bonus points → Travel/Dining earns +3.0, Groceries/Bills earns +0.5."
 key_equations:
-  - equation: "RewardPoints = \\frac{ScoredPoints \\times AmountSpent}{500}"
-    explanation: "Base reward calculation scaled by 500."
-  - equation: "ScoredPoints = [RCT + CPD + ET + IC + NoC + AR]"
-    explanation: "Sum of six factor bonuses or penalties."
+  - equation: "RewardPoints(Olddataset) = (PointsScored(BasedonCardType) * AmountSpentMonthly) / 500"
+    explanation: "Calculates points using only card type and amount spent."
+  - equation: "RewardPoints(SyntheticDataset) = (ScoredPoints * AmountSpent) / 500, where ScoredPoints = [RCT + CPD + ET + IC + NoC + AR]"
+    explanation: "Multi-factor formula for personalized reward point calculation."
 definitions:
   - term: "RCT"
-    definition: "Base multiplier based on card type."
+    definition: "Base multiplier based on Card Type for reward calculation."
   - term: "CPD"
-    definition: "Card Promotion Date bonus."
+    definition: "Card Promotion Date bonus for reward points."
   - term: "ET"
-    definition: "Expense type bonus for categories like travel."
+    definition: "Expense Type bonus based on spending category."
   - term: "IC"
-    definition: "Income category bonus."
+    definition: "Income Category bonus for reward calculation."
   - term: "NoC"
-    definition: "Penalty for holding additional cards."
+    definition: "Number of Cards penalty for holding multiple cards."
   - term: "AR"
-    definition: "Attrition risk bonus for at-risk customers."
+    definition: "Attrition Risk bonus to incentivize loyalty."
   - term: "DBI"
-    definition: "Davies-Bouldin Index for clustering validation."
+    definition: "Davies-Bouldin Index, a clustering validation metric."
 critical_citations:
-  - "[Cheema & Van der Stede, 2019] — Reward programs tailored to preferences enhance engagement."
-  - "[Li, Ngai, & Hu, 2021] — ML methods for consumer segmentation lack real-time adaptation."
-  - "[Gan et al., 2021] — XGBoost/LightGBM prone to overfitting on high-dimensional data."
+  - "[Cheema & Van der Stede, 2019] — Reward programs tailored to high-spending categories enhance engagement."
+  - "[Li, Ngai, & Hu, 2021] — ML applications in finance include K-Means for segmentation."
+  - "[Gan, Xu, & Chen, 2021] — Ensemble models like XGBoost predict consumer behavior in high-value categories."
+  - "[Sun & Vasarhelyi, 2018] — Deep neural networks applied to predict credit card delinquencies."
+  - "[Sadat Akash, 2024] — Credit Card Transaction Dataset used for training predictive models."
 relevance:
   topics:
-    - code: "3.A"
-      name: "Expense Categorization Frameworks"
-      justification: "Paper categorizes spending into luxury, travel, groceries, EMIs."
     - code: "5.A"
       name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "K-Means clusters users into Platinum, Gold, Silver, Signature profiles."
+      relevance: "high"
+      justification: "Directly segments users into behavioral profiles (e.g., luxury spenders) using clustering."
+    - code: "5.B"
+      name: "Profile Dynamics and the Cold-Start Problem"
+      relevance: "medium"
+      justification: "Synthetic data generation addresses data limitations for profile initialization."
     - code: "5.C"
-      name: "Financial Behavioral Profile Classification Algorithm"
-      justification: "K-Means algorithm classifies users based on spending behavior and card type."
-    - code: "11.A"
-      name: "Engagement Dynamics in Personal Finance Applications"
-      justification: "Personalized rewards increase customer engagement and loyalty."
-    - code: "11.B"
-      name: "Retention Mechanisms and Engagement Design"
-      justification: "Attrition risk bonus and targeted offers designed to retain at-risk customers."
+      name: "Classification Approaches for Financial Behavioral Profiles"
+      relevance: "high"
+      justification: "Compares K-Means, DBSCAN, and GMM for behavioral profile classification."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "high"
+      justification: "Applies Linear Regression, Random Forest, and XGBoost to predict reward points."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "medium"
+      justification: "Monthly spending trends analysis with synthetic data for forecasting."
+    - code: "7.A"
+      name: "Budgeting Strategies as Domain Knowledge"
+      relevance: "contextual"
+      justification: "Reward optimization provides a framework analogous to budget allocation."
+    - code: "7.B"
+      name: "Budget Recommendation in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Reward structure offers a basis for personalized recommendation systems."
+    - code: "7.C"
+      name: "Constrained Optimization Approaches for Budget Allocation"
+      relevance: "low"
+      justification: "Reward points formula incorporates constraints like penalty for multiple cards."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "high"
+      justification: "Uses R2, RMSE, MAE to evaluate predictive model performance."
     - code: "12.B"
       name: "Evaluation of Algorithmic Modules"
-      justification: "R2=0.99, RMSE, MAE used to evaluate Random Forest and XGBoost."
-  contribution: "Odin's expense categorization module can adopt the paper's multi-category bonus system (travel, luxury, groceries) to tailor rewards. The behavioral profiling module can use K-Means clustering to segment Filipino young professionals into spending profiles. Odin's retention mechanisms can incorporate attrition risk bonuses and promotion date incentives to increase engagement. The system evaluation framework can benchmark ML models using R2 and RMSE as demonstrated."
+      relevance: "high"
+      justification: "Evaluates clustering (Silhouette, DBI) and prediction (R2) modules."
+    - code: "12.C"
+      name: "Evaluation Methodologies for Budget Recommendation Systems"
+      relevance: "medium"
+      justification: "Model performance comparison informs evaluation of recommendation systems."
+  contribution: "This paper provides a data-driven framework for user segmentation and personalized incentive design applicable to Odin's expense categorization and budget recommendation modules. The K-Means clustering approach can inform Odin's behavioral profiling to classify users by spending habits. The multi-factor reward formula demonstrates a method for optimizing allocation based on user attributes, which parallels Odin's budget recommendation logic. The model evaluation metrics (R2, RMSE) offer a standard for assessing Odin's predictive modules. The framework's focus on incentivizing discretionary spending provides insights into engagement and retention mechanisms."
   directly_justifies:
-    - "K-Means clustering effectively segments users by spending behavior with silhouette score 0.42."
-    - "Including expense type bonuses (e.g., +3 for travel) increases reward point distribution range."
-    - "Random Forest achieves R2=0.99 for predicting reward points, minimizing prediction errors."
-    - "Personalized reward systems improve customer retention and satisfaction."
+    - "K-Means clustering effectively segments users by card type and spending behavior."
+    - "Multi-factor reward formulas can personalize incentives based on user attributes."
+    - "Random Forest achieves superior accuracy for predicting reward points."
+    - "Synthetic data enables robust model development when real data is limited."
+    - "Including attrition risk in reward calculation can support customer retention."
   limits:
-    - "Synthetic dataset may not fully replicate real-world transaction noise and patterns."
-    - "Paper focuses on Indian credit card market, limiting generalizability to other countries or PFMS contexts."
-    - "Reward point multipliers are arbitrarily chosen and not validated with real bank data."
-  mapping_rationale: "This paper was screened against Odin's functional domains. Behavioral profiling & classification (domain 5) applies strongly due to K-Means user segmentation into four spending profiles. Expense categorization (domain 3) applies via classification of spending types (luxury, travel, groceries). User retention & engagement (domain 11) applies because the paper explicitly designs rewards to increase loyalty and includes attrition risk bonuses. System evaluation (domain 12) applies due to model performance metrics (R2, RMSE). Spending forecasting (domain 6) was rejected because the paper does not forecast future spending amounts; it predicts reward points from current features. Anomaly detection (domain 8) and data privacy (10) are not addressed. Budget recommendation (7) and savings/debt (13) are absent. The borderline case of 'algorithm-specific' designation was considered but rejected because the paper's primary contribution is a reward calculation framework, not a novel ML algorithm."
+    - "Study uses synthetic data, not real credit card transaction data."
+    - "Reward points multipliers are subjective and not based on real industry data."
+    - "Generalizability to other financial domains or countries is not evaluated."
+    - "Real-time adaptability of the reward system is proposed but not implemented."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was conducted. The paper was flagged as highly relevant to Behavioral Profiling & Classification (5.A, 5.C) due to its K-Means user segmentation, and to Spending Forecasting (6.A, 6.B) for its predictive modeling. It also showed high relevance to System Evaluation (12.A, 12.B) through its use of R2, RMSE, and MAE. Medium relevance was assigned to Budget Recommendation (7.B) for the personalized reward formula's parallel to allocation logic, and Profile Dynamics (5.B) for its synthetic data approach addressing the cold-start problem. Low relevance was noted for Constrained Optimization (7.C) due to the simple penalty structure. Contextual relevance was assigned to Budgeting Strategies (7.A). Domains like Filipino Cultural Context (2.A-D), Expense Categorization (3.A-C), Existing Systems (4.A-B), Mobile-First Design (9.A-B), Data Privacy (10.A-B), User Retention (11.A-B), and Savings & Debt Management (13.A-C) were considered and rejected because the paper does not address cultural practices, expense categorization frameworks, PFMS landscape, mobile design, privacy concerns, engagement dynamics, or savings/debt management specifically. Overall, the paper's machine learning approach to user segmentation and personalized incentive optimization is highly relevant to Odin's core modules for behavioral profiling, forecasting, and recommendation."
 limitations:
-  - "Uses synthetic dataset instead of real credit card transaction data. [unacknowledged]"
-  - "Reward point multipliers are arbitrary and not calibrated with actual bank policies."
-  - "Temporal analysis limited to 15 months of synthetic data, lacking long-term validation. [unacknowledged]"
-  - "Clustering evaluated on card types only; other demographic factors (age, city) not deeply integrated."
+  - "Reliance on synthetically generated data limits real-world applicability. [unacknowledged]"
+  - "Reward point multipliers are arbitrary and may not reflect actual credit card company practices. [unacknowledged]"
+  - "The study does not validate the reward formula's impact on actual customer retention or spending. [unacknowledged]"
+  - "Generalizability to Philippine financial context or Filipino young professionals is not addressed."
 remember_this:
-  - "K-Means silhouette score 0.42 outperforms DBSCAN and GMM for spending segmentation."
-  - "Random Forest achieves R2=0.99, nearly perfect reward point prediction accuracy."
-  - "Adding six behavioral factors expands reward range from 0-1000 to 0-3500."
-  - "Personalized rewards with attrition risk bonuses can improve customer retention."
+  - "K-Means clustering achieved 0.42 Silhouette Score for user segmentation."
+  - "Random Forest and XGBoost both achieved R2 of 0.99 for reward prediction."
+  - "Personalized rewards incentivize discretionary spending like travel and luxury."
+  - "Synthetic data enables robust model development with limited real data."
+  - "Multi-factor formulas enable dynamic and fair reward allocation."
 ```

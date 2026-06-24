@@ -1,112 +1,108 @@
 ```yaml
-paper_id: "123e4567-e89b-12d3-a456-426614174000"
-designation: "local"
-title: "Data-Driven Decision Making in Scholarship Programs: Leveraging Decision Trees and Clustering Algorithms"
-authors: "Espiritu, F. V.; Natividad, M. C. B.; Velasco, R. A."
+paper_id: 6c9e3b8a-4f5d-5a8e-9b2c-1f3a4b5c6d7e
+designation: local-algorithm-specific
+title: Data-Driven Decision Making in Scholarship Programs: Leveraging Decision Trees and Clustering Algorithms
+authors: Espiritu, F. V.; Natividad, M. C. B.; Velasco, R. A.
 year: 2024
-venue: "INTERNATIONAL JOURNAL IN INFORMATION TECHNOLOGY IN GOVERNANCE, EDUCATION AND BUSINESS"
+venue: International Journal in Information Technology in Governance, Education and Business
 odin_topics:
-  - "5.C"
-  - "10.A"
-  - "10.B"
-  - "12.B"
-shorthand_tags:
-  - "/fin-behavior-profile"
-  - "/data-privacy"
-  - "/user-trust"
-  - "/eval-algorithm"
-tldr: "Integrates decision trees and clustering algorithms with an online system to improve scholarship application processing, achieving 31% higher success rates."
-problem_and_motivation: "Scholarship programs face inefficiencies from manual application review, especially with a 541.1% surge in applications. The BRO-Ed program lacks a systematic data-driven approach to evaluate applicants. This leads to missed opportunities and suboptimal resource allocation."
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.C
+  - 9.A
+  - 9.B
+  - 12.A
+  - 12.B
+tldr: Integrates decision trees and clustering with an online system to improve efficiency and decision-making for a Philippine scholarship program facing a massive application surge.
+problem_and_motivation: The BRO-Ed scholarship program in Isabela province faces a 541.1% surge in applications, overwhelming its manual review process. This lack of systematic evaluation leads to inefficiency and risks missing key success factors, necessitating a data-driven solution to improve selection and resource allocation.
 approach:
-  - "Used historical scholarship data from Isabela province (58,892 initial entries) as the dataset."
-  - "Preprocessed data by handling missing values, outliers, duplicates, and normalization."
-  - "Implemented C4.5 decision tree algorithm for identifying key success factors and K-means clustering for grouping similar applications."
-  - "Built an online registration system using Handlebars.js, Node.js/Express.js, MySQL, and W3.CSS."
-  - "Evaluated model performance using accuracy, precision, recall, and F1-score metrics against manual review outcomes."
+  - Historical scholarship application data from the PGI BRO Ed Scholarship program was integrated and preprocessed to ensure quality and integrity.
+  - Decision tree (C4.5) and K-means clustering algorithms were implemented on the cleaned dataset for pattern recognition and insight extraction.
+  - A user-friendly online registration platform was developed using Handlebars.js, Node.js with Express.js, and MySQL to enhance accessibility.
+  - Algorithm performance was evaluated using accuracy, precision, recall, and F1-score metrics.
+  - The system's impact was assessed through user satisfaction surveys and comparative success rate analysis against traditional methods.
 findings:
-  - "num: Online registration system achieved 31% higher success rate than traditional methods."
-  - "num: Decision tree predictive accuracy was 80% for successful applications and 70% for failures."
-  - "num: Data completeness reached 95% and accuracy 95% after preprocessing."
-  - "num: Removed 3,100 duplicate entries from original 58,892 records."
-  - "Parental occupation, academic performance, and financial need were high-impact success factors."
-  - "User satisfaction surveys showed high preference for the online system over manual processes."
+  - Preprocessing identified parent occupation, academic performance, and financial need as high-impact factors influencing scholarship success.
+  - num: 31% higher success rate was observed for applicants using the online system compared to traditional methods.
+  - The implemented algorithms achieved an 80% predictive accuracy for successful scholarship applications.
+  - User satisfaction surveys indicated a high preference for the online system due to its ease of use and accessibility.
+  - The integration of data mining techniques revealed hidden patterns, enabling more informed and fairer selection decisions.
 key_figures_tables:
-  - "Figure 3: Distribution of entries before/after duplicate removal → 3,100 duplicates eliminated."
-  - "Table 1: Comparison of entries before/after removal → Unique entries became 57,342."
-  - "Table 2: Data quality metrics → Completeness 95%, accuracy 95%, consistency high."
-  - "Figure 4: Impact of online registration system → 31% success rate improvement."
-  - "Table 4: User satisfaction metrics → High user satisfaction and accessibility."
-  - "Table 5: Factors influencing success → Parental occupation, academics, financial need high."
-  - "Figure 5: Predictive accuracy → 80% for success, 70% for failure."
-  - "Figure 6: Precision and recall rates → High for academic performance and financial need."
-  - "Figure 7: F1-scores across categories → Balanced performance across factors."
+  - Figure 4: Impact of online registration system on success rates → Demonstrates a 31% improvement over traditional methods.
+  - Table 5: Factors influencing scholarship application success → Identifies parent occupation, academic performance, and financial need as high-impact factors.
+  - Figure 5: Comparison of predictive accuracy for scholarship application outcomes → Shows 80% accuracy for predicting success vs. 70% for failure.
 key_equations:
   - equation: "Accuracy = (TP + TN) / (TP + TN + FP + FN)"
-    explanation: "Proportion of correct predictions."
+    explanation: Proportion of correctly classified instances among all cases.
   - equation: "Precision = TP / (TP + FP)"
-    explanation: "Correct positive predictions over total predicted positives."
+    explanation: Proportion of true positives among all positive predictions.
   - equation: "Recall = TP / (TP + FN)"
-    explanation: "Correct positives over actual positives."
+    explanation: Proportion of true positives identified correctly.
   - equation: "F1-score = 2 * (Precision * Recall) / (Precision + Recall)"
-    explanation: "Harmonic mean of precision and recall."
+    explanation: Harmonic mean of precision and recall, balancing both metrics.
 definitions:
-  - term: "TP"
-    definition: "True Positives - correctly classified positive instances."
-  - term: "TN"
-    definition: "True Negatives - correctly classified negative instances."
-  - term: "FP"
-    definition: "False Positives - negative instances incorrectly classified as positive."
-  - term: "FN"
-    definition: "False Negatives - positive instances incorrectly classified as negative."
-  - term: "C4.5"
-    definition: "Decision tree algorithm using information gain ratio for splits."
-  - term: "K-means"
-    definition: "Clustering algorithm partitioning data into K groups by centroid distance."
-  - term: "PII"
-    definition: "Personally Identifiable Information anonymized in the study."
-  - term: "RA 10173"
-    definition: "Philippine Data Privacy Act of 2012."
+  - term: C4.5 Algorithm
+    definition: A well-known decision tree algorithm used to handle categorical and numerical data effectively.
+  - term: K-Means Clustering
+    definition: A simple and efficient algorithm for partitioning a dataset into groups with similar properties.
+  - term: PII
+    definition: Personally Identifiable Information, which was anonymized to protect applicant privacy.
 critical_citations:
-  - "[Yağcı, 2022] — Predicts academic performance using ML algorithms."
-  - "[Alyahyan & Düştegör, 2020] — Reviews predictive modeling in higher education."
-  - "[Sugiyarti et al., 2018] — Decision support system for scholarship selection."
-  - "[Ferreira-Mello et al., 2019] — Text mining for education applications."
+  - "[Yağcı, 2022] — Provides basis for predictive modeling using ML algorithms."
+  - "[Alyahyan & Düştegör, 2020] — Offers literature review and best practices for predictive modeling."
+  - "[Sugiyarti et al., 2018] — Demonstrates integration of data-driven approaches in scholarship administration."
 relevance:
   topics:
-    - code: "5.C"
-      name: "Financial Behavioral Profile Classification Algorithm"
-      justification: "Uses decision trees and clustering to classify scholarship applicants into success-related groups."
-    - code: "10.A"
-      name: "Data Privacy and Security in Personal Finance Systems"
-      justification: "Explicitly discusses anonymization, informed consent, and compliance with RA 10173."
-    - code: "10.B"
-      name: "User Trust in Personal Finance Systems"
-      justification: "Transparent communication and ethical handling of applicant data build trust."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      justification: "Evaluates models using accuracy, precision, recall, and F1-score against baseline manual review."
-  contribution: "This paper provides an algorithmic framework using decision trees and clustering that can be adapted for Odin's behavioral profiling module. The evaluation metrics (accuracy, precision, recall, F1) directly support Odin's algorithm evaluation design. The data privacy and consent protocols inform Odin's data privacy and user trust features. The online system architecture demonstrates responsive design principles applicable to Odin's mobile-first interface."
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Provides a case study of a public system (scholarship) transitioning to a data-driven approach.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Directly addresses operational challenges like manual review and processing bottlenecks.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: contextual
+      justification: The method groups applicants (clustering), which is analogous to profiling.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Uses decision trees (classification) to predict success based on applicant features.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: low
+      justification: Mentions a "user-friendly online platform" and improved accessibility for remote areas.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: low
+      justification: Discusses front-end framework (Handlebars.js) and interface design but not finance-specific UX.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Evaluates system effectiveness using quantitative metrics (accuracy, user satisfaction).
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Explicitly evaluates the prediction algorithms using accuracy, precision, recall, and F1-score.
+  contribution: "This paper directly informs Odin's System Evaluation module (12.B) by demonstrating a clear evaluation framework for algorithmic modules using accuracy, precision, recall, and F1-score. Its approach to handling a surge in applications via an online system and data mining provides a justification for Odin's mobile-first design and anomaly detection modules. The identification of key success factors (parental occupation, academic performance) offers a methodological example for feature importance analysis. Its emphasis on user accessibility and satisfaction supports the rationale for Odin's engagement and retention design."
   directly_justifies:
-    - "Online registration systems can achieve 31% higher success rates than traditional methods."
-    - "Decision trees achieve 80% predictive accuracy for scholarship success classification."
-    - "Data anonymization and RA 10173 compliance are essential for user trust in applicant systems."
-    - "Clustering reveals applicant groups based on academic, financial, and demographic factors."
-    - "Precision and recall metrics are critical for evaluating imbalanced classification tasks."
+    - "Data mining techniques like decision trees and clustering can systematically evaluate a high volume of applications."
+    - "An online system is critical for managing a large influx of applications and improving accessibility."
+    - "User satisfaction and success rates are higher with a digital, data-driven system compared to traditional methods."
   limits:
-    - "The study focuses on scholarship applicants, not general personal finance users."
-    - "Dataset limited to one province in the Philippines; generalizability unknown."
-    - "No comparison against other ML algorithms beyond decision trees and clustering."
-    - "Long-term retention and engagement effects of the online system not measured. [unacknowledged]"
-  mapping_rationale: "The paper was screened against Odin's functional domains. The algorithm-specific domain (behavioral profiling) applies because decision trees and clustering classify applicants into success groups, analogous to financial behavior profiling. Data privacy and user trust domains apply due to explicit ethical protocols and RA 10173 discussion. System evaluation domain applies due to rigorous metric-based evaluation. Domains like spending forecasting, budget recommendation, anomaly detection, and savings/debt management were rejected because the paper does not address financial transactions or personal budgeting. Mobile-first design was considered but rejected as the paper does not emphasize mobile principles beyond responsive web design."
+    - "Focuses on scholarship selection, not personal finance management; direct applicability to spending behavior is limited."
+    - "The evaluation metrics (accuracy, precision) are tied to classification tasks and may not fully capture the nuance of financial behavior." [unacknowledged]
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to 'Existing Systems & Gaps' (topics 4.A, 4.B) because it directly addresses the operational challenges of a manual system handling a massive application surge. It was also flagged as relevant to 'System Evaluation' (12.A, 12.B) due to its explicit use of quantitative metrics to evaluate algorithmic performance. Relevance to 'Behavioral Profiling & Classification' (5.A, 5.C) was assessed as contextual/medium, as the clustering and classification approach is methodologically similar to profiling but applied to scholarship applicants rather than financial behavior. The domains of 'Expense Categorization', 'Spending Forecasting', 'Budget Recommendation', 'Anomaly Detection', 'Data Privacy & User Trust', 'User Retention & Engagement', and 'Savings & Debt Management' were considered and rejected due to the paper's focus on scholarship administration, which provides no direct insights or citations for these personal finance areas. Overall, the paper's relevance to Odin is primarily methodological and evaluative, providing a strong example of system evaluation and gap identification, rather than providing domain-specific financial behavior insights."
 limitations:
-  - "Sample limited to Isabela province's BRO-Ed scholarship program."
-  - "No longitudinal validation of applicant success after scholarship award."
-  - "Potential bias in historical data not fully addressed. [unacknowledged]"
-  - "Clustering number K selection method not detailed. [unacknowledged]"
+  - "The study is specific to scholarship programs, not personal finance management, limiting the generalizability of its findings."
+  - "The evaluation is based on a single case study (BRO-Ed scholarship), lacking cross-program validation." [unacknowledged]
+  - "The long-term impact on user retention and engagement beyond initial application is not assessed." [unacknowledged]
+  - "The paper does not address the cold-start problem or other dynamic aspects of the system." [unacknowledged]
 remember_this:
-  - "31% higher success rate from online system over traditional methods."
-  - "Decision trees achieved 80% predictive accuracy for scholarship success."
-  - "Data privacy included anonymization and RA 10173 compliance."
-  - "Clustering revealed groups based on parental occupation and academics."
-  - "Evaluation used accuracy, precision, recall, and F1-score metrics."
+  - "Manual review of 34,426 applications is inefficient and error-prone."
+  - "Decision trees and clustering can automate and improve selection accuracy."
+  - "Online systems increase accessibility and user satisfaction significantly."
+  - "num: The online system achieved a 31% higher success rate than traditional methods."
 ```

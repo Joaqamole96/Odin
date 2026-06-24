@@ -1,47 +1,44 @@
 ```yaml
 paper_id: 10.63282/3050-922X.ICRCEDA25-143
-designation: international
+designation: international-algorithm-specific
 title: Explainable and Context-Aware Financial Nudges via Event-Driven Microservices
 authors: Mandaleeka, A. P.
 year: 2025
-venue: International Journal of Emerging Research in Engineering and Technology
+venue: International Journal of Emerging Research in Engineering and Technology, ICRCEDA2025 Conference Proceeding
 odin_topics:
-  - 7.A
+  - 3.A
+  - 3.C
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.C
   - 8.A
   - 10.A
   - 10.B
   - 11.A
   - 11.B
   - 13.A
-shorthand_tags:
-  - /budget-strategies
-  - /anomaly-detection
-  - /data-privacy
-  - /user-trust
-  - /engagement
-  - /retention
-  - /savings-goals
-  - /xai
-  - /shap
-tldr: An event-driven microservices framework uses SHAP-based explainability to deliver context-aware financial nudges, improving user trust and engagement.
-problem_and_motivation: Generic financial alerts lack context and transparency, leading users to ignore or distrust them. Financial decisions directly affect well-being, making explainability essential for automated advice. Existing systems fail to integrate real-time context, interpretable AI, and modular architecture in a privacy-preserving way.
+tldr: A microservices framework delivers real-time financial nudges enhanced by SHAP-based explanations, increasing user engagement and trust.
+problem_and_motivation: Existing financial alerts are generic and lack transparency, causing user distrust and low engagement. There is a gap in integrating real-time personalization with explainable AI in scalable fintech architectures. The paper addresses this by proposing a modular system that combines context-awareness with interpretable decision-making.
 approach:
-  - Data consists of synthetic and anonymized financial datasets simulating diverse user behaviors.
-  - Kafka-based microservices include Data Ingestor, Context Processor, Nudge Decision Engine (rule-based or ML), XAI module with SHAP, and Notification Service.
-  - Context is enriched with transaction history, geolocation, behavioral signals, and temporal patterns like pay cycles.
-  - SHAP generates feature attributions (e.g., grocery spend, budget threshold) converted into natural language explanations.
-  - Evaluation measures engagement, perceived relevance, and trust through simulated scenarios without real users.
+  - Data ingestion from bank APIs, user behavior logs, and optional geolocation via Kafka topics.
+  - Context processor enriches transactions with historical spending, budget goals, and temporal patterns.
+  - Nudge decision engine uses rule-based logic or a trained ML model to classify events as nudge-worthy.
+  - XAI module applies SHAP to generate feature attributions and convert them into natural-language explanations.
+  - Notification service delivers formatted alerts via in-app, email, or chatbot with optional SHAP visualizations.
+  - System is evaluated on synthetic and anonymized datasets to simulate diverse user behaviors.
 findings:
   - Contextual triggers such as time, location, and prior habits increase user engagement.
   - Explainability boosts users' perceived relevance and trust in the system.
-  - SHAP provides local interpretability for individual nudge decisions with formal fairness guarantees.
-  - Modular event-driven architecture enables scalability, fault isolation, and auditability for financial applications.
+  - The modular architecture enables scalability, fault isolation, and data minimization.
+  - SHAP provides local interpretability and supports model debugging and bias detection.
 key_figures_tables:
-  - "Figure 1: Personalized Financial Alerts Nudge System overview → system architecture and data flow."
-  - "Figure 2: System overview of modular microservices and Kafka topics → detailed service interactions."
-  - "Table 1: Example SHAP attribution output → feature contributions to a nudge decision."
+  - Figure 1: Overview of the nudge system architecture → shows high-level data flow and services.
+  - Figure 2: Detailed microservices and Kafka topics → illustrates modular, event-driven design.
+  - Figure 3: Data ingestion pipeline → demonstrates transaction flow through context processor and nudge engine.
+  - Table 1: SHAP attribution values for features → example of how spending and budget features contribute to nudge decision.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
   - term: SHAP
@@ -49,56 +46,80 @@ definitions:
   - term: XAI
     definition: Explainable Artificial Intelligence, techniques that make AI decisions understandable to humans.
   - term: Kafka
-    definition: Distributed event streaming platform used for real-time data pipelines and microservice communication.
-  - term: RBAC
-    definition: Role-Based Access Control, a security mechanism that restricts system access based on user roles.
+    definition: A distributed event-streaming platform for building real-time data pipelines and streaming applications.
 critical_citations:
-  - "[Lundberg & Lee, 2017] — Unified SHAP framework for model interpretability."
+  - "[Lundberg and Lee, 2017] — foundational SHAP framework for model interpretability."
   - "[Kreps et al., 2011] — Kafka distributed messaging system for log processing."
-  - "[Ben-David et al., 2021] — Explanations increase trust in algorithmic financial advisors."
-  - "[Kim & Woo, 2021] — XAI framework for financial rating models."
+  - "[Kim and Woo, 2021] — XAI framework for financial rating models."
 relevance:
   topics:
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      justification: Nudges based on budget thresholds and spending patterns.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: Paper uses transaction categories for budget tracking, informing categorization frameworks.
+    - code: 3.C
+      name: User-Defined Allocation Constraints
+      relevance: medium
+      justification: User-defined budget thresholds and goals are central to nudge logic.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: Paper reviews existing fintech systems like Cleo and Revolut, establishing the landscape.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Identifies lack of explainability and generic alerts as key gaps.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Behavioral signals inform personalization, relevant to profiling.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: ML classification of nudge-worthy events aligns with behavioral classification approaches.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      justification: Spending warnings and deviation detection from user baselines.
+      relevance: medium
+      justification: Spending spikes and threshold violations detected as anomalies trigger nudges.
     - code: 10.A
       name: Data Privacy and Security in Personal Finance Systems
-      justification: Section 5 details OAuth, encryption, RBAC, and consent management.
+      relevance: high
+      justification: Dedicated security and privacy section with OAuth, encryption, and consent management.
     - code: 10.B
       name: User Trust in Personal Finance Systems
-      justification: SHAP explanations foster trust and transparency in automated nudges.
+      relevance: high
+      justification: Explainability directly builds user trust; user study evidence cited.
     - code: 11.A
       name: Engagement Dynamics in Personal Finance Applications
-      justification: Contextual triggers and explainability increase user engagement.
+      relevance: high
+      justification: Focus on engagement dynamics through personalized, timely nudges.
     - code: 11.B
       name: Retention Mechanisms and Engagement Design
-      justification: Timely, relevant nudges with rationale support long-term retention.
+      relevance: medium
+      justification: Nudges serve as retention mechanisms; system designed for repeated interaction.
     - code: 13.A
       name: Savings Goal Management in PFMS
-      justification: Goal reminders and alignment messages (e.g., saving for a house).
-  contribution: "This paper justifies integrating an explainable AI module into Odin's anomaly detection and budget recommendation components. The SHAP-based explanation generation directly supports Odin's user trust and transparency requirements. The event-driven microservices architecture provides a blueprint for Odin's scalable, privacy-preserving nudge delivery. The context-aware processing of transaction, location, and behavioral signals informs Odin's spending forecasting and behavioral profiling. The security and consent layer aligns with Odin's data privacy and user trust domains."
+      relevance: medium
+      justification: Savings opportunities and goal reminders align with savings goal management.
+  contribution: |
+    The paper's microservices-based architecture with SHAP directly informs Odin's notification and explanation modules, enabling transparent spending alerts. The context-aware data pipeline, integrating transaction history, geolocation, and behavioral signals, can be adapted for Odin's behavioral profiling and anomaly detection. The emphasis on user trust via explainability and data privacy mechanisms supports Odin's design for ethical AI. The use of Kafka for event-driven scalability provides a blueprint for Odin's real-time processing and modular deployment.
   directly_justifies:
-    - "Explainable AI increases user trust and behavioral compliance in financial nudging systems."
-    - "Contextual triggers such as time, location, and prior habits increase user engagement."
-    - "SHAP provides local interpretability for individual nudge decisions with formal guarantees."
-    - "Modular microservices with event streaming enable scalable, auditable financial advice systems."
+    - Explainability boosts users' perceived relevance and trust in financial nudges.
+    - Contextual triggers (time, location, prior habits) increase user engagement.
+    - Event-driven microservices enable scalable, fault-tolerant real-time processing.
+    - SHAP provides transparent, individualized explanations for nudge decisions.
   limits:
-    - "Evaluation uses synthetic data without real-world user studies. [unacknowledged]"
-    - "SHAP computational cost may limit real-time scalability; caching proposed but may increase operational expense."
-    - "No A/B testing or quantitative engagement metrics reported."
-  mapping_rationale: "The paper primarily addresses domains of user trust (10.B), engagement (11.A, 11.B), anomaly detection (8.A), and budget strategies (7.A) because it designs explainable nudges triggered by context (time, location, spending deviations). Savings goals (13.A) appear via goal reminders, and data privacy (10.A) has a dedicated section. Topics related to expense categorization (3.A, 3.B), behavioral profiling classification (5.C), spending forecasting (6.A, 6.B), and mobile-first design (9.A, 9.B) are rejected because the paper does not contribute novel methods in those areas—it uses existing categories and does not focus on forecasting or mobile UX. The system evaluation (12.A, 12.B) is not a formal framework for PFMS, so those codes are omitted."
+    - Evaluation performed on synthetic and anonymized datasets, not real-world user studies.
+    - SHAP computational cost requires optimizations like caching; may be expensive at scale.
+    - The paper does not address cold-start scenarios for new users.
+  mapping_rationale: |
+    A systematic scan across all 12 functional domains and associated topics identified strong relevance to Engagement & Retention, Data Privacy & User Trust, and Existing Systems & Gaps. The paper directly addresses user trust (10.B) and privacy (10.A) through dedicated sections, and engagement (11.A) via nudging; it also reviews existing systems (4.A) and their limitations (4.B). Moderate relevance was found for Expense Categorization (3.A) and User-Defined Allocation (3.C) as the system uses budget thresholds and categories. Behavioral profiling (5.A) and classification (5.C) are touched via behavioral signals and ML decisioning; anomaly detection (8.A) is applicable due to spending spike detection. Savings management (13.A) is partially covered via savings opportunities and goal reminders. Topics related to Filipino cultural context (2.A-2.D), spending forecasting (6.A-6.B), budget recommendation optimization (7.A-7.D), mobile-first design (9.A-9.B), and system evaluation (12.A-12.C) were considered but rejected due to lack of emphasis or specificity. Borderline cases included seasonal spending (2.B) mentioned in passing but not culturally specific, and budget recommendation (7.A) referenced only as budget goals, not recommendation algorithms. Overall, the paper provides strong support for Odin's trust, engagement, and architectural modularity.
 limitations:
-  - "Synthetic dataset may not generalize to real-world user behavior. [unacknowledged]"
-  - "No user study or empirical validation of trust or engagement metrics. [unacknowledged]"
-  - "SHAP computational cost and caching overhead acknowledged but not fully solved."
-  - "Paper does not address cold-start problem for new users."
+  - Evaluation performed on synthetic and anonymized datasets, not real-world user studies.
+  - SHAP computational cost requires optimizations like caching; may be expensive at scale.
+  - The paper does not address cold-start scenarios for new users.
 remember_this:
-  - "Explainability is critical for user trust in automated finance."
-  - "Context-aware triggers (time, location, habits) increase engagement."
-  - "SHAP provides fair, locally interpretable explanations for nudges."
-  - "Event-driven microservices enable scalable, auditable financial systems."
+  - Explainable nudges increase user trust and perceived relevance.
+  - Context-aware triggers boost engagement compared to generic alerts.
+  - Modular microservices with Kafka enable scalable real-time financial advice.
 ```

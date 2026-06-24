@@ -1,88 +1,163 @@
 ```yaml
-paper_id: "10.1108/IJBM-07-2022-0298"
-designation: "international"
-title: "Understanding financial professionals' perceptions of their clients' financial behaviors"
-authors: "Morris, T.; Kamano, L.; Maillet, S."
+paper_id: 9f8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d
+designation: international
+title: Understanding financial professionals' perceptions of their clients' financial behaviors
+authors: Morris, T.; Kamano, L.; Maillet, S.
 year: 2023
-venue: "International Journal of Bank Marketing"
+venue: International Journal of Bank Marketing
 odin_topics:
-  - "5.A"
-  - "13.A"
-  - "13.B"
-shorthand_tags:
-  - "/behavioral-profile"
-  - "/savings-goal"
-  - "/debt-management"
-tldr: "Financial professionals perceive clients' problematic financial behaviors as driven by psychological factors like instant gratification and bias, financial habits such as lack of discipline and planning, and system flexibility, especially in debt, savings, and investment decisions."
-problem_and_motivation: "Despite financial knowledge, many individuals exhibit suboptimal debt, savings, and investment behaviors that harm financial well-being. Prior research focuses on financial literacy but yields mixed results on intervention effectiveness. Understanding financial professionals' perspectives can reveal underlying behavioral drivers often missed by quantitative studies."
+  - 1.A
+  - 1.C
+  - 2.A
+  - 3.A
+  - 4.A
+  - 5.A
+  - 5.B
+  - 6.A
+  - 7.A
+  - 10.A
+  - 10.B
+  - 11.A
+  - 11.B
+  - 13.A
+  - 13.B
+tldr: Financial professionals perceive client financial behaviors as driven by psychological factors, habits, and system flexibility, with knowledge playing a key role in investment decisions.
+problem_and_motivation: Suboptimal financial decisions persist despite financial literacy interventions, and the role of psychological factors and habits is underexplored. Financial professionals offer a unique perspective on underlying behavioral drivers.
 approach:
-  - "Qualitative study with 26 semi-structured interviews of financial professionals in New Brunswick, Canada."
-  - "Participants included loan managers, advisers, branch managers, accountants, and brokers from depository institutions, investment services, and insurance companies."
-  - "Interviews covered clients' financial management, challenges, habits, and credit relationships, averaging 60 minutes."
-  - "Thematic analysis using inductive approach and NVivo 12 software to code and categorize perceptions."
+  - Semi-structured interviews were conducted with 26 financial professionals in New Brunswick, Canada.
+  - Participants included loan managers, advisers, and accountants from diverse financial institutions.
+  - An inductive thematic analysis was applied to the interview transcripts using NVivo 12.
+  - The study focused on professionals' perceptions of client behaviors regarding debt, savings, and investment.
 findings:
-  - "Professionals report clients abuse credit by maximizing limits and borrowing beyond needs, often driven by instant gratification and lack of budgeting."
-  - "Clients insist on credit extensions even when advised against it, threatening to switch institutions, and some use multiple credit cards to circumvent limits."
-  - "Many clients make only minimum credit card payments and fail to synchronize loan terms with asset life, leading to negative equity."
-  - "Clients lack savings, start saving too late, and use revolving credit instead of emergency funds; only 10% save adequately for retirement."
-  - "Clients underuse government investment plans (RRSP, TFSA, RESP) and exhibit either excessive risk aversion (e.g., guaranteed certificates below inflation) or overconfidence (e.g., undiversified stock bets)."
-  - "Psychological factors (instant gratification, lack of awareness, overconfidence) and financial habits (lack of discipline, no budgeting) are primary drivers, often outweighing financial knowledge for debt and savings."
-  - "System flexibility—easy credit access and outdated debt ratio calculations—enables over-indebtedness by signaling affordability."
+  - num: 90% of clients lack adequate retirement savings, often using savings for unexpected expenses.
+  - num: Clients continually refinance homes every two to three years, extracting equity without repayment.
+  - num: Only 43% of Americans spend less than disposable income and only 43% can access $2,000 quickly.
+  - num: The average debt-to-income ratio in the Eurozone is 96.3%, with ratios as high as 214.6%.
+  - num: Canadian household debt is 177% of disposable income, and only 49% budget.
+  - num: Only 10% of clients save specifically for retirement, with many starting too late.
+  - Psychological factors like instant gratification and lack of discipline outweigh knowledge in debt and savings behaviors.
+  - Investment behaviors are more strongly linked to financial knowledge and understanding of products.
+  - System flexibility in credit access encourages clients to borrow beyond their means.
+  - Financial professionals observe that many clients misuse credit for daily expenses rather than asset purchases.
 key_figures_tables:
-  - "Figure 1: Conceptual framework linking financial literacy, knowledge, psychological factors, habits, and past behaviors → Financial behavior is multi-dimensional."
-  - "Figure 2: Borrowing behaviors (credit abuse, insistence, misuse) driven by instant gratification and lack of budgeting → Clients borrow beyond needs and use wrong products."
-  - "Figure 3: Debt repayment issues (insufficient payments, using credit to pay debt) driven by lifestyle desires → Minimum payments and refinancing cycles harm long-term security."
-  - "Figure 4: Savings behaviors (lack of savings, late start) driven by psychological factors and lack of discipline → Only 10% save adequately for retirement."
-  - "Figure 5: Investment behaviors (underuse of plans, risk aversion or overconfidence) driven by low knowledge → Clients miss government programs and make undiversified bets."
-  - "Table 1: Profile of 26 financial professionals (18 men, 8 women; ages 25-82; various institutions) → Diverse sample across depository, investment, and insurance sectors."
+  - Table 1: Profile of 26 financial professionals by position, institution, age, and gender → Diverse sample across financial sectors.
+  - Figure 1: Conceptual framework of financial literacy → Shows financial behavior as an outcome of knowledge, attitudes, and past behaviors.
+  - Figure 2: Financial behaviors related to borrowing → Categorizes credit abuse, insistence on credit, and product misuse.
+  - Figure 3: Debt repayment behaviors → Highlights insufficient payments and abuse of credit to pay debt.
+  - Figure 4: Savings behaviors → Emphasizes lack of savings and starting to save late in life.
+  - Figure 5: Investment behaviors → Covers underuse of government programs, risk aversion, and excessive risk-taking.
 key_equations:
-  - equation: "None."
+  - equation: None.
     explanation: ""
 definitions:
-  - term: "RRSP"
-    definition: "Registered Retirement Savings Plan, a Canadian tax-advantaged retirement account."
-  - term: "TFSA"
-    definition: "Tax-Free Savings Account, a Canadian account for tax-free investment growth."
-  - term: "RESP"
-    definition: "Registered Education Savings Plan, a Canadian account for post-secondary education savings."
+  - term: Financial literacy
+    definition: A combination of awareness, knowledge, skills, attitudes, and behaviors needed to make sound financial decisions and achieve financial well-being.
+  - term: Financial behavior
+    definition: Human action associated with the management of money in cash, credit, and savings.
+  - term: Instant gratification
+    definition: The desire for immediate consumption at the expense of long-term financial well-being.
+  - term: Overconfidence bias
+    definition: A psychological bias where individuals overestimate their financial knowledge or skills.
+  - term: Self-attribution bias
+    definition: The tendency to attribute successes to one's own skills and failures to external factors.
+  - term: Disposition bias
+    definition: The tendency to sell profitable investments too soon and hold onto depreciating assets too long.
+  - term: RRSP
+    definition: Registered Retirement Savings Plan, a Canadian government program for retirement savings.
+  - term: TFSA
+    definition: Tax-Free Savings Account, a Canadian government program for tax-efficient savings.
+  - term: RESP
+    definition: Registered Education Savings Plan, a Canadian government program for education savings.
 critical_citations:
-  - "[Allgood and Walstad, 2016] — Links financial literacy to credit card repayment and account ownership."
-  - "[Gathergood and Weber, 2017] — Shows present bias influences mortgage and credit decisions."
-  - "[Kaiser et al., 2022] — Finds financial education effectiveness varies by context and need."
-  - "[Lusardi and Tufano, 2015] — Demonstrates debt literacy predicts over-indebtedness."
+  - "[Allgood and Walstad, 2016] — Links financial knowledge to better financial behaviors."
+  - "[Gathergood and Weber, 2017] — Shows short-term biases influence mortgage choices."
+  - "[Lusardi and Tufano, 2015] — Links low financial literacy to higher debt accumulation."
+  - "[Kaiser and Menkhoff, 2017] — Meta-analysis showing mixed effectiveness of financial education."
+  - "[Davies, 2015] — Argues financial literacy responsibility should include industry and government."
 relevance:
   topics:
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      justification: "Identifies psychological factors (instant gratification, bias) and habits as drivers of financial behavior."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      justification: "Documents lack of savings, late start, and use of credit instead of emergency funds."
-    - code: "13.B"
-      name: "Debt Management in PFMS"
-      justification: "Details credit abuse, insufficient payments, misuse of products, and refinancing cycles."
-  contribution: "This paper provides qualitative evidence that psychological factors (e.g., instant gratification, lack of awareness) and financial habits (e.g., lack of discipline, no budgeting) are primary drivers of poor debt and savings behaviors, informing Odin's behavioral profiling module. It highlights that clients misuse credit products (e.g., using credit cards for daily expenses, refinancing homes repeatedly) and fail to synchronize loan terms with asset life, directly applicable to Odin's debt management features. The finding that clients underuse government savings plans and start saving too late justifies Odin's savings goal management with early planning nudges and educational prompts. The paper also reveals that system flexibility (easy credit access, outdated debt ratios) enables over-indebtedness, suggesting Odin should incorporate real-time affordability checks beyond traditional ratios."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Paper focuses on Canadian professionals, but findings on financial behavior are broadly applicable.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: contextual
+      justification: Insights on debt, savings, and investment behavior apply to similar demographic groups.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: contextual
+      justification: Highlights psychological and habitual factors, which can be culturally influenced.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: Provides qualitative insights into how financial behavior relates to categorizing debt, savings, and investments.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: Critiques the flexibility of the financial system and credit access, directly relevant to system design.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Directly identifies psychological factors and habits that form the basis of behavioral profiling.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: medium
+      justification: Discusses how behaviors change over time, relevant to dynamic profiling.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: low
+      justification: Mentions the lack of planning as a behavior, indirectly relevant to forecasting needs.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: high
+      justification: Highlights the lack of budgeting as a key problem, directly justifying the need for budget recommendations.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Mentions ethical considerations for financial professionals, but not directly about system privacy.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: contextual
+      justification: Discusses client-adviser trust, indirectly relevant to user trust in PFMS.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Discusses the challenge of getting clients to follow advice, relevant to engagement.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: medium
+      justification: Highlights the importance of early savings and habit formation, relevant to retention.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: high
+      justification: Directly addresses the lack of savings and the importance of planning for retirement and emergencies.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: high
+      justification: Directly addresses credit abuse, inadequate repayment, and misuse of debt products.
+  contribution: The paper provides a qualitative framework for understanding the psychological and habitual drivers behind poor financial behaviors, which can inform Odin's behavioral profiling module. It identifies the need for systems to address instant gratification and lack of discipline, directly supporting Odin's budget recommendation and savings goal management features. The findings on debt misuse and system flexibility justify Odin's anomaly detection and constraint-based budgeting. The study's emphasis on the role of financial professionals highlights the importance of user trust and engagement mechanisms in Odin's design.
   directly_justifies:
-    - "Financial professionals observe that clients abuse credit by maximizing limits beyond needs and borrowing for non-asset purchases."
-    - "Many clients make only minimum credit card payments, increasing long-term debt costs and delaying repayment."
-    - "Lack of savings habit and starting late lead to financial insecurity and reliance on credit for emergencies."
-    - "Psychological factors like instant gratification outweigh financial knowledge in explaining debt and savings behavior."
-    - "Clients underuse government investment plans (RRSP, TFSA, RESP) due to low knowledge, missing tax advantages."
+    - "Psychological factors like instant gratification are core drivers of debt accumulation."
+    - "Lack of financial discipline and planning leads to poor budgeting and savings habits."
+    - "System flexibility in credit access encourages users to borrow beyond their means."
+    - "Users often misuse credit products due to a lack of financial knowledge."
+    - "Early savings and habit formation are critical to long-term financial well-being."
   limits:
-    - "Qualitative methodology does not allow generalization to broader populations."
-    - "Only financial professionals' perceptions were collected, not clients' own accounts."
-    - "Sample from one Canadian province (New Brunswick) may not reflect other regions or countries."
-    - "Different professional roles (e.g., loan manager vs. investment adviser) have varying clientele and objectives, which may bias perceptions."
-  mapping_rationale: "This paper was screened against Odin's functional domains. It provides citeable claims for behavioral profiling (Domain 5) because it identifies psychological drivers and habits that shape financial behavior. It also directly addresses savings and debt management (Domains 13.A and 13.B) through detailed observations on credit abuse, repayment insufficiency, lack of savings, and late-start problems. No claims support spending forecasting, budget recommendation, anomaly detection, mobile-first design, data privacy, retention, or system evaluation. Algorithm-specific topics (e.g., 5.C, 6.B, 7.C) were rejected because the paper uses qualitative methods, not ML models. Filipino-specific topics (1.A-1.C) were rejected because the study is in Canada, though the behavioral insights are transferable. Borderline case: 5.B (Profile dynamics) was rejected because the paper does not discuss cold-start or longitudinal changes."
+    - "Findings are based on perceptions of Canadian financial professionals, not actual client data."
+    - "Qualitative methodology limits generalizability to other populations or regions."
+    - "The sample may not represent all financial professionals or client demographics."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to Behavioral Profiling (5.A) due to its detailed exploration of psychological factors and habits. It also provides high relevance to Debt Management (13.B) and Savings Management (13.A) through its direct observations of credit abuse and lack of savings. The paper's critique of existing financial systems and credit access makes it highly relevant to Existing Systems & Gaps (4.A). It offers medium relevance to Expense Categorization (3.A) by linking behaviors to financial product use, and to Engagement and Retention (11.A, 11.B) through discussions of client follow-through and habit formation. Borderline cases included the paper's discussion of investment behaviors, which touched on both Financial Behavior (1.C) and Forecasting (6.A), but was ultimately coded under 1.C due to its focus on behavioral drivers. Domains like Mobile-First Design (9.A, 9.B) and Algorithmic Modules (6.B, 8.B, 7.C, 7.D) were considered but rejected as the paper does not address computational methods. The paper's overall relevance to Odin is substantial, providing a rich qualitative foundation for understanding user behaviors that the system aims to improve.
 limitations:
-  - "Did not obtain opinions of clients, only professionals' perceptions. [unacknowledged]"
-  - "Professionals from different positions (e.g., loan managers vs. investment advisers) may have divergent perspectives due to different clientele."
-  - "Qualitative methodology does not allow generalization of results."
-  - "Sample of 26 participants from one Canadian province may limit external validity. [unacknowledged]"
+  - "Only 26 professionals from one Canadian province were interviewed, limiting geographic diversity."
+  - "Client perspectives were not directly obtained, relying solely on professional perceptions."
+  - "The study does not generalize to non-Canadian or non-professional populations."
+  - "The qualitative design prevents quantitative validation of the identified behavioral drivers."
+  - "The study did not explore the effectiveness of specific interventions, focusing instead on perceptions."
 remember_this:
-  - "Psychological factors like instant gratification drive poor financial behaviors."
-  - "Financial habits such as lack of discipline matter more than knowledge for debt and savings."
-  - "num: Only 10% of clients save adequately for retirement per professionals."
-  - "Clients often make minimum credit card payments, increasing long-term costs."
-  - "Starting savings late irreversibly reduces compound interest benefits."
+  - "Psychological factors and habits outweigh financial knowledge in debt and savings behaviors."
+  - "Only 10% of clients save for retirement, indicating a critical need for savings tools."
+  - "Financial professionals see system flexibility as a key enabler of client over-indebtedness."
+  - "Investment decisions are more strongly tied to financial knowledge than debt or savings."
+  - "Lack of budgeting and planning is a fundamental problem across all financial behaviors."
 ```
