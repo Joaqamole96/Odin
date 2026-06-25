@@ -1,0 +1,93 @@
+```yaml
+paper_id: 10.69569/jip.2026.060
+designation: local
+title: Impact of Financial Literacy on Financial Performance in Select Multi-Purpose Cooperatives in Tagbilaran City, Bohol, Philippines
+authors: Gudelosao, E.; Cafe, A.J.; Liray, K.; Tabaco, J.G.; Felicitas, L.N.
+year: 2026
+venue: Journal of Interdisciplinary Perspectives
+odin_topics:
+  - 1.B
+  - 1.C
+  - 2.A
+  - 5.A
+  - 5.C
+tldr: Financial attitude fully mediates the relationship between financial knowledge and behavior, but member financial literacy does not predict cooperative financial performance.
+problem_and_motivation: The link between individual cooperative members' financial literacy and the overall financial performance of their cooperatives is under-researched, particularly in the local context of Bohol. While financially literate members are assumed to contribute to institutional health, empirical evidence for this direct relationship is lacking. This study addresses the gap by examining whether member-level competencies translate into institutional success.
+approach:
+  - Quantitative descriptive-correlational design with mediation analysis using OLS regression path modeling.
+  - Data from 100 members across four multi-purpose cooperatives in Tagbilaran City, selected via purposive sampling.
+  - Financial literacy measured via a 30-item questionnaire (knowledge, attitude, behavior) adapted from OECD/INFE guidelines.
+  - Cooperative financial performance assessed using CDA's STEPS method on 2024 financial statements.
+  - Mediation analysis employed non-parametric bootstrapping with 5,000 resamples.
+findings:
+  - Financial knowledge significantly increases financial attitude (β = 0.525, p < .001).
+  - Financial attitude significantly increases financial behavior (β = 0.592, p < .001).
+  - Financial knowledge has no significant direct effect on financial behavior (β = 0.024, p = .797).
+  - num: Financial attitude fully mediates the knowledge-behavior pathway (indirect effect β = 0.311, p < .001).
+  - num: Financial literacy has no significant predictive effect on cooperative financial performance (β = 0.048, p = .632).
+  - num: Financial literacy explains only 0.2% of the variance in cooperative financial performance (R² = 0.002).
+key_figures_tables:
+  - Table 1: Demographic profile of 100 cooperative members → Majority are female, young to middle-aged, and college graduates.
+  - Table 2: High financial literacy levels (mean 3.50) across all three components → Members understand concepts but struggle with behavior.
+  - Table 3: Direct effects from mediation model → Attitude is the key mediator between knowledge and behavior.
+  - Table 4: Indirect effects with bootstrapping → Full mediation through attitude (point estimate 0.311, CI 0.194-0.452).
+  - Table 5: Cooperative financial performance STEPS ratings → Most cooperatives show Fair performance, one Needs Improvement.
+  - Table 6: Regression analysis results → Financial literacy is not a significant predictor of performance.
+key_equations:
+  - equation: R² = 0.002
+    explanation: Financial literacy explains negligible variance in cooperative performance.
+definitions:
+  - term: STEPS
+    definition: Cooperative Development Authority's method for evaluating financial performance using Stability, Turnover, Efficiency, Profitability, and Structure of Assets ratios.
+  - term: FLI
+    definition: Financial Literacy Index, a composite mean score of knowledge, attitude, and behavior components.
+critical_citations:
+  - "[Perez & Lopez, 2020] — Found school cooperative members with good knowledge still had poor discipline."
+  - "[Lusardi, 2019] — Noted financial knowledge rarely improves outcomes without supportive structures."
+  - "[Yeolencia & Lestari, 2024] — Found literacy has no significant direct effect on organizational performance."
+relevance:
+  topics:
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: contextual
+      justification: Provides income distribution data for cooperative members in Bohol.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: medium
+      justification: Directly studies financial behavior and its determinants among cooperative members.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: low
+      justification: Focuses on cooperatives as a culturally relevant financial institution in the Philippines.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Empirically demonstrates the mediation model linking knowledge, attitude, and behavior.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Uses validated OECD/INFE instruments to classify literacy and behavior constructs.
+  contribution: This paper directly justifies Odin's need for a behavioral profiling module that distinguishes between financial knowledge, attitude, and behavior. It demonstrates that financial attitude is the critical mediating variable for translating knowledge into action, which informs Odin's user profiling and intervention design. The finding that literacy alone does not predict performance supports Odin's focus on actionable behavioral insights rather than mere educational content. The study's validated instrument can inform Odin's survey design for user data collection. It also highlights the importance of considering organizational and contextual factors when designing financial tools.
+  directly_justifies:
+    - "Financial attitude fully mediates the relationship between financial knowledge and behavior."
+    - "Financial knowledge has no significant direct effect on financial behavior."
+    - "Member financial literacy does not predict organizational financial performance."
+  limits:
+    - "The study was conducted only in Tagbilaran City, Bohol, limiting generalizability."
+    - "Uses purposive sampling of only four cooperatives, which may not represent all types."
+    - "Relies on cross-sectional data, preventing causal inferences."
+    - "Measures financial performance at the cooperative level, not individual member outcomes." [unacknowledged]
+  mapping_rationale: A systematic scan of all 12 functional domains was conducted. The paper was flagged as relevant primarily to the Behavioral Profiling & Classification domain (5.A high, 5.C medium) because it empirically tests the relationships among financial knowledge, attitude, and behavior using validated instruments. It also touches on Filipino Cultural Context (2.A low) by studying cooperatives and provides demographic/income data relevant to Financial Structure (1.B contextual). It was considered for Financial Behavior (1.C medium). All other domains (Expense Categorization, Existing Systems, Forecasting, Budget Recommendation, Anomaly Detection, Mobile Design, Data Privacy, Retention, Evaluation, Savings/Debt) were rejected because the paper does not address PFMS design, algorithms, or system-level features. The overall relevance is moderate, providing behavioral insights for Odin's profiling module but not directly informing system architecture.
+limitations:
+  - "Cross-sectional design limits causal inference."
+  - "Purposive sampling may introduce selection bias."
+  - "Generalizability is limited to Bohol cooperatives."
+  - "Relies on self-reported survey data for literacy constructs."
+  - "Does not account for other organizational factors influencing performance."
+remember_this:
+  - "Attitude is the essential link between financial knowledge and behavior."
+  - "Financial literacy alone fails to predict cooperative performance."
+  - "Knowledge explains 27.6% of variance in attitude, but not behavior directly."
+  - "The indirect effect of knowledge on behavior via attitude is 0.311."
+  - "Organizational factors likely outweigh member literacy in performance."
+```

@@ -15,151 +15,147 @@
 
 ---
 
-## 1. Filipino Young Professionals and the Financial Problem [/fil-yp-problem]
+## [O] 1. Filipino Young Professionals and the Financial Problem [/fil-yp-problem]
 
-### 1.A Filipino Young Professionals as a Demographic [/fil-yp-demographic]
+### [O] 1.A Filipino Young Professionals as a Demographic [/fil-yp-demographic]
 
-#### [X] 1.A.I Demographic profile: age range, employment sectors, and geographic concentration [/yp-profile]
+#### [O] 1.A.I Demographic profile: age range, employment sectors, and geographic concentration [/yp-profile]
 > *Scholar query: What is the demographic profile of Filipino young professionals aged 20 to 40 — including their dominant employment sectors, geographic distribution across Metro Manila and urban centers, and household composition — as documented in national surveys or institutional data from the Bangko Sentral ng Pilipinas, Philippine Statistics Authority, or similar sources?*
 
-#### [X] 1.A.II Income structure typology: salaried, freelance, gig, informal, and mixed earners [/income-typology]
+#### [O] 1.A.II Income structure typology: salaried, freelance, gig, informal, and mixed earners [/income-typology]
 > *Scholar query: How do researchers classify the income structures of Filipino young professionals, particularly the distinction between salaried, freelance, gig‑economy, informal, and mixed‑income earners? I am looking for studies that document the typology of income arrangements among Filipino workers in the millennial and Gen Z age range, and how these income types shape personal finance behavior and spending decisions.*
 
 > **Note:** Literature on regular salaried employees in this demographic is comparatively thin. Pre‑survey data from the pilot study may be used as supporting evidence, but this must be clearly distinguished from peer‑reviewed literature.
 
-#### [X] 1.A.III Financial literacy levels and the gap between knowledge and behavior [/literacy-behavior-gap]
+#### [O] 1.A.III Financial literacy levels and the gap between knowledge and behavior [/literacy-behavior-gap]
 > *Scholar query: What is the documented level of financial literacy among Filipino young professionals, and what evidence exists that higher financial literacy does not reliably translate into disciplined financial behavior? I am looking for studies that measure both knowledge and actual financial behavior in this demographic — particularly findings that show a gap between what Filipino young adults know about personal finance and what they actually do with their money.*
 
-#### [X] 1.A.IV Prevalence and severity of financial management problems in Metro Manila across DOLE employment categories [/fin-problem-prevalence]
+#### [O] 1.A.IV Prevalence and severity of financial management problems in Metro Manila across DOLE employment categories [/fin-problem-prevalence]
 > *Scholar query: How prevalent and severe are personal financial management problems — such as insufficient savings, debt reliance, and budget non‑adherence — among Filipino young professionals aged 20 to 40 specifically in the National Capital Region (Metro Manila), and how do these problems vary across the employment categories defined by the Department of Labor and Employment (regular, independent contract, fixed‑term/project employment)? I am looking for quantitative studies or institutional survey data that report prevalence rates disaggregated by employment type and geographic location, and that discuss how income predictability interacts with financial difficulty.*
 
 ---
 
-### 1.B Financial Structure of Filipino Young Professionals [/fin-structure]
+### [O] 1.B Financial Structure of Filipino Young Professionals [/fin-structure]
 
-#### [X] 1.B.I Income patterns: frequency, regularity, and amount across employment types [/income-patterns]
+#### [O] 1.B.I Income patterns: frequency, regularity, and amount across employment types [/income-patterns]
 > *Scholar query: What are the documented income patterns of Filipino young professionals across different employment types — including the frequency of income receipt such as semi‑monthly payroll cycles, the regularity or volatility of income amounts, and how these patterns differ between salaried and variable‑income workers? I am looking for empirical studies or institutional data that characterize how Filipino young adults receive their income and how that shapes their financial planning horizons.*
 
-#### 1.B.II Expenditure patterns: category‑level allocation across income stability types [/expenditure-patterns]
+#### [O] 1.B.II Expenditure patterns: category‑level allocation across income stability types [/expenditure-patterns]
 > *Scholar query: What do empirical studies reveal about the household or personal expenditure patterns of Filipino young professionals when disaggregated by income stability type? I am looking for research that compares how workers with stable salaried income allocate spending across categories differently from those with irregular, freelance, or mixed income — including data from Philippine institutional sources such as FIES or BSP survey instruments.*
 
-#### 1.B.III Financial goals: savings targets, fund accumulation, debt repayment, and investment intentions [/fin-goals]
+#### [O] 1.B.III Financial goals: savings targets, fund accumulation, debt repayment, and investment intentions [/fin-goals]
 > *Scholar query: What financial goals do Filipino young professionals most commonly pursue — including short‑term savings targets, emergency fund accumulation, debt repayment plans, and longer‑term investment intentions — and how do these goals vary by income type, employment status, and demographic characteristics? I am looking for studies that document declared or revealed financial goal‑setting behavior in this population.*
 
-#### 1.B.IV Debt structure and debt management behavior [/debt-structure]
+#### [O] 1.B.IV Debt structure and debt management behavior [/debt-structure]
 > *Scholar query: What is the documented debt structure of Filipino young professionals — including the types of debt they carry, the proportion of income consumed by debt service, and how they manage or fail to manage debt repayment — as reported in national surveys or empirical studies? I am looking for evidence on how debt behavior differs across salaried versus variable‑income young professionals and what consequences poor debt management produces.*
 
 ---
 
-### 1.C Financial Behavior of Filipino Young Professionals [/fin-behavior]
+### [O] 1.C Financial Behavior of Filipino Young Professionals [/fin-behavior]
 
-#### [X] 1.C.I Budgeting practice: prevalence, methods, and time horizons [/budgeting-prevalence]
+#### [O] 1.C.I Budgeting practice: prevalence, methods, and time horizons [/budgeting-prevalence]
 > *Scholar query: How prevalent is active budgeting practice among Filipino millennials and Gen Z, and what budgeting methods and time horizons — weekly, semi‑monthly, or monthly — do they most commonly use? I am looking for studies that measure the proportion of Filipino young adults who maintain a budget, the formats or tools they use, and the behavioral or demographic factors that predict whether someone budgets at all — particularly in Metro Manila or urban Philippine settings.*
 
-#### 1.C.II Financial behavior differences across income stability types [/income-type-behavior-diff]
+#### [O] 1.C.II Financial behavior differences across income stability types [/income-type-behavior-diff]
 > *Scholar query: How do the financial management behaviors of Filipino workers with stable income differ from those with variable or irregular income? I am looking for comparative studies that show how income predictability affects budgeting discipline, savings rates, expense prioritization, and financial stress — particularly for young professionals in the Philippines who move between employment types or hold multiple income sources simultaneously.*
 
-#### 1.C.III Budget failure points: irregular tracking, impulse overspending, and unplanned obligatory expenses [/budget-failure-points]
+#### [O] 1.C.III Budget failure points: irregular tracking, impulse overspending, and unplanned obligatory expenses [/budget-failure-points]
 > *Scholar query: What are the most commonly documented failure points in personal finance management among Filipino young adults? I am specifically interested in research that identifies irregular or inconsistent transaction tracking, impulse or unplanned overspending, and the destabilizing effect of sudden obligatory expenses — such as medical costs, family emergencies, or periodic lump‑sum payments — as the primary reasons budgets break down in practice.*
 
-#### 1.C.IV Evidence that intelligent adaptive tools outperform financial literacy‑only interventions [/intelligent-vs-literacy]
+#### [O] 1.C.IV Evidence that intelligent adaptive tools outperform financial literacy‑only interventions [/intelligent-vs-literacy]
 > *Scholar query: What evidence exists that intelligent or adaptive budgeting systems produce better financial behavior outcomes than financial literacy education alone? I am looking for studies that compare the effectiveness of tool‑mediated interventions — such as automated tracking, personalized alerts, or algorithmic budget recommendations — against purely instructional or literacy‑based approaches, particularly in populations of young adults where behavioral support matters more than knowledge transfer.*
 
 ---
 
-## 2. Filipino Cultural Context in Personal Finance [/fil-cultural-context]
+## [O] 2. Filipino Cultural Context in Personal Finance [/fil-cultural-context]
 
-> **Note:** This topic is a cross‑cutting input. The cultural patterns documented here are directly referenced by the expense categorization, behavioral profiling, spending forecasting, budget recommendation, and anomaly detection sections. Literature in this topic should be cited wherever those downstream modules require cultural grounding.
+### [O] 2.A Culturally Specific Financial Practices [/cultural-practices]
 
-### 2.A Culturally Specific Financial Practices [/cultural-practices]
+#### [O] 2.A.I Informal financial mechanisms: paluwagan, rotating savings, and community lending [/informal-fin-mechanisms]
+> *Scholar query: What informal financial mechanisms are documented among Filipino households and young professionals, including but not limited to paluwagan (rotating savings and credit associations), community lending, and peer‑to‑peer borrowing, and how do these practices affect cash flow patterns, budget adherence, and savings behavior? I am looking for studies that characterize participation rates, contribution structures, and the financial consequences of these mechanisms for individual budget management.*
 
-#### [X] 2.A.I Informal financial mechanisms: paluwagan, rotating savings, and community lending [/informal-fin-mechanisms]
-> *Scholar query: What informal financial mechanisms are documented among Filipino households and young professionals — particularly paluwagan (rotating savings and credit associations), community lending, and peer‑to‑peer borrowing — and how do these practices affect cash flow patterns, budget adherence, and savings behavior? I am looking for studies that characterize participation rates, contribution structures, and the financial consequences of these mechanisms for individual budget management.*
+#### [O] 2.A.II Family financial obligations: remittances, breadwinner expectations, and utang na loob [/family-obligations]
+> *Scholar query: What culturally specific family financial obligations — including but not limited to regular remittances to parents or siblings, breadwinner expectations, and the social norm of utang na loob as a felt financial duty — are documented among Filipino young professionals, and how do these obligations affect their personal budget allocation and savings capacity? I am looking for studies that quantify the proportion of income directed toward family support and that characterize the social pressure mechanisms that make these obligations difficult to reduce.*
 
-#### 2.A.II Family financial obligations: remittances, breadwinner expectations, and utang na loob [/family-obligations]
-> *Scholar query: What culturally specific family financial obligations — including regular remittances to parents or siblings, breadwinner expectations, and the social norm of utang na loob as a felt financial duty — are documented among Filipino young professionals, and how do these obligations affect their personal budget allocation and savings capacity? I am looking for studies that quantify the proportion of income directed toward family support and that characterize the social pressure mechanisms that make these obligations difficult to reduce.*
+#### [O] 2.A.III Community and religious financial contributions [/community-religious-contrib]
+> *Scholar query: What community and religious financial contributions — including but not limited to church donations, fiesta preparation costs, bayanihan‑type shared expenses, and ambag contributions — are documented as regular outflows among Filipino young adults, and how do these affect personal budget management? I am looking for studies that describe the frequency, amount, and obligatory versus voluntary character of these contributions and their interaction with formal budgeting practice.*
 
-#### 2.A.III Community and religious financial contributions [/community-religious-contrib]
-> *Scholar query: What community and religious financial contributions — including church donations, fiesta preparation costs, bayanihan‑type shared expenses, and ambag contributions — are documented as regular outflows among Filipino young adults, and how do these affect personal budget management? I am looking for studies that describe the frequency, amount, and obligatory versus voluntary character of these contributions and their interaction with formal budgeting practice.*
-
-#### 2.A.IV Government‑mandated financial obligations: SSS, PhilHealth, and Pag‑IBIG contributions [/mandated-contributions]
-> *Scholar query: How are SSS, PhilHealth, and Pag‑IBIG contributions treated in the personal financial management of Filipino young professionals — particularly the distinction between automatic payroll deductions for employed workers and voluntary self‑payment for freelance or self‑employed workers? I am looking for research or regulatory documentation that characterizes these contributions as a distinct category of obligatory expense and discusses how their treatment differs across employment types.*
+#### [O] 2.A.IV Government‑mandated financial obligations: SSS, PhilHealth, and Pag‑IBIG contributions [/mandated-contributions]
+> *Scholar query: How are government‑mandated financial obligations such as SSS, PhilHealth, and Pag‑IBIG contributions treated in the personal financial management of Filipino young professionals — particularly the distinction between automatic payroll deductions for employed workers and voluntary self‑payment for freelance or self‑employed workers? I am looking for research or regulatory documentation that characterizes these contributions as a distinct category of obligatory expense and discusses how their treatment differs across employment types.*
 
 ---
 
-### 2.B Seasonal and Cyclical Spending Patterns [/seasonal-patterns]
+### [O] 2.B Seasonal and Cyclical Spending Patterns [/seasonal-patterns]
 
-#### [X] 2.B.I Calendar‑driven spending spikes and suppression cycles [/calendar-spending-cycles]
-> *Scholar query: What calendar‑driven spending spikes and suppression cycles are documented among Filipino households and young professionals? I am looking for empirical or observational studies that characterize how spending behavior changes predictably across the calendar year — including the pre‑payday suppression period known as petsa de peligro, the post‑payday spending surge, and the seasonal escalation during the ber months leading to Christmas — and that quantify the magnitude of these fluctuations.*
+#### [O] 2.B.I Calendar‑driven spending spikes and suppression cycles [/calendar-spending-cycles]
+> *Scholar query: What calendar‑driven spending spikes and suppression cycles are documented among Filipino households and young professionals? I am looking for empirical or observational studies that characterize how spending behavior changes predictably across the calendar year — including but not limited to the pre‑payday suppression period known as petsa de peligro, the post‑payday spending surge, and the seasonal escalation during the ber months leading to Christmas — and that quantify the magnitude of these fluctuations.*
 
-> **Note – Odin’s term “Occasions”:** This sub‑subtopic covers documented Filipino spending cycle events, which Odin treats as *Occasions* (culturally expected spending spikes excluded from anomaly alerting). See Topic 2.D for the full treatment.
-
-#### 2.B.II Implications of cyclical patterns for forecasting, anomaly detection, and budget recommendation [/cyclical-pattern-implications]
+#### [O] 2.B.II Implications of cyclical patterns for forecasting, anomaly detection, and budget recommendation [/cyclical-pattern-implications]
 > *Scholar query: What are the implications of documented Filipino seasonal and cyclical spending patterns for the design of spending forecasting models, anomaly detection systems, and budget recommendation algorithms? I am looking for research that discusses how failure to account for these patterns produces systematic forecasting errors, anomaly false positives during culturally expected spending spikes, or budget recommendations that are unrealistic during high‑obligation periods.*
 
 ---
 
-### 2.C User‑Declared Financial Preferences [/user-preferences]
+### [O] 2.C User‑Declared Financial Preferences [/user-preferences]
 
 > **Note:** This subtopic covers preferences that users *declare* at onboarding or configure over time, as opposed to behavioral patterns inferred from transaction data.
 
-#### [X] 2.C.I Protected expense categories: non‑negotiable spending floors declared by users [/protected-categories]
-> *Scholar query: What evidence exists that personal finance systems should allow users to designate certain expense categories as protected or non‑negotiable — meaning the system will not recommend reducing spending in those categories regardless of optimization pressure — and what categories are most commonly treated this way by Filipino users? I am looking for research that grounds protected category logic in documented user financial behavior rather than treating it as a purely technical design decision.*
+#### [O] 2.C.I Expense category restrictions: spending floors and ceilings as declared by users [/category-restrictions]
+> *Scholar query: What evidence exists that personal finance systems should allow users to designate certain expense categories as, for example, open (no floor or ceiling), protected (with floor) or or locked (set amount) — meaning the system will not recommend reducing spending in protected and locked categories regardless of optimization pressure — and what categories are most commonly treated this way by Filipino users? What other restrictions do existing systems use if not that? I am looking for research that grounds open, protected, and locked category logic, or other category restriction logic, in documented user financial behavior rather than treating it as a purely technical design decision.*
 
-#### 2.C.II Category and goal prioritization as user‑configurable inputs to recommendation logic [/priority-config]
-> *Scholar query: How have personal finance systems implemented user‑configurable priority hierarchies — such as allowing users to rank their savings goal above discretionary spending, or to treat debt repayment as higher priority than leisure — as direct inputs to budget recommendation or allocation algorithms? I am looking for system design literature or user studies that evaluate the effect of allowing users to declare their own priority structures on recommendation acceptance and adherence.*
+#### [O] 2.C.II Category and goal prioritization as user‑configurable inputs to recommendation logic [/priority-config]
+> *Scholar query: How have personal finance systems implemented user‑configurable priority hierarchies — such as but not exclusive to allowing users to rank their savings goal above discretionary spending, or to treat debt repayment as higher priority than leisure — as direct inputs to budget recommendation or allocation algorithms? I am looking for system design literature or user studies that evaluate the effect of allowing users to declare their own priority structures on recommendation acceptance and adherence.*
 
 ---
 
-### 2.D Filipino Spending Cycles and "Occasions" [/occasions]
+### [O] 2.D Filipino Spending Cycles and "Occasions" [/occasions]
 
 > **Note:** This topic provides dedicated coverage of the magnitude, predictability, and algorithmic treatment of recurring high‑spending events in Filipino financial life. It directly supports Odin's anomaly whitelisting logic and seasonal forecast adjustments.
 
-#### 2.D.I Magnitude, timing, and predictability of documented Filipino spending cycles [/occasions-magnitude]
-> *Scholar query: What empirical evidence documents the magnitude, timing, and predictability of recurring high‑spending events — such as petsa de peligro, holiday seasons (ber months/Christmas), enrollment periods, fiesta preparations, Undas, and community contribution cycles (paluwagan/ambag) — in Filipino household or personal spending patterns? I am looking for studies that quantify the spending uplift associated with these events and establish their predictable seasonal or calendar‑driven timing, to justify their treatment as expected rather than anomalous outflows.*
+#### [O] 2.D.I Magnitude, timing, and predictability of documented Filipino spending cycles [/occasions-magnitude]
+> *Scholar query: What empirical evidence documents the magnitude, timing, and predictability of recurring high‑spending events — such as but not exclusive to petsa de peligro, holiday seasons (ber months/Christmas), enrollment periods, fiesta preparations, Undas, and community contribution cycles (paluwagan/ambag) — in Filipino household or personal spending patterns? I am looking for studies that quantify the spending uplift associated with these events and establish their predictable seasonal or calendar‑driven timing, to justify their treatment as expected rather than anomalous outflows.*
 
-#### 2.D.II Algorithmic treatment of expected spending spikes: whitelisting, seasonal adjustment, and event‑based threshold relaxation [/occasions-algorithmic]
-> *Scholar query: What algorithmic strategies have been proposed or implemented to prevent culturally or cyclically expected spending spikes from being flagged as anomalies in personal finance systems — including whitelisting, seasonal adjustment, lookback‑window exclusion, and event‑based threshold relaxation? I am looking for research that evaluates the effectiveness of these techniques in reducing false positive anomaly alerts and improving forecast accuracy during predictable high‑spending periods.*
+#### [O] 2.D.II Algorithmic treatment of expected spending spikes: whitelisting, seasonal adjustment, and event‑based threshold relaxation [/occasions-algorithmic]
+> *Scholar query: What algorithmic strategies have been proposed or implemented to prevent culturally or cyclically expected spending spikes from being flagged as anomalies in personal finance systems — including but not limited to whitelisting, seasonal adjustment, lookback‑window exclusion, and event‑based threshold relaxation? I am looking for research that evaluates the effectiveness of these techniques in reducing false positive anomaly alerts and improving forecast accuracy during predictable high‑spending periods.*
 
 ---
 
-## 3. Expense Categorization in Personal Finance Systems [/expense-categorization]
+## [O] 3. Expense Categorization in Personal Finance Systems [/expense-categorization]
 
-### 3.A Expense Categorization Frameworks [/cat-frameworks]
+### [O] 3.A Expense Categorization Frameworks [/cat-frameworks]
 
-#### [X] 3.A.I Approaches to expense categorization: user‑defined, institutionally derived, ML‑generated, and hybrid [/cat-approaches]
+#### [O] 3.A.I Approaches to expense categorization: user‑defined, institutionally derived, ML‑generated, and hybrid [/cat-approaches]
 > *Scholar query: What approaches to expense categorization have been implemented in personal finance systems, and how do they compare? I am looking for research that evaluates user‑defined category taxonomies, institutionally derived category schemes based on national expenditure surveys, machine learning‑generated categorizations from transaction descriptions, and hybrid approaches that combine these methods — with attention to the tradeoffs between flexibility, accuracy, and cultural appropriateness for different user populations.*
 
-#### 3.A.II PSA FIES and BSP CFS expenditure categories as the authoritative local standard [/fies-bsp-categories]
-> *Scholar query: How are the expenditure categories defined in the PSA Family Income and Expenditure Survey and the BSP Consumer Finance Survey structured, and how can they be mapped to the expense category system of a local Filipino personal finance management application? I am looking for research or documentation that uses these institutional survey instruments as a basis for designing culturally grounded expense taxonomies, and that demonstrates how FIES and BSP CFS categories can inform the default category structure of a PFMS serving Filipino users.*
+#### [O] 3.A.II PSA FIES and BSP CFS expenditure categories as the authoritative local standard [/fies-bsp-categories]
+> *Scholar query: How are the expenditure categories defined in the PSA Family Income and Expenditure Survey, Philippine Classification of Individual Consumption According to Purpose, BSP Consumer Finance Survey structured, and other govermental documents, and how can they be mapped to the expense category system of a local Filipino personal finance management application? I am looking for research or documentation that uses these institutional survey instruments as a basis for designing culturally grounded expense taxonomies, and that demonstrates how FIES, PCOICOP, and BSP CFS categories can inform the default category structure of a PFMS serving Filipino users.*
 
-#### 3.A.III Limitations of Western category schemas for Filipino spending contexts [/western-cat-limitations]
-> *Scholar query: In what ways do Western‑designed expense category schemas fail to adequately represent Filipino spending patterns and financial obligations? I am looking for research or design literature that identifies specific mismatches — such as the absence of categories for paluwagan contributions, family remittances, or multi‑household financial support — and that argues for the inadequacy of importing foreign categorization schemes into Filipino personal finance applications without significant local adaptation.*
+#### [O] 3.A.III Limitations of Western category schemas for Filipino spending contexts [/western-cat-limitations]
+> *Scholar query: In what ways do Western‑designed expense category schemas fail to adequately represent Filipino spending patterns and financial obligations? I am looking for research or design literature that identifies specific mismatches — such as but not exclusive to the absence of categories for paluwagan contributions, family remittances, or multi‑household financial support — and that argues for the inadequacy of importing foreign categorization schemes into Filipino personal finance applications without significant local adaptation.*
 
 ---
 
-### 3.B Expense Category Design Considerations [/cat-design]
+### [O] 3.B Expense Category Design Considerations [/cat-design]
 
-#### [X] 3.B.I Discretionary, essential, obligatory, and financial expense groupings [/cat-groupings]
-> *Scholar query: How have personal finance systems and financial behavior researchers structured the grouping of expense categories into higher‑level classifications — such as essential versus discretionary, or obligatory versus voluntary — and what evidence supports these groupings as meaningful for budget recommendation and behavioral monitoring? I am looking for research that grounds multi‑tier category hierarchies in actual spending behavior data rather than arbitrary convention.*
+#### [O] 3.B.I Discretionary, essential, obligatory, and financial expense groupings [/cat-groupings]
+> *Scholar query: How have personal finance systems and financial behavior researchers structured the grouping of expense categories into higher‑level classifications — such as but not exclusive to essential versus discretionary, or obligatory versus voluntary — and what evidence supports these groupings as meaningful for budget recommendation and behavioral monitoring? I am looking for research that grounds multi‑tier category hierarchies in actual spending behavior data rather than arbitrary convention.*
 
-#### 3.B.II Category ambiguity as a driver of user abandonment [/cat-ambiguity]
+#### [O] 3.B.II Category ambiguity as a driver of user abandonment [/cat-ambiguity]
 > *Scholar query: What evidence exists that ambiguous or poorly designed expense categories — where users are uncertain which category a transaction belongs to — are a significant driver of frustration and abandonment in personal finance applications? I am looking for usability studies or qualitative research that identifies category ambiguity as a distinct failure mode, separate from general data entry burden, and that discusses design strategies for reducing it.*
 
-#### 3.B.III Culturally specific expense categories warranting dedicated treatment: paluwagan, remittances, and religious obligations [/cultural-expense-categories]
+#### [O] 3.B.III Culturally specific expense categories warranting dedicated treatment: paluwagan, remittances, and religious obligations [/cultural-expense-categories]
 > *Scholar query: What culturally specific expense types in Filipino financial practice warrant dedicated categories in a personal finance management system, rather than being absorbed into generic miscellaneous or social expense buckets? I am looking for literature that documents the financial significance and regularity of paluwagan contributions, family remittances, religious and community donations, and similar obligations — and that makes the case that these represent distinct behavioral and budgeting domains that should be tracked separately.*
 
 ---
 
-### 3.C User‑Defined Allocation Constraints [/constraints-domain]
+### [O] 3.C User‑Defined Allocation Constraints [/constraints-domain]
 
 > **Note:** This topic covers the literature basis for allowing users to set spending limits (floors and ceilings) and constraint types (free, protected, locked) on expense categories, which directly feeds into the budget recommendation module's constraint encoding.
 
-#### 3.C.I Encoding hard and soft constraints: protected, locked, and free categories [/constraint-encoding]
+#### [O] 3.C.I Encoding hard and soft constraints: protected, locked, and open categories [/constraint-encoding]
 > *Scholar query: How have personal finance systems implemented user‑defined spending constraints — specifically the ability to designate categories as non‑negotiable (hard constraints, such as protected floors or locked fixed amounts) versus adjustable (soft constraints, such as ceilings or flexible ranges) — and what encoding strategies support these distinctions in allocation logic? I am looking for research that formalizes the difference between hard and soft constraints in budget optimization problems, including how violations are prevented or penalized.*
 
-#### 3.C.II Behavioral evidence for user‑set spending floors, ceilings, and category protections [/constraint-behavioral]
-> *Scholar query: What behavioral evidence exists that allowing users to set protected floors, locked amounts, or category ceilings improves budget adherence, user trust, or sustained logging behavior in personal finance applications? I am looking for studies that measure the effect of user‑defined constraints on recommendation acceptance and financial outcomes, and that identify which categories users most frequently protect.*
+#### [O] 3.C.II Behavioral evidence for user‑set spending floors, ceilings, and category protections [/constraint-behavioral]
+> *Scholar query: What behavioral evidence exists that allowing users to set open allocations, protected floors, locked amounts, or category ceilings improves budget adherence, user trust, or sustained logging behavior in personal finance applications? I am looking for studies that measure the effect of user‑defined constraints on recommendation acceptance and financial outcomes, and that identify which categories users most frequently protect.*
 
 ---
 
