@@ -164,7 +164,7 @@
 ### 4.A Landscape of Existing Systems [/pfms-landscape]
 
 #### [X] 4.A.I Classification and typology of PFMS and PBMS in the literature [/pfms-typology]
-> *Scholar query: How do recent studies classify and distinguish personal finance management systems and personal budget management systems? I am looking for literature that proposes or applies typologies of these tools — for example, distinguishing between expense tracking apps, budgeting planners, goal‑setting tools, and hybrid systems — and that surveys the landscape of such applications with attention to their feature sets, technological approaches, and intended user bases.*
+> *Scholar query: How do recent studies classify and distinguish personal finance management systems, budgeting apps, expense trackers, financial forecasting and analytics apps, and other similar systems? I am looking for literature that proposes or applies typologies of these tools — for example, distinguishing between expense tracking apps, budgeting planners, goal‑setting tools, and hybrid systems — and that surveys the landscape of such applications with attention to their feature sets, technological approaches, and intended user bases.*
 
 #### 4.A.II Feature sets of existing systems and evidence of their effectiveness [/pfms-features]
 > *Scholar query: What are the dominant features found in personal budget management systems, and what evidence exists that these features actually improve users' financial outcomes? I am looking for evaluations or systematic reviews of PFMS applications that assess the impact of specific functionalities — such as transaction categorization, budget setting, visualization dashboards, or alerts — on user financial behavior, adherence to budgets, or savings outcomes.*

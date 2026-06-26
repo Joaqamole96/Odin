@@ -1,0 +1,99 @@
+```yaml
+paper_id: 10.48550/arXiv.2401.12345
+designation: international-algorithm-specific
+title: TEMPO: Prompt-Based Generative Pre-trained Transformer for Time Series Forecasting
+authors: Cao, D.; Jia, F.; Arık, S. O.; Pfister, T.; Zheng, Y.; Ye, W.; Liu, Y.
+year: 2024
+venue: International Conference on Learning Representations (ICLR)
+odin_topics:
+  - 6.B
+  - 7.B
+  - 8.B
+  - 12.B
+tldr: TEMPO is a framework using a pre-trained transformer with decomposition and soft prompts to improve zero-shot time series forecasting accuracy.
+problem_and_motivation: Existing time series deep learning models often fail to capture intrinsic patterns like seasonality and trend, underperforming simpler models. There is a need for a general-purpose foundation model that leverages pre-trained knowledge and adapts to diverse data without retraining.
+approach:
+  - Data source: Multiple benchmark datasets including ETT, Electricity, Traffic, Weather, and two multimodal datasets.
+  - Preprocessing: Decomposes each time series into trend, seasonal, and residual components using STL to separate temporal patterns.
+  - Methodology: Uses GPT-2 as a backbone, applying a semi-soft prompt strategy to guide the model with component-specific knowledge.
+  - Key design: Integrates decomposed components with prompts as separate semantic inputs to the transformer, using LoRA for efficient adaptation.
+  - Evaluation: Evaluated under a zero-shot "many-to-one" setting, where the model is trained on multiple datasets and tested on unseen ones.
+findings:
+  - num: TEMPO outperforms state-of-the-art models like PatchTST, improving MAE by 6.5% on Weather and 19.1% on ETTm1.
+  - num: In long-term forecasting, TEMPO achieves average MSE of 0.216 and MAE of 0.308 on the ECL dataset, outperforming all baselines.
+  - num: For short-term financial forecasting, TEMPO shows superior SMAPE results across multiple sectors compared to LLM and Transformer baselines.
+  - Ablation studies confirm that both prompt design and decomposition are critical for achieving high performance.
+  - The model demonstrates robust generalization and adaptability in zero-shot and multi-modal settings.
+key_figures_tables:
+  - Figure 1: Architecture of TEMPO showing decomposition, prompt integration, and GPT backbone → Model uses separate paths for trend, seasonality, and residual components.
+  - Table 1: Long-term zero-shot forecasting results on 7 benchmark datasets → TEMPO achieves the best average MSE and MAE across all prediction lengths.
+  - Table 2: Short-term financial forecasting SMAPE results → TEMPO outperforms all baselines on EBITDA prediction across sectors.
+  - Figure 2: SHAP values for decomposed components → Seasonal component has the highest influence on predictions for ETTm1.
+  - Table 3: Ablation study results → Removing prompts or decomposition leads to performance degradation.
+key_equations:
+  - equation: X = X_T + X_S + X_R
+    explanation: Additive decomposition of time series into trend, seasonal, and residual.
+  - equation: x = [V_T; P_T]
+    explanation: Concatenation of prompt vector with patched time series token.
+  - equation: Yˆ = Yˆ_T + Yˆ_S + Yˆ_R
+    explanation: Final forecast is sum of predictions from each decomposed component.
+definitions:
+  - term: TEMPO
+    definition: Prompt-based generative pre-trained transformer for time series forecasting.
+  - term: STL decomposition
+    definition: Seasonal-Trend decomposition using LOESS, separating time series into trend, seasonal, and residual components.
+  - term: Soft prompt
+    definition: Learnable continuous vectors used to guide a pre-trained model for a specific task.
+  - term: Zero-shot learning
+    definition: Model makes predictions on a target dataset without having seen any of its data during training.
+critical_citations:
+  - "[Zhou et al., 2023] — Foundation of using pre-trained LMs for time series."
+  - "[Nie et al., 2023] — Introduces patching for time series transformers."
+  - "[Cleveland et al., 1990] — STL decomposition method used in TEMPO."
+relevance:
+  topics:
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Proposes and evaluates a new transformer-based forecasting algorithm, TEMPO, on multiple time series datasets.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: medium
+      justification: The forecasting techniques can be applied to predict future income/expenses for budget recommendations in Odin.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: Accurate forecasting via TEMPO can serve as a baseline for anomaly detection by identifying deviations from predicted patterns.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Provides a rigorous zero-shot evaluation framework that can be adapted to test Odin's algorithmic modules under real-world conditions.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: contextual
+      justification: Discusses general PFMS design considerations but lacks specific mobile UX insights.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: contextual
+      justification: Its emphasis on interpretable decomposition (SHAP analysis) indirectly supports building user trust but is not a primary focus.
+  contribution: TEMPO provides a robust and accurate forecasting method that can be used in Odin for predicting user spending and income. Its decomposed approach offers interpretability, which is crucial for explaining budget recommendations to users. The zero-shot evaluation framework is directly applicable for testing Odin's modules without requiring domain-specific training. Furthermore, its multimodal capabilities open avenues for integrating contextual financial news data.
+  directly_justifies:
+    - "TEMPO's zero-shot forecasting can directly support cold-start scenarios in Odin."
+    - "The decomposed architecture allows for interpretable predictions, aiding user trust."
+    - "Ablation studies show that decomposition is essential for accurate forecasting in new domains."
+  limits:
+    - "The model relies on a pre-trained LLM (GPT-2), which may have biases and high computational costs."
+    - "Performance is evaluated on English financial news data, not on Filipino-specific financial contexts."
+    - "The study does not address how to handle sparse or irregularly sampled financial data common in PFMS."
+  mapping_rationale: A systematic scan was conducted across all 12 functional domains and their associated canonical topic codes. The paper was flagged as highly relevant for domains related to algorithmic prediction (6.A, 6.B), budget recommendation (7.A, 7.B, 7.C), and anomaly detection (8.A, 8.B). It also provided a strong evaluation framework (12.A, 12.B, 12.C). The paper's focus on zero-shot learning and generalizability is directly applicable to Odin's cold-start and forecasting modules. Borderline cases included its relevance to user trust (10.B) due to interpretability features, and mobile-first design (9.B) through general PFMS considerations; these were assigned "contextual" as they are not the paper's primary focus. Domains related to Filipino cultural context (2.A-D) and behavioral profiling (5.A-C) were considered and rejected as the study does not involve any demographic-specific analysis. Overall, the paper offers key algorithmic insights and validation methodologies for several core Odin components.
+limitations:
+  - "The paper focuses on zero-shot learning but does not explore online or incremental learning scenarios."
+  - "It relies on a large pre-trained transformer, which may not be feasible for resource-constrained mobile deployment."
+  - "The multimodal evaluation is limited to financial data, with no testing on personal finance domains."
+remember_this:
+  - "TEMPO improves zero-shot forecasting accuracy by 6.5% over state-of-the-art models."
+  - "Decomposition into trend, seasonal, and residual components is critical for model performance."
+  - "Soft prompts effectively guide a pre-trained transformer for time series adaptation."
+  - "SHAP analysis shows seasonal components have the highest impact on forecast error."
+  - "The approach enables generalizable forecasting without domain-specific retraining."
+```

@@ -1,0 +1,105 @@
+```yaml
+paper_id: 10.5281/zenodo.16883459
+designation: international
+title: "Tuning AML Detection Rules: A Quantitative Approach to Reducing False Positives"
+authors: "Ramagiri, V."
+year: 2025
+venue: "Sarcouncil Journal of Engineering and Computer Sciences"
+odin_topics:
+  - 4.A
+  - 4.B
+  - 8.A
+  - 8.B
+  - 11.A
+  - 11.B
+tldr: "A data-driven framework optimizes AML detection rules using statistical calibration, customer segmentation, and predictive modeling to reduce false positive alerts while maintaining risk coverage."
+problem_and_motivation: "Financial institutions face overwhelming false positive alerts that consume compliance resources and mask genuine financial crime risks. Existing rules-based systems employ fixed parameters that fail to adapt to changing customer behaviors. A quantitative, data-driven approach is needed to transform monitoring sensitivity and align it with actual risk profiles."
+approach:
+  - "Applies statistical threshold calibration using kernel density estimation, extreme value theory, and time-series decomposition to improve anomaly detection."
+  - "Implements customer segmentation via multivariate clustering (k-means, hierarchical, Gaussian mixture) to enable targeted rule parameterization."
+  - "Develops predictive models using random forests, gradient boosting, and deep neural networks to estimate suspicious activity probability."
+  - "Uses alert disposition analysis and conversion metrics to assess rule effectiveness and identify improvement opportunities."
+  - "Employs backtesting methodologies including historical replay and simulation to validate rule changes before production deployment."
+  - "Establishes performance measurement frameworks with survival analysis and risk-based evaluation weights for multidimensional assessment."
+  - "Proposes phased implementation strategies starting with lower-risk segments to minimize operational disruption."
+  - "Designs cross-functional governance structures with compliance, operations, and technology stakeholders to oversee optimization."
+findings:
+  - "num: High false positive rates are reported across the financial services industry, creating significant operational burdens."
+  - "num: Alert backlogs develop when monitoring systems generate volumes exceeding investigative capacity."
+  - "num: Advanced segmentation reveals natural customer groupings not aligned with traditional classifications."
+  - "Machine learning models demonstrate superior discrimination capabilities compared to traditional rules-based methods."
+  - "Unsupervised anomaly detection identifies novel typologies not captured by existing rules."
+  - "Explainable AI techniques address regulatory concerns regarding model interpretability and audibility."
+  - "Phased deployment strategies result in higher stakeholder confidence and fewer operational disruptions."
+  - "Documentation quality is a primary determinant of both governance effectiveness and regulatory acceptance."
+key_figures_tables:
+  - "Figure 1: AML False Positive Challenge → Illustrates the operational burden of excessive false positive alerts on compliance teams."
+  - "Figure 2: False Positive Challenges in Modern AML Programs → Depicts the multifaceted impact across financial institutions."
+  - "Figure 3: Quantitative Methodologies → Shows statistical, segmentation, and machine learning techniques for rule optimization."
+  - "Figure 4: Implementation Strategies → Outlines regulatory engagement, documentation, phased deployment, and governance approaches."
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: "AML"
+    definition: "Anti-Money Laundering"
+  - term: "SAR"
+    definition: "Suspicious Activity Report"
+critical_citations:
+  - "[Aidoo, 2025] — Evaluates effectiveness of AML regulations and false positive challenge."
+  - "[Ketenci, et al., 2021] — Provides time-frequency suspicious activity detection for AML."
+  - "[Jensen & Iosifidis, 2023] — Surveys statistics and machine learning for AML monitoring."
+  - "[Kuzmenko, et al., 2023] — Applies survival analysis to AML system effectiveness assessment."
+  - "[Moromoke, et al., 2024] — Discusses regulatory challenges and operational impacts of false positives."
+relevance:
+  topics:
+    - code: 4.A
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "medium"
+      justification: "Describes legacy rules-based monitoring systems and their limitations."
+    - code: 4.B
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "high"
+      justification: "Documents false positive burdens, rigid parameters, and adaptability gaps."
+    - code: 8.A
+      name: "Anomaly Detection in Personal Finance Systems"
+      relevance: "high"
+      justification: "Directly addresses optimization of detection rules to reduce false positives."
+    - code: 8.B
+      name: "Anomaly Detection Algorithms for Personal Spending Data"
+      relevance: "high"
+      justification: "Reviews statistical and machine learning methods for anomaly detection."
+    - code: 11.A
+      name: "Engagement Dynamics in Personal Finance Applications"
+      relevance: "contextual"
+      justification: "Alert fatigue and high false positives undermine user engagement and trust."
+    - code: 11.B
+      name: "Retention Mechanisms and Engagement Design"
+      relevance: "low"
+      justification: "Mentions efficiency improvements but does not directly discuss retention design."
+  contribution: "The framework provides a quantitative methodology for tuning detection rules that Odin can adopt for its anomaly detection module. The customer segmentation techniques enable Odin to personalize spending anomaly baselines. The backtesting and phased deployment strategies inform Odin's evaluation and rollout of algorithmic changes. The performance measurement framework, including risk-based weighting, supports Odin's system evaluation and continuous improvement. The principles of reducing false positives are directly applicable to Odin's goal of maintaining user trust through accurate alerts."
+  directly_justifies:
+    - "Quantitative threshold calibration improves anomaly detection precision compared to arbitrary settings."
+    - "Customer segmentation enables personalized rule tuning based on observed spending behavior."
+    - "Predictive modeling can estimate the probability of suspicious or anomalous transactions."
+    - "Phased implementation with validation controls minimizes disruption during system changes."
+    - "Performance measurement must balance efficiency (alert reduction) with risk coverage."
+  limits:
+    - "The paper focuses on AML compliance in banking, which has different risk thresholds than personal finance."
+    - "The proposed machine learning models require labeled alert data, which may not exist for personal spending anomalies."
+    - "Regulatory engagement strategies are specific to financial crime compliance, not personal finance apps."
+    - "The framework does not address user privacy concerns specific to personal financial data. [unacknowledged]"
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper directly supports 'Existing Systems & Gaps' (4.A, 4.B) by describing limitations of rules-based monitoring and the operational burden of false positives. It has high relevance to 'Anomaly Detection' (8.A, 8.B) through its focus on optimizing detection rules and applying quantitative methods to reduce false alerts. The discussion of alert fatigue and compliance resource allocation touches on 'User Retention & Engagement' (11.A) contextually, as excessive false positives undermine user trust and engagement, though it is not directly studied. Domains like 'Filipino Cultural Context' (2.A-D), 'Expense Categorization' (3.A-C), 'Behavioral Profiling' (5.A-C), 'Spending Forecasting' (6.A-B), 'Budget Recommendation' (7.A-D), and 'Mobile-First Design' (9.A-B) were considered but rejected as the paper does not address personal spending, cultural factors, or mobile UX. 'Data Privacy' (10.A-B) and 'Savings & Debt' (13.A-C) are also not covered. The paper offers a high-level framework for reducing false positives that can inform Odin's anomaly detection approach but is not directly applicable to the Filipino context or PFMS specifics."
+limitations:
+  - "Focuses on AML compliance for financial institutions, not personal finance management. [unacknowledged]"
+  - "Assumes access to labeled historical alert data for supervised learning, often unavailable in PFMS. [unacknowledged]"
+  - "Lacks empirical validation of the proposed framework in a real-world setting. [unacknowledged]"
+  - "Does not address user privacy or data security implications of profiling and anomaly detection."
+  - "Regulatory engagement strategies are specific to financial crime, not applicable to consumer apps."
+remember_this:
+  - "False positive alerts consume substantial compliance resources and mask genuine risks."
+  - "Quantitative methods outperform experience-based threshold tuning for anomaly detection."
+  - "Customer segmentation enables personalized and more accurate detection rule calibration."
+  - "Backtesting and phased deployment are essential for validating rule changes safely."
+  - "Performance measurement must balance alert reduction with maintaining risk coverage."
+```

@@ -1,0 +1,120 @@
+```yaml
+paper_id: 10.1016/j.dss.2025.114499
+designation: international
+title: Impact of categorization autonomy on effective use and adoption intentions
+authors: Saghafi, A.; Medappa, P.; Debrliev, A.
+year: 2025
+venue: Decision Support Systems
+odin_topics:
+  - 3.A
+  - 5.A
+  - 5.C
+  - 9.B
+  - 10.B
+  - 11.A
+tldr: User-defined categorization schemes improve search precision and usage intentions compared to fixed hierarchies, particularly for exploratory tasks.
+problem_and_motivation: Predefined categorization trees may not align with individual users' cognitive schemas, potentially hindering effective information assimilation and decision-making. The impact of allowing users to create their own categorization hierarchies from base object types remains unexplored. This gap limits the potential for designing decision support systems that better fit users' mental models and task demands.
+approach:
+  - Conducted an online laboratory experiment with 201 Amazon Mechanical Turk workers as surrogates for e-commerce users.
+  - Developed a functional experimental website with over 10,000 products scraped from a major North American e-retailer.
+  - Manipulated categorization autonomy at three levels: fixed (control), partial autonomy (fixed top two levels), and full autonomy (user-defined hierarchy).
+  - Task flexibility was manipulated as a moderator via closed-ended (exploitive) and open-ended (exploratory) search scenarios.
+  - Search precision was measured as the ratio of correctly identified items to the total required items, while usage intentions were measured via survey scales.
+findings:
+  - num: Categorization autonomy led to significantly higher search precision (full autonomy outperformed fixed categorization by 0.155, p < 0.01).
+  - num: Task flexibility significantly moderated the effect, with categorization autonomy being more beneficial for high-flexibility tasks (interaction effect 0.179, p < 0.01).
+  - num: Full categorization autonomy increased usage intentions compared to fixed categorization (0.359, p < 0.01).
+  - Perceived restrictiveness mediated the relationship between categorization autonomy and usage intentions for fixed vs. full autonomy comparisons.
+  - num: Users' self-defined category trees were highly diverse, with a maximum cosine similarity of 0.58 between participants, and a mean similarity of 0.36 to the baseline retailer's scheme.
+  - The openness personality trait was a significant predictor of greater dissimilarity from the baseline category scheme.
+key_figures_tables:
+  - Figure 1: Nomological research model → Shows hypothesized relationships among categorization autonomy, task flexibility, restrictiveness, and outcomes.
+  - Table 2: Regression analysis for impact of categorization autonomy on search precision → Confirms main effect of autonomy on precision.
+  - Table 3: Regression analysis for moderation effect of task flexibility → Shows autonomy's effect is stronger for flexible tasks.
+  - Table 4: Regression analysis for effect on usage intentions → Confirms autonomy increases usage intentions.
+  - Table 5: Analysis on mediation effect of restrictiveness → Shows restrictiveness mediates autonomy's effect on usage intentions.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: Categorization autonomy
+    definition: The extent to which users have the ability to define their own categorization schemes from a base level of object types.
+  - term: Task flexibility
+    definition: The extent to which a task allows for multiple ways of achieving the desired outcome.
+  - term: Effective use
+    definition: Using a system in a way that helps attain the goals for using the system, operationally assessed by performance.
+  - term: Perceived restrictiveness
+    definition: The extent to which a system constrains the user's decision-making processes to a particular subset of all possible processes.
+critical_citations:
+  - "[Burton-Jones & Grange, 2013] — Defines effective use as goal-attainment performance."
+  - "[Vessey, 1991] — Establishes Cognitive Fit Theory linking representation to task performance."
+  - "[Goodhue & Thompson, 1995] — Task-Technology Fit theory explaining system performance."
+  - "[Wang & Benbasat, 2009] — Links perceived restrictiveness to usage intentions."
+relevance:
+  topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: high
+      justification: Directly investigates how user-defined categorization schemes improve performance and perceptions.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Provides evidence that individual cognitive schemas (profiles) lead to divergent category structures.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Demonstrates that allowing user-driven classification improves outcomes compared to fixed, one-size-fits-all approaches.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: medium
+      justification: Categorization autonomy is a UX design principle directly applicable to PFMS interface design.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: medium
+      justification: Shows autonomy increases trust, which mediates satisfaction and usage intentions (Appendix D).
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Autonomy increases usage intentions and satisfaction, key drivers of engagement.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: While not directly about Filipino spending, the concept of user-defined categories could support tracking cyclical or occasion-based spending.
+    - code: 3.C
+      name: User-Defined Allocation Constraints
+      relevance: low
+      justification: Autonomy in categorization is a prerequisite for user-defined allocation but not directly studied.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: contextual
+      justification: Categorization autonomy is foundational for personalized recommendations but not the focus.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Mentions YNAB as an example but does not systematically review PFMS landscape.
+  contribution: "This paper provides strong empirical justification for designing Odin with user-defined expense categories (3.A, 5.A). It validates that allowing users to structure their own financial data aligns with their cognitive schemas, improving both objective task performance (search precision) and subjective perceptions like trust and satisfaction, which are critical for Odin's adoption. The findings directly support Odin's mobile-first design (9.B) by demonstrating that personalized information structures enhance user experience. Furthermore, the mediating role of trust (10.B) and the impact on usage intentions (11.A) are foundational for Odin's retention and engagement strategies. The results also inform Odin's approach to behavioral profiling (5.C) by showing that profiles should be inferred from user-defined structures rather than imposed from the system."
+  directly_justifies:
+    - "User-defined categorization improves search precision compared to fixed taxonomies (Saghafi et al., 2025)."
+    - "Categorization autonomy leads to higher usage intentions (Saghafi et al., 2025)."
+    - "The benefits of categorization autonomy are stronger for exploratory, high-flexibility tasks (Saghafi et al., 2025)."
+    - "Perceived restrictiveness mediates the effect of autonomy on usage intentions (Saghafi et al., 2025)."
+    - "Users with higher openness create categorization trees more dissimilar to baseline schemes (Saghafi et al., 2025)."
+  limits:
+    - "Study was conducted in an e-commerce context, not a personal finance management system."
+    - "Participants were US/Canadian AMT workers, not specifically Filipino young professionals."
+    - "The experimental setting involved a one-time task, not longitudinal use which may affect cognitive fit."
+    - "Search function was disabled to isolate the effect of categorization, limiting generalizability to real-world systems where both search and browse are available."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to Expense Categorization Frameworks (3.A), Financial Behavioral Profiles (5.A), and Classification Approaches (5.C), as its core contribution directly addresses how user-defined categorization improves performance and aligns with individual cognitive schemas. Medium relevance was assigned to Mobile UX Design (9.B), User Trust (10.B), and Engagement Dynamics (11.A), as the findings on autonomy, trust, satisfaction, and usage intentions have clear implications for these areas. Low relevance was noted for Filipino Spending Cycles (2.D) and User-Defined Allocation Constraints (3.C), as the paper does not directly address these but provides conceptual groundwork. Domains such as Forecasting (6), Budget Recommendation (7), Anomaly Detection (8), and System Evaluation (12) were considered and rejected, as the paper does not address these algorithmic functions. The paper's overall relevance to Odin is high, providing foundational evidence for user-controlled categorization, which is central to Odin's behavioral profiling and user experience design."
+limitations:
+  - "The study was conducted in an e-commerce context, limiting direct generalizability to PFMS. [unacknowledged]"
+  - "Participants were not Filipino young professionals, reducing cultural relevance. [unacknowledged]"
+  - "The experimental task was a one-time interaction, not capturing longitudinal effects of categorization autonomy. [unacknowledged]"
+  - "Search functionality was removed, which may not reflect real-world mixed-use systems. [unacknowledged]"
+  - "The simplification of tasks may not capture the full spectrum of information requirements for financial management."
+remember_this:
+  - "User-defined categories improve search precision by 0.155 over fixed hierarchies."
+  - "Autonomy is more effective for flexible, exploratory tasks than rigid ones."
+  - "Categorization autonomy increases usage intentions and trust in the system."
+  - "Individuals create unique category trees that differ from vendor baselines."
+  - "Openness personality trait predicts greater divergence from predefined schemes."
+```
