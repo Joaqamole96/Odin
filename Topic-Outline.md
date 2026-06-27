@@ -159,30 +159,30 @@
 
 ---
 
-## 4. Existing Personal Finance and Budget Management Systems [/existing-pfms]
+## [O] 4. Existing Personal Finance and Budget Management Systems [/existing-pfms]
 
-### 4.A Landscape of Existing Systems [/pfms-landscape]
+### [O] 4.A Landscape of Existing Systems [/pfms-landscape]
 
-#### [X] 4.A.I Classification and typology of PFMS and PBMS in the literature [/pfms-typology]
+#### [O] 4.A.I Classification and typology of PFMS and PBMS in the literature [/pfms-typology]
 > *Scholar query: How do recent studies classify and distinguish personal finance management systems, budgeting apps, expense trackers, financial forecasting and analytics apps, and other similar systems? I am looking for literature that proposes or applies typologies of these tools — for example, distinguishing between expense tracking apps, budgeting planners, goal‑setting tools, and hybrid systems — and that surveys the landscape of such applications with attention to their feature sets, technological approaches, and intended user bases.*
 
-#### 4.A.II Feature sets of existing systems and evidence of their effectiveness [/pfms-features]
-> *Scholar query: What are the dominant features found in personal budget management systems, and what evidence exists that these features actually improve users' financial outcomes? I am looking for evaluations or systematic reviews of PFMS applications that assess the impact of specific functionalities — such as transaction categorization, budget setting, visualization dashboards, or alerts — on user financial behavior, adherence to budgets, or savings outcomes.*
+#### [O] 4.A.II Feature sets of existing systems and evidence of their effectiveness [/pfms-features]
+> *Scholar query: What are the dominant features found in personal finance management systems, and what evidence exists that these features actually improve users' financial outcomes? I am looking for evaluations or systematic reviews of PFMS applications that assess the impact of specific functionalities — such as but not exclusive to transaction categorization, budget setting, visualization dashboards, or alerts — on user financial behavior, adherence to budgets, or savings outcomes.*
 
-#### 4.A.III Intelligent and adaptive features: forecasting, anomaly detection, and recommendation in existing systems [/pfms-intelligent-features]
-> *Scholar query: What intelligent or adaptive features — such as spending forecasting, anomaly or overspending detection, and personalized budget recommendation — have been implemented in existing personal finance management systems, and what results have they produced? I am looking for system papers or evaluations that document ML‑driven or algorithmic features in PFMS tools, reporting accuracy, user acceptance, and behavioral impact where available.*
+#### [O] 4.A.III Intelligent and adaptive features: forecasting, anomaly detection, and recommendation in existing systems [/pfms-intelligent-features]
+> *Scholar query: What intelligent or adaptive features — such as but not exclusive to spending forecasting, anomaly or overspending detection, and personalized budget recommendation — have been implemented in existing personal finance management systems, and what results have they produced? I am looking for system papers or evaluations that document ML‑driven or algorithmic features in PFMS tools, reporting accuracy, user acceptance, and behavioral impact where available.*
 
 ---
 
-### 4.B Limitations and Gaps in Existing Systems [/pfms-gaps]
+### [O] 4.B Limitations and Gaps in Existing Systems [/pfms-gaps]
 
-#### [X] 4.B.I Documented limitations: manual entry burden, absence of forecasting, generic categories, no profiling [/pfms-limitations]
-> *Scholar query: What limitations of existing personal finance and budgeting applications are most consistently identified in research literature? I am specifically interested in studies that critique the usability cost of manual transaction entry, the absence of predictive or forecasting capabilities, the lack of anomaly or overspending detection, the use of generic expense categories that do not reflect actual user spending, and the absence of behavioral user profiling.*
+#### [O] 4.B.I Documented limitations: manual entry burden, absence of forecasting, generic categories, no profiling [/pfms-limitations]
+> *Scholar query: What limitations of existing personal finance management applications are most consistently identified in research literature? I am specifically interested in studies that critique the usability cost of manual transaction entry, the absence of predictive or forecasting capabilities, the lack of anomaly or overspending detection, the use of generic expense categories that do not reflect actual user spending, and the absence of behavioral user profiling.*
 
-#### 4.B.II Absence of locally grounded systems for Filipino users [/pfms-local-gap]
+#### [O] 4.B.II Absence of locally grounded systems for Filipino users [/pfms-local-gap]
 > *Scholar query: What gap exists in the current landscape of personal finance management systems when evaluated against the needs of Filipino users, particularly young professionals with culturally specific financial obligations and variable income structures? I am looking for research that articulates why existing PFMS tools — typically designed for Western users or generic populations — fail to address local spending norms, income patterns, or the need for intelligent, adaptive, and context‑aware budgeting support.*
 
-#### 4.B.III Design and architecture patterns transferable to Odin from existing systems [/pfms-transferable]
+#### [O] 4.B.III Design and architecture patterns transferable to Odin from existing systems [/pfms-transferable]
 > *Scholar query: What design decisions, system architectures, or implementation patterns from existing personal finance management systems — regardless of their target population — are transferable to a locally grounded, mobile‑first, intelligent PFMS serving Filipino young professionals? I am looking for system papers that provide reusable architectural, algorithmic, or UX insights beyond their specific deployment context.*
 
 ---

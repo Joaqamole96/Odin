@@ -3,16 +3,17 @@
 Compile all summary files into a single Markdown document, with optional filtering.
 
 Usage:
-    python3 Z_Compiler.py --input ./summaries --output compiled.md
-    python3 Z_Compiler.py -i ./02_Internationals -o all_summaries.md
-    python3 Z_Compiler.py -i ./02_Internationals -o all_summaries.md -d international
-    python3 Z_Compiler.py -i ./02_Internationals -o all_summaries.md -t 7.C
-    python3 Z_Compiler.py -i ./02_Internationals -o all_summaries.md -d international -t 7.C
-    python3 Z_Compiler.py -i ./02_Internationals -o all_summaries.md --quiet
+    python3 Z_Compiler.py --input ./summaries --output-dir ./compiled
+    python3 Z_Compiler.py -i ./02_Internationals -o ./out
+    python3 Z_Compiler.py -i ./02_Internationals -o ./out -d international
+    python3 Z_Compiler.py -i ./02_Internationals -o ./out -t 7.C
+    python3 Z_Compiler.py -i ./02_Internationals -o ./out -d international -t 7.C
+    python3 Z_Compiler.py -i ./02_Internationals -o ./out --quiet
 """
 
 import argparse
 import re
+import sys
 from pathlib import Path
 from typing import List, Optional
 
@@ -206,9 +207,9 @@ def main():
         help="Directory containing summary files (.yaml, .yml, .md)."
     )
     parser.add_argument(
-        "--output", "-o",
+        "--output-dir", "-o",
         required=True,
-        help="Output Markdown file path."
+        help="Output directory to place the compiled Markdown file."
     )
     parser.add_argument(
         "--designation", "-d",
@@ -230,9 +231,30 @@ def main():
         print(f"Error: Input directory '{args.input}' does not exist.", file=sys.stderr)
         sys.exit(1)
 
+    output_dir = Path(args.output_dir)
+    try:
+        output_dir.mkdir(parents=True, exist_ok=True)
+    except Exception as e:
+        print(f"Error: Could not create output directory '{args.output_dir}': {e}", file=sys.stderr)
+        sys.exit(1)
+
     # Normalize filters
     desig_filter = args.designation.lower() if args.designation else None
     topic_filter = args.topic if args.topic else None
+
+    # Determine output file name based on filters
+    if topic_filter and desig_filter:
+        # Combine both: e.g., "International-7.C-Compilation.md"
+        base_name = f"{desig_filter.capitalize()}-{topic_filter}-Compilation.md"
+    elif topic_filter:
+        base_name = f"{topic_filter}-Compilation.md"
+    elif desig_filter:
+        # Capitalize first letter, e.g., "local" -> "Local-Compilation.md"
+        base_name = f"{desig_filter.capitalize()}-Compilation.md"
+    else:
+        base_name = "All-Compilation.md"
+
+    output_file = output_dir / base_name
 
     # Find and filter summary files
     files, total_found = find_summary_files(input_dir, desig_filter, topic_filter, args.quiet)
@@ -243,7 +265,7 @@ def main():
             if desig_filter or topic_filter:
                 print(f"Filters applied: designation={desig_filter}, topic={topic_filter}", file=sys.stderr)
         # Still create an output file with the agent instruction
-        with open(args.output, 'w', encoding='utf-8') as out:
+        with open(output_file, 'w', encoding='utf-8') as out:
             out.write(f"# Compiled Research Summaries\n\n")
             out.write(f"**Total Papers:** 0\n\n")
             if desig_filter or topic_filter:
@@ -255,7 +277,7 @@ def main():
                 out.write("\n")
             out.write("No summary files match the given filters.\n\n")
             out.write(AGENT_INSTRUCTION)
-        print(f"Created empty output: {args.output}")
+        print(f"Created empty output: {output_file}")
         sys.exit(0)
 
     # Process each matching file
@@ -264,7 +286,7 @@ def main():
     errors = []
     matched_by_filter = len(files)
 
-    with open(args.output, 'w', encoding='utf-8') as out:
+    with open(output_file, 'w', encoding='utf-8') as out:
         # Write header
         out.write(f"# Compiled Research Summaries\n\n")
         
@@ -289,10 +311,8 @@ def main():
                 # Write paper header
                 out.write(f"## Paper {i}: {filepath.name}\n\n")
                 out.write(f"**Source File:** `{filepath.name}`\n\n")
-                out.write("```yaml\n")
                 out.write(content)
-                out.write("\n```\n\n")
-                out.write("---\n\n")
+                out.write("\n---\n\n")
                 
                 papers_processed += 1
                 
@@ -313,7 +333,8 @@ def main():
         print(f"COMPILATION COMPLETE")
         print(f"{'='*50}")
         print(f"Input directory:  {input_dir}")
-        print(f"Output file:      {args.output}")
+        print(f"Output directory: {output_dir}")
+        print(f"Output file:      {output_file.name}")
         if desig_filter or topic_filter:
             print(f"Filters applied:  designation={desig_filter}, topic={topic_filter}")
         print(f"Files found:      {total_found}")
@@ -328,5 +349,4 @@ def main():
 
 
 if __name__ == "__main__":
-    import sys
     main()
