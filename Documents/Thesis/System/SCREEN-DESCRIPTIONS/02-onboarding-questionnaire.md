@@ -8,7 +8,7 @@ This screen collects the initial financial context needed to classify a user, in
 
 - A guided multi-step onboarding flow.
 - Questions for employment status, income frequency, approximate income range, and income stability.
-- Employment status options: Regular / Permanent employee, Contractual / Project-based employee, Freelancer / Self-employed, Part-time employee, Business owner / Entrepreneur, and Other.
+- Employment status options matching the specification: Regular Employees (Full-time Employee, Part-time Employee), Independent Contractors (Self-employed Individual, Freelancer, Business Owner, Entrepreneur), and Fixed-Term and Project Employees (Contractual/project-based employee or similar, Business owner/entrepreneur, Gig economy worker).
 - Income stability options limited to Stable and Variable for profile classification.
 - Questions for fixed obligations, debt payments, financial dependents, family support, and recurring expenses.
 - Questions for savings goals and budget priorities.
@@ -21,7 +21,7 @@ This screen collects the initial financial context needed to classify a user, in
 - Step indicator.
 - Multiple choice controls.
 - Numeric inputs for amounts or ranges.
-- Employment status selector.
+- Employment status selector grouped by Regular Employees, Independent Contractors, and Fixed-Term and Project Employees.
 - Stable / Variable income stability selector.
 - Income frequency selector.
 - Category selector for obligations and protected categories.
@@ -65,7 +65,7 @@ This screen collects the initial financial context needed to classify a user, in
 ## Validation Rules
 
 - Required questions must be answered before final submission.
-- Employment status must use one of the configured options.
+- Employment status must use one of the configured specification options.
 - Income stability must be stored as Stable or Variable.
 - Numeric amounts cannot be negative.
 - Protected categories must map to valid category records.

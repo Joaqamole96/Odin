@@ -1,17 +1,18 @@
-# 03. Profile Result / Financial Behavioral Profile
+# 03. Financial Behavioral Profile Overview
 
 ## Purpose
 
-This screen shows the user's assigned Financial Behavioral Profile and explains how the profile affects forecasts, budget recommendations, anomaly baselines, and user guidance.
+This screen shows the user's assigned Financial Behavioral Profile after onboarding and remains the ongoing overview for profile details, reassessment, profile history, and user-confirmed profile changes.
 
 ## What We Will Build
 
 - A profile result page after onboarding.
+- An ongoing Financial Behavioral Profile overview.
 - Support for four profiles: Stable-Flexible, Stable-Obligated, Variable-Flexible, and Variable-Obligated.
 - Plain-language explanation of the assigned profile.
 - Key factors that contributed to classification.
 - Recommended first actions based on the profile.
-- Reassessment and manual review entry points.
+- Profile reassignment, reassessment, questionnaire retake, and manual review entry points.
 - User confirmation before any later profile change becomes active.
 - Profile history summary once reclassification exists.
 
@@ -26,6 +27,8 @@ This screen shows the user's assigned Financial Behavioral Profile and explains 
 - Reassessment status banner when sustained behavior changes are detected.
 - Continue to dashboard button.
 - Reassess profile button.
+- Change profile manually button where allowed.
+- Retake questionnaire button.
 - Profile history link.
 
 ## Main User Actions
@@ -33,6 +36,8 @@ This screen shows the user's assigned Financial Behavioral Profile and explains 
 - Review assigned profile.
 - Continue to the dashboard.
 - Request reassessment.
+- Retake the questionnaire.
+- Manually select a profile where allowed.
 - Confirm or reject future profile changes.
 - View why profile assignment happened.
 - Override or request review when the profile feels inaccurate.

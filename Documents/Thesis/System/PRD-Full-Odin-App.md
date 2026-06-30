@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Filipino working young adults aged 20 to 40 in Metro Manila need a *personal finance management* system that reflects how they actually receive, spend, and allocate money, *learns how their latent behavior affects those processes, and makes informed suggestions based on what was observed*. Existing tools are often generic expense trackers: they help record past spending, but they do not adequately support variable income, fixed obligations, family and community contributions, protected expense categories, culturally cyclical spending, savings goals, debt pressure, or forward-looking budget guidance.
+Filipino working young adults aged 20 to 40 in Metro Manila need a *personal finance management* system that reflects how they actually receive, spend, and allocate money, *classifies their financial behavior using Random Forest, forecasts spending using LSTM, detects anomalies using Isolation Forest, and recommends budgets using Linear Programming*. Existing tools are often generic expense trackers: they help record past spending, but they do not adequately support variable income, fixed obligations, family and community contributions, protected expense categories, culturally cyclical spending, savings goals, debt pressure, or forward-looking budget guidance.
 
 The target user needs a mobile-first and web-accessible personal *finance* management system that turns manual transaction logging into useful guidance. The system must help users understand their cash position, classify their financial behavior, forecast likely spending, detect unusual or risky transactions, recommend budget allocations, track savings goals, and manage debt repayment strategies.
 
@@ -10,28 +10,44 @@ The research team also needs the app to support thesis evaluation. Odin must be 
 
 ## Solution
 
-Build Odin as a mobile-first personal *finance* management application with web access. The app will provide a guided onboarding flow for Filipino working young adults aged 20 to 40, classify users into one of four financial behavioral profiles, let users manually record income, expenses, transfers, and recurring transactions, organize spending through a Filipino-context category taxonomy, generate profile-aware budget recommendations, show spending forecasts, detect anomalous or risky spending behavior, track savings goals, and guide debt repayment using Avalanche and Snowball strategies.
+Build Odin as a mobile-first personal *finance* management application with web access. The app will provide a guided onboarding flow for Filipino working young adults aged 20 to 40, remain fully operable on mobile screens at 375 dp or less without horizontal scrolling from 320 to 450 dp, use a centered desktop container up to 1200 px, classify users into one of four financial behavioral profiles using a Random Forest classifier, let users manually record income, expenses, transfers, recurring transactions, and transaction templates, organize spending through a PSA PCOICOP-based category hierarchy with Free, Protected, and Locked restriction levels, generate profile-aware budget recommendations via a Linear Programming recommender, show spending forecasts via LSTM, detect anomalous or risky spending behavior via Isolation Forest, track savings goals with Snowball and Avalanche strategies, and guide debt repayment using Avalanche and Snowball strategies.
 
 Odin should behave as a decision-support tool, not a licensed financial adviser. The app should explain recommendations and alerts in plain user-facing language, preserve user control over final decisions, and avoid shaming users for culturally or personally necessary expenses.
 
-Confirmed primary screens:
+Confirmed primary screens (matching Specification v4.0 hierarchy):
 
-1. Login / Register
-2. Onboarding questionnaire
-3. Profile result / financial behavioral profile
-4. Dashboard / overview
-5. Add transaction
-6. Transactions list / history
-7. Recurring transactions
-8. Categories / category settings
-9. Budget setup
-10. Budget recommendation
-11. Forecast dashboard
-12. Alerts / anomaly review
-13. Savings goals
-14. Debt accounts
-15. Reports / analytics
-16. Settings / privacy / account
+1. Registration
+   1.1. Onboarding questionnaire
+   1.2. Onboarding result and financial behavioral profile assignment
+2. Login
+3. User Profile
+4. Financial Behavioral Profile Overview
+   4.1. Profile details
+   4.2. Profile reassignment
+5. Dashboard
+6. Transaction Entry
+   6.1. Manual transaction entry
+   6.2. Recurring transaction entry
+7. Transactions History
+8. Budget Overview
+   8.1. Budget recommendation
+   8.2. Budget categories
+9. Forecasting Overview
+10. Anomaly Detection Overview
+    10.1. Overspending detection
+    10.2. Anomaly detection
+11. Savings Goals Overview
+    11.1. Savings goal hierarchy
+12. Debt Overview
+    12.1. Debt hierarchy
+13. Reports & Analytics
+14. Settings
+    14.1. User Settings
+    14.2. System Settings
+    14.3. Help & Problem Reporting
+15. Notifications & Alerts
+
+The financial behavioral profile model shall use two binary dimensions, Income Stability and Obligation Level, producing the four fixed profiles Stable-Flexible, Stable-Obligated, Variable-Flexible, and Variable-Obligated. The app shall support manual classification, questionnaire classification, cold-start classification, and standard classification, with periodic reclassification using the same rules and user confirmation before any profile change takes effect.
 
 ## User Stories
 
@@ -121,27 +137,70 @@ Confirmed primary screens:
 84. As a thesis evaluator, I want usability evaluation through SUS, so that user experience can be measured consistently.
 85. As a thesis evaluator, I want ISO 25010 quality characteristics mapped to app behavior, so that functional suitability, usability, performance efficiency, security, reliability, and portability can be evaluated.
 
+86. As a user, I want to download and install Odin via Android Package Kit, so that I can run the app on my Android device.
+87. As a mobile web visitor, I want to be redirected to the app installation link, so that I can install the native application.
+88. As a gig economy worker, I want my employment type recognized during onboarding, so that Odin accurately reflects my work situation.
+89. As a user, I want to create pre-filled transaction templates, so that I can log frequent expenses faster without re-entering all fields.
+90. As a user, I want to manage financial accounts with individual balances, so that I understand my cash position across wallets and bank accounts.
+91. As a user, I want expense items classified under subcategories, categories, and expense groups based on PSA PCOICOP, so that classification follows the Philippine standard.
+92. As a user, I want to create custom categories and subcategories assigned to an expense group, so that my tracking matches my personal spending language.
+93. As a user, I want each expense item to belong to exactly one expense group via its category chain, so that forecasting and budget classification remain unambiguous.
+94. As a user, I want to set restriction levels on categories — Free, Protected, or Locked — so that I control which budgets are flexible and which are fixed.
+95. As a user, I want to set floor and ceiling amounts on categories, so that I define minimum and maximum spending per period.
+96. As a user, I want to select a named budget strategy (50/30/20 or Savings-First), so that my budget follows a recognized allocation framework.
+97. As a user, I want to create a custom budget strategy with my own ratios and hierarchy, so that my budget matches my personal priorities.
+98. As a user, I want a budget health indicator, so that I can quickly assess whether my spending is on track for the period.
+99. As a user facing budget infeasibility, I want a sensitive explanation and recommended reductions in a defined order, so that protected and essential categories are preserved first.
+100. As a new user with no transaction history, I want a cold-start budget recommendation based on my profile, so that the app is useful immediately.
+101. As a user, I want to review and act on flagged anomalous transactions, so that I can correct or explain unexpected spending.
+102. As a user with debt accounts, I want to declare hardship circumstances, so that the system adjusts projections appropriately.
+103. As a user, I want all core features except LSTM forecasting to work offline, so that I can use Odin without a constant internet connection.
+104. As a user, I want to export my financial data before deleting my account, so that I retain a copy of my records.
+105. As a user, I want a clear account offboarding flow, so that I understand what personal data will be deleted.
+106. As a user, I want to sort transaction history, so that I can find records quickly.
+107. As a mobile user, I want a simple installation guide from the download link to first successful launch, so that I can set up Odin without guessing the steps.
+108. As a user, I want anomaly detection to handle cold-start periods gracefully, so that the app can still flag risky behavior before enough personal history exists.
+
 ## Implementation Decisions
 
 - Build Odin as a mobile-first application with web access. Mobile is the primary UX target; web should support the same core workflows with more room for analysis and reporting.
+- Core user flows shall work on mobile screens at 375 density-independent pixels or less, and the layout shall adapt to widths between 320 and 450 dp without horizontal scrolling.
+- The desktop version shall use a centered container with a maximum width of 1200 pixels.
+- The mobile application shall be distributed as an Android Package Kit. The mobile web version shall redirect users to the app installation link.
+- The mobile web version shall lead to the Google Play link or installation link for the native application.
+- All core features except LSTM-based forecasting shall be available offline. Forecasting requires a server connection because the LSTM model is hosted server-side.
 - Treat Filipino working young adults aged 20 to 40 in Metro Manila as the canonical target demographic.
-- Onboarding employment status options should be Regular / Permanent employee, Contractual / Project-based employee, Freelancer / Self-employed, Part-time employee, Business owner / Entrepreneur, and Other.
+- Onboarding employment status options follow the Specification v4.0 hierarchy: Regular Employees (Full-time, Part-time), Independent Contractors (Self-employed, Freelancer, Business Owner, Entrepreneur), and Fixed-Term and Project Employees (Contractual/project-based, Business owner/entrepreneur, Gig economy worker). Employment type carries less weight in profile classification than transaction-derived features like income sources, income amount, and income frequency.
 - Income stability should use only two options for profile classification: Stable and Variable. Mixed income should not be treated as a separate classification value.
+- The financial behavioral profile labels are fixed as Stable-Flexible, Stable-Obligated, Variable-Flexible, and Variable-Obligated.
+- Profile classification shall support manual selection, questionnaire-based classification, cold-start fallback classification, and standard reclassification.
 - Treat the confirmed screens as the first route map for the full app.
 - Use a shared domain model across mobile and web so transaction, budget, forecast, profile, alert, savings, and debt concepts do not diverge between platforms.
-- Create a transaction ledger module as a deep module. It should expose a simple interface for income, expense, transfer, recurring transactions, edits, deletes, category assignment, and date-range queries while hiding ledger invariants.
-- Create a category taxonomy module as a deep module. It should define detailed categories, broad forecast categories, protected/default categories, Filipino-specific obligations, and mapping rules.
+- Create a financial account structure module. Each user may have multiple financial accounts (wallets, bank accounts, e-wallets). Each account tracks its own balance, supports positive and negative balances, and records the flow of money in and out. The sum of all account balances represents the user's total cash position.
+- Transaction templates shall be supported as pre-filled transaction records (income, expense, or transfer) that the user can instantiate for faster repeated logging. Templates may have some or all fields pre-filled.
+- Create a transaction ledger module as a deep module. It should expose a simple interface for income, expense, transfer, recurring transactions, templates, edits, deletes, category assignment, and date-range queries while hiding ledger invariants.
+- Transaction history shall support searching, sorting, and filtering. Retention shall follow the officially cited guideline used in the thesis; the PRD does not prescribe a duration here.
+- Create a category taxonomy module as a deep module. It should define a four-tier hierarchy: Items → Subcategories → Categories → Expense Groups (Essentials, Obligatory, Discretionary, Financial Allocation). Subcategories and categories shall be based on the PSA PCOICOP standard. Filipino-specific categories include family support, remittances, paluwagan, church or religious donations, barangay or community collections, government contributions, debt payments, insurance, emergency fund, savings, and investments.
+- Users may create custom categories and subcategories, but must assign them to an existing expense group. Users cannot create custom expense groups.
+- Each expense item must fall under exactly one expense group via its category chain. If an item spans multiple groups, the user must split its cost.
+- Expense restrictions operate at three levels: Free (user-defined floor and ceiling), Protected (floor is locked, cannot be reduced below a minimum), and Locked (both floor and ceiling are fixed at a set amount). Categories that are sensitive for Filipino users — such as debt repayment, insurance, and emergency fund — default to Protected or Locked.
 - Create a financial behavioral profile module as a deep module. It should classify users into one of four profiles, store explanation data, support reassessment, and handle user confirmation before profile changes.
-- Create a budget recommendation module as a deep module. It should consume current balance, profile, protected categories, goals, obligations, and forecast outputs, then return explainable category allocations.
+- Create a budget recommendation module as a deep module using a Linear Programming recommender. It should consume current balance, profile, protected categories, goals, obligations, and forecast outputs, then return explainable category allocations.
+- Named budget strategies (50/30/20 and Savings-First) shall be provided as configuration presets. Users may also define custom budget strategies with their own allocation ratios, hierarchy, and restriction rules.
+- A budget health indicator shall be displayed to show whether the user is overspending, underspending, or on track relative to the current budget period.
+- Budget surplus handling shall be supported, and one valid policy may allocate surplus to the highest-priority active savings goal consistent with a zero-based budget approach.
+- Budget infeasibility occurs when total budget size exceeds current balance plus foreseeable income. The system shall recommend reductions in a defined order: Discretionary first, then Financial Allocation, then Obligatory. Essential and Protected categories shall not be reduced unless the user explicitly overrides. The system shall communicate infeasibility with sensitivity to avoid causing user distress.
+- Cold-start budget recommendations shall be generated from the user's profile and population baselines when no transaction history exists.
 - Create a forecasting module as a deep module. It should support cold-start forecasts, personalized forecasts, total forecasts, per-category forecasts, and metadata explaining whether the result is personalized or fallback-based.
 - The primary forecast visualization should include a next-month multi-line graph for Essentials, Discretionary, Financial Allocation, and Obligatory spending.
-- Create an anomaly and overspending detection module as a deep module. It should detect unusual transaction behavior, budget-risk conditions, culturally expected exceptions, and user-whitelisted intentional outliers.
+- Create an anomaly and overspending detection module as a deep module using an Isolation Forest detector for statistical anomalies and rule-based logic for overspending. It should detect unusual transaction behavior, budget-risk conditions, culturally expected exceptions, and user-whitelisted intentional outliers. Users may take remedial action on flagged anomalies (e.g., confirming as intentional, correcting the transaction, or adjusting the category).
+- Anomaly detection shall support a cold-start mode that still produces useful statistical alerts when personal transaction history is sparse.
 - Create a savings goal module as a deep module. It should manage goals, contributions, progress states, prioritization, Snowball and Avalanche allocation strategies, and projected achievement dates.
 - The savings goal module should provide a priority setting table that lists all active savings goals with their priority rank, target amount, saved amount, remaining amount, target date, progress state, and selected allocation strategy inputs.
 - Each savings goal should be linked to a Financial Allocation subcategory used for contribution transactions, budget allocation, reporting, and forecast aggregation. The savings goal record remains the source of truth for target amount, saved amount, progress state, priority, and strategy logic.
 - Savings goal Snowball and Avalanche should follow the same allocation principles as the debt module. Snowball prioritizes the savings goal with the smallest remaining amount first. Avalanche prioritizes the highest-ranked or highest-impact savings goal first according to the goal ranking field defined in the system specification.
 - When a budget strategy includes a Financial Allocation portion, such as the 20 percent in a 50/30/20 budget, Odin should distribute that portion across active savings goals according to the selected savings goal allocation strategy.
-- Create a debt management module as a deep module. It should manage debt accounts and compute Avalanche and Snowball repayment projections.
+- Create a debt management module as a deep module. It should manage debt accounts and compute Avalanche and Snowball repayment projections. Debt hardship circumstances shall be supported, allowing users to declare temporary difficulty meeting minimum payments for adjusted projections.
 - Debt repayment projections should be generated on demand when the user opens the debt strategy or projection screen and no current projection exists, switches payoff strategy, changes extra payment amount, edits a debt account balance, interest rate, or minimum payment, records a debt payment that changes the current balance, or when a report or dashboard needs debt progress and the existing projection is stale.
 - Create an alerts and notifications module as a deep module. It should centralize alert generation, acknowledgement, notification preferences, cooldown behavior, and alert fatigue controls.
 - Create a reporting module as a deep module. It should produce date-range summaries, category breakdowns, budget-vs-actual reports, forecast-vs-actual comparisons, savings progress, debt progress, and obligation/protected-category summaries.
@@ -158,28 +217,34 @@ Confirmed primary screens:
 - No multi-currency support will be required for the first full-app PRD.
 - Authentication, consent, account management, and privacy controls are part of the app, even though they are not the thesis's main research contribution.
 - The system should support RA 10173-aligned privacy expectations: consent, data minimization, secure handling, access, correction, and deletion.
+- Offboarding shall provide a clear flow for data export and account deletion. Users shall be informed exactly what data will be deleted and what (if anything) will be retained.
 - The implementation should preserve separation between user-facing UI, domain logic, persistence, and model-serving boundaries.
-- The model architecture decision needs final alignment. Current repository materials support Random Forest for profile classification, LSTM for forecasting, and Isolation Forest for anomaly detection, while some internal framing suggests a simplified LSTM-centered design. This PRD treats the three-model version as the full-app target unless the team formally revises the thesis scope.
+- The model architecture is definitive per Specification v4.0: Random Forest for financial behavioral profile classification, LSTM for spending forecasting, Isolation Forest for anomaly detection, and Linear Programming for budget recommendation. All four algorithms are in scope.
 
 ## Testing Decisions
 
 - Tests should verify external behavior and user-visible outcomes, not internal implementation details.
+- Transaction history tests should cover retention policy presence and the expected handling of retained records according to the thesis guideline.
 - Transaction ledger tests should cover creating, editing, deleting, filtering, recurring generation, transfer handling, and balance effects.
-- Category taxonomy tests should cover detailed-to-broad mappings, protected-category defaults, Filipino-context categories, and category validation.
-- Profile module tests should cover initial classification, explanation generation, reclassification triggers, and user confirmation behavior.
-- Budget recommendation tests should cover protected categories, profile-specific allocations, surplus behavior, deficit behavior, recommendation explanations, and user overrides.
+- Category taxonomy tests should cover the four-tier hierarchy (Items → Subcategories → Categories → Expense Groups), PSA PCOICOP mappings, custom categories, expense group exclusivity, Free/Protected/Locked restriction levels, protected-category defaults, Filipino-context categories, and category validation.
+- Profile module tests should cover the four fixed profile labels, initial classification, explanation generation, manual classification, questionnaire classification, cold-start classification, standard reclassification, periodic reclassification triggers, and user confirmation behavior.
+- Budget recommendation tests should cover protected categories, profile-specific allocations, named budget strategies (50/30/20, Savings-First), custom strategies, surplus behavior, deficit behavior, infeasibility handling, budget health indicator, cold-start recommendations, recommendation explanations, and user overrides.
 - Forecasting tests should cover cold-start fallback, personalized-forecast availability, forecast metadata, per-category outputs, total outputs, and forecast consumption by dashboard and budget modules.
 - Forecasting UI tests should verify that the next-month graph renders all four broad-category lines and remains readable on mobile.
 - Anomaly detection tests should cover high category deviation, high income-ratio spending, recurring-payment suppression, user whitelisting, culturally expected exception behavior, and alert explanation output.
+- Anomaly detection tests should also cover cold-start behavior when history is sparse.
 - Savings goal tests should cover goal creation, linked Financial Allocation subcategories, contribution recording, priority table behavior, progress states, target-date projections, Snowball allocation order, Avalanche allocation order, prioritization, and completion behavior.
 - Debt management tests should cover debt account creation, minimum payments, Avalanche order, Snowball order, projected payoff dates, and strategy switching.
 - Alerts tests should cover alert creation, acknowledgement, cooldowns, notification preferences, grouped alerts, and suppression rules.
 - Reporting tests should cover budget-vs-actual, forecast-vs-actual, category summaries, date filters, savings progress, and debt progress.
 - Authentication and privacy tests should cover login, logout, protected routes, consent state, account deletion flow, and sensitive-data access rules.
 - Mobile-first UI tests should cover core workflows on narrow viewports: onboarding, add transaction, dashboard, budget recommendation, forecast, alerts, savings, debt, and settings.
+- Mobile-first UI tests should verify operation at 375 dp and below, and no horizontal scrolling across 320 to 450 dp widths.
+- Desktop UI tests should verify the centered container and 1200 px maximum width.
 - Web UI tests should cover dashboard, reports, transactions, budget, forecast, savings, debt, and settings on larger viewports.
+- Installation tests should verify that the mobile web path leads users to the installation link and that the onboarding path gets a user from download to first launch.
 - Integration tests should cover the main data flow: onboarding to profile, profile to transaction logging, transactions to forecasts, forecasts to budget recommendation, transactions to anomaly alerts, and alerts to user feedback.
-- Model evaluation should be separate from UI tests. Forecasting should be evaluated using time-series-appropriate metrics such as MAE, RMSE, and related forecast-error measures. Anomaly detection should be evaluated using precision, recall, and F1-score. Profile classification should be evaluated using classification metrics if the classifier remains in scope.
+- Model evaluation should be separate from UI tests. Profile classification (Random Forest) should be evaluated using classification metrics (accuracy ≥ 0.85 target). Forecasting (LSTM) should be evaluated using time-series-appropriate metrics such as sMAPE (< 25% / 30% per category target), MAE, and RMSE. Anomaly detection (Isolation Forest) should be evaluated using precision, recall, and F1-score (≥ 0.675 target). Budget recommendation (Linear Programming) should be evaluated using budget adherence (≥ 70% target).
 - Usability evaluation should use SUS for the complete user-facing app.
 - Software quality evaluation should map ISO 25010 characteristics to concrete testable criteria.
 
@@ -212,6 +277,6 @@ Confirmed primary screens:
 - The PRD is based on the full-app scope confirmed by the repository materials and the accepted screen list.
 - The app should be framed as a personal budget management system and decision-support tool.
 - The strongest product thesis is that Odin is not merely a tracker: it turns consistent manual logging into forecasted, profile-aware, culturally grounded budget guidance.
-- The strongest unresolved architecture issue is algorithm scope. The team should explicitly decide whether the final thesis implementation uses Random Forest, LSTM, and Isolation Forest, or narrows the intelligent component to LSTM with deterministic support modules.
+- The algorithm scope is settled per Specification v4.0: Random Forest for profile classification, LSTM for forecasting, Isolation Forest for anomaly detection, and Linear Programming for budget recommendation.
 - The strongest UX risk is manual logging fatigue. The app must make transaction entry fast, visible, and rewarding through immediate dashboard, forecast, alert, and recommendation value.
 - The strongest trust risk is sensitive financial data. The app must explain data usage, protect data, and make intelligent outputs understandable.
