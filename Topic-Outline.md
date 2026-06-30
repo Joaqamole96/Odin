@@ -189,26 +189,32 @@
 
 ## 5. Financial Behavioral Profiling [/behavioral-profiling]
 
-### 5.A Financial Behavioral Profiles in Personal Finance [/profile-domain]
+### [O] 5.A Financial Behavioral Profiles in Personal Finance [/profile-domain]
 
-#### [X] 5.A.I Role of behavioral profiling in personalizing budget recommendation, forecasting, and anomaly detection [/profiling-role]
-> *Scholar query: What role does user behavioral profiling play in enabling personalization within personal finance management systems — specifically in improving budget recommendation accuracy, providing fallback behavior for new users during cold start, and tailoring forecasting and anomaly detection to individual spending patterns? I am looking for system design literature or implemented PFMS studies that demonstrate how assigning users to profile types shapes the output of downstream algorithmic modules.*
+#### [O] 5.A.I Role of behavioral profiling in personalizing budget recommendation, forecasting, and anomaly detection [/profiling-role]
+> *Scholar query: What role does user behavioral profiling play in enabling personalization within personal finance management systems — including but not limited to improving budget recommendation accuracy, providing fallback behavior for new users during cold start, and tailoring forecasting and anomaly detection to individual spending patterns? I am looking for system design literature or implemented PFMS studies that demonstrate how assigning users to profile types shapes the output of downstream algorithmic modules.*
 
-#### 5.A.II Inadequacy of Western behavioral taxonomies for Filipino financial user contexts [/western-taxonomy-gap]
+> *Scholar query: What role does user behavioral profiling play in enabling personalization within Filipino personal finance management systems — including but not limited to improving Filipino budget recommendation accuracy, providing fallback behavior for new Filipino users during cold start, and tailoring forecasting and anomaly detection to Filipino individual spending patterns? I am looking for Philippine system design literature or implemented Philippine PFMS studies that demonstrate how assigning users to profile types shapes the output of downstream algorithmic modules.*
+
+#### [O] 5.A.II Inadequacy of Western behavioral taxonomies for Filipino financial user contexts [/western-taxonomy-gap]
 > *Scholar query: Why are Western financial behavioral taxonomies and financial personality frameworks inadequate for characterizing Filipino users' financial behavior? I am looking for research that documents the cultural, structural, and institutional differences between Filipino and Western financial contexts — and that argues for locally grounded profile construction rather than applying imported frameworks.*
 
-#### 5.A.III Behavioral dimensions as meaningful profile differentiators: income stability and obligation weight [/profile-dimensions]
+#### [O] 5.A.III Behavioral dimensions as meaningful profile differentiators: income stability and obligation weight [/profile-dimensions]
 > *Scholar query: What evidence supports income stability (the predictability of income frequency and amount) and obligation weight (the proportion of total expenses consumed by essential and obligatory spending) as meaningful and discriminating behavioral dimensions for financial user profiling? I am looking for research that validates these two axes — where obligation weight is operationalized as (Essential Expenses + Obligatory Expenses) / Total Expenses — as distinguishing features that correlate with different budgeting needs, forecasting requirements, and anomaly susceptibility.*
 
-#### 5.A.IV Constructing locally grounded financial profiles from Philippine institutional and behavioral data [/fil-profile-construction]
-> *Scholar query: How can locally grounded financial behavioral profiles or user archetypes be constructed from Philippine institutional data sources such as the FIES and BSP CFS, or from observed transaction behavior? I am looking for methodological literature on deriving user typologies from survey or expenditure datasets — including clustering, segmentation, or expert‑informed classification approaches — applied to data that captures Filipino household financial structure.*
+> *Scholar query: What evidence supports income stability (the predictability of income frequency and amount) and obligation weight (the proportion of total expenses consumed by essential and obligatory spending) as meaningful and discriminating behavioral dimensions for Philippine financial user profiling? I am looking for research that validates these two axes — where obligation weight is operationalized as (Essential Expenses + Obligatory Expenses) / Total Expenses — as distinguishing features that correlate with different budgeting needs, forecasting requirements, and anomaly susceptibility of Filipinos.*
+
+#### [O] 5.A.IV Constructing locally grounded financial profiles from Philippine institutional and behavioral data [/fil-profile-construction]
+> *Scholar query: How can Filipino-grounded financial behavioral profiles or user archetypes be constructed from Philippine institutional data sources such as the FIES and BSP CFS, or from observed transaction behavior? I am looking for methodological literature on deriving user typologies from survey or expenditure datasets — including clustering, segmentation, or expert‑informed classification approaches — applied to data that captures Filipino household financial structure.*
 
 ---
 
 ### 5.B Profile Dynamics and the Cold‑Start Problem [/profile-dynamics]
 
-#### [X] 5.B.I Concept drift as the framework for progressive profile updates over time [/concept-drift]
+#### [O] 5.B.I Concept drift as the framework for progressive profile updates over time [/concept-drift]
 > *Scholar query: How is the concept drift framework applied to adaptive user modeling and profile updates in intelligent systems, and how does it apply to progressively updating a user's financial behavioral profile as their spending and income patterns evolve? I am looking for literature on drift detection methods and adaptive learning strategies that serve as the technical grounding for a system that updates user profiles based on behavioral signal accumulation over time.*
+
+> *Scholar query: How is the concept drift framework applied to adaptive user modeling and profile updates in Philippine intelligent systems, and how does it apply to progressively updating a Filipino user's financial behavioral profile as their spending and income patterns evolve? I am looking for Philippine literature on drift detection methods and adaptive learning strategies that serve as the technical grounding for a system that updates user profiles based on behavioral signal accumulation over time.*
 
 #### 5.B.II Behavioral signals that should trigger profile reassessment [/profile-triggers]
 > *Scholar query: What behavioral signals in a personal finance system should trigger a reassessment or reclassification of a user's financial behavioral profile? I am looking for research on change‑point detection, sustained behavioral shifts, or threshold‑based triggers in adaptive user modeling — applied to signals such as sustained income level changes, shifts in the proportion of obligatory versus discretionary spending, or consistent departures from the patterns used to initially classify the user.*

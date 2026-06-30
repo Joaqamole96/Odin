@@ -543,10 +543,10 @@ Information2024,15,786
 3.3. FindingsonConceptDriftDetectionMethods
 Thestudieswerecategorizedbasedonthemethodsusedfordetectingconceptdrift.
 Thissectiondetailsthefindingsforeachcategory.
-DDMs . The concept of drift detection was significantly advanced by the work of
+DDMs. The concept of drift detection was significantly advanced by the work of
 Gamaetal. in2004withtheirintroductionoftheDDM[19]. Thismethodhassincebecome
 abenchmark,inspiringnumeroussubsequenttechniquesthateitherbuilduponormodify
-theoriginalalgorithm. ThemainstructureoftheDDMisprovidedinAlgorithm 1.
+theoriginalalgorithm. ThemainstructureoftheDDMisprovidedinAlgorithm1.
 Algorithm1:Generalalgorithmfordriftdetectionmechanisms.
 Input: Datastreamcontinuouslyenteringthesystem
 Output: Updatedmodel,responsivetotheconceptdrift
@@ -617,7 +617,7 @@ the STEPD algorithm, which remains influential. Meanwhile, Albert Bifet’s 2007
 “LearningfromTime-changingDatawithAdaptiveWindowing”(ADWIN)[30]hasmade
 substantialcontributionstoadaptivelearningstrategies. Basedonthesepapers,manynew
 advancedtechniqueshavebeendeveloped.
-Thegeneralstructureofthewindow-basedconceptDDMsisdescribedinAlgorithm 2.
+Thegeneralstructureofthewindow-basedconceptDDMsisdescribedinAlgorithm2.
 Algorithm2:WBMforconceptdriftdetection
 Input: Datastreamcontinuouslyenteringthesystem
 Output: Updatedmodel,responsivetotheconceptdrift
@@ -840,9 +840,9 @@ methods. Thesedatasetsrepresentdiversereal-worldscenarios,includingdifferenttype
 and magnitudes of concept drift, class imbalances, and varying data distributions. In
 Table5,wesummarizethemaindatasetsandtheircharacteristicsusedfortheconceptdrift
 detectionproblem.
-ManyofthesedatasetsareimplementedandtestedwithintheMOA(MassiveOnline
-Analysis, ver. 24.07.0)framework, awidelyusedopen-sourcesoftwarefordatastream
-mining.
+ManyofthesedatasetsareimplementedandtestedwithintheMOA(MassiveOn-
+line Analysis, ver. 24.07.0) framework, a widely used open-source software for data
+streammining.
 The THU-Concept-Drift-Datasets are relatively new. These datasets are free and
 integratedwithconvenientinterfacesfordatastreamgenerationandmanipulation,making
 themanexcellentresourcefortestingandcomparingconceptdriftdetectionmethods[98].
@@ -989,210 +989,213 @@ DataAvailabilityStatement:Nonewdatawerecreatedoranalyzedinthisstudy.
 ConflictsofInterest:Theauthorsdeclarenoconflictsofinterest.
 References
 1. Lu,J.;Liu,A.;Dong,F.;Gu,F.;Gama,J.;Zhang,G. LearningunderConceptDrift:AReview. IEEETrans.Knowl.DataEng.2019,
-31,2346–2363. https://doi.org/10.1109/TKDE.2018.2876857.
-2. Iwashita,A.S.;Papa,J.P. AnOverviewonConceptDriftLearning. IEEEAccess2019,7,1532–1547. https://doi.org/10.1109/
-ACCESS.2018.2886026.
+31,2346–2363. [CrossRef]
+2. Iwashita,A.S.;Papa,J.P. AnOverviewonConceptDriftLearning. IEEEAccess2019,7,1532–1547. [CrossRef]
 3. Brzezinski,D.;Stefanowski,J.Combiningblock-basedandonlinemethodsinlearningensemblesfromconceptdriftingdata
-streams. Inf.Sci.2014,265,50–67. https://doi.org/10.1016/j.ins.2013.12.011.
+streams. Inf.Sci.2014,265,50–67. [CrossRef]
 4. Ross,G.J.;Adams,N.M.;Tasoulis,D.K.;Hand,D.J. Exponentiallyweightedmovingaveragechartsfordetectingconceptdrift.
-PatternRecognit.Lett.2012,33,191–198. https://doi.org/10.1016/j.patrec.2011.08.019.
+PatternRecognit.Lett.2012,33,191–198. [CrossRef]
 5. DalPozzolo,A.;Boracchi,G.;Caelen,O.;Alippi,C.;Bontempi,G. Creditcardfrauddetectionandconcept-driftadaptation
 withdelayedsupervisedinformation. InProceedingsofthe2015InternationalJointConferenceonNeuralNetworks(IJCNN),
-Killarney,Ireland,12–17July2015;pp.1–8. https://doi.org/10.1109/IJCNN.2015.7280527.
+Killarney,Ireland,12–17July2015;pp.1–8. [CrossRef]
 6. Cavalcante, R.C.; Oliveira, A.L.I. An approach to handle concept drift in financial time series based on Extreme Learning
 MachinesandexplicitDriftDetection. InProceedingsofthe2015InternationalJointConferenceonNeuralNetworks(IJCNN),
-Killarney,Ireland,12–17July2015;pp.1–8. https://doi.org/10.1109/IJCNN.2015.7280721.
-7. Munirathinam,S. Driftdetectionanalyticsforiotsensors. ProcediaComput.Sci.2021,180,903–912.
+Killarney,Ireland,12–17July2015;pp.1–8. [CrossRef]
+7. Munirathinam,S. Driftdetectionanalyticsforiotsensors. ProcediaComput.Sci.2021,180,903–912.[CrossRef]
+8. Susnjak,T.;Maddigan,P. Forecastingpatientflowswithpandemicinducedconceptdriftusingexplainablemachinelearning.
+EPJDataSci.2023,12,11.[CrossRef]
 
 Information2024,15,786 21of24
-8. Susnjak,T.;Maddigan,P. Forecastingpatientflowswithpandemicinducedconceptdriftusingexplainablemachinelearning.
-EPJDataSci.2023,12,11.
 9. Žliobaite˙,I.;Pechenizkiy,M.;Gama,J. Anoverviewofconceptdriftapplications. InBigDataAnalysis:NewAlgorithmsforaNew
 Society;Springer:Cham,Switzerland,2016;pp.91–114.
 10. Langenkämper,D.;VanKevelaer,R.;Purser,A.;Nattkemper,T.W. Gear-inducedconceptdriftinmarineimagesanditseffecton
-deeplearningclassification. Front.Mar.Sci.2020,7,506.
-11. Vapnik,V.N. Anoverviewofstatisticallearningtheory. IEEETrans.NeuralNetw.1999,10,988–99.
+deeplearningclassification. Front.Mar.Sci.2020,7,506.[CrossRef]
+11. Vapnik,V.N. Anoverviewofstatisticallearningtheory. IEEETrans.NeuralNetw.1999,10,988–999.[CrossRef]
 12. Murphy,K.P. MachineLearning:AProbabilisticPerspective; MITPress:Cambridge,MA,USA,2012.
 13. Hershey,J.R.;Olsen,P.A. ApproximatingtheKullbackLeiblerdivergencebetweenGaussianmixturemodels. InProceedingsof
 the2007IEEEInternationalConferenceonAcoustics,SpeechandSignalProcessing-ICASSP’07,Honolulu,HI,USA,15–20April
 2007.
-14. Shalev-Shwartz,S. Onlinelearningandonlineconvexoptimization.Found.TrendsMach.Learn. 2012,4,107–94.
+14. Shalev-Shwartz,S. Onlinelearningandonlineconvexoptimization.Found.TrendsMach.Learn. 2012,4,107–194.[CrossRef]
 15. Paul,J.;Feliciano-Cestero,M.M. FivedecadesofresearchonforeigndirectinvestmentbyMNEs: Anoverviewandresearch
-agenda. J.Bus.Res.2021,124,800–812. https://doi.org/10.1016/j.jbusres.2020.04.017.
+agenda. J.Bus.Res.2021,124,800–812. [CrossRef]
 16. Raffel,C.;Shazeer,N.;Roberts,A.;Lee,K.;Narang,S.;Matena,M.;Zhou,Y.;Li,W.;Liu,P.J. ExploringtheLimitsofTransfer
 LearningwithaUnifiedText-to-TextTransformer. J.Mach.Learn.Res.2020,21,1–67.
 17. Wells,G.A.;Shea,B.;O’Connell,D.;Peterson,J.;Welch,V.;Losos,M.;Tugwell,P. TheNewcastle-OttawaScale(NOS)forAssessing
 theQualityofNonrandomisedStudiesinMeta-Analyses;OttawaHospitalResearchInstitute:Ottawa,ON,Canada,2000.
 18. CriticalAppraisalSkillsProgramme. CASPQualitativeResearchChecklist; CriticalAppraisalSkillsProgramme:Oxford,UK,2017.
 19. Gama,J.; Medas,P.; Castillo,G.; Rodrigues,P. Learningwithdriftdetection. InProceedingsoftheAdvancesinArtificial
-Intelligence–SBIA2004:17thBrazilianSymposiumonArtificialIntelligence,SaoLuis,Maranhao,Brazil,29September–1Ocotber
+Intelligence–SBIA2004:17thBrazilianSymposiumonArtificialIntelligence,SaoLuis,Maranhao,Brazil,29September–1October
 2004;Proceedings17;Springer:Berlin/Heidelberg,Germany,2004;pp.286–295.
 20. Baena-Garcıa,M.;delCampo-Ávila,J.;Fidalgo,R.;Bifet,A.;Gavalda,R.;Morales-Bueno,R. Earlydriftdetectionmethod. In
 ProceedingsoftheFourthInternationalWorkshoponKnowledgeDiscoveryfromDataStreams,Philadelphia,PA,USA,20
 August2006;Citeseer:Princeton,NJ,USA,2006;Volume6,pp.77–86.
 21. Frías-Blanco, I.; Campo-Ávila, J.d.; Ramos-Jiménez, G.; Morales-Bueno, R.; Ortiz-Díaz, A.; Caballero-Mota, Y. Online and
 Non-Parametric Drift Detection Methods Based on Hoeffding’s Bounds. IEEE Trans. Knowl. Data Eng. 2015, 27, 810–823.
-https://doi.org/10.1109/TKDE.2014.2345382.
+[CrossRef]
 22. Pesaranghader,A.;Viktor,H.L. Fasthoeffdingdriftdetectionmethodforevolvingdatastreams. InProceedingsoftheMachine
 Learning and Knowledge Discovery in Databases: European Conference, ECML PKDD 2016, Riva del Garda, Italy, 19–23
 September2016;Proceedings,PartII16;Springer:Cham,Switzerland,2016;pp.96–111.
 23. Barros,R.S.;Cabral,D.R.;Gonçalves,P.M.,Jr.;Santos,S.G. RDDM:Reactivedriftdetectionmethod. ExpertSyst. Appl. 2017,
-90,344–355.
-24. Yan,M.M.W. Accuratedetectingconceptdriftinevolvingdatastreams. ICTExpress2020,6,332–338.
+90,344–355.[CrossRef]
+24. Yan,M.M.W. Accuratedetectingconceptdriftinevolvingdatastreams. ICTExpress2020,6,332–338.[CrossRef]
 25. Mahdi,O.A.;Pardede,E.;Ali,N.;Cao,J. Diversitymeasureasanewdriftdetectionmethodindatastreaming. Knowl.-BasedSyst.
-2020,191,105227.
+2020,191,105227.[CrossRef]
 26. Wang,P.;Jin,N.;Fehringer,G. ConceptdriftdetectionwithFalsePositiverateformulti-labelclassificationinIoTdatastream. In
 Proceedingsofthe2020InternationalConferenceonUK-ChinaEmergingTechnologies(UCET),Glasgow,UK,20–21August
-2020;pp.1–4. https://doi.org/10.1109/UCET51115.2020.9205421.
+2020;pp.1–4. [CrossRef]
 27. Wang,P.;Jin,N.;Woo,W.L.;Woodward,J.R.;Davies,D. Noisetolerantdriftdetectionmethodfordatastreammining. Inf.Sci.
-2022,609,1318–1333.
+2022,609,1318–1333.[CrossRef]
 28. Yu,H.;Liu,W.;Lu,J.;Wen,Y.;Luo,X.;Zhang,G. Detectinggroupconceptdriftfrommultipledatastreams. PatternRecognit.
-2023,134,109113.
+2023,134,109113.[CrossRef]
 29. Nishida,K.;Yamauchi,K. Detectingconceptdriftusingstatisticaltesting. InProceedingsoftheInternationalConferenceon
 DiscoveryScience,Sendai,Japan,1–4October2007;Springer:Berlin/Heidelberg,Germany,2007;pp.264–269.
 30. Bifet,A.;Gavalda,R.Learningfromtime-changingdatawithadaptivewindowing. InProceedingsofthe2007SIAMInternational
 ConferenceonDataMining,Minneapolis,MN,USA,26–28April2007;SIAM:Philadelphia,PA,USA,2007;pp.443–448.
 31. Bach,S.H.;Maloof,M.A. PairedLearnersforConceptDrift. InProceedingsofthe2008EighthIEEEInternationalConferenceon
-DataMining,Pisa,Italy,5–19December2008;pp.23–32. https://doi.org/10.1109/ICDM.2008.119.
+DataMining,Pisa,Italy,5–19December2008;pp.23–32. [CrossRef]
 32. Li, P.; Hu, X.; Wu, X. Miningconcept-driftingdata streamswithmultiple semi-randomdecisiontrees. InProceedingsof
 the International Conference on Advanced Data Mining and Applications, Chengdu, China, 8–10 October 2008; Springer:
 Berlin/Heidelberg,Germany,2008;pp.733–740.
 33. Sun,J.;Li,H. Dynamicfinancialdistresspredictionusinginstanceselectionforthedisposalofconceptdrift. ExpertSyst.Appl.
-2011,38,2566–2576.
+2011,38,2566–2576.[CrossRef]
 34. Yang,B.;Zhang,Y.;Li,X. Classifyingtextstreamsbykeywordsusingclassifierensemble. DataKnowl.Eng.2011,70,775–793.
+[CrossRef]
 35. Ding,Z.;Fei,M. Ananomalydetectionapproachbasedonisolationforestalgorithmforstreamingdatausingslidingwindow.
-IFACProc.Vol.2013,46,12–17.
+IFACProc.Vol.2013,46,12–17.[CrossRef]
 36. Marseguerra,M. EarlydetectionofgradualconceptdriftsbytextcategorizationandSupportVectorMachinetechniques:The
-TRIOalgorithm. Reliab.Eng.Syst.Saf.2014,129,1–9.
+TRIOalgorithm. Reliab.Eng.Syst.Saf.2014,129,1–9.[CrossRef]
 
 Information2024,15,786 22of24
 37. Huang, D.T.J.; Koh, Y.S.; Dobbie, G.; Pears, R. DetectingVolatilityShiftinDataStreams. InProceedingsofthe2014IEEE
-InternationalConferenceonDataMining,Shenzhen,China,14–17December2014;pp.863–868. https://doi.org/10.1109/ICDM.
-2014.50.
+InternationalConferenceonDataMining,Shenzhen,China,14–17December2014;pp.863–868. [CrossRef]
 38. Jankowski,D.;Jackowski,K.;Cyganek,B. Learningdecisiontreesfromdatastreamswithconceptdrift. ProcediaComput.Sci.
-2016,80,1682–1691.
+2016,80,1682–1691.[CrossRef]
 39. daCosta,F.G.;Rios,R.A.;deMello,R.F. Usingdynamicalsystemstoolstodetectconceptdriftindatastreams. ExpertSyst.Appl.
-2016,60,39–50.
-40. deLimaCabral,D.R.;deBarros,R.S.M. ConceptdriftdetectionbasedonFisher’sExacttest. Inf.Sci.2018,442,220–234.
+2016,60,39–50.[CrossRef]
+40. deLimaCabral, D.R.; deBarros, R.S.M. ConceptdriftdetectionbasedonFisher’sExacttest. Inf. Sci. 2018, 442,220–234.
+[CrossRef]
 41. Pesaranghader,A.;Viktor,H.L.;Paquet,E. McDiarmiddriftdetectionmethodsforevolvingdatastreams. InProceedingsofthe
 2018InternationalJointConferenceonNeuralNetworks(IJCNN),RiodeJaneiro,Brazil,8–13July2018;IEEE:Piscataway,NJ,
 USA,2018;pp.1–9.
-42. Cano,A.;Gómez-Olmedo,M.;Moral,S. ABayesianapproachtoabruptconceptdrift. Knowl.-BasedSyst.2019,185,104909.
+42. Cano,A.;Gómez-Olmedo,M.;Moral,S. ABayesianapproachtoabruptconceptdrift. Knowl.-BasedSyst. 2019,185,104909.
+[CrossRef]
 43. Diaz-Rozo, J.; Bielza, C.; Larrañaga, P. Machine-tool condition monitoring with Gaussian mixture models-based dynamic
-probabilisticclustering. Eng.Appl.Artif.Intell.2020,89,103434.
+probabilisticclustering. Eng.Appl.Artif.Intell.2020,89,103434.[CrossRef]
 44. Wang,L.;Wu,C. DynamicimbalancedbusinesscreditevaluationbasedonLearn++withslidingtimewindowandweight
-samplingandFCMwithmultiplekernels. Inf.Sci.2020,520,305–323.
-45. Alakent,B. Softsensordesignusingtransductivemovingwindowlearner. Comput.Chem.Eng.2020,140,106941.
+samplingandFCMwithmultiplekernels. Inf.Sci.2020,520,305–323.[CrossRef]
+45. Alakent,B. Softsensordesignusingtransductivemovingwindowlearner. Comput.Chem.Eng.2020,140,106941.[CrossRef]
 46. Urhan, A.; Alakent, B. Integrating adaptive moving window and just-in-time learning paradigms for soft-sensor design.
-Neurocomputing2020,392,23–37.
+Neurocomputing2020,392,23–37.[CrossRef]
 47. Gâlmeanu,H.;Andonie,R. WeightedIncremental–DecrementalSupportVectorMachinesforconceptdriftwithshiftingwindow.
-NeuralNetw.2022,152,528–541.
+NeuralNetw.2022,152,528–541.[CrossRef]
 48. Jain,M.;Kaur,G.;Saxena,V.AK-MeansclusteringandSVMbasedhybridconceptdriftdetectiontechniquefornetworkanomaly
-detection. ExpertSyst.Appl.2022,193,116510.
+detection. ExpertSyst.Appl.2022,193,116510.[CrossRef]
 49. Chikushi,R.T.M.;deBarros,R.S.M.;daSilva,M.G.N.M.;Maciel,B.I.F. Usingspectralentropyandbernoullimaptohandle
-conceptdrift. ExpertSyst.Appl.2021,167,114114.
+conceptdrift. ExpertSyst.Appl.2021,167,114114.[CrossRef]
 50. Husheng,G.;Hai,L.;Qiaoyan,R.;Wenjian,W. ConceptDriftTypeIdentificationBasedonMulti-SlidingWindows. Inf.Sci.2021,
 585,1–23.
 51. Masud,M.;Gao,J.;Khan,L.;Han,J.;Thuraisingham,B.M. Classificationandnovelclassdetectioninconcept-driftingdata
-streamsundertimeconstraints. IEEETrans.Knowl.DataEng.2010,23,859–874.
-52. Wu,X.;Li,P.;Hu,X. Learningfromconceptdriftingdatastreamswithunlabeleddata. Neurocomputing2012,92,145–155.
+streamsundertimeconstraints. IEEETrans.Knowl.DataEng.2010,23,859–874.[CrossRef]
+52. Wu,X.; Li,P.; Hu,X. Learningfromconceptdriftingdatastreamswithunlabeleddata. Neurocomputing2012,92,145–155.
+[CrossRef]
 53. Lee,J.;Magoules,F. Detectionofconceptdriftforlearningfromstreamdata. InProceedingsofthe2012IEEE14thInternational
 ConferenceonHighPerformanceComputingandCommunication&2012IEEE9thInternationalConferenceonEmbedded
 SoftwareandSystems,Liverpool,UK,25–27June2012;IEEE:Piscataway,NJ,USA,2012;pp.241–245.
 54. Lughofer,E.;Weigl,E.;Heidl,W.;Eitzinger,C.;Radauer,T. Recognizinginputspaceandtargetconceptdriftsindatastreams
-withscarcelylabeledandunlabelledinstances. Inf.Sci.2016,355,127–151.
+withscarcelylabeledandunlabelledinstances. Inf.Sci.2016,355,127–151.[CrossRef]
 55. Sethi,T.S.;Kantardzic,M. Onthereliabledetectionofconceptdriftfromstreamingunlabeleddata. ExpertSyst. Appl. 2017,
-82,77–99.
-56. Sethi,T.S.;Kantardzic,M. Handlingadversarialconceptdriftinstreamingdata. ExpertSyst.Appl.2018,97,18–40.
+82,77–99.[CrossRef]
+56. Sethi,T.S.;Kantardzic,M. Handlingadversarialconceptdriftinstreamingdata. ExpertSyst.Appl.2018,97,18–40.[CrossRef]
 57. Escovedo,T.;Koshiyama,A.;daCruz,A.A.;Vellasco,M. DetectA:Abruptconceptdriftdetectioninnon-stationaryenvironments.
-Appl.SoftComput.2018,62,119–133.
+Appl.SoftComput.2018,62,119–133.[CrossRef]
 58. Cejnek,M.;Bukovsky,I. Conceptdriftrobustadaptivenoveltydetectionfordatastreams. Neurocomputing2018,309,46–53.
+[CrossRef]
 59. Spinosa,E.J.;deLeonF.deCarvalho,A.P.;Gama,J. Olindda:Acluster-basedapproachfordetectingnoveltyandconceptdriftin
-datastreams. InProceedingsofthe2007ACMsymposiumonAppliedcomputing,Seoul,RepublicofKorea,11–15March2007;
+datastreams. InProceedingsofthe2007ACMSymposiumonAppliedComputing,Seoul,RepublicofKorea,11–15March2007;
 pp.448–452.
 60. Din,S.U.;Shao,J.;Kumar,J.;Ali,W.;Liu,J.;Ye,Y. Onlinereliablesemi-supervisedlearningonevolvingdatastreams. Inf.Sci.
-2020,525,153–171.
+2020,525,153–171.[CrossRef]
 61. Zheng,X.;Li,P.;Hu,X.;Yu,K. Semi-supervisedclassificationondatastreamswithrecurringconceptdriftandconceptevolution.
-Knowl.-BasedSyst.2021,215,106749.
+Knowl.-BasedSyst.2021,215,106749.[CrossRef]
 62. Tanha,J.; Samadi,N.; Abdi,Y.; Razzaghi-Asl,N. CPSSDS:Conformalpredictionforsemi-supervisedclassificationondata
-streams. Inf.Sci.2022,584,212–234.
+streams. Inf.Sci.2022,584,212–234.[CrossRef]
 63. Liao,G.;Zhang,P.;Yin,H.;Deng,X.;Li,Y.;Zhou,H.;Zhao,D. Anovelsemi-supervisedclassificationapproachforevolvingdata
-streams. ExpertSyst.Appl.2023,215,119273.
+streams. ExpertSyst.Appl.2023,215,119273.[CrossRef]
 64. Zhang,P.;Zhu,X.;Shi,Y.;Guo,L.;Wu,X. Robustensemblelearningforminingnoisydatastreams. Decis.SupportSyst.2011,
-50,469–479.
+50,469–479.[CrossRef]
 65. Farid,D.M.;Zhang,L.;Hossain,A.;Rahman,C.M.;Strachan,R.;Sexton,G.;Dahal,K. Anadaptiveensembleclassifierformining
-conceptdriftingdatastreams. ExpertSyst.Appl.2013,40,5895–5906.
-66. Mirza,B.;Lin,Z.;Liu,N. Ensembleofsubsetonlinesequentialextremelearningmachineforclassimbalanceandconceptdrift.
-Neurocomputing2015,149,316–329.
+conceptdriftingdatastreams. ExpertSyst.Appl.2013,40,5895–5906.[CrossRef]
 
 Information2024,15,786 23of24
+66. Mirza,B.;Lin,Z.;Liu,N. Ensembleofsubsetonlinesequentialextremelearningmachineforclassimbalanceandconceptdrift.
+Neurocomputing2015,149,316–329.[CrossRef]
 67. Sun,J.;Fujita,H.;Chen,P.;Li,H. Dynamicfinancialdistresspredictionwithconceptdriftbasedontimeweightingcombined
-withAdaboostsupportvectormachineensemble. Knowl.-BasedSyst.2017,120,4–14.
+withAdaboostsupportvectormachineensemble. Knowl.-BasedSyst.2017,120,4–14.[CrossRef]
 68. Ren,S.;Liao,B.;Zhu,W.;Li,Z.;Liu,W.;Li,K. Thegradualresamplingensembleforminingimbalanceddatastreamswith
-conceptdrift. Neurocomputing2018,286,150–166.
+conceptdrift. Neurocomputing2018,286,150–166.[CrossRef]
 69. Ancy,S.;Paulraj,D. Handlingimbalanceddatawithconceptdriftbyapplyingdynamicsamplingandensembleclassification
-model. Comput.Commun.2020,153,553–560.
+model. Comput.Commun.2020,153,553–560.[CrossRef]
 70. Zyblewski,P.;Sabourin,R.;Woz´niak,M. Preprocesseddynamicclassifierensembleselectionforhighlyimbalanceddrifteddata
-streams. Inf.Fusion2021,66,138–154.
+streams. Inf.Fusion2021,66,138–154.[CrossRef]
 71. Alberghini,G.;Junior,S.B.;Cano,A. Adaptiveensembleofself-adjustingnearestneighborsubspacesformulti-labeldriftingdata
-streams. Neurocomputing2022,481,228–248.
+streams. Neurocomputing2022,481,228–248.[CrossRef]
 72. Xu,S.;Wang,J. Afastincrementalextremelearningmachinealgorithmfordatastreamsclassification. ExpertSyst.Appl.2016,
-65,332–344.
+65,332–344.[CrossRef]
 73. Liu,D.;Wu,Y.;Jiang,H. FP-ELM:Anonlinesequentiallearningalgorithmfordealingwithconceptdrift. Neurocomputing2016,
-207,322–334.
+207,322–334.[CrossRef]
 74. Krawczyk,B. GPU-acceleratedextremelearningmachinesforimbalanceddatastreamswithconceptdrift. ProcediaComput.Sci.
-2016,80,1692–1701.
+2016,80,1692–1701.[CrossRef]
 75. Mirza,B.;Lin,Z. Meta-cognitiveonlinesequentialextremelearningmachineforimbalancedandconcept-driftingdataclassifica-
-tion. NeuralNetw.2016,80,79–94.
-76. Xu,S.;Wang,J. Dynamicextremelearningmachinefordatastreamclassification. Neurocomputing2017,238,433–449.
+tion. NeuralNetw.2016,80,79–94.[CrossRef]
+76. Xu,S.;Wang,J. Dynamicextremelearningmachinefordatastreamclassification. Neurocomputing2017,238,433–449.[CrossRef]
 77. Lobo,J.L.;Laña,I.;DelSer,J.;Bilbao,M.N.;Kasabov,N. Evolvingspikingneuralnetworksforonlinelearningoverdriftingdata
-streams. NeuralNetw.2018,108,1–19.
+streams. NeuralNetw.2018,108,1–19.[CrossRef]
 78. Liu,Z.;Loo,C.K.;Seera,M. Meta-cognitiverecurrentrecursivekernelOS-ELMforconceptdrifthandling. Appl.SoftComput.
-2019,75,494–507.
+2019,75,494–507.[CrossRef]
 79. Liu,Z.;Loo,C.K.;Pasupa,K.;Seera,M. Meta-cognitiverecurrentkernelonlinesequentialextremelearningmachinewithkernel
-adaptivefilterforconceptdrifthandling. Eng.Appl.Artif.Intell.2020,88,103327.
+adaptivefilterforconceptdrifthandling. Eng.Appl.Artif.Intell.2020,88,103327.[CrossRef]
 80. Xu,R.;Cheng,Y.;Liu,Z.;Xie,Y.;Yang,Y. ImprovedLongShort-TermMemorybasedanomalydetectionwithconceptdrift
-adaptivemethodforsupportingIoTservices. FutureGener.Comput.Syst.2020,112,228–242.
+adaptivemethodforsupportingIoTservices. FutureGener.Comput.Syst.2020,112,228–242.[CrossRef]
 81. Guo,H.;Zhang,S.;Wang,W. Selectiveensemble-basedonlineadaptivedeepneuralnetworksforstreamingdatawithconcept
-drift. NeuralNetw.2021,142,437–456.
+drift. NeuralNetw.2021,142,437–456.[CrossRef][PubMed]
 82. Gama,J.;Rodrigues,P.P.;Spinosa,E.;Carvalho,A. Knowledgediscoveryfromdatastreams. InWebIntelligenceandSecurity;IOS
-Press:Amsterdam,TheNetherlands,2010;pp.125–138
+Press:Amsterdam,TheNetherlands,2010;pp.125–138.
 83. Gama,J.;Žliobaite˙,I.;Bifet,A.;Pechenizkiy,M.;Bouchachia,A. Asurveyonconceptdriftadaptation. ACMComput.Surv.2014,
-46,1–37.https://doi.org/10.1145/2523813.
+46,1–37.[CrossRef]
 84. Žliobaite˙,I. Learningunderconceptdrift:Anoverview. arXiv2010,arXiv:1010.4784.
-85. Cui,Z.;Tian,H.;Shen,H.. EffectiveDensity-BasedConceptDriftDetectionforEvolvingDataStreams. InProceedingsofthe
+85. Cui,Z.;Tian,H.;Shen,H. EffectiveDensity-BasedConceptDriftDetectionforEvolvingDataStreams. InProceedingsofthe
 InternationalConferenceonParallelandDistributedComputing:ApplicationsandTechnologies,Jeju,RepublicofKorea,16
 August2023;SpringerNature:Singapore,2023;pp.190–201.
 86. Li,Q.;Xiong,Q.;Ji,S.;Yu,Y.;Wu,C.;Gao,M. Incrementalsemi-supervisedextremelearningmachineformixeddatastream
-classification. ExpertSyst.Appl.2021,185,115591.
-87. Barros,R.S.;Santos,S.G.. Alarge-scalecomparisonofconceptdriftdetectors. Inf.Sci.2018,451,348–370.
-88. deBarros,R.S.;deCarvalho,Santos,S.G. Anoverviewandcomprehensivecomparisonofensemblesforconceptdrift. Inf.Fusion
-2019,52,213–44.
+classification. ExpertSyst.Appl.2021,185,115591.[CrossRef]
+87. Barros,R.S.;Santos,S.G. Alarge-scalecomparisonofconceptdriftdetectors. Inf.Sci.2018,451,348–370.[CrossRef]
+88. deBarros,R.S.;deCarvalhoSantos,S.G.T. Anoverviewandcomprehensivecomparisonofensemblesforconceptdrift. Inf.
+Fusion2019,52,213–244.[CrossRef]
 89. Poenaru-Olaru, L.; Cruz, L.; van Deursen, A.; Rellermeyer, J.S. Are concept drift detectors reliable alarming systems?—A
 comparativestudy. InProceedingsofthe2022IEEEInternationalConferenceonBigData(BigData),Osaka,Japan,17–20
 December2022;pp.3364–3373.
 90. Hinder, F.; Vaquet, V.; Hammer, B. Oneortwothingsweknowaboutconceptdrift—Asurveyonmonitoringinevolving
-environments.PartA:Detectingconceptdrift. Front.Artif.Intell.2024,7,1330257.
+environments.PartA:Detectingconceptdrift. Front.Artif.Intell.2024,7,1330257.[CrossRef]
 91. Sherstinsky, A.Fundamentalsofrecurrentneuralnetwork(RNN)andlongshort-termmemory(LSTM)network. Phys. D
-NonlinearPhenom.2020,404,132306.
+NonlinearPhenom.2020,404,132306.[CrossRef]
 92. Dawid,A.P. Presentpositionandpotentialdevelopments:Somepersonalviewsstatisticaltheorytheprequentialapproach. J.R.
-Stat.Soc.Ser.A(Gen.)1984,147,278–290.
+Stat.Soc.Ser.A(Gen.)1984,147,278–290.[CrossRef]
 93. Chawla,N.V.;Bowyer,K.W.;Hall,L.O.;Kegelmeyer,W.P. SMOTE:Syntheticminorityover-samplingtechnique. J.Artif.Intell.
-Res.2002,16,321–357.
+Res.2002,16,321–357.[CrossRef]
 94. Liu,W.;Zhang,H.;Ding,Z.;Liu,Q.;Zhu,C. Acomprehensiveactivelearningmethodformulticlassimbalanceddatastreams
-withconceptdrift. Knowl.-BasedSyst.2021,215,106778.
+withconceptdrift. Knowl.-BasedSyst.2021,215,106778.[CrossRef]
 95. Tang,B.;He,H.KernelADASYN: Kernelbasedadaptivesyntheticdatagenerationforimbalancedlearning. InProceedingsof
 the2015IEEECongressonEvolutionaryComputation(CEC),Sendai,Japan,25–28May2015;pp.664–671.
-96. Domingos,P.;Hulten,G. Mininghigh-speeddatastreams. InProceedingsoftheSixthACMSIGKDDInternationalConference
-onKnowledgeDiscoveryandDataMining,Boston,MA,USA,1August2000;pp.71–80.
 
 Information2024,15,786 24of24
+96. Domingos,P.;Hulten,G. Mininghigh-speeddatastreams. InProceedingsoftheSixthACMSIGKDDInternationalConference
+onKnowledgeDiscoveryandDataMining,Boston,MA,USA,1August2000;pp.71–80.
 97. Marrs,G.R.;Hickey,R.J.;Black,M.M.Theimpactoflatencyononlineclassificationlearningwithconceptdrift.InProceedingsof
 theInKnowledgeScience,EngineeringandManagement:4thInternationalConference,KSEM2010,Belfast,NorthernIreland,
 UK,1–3September2010;Proceedings4;Springer:Berlin/Heidelberg,Germany,2010;pp.459–469.
 98. Liu,Z.;Hu,S.;He,X. Real-TimeSafetyAssessmentofDynamicSystemsinNon-StationaryEnvironments:AReviewofMethods
 andTechniques. InProceedingsofthe2023CAASymposiumonFaultDetection,SupervisionandSafetyforTechnicalProcesses
-(SAFEPROCESS),Yibin,China,22–24September2023;pp.1–6. https://doi.org/10.1109/SAFEPROCESS58597.2023.10295743.
+(SAFEPROCESS),Yibin,China,22–24September2023;pp.1–6. [CrossRef]
 Disclaimer/Publisher’sNote: Thestatements, opinionsanddatacontainedinallpublicationsaresolelythoseoftheindividual
 author(s)andcontributor(s)andnotofMDPIand/ortheeditor(s).MDPIand/ortheeditor(s)disclaimresponsibilityforanyinjuryto
 peopleorpropertyresultingfromanyideas,methods,instructionsorproductsreferredtointhecontent.

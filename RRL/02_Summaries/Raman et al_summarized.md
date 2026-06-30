@@ -1,0 +1,115 @@
+```yaml
+paper_id: 10.48550/arXiv.2606.9052
+designation: international-algorithm-specific
+title: "REMI: A Novel Causal Schema Memory Architecture for Personalized Lifestyle Recommendation Agents"
+authors: "Raman, V.; R, V. A.; Ragav, A."
+year: 2026
+venue: "Unknown"
+odin_topics:
+  - 5.B
+  - 6.A
+  - 7.A
+  - 7.B
+  - 8.A
+  - 8.B
+  - 9.A
+  - 10.A
+  - 12.A
+tldr: "REMI combines a personal causal knowledge graph, causal reasoning, and schema-based planning to generate explainable, personalized lifestyle recommendations."
+problem_and_motivation: "Current LLM-based personal assistants provide generic, population-level advice that fails to account for individual circumstances and lacks transparent reasoning. This limits their usefulness and trustworthiness in sensitive domains like health and lifestyle. A system is needed that leverages personal data to reason about cause-effect relationships and provides explainable, tailored recommendations."
+approach:
+  - "The system maintains a personal causal knowledge graph encoding user events and their causal relationships."
+  - "A causal reasoner uses graph traversal, LLM-based path scoring, and counterfactual analysis to identify relevant causal factors for a user query."
+  - "A schema-based planner retrieves and instantiates abstract plan templates with the user's specific causal factors to generate a personalized action plan."
+  - "An LLM orchestrator assembles retrieved memory, causal factors, and the action plan into a coherent, explainable final response."
+  - "The architecture was evaluated on 28 scenarios using two novel metrics: Personalization Salience Score (PSS) and Causal Reasoning Accuracy (CRA)."
+findings:
+  - "num: REMI achieved a PSS of 0.85-0.92, compared to 0.68-0.82 for memory-only and ablated CSM baselines."
+  - "num: REMI achieved a CRA of 0.4-0.8, while the memory-only agent scored 0.0 and the ablated CSM scored 0.2-0.6."
+  - "Causal reasoning and structured schema planning are crucial for accurate and consistent explainable recommendations."
+  - "The system demonstrates robustness by maintaining high personalization even when responses are driven by causal inference rather than direct memory retrieval."
+key_figures_tables:
+  - "Figure 1: Overview of the Causal Schema Memory (CSM) architecture → Shows the four main components and their interaction."
+  - "Figure 2: Example event graph illustrating the causal chain between lifestyle factors → Provides a visual example of the personal knowledge graph."
+key_equations:
+  - equation: "PSS = 1/|C| * sum_{c in C} [ max_{r in R} sim(c, r) >= tau ]"
+    explanation: "Measures how much personal context is reflected in the response."
+  - equation: "CRA = 1/|F| * sum_{f in F} [ sim(f, R) >= tau ]"
+    explanation: "Measures if the explanation aligns with causal paths in the graph."
+definitions:
+  - term: "PSS"
+    definition: "Personalization Salience Score; measures reflection of user context in output."
+  - term: "CRA"
+    definition: "Causal Reasoning Accuracy; measures alignment of explanation with causal paths."
+  - term: "CSM"
+    definition: "Causal Schema Memory; the proposed architecture for REMI."
+  - term: "LLM"
+    definition: "Large Language Model; used for orchestration and natural language generation."
+critical_citations:
+  - "[Harsha Tanneru et al., 2024] — Shows LLMs provide generic, population-level advice."
+  - "[Subramanian et al., 2024] — Highlights lack of personalization in health advice from LLMs."
+  - "[Yao et al., 2023] — Introduces ReAct, a baseline for LLM agents with reasoning and acting."
+relevance:
+  topics:
+    - code: 5.B
+      name: "Profile Dynamics and the Cold‑Start Problem"
+      relevance: "high"
+      justification: "The paper directly addresses cold-start via a fallback mechanism for sparse user data."
+    - code: 6.A
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "medium"
+      justification: "The architecture's causal reasoning can be adapted for predicting spending behavior."
+    - code: 7.A
+      name: "Budgeting Strategies as Domain Knowledge"
+      relevance: "contextual"
+      justification: "The schema-based planning approach is analogous to using domain knowledge for budgeting."
+    - code: 7.B
+      name: "Budget Recommendation in Personal Finance Systems"
+      relevance: "medium"
+      justification: "The paper's approach to generating personalized, explainable recommendations is directly applicable to budget recommendations."
+    - code: 8.A
+      name: "Anomaly Detection in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Counterfactual reasoning can be used to identify anomalous spending patterns."
+    - code: 8.B
+      name: "Anomaly Detection Algorithms for Personal Spending Data"
+      relevance: "low"
+      justification: "The paper discusses counterfactual analysis, a technique relevant to anomaly detection, but not specific algorithms."
+    - code: 9.A
+      name: "Mobile‑First Design Principles and Rationale"
+      relevance: "contextual"
+      justification: "The paper does not address mobile design but the architecture could inform mobile-first systems."
+    - code: 10.A
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "low"
+      justification: "The paper mentions data privacy but does not propose specific privacy mechanisms."
+    - code: 12.A
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "medium"
+      justification: "The paper introduces new evaluation metrics (PSS, CRA) that could be adapted for financial systems."
+  contribution: "REMI's architecture provides a novel integration of causal reasoning and schema-based planning, offering a template for building transparent, personalized recommendation systems. The proposed evaluation metrics (PSS and CRA) provide a rigorous way to assess personalization and explainability, which can be directly adapted for evaluating Odin's modules. The modular design of REMI allows for independent improvement or replacement of components, which aligns with Odin's need for a flexible and extensible system. The focus on providing transparent, causal explanations for recommendations is crucial for building user trust in Odin. The system's ability to handle sparse data through a fallback mechanism is relevant for Odin's cold-start problem with new users."
+  directly_justifies:
+    - "A memory-augmented, causal reasoning architecture can provide more context-aware recommendations."
+    - "Schema-based planning bridges symbolic planning and neural generation to create interpretable action plans."
+    - "Explicit reasoning traces linked to user data enhance user trust and allow auditing of the agent."
+    - "Counterfactual reasoning can be used to test and validate recommended actions."
+  limits:
+    - "The paper focuses on lifestyle and wellness, not personal finance, requiring adaptation."
+    - "The system's performance is dependent on the quality and quantity of user data, which may be sparse initially."
+    - "The evaluation was conducted on a limited number of scenarios (28), which may not be generalizable."
+    - "The risk of the LLM generating hallucinations remains, even with structured inputs."
+  mapping_rationale: "A systematic scan of all 12 functional domains was performed. The domains flagged as relevant were: Behavioral Profiling (for cold-start mitigation), Spending Forecasting (for its predictive modeling approach), Budget Recommendation (for its schema-based planning and explainable output), Anomaly Detection (for its use of counterfactual reasoning), Mobile-First Design (for its potential to inform architecture), Data Privacy (for its discussion of trust), and System Evaluation (for its proposed metrics). The highest relevance (high/medium) was assigned to topics directly related to cold-start (5.B), budget recommendation (7.B), and evaluation (12.A). Topics like spending forecasting (6.A) and anomaly detection (8.A, 8.B) were deemed medium relevance because the approach is conceptually transferable but not domain-specific. Domains like Filipino cultural context (2.A-D) and expense categorization (3.A-C) were considered but rejected as the paper does not address these specifics. The paper's overall relevance to Odin is moderate; it offers a robust architectural pattern and evaluation methodology, but requires significant adaptation to the financial domain."
+limitations:
+  - "The evaluation was performed on a limited set of 28 scenarios, which may not be representative of real-world user diversity."
+  - "The system's effectiveness for cold-start users, a key issue for Odin, is acknowledged but not empirically validated."
+  - "The reliance on a single LLM (Gemini-2.0-Flash) for orchestration may introduce model-specific biases."
+  - "The paper does not address how the causal graph would be built from raw financial transaction data."
+  - "The computational cost for maintaining and reasoning over personal causal graphs for thousands of users is not addressed."
+  - "The paper does not detail a user study to validate the perceived trustworthiness and usefulness of the explanations." [unacknowledged]
+remember_this:
+  - "REMI uses a causal knowledge graph to model user context and generate recommendations."
+  - "The architecture achieves a Personalization Salience Score (PSS) of 0.85-0.92."
+  - "Causal Reasoning Accuracy (CRA) improved from 0.0 to 0.8 with the full REMI architecture."
+  - "Schema-based planning bridges symbolic reasoning and neural generation for interpretable outputs."
+  - "The system provides transparent explanations by tracing recommendations back to causal factors."
+```

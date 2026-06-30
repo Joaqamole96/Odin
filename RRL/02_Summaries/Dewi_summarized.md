@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.70764/gdpu-jbfi.2025.1(2)-09
-designation: local
+designation: international
 title: Financial Literacy and Digital Savings Behavior of Gen Z in the Fintech Era: A Systematic Literature Review
 authors: Dewi, A. K.
 year: 2025

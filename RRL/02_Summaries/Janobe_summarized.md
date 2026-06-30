@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.59431/jda.v4i1.660
-designation: local
+designation: local # Independent Developer, SourceCodester Community, Philippines
 title: Development of Budget Management System Using Visual Basic .NET and MySQL Database: A Desktop Application for Personal Financial Tracking
 authors: Janobe, J.
 year: 2025

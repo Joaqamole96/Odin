@@ -1,0 +1,119 @@
+```yaml
+paper_id: 10.66372/JGER.v1i1.1
+designation: international-algorithm-specific
+title: Concept drift monitoring and continual learning in production AI systems: an empirical cost–benefit comparison of detection methods and adaptation strategies
+authors: Patterson, S. M.; Lindberg, M. J.
+year: 2026
+venue: Journal of Global Engineering Review
+odin_topics:
+  - 6.A
+  - 6.B
+  - 8.A
+  - 8.B
+  - 12.A
+  - 12.B
+tldr: An empirical comparison of ADWIN, DDM, and Page-Hinkley drift detectors with incremental learning and full retraining shows no single configuration dominates across drift regimes.
+problem_and_motivation: Production machine learning models suffer performance degradation from concept drift, but practitioners lack comparative cost-benefit evidence to select detector-strategy pairs. The gap lies in integrating accuracy, latency, compute cost, and false-alarm rate into a unified operational framework.
+approach:
+  - Evaluated three drift detectors (ADWIN, DDM, Page-Hinkley) on Electricity and SEA benchmarks plus a noisy variant.
+  - Paired each detector with incremental learning (Hoeffding tree) and full retraining (XGBoost) adaptation strategies.
+  - Defined a cost-benefit score S = α·Acc − β·Lat − γ·Cost − δ·FAR with coefficients calibrated for balanced contribution.
+  - Conducted 60 controlled trials across five random seeds per configuration.
+  - Measured prequential accuracy, detection delay, update cost, and false-alarm rate.
+findings:
+  - num: ADWIN with incremental learning achieved the highest mean accuracy (0.864) and lowest update cost (1.00 baseline).
+  - num: DDM with retraining had the lowest detection delay (138 steps mean) but cost was 4.7× baseline and false-alarm rate 38% higher.
+  - ADWIN+Incremental dominated on gradual, recurring drift (Electricity) with highest accuracy and lowest false alarms.
+  - DDM+Retraining recovered fastest on abrupt drift (SEA) but its accuracy advantage was marginal after accounting for delay.
+  - Page-Hinkley+Incremental offered a middle ground with lowest false-alarm rate (0.42 per 1k steps) and moderate cost.
+  - num: On SEA-Noisy, all detectors degraded by 4–6 percentage points in accuracy.
+  - Detector quality is poorly summarized by accuracy alone; two configurations differed by <1% accuracy but nearly 5× in cost.
+key_figures_tables:
+  - Table 1: Representative studies on drift detection → contextual examples across domains.
+  - Table 2: Detector configurations → parameter rationale for ADWIN, DDM, Page-Hinkley.
+  - Table 3: Dataset configurations → drift types and points for Electricity, SEA, SEA-Noisy.
+  - Table 4: Headline performance comparison → accuracy, latency, cost, FAR across six pairs.
+  - Figure 1: Overall research framework → stream input to drift detector to adaptation to scoring.
+  - Figure 2: Methodological pipeline → prequential loop showing detector-strategy interaction.
+  - Figure 3: Per-segment accuracy vs. compute cost → ADWIN+Incremental flat cost, DDM+Retraining step spikes.
+key_equations:
+  - equation: S = α·Acc − β·Lat − γ·Cost − δ·FAR
+    explanation: Cost-benefit score integrating four operational metrics.
+definitions:
+  - term: Concept drift
+    definition: Change in the joint distribution P_t(x, y) over time.
+  - term: ADWIN
+    definition: Adaptive Windowing detector using Hoeffding bounds to detect mean shifts.
+  - term: DDM
+    definition: Drift Detection Method monitoring classifier error-rate changes.
+  - term: Page-Hinkley
+    definition: Cumulative sum detector for one-sided deviation signals.
+  - term: Prequential evaluation
+    definition: Online evaluation framework that updates metrics incrementally as data arrives.
+critical_citations:
+  - "[Zhong, 2024] — Time-decay features for transaction fraud drift."
+  - "[Han & Cao, 2024] — Multi-source fusion for credit default early warning."
+  - "[Li & Ling, 2026] — Ensemble anomaly detection for community banks."
+  - "[Wei & Shang, 2026] — Oversampling-ensemble interactions under imbalance."
+relevance:
+  topics:
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Directly evaluates predictive performance degradation under drift, informing Odin's forecasting module.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Compares adaptation strategies for streaming data, directly applicable to spending forecast updates.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Drift detection is a core component of anomaly detection pipelines; framework informs trigger design.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: ADWIN, DDM, and Page-Hinkley are candidate detectors for spending anomalies.
+    - code: 8.C
+      name: Cold-Start Baseline Strategies for Anomaly Detection
+      relevance: contextual
+      justification: Mentions cold-start only indirectly via buffer/window initialization.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Cost-benefit framework provides a multi-metric evaluation template for Odin modules.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Directly compares algorithmic detector-strategy pairs with controlled experiments.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: low
+      justification: Only tangentially related via drift in user behavior distributions.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: contextual
+      justification: Identifies gap in cost-benefit evidence for drift handling, analogous to PFMS gaps.
+  contribution: The paper provides a directly reusable cost-benefit evaluation framework for Odin's algorithmic modules, particularly for spending forecasting (6.A/6.B) and anomaly detection (8.A/8.B). The empirical comparison of ADWIN, DDM, and Page-Hinkley offers concrete guidance for selecting drift detectors based on dominant drift profiles in user spending data. The adaptation strategy comparison (incremental vs. full retrain) informs Odin's design choices for updating user profiles and budget recommendations. The multi-metric approach (accuracy, latency, cost, false-alarm rate) establishes a template for evaluating Odin's system components beyond predictive accuracy.
+  directly_justifies:
+    - "ADWIN with incremental learning is preferred when spending patterns change gradually and compute is constrained."
+    - "DDM with retraining reacts fastest to abrupt shifts, justifying higher compute for critical anomaly scenarios."
+    - "No single detector-strategy pair dominates across all regimes, supporting adaptive configuration in Odin."
+    - "False-alarm rate carries significant operational cost, informing threshold tuning for spending anomaly alerts."
+  limits:
+    - "Benchmarks may not represent all production drift profiles (e.g., seasonal spending cycles)."
+    - "Cost coefficients are illustrative rather than universal; teams should calibrate against true unit costs."
+    - "Evaluation considered only binary classification; Odin's spending data may involve multi-class or regression settings."
+    - "The study does not address privacy-preserving adaptation, which is relevant to Odin's data handling."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The Spending Forecasting domain (6.A, 6.B) was flagged as high relevance because the paper directly evaluates predictive accuracy under drift and compares adaptation strategies for streaming data, both core to Odin's forecasting module. The Anomaly Detection domain (8.A, 8.B) was also high relevance as the drift detectors studied (ADWIN, DDM, Page-Hinkley) are directly applicable to spending anomaly detection, and the cost-benefit framework informs trigger design. The System Evaluation domain (12.A, 12.B) was high relevance because the multi-metric experimental framework provides a template for evaluating Odin's algorithmic modules. Behavioral Profiling (5.A) was considered but assigned low relevance because the paper does not address user profile construction or classification. Existing Systems & Gaps (4.B) was contextual only, as the paper identifies a general gap in cost-benefit evidence analogous to Odin's design gap. Mobile-First Design, Data Privacy, User Retention, and Savings/Debt Management domains were rejected as the paper contains no actionable claims for those areas. The overall relevance is high for forecasting, anomaly detection, and system evaluation modules."
+limitations:
+  - "Electricity and SEA benchmarks may not represent all production drift profiles; seasonal spending cycles are unrepresented. [unacknowledged]"
+  - "Cost coefficients are illustrative; Odin-specific calibration is required. [acknowledged]"
+  - "Only binary classification was evaluated; Odin's spending data may require multi-class or regression settings. [unacknowledged]"
+  - "Privacy-preserving adaptation is not addressed, limiting direct applicability to privacy-sensitive PFMS contexts. [unacknowledged]"
+remember_this:
+  - "ADWIN with incremental learning gives the best accuracy-to-cost ratio for gradual drift."
+  - "DDM with retraining reacts fastest to abrupt shifts but costs nearly 5× more."
+  - "Page-Hinkley offers a middle ground with the lowest false-alarm rate."
+  - "No single drift detection configuration dominates across all operational regimes."
+  - "The cost-benefit framework enables multi-metric evaluation beyond accuracy alone."
+```

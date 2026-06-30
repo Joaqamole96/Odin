@@ -16,7 +16,7 @@ author: Odin Research Team
 
 ## Input
 
-The skill accepts a single Markdown file containing multiple YAML summaries, each wrapped in ` ```yaml ... ``` ` blocks (as produced by the `summarizer-ai` skill).
+The skill accepts a single Markdown file containing multiple YAML summaries, each wrapped in ` ```yaml ... ``` ` blocks.
 
 **Required fields from each YAML summary:**
 - `title`

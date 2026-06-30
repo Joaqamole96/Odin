@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.1234/wjebm.2025.2.6.1
-designation: local
+designation: international
 title: A Systematic Literature Review on Personal Financial Management Practices: Budgeting, Investment, Debt, and Saving
 authors: Elliyana, E.; Maricar, R.; Toalib, R.
 year: 2025

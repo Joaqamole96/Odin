@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 13523fe0-2a2d-5e2f-9a5c-5b8c9d2e4f3a
-designation: local
+designation: local # Published in Technological University of the Philippines - Manila
 title: WEKA-BASED DECISION-TREE MODEL FOR USER SUBSCRIPTION PLAN PREDICTION
 authors: Guban, J. C. R.; Menderico, C. D. R.; Montalban, D. M. G.
 year: 2025

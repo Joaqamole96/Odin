@@ -3,7 +3,7 @@ paper_id: "f47ac10b-58cc-4372-a567-0e02b2c3d479"
 designation: "local"
 title: "Consumer Finance Survey Report 2021"
 authors: "Bangko Sentral ng Pilipinas"
-year: 2021
+year: 2021 # This is a special exception as this is a core paper
 venue: "Unknown"
 odin_topics:
   - "1.C"

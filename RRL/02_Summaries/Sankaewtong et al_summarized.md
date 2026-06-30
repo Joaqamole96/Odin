@@ -1,0 +1,146 @@
+```yaml
+paper_id: 10.1109/ACCESS.2025.3636560
+designation: international
+title: SoK: Advances in Anomaly Detection Techniques for Cryptoasset Transactions
+authors: Sankaewtong, K.; Kim, T.; Tessone, C. J.; Ikeda, Y.
+year: 2025
+venue: IEEE Access
+odin_topics:
+  - 4.A
+  - 4.B
+ 5.A
+ 5.C
+ 6.A
+ 6.B
+ 7.B
+ 7.C
+ 8.A
+ 8.B
+ 10.A
+ 12.A
+ 12.B
+tldr: A systematization of knowledge that maps 103 peer-reviewed studies on anomaly detection in cryptoasset transactions into four methodological families and identifies five cross-cutting research gaps.
+problem_and_motivation: The open and pseudonymous nature of blockchain systems exposes them to fraud, market manipulation, and protocol exploits, yet the existing literature on anomaly detection in this domain remains fragmented. A unified synthesis is needed to compare diverse methods, identify limitations, and guide the development of more effective, scalable, and interpretable detection systems.
+approach:
+  - A reproducible literature search was conducted using the OpenAlex database with a targeted query string on anomaly detection and cryptoassets.
+  - A multi-stage screening process applied inclusion and exclusion criteria, resulting in a final set of 103 peer-reviewed publications for in-depth analysis.
+  - A multi-dimensional classification framework was developed, with detection methodology as the primary axis, categorizing techniques into statistical, network analysis, machine learning, and heuristic-based methods.
+  - The studies were analyzed across primary dimensions (methodology, data source, application domain) and secondary dimensions (temporal aspects, scale of analysis).
+  - A comparative analysis was performed to evaluate the strengths, weaknesses, and trade-offs of each methodological category.
+findings:
+  - Machine learning methods dominate the literature, accounting for 49 of the 103 analyzed studies.
+  - Network analysis constitutes the second-largest group with 30 studies, emphasizing the importance of graph-based perspectives.
+  - Five cross-cutting research gaps were identified: label scarcity, adversarial evasion, real-time scalability, behavioral ambiguity, and multi-chain visibility.
+  - num: The reviewed literature shows that supervised models can achieve F1-scores exceeding 95% for specific fraud detection tasks, but performance is highly dependent on feature engineering and data quality.
+  - num: The Miner Sequence Bootstrapping (MSB) test identified statistically significant selfish mining behavior in Monacoin and Bitcoin Cash, with Monacoin exhibiting the highest fraction of suspicious miners.
+  - num: A hybrid distance-density framework for pump-and-dump detection consistently outperforms single-metric methods, achieving a higher detection rate and lower false positive rate.
+  - A key challenge is the scarcity of accurately labeled data, severely impeding supervised learning and necessitating semi-supervised or unsupervised approaches.
+  - The ambiguity between legitimate privacy-preserving behaviors and malicious obfuscation techniques presents a significant detection challenge.
+  - The complexity of cross-chain activity and bridge exploits demands more integrated, entity-centric detection methods.
+key_figures_tables:
+  - Figure 2: Distribution of selected research papers by publication year → Shows notable growth in research activity starting from 2009, the year Bitcoin was introduced.
+  - Figure 6: Taxonomy of anomaly detection techniques → Provides a structured overview of four primary methodological categories and their subcategories.
+  - Figure 7: Distribution of 103 selected research papers across categories → Illustrates the dominance of machine learning and network analysis approaches.
+  - Table 14: Comparison of anomaly detection methodologies → Synthesizes trade-offs in data requirements, detection capabilities, interpretability, and scalability.
+key_equations:
+  - equation: "Sn(X) = (1, S1(X), S2(X), ..., Sn(X))"
+    explanation: Truncated signature of a path for time-series anomaly detection.
+  - equation: "P(k_v) = k_v^α / Σ_w k_w^α"
+    explanation: Preferential attachment probability for new links in a network.
+  - equation: "MD(r) = sqrt((r - μ)^T Σ^{-1} (r - μ))"
+    explanation: Mahalanobis distance for multivariate anomaly scoring.
+  - equation: "F1 = 2 * (Precision * Recall) / (Precision + Recall)"
+    explanation: Harmonic mean of precision and recall for evaluating imbalanced classification.
+definitions:
+  - term: SoK
+    definition: Systematization of Knowledge, a comprehensive review that organizes and synthesizes existing research in a field.
+  - term: GNN
+    definition: Graph Neural Network, a deep learning model that operates on graph-structured data.
+  - term: DeFi
+    definition: Decentralized Finance, a blockchain-based financial system without central intermediaries.
+  - term: UTXO
+    definition: Unspent Transaction Output, a transaction model used by Bitcoin that tracks discrete chunks of cryptocurrency.
+  - term: MEV
+    definition: Miner Extractable Value, the profit a miner can make by reordering transactions within a block.
+critical_citations:
+  - "[Nakamoto, 2008] — Introduced the foundational blockchain technology for Bitcoin."
+  - "[Chen et al., 2019] — Provides evidence of market manipulation using Mt. Gox transaction data."
+  - "[Wu et al., 2022] — Establishes a baseline for graph-based phishing detection on Ethereum."
+  - "[Li et al., 2021] — Presents a goal-modeling framework for detecting money laundering roles in Bitcoin mixing."
+relevance:
+  topics:
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Provides a comprehensive overview of anomaly detection techniques applicable to PFMS.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Explicitly identifies five cross-cutting research gaps, including label scarcity and real-time scalability.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Discusses behavioral profiling through transaction pattern analysis and address clustering.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Reviews supervised, unsupervised, and deep learning methods for classifying addresses and transactions as anomalous.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: medium
+      justification: Reviews forecasting methods like SARIMAX and signature-based techniques for anomaly detection.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: medium
+      justification: Discusses LSTM, VAR, and time-series models for detecting anomalies in sequential transaction data.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: low
+      justification: Tangentially relevant as the paper focuses on detection, not recommendation.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: contextual
+      justification: Provides background on optimization in financial contexts but is not the paper's focus.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Directly addresses anomaly detection in blockchain transaction networks, a relevant domain.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Provides a comprehensive taxonomy and comparison of statistical, network, ML, and heuristic algorithms.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: Addresses behavioral ambiguity and the challenge of distinguishing privacy-preserving behavior from malicious obfuscation.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Discusses evaluation metrics for anomaly detection, including precision, recall, F1, AUC-ROC, and AUC-PR.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Provides a comparative analysis of different algorithmic approaches and their performance trade-offs.
+  contribution: "This paper provides a systematic review and taxonomy of anomaly detection techniques directly applicable to the design of Odin's anomaly detection module (8.A, 8.B). The identification of key research gaps, such as label scarcity and real-time scalability, informs the development of robust detection strategies. The comparative analysis of statistical, network, machine learning, and heuristic methods offers a foundational framework for selecting and evaluating Odin's algorithmic components. The discussion on behavioral ambiguity and privacy-preserving analytics is crucial for designing a system that respects user trust while effectively identifying illicit activity."
+  directly_justifies:
+    - "Hybrid graph-neural and heuristic pipelines are a promising direction for anomaly detection."
+    - "Semi-supervised and self-supervised learning are essential to address label scarcity."
+    - "Explainable AI techniques are vital for model interpretability and user trust."
+    - "Real-time detection at block-time granularity is a critical requirement."
+    - "Addressing cross-chain anomalies requires integrated, entity-centric detection methods."
+  limits:
+    - "The reviewed studies focus primarily on Bitcoin and Ethereum, with less coverage of other blockchains."
+    - "The comparative analysis is qualitative and does not involve a standardized empirical benchmark."
+    - "The paper does not propose a novel algorithm but synthesizes existing ones."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant for domains related to anomaly detection (Domain 8), system evaluation (Domain 12), and existing systems/gaps (Domain 4). Topic codes 8.A, 8.B, 4.B, and 12.B were assigned a relevance of 'high' because the paper directly addresses these core concerns by providing a comprehensive taxonomy and comparative analysis of anomaly detection algorithms, explicitly identifying research gaps, and discussing evaluation methodologies. Topic codes 5.C, 6.B, and 10.A received 'medium' relevance as the paper discusses classification approaches, forecasting algorithms, and data privacy challenges that are supportive of Odin's design in these areas. Topics related to budgeting (7.B, 7.C) and Filipino context (1.A, 2.D) were considered but rejected due to the paper's general, international scope and focus on technical detection methods rather than domain-specific financial practices. The paper's overall relevance to Odin lies in its comprehensive review of anomaly detection techniques, which serves as a critical reference for designing and evaluating the system's core analytical modules."
+limitations:
+  - "The survey is limited to papers published before March 2025, and may not include the most recent developments. [unacknowledged]"
+  - "Direct performance comparisons are difficult due to the lack of standardized benchmarks and datasets across studies."
+  - "The paper's focus on cryptoasset transactions may limit the direct transferability of all findings to personal finance management systems for Filipino young professionals. [unacknowledged]"
+remember_this:
+  - "Machine learning is the dominant approach for cryptoasset anomaly detection."
+  - "Label scarcity and class imbalance are major obstacles for supervised learning."
+  - "Hybrid and explainable models are critical for practical deployment and user trust."
+  - "num: Supervised models can achieve F1-scores over 95% for specific tasks like phishing detection."
+  - "Cross-chain activity and privacy tools create significant behavioral ambiguity for detectors."
+```

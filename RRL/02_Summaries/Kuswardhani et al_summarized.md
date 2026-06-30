@@ -1,6 +1,6 @@
 ```yaml
 paper_id: "1e6b4d3a-8f9a-5c7e-9b2d-4f8a3c6e1d7b"
-designation: "local"
+designation: international
 title: "The Influence of E-Wallets on The Consumptive Behavior Generation Z: Systematic Review"
 authors: "Kuswardhani, E. L.; Sari, M. A. N. P.; Yuniawan, A.; Kusumawardhani, A."
 year: 2025

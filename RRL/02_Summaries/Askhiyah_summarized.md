@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.59784/journaljoae.v1i1.37
-designation: local
+designation: international
 title: Digital Finance Usage and Its Impact on Consumer Economic Behavior Based on National Data
 authors: Askhiyah, U. M.
 year: 2026

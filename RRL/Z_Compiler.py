@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Compile all summary files into a single Markdown document, with optional filtering.
+Compile all summary files into a single Markdown document, with optional filtering, range selection, and sorting.
 
 Usage:
     python3 Z_Compiler.py --input ./summaries --output-dir ./compiled
@@ -9,13 +9,19 @@ Usage:
     python3 Z_Compiler.py -i ./02_Internationals -o ./out -t 7.C
     python3 Z_Compiler.py -i ./02_Internationals -o ./out -d international -t 7.C
     python3 Z_Compiler.py -i ./02_Internationals -o ./out --quiet
+    python3 Z_Compiler.py -i ./summaries -o ./out --floor 5 --ceiling 15
+    python3 Z_Compiler.py -i ./summaries -o ./out --floor 5 --ceiling 15 --randomize
+    python3 Z_Compiler.py -i ./summaries -o ./out -d international --randomize
+    python3 Z_Compiler.py -i ./summaries -o ./out --sort year
+    python3 Z_Compiler.py -i ./summaries -o ./out --sort alpha --floor 2 --ceiling 10
 """
 
 import argparse
 import re
 import sys
+import random
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Tuple
 
 
 # The agent instruction to append at the end of every compilation
@@ -114,6 +120,21 @@ def extract_topics(content: str) -> List[str]:
     return topics
 
 
+def extract_year(content: str) -> Optional[int]:
+    """
+    Extract the year value from file content.
+    Looks for "year:" followed by a 4-digit number.
+    """
+    pattern = re.compile(r'^year:\s*(\d{4})', re.MULTILINE)
+    match = pattern.search(content)
+    if match:
+        try:
+            return int(match.group(1))
+        except ValueError:
+            return None
+    return None
+
+
 def paper_matches_filters(content: str, desig_filter: Optional[str], topic_filter: Optional[str]) -> bool:
     """
     Check if a paper matches the given filters based on its content.
@@ -139,10 +160,10 @@ def paper_matches_filters(content: str, desig_filter: Optional[str], topic_filte
     return True
 
 
-def find_summary_files(input_dir: Path, desig_filter: Optional[str] = None, topic_filter: Optional[str] = None, quiet: bool = False) -> tuple[List[Path], int, int]:
+def find_summary_files(input_dir: Path, desig_filter: Optional[str] = None, topic_filter: Optional[str] = None, quiet: bool = False) -> Tuple[List[Tuple[Path, str]], int]:
     """
     Find all summary files in the directory that match the filters (deduplicated by base name).
-    Returns: (selected_files, total_found, total_after_filter)
+    Returns: (list of (Path, content) tuples for matched files, total unique files found)
     """
     # Collect all files by base name, preferring .yaml > .yml > .md
     file_map = {}
@@ -155,7 +176,7 @@ def find_summary_files(input_dir: Path, desig_filter: Optional[str] = None, topi
             file_map[base][ext] = f
     
     total_found = len(file_map)
-    selected_files = []
+    matched_items = []  # will hold (Path, content)
     
     # For each base name, pick the preferred extension and check filters
     ext_priority = [".yaml", ".yml", ".md"]
@@ -173,7 +194,7 @@ def find_summary_files(input_dir: Path, desig_filter: Optional[str] = None, topi
         if chosen_path is None:
             continue
         
-        # Read content once to check filters
+        # Read content once
         try:
             content = chosen_path.read_text(encoding='utf-8-sig')
         except Exception as e:
@@ -183,7 +204,7 @@ def find_summary_files(input_dir: Path, desig_filter: Optional[str] = None, topi
         
         # Check filters
         if paper_matches_filters(content, desig_filter, topic_filter):
-            selected_files.append(chosen_path)
+            matched_items.append((chosen_path, content))
         else:
             if not quiet:
                 # Print which filter caused the exclusion
@@ -194,7 +215,8 @@ def find_summary_files(input_dir: Path, desig_filter: Optional[str] = None, topi
                 elif topic_filter and topic_filter not in topics:
                     print(f"Skipping {chosen_path.name} (topics: {topics}, filter: {topic_filter})", file=sys.stderr)
     
-    return sorted(selected_files), total_found
+    # Do NOT sort here; sorting is done in main based on --sort flag
+    return matched_items, total_found
 
 
 def main():
@@ -219,6 +241,28 @@ def main():
         "--topic", "-t",
         help="Filter by topic code (e.g., 7.C, 5.A, 13.B)."
     )
+    # NEW: floor and ceiling instead of limit
+    parser.add_argument(
+        "--floor",
+        type=int,
+        help="Starting position (1‑based) of the range of papers to include (default: 1)."
+    )
+    parser.add_argument(
+        "--ceiling",
+        type=int,
+        help="Ending position (1‑based, inclusive) of the range of papers to include (default: total matched)."
+    )
+    # NEW: sort flag
+    parser.add_argument(
+        "--sort",
+        choices=["alpha", "year"],
+        help="Sort order: 'alpha' (alphabetical by source filename) or 'year' (descending by year). If not specified, defaults to alphabetical (same as 'alpha')."
+    )
+    parser.add_argument(
+        "--randomize", "-r",
+        action="store_true",
+        help="Randomize the order of papers after sorting (and before applying floor/ceiling)."
+    )
     parser.add_argument(
         "--quiet", "-q",
         action="store_true",
@@ -242,25 +286,98 @@ def main():
     desig_filter = args.designation.lower() if args.designation else None
     topic_filter = args.topic if args.topic else None
 
-    # Determine output file name based on filters
-    if topic_filter and desig_filter:
-        # Combine both: e.g., "International-7.C-Compilation.md"
-        base_name = f"{desig_filter.capitalize()}-{topic_filter}-Compilation.md"
-    elif topic_filter:
-        base_name = f"{topic_filter}-Compilation.md"
-    elif desig_filter:
-        # Capitalize first letter, e.g., "local" -> "Local-Compilation.md"
-        base_name = f"{desig_filter.capitalize()}-Compilation.md"
-    else:
-        base_name = "All-Compilation.md"
-
+    # Determine base name components
+    name_parts = []
+    if desig_filter:
+        name_parts.append(desig_filter.capitalize())
+    if topic_filter:
+        name_parts.append(topic_filter)
+    if not name_parts:
+        name_parts.append("All")
+    
+    # Add floor/ceiling to filename if specified
+    if args.floor is not None:
+        name_parts.append(f"Floor{args.floor}")
+    if args.ceiling is not None:
+        name_parts.append(f"Ceiling{args.ceiling}")
+    
+    # Add sort info
+    if args.sort == "year":
+        name_parts.append("YearSorted")
+    elif args.sort == "alpha":
+        name_parts.append("AlphaSorted")
+    # if not specified, we still default to alpha but we don't need to mention in filename (backward compatible)
+    
+    # Add randomized indicator
+    if args.randomize:
+        name_parts.append("Randomized")
+    
+    # Assemble filename
+    base_name = "-".join(name_parts) + "-Compilation.md"
     output_file = output_dir / base_name
 
-    # Find and filter summary files
-    files, total_found = find_summary_files(input_dir, desig_filter, topic_filter, args.quiet)
+    # Find and filter summary files – returns list of (path, content)
+    matched_items, total_found = find_summary_files(input_dir, desig_filter, topic_filter, args.quiet)
+    original_matched = len(matched_items)
     
-    if not files:
-        print(f"Warning: No matching summary files found in '{args.input}'.", file=sys.stderr)
+    # items to process (list of (path, content))
+    items = matched_items.copy()
+    
+    # Apply sorting (default: alphabetical if no --sort given, but we treat 'alpha' as default)
+    sort_mode = args.sort if args.sort else "alpha"  # default to alphabetical for backward compatibility
+    if sort_mode == "alpha":
+        items.sort(key=lambda x: x[0].name)  # sort by filename
+        if not args.quiet:
+            print(f"Sorted alphabetically by filename.")
+    elif sort_mode == "year":
+        # Sort descending by year; papers without year go to the end
+        def year_key(item):
+            year = extract_year(item[1])
+            # If year is None, treat as -1 so they appear after all real years
+            return -year if year is not None else -float('inf')  # descending, so larger year first
+        items.sort(key=year_key, reverse=False)  # but we want descending: use reverse=True with a positive key? Actually easier: key returns -year for real years, and -inf for missing; then reverse=False gives descending order? Let's think: if we want highest year first, we can return year and reverse=True, but then missing year (None) would be last if we set it to 0? Better: return year or -1, then reverse=True so highest first, but -1 would be last. That works: key = year or -1, reverse=True. But if year is 0? Not likely. So:
+        def year_key(item):
+            return extract_year(item[1]) or -1
+        items.sort(key=year_key, reverse=True)
+        if not args.quiet:
+            print(f"Sorted by year descending.")
+    
+    # Randomize if requested (after sorting)
+    if args.randomize:
+        random.shuffle(items)
+        if not args.quiet:
+            print(f"Randomized order of {len(items)} papers.")
+    
+    # Apply floor and ceiling (range selection)
+    total_items = len(items)
+    floor = args.floor if args.floor is not None else 1
+    ceiling = args.ceiling if args.ceiling is not None else total_items
+    
+    # Validate floor and ceiling
+    if floor < 1:
+        print("Warning: --floor must be at least 1. Using 1.", file=sys.stderr)
+        floor = 1
+    if ceiling < floor:
+        print("Error: --ceiling must be greater than or equal to --floor.", file=sys.stderr)
+        sys.exit(1)
+    
+    # Convert to 0‑based slice indices (ceiling inclusive -> end exclusive)
+    start = floor - 1
+    end = min(ceiling, total_items)  # inclusive, so slice up to ceiling
+    
+    if start >= total_items:
+        # No items in range
+        items = []
+    else:
+        items = items[start:end]
+    
+    included_count = len(items)
+    if not args.quiet:
+        if args.floor is not None or args.ceiling is not None:
+            print(f"Selected papers {floor} to {ceiling} (out of {total_items} matched). Included: {included_count} papers.")
+
+    if not items:
+        print(f"Warning: No papers in the specified range (floor={floor}, ceiling={ceiling}) or no matching files found.", file=sys.stderr)
         if not args.quiet:
             if desig_filter or topic_filter:
                 print(f"Filters applied: designation={desig_filter}, topic={topic_filter}", file=sys.stderr)
@@ -275,7 +392,7 @@ def main():
                 if topic_filter:
                     out.write(f"- Topic: `{topic_filter}`\n")
                 out.write("\n")
-            out.write("No summary files match the given filters.\n\n")
+            out.write("No summary files match the given criteria.\n\n")
             out.write(AGENT_INSTRUCTION)
         print(f"Created empty output: {output_file}")
         sys.exit(0)
@@ -284,7 +401,6 @@ def main():
     papers_processed = 0
     papers_failed = 0
     errors = []
-    matched_by_filter = len(files)
 
     with open(output_file, 'w', encoding='utf-8') as out:
         # Write header
@@ -299,12 +415,24 @@ def main():
                 out.write(f"- Topic: `{topic_filter}`\n")
             out.write("\n")
         
-        out.write(f"**Total Papers:** {len(files)}\n\n")
+        # Show total papers after range and sorting
+        out.write(f"**Total Papers:** {included_count}\n\n")
+        notes = []
+        if args.floor is not None or args.ceiling is not None:
+            range_str = f"positions {floor} to {ceiling}"
+            if included_count < (ceiling - floor + 1) and ceiling > total_items:
+                range_str += f" (clipped to {total_items} available)"
+            notes.append(f"Included papers {range_str}")
+        if args.sort:
+            notes.append(f"Sorted by {args.sort}")
+        if args.randomize:
+            notes.append("Order randomized")
+        if notes:
+            out.write(f"**Note:** {', '.join(notes)}.\n\n")
         out.write(f"---\n\n")
 
-        for i, filepath in enumerate(files, 1):
+        for i, (filepath, content) in enumerate(items, 1):
             try:
-                content = filepath.read_text(encoding='utf-8-sig')
                 # Clean up any trailing whitespace
                 content = content.strip()
                 
@@ -338,7 +466,13 @@ def main():
         if desig_filter or topic_filter:
             print(f"Filters applied:  designation={desig_filter}, topic={topic_filter}")
         print(f"Files found:      {total_found}")
-        print(f"Files matched:    {matched_by_filter}")
+        print(f"Files matched:    {original_matched}")
+        if args.sort:
+            print(f"Sort order:       {args.sort}")
+        if args.randomize:
+            print(f"Randomized:       Yes")
+        if args.floor is not None or args.ceiling is not None:
+            print(f"Range selected:   {floor} to {ceiling} (included {included_count})")
         print(f"Papers processed: {papers_processed}")
         if papers_failed > 0:
             print(f"Papers failed:    {papers_failed}")

@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.46932/sfjdv7n4-005
-designation: local
+designation: local # Published in a Philippine university
 title: The importance of financial literacy for young adults: a guide to smart money management
 authors: Mercado, M. D.; Castillo, A. P.; Araves, J. A.
 year: 2026

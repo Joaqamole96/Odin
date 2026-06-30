@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 9f0b6d7c-8a3b-5e1f-9c4d-2a7e8b3c5d1f
-designation: local
+designation: international
 title: Integrating Financial Management and Gamification: A Systematic Literature Review and Future Research Agenda
 authors: Prasetyo, A. P.; Santoso, H. B.; Putra, P. O. H.
 year: 2023

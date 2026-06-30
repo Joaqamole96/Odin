@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.20885/psikologika.vol30.iss2.art5
-designation: local
+designation: international
 title: The Mediating Role of Financial Well-Being in the Relationship between Financial Behavior and Stress Among Irregular Income Workers
 authors: Nurkhalida, K.; Renanita, T.
 year: 2025

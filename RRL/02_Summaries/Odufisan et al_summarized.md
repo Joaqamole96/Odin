@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 9ae8a6f2-3c5c-5678-9012-345678901234
-designation: local
+designation: international
 title: Harnessing artificial intelligence and machine learning for fraud detection and prevention in Nigeria
 authors: Odufisan, O.I.; Abhulimen, O.V.; Ogunti, E.O.
 year: 2025
