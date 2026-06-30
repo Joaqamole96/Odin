@@ -29,6 +29,7 @@ This directory describes the user-facing screens and major workflow surfaces for
 - 21. Notifications / Alerts Center
 - 22. Installation Guide
 - 23. Account Offboarding
+- 24. Help and Problem Reporting
 
 ## Notes
 
