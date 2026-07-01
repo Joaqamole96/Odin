@@ -1,0 +1,107 @@
+```yaml
+paper_id: 10.1016/j.socimp.2025.100138
+designation: local-algorithm-specific
+title: From data to decision: Alleviating poverty and promoting development through measuring the unmeasurable economic numbers
+authors: Onsay, E. A.; Rabajante, J. F.
+year: 2025
+venue: Societal Impacts
+odin_topics:
+  - 5.C
+  - 6.A
+  - 6.B
+  - 8.B
+  - 12.A
+  - 12.B
+tldr: Integrates machine learning with econometrics to predict multidimensional poverty and generate localized policy targeting tools from CBMS data.
+problem_and_motivation: Traditional poverty measurement relies on costly, time-intensive surveys, and current regression-based analyses often lack predictive precision. There is a critical need for more accurate, localized, and data-driven tools to inform poverty alleviation policies in the Philippines.
+approach:
+  - Used Community-Based Monitoring System (CBMS) data from 34 localities in Camarines Sur, Philippines.
+  - Combined descriptive, diagnostic, and multidimensional statistical analysis with econometric models like logit/probit regression.
+  - Applied machine learning regression (Random Forest, XGBoost, CatBoost, LightGBM, SVR) and classification (Random Forest, AdaBoost, SVM, etc.) algorithms.
+  - Conducted 273 regression and 468 classification ensemble runs to predict poverty incidence, gap, and severity.
+  - Generated policy maps and a three-round classification system to prioritize interventions for the most vulnerable populations.
+findings:
+  - num: Random Forest classification achieved a prediction accuracy of 92.60–98.00%.
+  - num: The proposed model reduced traditional survey and data processing costs by up to 70%.
+  - Random Forest regressor and classifier outperformed other models for poverty prediction.
+  - A set of 27 multidimensional socioeconomic variables were identified as significant predictors of poverty.
+  - Distinct poverty configurations exist across different localities and indigenous tribes, requiring context-specific policies.
+key_figures_tables:
+  - Figure 1: Sample results of statistical and econometric analyses showing poverty proportions by locality → Poverty outcomes vary significantly and are influenced by multidimensional variables.
+  - Figure 2: Results of machine learning regression and classification → Random Forest models show superior performance and consistency.
+  - Table 1: Theory of Change, hypotheses, and results chain → Provides a framework linking inputs, processes, outputs, and impact indicators.
+  - Table 2: Proposed intervention programs and policy initiatives → Details targeted policies for nutrition, housing, education, and livelihood.
+  - Table 3: Multidimensional poverty indicators and target areas → Maps indicators to recommended interventions and priority groups.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: CBMS
+    definition: Community-Based Monitoring System, a data collection system for local poverty and socioeconomic indicators.
+  - term: Random Forest
+    definition: An ensemble learning method that constructs multiple decision trees and outputs the average or mode of predictions.
+  - term: XGBoost
+    definition: eXtreme Gradient Boosting, an optimized algorithm for gradient boosting known for speed and performance.
+critical_citations:
+  - "[Onsay & Rabajante, 2024] — Details the dataset and initial models used for poverty prediction."
+  - "[Sobreviñas, 2020] — Provides a framework for analyzing chronic and transient poverty using CBMS data."
+  - "[Haughton & Khandker, 2009] — Standard reference for poverty and inequality measurement techniques."
+relevance:
+  topics:
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: contextual
+      justification: Applies classification algorithms to categorize poverty levels, analogous to profiling financial behavior.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Directly employs predictive machine learning models (Random Forest, XGBoost) for forecasting socioeconomic outcomes.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: contextual
+      justification: Uses similar forecasting algorithms (Random Forest, etc.) though applied to poverty data, not spending sequences.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: contextual
+      justification: Classification models used could be adapted for anomaly detection, though not the paper's focus.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Provides a clear evaluation framework using accuracy, cost reduction, and policy targeting metrics.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Systematically evaluates and compares 7 regression and 12 classification algorithms.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: low
+      justification: The paper profiles poverty and vulnerability, which are analogous but not directly about financial behavior profiles.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: low
+      justification: Policy recommendations are similar to budget allocation strategies in a public policy context.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: low
+      justification: Related to financial management for poverty alleviation, but not specifically about savings goals.
+  contribution: This paper provides a robust methodological framework for predictive classification that can inform Odin's behavioral profiling and forecasting modules. Its use of ensemble methods and systematic evaluation offers a blueprint for Odin's algorithmic architecture. The focus on localized targeting and cost-efficiency is directly relevant to Odin's design as a PFMS for Filipino users. The paper's emphasis on data-driven policy recommendations justifies Odin's core function of providing actionable financial insights.
+  directly_justifies:
+    - "Machine learning models, specifically Random Forest, can predict financial states with up to 98% accuracy."
+    - "A systematic comparison of multiple algorithms is essential for selecting the optimal module."
+    - "A three-round classification system can prioritize users based on vulnerability."
+    - "Using local data is critical for developing context-specific financial tools."
+  limits:
+    - "The study focuses on poverty prediction, not personal spending, so direct applicability to Odin's core tasks is limited."
+    - "The dataset is regional (Bicol), which may limit generalizability to other Filipino demographics."
+  mapping_rationale: A systematic scan of the 12 functional domains revealed that the paper's primary relevance lies in its algorithmic and evaluative contributions. The domains of Spending Forecasting (6.A, 6.B) and System Evaluation (12.A, 12.B) were flagged as having high relevance because the paper directly compares and validates machine learning models for prediction, which is analogous to Odin's forecasting needs. The Behavioral Profiling domain (5.C) is contextually relevant due to its classification approach. Other domains like Expense Categorization (3.A-C) and Mobile-First Design (9.A-B) were considered and rejected as the paper does not address them. Similarly, domains like Data Privacy (10) and Engagement (11) were rejected for lacking discussion. The financial domains (1, 2, 7, 13) were rejected as the paper's scope is macroeconomic poverty, not personal finance. The final assessment is that the paper offers high-value methodological and evaluation strategies that can be adapted for Odin's algorithmic core.
+limitations:
+  - "Focuses on macroeconomic poverty, not personal financial behavior."
+  - "Models are region-specific and may not generalize to the broader Filipino young professional demographic."
+  - "Does not address real-time data processing or mobile application constraints."
+  - "The ethical statement notes that ethical clearance was not required, but using socioeconomic data in a PFMS requires careful privacy handling [unacknowledged]."
+remember_this:
+  - "Random Forest achieved 92.60-98.00% accuracy in classifying poverty states."
+  - "Systematic comparison of 12 classification algorithms is essential for performance validation."
+  - "Using 27 socioeconomic variables improved prediction and policy targeting."
+  - "The framework enables localized policy targeting and cost-efficient data analysis."
+```

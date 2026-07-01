@@ -1,0 +1,111 @@
+```yaml
+paper_id: 10.1145/3726302.3729897
+designation: international-algorithm-specific
+title: Are Generative AI Agents Effective Personalized Financial Advisors?
+authors: Takayanagi, T.; Izumi, K.; Sanz-Cruzado, J.; McCreadie, R.; Ounis, I.
+year: 2025
+venue: Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '25)
+odin_topics:
+  - 5.A
+  - 5.B
+  - 5.C
+  - 10.B
+  - 11.A
+  - 12.A
+  - 12.B
+  - 12.C
+  - 4.B
+tldr: LLM-based conversational agents can effectively elicit investor preferences and personalize advice, but their influence depends on elicitation quality, and users may trust agents that provide worse advice.
+problem_and_motivation: Human financial advisors are costly, excluding many; automated systems often ignore personalization and trust-building. Existing conversational agents have not been tested in high-stakes financial advisory where users lack expertise and mistakes carry risk. This paper investigates whether LLM-advisors can effectively elicit preferences, provide personalized guidance, and leverage personality to foster trust.
+approach:
+  - Conducted a lab-based user study with 64 participants acting as three archetypal investor profiles (growth-oriented, conservative income, risk-taking).
+  - Divided interaction into two stages: preference elicitation (System-Ask-User-Respond paradigm) and advisory discussion for four assets per profile.
+  - Compared non-personalized baseline, personalized (using elicited preferences), and two personality-injected variants (extroverted and conscientious) using Llama-3.1 8B.
+  - Evaluated elicitation accuracy against a human expert and decision-making effectiveness via Spearman's rank correlation between participant and expert asset rankings.
+  - Collected user perceptions across 7 dimensions (personalization, trust, satisfaction, etc.) using 7-point Likert scales.
+findings:
+  - num: Elicitation accuracy averaged 0.70 across profiles, close to expert's 0.85 for growth and conservative, but dropped to 0.53 for risk-taking (40.5% lower).
+  - Personalized advice improved decision-making correlation from 0.11 (baseline) to 0.31, but only when elicitation was successful (0.481); unsuccessful elicitation caused negative correlation (-0.228).
+  - Users rated personalized and non-personalized advisors similarly on most dimensions except information provision; they could not distinguish good from bad advice.
+  - Extroverted personality led to lower decision quality (0.122 vs 0.26 for conscientious) but higher intention to use and emotional trust.
+  - Sentiment analysis showed extroverted advisors used more positive language, while conscientious advisors used more negative and uncertain terms.
+key_figures_tables:
+  - Table 3: Elicitation accuracy by profile and advisor variant → LLM matches expert for 2/3 profiles but fails for risk-taking.
+  - Table 4: Spearman's rho between investor and expert rankings → personalization improves only with successful elicitation.
+  - Table 5: Average participant responses to advisor assessment → users cannot distinguish personalized from non-personalized, and prefer extroverted despite worse advice.
+  - Figure 4: Average sentiment scores by advisor personality → extroverted uses more positive language, conscientious more negative/uncertain.
+key_equations:
+  - equation: ElicitationAccuracy(i) = 1/n * sum_{j=1}^{n} (|i_LLM_j ∩ i_pref| / |i_pref|)
+    explanation: Proportion of correctly captured investor preferences averaged over sessions.
+definitions:
+  - term: LLM
+    definition: Large Language Model
+  - term: SAUR
+    definition: System-Ask-User-Respond, a conversational paradigm where the system asks questions and the user responds.
+  - term: Big Five
+    definition: A personality model comprising five traits: openness, conscientiousness, extraversion, agreeableness, neuroticism.
+critical_citations:
+  - [Radlinski et al., 2019] — foundational for conversational preference elicitation.
+  - [Komiak and Benbasat, 2006] — trust and adoption of recommendation agents.
+  - [Jiang et al., 2024] — method for injecting personality into LLMs.
+relevance:
+  topics:
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Defines and uses investor profiles (growth, conservative, risk-taking) as behavioral profiles for financial decision-making.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: high
+      justification: Preference elicitation stage addresses the cold-start problem by collecting investor preferences through conversation.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Uses predefined profile categories and evaluates elicitation accuracy, contributing to classification approaches.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Measures emotional trust and trust in competence, showing personality affects trust even when advice quality differs.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Measures user satisfaction and intention to use, relevant to engagement dynamics.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Proposes a user study evaluation framework with multiple metrics (accuracy, ranking correlation, questionnaires).
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: Evaluates the LLM-advisor as an algorithmic module for financial advice.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: medium
+      justification: Uses Spearman's rho and questionnaires, similar to evaluation methodologies for recommendation systems.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: contextual
+      justification: Discusses limitations of existing automated financial systems that ignore personalization and trust.
+  contribution: This paper directly informs Odin's preference elicitation module by showing that LLM-based conversation can capture user preferences, but highlights the need for robust handling of contradictory statements. It validates the importance of accurate user profiling for personalized recommendations, as poor elicitation leads to adverse outcomes. The findings on trust and personality inform Odin's design of conversational interfaces that balance advice quality and user satisfaction. The evaluation framework (ranking correlation, questionnaires) provides a methodology for testing Odin's advisory components.
+  directly_justifies:
+    - LLM-advisors can match human experts in preference elicitation for straightforward investor profiles.
+    - Personalization of advice improves investment decisions only when preferences are accurately elicited.
+    - Users cannot distinguish between good and bad advice and may trust more personable but less accurate advisors.
+  limits:
+    - The study uses synthetic investor profiles, not real investors; participants may not fully internalize profiles.
+    - Only two personality variants tested; other traits may differ.
+    - Participants were university students, not representative of all investors.
+  mapping_rationale: A systematic scan across all 12 functional domains and their topic codes was performed. Domains flagged as relevant include Behavioral Profiling & Classification (codes 5.A, 5.B, 5.C) with high relevance because the paper directly studies investor profiles and cold-start elicitation; Data Privacy & User Trust (10.B) high due to explicit trust measurements; User Retention & Engagement (11.A) medium for satisfaction and intention measures; System Evaluation (12.A, 12.B, 12.C) medium for the user study and evaluation metrics; and Existing Systems & Gaps (4.B) contextual for background. Borderline cases: the preference elicitation touches on 2.C (user-declared preferences) but was rejected because the context is investment advice, not PFMS expense preferences; similarly, budgeting topics (7.A-D) were considered but rejected as the paper focuses on asset selection, not budget allocation. Domains like Filipino cultural context, expense categorization, forecasting, anomaly detection, mobile design, and savings/debt management were deemed not applicable. Overall, the paper is highly relevant to Odin's user profiling, personalization, and trust-building aspects, while providing an evaluation methodology applicable to its modules.
+limitations:
+  - The study uses synthetic investor profiles rather than real investors, limiting external validity.
+  - Only two personality variants were tested; other personality traits or combinations may yield different outcomes.
+  - Participants were university students, which may not represent the broader investor population.
+  - The LLM used (Llama-3.1 8B) may not generalize to other models.
+  - The study does not explore long-term effects or repeated interactions.
+remember_this:
+  - LLM-advisors match human experts in preference elicitation for 2/3 profiles.
+  - Successful preference elicitation improves decision-making correlation from 0.11 to 0.481.
+  - Unsuccessful elicitation leads to negative correlation (-0.228), directing investors to wrong assets.
+  - Users prefer extroverted advisors despite worse advice, increasing trust and intention to use.
+  - Extroverted advisors use more positive language, while conscientious ones use more negative/uncertain language.
+```

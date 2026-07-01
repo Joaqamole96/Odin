@@ -1,0 +1,150 @@
+```yaml
+paper_id: 10.1016/j.enbuild.2024.114954
+designation: international-algorithm-specific
+title: Automatic standard building category classification from smart meter data – A supervised learning approach
+authors: Lien, S.K.; Rajasekharan, J.
+year: 2024
+venue: Energy & Buildings
+odin_topics:
+  - 3.A
+  - 3.B
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.C
+  - 6.A
+  - 6.B
+  - 7.A
+  - 7.B
+  - 8.A
+  - 8.B
+  - 12.A
+  - 12.B
+tldr: Supervised classification of hourly smart meter data using 82 physics-based features achieves 84% accuracy in identifying Norwegian building categories and heating type.
+problem_and_motivation: Building metadata essential for grid planning and energy policy is often unavailable or costly to obtain. Existing classification approaches rely on limited datasets or unsupervised methods that fail to align with standardized building categories, hindering practical application.
+approach:
+  - Dataset comprises 2724 Norwegian buildings across 11 categories with hourly electricity and temperature data.
+  - Extracted 82 physics-based domain features from each time series, covering load variation, seasonality, daily profiles, and correlation with standard profiles.
+  - Evaluated multiple classifiers including Random Forest, CatBoost, SVM, and Gradient Boosting.
+  - Applied feature selection and ensemble methods to optimize performance.
+  - Tested generalizability on external datasets from Norway, Canada, and the US/UK.
+findings:
+  - num: Random Forest and CatBoost achieved 84% accuracy for building type and 89% for category-only prediction.
+  - num: Top-2 accuracy reached 92% for type and 97% for category, offering robust fallback for ambiguous cases.
+  - num: Feature selection showed that 7-12 features capture most discriminatory information, peaking at 86% accuracy.
+  - Supervised classification significantly outperformed K-means clustering in aligning predictions with predefined building codes.
+  - Generalizability was strong for Norwegian residential data (70-75% accuracy) but poor for international datasets, indicating climate and labeling sensitivity.
+  - Ensemble learning did not improve performance, likely due to high correlation among base models.
+  - SLP features derived from the same data source contributed only a marginal 0.5% accuracy gain.
+key_figures_tables:
+  - Table 1: Dataset labels and support → Shows class distribution and highlights data imbalance, guiding performance interpretation.
+  - Figure 3: Confusion matrices for classifiers → Demonstrates low confusion between residential and non-residential categories.
+  - Figure 6: Accuracy vs. feature count → Indicates optimal feature set of 7-12 for efficient classification.
+  - Figure 7: Elbow and silhouette scores → Shows unsupervised k-means peaks at 6 clusters, misaligned with 17 building labels.
+  - Figure 8: Cluster assignments vs. labels → Visualizes the mismatch between unsupervised groups and regulatory categories.
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: "TEK17"
+    definition: "Norwegian building regulations defining standard building categories."
+  - term: "PROFet"
+    definition: "Model for generating standard load profiles based on building area and outdoor temperature."
+  - term: "AMS"
+    definition: "Advanced Metering System, the Norwegian smart meter infrastructure."
+  - term: "EH"
+    definition: "Electric heating classification for buildings."
+  - term: "NEH"
+    definition: "Non-electric heating classification for buildings."
+critical_citations:
+  - "[K. B. Lindberg et al., 2019] — Modeling electric/heat loads for forecasting."
+  - "[M. Sodenkamp et al., 2016] — Supervised classification with interdependent variables."
+  - "[C. Miller et al., 2020] — Building Data Genome Project 2 dataset."
+  - "[C. Miller, 2019] — Explainable ML for non-residential smart meter classification."
+relevance:
+  topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: contextual
+      justification: "Provides a framework for classifying building types from consumption data, analogous to expense categorization."
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: low
+      justification: "Discusses the design of building categories, not user expense categories."
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: low
+      justification: "Reviews smart meter classification landscape but not PFMS."
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: "Explicitly identifies gaps in supervised classification and limited datasets for building metadata extraction."
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: contextual
+      justification: "Analogous profiling of building load profiles using supervised learning."
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: "Demonstrates a supervised classification approach for profiling building energy behavior."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: low
+      justification: "Focuses on classification, not predictive modeling of future spending."
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: "Not a forecasting paper; focuses on static classification."
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: contextual
+      justification: "Extracts domain knowledge (physics-based features) to inform classification, analogous to budget rule design."
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: low
+      justification: "Not about recommendation; about classification."
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: "Discusses misclassification consequences, not anomaly detection."
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: low
+      justification: "Uses classification, not anomaly detection algorithms."
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: "Uses accuracy, precision, recall, and F1 to evaluate classification performance."
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: "Compares multiple classifiers and ensemble methods."
+    - code: 13.C
+      name: End-of-Period Surplus as a Savings Input
+      relevance: contextual
+      justification: "Classifies building load profiles to understand peak loads, tangentially related to surplus identification."
+  contribution: "This paper provides a robust supervised classification framework that can be adapted to classify user expense patterns in Odin, particularly for cold-start profiling (5.C). Its emphasis on domain-specific feature engineering (7.A) and evaluation metrics (12.A/12.B) directly informs Odin's algorithmic module design. The identification of gaps in existing unsupervised approaches (4.B) justifies Odin's use of supervised learning for behavioral classification. The paper's handling of noisy, real-world meter data offers lessons for Odin's data preprocessing and feature extraction pipeline."
+  directly_justifies:
+    - "Supervised learning with domain-informed features outperforms unsupervised clustering for predefined category classification."
+    - "Feature selection can reduce dimensionality while maintaining high accuracy, crucial for mobile-first efficiency."
+    - "Classification accuracy can be significantly impacted by data labeling uncertainty, a challenge Odin must address."
+    - "Ensemble methods may not improve performance if base models share correlated errors."
+    - "Model generalizability is limited across climate zones, requiring careful validation for Philippine data."
+  limits:
+    - "The study is primarily focused on Norwegian buildings and climate, limiting direct transferability to the Philippines."
+    - "The dataset labels contain uncertainty, and buildings with mixed use are assigned a single category, limiting real-world granularity."
+    - "The method does not classify buildings with PV systems or other distributed energy resources, a growing trend."
+    - "The paper does not address real-time classification or streaming data scenarios."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The domains of 'Expense Categorization' (3.A, 3.B) and 'Existing Systems & Gaps' (4.B) were flagged as highly relevant because the paper directly addresses classification frameworks and identifies limitations of unsupervised methods. The 'Behavioral Profiling & Classification' domain (5.C) is highly relevant due to the supervised classification approach for building types, which parallels user behavior classification. The 'System Evaluation' domain (12.A, 12.B) was assigned medium relevance because the paper employs rigorous performance metrics and model comparisons. Domains like 'Filipino Cultural Context' (2.A-2.D), 'Data Privacy & User Trust' (10.A, 10.B), and 'User Retention & Engagement' (11.A, 11.B) were considered and rejected as the paper does not address these aspects. The 'Spending Forecasting' (6.A, 6.B) and 'Budget Recommendation' (7.A, 7.B) domains were considered but deemed low relevance because the paper focuses on classification, not prediction or optimization. Overall, the paper's strength lies in its methodological framework for classification from time-series data, which directly informs Odin's approach to profiling and its evaluation, while its geographic and application context limits direct applicability."
+limitations:
+  - "The method is trained on Norwegian data and may not generalize to Filipino spending patterns without retraining and feature adaptation."
+  - "The reliance on hourly data may not be feasible for Odin's mobile-first architecture with potentially lower-frequency inputs. [unacknowledged]"
+  - "The paper assumes the existence of standardized building categories, which may not perfectly map to user expense categories. [unacknowledged]"
+  - "Performance on international datasets was poor, highlighting sensitivity to cultural and climatic factors. [unacknowledged]"
+remember_this:
+  - "Supervised classification using 82 features achieved 84% accuracy for building type."
+  - "Feature selection reduced inputs to 7-12 features while maintaining high accuracy."
+  - "Domain-specific features significantly outperformed generic or unsupervised approaches."
+  - "Model generalization across different climates remains a key challenge."
+  - "Accurate labeling is critical; uncertainty in ground truth limits maximum achievable accuracy."
+```

@@ -209,17 +209,19 @@
 
 ---
 
-### 5.B Profile Dynamics and the Cold‑Start Problem [/profile-dynamics]
+### [O] 5.B Profile Dynamics and the Cold‑Start Problem [/profile-dynamics]
 
 #### [O] 5.B.I Concept drift as the framework for progressive profile updates over time [/concept-drift]
 > *Scholar query: How is the concept drift framework applied to adaptive user modeling and profile updates in intelligent systems, and how does it apply to progressively updating a user's financial behavioral profile as their spending and income patterns evolve? I am looking for literature on drift detection methods and adaptive learning strategies that serve as the technical grounding for a system that updates user profiles based on behavioral signal accumulation over time.*
 
 > *Scholar query: How is the concept drift framework applied to adaptive user modeling and profile updates in Philippine intelligent systems, and how does it apply to progressively updating a Filipino user's financial behavioral profile as their spending and income patterns evolve? I am looking for Philippine literature on drift detection methods and adaptive learning strategies that serve as the technical grounding for a system that updates user profiles based on behavioral signal accumulation over time.*
 
-#### 5.B.II Behavioral signals that should trigger profile reassessment [/profile-triggers]
+#### [0] 5.B.II Behavioral signals that should trigger profile reassessment [/profile-triggers]
 > *Scholar query: What behavioral signals in a personal finance system should trigger a reassessment or reclassification of a user's financial behavioral profile? I am looking for research on change‑point detection, sustained behavioral shifts, or threshold‑based triggers in adaptive user modeling — applied to signals such as sustained income level changes, shifts in the proportion of obligatory versus discretionary spending, or consistent departures from the patterns used to initially classify the user.*
 
-#### 5.B.III Cold‑start handling for financial behavioral profiles [/profiling-cold-start]
+> *Scholar query: What behavioral signals in a personal finance system should trigger a reassessment or reclassification of a user's financial behavioral profile? I am looking for Philippines-based research on change‑point detection, sustained behavioral shifts, or threshold‑based triggers in adaptive user modeling — applied to signals such as sustained income level changes, shifts in the proportion of obligatory versus discretionary spending, or consistent departures from the patterns used to initially classify the user.*
+
+#### [O] 5.B.III Cold‑start handling for financial behavioral profiles [/profiling-cold-start]
 > *Scholar query: What strategies exist for assigning an initial financial behavioral profile to a new user who has not yet generated any transaction history? I am looking for research on questionnaire‑based classification, demographic proxy assignment, and profile‑average fallback — with attention to how onboarding surveys can provide sufficient signal to avoid a true cold‑start problem.*
 
 > **Note – Odin's approach:** Odin's FBP classifier does **not** require a cold‑start fallback because the onboarding questionnaire provides sufficient initial features for classification. Thus, while general cold‑start literature for profiling is reviewed, Odin's specific implementation relies on the questionnaire as the primary input at registration.
@@ -230,10 +232,12 @@
 
 > **Note:** This section surveys *classification methods in general* as applied to user profiling tasks. The literature reviewed here may cover any classification algorithm (Random Forest, SVM, logistic regression, gradient boosting, etc.) applied to similar profile‑assignment problems.
 
-#### [X] 5.C.I Supervised classification versus clustering for predefined profile categories [/classification-vs-clustering]
+#### [O] 5.C.I Supervised classification versus clustering for predefined profile categories [/classification-vs-clustering]
 > *Scholar query: When should supervised classification be chosen over clustering for assigning users to financial behavioral profiles, particularly when the profile categories are predefined by domain knowledge rather than discovered from data? I am looking for research that discusses the suitability of supervised versus unsupervised approaches in the context of fixed profile taxonomies — arguing that classification is appropriate when profiles are already specified and the task is to assign users, not to discover new groupings.*
 
-#### 5.C.II Classification algorithms applied to behavioral and financial user profiling [/classifier-candidates]
+> *Scholar query: When should supervised classification be chosen over clustering for assigning users to financial behavioral profiles, particularly when the profile categories are predefined by domain knowledge rather than discovered from data? I am looking for Philippine research that discusses the suitability of supervised versus unsupervised approaches in the context of fixed profile taxonomies — arguing that classification is appropriate when profiles are already specified and the task is to assign users, not to discover new groupings.*
+
+#### [O] 5.C.II Classification algorithms applied to behavioral and financial user profiling [/classifier-candidates]
 > *Scholar query: What classification algorithms have been applied to behavioral or financial user profiling tasks — including tree‑based methods, logistic regression, support vector machines, and ensemble approaches — and what results do they produce in terms of accuracy, interpretability, and feature importance? I am looking for comparative studies that benchmark multiple classifiers on user profile or customer segmentation tasks using behavioral or financial feature sets.*
 
 #### 5.C.III Feature selection: onboarding questionnaire data versus accumulated transaction behavioral data [/classifier-features]

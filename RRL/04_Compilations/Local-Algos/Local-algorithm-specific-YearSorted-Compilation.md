@@ -10,7 +10,166 @@
 
 ---
 
-## Paper 1: Delena et al_summarized.md
+## Paper 1: Chowdhury et al_summarized.md
+
+**Source File:** `Chowdhury et al_summarized.md`
+
+```yaml
+paper_id: 10.1016/j.chbr.2025.100926
+designation: local-algorithm-specific
+title: Modeling financial literacy through explainable machine learning and behavioral segmentation in emerging economies
+authors: Chowdhury, T.A.; Chowdhury, M.A.H.; Rahman, M.T.; Ahmed, I.; Ahmed, N.; Tuhin, M.A.I.; Kafy, A.A.
+year: 2026
+venue: Computers in Human Behavior Reports
+odin_topics:
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.B
+  - 2.D
+  - 3.A
+  - 5.A
+  - 5.B
+  - 5.C
+  - 6.A
+  - 6.B
+  - 7.A
+  - 10.B
+  - 11.A
+  - 12.A
+tldr: A machine learning and behavioral segmentation framework reveals that institutional trust and digital comfort predict financial literacy better than formal education in Bangladesh.
+problem_and_motivation: Traditional demographic models fail to capture the complexity of digital financial behavior in emerging economies. The lack of advanced analytics to map financial literacy across behavioral groups limits the design of effective, targeted interventions.
+approach:
+  - Collected primary survey data from 1067 adults in Bangladesh using a structured instrument aligned with OECD/INFE guidelines.
+  - Applied Random Forest, XGBoost, and Decision Tree to classify financial literacy levels.
+  - Used SHAP analysis to identify key predictors and explain feature importance globally and locally.
+  - Performed k-means clustering to segment the population based on behavioral and financial characteristics.
+  - Validated clusters using silhouette score (0.42), Davies-Bouldin Index (1.08), and Calinski-Harabasz Index (287.3).
+findings:
+  - num: XGBoost achieved an F1-score of 0.52, representing a 58% improvement over the random baseline of 0.33.
+  - num: Institutional trust was the second-strongest predictor (SHAP importance = 0.18), surpassing education (0.09) and gender (0.06).
+  - num: Rural participants scored 7.3% higher in financial literacy than urban participants, though the difference was not statistically significant.
+  - num: Correlation coefficients between financial knowledge and actual behaviors were below 0.10, indicating a knowledge-behavior gap.
+  - Three behavioral clusters emerged: Digitally Literate Planners (34%), Informally Active but Underskilled (41%), and Digitally Excluded Traditionalists (25%).
+  - num: The Digitally Excluded Traditionalists cluster had a mean financial knowledge score of 3.1/10 and an institutional trust score of 1.9/5.
+  - Gender-education interaction analysis showed women benefit more from tertiary education (F=4.83, p=0.003) compared to men (F=0.91, p=0.44).
+key_figures_tables:
+  - Figure 2: Literacy scores by region → Rural participants slightly outperformed urban ones (5.73 vs. 5.34).
+  - Figure 5: Gender-education interaction effects → Women's literacy scores peak at graduate level (mean 6.12).
+  - Figure 9: Model performance metrics → XGBoost marginally outperforms Random Forest and Decision Tree.
+  - Figure 11: SHAP feature importance → Income, trust, and age are the top predictors of financial literacy.
+  - Figure 13: Behavioral profiles across clusters → Cluster profiles show distinct patterns in financial behaviors and digital engagement.
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: "SHAP"
+    definition: "SHapley Additive exPlanations, a method to explain individual predictions of machine learning models."
+  - term: "XGBoost"
+    definition: "Extreme Gradient Boosting, an ensemble learning algorithm used for classification and regression."
+  - term: "SMOTE"
+    definition: "Synthetic Minority Over-sampling Technique, used to address class imbalance by generating synthetic examples."
+  - term: "OECD"
+    definition: "Organisation for Economic Co-operation and Development."
+  - term: "F1-score"
+    definition: "The harmonic mean of precision and recall, balancing both metrics."
+critical_citations:
+  - "[Lusardi & Messy, 2023] — Foundational framework for financial literacy and well-being."
+  - "[Lusardi & Streeter, 2023] — Established measurement of financial literacy and well-being in the US."
+  - "[OECD, 2022] — Policy handbook guiding financial literacy assessment."
+  - "[Koskelainen et al., 2023] — Research agenda on financial literacy in the digital age."
+relevance:
+  topics:
+    - code: "1.B"
+      name: "Financial Structure of Filipino Young Professionals"
+      relevance: "contextual"
+      justification: "This paper analyzes the financial structure of Bangladeshi adults, providing a comparable emerging economy context."
+    - code: "1.C"
+      name: "Financial Behavior of Filipino Young Professionals"
+      relevance: "high"
+      justification: "Directly analyzes financial behaviors through behavioral segmentation and identifies knowledge-behavior gaps."
+    - code: "2.A"
+      name: "Culturally Specific Financial Practices"
+      relevance: "medium"
+      justification: "Highlights role of informal networks (samitis, family) and community-based financial practices in Bangladesh."
+    - code: "2.B"
+      name: "Seasonal and Cyclical Spending Patterns"
+      relevance: "contextual"
+      justification: "Addresses seasonal income management needs, relevant to understanding cyclical spending patterns in emerging economies."
+    - code: "2.D"
+      name: "Filipino Spending Cycles and 'Occasions'"
+      relevance: "contextual"
+      justification: "Provides analogous context on spending cycles in a South Asian emerging economy."
+    - code: "3.A"
+      name: "Expense Categorization Frameworks"
+      relevance: "contextual"
+      justification: "Discusses savings, budgeting, and borrowing behaviors relevant to expense categorization."
+    - code: "5.A"
+      name: "Financial Behavioral Profiles in Personal Finance"
+      relevance: "high"
+      justification: "Empirically identifies three distinct behavioral profiles using k-means clustering."
+    - code: "5.B"
+      name: "Profile Dynamics and the Cold-Start Problem"
+      relevance: "medium"
+      justification: "Suggests pathways between clusters, implying dynamic profiles and transitional states."
+    - code: "5.C"
+      name: "Classification Approaches for Financial Behavioral Profiles"
+      relevance: "high"
+      justification: "Uses Random Forest, XGBoost, and k-means for behavioral classification and segmentation."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "high"
+      justification: "Develops predictive ML models (Random Forest, XGBoost) to forecast financial literacy as a proxy for financial behavior."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "medium"
+      justification: "Provides methodological foundation using ML algorithms (XGBoost) for predicting financial outcomes."
+    - code: "7.A"
+      name: "Budgeting Strategies as Domain Knowledge"
+      relevance: "medium"
+      justification: "Budgeting practices are a key behavioral indicator across all three clusters."
+    - code: "10.B"
+      name: "User Trust in Personal Finance Systems"
+      relevance: "high"
+      justification: "Institutional trust (SHAP importance 0.18) is identified as a top predictor of financial literacy."
+    - code: "11.A"
+      name: "Engagement Dynamics in Personal Finance Applications"
+      relevance: "medium"
+      justification: "Cluster analysis shows variation in digital banking usage and comfort, relevant to engagement."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "medium"
+      justification: "Evaluates ML models using F1-score, AUC-ROC, accuracy, and confusion matrices."
+  contribution: "This paper's segmentation framework directly informs Odin's behavioral profiling module (5.A, 5.C) by providing a data-driven method to categorize users based on financial behaviors and digital engagement. The SHAP-based feature importance analysis guides the design of Odin's budget recommendation and anomaly detection algorithms by identifying institutional trust, digital comfort, and income as critical predictors to incorporate as features. The weak correlation between knowledge and behavior supports Odin's approach to infer financial capability from behavioral signals rather than relying on user-declared knowledge, addressing the cold-start problem (5.B, 7.D). The recommendation to allocate resources based on segment needs (60% to the least capable) provides a strategy for prioritizing Odin's user retention and engagement mechanisms (11.B)."
+  directly_justifies:
+    - "Financial literacy interventions must address behavioral barriers and institutional trust, not just information gaps."
+    - "Formal education is a weak predictor of financial literacy; informal community networks are more influential."
+    - "Rural users can exhibit higher financial literacy than urban users due to community-based learning mechanisms."
+    - "Women benefit more from formal education, suggesting gender-differentiated pathways to financial capability."
+    - "Resource allocation for interventions should be prioritized for the most excluded segments (60% to Cluster 2)."
+  limits:
+    - "The digital-only survey method excludes the most financially vulnerable individuals without internet access, potentially overestimating literacy. [unacknowledged]"
+    - "The cross-sectional design limits causal inferences about the relationship between institutional trust and literacy. [unacknowledged]"
+    - "Self-reported behaviors are subject to social desirability and recall bias. [unacknowledged]"
+    - "The modest F1-score (0.52) indicates that unmeasured variables, such as psychological traits and social network factors, may influence literacy outcomes. [unacknowledged]"
+    - "The survey instrument, while adapted to Bangladesh, may not fully capture the nuances of culturally specific practices. [unacknowledged]"
+  mapping_rationale: "A systematic scan was performed across all 12 functional domains and their associated topic codes. The following domains were flagged as relevant: Behavioral Profiling & Classification (codes 5.A, 5.B, 5.C) with high relevance due to the paper's core segmentation and ML classification; Spending Forecasting (6.A, 6.B) with high relevance due to the predictive modeling framework; and Data Privacy & User Trust (10.B) with high relevance due to institutional trust being a top predictor. The Filipino Cultural Context domain (codes 2.A, 2.B, 2.D) was assigned contextual/medium relevance as the paper provides an analogous emerging economy context (Bangladesh) with comparable cultural financial practices (ROSCAs, family advice). Borderline cases included seasonal spending (2.B) and financial structure (1.B), which were considered relevant but not directly central to the paper's primary contribution; they were included as contextual. Domains such as Expense Categorization (3.A) and System Evaluation (12.A) were assigned contextual/medium relevance as they relate to budgeting practices and model evaluation metrics, respectively, though they are not the paper's focus. The paper's overall relevance to Odin is substantial, providing a validated methodological framework for behavioral segmentation and predictive modeling, with concrete findings on key predictors that can directly inform Odin's algorithm design and user profiling."
+limitations:
+  - "Digital-only survey excludes the most financially vulnerable populations without internet access, potentially biasing results toward more digitally engaged groups. [unacknowledged]"
+  - "Cross-sectional design prevents causal inferences about the direction of relationships between trust and literacy. [unacknowledged]"
+  - "Self-reported behavioral data are subject to social desirability and recall bias. [unacknowledged]"
+  - "The modest F1-score (0.52) suggests unmeasured psychological or social variables may significantly influence literacy outcomes. [unacknowledged]"
+  - "The survey, while adapted to Bangladesh, may not fully capture the nuances of informal financial systems. [unacknowledged]"
+remember_this:
+  - "Institutional trust (SHAP 0.18) predicts financial literacy better than formal education (SHAP 0.09)."
+  - "Weak knowledge-behavior correlations (<0.10) challenge education-only financial literacy interventions."
+  - "Rural residents showed 7.3% higher literacy than urban, suggesting informal community learning is effective."
+  - "Three behavioral segments require differentiated interventions: 60% resources to the most excluded group."
+  - "ML models with SHAP provide transparent, actionable insights beyond predictive accuracy."
+```
+---
+
+## Paper 2: Delena et al_summarized.md
 
 **Source File:** `Delena et al_summarized.md`
 
@@ -115,7 +274,7 @@ remember_this:
 ```
 ---
 
-## Paper 2: de Goma et al_summarized.md
+## Paper 3: de Goma et al_summarized.md
 
 **Source File:** `de Goma et al_summarized.md`
 
@@ -227,7 +386,7 @@ remember_this:
 ```
 ---
 
-## Paper 3: Hassine et al_summarized.md
+## Paper 4: Hassine et al_summarized.md
 
 **Source File:** `Hassine et al_summarized.md`
 
@@ -367,7 +526,7 @@ remember_this:
 ```
 ---
 
-## Paper 4: Pandiin & Matias_summarized.md
+## Paper 5: Pandiin & Matias_summarized.md
 
 **Source File:** `Pandiin & Matias_summarized.md`
 
@@ -453,7 +612,7 @@ remember_this:
 ```
 ---
 
-## Paper 5: Alunen et al_summarized.md
+## Paper 6: Alunen et al_summarized.md
 
 **Source File:** `Alunen et al_summarized.md`
 
@@ -572,7 +731,7 @@ remember_this:
 ```
 ---
 
-## Paper 6: Ram & Agoylo_summarized.md
+## Paper 7: Ram & Agoylo_summarized.md
 
 **Source File:** `Ram & Agoylo_summarized.md`
 
@@ -682,7 +841,7 @@ remember_this:
 ```
 ---
 
-## Paper 7: Carillo & Serra_summarized.md
+## Paper 8: Carillo & Serra_summarized.md
 
 **Source File:** `Carillo & Serra_summarized.md`
 
@@ -790,167 +949,6 @@ remember_this:
   - "PSO optimization outperformed exponential background value methods in forecast accuracy."
   - "Grey models show promise for short-term forecasting in data-constrained environments."
   - "Explicit seasonal modeling is needed to capture quarterly fluctuations in economic data."
-```
----
-
-## Paper 8: Ama_summarized.md
-
-**Source File:** `Ama_summarized.md`
-
-```yaml
-paper_id: 10.20944/preprints202508.0349.v1
-designation: local-algorithm-specific
-title: Analysis of the Food and Income Expenditure Survey 2023 Among Filipino Households
-authors: Ama, N. A.
-year: 2025
-venue: Preprints.org
-odin_topics:
-  - 2.A
-  - 2.B
-  - 2.D
-  - 3.A
-  - 4.A
-  - 4.B
-  - 5.A
-  - 5.B
-  - 6.A
-  - 7.A
-  - 8.A
-  - 12.A
-  - 13.A
-tldr: Filipino household food spending is income-inelastic, spatially clustered, and higher in rural areas, with household size, income, and location as key nonlinear predictors of food insecurity.
-problem_and_motivation: Understanding drivers of food expenditure among Filipino households is fundamental to shaping effective social, agricultural, and economic policies, yet detailed analysis of 2023 FIES data remains limited. This study addresses the gap by using advanced statistical methods to assess how income, geography, livelihood sources, and household characteristics shape food spending patterns and food insecurity.
-approach:
-  - Data from 163,268 households in the 2023 Philippine Family Income and Expenditure Survey (FIES) were analyzed using RStudio v4.5.1.
-  - Principal Component Analysis (PCA) identified dominant income sources, supported by scree plots and loading scores.
-  - Spatial clustering was evaluated via regional mapping using GADM shapefiles and visualizations.
-  - Rural-urban differences were tested using the non-parametric Mann-Whitney U test due to normality violations.
-  - A Generalized Additive Model (GAM) was employed to predict food insecurity, incorporating smooth terms for continuous predictors and a parametric term for urban-rural residence.
-  - Log-log Engel curves and a beta regression model were used to analyze income elasticity and the proportion of food spent outside the home, respectively.
-findings:
-  - num: Food expenditure has an income elasticity of 0.58, confirming food as a necessity good under Engel's Law.
-  - num: Rural households spend more on food (Median = ₱102,467) than urban households (Median = ₱80,700).
-  - PCA identified retail, transport, and agriculture as dominant income source clusters.
-  - Spatial clustering shows Leyte and Bohol have the highest mean food expenditure (≥₱120,000).
-  - The GAM explained 27.2% of deviance in food insecurity, with RPCINC as the strongest nonlinear predictor.
-  - num: The GAM achieved 90.02% accuracy and an AUC of 0.86 in predicting food insecurity.
-  - Urban residence (β = -0.51) was associated with a lower likelihood of food insecurity.
-  - Household size showed a significant nonlinear positive association with food insecurity risk.
-  - Bread (29.5%) and meat (14.8%) account for the largest shares of food expenditure.
-  - Higher-income and rural households spend a larger proportion of food outside the home.
-key_figures_tables:
-  - Figure 1: Lorenz curve of food expenditure → Food spending is more evenly distributed than income.
-  - Figure 2: Histogram of food expenditure per member → Distribution is right-skewed with concentration at lower values.
-  - Figure 5: Spatial map of mean food expenditure → High-spending clusters in Leyte and Bohol.
-  - Figure 8: GAM partial effect plots → Income and household size show strong nonlinear effects on food insecurity.
-  - Figure 10: Engel curve log-log plot → Positive but inelastic relationship between income and food spending.
-key_equations:
-  - equation: U = n1 * n2 + (n1(n1+1))/2 - R1
-    explanation: Mann-Whitney U test statistic for group comparisons.
-  - equation: g(E(Y)) = β0 + f1(x1) + ... + fm(xm)
-    explanation: Generalized Additive Model with logit link function.
-  - equation: log(FOOD_i) = β0 + β1 * log(TINC_i) + ε_i
-    explanation: Log-log Engel curve for estimating income elasticity.
-  - equation: logit(μ_i) = β0 + β1 * log(INCOME_i) + β2 * URB_i + β3 * FSIZE_i
-    explanation: Beta regression model for proportion of food spent outside home.
-definitions:
-  - term: FIES
-    definition: Family Income and Expenditure Survey conducted by the Philippine Statistics Authority.
-  - term: PCA
-    definition: Principal Component Analysis, a dimensionality reduction technique.
-  - term: GAM
-    definition: Generalized Additive Model, a flexible regression framework for nonlinear effects.
-  - term: RPCINC
-    definition: Real per capita income, adjusted for household size.
-  - term: Engel's Law
-    definition: As income rises, the proportion of income spent on food declines.
-  - term: Beta regression
-    definition: A regression model for proportions bounded between 0 and 1.
-critical_citations:
-  - "[Valera et al., 2022] — Found inelastic demand for rice and flexible preferences for meat and dairy."
-  - "[Briones, 2022] — Examined food price shocks and cash transfer effects on nutrient intake."
-  - "[Bairagi et al., 2022] — Identified structural shifts in rural vs. urban food basket composition."
-  - "[Cigaral, 2025] — Reported food as the largest expenditure share (57.2%) in 2021."
-relevance:
-  topics:
-    - code: 2.A
-      name: Culturally Specific Financial Practices
-      relevance: medium
-      justification: Highlights dominance of bread and meat in spending, reflecting local dietary patterns.
-    - code: 2.B
-      name: Seasonal and Cyclical Spending Patterns
-      relevance: medium
-      justification: Spatial and rural-urban spending variations suggest cyclical/geographic influences.
-    - code: 2.D
-      name: Filipino Spending Cycles and "Occasions"
-      relevance: low
-      justification: Mentions spending outside home, but not explicitly tied to festive occasions.
-    - code: 3.A
-      name: Expense Categorization Frameworks
-      relevance: medium
-      justification: Provides empirical distribution of spending across major food categories.
-    - code: 4.A
-      name: Landscape of Existing Personal Finance Systems
-      relevance: contextual
-      justification: References BSP survey and PSA FIES as data sources for understanding spending.
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      relevance: low
-      justification: Acknowledges cross-sectional nature and lack of dietary/nutritional detail.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: medium
-      justification: PCA-based livelihood segmentation offers a proxy for behavioral profiles.
-    - code: 5.B
-      name: Profile Dynamics and the Cold‑Start Problem
-      relevance: contextual
-      justification: Segmentation by income sources can inform initial profile estimation.
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: high
-      justification: GAM and Engel curve analysis demonstrate predictive modeling of food spending.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      relevance: medium
-      justification: Income elasticity and food share patterns inform budget allocation strategies.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: low
-      justification: Identifies spending clusters and outliers in food expenditure distribution.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: medium
-      justification: Uses accuracy, AUC, and R² to evaluate GAM classification performance.
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      relevance: contextual
-      justification: Food spending patterns indirectly relate to surplus available for savings.
-  contribution: "The paper provides empirical benchmarks for income elasticity of food (0.58) and food expenditure distributions that can calibrate Odin's budget recommendation module. Its GAM framework for predicting food insecurity offers a methodological template for Odin's behavioral risk assessment. The PCA-derived livelihood segmentation can inform Odin's cold-start profiling for new users. The rural-urban spending differences provide contextual data for Odin's geographic customization. The beta regression for out-of-home food spending supports Odin's expense categorization logic."
-  directly_justifies:
-    - "Income elasticity of 0.58 establishes food as a necessity for Filipino households."
-    - "Rural households exhibit higher median food spending (₱102,467) than urban (₱80,700)."
-    - "Household size and income are significant nonlinear predictors of food insecurity."
-    - "Bread and meat account for 29.5% and 14.8% of food expenditure, respectively."
-    - "GAM models can achieve 90% accuracy in predicting household financial vulnerability."
-  limits:
-    - "Cross-sectional FIES data limits causal inference on spending dynamics. [unacknowledged]"
-    - "Lack of nutritional/dietary diversity measures restricts analysis of food quality."
-    - "Provincial-level aggregation obscures intra-regional disparities."
-    - "Self-reported income may suffer from recall bias, especially in informal sectors."
-    - "No detailed evaluation of algorithmic modules for budget recommendation is provided."
-  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes identified relevant connections. Domains flagged as relevant include Filipino Cultural Context (2.A, 2.B, 2.D), Expense Categorization (3.A), Existing Systems (4.A, 4.B), Behavioral Profiling (5.A, 5.B), Forecasting (6.A), Budget Recommendation (7.A), Anomaly Detection (8.A), and Evaluation (12.A). High relevance was assigned to 6.A due to the predictive GAM and Engel curve modeling. Medium relevance was assigned to 2.A, 2.B, 3.A, 5.A, 7.A, 12.A, and 13.A based on empirical spending patterns. Borderline cases include 2.D (spending cycles) and 7.C (constrained optimization) — the paper discusses Engel curves but not optimization, so 7.C was rejected. Domains 9.A, 9.B, 10.A, 10.B, 11.A, 11.B, and 13.C were rejected as the paper does not address mobile design, privacy, retention, or surplus mechanisms. Overall, the paper provides strong empirical grounding for Odin's core financial understanding modules."
-limitations:
-  - "Cross-sectional design cannot establish causal relationships between income and food spending. [unacknowledged]"
-  - "Lack of detailed nutritional and dietary diversity measures limits holistic food security assessment. [unacknowledged]"
-  - "Spatial analysis limited to provincial aggregates, hiding intra-provincial disparities."
-  - "Reliance on self-reported data may introduce recall bias among informal sector households."
-  - "Beta regression pseudo-R² of 0.1403 indicates limited explanatory power for out-of-home food spending. [unacknowledged]"
-remember_this:
-  - "Food expenditure income elasticity is 0.58, confirming Engel's Law for Filipino households."
-  - "Rural households spend more on food and face higher food insecurity risk."
-  - "GAM achieved 90% accuracy in predicting food insecurity from household characteristics."
-  - "Bread (29.5%) and meat (14.8%) dominate Filipino household food spending."
-  - "Household size and income exhibit strong nonlinear associations with food insecurity."
 ```
 ---
 
@@ -1894,114 +1892,13 @@ remember_this:
 ```
 ---
 
-## Paper 17: Apus et al_summarized.md
+## Paper 17: Yuan & Hernandez_summarized.md
 
-**Source File:** `Apus et al_summarized.md`
-
-```yaml
-paper_id: d2a3b4c5-6e7f-48a9-b0c1-d2e3f4a5b6c7
-designation: local-algorithm-specific
-title: Predicting the Filipino Household Income Using Naive Bayes Classification Algorithm
-authors: Apus, J.O.; Mantalaba, K.D.V.; Mackno, A.J.B.; Bokingkito, P.B.
-year: 2023
-venue: International Journal of Computing and Digital Systems
-odin_topics:
-  - 3.A
-  - 5.A
-  - 5.C
-  - 6.A
-  - 12.B
-tldr: Predicts Filipino household income class using Naive Bayes with expenditure and income features from FIES data, achieving 93% accuracy with bagging.
-problem_and_motivation: Philippine poverty reduction requires accurate identification of vulnerable households. Existing predictive models rely mainly on socio-demographic variables, neglecting expenditure and income data. This gap limits the effectiveness of targeted interventions.
-approach:
-  - Used the 2018 FIES dataset with 41,545 households and 60 features, cleaning missing values using mode for categorical and mean/median for numeric.
-  - Selected 13 features using univariate chi-squared feature selection based on correlation with income class.
-  - Implemented Naive Bayes classifier with bagging and boosting ensemble techniques using Python's sklearn.
-  - Split data 80-20 for training and testing; evaluated using confusion matrix, precision, recall, F1-score, and accuracy.
-  - Compared bagging and boosting ensemble methods to determine best performance.
-findings:
-  - "num: Bagging ensemble achieved 93% accuracy, while boosting achieved 89% accuracy."
-  - "num: Bagging model had precision 0.93, recall 0.94, and F1-score 0.94 weighted mean."
-  - "num: Boosting model had precision 0.90, recall 0.93, F1-score 0.91."
-  - Poor income class had the most true positives; rich class had the least.
-  - Models with accuracy above 80% are considered good, indicating Naive Bayes is effective for this task.
-key_figures_tables:
-  - "Table III: Selected features with chi-squared scores → top features include total food and transportation expenditure."
-  - "Figure 3: Confusion matrix for bagging model → shows strong diagonal performance across income classes."
-  - "Table VI: Classification report for bagging ensemble → weighted averages above 0.93 for precision, recall, F1."
-key_equations:
-  - equation: "Precision = TP/(TP+FP)"
-    explanation: "Measures accuracy of positive predictions."
-  - equation: "Recall = TP/(TP+FN)"
-    explanation: "Measures proportion of actual positives correctly identified."
-  - equation: "F1 = 2*(Precision*Recall)/(Precision+Recall)"
-    explanation: "Harmonic mean of precision and recall."
-  - equation: "Accuracy = (TP+TN)/(P+N)"
-    explanation: "Overall proportion of correct predictions."
-definitions:
-  - term: "FIES"
-    definition: "Family Income and Expenditure Survey conducted by the Philippine Statistics Authority."
-  - term: "PSA"
-    definition: "Philippine Statistics Authority, the national statistical agency."
-  - term: "Bagging"
-    definition: "Bootstrap aggregating; an ensemble method to reduce variance."
-  - term: "Boosting"
-    definition: "An ensemble method that iteratively adjusts weights of misclassified instances."
-critical_citations:
-  - "None."
-relevance:
-  topics:
-    - code: "3.A"
-      name: "Expense Categorization Frameworks"
-      relevance: "medium"
-      justification: "Uses expenditure categories as predictive features, relevant to categorization design."
-    - code: "5.A"
-      name: "Financial Behavioral Profiles"
-      relevance: "medium"
-      justification: "Classifies households into income classes, a form of financial profile."
-    - code: "5.C"
-      name: "Classification Approaches for Financial Behavioral Profiles"
-      relevance: "high"
-      justification: "Directly applies a classification algorithm to financial data, relevant to profile classification module."
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      relevance: "low"
-      justification: "Predicts income class, but not spending forecasting; general predictive modeling context."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      relevance: "medium"
-      justification: "Provides evaluation metrics and comparison of ensembles, useful for algorithm evaluation."
-  contribution: "This paper's use of expenditure features for classification can inform Odin's expense categorization module by highlighting which spending categories are most discriminative of income class. The Naive Bayes algorithm and ensemble evaluation provide a baseline for Odin's behavioral profiling module. The feature selection method (chi-squared) can guide Odin's feature engineering for user profiles. The high accuracy suggests that expenditure data alone can predict financial class, which can be used for cold-start profiling in Odin."
-  directly_justifies:
-    - "Expenditure categories such as food and transportation are strong predictors of income class."
-    - "Naive Bayes with bagging achieves 93% accuracy in classifying Filipino household income."
-    - "Feature selection using chi-squared can identify relevant expenditure features."
-    - "Models with accuracy above 80% are considered effective for classification tasks."
-  limits:
-    - "The model is trained on aggregated survey data, not individual spending transactions, limiting applicability to personal finance systems [unacknowledged]."
-    - "Only uses 13 features; other relevant financial behaviors may be omitted [unacknowledged]."
-    - "The dataset is from 2018; spending patterns may have changed [unacknowledged]."
-  mapping_rationale: "Systematic scan of all 12 functional domains and their associated topic codes flagged the Expense Categorization (3.A, medium), Behavioral Profiling (5.A medium, 5.C high), Predictive Modeling (6.A low), and System Evaluation (12.B medium) domains as relevant. The paper's focus on classifying income using expenditure features directly maps to 5.C (classification approach) and 3.A (use of expense categories). The borderline case of predictive modeling was considered: although it is predictive, it does not forecast sequential spending, so 6.A is low. Domains such as Budget Recommendation, Anomaly Detection, Mobile-First, Data Privacy, and Retention were rejected as the paper does not address them. Overall, the paper provides moderate to high relevance for Odin's profiling and classification modules."
-limitations:
-  - "Only used 13 features; additional parameters like region and family size could improve accuracy."
-  - "Explored only Naive Bayes; other algorithms may yield better performance."
-  - "The study does not address real-time application or integration into a PFMS."
-remember_this:
-  - "Bagging Naive Bayes achieved 93% accuracy for income class prediction."
-  - "Food and transportation expenditures are top predictors of income class."
-  - "Naive Bayes is simple, fast, and robust to missing data."
-  - "Feature selection using chi-squared improves model performance."
-  - "Expenditure data alone can effectively classify Filipino household income."
-```
----
-
-## Paper 18: Yuan et al_summarized.md
-
-**Source File:** `Yuan et al_summarized.md`
+**Source File:** `Yuan & Hernandez_summarized.md`
 
 ```yaml
 paper_id: "10.1109/ACCESS.2023.3338705"
-designation: "local-algorithm-specific"
+designation: "local-algorithm-specific" # National University, Philippines
 title: "User Cold Start Problem in Recommendation Systems: A Systematic Review"
 authors: "Yuan, H.; Hernandez, A. A."
 year: 2023
@@ -2101,6 +1998,107 @@ remember_this:
   - "Method-driven approaches include meta-learning, deep learning, and improved collaborative filtering."
   - "num: 45 papers from 2016-2023 were systematically reviewed on this topic."
   - "Ranking metrics like NDCG are the most prevalent for evaluating cold start performance."
+```
+---
+
+## Paper 18: Apus et al_summarized.md
+
+**Source File:** `Apus et al_summarized.md`
+
+```yaml
+paper_id: d2a3b4c5-6e7f-48a9-b0c1-d2e3f4a5b6c7
+designation: local-algorithm-specific
+title: Predicting the Filipino Household Income Using Naive Bayes Classification Algorithm
+authors: Apus, J.O.; Mantalaba, K.D.V.; Mackno, A.J.B.; Bokingkito, P.B.
+year: 2023
+venue: International Journal of Computing and Digital Systems
+odin_topics:
+  - 3.A
+  - 5.A
+  - 5.C
+  - 6.A
+  - 12.B
+tldr: Predicts Filipino household income class using Naive Bayes with expenditure and income features from FIES data, achieving 93% accuracy with bagging.
+problem_and_motivation: Philippine poverty reduction requires accurate identification of vulnerable households. Existing predictive models rely mainly on socio-demographic variables, neglecting expenditure and income data. This gap limits the effectiveness of targeted interventions.
+approach:
+  - Used the 2018 FIES dataset with 41,545 households and 60 features, cleaning missing values using mode for categorical and mean/median for numeric.
+  - Selected 13 features using univariate chi-squared feature selection based on correlation with income class.
+  - Implemented Naive Bayes classifier with bagging and boosting ensemble techniques using Python's sklearn.
+  - Split data 80-20 for training and testing; evaluated using confusion matrix, precision, recall, F1-score, and accuracy.
+  - Compared bagging and boosting ensemble methods to determine best performance.
+findings:
+  - "num: Bagging ensemble achieved 93% accuracy, while boosting achieved 89% accuracy."
+  - "num: Bagging model had precision 0.93, recall 0.94, and F1-score 0.94 weighted mean."
+  - "num: Boosting model had precision 0.90, recall 0.93, F1-score 0.91."
+  - Poor income class had the most true positives; rich class had the least.
+  - Models with accuracy above 80% are considered good, indicating Naive Bayes is effective for this task.
+key_figures_tables:
+  - "Table III: Selected features with chi-squared scores → top features include total food and transportation expenditure."
+  - "Figure 3: Confusion matrix for bagging model → shows strong diagonal performance across income classes."
+  - "Table VI: Classification report for bagging ensemble → weighted averages above 0.93 for precision, recall, F1."
+key_equations:
+  - equation: "Precision = TP/(TP+FP)"
+    explanation: "Measures accuracy of positive predictions."
+  - equation: "Recall = TP/(TP+FN)"
+    explanation: "Measures proportion of actual positives correctly identified."
+  - equation: "F1 = 2*(Precision*Recall)/(Precision+Recall)"
+    explanation: "Harmonic mean of precision and recall."
+  - equation: "Accuracy = (TP+TN)/(P+N)"
+    explanation: "Overall proportion of correct predictions."
+definitions:
+  - term: "FIES"
+    definition: "Family Income and Expenditure Survey conducted by the Philippine Statistics Authority."
+  - term: "PSA"
+    definition: "Philippine Statistics Authority, the national statistical agency."
+  - term: "Bagging"
+    definition: "Bootstrap aggregating; an ensemble method to reduce variance."
+  - term: "Boosting"
+    definition: "An ensemble method that iteratively adjusts weights of misclassified instances."
+critical_citations:
+  - "None."
+relevance:
+  topics:
+    - code: "3.A"
+      name: "Expense Categorization Frameworks"
+      relevance: "medium"
+      justification: "Uses expenditure categories as predictive features, relevant to categorization design."
+    - code: "5.A"
+      name: "Financial Behavioral Profiles"
+      relevance: "medium"
+      justification: "Classifies households into income classes, a form of financial profile."
+    - code: "5.C"
+      name: "Classification Approaches for Financial Behavioral Profiles"
+      relevance: "high"
+      justification: "Directly applies a classification algorithm to financial data, relevant to profile classification module."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "low"
+      justification: "Predicts income class, but not spending forecasting; general predictive modeling context."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "medium"
+      justification: "Provides evaluation metrics and comparison of ensembles, useful for algorithm evaluation."
+  contribution: "This paper's use of expenditure features for classification can inform Odin's expense categorization module by highlighting which spending categories are most discriminative of income class. The Naive Bayes algorithm and ensemble evaluation provide a baseline for Odin's behavioral profiling module. The feature selection method (chi-squared) can guide Odin's feature engineering for user profiles. The high accuracy suggests that expenditure data alone can predict financial class, which can be used for cold-start profiling in Odin."
+  directly_justifies:
+    - "Expenditure categories such as food and transportation are strong predictors of income class."
+    - "Naive Bayes with bagging achieves 93% accuracy in classifying Filipino household income."
+    - "Feature selection using chi-squared can identify relevant expenditure features."
+    - "Models with accuracy above 80% are considered effective for classification tasks."
+  limits:
+    - "The model is trained on aggregated survey data, not individual spending transactions, limiting applicability to personal finance systems [unacknowledged]."
+    - "Only uses 13 features; other relevant financial behaviors may be omitted [unacknowledged]."
+    - "The dataset is from 2018; spending patterns may have changed [unacknowledged]."
+  mapping_rationale: "Systematic scan of all 12 functional domains and their associated topic codes flagged the Expense Categorization (3.A, medium), Behavioral Profiling (5.A medium, 5.C high), Predictive Modeling (6.A low), and System Evaluation (12.B medium) domains as relevant. The paper's focus on classifying income using expenditure features directly maps to 5.C (classification approach) and 3.A (use of expense categories). The borderline case of predictive modeling was considered: although it is predictive, it does not forecast sequential spending, so 6.A is low. Domains such as Budget Recommendation, Anomaly Detection, Mobile-First, Data Privacy, and Retention were rejected as the paper does not address them. Overall, the paper provides moderate to high relevance for Odin's profiling and classification modules."
+limitations:
+  - "Only used 13 features; additional parameters like region and family size could improve accuracy."
+  - "Explored only Naive Bayes; other algorithms may yield better performance."
+  - "The study does not address real-time application or integration into a PFMS."
+remember_this:
+  - "Bagging Naive Bayes achieved 93% accuracy for income class prediction."
+  - "Food and transportation expenditures are top predictors of income class."
+  - "Naive Bayes is simple, fast, and robust to missing data."
+  - "Feature selection using chi-squared improves model performance."
+  - "Expenditure data alone can effectively classify Filipino household income."
 ```
 ---
 

@@ -1,0 +1,104 @@
+```yaml
+paper_id: 10.1007/s00354-024-00241-w
+designation: international-algorithm-specific
+title: Incorporating Domain-Specific Traits into Personality-Aware Recommendations for Financial Applications
+authors: Takayanagi, T.; Izumi, K.
+year: 2024
+venue: New Generation Computing
+odin_topics:
+  - 5.A
+  - 5.B
+  - 5.C
+  - 7.D
+  - 10.A
+tldr: Integrates general personality and domain-specific psychological traits into collaborative filtering for personalized stock recommendations.
+problem_and_motivation: Research on personality-aware recommendations in specialized domains like finance is limited due to privacy concerns and the need for domain expertise. Domain-specific psychological traits such as risk tolerance are critical for explaining user behavior in finance.
+approach:
+  - Data from 969 Japanese investors included transaction history, Big-Five personality traits, behavioral biases, cognitive ability, and investment goals.
+  - User similarity computed separately on transaction data and psychological traits using Pearson correlation.
+  - Weighted average of similarity scores combines transaction and psychological data.
+  - Investors were grouped via clustering (K-means) on psychological traits or by transaction volume to tune the similarity weight per group.
+  - Top-N stocks recommended using user-based collaborative filtering with weighted neighbor aggregation.
+findings:
+  - num: General personality-based model achieved F1=0.088 (GSR) vs random model F1=0.003.
+  - num: Adding domain-specific psychological traits improved F1 from 0.088 to 0.092 for general stock recommendations.
+  - Clustering investors by psychological traits improved new stock recommendation F1 to 0.083 vs transaction-based model F1=0.076.
+  - Division model outperformed transaction-based model in new stock recommendation across most cluster counts.
+  - Personality-based model significantly outperformed random model, confirming utility for cold-start.
+  - Simple weighted average of similarities did not improve over transaction-based model.
+  - Adding all psychological variables did not always improve performance over subsets.
+key_figures_tables:
+  - "Table 2: Results showing personality-based model outperforms random, but transaction-based model is superior overall."
+  - "Table 3: Ablation study results indicating domain-specific traits improve recommendation performance."
+  - "Figure 4: Performance of weighted average model falls between psychology-only and transaction-only models."
+  - "Figure 5: Division model and cluster model outperform transaction-based model in new stock recommendations."
+  - "Figure 3: Hierarchical clustering heatmap reveals relationships among investor psychological traits."
+key_equations:
+  - equation: "SimT(u,v) = sum((r_ua - r_u)(r_va - r_v)) / sqrt(sum(r_ua - r_u)^2 * sum(r_va - r_v)^2)"
+    explanation: "Pearson correlation for transaction data similarity."
+  - equation: "SimP(u,v) = sum((p_u^i - p_u)(p_v^i - p_v)) / sqrt(sum(p_u^i - p_u)^2 * sum(p_v^i - p_v)^2)"
+    explanation: "Pearson correlation for psychological trait similarity."
+  - equation: "Sim(u,v) = alpha_u_in_Ci * SimT(u,v) + (1 - alpha_u_in_Ci) * SimP(u,v)"
+    explanation: "Weighted average combining transaction and psychological similarities."
+definitions:
+  - term: "Big-Five personality traits"
+    definition: "Five-factor model: Extraversion, Openness, Conscientiousness, Agreeableness, Neuroticism."
+  - term: "Domain-specific psychological traits"
+    definition: "Traits like risk tolerance, behavioral biases, cognitive ability relevant to finance."
+  - term: "Cold-start problem"
+    definition: "Difficulty in recommending to new users with no interaction history."
+  - term: "Collaborative filtering"
+    definition: "Recommendation method using similarity between users or items."
+  - term: "Behavioral biases"
+    definition: "Systematic deviations from rational decision-making in finance."
+critical_citations:
+  - "[Lex & Schedl, 2022] — Foundational survey on personality-aware recommenders."
+  - "[Dhelim et al., 2022] — Comprehensive review of personality-aware recommendation systems."
+  - "[Swezey & Charron, 2018] — Personalized stock recommendation using risk tolerance."
+  - "[McCrae & John, 1992] — Defines Big-Five personality model used in study."
+  - "[Grinbaltt et al., 2011] — Links cognitive ability to stock market participation."
+relevance:
+  topics:
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: "Directly investigates personality and behavioral traits for profiling investors."
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: medium
+      justification: "Demonstrates personality traits mitigate cold-start in stock recommendations."
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: "Uses clustering and collaborative filtering to classify investors by psychological traits."
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: contextual
+      justification: "Provides background on personalization but not on budget constraints."
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: "Mentions privacy as a challenge but does not address solutions."
+  contribution: "This paper provides a methodological framework for incorporating behavioral traits into user modeling, directly applicable to Odin's behavioral profiling module (5.A, 5.C). Its approach to grouping users by psychological characteristics can inform cold-start strategies (5.B) by using trait-based similarity when transaction data is sparse. The finding that domain-specific traits improve recommendation accuracy justifies Odin's inclusion of Filipino-specific financial psychology. The clustering and weighting approach can be adapted for Odin's budget recommendation personalization."
+  directly_justifies:
+    - "Using Big-Five personality traits can mitigate the cold-start problem in financial recommendations."
+    - "Domain-specific psychological traits improve recommendation performance over general traits alone."
+    - "Clustering users by psychological traits enhances new item recommendation over transaction-only models."
+    - "Investors with limited transaction data benefit from personality-based similarity."
+  limits:
+    - "Data collected from Japanese investors, limiting generalizability to Filipino context."
+    - "Study focuses on stock recommendations, not spending/budgeting behavior."
+    - "Cold-start evaluation simulated with data-splitting, not true new user scenarios."
+  mapping_rationale: "A systematic scan of all 12 functional domains was performed. The paper was flagged as directly relevant to Behavioral Profiling & Classification (5.A, 5.B, 5.C) due to its core focus on using personality and psychological traits to model investor behavior. It also has contextual relevance to Savings & Debt Management (13.A, 13.B) and Budget Recommendation (7.A, 7.D) through its personalization approach, though not explicitly about budgeting. Other domains like Expense Categorization (3.A) and Anomaly Detection (8.A) were rejected as not addressed. The paper was considered borderline for Data Privacy (10.A) because it mentions privacy challenges but offers no technical contributions, hence 'low' relevance. Overall, the paper is highly relevant for Odin's behavioral profiling and personalization engine."
+limitations:
+  - "Generalizability may be limited due to the use of Japanese investors only."
+  - "Dataset includes only investors with >50 transactions, excluding novice users."
+  - "No comparison with deep learning or modern recommendation baselines. [unacknowledged]"
+  - "The optimal set of psychological traits for recommendation remains unclear."
+remember_this:
+  - "General personality traits improve stock recommendation over random by 0.085 F1."
+  - "Domain-specific psychological traits further boost recommendation performance."
+  - "Clustering by psychology helps new recommendations more than general ones."
+  - "Personality traits are useful for cold-start but not as accurate as transaction data."
+  - "Weighted similarity combining traits and transactions requires user grouping."
+```
