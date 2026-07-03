@@ -3,7 +3,7 @@ paper_id: 5c4b4c6e-8b2d-5b9a-8f1e-3d7a9c2e5f1d
 designation: international-algorithm-specific
 title: Machine Learning Approaches for Credit Default Prediction in Emerging Economies
 authors: Lockwood, T.; Whitfield, V.; Whitlock, T.
-year: 0
+year: 2026
 venue: Unknown
 odin_topics:
   - 5.A

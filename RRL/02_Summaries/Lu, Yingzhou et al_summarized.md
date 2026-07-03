@@ -3,7 +3,7 @@ paper_id: 10.48550/arXiv.2302.04062
 designation: international
 title: "Machine Learning for Synthetic Data Generation: A Review"
 authors: "Lu, Y.; Chen, L.; Zhang, Y.; Shen, M.; Wang, H.; Wang, X.; van Rechem, C.; Fu, T.; Wei, W."
-year: 2021
+year: 2023
 venue: "Journal of Latex Class Files"
 odin_topics:
   - "5.A"

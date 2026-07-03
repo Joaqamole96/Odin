@@ -1,0 +1,133 @@
+```yaml
+paper_id: 10.32996/jcsts.2025.7.4.88
+designation: international
+title: The Role of AI and Machine Learning in Fraud Detection for Financial Services
+authors: Veldurthi, A. K.
+year: 2025
+venue: Journal of Computer Science and Technology Studies
+odin_topics:
+  - 8.A
+  - 8.B
+  - 10.A
+  - 10.B
+  - 5.A
+  - 5.C
+  - 12.A
+  - 12.B
+tldr: A comprehensive review of AI/ML fraud detection techniques, spanning from supervised learning to behavioral biometrics and explainable AI, highlighting implementation challenges and future trends.
+problem_and_motivation: Financial institutions face escalating fraud risks as digital ecosystems expand, but traditional rule-based systems are inadequate due to their static nature, high false positives, and limited contextual awareness. AI and ML have emerged as transformative technologies that enable real-time, adaptive fraud detection with improved accuracy and efficiency.
+approach:
+  - This is a survey and review article, not a primary research study. It synthesizes findings from academic literature and industry reports on AI/ML fraud detection.
+  - It traces the chronological evolution of fraud detection from manual reviews (1960s) to rule-based, statistical, and current AI/ML systems.
+  - It categorizes core ML techniques into supervised (Random Forests, SVMs, Neural Networks), unsupervised (Isolation Forests, Autoencoders), and hybrid/ensemble methods.
+  - It details the architectural components of real-time transaction monitoring systems, including data ingestion, feature engineering, and model execution.
+  - It discusses Explainable AI (XAI) techniques like LIME and SHAP for regulatory compliance, and analyzes implementation challenges such as data quality, false positives, and adversarial attacks.
+findings:
+  - num: AI systems can detect 95% of fraudulent transactions compared to 50% for rule-based systems.
+  - num: False positives can be reduced by up to 50% with AI systems.
+  - Behavioral biometrics like keystroke dynamics and mouse movement analysis can achieve up to 95% accuracy in distinguishing legitimate users from impostors after capturing modest typing behavior.
+  - num: Anomaly detection and network analysis can uncover fraud rings involving over 100 accounts per network.
+  - num: Risk-based authentication can reduce false positives by up to 60% compared to uniform authentication.
+  - num: LSTM models demonstrate particularly strong performance in detecting sequential fraud patterns like credential stuffing.
+  - num: Hybrid systems combining rule-based and ML models can reduce implementation costs by up to 40%.
+  - num: Effective XAI techniques can reduce regulatory examination time by up to 60%.
+  - Machine learning models identify most suspicious cross-border transactions compared to a much smaller percentage for rule-based approaches when evaluated against consistent test datasets.
+  - Adversarially trained models detect a much higher percentage of sophisticated evasion attempts compared to conventionally trained alternatives.
+key_figures_tables:
+  - "Table 1: Evolution of Fraud Detection Systems → AI/ML offers real-time detection and adaptive learning, overcoming limitations of previous eras."
+  - "Table 2: Machine Learning Techniques for Fraud Detection → Supervised, unsupervised, and hybrid methods each have distinct strengths for different fraud types."
+  - "Table 3: Real-Time Monitoring Components → Data ingestion, feature engineering, and feedback loops are critical for effective fraud detection platforms."
+  - "Table 4: Behavioral Biometrics and Device Intelligence → Keystroke dynamics, mouse analysis, and device fingerprinting provide complementary security layers."
+  - "Table 5: Future Fraud Detection Trends → Federated learning, reinforcement learning, and cross-industry collaboration are emerging trends."
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: AI (Artificial Intelligence)
+    definition: Simulation of human intelligence processes by machines, especially computer systems.
+  - term: ML (Machine Learning)
+    definition: A subset of AI that enables systems to learn and improve from experience without explicit programming.
+  - term: XAI (Explainable AI)
+    definition: AI systems designed to be transparent and understandable to humans, explaining their decision-making processes.
+  - term: LIME (Local Interpretable Model-agnostic Explanations)
+    definition: A technique that explains predictions of any classifier in an interpretable and faithful manner.
+  - term: SHAP (SHapley Additive exPlanations)
+    definition: A method based on game theory to explain the output of any machine learning model.
+  - term: RNN (Recurrent Neural Network)
+    definition: A class of neural networks designed for sequential data analysis, with connections that form cycles.
+  - term: LSTM (Long Short-Term Memory)
+    definition: A type of RNN capable of learning long-term dependencies, ideal for processing sequences.
+  - term: SVM (Support Vector Machine)
+    definition: A supervised learning model that classifies data by finding the optimal hyperplane in a high-dimensional space.
+  - term: GDPR (General Data Protection Regulation)
+    definition: A regulation in EU law on data protection and privacy in the European Union and the European Economic Area.
+  - term: FCRA (Fair Credit Reporting Act)
+    definition: A U.S. federal law that promotes accuracy, fairness, and privacy of information in consumer credit reports.
+  - term: BSA/AML (Bank Secrecy Act/Anti-Money Laundering)
+    definition: A set of laws and regulations requiring financial institutions to assist government agencies in detecting and preventing money laundering.
+  - term: API (Application Programming Interface)
+    definition: A set of rules and protocols for building and interacting with software applications.
+critical_citations:
+  - "[Chandola et al., 2010] — Foundational review on anomaly detection for discrete sequences."
+  - "[Lopez-Rojas et al., 2016] — Presented PAYSIM simulator for fraud detection."
+  - "[Pan, 2024] — Overview of ML in financial transaction fraud detection."
+  - "[Bolton & Hand, 2002] — Seminal review on statistical fraud detection methods."
+  - "[Yan et al., 2018] — Broad survey on ML and deep learning for cybersecurity."
+relevance:
+  topics:
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Directly reviews anomaly detection techniques (Isolation Forests, Autoencoders).
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Discusses core algorithms like Isolation Forests and Autoencoders for detecting outliers in financial data.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: Covers XAI for regulatory compliance and mentions federated learning as a privacy-preserving trend.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: medium
+      justification: Argues that transparent models and reducing false positives are critical for building customer trust.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Discusses behavioral biometrics and profiling to distinguish legitimate users from impostors.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Reviews classification methods like Random Forests and SVMs for identifying behavioral patterns.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: low
+      justification: Mentions evaluation metrics like precision, recall, and false positive rates but does not provide a specific framework.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: low
+      justification: Discusses model performance comparisons (e.g., Random Forests vs. Neural Networks).
+  contribution: This paper provides a comprehensive survey of AI/ML techniques that can be directly applied to Odin's anomaly detection module, specifically in selecting and justifying algorithms for detecting unusual spending patterns. Its discussion of behavioral biometrics and profiling offers a foundation for Odin's user behavioral profiling capabilities. The paper's analysis of XAI and regulatory compliance provides critical insights for building user trust and ensuring transparency in Odin's decision-making.
+  directly_justifies:
+    - "Random Forests effectively handle the class imbalance inherent in fraud detection."
+    - "Isolation Forests are computationally efficient for real-time anomaly detection."
+    - "Explainable AI techniques like LIME and SHAP are necessary for regulatory compliance and user trust."
+    - "Behavioral biometrics enhance user authentication without increasing friction."
+    - "Ensemble methods combine models to maximize detection capabilities."
+  limits:
+    - "Lack of specific empirical evaluation or case study data for Odin's context."
+    - "No discussion of how to implement these systems on mobile-first platforms."
+    - "Primarily focused on fraud detection, not on the broader range of personal finance management tasks like budgeting."
+  mapping_rationale: A systematic scan across all 12 functional domains was performed. The paper's core contribution on anomaly detection techniques maps directly to domain 8.A and 8.B with high relevance. Its coverage of explainable AI and data privacy aligns with domain 10.A and 10.B (medium). Behavioral profiling discussions relate to domain 5.A and 5.C (medium). While the paper covers evaluation (12.A, 12.B), it is general and offers low direct value for Odin's specific evaluation needs. Domains related to forecasting, budgeting, and mobile design were rejected as the paper contains no relevant claims. Overall, the paper is highly relevant for informing Odin's anomaly detection engine and user trust considerations but provides only foundational or contextual insights for other domains.
+limitations:
+  - "This is a survey paper, not primary research, offering no novel empirical contributions. [unacknowledged]"
+  - "The paper does not address the specific financial behaviors and cultural contexts of Filipino young professionals. [unacknowledged]"
+  - "Implementation challenges such as data quality and adversarial attacks are discussed but not quantified for specific contexts."
+  - "The focus is on transaction fraud, a different domain than personal spending behavior analysis."
+remember_this:
+  - "AI systems can detect 95% of fraud vs. 50% for rule-based systems."
+  - "Behavioral biometrics provide continuous authentication through typing and mouse patterns."
+  - "Explainable AI is critical for regulatory compliance and user trust."
+  - "A layered defense strategy reduces fraud losses through multiple detection mechanisms."
+  - "Hybrid systems combine rule-based and ML models to reduce implementation costs."
+```
