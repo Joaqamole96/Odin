@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.69569/jip.2025.758
-designation: local
+designation: local # Published in Bulacan State University, Philippines
 title: "A Systematic Literature Review: Present Bias versus Financial Literacy as Determinants of Savings Behavior Among Entrepreneurs"
 authors: "Aquino, E. J.; Sealmoy, R.; Mandap, O."
 year: 2026

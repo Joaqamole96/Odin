@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.3390/jrfm19020104
-designation: international-algorithm-specific
+designation: international
 title: Performance, Fairness, and Explainability in AI-Based Credit Scoring: A Systematic Literature Review
 authors: Bahlool, R.; Hewahi, N.; Elmedany, W.
 year: 2026

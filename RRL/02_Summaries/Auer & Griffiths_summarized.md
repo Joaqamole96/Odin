@@ -1,0 +1,103 @@
+```yaml
+paper_id: 10.1080/16066359.2023.2264763
+designation: international
+title: An empirical attempt to identify binge gambling utilizing account-based player tracking data
+authors: Auer, M.; Griffiths, M. D.
+year: 2024
+venue: Addiction Research & Theory
+odin_topics:
+  - 1.A
+  - 1.C
+  - 4.A
+  - 5.A
+  - 5.C
+  - 8.C
+  - 11.A
+  - 11.B
+tldr: Cluster analysis of online gambling account data identified two player groups with low gambling frequency but high per-session intensity, potentially indicative of binge gambling.
+problem_and_motivation: Binge gambling is under-explored and previous studies relied solely on self-report data. Account-based tracking data has not been used to operationalize or identify binge gambling patterns.
+approach:
+  - Analyzed anonymized account data from 150,895 British online casino gamblers from January to March 2023.
+  - Used 14 behavioral parameters including gambling days, sessions, bet amounts, deposits, and session balance.
+  - Applied k-means clustering with min-max standardization to identify player groups.
+  - Evaluated cluster stability by applying the model to data from April to June 2023.
+findings:
+  - Six distinct clusters of gamblers were identified.
+  - Cluster 2 (15% of sample) and Cluster 5 (8%) gambled on relatively few days but showed high gambling intensity on those days.
+  - Gamblers in Cluster 2 had the highest average deposits per day (£85.91) and bets per day (£1021.08).
+  - Cluster 5 had the second highest bets per day (£827.48) and displayed the lowest session depletion rate (6%).
+  - num: 17% of Cluster 2 and 29% of Cluster 5 gamblers stopped gambling entirely in the subsequent three-month period.
+  - num: 61% of Cluster 2 and 55% of Cluster 5 gamblers remained in their respective clusters during the follow-up period.
+key_figures_tables:
+  - Table 3: Mean values per cluster for 14 gambling variables. → Cluster 2 and 5 show low days but high intensity.
+  - Figure 2: Deviation of Cluster 2 from average features. → Highest positive deviation in bet and deposit per day.
+  - Figure 3: Deviation of Cluster 5 from average features. → Highest positive deviation in bet per day and per game.
+  - Table 5: Cluster transition matrix. → 17-29% of binge clusters became inactive in the next period.
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: Binge gambling
+    definition: Intermittent episodes of excessive gambling with transient loss of control and acute harm, with abstinence between episodes.
+  - term: Account-based tracking data
+    definition: Behavioral data from online gambling accounts, including bets, deposits, and session activity.
+critical_citations:
+  - "[Nower & Blaszczynski, 2003] — Defines binge gambling criteria used as conceptual basis."
+  - "[Cowlishaw et al., 2018] — Developed a screening tool based on binge gambling criteria."
+  - "[Auer & Griffiths, 2023a] — Operationalized chasing losses using account-based data."
+relevance:
+  topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Provides a general example of behavioral profiles but no specific Filipino context.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: contextual
+      justification: Behavioral patterns of online gamblers are relevant but not specific to young Filipino professionals.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Demonstrates the use of behavioral tracking to identify risk profiles, relevant for PFMS feature design.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Directly addresses the identification of distinct behavioral clusters (binge gamblers) using account data.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Applies cluster analysis to classify users into behavioral profiles based on spending intensity and frequency.
+    - code: 8.C
+      name: Cold-Start Baseline Strategies for Anomaly Detection
+      relevance: low
+      justification: The identified binge patterns could inform baseline behavior for anomaly detection in new users.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Findings on cluster stability and inactivity rates inform engagement dynamics.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: medium
+      justification: Insights on which user groups disengage could inform retention strategies.
+  contribution: This paper provides a methodological contribution for identifying episodic high-intensity behavior using cluster analysis, which could be adapted for Odin's behavioral profiling module (5.A). The identification of distinct user clusters with low frequency but high intensity spending maps directly to Odin's need to classify spending profiles (5.C). The study's use of account-based data supports Odin's core data-driven approach, and its findings on cluster stability inform engagement and retention strategies (11.A, 11.B). The technique offers a potential baseline for detecting deviations from normal spending patterns in Odin's anomaly detection system (8.C).
+  directly_justifies:
+    - Account-based behavioral data can identify episodic high-intensity spending profiles.
+    - Cluster analysis is an effective method for classifying users into distinct financial behavioral groups.
+    - High-intensity, low-frequency users may disengage at higher rates, relevant for retention.
+    - Tracking intra-session and inter-session dynamics can inform cold-start baselines.
+  limits:
+    - Single operator data may not capture total gambling behavior.
+    - Binge patterns may not be fully visible over a three-month period.
+    - The study does not validate identified clusters against self-reported binge gambling status.
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was performed. Domains such as Filipino Cultural Context, Expense Categorization, Budget Recommendation, Savings & Debt Management, Mobile-First Design, Data Privacy, and System Evaluation were considered but rejected as the paper does not directly inform these areas. The paper's primary relevance lies in Behavioral Profiling & Classification (Topics 5.A and 5.C), as it directly applies cluster analysis to identify behavioral profiles based on gambling intensity and frequency. It provides a method for identifying episodic high-intensity behavior, which is a borderline case touching on Anomaly Detection (8.C) by offering a potential baseline for unusual patterns. It also offers indirect support for Engagement & Retention (11.A, 11.B) through its analysis of user stability and inactivity. The topic of Existing Systems (4.A) is relevant in demonstrating a data-driven approach. Overall, the paper offers a valuable methodological example for classifying behavioral profiles from transaction data, with moderate relevance to engagement and cold-start anomaly baselines.
+limitations:
+  - Data from only one online gambling operator may not be generalizable.
+  - Short observation period (three months) may not capture the episodic nature of binge gambling fully.
+  - The identified clusters are not validated against external clinical criteria for binge gambling. [unacknowledged]
+remember_this:
+  - Cluster analysis identified two groups with low gambling frequency but high intensity.
+  - num: 17% to 29% of high-intensity, low-frequency gamblers stopped gambling entirely in the following period.
+  - Behavioral profiles can be identified from account-based transaction data.
+  - High-intensity, low-frequency behavior may represent a distinct user profile.
+  - Account-based clustering offers a baseline for detecting unusual spending patterns.
+```

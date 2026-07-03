@@ -1,5 +1,5 @@
 ```yaml
-paper_id: "00000000-0000-0000-0000-000000000000"
+paper_id: 10.1145/3800645.3813097
 designation: "international-algorithm-specific"
 title: "Proteus: Shapeshifting Desktop Visualizations for Mobile via Multi-level Intelligent Adaptation"
 authors: "Liu, C.; Cheng, S.; Liang, F.; Jiang, Z.; Huang, L.; Athapaththu, K.; Wang, Y."

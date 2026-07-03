@@ -1,6 +1,6 @@
 ```yaml
 paper_id: "10.5089/9798400295125.001"
-designation: "local-algorithm-specific"
+designation: "local"
 title: "Artificial Intelligence and the Philippine Labor Market: Mapping Occupational Exposure and Complementarity"
 authors: "Cucio, M.; Hennig, T."
 year: 2025

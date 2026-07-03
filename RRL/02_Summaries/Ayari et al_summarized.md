@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.1007/s10462-025-11416-2
-designation: international-algorithm-specific
+designation: international
 title: Machine learning powered financial credit scoring: a systematic literature review
 authors: Ayari, H.; Guetari, R.; Kraïem, N.
 year: 2026

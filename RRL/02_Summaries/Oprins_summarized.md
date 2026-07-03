@@ -1,5 +1,5 @@
 ```yaml
-paper_id: "6ba7b810-9dad-11d1-80b4-00c04fd430c8"
+paper_id: 10.1111/ntwe.70030
 designation: "international"
 title: "Understanding Online Freelancers' Labour Agency at the Intersection of Platforms, Wider Labour Markets, and Households: Evidence From the Philippines"
 authors: "Oprins, J. H."

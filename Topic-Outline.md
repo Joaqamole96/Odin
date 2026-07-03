@@ -240,13 +240,13 @@
 #### [O] 5.C.II Classification algorithms applied to behavioral and financial user profiling [/classifier-candidates]
 > *Scholar query: What classification algorithms have been applied to behavioral or financial user profiling tasks — including tree‑based methods, logistic regression, support vector machines, and ensemble approaches — and what results do they produce in terms of accuracy, interpretability, and feature importance? I am looking for comparative studies that benchmark multiple classifiers on user profile or customer segmentation tasks using behavioral or financial feature sets.*
 
-#### 5.C.III Feature selection: onboarding questionnaire data versus accumulated transaction behavioral data [/classifier-features]
+#### [O] 5.C.III Feature selection: onboarding questionnaire data versus accumulated transaction behavioral data [/classifier-features]
 > *Scholar query: What features are most appropriate for classifying a user's financial behavioral profile — questionnaire responses collected during onboarding, early transaction behavioral data, or a combination of both? I am looking for research on feature selection and feature engineering for financial user profiling classifiers, including evidence on which input types produce more accurate profile assignments and how the feature set should evolve as behavioral data accumulates.*
 
-#### 5.C.IV Training a profile classifier without labeled real user data at launch [/classifier-training-cold-start]
+#### [O] 5.C.IV Training a profile classifier without labeled real user data at launch [/classifier-training-cold-start]
 > *Scholar query: How can a supervised user profile classifier be trained when no labeled real user data exists at system launch? I am looking for research on approaches such as synthetic data generation, expert‑defined feature distributions, or simulation‑based training that allow a classification model to be deployed before the system has acquired real behavioral data from actual users.*
 
-#### 5.C.V Progressive reclassification: periodic, continuous, and drift‑triggered profile update strategies [/progressive-reclassification]
+#### [O] 5.C.V Progressive reclassification: periodic, continuous, and drift‑triggered profile update strategies [/progressive-reclassification]
 > *Scholar query: What strategies exist for progressively reclassifying users into updated financial behavioral profiles over time — including periodic batch reclassification, continuous online learning, and drift‑triggered reassessment? I am looking for research that evaluates these update strategies in terms of classification stability, responsiveness to genuine behavioral change, and resistance to noise‑driven spurious reclassifications.*
 
 #### 5.C.VI Tradeoffs across candidate classifiers: predictive accuracy, interpretability, and mobile feasibility [/classifier-tradeoffs]

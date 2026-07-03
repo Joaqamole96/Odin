@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
-designation: international-algorithm-specific
+designation: international
 title: A Comprehensive Review of Machine Learning Techniques for Intelligent Personal Finance Management Systems
 authors: D'Souza, M.; Bhegade, P.; Bhalekar, P.; Bhavsar, Y.
 year: 2026

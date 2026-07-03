@@ -1,0 +1,83 @@
+```yaml
+paper_id: 10.1145/3639233.3639353
+designation: local-algorithm-specific
+title: Classifying Sentiments on Social Media Texts: A GPT-4 Preliminary Study
+authors: Maceda, L. L.; Llovido, J. L.; Artiaga, M. B.; Abisado, M. B.
+year: 2023
+venue: 2023 7th International Conference on Natural Language Processing and Information Retrieval
+odin_topics:
+  - 5.C
+  - 12.A
+  - 12.B
+tldr: Evaluates GPT-4 for sentiment classification on code-mixed social media texts, achieving substantial agreement with human annotations using one-shot prompts.
+problem_and_motivation: Manual sentiment annotation of social media data is costly and time-consuming, especially for code-mixed low-resource languages. Automated methods are needed to scale sentiment analysis for public opinion tracking. Prior work lacks evaluation of GPT-4 on such data.
+approach:
+  - Used GPT-4 API with zero-shot and one-shot prompts (English and code-mixed) on 600 social media posts about Philippine UAQTE program.
+  - Compared GPT-4 against fine-tuned mBERT, using Cohen's Kappa, accuracy, precision, and recall.
+  - Employed batch processing to reduce API costs, with 30 and 15 samples per request for zero-shot and one-shot respectively.
+  - Conducted error analysis to identify misclassifications due to slang and domain-specific language.
+findings:
+  - "num: One-shot English prompt achieved Cohen's Kappa 0.77 and accuracy 0.85."
+  - "num: Code-mixed one-shot achieved Kappa 0.73 and accuracy 0.825."
+  - "num: Zero-shot English achieved Kappa 0.50 and accuracy 0.668."
+  - "num: Fine-tuned mBERT underperformed GPT-4 with accuracy 0.828."
+  - Model sometimes returned textual responses instead of numeric codes, requiring post-processing.
+  - Slang and domain-specific terms caused misclassifications.
+key_figures_tables:
+  - "Table 2: Performance of GPT-4 and mBERT on sentiment classification → one-shot English best with Kappa 0.77."
+  - "Table 3: Examples of classified sentiments showing model errors → Model struggles with slang like 'cutie'."
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: "GPT-4"
+    definition: "Large language model by OpenAI used for text generation and classification."
+  - term: "mBERT"
+    definition: "Multilingual BERT model pre-trained on 104 languages."
+  - term: "Code-mixing"
+    definition: "Use of multiple languages within a single sentence."
+  - term: "UAQTE"
+    definition: "Philippine Universal Access to Quality and Tertiary Education Act."
+  - term: "Cohen's Kappa"
+    definition: "Statistic measuring inter-rater agreement."
+critical_citations:
+  - "[OpenAI, 2023] — GPT-4 technical report and capabilities."
+  - "[Devlin et al., 2019] — BERT and mBERT foundation."
+  - "[Gilardi et al., 2023] — ChatGPT outperforms crowd workers for annotation."
+relevance:
+  topics:
+    - code: "5.C"
+      name: "Classification Approaches for Financial Behavioral Profiles"
+      relevance: "low"
+      justification: "Paper focuses on sentiment classification, not financial profiles, but provides a classification methodology."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "low"
+      justification: "Uses evaluation metrics (Kappa, accuracy) that could inform Odin's evaluation design."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "low"
+      justification: "Compares GPT-4 and mBERT, offering a template for evaluating classification algorithms."
+  contribution: "The paper demonstrates a cost-effective approach to sentiment classification using GPT-4 without fine-tuning, which could be adapted to classify user intent or sentiment in Odin's feedback module. The evaluation metrics (Cohen's Kappa, accuracy) provide a benchmark for assessing Odin's own classification modules. The findings on prompt engineering (one-shot with persona) offer guidance for implementing LLM-based features in Odin. The error analysis highlights challenges with slang and domain-specific language, relevant to Odin's Filipino user base."
+  directly_justifies:
+    - "GPT-4 with one-shot prompts achieves substantial agreement with human annotators on code-mixed data."
+    - "Fine-tuned mBERT underperforms GPT-4 on sentiment classification."
+    - "Prompt design, including persona and examples, significantly improves classification accuracy."
+    - "Zero-shot performance is notably lower, indicating the need for few-shot examples."
+  limits:
+    - "Limited sample size (600 posts) and single-run experiment due to API costs."
+    - "Possible data contamination as GPT-4 may have seen similar social media data during training."
+    - "Not tested on financial domain or spending-related texts."
+    - "Error analysis shows sensitivity to slang and non-standard language."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. Domains related to financial practices, spending forecasting, budgeting, anomaly detection, mobile design, privacy, and savings/debt were rejected because the paper does not address financial behaviors or PFMS-specific tasks. The domain of Behavioral Profiling & Classification (5.C) was flagged as low relevance because the paper presents a classification approach (sentiment) that could be adapted for profiling. The System Evaluation domains (12.A and 12.B) were also flagged as low relevance because the paper uses standard evaluation metrics and compares algorithms, which could inform Odin's evaluation methodology. Borderline cases included 11.A (Engagement Dynamics) because sentiment analysis could gauge user engagement, but the paper does not link to engagement mechanisms. Ultimately, only 5.C, 12.A, and 12.B were selected with low relevance. Overall, the paper provides methodological insights for using LLMs in classification tasks but lacks direct application to PFMS, making its relevance contextual at best."
+limitations:
+  - "Small dataset and single experimental run due to cost constraints."
+  - "Potential data contamination of GPT-4 training set."
+  - "Not validated on financial or spending-related texts."
+  - "Error analysis reveals sensitivity to slang and domain-specific terms. [unacknowledged]"
+remember_this:
+  - "One-shot English prompt achieved Kappa 0.77 and accuracy 0.85."
+  - "GPT-4 outperforms fine-tuned mBERT on code-mixed sentiment data."
+  - "Prompt design with persona and examples is critical for performance."
+  - "Code-mixed prompts perform similarly to English ones when context is adequate."
+```

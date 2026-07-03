@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 5b3e3e7a-6f5b-5a3e-8f5e-6b3e3e7a6f5b
-designation: international-algorithm-specific
+designation: international
 title: Predictive Financial Decision Platform through Scalable Online Computing and Reward-Driven Analytical Mechanisms
 authors: Guedi, H. I.
 year: 2026

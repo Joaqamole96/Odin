@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
-designation: international
+designation: international-algorithm-specific
 title: Digital Persona Modeling for Context-Aware Financial Decisioning
 authors: Sanhosh, S. R.; Singh, A. K.
 year: 2025

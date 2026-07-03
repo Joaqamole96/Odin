@@ -1,5 +1,5 @@
 ```yaml
-paper_id: e8a6b3e8-0b4d-563b-9f1f-8c1f5a4b9c7d
+paper_id: 10.61336/jmsr/25-04-36
 designation: international
 title: Enhancing Financial Literacy and Personal Investment Decisions Through AI and Machine Learning
 authors: Praveen, R.V.S.; Vemuri, H.K.; Peri, S.S.S.R.G.; Sista, S.; Saxena, V.; Saxena, P.

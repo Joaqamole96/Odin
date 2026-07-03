@@ -1,5 +1,5 @@
 ```yaml
-paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+paper_id: 10.2139/ssrn.6363518
 designation: international
 title: Consumers semi-intertemporally make intertemporal decisions: insights from the payday effects
 authors: Ma, C.; Gu, Y.; Chong, J. K.

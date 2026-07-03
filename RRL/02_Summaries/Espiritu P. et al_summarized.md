@@ -1,0 +1,85 @@
+```yaml
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+designation: local-algorithm-specific
+title: Balarila: Deep Learning for Semantic Grammar Error Correction in Low-Resource Settings
+authors: Espiritu, P.; Jadie, J.; Ponce, A.; Cheng, C.
+year: 2023
+venue: Proceedings of the First Workshop in South East Asian Language Processing
+odin_topics:
+  - "3.C"
+  - "8.C"
+tldr: Develops a transformer encoder-based model for Filipino grammar error correction using a synthetic dataset and iterative sequence tagging.
+problem_and_motivation: Existing Filipino grammar checkers are limited to lexical errors and lack semantic error correction capabilities. There is no publicly available Filipino grammar checker addressing this complexity, motivating the development of a deep learning solution.
+approach:
+  - "Adopted the GECToR approach, framing grammar error correction as an iterative sequence tagging task using a transformer encoder."
+  - "Created a synthetic dataset of error-free and error-filled Filipino sentences via an automated error generation pipeline from scraped news articles."
+  - "Fine-tuned three pre-trained models: BERT-Base, RoBERTa-Base, and RoBERTa-Large, using a two-stage fine-tuning process."
+  - "Used a dataset of 906,958 sentences split into train, dev, and test sets with a 70:15:15 ratio."
+  - "Evaluated GEC performance using precision, recall, and F0.5 scores, and GED performance using a multi-class confusion matrix."
+findings:
+  - "num: RoBERTa-Large achieved the highest F0.5 score of 70.75, while RoBERTa-Base achieved a score of 69.00."
+  - "num: RoBERTa-Base demonstrated cost-effectiveness with only a 1.75% F0.5 score difference compared to RoBERTa-Large."
+  - "Models struggled with duplicate words, morphological errors, and missing word errors due to the error automation algorithm's vagueness."
+  - "RoBERTa-Large outperformed others in GEC scores, producing corrections closest to the gold standard."
+  - "BERT-Base had the poorest performance across all GEC metrics."
+  - "All models faced difficulties with EMARK transformation tags due to a lack of common indicators for exclamation marks."
+  - "Inconsistencies were observed in correcting the same erroneous sentence with multiple errors due to dataset limitations."
+key_figures_tables:
+  - "Figure 3: Bar charts comparing precision, recall, and F0.5 scores of three models → RoBERTa-Large shows the best GEC performance."
+  - "Table 2: List of error types and their corresponding transformation tags → Defines the tagging schema for the GEC task."
+  - "Table 3: Tagalog Verb Form Transformation Tags → Shows the morphological transformations for verbs."
+  - "Table 6: Grouped GED performance results for error-free and error-filled datasets → RoBERTa-Large generally performs best across error types."
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: "GEC"
+    definition: "Grammatical Error Correction"
+  - term: "GED"
+    definition: "Grammatical Error Detection"
+  - term: "SMT"
+    definition: "Statistical Machine Translation"
+  - term: "GECToR"
+    definition: "Grammatical Error Correction: Tag, Not Rewrite"
+  - term: "BERT"
+    definition: "Bidirectional Encoder Representations from Transformers"
+  - term: "RoBERTa"
+    definition: "Robustly optimized BERT approach"
+critical_citations:
+  - "[Omelianchuk et al., 2020] — Foundational approach adopted for the GEC model."
+  - "[Cruz and Cheng, 2021] — Pre-trained Filipino RoBERTa models used in the study."
+  - "[Cruz and Cheng, 2019] — Pre-trained Filipino BERT model used in the study."
+relevance:
+  topics:
+    - code: "3.C"
+      name: "User-Defined Allocation Constraints"
+      relevance: "contextual"
+      justification: "The study's synthetic data generation approach could inform handling of user constraints in natural language."
+    - code: "8.C"
+      name: "Cold-Start Baseline Strategies for Anomaly Detection"
+      relevance: "low"
+      justification: "The GECToR architecture used for error detection may inform cold-start baseline strategies for anomaly detection modules."
+  contribution: "The paper's approach to synthetic dataset creation for low-resource languages provides a potential strategy for generating labeled data for Odin's cold-start challenges. The GECToR-inspired iterative sequence tagging architecture offers a potential method for detecting and correcting constraints or anomalies in user-declared inputs, such as budget categories or spending descriptions. The use of transformer encoders demonstrates a viable path for leveraging pre-trained models for financial natural language processing tasks, reducing reliance on large, domain-specific corpora."
+  directly_justifies:
+    - "Synthetic data generation is a viable strategy for low-resource natural language processing tasks."
+    - "Transformer encoder-based models can effectively handle error detection and correction in the Filipino language."
+    - "Iterative sequence tagging can refine predictions over multiple passes."
+  limits:
+    - "Limited to specific grammar and spelling errors; does not cover all possible Filipino language errors."
+    - "The synthetic dataset may introduce biases due to the rule-based error automation pipeline."
+    - "Training was hindered by GPU memory issues, particularly for the RoBERTa-Large model."
+    - "The error automation algorithm introduced only one error per sentence, limiting model robustness."
+    - "The study does not address financial domain-specific language or user constraints."
+  mapping_rationale: "A systematic scan across all 12 functional domains and associated topic codes was performed. The primary contribution of the paper, being a deep learning model for grammar error correction in a low-resource setting, was assessed. The paper was flagged as potentially relevant to the 'Expense Categorization' domain, specifically topic 3.C (User-Defined Allocation Constraints), as the ability to parse and correct user input could inform how users specify their budget allocations. Additionally, the paper's architecture (GECToR) and its use of synthetic data were considered for topic 8.C (Cold-Start Baseline Strategies for Anomaly Detection), as the approach could inspire strategies for handling scarce labeled data. These were assigned 'contextual' and 'low' relevance, respectively. Topics related to forecasting, behavioral profiling, and system evaluation were rejected as the paper does not address financial data or PFMS design. Borderline cases were considered for topic 4.A (Landscape of Existing Systems) due to the mention of Gramatika, but this was rejected as the paper's focus is on building a new system, not analyzing the landscape. Overall, the paper's relevance to Odin is indirect, providing methodological inspiration for data generation and input processing rather than direct financial insights."
+limitations:
+  - "The Balarila model only covers a limited set of Filipino grammatical errors."
+  - "The synthetic dataset was created using rule-based automation, which may introduce inaccuracies."
+  - "Memory issues during training for the RoBERTa-Large model, especially due to GPU limitations."
+  - "The dataset only contains one error per corrupted sentence, limiting the model's ability to correct multiple errors."
+  - "The study does not address real-world user interactions or financial language. [unacknowledged]"
+remember_this:
+  - "RoBERTa-Large achieved the highest F0.5 score of 70.75 for Filipino grammar error correction."
+  - "RoBERTa-Base is the most cost-effective model with only a 1.75% score difference from the large version."
+  - "Synthetic dataset creation is a viable method for low-resource language tasks."
+  - "Model performance is hampered by limited error types and the synthetic data generation approach."
+```

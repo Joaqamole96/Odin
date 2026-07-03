@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.66104/xkad2306
-designation: international-algorithm-specific
+designation: international
 title: Neural Networks for Real-Time Financial Fraud Detection
 authors: Oliveira, D. N. O.
 year: 2026

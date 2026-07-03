@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.63125/p4y4te47
-designation: international-algorithm-specific
+designation: international
 title: Deep Neural Network Models for Real-Time Financial Forecasting and Market Intelligence
 authors: Dhanekula, A.; Munira, M. S. K.
 year: 2026

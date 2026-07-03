@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 326ca948-31b5-5a2b-adf8-513e8912fcc7
-designation: international-algorithm-specific
+designation: international
 title: "Non-Stationarity in Financial Time Series: A Unifying Survey on Drift Detection, Adaptive Learning, and Evaluation"
 authors: "Cabral, D. M.; Lima, A. M. A.; Oliveira, G. H. F. M.; Oliveira, A. L. I."
 year: 2026

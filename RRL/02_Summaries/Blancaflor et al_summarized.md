@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.1145/3698062.3698088
-designation: local-algorithm-specific
+designation: local
 title: Exploring Machine Learning for Credit Card Fraud Detection from a Philippine Perspective
 authors: Blancaflor, E.; Asuncion, K. D.; Reyes, H. J.; Verzosa, M.
 year: 2024

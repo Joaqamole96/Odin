@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.62951/ijamc.v1i1.3
-designation: local-algorithm-specific
+designation: local-algorithm-specific # Published in UP Diliman
 title: A Comparative Analysis of Machine Learning Models for Predictive Analytics in Finance
 authors: Reyes, J. M.; Santos, L. P.; Perez, A.
 year: 2024

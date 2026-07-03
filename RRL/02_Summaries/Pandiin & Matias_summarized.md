@@ -1,5 +1,5 @@
 ```yaml
-paper_id: "4a3f2b1c-5d6e-7f8a-9b0c-1d2e3f4a5b6c"
+paper_id: "10.54610/aeis.v1i1.178"
 designation: "local-algorithm-specific"
 title: "Predictive Modeling for Loan Eligibility Assessment: A Comparative Study of Logistic Regression, Random Forest, and Support Vector Machine with Detailed Oversampling"
 authors: "Pandiin, J. D.; Matias, J. B."

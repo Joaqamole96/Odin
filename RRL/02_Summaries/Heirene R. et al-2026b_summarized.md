@@ -1,0 +1,124 @@
+```yaml
+paper_id: 10.1556/2006.2025.00525
+designation: international-algorithm-specific
+title: Predicting problem gambling among online sports and race bettors: Assessing the value of machine learning using behavioural and self-reported data
+authors: Heirene, R. M.; Vanichkina, D.; Zhang, E.; Huynh, C. T. De; Leau, E. L. Y.; Gainsbury, S. M.
+year: 2026
+venue: Journal of Behavioral Addictions
+odin_topics:
+  - 5.A
+  - 5.C
+  - 6.A
+  - 6.B
+  - 8.A
+  - 8.B
+  - 9.A
+  - 10.A
+  - 12.B
+tldr: Machine learning models using 30 days of behavioural data adequately classify online sports bettors at risk of problem gambling, with performance significantly enhanced by adding two self-reported survey variables.
+problem_and_motivation: Online gambling operators collect behavioural data to identify at-risk customers, but clarity on optimal variables and data windows is lacking. Regulatory frameworks increasingly require timely intervention, yet research comparing short-term versus longer-term data windows for risk detection is limited.
+approach:
+  - Analysed account data and survey responses from 1,470 Australian sports and race betting customers (N=1,349 for six-month window).
+  - Built machine learning models (XGBoost, Random Forest, Logistic Regression, Decision Tree, Neural Network) to classify PGSI risk groups.
+  - Compared models trained on 30-day versus six-month behavioural data windows.
+  - Evaluated performance improvement from adding 11-13 self-reported survey variables (e.g., gambling satisfaction, number of accounts).
+  - Used 70/30 train-test split with 10-fold cross-validation and SMOTE for class imbalance.
+findings:
+  - num: Models using only 30 days of behavioural data achieved adequate classification (AUROC 0.752).
+  - num: Extending data to six months did not meaningfully improve performance (AUROC 0.743).
+  - num: Adding self-report variables substantially improved performance (AUROC 0.850 for 30-day model).
+  - num: Two self-reported variables—gambling satisfaction and number of gambling accounts—were primarily responsible for the improvements.
+  - Most predictive account-based variables: age, deposits per active day, average stake, and days since last bet.
+  - XGBoost achieved the best classification accuracy among tested algorithms.
+  - The binary PGSI ≥8 threshold outperformed the ≥5 threshold for model discrimination.
+  - Models using 30-day data with both survey variables achieved 66.2% sensitivity and 84.4% specificity.
+key_figures_tables:
+  - Figure 2: Confusion matrix and ROC curve for optimal 30-day account model → AUROC 0.752 with 66.2% sensitivity.
+  - Figure 4: Performance of 30-day model combining account and survey data → AUROC 0.850, highest overall performance.
+  - Figure 6: Comparison of models including/excluding survey predictors → Gambling satisfaction and number of accounts drive performance gains.
+  - Table 3: Comparison of classification approaches across PGSI thresholds → Binary ≥8 classification using XGBoost performed best.
+  - Table 4: Model performance comparison across phases → Phase 3 models with survey data achieved highest AUROC and balanced accuracy.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: PGSI
+    definition: Problem Gambling Severity Index, a 9-item scale assessing gambling problems.
+  - term: AUROC
+    definition: Area Under the Receiver Operating Characteristic curve, a measure of classification performance.
+  - term: AUPRC
+    definition: Area Under the Precision-Recall Curve, focused on positive class performance.
+  - term: SMOTE
+    definition: Synthetic Minority Oversampling Technique, used to address class imbalance.
+  - term: XGBoost
+    definition: Extreme Gradient Boosting, a machine learning algorithm using gradient boosting.
+critical_citations:
+  - "[Auer & Griffiths, 2022] — Found Random Forest performs best for self-reported problem gambling prediction."
+  - "[Murch et al., 2023] — Used similar PGSI-based classification with account data from Quebec."
+  - "[Andersson et al., 2025] — Found similar performance across 30-, 60-, and 90-day data windows."
+relevance:
+  topics:
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Directly classifies customers into risk profiles (PGSI groups) based on behavioural data.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Compares multiple machine learning classifiers (XGBoost, Random Forest, etc.) for risk classification.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Demonstrates predictive modeling of risk status using behavioural account data.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: medium
+      justification: Applies time-series features from sequential betting data for risk prediction.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Risk detection in gambling spending patterns is analogous to anomaly detection in PFMS.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: Uses machine learning algorithms for identifying anomalous (risky) spending behaviour.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: contextual
+      justification: Mentions online gambling platforms and customer interactions, provides context for mobile usage.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: Discusses use of personal data (behavioural and survey) for risk detection, touches on privacy implications.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Provides thorough evaluation of model performance using AUROC, AUPRC, sensitivity, specificity, etc.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Provides background on existing risk detection systems in online gambling, analogous to PFMS.
+  contribution: This paper provides a robust methodology for predicting at-risk user behaviour using short-term (30-day) data, which can be applied to Odin's anomaly detection and behavioral profiling modules. It demonstrates that adding minimal self-reported data (e.g., user satisfaction, number of financial accounts) significantly enhances classification accuracy, informing Odin's user-declared preferences module. The finding that longer historical data does not improve performance justifies Odin's potential use of recent spending data for timely intervention. The comparative evaluation of XGBoost against other classifiers guides Odin's algorithm selection for behavioural classification tasks.
+  directly_justifies:
+    - Machine learning models can classify financial risk profiles using only 30 days of transactional data.
+    - Self-reported user variables like satisfaction and number of accounts improve predictive model performance.
+    - XGBoost is a competitive algorithm for classification in personal finance behavioral profiling contexts.
+    - Short-term data windows are sufficient for risk detection, enabling early intervention strategies.
+    - Evaluation using AUROC and AUPRC provides a comprehensive framework for model assessment in imbalanced classification.
+  limits:
+    - Single-site behavioural data may not capture full user spending across multiple platforms.
+    - Self-report variables may suffer from common method bias as they are collected simultaneously with the outcome.
+    - Survey sample was not fully representative of the wider customer base, with more engaged bettors self-selecting.
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The domain of Behavioral Profiling & Classification (5.A, 5.C) and Anomaly Detection (8.A, 8.B) were flagged as high relevance because the paper directly classifies customers into risk profiles using predictive models. Spending Forecasting (6.A, 6.B) was also high/medium relevance due to the use of predictive modeling on spending data. System Evaluation (12.B) is high relevance due to the extensive model performance comparison. The domain of Mobile-First Design (9.A) was considered but rejected for direct relevance, only providing contextual background on online platforms. Data Privacy (10.A) was considered low relevance as privacy is not a central focus, though user data use is discussed. The domains of Filipino Cultural Context (2.A-D), Expense Categorization (3.A-C), Existing Systems (4.A-B), Budget Recommendation (7.A-D), Retention (11.A-B), Savings & Debt (13.A-C) were considered and rejected as the paper does not address these topics. Borderline cases included seasonal spending (2.B) being tangentially related to betting patterns but not addressed, and user-defined constraints (3.C) touching on self-report data but not in a PFMS context. Overall, the paper is highly relevant to Odin's predictive modeling, profiling, and anomaly detection modules, but has limited direct applicability to cultural, budgeting, or debt management domains.
+limitations:
+  - Single-site account data may not capture gambling behaviour across multiple platforms. [unacknowledged]
+  - Self-report survey variables and the PGSI outcome share common method bias due to simultaneous collection. [unacknowledged]
+  - Survey respondents were more engaged bettors, potentially limiting generalisability to the full customer base.
+  - The study did not compare performance using the first 30 days of account history, only the 30 days preceding the survey.
+remember_this:
+  - Classification models using 30 days of data match six-month data performance.
+  - Adding gambling satisfaction and account count variables lifts AUROC from 0.752 to 0.850.
+  - XGBoost outperforms Random Forest and other algorithms in this risk detection context.
+  - The models correctly classify 66% of high-risk individuals but flag many false positives.
+  - Short-term data windows enable earlier risk detection and intervention in PFMS systems.
+```

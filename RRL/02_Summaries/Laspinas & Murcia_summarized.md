@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.5281/zenodo.10049652
-designation: local-algorithm-specific
+designation: local-algorithm-specific # Published in University of Mindanao, Philippines
 title: Machine Learning Approaches in Classifying Income Levels
 authors: Laspiñas, E. L.; Murcia, J. V. B.
 year: 2024

@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8_1a2b3c4d5e6f7g8h9i0j
-designation: international
+designation: international-algorithm-specific
 title: Machine Learning in Financial Risk and Behavior Analysis: Predictive Insights on Bankruptcy, Fraud, and Consumer Trends in the USA
 authors: Begum, M.
 year: 2025

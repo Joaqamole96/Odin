@@ -1,6 +1,6 @@
 ```yaml
 paper_id: f4a4e9c0-8b6c-5a7d-9e1f-3c4d5e6f7a8b
-designation: international-algorithm-specific
+designation: international
 title: Intelligent UI's: Revolutionizing Financial Transaction Systems Through AI and Event-Driven Architecture
 authors: Musunuri, H.
 year: 2025

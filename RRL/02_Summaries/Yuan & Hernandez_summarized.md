@@ -1,6 +1,6 @@
 ```yaml
 paper_id: "10.1109/ACCESS.2023.3338705"
-designation: "local-algorithm-specific" # National University, Philippines
+designation: "local" # National University, Philippines
 title: "User Cold Start Problem in Recommendation Systems: A Systematic Review"
 authors: "Yuan, H.; Hernandez, A. A."
 year: 2023

@@ -1,6 +1,6 @@
 ```yaml
 paper_id: 10.3390/electronics14091721
-designation: international-algorithm-specific
+designation: international
 title: Artificial Intelligence vs. Efficient Markets: A Critical Reassessment of Predictive Models in the Big Data Era
 authors: Pagliaro, A.
 year: 2025
