@@ -82,11 +82,23 @@ Use the following **four‑factor framework** to evaluate each paper. Do not rel
 
 ## Process Steps
 
+0. **Count total papers first** – Before reading any summaries in detail, scan the compilation document to determine the exact total number of unique paper summaries. Record this number prominently at the very top of your output (e.g., *“Total papers in compilation: N”*). This count will serve as your immutable baseline for the final verification.
+
 1. **Scan the compilation** – read each paper’s summary (title, tldr, findings, contribution, topics).
+
 2. **Evaluate** using the four criteria. Be **critical** – a paper with a high score might still be irrelevant if its findings are too generic or not applicable to Odin.
+
 3. **Compare** papers within the same topic area to detect **oversaturation** (e.g., five papers all saying “financial literacy improves savings” – keep the best one or two, cull the rest).
+
 4. **Assign** to one of the three groups.
+
 5. **Write justification** – be concise but specific (e.g., *“Unique finding: payday salience drives overspending; directly supports payday‑alert feature.”*)
+
+6. **Verify tally and check for duplicates** – Once all papers have been assigned, perform a strict double‑check:
+   - **Deduplication**: Ensure that no filename (or paper title, if filename is missing) appears in more than one group (Crucial, Supporting, or Irrelevant). Each paper must belong to exactly one section.
+   - **Summation**: Sum the counts of papers in the three groups.
+   - **Validation**: This sum must exactly equal the total number recorded in Step 0.
+   - At the end of your output, include a clear tally table (e.g., *“Crucial: X, Supporting: Y, Irrelevant: Z, Total: X+Y+Z = N”*) to explicitly demonstrate that the counts reconcile.
 
 ---
 
@@ -103,6 +115,8 @@ Use the following **four‑factor framework** to evaluate each paper. Do not rel
 
 ```markdown
 # Paper Classification for Odin
+
+**Total papers in compilation: 45**  *(Step 0 baseline)*
 
 ## Crucial Papers (Must Include)
 
@@ -131,20 +145,12 @@ Use the following **four‑factor framework** to evaluate each paper. Do not rel
 2. **Chowdhury T. et al_summarized.md** – ML for financial literacy in Bangladesh; methodological inspiration for profiling but not directly applicable.
 
 ... (continue)
-```
 
 ---
 
-## Final Checklist
+## Final Tally Verification *(Step 6)*
 
-- [ ] All papers in the compilation are categorised.
-- [ ] Justifications are specific and tied to Odin’s modules.
-- [ ] Overlap/redundancy is addressed (cull duplicate findings).
-- [ ] The crucial list is manageable (not >50) – quality over quantity.
-- [ ] The reasoning is transparent enough for a human to verify.
-
----
-
-## Agent Instruction
-
-Read the entire compilation carefully. For each paper, apply the criteria above. Do not be constrained by the paper’s original numeric score – use your own judgment. Think like a thesis advisor selecting the best evidence to support a system design. When in doubt, assign to “Supporting” rather than “Crucial” – only the most impactful papers should be in the crucial list.
+- Crucial: 10
+- Supporting: 25
+- Irrelevant: 10
+- **Total assigned: 45** ✅ (Matches initial count of 45. No duplicates found across groups.)
