@@ -1,0 +1,92 @@
+```yaml
+paper_id: 10.1080/0144929X.2025.2533358
+designation: international-algorithm-specific
+title: Between transparency and trust: identifying key factors in AI system perception
+authors: Cetinkaya, N. E.; Krämer, N.
+year: 2026
+venue: Behaviour & Information Technology
+odin_topics:
+  - 10.A
+  - 10.B
+  - 5.A
+  - 9.A
+tldr: User preferences for AI system attributes are heterogeneous, with distinct clusters prioritizing explainability and certification versus fairness and reliability, revealing fundamental trade-offs in trust-building.
+problem_and_motivation: Users must evaluate multiple AI system attributes simultaneously, but prior research has largely examined factors like explainability, reliability, and fairness in isolation. The relative importance of these attributes and how they interact in actual adoption decisions remains unclear, particularly regarding the tension between understanding a system directly or relying on external trust signals.
+approach:
+  - A choice-based conjoint analysis was conducted with 315 German participants recruited via Prolific.
+  - Participants made 18 forced-choice decisions between two AI system profiles for a healthcare decision-making scenario.
+  - Four attributes were manipulated: explainability (3 levels), technical reliability (2 levels), AI certification seal (3 levels), and fairness (2 levels).
+  - A latent class analysis (Gaussian mixture model) identified two distinct participant clusters with opposing preference patterns.
+  - Logistic regression was used to estimate part-worth utilities and relative importance weights for each attribute within the identified clusters.
+findings:
+  - No significant overall preferences for any single attribute were found across the entire sample, indicating heterogeneous preferences.
+  - A two-cluster solution was identified with high entropy (0.82), showing clear segment separation.
+  - Cluster 1 (n=133) showed positive preferences for explainability (β=0.145) and AI certification (β=0.193), but a negative preference for fairness (β=-0.269).
+  - Cluster 2 (n=182) showed positive preferences for reliability (β=0.137) and fairness (β=0.409), but negative preferences for explainability (β=-0.190) and AI certification (β=-0.240).
+  - The most preferred combination for Cluster 1 was high reliability (99%), no explainability, no AI certificate, and low fairness.
+  - The most preferred combination for Cluster 2 was medium reliability (65%), low explainability, a low AI certificate, and high fairness.
+key_figures_tables:
+  - "Table 1: Logistic regression coefficients for each cluster → Shows opposing preference patterns for explainability, reliability, certification, and fairness."
+  - "Table 2: Sample demographics by cluster → Cluster 2 is slightly older and has higher AI acceptance and lower AI fear than Cluster 1."
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: Explainability
+    definition: The ability to attribute comprehensible and interpretable reasons for an AI's decisions and actions.
+  - term: AI certification seal
+    definition: An external trust signal providing third-party validation of an AI system's quality and trustworthiness.
+  - term: Reliability
+    definition: The probability that a system will fulfill its desired function under specific conditions over a designated period.
+  - term: Fairness
+    definition: The equitable treatment of diverse user groups by an AI system.
+  - term: Epistemic trust
+    definition: Confidence placed in experts or institutions based on their perceived competence and integrity.
+  - term: Calibrated trust
+    definition: The alignment between a user's trust level and a system's actual reliability.
+critical_citations:
+  - "[Kaplan et al., 2023] — Meta-analysis showing reliability as a heavily weighted trust factor."
+  - "[Bromme & Gierth, 2021] — Proposes epistemic trust as an alternative to direct understanding."
+  - "[Ferrario & Loi, 2022] — Finding that explainability can decrease trust by revealing limitations."
+  - "[Kieslich et al., 2022] — Shows fairness and performance are equally important to users."
+relevance:
+  topics:
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: high
+      justification: Directly investigates how users weigh trust signals (certification) against other system attributes.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Core focus is on identifying factors that build or reduce user trust and influence adoption decisions.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Identifies distinct user clusters with opposing preferences, similar to behavioral profiling approaches.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: contextual
+      justification: Provides general user preference insights applicable to designing trust-building features in mobile interfaces.
+  contribution: "This paper provides a methodological framework (conjoint analysis) for evaluating competing user priorities in AI system design. It directly informs Odin's trust-building module by demonstrating that a one-size-fits-all approach to transparency and certification is ineffective. The identification of two distinct user clusters with opposing preferences for explainability versus reliability justifies a personalized or adaptive trust-calibration system. Furthermore, the finding that a segment of users actively avoids explanations and certifications challenges the assumption that more transparency is universally beneficial."
+  directly_justifies:
+    - "Users can be segmented into distinct groups with opposing preferences for transparency versus performance attributes."
+    - "AI certification seals are valued by some users but actively rejected by others."
+    - "Fairness is a primary driver of adoption for a significant user segment, outweighing reliability."
+    - "High explainability is not universally preferred and can be viewed negatively by some users."
+  limits:
+    - "Findings are based on a hypothetical healthcare scenario, which may not fully generalize to personal finance applications."
+    - "The study measured system choice as a proxy for trust, but trust and reliance are distinct constructs."
+    - "The attribute levels were presented abstractly, which may not capture real-world user experiences with interactive features."
+    - "The sample was limited to German participants, and cultural factors may influence preference patterns."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The domain 'Data Privacy & User Trust' (topics 10.A, 10.B) was flagged as highly relevant because the paper's central contribution directly examines user preferences for trust-building mechanisms like explainability and certification. The domain 'Behavioral Profiling & Classification' (topic 5.A) was flagged as medium relevance because the study uses cluster analysis to identify distinct user groups with opposing preferences, analogous to profiling financial behaviors. The domain 'Mobile-First Design' (topic 9.A) was flagged as contextual because the findings on user preferences for information presentation and trust signals are applicable to mobile UX design considerations. The domain 'Existing Systems & Gaps' (topics 4.A, 4.B) was considered but rejected because the paper does not review or evaluate existing personal finance systems specifically. The domain 'Expense Categorization' (topics 3.A, 3.B, 3.C) was rejected as the paper does not address spending classification. All other domains, including forecasting, budgeting, anomaly detection, and savings/debt management, were rejected as the paper's scope is limited to general AI system perception and trust, not financial analytics. Overall, the paper is highly relevant to Odin's trust and personalization modules but less relevant to its core financial data processing functions."
+limitations:
+  - "The conjoint design may have limited ecological validity due to the abstract presentation of attribute levels."
+  - "The study focused on a healthcare context, potentially limiting generalizability to personal finance."
+  - "AI literacy was not measured, but may mediate the relationship between system attributes and user trust."
+  - "The sample was culturally homogenous (German), and preferences may differ across populations. [unacknowledged]"
+remember_this:
+  - "User preferences for AI system attributes are not uniform but form distinct clusters."
+  - "One user cluster values explainability and certification, while another favors reliability and fairness."
+  - "High explainability is negatively perceived by 133 out of 315 participants."
+  - "Fairness is the strongest positive driver for one user group, while it is negatively valued by the other."
+```

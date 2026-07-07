@@ -1,0 +1,93 @@
+```yaml
+paper_id: 10.1145/3593013.359405
+designation: international
+title: Questioning the ability of feature-based explanations to empower non-experts in robo-advised financial decision-making
+authors: Bertrand, A.; Maxwell, W.; Eagan, J. R.
+year: 2023
+venue: 2023 ACM Conference on Fairness, Accountability, and Transparency
+odin_topics:
+  - 4.B
+  - 10.A
+  - 10.B
+  - 9.B
+tldr: Feature-based explanations do not improve user understanding, appropriate reliance, or trust calibration in robo-advised life-insurance recommendations compared to no explanation.
+problem_and_motivation: Legal mandates require explanations for AI-based financial advice to enable informed decisions, yet it is unclear if current XAI methods meet these requirements in practice. There is a gap between regulatory expectations and the actual impact of feature-based explanations on non-expert user behavior.
+approach:
+  - Conducted qualitative interviews with 6 French regulators and 5 lay users to define needs and legal requirements for explanations in life-insurance.
+  - Built Robex, a simplified but realistic rule-based robo-advisor, using ecological interface design.
+  - Ran a large-scale quantitative study with 256 participants comparing four conditions: no explanation, graphical-static, graphical-mutable, and dialogic.
+  - Used SHAP to generate feature importance explanations for both correct and deliberately false recommendations.
+  - Measured reliance, trust, cognitive load, engagement, and objective understanding via questionnaires.
+findings:
+  - num: Users with no explanation were more or equally likely to distinguish between good and bad advice than those receiving explanations.
+  - Dialogic explanations significantly increased user trust in incorrect recommendations compared to the no-explanation control group.
+  - num: Dialogic explanations led to almost significantly higher reliance on incorrect robo-advice (p=0.068) than the control.
+  - Graphical or dialogic explanations did not improve user understanding of the recommendation or the explanation itself.
+  - No significant effect of explanation formats on perceived cognitive load or user engagement was found.
+key_figures_tables:
+  - Figure 4a: Reliance scores across conditions → Dialogic explanations do not reduce over-reliance on incorrect advice.
+  - Figure 4b: Trust scores across conditions → Dialogic explanations increase trust, even when advice is wrong.
+  - Figure 4e: Understanding of recommendation across conditions → No explanation format significantly improves comprehension.
+  - Table 2: Questionnaire items and Cronbach's alphas → Validated measures for trust, engagement, and cognitive load.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: Robo-advisor
+    definition: An automated online service that provides financial advice or recommendations.
+  - term: Feature-based explanation
+    definition: An explanation that links a recommendation to specific user characteristics or input features.
+  - term: SHAP
+    definition: SHapley Additive exPlanations, a method for explaining individual predictions by attributing importance to each feature.
+critical_citations:
+  - "[Miller, 2019] — Foundational theory on explanation in AI from social sciences."
+  - "[Bibal et al., 2021] — Overview of legal frameworks for explainable AI."
+  - "[Szymanski et al., 2021] — Comparison of visual and textual explanations for non-experts."
+relevance:
+  topics:
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Discusses legal requirements for explanations as a form of consumer protection and transparency.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Directly measures how different explanation formats affect user trust in a robo-advisor.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Identifies that current robo-advisor explanations fail to empower users or meet legal objectives.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: medium
+      justification: Compares dialogic and graphical explanations, informing UX design choices for user interfaces.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Provides an empirical evaluation framework for assessing explanation effectiveness.
+  contribution: "This paper provides a foundational empirical critique of feature-based explanations in a high-stakes financial context, directly informing Odin's explanation module design. It highlights that legally mandated explanations may not improve user outcomes and can lead to over-reliance. The study's mixed-methods approach (qualitative + quantitative) offers a rigorous evaluation framework applicable to Odin's user studies. The finding that dialogic explanations increase trust without improving understanding is critical for Odin's UX design, suggesting caution with anthropomorphic interfaces. Ultimately, this work shifts the focus from providing explanations to ensuring they are cognitively engaging and calibrated to user expertise."
+  directly_justifies:
+    - "Feature-based explanations do not increase appropriate reliance on financial advice compared to no explanation."
+    - "Dialogic explanation formats can increase user trust in incorrect recommendations, causing over-reliance."
+    - "Current explanation formats fail to improve user understanding of financial recommendations."
+    - "Regulatory objectives for explanations may not be met by existing XAI techniques."
+  limits:
+    - "The study uses a simplified, rule-based robo-advisor, not a real AI system."
+    - "Participants were crowd-sourced and may lack the engagement of real users."
+    - "The sample was skewed towards female participants (73%)."
+    - "No long-term effects of explanations on user behavior were measured."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was conducted. The paper's primary focus on the efficacy of explanations for user trust and reliance in a financial robo-advisor makes it highly relevant to Odin's Data Privacy & User Trust (10.A, 10.B) and System Evaluation (12.A) domains. It also directly addresses the limitations of existing systems (4.B) and informs mobile UX design (9.B) through its comparison of explanation formats. The topic on User Retention (11.A) was considered but rejected because the paper does not measure long-term engagement or retention. Similarly, while the paper touches on user profiling, it does not contribute to Behavioral Profiling (5.A) or Spending Forecasting (6.A). The Financial Behavior (1.C) and Cultural Context (2.A) domains were deemed irrelevant as the study is framed within a European regulatory context and focuses on decision-making psychology rather than spending patterns. Overall, the paper offers critical, cautionary evidence for the design of any explanation feature in Odin, emphasizing the need for rigorous evaluation to avoid unintended consequences like over-reliance."
+limitations:
+  - "The content analysis in Study 1 was based on one author's notes, potentially limiting data capture."
+  - "The non-expert participants in the qualitative study were graduate students, a specific subsample."
+  - "The simplified robo-advisor (Robex) omitted factors like costs and fund performance."
+  - "Crowd-sourced participants may lack the mental engagement of real users."
+  - "The explanation formats tested may not represent the full design space."
+  - "Only short-term effects were measured." [unacknowledged]
+  - "The study does not explore how explanations might interact with different levels of domain expertise." [unacknowledged]
+remember_this:
+  - "Feature-based explanations did not improve user understanding or appropriate reliance."
+  - "Dialogic explanations increased trust in wrong recommendations, a harmful over-reliance effect."
+  - "Graphical formats may be safer than dialogic formats for informing users."
+  - "Regulatory mandates for explanations may not achieve their intended user empowerment goals."
+```

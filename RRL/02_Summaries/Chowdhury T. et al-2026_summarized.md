@@ -1,0 +1,167 @@
+```yaml
+paper_id: 10.1016/j.chbr.2025.100926
+designation: local-algorithm-specific
+title: Modeling financial literacy through explainable machine learning and behavioral segmentation in emerging economies
+authors: Chowdhury, T. A.; Chowdhury, M. A. H.; Rahman, M. T.; Ahmed, I.; Ahmed, N.; Tuhin, M. A. I.; Kafy, A. A.
+year: 2026
+venue: Computers in Human Behavior Reports
+odin_topics:
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.D
+  - 3.A
+  - 5.A
+  - 5.B
+  - 5.C
+  - 6.A
+  - 6.B
+  - 7.A
+  - 7.B
+  - 9.A
+  - 10.A
+  - 10.B
+  - 12.A
+tldr: Machine learning and behavioral segmentation reveal that institutional trust and digital comfort, not education or demographics, are key predictors of financial literacy in Bangladesh.
+problem_and_motivation: Traditional demographic methods fail to capture the complexity of digital financial behavior, hampering effective intervention design in emerging economies. Understanding the complex links between demographic traits, digital access, and financial literacy is crucial for shaping policy. A significant gap exists in using advanced analytics to map financial literacy across behavioral groups for targeted strategies.
+approach:
+  - Analyzed survey data from 1067 Bangladeshi adults collected via stratified random sampling.
+  - Used Random Forest, XGBoost, and Decision Tree models to classify financial literacy.
+  - Employed SHAP analysis for model interpretability and feature importance ranking.
+  - Applied k-means clustering with silhouette score validation for behavioral segmentation.
+  - Addressed class imbalance using SMOTE and ADASYN resampling techniques.
+findings:
+  - num: XGBoost achieved a macro F1-score of 0.52, a 58% improvement over random guessing.
+  - Institutional trust (SHAP importance 0.18) was a stronger predictor than education (0.09).
+  - num: Rural participants had 7.3% higher financial literacy scores than urban participants.
+  - num: Three behavioral clusters were identified: Digitally Literate Planners (34%), Informally Active but Underskilled (41%), and Digitally Excluded Traditionalists (25%).
+  - num: The Digitally Excluded Traditionalists cluster had a mean financial knowledge score of 3.1/10 and a trust score of 1.9/5.
+  - Weak correlations (r < 0.10) were found between financial knowledge and actual behaviors.
+  - Gender-education interaction effects were significant only for women, benefiting from tertiary education.
+  - Formal education level did not significantly impact literacy scores across the sample.
+key_figures_tables:
+  - Figure 9: Model performance comparison → XGBoost outperforms Random Forest and Decision Tree.
+  - Figure 11: SHAP feature importance → Income, trust, and age are top predictors.
+  - Figure 13: Behavioral profiles across clusters → Distinct patterns in digital engagement and formal banking use.
+  - Table 1: Cluster profiles and interventions → Differentiated strategies for each behavioral segment.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: ML
+    definition: Machine Learning
+  - term: SHAP
+    definition: SHapley Additive exPlanations
+  - term: SMOTE
+    definition: Synthetic Minority Over-sampling Technique
+  - term: ADASYN
+    definition: Adaptive Synthetic Sampling
+  - term: BDT
+    definition: Bangladeshi Taka
+  - term: ROC
+    definition: Receiver Operating Characteristic
+  - term: AUC
+    definition: Area Under the Curve
+  - term: PCA
+    definition: Principal Component Analysis
+critical_citations:
+  - "[Lusardi & Messy, 2023] — Foundational framework for financial literacy assessment."
+  - "[Koskelainen et al., 2023] — Digital age financial literacy research agenda."
+  - "[Singh et al., 2020] — Application of AI in behavioral finance."
+  - "[Choung et al., 2023] — Digital financial literacy and financial well-being."
+relevance:
+  topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Provides a framework for analyzing demographic groups in emerging economies.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: contextual
+      justification: Discusses income levels and digital access relevant to financial structures.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly analyzes financial behaviors and literacy using ML and clustering.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: high
+      justification: Identifies behavioral clusters and informal practices like ROSCAs.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: medium
+      justification: The concept of behavioral segments and informal financial networks is analogous to understanding spending cycles.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: Segmentation analysis can inform how to design categories for different user types.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: The core contribution is the creation of behavioral profiles via clustering.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: medium
+      justification: Identifies transitional segments (Cluster 1) relevant to profile dynamics.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Uses Random Forest and XGBoost to classify literacy and behavioral segments.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Employs ML models to predict financial literacy outcomes.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: The study is cross-sectional and does not forecast sequential spending data.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Behavioral segments show varying budgeting and savings capabilities.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: medium
+      justification: The segmentation framework can be used to tailor budget recommendations.
+    - code: 9.A
+      name: Mobile‑First Design Principles and Rationale
+      relevance: medium
+      justification: Digital comfort and access are key predictors, informing mobile design.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Institutional trust is a key predictor, which relates to data privacy concerns.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Trust in institutions is a primary finding, with importance value of 0.18.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Evaluates ML model performance with F1-score and other metrics.
+  contribution: This study provides a validated machine learning framework for predicting financial literacy in emerging economies, directly applicable to Odin's user profiling and behavioral segmentation modules. Its demonstration of SHAP analysis offers a methodological blueprint for making Odin's algorithmic decisions interpretable and trustworthy for Filipino users. The identification of institutional trust and digital comfort as top predictors has direct implications for Odin's design and user onboarding, emphasizing trust-building over demographic assumptions.
+  directly_justifies:
+    - "Financial literacy is best predicted by institutional trust and digital comfort, not formal education."
+    - "Behavioral segmentation reveals three distinct user groups requiring differentiated interventions."
+    - "Machine learning models like XGBoost provide meaningful, interpretable improvements for user classification."
+    - "Rural users demonstrate financial literacy levels comparable to or exceeding urban users."
+  limits:
+    - "Self-reported data may introduce social desirability and recall bias."
+    - "Digital-only survey excludes the most financially vulnerable populations without internet access."
+    - "Cross-sectional design prevents causal inferences about literacy development."
+    - "Unmeasured psychological traits like financial anxiety may improve model accuracy."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to Behavioral Profiling & Classification (Domain 5) due to its core use of k-means clustering and ML classification. It was also highly relevant to Data Privacy & User Trust (Domain 10) because institutional trust emerged as a top predictor (SHAP 0.18). Relevance was assigned to Filipino Cultural Context (Domain 2) due to the discussion of informal financial practices like ROSCAs, which are culturally analogous. For Spending Forecasting (Domain 6), relevance was lower as the study is cross-sectional, but the predictive modeling approach (6.A) is directly relevant. For Budget Recommendation (Domain 7), the segmentation provides a basis for tailored strategies (7.B). The study did not directly address Anomaly Detection (Domain 8), Savings & Debt Management (Domain 13) in detail, or System Evaluation (Domain 12) beyond model metrics, so these were considered low or contextual. Overall, the paper is highly relevant for informing Odin's user profiling, personalization algorithms, and trust-building mechanisms.
+limitations:
+  - "Self-reported data may be subject to social desirability bias. [unacknowledged]"
+  - "Online survey method excludes digitally excluded populations, potentially biasing results."
+  - "Cross-sectional design prevents causal inference regarding financial literacy development."
+  - "The modest F1-score (0.52) indicates that significant variance in literacy remains unexplained by the selected features."
+  - "Cultural bias may exist as the survey instrument was adapted from Western frameworks."
+remember_this:
+  - "Institutional trust (SHAP 0.18) predicts literacy more than education (SHAP 0.09)."
+  - "Rural users showed 7.3% higher financial literacy than urban users."
+  - "Three behavioral clusters were identified: Planners, Underskilled, and Traditionalists."
+  - "Financial knowledge and actual behavior showed negligible correlation (r < 0.10)."
+  - "60% of intervention resources should target the Digitally Excluded Traditionalist cluster."
+```

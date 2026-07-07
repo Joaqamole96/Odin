@@ -1,0 +1,119 @@
+```yaml
+paper_id: 10.1109/ACCESS.2025.3531662
+designation: international-algorithm-specific
+title: Imbalanced Data Problem in Machine Learning: A Review
+authors: Altalhan, M.; Algarni, A.; Turki-Hadjalouane, M.
+year: 2025
+venue: IEEE Access
+odin_topics:
+  - 6.A
+  - 8.A
+  - 5.C
+  - 12.A
+tldr: A survey of data-level, algorithm-level, and hybrid machine learning techniques for addressing class imbalance, highlighting evaluation metrics and persistent challenges in generalizability and scalability.
+problem_and_motivation: Imbalanced data, where one class significantly outnumbers others, causes machine learning classifiers to exhibit bias toward the majority class, leading to misclassification of critical minority instances. This problem is prevalent across domains like healthcare and finance, making reliable model performance difficult. Existing methods have limitations, creating a need for a comprehensive review to guide researchers toward robust solutions.
+approach:
+  - Reviewed 40 studies from databases including Google Scholar, IEEE, and Elsevier, focusing on publications from 2020 to 2024.
+  - Categorizes techniques into data-level (e.g., SMOTE, undersampling), algorithm-level (e.g., cost-sensitive learning, ensemble methods), and hybrid approaches.
+  - Discusses evaluation metrics specific to imbalanced learning, such as F1 Score, G-mean, and AUC, derived from the confusion matrix.
+  - Analyzes the effectiveness and limitations of each technique, identifying research gaps.
+  - Explores real-world applications of hybrid methods in healthcare, fraud detection, and cybersecurity.
+findings:
+  - Data-level techniques like SMOTE address imbalance but risk overfitting and generating ambiguous samples, especially with class overlap.
+  - Algorithm-level methods like cost-sensitive learning and ensemble models (e.g., SMOTEBoost) improve minority class focus but may increase complexity or sensitivity to noise.
+  - Hybrid approaches, such as combining SMOTE with Random Forest or deep learning models, demonstrate effectiveness across domains like medical diagnosis and fraud detection.
+  - Evaluation metrics like G-mean and AUC are preferred over accuracy for imbalanced data, as they provide a more balanced assessment of model performance.
+  - num: A model could achieve 99% accuracy on a dataset with 99% negative samples by simply predicting the majority class, highlighting the inadequacy of accuracy.
+  - Key persistent challenges include scalability of data-level techniques, robustness of algorithms against evolving threats, and generalization of hybrid methods.
+key_figures_tables:
+  - Figure 1: Basic approaches to class distribution balance (oversampling and undersampling). → Visual summary of foundational techniques.
+  - Table 1: Effectiveness and limitations of hybrid-sampling techniques. → Summarizes specific hybrid sampling variants and their trade-offs.
+  - Table 2: Effectiveness and limitations of ensemble methods. → Overview of ensemble methods like AdaBoost and Bagging for imbalanced data.
+  - Table 3: Effectiveness and limitations of hybrid approaches. → Details combined strategies and their real-world application contexts.
+  - Table 4: Applications of hybrid approaches. → Maps hybrid techniques to specific domains and datasets.
+  - Table 5: Evaluation metrics for imbalance classification. → Lists metrics derived from confusion matrix for assessing model performance.
+key_equations:
+  - equation: \(TPR = TP / (TP + FN)\)
+    explanation: True Positive Rate measures the proportion of actual positives correctly identified.
+  - equation: \(FPR = FP / (FP + TN)\)
+    explanation: False Positive Rate measures the proportion of actual negatives incorrectly identified.
+  - equation: \(G\text{-}mean = \sqrt{Recall \times Specificity}\)
+    explanation: Geometric mean balances performance across classes.
+  - equation: \(F1 = 2 \times (Precision \times Recall) / (Precision + Recall)\)
+    explanation: Harmonic mean of precision and recall for a balanced evaluation.
+definitions:
+  - term: SMOTE
+    definition: Synthetic Minority Oversampling Technique, generates synthetic samples for minority class.
+  - term: ADASYN
+    definition: Adaptive Synthetic Sampling, generates synthetic samples focusing on harder-to-learn minority instances.
+  - term: Ensemble Methods
+    definition: Techniques combining multiple models (e.g., boosting, bagging) to improve predictive performance.
+  - term: Cost-Sensitive Learning
+    definition: Assigning different costs to misclassifications to prioritize the minority class.
+  - term: AUC
+    definition: Area Under the ROC Curve, a metric robust to class imbalance.
+  - term: G-mean
+    definition: Geometric mean of recall and specificity, balancing class performance.
+critical_citations:
+  - "[Chawla et al., 2002] — Introduced SMOTE, a foundational oversampling method."
+  - "[Domingos, 1999] — Proposed MetaCost for cost-sensitive classification."
+  - "[Schapire, 1999] — Early work on boosting, foundational for ensemble methods."
+  - "[Breiman, 2001] — Introduced Random Forests, an influential ensemble method."
+relevance:
+  topics:
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: medium
+      justification: Discusses forecasting algorithms (e.g., LSTM, RNN) used to address imbalance in sequential data.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Directly addresses anomaly detection through evaluation metrics and methods relevant to fraud detection.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Reviews classification techniques for imbalanced data, applicable to profiling user behaviors.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Dedicated section on evaluation metrics for imbalanced data (AUC, G-mean, F1), directly relevant to system evaluation.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: contextual
+      justification: Underlying system reliability from handling imbalance indirectly supports user trust.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: contextual
+      justification: System reliability from handling imbalance supports savings management, but not directly addressed.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: contextual
+      justification: Algorithm-level efficiency discussion relates to resource constraints but not design principles.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: low
+      justification: Discusses general limitations of imbalanced data methods, relevant to system limitations.
+  contribution: This review synthesizes a wide range of techniques for handling imbalanced data, directly informing the design of Odin's algorithmic modules. For predictive modeling (6.A) and anomaly detection (8.A), it provides a catalog of algorithms and their trade-offs, guiding module selection and implementation. Its detailed analysis of evaluation metrics (12.A) offers a framework for rigorously assessing the performance of Odin's classification and prediction components. By identifying persistent gaps in scalability and robustness, the paper helps justify the need for tailored, domain-aware approaches in Odin's design.
+  directly_justifies:
+    - "AUC and G-mean are essential for evaluating models on imbalanced spending data in Odin."
+    - "Oversampling techniques like SMOTE can be applied to augment minority financial behavior profiles."
+    - "Ensemble methods such as SMOTEBoost and RUSBoost are effective for handling class imbalance."
+    - "Data-level methods risk overfitting and require careful evaluation against generalization to avoid poor performance."
+  limits:
+    - "Reviews techniques but does not provide a novel algorithm for imbalanced data classification."
+    - "Discusses generalizability challenges but does not propose specific solutions for domain adaptation."
+    - "The computational cost of hybrid approaches, especially in deep learning, is noted as a limitation [unacknowledged]."
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper's core relevance lies in domains that rely on classification and prediction under class imbalance. Topic 8.A (Anomaly Detection) and 12.A (Evaluation Frameworks) were assigned high relevance due to the paper's direct focus on detection algorithms and evaluation metrics for imbalanced data. Topics 6.A (Predictive Modeling) and 5.C (Classification Approaches) received medium relevance as the reviewed algorithmic strategies and classification techniques are directly applicable. Topic 10.B (User Trust) was considered contextual, as effective model performance indirectly builds trust. Domains like 9.A (Mobile-First Design) and 13.A (Savings Goal Management) were rejected as the paper does not address mobile design principles or savings-specific strategies. The overall relevance is high for guiding the selection and evaluation of classification and forecasting modules in Odin.
+limitations:
+  - "Data-level techniques may discard useful information or introduce noise, impacting model robustness."
+  - "Algorithm-level solutions often require complex adjustments and may not generalize across datasets."
+  - "Hybrid approaches face scalability and generalization issues, with computational costs noted as a barrier."
+  - "Evaluation metrics like accuracy can be misleading; reliance on metrics like AUC and G-mean is necessary but may still not capture all practical failure modes [unacknowledged]."
+  - "The paper does not extensively cover the cold-start problem, which is crucial for profiling users with little transaction history [unacknowledged]."
+remember_this:
+  - "Accuracy is misleading for imbalanced data; use AUC or G-mean."
+  - "SMOTE generates synthetic minority samples but risks overfitting."
+  - "Hybrid methods combine data and algorithm-level techniques for better performance."
+  - "num: A 99% accuracy rate can be achieved by simply predicting the majority class."
+  - "Class imbalance affects many domains including finance and healthcare."
+```
