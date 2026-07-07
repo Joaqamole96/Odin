@@ -6,541 +6,7 @@
 
 ---
 
-## Paper 1: Erno & Grefalde_summarized.md
-
-**Source File:** `Erno & Grefalde_summarized.md`
-
-```yaml
-paper_id: 1d5a2f70-4b6d-5ba5-9b0d-9e5e6f7a8b9c
-designation: local
-title: Behavioral and Psychological Drivers of Sustainable Saving and Financial Resilience among Community Households
-authors: Erno, G. Y. L.; Grefalde, J. Q.
-year: 2026
-venue: Journal of Daoist Studies 19-3s
-odin_topics:
-  - 3.A
-  - 3.B
-  - 13.A
-  - 13.B
-  - 1.C
-  - 1.B
-  - 5.A
-  - 2.B
-  - 2.A
-tldr: Community households exhibit strong debt discipline but weak budgeting, saving, and investment behaviors, resulting in low financial resilience shaped by risk-averse and defensive financial decision-making.
-problem_and_motivation: Household financial resilience in resource-constrained community settings is poorly understood, particularly how behavioral and psychological drivers interact with financial capability domains. Existing research lacks an integrated framework that links sustainable saving behavior, financial capability dimensions, and resilience outcomes specifically for Filipino community households. This gap limits the design of targeted interventions that address both structural and behavioral barriers to financial stability.
-approach:
-  - Quantitative descriptive design with 300 household financial decision-makers from Tago, Surigao del Sur.
-  - Structured survey measuring budgeting, saving, debt management, investment behavior, and financial resilience indicators.
-  - Items adapted from established financial capability and resilience frameworks with localized language for clarity.
-  - Face-to-face administration to ensure comprehension and minimize non-response across varying literacy levels.
-  - Descriptive analysis to document existing financial practices and resilience capacity without manipulation.
-findings:
-  - Households demonstrate strong debt management (mean 3.86, Agree) with prudent borrowing and repayment discipline.
-  - Budgeting systems are weak (mean 2.35, Disagree) despite strong family involvement in budget preparation.
-  - Institutionalized saving behavior is underdeveloped (mean 2.44, Disagree) with low use of banks and cooperatives.
-  - Investment engagement is the weakest domain (mean 2.37, Disagree), indicating limited wealth-building pathways.
-  - Financial resilience is low (mean 1.98, Disagree), with limited shock absorption and recovery capacity.
-  - num: 1.60 mean for managing sudden expenses reflects severe savings insufficiency and perceived vulnerability.
-  - num: 4.30 mean for avoiding high-interest loans confirms defensive financial awareness and risk aversion.
-  - Behavioral barriers include present bias, decision fatigue, and low confidence in coping with uncertainty.
-  - Households prioritize short-term financial control over long-term planning, reflecting adaptive responses to perceived economic vulnerability.
-  - Strong debt discipline coexists with weak budgeting, saving, and investment, creating an imbalanced capability configuration.
-key_figures_tables:
-  - Table 1: Financial capability across domains → Imbalanced configuration with strong debt discipline but weak budgeting, saving, and investment.
-  - Table 2: Financial resilience indicators → Uniformly low resilience across shock absorption, adaptability, recovery, and preparation.
-  - None.
-key_equations:
-  - equation: None.
-    explanation: ""
-definitions:
-  - term: Financial resilience
-    definition: Capacity of households to withstand, adapt to, and recover from economic disruptions while maintaining essential consumption.
-  - term: Financial capability
-    definition: Multidimensional construct integrating financial knowledge, attitudes, skills, and behavioral execution in decision-making.
-  - term: Sustainable saving behavior
-    definition: Consistent, long-term financial discipline aligned with future-oriented goals and adaptive coping strategies.
-critical_citations:
-  - "[Katnic et al., 2024] — Financial literacy predicts resilience outcomes in rural households."
-  - "[Karlan et al., 2017] — Community-based savings groups enhance financial discipline and collective accountability."
-  - "[Bufe et al., 2022] — Capability metrics predict financial shock absorption capacity."
-  - "[Liu et al., 2025] — Defines financial resilience as absorbing shocks while sustaining basic needs."
-relevance:
-  topics:
-    - code: 3.A
-      name: Expense Categorization Frameworks
-      relevance: medium
-      justification: Surveys budgeting practices as a core financial capability domain.
-    - code: 3.B
-      name: Expense Category Design Considerations
-      relevance: low
-      justification: Mentions grouping expenses but does not design categorization frameworks.
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      relevance: medium
-      justification: Assesses goal-oriented saving and emergency savings behavior.
-    - code: 13.B
-      name: Debt Management in PFMS
-      relevance: high
-      justification: Provides extensive findings on debt discipline and borrowing behavior.
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      relevance: low
-      justification: Community household focus indirectly informs young professional context.
-    - code: 1.B
-      name: Financial Structure of Filipino Young Professionals
-      relevance: contextual
-      justification: Provides background on income stability and financial practices.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: high
-      justification: Identifies defensive, risk-averse financial profiles and behavioral drivers.
-    - code: 2.B
-      name: Seasonal and Cyclical Spending Patterns
-      relevance: low
-      justification: Mentions income variability but does not analyze seasonal patterns.
-    - code: 2.A
-      name: Culturally Specific Financial Practices
-      relevance: low
-      justification: References community norms but does not focus on cultural practices.
-  contribution: This paper provides empirical evidence that financial resilience among community households depends on balanced integration of budgeting, saving, debt management, and investment behaviors. The findings directly inform Odin's expense categorization module by revealing the importance of structured budgeting and savings tracking. The study highlights the need for Odin's debt management features to support disciplined borrowing while also encouraging proactive saving and investment. The behavioral profiling insights validate Odin's approach to understanding user risk perception and decision fatigue. The paper underscores the critical role of psychological readiness and institutional access, which Odin must address through trust-building and simplified financial tools.
-  directly_justifies:
-    - Defensive financial habits focused on debt avoidance do not generate comprehensive financial resilience.
-    - Financial resilience depends on balanced integration of planning, saving, borrowing, and investing behaviors.
-    - Behavioral barriers such as present bias and decision fatigue constrain long-term financial planning.
-    - Strong debt discipline without structured saving and investment limits adaptive financial capacity.
-    - Psychological readiness and coping confidence are essential for effective financial decision-making under uncertainty.
-  limits:
-    - Geographic scope limited to a single rural municipality, limiting generalizability.
-    - Quantitative descriptive design does not establish causal relationships [unacknowledged].
-    - Reliance on self-reported data may introduce social desirability bias [unacknowledged].
-    - Psychological constructs were not directly measured, limiting understanding of mediating effects.
-    - Cross-sectional design captures behaviors at a single point, missing adaptive dynamics over time.
-  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was conducted. The paper was flagged as relevant for Expense Categorization (3.A, 3.B) because it measures budgeting practices, though not at a granular category level. For Savings & Debt Management (13.A, 13.B), relevance is high and medium respectively, given direct assessment of debt discipline and saving behavior. Financial Behavior (1.C, 5.A) was selected due to the defensive, risk-averse profile observed and the behavioral drivers discussed. Seasonal spending (2.B) and cultural practices (2.A) were considered but rejected as only tangentially mentioned. Domains such as Anomaly Detection, Mobile-First Design, Data Privacy, Engagement, and System Evaluation were considered and rejected because the paper does not address these topics. The paper's primary contribution is its behavioral and financial capability analysis, making it highly relevant for understanding user profiles and debt management, with medium relevance for general financial behavior and saving goals. Overall, the paper provides foundational insights into financial behavior patterns that Odin must address in designing for Filipino users.
-limitations:
-  - Geographic scope was confined to a single municipality with predominantly rural characteristics, limiting generalizability to urban or other socio-economic contexts.
-  - The quantitative descriptive design did not establish causal relationships among behavioral practices, psychological factors, and resilience outcomes.
-  - Reliance on self-reported data from household decision-makers may introduce response biases, including social desirability and recall limitations.
-  - The study focused primarily on behavioral and capability indicators and did not directly measure psychological constructs such as financial anxiety, coping confidence, or perceived control.
-  - External economic factors—including inflation, employment instability, market access, and environmental risks—were not incorporated, although they shape financial capacity and stress responses.
-  - The cross-sectional design captured financial behaviors at a single point in time, limiting the ability to observe adaptive changes over time.
-remember_this:
-  - Household financial capability is imbalanced with strong debt discipline but weak saving.
-  - Low financial resilience reflects limited shock absorption and recovery capacity.
-  - Defensive financial habits constrain long-term stability and adaptive capacity.
-  - Sustainable financial resilience requires balanced integration of budgeting, saving, debt, and investment.
-  - Financial decisions are risk-averse, shaped by perceived vulnerability and limited planning confidence.
-```
----
-
-## Paper 2: Bahlool et al_summarized.md
-
-**Source File:** `Bahlool et al_summarized.md`
-
-```yaml
-paper_id: 10.3390/jrfm19020104
-designation: international
-title: Performance, Fairness, and Explainability in AI-Based Credit Scoring: A Systematic Literature Review
-authors: Bahlool, R.; Hewahi, N.; Elmedany, W.
-year: 2026
-venue: Journal of Risk and Financial Management
-odin_topics:
-  - 5.C
-  - 6.B
-  - 7.B
-  - 8.A
-  - 8.B
-  - 10.A
-  - 10.B
-  - 12.A
-  - 12.B
-tldr: A systematic review of 43 studies finds that performance, fairness, and explainability in AI credit scoring are treated in isolation, with limited joint optimization despite regulatory pressures for transparency and non-discrimination.
-problem_and_motivation: AI adoption in credit scoring offers strong predictive performance but raises fairness and explainability concerns. Existing research addresses these dimensions in isolation, leaving a gap in understanding their interactions under regulatory and human oversight.
-approach:
-  - Systematic literature review following PRISMA guidelines, searching IEEE, Scopus, Web of Science, and ScienceDirect.
-  - Included 43 peer-reviewed studies from 2020-2025 focusing on AI credit scoring with performance, fairness, or explainability.
-  - Used a customized 3Rs&Q (Relevance, Rigor, Reproducibility, Quality) framework for quality assessment.
-  - Structured data extraction using a PICOC framework to guide research questions on trade-offs, bias mitigation, and regulation.
-  - Synthesized findings narratively, mapping studies to intersections of performance, explainability, fairness, regulation, and human-in-the-loop.
-findings:
-  - num: 55.81% of selected studies were published in domain-specific venues not belonging to a major digital library.
-  - num: 48.8% of included studies were published in 2024, indicating recent research interest.
-  - Explainability showed the strongest expansion between 2023 and 2024, becoming the dominant research pillar.
-  - num: 21 papers explicitly discussed the association between fairness and protected attributes.
-  - num: Only 10 out of 43 papers (23.25%) explicitly measured or proposed novel fairness mitigation strategies.
-  - The trade-off between explainability and performance is largely assumed; limited empirical quantification shows marginal differences between interpretable and black-box models.
-  - num: Performance gaps between interpretable and black-box models are often marginal, e.g., less than a 4% AUC difference in many reported cases.
-  - Fairness is treated as a multi-objective optimization problem with tunable trade-offs; aggressive enforcement degrades performance.
-  - Regulatory frameworks (e.g., EU AI Act, ECOA) increasingly mandate explainability and human oversight, but this is not fully integrated into unified pipelines.
-  - Human-in-the-loop (HITL) oversight remains under-specified in practical implementation terms.
-key_figures_tables:
-  - Figure 4: Topic coverage by year → Explainability and fairness research surged from 2023 onward.
-  - Table 5: Pairwise intersections grouped by base dimension → Fairness and protected attributes have the highest intersection (21 papers).
-  - Table 6: Comparison of interpretable vs. black-box model performance → Performance differences are often marginal and dataset-dependent.
-  - Table A10-A13: Summary of fairness mitigation strategies → No universally dominant strategy; effectiveness depends on deployment stage and regulatory context.
-key_equations:
-  - equation: "None."
-    explanation: ""
-definitions:
-  - term: XAI
-    definition: Explainable Artificial Intelligence, techniques to make AI model outputs understandable to humans.
-  - term: HITL
-    definition: Human-in-the-loop, a paradigm where human judgment is integrated into AI system decision-making.
-  - term: ECOA
-    definition: Equal Credit Opportunity Act, a US law prohibiting discrimination in credit transactions.
-  - term: GDPR
-    definition: General Data Protection Regulation, an EU law on data protection and privacy.
-  - term: SHAP
-    definition: SHapley Additive exPlanations, a game-theoretic approach to explain the output of machine learning models.
-  - term: LIME
-    definition: Local Interpretable Model-agnostic Explanations, a technique to explain individual predictions of any classifier.
-  - term: AUC
-    definition: Area Under the ROC Curve, a performance metric for binary classification.
-  - term: PRISMA
-    definition: Preferred Reporting Items for Systematic Reviews and Meta-Analyses, a guideline for reporting systematic reviews.
-critical_citations:
-  - "[Kozodoi et al., 2022] — Establishes baseline fairness-performance trade-offs in credit scoring."
-  - "[Valdrighi et al., 2025] — Provides a comprehensive review of bias mitigation and transparency tools."
-  - "[Dessain et al., 2023] — Quantifies the marginal performance cost of explainability."
-  - "[Langenbucher, 2020] — Outlines a legal framework for responsible AI credit scoring."
-  - "[Kumar et al., 2022] — Aligns algorithmic fairness research with US fair lending regulation."
-relevance:
-  topics:
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: high
-      justification: "Reviews classification models (LR, XGBoost, DL) and their fairness/explainability trade-offs."
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: medium
-      justification: "Discusses predictive modeling for credit risk, including sequential and temporal data considerations."
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      relevance: contextual
-      justification: "Provides background on algorithmic decision-making and constraints, but not directly on budget recommendation."
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: contextual
-      justification: "Mentions outlier and boundary sample detection in credit scoring models."
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: medium
-      justification: "Identifies data imbalance and protected attributes as sources of bias, relevant to anomaly detection design."
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: high
-      justification: "Discusses regulatory frameworks like GDPR and their implications for data privacy and fairness."
-    - code: 10.B
-      name: User Trust in Personal Finance Systems
-      relevance: high
-      justification: "Emphasizes explainability and fairness as foundational for user trust and regulatory compliance."
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: high
-      justification: "Reviews evaluation metrics for fairness (e.g., DI, EO) and performance (AUC, accuracy), crucial for system evaluation."
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: high
-      justification: "Provides systematic comparison of model performance and fairness metrics, directly applicable to evaluating Odin's algorithmic modules."
-  contribution: "This review provides a governance-oriented synthesis of AI-based credit scoring. It justifies Odin's need for a fairness-aware and explainable architecture by demonstrating the limitations of performance-only models. It directly informs the design of Odin's behavioral profiling module (5.C) by highlighting classification trade-offs. It also underpins the importance of evaluation frameworks (12.A, 12.B) that jointly assess performance, fairness, and explainability. Finally, it provides a clear rationale for incorporating regulatory and privacy considerations (10.A, 10.B) into Odin's design."
-  directly_justifies:
-    - "Fairness and explainability must be integrated as joint objectives, not post-hoc additions, in AI-based financial systems."
-    - "The performance gap between interpretable and black-box models is often marginal, making interpretable models a viable choice for regulated applications."
-    - "Regulatory frameworks like the EU AI Act and ECOA mandate transparency, necessitating explainable AI for compliance."
-    - "Human-in-the-loop oversight is essential for certifying fairness and mitigating residual bias in algorithmic decisions."
-    - "There is no universally dominant fairness mitigation strategy; selection depends on context, regulation, and risk tolerance."
-  limits:
-    - "The review is a synthesis of existing literature and does not propose a deployable system."
-    - "The focus is on credit scoring, which may not fully translate to PFMS domains like spending behavior prediction or budget recommendation."
-    - "Specific algorithms for PFMS (e.g., for spending forecasting) are not directly evaluated."
-    - "The review's findings are based on studies from a specific period (2020-2025) and may not capture all future developments."
-  mapping_rationale: "All 12 functional domains and their associated canonical topic codes were systematically scanned. High relevance was assigned to 5.C (Classification Approaches) due to the review's focus on model selection and trade-offs; 10.A and 10.B (Data Privacy & User Trust) for its strong regulatory and governance discussion; and 12.A/12.B (Evaluation Frameworks) for its comprehensive review of performance and fairness metrics. Medium relevance was given to 6.B (Forecasting Algorithms) and 8.B (Anomaly Detection Algorithms) as the paper discusses predictive modeling and bias sources relevant to these modules. Contextual relevance was assigned to 7.B (Budget Recommendation) as the paper provides background on optimization but not direct methods. Domains like 2.A (Cultural Practices) and 9.A (Mobile-First Design) were rejected as they were not addressed. The primary contribution is its intersection-oriented synthesis, informing Odin's need for a balanced, explainable, and fair system, directly supporting evaluation and trust modules."
-limitations:
-  - "The review focuses on credit scoring, a specific financial domain, limiting generalizability to other PFMS functions."
-  - "The study does not propose a novel algorithm or system, only synthesizes existing evidence."
-  - "Human-in-the-loop oversight is discussed conceptually but lacks practical implementation details."
-  - "The analysis is based on studies published up to 2025, and emerging trends may not be fully captured. [unacknowledged]"
-remember_this:
-  - "Performance gains from black-box models over interpretable models are often marginal."
-  - "Explainability has become the dominant research pillar in AI credit scoring since 2023."
-  - "Fairness is a multi-objective optimization problem, not a one-time correction."
-  - "Regulatory frameworks are driving the need for explainable and fair AI systems."
-  - "There is no single best fairness strategy; context and risk tolerance determine the choice."
-```
----
-
-## Paper 3: Khan & Sadaoui_summarized.md
-
-**Source File:** `Khan & Sadaoui_summarized.md`
-
-```yaml
-paper_id: "b7a8c9d0-e1f2-4a3b-8c9d-0e1f2a3b4c5d"
-designation: "international"
-title: "Learner-based Concept Drift Detection: Analysis and Evaluation"
-authors: "Khan, M.M.U.H.; Sadaoui, S."
-year: 2026
-venue: "Unknown"
-odin_topics:
-  - "2.B"
-  - "5.A"
-  - "5.B"
-  - "5.C"
-  - "6.A"
-  - "6.B"
-  - "7.B"
-  - "8.A"
-  - "8.B"
-  - "12.A"
-  - "12.B"
-tldr: "Surveys and evaluates learner-based concept drift detection methods, including SPC, window-based, and ensemble-based detectors, on synthetic and real-world streaming datasets."
-problem_and_motivation: "Concept drift in streaming data can severely degrade model performance, yet detecting drift events efficiently remains challenging due to diverse drift types and algorithmic complexity. A comprehensive survey and empirical comparison of detection methods is lacking for practitioners. This paper addresses this gap by reviewing learner-based detectors and evaluating them across multiple drift scenarios."
-approach:
-  - "Surveys concept drift formal definitions, types (real, virtual, mixed), and transitions (sudden, gradual, incremental, recurrent)."
-  - "Reviews 15 learner-based drift detectors: SPC (FTDD, RDDM, FHDDM, EWMA, EDDM), window (KSWIN, FPDD, WSTD, MDDM, ADWIN, D3), and ensemble (ARF, AUE, DWM, AWE)."
-  - "Evaluates detectors on six synthetic datasets (RT, SINE, MIXED) with abrupt and gradual drifts, and two real-world datasets (ELEC2, CIC-IDS2017)."
-  - "Uses Naive Bayes and Hoeffding Tree as base learners with default hyperparameters and AUC as performance metric."
-  - "Compares detector performance by category and drift type, and summarizes best-performing combinations."
-findings:
-  - "num: EWMA+HT and EDDM+HT achieve the best overall SPC performance with AUC ≈ 0.69."
-  - "num: On abrupt synthetic drifts, ARF+HT achieves the highest average AUC ≈ 0.94."
-  - "num: On real-world streams, AUE+HT performs best among ensemble methods with AUC ≈ 0.88."
-  - "num: For window-based methods, KSWIN, WSTD, and D3 with HT share top abrupt-drift performance at AUC ≈ 0.61."
-  - "Ensemble methods consistently outperform SPC and window-based detectors across all dataset types."
-  - "HT generally outperforms NB, except on real-world streams where NB sometimes matches or exceeds HT for SPC and window-based detectors."
-key_figures_tables:
-  - "Table 8.1: Comparison of SPC-based methods with two base learners → shows FTDD best for abrupt, EWMA/EDDM best overall."
-  - "Table 9.1: Comparison of window-based methods → shows KSWIN/WSTD/D3 best for abrupt, WSTD/D3 best overall."
-  - "Table 10.1: Comparison of ensemble-based methods → shows ARF best for synthetic, AUE best for real-world."
-  - "Table 11.1: Best-performing detectors per category → summarizes top performers by drift type and base learner."
-key_equations:
-  - equation: "\(P(|\bar{X} - \mu| \ge \epsilon) \le 2e^{-2n\epsilon^2}\)"
-    explanation: "Hoeffding bound for deviation of sample mean."
-  - equation: "\(\sigma_{z_t} = \sqrt{\frac{\lambda}{2-\lambda} p_0(1-p_0)(1-(1-\lambda)^{2t})}\)"
-    explanation: "Standard deviation of EWMA estimator for drift detection."
-definitions:
-  - term: "Concept drift"
-    definition: "Change in joint probability distribution of input features and target over time."
-  - term: "Real drift"
-    definition: "Change in posterior probability P(y|X), affecting decision boundary."
-  - term: "Virtual drift"
-    definition: "Change in feature distribution P(X) without changing P(y|X)."
-  - term: "Abrupt drift"
-    definition: "Sudden change from old to new concept at a precise timestamp."
-  - term: "Gradual drift"
-    definition: "Progressive change with a transition phase mixing old and new concepts."
-  - term: "Learner-based detection"
-    definition: "Detects drift by monitoring classifier performance, e.g., error rates."
-critical_citations:
-  - "[Gama et al., 2014] — Foundational survey on concept drift adaptation."
-  - "[Bifet & Gavalda, 2007] — ADWIN adaptive windowing algorithm."
-  - "[Kolter & Maloof, 2007] — Dynamic Weighted Majority ensemble method."
-relevance:
-  topics:
-    - code: "2.B"
-      name: "Seasonal and Cyclical Spending Patterns"
-      relevance: "high"
-      justification: "Explicitly discusses recurrent drift with seasonal spending changes as a concrete example."
-    - code: "5.A"
-      name: "Financial Behavioral Profiles"
-      relevance: "high"
-      justification: "Drift detection is essential for maintaining accurate behavioral profiles as user behavior changes."
-    - code: "5.B"
-      name: "Profile Dynamics and the Cold‑Start Problem"
-      relevance: "medium"
-      justification: "Addresses profile dynamics through drift detection but does not cover cold-start."
-    - code: "5.C"
-      name: "Classification Approaches for Financial Behavioral Profiles"
-      relevance: "high"
-      justification: "Surveys classification-based drift detectors directly applicable to profile classification."
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      relevance: "high"
-      justification: "Concept drift degrades predictive models, and detection methods are critical for maintaining accuracy."
-    - code: "6.B"
-      name: "Forecasting Algorithms for Sequential Spending Data"
-      relevance: "high"
-      justification: "Drift detection informs adaptation of forecasting models to changing spending patterns."
-    - code: "7.B"
-      name: "Budget Recommendation in Personal Finance Systems"
-      relevance: "medium"
-      justification: "Budget recommendations require adaptation to drift, and detection methods can support that."
-    - code: "8.A"
-      name: "Anomaly Detection in Personal Finance Systems"
-      relevance: "high"
-      justification: "Drift detection is a core component of anomaly detection in streaming data."
-    - code: "8.B"
-      name: "Anomaly Detection Algorithms for Personal Spending Data"
-      relevance: "high"
-      justification: "Surveys algorithms that can be used for anomaly detection in spending data."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      relevance: "medium"
-      justification: "Provides an evaluation methodology for drift detectors that can inform PFMS evaluation."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      relevance: "medium"
-      justification: "Empirical comparison of algorithmic modules (drift detectors) offers insights for module evaluation."
-  contribution: "This paper's survey of drift detection methods directly informs the design of Odin's anomaly detection module by identifying suitable algorithms for detecting changes in user spending behavior. Its empirical comparison of SPC, window-based, and ensemble methods provides guidance for selecting a drift detector for Odin's forecasting and profile management components. The distinction between abrupt and gradual drifts is particularly relevant for Odin's handling of seasonal spending and unexpected financial events. The evaluation framework using synthetic and real-world datasets offers a template for testing Odin's algorithmic modules under controlled drift scenarios."
-  directly_justifies:
-    - "Seasonal changes in spending behavior are a type of recurrent drift that Odin must detect."
-    - "Ensemble-based detectors like ARF with Hoeffding Trees achieve the highest accuracy on abrupt drifts."
-    - "AUE with Hoeffding Trees is most effective on real-world data streams, suggesting a preference for Odin's real-world deployment."
-    - "Hoeffding Trees generally outperform Naive Bayes, recommending their use as base learners for drift adaptation in Odin."
-  limits:
-    - "Only learner-based detectors are covered; distribution-based detectors are not evaluated."
-    - "Only two base learners (Naive Bayes and Hoeffding Tree) are used; other classifiers may yield different results. [unacknowledged]"
-    - "Synthetic datasets may not fully capture the complexity of real-world financial data. [unacknowledged]"
-    - "The evaluation metric is limited to AUC; other metrics like F1 and detection delay are not considered. [unacknowledged]"
-    - "Some detectors (WSTD, AUE) had no publicly available implementation, potentially affecting reproducibility. [unacknowledged]"
-  mapping_rationale: "A systematic scan across all 12 functional domains and their associated canonical topic codes was conducted. The following domains were flagged as relevant: Filipino Cultural Context (specifically 2.B due to recurrent drift examples), Behavioral Profiling (5.A, 5.B, 5.C), Spending Forecasting (6.A, 6.B), Anomaly Detection (8.A, 8.B), and System Evaluation (12.A, 12.B). Budget Recommendation (7.B) was also considered medium. Domains such as Mobile-First Design, Data Privacy, User Retention, Savings & Debt Management were considered but rejected because the paper does not address those aspects. Borderline cases: 2.B and 2.D both relate to spending cycles; since the paper explicitly mentions seasonal spending but not Filipino-specific, 2.B was chosen. 5.B (cold-start) was assigned medium because the paper does not discuss cold-start, though it covers profile dynamics. Overall, the paper provides high relevance for drift detection modules and medium relevance for evaluation and adaptation in Odin."
-limitations:
-  - "Only learner-based detectors are covered; distribution-based detectors are not evaluated."
-  - "Only two base learners (Naive Bayes and Hoeffding Tree) are used; other classifiers may yield different results. [unacknowledged]"
-  - "Synthetic datasets may not fully capture the complexity of real-world financial data. [unacknowledged]"
-  - "The evaluation metric is limited to AUC; other metrics like F1 and detection delay are not considered. [unacknowledged]"
-  - "Some detectors (WSTD, AUE) had no publicly available implementation, potentially affecting reproducibility. [unacknowledged]"
-remember_this:
-  - "Ensemble methods, especially ARF with HT, outperform SPC and window-based detectors on synthetic drifts."
-  - "AUE with HT is best for real-world data streams, achieving AUC 0.88."
-  - "EWMA and EDDM with HT are reliable SPC choices with AUC around 0.69."
-  - "Hoeffding Trees are generally superior to Naive Bayes for drift adaptation."
-  - "Drift detector selection depends on drift type and dataset characteristics."
-```
----
-
-## Paper 4: Ramesh & Shobha_summarized.md
-
-**Source File:** `Ramesh & Shobha_summarized.md`
-
-```yaml
-paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
-designation: international
-title: Dynamic Income Volatility and Adaptive Financial Planning Strategies in the Gig Economy: An Empirical Study
-authors: Ramesh, S.; Shobha, C.
-year: 2026
-venue: Artha Vijnana
-odin_topics:
-  - 1.A
-  - 1.B
-  - 1.C
-  - 2.B
-  - 3.A
-  - 5.A
-  - 5.C
-  - 6.A
-  - 6.B
-  - 7.A
-  - 13.A
-tldr: Gig workers facing higher income volatility adopt more adaptive financial planning strategies, a relationship moderated by financial literacy and influenced by demographic and psychological factors.
-problem_and_motivation: The gig economy's rapid growth presents unique financial challenges for workers due to pronounced income volatility. This instability complicates financial management for individuals lacking traditional employment benefits. Effective financial planning strategies are crucial for mitigating these adverse effects.
-approach:
-  - A longitudinal research design was used, surveying 500 gig workers bi-annually over three years.
-  - Data was collected via online surveys optimized for mobile and desktop accessibility.
-  - The study employed multiple regression analyses and structural equation modeling (SEM) to examine relationships.
-  - Mixed-effects models and growth curve modeling were used for longitudinal data analysis.
-  - Thematic analysis of qualitative data from open-ended questions and interviews was also conducted.
-findings:
-  - num: Higher income volatility is positively associated with adaptive financial planning strategies (β = 0.276, p < 0.001).
-  - Financial literacy moderates the relationship between income volatility and adaptive strategies (β = 0.161, p = 0.009).
-  - Education (β = 0.038, p = 0.002) and family status (β = 0.046, p = 0.046) significantly predict adaptive financial planning.
-  - Risk tolerance positively influences adaptive planning (β = 0.332, p < 0.001), while cognitive bias has a negative impact (β = -0.220, p = 0.001).
-  - Demographic factors like age, education, and family status significantly influence financial planning strategies.
-key_figures_tables:
-  - Table 1: Descriptive statistics for all study variables including means, standard deviations, and ranges.
-  - Table 2: Cronbach's alpha values (0.78, 0.81) for financial literacy and adaptive financial planning scales, confirming reliability.
-  - Table 3: VIF values for multicollinearity check, showing high VIFs for income volatility and its interaction term.
-  - Table 4: Regression results for Model 1 showing significant positive effects of income volatility, risk tolerance, and demographic factors on adaptive planning.
-  - Table 5: Regression results for Model 2 demonstrating the significant moderating effect of financial literacy on income volatility and adaptive planning.
-key_equations:
-  - equation: "None."
-    explanation: ""
-definitions:
-  - term: Financial Literacy
-    definition: The ability to understand and use various financial skills, including personal financial management, budgeting, and investing.
-  - term: Income Volatility
-    definition: The degree of unpredictable fluctuation in an individual's earnings over time.
-  - term: Adaptive Financial Planning
-    definition: The use of flexible and dynamic strategies, such as diversified income sources and flexible budgeting, to manage financial instability.
-  - term: Gig Economy
-    definition: A labor market characterized by flexible, short-term, and task-based work arrangements often mediated by digital platforms.
-  - term: Cognitive Bias
-    definition: Systematic patterns of deviation from norm or rationality in judgment, affecting financial decision-making.
-critical_citations:
-  - "[Katz and Krueger, 2016] — Foundational for gig economy growth and worker challenges."
-  - "[Lusardi and Mitchell, 2014] — Establishes the link between financial literacy and better financial outcomes."
-  - "[Kahneman and Tversky, 1979] — Provides the theoretical basis (Prospect Theory) for understanding decision-making under uncertainty."
-relevance:
-  topics:
-    - code: "1.A"
-      name: "Filipino Young Professionals as a Demographic"
-      relevance: "contextual"
-      justification: "While the study focuses on gig workers generally, its findings on financial behavior and volatility are applicable to demographic subsets like Filipino young professionals."
-    - code: "1.B"
-      name: "Financial Structure of Filipino Young Professionals"
-      relevance: "contextual"
-      justification: "Provides insights into income volatility and financial management challenges that can inform understanding of the financial structure of this group."
-    - code: "1.C"
-      name: "Financial Behavior of Filipino Young Professionals"
-      relevance: "medium"
-      justification: "Directly studies financial planning behaviors (adaptive strategies) in response to income volatility, relevant to understanding financial behavior."
-    - code: "2.B"
-      name: "Seasonal and Cyclical Spending Patterns"
-      relevance: "medium"
-      justification: "Income volatility in gig work is linked to seasonality and demand cycles, which informs understanding of cyclical spending patterns."
-    - code: "3.A"
-      name: "Expense Categorization Frameworks"
-      relevance: "low"
-      justification: "Adaptive strategies include flexible budgeting, which requires frameworks for expense categorization, though not the paper's focus."
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      relevance: "high"
-      justification: "Directly investigates how income volatility and psychological traits (risk tolerance, cognitive bias) shape financial behavioral profiles and adaptive planning."
-    - code: "5.C"
-      name: "Classification Approaches for Financial Behavioral Profiles"
-      relevance: "medium"
-      justification: "The study's identification of factors (literacy, demographics) influencing behavior can inform classification approaches for profiles."
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      relevance: "low"
-      justification: "Findings on behavioral responses to volatility can be input features for predictive models but does not itself develop them."
-    - code: "6.B"
-      name: "Forecasting Algorithms for Sequential Spending Data"
-      relevance: "low"
-      justification: "Insights on how volatility affects planning can inform forecasting, but the paper does not propose or evaluate algorithms."
-    - code: "7.A"
-      name: "Budgeting Strategies as Domain Knowledge"
-      relevance: "high"
-      justification: "The paper identifies flexible budgeting and increased savings as key adaptive strategies, directly relevant to domain knowledge on budgeting."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      relevance: "medium"
-      justification: "Findings show increased savings during high-income periods as a coping strategy, relevant to savings goal management."
-  contribution: This paper provides empirical evidence on how financial literacy and demographic factors moderate the behavioral response to income volatility, which can inform Odin's user profiling module. The identified adaptive strategies (flexible budgeting, increased savings) can be directly incorporated into Odin's budget recommendation and savings goal modules. The negative impact of cognitive bias on planning validates the need for behavioral nudges within the application. The methodology using mixed-effects models offers a framework for evaluating financial behavior over time.
-  directly_justifies:
-    - "Income volatility prompts adoption of flexible budgeting and increased savings."
-    - "Financial literacy enhances the effectiveness of financial planning strategies."
-    - "Risk tolerance is positively associated with better financial planning."
-    - "Cognitive biases negatively impact financial decision-making."
-    - "Demographic factors like education and family status influence financial planning."
-  limits:
-    - "The study focuses on the Indian gig economy context, which may limit generalizability to other regions."
-    - "Self-reported data on income and financial behaviors may be subject to recall bias."
-    - "The longitudinal period of three years may not capture long-term efficacy of adaptive strategies."
-  mapping_rationale: During the systematic scan, the paper was flagged as highly relevant to the domains of Behavioral Profiling & Classification (specifically 5.A and 5.C) due to its focus on how workers adapt behaviors to income volatility and the influence of psychological factors. It also provides high relevance to Budget Recommendation (7.A) as it identifies key adaptive strategies like flexible budgeting. Medium relevance was assigned to topics related to Financial Behavior (1.C), Seasonal Patterns (2.B), and Savings Management (13.A), as the findings directly inform these areas. Low relevance was given to Expense Categorization (3.A), Predictive Modeling (6.A), and Forecasting (6.B), as the paper discusses concepts related to these topics but does not propose new frameworks or algorithms. Domains such as Mobile-First Design, Data Privacy, and User Retention were considered but rejected as the paper does not address them.
-limitations:
-  - "The study relies on self-reported income and financial strategies, which may introduce social desirability bias. [unacknowledged]"
-  - "The sample, while diverse, is limited to platform-based gig workers in India, potentially limiting generalizability to other gig economy contexts."
-  - "Potential multicollinearity noted in VIF values, particularly for income volatility and its interaction term, suggests caution in interpreting individual coefficients."
-remember_this:
-  - "Higher income volatility drives gig workers toward adaptive financial strategies."
-  - "Financial literacy significantly improves the effectiveness of financial planning."
-  - "Risk tolerance positively influences adaptive planning, while cognitive bias hinders it."
-  - "Educational attainment and family status are key demographic predictors of financial behavior."
-  - "num: Income volatility and financial literacy interaction has a beta coefficient of 0.161."
-```
----
-
-## Paper 5: D'Souza et al_summarized.md
+## Paper 1: D'Souza et al_summarized.md
 
 **Source File:** `D'Souza et al_summarized.md`
 
@@ -688,7 +154,7 @@ remember_this:
 ```
 ---
 
-## Paper 6: Kuna_summarized.md
+## Paper 2: Kuna_summarized.md
 
 **Source File:** `Kuna_summarized.md`
 
@@ -804,7 +270,7 @@ remember_this:
 ```
 ---
 
-## Paper 7: Mithun et al_summarized.md
+## Paper 3: Mithun et al_summarized.md
 
 **Source File:** `Mithun et al_summarized.md`
 
@@ -970,7 +436,7 @@ remember_this:
 ```
 ---
 
-## Paper 8: Binzaid_summarized.md
+## Paper 4: Binzaid_summarized.md
 
 **Source File:** `Binzaid_summarized.md`
 
@@ -1084,7 +550,7 @@ remember_this:
 ```
 ---
 
-## Paper 9: Prashanth et al_summarized.md
+## Paper 5: Prashanth et al_summarized.md
 
 **Source File:** `Prashanth et al_summarized.md`
 
@@ -1206,7 +672,7 @@ remember_this:
 ```
 ---
 
-## Paper 10: Kim J. et al_summarized.md
+## Paper 6: Kim J. et al_summarized.md
 
 **Source File:** `Kim J. et al_summarized.md`
 
@@ -1347,7 +813,7 @@ remember_this:
 ```
 ---
 
-## Paper 11: Delena et al_summarized.md
+## Paper 7: Delena et al_summarized.md
 
 **Source File:** `Delena et al_summarized.md`
 
@@ -1452,7 +918,7 @@ remember_this:
 ```
 ---
 
-## Paper 12: Nurkhalida & Renanita_summarized.md
+## Paper 8: Nurkhalida & Renanita_summarized.md
 
 **Source File:** `Nurkhalida & Renanita_summarized.md`
 
@@ -1581,7 +1047,7 @@ remember_this:
 ```
 ---
 
-## Paper 13: Pagliaro_summarized.md
+## Paper 9: Pagliaro_summarized.md
 
 **Source File:** `Pagliaro_summarized.md`
 
@@ -1720,7 +1186,7 @@ remember_this:
 ```
 ---
 
-## Paper 14: Han & Ko_summarized.md
+## Paper 10: Han & Ko_summarized.md
 
 **Source File:** `Han & Ko_summarized.md`
 
@@ -1829,7 +1295,7 @@ remember_this:
 ```
 ---
 
-## Paper 15: Mutuc_summarized.md
+## Paper 11: Mutuc_summarized.md
 
 **Source File:** `Mutuc_summarized.md`
 
@@ -1963,7 +1429,7 @@ remember_this:
 ```
 ---
 
-## Paper 16: Sankaewtong et al_summarized.md
+## Paper 12: Sankaewtong et al_summarized.md
 
 **Source File:** `Sankaewtong et al_summarized.md`
 
@@ -2115,7 +1581,7 @@ remember_this:
 ```
 ---
 
-## Paper 17: Ashrafuzzaman et al_summarized.md
+## Paper 13: Ashrafuzzaman et al_summarized.md
 
 **Source File:** `Ashrafuzzaman et al_summarized.md`
 
@@ -2310,7 +1776,7 @@ remember_this:
 ```
 ---
 
-## Paper 18: Majeed_summarized.md
+## Paper 14: Majeed_summarized.md
 
 **Source File:** `Majeed_summarized.md`
 
@@ -2442,7 +1908,7 @@ remember_this:
 ```
 ---
 
-## Paper 19: Banta_summarized.md
+## Paper 15: Banta_summarized.md
 
 **Source File:** `Banta_summarized.md`
 
@@ -2575,120 +2041,7 @@ remember_this:
 ```
 ---
 
-## Paper 20: Onsay & Rabajante_summarized.md
-
-**Source File:** `Onsay & Rabajante_summarized.md`
-
-```yaml
-paper_id: 10.1016/j.socimp.2025.100138
-designation: local-algorithm-specific
-title: From data to decision: Alleviating poverty and promoting development through measuring the unmeasurable economic numbers
-authors: Onsay, E. A.; Rabajante, J. F.
-year: 2025
-venue: Societal Impacts
-odin_topics:
-  - 5.C
-  - 6.A
-  - 6.B
-  - 8.B
-  - 12.A
-  - 12.B
-tldr: Integrates machine learning with econometrics to predict multidimensional poverty and generate localized policy targeting tools from CBMS data.
-problem_and_motivation: Traditional poverty measurement relies on costly, time-intensive surveys, and current regression-based analyses often lack predictive precision. There is a critical need for more accurate, localized, and data-driven tools to inform poverty alleviation policies in the Philippines.
-approach:
-  - Used Community-Based Monitoring System (CBMS) data from 34 localities in Camarines Sur, Philippines.
-  - Combined descriptive, diagnostic, and multidimensional statistical analysis with econometric models like logit/probit regression.
-  - Applied machine learning regression (Random Forest, XGBoost, CatBoost, LightGBM, SVR) and classification (Random Forest, AdaBoost, SVM, etc.) algorithms.
-  - Conducted 273 regression and 468 classification ensemble runs to predict poverty incidence, gap, and severity.
-  - Generated policy maps and a three-round classification system to prioritize interventions for the most vulnerable populations.
-findings:
-  - num: Random Forest classification achieved a prediction accuracy of 92.60–98.00%.
-  - num: The proposed model reduced traditional survey and data processing costs by up to 70%.
-  - Random Forest regressor and classifier outperformed other models for poverty prediction.
-  - A set of 27 multidimensional socioeconomic variables were identified as significant predictors of poverty.
-  - Distinct poverty configurations exist across different localities and indigenous tribes, requiring context-specific policies.
-key_figures_tables:
-  - Figure 1: Sample results of statistical and econometric analyses showing poverty proportions by locality → Poverty outcomes vary significantly and are influenced by multidimensional variables.
-  - Figure 2: Results of machine learning regression and classification → Random Forest models show superior performance and consistency.
-  - Table 1: Theory of Change, hypotheses, and results chain → Provides a framework linking inputs, processes, outputs, and impact indicators.
-  - Table 2: Proposed intervention programs and policy initiatives → Details targeted policies for nutrition, housing, education, and livelihood.
-  - Table 3: Multidimensional poverty indicators and target areas → Maps indicators to recommended interventions and priority groups.
-key_equations:
-  - equation: None.
-    explanation: ""
-definitions:
-  - term: CBMS
-    definition: Community-Based Monitoring System, a data collection system for local poverty and socioeconomic indicators.
-  - term: Random Forest
-    definition: An ensemble learning method that constructs multiple decision trees and outputs the average or mode of predictions.
-  - term: XGBoost
-    definition: eXtreme Gradient Boosting, an optimized algorithm for gradient boosting known for speed and performance.
-critical_citations:
-  - "[Onsay & Rabajante, 2024] — Details the dataset and initial models used for poverty prediction."
-  - "[Sobreviñas, 2020] — Provides a framework for analyzing chronic and transient poverty using CBMS data."
-  - "[Haughton & Khandker, 2009] — Standard reference for poverty and inequality measurement techniques."
-relevance:
-  topics:
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: contextual
-      justification: Applies classification algorithms to categorize poverty levels, analogous to profiling financial behavior.
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: high
-      justification: Directly employs predictive machine learning models (Random Forest, XGBoost) for forecasting socioeconomic outcomes.
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: contextual
-      justification: Uses similar forecasting algorithms (Random Forest, etc.) though applied to poverty data, not spending sequences.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: contextual
-      justification: Classification models used could be adapted for anomaly detection, though not the paper's focus.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: high
-      justification: Provides a clear evaluation framework using accuracy, cost reduction, and policy targeting metrics.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: high
-      justification: Systematically evaluates and compares 7 regression and 12 classification algorithms.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: low
-      justification: The paper profiles poverty and vulnerability, which are analogous but not directly about financial behavior profiles.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      relevance: low
-      justification: Policy recommendations are similar to budget allocation strategies in a public policy context.
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      relevance: low
-      justification: Related to financial management for poverty alleviation, but not specifically about savings goals.
-  contribution: This paper provides a robust methodological framework for predictive classification that can inform Odin's behavioral profiling and forecasting modules. Its use of ensemble methods and systematic evaluation offers a blueprint for Odin's algorithmic architecture. The focus on localized targeting and cost-efficiency is directly relevant to Odin's design as a PFMS for Filipino users. The paper's emphasis on data-driven policy recommendations justifies Odin's core function of providing actionable financial insights.
-  directly_justifies:
-    - "Machine learning models, specifically Random Forest, can predict financial states with up to 98% accuracy."
-    - "A systematic comparison of multiple algorithms is essential for selecting the optimal module."
-    - "A three-round classification system can prioritize users based on vulnerability."
-    - "Using local data is critical for developing context-specific financial tools."
-  limits:
-    - "The study focuses on poverty prediction, not personal spending, so direct applicability to Odin's core tasks is limited."
-    - "The dataset is regional (Bicol), which may limit generalizability to other Filipino demographics."
-  mapping_rationale: A systematic scan of the 12 functional domains revealed that the paper's primary relevance lies in its algorithmic and evaluative contributions. The domains of Spending Forecasting (6.A, 6.B) and System Evaluation (12.A, 12.B) were flagged as having high relevance because the paper directly compares and validates machine learning models for prediction, which is analogous to Odin's forecasting needs. The Behavioral Profiling domain (5.C) is contextually relevant due to its classification approach. Other domains like Expense Categorization (3.A-C) and Mobile-First Design (9.A-B) were considered and rejected as the paper does not address them. Similarly, domains like Data Privacy (10) and Engagement (11) were rejected for lacking discussion. The financial domains (1, 2, 7, 13) were rejected as the paper's scope is macroeconomic poverty, not personal finance. The final assessment is that the paper offers high-value methodological and evaluation strategies that can be adapted for Odin's algorithmic core.
-limitations:
-  - "Focuses on macroeconomic poverty, not personal financial behavior."
-  - "Models are region-specific and may not generalize to the broader Filipino young professional demographic."
-  - "Does not address real-time data processing or mobile application constraints."
-  - "The ethical statement notes that ethical clearance was not required, but using socioeconomic data in a PFMS requires careful privacy handling [unacknowledged]."
-remember_this:
-  - "Random Forest achieved 92.60-98.00% accuracy in classifying poverty states."
-  - "Systematic comparison of 12 classification algorithms is essential for performance validation."
-  - "Using 27 socioeconomic variables improved prediction and policy targeting."
-  - "The framework enables localized policy targeting and cost-efficient data analysis."
-```
----
-
-## Paper 21: Akarlar_summarized.md
+## Paper 16: Akarlar_summarized.md
 
 **Source File:** `Akarlar_summarized.md`
 
@@ -2817,7 +2170,7 @@ remember_this:
 ```
 ---
 
-## Paper 22: Kozakova & Endeva_summarized.md
+## Paper 17: Kozakova & Endeva_summarized.md
 
 **Source File:** `Kozakova & Endeva_summarized.md`
 
@@ -2960,7 +2313,7 @@ remember_this:
 ```
 ---
 
-## Paper 23: Nagaraj_summarized.md
+## Paper 18: Nagaraj_summarized.md
 
 **Source File:** `Nagaraj_summarized.md`
 
@@ -3058,7 +2411,7 @@ remember_this:
 ```
 ---
 
-## Paper 24: Qawasmeh & Al-Qahtani_summarized.md
+## Paper 19: Qawasmeh & Al-Qahtani_summarized.md
 
 **Source File:** `Qawasmeh & Al-Qahtani_summarized.md`
 
@@ -3147,7 +2500,7 @@ remember_this:
 ```
 ---
 
-## Paper 25: Liu_summarized.md
+## Paper 20: Liu_summarized.md
 
 **Source File:** `Liu_summarized.md`
 
@@ -3312,7 +2665,7 @@ remember_this:
 ```
 ---
 
-## Paper 26: Ruiz et al_summarized.md
+## Paper 21: Ruiz et al_summarized.md
 
 **Source File:** `Ruiz et al_summarized.md`
 
@@ -3437,7 +2790,7 @@ remember_this:
 ```
 ---
 
-## Paper 27: Kuswardhani et al_summarized.md
+## Paper 22: Kuswardhani et al_summarized.md
 
 **Source File:** `Kuswardhani et al_summarized.md`
 
@@ -3559,7 +2912,7 @@ remember_this:
 ```
 ---
 
-## Paper 28: Hidayat et al_summarized.md
+## Paper 23: Hidayat et al_summarized.md
 
 **Source File:** `Hidayat et al_summarized.md`
 
@@ -3693,7 +3046,7 @@ remember_this:
 ```
 ---
 
-## Paper 29: Conales_summarized.md
+## Paper 24: Conales_summarized.md
 
 **Source File:** `Conales_summarized.md`
 
@@ -3816,7 +3169,7 @@ remember_this:
 ```
 ---
 
-## Paper 30: de Goma et al_summarized.md
+## Paper 25: de Goma et al_summarized.md
 
 **Source File:** `de Goma et al_summarized.md`
 
@@ -3928,7 +3281,7 @@ remember_this:
 ```
 ---
 
-## Paper 31: Scrivano A.-2025a_summarized.md
+## Paper 26: Scrivano A.-2025a_summarized.md
 
 **Source File:** `Scrivano A.-2025a_summarized.md`
 
@@ -4056,7 +3409,7 @@ remember_this:
 ```
 ---
 
-## Paper 32: Janobe_summarized.md
+## Paper 27: Janobe_summarized.md
 
 **Source File:** `Janobe_summarized.md`
 
@@ -4171,7 +3524,7 @@ remember_this:
 ```
 ---
 
-## Paper 33: Islam M. et al_summarized.md
+## Paper 28: Islam M. et al_summarized.md
 
 **Source File:** `Islam M. et al_summarized.md`
 
@@ -4280,7 +3633,7 @@ remember_this:
 ```
 ---
 
-## Paper 34: Abd-Ellatif et al_summarized.md
+## Paper 29: Abd-Ellatif et al_summarized.md
 
 **Source File:** `Abd-Ellatif et al_summarized.md`
 
@@ -4383,7 +3736,7 @@ remember_this:
 ```
 ---
 
-## Paper 35: Sarmiento et al_summarized.md
+## Paper 30: Sarmiento et al_summarized.md
 
 **Source File:** `Sarmiento et al_summarized.md`
 
@@ -4539,7 +3892,7 @@ remember_this:
 ```
 ---
 
-## Paper 36: Dimaunahan et al_summarized.md
+## Paper 31: Dimaunahan et al_summarized.md
 
 **Source File:** `Dimaunahan et al_summarized.md`
 
@@ -4715,7 +4068,7 @@ remember_this:
 ```
 ---
 
-## Paper 37: Shaha & Gavekar_summarized.md
+## Paper 32: Shaha & Gavekar_summarized.md
 
 **Source File:** `Shaha & Gavekar_summarized.md`
 
@@ -4831,7 +4184,7 @@ remember_this:
 ```
 ---
 
-## Paper 38: Krichen & Mihoub_summarized.md
+## Paper 33: Krichen & Mihoub_summarized.md
 
 **Source File:** `Krichen & Mihoub_summarized.md`
 
@@ -4942,7 +4295,7 @@ remember_this:
 ```
 ---
 
-## Paper 39: Gabatin et al_summarized.md
+## Paper 34: Gabatin et al_summarized.md
 
 **Source File:** `Gabatin et al_summarized.md`
 
@@ -5061,7 +4414,7 @@ remember_this:
 ```
 ---
 
-## Paper 40: Kara & Senguler_summarized.md
+## Paper 35: Kara & Senguler_summarized.md
 
 **Source File:** `Kara & Senguler_summarized.md`
 
@@ -5182,7 +4535,7 @@ remember_this:
 ```
 ---
 
-## Paper 41: Li Y. et al_summarized.md
+## Paper 36: Li Y. et al_summarized.md
 
 **Source File:** `Li Y. et al_summarized.md`
 
@@ -5294,7 +4647,7 @@ remember_this:
 ```
 ---
 
-## Paper 42: Al Lawati et al_summarized.md
+## Paper 37: Al Lawati et al_summarized.md
 
 **Source File:** `Al Lawati et al_summarized.md`
 
@@ -5420,7 +4773,7 @@ remember_this:
 ```
 ---
 
-## Paper 43: Musunuri_summarized.md
+## Paper 38: Musunuri_summarized.md
 
 **Source File:** `Musunuri_summarized.md`
 
@@ -5557,7 +4910,7 @@ remember_this:
 ```
 ---
 
-## Paper 44: Zihan_summarized.md
+## Paper 39: Zihan_summarized.md
 
 **Source File:** `Zihan_summarized.md`
 
@@ -5687,7 +5040,7 @@ remember_this:
 ```
 ---
 
-## Paper 45: Ahmed et al_summarized.md
+## Paper 40: Ahmed et al_summarized.md
 
 **Source File:** `Ahmed et al_summarized.md`
 
@@ -5827,7 +5180,7 @@ remember_this:
 ```
 ---
 
-## Paper 46: Hossain et al_summarized.md
+## Paper 41: Hossain et al_summarized.md
 
 **Source File:** `Hossain et al_summarized.md`
 
@@ -5922,7 +5275,7 @@ remember_this:
 ```
 ---
 
-## Paper 47: Albert et al_summarized.md
+## Paper 42: Albert et al_summarized.md
 
 **Source File:** `Albert et al_summarized.md`
 
@@ -6029,7 +5382,7 @@ remember_this:
 ```
 ---
 
-## Paper 48: Pandey & Awasthi_summarized.md
+## Paper 43: Pandey & Awasthi_summarized.md
 
 **Source File:** `Pandey & Awasthi_summarized.md`
 
@@ -6156,7 +5509,7 @@ remember_this:
 ```
 ---
 
-## Paper 49: Praveen et al_summarized.md
+## Paper 44: Praveen et al_summarized.md
 
 **Source File:** `Praveen et al_summarized.md`
 
@@ -6283,7 +5636,7 @@ remember_this:
 ```
 ---
 
-## Paper 50: Wang L. et al_summarized.md
+## Paper 45: Wang L. et al_summarized.md
 
 **Source File:** `Wang L. et al_summarized.md`
 
@@ -6404,6 +5757,610 @@ remember_this:
   - Both recommendation randomness and social diversity can alleviate information cocoons.
   - User conformity behaviors are more pronounced in agents with a greater number of social connections.
   - The simulation framework provides a valuable, privacy-preserving platform for evaluating system dynamics.
+```
+---
+
+## Paper 46: Odufisan et al_summarized.md
+
+**Source File:** `Odufisan et al_summarized.md`
+
+```yaml
+paper_id: 9ae8a6f2-3c5c-5678-9012-345678901234
+designation: international
+title: Harnessing artificial intelligence and machine learning for fraud detection and prevention in Nigeria
+authors: Odufisan, O.I.; Abhulimen, O.V.; Ogunti, E.O.
+year: 2025
+venue: Journal of Economic Criminology
+odin_topics:
+  - 8.A
+  - 8.B
+  - 10.A
+tldr: AI and machine learning enhance fraud detection in Nigerian sectors by enabling real-time analysis, adaptive learning, and anomaly identification beyond traditional rules.
+problem_and_motivation: Fraud threatens Nigeria's digital economy, yet traditional detection systems are ineffective against evolving schemes and are overwhelmed by data volume. A more adaptive, intelligent solution is needed to protect financial stability and user trust.
+approach:
+  - Reviewed supervised, unsupervised, and deep learning methods for fraud detection in banking, e-commerce, healthcare, and education.
+  - Emphasized real-time analysis of transaction data to identify anomalies and behavioral deviations.
+  - Analyzed applications in user authentication, behavioral analysis, and risk scoring.
+  - Discussed integration challenges and the need for continuous model updates.
+findings:
+  - Fraudulent loans accounted for 94.35% of bank losses, highlighting a critical system flaw.
+  - AI reduces false positives by differentiating legitimate from fraudulent behavior.
+  - Machine learning models achieve high accuracy, e.g., 97% detection rate for credit card fraud.
+  - Traditional rule-based systems lack adaptability to new fraud tactics.
+  - Text analysis using SVM achieved over 98% accuracy in detecting phishing emails.
+  - AI enables real-time monitoring and proactive fraud mitigation.
+key_figures_tables:
+  - None.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: AI
+    definition: Machines imitating human intelligence to perform tasks like reasoning and pattern recognition.
+  - term: ML
+    definition: Algorithms that learn patterns from data to make predictions without explicit programming.
+critical_citations:
+  - "[Bansal et al., 2024] — Highlights real-time fraud detection benefits."
+  - "[Bello et al., 2024] — Discusses adaptive ML for fraud."
+  - "[Hilal et al., 2022] — Reviews anomaly detection techniques."
+relevance:
+  topics:
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Directly covers anomaly detection techniques for fraud, transferable to spending irregularities.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Reviews ML algorithms including supervised and unsupervised for detecting financial anomalies.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: Discusses data quality, privacy regulations (NDPR), and ethical considerations as challenges.
+  contribution: This paper justifies Odin's use of anomaly detection algorithms to identify suspicious spending patterns in user transaction data. It provides evidence that machine learning models can continuously adapt to new financial behaviors, supporting Odin's need for dynamic profile updates. The review also highlights the importance of balancing fraud prevention with user privacy, which informs Odin's data handling policies. Finally, it underscores the value of real-time analysis, a feature Odin can implement for proactive user alerts.
+  directly_justifies:
+    - Supervised learning can identify known fraudulent patterns in transaction data.
+    - Unsupervised learning detects novel anomalies without prior labeling.
+    - Real-time analysis enables immediate flagging of suspicious spending.
+    - Machine learning reduces false positive rates compared to rule-based systems.
+  limits:
+    - Focuses on fraud detection rather than general spending behavior analysis.
+    - Does not provide empirical evaluation specific to personal finance management systems.
+    - Data quality challenges are noted but not quantified for PFMS contexts.
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper primarily addresses fraud detection, making it highly relevant to Anomaly Detection (8.A, 8.B) and medium relevance to Data Privacy (10.A) due to challenges mentioned. It was considered and rejected for Spending Forecasting (6.A, 6.B) and Budget Recommendation (7.A–D) because no predictive modeling for budgets or allocation is discussed. Behavioral Profiling (5.A–C) was considered but rejected as the paper focuses on fraudulent behavior rather than general financial profiles. The paper's overall relevance to Odin lies in its comprehensive review of ML techniques that can be directly applied to detect spending anomalies, while also highlighting privacy considerations that are critical for user trust.
+limitations:
+  - Limited primary data; relies heavily on secondary sources.
+  - Does not provide a specific algorithm implementation for PFMS.
+  - Nigeria-specific fraud context may not fully generalize to Filipino spending patterns. [unacknowledged]
+remember_this:
+  - Machine learning models detect financial anomalies in real-time.
+  - 97% detection rate was achieved for fraudulent credit card transactions.
+  - AI reduces false positives by learning legitimate behavior patterns.
+  - Data privacy regulations are a key consideration for fraud systems.
+  - Continuous model updates are required to counter evolving fraud tactics.
+```
+---
+
+## Paper 47: Abbas et al_summarized.md
+
+**Source File:** `Abbas et al_summarized.md`
+
+```yaml
+paper_id: 10.1007/s42979-025-04214-8
+designation: international-algorithm-specific
+title: Machine Learning-Based Analysis of Technology Acceptance in FinTech: A Behavioral Study Using Digital Wallet Data
+authors: Abbas, S. K.; Hussain, M.; Rimal, Y. N.
+year: 2025
+venue: SN Computer Science
+odin_topics:
+  - 5.C
+  - 11.A
+  - 12.A
+  - 12.B
+tldr: Machine learning models using transactional data show limited predictive power for classifying high-engagement FinTech users due to class imbalance and overlapping behavioral patterns.
+problem_and_motivation: Existing technology acceptance models rely on surveys and intention-based indicators, which may not capture real-world engagement and are susceptible to bias. There is limited empirical evidence on how actual behavioral data maps onto technology acceptance in FinTech.
+approach:
+  - Used a Kaggle dataset of 7000 digital wallet users with 20 demographic, transactional, and behavioral features.
+  - Operationalized technology acceptance as daily app usage, creating a binary classification target.
+  - Applied Logistic Regression, SVM, Random Forest, and XGBoost classifiers.
+  - Addressed class imbalance (33.5% high-acceptance) using SMOTE during training.
+  - Evaluated models using accuracy, ROC AUC, precision, recall, F1-score, and SHAP for feature importance.
+findings:
+  - All models achieved ~66.5% accuracy, but ROC AUC scores were modest (XGBoost highest at 0.519).
+  - Linear classifiers (Logistic Regression, SVM) failed to identify any high-acceptance users (precision and recall = 0).
+  - XGBoost achieved the best F1-score for the high-acceptance class at 0.22, improving to 0.36 with SMOTE.
+  - num: SMOTE increased XGBoost's recall for high-acceptance users from 0.16 to 0.27.
+  - Customer Lifetime Value (LTV), Satisfaction Score, and Issue Resolution Time were the most influential features.
+  - PCA showed first three components captured only 35.6% of variance, with no clear separation between classes.
+  - Predicted probabilities for both classes showed significant overlap, indicating model uncertainty.
+key_figures_tables:
+  - Figure 1: Precision-Recall and ROC curves → XGBoost slightly outperformed others but remained near random.
+  - Figure 2: PCA 3D projection and loadings → LTV, Total Spent, and Satisfaction Score dominate PC1.
+  - Figure 3: Feature importance and calibration curves → Satisfaction and LTV are top predictors; models are poorly calibrated.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: TAM
+    definition: Technology Acceptance Model; posits perceived usefulness and ease of use influence adoption.
+  - term: UTAUT
+    definition: Unified Theory of Acceptance and Use of Technology; extends TAM with social influence and facilitating conditions.
+  - term: LTV
+    definition: Customer Lifetime Value; a metric representing the total revenue a customer is expected to generate.
+critical_citations:
+  - "[Zhang et al., 2021] — Found perceived competence and benevolence of algorithms impact robo-advisor adoption."
+  - "[Davis, 1989] — Introduced TAM, the foundational model for technology acceptance."
+relevance:
+  topics:
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Applies ML classifiers (RF, XGBoost) to classify user engagement levels based on behavioral data.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: high
+      justification: Directly models user engagement (daily app usage) as the target variable for technology acceptance.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Provides a comparative evaluation of ML models for behavioral prediction, relevant to system assessment.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: Evaluates algorithm performance using metrics like precision, recall, and F1-score in an imbalanced setting.
+  contribution: The paper demonstrates that machine learning can be applied to behavioral data to predict user engagement, which is relevant to Odin's profiling and engagement modules. It shows that ensemble methods like XGBoost outperform linear models, suggesting their use for user classification tasks. The identification of LTV and satisfaction as key predictors highlights the importance of user value and experience metrics for Odin's personalization. The study's findings on the limitations of static features inform Odin's need for temporal and psychographic data. The methodological framework offers a template for evaluating Odin's own classification modules.
+  directly_justifies:
+    - "XGBoost outperformed linear classifiers for imbalanced user engagement classification."
+    - "Customer satisfaction and lifetime value are strong behavioral predictors of engagement."
+    - "Static transactional data alone is insufficient for robust user acceptance prediction."
+  limits:
+    - "The dataset is from a single non-Philippine platform, limiting generalizability to Filipino users."
+    - "Technology acceptance is operationalized only as daily usage, omitting cognitive and affective components."
+    - "The study uses cross-sectional data, lacking temporal dynamics of user behavior."
+    - "Psychographic variables like financial literacy and trust are absent from the model."
+  mapping_rationale: A systematic scan of all 12 functional domains and their topic codes was conducted. The paper was flagged as relevant to the "Behavioral Profiling & Classification" (5.C) domain due to its application of ML classifiers to user data. It also strongly informs "User Retention & Engagement" (11.A) by directly modeling daily app usage as a proxy for acceptance. The evaluation methodology (12.A, 12.B) is relevant as a comparative benchmark. Domains like Filipino Cultural Context (2), Expense Categorization (3), Existing Systems (4), Forecasting (6), Budgeting (7), Anomaly Detection (8), Mobile Design (9), Privacy (10), and Savings/Debt (13) were rejected because the paper does not address these topics. The paper's overall relevance to Odin is medium; it provides methodological insights for user profiling and engagement prediction but lacks direct applicability to PFMS-specific functions.
+limitations:
+  - "Single, cross-sectional dataset limits generalizability. [unacknowledged]"
+  - "Behavioral proxy (daily usage) may not capture full technology acceptance. [acknowledged]"
+  - "Use of only static features misses temporal behavioral patterns. [acknowledged]"
+  - "Lack of psychographic variables constrains interpretability. [acknowledged]"
+  - "Class imbalance and overlapping behaviors constrain predictive performance despite SMOTE. [acknowledged]"
+remember_this:
+  - "XGBoost outperformed linear models for imbalanced user engagement classification."
+  - "SMOTE improved XGBoost recall for high-engagement users from 0.16 to 0.27."
+  - "Customer satisfaction and lifetime value are the strongest behavioral predictors."
+  - "Static transactional data alone provides only weak signals of technology acceptance."
+  - "Predicting user engagement from behavioral data remains a challenging task."
+```
+---
+
+## Paper 48: Hassine et al_summarized.md
+
+**Source File:** `Hassine et al_summarized.md`
+
+```yaml
+paper_id: 10.62345/jads.2025.14.3.1
+designation: local-algorithm-specific
+title: Inequality, Education and Occupational Change in the Philippines
+authors: Belhaj Hassine, N.; Fernandez, F. C.; Lavin, B. A.
+year: 2025
+venue: Journal of Asian Development Studies
+odin_topics:
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.B
+  - 2.D
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.C
+  - 12.A
+tldr: Slow growth in college-educated labor supply sustains high wage premiums, while shifts in occupational structure, particularly growth in middle-skill jobs from 2012-2016, have recently narrowed wage inequality.
+problem_and_motivation: The Philippines has persistently high income inequality despite poverty reduction and economic growth. The relationship between education, employment structure, and wage inequality remains underexplored. This study analyzes how changes in skill supply and occupational composition have shaped wage distribution over two decades.
+approach:
+  - Data from Philippine Labor Force Survey (2002-2024), covering wage workers aged 15+.
+  - Constructed an occupation crosswalk harmonizing PSOC 1992 and 2012 to create 22 consistent occupation codes.
+  - Classified occupations into high-, middle-skill routine, middle-skill nonroutine, and low-skill categories.
+  - Used Recentered Influence Function (RIF) regressions to estimate returns to education and occupation across wage quantiles.
+  - Applied DiNardo-Fortin-Lemieux (DFL) reweighting to isolate the impact of occupational changes on wage distributions.
+findings:
+  - num: College wage premium declined from 88% in 2013 to 59% in 2024, but college graduates still earned 80% more than high school graduates.
+  - num: Returns to college education and high-skill occupations rise monotonically across wage quantiles, with college coefficients increasing over time.
+  - num: Real wages for non-college workers grew 32% from 2012-2024 versus 5% for college workers, narrowing inequality.
+  - num: Middle-skill employment share grew by 3.6 percentage points from 2002-2016 but declined by 2.8 points from 2016-2024.
+  - Occupational reallocation explains a significant share of non-college wage growth after 2012, particularly for men.
+  - num: Youth college graduates (25-34) had 6.7% unemployment in 2024, higher than the 4.4% for non-college peers.
+key_figures_tables:
+  - "Figure 1: Income and wage Gini trends 2002-2024 → Inequality declined from 2012 onward, with wage Gini falling to 32% by 2024."
+  - "Figure 5: College wage premium trend → Premium peaked at 88% in 2013, declined to 59% by 2024."
+  - "Figure 8: Returns to education by quantile → College returns increase monotonically across income distribution, widening gaps."
+  - "Table 1A: RIF regression on wage Gini → College education has positive and increasing effect on wage inequality over time."
+key_equations:
+  - equation: "f_{x_{t0}}(w) = ∫ f(w | x, t_w=t0) dF(x | t_x=t0)"
+    explanation: "Observed wage density as joint distribution of wages and covariates."
+  - equation: "f_{x_{t1}}(w) = ∫ f(w | x, t_w=t0) * ψ_x(x) dF(x | t_x=t0)"
+    explanation: "Counterfactual wage density reweighting covariates from t0 to t1."
+  - equation: "ψ̂_x = [Pr(t_x=t1 | x)/Pr(t_x=t0 | x)] * [Pr(t_x=t0)/Pr(t_x=t1)]"
+    explanation: "Reweighting function estimated via logit model for DFL decomposition."
+definitions:
+  - term: RIF Regression
+    definition: "Recentered Influence Function regression for unconditional quantile effects on wage distribution."
+  - term: DFL Reweighting
+    definition: "DiNardo-Fortin-Lemieux semiparametric method to decompose wage distribution changes."
+  - term: PSOC
+    definition: "Philippine Standard Occupational Classification, versions 1992 (ISCO-88) and 2012 (ISCO-08)."
+  - term: LFS
+    definition: "Labor Force Survey, quarterly nationwide household survey by Philippine Statistics Authority."
+  - term: Wage Premium
+    definition: "Percentage wage gap between college graduates and high school graduates, reflecting skill valuation."
+critical_citations:
+  - "[Acemoglu and Autor, 2011] — Framework for skill-task-occupation classification."
+  - "[Firpo et al., 2018] — Methodological basis for RIF regression approach."
+  - "[DiNardo et al., 1996] — Foundation for DFL decomposition technique."
+  - "[Autor, 2019] — Framework for analyzing job polarization and wage inequality."
+  - "[World Bank, 2022] — Comprehensive prior analysis of Philippine inequality drivers."
+relevance:
+  topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: medium
+      justification: Provides wage and employment data for prime-age workers (25-54), including youth unemployment trends.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Documents wage distribution and returns to education, directly relevant to income structure.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: medium
+      justification: Highlights unemployment and labor market outcomes shaping financial behavior.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: contextual
+      justification: Context on labor market structure and wage inequality in Philippine context.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: low
+      justification: Mentions COVID-19 cyclical disruption but not seasonal spending patterns.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: Discusses cyclical labor market shifts, not spending cycles.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Provides macroeconomic context for personal finance system design.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: low
+      justification: Identifies skills mismatch and occupational polarization as systemic gaps.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Documents wage premium persistence and occupational shifts that differentiate worker profiles.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Uses occupational and education classifications that inform behavioral profile segmentation.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Provides RIF regression and DFL decomposition methodologies applicable to system evaluation.
+  contribution: "This paper provides empirical methods (RIF regression, DFL decomposition) applicable to evaluating Odin's algorithmic modules. Its analysis of education and occupational returns offers a framework for segmenting user financial profiles based on income trajectories. The findings on wage premium persistence inform Odin's expense categorization and forecasting modules. The documentation of occupational shifts and skill supply constraints justifies behavioral profiling approaches. The paper's methodological rigor supports system evaluation frameworks for algorithmic modules."
+  directly_justifies:
+    - "RIF regression methods can evaluate inequality impacts of algorithmic modules."
+    - "Occupational classification informs behavioral profile segmentation for PFMS."
+    - "Wage premium trends provide baseline for income-based user segmentation."
+    - "DFL decomposition methods apply to counterfactual evaluation of financial advice."
+  limits:
+    - "Focus on wage workers excludes self-employed and informal sector, limiting generalizability to all Filipino workers."
+    - "Paper does not address individual-level financial behavior or spending patterns."
+    - "Analysis aggregates to 22 occupation codes, which may oversimplify occupational diversity."
+    - "DFL decomposition holds wages within occupations fixed, abstracting from within-occupation wage dynamics."
+  mapping_rationale: "Systematic scan across all 12 functional domains and 38 topic codes flagged the following as relevant: Filipino Cultural Context (2.A contextual, 2.B low, 2.D low) for the Philippine-specific labor market analysis; Existing Systems & Gaps (4.A contextual, 4.B low) for identifying skills mismatch; Behavioral Profiling (5.A high, 5.C high) as the paper directly uses occupational and education classifications to differentiate worker types; and System Evaluation (12.A high) for its RIF regression and DFL decomposition methodologies. Domains on expense categorization (3.A-3.C), spending forecasting (6.A-6.B), budget recommendation (7.A-7.D), anomaly detection (8.A-8.C), mobile design (9.A-9.B), data privacy (10.A-10.B), user retention (11.A-11.B), savings and debt (13.A-13.C) were considered but rejected as the paper does not address these PFMS-specific functions. The paper is highly relevant methodologically for evaluating algorithmic modules and informing user segmentation, but does not directly address personal finance system design. Its empirical framework for analyzing inequality and occupational shifts provides foundation for behavioral profiling and evaluation modules."
+limitations:
+  - "Wage data only available from 2002 onward, limiting historical context."
+  - "Analysis excludes non-wage workers (self-employed, family workers), missing significant portion of workforce."
+  - "LFS occupational classifications changed in 2016, requiring crosswalk that may introduce harmonization errors."
+  - "Does not explicitly examine within-occupation wage heterogeneity beyond education grouping."
+  - "COVID-19 pandemic effects may confound recent structural trend identification. [unacknowledged]"
+remember_this:
+  - "College wage premium declined to 59% by 2024 from 88% in 2013."
+  - "Non-college wages grew 32% from 2012-2024, outpacing college-educated workers."
+  - "Middle-skill employment expanded from 2002-2016 but declined after 2016."
+  - "Occupational reallocation explains non-college wage growth after 2012."
+  - "Young college graduates face 6.7% unemployment, higher than less-educated peers."
+```
+---
+
+## Paper 49: Huang et al_summarized.md
+
+**Source File:** `Huang et al_summarized.md`
+
+```yaml
+paper_id: "10.1145/3766918.3766944"
+designation: "international-algorithm-specific"
+title: "Wealth-Voyager: Navigating Intelligent Wealth Management with a Multi-Agent Framework"
+authors: "Huang, R.; Zhao, Z.; Chen, S.; Wu, X.; Zhao, J. L."
+year: 2025
+venue: "2025 International Conference on Generative Artificial Intelligence for Business (GAIB 2025)"
+odin_topics:
+  - "5.A"
+  - "5.B"
+  - "7.B"
+  - "9.A"
+  - "9.B"
+  - "10.B"
+  - "12.A"
+tldr: "A multi-agent LLM framework integrates behavioral profiling, real-time market intelligence, and portfolio optimization to deliver personalized, adaptive wealth management advice."
+problem_and_motivation: "Traditional wealth management lacks scalability and personalization, while existing AI solutions are fragmented and fail to integrate long-term strategy with behavioral adaptation. A unified system is needed to address both quantitative performance and the cognitive biases that shape retail investor behavior."
+approach:
+  - "Wealth-Voyager coordinates four specialized agents: AssistHub (behavioral profiling), NewsCrawler (real-time intelligence), AlphaForge (portfolio optimization), and DualAdvisor (BDI-grounded advisory simulation)."
+  - "The system uses a central LLM meta-controller to orchestrate agent collaboration via structured function calls and shared memory."
+  - "Behavioral profiling quantifies nine cognitive biases (e.g., loss aversion, herding) to construct a user-specific behavioral vector."
+  - "The DualAdvisor module simulates advisor-client dialogue with two LLM agents to uncover biases and promote reflective decision-making."
+  - "AlphaForge employs constrained mean-variance optimization with liquidity caps and drawdown limits, augmented by Monte Carlo simulation."
+  - "A proof-of-concept case study was conducted with a single mid-career participant over one month under live market conditions."
+  - "The system compares a passive baseline, a behaviorally anchored portfolio, and a dynamically rebalanced tactical strategy."
+findings:
+  - "num: The tactical strategy outperformed the passive baseline by +1.62 percentage points in cumulative return during the evaluation period."
+  - "num: Anchoring by behavioral signals improved annualized return from 3.72% to 6.53% and reduced annualized volatility from 18.08% to 9.42%."
+  - "num: The tactical approach achieved a 1.86% cumulative return with 12.10% annualized volatility, compared to 0.24% and 13.70% for the anchored portfolio."
+  - "The adaptive tactical adjustments effectively reduced losses during a tariff-induced shock (-2.56% vs. -2.79%) and captured greater upside during the rebound (3.24% vs. 2.16%)."
+  - "Qualitative feedback indicated that the dual-agent simulation enhanced user trust and self-awareness by exposing cognitive biases."
+key_figures_tables:
+  - "Figure 1: Architecture of the Wealth-Voyager framework → System integrates four core modules orchestrated by an LLM meta-controller."
+  - "Table 1: Comparison of user-declared baseline and AI-optimized allocation → AI optimization improved diversification and aligned with implicit risk profile."
+  - "Figure 2: Segment-level returns for passive and tactical portfolios → Tactical strategy consistently outperformed across multiple market phases."
+  - "Table 2: Performance comparison across strategies → Anchoring and tactical adjustments significantly improved risk-adjusted returns."
+  - "Table 3: Capability comparison with market offerings → Wealth-Voyager uniquely supports real-time adjustment, personalization, and financial education."
+key_equations:
+  - equation: "L(w) = -Sharpe(w) + λ * IlliqPenalty(w)"
+    explanation: "Objective function for portfolio optimization balancing Sharpe ratio and illiquidity."
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: "LLM"
+    definition: "Large Language Model."
+  - term: "BDI"
+    definition: "Belief-Desire-Intention framework for modeling rational agency."
+  - term: "SAA"
+    definition: "Strategic Asset Allocation, the long-term policy portfolio."
+  - term: "TAA"
+    definition: "Tactical Asset Allocation, short-term adjustments to the SAA."
+  - term: "PFMS"
+    definition: "Personal Finance Management System."
+critical_citations:
+  - "[Brinson et al., 1986] — Asset allocation explains over 90% of performance variance."
+  - "[Ibbotson & Kaplan, 2000] — Confirms asset allocation's dominant role in portfolio returns."
+  - "[Pompian, 2016] — Risk profiling through a behavioral finance lens."
+relevance:
+  topics:
+    - code: "5.A"
+      name: "Financial Behavioral Profiles in Personal Finance"
+      relevance: "high"
+      justification: "Directly proposes and implements a nine-dimensional behavioral vector for user profiling."
+    - code: "5.B"
+      name: "Profile Dynamics and the Cold‑Start Problem"
+      relevance: "high"
+      justification: "Uses dynamic dialogue and BDI modeling to infer and adapt profiles, addressing cold-start."
+    - code: "7.B"
+      name: "Budget Recommendation in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Provides personalized portfolio allocation recommendations, a form of budget recommendation."
+    - code: "9.A"
+      name: "Mobile‑First Design Principles and Rationale"
+      relevance: "contextual"
+      justification: "The interactive, dialogue-based interface is relevant to mobile-first design but not a core focus."
+    - code: "9.B"
+      name: "Mobile UX Design for Personal Finance"
+      relevance: "contextual"
+      justification: "The system's conversational UX provides a relevant example but is not specifically mobile-first."
+    - code: "10.B"
+      name: "User Trust in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Explicitly addresses transparency, explainability, and trust through rationale tracing."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "medium"
+      justification: "Provides an evaluation framework with quantitative performance and qualitative user feedback."
+  contribution: "Wealth-Voyager contributes a modular architecture for PFMS that integrates behavioral profiling (relevant to modules 5.A, 5.B) with quantitative portfolio optimization. Its DualAdvisor module offers a novel method for bias-aware, interactive advisory that can inform the design of user engagement and trust-building features in Odin (modules 10.B, 11.A). The system's evaluation framework, comparing anchored and tactical strategies, provides a template for assessing Odin's algorithmic modules. The emphasis on transparent rationale generation directly informs Odin's requirements for user trust and explainability."
+  directly_justifies:
+    - "Multi-agent LLM frameworks can coordinate specialized financial tasks effectively."
+    - "Incorporating behavioral biases into advisory dialogue improves user trust and engagement."
+    - "Tactical asset allocation layered on strategic allocation improves risk-adjusted returns."
+    - "Real-time market intelligence enables proactive portfolio rebalancing."
+    - "Explainable, dialogue-based interfaces bridge the financial education-decision gap."
+  limits:
+    - "The proof-of-concept study was conducted on a single user, limiting generalizability."
+    - "Performance is contingent on the underlying LLM, which may vary."
+    - "The asset universe was limited, and the framework was not tested across diverse market regimes."
+    - "The system's reliance on proprietary LLMs may raise cost and data privacy concerns. [unacknowledged]"
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes flagged the Behavioral Profiling & Classification, Budget Recommendation, Mobile-First Design, Data Privacy & User Trust, and System Evaluation domains as relevant. Topic 5.A (Financial Behavioral Profiles) and 5.B (Profile Dynamics) were rated high due to the paper's core contribution of a quantified behavioral vector and BDI-based dynamic profiling. Topic 7.B (Budget Recommendation) received medium relevance as the paper provides a method for personalized allocation, which is a form of budget recommendation. Topics 9.A and 9.B were rated contextual as the paper's dialogue interface is relevant to UX but not specifically mobile-first. Topic 10.B (User Trust) was rated medium due to the explicit focus on transparency and explainability. Topic 12.A (Evaluation Frameworks) was rated medium for its use of quantitative backtesting and qualitative feedback. Other domains, such as Expense Categorization (3.A-C), Existing Systems (4.A-B), Forecasting (6.A-B), Anomaly Detection (8.A-C), Savings & Debt Management (13.A-C), and others, were considered and rejected as the paper does not provide specific, citable claims informing those design areas for Odin. Overall, the paper is highly relevant for informing Odin's approach to behavioral profiling, interactive advisory design, and system evaluation."
+limitations:
+  - "Single-user pilot study, not statistically validated."
+  - "Performance contingent on the underlying LLM model."
+  - "Limited asset universe and market regime testing."
+  - "Potential cost and data privacy concerns with proprietary LLM APIs. [unacknowledged]"
+remember_this:
+  - "A multi-agent LLM framework can coordinate behavioral profiling and portfolio optimization."
+  - "Behavioral anchoring improved annual return by 2.81 percentage points in the case study."
+  - "Tactical adjustments outperformed a passive baseline by 1.62 percentage points in cumulative return."
+  - "Interactive, explainable dialogue enhances user trust and self-awareness."
+  - "Integrating real-time news with BDI-based reasoning enables proactive portfolio management."
+```
+---
+
+## Paper 50: Espelita et-al_summarized.md
+
+**Source File:** `Espelita et-al_summarized.md`
+
+```yaml
+paper_id: 9a7d8c3e-5b2f-4a8e-9c1d-6f3a8e2b7c5d
+designation: local
+title: Understanding Monetary Policy: Student Awareness, Perceptions, and Financial Behaviors in the Philippine Context
+authors: Atento, R. G.; Espelita, C. A. M.; Rao, L.; Tian, Y.
+year: 2025
+venue: International Journal of Health and Business Analytics
+odin_topics:
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.D
+  - 4.B
+  - 5.A
+  - 5.B
+  - 5.C
+  - 6.A
+  - 7.A
+  - 8.A
+  - 9.A
+  - 10.A
+  - 12.A
+  - 13.A
+tldr: Filipino students show moderate monetary policy awareness, with graduate and business students exhibiting higher understanding, and this awareness positively correlates with saving and investment behaviors.
+problem_and_motivation: Limited research examines young Filipinos' understanding of monetary policy, a critical gap given its role in economic stability and the youth's future role as economic stewards. The study addresses this by investigating how awareness and perceptions vary across educational levels and fields of study.
+approach:
+  - Descriptive-correlational survey design with 200 respondents from senior high, undergraduate, and graduate levels in Philippine institutions.
+  - Stratified random sampling ensured representation across educational levels, academic programs, and demographic groups.
+  - Structured questionnaire measured awareness of monetary policy, perceptions of effectiveness, and financial behaviors using Likert scales.
+  - Validation included expert review and pilot testing with 30 students; Cronbach's alpha for subscales ranged from .74 to .85.
+  - Data analyzed using ANOVA, t-tests, Pearson correlations, and multiple regression with Jamovi and SPSS.
+findings:
+  - num: Overall awareness of monetary policy is moderate, with graduate students scoring significantly higher (M=3.75) than undergraduates (M=3.25) and senior high students (M=2.80).
+  - num: Business/economics students exhibited higher awareness (M=3.48) than students in other fields, F(4,195)=11.22, p<.001.
+  - num: Awareness was positively correlated with perception of policy effectiveness (r=0.48, p<.001), saving behavior (r=0.31, p<.001), and investment behavior (r=0.24, p=.001).
+  - No significant relationship was found between awareness and spending behavior (r=-0.07, p=.310).
+  - num: Regression models showed awareness and perception significantly predicted saving (R²=.22) and investment (R²=.15) but not spending (R²=.04).
+  - Students perceive monetary policy as effective in controlling inflation but are more cautious about its role in employment and long-term growth.
+  - Gender did not significantly differentiate awareness levels, t(198)=0.31, p=.756.
+  - Older students (23-30 years) demonstrated higher awareness (M=3.48) compared to younger groups (16-18 years, M=2.85).
+  - Awareness levels differed significantly by educational level, F=47.83, p<.001, with all pairwise differences significant.
+  - Students in "Other" programs (education, health sciences) had the lowest awareness (M=3.02), highlighting a curricular gap.
+key_figures_tables:
+  - "Table 4: Difference in awareness by age → Older students show higher awareness, F=14.62, p<.001."
+  - "Table 5: Difference in awareness by gender → No significant difference found, t(198)=0.31, p=.756."
+  - "Table 6: Difference in awareness by educational level → Graduate students highest, senior high lowest."
+  - "Table 7: Difference in awareness by program → Business/economics highest, others lowest."
+  - "Table 8: Correlation between awareness and perception → Positive moderate correlation, r=0.48."
+  - "Table 9: Correlation between awareness and saving → Positive significant, r=0.31."
+  - "Table 10: Correlation between awareness and investment → Positive significant, r=0.24."
+  - "Table 11: Correlation between awareness and spending → No significant relationship, r=-0.07."
+  - "Table 12: Regression results → Awareness and perception predict saving and investment, not spending."
+key_equations:
+  - equation: "R² = .22 for saving behavior model"
+    explanation: "Awareness and perception explain 22% of saving variance."
+  - equation: "R² = .15 for investment behavior model"
+    explanation: "Awareness and perception explain 15% of investment variance."
+  - equation: "R² = .04 for spending behavior model"
+    explanation: "Awareness and perception explain negligible spending variance."
+definitions:
+  - term: "TRA"
+    definition: "Theory of Reasoned Action, positing behavior is shaped by behavioral intentions influenced by attitudes and subjective norms."
+  - term: "TPB"
+    definition: "Theory of Planned Behavior, extends TRA by adding perceived behavioral control as a predictor of intentions."
+  - term: "Monetary Policy"
+    definition: "Central bank actions to regulate money supply and credit to achieve macroeconomic objectives like price stability."
+  - term: "BSP"
+    definition: "Bangko Sentral ng Pilipinas, the central monetary authority of the Philippines."
+critical_citations:
+  - "[Blinder et al., 2008] — Public expectations influence policy effectiveness."
+  - "[Ajzen, 1991] — Foundational theory on planned behavior."
+  - "[OECD, 2020] — Philippine financial literacy below global average."
+  - "[Mishkin, 2019] — Definition and scope of monetary policy."
+  - "[Lusardi & Mitchell, 2020] — Financial literacy interacts with contextual factors."
+relevance:
+  topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: "Directly examines Filipino students as future young professionals and economic actors."
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: "Investigates saving, spending, and investment behaviors of Filipino students."
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: "Analyzes financial behaviors (saving, investing, spending) in relation to policy awareness."
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: "Discusses cultural factors like extended family support and collectivist spending."
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: contextual
+      justification: "Mentions cultural spending patterns but does not focus on cyclical occasions."
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: "Identifies gaps in financial literacy and policy communication in the Philippines."
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: "Examines how awareness shapes saving and investing profiles."
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: contextual
+      justification: "Does not address cold-start, but profiles vary by educational background."
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: low
+      justification: "Does not discuss classification algorithms for behavioral profiles."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: low
+      justification: "Does not focus on predictive modeling; examines awareness-behavior correlations."
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: "Findings on saving behavior inform budget recommendation systems."
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: "No direct discussion of anomaly detection; mentions spending patterns."
+    - code: 9.A
+      name: Mobile‑First Design Principles and Rationale
+      relevance: contextual
+      justification: "Recommends digital platforms and OERs for financial education."
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: "Mentions data security in methodology but not a core finding."
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: "Provides empirical evaluation framework for financial literacy interventions."
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: high
+      justification: "Awareness positively correlates with saving behavior, informing savings goal features."
+  contribution: "This paper directly informs Odin's behavioral profiling module by identifying how monetary policy awareness shapes saving and investment behaviors among Filipino students. The findings validate the need for personalized financial education in Odin's onboarding, as awareness levels vary significantly by educational background. The correlation between awareness and saving behavior (r=0.31) supports Odin's savings goal management features that adapt to user knowledge levels. The negative correlation with spending (r=-0.07) suggests that behavioral nudges in Odin must go beyond information provision to influence consumption habits. The study's grounded theory approach using TRA/TPB provides a theoretical foundation for Odin's user segmentation and intervention design."
+  directly_justifies:
+    - "Graduate and business students exhibit higher monetary policy awareness, justifying educational-level segmentation in Odin."
+    - "Awareness correlates with saving behavior (r=0.31), supporting savings goal features in Odin."
+    - "Awareness does not significantly influence spending, necessitating behavioral nudges beyond information."
+    - "Gender did not differentiate awareness, suggesting gender-neutral financial education design in Odin."
+    - "Students perceive monetary policy as effective in inflation control but not employment, indicating communication gaps to address."
+  limits:
+    - "Cross-sectional design prevents causal inference about awareness-behavior relationships."
+    - "Self-reported data may introduce social desirability and recall biases."
+    - "Sample restricted to selected institutions, limiting generalizability to all Filipino students."
+    - "Scope excludes variables like trust in government and media exposure that may influence literacy."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was conducted. The 'Filipino Cultural Context' domain was flagged as highly relevant because the paper directly examines Filipino students' financial behaviors and cultural spending patterns, with topic 2.A (culturally specific practices) rated medium and 2.D (spending cycles) rated contextual due to only tangential mention. The 'Behavioral Profiling' domain was highly relevant, with topics 5.A (behavioral profiles) rated high based on the awareness-behavior correlations, 5.B (cold-start) rated contextual as the study mentions educational gaps that resemble cold-start conditions, and 5.C (classification) rated low as no classification algorithms are discussed. The 'Expense Categorization' domain was considered but rejected entirely (3.A, 3.B, 3.C) as the paper does not address expense frameworks. The 'Spending Forecasting' domain (6.A, 6.B) was rated low to contextual because the paper discusses spending behavior but not predictive models. The 'Budget Recommendation' domain (7.A) was rated medium as saving behavior findings can inform budget features. The 'Anomaly Detection' domain (8.A, 8.B, 8.C) was rejected due to no algorithmic discussion. The 'Mobile-First Design' domain (9.A) was rated contextual based on digital learning recommendations. The 'Data Privacy' domain (10.A) was rated low due to only methodological mention. The 'System Evaluation' domain (12.A) was rated medium for the empirical framework. The 'Savings & Debt Management' domain (13.A) was rated high for the direct saving behavior correlation, while 13.B and 13.C were rejected due to no debt or surplus discussion. Overall, the paper is moderately relevant to Odin, providing empirical grounding for behavioral profiling and savings features, but with limited direct algorithmic or system design implications."
+limitations:
+  - "Cross-sectional design prevents causal inference; longitudinal research needed."
+  - "Self-reported data may introduce social desirability bias."
+  - "Sample restricted to selected HEIs and senior high schools; findings may not generalize."
+  - "Does not examine trust in government institutions or media exposure as variables."
+remember_this:
+  - "Graduate and business students show highest monetary policy awareness."
+  - "Awareness correlates positively with saving and investment behaviors."
+  - "Awareness does not influence spending behavior, highlighting behavioral gaps."
+  - "Students perceive inflation control effectiveness but doubt employment impact."
+  - "Targeted financial education across disciplines is urgently needed."
 ```
 ---
 

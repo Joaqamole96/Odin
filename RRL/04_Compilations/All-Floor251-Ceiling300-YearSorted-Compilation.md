@@ -6,251 +6,7 @@
 
 ---
 
-## Paper 1: Pretnar et al_summarized.md
-
-**Source File:** `Pretnar et al_summarized.md`
-
-```yaml
-paper_id: 10.21203/rs.3.rs-7730348/v1
-designation: international-algorithm-specific
-title: Mental Accounting Through Two-stage Budgeting Under Bounded Rationality
-authors: Pretnar, N.; Olivola, C. Y.; Montgomery, A.
-year: 2025
-venue: Research Square
-odin_topics:
-  - 3.A
-  - 5.A
-  - 6.A
-  - 7.A
-  - 7.C
-  - 8.A
-  - 10.B
-tldr: A structural model generalizes two-stage budgeting with cognitive frictions to quantify mental accounting behavior from expenditure data alone.
-problem_and_motivation: Classical two-stage budgeting assumes perfect fungibility and ex-post budget adherence, yet consumers exhibit mental accounting and sticky budgets due to cognitive costs. There is a lack of empirical, agent-level quantification of how bounded rationality manifests in budgeting. This gap prevents the design of effective financial interventions that account for heterogeneous consumer decision-making.
-approach:
-  - Proposes a dynamic, two-stage budgeting model where a planner sets ex-ante budgets subject to cognitive constraints and a doer realizes expenditure shocks.
-  - Incorporates narrow choice bracketing via probabilistic budget re-evaluation (ψ) and numeracy constraints that prevent trivial budget changes.
-  - Mental accounting is captured by a state variable (over/under-spending from prior periods) that influences future budget adjustments via a parameter γ.
-  - Estimates the structural model using a hierarchical MH-within-Gibbs MCMC algorithm on weekly expenditure data from 2,509 low-income prepaid debit card users.
-  - Compares model variants with absolute ($1) and relative (%) numeracy thresholds, and tests counterfactuals by fully relaxing cognitive constraints.
-findings:
-  - num: 80% of consumer-week combinations exhibit bounded rationality, with an average of 2.11 budget updates per week under the $1-threshold model.
-  - num: A $1 numeracy threshold reduces budget updates by 14.9%, while relative thresholds of 1%, 5%, and 10% reduce updates by 41.8%, 64%, and 70% respectively.
-  - Ex-ante budgeting behavior is largely consistent with mental accounting (78.7% are budget prioritizers), but ex-post spending behavior is mixed, with 46.8% classified as spendthrifts.
-  - num: 22.3% of consumers are ex-ante budget prioritizers but ex-post habitual over-spenders (type ii), exhibiting a "planning fallacy" pattern after over-spending.
-  - Counterfactual relaxation of cognitive constraints makes 68.4% of consumers worse off, and 3.3% go bankrupt under the $1-threshold model.
-  - num: Consumers who go bankrupt when constraints are relaxed have significantly lower estimated updates (1.25/week) and are more likely to be ex-ante type (i) but ex-post type (ii).
-key_figures_tables:
-  - "Table 1: Summary statistics of agent-level means → Shows low-income sample (median weekly income $460) with substantial spending variation."
-  - "Table 2: Posterior summary statistics for baseline and $1-threshold models → Reports estimated means and standard deviations for all key behavioral parameters."
-  - "Table 3: Marginal distributions of ex-ante and ex-post types → Ex-ante most are budget prioritizers, ex-post plurality are spendthrifts."
-  - "Table 4: Joint distributions of ex-ante and ex-post types → Reveals 37.5% are budget prioritizers ex-ante but spendthrifts ex-post."
-  - "Figure 2: Time series of actual vs. predicted spending → Demonstrates the model's fit for a median-income agent across categories."
-  - "Figure 3: Posterior density of budget updates per week → Shows distribution of k under different numeracy thresholds."
-  - "Figure 4: Density of k conditional on counterfactual type → Bankrupt consumers have significantly fewer budget updates."
-key_equations:
-  - equation: $x_{ijt} = \omega_{ijt} + \zeta_{ijt}$
-    explanation: Doer's expenditure is budget plus shock.
-  - equation: $a_{ijt} = \omega_{ij,t-1} - x_{ij,t-1} = -\zeta_{ij,t-1}$
-    explanation: Mental account balance equals negative prior shock.
-  - equation: $\omega_{ijt} = \theta_{ijt} \ell_{it} + \gamma_i a_{ijt}$
-    explanation: Budget is income share plus anchored mental account.
-  - equation: $\Gamma_{ijt} \sim \text{Bernoulli}(\psi_{ij})$
-    explanation: Probability of re-evaluating a specific budget.
-  - equation: $\vartheta_{iyt}^* = \frac{\alpha_{i,\iota_{iyt}} \ell_{it} - \alpha_{i,\iota_{iyt}} \sum_{s<y} \ell_{it} \theta_{i,\iota_{ist},t} + \gamma_i a_{i,\iota_{iyt},t} + \zeta_{i,\iota_{iyt},t}}{\ell_{it}(\alpha_{i,\iota_{iyt}} + \alpha_{i,J+1})} \dots$
-    explanation: Analytical expression for optimal candidate budget share.
-definitions:
-  - term: Mental Accounting
-    definition: A book-keeping mechanism where past over/under-spending informs future budgets.
-  - term: Narrow Choice Bracketing
-    definition: Consumers re-evaluate only a subset of budgets per period due to cognitive constraints.
-  - term: Numeracy Constraint
-    definition: A threshold (absolute or relative) that a budget change must exceed to be implemented.
-  - term: Budget Prioritizer
-    definition: Consumer type that reduces budget after over-spending and increases after under-spending.
-  - term: Spendthrift
-    definition: Consumer type that increases spending regardless of prior over or under-spending.
-critical_citations:
-  - "[Thaler, 1985] — Foundational theory of mental accounting."
-  - "[Deaton and Muellbauer, 1980] — Classical two-stage budgeting framework."
-  - "[Shefrin and Thaler, 1981] — Planner/doer model of self-control."
-  - "[Gabaix, 2014] — Sparse maximization and bounded rationality."
-  - "[Kőszegi and Matějka, 2020] — Mental budgeting with attention costs."
-relevance:
-  topics:
-    - code: 3.A
-      name: Expense Categorization Frameworks
-      relevance: high
-      justification: The model operationalizes budget categories and estimates category-specific expenditure shares.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: high
-      justification: Empirically classifies consumers into ex-ante and ex-post behavioral types (budget prioritizers, spendthrifts).
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: high
-      justification: Develops a structural forecasting model for spending based on budgets, mental accounts, and shocks.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      relevance: high
-      justification: Models the strategic process of setting and updating budgets under cognitive frictions.
-    - code: 7.C
-      name: Constrained Optimization Approaches for Budget Allocation
-      relevance: high
-      justification: Formulates budget selection as a constrained optimization problem with cognitive and numeracy constraints.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: medium
-      justification: Expenditure shocks (ζ) are modeled as deviations from budgets, which is foundational for anomaly detection.
-    - code: 10.B
-      name: User Trust in Personal Finance Systems
-      relevance: contextual
-      justification: Counterfactual analysis shows that nudging via apps can harm certain users, affecting trust.
-    - code: 2.B
-      name: Seasonal and Cyclical Spending Patterns
-      relevance: low
-      justification: The model captures spending spikes and trends but does not focus on seasonality.
-  contribution: "The paper provides a structurally estimated model for inferring latent budgeting behavior from expenditure data, which can be used to enhance Odin's spending forecasting module (6.A) by incorporating cognitive constraints. It offers a methodology for dynamically classifying users into behavioral profiles (5.A) based on their budget-updating and spending responses, enabling adaptive budgeting strategies. The counterfactual analysis reveals critical insights for Odin's nudging features (11.A): increasing attentiveness can have adverse effects for some users, implying that interventions should be personalized and cautious. The model's framework for budget updating and mental accounting directly informs the design of Odin's budget recommendation (7.B) and anomaly detection (8.A) algorithms, providing a theoretical basis for handling infeasibility and user inertia. Finally, the identification of distinct consumer types (e.g., budget prioritizers vs. spendthrifts) supports the development of tailored financial advice and savings/debt management strategies (13.A, 13.B)."
-  directly_justifies:
-    - "Budget updates occur for approximately half of consumption categories each period, supporting a sparse-max approach for Odin's budget recommendation."
-    - "A $1 numeracy threshold is a better fit than no threshold, justifying the inclusion of an 'inertia' parameter in Odin's budget adjustment logic."
-    - "Relaxing cognitive constraints makes 68% of consumers worse off, suggesting Odin should avoid over-nudging and prioritize user autonomy."
-    - "Ex-ante budgeting behavior is distinct from ex-post spending, indicating Odin should track both planned budgets and actual expenditure separately."
-    - "Consumers who are ex-ante budget prioritizers but ex-post spendthrifts are most vulnerable to adverse outcomes, requiring targeted support."
-  limits:
-    - "Results are model-dependent and rely on unobserved latent variables, limiting the certainty of individual-type classifications."
-    - "Data is from low-income, underbanked prepaid card users in North America, which may not generalize to Filipino young professionals."
-    - "Assumes strong separability of utility, which may oversimplify substitution patterns across broad expenditure categories."
-    - "Does not explicitly model price variation, aggregating prices into indices, which may miss important consumption adjustments."
-  mapping_rationale: "A systematic scan across all 12 functional domains was conducted. The paper's core theoretical and empirical contributions on modeling bounded rationality in budgeting directly map to high relevance for domains: Expense Categorization (3.A, 3.B), Behavioral Profiling (5.A, 5.B, 5.C), Spending Forecasting (6.A, 6.B), and Budget Recommendation (7.A, 7.B, 7.C, 7.D). The structural estimation approach and consumer typing also offer medium relevance to Anomaly Detection (8.A) and System Evaluation (12.A, 12.B, 12.C). The counterfactual simulations on attentiveness inform Engagement & Retention (11.A) and Data Privacy/Trust (10.B), albeit with contextual or low relevance as the paper does not directly study app design or trust. Topics like Filipino Cultural Context (2.A, 2.B, 2.C) and Savings/Debt (13.A, 13.B) were considered but rejected as the paper's empirical setting is North American and its primary contribution is methodological, though findings on overspending cycles are tangentially relevant to debt management. Borderline cases included the mental accounting state variable (a), which relates to both expense categorization (3.A) and behavioral profiles (5.A); it was assigned to 5.A for its role in defining consumer types. The paper's overall relevance to Odin is high, providing a quantitative, micro-founded framework for modeling key user behaviors that directly informs the design of adaptive and personalized financial management features."
-limitations:
-  - "Findings are based on a model-dependent estimation of latent budgets, not directly observed." [unacknowledged]
-  - "The dataset is from a specific low-income, underbanked population in North America; applicability to other demographics (e.g., Filipino YPs) is not tested." [acknowledged]
-  - "Assumes strong separability in utility, which may not capture complex category interactions."
-  - "The model does not incorporate explicit price effects, relying on aggregated price indices." [acknowledged]
-  - "Counterfactual simulations of 'full rationality' may not reflect real-world behavioral changes from app nudges."
-remember_this:
-  - "Consumers update only about half their budgets per week, showing bounded rationality."
-  - "Most consumers are budget prioritizers ex-ante but spendthrifts ex-post."
-  - "Relaxing cognitive constraints makes 68% of consumers worse off."
-  - "3.3% of consumers go bankrupt if all budgets are updated weekly."
-  - "Sticky budgets can serve as a disciplinary tool for vulnerable consumers."
-```
----
-
-## Paper 2: Anes & Abreu_summarized.md
-
-**Source File:** `Anes & Abreu_summarized.md`
-
-```yaml
-paper_id: 10.3390/app15074044
-designation: international-algorithm-specific
-title: Adaptive Cluster-Based Normalization for Robust TOPSIS in Multicriteria Decision-Making
-authors: Anes, V.; Abreu, A.
-year: 2025
-venue: Applied Sciences
-odin_topics:
-  - 3.A
-  - 7.C
-  - 8.A
-  - 8.B
-  - 12.A
-  - 12.B
-  - 12.C
-tldr: Proposes a cluster-based logarithmic normalization for TOPSIS that uses fuzzy numbers for uncertainty and expert-defined centroids to improve ranking stability and outlier robustness.
-problem_and_motivation: Traditional TOPSIS normalization techniques like Min-Max and Z-score are sensitive to outliers and large variance, which can distort rankings. Clustering methods also often rely on rigid, data-driven classifications that fail to capture uncertainty or expert intent. There is a need for a more flexible and robust normalization and clustering framework.
-approach:
-  - Defines cluster centroids a priori using fuzzy numbers based on expert judgment and ideal conditions for each criterion.
-  - Converts each alternative's fuzzy criterion scores into crisp centroids using the average of (a, b, c) values.
-  - Assigns each alternative to the cluster with the nearest Euclidean distance to its predefined centroid.
-  - Applies logarithmic normalization within each cluster to compress extreme values and stabilize variance.
-  - Uses the cluster centroids to derive criterion weights and then applies the standard TOPSIS procedure.
-  - Validates the approach using a case study on selecting a host city based on cost, infrastructure, safety, and accessibility.
-findings:
-  - The proposed fuzzy clustering method produced classifications nearly identical to Fuzzy K-Means but with a more logically coherent assignment for a borderline case (City K).
-  - The proposed method is computationally simpler and more deterministic than iterative Fuzzy K-Means.
-  - Logarithmic normalization provided more balanced and stable TOPSIS scores, especially in clusters with high variance, compared to Min-Max normalization.
-  - Top-ranked alternatives (City K and City C) were consistent across both normalization methods, reinforcing the robustness of the overall framework.
-key_figures_tables:
-  - Table 5: Distances to cluster centroids → Used to assign each city to its most appropriate cluster based on Euclidean distance.
-  - Table 8: Logarithmic normalization results → Shows how extreme cost values are compressed within each cluster.
-  - Table 11: TOPSIS results using logarithmic normalization → City K (0.89), City C (1.00), and City E (0.89) are top-ranked in their clusters.
-key_equations:
-  - equation: C_{cwj} = (a_w + b_w + c_w) / 3
-    explanation: Calculates the crisp centroid of a cluster for a criterion.
-  - equation: C_{Aij} = (a_i + b_i + c_i) / 3
-    explanation: Calculates the crisp centroid of an alternative for a criterion.
-  - equation: X' = (log(X) - log(X_min)) / (log(X_max) - log(X_min))
-    explanation: Logarithmic normalization formula to scale data and reduce outlier impact.
-definitions:
-  - term: TOPSIS
-    definition: Technique for Order of Preference by Similarity to Ideal Solution, a multi-criteria decision-making method.
-  - term: MCDM
-    definition: Multi-criteria decision-making, a field for evaluating multiple conflicting factors.
-  - term: Fuzzy Number
-    definition: A representation of uncertainty using a triplet (a, b, c) for lower, central, and upper bounds.
-  - term: Cluster Centroid
-    definition: The ideal point representing the optimal position for a cluster across all criteria.
-critical_citations:
-  - "[Vafaei et al., 2021] — Compares normalization techniques on data with outliers."
-  - "[Zavadskas & Turskis, 2008] — Introduces a novel logarithmic normalization method in game theory."
-  - "[Štilic´ & Puška, 2023] — Comprehensive review of MCDM methods in sustainable engineering."
-relevance:
-  topics:
-    - code: 3.A
-      name: Expense Categorization Frameworks
-      relevance: contextual
-      justification: Provides a methodological framework for categorizing alternatives (cities) based on cost and other criteria.
-    - code: 7.C
-      name: Constrained Optimization Approaches for Budget Allocation
-      relevance: low
-      justification: The case study involves budget allocation (cost criterion), but the method does not address constraint optimization.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: low
-      justification: The method mitigates the effect of outliers, which is conceptually similar to handling anomalies in financial data.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: low
-      justification: Focuses on algorithmic robustness to outliers, a key challenge in anomaly detection.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: high
-      justification: The paper presents a novel evaluation methodology (TOPSIS with cluster-based normalization) that can be used to rank financial options.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: high
-      justification: Directly evaluates the performance of the proposed clustering and normalization algorithms within the TOPSIS framework.
-    - code: 12.C
-      name: Evaluation Methodologies for Budget Recommendation Systems
-      relevance: high
-      justification: The TOPSIS-based ranking methodology can be applied to evaluate and rank budget recommendation strategies for Odin.
-  contribution: The paper provides a methodological framework for evaluating and ranking alternatives under uncertainty, which can be directly applied to Odin's recommendation system. Its cluster-based normalization approach can enhance the robustness of the Budget Recommendation (7.B) and Anomaly Detection (8.A) modules by mitigating the impact of outliers in financial data. The use of expert-defined profiles offers a way to incorporate Filipino cultural context and user preferences into the ranking process. Finally, the deterministic clustering method provides a computationally efficient and transparent approach for grouping users with similar financial behavior profiles.
-  directly_justifies:
-    - "Cluster-based normalization improves ranking stability by reducing the influence of outliers."
-    - "Logarithmic normalization is effective for datasets with high variance and non-linear distributions."
-    - "Using predefined cluster centroids allows for expert judgment to guide the classification process."
-    - "The proposed TOPSIS framework is computationally simple and easy to implement."
-  limits:
-    - "The definition of cluster centroids is based on expert judgment, introducing subjectivity."
-    - "The method's performance on large-scale, high-dimensional datasets remains untested."
-    - "The study does not compare its method against a wide array of modern optimization or machine learning baselines. [unacknowledged]"
-    - "The applicability of the method to streaming or real-time data is not explored. [unacknowledged]"
-  mapping_rationale: A systematic scan of all 12 functional domains was performed to map the paper's contributions to Odin's topics. The paper's core contribution is algorithmic and methodological, leading to the selection of topics under `12.A`, `12.B`, and `12.C` as `high` relevance, as it provides a framework for evaluating systems and algorithms. The case study's context of selecting an option based on multiple criteria (like cost) relates to `3.A` (`contextual`) and `7.A` (`low`). The method's ability to handle outliers directly informs the principles for anomaly detection (`8.A`, `8.B` - both `low`). The domain of "Behavioral Profiling" (`5.A`) was considered but rejected because the paper does not classify individuals. "Filipino Cultural Context" (`2.A`, `2.B`, `2.C`, `2.D`) was rejected as the case study is not culturally specific. The "Data Privacy" (`10.A`, `10.B`) and "Engagement" (`11.A`, `11.B`) domains were not addressed. The paper's overall relevance to Odin is high in its capacity to provide a robust, outlier-resistant, and expert-guided evaluation framework, which can be adapted for modules like budget recommendation and anomaly detection, despite its abstract, algorithm-focused nature.
-limitations:
-  - "The definition of ideal cluster centroids is based on expert judgment, introducing subjectivity."
-  - "The method's performance on large-scale, high-dimensional datasets remains untested."
-  - "The study does not compare its method against a wide array of modern optimization or machine learning baselines. [unacknowledged]"
-  - "The applicability of the method to streaming or real-time data is not explored. [unacknowledged]"
-remember_this:
-  - "Logarithmic normalization in TOPSIS improves ranking stability with high-variance data."
-  - "Fuzzy numbers enable the representation of uncertainty in expert-defined cluster profiles."
-  - "The proposed clustering method is computationally simpler than Fuzzy K-Means."
-  - "City K was more logically assigned to a cluster by the proposed method than by Fuzzy K-Means."
-```
----
-
-## Paper 3: Lambert et al_summarized.md
+## Paper 1: Lambert et al_summarized.md
 
 **Source File:** `Lambert et al_summarized.md`
 
@@ -382,7 +138,7 @@ remember_this:
 ```
 ---
 
-## Paper 4: Pereira & Da Silva_summarized.md
+## Paper 2: Pereira & Da Silva_summarized.md
 
 **Source File:** `Pereira & Da Silva_summarized.md`
 
@@ -497,7 +253,7 @@ remember_this:
 ```
 ---
 
-## Paper 5: Munira et al_summarized.md
+## Paper 3: Munira et al_summarized.md
 
 **Source File:** `Munira et al_summarized.md`
 
@@ -636,7 +392,7 @@ remember_this:
 ```
 ---
 
-## Paper 6: Nokhiz & Ruwanpathirana_summarized.md
+## Paper 4: Nokhiz & Ruwanpathirana_summarized.md
 
 **Source File:** `Nokhiz & Ruwanpathirana_summarized.md`
 
@@ -825,7 +581,7 @@ remember_this:
 ```
 ---
 
-## Paper 7: Gao J. et al_summarized.md
+## Paper 5: Gao J. et al_summarized.md
 
 **Source File:** `Gao J. et al_summarized.md`
 
@@ -942,7 +698,7 @@ remember_this:
   ```
 ---
 
-## Paper 8: Kalideen_summarized.md
+## Paper 6: Kalideen_summarized.md
 
 **Source File:** `Kalideen_summarized.md`
 
@@ -1094,7 +850,7 @@ remember_this:
 ```
 ---
 
-## Paper 9: Bancoro et al_summarized.md
+## Paper 7: Bancoro et al_summarized.md
 
 **Source File:** `Bancoro et al_summarized.md`
 
@@ -1221,7 +977,7 @@ remember_this:
 ```
 ---
 
-## Paper 10: Saghafi et al_summarized.md
+## Paper 8: Saghafi et al_summarized.md
 
 **Source File:** `Saghafi et al_summarized.md`
 
@@ -1347,7 +1103,7 @@ remember_this:
 ```
 ---
 
-## Paper 11: Casalhay et al_summarized.md
+## Paper 9: Casalhay et al_summarized.md
 
 **Source File:** `Casalhay et al_summarized.md`
 
@@ -1517,7 +1273,7 @@ remember_this:
 ```
 ---
 
-## Paper 12: Patra et al_summarized.md
+## Paper 10: Patra et al_summarized.md
 
 **Source File:** `Patra et al_summarized.md`
 
@@ -1660,7 +1416,7 @@ remember_this:
 ```
 ---
 
-## Paper 13: Rosario_summarized.md
+## Paper 11: Rosario_summarized.md
 
 **Source File:** `Rosario_summarized.md`
 
@@ -1777,7 +1533,7 @@ remember_this:
 ```
 ---
 
-## Paper 14: Bhavana et al_summarized.md
+## Paper 12: Bhavana et al_summarized.md
 
 **Source File:** `Bhavana et al_summarized.md`
 
@@ -1905,7 +1661,7 @@ remember_this:
 ```
 ---
 
-## Paper 15: Cabrera et al_summarized.md
+## Paper 13: Cabrera et al_summarized.md
 
 **Source File:** `Cabrera et al_summarized.md`
 
@@ -2023,7 +1779,7 @@ remember_this:
 ```
 ---
 
-## Paper 16: Chen X. et al_summarized.md
+## Paper 14: Chen X. et al_summarized.md
 
 **Source File:** `Chen X. et al_summarized.md`
 
@@ -2131,7 +1887,7 @@ remember_this:
 ```
 ---
 
-## Paper 17: Yuttama_summarized.md
+## Paper 15: Yuttama_summarized.md
 
 **Source File:** `Yuttama_summarized.md`
 
@@ -2258,7 +2014,7 @@ remember_this:
 ```
 ---
 
-## Paper 18: Hall_summarized.md
+## Paper 16: Hall_summarized.md
 
 **Source File:** `Hall_summarized.md`
 
@@ -2365,7 +2121,7 @@ remember_this:
 ```
 ---
 
-## Paper 19: Fariha et al_summarized.md
+## Paper 17: Fariha et al_summarized.md
 
 **Source File:** `Fariha et al_summarized.md`
 
@@ -2517,7 +2273,7 @@ remember_this:
 ```
 ---
 
-## Paper 20: Remonde_summarized.md
+## Paper 18: Remonde_summarized.md
 
 **Source File:** `Remonde_summarized.md`
 
@@ -2615,7 +2371,7 @@ remember_this:
 ```
 ---
 
-## Paper 21: Torres et al-2025a_summarized.md
+## Paper 19: Torres et al-2025a_summarized.md
 
 **Source File:** `Torres et al-2025a_summarized.md`
 
@@ -2708,7 +2464,7 @@ remember_this:
 ```
 ---
 
-## Paper 22: Kashif & Naseer_summarized.md
+## Paper 20: Kashif & Naseer_summarized.md
 
 **Source File:** `Kashif & Naseer_summarized.md`
 
@@ -2832,7 +2588,7 @@ remember_this:
 ```
 ---
 
-## Paper 23: Vega et al_summarized.md
+## Paper 21: Vega et al_summarized.md
 
 **Source File:** `Vega et al_summarized.md`
 
@@ -2972,7 +2728,7 @@ remember_this:
 ```
 ---
 
-## Paper 24: Weng_summarized.md
+## Paper 22: Weng_summarized.md
 
 **Source File:** `Weng_summarized.md`
 
@@ -3069,7 +2825,7 @@ remember_this:
 ```
 ---
 
-## Paper 25: Darwish et al_summarized.md
+## Paper 23: Darwish et al_summarized.md
 
 **Source File:** `Darwish et al_summarized.md`
 
@@ -3185,7 +2941,7 @@ remember_this:
 ```
 ---
 
-## Paper 26: Cucio & Hennig_summarized.md
+## Paper 24: Cucio & Hennig_summarized.md
 
 **Source File:** `Cucio & Hennig_summarized.md`
 
@@ -3320,7 +3076,7 @@ remember_this:
 ```
 ---
 
-## Paper 27: Zhong_summarized.md
+## Paper 25: Zhong_summarized.md
 
 **Source File:** `Zhong_summarized.md`
 
@@ -3439,7 +3195,7 @@ remember_this:
 ```
 ---
 
-## Paper 28: Oyeyemi et al_summarized.md
+## Paper 26: Oyeyemi et al_summarized.md
 
 **Source File:** `Oyeyemi et al_summarized.md`
 
@@ -3626,7 +3382,7 @@ remember_this:
 ```
 ---
 
-## Paper 29: Eliades & Papadopoulos_summarized.md
+## Paper 27: Eliades & Papadopoulos_summarized.md
 
 **Source File:** `Eliades & Papadopoulos_summarized.md`
 
@@ -3743,7 +3499,7 @@ remember_this:
 ```
 ---
 
-## Paper 30: Elliyana et al_summarized.md
+## Paper 28: Elliyana et al_summarized.md
 
 **Source File:** `Elliyana et al_summarized.md`
 
@@ -3922,7 +3678,7 @@ remember_this:
 ```
 ---
 
-## Paper 31: Nasih & Adam_summarized.md
+## Paper 29: Nasih & Adam_summarized.md
 
 **Source File:** `Nasih & Adam_summarized.md`
 
@@ -4104,7 +3860,7 @@ remember_this:
 ```
 ---
 
-## Paper 32: Estorba et al_summarized.md
+## Paper 30: Estorba et al_summarized.md
 
 **Source File:** `Estorba et al_summarized.md`
 
@@ -4255,7 +4011,7 @@ remember_this:
 ```
 ---
 
-## Paper 33: Zole & Wagh_summarized.md
+## Paper 31: Zole & Wagh_summarized.md
 
 **Source File:** `Zole & Wagh_summarized.md`
 
@@ -4370,7 +4126,7 @@ remember_this:
 ```
 ---
 
-## Paper 34: Imawan et al_summarized.md
+## Paper 32: Imawan et al_summarized.md
 
 **Source File:** `Imawan et al_summarized.md`
 
@@ -4511,7 +4267,7 @@ remember_this:
 ```
 ---
 
-## Paper 35: Duvalla_summarized.md
+## Paper 33: Duvalla_summarized.md
 
 **Source File:** `Duvalla_summarized.md`
 
@@ -4637,7 +4393,7 @@ remember_this:
 ```
 ---
 
-## Paper 36: Kowsar M. et al-2025_summarized.md
+## Paper 34: Kowsar M. et al-2025_summarized.md
 
 **Source File:** `Kowsar M. et al-2025_summarized.md`
 
@@ -4791,7 +4547,7 @@ remember_this:
 ```
 ---
 
-## Paper 37: Polytarchos_summarized.md
+## Paper 35: Polytarchos_summarized.md
 
 **Source File:** `Polytarchos_summarized.md`
 
@@ -4905,7 +4661,7 @@ remember_this:
 ```
 ---
 
-## Paper 38: Efendi & Widagdo_summarized.md
+## Paper 36: Efendi & Widagdo_summarized.md
 
 **Source File:** `Efendi & Widagdo_summarized.md`
 
@@ -5033,7 +4789,7 @@ remember_this:
 ```
 ---
 
-## Paper 39: Esperanza et al_summarized.md
+## Paper 37: Esperanza et al_summarized.md
 
 **Source File:** `Esperanza et al_summarized.md`
 
@@ -5146,7 +4902,7 @@ remember_this:
 ```
 ---
 
-## Paper 40: Rastogi et al_summarized.md
+## Paper 38: Rastogi et al_summarized.md
 
 **Source File:** `Rastogi et al_summarized.md`
 
@@ -5277,7 +5033,7 @@ remember_this:
 ```
 ---
 
-## Paper 41: Albert et al-2025_summarized.md
+## Paper 39: Albert et al-2025_summarized.md
 
 **Source File:** `Albert et al-2025_summarized.md`
 
@@ -5466,7 +5222,7 @@ remember_this:
 ```
 ---
 
-## Paper 42: Yaramolu_summarized.md
+## Paper 40: Yaramolu_summarized.md
 
 **Source File:** `Yaramolu_summarized.md`
 
@@ -5581,7 +5337,7 @@ remember_this:
 ```
 ---
 
-## Paper 43: Lu, Yifei et al_summarized.md
+## Paper 41: Lu, Yifei et al_summarized.md
 
 **Source File:** `Lu, Yifei et al_summarized.md`
 
@@ -5725,7 +5481,7 @@ remember_this:
 ```
 ---
 
-## Paper 44: Dewi_summarized.md
+## Paper 42: Dewi_summarized.md
 
 **Source File:** `Dewi_summarized.md`
 
@@ -5848,7 +5604,7 @@ remember_this:
 ```
 ---
 
-## Paper 45: Mariano & Monreal_summarized.md
+## Paper 43: Mariano & Monreal_summarized.md
 
 **Source File:** `Mariano & Monreal_summarized.md`
 
@@ -5954,7 +5710,7 @@ remember_this:
 ```
 ---
 
-## Paper 46: Compagnino et al_summarized.md
+## Paper 44: Compagnino et al_summarized.md
 
 **Source File:** `Compagnino et al_summarized.md`
 
@@ -6093,7 +5849,7 @@ remember_this:
 ```
 ---
 
-## Paper 47: Mamun_summarized.md
+## Paper 45: Mamun_summarized.md
 
 **Source File:** `Mamun_summarized.md`
 
@@ -6259,7 +6015,7 @@ remember_this:
 ```
 ---
 
-## Paper 48: Chowdhury A. et al_summarized.md
+## Paper 46: Chowdhury A. et al_summarized.md
 
 **Source File:** `Chowdhury A. et al_summarized.md`
 
@@ -6386,7 +6142,7 @@ remember_this:
 ```
 ---
 
-## Paper 49: Santiago_summarized.md
+## Paper 47: Santiago_summarized.md
 
 **Source File:** `Santiago_summarized.md`
 
@@ -6574,7 +6330,7 @@ remember_this:
 ```
 ---
 
-## Paper 50: Adlermann_summarized.md
+## Paper 48: Adlermann_summarized.md
 
 **Source File:** `Adlermann_summarized.md`
 
@@ -6682,6 +6438,226 @@ remember_this:
   - GRA signatures provide interpretable relational cues for investigator triage.
   - The framework supports petabyte-scale with sub-300ms latency and tenant isolation.
   - GRA serves as an early drift indicator, enabling timely model retraining.
+```
+---
+
+## Paper 49: Robba et al_summarized.md
+
+**Source File:** `Robba et al_summarized.md`
+
+```yaml
+paper_id: 10.3389/frbhe.2024.1369261
+designation: international
+title: In search of socially responsible investors: a Latent Profile Analysis
+authors: Robba, M.; Sorgente, A.; Iannello, P.
+year: 2024
+venue: Frontiers in Behavioral Economics
+odin_topics:
+  - 5.A
+  - 5.B
+  - 5.C
+tldr: Identifies five investor profiles using Latent Profile Analysis, finding that sustainable investors are characterized by high SRI knowledge, risk appetite, positive attitudes, personal norms, and environmental concern.
+problem_and_motivation: Literature lacks systematic research on the psychological and behavioral profile of socially responsible investors. Understanding these characteristics is essential for designing inclusive financial products and identifying barriers to sustainable investing.
+approach:
+  - Cross-sectional online survey of 1,002 representative Italian consumers aged 18-54 with quota sampling for gender, age, education, and region.
+  - Latent Profile Analysis (LPA) used to identify subgroups based on 9 determinants: financial literacy, SRI knowledge, risk tolerance, perceived consumer effectiveness, trust, personal norms, perceived behavioral control, environmental concern, and connectedness to nature.
+  - Model selection based on VLMR-LRT, LMR-LRT, and information criteria (AIC, BIC, SABIC); 5-profile solution selected for parsimony and interpretability.
+  - Profiles associated with current SRI investment via chi-square test and with willingness to invest via one-way ANOVA with Tukey’s HSD post-hoc tests.
+findings:
+  - "num: Five distinct consumer profiles were identified, with only the 'fully equipped' profile (22.7% of sample) significantly associated with current SRI investment."
+  - "num: The 'fully equipped' profile showed 11.9% current SRI ownership vs. 4.7% sample average."
+  - "num: The 'environmental concern' profile had 0% current SRI investors and the lowest willingness to invest (M=3.03)."
+  - "num: The 'fully equipped' profile had the highest willingness to invest in SRI (M=5.32), followed by 'equipped but risk avoidant' (M=4.65)."
+  - "num: ANOVA showed large effect size (partial η2 = 0.301) for profile membership on SRI investment intention."
+  - Psychological characteristics (attitudes, personal norms, perceived behavioral control, environmental concern) play a key role alongside classical financial determinants.
+  - Risk tolerance and SRI knowledge are critical for converting intention into actual SRI investment.
+  - Environmental concern alone, without financial literacy and risk appetite, is insufficient to drive sustainable investment.
+key_figures_tables:
+  - "Figure 1: Factor score means for nine determinants across five profiles → Fully equipped profile scores highest on all determinants except financial literacy."
+  - "Table 6: Cross-tabulation of profiles with SRI investing → Fully equipped profile has largest positive adjusted residual (5.8)."
+  - "Table 4: Relative fit indices for LPA models → 5-profile solution selected based on inferential tests and parsimony."
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: LPA
+    definition: Latent Profile Analysis, a clustering technique identifying subgroups based on variable configurations.
+  - term: SRI
+    definition: Socially Responsible Investment, investment strategy combining financial performance with social responsibility.
+  - term: TPB
+    definition: Theory of Planned Behavior, framework explaining behavior through attitudes, subjective norms, and perceived behavioral control.
+  - term: ESG
+    definition: Environmental, Social, and Governance criteria used to evaluate corporate sustainability.
+  - term: PCE
+    definition: Perceived Consumer Effectiveness, belief that individual actions can positively impact the environment.
+  - term: IINS
+    definition: Illustrated Inclusion of Nature in Self scale, measuring connectedness to nature.
+critical_citations:
+  - "[Ajzen, 1991] — Foundational TPB framework for behavioral prediction."
+  - "[Riedl and Smeets, 2017] — Key evidence on investor motivations for SRI."
+  - "[Wins and Zwergel, 2016] — Examined determinants of sustainable fund investment."
+  - "[Gutsche and Zwergel, 2020] — Identified investment barriers and labeling effects."
+relevance:
+  topics:
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Directly uses LPA to identify distinct investor behavioral profiles.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: high
+      justification: Profiles represent configurations of psychological and financial traits relevant to cold-start user modeling.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Demonstrates person-centered LPA classification methodology for financial behavior.
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Italian sample provides general demographic profiling approach but not Filipino-specific.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: contextual
+      justification: Behavioral determinants framework is transferable but not applied to Filipino context.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: low
+      justification: Cultural factors not investigated; Italian context limits direct applicability.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: low
+      justification: No seasonal spending analysis; paper focuses on investment, not consumption.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: low
+      justification: Not about expense categorization; investment decision model only.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: contextual
+      justification: Provides general behavioral framework but no specific budget recommendation content.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: No discussion of data privacy or security.
+  contribution: |
+    This paper provides a validated behavioral profiling methodology (Latent Profile Analysis) for Odin's user classification module. The finding that psychological determinants (personal norms, attitudes, perceived behavioral control) are as important as financial literacy for investment behavior informs Odin's preference elicitation design. The identification of an intention-behavior gap linked to risk aversion and knowledge deficits directly justifies Odin's educational and onboarding features for new users. The profile-based segmentation approach offers a template for Odin's cold-start user typing based on limited initial inputs. Finally, the integration of TPB with financial determinants provides a theoretical foundation for Odin's behavioral prediction engine.
+  directly_justifies:
+    - "Latent Profile Analysis can classify users into distinct behavioral profiles for personal finance systems."
+    - "Psychological determinants including personal norms and attitudes significantly influence financial decision-making."
+    - "Knowledge deficits and risk aversion are key barriers that can create an intention-behavior gap."
+    - "Environmental concern alone is insufficient to drive sustainable financial behavior without financial literacy."
+  limits:
+    - "Cross-sectional data in Italy limits generalizability to Filipino young professionals."
+    - "SRI context (investment) differs from PFMS context (spending, budgeting)."
+    - "Perceived knowledge measures may not correlate with objective financial literacy."
+  mapping_rationale: |
+    All 12 functional domains and their 28 associated topic codes were systematically scanned against the paper's content. Domains 5 (Behavioral Profiling), 1 (Demographic/Behavioral context), and 7 (Budget Recommendation) were flagged as potentially relevant. Topic 5.A (Financial Behavioral Profiles) was assigned high relevance as the paper's LPA directly identifies investor behavioral profiles—a methodology directly transferable to Odin's user classification. Topic 5.B (Profile Dynamics and Cold-Start) was also high because the paper demonstrates how configurations of limited variables (psychological and financial) can classify users, directly informing cold-start user typing. Topic 5.C (Classification Approaches) was high as LPA is a robust classification method demonstrated in financial behavior context. Topic 1.A and 1.C were assigned contextual because while the demographic and behavioral framework is relevant, the sample is Italian, not Filipino. Topic 7.A was contextual for providing behavioral theory but not budget-specific algorithms. Domains 2 (Cultural Practices), 3 (Expense Categorization), 6 (Forecasting), 8 (Anomaly Detection), 9 (Mobile Design), 10 (Privacy), 11 (Retention), 12 (Evaluation), and 13 (Savings/Debt) were rejected as the paper does not address these areas—no seasonal patterns, no forecasting, no privacy/trust in digital systems, no expense categorization, and no savings or debt management. The overall relevance to Odin is primarily methodological, providing a validated user profiling approach that can be adapted for financial behavior classification in the Philippine context.
+limitations:
+  - "Cross-sectional design prevents causal inferences about determinants of SRI behavior. [unacknowledged]"
+  - "Self-reported survey data may be subject to social desirability and response biases. [unacknowledged]"
+  - "Italian sample limits generalizability to other cultural contexts, including the Philippines. [unacknowledged]"
+  - "Investor motivations (e.g., diversification, financial performance) were not examined."
+  - "Perceived knowledge measures may overestimate actual financial literacy."
+remember_this:
+  - "Latent Profile Analysis identified five distinct investor behavioral profiles."
+  - "num: Only 11.9% of the fully equipped profile were current SRI investors versus 4.7% sample average."
+  - "Psychological factors like personal norms are as important as financial literacy."
+  - "Environmental concern without financial knowledge does not drive sustainable investment."
+  - "Knowledge and risk appetite are critical to convert intention into actual behavior."
+```
+---
+
+## Paper 50: Xing_summarized.md
+
+**Source File:** `Xing_summarized.md`
+
+```yaml
+paper_id: 10.1016/j.ipm.2024.103704
+designation: international-algorithm-specific
+title: Financial risk tolerance profiling from text
+authors: Xing, F.
+year: 2024
+venue: Information Processing and Management
+odin_topics:
+  - 5.A
+  - 5.B
+  - 5.C
+  - 6.A
+  - 10.A
+tldr: User-generated text is a viable source for financial risk tolerance profiling, with a CNN model achieving a micro-F1 of 0.5066, significantly outperforming training-free baselines.
+problem_and_motivation: Traditional risk tolerance assessment relies on questionnaires, which are costly and limited in scale. There is a pressing need for a faster, more cost-efficient method to profile individual risk tolerance to support financial inclusion and personalized services, but the potential of unstructured digital footprints remains underexplored.
+approach:
+  - A quaternary classification task (gambler, willing after research, cautious, risk avoider) for risk tolerance is defined.
+  - Risk tolerance labels are synthesized via a meta-analysis of three studies, deriving a linear regression from Big Five personality traits.
+  - A CNN model, based on Majumder et al. (2017), is trained on a corpus synthesized from MyPersonality, Essay, and PAN-15 datasets.
+  - The model integrates Word2Vec, Glove, and BERT embeddings, along with Mairesse linguistic features (LIWC and MRC).
+  - The approach is evaluated using 10-fold cross-validation and compared against strategic guess and GPT-3.5/GPT-4 baselines.
+findings:
+  - num: The proposed CNN model achieves a micro-F1 of circa 0.51, significantly outperforming the GPT-4 baseline (0.28) and strategic guess (0.34).
+  - num: Text augmentation and multi-task learning with personality detection provided minimal benefit to the risk tolerance profiling task.
+  - num: Richer text representations (combining Word2Vec, Glove, and BERT) were the primary driver of performance improvement, yielding over a 0.02 increase in micro-F1.
+  - The study proves that user-generated text is a useful information source for financial risk profiling, potentially replacing formal questionnaires in low-stakes situations.
+  - It is more difficult to identify the most extreme risk-taking or risk-averse investors, indicating the need for some human intervention in the overall profiling process.
+key_figures_tables:
+  - Table 5: Experimental results for different model settings → CNN-MT(W+G+B) achieves the highest micro-F1 of 0.5066.
+  - Table 6: Robustness tests showing significant difference between CNN models and baselines → p-values < 0.01 confirm statistical significance.
+key_equations:
+  - equation: risk_tol_5 = 3.0715 + 0.094EXT_5 + 0.192OPN_5 - 0.145AGR_5 - 0.071CON_5 - 0.025NEU_5
+    explanation: Linear regression summarizing meta-analysis to derive risk tolerance from Big Five traits.
+definitions:
+  - term: Risk Tolerance
+    definition: Willingness to engage in risky behavior where possible outcomes can be negative.
+  - term: Big Five Personality Traits
+    definition: A five-factor model of personality comprising Extroversion, Neuroticism, Agreeableness, Conscientiousness, and Openness.
+  - term: CNN
+    definition: Convolutional Neural Network, a deep learning model used for text feature extraction and classification.
+critical_citations:
+  - "[Pak and Mahmood, 2015] — Provides regression equation for risk tolerance vs. personality."
+  - "[Pinjisakikool, 2018] — Provides regression equation for risk tolerance vs. personality."
+  - "[Wong and Carducci, 2013] — Provides regression equation for risk tolerance vs. personality."
+  - "[Majumder et al., 2017] — Provides the base CNN architecture for the model."
+relevance:
+  topics:
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Directly addresses the task of profiling user risk tolerance, a key behavioral profile.
+    - code: 5.B
+      name: Profile Dynamics and the Cold-Start Problem
+      relevance: high
+      justification: Provides a method for initial profiling from text, which can help address the cold-start problem.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Proposes and evaluates a CNN-based classification approach for a behavioral profile (risk tolerance).
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: medium
+      justification: The model predicts a stable user trait, which can be an input for forecasting models within Odin.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Discusses using digital footprints for profiling, highlighting the need for privacy considerations in such approaches.
+  contribution: This paper provides a foundational method for automatically deriving a user's financial risk tolerance from text, which can be integrated into Odin's user onboarding process to address the cold-start problem for behavioral profiling. The findings on the effectiveness of rich linguistic features (LIWC, MRC) over complex model architectures inform the feature engineering for Odin's classification modules. The demonstrated possibility of replacing formal questionnaires with text analysis supports Odin's mobile-first design philosophy by reducing user friction. The study's discussion on the limitations of extreme profile identification provides a specific area where Odin's system might require human or fallback mechanisms.
+  directly_justifies:
+    - A CNN model can profile financial risk tolerance from user text with a micro-F1 of 0.5066.
+    - Richer text representations are more important than text augmentation or multi-tasking for this task.
+    - User-generated text is a useful and cost-efficient source for financial risk profiling.
+    - Profiling from text can replace formal questionnaires in low-stakes situations.
+  limits:
+    - Risk tolerance labels were derived indirectly from personality datasets, not ground truth surveys.
+    - The model's performance on extreme risk categories (gambler, risk avoider) is poor, requiring human intervention.
+  mapping_rationale: A systematic scan across all 12 functional domains and associated topics identified the Behavioral Profiling & Classification domain (5.A, 5.B, 5.C) as the most directly relevant, assigned high relevance because the paper directly proposes a method to classify risk tolerance. The Forecasting domain (6.A, 6.B) was flagged as medium relevance, as the predicted risk profile could serve as a static input to forecasting models. Data Privacy (10.A) was deemed contextual, as the paper's use of digital footprints raises privacy issues relevant to Odin's design. The Filipino Cultural Context domain was considered and rejected because the study uses international datasets and does not address Filipino-specific practices. Expense Categorization, Budget Recommendation, and System Evaluation domains were rejected as the paper does not address these functions directly. The paper's overall relevance to Odin is high, as it offers a practical, data-driven solution for user profiling that aligns with Odin's goal of providing personalized financial management with minimal user input.
+limitations:
+  - Risk tolerance labels are synthesized through meta-analysis of multiple datasets, not directly validated against ground truth. [unacknowledged]
+  - The synthesized dataset may not represent the demographic and cultural specifics of Filipino young professionals. [unacknowledged]
+  - The study does not address the integration of this text-based model with other data sources like demographics.
+  - The model's performance on extremely risk-tolerant or risk-averse users is significantly lower.
+remember_this:
+  - A CNN model achieves a micro-F1 of 0.51 for text-based risk profiling.
+  - Richer text embeddings are more effective than advanced machine learning tricks.
+  - User text is a viable, low-cost alternative to formal risk questionnaires.
+  - The method struggles with identifying extreme profiles (gamblers/avoiders).
 ```
 ---
 

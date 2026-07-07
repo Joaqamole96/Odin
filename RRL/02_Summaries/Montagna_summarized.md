@@ -1,0 +1,123 @@
+```yaml
+paper_id: 8e1d7b9c-5f4a-4b3c-9e2d-1a3f5c7d9e0b # No DOI available
+designation: international
+title: Integration of Explainability in Recommender Systems to Enhance Enterprise Value Strategies
+authors: Montagna, A.
+year: 2023
+venue: University of Padova
+odin_topics:
+  - "4.A"
+  - "4.B"
+  - "6.A"
+  - "6.B"
+  - "7.B"
+  - "7.C"
+  - "8.A"
+  - "10.A"
+  - "11.A"
+  - "12.A"
+  - "12.B"
+tldr: Surveys value-aware recommender systems (VARS), proposes a novel explainable value-aware matrix factorization model (XVMF), and critiques the qualitative evaluation of explanations in graph-based recommender systems.
+problem_and_motivation: Recommender systems designed for business value (VARS) lack transparency, hindering user trust and adoption. Existing systems often prioritize either business value or explainability, without a balanced approach. A gap exists in quantitative evaluation methods for explanations, especially in emerging graph-based models.
+approach:
+  - Conducted a systematic literature review of VARS following PRISMA guidelines.
+  - Proposed a taxonomy for VARS based on technical approach and value objective.
+  - Developed XVMF, a matrix factorization model integrating explainability and value regularization terms.
+  - Evaluated XVMF on Yelp and Amazon datasets using NDCG, NDCV, and E-NDCG metrics.
+  - Critically analyzed evaluation methods for explainability in graph-based recommender systems.
+findings:
+  - "num: XVMF achieved up to 1.995% E-NDCG on Yelp, outperforming MF (0.879%) and EMF (0.810%)."
+  - "num: On Amazon, XVMF achieved 0.115% NDCV, the highest business value performance."
+  - Value optimization in VARS can degrade recommendation accuracy if not balanced with user interest.
+  - Most graph-based explainable recommender systems rely on qualitative case studies, lacking quantitative, comparable evaluations.
+  - There is a need for standardized, guideline-compliant metrics for evaluating explanation quality in recommender systems.
+key_figures_tables:
+  - "Table 2.2: Product value-aware recommender systems → Surveys VARS techniques and optimized values."
+  - "Figure 3.2: Performance analysis for Yelp dataset → Shows the trade-off between explainability and value regularization terms."
+  - "Table 3.5: Evaluation metrics for Yelp → XVMF achieves highest NDCG, NDCV, and E-NDCG scores."
+  - "Table 4.1: Graph-Based Explainable Recommender Systems → Categorizes methods and evaluation approaches."
+key_equations:
+  - equation: "L = \sum (r_{u,i} - p_u \cdot q_i^T)^2 + \frac{\beta}{2}(||p_u||^2 + ||q_i||^2) + ||p_u - q_i||^2(\lambda W_{u,i} + \delta v_i)"
+    explanation: "XVMF loss function balancing accuracy, explainability, and business value."
+  - equation: "E_{u,i} = \sum_{r \in R, r \ge P_\tau} |NN_k(u)| \times r_{i,r}"
+    explanation: "Calculates explainability power based on neighbor ratings."
+definitions:
+  - term: "VARS"
+    definition: "Value-Aware Recommender System; optimizes economic value of recommendations."
+  - term: "XVMF"
+    definition: "Explainable Value-aware Matrix Factorization; proposed model balancing explainability and value."
+  - term: "NDCG"
+    definition: "Normalized Discounted Cumulative Gain; metric for ranking quality."
+  - term: "NDCV"
+    definition: "Normalized Discounted Cumulative Value; metric for business value."
+  - term: "E-NDCG"
+    definition: "Explainable Normalized Discounted Cumulative Gain; metric for explainability performance."
+  - term: "GxRS"
+    definition: "Graph-Based Explainable Recommender System."
+critical_citations:
+  - "[Page et al., 2021] — PRISMA guidelines for systematic reviews."
+  - "[Ricci et al., 2022] — Foundational handbook on recommender systems."
+  - "[Jannach and Zanker, 2022] — Business value and impact of recommender systems."
+  - "[Tintarev and Masthoff, 2015] — Guidelines for designing and evaluating explainable RS."
+  - "[Abdollahi and Nasraoui, 2016] — Introduced Explainable Matrix Factorization."
+relevance:
+  topics:
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Provides a general review of recommender systems, a technology applicable to PFMS."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "high"
+      justification: "Identifies the lack of explainability and value-awareness in current systems, a direct gap for PFMS."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Discusses predictive modeling and forecasting in VARS, which can inform spending prediction."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "medium"
+      justification: "Surveys forecasting algorithms (RL, bandits) used for VARS that could be adapted for spending forecasting."
+    - code: "7.B"
+      name: "Budget Recommendation in Personal Finance Systems"
+      relevance: "high"
+      justification: "Proposes a model (XVMF) that directly balances recommendation value and explainability, core to budget recommendation."
+    - code: "7.C"
+      name: "Constrained Optimization Approaches for Budget Allocation"
+      relevance: "medium"
+      justification: "Reviews optimization techniques in VARS that can inform budget allocation algorithms."
+    - code: "8.A"
+      name: "Anomaly Detection in Personal Finance Systems"
+      relevance: "low"
+      justification: "Mentions anomaly detection only as a potential future direction for VARS evaluation."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "low"
+      justification: "Discusses trustworthy AI principles, including privacy, as a general concern for AI systems."
+    - code: "11.A"
+      name: "Engagement Dynamics in Personal Finance Applications"
+      relevance: "high"
+      justification: "Focuses on optimizing user engagement (a key business value) and trust through explainability."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "high"
+      justification: "Proposes a quantitative evaluation framework for explainability (E-NDCG), which is crucial for PFMS evaluation."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "high"
+      justification: "Specifically evaluates algorithmic modules (MF, EMF, XVMF) using proposed metrics."
+  contribution: "This thesis provides a systematic taxonomy of VARS, aiding in the selection and understanding of value-driven algorithms for Odin's modules. It introduces XVMF, a novel model that demonstrates how to balance the generation of business value (e.g., from savings or spending data) with the need for explainable recommendations, which is critical for user trust. The work also identifies a critical flaw in the evaluation of graph-based explainable models, advocating for quantitative metrics, which is a core requirement for any system evaluation in Odin."
+  directly_justifies:
+    - "Value-aware recommender systems can be adapted to optimize savings and debt management strategies."
+    - "Explainability is a key factor for building user trust and increasing the adoption of financial systems."
+    - "Quantitative evaluation of explanations is necessary for comparing and improving recommendation algorithms."
+  limits:
+    - "The XVMF model was evaluated only on Yelp and Amazon datasets, which may not reflect financial transaction data."
+    - "The proposed evaluation metrics (E-NDCG, NDCV) assume business value is static per item, which may not hold in PFMS."
+    - "The study does not involve user studies to validate the perceived quality of explanations generated by XVMF."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to 'Existing Systems & Gaps' (4.A, 4.B) due to its identification of the lack of explainable, value-aware models. It directly informs 'Budget Recommendation' (7.B, 7.C) and 'System Evaluation' (12.A, 12.B) through the proposed XVMF model and its quantitative evaluation metrics. The themes of 'Behavioral Profiling' (5.A) and 'Spending Forecasting' (6.A, 6.B) were considered but assigned medium/low relevance as the paper focuses on general VARS taxonomy and models rather than specific PFMS behavioral forecasting. 'Data Privacy' (10.A) and 'Anomaly Detection' (8.A) were considered contextual as they are mentioned only in passing as part of broader trustworthy AI principles. The core contribution of a balanced model and a critical view on explainability evaluation makes this paper highly relevant for informing Odin's design and evaluation strategy."
+limitations:
+  - "The systematic review is limited to articles from four databases and excludes non-English papers."
+  - "The XVMF model's performance is demonstrated only on two specific datasets; generalizability to PFMS data is unproven."
+  - "The evaluation of graph-based explainable systems in the literature lacks quantitative, comparable metrics."
+```

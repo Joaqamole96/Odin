@@ -6,227 +6,7 @@
 
 ---
 
-## Paper 1: Robba et al_summarized.md
-
-**Source File:** `Robba et al_summarized.md`
-
-```yaml
-paper_id: 10.3389/frbhe.2024.1369261
-designation: international
-title: In search of socially responsible investors: a Latent Profile Analysis
-authors: Robba, M.; Sorgente, A.; Iannello, P.
-year: 2024
-venue: Frontiers in Behavioral Economics
-odin_topics:
-  - 5.A
-  - 5.B
-  - 5.C
-tldr: Identifies five investor profiles using Latent Profile Analysis, finding that sustainable investors are characterized by high SRI knowledge, risk appetite, positive attitudes, personal norms, and environmental concern.
-problem_and_motivation: Literature lacks systematic research on the psychological and behavioral profile of socially responsible investors. Understanding these characteristics is essential for designing inclusive financial products and identifying barriers to sustainable investing.
-approach:
-  - Cross-sectional online survey of 1,002 representative Italian consumers aged 18-54 with quota sampling for gender, age, education, and region.
-  - Latent Profile Analysis (LPA) used to identify subgroups based on 9 determinants: financial literacy, SRI knowledge, risk tolerance, perceived consumer effectiveness, trust, personal norms, perceived behavioral control, environmental concern, and connectedness to nature.
-  - Model selection based on VLMR-LRT, LMR-LRT, and information criteria (AIC, BIC, SABIC); 5-profile solution selected for parsimony and interpretability.
-  - Profiles associated with current SRI investment via chi-square test and with willingness to invest via one-way ANOVA with Tukey’s HSD post-hoc tests.
-findings:
-  - "num: Five distinct consumer profiles were identified, with only the 'fully equipped' profile (22.7% of sample) significantly associated with current SRI investment."
-  - "num: The 'fully equipped' profile showed 11.9% current SRI ownership vs. 4.7% sample average."
-  - "num: The 'environmental concern' profile had 0% current SRI investors and the lowest willingness to invest (M=3.03)."
-  - "num: The 'fully equipped' profile had the highest willingness to invest in SRI (M=5.32), followed by 'equipped but risk avoidant' (M=4.65)."
-  - "num: ANOVA showed large effect size (partial η2 = 0.301) for profile membership on SRI investment intention."
-  - Psychological characteristics (attitudes, personal norms, perceived behavioral control, environmental concern) play a key role alongside classical financial determinants.
-  - Risk tolerance and SRI knowledge are critical for converting intention into actual SRI investment.
-  - Environmental concern alone, without financial literacy and risk appetite, is insufficient to drive sustainable investment.
-key_figures_tables:
-  - "Figure 1: Factor score means for nine determinants across five profiles → Fully equipped profile scores highest on all determinants except financial literacy."
-  - "Table 6: Cross-tabulation of profiles with SRI investing → Fully equipped profile has largest positive adjusted residual (5.8)."
-  - "Table 4: Relative fit indices for LPA models → 5-profile solution selected based on inferential tests and parsimony."
-key_equations:
-  - equation: "None."
-    explanation: ""
-definitions:
-  - term: LPA
-    definition: Latent Profile Analysis, a clustering technique identifying subgroups based on variable configurations.
-  - term: SRI
-    definition: Socially Responsible Investment, investment strategy combining financial performance with social responsibility.
-  - term: TPB
-    definition: Theory of Planned Behavior, framework explaining behavior through attitudes, subjective norms, and perceived behavioral control.
-  - term: ESG
-    definition: Environmental, Social, and Governance criteria used to evaluate corporate sustainability.
-  - term: PCE
-    definition: Perceived Consumer Effectiveness, belief that individual actions can positively impact the environment.
-  - term: IINS
-    definition: Illustrated Inclusion of Nature in Self scale, measuring connectedness to nature.
-critical_citations:
-  - "[Ajzen, 1991] — Foundational TPB framework for behavioral prediction."
-  - "[Riedl and Smeets, 2017] — Key evidence on investor motivations for SRI."
-  - "[Wins and Zwergel, 2016] — Examined determinants of sustainable fund investment."
-  - "[Gutsche and Zwergel, 2020] — Identified investment barriers and labeling effects."
-relevance:
-  topics:
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: high
-      justification: Directly uses LPA to identify distinct investor behavioral profiles.
-    - code: 5.B
-      name: Profile Dynamics and the Cold‑Start Problem
-      relevance: high
-      justification: Profiles represent configurations of psychological and financial traits relevant to cold-start user modeling.
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: high
-      justification: Demonstrates person-centered LPA classification methodology for financial behavior.
-    - code: 1.A
-      name: Filipino Young Professionals as a Demographic
-      relevance: contextual
-      justification: Italian sample provides general demographic profiling approach but not Filipino-specific.
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      relevance: contextual
-      justification: Behavioral determinants framework is transferable but not applied to Filipino context.
-    - code: 2.A
-      name: Culturally Specific Financial Practices
-      relevance: low
-      justification: Cultural factors not investigated; Italian context limits direct applicability.
-    - code: 2.B
-      name: Seasonal and Cyclical Spending Patterns
-      relevance: low
-      justification: No seasonal spending analysis; paper focuses on investment, not consumption.
-    - code: 3.A
-      name: Expense Categorization Frameworks
-      relevance: low
-      justification: Not about expense categorization; investment decision model only.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      relevance: contextual
-      justification: Provides general behavioral framework but no specific budget recommendation content.
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: low
-      justification: No discussion of data privacy or security.
-  contribution: |
-    This paper provides a validated behavioral profiling methodology (Latent Profile Analysis) for Odin's user classification module. The finding that psychological determinants (personal norms, attitudes, perceived behavioral control) are as important as financial literacy for investment behavior informs Odin's preference elicitation design. The identification of an intention-behavior gap linked to risk aversion and knowledge deficits directly justifies Odin's educational and onboarding features for new users. The profile-based segmentation approach offers a template for Odin's cold-start user typing based on limited initial inputs. Finally, the integration of TPB with financial determinants provides a theoretical foundation for Odin's behavioral prediction engine.
-  directly_justifies:
-    - "Latent Profile Analysis can classify users into distinct behavioral profiles for personal finance systems."
-    - "Psychological determinants including personal norms and attitudes significantly influence financial decision-making."
-    - "Knowledge deficits and risk aversion are key barriers that can create an intention-behavior gap."
-    - "Environmental concern alone is insufficient to drive sustainable financial behavior without financial literacy."
-  limits:
-    - "Cross-sectional data in Italy limits generalizability to Filipino young professionals."
-    - "SRI context (investment) differs from PFMS context (spending, budgeting)."
-    - "Perceived knowledge measures may not correlate with objective financial literacy."
-  mapping_rationale: |
-    All 12 functional domains and their 28 associated topic codes were systematically scanned against the paper's content. Domains 5 (Behavioral Profiling), 1 (Demographic/Behavioral context), and 7 (Budget Recommendation) were flagged as potentially relevant. Topic 5.A (Financial Behavioral Profiles) was assigned high relevance as the paper's LPA directly identifies investor behavioral profiles—a methodology directly transferable to Odin's user classification. Topic 5.B (Profile Dynamics and Cold-Start) was also high because the paper demonstrates how configurations of limited variables (psychological and financial) can classify users, directly informing cold-start user typing. Topic 5.C (Classification Approaches) was high as LPA is a robust classification method demonstrated in financial behavior context. Topic 1.A and 1.C were assigned contextual because while the demographic and behavioral framework is relevant, the sample is Italian, not Filipino. Topic 7.A was contextual for providing behavioral theory but not budget-specific algorithms. Domains 2 (Cultural Practices), 3 (Expense Categorization), 6 (Forecasting), 8 (Anomaly Detection), 9 (Mobile Design), 10 (Privacy), 11 (Retention), 12 (Evaluation), and 13 (Savings/Debt) were rejected as the paper does not address these areas—no seasonal patterns, no forecasting, no privacy/trust in digital systems, no expense categorization, and no savings or debt management. The overall relevance to Odin is primarily methodological, providing a validated user profiling approach that can be adapted for financial behavior classification in the Philippine context.
-limitations:
-  - "Cross-sectional design prevents causal inferences about determinants of SRI behavior. [unacknowledged]"
-  - "Self-reported survey data may be subject to social desirability and response biases. [unacknowledged]"
-  - "Italian sample limits generalizability to other cultural contexts, including the Philippines. [unacknowledged]"
-  - "Investor motivations (e.g., diversification, financial performance) were not examined."
-  - "Perceived knowledge measures may overestimate actual financial literacy."
-remember_this:
-  - "Latent Profile Analysis identified five distinct investor behavioral profiles."
-  - "num: Only 11.9% of the fully equipped profile were current SRI investors versus 4.7% sample average."
-  - "Psychological factors like personal norms are as important as financial literacy."
-  - "Environmental concern without financial knowledge does not drive sustainable investment."
-  - "Knowledge and risk appetite are critical to convert intention into actual behavior."
-```
----
-
-## Paper 2: Xing_summarized.md
-
-**Source File:** `Xing_summarized.md`
-
-```yaml
-paper_id: 10.1016/j.ipm.2024.103704
-designation: international-algorithm-specific
-title: Financial risk tolerance profiling from text
-authors: Xing, F.
-year: 2024
-venue: Information Processing and Management
-odin_topics:
-  - 5.A
-  - 5.B
-  - 5.C
-  - 6.A
-  - 10.A
-tldr: User-generated text is a viable source for financial risk tolerance profiling, with a CNN model achieving a micro-F1 of 0.5066, significantly outperforming training-free baselines.
-problem_and_motivation: Traditional risk tolerance assessment relies on questionnaires, which are costly and limited in scale. There is a pressing need for a faster, more cost-efficient method to profile individual risk tolerance to support financial inclusion and personalized services, but the potential of unstructured digital footprints remains underexplored.
-approach:
-  - A quaternary classification task (gambler, willing after research, cautious, risk avoider) for risk tolerance is defined.
-  - Risk tolerance labels are synthesized via a meta-analysis of three studies, deriving a linear regression from Big Five personality traits.
-  - A CNN model, based on Majumder et al. (2017), is trained on a corpus synthesized from MyPersonality, Essay, and PAN-15 datasets.
-  - The model integrates Word2Vec, Glove, and BERT embeddings, along with Mairesse linguistic features (LIWC and MRC).
-  - The approach is evaluated using 10-fold cross-validation and compared against strategic guess and GPT-3.5/GPT-4 baselines.
-findings:
-  - num: The proposed CNN model achieves a micro-F1 of circa 0.51, significantly outperforming the GPT-4 baseline (0.28) and strategic guess (0.34).
-  - num: Text augmentation and multi-task learning with personality detection provided minimal benefit to the risk tolerance profiling task.
-  - num: Richer text representations (combining Word2Vec, Glove, and BERT) were the primary driver of performance improvement, yielding over a 0.02 increase in micro-F1.
-  - The study proves that user-generated text is a useful information source for financial risk profiling, potentially replacing formal questionnaires in low-stakes situations.
-  - It is more difficult to identify the most extreme risk-taking or risk-averse investors, indicating the need for some human intervention in the overall profiling process.
-key_figures_tables:
-  - Table 5: Experimental results for different model settings → CNN-MT(W+G+B) achieves the highest micro-F1 of 0.5066.
-  - Table 6: Robustness tests showing significant difference between CNN models and baselines → p-values < 0.01 confirm statistical significance.
-key_equations:
-  - equation: risk_tol_5 = 3.0715 + 0.094EXT_5 + 0.192OPN_5 - 0.145AGR_5 - 0.071CON_5 - 0.025NEU_5
-    explanation: Linear regression summarizing meta-analysis to derive risk tolerance from Big Five traits.
-definitions:
-  - term: Risk Tolerance
-    definition: Willingness to engage in risky behavior where possible outcomes can be negative.
-  - term: Big Five Personality Traits
-    definition: A five-factor model of personality comprising Extroversion, Neuroticism, Agreeableness, Conscientiousness, and Openness.
-  - term: CNN
-    definition: Convolutional Neural Network, a deep learning model used for text feature extraction and classification.
-critical_citations:
-  - "[Pak and Mahmood, 2015] — Provides regression equation for risk tolerance vs. personality."
-  - "[Pinjisakikool, 2018] — Provides regression equation for risk tolerance vs. personality."
-  - "[Wong and Carducci, 2013] — Provides regression equation for risk tolerance vs. personality."
-  - "[Majumder et al., 2017] — Provides the base CNN architecture for the model."
-relevance:
-  topics:
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: high
-      justification: Directly addresses the task of profiling user risk tolerance, a key behavioral profile.
-    - code: 5.B
-      name: Profile Dynamics and the Cold-Start Problem
-      relevance: high
-      justification: Provides a method for initial profiling from text, which can help address the cold-start problem.
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: high
-      justification: Proposes and evaluates a CNN-based classification approach for a behavioral profile (risk tolerance).
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: medium
-      justification: The model predicts a stable user trait, which can be an input for forecasting models within Odin.
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: contextual
-      justification: Discusses using digital footprints for profiling, highlighting the need for privacy considerations in such approaches.
-  contribution: This paper provides a foundational method for automatically deriving a user's financial risk tolerance from text, which can be integrated into Odin's user onboarding process to address the cold-start problem for behavioral profiling. The findings on the effectiveness of rich linguistic features (LIWC, MRC) over complex model architectures inform the feature engineering for Odin's classification modules. The demonstrated possibility of replacing formal questionnaires with text analysis supports Odin's mobile-first design philosophy by reducing user friction. The study's discussion on the limitations of extreme profile identification provides a specific area where Odin's system might require human or fallback mechanisms.
-  directly_justifies:
-    - A CNN model can profile financial risk tolerance from user text with a micro-F1 of 0.5066.
-    - Richer text representations are more important than text augmentation or multi-tasking for this task.
-    - User-generated text is a useful and cost-efficient source for financial risk profiling.
-    - Profiling from text can replace formal questionnaires in low-stakes situations.
-  limits:
-    - Risk tolerance labels were derived indirectly from personality datasets, not ground truth surveys.
-    - The model's performance on extreme risk categories (gambler, risk avoider) is poor, requiring human intervention.
-  mapping_rationale: A systematic scan across all 12 functional domains and associated topics identified the Behavioral Profiling & Classification domain (5.A, 5.B, 5.C) as the most directly relevant, assigned high relevance because the paper directly proposes a method to classify risk tolerance. The Forecasting domain (6.A, 6.B) was flagged as medium relevance, as the predicted risk profile could serve as a static input to forecasting models. Data Privacy (10.A) was deemed contextual, as the paper's use of digital footprints raises privacy issues relevant to Odin's design. The Filipino Cultural Context domain was considered and rejected because the study uses international datasets and does not address Filipino-specific practices. Expense Categorization, Budget Recommendation, and System Evaluation domains were rejected as the paper does not address these functions directly. The paper's overall relevance to Odin is high, as it offers a practical, data-driven solution for user profiling that aligns with Odin's goal of providing personalized financial management with minimal user input.
-limitations:
-  - Risk tolerance labels are synthesized through meta-analysis of multiple datasets, not directly validated against ground truth. [unacknowledged]
-  - The synthesized dataset may not represent the demographic and cultural specifics of Filipino young professionals. [unacknowledged]
-  - The study does not address the integration of this text-based model with other data sources like demographics.
-  - The model's performance on extremely risk-tolerant or risk-averse users is significantly lower.
-remember_this:
-  - A CNN model achieves a micro-F1 of 0.51 for text-based risk profiling.
-  - Richer text embeddings are more effective than advanced machine learning tricks.
-  - User text is a viable, low-cost alternative to formal risk questionnaires.
-  - The method struggles with identifying extreme profiles (gamblers/avoiders).
-```
----
-
-## Paper 3: Khashadourian & Harrison_summarized.md
+## Paper 1: Khashadourian & Harrison_summarized.md
 
 **Source File:** `Khashadourian & Harrison_summarized.md`
 
@@ -328,7 +108,7 @@ remember_this:
 ```
 ---
 
-## Paper 4: Shuryhin & Zinovatna_summarized.md
+## Paper 2: Shuryhin & Zinovatna_summarized.md
 
 **Source File:** `Shuryhin & Zinovatna_summarized.md`
 
@@ -465,7 +245,7 @@ remember_this:
 ```
 ---
 
-## Paper 5: Ramos-2024b_summarized.md
+## Paper 3: Ramos-2024b_summarized.md
 
 **Source File:** `Ramos-2024b_summarized.md`
 
@@ -633,7 +413,7 @@ remember_this:
 ```
 ---
 
-## Paper 6: Nie et al_summarized.md
+## Paper 4: Nie et al_summarized.md
 
 **Source File:** `Nie et al_summarized.md`
 
@@ -755,7 +535,7 @@ remember_this:
 ```
 ---
 
-## Paper 7: Paghasian_summarized.md
+## Paper 5: Paghasian_summarized.md
 
 **Source File:** `Paghasian_summarized.md`
 
@@ -902,7 +682,7 @@ remember_this:
 ```
 ---
 
-## Paper 8: Natal et al_summarized.md
+## Paper 6: Natal et al_summarized.md
 
 **Source File:** `Natal et al_summarized.md`
 
@@ -1019,108 +799,7 @@ remember_this:
 ```
 ---
 
-## Paper 9: Onsay & Rabajante-2024b_summarized.md
-
-**Source File:** `Onsay & Rabajante-2024b_summarized.md`
-
-```yaml
-paper_id: "10.1016/j.sctalk.2024.100387"
-designation: "local-algorithm-specific"
-title: "When machine learning meets econometrics: Can it build a better measure to predict multidimensional poverty and examine unmeasurable economic conditions?"
-authors: "Onsay, E. A.; Rabajante, J. F."
-year: 2024
-venue: "Science Talks"
-odin_topics:
-  - "6.A"
-  - "6.B"
-  - "12.A"
-  - "12.B"
-  - "12.C"
-tldr: "Combines machine learning and econometrics to predict multidimensional poverty in Philippine indigenous communities, finding random forest outperforms other algorithms with high accuracy and R-square."
-problem_and_motivation: "Poverty measurement is costly and time-consuming, and existing methods suffer from sampling errors. Indigenous communities have complex socioeconomic conditions that are often studied qualitatively, lacking disaggregated quantitative measures. This gap hinders effective policy targeting."
-approach:
-  - "Uses census data from Goa, Camarines Sur, covering all households including indigenous communities, with 15 multidimensional socioeconomic indicators."
-  - "Applies econometric models (logit and probit) to establish causal relationships between predictors and poverty status."
-  - "Trains and compares multiple machine learning regressors and classifiers: random forest, XGBoost, LightGBM, SVM, AdaBoost, GaussianNB, and others."
-  - "Evaluates model performance using RMSE, MSE, R-square, and accuracy, and uses pipeline algorithms for classification."
-  - "Conducts causality tests to identify key poverty predictors, including household size, informal settler status, and indicators of health, education, and income."
-findings:
-  - "num: Random forest achieved the highest R-square of 0.9208 and accuracy of 0.9108 for poverty prediction."
-  - "num: For the general population, 63.70% live in poverty and 51.10% lack food access."
-  - "num: For indigenous communities, 82% live in poverty and 71% lack food access."
-  - "Household size and informal settler status are strong positive predictors of poverty."
-  - "num: Random forest had the lowest RMSE (0.3298) compared to XGBoost (0.4001) and LightGBM (0.3642) for regressors."
-  - "num: In pipeline classification, random forest achieved 94.89% accuracy for indigenous communities."
-key_figures_tables:
-  - "Figure 2: Multidimensional poverty evaluation results → Shows deprivation across education, income, and health indicators."
-  - "Figure 4: RMSE of regressors → Random forest has lowest RMSE (0.3298)."
-  - "Figure 6: R-square of regressors → Random forest highest R-square (0.9208)."
-  - "Figure 7: Performance evaluation classifiers → Random forest accuracy 0.9108, pipeline 94.89%."
-  - "Figure 13: R-square for indigenous communities → Random forest 0.9208."
-  - "Figure 14: Accuracy for indigenous communities → Random forest 90.69% random, 94.89% pipeline."
-key_equations:
-  - equation: "None."
-    explanation: ""
-definitions:
-  - term: "Multidimensional poverty"
-    definition: "Poverty measured across multiple dimensions such as education, health, income, and living standards."
-  - term: "Indigenous People (IP)"
-    definition: "Members of indigenous communities in the Philippines, often marginalized."
-  - term: "Deprivation"
-    definition: "Lack of access to basic necessities or indicators."
-critical_citations:
-  - "[Alkire, 2005] — Capability approach to poverty measurement."
-  - "[Foster et al., 1984] — Decomposable poverty measures."
-  - "[Sobreviñas, 2020] — CBMS data for poverty dynamics."
-  - "[Onsay & Rabajante, 2024] — Data brief and dataset."
-relevance:
-  topics:
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      relevance: "high"
-      justification: "Uses ML to predict poverty, demonstrating predictive modeling for financial vulnerability."
-    - code: "6.B"
-      name: "Forecasting Algorithms for Sequential Spending Data"
-      relevance: "high"
-      justification: "Compares multiple forecasting algorithms (RF, XGBoost, LightGBM) on socioeconomic data."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      relevance: "high"
-      justification: "Provides systematic evaluation of ML models using RMSE, R-square, and accuracy."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      relevance: "high"
-      justification: "Specifically evaluates classification and regression modules for predictive accuracy."
-    - code: "12.C"
-      name: "Evaluation Methodologies for Budget Recommendation Systems"
-      relevance: "medium"
-      justification: "Methodology of model comparison can inform evaluation of recommendation systems."
-  contribution: "This paper demonstrates the feasibility of using machine learning for predictive classification of economic vulnerability, which can inform spending forecasting and anomaly detection modules in Odin. The systematic evaluation framework comparing multiple algorithms provides a template for selecting optimal models for Odin's algorithmic components. The causal identification of poverty predictors using econometrics can guide feature engineering for user profiling and budget recommendation. The replicable methodology using publicly available census data supports data-driven policy targeting, which aligns with Odin's goal of personalized financial management."
-  directly_justifies:
-    - "Random forest can achieve over 90% accuracy in classifying poverty status."
-    - "Household size and informal settler status are strong predictors of economic status."
-    - "Econometric causal testing can identify relevant predictors for ML models."
-    - "The methodology is replicable for other regions with available data."
-  limits:
-    - "The paper focuses on poverty, not spending behavior, limiting direct applicability to expenditure forecasting."
-    - "The data is cross-sectional, not time-series, so temporal spending patterns are not modeled."
-    - "Models are trained on rural indigenous communities, which may not generalize to urban young professionals."
-  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was conducted. Domains flagged as relevant include Spending Forecasting (6) and System Evaluation (12), as the paper directly addresses predictive modeling and algorithm evaluation. Specifically, topic 6.A and 6.B were assigned high relevance due to the use of ML for prediction and comparison of algorithms. Topics 12.A and 12.B were assigned high relevance for the evaluation frameworks and module assessment; 12.C received medium relevance as the evaluation methodology could inform budget recommendation systems. Domains related to Filipino cultural context (2), expense categorization (3), existing systems (4), behavioral profiling (5), budget recommendation (7), anomaly detection (8), mobile-first design (9), data privacy (10), user retention (11), and savings/debt management (13) were considered but rejected because the paper does not address these topics; it focuses on poverty measurement rather than personal finance management. The overall relevance to Odin is moderate, providing methodological inspiration for predictive modules rather than direct content."
-limitations:
-  - "Cross-sectional data limits temporal forecasting capabilities. [unacknowledged]"
-  - "Models are not validated on external datasets, reducing generalizability. [unacknowledged]"
-  - "The paper does not address real-time or sequential data, which are central to PFMS. [unacknowledged]"
-  - "The focus on indigenous communities may not represent the broader Filipino young professional demographic. [unacknowledged]"
-remember_this:
-  - "Random forest achieved 0.9208 R-square and 0.9108 accuracy for poverty prediction."
-  - "Household size and informal settler status are key poverty predictors."
-  - "The study demonstrates cost-effective poverty measurement using ML."
-  - "Causal econometric testing identifies robust predictors for ML models."
-  - "Methodology is replicable with available census data."
-```
----
-
-## Paper 10: Mienye et al-2024_summarized.md
+## Paper 7: Mienye et al-2024_summarized.md
 
 **Source File:** `Mienye et al-2024_summarized.md`
 
@@ -1261,7 +940,7 @@ remember_this:
 ```
 ---
 
-## Paper 11: Asemi et al-2024_summarized.md
+## Paper 8: Asemi et al-2024_summarized.md
 
 **Source File:** `Asemi et al-2024_summarized.md`
 
@@ -1404,7 +1083,7 @@ remember_this:
 ```
 ---
 
-## Paper 12: Hovakimyan & Bravo_summarized.md
+## Paper 9: Hovakimyan & Bravo_summarized.md
 
 **Source File:** `Hovakimyan & Bravo_summarized.md`
 
@@ -1543,7 +1222,7 @@ remember_this:
 ```
 ---
 
-## Paper 13: Chatterjee & Das_summarized.md
+## Paper 10: Chatterjee & Das_summarized.md
 
 **Source File:** `Chatterjee & Das_summarized.md`
 
@@ -1686,7 +1365,7 @@ remember_this:
 ```
 ---
 
-## Paper 14: Garg et al-2024_summarized.md
+## Paper 11: Garg et al-2024_summarized.md
 
 **Source File:** `Garg et al-2024_summarized.md`
 
@@ -1844,7 +1523,7 @@ remember_this:
 ```
 ---
 
-## Paper 15: Mesino-Romero et al_summarized.md
+## Paper 12: Mesino-Romero et al_summarized.md
 
 **Source File:** `Mesino-Romero et al_summarized.md`
 
@@ -1974,7 +1653,7 @@ remember_this:
 ```
 ---
 
-## Paper 16: Somera_summarized.md
+## Paper 13: Somera_summarized.md
 
 **Source File:** `Somera_summarized.md`
 
@@ -2086,7 +1765,7 @@ remember_this:
 ```
 ---
 
-## Paper 17: Sandstrom_summarized.md
+## Paper 14: Sandstrom_summarized.md
 
 **Source File:** `Sandstrom_summarized.md`
 
@@ -2192,7 +1871,7 @@ remember_this:
 ```
 ---
 
-## Paper 18: Gentyala_summarized.md
+## Paper 15: Gentyala_summarized.md
 
 **Source File:** `Gentyala_summarized.md`
 
@@ -2302,7 +1981,7 @@ remember_this:
 ```
 ---
 
-## Paper 19: Yildiz & Demir_summarized.md
+## Paper 16: Yildiz & Demir_summarized.md
 
 **Source File:** `Yildiz & Demir_summarized.md`
 
@@ -2443,7 +2122,7 @@ remember_this:
 ```
 ---
 
-## Paper 20: Gomez et al_summarized.md
+## Paper 17: Gomez et al_summarized.md
 
 **Source File:** `Gomez et al_summarized.md`
 
@@ -2549,7 +2228,7 @@ remember_this:
 ```
 ---
 
-## Paper 21: Samuel_summarized.md
+## Paper 18: Samuel_summarized.md
 
 **Source File:** `Samuel_summarized.md`
 
@@ -2660,7 +2339,7 @@ remember_this:
 ```
 ---
 
-## Paper 22: Yadav et al_summarized.md
+## Paper 19: Yadav et al_summarized.md
 
 **Source File:** `Yadav et al_summarized.md`
 
@@ -2819,7 +2498,7 @@ remember_this:
 ```
 ---
 
-## Paper 23: Yin_summarized.md
+## Paper 20: Yin_summarized.md
 
 **Source File:** `Yin_summarized.md`
 
@@ -2932,7 +2611,7 @@ remember_this:
 ```
 ---
 
-## Paper 24: Pittman_summarized.md
+## Paper 21: Pittman_summarized.md
 
 **Source File:** `Pittman_summarized.md`
 
@@ -3039,7 +2718,7 @@ remember_this:
 ```
 ---
 
-## Paper 25: Pratama & Putri_summarized.md
+## Paper 22: Pratama & Putri_summarized.md
 
 **Source File:** `Pratama & Putri_summarized.md`
 
@@ -3165,7 +2844,7 @@ remember_this:
 ```
 ---
 
-## Paper 26: Pawar et al_summarized.md
+## Paper 23: Pawar et al_summarized.md
 
 **Source File:** `Pawar et al_summarized.md`
 
@@ -3290,7 +2969,7 @@ remember_this:
 ```
 ---
 
-## Paper 27: Bongalonta et al_summarized.md
+## Paper 24: Bongalonta et al_summarized.md
 
 **Source File:** `Bongalonta et al_summarized.md`
 
@@ -3406,7 +3085,7 @@ remember_this:
 ```
 ---
 
-## Paper 28: Yang T. et al_summarized.md
+## Paper 25: Yang T. et al_summarized.md
 
 **Source File:** `Yang T. et al_summarized.md`
 
@@ -3498,7 +3177,7 @@ remember_this:
 ```
 ---
 
-## Paper 29: Hassan_summarized.md
+## Paper 26: Hassan_summarized.md
 
 **Source File:** `Hassan_summarized.md`
 
@@ -3639,7 +3318,7 @@ remember_this:
 ```
 ---
 
-## Paper 30: Bari et al_summarized.md
+## Paper 27: Bari et al_summarized.md
 
 **Source File:** `Bari et al_summarized.md`
 
@@ -3779,7 +3458,7 @@ remember_this:
 ```
 ---
 
-## Paper 31: Cao et al_summarized.md
+## Paper 28: Cao et al_summarized.md
 
 **Source File:** `Cao et al_summarized.md`
 
@@ -3884,7 +3563,7 @@ remember_this:
 ```
 ---
 
-## Paper 32: Ramos-2024a_summarized.md
+## Paper 29: Ramos-2024a_summarized.md
 
 **Source File:** `Ramos-2024a_summarized.md`
 
@@ -4014,7 +3693,7 @@ remember_this:
 ```
 ---
 
-## Paper 33: Faisal et al_summarized.md
+## Paper 30: Faisal et al_summarized.md
 
 **Source File:** `Faisal et al_summarized.md`
 
@@ -4139,7 +3818,7 @@ remember_this:
 ```
 ---
 
-## Paper 34: Takayanagi & Izumi_summarized.md
+## Paper 31: Takayanagi & Izumi_summarized.md
 
 **Source File:** `Takayanagi & Izumi_summarized.md`
 
@@ -4249,7 +3928,7 @@ remember_this:
 ```
 ---
 
-## Paper 35: Nourallah et al_summarized.md
+## Paper 32: Nourallah et al_summarized.md
 
 **Source File:** `Nourallah et al_summarized.md`
 
@@ -4381,7 +4060,7 @@ remember_this:
 ```
 ---
 
-## Paper 36: Doroy_summarized.md
+## Paper 33: Doroy_summarized.md
 
 **Source File:** `Doroy_summarized.md`
 
@@ -4479,7 +4158,7 @@ remember_this:
 ```
 ---
 
-## Paper 37: Almonteros et al_summarized.md
+## Paper 34: Almonteros et al_summarized.md
 
 **Source File:** `Almonteros et al_summarized.md`
 
@@ -4662,7 +4341,7 @@ remember_this:
 ```
 ---
 
-## Paper 38: Nooji et al_summarized.md
+## Paper 35: Nooji et al_summarized.md
 
 **Source File:** `Nooji et al_summarized.md`
 
@@ -4774,7 +4453,7 @@ remember_this:
 ```
 ---
 
-## Paper 39: Li M. et al_summarized.md
+## Paper 36: Li M. et al_summarized.md
 
 **Source File:** `Li M. et al_summarized.md`
 
@@ -4922,7 +4601,7 @@ remember_this:
 ```
 ---
 
-## Paper 40: Reyes et al_summarized.md
+## Paper 37: Reyes et al_summarized.md
 
 **Source File:** `Reyes et al_summarized.md`
 
@@ -5012,7 +4691,7 @@ remember_this:
 ```
 ---
 
-## Paper 41: Sulaiman et al_summarized.md
+## Paper 38: Sulaiman et al_summarized.md
 
 **Source File:** `Sulaiman et al_summarized.md`
 
@@ -5145,7 +4824,7 @@ remember_this:
 ```
 ---
 
-## Paper 42: Nayak & Jayakumar_summarized.md
+## Paper 39: Nayak & Jayakumar_summarized.md
 
 **Source File:** `Nayak & Jayakumar_summarized.md`
 
@@ -5343,7 +5022,7 @@ remember_this:
 ```
 ---
 
-## Paper 43: Fathy_summarized.md
+## Paper 40: Fathy_summarized.md
 
 **Source File:** `Fathy_summarized.md`
 
@@ -5485,7 +5164,7 @@ remember_this:
 ```
 ---
 
-## Paper 44: Hopfgartner et al_summarized.md
+## Paper 41: Hopfgartner et al_summarized.md
 
 **Source File:** `Hopfgartner et al_summarized.md`
 
@@ -5611,7 +5290,7 @@ remember_this:
 ```
 ---
 
-## Paper 45: Lim & Cordova_summarized.md
+## Paper 42: Lim & Cordova_summarized.md
 
 **Source File:** `Lim & Cordova_summarized.md`
 
@@ -5739,7 +5418,7 @@ remember_this:
 ```
 ---
 
-## Paper 46: Schwartz_summarized.md
+## Paper 43: Schwartz_summarized.md
 
 **Source File:** `Schwartz_summarized.md`
 
@@ -5934,7 +5613,7 @@ remember_this:
 ```
 ---
 
-## Paper 47: Cho_summarized.md
+## Paper 44: Cho_summarized.md
 
 **Source File:** `Cho_summarized.md`
 
@@ -6036,7 +5715,7 @@ remember_this:
 ```
 ---
 
-## Paper 48: Hassan et al_summarized.md
+## Paper 45: Hassan et al_summarized.md
 
 **Source File:** `Hassan et al_summarized.md`
 
@@ -6145,7 +5824,7 @@ remember_this:
 ```
 ---
 
-## Paper 49: Lien & Rajasekharan_summarized.md
+## Paper 46: Lien & Rajasekharan_summarized.md
 
 **Source File:** `Lien & Rajasekharan_summarized.md`
 
@@ -6301,7 +5980,7 @@ remember_this:
 ```
 ---
 
-## Paper 50: Zhu-2024_summarized.md
+## Paper 47: Zhu-2024_summarized.md
 
 **Source File:** `Zhu-2024_summarized.md`
 
@@ -6439,6 +6118,384 @@ remember_this:
   - "A 120-minute intervention was effective, addressing time constraints of the target demographic."
   - "User-modifiable projection code enhances trust and understanding compared to black-box AI."
   - "Topic-specific models (housing, education, savings) are more effective than generalized projections."
+```
+---
+
+## Paper 48: Qu et al_summarized.md
+
+**Source File:** `Qu et al_summarized.md`
+
+```yaml
+paper_id: 10.1145/3616855.3635778
+designation: international-algorithm-specific
+title: Budgeted Embedding Table For Recommender Systems
+authors: Qu, Y.; Chen, T.; Nguyen, Q. V. H.; Yin, H.
+year: 2024
+venue: Proceedings of the 17th ACM International Conference on Web Search and Data Mining (WSDM ’24)
+odin_topics:
+  - 4.A
+  - 4.B
+  - 7.D
+  - 8.B
+  - 9.A
+  - 12.A
+  - 12.B
+tldr: A method for generating table-level embedding sizes that strictly meet memory budgets, using a fitness predictor to efficiently evaluate actions without per-instance search.
+problem_and_motivation: Existing lightweight embedding methods for recommender systems suffer from two major drawbacks: they rely on heuristic trade-off coefficients that fail to strictly meet memory budgets, and they perform per-instance embedding size searches which are computationally inefficient. This creates a need for a scalable solution that can guarantee memory constraints while efficiently finding optimal embedding sizes.
+approach:
+  - Proposes Budgeted Embedding Table (BET), which generates table-level actions specifying embedding sizes for all users and items simultaneously.
+  - Employs a budget-aware sampler that draws embeddings sizes from probabilistic distributions (power law, truncated exponential, etc.) to strictly cap total parameter usage.
+  - Introduces a DeepSets-based fitness prediction network that evaluates table-level actions by learning set-based action representations.
+  - Alternates between three action selection strategies: greedy fitness prediction, random selection for diversity, and nearest neighbor search in action embedding space.
+  - Conducts selective retraining on top actions from the population to identify the final optimal embedding size allocation.
+findings:
+  - num: BET achieves superior performance on Gowalla and Yelp2018 datasets across three backbone recommenders (LightGCN, NGCF, NCF) at 80%, 90%, and 95% sparsity levels.
+  - The DeepSets-based fitness predictor significantly outperforms simpler fitness prediction and random selection variants.
+  - BET guarantees strict adherence to pre-specified memory budgets, unlike ESAPN and OptEmbed which often fail to meet minimum sparsity targets.
+  - num: BET with LightGCN at 95% sparsity achieves 0.0627 Recall@20 and 0.1037 NDCG@20 on Gowalla, outperforming the best baseline CIESS which achieves 0.0513 and 0.0853 respectively.
+  - The fitness predictor converges within 15 iterations, with recommendation performance peaking around 40 iterations.
+  - num: Setting the number of sampled actions рЭСЪ to 100 yields the best performance across both datasets.
+  - BET is effective with multiple backbone recommenders, demonstrating model-agnostic applicability.
+  - The fitness prediction network learns expressive set-based action representations using user/item frequency and embedding size information.
+key_figures_tables:
+  - Figure 1: Overview of BET workflow → Shows the three-component system of sampler, fitness predictor, and backbone recommender.
+  - Figure 2: Set-based action formulation example → Illustrates how actions are represented as sets of users/items per embedding size.
+  - Figure 3: DeepSets-based fitness predictor architecture → Depicts the user/item encoders and set aggregation for action representation.
+  - Table 1: Performance comparison on Gowalla and Yelp → BET achieves the best results across most metrics and sparsity levels.
+  - Table 2: Model component analysis → DeepSets-based predictor outperforms random and simple fitness prediction variants.
+  - Figure 4: Sensitivity analysis of рЭСЪ → Performance improves with more sampled actions, plateauing at 100.
+  - Figure 5: Sensitivity analysis of рЭСЗ → Performance improves up to 40 iterations then stabilizes.
+  - Figure 6: Fitness prediction loss convergence → Loss diminishes within the first 15 iterations.
+key_equations:
+  - equation: L_BPR = -∑_{(u,i,j)∈D_train} ln σ(ŷ_ui - ŷ_uj) + λ||Θ||²
+    explanation: Bayesian Personalized Ranking loss for optimizing recommenders.
+  - equation: d_i = ⌊ p̃_i · w · d_max · (|U|+|V|) ⌋
+    explanation: Calculates embedding size for each user based on normalized probability and memory budget.
+  - equation: f_Θ(E ⊙ M | D_valid) / f_Θ(E | D_valid)
+    explanation: Fitness score is the ratio of recommendation quality with sparsified vs full embeddings.
+  - equation: Φ = argmin_{φ'} ∑_{a}(r_a - f_{φ'}(a))²
+    explanation: Optimizes fitness predictor by minimizing mean squared error between predicted and actual scores.
+definitions:
+  - term: BET
+    definition: Budgeted Embedding Table - the proposed method for table-level embedding size search.
+  - term: Table-level action
+    definition: An action that specifies embedding sizes for all users and items in one embedding table.
+  - term: Fitness predictor
+    definition: A DeepSets-based network that predicts the recommendation performance of a table-level action.
+  - term: Set-based action formulation
+    definition: Representing an action as sets of users/items grouped by their assigned embedding size.
+  - term: Sparsity ratio
+    definition: The ratio of active parameters in the compressed embedding table compared to the full table.
+  - term: DeepSets
+    definition: A neural architecture for learning permutation-invariant representations of sets.
+critical_citations:
+  - "[He et al., 2020] — Foundation for LightGCN backbone model."
+  - "[Rendle et al., 2009] — Source of BPR loss function for recommendation."
+  - "[Zhao et al., 2021] — Prior work on automated embedding dimensionality search."
+  - "[Liu et al., 2021] — Prior work on learnable embedding sizes via pruning."
+  - "[Qu et al., 2023] — Previous RL-based method for continuous embedding size search."
+relevance:
+  topics:
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Discusses memory-efficient embedding techniques applicable to resource-constrained financial systems.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Explicitly identifies the limitations of existing lightweight embedding methods (implicit memory constraints, per-instance inefficiency) and proposes a solution.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: high
+      justification: Provides a method to strictly enforce memory/sparsity constraints through probabilistic sampling, directly relevant to handling budget constraints in recommendation.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: contextual
+      justification: The concept of adaptive embedding sizes could be extended to anomaly detection, but the paper focuses on recommendation.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: high
+      justification: Addresses memory constraints critical for on-device/deployable systems, directly relevant to mobile-first financial applications.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Uses standard recommendation metrics (Recall, NDCG) that could be adapted to evaluate PFMS modules.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Provides a rigorous evaluation methodology for algorithmic modules (embedding size search) with ablation studies and hyperparameter analysis.
+  contribution: This paper provides a novel algorithmic framework (BET) for efficiently searching embedding sizes under strict memory budgets, which directly addresses Odin's need to optimize resource-constrained financial recommendation modules. The set-based action formulation and DeepSets fitness predictor offer a scalable approach to managing user and item representations, relevant to Odin's expense categorization and behavioral profiling. The strict budget enforcement mechanism is directly applicable to Odin's constrained optimization and infeasibility handling modules. The model-agnostic design and selective retraining strategy demonstrate how algorithmic modules can be evaluated and optimized with minimal computational overhead.
+  directly_justifies:
+    - "Memory budgets can be strictly enforced using probabilistic sampling from table-level actions."
+    - "DeepSets-based set representation learning enables efficient evaluation of unseen actions."
+    - "Hybrid action selection strategies (greedy, random, nearest neighbor) improve search diversity and prevent overfitting."
+    - "Selective retraining on top actions from the population identifies optimal embedding size allocations."
+    - "The fitness predictor converges quickly, reducing the need for exhaustive retraining."
+  limits:
+    - "The study focuses on recommendation systems, not directly on personal finance or expense categorization."
+    - "The approach assumes static user and item sets; handling dynamic users/items requires extension."
+    - "Fitness predictor performance depends on the representativeness of the training samples; may require many iterations for complex domains."
+    - "The effectiveness of the probabilistic distributions (power law, etc.) may vary with different data characteristics."
+    - "No discussion on privacy-preserving aspects of embedding size search."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes revealed that this paper is most relevant to the 'Existing Systems & Gaps' (4.A, 4.B), 'Budget Recommendation' (7.D), 'Anomaly Detection' (8.B contextual), 'Mobile-First Design' (9.A), and 'System Evaluation' (12.A, 12.B) domains. The paper directly addresses the limitations of existing lightweight embedding methods (4.A, 4.B) and proposes a novel algorithm that strictly enforces memory constraints (7.D). The focus on reducing memory footprint is critical for mobile-first design (9.A). The rigorous evaluation framework and ablation studies (12.A, 12.B) are directly applicable. The paper was considered for 8.A and 8.B due to the potential of adaptive embeddings for anomaly detection, but the core contribution does not address detection algorithms, so it was assigned contextual relevance. The domains of Filipino cultural context, expense categorization, behavioral profiling, forecasting, user retention, and savings/debt management were considered but not selected as the paper does not provide claims directly informing those specific topics. Overall, the paper provides high relevance for Odin's algorithmic design, particularly in memory-constrained and budgeted recommendation scenarios.
+limitations:
+  - "The approach is designed for recommendation systems; adaptation to personal finance modules requires additional validation."
+  - "Hyperparameters (e.g., number of iterations, sample size) may require tuning for different datasets and domains."
+  - "The study does not explore the impact of dynamic user/item sets, which are common in financial applications."
+  - "Fitness predictor may need retraining if the data distribution changes significantly over time."
+  - "The method does not address cold-start scenarios for new users or items."
+  - "Privacy implications of storing embedding sizes and distributions are not discussed. [unacknowledged]"
+  - "Real-time performance and inference latency under strict budgets are not evaluated. [unacknowledged]"
+  - "Integration with PFMS-specific features like expense categorization or savings goals is not explored. [unacknowledged]"
+remember_this:
+  - "BET guarantees strict adherence to memory budgets through table-level probabilistic sampling."
+  - "DeepSets-based fitness predictor efficiently evaluates table-level actions without per-instance training."
+  - "Hybrid action selection (greedy, random, nearest neighbor) improves search diversity and performance."
+  - "BET outperforms state-of-the-art methods at 80%, 90%, and 95% sparsity across three recommenders."
+  - "The fitness predictor converges within 15 iterations, enabling efficient search with only 40 iterations."
+```
+---
+
+## Paper 49: Schwartz et al_summarized.md
+
+**Source File:** `Schwartz et al_summarized.md`
+
+```yaml
+paper_id: 10.48550/arXiv.2509.11389
+designation: international
+title: Enhancing ML Interpretability for Credit Scoring
+authors: Schwartz, S.; Wang, Q.; Fang, F.
+year: 2024
+venue: Unknown
+odin_topics:
+  - 4.B
+  - 5.B
+  - 5.C
+  - 6.B
+  - 7.A
+  - 7.B
+  - 7.D
+  - 8.A
+  - 8.B
+  - 12.B
+tldr: A hybrid framework uses SHAP to select top features from a black-box XGBoost model, then trains a glass-box EBM model with 10 features, achieving comparable performance with an 88.5% feature reduction.
+problem_and_motivation: Black-box machine learning models for credit scoring are accurate but lack transparency, limiting their use in regulated environments. Post-hoc explanation methods do not inherently produce lightweight or fully transparent models. There is a need for an approach that maintains predictive power while creating models that are inherently interpretable and meet regulatory expectations.
+approach:
+  - A high-performing XGBoost model is trained on the full feature set to serve as a performance benchmark.
+  - SHAP is used to rank features by their importance based on the XGBoost model.
+  - A subset of the top-ranked features, specifically 10, is selected to train glass-box models, such as Explainable Boosting Machine (EBM) and Penalized Logistic Tree Regression (PLTR).
+  - The resulting glass-box models are refined through feature interaction analysis, correlation analysis, and potential expert input.
+  - The approach is evaluated using the Lending Club dataset, comparing the reduced glass-box models against the benchmark and logistic regression.
+findings:
+  - The approach reduces the number of features from 86 to 10, an 88.5% reduction.
+  - The reduced EBM model achieves performance comparable to the full-feature XGBoost benchmark.
+  - num: The maximum improvement from including all nine pairwise interactions in EBM was 0.4% on the F1 score.
+  - The SHAP top feature list is largely consistent across LR, XGBoost, and EBM models.
+  - XGBoost provided the fastest computation of feature importance among the models compared, making it a practical choice for feature selection.
+  - Correlation analysis can be used to refine the feature set and slightly improve performance.
+key_figures_tables:
+  - Figure 1: Loan amount and annual income feature interaction → Counterintuitive patterns can arise from feature interactions.
+  - Figure 2: Loan amount attribution → Higher loan amounts are associated with a higher probability of default.
+  - Figure 3: Annual income attribution → Higher annual incomes correspond to a lower probability of default.
+  - Figure 4: Performance w.r.t. the number of (top) features → Adding more than 10 features yields no substantial performance improvement.
+  - Table 1: Performance of base models → Base models show similar performance on AUPRC, AUROC, and F1.
+  - Table 2: Top features in different models → Top features are largely consistent across LR, XGBoost, and EBM.
+  - Table 3: Performance comparison after correlation analysis → Removing correlated lower-ranked features can improve performance.
+key_equations:
+  - equation: p = 1 / (1 + e^{-(β_0 + β_1 x_1 + ... + β_d x_d)})
+    explanation: Logistic regression predicts probability using a linear combination of features.
+  - equation: y_i = Σ_{k=1}^{K} f_k(x_i)
+    explanation: XGBoost prediction is the sum of outputs from K decision trees.
+  - equation: g(E[Y]) = β_0 + Σ_{j=1}^{d} f_j(x_j) + Σ_{1≤j<q≤d} f_{j,q}(x_j, x_q)
+    explanation: EBM can model pairwise feature interactions within an additive framework.
+definitions:
+  - term: XAI
+    definition: Explainable Artificial Intelligence; methods to make AI model decisions understandable to humans.
+  - term: SHAP
+    definition: SHapley Additive exPlanations; a game-theoretic approach to explain model predictions by assigning feature importance.
+  - term: XGBoost
+    definition: eXtreme Gradient Boosting; an optimized and scalable gradient boosting algorithm.
+  - term: EBM
+    definition: Explainable Boosting Machine; an interpretable glass-box model based on generalized additive models.
+  - term: PLTR
+    definition: Penalized Logistic Tree Regression; a hybrid model using decision tree-derived features in a penalized logistic regression.
+critical_citations:
+  - "[Lundberg & Lee, 2017] — Defines SHAP for additive feature attribution."
+  - "[Chen & Guestrin, 2016] — Introduces the XGBoost algorithm used as benchmark."
+  - "[Nori et al., 2019] — Presents the EBM glass-box model used in the approach."
+relevance:
+  topics:
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: The paper directly addresses the lack of transparency in black-box ML models for credit scoring, a key gap the paper aims to solve.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: medium
+      justification: The feature selection process could be analogous to cold-start issues by identifying essential features when data is limited.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: The models discussed (XGBoost, EBM) are classification approaches that could be adapted for financial behavioral profiling.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: While XGBoost is used for classification, its principles are relevant to forecasting, though the paper focuses on credit default, not sequential spending.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: The use of SHAP and correlation analysis reflects using domain knowledge to refine model feature sets, analogous to refining budget allocation strategies.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: contextual
+      justification: The paper does not focus on recommendation but provides a methodology for selecting key features, which is a foundational step for recommendation systems.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: medium
+      justification: The paper's approach to reducing features from 86 to 10 demonstrates a method for simplifying complex models, akin to reducing complexity in allocation problems.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: The paper discusses detecting default, a type of anomaly, but its core contribution is on model interpretability rather than anomaly detection methods.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: low
+      justification: The algorithms used are for classification, not specifically for anomaly detection in spending data.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: The paper extensively evaluates the performance of different models (XGBoost, EBM, PLTR) using metrics like AUPRC, AUROC, and F1, which is central to evaluating algorithmic modules.
+  contribution: The paper provides a concrete methodology for building transparent, lightweight ML models by using post-hoc explanation tools for feature selection. This methodology can be directly applied to Odin's budgeting and forecasting modules to ensure the core algorithms are both accurate and interpretable. The framework's emphasis on reducing feature complexity without losing performance is directly relevant to Odin's goal of providing clear, actionable financial insights. The paper demonstrates that high-performing models can be simplified, which is crucial for building user trust and meeting regulatory standards.
+  directly_justifies:
+    - Using SHAP for feature importance enables selection of a concise, high-impact feature set.
+    - EBM can achieve performance comparable to XGBoost while being significantly more interpretable.
+    - Reducing model complexity to about 10 features can maintain predictive power while enhancing transparency.
+  limits:
+    - The study is conducted on a single dataset (Lending Club), limiting generalizability.
+    - The approach was not tested across diverse datasets to validate its robustness.
+    - The focus is on binary classification (default vs. non-default), not on other financial applications like spending forecasting.
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes identified the most relevant ones. The paper's core contribution on enhancing ML interpretability and reducing feature complexity maps most directly to "Existing Systems & Gaps" (4.B) and "System Evaluation" (12.B) with high relevance. Topics related to "Budget Recommendation" (7.A, 7.B, 7.D) and "Behavioral Profiling" (5.B, 5.C) were assigned medium relevance because the methodology for feature selection and model simplification is foundational to those areas, even though the paper's domain is credit scoring. The paper's discussion of default prediction touches on "Anomaly Detection" (8.A, 8.B), but its primary focus on explainability over detection algorithms makes the relevance low. Topics concerning "Filipino Cultural Context" (2), "Mobile-First Design" (9), "Data Privacy" (10), "User Retention" (11), and "Savings & Debt Management" (13) were considered and rejected as the paper provides no specific insights on these aspects of personal finance management. Overall, the paper offers a highly relevant methodology for building transparent and efficient algorithmic modules within Odin.
+limitations:
+  - "The proposed approach was only evaluated on a single dataset from Lending Club, which may not represent all credit or financial behaviors. [unacknowledged]"
+  - "The study did not extensively optimize the base black-box model, which could affect the generalizability of the feature rankings. [unacknowledged]"
+  - "The paper acknowledges that SHAP has limitations in handling correlated features, but the proposed mitigation through correlation analysis may not fully resolve this issue."
+remember_this:
+  - SHAP-guided feature selection can reduce features by 88.5% without significant performance loss.
+  - EBM provides a strong balance between explainability and predictive performance.
+  - Correlation analysis can refine feature sets and slightly improve model performance.
+  - A hybrid approach using post-hoc explanations to build glass-box models enhances transparency.
+```
+---
+
+## Paper 50: Bauer et al_summarized.md
+
+**Source File:** `Bauer et al_summarized.md`
+
+```yaml
+paper_id: 10.48550/arXiv.2401.02524
+designation: international
+title: Comprehensive Exploration of Synthetic Data Generation: A Survey
+authors: Bauer, A.; Trapp, S.; Stenger, M.; Leppich, R.; Kounev, S.; Leznik, M.; Chard, K.; Foster, I.
+year: 2024
+venue: Unknown
+odin_topics:
+  - 4.A
+  - 4.B
+  - 5.C
+  - 6.B
+  - 8.B
+  - 12.A
+  - 12.B
+  - 12.C
+tldr: Surveying 417 models reveals GANs dominate computer vision, while RNNs and transformers excel with sequential data, and a lack of standardized metrics hinders robust comparison.
+problem_and_motivation: The rapid proliferation of synthetic data generation models and the lack of comprehensive overviews make it difficult for researchers and practitioners to select appropriate models. Existing surveys are often limited in scope, overlooking recent advancements or focusing on a single domain.
+approach:
+  - A comprehensive survey of 417 synthetic data generation models published over the last decade was conducted.
+  - Models were classified into 20 distinct types and 42 sub-types based on their architecture and functionality.
+  - A classification system was introduced using criteria such as data type, sampling process, training process, and performance.
+  - A trend analysis was performed to identify shifts in model popularity and performance over time.
+  - A practical guideline was developed to assist in selecting the appropriate model type for a given task.
+findings:
+  - num: Computer vision is the most popular application field, and GANs are the most widely used model type.
+  - num: Neural network-based approaches, particularly GANs and diffusion models, have superseded simpler probabilistic models for image generation.
+  - There is a significant lack of standardized evaluation metrics and benchmark datasets, making direct model comparison difficult.
+  - The computational cost of training and sampling is often neglected in the literature, hindering practical deployment considerations.
+  - Privacy-preserving data generation is in its nascent stage, primarily relying on simpler models like Bayesian networks and Markov chains.
+key_figures_tables:
+  - Figure 44: Number of papers per model type over time → GANs surged in popularity after 2014.
+  - Table 1: Comparison of this survey to other related surveys → This work is the most comprehensive in terms of models and aspects investigated.
+  - Figure 56: Performance predecessor relationships → Newer models generally outperform older ones, with DCGAN being a common baseline.
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: SDG
+    definition: Synthetic Data Generation
+  - term: GAN
+    definition: Generative Adversarial Network
+  - term: RNN
+    definition: Recurrent Neural Network
+  - term: VAE
+    definition: Variational Autoencoder
+critical_citations:
+  - "[Goodfellow et al., 2014] — Introduced the foundational GAN framework."
+  - "[Radford et al., 2015] — Established DCGAN, a key CNN-based GAN architecture."
+  - "[Van Oord et al., 2016] — Pioneered PixelRNN and PixelCNN for image generation."
+  - "[Sohl-Dickstein et al., 2015] — First implementation of diffusion probabilistic models."
+relevance:
+  topics:
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Provides a high-level survey of generative models, placing PFMS within the broader context of AI systems.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: contextual
+      justification: Highlights the challenge of model selection and the lack of standardized evaluation, a gap applicable to PFMS.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: low
+      justification: Mentions classification using RNNs and other models, which could be applied to profiling spending behavior.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: medium
+      justification: Reviews RNNs, transformers, and other models suited for sequential forecasting, directly relevant to spending prediction.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: low
+      justification: Surveys GANs and other models used for anomaly detection, a relevant technique for PFMS.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: low
+      justification: Discusses the need for standardized evaluation metrics and benchmarks, a challenge for PFMS.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: Provides a detailed analysis of how different generative models are evaluated, informing the evaluation of PFMS algorithms.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: low
+      justification: Discusses metrics like NLL and human evaluation, which could be adapted for budget recommendation systems.
+  contribution: "This survey provides a comprehensive taxonomy and performance overview of generative models, serving as a foundational reference for selecting appropriate algorithms for Odin's modules. It directly informs the design of Odin by highlighting the strengths of GANs for behavioral profile generation and the suitability of RNNs and transformers for sequential spending data forecasting. The identified lack of standardized evaluation metrics underscores the need for Odin to implement a robust, internally consistent testing framework. The survey's discussion on privacy-preserving models, primarily GANs and Bayesian networks, offers a starting point for Odin's data privacy module."
+  directly_justifies:
+    - "GANs are the most effective models for generating high-fidelity synthetic visual data."
+    - "RNNs and transformers are the preferred architectures for modeling sequential data like spending histories."
+    - "A lack of standardized evaluation metrics makes direct model comparison difficult."
+    - "Privacy-preserving data generation is an emerging field with significant limitations."
+  limits:
+    - "The survey does not provide implementation details or performance benchmarks for specific models, limiting direct applicability."
+    - "The paper focuses on the generation of raw data (images, text) rather than structured financial data, a key difference from Odin's domain."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was conducted against the content of this survey paper. The paper was flagged as relevant to the 'Existing Systems & Gaps' domain (codes 4.A, 4.B) due to its comprehensive review of the broader AI landscape and its analysis of limitations like the lack of standardized benchmarks. It was considered relevant to 'Behavioral Profiling & Classification' (5.C) because it reviews classification methods using RNNs, a technique that could be adapted for financial profiles. For 'Spending Forecasting' (6.B) and 'Anomaly Detection' (8.B), the survey's in-depth review of RNNs, transformers, and GANs provides crucial algorithmic context. The paper is highly relevant to the 'System Evaluation' domain (12.A, 12.B, 12.C) as it dedicates significant effort to critiquing evaluation methodologies and metrics. Domains like 'Filipino Cultural Context' (2.A-2.D), 'Expense Categorization' (3.A-3.C), and 'Budget Recommendation' (7.A-7.D) were considered and rejected because the paper is a general survey of generative models and does not touch upon cultural, categorization, or constraint-specific financial topics. Overall, the paper's relevance to Odin is primarily contextual, providing a broad theoretical and methodological background for the development of algorithmic modules."
+limitations:
+  - "Does not provide a formal comparison or meta-analysis of the 417 surveyed models, only a narrative summary."
+  - "The trend analysis and performance insights are largely based on publication counts and citation data, not on quantitative model performance metrics."
+  - "The guideline for model selection is high-level and does not provide decision-making thresholds or quantitative criteria. [unacknowledged]"
+remember_this:
+  - "GANs are the dominant model type for generating high-quality synthetic data, especially images."
+  - "No single model fits all tasks; RNNs excel with sequences, while GANs and diffusion models lead in image generation."
+  - "The lack of standard benchmarks and metrics is a major obstacle to comparing generative model performance."
+  - "Privacy-preserving synthetic data generation remains a significant challenge, often reducing data utility."
+  - "The computational cost of training modern generative models is a critical, often-overlooked factor."
 ```
 ---
 

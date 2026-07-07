@@ -6,611 +6,7 @@
 
 ---
 
-## Paper 1: Odufisan et al_summarized.md
-
-**Source File:** `Odufisan et al_summarized.md`
-
-```yaml
-paper_id: 9ae8a6f2-3c5c-5678-9012-345678901234
-designation: international
-title: Harnessing artificial intelligence and machine learning for fraud detection and prevention in Nigeria
-authors: Odufisan, O.I.; Abhulimen, O.V.; Ogunti, E.O.
-year: 2025
-venue: Journal of Economic Criminology
-odin_topics:
-  - 8.A
-  - 8.B
-  - 10.A
-tldr: AI and machine learning enhance fraud detection in Nigerian sectors by enabling real-time analysis, adaptive learning, and anomaly identification beyond traditional rules.
-problem_and_motivation: Fraud threatens Nigeria's digital economy, yet traditional detection systems are ineffective against evolving schemes and are overwhelmed by data volume. A more adaptive, intelligent solution is needed to protect financial stability and user trust.
-approach:
-  - Reviewed supervised, unsupervised, and deep learning methods for fraud detection in banking, e-commerce, healthcare, and education.
-  - Emphasized real-time analysis of transaction data to identify anomalies and behavioral deviations.
-  - Analyzed applications in user authentication, behavioral analysis, and risk scoring.
-  - Discussed integration challenges and the need for continuous model updates.
-findings:
-  - Fraudulent loans accounted for 94.35% of bank losses, highlighting a critical system flaw.
-  - AI reduces false positives by differentiating legitimate from fraudulent behavior.
-  - Machine learning models achieve high accuracy, e.g., 97% detection rate for credit card fraud.
-  - Traditional rule-based systems lack adaptability to new fraud tactics.
-  - Text analysis using SVM achieved over 98% accuracy in detecting phishing emails.
-  - AI enables real-time monitoring and proactive fraud mitigation.
-key_figures_tables:
-  - None.
-key_equations:
-  - equation: None.
-    explanation: ""
-definitions:
-  - term: AI
-    definition: Machines imitating human intelligence to perform tasks like reasoning and pattern recognition.
-  - term: ML
-    definition: Algorithms that learn patterns from data to make predictions without explicit programming.
-critical_citations:
-  - "[Bansal et al., 2024] — Highlights real-time fraud detection benefits."
-  - "[Bello et al., 2024] — Discusses adaptive ML for fraud."
-  - "[Hilal et al., 2022] — Reviews anomaly detection techniques."
-relevance:
-  topics:
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: high
-      justification: Directly covers anomaly detection techniques for fraud, transferable to spending irregularities.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: high
-      justification: Reviews ML algorithms including supervised and unsupervised for detecting financial anomalies.
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: medium
-      justification: Discusses data quality, privacy regulations (NDPR), and ethical considerations as challenges.
-  contribution: This paper justifies Odin's use of anomaly detection algorithms to identify suspicious spending patterns in user transaction data. It provides evidence that machine learning models can continuously adapt to new financial behaviors, supporting Odin's need for dynamic profile updates. The review also highlights the importance of balancing fraud prevention with user privacy, which informs Odin's data handling policies. Finally, it underscores the value of real-time analysis, a feature Odin can implement for proactive user alerts.
-  directly_justifies:
-    - Supervised learning can identify known fraudulent patterns in transaction data.
-    - Unsupervised learning detects novel anomalies without prior labeling.
-    - Real-time analysis enables immediate flagging of suspicious spending.
-    - Machine learning reduces false positive rates compared to rule-based systems.
-  limits:
-    - Focuses on fraud detection rather than general spending behavior analysis.
-    - Does not provide empirical evaluation specific to personal finance management systems.
-    - Data quality challenges are noted but not quantified for PFMS contexts.
-  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper primarily addresses fraud detection, making it highly relevant to Anomaly Detection (8.A, 8.B) and medium relevance to Data Privacy (10.A) due to challenges mentioned. It was considered and rejected for Spending Forecasting (6.A, 6.B) and Budget Recommendation (7.A–D) because no predictive modeling for budgets or allocation is discussed. Behavioral Profiling (5.A–C) was considered but rejected as the paper focuses on fraudulent behavior rather than general financial profiles. The paper's overall relevance to Odin lies in its comprehensive review of ML techniques that can be directly applied to detect spending anomalies, while also highlighting privacy considerations that are critical for user trust.
-limitations:
-  - Limited primary data; relies heavily on secondary sources.
-  - Does not provide a specific algorithm implementation for PFMS.
-  - Nigeria-specific fraud context may not fully generalize to Filipino spending patterns. [unacknowledged]
-remember_this:
-  - Machine learning models detect financial anomalies in real-time.
-  - 97% detection rate was achieved for fraudulent credit card transactions.
-  - AI reduces false positives by learning legitimate behavior patterns.
-  - Data privacy regulations are a key consideration for fraud systems.
-  - Continuous model updates are required to counter evolving fraud tactics.
-```
----
-
-## Paper 2: Abbas et al_summarized.md
-
-**Source File:** `Abbas et al_summarized.md`
-
-```yaml
-paper_id: 10.1007/s42979-025-04214-8
-designation: international-algorithm-specific
-title: Machine Learning-Based Analysis of Technology Acceptance in FinTech: A Behavioral Study Using Digital Wallet Data
-authors: Abbas, S. K.; Hussain, M.; Rimal, Y. N.
-year: 2025
-venue: SN Computer Science
-odin_topics:
-  - 5.C
-  - 11.A
-  - 12.A
-  - 12.B
-tldr: Machine learning models using transactional data show limited predictive power for classifying high-engagement FinTech users due to class imbalance and overlapping behavioral patterns.
-problem_and_motivation: Existing technology acceptance models rely on surveys and intention-based indicators, which may not capture real-world engagement and are susceptible to bias. There is limited empirical evidence on how actual behavioral data maps onto technology acceptance in FinTech.
-approach:
-  - Used a Kaggle dataset of 7000 digital wallet users with 20 demographic, transactional, and behavioral features.
-  - Operationalized technology acceptance as daily app usage, creating a binary classification target.
-  - Applied Logistic Regression, SVM, Random Forest, and XGBoost classifiers.
-  - Addressed class imbalance (33.5% high-acceptance) using SMOTE during training.
-  - Evaluated models using accuracy, ROC AUC, precision, recall, F1-score, and SHAP for feature importance.
-findings:
-  - All models achieved ~66.5% accuracy, but ROC AUC scores were modest (XGBoost highest at 0.519).
-  - Linear classifiers (Logistic Regression, SVM) failed to identify any high-acceptance users (precision and recall = 0).
-  - XGBoost achieved the best F1-score for the high-acceptance class at 0.22, improving to 0.36 with SMOTE.
-  - num: SMOTE increased XGBoost's recall for high-acceptance users from 0.16 to 0.27.
-  - Customer Lifetime Value (LTV), Satisfaction Score, and Issue Resolution Time were the most influential features.
-  - PCA showed first three components captured only 35.6% of variance, with no clear separation between classes.
-  - Predicted probabilities for both classes showed significant overlap, indicating model uncertainty.
-key_figures_tables:
-  - Figure 1: Precision-Recall and ROC curves → XGBoost slightly outperformed others but remained near random.
-  - Figure 2: PCA 3D projection and loadings → LTV, Total Spent, and Satisfaction Score dominate PC1.
-  - Figure 3: Feature importance and calibration curves → Satisfaction and LTV are top predictors; models are poorly calibrated.
-key_equations:
-  - equation: None.
-    explanation: ""
-definitions:
-  - term: TAM
-    definition: Technology Acceptance Model; posits perceived usefulness and ease of use influence adoption.
-  - term: UTAUT
-    definition: Unified Theory of Acceptance and Use of Technology; extends TAM with social influence and facilitating conditions.
-  - term: LTV
-    definition: Customer Lifetime Value; a metric representing the total revenue a customer is expected to generate.
-critical_citations:
-  - "[Zhang et al., 2021] — Found perceived competence and benevolence of algorithms impact robo-advisor adoption."
-  - "[Davis, 1989] — Introduced TAM, the foundational model for technology acceptance."
-relevance:
-  topics:
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: medium
-      justification: Applies ML classifiers (RF, XGBoost) to classify user engagement levels based on behavioral data.
-    - code: 11.A
-      name: Engagement Dynamics in Personal Finance Applications
-      relevance: high
-      justification: Directly models user engagement (daily app usage) as the target variable for technology acceptance.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: medium
-      justification: Provides a comparative evaluation of ML models for behavioral prediction, relevant to system assessment.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: medium
-      justification: Evaluates algorithm performance using metrics like precision, recall, and F1-score in an imbalanced setting.
-  contribution: The paper demonstrates that machine learning can be applied to behavioral data to predict user engagement, which is relevant to Odin's profiling and engagement modules. It shows that ensemble methods like XGBoost outperform linear models, suggesting their use for user classification tasks. The identification of LTV and satisfaction as key predictors highlights the importance of user value and experience metrics for Odin's personalization. The study's findings on the limitations of static features inform Odin's need for temporal and psychographic data. The methodological framework offers a template for evaluating Odin's own classification modules.
-  directly_justifies:
-    - "XGBoost outperformed linear classifiers for imbalanced user engagement classification."
-    - "Customer satisfaction and lifetime value are strong behavioral predictors of engagement."
-    - "Static transactional data alone is insufficient for robust user acceptance prediction."
-  limits:
-    - "The dataset is from a single non-Philippine platform, limiting generalizability to Filipino users."
-    - "Technology acceptance is operationalized only as daily usage, omitting cognitive and affective components."
-    - "The study uses cross-sectional data, lacking temporal dynamics of user behavior."
-    - "Psychographic variables like financial literacy and trust are absent from the model."
-  mapping_rationale: A systematic scan of all 12 functional domains and their topic codes was conducted. The paper was flagged as relevant to the "Behavioral Profiling & Classification" (5.C) domain due to its application of ML classifiers to user data. It also strongly informs "User Retention & Engagement" (11.A) by directly modeling daily app usage as a proxy for acceptance. The evaluation methodology (12.A, 12.B) is relevant as a comparative benchmark. Domains like Filipino Cultural Context (2), Expense Categorization (3), Existing Systems (4), Forecasting (6), Budgeting (7), Anomaly Detection (8), Mobile Design (9), Privacy (10), and Savings/Debt (13) were rejected because the paper does not address these topics. The paper's overall relevance to Odin is medium; it provides methodological insights for user profiling and engagement prediction but lacks direct applicability to PFMS-specific functions.
-limitations:
-  - "Single, cross-sectional dataset limits generalizability. [unacknowledged]"
-  - "Behavioral proxy (daily usage) may not capture full technology acceptance. [acknowledged]"
-  - "Use of only static features misses temporal behavioral patterns. [acknowledged]"
-  - "Lack of psychographic variables constrains interpretability. [acknowledged]"
-  - "Class imbalance and overlapping behaviors constrain predictive performance despite SMOTE. [acknowledged]"
-remember_this:
-  - "XGBoost outperformed linear models for imbalanced user engagement classification."
-  - "SMOTE improved XGBoost recall for high-engagement users from 0.16 to 0.27."
-  - "Customer satisfaction and lifetime value are the strongest behavioral predictors."
-  - "Static transactional data alone provides only weak signals of technology acceptance."
-  - "Predicting user engagement from behavioral data remains a challenging task."
-```
----
-
-## Paper 3: Hassine et al_summarized.md
-
-**Source File:** `Hassine et al_summarized.md`
-
-```yaml
-paper_id: 10.62345/jads.2025.14.3.1
-designation: local-algorithm-specific
-title: Inequality, Education and Occupational Change in the Philippines
-authors: Belhaj Hassine, N.; Fernandez, F. C.; Lavin, B. A.
-year: 2025
-venue: Journal of Asian Development Studies
-odin_topics:
-  - 1.A
-  - 1.B
-  - 1.C
-  - 2.A
-  - 2.B
-  - 2.D
-  - 4.A
-  - 4.B
-  - 5.A
-  - 5.C
-  - 12.A
-tldr: Slow growth in college-educated labor supply sustains high wage premiums, while shifts in occupational structure, particularly growth in middle-skill jobs from 2012-2016, have recently narrowed wage inequality.
-problem_and_motivation: The Philippines has persistently high income inequality despite poverty reduction and economic growth. The relationship between education, employment structure, and wage inequality remains underexplored. This study analyzes how changes in skill supply and occupational composition have shaped wage distribution over two decades.
-approach:
-  - Data from Philippine Labor Force Survey (2002-2024), covering wage workers aged 15+.
-  - Constructed an occupation crosswalk harmonizing PSOC 1992 and 2012 to create 22 consistent occupation codes.
-  - Classified occupations into high-, middle-skill routine, middle-skill nonroutine, and low-skill categories.
-  - Used Recentered Influence Function (RIF) regressions to estimate returns to education and occupation across wage quantiles.
-  - Applied DiNardo-Fortin-Lemieux (DFL) reweighting to isolate the impact of occupational changes on wage distributions.
-findings:
-  - num: College wage premium declined from 88% in 2013 to 59% in 2024, but college graduates still earned 80% more than high school graduates.
-  - num: Returns to college education and high-skill occupations rise monotonically across wage quantiles, with college coefficients increasing over time.
-  - num: Real wages for non-college workers grew 32% from 2012-2024 versus 5% for college workers, narrowing inequality.
-  - num: Middle-skill employment share grew by 3.6 percentage points from 2002-2016 but declined by 2.8 points from 2016-2024.
-  - Occupational reallocation explains a significant share of non-college wage growth after 2012, particularly for men.
-  - num: Youth college graduates (25-34) had 6.7% unemployment in 2024, higher than the 4.4% for non-college peers.
-key_figures_tables:
-  - "Figure 1: Income and wage Gini trends 2002-2024 → Inequality declined from 2012 onward, with wage Gini falling to 32% by 2024."
-  - "Figure 5: College wage premium trend → Premium peaked at 88% in 2013, declined to 59% by 2024."
-  - "Figure 8: Returns to education by quantile → College returns increase monotonically across income distribution, widening gaps."
-  - "Table 1A: RIF regression on wage Gini → College education has positive and increasing effect on wage inequality over time."
-key_equations:
-  - equation: "f_{x_{t0}}(w) = ∫ f(w | x, t_w=t0) dF(x | t_x=t0)"
-    explanation: "Observed wage density as joint distribution of wages and covariates."
-  - equation: "f_{x_{t1}}(w) = ∫ f(w | x, t_w=t0) * ψ_x(x) dF(x | t_x=t0)"
-    explanation: "Counterfactual wage density reweighting covariates from t0 to t1."
-  - equation: "ψ̂_x = [Pr(t_x=t1 | x)/Pr(t_x=t0 | x)] * [Pr(t_x=t0)/Pr(t_x=t1)]"
-    explanation: "Reweighting function estimated via logit model for DFL decomposition."
-definitions:
-  - term: RIF Regression
-    definition: "Recentered Influence Function regression for unconditional quantile effects on wage distribution."
-  - term: DFL Reweighting
-    definition: "DiNardo-Fortin-Lemieux semiparametric method to decompose wage distribution changes."
-  - term: PSOC
-    definition: "Philippine Standard Occupational Classification, versions 1992 (ISCO-88) and 2012 (ISCO-08)."
-  - term: LFS
-    definition: "Labor Force Survey, quarterly nationwide household survey by Philippine Statistics Authority."
-  - term: Wage Premium
-    definition: "Percentage wage gap between college graduates and high school graduates, reflecting skill valuation."
-critical_citations:
-  - "[Acemoglu and Autor, 2011] — Framework for skill-task-occupation classification."
-  - "[Firpo et al., 2018] — Methodological basis for RIF regression approach."
-  - "[DiNardo et al., 1996] — Foundation for DFL decomposition technique."
-  - "[Autor, 2019] — Framework for analyzing job polarization and wage inequality."
-  - "[World Bank, 2022] — Comprehensive prior analysis of Philippine inequality drivers."
-relevance:
-  topics:
-    - code: 1.A
-      name: Filipino Young Professionals as a Demographic
-      relevance: medium
-      justification: Provides wage and employment data for prime-age workers (25-54), including youth unemployment trends.
-    - code: 1.B
-      name: Financial Structure of Filipino Young Professionals
-      relevance: medium
-      justification: Documents wage distribution and returns to education, directly relevant to income structure.
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      relevance: medium
-      justification: Highlights unemployment and labor market outcomes shaping financial behavior.
-    - code: 2.A
-      name: Culturally Specific Financial Practices
-      relevance: contextual
-      justification: Context on labor market structure and wage inequality in Philippine context.
-    - code: 2.B
-      name: Seasonal and Cyclical Spending Patterns
-      relevance: low
-      justification: Mentions COVID-19 cyclical disruption but not seasonal spending patterns.
-    - code: 2.D
-      name: Filipino Spending Cycles and "Occasions"
-      relevance: low
-      justification: Discusses cyclical labor market shifts, not spending cycles.
-    - code: 4.A
-      name: Landscape of Existing Personal Finance Systems
-      relevance: contextual
-      justification: Provides macroeconomic context for personal finance system design.
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      relevance: low
-      justification: Identifies skills mismatch and occupational polarization as systemic gaps.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: high
-      justification: Documents wage premium persistence and occupational shifts that differentiate worker profiles.
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: high
-      justification: Uses occupational and education classifications that inform behavioral profile segmentation.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: high
-      justification: Provides RIF regression and DFL decomposition methodologies applicable to system evaluation.
-  contribution: "This paper provides empirical methods (RIF regression, DFL decomposition) applicable to evaluating Odin's algorithmic modules. Its analysis of education and occupational returns offers a framework for segmenting user financial profiles based on income trajectories. The findings on wage premium persistence inform Odin's expense categorization and forecasting modules. The documentation of occupational shifts and skill supply constraints justifies behavioral profiling approaches. The paper's methodological rigor supports system evaluation frameworks for algorithmic modules."
-  directly_justifies:
-    - "RIF regression methods can evaluate inequality impacts of algorithmic modules."
-    - "Occupational classification informs behavioral profile segmentation for PFMS."
-    - "Wage premium trends provide baseline for income-based user segmentation."
-    - "DFL decomposition methods apply to counterfactual evaluation of financial advice."
-  limits:
-    - "Focus on wage workers excludes self-employed and informal sector, limiting generalizability to all Filipino workers."
-    - "Paper does not address individual-level financial behavior or spending patterns."
-    - "Analysis aggregates to 22 occupation codes, which may oversimplify occupational diversity."
-    - "DFL decomposition holds wages within occupations fixed, abstracting from within-occupation wage dynamics."
-  mapping_rationale: "Systematic scan across all 12 functional domains and 38 topic codes flagged the following as relevant: Filipino Cultural Context (2.A contextual, 2.B low, 2.D low) for the Philippine-specific labor market analysis; Existing Systems & Gaps (4.A contextual, 4.B low) for identifying skills mismatch; Behavioral Profiling (5.A high, 5.C high) as the paper directly uses occupational and education classifications to differentiate worker types; and System Evaluation (12.A high) for its RIF regression and DFL decomposition methodologies. Domains on expense categorization (3.A-3.C), spending forecasting (6.A-6.B), budget recommendation (7.A-7.D), anomaly detection (8.A-8.C), mobile design (9.A-9.B), data privacy (10.A-10.B), user retention (11.A-11.B), savings and debt (13.A-13.C) were considered but rejected as the paper does not address these PFMS-specific functions. The paper is highly relevant methodologically for evaluating algorithmic modules and informing user segmentation, but does not directly address personal finance system design. Its empirical framework for analyzing inequality and occupational shifts provides foundation for behavioral profiling and evaluation modules."
-limitations:
-  - "Wage data only available from 2002 onward, limiting historical context."
-  - "Analysis excludes non-wage workers (self-employed, family workers), missing significant portion of workforce."
-  - "LFS occupational classifications changed in 2016, requiring crosswalk that may introduce harmonization errors."
-  - "Does not explicitly examine within-occupation wage heterogeneity beyond education grouping."
-  - "COVID-19 pandemic effects may confound recent structural trend identification. [unacknowledged]"
-remember_this:
-  - "College wage premium declined to 59% by 2024 from 88% in 2013."
-  - "Non-college wages grew 32% from 2012-2024, outpacing college-educated workers."
-  - "Middle-skill employment expanded from 2002-2016 but declined after 2016."
-  - "Occupational reallocation explains non-college wage growth after 2012."
-  - "Young college graduates face 6.7% unemployment, higher than less-educated peers."
-```
----
-
-## Paper 4: Huang et al_summarized.md
-
-**Source File:** `Huang et al_summarized.md`
-
-```yaml
-paper_id: "10.1145/3766918.3766944"
-designation: "international-algorithm-specific"
-title: "Wealth-Voyager: Navigating Intelligent Wealth Management with a Multi-Agent Framework"
-authors: "Huang, R.; Zhao, Z.; Chen, S.; Wu, X.; Zhao, J. L."
-year: 2025
-venue: "2025 International Conference on Generative Artificial Intelligence for Business (GAIB 2025)"
-odin_topics:
-  - "5.A"
-  - "5.B"
-  - "7.B"
-  - "9.A"
-  - "9.B"
-  - "10.B"
-  - "12.A"
-tldr: "A multi-agent LLM framework integrates behavioral profiling, real-time market intelligence, and portfolio optimization to deliver personalized, adaptive wealth management advice."
-problem_and_motivation: "Traditional wealth management lacks scalability and personalization, while existing AI solutions are fragmented and fail to integrate long-term strategy with behavioral adaptation. A unified system is needed to address both quantitative performance and the cognitive biases that shape retail investor behavior."
-approach:
-  - "Wealth-Voyager coordinates four specialized agents: AssistHub (behavioral profiling), NewsCrawler (real-time intelligence), AlphaForge (portfolio optimization), and DualAdvisor (BDI-grounded advisory simulation)."
-  - "The system uses a central LLM meta-controller to orchestrate agent collaboration via structured function calls and shared memory."
-  - "Behavioral profiling quantifies nine cognitive biases (e.g., loss aversion, herding) to construct a user-specific behavioral vector."
-  - "The DualAdvisor module simulates advisor-client dialogue with two LLM agents to uncover biases and promote reflective decision-making."
-  - "AlphaForge employs constrained mean-variance optimization with liquidity caps and drawdown limits, augmented by Monte Carlo simulation."
-  - "A proof-of-concept case study was conducted with a single mid-career participant over one month under live market conditions."
-  - "The system compares a passive baseline, a behaviorally anchored portfolio, and a dynamically rebalanced tactical strategy."
-findings:
-  - "num: The tactical strategy outperformed the passive baseline by +1.62 percentage points in cumulative return during the evaluation period."
-  - "num: Anchoring by behavioral signals improved annualized return from 3.72% to 6.53% and reduced annualized volatility from 18.08% to 9.42%."
-  - "num: The tactical approach achieved a 1.86% cumulative return with 12.10% annualized volatility, compared to 0.24% and 13.70% for the anchored portfolio."
-  - "The adaptive tactical adjustments effectively reduced losses during a tariff-induced shock (-2.56% vs. -2.79%) and captured greater upside during the rebound (3.24% vs. 2.16%)."
-  - "Qualitative feedback indicated that the dual-agent simulation enhanced user trust and self-awareness by exposing cognitive biases."
-key_figures_tables:
-  - "Figure 1: Architecture of the Wealth-Voyager framework → System integrates four core modules orchestrated by an LLM meta-controller."
-  - "Table 1: Comparison of user-declared baseline and AI-optimized allocation → AI optimization improved diversification and aligned with implicit risk profile."
-  - "Figure 2: Segment-level returns for passive and tactical portfolios → Tactical strategy consistently outperformed across multiple market phases."
-  - "Table 2: Performance comparison across strategies → Anchoring and tactical adjustments significantly improved risk-adjusted returns."
-  - "Table 3: Capability comparison with market offerings → Wealth-Voyager uniquely supports real-time adjustment, personalization, and financial education."
-key_equations:
-  - equation: "L(w) = -Sharpe(w) + λ * IlliqPenalty(w)"
-    explanation: "Objective function for portfolio optimization balancing Sharpe ratio and illiquidity."
-  - equation: "None."
-    explanation: ""
-definitions:
-  - term: "LLM"
-    definition: "Large Language Model."
-  - term: "BDI"
-    definition: "Belief-Desire-Intention framework for modeling rational agency."
-  - term: "SAA"
-    definition: "Strategic Asset Allocation, the long-term policy portfolio."
-  - term: "TAA"
-    definition: "Tactical Asset Allocation, short-term adjustments to the SAA."
-  - term: "PFMS"
-    definition: "Personal Finance Management System."
-critical_citations:
-  - "[Brinson et al., 1986] — Asset allocation explains over 90% of performance variance."
-  - "[Ibbotson & Kaplan, 2000] — Confirms asset allocation's dominant role in portfolio returns."
-  - "[Pompian, 2016] — Risk profiling through a behavioral finance lens."
-relevance:
-  topics:
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      relevance: "high"
-      justification: "Directly proposes and implements a nine-dimensional behavioral vector for user profiling."
-    - code: "5.B"
-      name: "Profile Dynamics and the Cold‑Start Problem"
-      relevance: "high"
-      justification: "Uses dynamic dialogue and BDI modeling to infer and adapt profiles, addressing cold-start."
-    - code: "7.B"
-      name: "Budget Recommendation in Personal Finance Systems"
-      relevance: "medium"
-      justification: "Provides personalized portfolio allocation recommendations, a form of budget recommendation."
-    - code: "9.A"
-      name: "Mobile‑First Design Principles and Rationale"
-      relevance: "contextual"
-      justification: "The interactive, dialogue-based interface is relevant to mobile-first design but not a core focus."
-    - code: "9.B"
-      name: "Mobile UX Design for Personal Finance"
-      relevance: "contextual"
-      justification: "The system's conversational UX provides a relevant example but is not specifically mobile-first."
-    - code: "10.B"
-      name: "User Trust in Personal Finance Systems"
-      relevance: "medium"
-      justification: "Explicitly addresses transparency, explainability, and trust through rationale tracing."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      relevance: "medium"
-      justification: "Provides an evaluation framework with quantitative performance and qualitative user feedback."
-  contribution: "Wealth-Voyager contributes a modular architecture for PFMS that integrates behavioral profiling (relevant to modules 5.A, 5.B) with quantitative portfolio optimization. Its DualAdvisor module offers a novel method for bias-aware, interactive advisory that can inform the design of user engagement and trust-building features in Odin (modules 10.B, 11.A). The system's evaluation framework, comparing anchored and tactical strategies, provides a template for assessing Odin's algorithmic modules. The emphasis on transparent rationale generation directly informs Odin's requirements for user trust and explainability."
-  directly_justifies:
-    - "Multi-agent LLM frameworks can coordinate specialized financial tasks effectively."
-    - "Incorporating behavioral biases into advisory dialogue improves user trust and engagement."
-    - "Tactical asset allocation layered on strategic allocation improves risk-adjusted returns."
-    - "Real-time market intelligence enables proactive portfolio rebalancing."
-    - "Explainable, dialogue-based interfaces bridge the financial education-decision gap."
-  limits:
-    - "The proof-of-concept study was conducted on a single user, limiting generalizability."
-    - "Performance is contingent on the underlying LLM, which may vary."
-    - "The asset universe was limited, and the framework was not tested across diverse market regimes."
-    - "The system's reliance on proprietary LLMs may raise cost and data privacy concerns. [unacknowledged]"
-  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes flagged the Behavioral Profiling & Classification, Budget Recommendation, Mobile-First Design, Data Privacy & User Trust, and System Evaluation domains as relevant. Topic 5.A (Financial Behavioral Profiles) and 5.B (Profile Dynamics) were rated high due to the paper's core contribution of a quantified behavioral vector and BDI-based dynamic profiling. Topic 7.B (Budget Recommendation) received medium relevance as the paper provides a method for personalized allocation, which is a form of budget recommendation. Topics 9.A and 9.B were rated contextual as the paper's dialogue interface is relevant to UX but not specifically mobile-first. Topic 10.B (User Trust) was rated medium due to the explicit focus on transparency and explainability. Topic 12.A (Evaluation Frameworks) was rated medium for its use of quantitative backtesting and qualitative feedback. Other domains, such as Expense Categorization (3.A-C), Existing Systems (4.A-B), Forecasting (6.A-B), Anomaly Detection (8.A-C), Savings & Debt Management (13.A-C), and others, were considered and rejected as the paper does not provide specific, citable claims informing those design areas for Odin. Overall, the paper is highly relevant for informing Odin's approach to behavioral profiling, interactive advisory design, and system evaluation."
-limitations:
-  - "Single-user pilot study, not statistically validated."
-  - "Performance contingent on the underlying LLM model."
-  - "Limited asset universe and market regime testing."
-  - "Potential cost and data privacy concerns with proprietary LLM APIs. [unacknowledged]"
-remember_this:
-  - "A multi-agent LLM framework can coordinate behavioral profiling and portfolio optimization."
-  - "Behavioral anchoring improved annual return by 2.81 percentage points in the case study."
-  - "Tactical adjustments outperformed a passive baseline by 1.62 percentage points in cumulative return."
-  - "Interactive, explainable dialogue enhances user trust and self-awareness."
-  - "Integrating real-time news with BDI-based reasoning enables proactive portfolio management."
-```
----
-
-## Paper 5: Espelita et-al_summarized.md
-
-**Source File:** `Espelita et-al_summarized.md`
-
-```yaml
-paper_id: 9a7d8c3e-5b2f-4a8e-9c1d-6f3a8e2b7c5d
-designation: local
-title: Understanding Monetary Policy: Student Awareness, Perceptions, and Financial Behaviors in the Philippine Context
-authors: Atento, R. G.; Espelita, C. A. M.; Rao, L.; Tian, Y.
-year: 2025
-venue: International Journal of Health and Business Analytics
-odin_topics:
-  - 1.A
-  - 1.B
-  - 1.C
-  - 2.A
-  - 2.D
-  - 4.B
-  - 5.A
-  - 5.B
-  - 5.C
-  - 6.A
-  - 7.A
-  - 8.A
-  - 9.A
-  - 10.A
-  - 12.A
-  - 13.A
-tldr: Filipino students show moderate monetary policy awareness, with graduate and business students exhibiting higher understanding, and this awareness positively correlates with saving and investment behaviors.
-problem_and_motivation: Limited research examines young Filipinos' understanding of monetary policy, a critical gap given its role in economic stability and the youth's future role as economic stewards. The study addresses this by investigating how awareness and perceptions vary across educational levels and fields of study.
-approach:
-  - Descriptive-correlational survey design with 200 respondents from senior high, undergraduate, and graduate levels in Philippine institutions.
-  - Stratified random sampling ensured representation across educational levels, academic programs, and demographic groups.
-  - Structured questionnaire measured awareness of monetary policy, perceptions of effectiveness, and financial behaviors using Likert scales.
-  - Validation included expert review and pilot testing with 30 students; Cronbach's alpha for subscales ranged from .74 to .85.
-  - Data analyzed using ANOVA, t-tests, Pearson correlations, and multiple regression with Jamovi and SPSS.
-findings:
-  - num: Overall awareness of monetary policy is moderate, with graduate students scoring significantly higher (M=3.75) than undergraduates (M=3.25) and senior high students (M=2.80).
-  - num: Business/economics students exhibited higher awareness (M=3.48) than students in other fields, F(4,195)=11.22, p<.001.
-  - num: Awareness was positively correlated with perception of policy effectiveness (r=0.48, p<.001), saving behavior (r=0.31, p<.001), and investment behavior (r=0.24, p=.001).
-  - No significant relationship was found between awareness and spending behavior (r=-0.07, p=.310).
-  - num: Regression models showed awareness and perception significantly predicted saving (R²=.22) and investment (R²=.15) but not spending (R²=.04).
-  - Students perceive monetary policy as effective in controlling inflation but are more cautious about its role in employment and long-term growth.
-  - Gender did not significantly differentiate awareness levels, t(198)=0.31, p=.756.
-  - Older students (23-30 years) demonstrated higher awareness (M=3.48) compared to younger groups (16-18 years, M=2.85).
-  - Awareness levels differed significantly by educational level, F=47.83, p<.001, with all pairwise differences significant.
-  - Students in "Other" programs (education, health sciences) had the lowest awareness (M=3.02), highlighting a curricular gap.
-key_figures_tables:
-  - "Table 4: Difference in awareness by age → Older students show higher awareness, F=14.62, p<.001."
-  - "Table 5: Difference in awareness by gender → No significant difference found, t(198)=0.31, p=.756."
-  - "Table 6: Difference in awareness by educational level → Graduate students highest, senior high lowest."
-  - "Table 7: Difference in awareness by program → Business/economics highest, others lowest."
-  - "Table 8: Correlation between awareness and perception → Positive moderate correlation, r=0.48."
-  - "Table 9: Correlation between awareness and saving → Positive significant, r=0.31."
-  - "Table 10: Correlation between awareness and investment → Positive significant, r=0.24."
-  - "Table 11: Correlation between awareness and spending → No significant relationship, r=-0.07."
-  - "Table 12: Regression results → Awareness and perception predict saving and investment, not spending."
-key_equations:
-  - equation: "R² = .22 for saving behavior model"
-    explanation: "Awareness and perception explain 22% of saving variance."
-  - equation: "R² = .15 for investment behavior model"
-    explanation: "Awareness and perception explain 15% of investment variance."
-  - equation: "R² = .04 for spending behavior model"
-    explanation: "Awareness and perception explain negligible spending variance."
-definitions:
-  - term: "TRA"
-    definition: "Theory of Reasoned Action, positing behavior is shaped by behavioral intentions influenced by attitudes and subjective norms."
-  - term: "TPB"
-    definition: "Theory of Planned Behavior, extends TRA by adding perceived behavioral control as a predictor of intentions."
-  - term: "Monetary Policy"
-    definition: "Central bank actions to regulate money supply and credit to achieve macroeconomic objectives like price stability."
-  - term: "BSP"
-    definition: "Bangko Sentral ng Pilipinas, the central monetary authority of the Philippines."
-critical_citations:
-  - "[Blinder et al., 2008] — Public expectations influence policy effectiveness."
-  - "[Ajzen, 1991] — Foundational theory on planned behavior."
-  - "[OECD, 2020] — Philippine financial literacy below global average."
-  - "[Mishkin, 2019] — Definition and scope of monetary policy."
-  - "[Lusardi & Mitchell, 2020] — Financial literacy interacts with contextual factors."
-relevance:
-  topics:
-    - code: 1.A
-      name: Filipino Young Professionals as a Demographic
-      relevance: high
-      justification: "Directly examines Filipino students as future young professionals and economic actors."
-    - code: 1.B
-      name: Financial Structure of Filipino Young Professionals
-      relevance: high
-      justification: "Investigates saving, spending, and investment behaviors of Filipino students."
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      relevance: high
-      justification: "Analyzes financial behaviors (saving, investing, spending) in relation to policy awareness."
-    - code: 2.A
-      name: Culturally Specific Financial Practices
-      relevance: medium
-      justification: "Discusses cultural factors like extended family support and collectivist spending."
-    - code: 2.D
-      name: Filipino Spending Cycles and "Occasions"
-      relevance: contextual
-      justification: "Mentions cultural spending patterns but does not focus on cyclical occasions."
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      relevance: high
-      justification: "Identifies gaps in financial literacy and policy communication in the Philippines."
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: high
-      justification: "Examines how awareness shapes saving and investing profiles."
-    - code: 5.B
-      name: Profile Dynamics and the Cold‑Start Problem
-      relevance: contextual
-      justification: "Does not address cold-start, but profiles vary by educational background."
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: low
-      justification: "Does not discuss classification algorithms for behavioral profiles."
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: low
-      justification: "Does not focus on predictive modeling; examines awareness-behavior correlations."
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      relevance: medium
-      justification: "Findings on saving behavior inform budget recommendation systems."
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: low
-      justification: "No direct discussion of anomaly detection; mentions spending patterns."
-    - code: 9.A
-      name: Mobile‑First Design Principles and Rationale
-      relevance: contextual
-      justification: "Recommends digital platforms and OERs for financial education."
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: low
-      justification: "Mentions data security in methodology but not a core finding."
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: medium
-      justification: "Provides empirical evaluation framework for financial literacy interventions."
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      relevance: high
-      justification: "Awareness positively correlates with saving behavior, informing savings goal features."
-  contribution: "This paper directly informs Odin's behavioral profiling module by identifying how monetary policy awareness shapes saving and investment behaviors among Filipino students. The findings validate the need for personalized financial education in Odin's onboarding, as awareness levels vary significantly by educational background. The correlation between awareness and saving behavior (r=0.31) supports Odin's savings goal management features that adapt to user knowledge levels. The negative correlation with spending (r=-0.07) suggests that behavioral nudges in Odin must go beyond information provision to influence consumption habits. The study's grounded theory approach using TRA/TPB provides a theoretical foundation for Odin's user segmentation and intervention design."
-  directly_justifies:
-    - "Graduate and business students exhibit higher monetary policy awareness, justifying educational-level segmentation in Odin."
-    - "Awareness correlates with saving behavior (r=0.31), supporting savings goal features in Odin."
-    - "Awareness does not significantly influence spending, necessitating behavioral nudges beyond information."
-    - "Gender did not differentiate awareness, suggesting gender-neutral financial education design in Odin."
-    - "Students perceive monetary policy as effective in inflation control but not employment, indicating communication gaps to address."
-  limits:
-    - "Cross-sectional design prevents causal inference about awareness-behavior relationships."
-    - "Self-reported data may introduce social desirability and recall biases."
-    - "Sample restricted to selected institutions, limiting generalizability to all Filipino students."
-    - "Scope excludes variables like trust in government and media exposure that may influence literacy."
-  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was conducted. The 'Filipino Cultural Context' domain was flagged as highly relevant because the paper directly examines Filipino students' financial behaviors and cultural spending patterns, with topic 2.A (culturally specific practices) rated medium and 2.D (spending cycles) rated contextual due to only tangential mention. The 'Behavioral Profiling' domain was highly relevant, with topics 5.A (behavioral profiles) rated high based on the awareness-behavior correlations, 5.B (cold-start) rated contextual as the study mentions educational gaps that resemble cold-start conditions, and 5.C (classification) rated low as no classification algorithms are discussed. The 'Expense Categorization' domain was considered but rejected entirely (3.A, 3.B, 3.C) as the paper does not address expense frameworks. The 'Spending Forecasting' domain (6.A, 6.B) was rated low to contextual because the paper discusses spending behavior but not predictive models. The 'Budget Recommendation' domain (7.A) was rated medium as saving behavior findings can inform budget features. The 'Anomaly Detection' domain (8.A, 8.B, 8.C) was rejected due to no algorithmic discussion. The 'Mobile-First Design' domain (9.A) was rated contextual based on digital learning recommendations. The 'Data Privacy' domain (10.A) was rated low due to only methodological mention. The 'System Evaluation' domain (12.A) was rated medium for the empirical framework. The 'Savings & Debt Management' domain (13.A) was rated high for the direct saving behavior correlation, while 13.B and 13.C were rejected due to no debt or surplus discussion. Overall, the paper is moderately relevant to Odin, providing empirical grounding for behavioral profiling and savings features, but with limited direct algorithmic or system design implications."
-limitations:
-  - "Cross-sectional design prevents causal inference; longitudinal research needed."
-  - "Self-reported data may introduce social desirability bias."
-  - "Sample restricted to selected HEIs and senior high schools; findings may not generalize."
-  - "Does not examine trust in government institutions or media exposure as variables."
-remember_this:
-  - "Graduate and business students show highest monetary policy awareness."
-  - "Awareness correlates positively with saving and investment behaviors."
-  - "Awareness does not influence spending behavior, highlighting behavioral gaps."
-  - "Students perceive inflation control effectiveness but doubt employment impact."
-  - "Targeted financial education across disciplines is urgently needed."
-```
----
-
-## Paper 6: Karst et al_summarized.md
+## Paper 1: Karst et al_summarized.md
 
 **Source File:** `Karst et al_summarized.md`
 
@@ -731,7 +127,209 @@ remember_this:
 ```
 ---
 
-## Paper 7: Cabiles_summarized.md
+## Paper 2: Ashta_summarized.md
+
+**Source File:** `Ashta_summarized.md`
+
+```yaml
+paper_id: 10.2139/ssrn.5739406
+designation: international
+title: Artificial Intelligence in Microfinance and Financial Inclusion: Applications, Issues, and Future Directions
+authors: Ashta, A.
+year: 2025
+venue: SSRN
+odin_topics:
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.B
+  - 2.D
+  - 3.A
+  - 3.B
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.C
+  - 6.A
+  - 6.B
+  - 7.B
+  - 8.A
+  - 8.B
+  - 9.A
+  - 9.B
+  - 10.A
+tldr: AI enables financial inclusion for unbanked populations through alternative credit scoring, automated underwriting, and personalized services, but introduces risks of algorithmic bias, privacy violations, and digital exclusion requiring robust governance.
+problem_and_motivation: Two billion adults globally lack access to formal financial services due to credit invisibility, high costs, and information asymmetries. Traditional credit scoring excludes those without formal credit histories, creating a barrier to first-time loans. AI offers a means to break these barriers by leveraging alternative data to assess creditworthiness and automate financial services.
+approach:
+  - This paper is a critical review of academic and gray literature, analyzing AI applications across payments, savings, lending, insurance, and investments.
+  - The analysis draws on real-world case studies from the Global South, including M-Pesa, GCash, Tala, Branch, BIMA, and Pula.
+  - The BHAI framework for humane AI development is adopted to evaluate ethical considerations and operational challenges.
+  - The paper synthesizes findings from multiple sources to provide a nuanced assessment of AI's role in financial inclusion and its limitations.
+  - The review uses an interpretative-constructivist approach to prioritize context-rich insights over universal generalizations.
+findings:
+  - AI-powered alternative credit scoring enables lending to credit-invisible populations, with mobile payment data showing correlations of 0.65-0.72 with repayment rates.
+  - num: Alternative credit scoring models reduce default rates and can cut operational costs from 6-12% to under 2%.
+  - num: AI-powered KYC verification can reduce onboarding time from weeks to minutes, expanding access for unbanked populations.
+  - Gradient boosting methods (XGBoost, LightGBM) power 70-80% of alternative credit scoring production systems.
+  - AI-driven fraud detection and personalized services enhance payment security and user engagement for platforms like GCash and M-Pesa.
+  - AI enables parametric insurance and dynamic pricing, creating micro-insurance products for smallholder farmers and informal workers.
+  - Algorithmic bias, proxy discrimination, and privacy violations are significant risks, requiring fairness audits and explainable AI.
+  - The "inclusion paradox" reveals that AI provides access but often at exploitative terms, such as high-interest rates (30-40% APR).
+key_figures_tables:
+  - Table 1: Behavioral finance nudges in digital savings → AI can automate personalized savings nudges based on transaction patterns.
+  - Table 2: Traditional versus Alternative Data → AI leverages mobile phone and digital wallet data for credit scoring.
+  - Table 3: AI Technologies by Financial Sector → Supervised learning dominates across all sectors, particularly gradient boosting.
+  - Table 4: Humane Considerations by Financial Sector → All sectors face challenges of bias, privacy, transparency, and manipulative practices.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: Artificial Intelligence (AI)
+    definition: Computer systems that can perform tasks typically requiring human intelligence, such as pattern recognition, decision-making, and language understanding.
+  - term: Machine Learning (ML)
+    definition: Algorithms that improve automatically through experience, learning patterns from data.
+  - term: Supervised Learning
+    definition: Training algorithms on labeled datasets to predict outcomes (e.g., classifying fraud or default risk).
+  - term: Unsupervised Learning
+    definition: Discovering hidden patterns in data without pre-labeled examples (e.g., clustering users by behavior).
+  - term: Reinforcement Learning
+    definition: Algorithms learn optimal strategies through trial and error, receiving rewards for successful actions.
+  - term: Natural Language Processing (NLP)
+    definition: Technology enabling computers to understand and generate human language.
+  - term: Computer Vision
+    definition: AI systems that can interpret and analyze images and visual data.
+  - term: Gradient Boosting
+    definition: An ensemble machine learning technique that combines multiple decision trees to improve predictive accuracy, used heavily in credit scoring.
+  - term: Parametric Insurance
+    definition: Insurance that pays out automatically when specific measurable events occur (e.g., rainfall reaching a threshold).
+  - term: Credit Invisibility
+    definition: Individuals having no footprint in conventional credit bureaus, lacking formal credit history.
+  - term: Proxy Discrimination
+    definition: Using variables that correlate with protected characteristics (e.g., race, gender) as proxies, leading to discriminatory outcomes.
+  - term: Explainable AI (XAI)
+    definition: AI systems designed to be transparent, allowing humans to understand how decisions are made.
+critical_citations:
+  - "[Consumer Financial Protection Bureau, 2015] — Quantifies credit invisibility in the US."
+  - "[Björkegren & Grissen, 2019] — Shows mobile usage predicts credit repayment."
+  - "[Solon Barocas & Selbst, 2016] — Foundational work on big data's disparate impact."
+  - "[Berg, Burg, Gombović, & Puri, 2019] — Demonstrates fintech credit scoring using digital footprints."
+  - "[Kalluri, 2020] — Argues AI shifts power, not just good or fair."
+relevance:
+  topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Provides a general framework for understanding financial inclusion challenges in developing economies, relevant to this demographic.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: contextual
+      justification: Discusses informal income, gig economy, and lack of formal credit, relevant to financial structures.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: contextual
+      justification: Addresses behavioral nudges and savings patterns, relevant to understanding financial behavior.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: contextual
+      justification: Mentions family obligations and cultural insensitivity in AI models, relevant to culturally specific practices.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: medium
+      justification: Discusses irregular income for smallholder farmers and flexible loan products aligned with harvest cycles.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: contextual
+      justification: Mentions income variability and cultural patterns in spending, relevant to spending cycles.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: low
+      justification: Mentioned in the context of AI analyzing transaction patterns for personalization and savings.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: low
+      justification: Implicitly relevant as AI personalization requires expense categorization.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Reviews existing fintech, mobile money, and microfinance systems, providing a landscape overview.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Identifies barriers like credit invisibility, high costs, and exclusion as key gaps that AI addresses.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Uses clustering and classification to segment users and personalize services based on behavior.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Employs classification models and gradient boosting for behavior prediction and credit scoring.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Core to the paper, detailing use of supervised learning, time-series forecasting, and reinforcement learning.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Discusses LSTM and ARIMA for market prediction and income volatility forecasting.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: medium
+      justification: Savings nudges, automated savings, and pension optimization relate to budget recommendation.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Dedicated sections on AI-powered fraud detection using supervised and unsupervised learning.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Discusses algorithms for detecting novel fraud schemes and unusual transaction patterns.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: medium
+      justification: Case studies like M-Pesa and GCash highlight mobile-first financial services.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: contextual
+      justification: Mentions user segmentation and personalization, which relates to UX design.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: high
+      justification: Dedicated humane considerations section on privacy violations, biometric data breaches, and data protection.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: medium
+      justification: Discusses transparency, accountability, and the need for recourse to build trust.
+  contribution: This paper justifies Odin's core modules by providing evidence for AI-driven personalization, forecasting, and anomaly detection, while also highlighting the critical need for ethical safeguards. It validates the use of alternative data for credit scoring and behavioral profiling, directly supporting Odin's approach to user classification and budget recommendation. The analysis of existing systems and their gaps informs Odin's design rationale, particularly in addressing the limitations of traditional financial tools. Furthermore, the paper's emphasis on privacy, fairness, and mobile-first design provides a framework for Odin's principles. Its case studies from the Global South, including examples from the Philippines, offer relevant context for Odin's target demographic.
+  directly_justifies:
+    - "AI-driven expense categorization and personalization improve user engagement and financial management."
+    - "Mobile-first financial apps like GCash demonstrate the viability of digital platforms for the target demographic."
+    - "Alternative credit scoring using mobile data can address credit invisibility for Filipino young professionals."
+    - "Behavioral nudges and automated savings can help users with irregular income build emergency funds."
+    - "Robust fraud detection systems are essential for user trust and security in mobile finance."
+  limits:
+    - "Non-systematic review approach limits generalizability of findings and may miss specific quantitative details."
+    - "The analysis relies heavily on case studies, which may not be representative of all contexts."
+    - "The paper provides a broad overview but lacks deep technical specifics on algorithm implementation."
+    - "The focus is on general financial inclusion, not specifically on a PFMS for Filipino young professionals."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was conducted for this paper. The domains flagged as relevant were: Existing Systems & Gaps (high), Behavioral Profiling (medium), Spending Forecasting (high), Budget Recommendation (medium), Anomaly Detection (high), Mobile-First Design (medium), and Data Privacy (high). The paper's focus on alternative credit scoring, fraud detection, and predictive modeling directly justifies high relevance to topics 4.B, 6.A, 6.B, 8.A, and 8.B. Its discussion of behavioral nudges and segmentation supports topics 5.A and 5.C with medium relevance. The paper's emphasis on ethical challenges, privacy violations, and the need for transparency provides high relevance to topic 10.A. The paper touches on mobile-first case studies (9.A) and cultural practices (2.A) but does not provide deep insight, hence contextual relevance. Topics like 7.C (constrained optimization) and 13.A (savings goals) were considered but rejected as the paper does not provide specific methodologies or frameworks for these areas. The paper's overall relevance to Odin is high, as it validates the use of AI for core functionalities while providing a critical lens on necessary ethical and privacy safeguards.
+limitations:
+  - "The study is a non-systematic review, which may be subject to selection bias in the literature and case studies chosen. [unacknowledged]"
+  - "Findings from Global South case studies may not be directly generalizable to the specific context of Filipino young professionals."
+  - "The paper does not provide a comparative analysis of different AI algorithms or their performance metrics in detail."
+  - "The analysis focuses on AI's potential but does not empirically measure the impact of these systems on financial wellbeing or inclusion outcomes."
+  - "The discussion of ethical challenges is broad and lacks specific, actionable recommendations for implementation."
+remember_this:
+  - AI alternative credit scoring can reduce operational costs from 12% to under 2%.
+  - Alternative data models achieve predictive power comparable to traditional FICO scores.
+  - AI enables access to credit but often at exploitative rates of 30-40% APR.
+  - Ethical AI requires fairness audits, transparency, and human oversight.
+  - Mobile money platforms demonstrate AI's potential for reaching unbanked populations.
+```
+---
+
+## Paper 3: Cabiles_summarized.md
 
 **Source File:** `Cabiles_summarized.md`
 
@@ -858,7 +456,7 @@ remember_this:
 ```
 ---
 
-## Paper 8: Rodriguez-Correa et al_summarized.md
+## Paper 4: Rodriguez-Correa et al_summarized.md
 
 **Source File:** `Rodriguez-Correa et al_summarized.md`
 
@@ -1048,7 +646,7 @@ remember_this:
 ```
 ---
 
-## Paper 9: Sanhosh & Singh_summarized.md
+## Paper 5: Sanhosh & Singh_summarized.md
 
 **Source File:** `Sanhosh & Singh_summarized.md`
 
@@ -1201,7 +799,7 @@ remember_this:
 ```
 ---
 
-## Paper 10: Yang R. et al_summarized.md
+## Paper 6: Yang R. et al_summarized.md
 
 **Source File:** `Yang R. et al_summarized.md`
 
@@ -1366,7 +964,7 @@ remember_this:
 ```
 ---
 
-## Paper 11: Ling & Weiling_summarized.md
+## Paper 7: Ling & Weiling_summarized.md
 
 **Source File:** `Ling & Weiling_summarized.md`
 
@@ -1463,7 +1061,7 @@ remember_this:
 ```
 ---
 
-## Paper 12: Metha_summarized.md
+## Paper 8: Metha_summarized.md
 
 **Source File:** `Metha_summarized.md`
 
@@ -1617,7 +1215,7 @@ remember_this:
 ```
 ---
 
-## Paper 13: Abdullahi et al_summarized.md
+## Paper 9: Abdullahi et al_summarized.md
 
 **Source File:** `Abdullahi et al_summarized.md`
 
@@ -1766,7 +1364,7 @@ remember_this:
 ```
 ---
 
-## Paper 14: Du Y. et al_summarized.md
+## Paper 10: Du Y. et al_summarized.md
 
 **Source File:** `Du Y. et al_summarized.md`
 
@@ -1883,7 +1481,7 @@ remember_this:
 ```
 ---
 
-## Paper 15: Parameswaran & Saad_summarized.md
+## Paper 11: Parameswaran & Saad_summarized.md
 
 **Source File:** `Parameswaran & Saad_summarized.md`
 
@@ -2050,7 +1648,7 @@ remember_this:
 ```
 ---
 
-## Paper 16: Ramagiri_summarized.md
+## Paper 12: Ramagiri_summarized.md
 
 **Source File:** `Ramagiri_summarized.md`
 
@@ -2161,7 +1759,7 @@ remember_this:
 ```
 ---
 
-## Paper 17: Pandiin & Matias_summarized.md
+## Paper 13: Pandiin & Matias_summarized.md
 
 **Source File:** `Pandiin & Matias_summarized.md`
 
@@ -2247,7 +1845,7 @@ remember_this:
 ```
 ---
 
-## Paper 18: Li & Li_summarized.md
+## Paper 14: Li & Li_summarized.md
 
 **Source File:** `Li & Li_summarized.md`
 
@@ -2366,7 +1964,7 @@ remember_this:
 ```
 ---
 
-## Paper 19: Theerthala_summarized.md
+## Paper 15: Theerthala_summarized.md
 
 **Source File:** `Theerthala_summarized.md`
 
@@ -2584,7 +2182,120 @@ remember_this:
 ```
 ---
 
-## Paper 20: Bachmann et al_summarized.md
+## Paper 16: Onsay & Rabajante-2025_summarized.md
+
+**Source File:** `Onsay & Rabajante-2025_summarized.md`
+
+```yaml
+paper_id: 10.1016/j.socimp.2025.100138
+designation: local-algorithm-specific
+title: From data to decision: Alleviating poverty and promoting development through measuring the unmeasurable economic numbers
+authors: Onsay, E. A.; Rabajante, J. F.
+year: 2025
+venue: Societal Impacts
+odin_topics:
+  - 5.C
+  - 6.A
+  - 6.B
+  - 8.B
+  - 12.A
+  - 12.B
+tldr: Integrates machine learning with econometrics to predict multidimensional poverty and generate localized policy targeting tools from CBMS data.
+problem_and_motivation: Traditional poverty measurement relies on costly, time-intensive surveys, and current regression-based analyses often lack predictive precision. There is a critical need for more accurate, localized, and data-driven tools to inform poverty alleviation policies in the Philippines.
+approach:
+  - Used Community-Based Monitoring System (CBMS) data from 34 localities in Camarines Sur, Philippines.
+  - Combined descriptive, diagnostic, and multidimensional statistical analysis with econometric models like logit/probit regression.
+  - Applied machine learning regression (Random Forest, XGBoost, CatBoost, LightGBM, SVR) and classification (Random Forest, AdaBoost, SVM, etc.) algorithms.
+  - Conducted 273 regression and 468 classification ensemble runs to predict poverty incidence, gap, and severity.
+  - Generated policy maps and a three-round classification system to prioritize interventions for the most vulnerable populations.
+findings:
+  - num: Random Forest classification achieved a prediction accuracy of 92.60–98.00%.
+  - num: The proposed model reduced traditional survey and data processing costs by up to 70%.
+  - Random Forest regressor and classifier outperformed other models for poverty prediction.
+  - A set of 27 multidimensional socioeconomic variables were identified as significant predictors of poverty.
+  - Distinct poverty configurations exist across different localities and indigenous tribes, requiring context-specific policies.
+key_figures_tables:
+  - Figure 1: Sample results of statistical and econometric analyses showing poverty proportions by locality → Poverty outcomes vary significantly and are influenced by multidimensional variables.
+  - Figure 2: Results of machine learning regression and classification → Random Forest models show superior performance and consistency.
+  - Table 1: Theory of Change, hypotheses, and results chain → Provides a framework linking inputs, processes, outputs, and impact indicators.
+  - Table 2: Proposed intervention programs and policy initiatives → Details targeted policies for nutrition, housing, education, and livelihood.
+  - Table 3: Multidimensional poverty indicators and target areas → Maps indicators to recommended interventions and priority groups.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: CBMS
+    definition: Community-Based Monitoring System, a data collection system for local poverty and socioeconomic indicators.
+  - term: Random Forest
+    definition: An ensemble learning method that constructs multiple decision trees and outputs the average or mode of predictions.
+  - term: XGBoost
+    definition: eXtreme Gradient Boosting, an optimized algorithm for gradient boosting known for speed and performance.
+critical_citations:
+  - "[Onsay & Rabajante, 2024] — Details the dataset and initial models used for poverty prediction."
+  - "[Sobreviñas, 2020] — Provides a framework for analyzing chronic and transient poverty using CBMS data."
+  - "[Haughton & Khandker, 2009] — Standard reference for poverty and inequality measurement techniques."
+relevance:
+  topics:
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: contextual
+      justification: Applies classification algorithms to categorize poverty levels, analogous to profiling financial behavior.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Directly employs predictive machine learning models (Random Forest, XGBoost) for forecasting socioeconomic outcomes.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: contextual
+      justification: Uses similar forecasting algorithms (Random Forest, etc.) though applied to poverty data, not spending sequences.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: contextual
+      justification: Classification models used could be adapted for anomaly detection, though not the paper's focus.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Provides a clear evaluation framework using accuracy, cost reduction, and policy targeting metrics.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Systematically evaluates and compares 7 regression and 12 classification algorithms.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: low
+      justification: The paper profiles poverty and vulnerability, which are analogous but not directly about financial behavior profiles.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: low
+      justification: Policy recommendations are similar to budget allocation strategies in a public policy context.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: low
+      justification: Related to financial management for poverty alleviation, but not specifically about savings goals.
+  contribution: This paper provides a robust methodological framework for predictive classification that can inform Odin's behavioral profiling and forecasting modules. Its use of ensemble methods and systematic evaluation offers a blueprint for Odin's algorithmic architecture. The focus on localized targeting and cost-efficiency is directly relevant to Odin's design as a PFMS for Filipino users. The paper's emphasis on data-driven policy recommendations justifies Odin's core function of providing actionable financial insights.
+  directly_justifies:
+    - "Machine learning models, specifically Random Forest, can predict financial states with up to 98% accuracy."
+    - "A systematic comparison of multiple algorithms is essential for selecting the optimal module."
+    - "A three-round classification system can prioritize users based on vulnerability."
+    - "Using local data is critical for developing context-specific financial tools."
+  limits:
+    - "The study focuses on poverty prediction, not personal spending, so direct applicability to Odin's core tasks is limited."
+    - "The dataset is regional (Bicol), which may limit generalizability to other Filipino demographics."
+  mapping_rationale: A systematic scan of the 12 functional domains revealed that the paper's primary relevance lies in its algorithmic and evaluative contributions. The domains of Spending Forecasting (6.A, 6.B) and System Evaluation (12.A, 12.B) were flagged as having high relevance because the paper directly compares and validates machine learning models for prediction, which is analogous to Odin's forecasting needs. The Behavioral Profiling domain (5.C) is contextually relevant due to its classification approach. Other domains like Expense Categorization (3.A-C) and Mobile-First Design (9.A-B) were considered and rejected as the paper does not address them. Similarly, domains like Data Privacy (10) and Engagement (11) were rejected for lacking discussion. The financial domains (1, 2, 7, 13) were rejected as the paper's scope is macroeconomic poverty, not personal finance. The final assessment is that the paper offers high-value methodological and evaluation strategies that can be adapted for Odin's algorithmic core.
+limitations:
+  - "Focuses on macroeconomic poverty, not personal financial behavior."
+  - "Models are region-specific and may not generalize to the broader Filipino young professional demographic."
+  - "Does not address real-time data processing or mobile application constraints."
+  - "The ethical statement notes that ethical clearance was not required, but using socioeconomic data in a PFMS requires careful privacy handling [unacknowledged]."
+remember_this:
+  - "Random Forest achieved 92.60-98.00% accuracy in classifying poverty states."
+  - "Systematic comparison of 12 classification algorithms is essential for performance validation."
+  - "Using 27 socioeconomic variables improved prediction and policy targeting."
+  - "The framework enables localized policy targeting and cost-efficient data analysis."
+```
+---
+
+## Paper 17: Bachmann et al_summarized.md
 
 **Source File:** `Bachmann et al_summarized.md`
 
@@ -2700,7 +2411,7 @@ remember_this:
 ```
 ---
 
-## Paper 21: Jamal & Hashmat_summarized.md
+## Paper 18: Jamal & Hashmat_summarized.md
 
 **Source File:** `Jamal & Hashmat_summarized.md`
 
@@ -2820,7 +2531,7 @@ remember_this:
 ```
 ---
 
-## Paper 22: Andersson_summarized.md
+## Paper 19: Andersson_summarized.md
 
 **Source File:** `Andersson_summarized.md`
 
@@ -2919,7 +2630,7 @@ remember_this:
 ```
 ---
 
-## Paper 23: Mannapur_summarized.md
+## Paper 20: Mannapur_summarized.md
 
 **Source File:** `Mannapur_summarized.md`
 
@@ -3047,7 +2758,7 @@ remember_this:
 ```
 ---
 
-## Paper 24: Dritsas & Trigka_summarized.md
+## Paper 21: Dritsas & Trigka_summarized.md
 
 **Source File:** `Dritsas & Trigka_summarized.md`
 
@@ -3183,7 +2894,7 @@ remember_this:
 ```
 ---
 
-## Paper 25: Ibrahim et al_summarized.md
+## Paper 22: Ibrahim et al_summarized.md
 
 **Source File:** `Ibrahim et al_summarized.md`
 
@@ -3316,7 +3027,7 @@ remember_this:
 ```
 ---
 
-## Paper 26: Yunita et al_summarized.md
+## Paper 23: Yunita et al_summarized.md
 
 **Source File:** `Yunita et al_summarized.md`
 
@@ -3462,7 +3173,7 @@ remember_this:
 ```
 ---
 
-## Paper 27: Guban et al_summarized.md
+## Paper 24: Guban et al_summarized.md
 
 **Source File:** `Guban et al_summarized.md`
 
@@ -3565,7 +3276,7 @@ remember_this:
 ```
 ---
 
-## Paper 28: Gulbakyt et al_summarized.md
+## Paper 25: Gulbakyt et al_summarized.md
 
 **Source File:** `Gulbakyt et al_summarized.md`
 
@@ -3681,7 +3392,7 @@ remember_this:
 ```
 ---
 
-## Paper 29: Siddiqui_summarized.md
+## Paper 26: Siddiqui_summarized.md
 
 **Source File:** `Siddiqui_summarized.md`
 
@@ -3813,7 +3524,7 @@ remember_this:
 ```
 ---
 
-## Paper 30: Oktana & Sanjaya_summarized.md
+## Paper 27: Oktana & Sanjaya_summarized.md
 
 **Source File:** `Oktana & Sanjaya_summarized.md`
 
@@ -3915,7 +3626,7 @@ remember_this:
 ```
 ---
 
-## Paper 31: Martinez_summarized.md
+## Paper 28: Martinez_summarized.md
 
 **Source File:** `Martinez_summarized.md`
 
@@ -4031,7 +3742,7 @@ remember_this:
 ```
 ---
 
-## Paper 32: Vidal-Sarahina_summarized.md
+## Paper 29: Vidal-Sarahina_summarized.md
 
 **Source File:** `Vidal-Sarahina_summarized.md`
 
@@ -4158,7 +3869,154 @@ remember_this:
 ```
 ---
 
-## Paper 33: Alunen et al_summarized.md
+## Paper 30: Chahar et al_summarized.md
+
+**Source File:** `Chahar et al_summarized.md`
+
+```yaml
+paper_id: 10.2139/ssrn.6377518
+designation: international
+title: Artificial Intelligence Powered Personal Finance Management System
+authors: Chahar, P.; Vishwakarma, Y.; Mishra, R.; Paliwal, G.
+year: 2025
+venue: International Conference on Innovative Computing and Communication
+odin_topics:
+  - 3.A
+  - 3.B
+  - 4.A
+  - 4.B
+  - 6.A
+  - 7.A
+  - 7.B
+  - 8.A
+  - 10.A
+  - 11.A
+tldr: Proposes an AI-powered personal finance assistant using ML and NLP for dynamic, user-specific financial insights, budget recommendations, and financial education.
+problem_and_motivation: Existing personal finance solutions rely on static budgeting and generic advice, lacking adaptability and personalization. Individuals struggle with financial planning due to complex financial systems and limited literacy. This paper aims to address these gaps with an intelligent, adaptive, and educational system.
+approach:
+  - The system architecture comprises six modules: data collection, expense classification, predictive analytics, recommendation, NLP interface, and security.
+  - Expense classification uses supervised ML (Random Forest, SVM, LSTM) on transaction metadata and text descriptions, employing TF-IDF and word embeddings.
+  - Predictive analytics applies time series forecasting (ARIMA, LSTM) to predict future expenses and income for proactive planning.
+  - A recommendation system provides personalized financial advice and budgeting tips based on user behavior, goals, and predictive insights.
+  - The system is implemented with React.js for the frontend, Flask for the backend and ML operations, and MongoDB for data storage.
+  - Security is addressed with end-to-end encryption, role-based access control, and anonymization for training data, complying with GDPR.
+findings:
+  - num: The system achieved a user satisfaction rating of 4.4/5, with high scores for ease of use (4.5/5) and goal-setting functionality (4.3/5).
+  - num: Transaction categorization accuracy was rated 4.2/5, though some users noted issues with ambiguous or vendor-specific transactions.
+  - The system effectively provides a comprehensive financial overview through automated data aggregation and analysis.
+  - Adaptive budgets based on spending habits and income sources were successfully generated using ML techniques.
+  - Incorporating educational modules was identified as a key feature for improving financial literacy.
+  - The system performed well for users with stable incomes but struggled with irregular income streams and highly variable expenses.
+  - Model adaptability was a challenge, particularly for users with fluctuating earnings or atypical spending patterns.
+  - Data quality and accessibility were identified as critical factors influencing the accuracy of predictions and recommendations.
+  - User trust and adoption remain significant challenges, requiring transparent interfaces and clear explanations of AI decision-making.
+  - Regulatory compliance and risk management, including algorithmic bias and model drift, require ongoing attention.
+key_figures_tables:
+  - "Figure 1: Real-time budget display → Shows a dashboard for current budget tracking."
+  - "Figure 2: Jinja2 HTML template for expense data submission and visualization → Displays a user interface for expense input and chart rendering."
+  - "Figure 3: SQL view for monthly financial summary → Defines a database view for calculating income, expenses, and savings per user."
+  - "Figure 4: Data flow diagram → Illustrates the flow from user data input to the AI engine and back to the UI."
+  - "Figure 6: Distribution of expenses across transaction types → Pie chart showing percentage breakdown of spending categories."
+  - "Table 1: AI-powered finance management tools → Summarizes features, AI techniques, strengths, and limitations of existing tools like Mint, YNAB, Digit, and Tally."
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: "PFMS"
+    definition: "Personal Finance Management System"
+  - term: "NLP"
+    definition: "Natural Language Processing"
+  - term: "ML"
+    definition: "Machine Learning"
+  - term: "GDPR"
+    definition: "General Data Protection Regulation"
+  - term: "ARIMA"
+    definition: "Autoregressive Integrated Moving Average"
+  - term: "LSTM"
+    definition: "Long Short-Term Memory"
+  - term: "SVM"
+    definition: "Support Vector Machine"
+critical_citations:
+  - "[Zhang et al., 2007] — Uses decision trees and SVM for classification."
+  - "[Siami-Namini et al., 2018] — Compares ARIMA and LSTM for forecasting."
+  - "[Luef et al., 2020] — Applies recommendation systems in finance."
+  - "[Galperti, 2019] — Provides a theory of personal budgeting."
+  - "[Paliwal et al., 2025] — Discusses trust in AI systems."
+relevance:
+  topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: high
+      justification: "Proposes ML models (RF, SVM, LSTM) for automated expense categorization."
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: medium
+      justification: "Discusses categorization into meaningful groups like food, transport, utilities."
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: "Reviews existing tools (Mint, YNAB, Digit) and their limitations."
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: "Critiques static, rule-based designs and lack of personalization in current systems."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: medium
+      justification: "Applies ARIMA and LSTM for expense and income forecasting."
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: contextual
+      justification: "Mentions LSTM for sequential analysis but does not detail the algorithm."
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: high
+      justification: "Discusses goal-based and adaptive budgeting strategies."
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: high
+      justification: "Generates personalized budget recommendations based on spending behavior."
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: "Mentions fraud and anomaly detection but does not specify the approach."
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: "Describes encryption, access control, and GDPR compliance for data protection."
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: low
+      justification: "Mentions user satisfaction and engagement as key to system success."
+  contribution: "This paper provides a high-level blueprint for an AI-powered PFMS, justifying the integration of ML and NLP to address the limitations of static budgeting tools. It directly supports Odin's rationale for using predictive analytics and expense classification as core modules by reviewing relevant techniques and their applications. The paper's discussion of user trust and data security underlines the importance of these non-functional requirements for Odin's design. The systematic literature review and proposed architecture offer a foundation for building Odin's recommendation and classification engines, although it does not provide deep algorithmic details. The evaluation using user satisfaction metrics provides a benchmark for assessing Odin's user-centered design goals."
+  directly_justifies:
+    - "AI systems can learn from individual spending patterns to provide predictive insights and tailored advice."
+    - "Expense classification models using ML are fundamental for budget management and visualizing spending habits."
+    - "Predictive analytics enable users to plan budgets proactively and anticipate financial shortfalls."
+    - "Recommendation systems enhance engagement by tailoring financial guidance to individual user profiles and goals."
+    - "Security and privacy measures like encryption and anonymization are critical for user trust in PFMS."
+  limits:
+    - "The paper is a proposal and literature review, lacking empirical evaluation of its own AI models."
+    - "The proposed system's performance for users with irregular income is acknowledged as a challenge, but not fully resolved."
+    - "The paper does not provide a detailed comparison of the proposed system against existing state-of-the-art AI techniques."
+    - "The security and privacy measures are mentioned at a high level, without implementation details or validation."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The domains of 'Expense Categorization' (3.A, 3.B), 'Existing Systems & Gaps' (4.A, 4.B), and 'Budget Recommendation' (7.A, 7.B) were flagged as high relevance because the paper directly addresses these with proposed ML solutions and reviews existing tools. 'Spending Forecasting' (6.A) was medium relevance as the paper discusses forecasting methods. 'Data Privacy & User Trust' (10.A) and 'User Retention & Engagement' (11.A) were low/medium relevance, as they are mentioned but not the core focus. Topics like 'Anomaly Detection' (8.A) and 'Forecasting Algorithms for Sequential Spending Data' (6.B) were considered but rejected or given low/contextual relevance due to the paper's lack of algorithmic depth. The paper was also considered for 'Savings & Debt Management' (13.A-C), but it only briefly mentions savings, not in a specific module, so it was rejected. Overall, the paper provides a strong high-level justification for the core modules of an AI-powered PFMS but lacks the technical specificity required for direct implementation of Odin's algorithms."
+limitations:
+  - "As a proposal paper, it does not present empirical results for its own proposed system, limiting the validation of its claims."
+  - "The evaluation is based on a literature review and preliminary prototype feedback, not a fully deployed system."
+  - "The paper acknowledges challenges with data quality and adaptability for irregular incomes but does not offer concrete solutions."
+  - "The discussion of AI techniques is high-level and lacks the detail necessary for a direct implementation in Odin."
+  - "User trust and adoption challenges are identified but the paper does not propose novel methods to address these beyond transparency."
+remember_this:
+  - "Achieved a 4.4/5 user satisfaction rating for its PFMS prototype."
+  - "Uses ML for expense classification and LSTM for spending prediction."
+  - "Identifies user trust and data quality as key adoption barriers."
+  - "Recommends adaptive budgeting based on income and spending habits."
+  - "Emphasizes financial literacy education as a core system feature."
+```
+---
+
+## Paper 31: Alunen et al_summarized.md
 
 **Source File:** `Alunen et al_summarized.md`
 
@@ -4277,7 +4135,7 @@ remember_this:
 ```
 ---
 
-## Paper 34: Begum_summarized.md
+## Paper 32: Begum_summarized.md
 
 **Source File:** `Begum_summarized.md`
 
@@ -4402,7 +4260,7 @@ remember_this:
 ```
 ---
 
-## Paper 35: Li et al_summarized.md
+## Paper 33: Li et al_summarized.md
 
 **Source File:** `Li et al_summarized.md`
 
@@ -4504,7 +4362,7 @@ remember_this:
 ```
 ---
 
-## Paper 36: Vyas_summarized.md
+## Paper 34: Vyas_summarized.md
 
 **Source File:** `Vyas_summarized.md`
 
@@ -4656,7 +4514,7 @@ remember_this:
 ```
 ---
 
-## Paper 37: Bukovski et al_summarized.md
+## Paper 35: Bukovski et al_summarized.md
 
 **Source File:** `Bukovski et al_summarized.md`
 
@@ -4838,7 +4696,7 @@ remember_this:
 ```
 ---
 
-## Paper 38: Veldurthi_summarized.md
+## Paper 36: Veldurthi_summarized.md
 
 **Source File:** `Veldurthi_summarized.md`
 
@@ -4977,7 +4835,7 @@ remember_this:
 ```
 ---
 
-## Paper 39: Hall & Rasheed_summarized.md
+## Paper 37: Hall & Rasheed_summarized.md
 
 **Source File:** `Hall & Rasheed_summarized.md`
 
@@ -5118,7 +4976,7 @@ remember_this:
 ```
 ---
 
-## Paper 40: Garcia_summarized.md
+## Paper 38: Garcia_summarized.md
 
 **Source File:** `Garcia_summarized.md`
 
@@ -5230,7 +5088,7 @@ remember_this:
 ```
 ---
 
-## Paper 41: Sabiri et al_summarized.md
+## Paper 39: Sabiri et al_summarized.md
 
 **Source File:** `Sabiri et al_summarized.md`
 
@@ -5341,7 +5199,7 @@ remember_this:
 ```
 ---
 
-## Paper 42: Flores_summarized.md
+## Paper 40: Flores_summarized.md
 
 **Source File:** `Flores_summarized.md`
 
@@ -5477,7 +5335,7 @@ remember_this:
 ```
 ---
 
-## Paper 43: Bongado et al_summarized.md
+## Paper 41: Bongado et al_summarized.md
 
 **Source File:** `Bongado et al_summarized.md`
 
@@ -5593,7 +5451,7 @@ remember_this:
 ```
 ---
 
-## Paper 44: Al-E'mari et al_summarized.md
+## Paper 42: Al-E'mari et al_summarized.md
 
 **Source File:** `Al-E'mari et al_summarized.md`
 
@@ -5698,7 +5556,7 @@ remember_this:
 ```
 ---
 
-## Paper 45: Tiongco & Gangan_summarized.md
+## Paper 43: Tiongco & Gangan_summarized.md
 
 **Source File:** `Tiongco & Gangan_summarized.md`
 
@@ -5805,7 +5663,7 @@ remember_this:
 ```
 ---
 
-## Paper 46: Carmona_summarized.md
+## Paper 44: Carmona_summarized.md
 
 **Source File:** `Carmona_summarized.md`
 
@@ -5966,7 +5824,7 @@ remember_this:
 ```
 ---
 
-## Paper 47: Aggarwal et al_summarized.md
+## Paper 45: Aggarwal et al_summarized.md
 
 **Source File:** `Aggarwal et al_summarized.md`
 
@@ -6127,7 +5985,7 @@ remember_this:
 ```
 ---
 
-## Paper 48: Velez_summarized.md
+## Paper 46: Velez_summarized.md
 
 **Source File:** `Velez_summarized.md`
 
@@ -6302,7 +6160,7 @@ remember_this:
 ```
 ---
 
-## Paper 49: Badiger et al_summarized.md
+## Paper 47: Badiger et al_summarized.md
 
 **Source File:** `Badiger et al_summarized.md`
 
@@ -6412,7 +6270,7 @@ remember_this:
 ```
 ---
 
-## Paper 50: Pakarinen_summarized.md
+## Paper 48: Pakarinen_summarized.md
 
 **Source File:** `Pakarinen_summarized.md`
 
@@ -6523,6 +6381,221 @@ remember_this:
   - "Category-based overviews are more effective than long legal text for consent comprehension."
   - "Iterative design based on user feedback significantly reduced task completion time."
   - "Clear consent status visibility reduces user uncertainty and hesitation."
+```
+---
+
+## Paper 49: Sipila_summarized.md
+
+**Source File:** `Sipila_summarized.md`
+
+```yaml
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+designation: international
+title: Proof of concept of centralized personal finance application
+authors: Sipilä, M.
+year: 2025
+venue: Unknown
+odin_topics:
+  - 3.A
+  - 3.B
+  - 4.A
+  - 4.B
+  - 9.A
+  - 10.A
+  - 11.A
+  - 12.A
+tldr: A proof-of-concept personal finance application was developed using DSRM to consolidate fragmented financial tracking, automate data retrieval, and generate integrated reports for a stakeholder.
+problem_and_motivation: Stakeholders managing finances over a decade rely on fragmented tools like spreadsheets and third-party apps, leading to scalability issues, high manual effort, and error-prone reporting. Existing PFM tools lack comprehensive integration and automation, failing to meet the needs of sophisticated users with specific asset tracking requirements.
+approach:
+  - The Design Science Research Methodology (DSRM) was followed, involving six iterative phases from problem identification to evaluation.
+  - A structured questionnaire identified stakeholder challenges, including complexity, lack of automation, and reporting inefficiencies.
+  - The application was built using Flutter for a cross-platform UI, ASP.NET Core for the backend API, and MongoDB for data storage.
+  - Key features include asset tracking (shares, cash, real estate), categorized cash flow monitoring, and automated PDF report generation.
+  - External integrations were implemented using Google Sheets API for stock prices and HexaRate API for exchange rates, with a focus on automating data retrieval.
+findings:
+  - num: The PoC application significantly reduced manual work and human error by centralizing financial data and automating calculations.
+  - num: The stakeholder reported a reduction in manual effort and increased trust in data accuracy, validated through task-based user testing.
+  - num: The system successfully replaced a multi-step manual reporting process with one integrated, automated PDF report generation feature.
+  - The stakeholder found the interface intuitive and the visualizations (pie charts, trend graphs) clear and informative for gaining financial insights.
+  - The application effectively addressed the core "Must have" requirements, such as data visualization and asset tagging, as defined in the design phase.
+  - User feedback highlighted the need for refinements in tooltips, label clarity, and a clearer definition of the cash flow module's purpose.
+key_figures_tables:
+  - Figure 3: Interactive doughnut chart of shares → Visualizes portfolio distribution.
+  - Figure 4: Editable tables of assets with summary stats → Enables data review and modification.
+  - Figure 5: User net worth over time → Tracks historical asset growth trends.
+  - Figure 7: Multi-layered pie charts of share distribution → Shows categorization by type, country, and subcategory.
+  - Figure 9: Cash flow tracking charts and timeline → Compares monthly income and expenses.
+  - Figure 10: User-generated financial report → Consolidates key metrics into a PDF.
+  - Table 9: Baseline vs. PoC system comparison → Highlights improvements in automation and centralization.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: DSRM
+    definition: Design Science Research Methodology
+  - term: PFM
+    definition: Personal Finance Management
+  - term: PoC
+    definition: Proof-of-concept
+  - term: FR
+    definition: Functional Requirement
+  - term: QA
+    definition: Quality Attribute
+critical_citations:
+  - "[Cederberg, 2013] — Highlights user preference for automation and visual clarity."
+  - "[Torno et al., 2021] — Identifies lack of holistic integration in PFM apps."
+  - "[Stefanov et al., 2024] — Notes need for localized and centralized PFM solutions."
+  - "[Herrala et al., 2023] — Links tool complexity to user stress and distrust."
+relevance:
+  topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: The system implements categorization for transactions and assets, aligning with this topic.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: medium
+      justification: User tagging and categorization of cash flow and assets are core to the design.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: The thesis provides a detailed literature review and analysis of PFM landscape limitations.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Directly addresses fragmentation, manual effort, and scalability gaps in current tools.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: contextual
+      justification: Flutter was used for cross-platform support, but mobile optimization was not completed.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: The lack of authentication is identified as a major limitation, highlighting its importance.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Discusses how automation and visualization can improve user engagement and motivation.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Used a structured DSRM evaluation with task-based testing and stakeholder questionnaires.
+  contribution: "This research contributes a practical proof-of-concept that demonstrates how centralized financial data, automated retrieval, and integrated reporting can significantly reduce manual workload and errors for a sophisticated user. The application's design directly informs Odin's architecture for asset tracking and reporting modules. The DSRM-based iterative development and stakeholder evaluation provide a validated framework for building user-centric PFM tools. The findings on automation and data centralization justify Odin's focus on these features to address similar gaps in the Filipino context."
+  directly_justifies:
+    - "A centralized platform can solve the problem of fragmented financial data from multiple sources."
+    - "Automating data retrieval for share prices and exchange rates significantly reduces manual effort and errors."
+    - "Integrated reporting replaces time-consuming manual processes with on-demand summaries."
+    - "User-centered design and iterative feedback are critical for developing effective PFM tools."
+    - "Stakeholders value systems that are reliable, automated, and provide clear visual insights."
+  limits:
+    - "The study is based on a single stakeholder, limiting generalizability to broader populations."
+    - "Full automation through bank and broker APIs was not achieved, relying on manual entry and workarounds."
+    - "No authentication or authorization mechanisms were implemented, posing data security risks."
+    - "Mobile-specific UI optimization was not completed, focusing primarily on desktop and web platforms."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. Domains directly relevant to the thesis's core contribution (expense categorization, existing systems/gaps, and system evaluation) were flagged as high priority. The paper's literature review and problem analysis strongly support topics like 3.A, 3.B, 4.A, and 4.B (high). Its practical evaluation using a DSRM framework provides a direct contribution to 12.A (high). The discussion on user engagement and motivation links to 11.A (medium). The mention of mobile-first design (9.A) and data security (10.A) is purely contextual, as these were not primary implementation focuses due to the PoC scope. Topics related to Filipino cultural context (2.A-D), behavioral profiling (5.A-C), forecasting (6.A-B), budget recommendation (7.A-D), anomaly detection (8.A-C), and savings/debt management (13.A-C) were considered but rejected as the thesis does not address these specific problem domains. The paper's overall relevance to Odin is high as it provides a validated blueprint for a centralized PFM system with automated reporting, addressing gaps found in many existing tools."
+limitations:
+  - "The system was only tested with one stakeholder, limiting generalizability of usability findings. [unacknowledged]"
+  - "User authentication and data privacy were not implemented, making it unsuitable for multi-user deployment."
+  - "Full automation via bank/broker APIs was not achieved, requiring manual data entry for some transactions."
+  - "Mobile UI optimization was not completed, limiting the 'mobile-first' aspect of the design."
+  - "Performance was not formally tested under load, and no unit/integration tests were documented."
+  - "The study's findings may be biased due to the stakeholder's high financial literacy."
+remember_this:
+  - "Centralized PFM tools reduce manual work and improve data reliability."
+  - "Automated reporting saves significant time compared to manual quarterly reviews."
+  - "Stakeholder feedback confirmed a reduction in manual effort and increased trust in data."
+  - "The PoC addressed core requirements but lacked authentication and mobile optimization."
+  - "DSRM provides an effective framework for developing user-centered financial applications."
+```
+---
+
+## Paper 50: Aboud_summarized.md
+
+**Source File:** `Aboud_summarized.md`
+
+```yaml
+paper_id: 10.21070/acopen.10.2025.12858
+designation: international-algorithm-specific
+title: Goal Programming Model in Financial Planning of the International Development Bank
+authors: Aboud, M.M.S.F.
+year: 2025
+venue: Academia Open
+odin_topics:
+  - 7.C
+  - 12.C
+tldr: Goal programming optimizes conflicting financial objectives in banking under resource constraints, achieving near-optimal solutions with minimal deviations.
+problem_and_motivation: Financial institutions struggle to balance multiple conflicting objectives like profitability, cost control, and liquidity. Traditional planning models lack the capability to handle these competing goals, especially in resource-constrained environments. A quantitative method is needed to reconcile these trade-offs and improve decision-making.
+approach:
+  - A weighted-preemptive hybrid goal programming model is formulated for bank financial planning.
+  - The model incorporates multiple objectives: revenue, expenses, net profit, fixed assets, loans, and equity.
+  - WINQSB software is used to solve the model with prioritized goals and assigned weights.
+  - The case study uses annual financial data from the International Development Bank for 2016-2024.
+  - The model is evaluated by comparing actual and target values across all financial goals.
+findings:
+  - The GP model achieved near-optimal solutions for all prioritized goals.
+  - Revenue goal was slightly underachieved with a negative deviation of 0.1884.
+  - Expense goal was slightly underachieved with a negative deviation of 0.1873.
+  - Net profit goal was underachieved with a negative deviation of 0.3006.
+  - Fixed assets goal was overachieved with a positive deviation of 0.7833.
+  - Equity goal was underachieved with a negative deviation of 0.2956.
+  - The model demonstrates flexible prioritization of goals in a multi-objective setting.
+key_figures_tables:
+  - Table 1: Financial data summary 2016-2024 → Provides raw data for the model.
+  - Table 2: Scaled financial data in billion IQD → Enables analysis with smaller numbers.
+key_equations:
+  - equation: Min Z = Σ(w_i^- d_i^- + w_i^+ d_i^+)
+    explanation: Minimizes weighted deviations from multiple goals.
+  - equation: Σ a_ij X_j + d_i^- - d_i^+ = b_i
+    explanation: Defines goal constraints with deviation variables.
+definitions:
+  - term: Goal Programming
+    definition: A mathematical model for solving multi-objective problems with competing goals.
+  - term: Negative Deviation
+    definition: The amount by which an actual value is below the aspiration level.
+  - term: Positive Deviation
+    definition: The amount by which an actual value exceeds the aspiration level.
+  - term: Weighted Method
+    definition: Assigns weights to goals and minimizes total weighted deviation.
+  - term: Preemptive Method
+    definition: Prioritizes goals, satisfying higher-priority ones first.
+  - term: WINQSB
+    definition: Software used to solve the goal programming model.
+critical_citations:
+  - "[Alam, 2022] — Foundational GP model for financial planning."
+  - "[Lakshmi et al., 2021] — GP application in financial planning case study."
+  - "[Nyor et al., 2022] — GP for financial management in Nigeria."
+relevance:
+  topics:
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: high
+      justification: Applies goal programming to optimize multi-objective financial planning.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: medium
+      justification: Demonstrates a method for evaluating optimal solutions against target values.
+  contribution: "The paper provides a practical optimization framework that can inform Odin's budget recommendation module by demonstrating how conflicting objectives (e.g., maximizing savings while minimizing expenses) can be balanced using a weighted-preemptive goal programming approach. The solution method, using WINQSB, offers a reproducible technique for solving multi-objective financial planning problems with prioritized constraints. The case study results, including deviation analysis, provide a benchmark for evaluating optimization models. The model's flexibility suggests it can be adapted for personalized budget allocation based on user-defined financial goals. The research validates the use of constrained optimization for complex financial planning in resource-limited settings, directly applicable to Odin's budget recommendation engine."
+  directly_justifies:
+    - "Goal programming can optimize financial planning with conflicting objectives."
+    - "The model achieves near-optimal solutions with minimal goal deviations."
+    - "Prioritization of goals allows flexible decision-making in resource allocation."
+    - "The approach is applicable to banking and personal finance contexts."
+  limits:
+    - "The model is demonstrated on a single bank's data and may not generalize."
+    - "User preferences and behavioral factors are not incorporated."
+    - "The study focuses on a bank, not individual personal finance management."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to the 'Budget Recommendation' domain (Topic 7.C) because it directly applies constrained optimization (goal programming) to balance multiple, conflicting financial objectives. It is also relevant to 'System Evaluation' (Topic 12.C) because it demonstrates an evaluation methodology based on comparing actual outcomes to target values and analyzing deviations. The paper touches on 'Savings & Debt Management' (Topic 13.A and 13.B) tangentially through its objectives but does not focus on user-level savings goals or debt management strategies. The following domains/topics were considered and rejected: 'Filipino Cultural Context' (Topics 2.A-2.D) because the case study is based on an Iraqi bank and does not address Filipino-specific practices; 'Expense Categorization' (Topic 3.A-3.C) because the paper does not deal with categorizing expenses; 'Behavioral Profiling' (Topics 5.A-5.C) because it does not involve user behavior or profiles; 'Anomaly Detection' (Topics 8.A-8.C) because it does not address detecting outliers. Overall, the paper is most relevant for its constrained optimization methodology, which can be adapted for Odin's budget recommendation algorithm."
+limitations:
+  - "The model is based on historical data from a single bank, limiting generalizability."
+  - "The study does not consider dynamic changes in user behavior or financial conditions."
+  - "Behavioral and psychological factors influencing financial decisions are not incorporated. [unacknowledged]"
+  - "The approach is applied to banking rather than individual personal finance. [unacknowledged]"
+remember_this:
+  - "Goal programming balances conflicting financial objectives effectively."
+  - "The model achieved near-optimal solutions with minimal deviations."
+  - "Prioritization allows flexible resource allocation in financial planning."
+  - "Multi-objective optimization is feasible for complex financial systems."
+  - "The method can be adapted for personalized budget recommendation."
 ```
 ---
 

@@ -1,0 +1,96 @@
+```yaml
+paper_id: 10.51483/IJAIML.6.2s.2026.754-762
+designation: international-algorithm-specific
+title: Robust Learning Under Distribution Shifts for Non-Stationary Data Environments
+authors: Rekha, D.; Vairavan, S.; MP, S.; Katariya, J. K.; Parikh, S. M.; Shanthi, T.; Shanthi, R.
+year: 2026
+venue: International Journal of Artificial Intelligence and Machine Learning
+odin_topics:
+  - 4.B
+  - 6.B
+  - 8.A
+  - 8.B
+  - 12.A
+tldr: An adaptive learning framework combining AHO-InDNN and LDP-based optimization achieves robust fraud detection under sudden, gradual, and recurrent concept drift in financial transaction streams.
+problem_and_motivation: Existing machine learning models assume stationary data distributions, but real-world financial transactions exhibit concept drift due to evolving fraud strategies and user behavior. This distribution shift degrades model performance and requires continuous adaptation without full retraining. Current approaches lack integrated drift detection, online learning, and uncertainty-aware optimization.
+approach:
+  - Used PaySim artificial mobile money transaction data with 30 days of sequential records and 743 time steps.
+  - Implemented a drift detection module using statistical divergence and mean shift to identify sudden, gradual, and recurrent concept drift.
+  - Designed an Incremental Deep Neural Network (InDNN) with dynamic hidden layers and ReLU activation for online learning.
+  - Applied Archerfish Hunting Optimization (AHO) for parameter tuning, balancing exploration and exploitation via shooting and jumping behaviors.
+  - Introduced Large Deviations Principle (LDP) based optimization to enhance stability and robustness under distribution shifts.
+  - Compared against KNN, SMOTEBoost with cost-sensitive learning, and MH-DRNN using accuracy, precision, recall, and F1-score.
+findings:
+  - num: 98.74% accuracy, 98.42% precision, 98.52% recall, and 98.37% F1-score on the PaySim dataset.
+  - AHO-InDNN outperformed KNN, SMOTEBoost, and MH-DRNN across all metrics.
+  - The model effectively adapts to sudden, gradual, and recurrent concept drift without full retraining.
+  - LDP-based optimization reduces false positives and improves generalization in non-stationary environments.
+key_figures_tables:
+  - Figure 1: Architecture of the proposed robust adaptive learning framework → Shows four modules: data input, drift detection, adaptive learning, output prediction.
+  - Figure 2: Fraud rate changes under three drift types (sudden, gradual, recurrent) → Illustrates the need for adaptive learning under dynamic fraud patterns.
+  - Table 1: Types of concept drift and examples → Defines sudden, gradual, and recurrent drift with real-world fraud examples.
+  - Table 2: Performance comparison of models → Proposed model achieves highest accuracy, precision, recall, and F1.
+key_equations:
+  - equation: y' = (y - y_min) / (y_max - y_min)
+    explanation: Scales features to [0,1] for stable learning.
+  - equation: F(θ) = -1/M ∑_m ∑_p s_mp log x_mp
+    explanation: Cross-entropy loss with robustness regularization.
+  - equation: θ_s = θ_{s-1} - α * (β1 m_{s-1} + (1-β1)∇θ F(θ_{s-1})) / (sqrt(β2 v_{s-1} + (1-β2)(∇θ F(θ_{s-1}))^2 + ε))
+    explanation: Adam-like update for dynamic parameter adaptation.
+  - equation: lim_{s→∞} 1/s log P(X_s ∈ A) = - inf_{x∈A} I(x)
+    explanation: Measures exponential decay rate of rare fraud events.
+definitions:
+  - term: AHO
+    definition: Archerfish Hunting Optimization, a metaheuristic for parameter tuning balancing exploration and exploitation.
+  - term: InDNN
+    definition: Incremental Deep Neural Network with dynamic depth and neuron structure for non-stationary data.
+  - term: LDP
+    definition: Large Deviations Principle, a probabilistic method for measuring rare event probabilities in streaming data.
+  - term: Concept drift
+    definition: Change in the conditional distribution between input and output over time.
+  - term: Distribution shift
+    definition: Change in data distribution between training and testing phases.
+critical_citations:
+  - "[Liu et al., 2024] — Deep reinforcement learning in nonstationary environments."
+  - "[Halstead et al., 2022] — Analyzing concept drift adaptation."
+  - "[Cano and Krawczyk, 2022] — Online self-adjusting ensemble for drifting data."
+relevance:
+  topics:
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: medium
+      justification: Identifies research gap in integrated drift detection and adaptive learning.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: Uses sequential transaction data but focuses on fraud detection, not spending forecasting.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Directly addresses fraud detection as anomaly detection in financial transactions.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Proposes AHO-InDNN algorithm specifically for detecting fraud under concept drift.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: low
+      justification: Uses standard classification metrics but not tailored to PFMS evaluation.
+  contribution: The paper's drift-aware learning framework directly justifies Odin's anomaly detection module by demonstrating how adaptive algorithms can maintain accuracy under shifting spending patterns. The AHO-InDNN approach offers a pathway for Odin's anomaly detection algorithms (8.B) to handle real-world concept drift without full retraining. The LDP-based robustness evaluation informs Odin's system evaluation (12.A) by providing metrics for stability under distribution shifts. The identified gaps in existing systems (4.B) highlight the need for Odin's integrated adaptive learning capabilities.
+  directly_justifies:
+    - Adaptive learning frameworks can maintain fraud detection accuracy above 98% under concept drift.
+    - Integrated drift detection and online learning outperform static models in non-stationary financial data.
+    - LDP-based optimization reduces false positives and improves generalization in dynamic environments.
+  limits:
+    - None identified.
+  mapping_rationale: Systematic scan across all 12 functional domains flagged only Anomaly Detection and related topics as relevant. The paper directly supports 8.A and 8.B with high relevance due to its fraud detection focus under concept drift. Topic 4.B received medium relevance because the paper explicitly discusses gaps in existing drift detection methods, but it does not survey PFMS specifically. Topic 6.B was considered low because while the data is sequential, the task is fraud classification rather than spending forecasting. Topic 12.A was considered low because evaluation metrics are standard and not PFMS-specific. Domains such as Filipino Cultural Context, Expense Categorization, Budget Recommendation, and Mobile-First Design were rejected as the paper contains no content on these topics. Overall, the paper is highly relevant to Odin's anomaly detection and adaptive learning components but has limited applicability elsewhere.
+limitations:
+  - Tested only on simulated PaySim data; real-world validation is needed. [unacknowledged]
+  - Computational overhead of AHO may hinder real-time deployment. [unacknowledged]
+  - Generalizability to other financial datasets beyond mobile money transfers is untested. [unacknowledged]
+remember_this:
+  - AHO-InDNN achieves 98.74% accuracy in fraud detection under concept drift.
+  - Integrated drift detection and online learning enable adaptation without full retraining.
+  - LDP-based optimization improves stability and reduces false alarms in dynamic data.
+  - The framework handles sudden, gradual, and recurrent distribution shifts effectively.
+```

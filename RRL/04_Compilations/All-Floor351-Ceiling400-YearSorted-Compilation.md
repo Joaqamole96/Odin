@@ -6,385 +6,7 @@
 
 ---
 
-## Paper 1: Qu et al_summarized.md
-
-**Source File:** `Qu et al_summarized.md`
-
-```yaml
-paper_id: 10.1145/3616855.3635778
-designation: international-algorithm-specific
-title: Budgeted Embedding Table For Recommender Systems
-authors: Qu, Y.; Chen, T.; Nguyen, Q. V. H.; Yin, H.
-year: 2024
-venue: Proceedings of the 17th ACM International Conference on Web Search and Data Mining (WSDM ’24)
-odin_topics:
-  - 4.A
-  - 4.B
-  - 7.D
-  - 8.B
-  - 9.A
-  - 12.A
-  - 12.B
-tldr: A method for generating table-level embedding sizes that strictly meet memory budgets, using a fitness predictor to efficiently evaluate actions without per-instance search.
-problem_and_motivation: Existing lightweight embedding methods for recommender systems suffer from two major drawbacks: they rely on heuristic trade-off coefficients that fail to strictly meet memory budgets, and they perform per-instance embedding size searches which are computationally inefficient. This creates a need for a scalable solution that can guarantee memory constraints while efficiently finding optimal embedding sizes.
-approach:
-  - Proposes Budgeted Embedding Table (BET), which generates table-level actions specifying embedding sizes for all users and items simultaneously.
-  - Employs a budget-aware sampler that draws embeddings sizes from probabilistic distributions (power law, truncated exponential, etc.) to strictly cap total parameter usage.
-  - Introduces a DeepSets-based fitness prediction network that evaluates table-level actions by learning set-based action representations.
-  - Alternates between three action selection strategies: greedy fitness prediction, random selection for diversity, and nearest neighbor search in action embedding space.
-  - Conducts selective retraining on top actions from the population to identify the final optimal embedding size allocation.
-findings:
-  - num: BET achieves superior performance on Gowalla and Yelp2018 datasets across three backbone recommenders (LightGCN, NGCF, NCF) at 80%, 90%, and 95% sparsity levels.
-  - The DeepSets-based fitness predictor significantly outperforms simpler fitness prediction and random selection variants.
-  - BET guarantees strict adherence to pre-specified memory budgets, unlike ESAPN and OptEmbed which often fail to meet minimum sparsity targets.
-  - num: BET with LightGCN at 95% sparsity achieves 0.0627 Recall@20 and 0.1037 NDCG@20 on Gowalla, outperforming the best baseline CIESS which achieves 0.0513 and 0.0853 respectively.
-  - The fitness predictor converges within 15 iterations, with recommendation performance peaking around 40 iterations.
-  - num: Setting the number of sampled actions рЭСЪ to 100 yields the best performance across both datasets.
-  - BET is effective with multiple backbone recommenders, demonstrating model-agnostic applicability.
-  - The fitness prediction network learns expressive set-based action representations using user/item frequency and embedding size information.
-key_figures_tables:
-  - Figure 1: Overview of BET workflow → Shows the three-component system of sampler, fitness predictor, and backbone recommender.
-  - Figure 2: Set-based action formulation example → Illustrates how actions are represented as sets of users/items per embedding size.
-  - Figure 3: DeepSets-based fitness predictor architecture → Depicts the user/item encoders and set aggregation for action representation.
-  - Table 1: Performance comparison on Gowalla and Yelp → BET achieves the best results across most metrics and sparsity levels.
-  - Table 2: Model component analysis → DeepSets-based predictor outperforms random and simple fitness prediction variants.
-  - Figure 4: Sensitivity analysis of рЭСЪ → Performance improves with more sampled actions, plateauing at 100.
-  - Figure 5: Sensitivity analysis of рЭСЗ → Performance improves up to 40 iterations then stabilizes.
-  - Figure 6: Fitness prediction loss convergence → Loss diminishes within the first 15 iterations.
-key_equations:
-  - equation: L_BPR = -∑_{(u,i,j)∈D_train} ln σ(ŷ_ui - ŷ_uj) + λ||Θ||²
-    explanation: Bayesian Personalized Ranking loss for optimizing recommenders.
-  - equation: d_i = ⌊ p̃_i · w · d_max · (|U|+|V|) ⌋
-    explanation: Calculates embedding size for each user based on normalized probability and memory budget.
-  - equation: f_Θ(E ⊙ M | D_valid) / f_Θ(E | D_valid)
-    explanation: Fitness score is the ratio of recommendation quality with sparsified vs full embeddings.
-  - equation: Φ = argmin_{φ'} ∑_{a}(r_a - f_{φ'}(a))²
-    explanation: Optimizes fitness predictor by minimizing mean squared error between predicted and actual scores.
-definitions:
-  - term: BET
-    definition: Budgeted Embedding Table - the proposed method for table-level embedding size search.
-  - term: Table-level action
-    definition: An action that specifies embedding sizes for all users and items in one embedding table.
-  - term: Fitness predictor
-    definition: A DeepSets-based network that predicts the recommendation performance of a table-level action.
-  - term: Set-based action formulation
-    definition: Representing an action as sets of users/items grouped by their assigned embedding size.
-  - term: Sparsity ratio
-    definition: The ratio of active parameters in the compressed embedding table compared to the full table.
-  - term: DeepSets
-    definition: A neural architecture for learning permutation-invariant representations of sets.
-critical_citations:
-  - "[He et al., 2020] — Foundation for LightGCN backbone model."
-  - "[Rendle et al., 2009] — Source of BPR loss function for recommendation."
-  - "[Zhao et al., 2021] — Prior work on automated embedding dimensionality search."
-  - "[Liu et al., 2021] — Prior work on learnable embedding sizes via pruning."
-  - "[Qu et al., 2023] — Previous RL-based method for continuous embedding size search."
-relevance:
-  topics:
-    - code: 4.A
-      name: Landscape of Existing Personal Finance Systems
-      relevance: medium
-      justification: Discusses memory-efficient embedding techniques applicable to resource-constrained financial systems.
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      relevance: high
-      justification: Explicitly identifies the limitations of existing lightweight embedding methods (implicit memory constraints, per-instance inefficiency) and proposes a solution.
-    - code: 7.D
-      name: Infeasibility Handling and Reduction Hierarchies
-      relevance: high
-      justification: Provides a method to strictly enforce memory/sparsity constraints through probabilistic sampling, directly relevant to handling budget constraints in recommendation.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: contextual
-      justification: The concept of adaptive embedding sizes could be extended to anomaly detection, but the paper focuses on recommendation.
-    - code: 9.A
-      name: Mobile-First Design Principles and Rationale
-      relevance: high
-      justification: Addresses memory constraints critical for on-device/deployable systems, directly relevant to mobile-first financial applications.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: medium
-      justification: Uses standard recommendation metrics (Recall, NDCG) that could be adapted to evaluate PFMS modules.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: high
-      justification: Provides a rigorous evaluation methodology for algorithmic modules (embedding size search) with ablation studies and hyperparameter analysis.
-  contribution: This paper provides a novel algorithmic framework (BET) for efficiently searching embedding sizes under strict memory budgets, which directly addresses Odin's need to optimize resource-constrained financial recommendation modules. The set-based action formulation and DeepSets fitness predictor offer a scalable approach to managing user and item representations, relevant to Odin's expense categorization and behavioral profiling. The strict budget enforcement mechanism is directly applicable to Odin's constrained optimization and infeasibility handling modules. The model-agnostic design and selective retraining strategy demonstrate how algorithmic modules can be evaluated and optimized with minimal computational overhead.
-  directly_justifies:
-    - "Memory budgets can be strictly enforced using probabilistic sampling from table-level actions."
-    - "DeepSets-based set representation learning enables efficient evaluation of unseen actions."
-    - "Hybrid action selection strategies (greedy, random, nearest neighbor) improve search diversity and prevent overfitting."
-    - "Selective retraining on top actions from the population identifies optimal embedding size allocations."
-    - "The fitness predictor converges quickly, reducing the need for exhaustive retraining."
-  limits:
-    - "The study focuses on recommendation systems, not directly on personal finance or expense categorization."
-    - "The approach assumes static user and item sets; handling dynamic users/items requires extension."
-    - "Fitness predictor performance depends on the representativeness of the training samples; may require many iterations for complex domains."
-    - "The effectiveness of the probabilistic distributions (power law, etc.) may vary with different data characteristics."
-    - "No discussion on privacy-preserving aspects of embedding size search."
-  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes revealed that this paper is most relevant to the 'Existing Systems & Gaps' (4.A, 4.B), 'Budget Recommendation' (7.D), 'Anomaly Detection' (8.B contextual), 'Mobile-First Design' (9.A), and 'System Evaluation' (12.A, 12.B) domains. The paper directly addresses the limitations of existing lightweight embedding methods (4.A, 4.B) and proposes a novel algorithm that strictly enforces memory constraints (7.D). The focus on reducing memory footprint is critical for mobile-first design (9.A). The rigorous evaluation framework and ablation studies (12.A, 12.B) are directly applicable. The paper was considered for 8.A and 8.B due to the potential of adaptive embeddings for anomaly detection, but the core contribution does not address detection algorithms, so it was assigned contextual relevance. The domains of Filipino cultural context, expense categorization, behavioral profiling, forecasting, user retention, and savings/debt management were considered but not selected as the paper does not provide claims directly informing those specific topics. Overall, the paper provides high relevance for Odin's algorithmic design, particularly in memory-constrained and budgeted recommendation scenarios.
-limitations:
-  - "The approach is designed for recommendation systems; adaptation to personal finance modules requires additional validation."
-  - "Hyperparameters (e.g., number of iterations, sample size) may require tuning for different datasets and domains."
-  - "The study does not explore the impact of dynamic user/item sets, which are common in financial applications."
-  - "Fitness predictor may need retraining if the data distribution changes significantly over time."
-  - "The method does not address cold-start scenarios for new users or items."
-  - "Privacy implications of storing embedding sizes and distributions are not discussed. [unacknowledged]"
-  - "Real-time performance and inference latency under strict budgets are not evaluated. [unacknowledged]"
-  - "Integration with PFMS-specific features like expense categorization or savings goals is not explored. [unacknowledged]"
-remember_this:
-  - "BET guarantees strict adherence to memory budgets through table-level probabilistic sampling."
-  - "DeepSets-based fitness predictor efficiently evaluates table-level actions without per-instance training."
-  - "Hybrid action selection (greedy, random, nearest neighbor) improves search diversity and performance."
-  - "BET outperforms state-of-the-art methods at 80%, 90%, and 95% sparsity across three recommenders."
-  - "The fitness predictor converges within 15 iterations, enabling efficient search with only 40 iterations."
-```
----
-
-## Paper 2: Schwartz et al_summarized.md
-
-**Source File:** `Schwartz et al_summarized.md`
-
-```yaml
-paper_id: 10.48550/arXiv.2509.11389
-designation: international
-title: Enhancing ML Interpretability for Credit Scoring
-authors: Schwartz, S.; Wang, Q.; Fang, F.
-year: 2024
-venue: Unknown
-odin_topics:
-  - 4.B
-  - 5.B
-  - 5.C
-  - 6.B
-  - 7.A
-  - 7.B
-  - 7.D
-  - 8.A
-  - 8.B
-  - 12.B
-tldr: A hybrid framework uses SHAP to select top features from a black-box XGBoost model, then trains a glass-box EBM model with 10 features, achieving comparable performance with an 88.5% feature reduction.
-problem_and_motivation: Black-box machine learning models for credit scoring are accurate but lack transparency, limiting their use in regulated environments. Post-hoc explanation methods do not inherently produce lightweight or fully transparent models. There is a need for an approach that maintains predictive power while creating models that are inherently interpretable and meet regulatory expectations.
-approach:
-  - A high-performing XGBoost model is trained on the full feature set to serve as a performance benchmark.
-  - SHAP is used to rank features by their importance based on the XGBoost model.
-  - A subset of the top-ranked features, specifically 10, is selected to train glass-box models, such as Explainable Boosting Machine (EBM) and Penalized Logistic Tree Regression (PLTR).
-  - The resulting glass-box models are refined through feature interaction analysis, correlation analysis, and potential expert input.
-  - The approach is evaluated using the Lending Club dataset, comparing the reduced glass-box models against the benchmark and logistic regression.
-findings:
-  - The approach reduces the number of features from 86 to 10, an 88.5% reduction.
-  - The reduced EBM model achieves performance comparable to the full-feature XGBoost benchmark.
-  - num: The maximum improvement from including all nine pairwise interactions in EBM was 0.4% on the F1 score.
-  - The SHAP top feature list is largely consistent across LR, XGBoost, and EBM models.
-  - XGBoost provided the fastest computation of feature importance among the models compared, making it a practical choice for feature selection.
-  - Correlation analysis can be used to refine the feature set and slightly improve performance.
-key_figures_tables:
-  - Figure 1: Loan amount and annual income feature interaction → Counterintuitive patterns can arise from feature interactions.
-  - Figure 2: Loan amount attribution → Higher loan amounts are associated with a higher probability of default.
-  - Figure 3: Annual income attribution → Higher annual incomes correspond to a lower probability of default.
-  - Figure 4: Performance w.r.t. the number of (top) features → Adding more than 10 features yields no substantial performance improvement.
-  - Table 1: Performance of base models → Base models show similar performance on AUPRC, AUROC, and F1.
-  - Table 2: Top features in different models → Top features are largely consistent across LR, XGBoost, and EBM.
-  - Table 3: Performance comparison after correlation analysis → Removing correlated lower-ranked features can improve performance.
-key_equations:
-  - equation: p = 1 / (1 + e^{-(β_0 + β_1 x_1 + ... + β_d x_d)})
-    explanation: Logistic regression predicts probability using a linear combination of features.
-  - equation: y_i = Σ_{k=1}^{K} f_k(x_i)
-    explanation: XGBoost prediction is the sum of outputs from K decision trees.
-  - equation: g(E[Y]) = β_0 + Σ_{j=1}^{d} f_j(x_j) + Σ_{1≤j<q≤d} f_{j,q}(x_j, x_q)
-    explanation: EBM can model pairwise feature interactions within an additive framework.
-definitions:
-  - term: XAI
-    definition: Explainable Artificial Intelligence; methods to make AI model decisions understandable to humans.
-  - term: SHAP
-    definition: SHapley Additive exPlanations; a game-theoretic approach to explain model predictions by assigning feature importance.
-  - term: XGBoost
-    definition: eXtreme Gradient Boosting; an optimized and scalable gradient boosting algorithm.
-  - term: EBM
-    definition: Explainable Boosting Machine; an interpretable glass-box model based on generalized additive models.
-  - term: PLTR
-    definition: Penalized Logistic Tree Regression; a hybrid model using decision tree-derived features in a penalized logistic regression.
-critical_citations:
-  - "[Lundberg & Lee, 2017] — Defines SHAP for additive feature attribution."
-  - "[Chen & Guestrin, 2016] — Introduces the XGBoost algorithm used as benchmark."
-  - "[Nori et al., 2019] — Presents the EBM glass-box model used in the approach."
-relevance:
-  topics:
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      relevance: high
-      justification: The paper directly addresses the lack of transparency in black-box ML models for credit scoring, a key gap the paper aims to solve.
-    - code: 5.B
-      name: Profile Dynamics and the Cold‑Start Problem
-      relevance: medium
-      justification: The feature selection process could be analogous to cold-start issues by identifying essential features when data is limited.
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: medium
-      justification: The models discussed (XGBoost, EBM) are classification approaches that could be adapted for financial behavioral profiling.
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: low
-      justification: While XGBoost is used for classification, its principles are relevant to forecasting, though the paper focuses on credit default, not sequential spending.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      relevance: medium
-      justification: The use of SHAP and correlation analysis reflects using domain knowledge to refine model feature sets, analogous to refining budget allocation strategies.
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      relevance: contextual
-      justification: The paper does not focus on recommendation but provides a methodology for selecting key features, which is a foundational step for recommendation systems.
-    - code: 7.D
-      name: Infeasibility Handling and Reduction Hierarchies
-      relevance: medium
-      justification: The paper's approach to reducing features from 86 to 10 demonstrates a method for simplifying complex models, akin to reducing complexity in allocation problems.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: low
-      justification: The paper discusses detecting default, a type of anomaly, but its core contribution is on model interpretability rather than anomaly detection methods.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: low
-      justification: The algorithms used are for classification, not specifically for anomaly detection in spending data.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: high
-      justification: The paper extensively evaluates the performance of different models (XGBoost, EBM, PLTR) using metrics like AUPRC, AUROC, and F1, which is central to evaluating algorithmic modules.
-  contribution: The paper provides a concrete methodology for building transparent, lightweight ML models by using post-hoc explanation tools for feature selection. This methodology can be directly applied to Odin's budgeting and forecasting modules to ensure the core algorithms are both accurate and interpretable. The framework's emphasis on reducing feature complexity without losing performance is directly relevant to Odin's goal of providing clear, actionable financial insights. The paper demonstrates that high-performing models can be simplified, which is crucial for building user trust and meeting regulatory standards.
-  directly_justifies:
-    - Using SHAP for feature importance enables selection of a concise, high-impact feature set.
-    - EBM can achieve performance comparable to XGBoost while being significantly more interpretable.
-    - Reducing model complexity to about 10 features can maintain predictive power while enhancing transparency.
-  limits:
-    - The study is conducted on a single dataset (Lending Club), limiting generalizability.
-    - The approach was not tested across diverse datasets to validate its robustness.
-    - The focus is on binary classification (default vs. non-default), not on other financial applications like spending forecasting.
-  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes identified the most relevant ones. The paper's core contribution on enhancing ML interpretability and reducing feature complexity maps most directly to "Existing Systems & Gaps" (4.B) and "System Evaluation" (12.B) with high relevance. Topics related to "Budget Recommendation" (7.A, 7.B, 7.D) and "Behavioral Profiling" (5.B, 5.C) were assigned medium relevance because the methodology for feature selection and model simplification is foundational to those areas, even though the paper's domain is credit scoring. The paper's discussion of default prediction touches on "Anomaly Detection" (8.A, 8.B), but its primary focus on explainability over detection algorithms makes the relevance low. Topics concerning "Filipino Cultural Context" (2), "Mobile-First Design" (9), "Data Privacy" (10), "User Retention" (11), and "Savings & Debt Management" (13) were considered and rejected as the paper provides no specific insights on these aspects of personal finance management. Overall, the paper offers a highly relevant methodology for building transparent and efficient algorithmic modules within Odin.
-limitations:
-  - "The proposed approach was only evaluated on a single dataset from Lending Club, which may not represent all credit or financial behaviors. [unacknowledged]"
-  - "The study did not extensively optimize the base black-box model, which could affect the generalizability of the feature rankings. [unacknowledged]"
-  - "The paper acknowledges that SHAP has limitations in handling correlated features, but the proposed mitigation through correlation analysis may not fully resolve this issue."
-remember_this:
-  - SHAP-guided feature selection can reduce features by 88.5% without significant performance loss.
-  - EBM provides a strong balance between explainability and predictive performance.
-  - Correlation analysis can refine feature sets and slightly improve model performance.
-  - A hybrid approach using post-hoc explanations to build glass-box models enhances transparency.
-```
----
-
-## Paper 3: Bauer et al_summarized.md
-
-**Source File:** `Bauer et al_summarized.md`
-
-```yaml
-paper_id: 10.48550/arXiv.2401.02524
-designation: international
-title: Comprehensive Exploration of Synthetic Data Generation: A Survey
-authors: Bauer, A.; Trapp, S.; Stenger, M.; Leppich, R.; Kounev, S.; Leznik, M.; Chard, K.; Foster, I.
-year: 2024
-venue: Unknown
-odin_topics:
-  - 4.A
-  - 4.B
-  - 5.C
-  - 6.B
-  - 8.B
-  - 12.A
-  - 12.B
-  - 12.C
-tldr: Surveying 417 models reveals GANs dominate computer vision, while RNNs and transformers excel with sequential data, and a lack of standardized metrics hinders robust comparison.
-problem_and_motivation: The rapid proliferation of synthetic data generation models and the lack of comprehensive overviews make it difficult for researchers and practitioners to select appropriate models. Existing surveys are often limited in scope, overlooking recent advancements or focusing on a single domain.
-approach:
-  - A comprehensive survey of 417 synthetic data generation models published over the last decade was conducted.
-  - Models were classified into 20 distinct types and 42 sub-types based on their architecture and functionality.
-  - A classification system was introduced using criteria such as data type, sampling process, training process, and performance.
-  - A trend analysis was performed to identify shifts in model popularity and performance over time.
-  - A practical guideline was developed to assist in selecting the appropriate model type for a given task.
-findings:
-  - num: Computer vision is the most popular application field, and GANs are the most widely used model type.
-  - num: Neural network-based approaches, particularly GANs and diffusion models, have superseded simpler probabilistic models for image generation.
-  - There is a significant lack of standardized evaluation metrics and benchmark datasets, making direct model comparison difficult.
-  - The computational cost of training and sampling is often neglected in the literature, hindering practical deployment considerations.
-  - Privacy-preserving data generation is in its nascent stage, primarily relying on simpler models like Bayesian networks and Markov chains.
-key_figures_tables:
-  - Figure 44: Number of papers per model type over time → GANs surged in popularity after 2014.
-  - Table 1: Comparison of this survey to other related surveys → This work is the most comprehensive in terms of models and aspects investigated.
-  - Figure 56: Performance predecessor relationships → Newer models generally outperform older ones, with DCGAN being a common baseline.
-key_equations:
-  - equation: "None."
-    explanation: ""
-definitions:
-  - term: SDG
-    definition: Synthetic Data Generation
-  - term: GAN
-    definition: Generative Adversarial Network
-  - term: RNN
-    definition: Recurrent Neural Network
-  - term: VAE
-    definition: Variational Autoencoder
-critical_citations:
-  - "[Goodfellow et al., 2014] — Introduced the foundational GAN framework."
-  - "[Radford et al., 2015] — Established DCGAN, a key CNN-based GAN architecture."
-  - "[Van Oord et al., 2016] — Pioneered PixelRNN and PixelCNN for image generation."
-  - "[Sohl-Dickstein et al., 2015] — First implementation of diffusion probabilistic models."
-relevance:
-  topics:
-    - code: 4.A
-      name: Landscape of Existing Personal Finance Systems
-      relevance: contextual
-      justification: Provides a high-level survey of generative models, placing PFMS within the broader context of AI systems.
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      relevance: contextual
-      justification: Highlights the challenge of model selection and the lack of standardized evaluation, a gap applicable to PFMS.
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: low
-      justification: Mentions classification using RNNs and other models, which could be applied to profiling spending behavior.
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: medium
-      justification: Reviews RNNs, transformers, and other models suited for sequential forecasting, directly relevant to spending prediction.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: low
-      justification: Surveys GANs and other models used for anomaly detection, a relevant technique for PFMS.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: low
-      justification: Discusses the need for standardized evaluation metrics and benchmarks, a challenge for PFMS.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: medium
-      justification: Provides a detailed analysis of how different generative models are evaluated, informing the evaluation of PFMS algorithms.
-    - code: 12.C
-      name: Evaluation Methodologies for Budget Recommendation Systems
-      relevance: low
-      justification: Discusses metrics like NLL and human evaluation, which could be adapted for budget recommendation systems.
-  contribution: "This survey provides a comprehensive taxonomy and performance overview of generative models, serving as a foundational reference for selecting appropriate algorithms for Odin's modules. It directly informs the design of Odin by highlighting the strengths of GANs for behavioral profile generation and the suitability of RNNs and transformers for sequential spending data forecasting. The identified lack of standardized evaluation metrics underscores the need for Odin to implement a robust, internally consistent testing framework. The survey's discussion on privacy-preserving models, primarily GANs and Bayesian networks, offers a starting point for Odin's data privacy module."
-  directly_justifies:
-    - "GANs are the most effective models for generating high-fidelity synthetic visual data."
-    - "RNNs and transformers are the preferred architectures for modeling sequential data like spending histories."
-    - "A lack of standardized evaluation metrics makes direct model comparison difficult."
-    - "Privacy-preserving data generation is an emerging field with significant limitations."
-  limits:
-    - "The survey does not provide implementation details or performance benchmarks for specific models, limiting direct applicability."
-    - "The paper focuses on the generation of raw data (images, text) rather than structured financial data, a key difference from Odin's domain."
-  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was conducted against the content of this survey paper. The paper was flagged as relevant to the 'Existing Systems & Gaps' domain (codes 4.A, 4.B) due to its comprehensive review of the broader AI landscape and its analysis of limitations like the lack of standardized benchmarks. It was considered relevant to 'Behavioral Profiling & Classification' (5.C) because it reviews classification methods using RNNs, a technique that could be adapted for financial profiles. For 'Spending Forecasting' (6.B) and 'Anomaly Detection' (8.B), the survey's in-depth review of RNNs, transformers, and GANs provides crucial algorithmic context. The paper is highly relevant to the 'System Evaluation' domain (12.A, 12.B, 12.C) as it dedicates significant effort to critiquing evaluation methodologies and metrics. Domains like 'Filipino Cultural Context' (2.A-2.D), 'Expense Categorization' (3.A-3.C), and 'Budget Recommendation' (7.A-7.D) were considered and rejected because the paper is a general survey of generative models and does not touch upon cultural, categorization, or constraint-specific financial topics. Overall, the paper's relevance to Odin is primarily contextual, providing a broad theoretical and methodological background for the development of algorithmic modules."
-limitations:
-  - "Does not provide a formal comparison or meta-analysis of the 417 surveyed models, only a narrative summary."
-  - "The trend analysis and performance insights are largely based on publication counts and citation data, not on quantitative model performance metrics."
-  - "The guideline for model selection is high-level and does not provide decision-making thresholds or quantitative criteria. [unacknowledged]"
-remember_this:
-  - "GANs are the dominant model type for generating high-quality synthetic data, especially images."
-  - "No single model fits all tasks; RNNs excel with sequences, while GANs and diffusion models lead in image generation."
-  - "The lack of standard benchmarks and metrics is a major obstacle to comparing generative model performance."
-  - "Privacy-preserving synthetic data generation remains a significant challenge, often reducing data utility."
-  - "The computational cost of training modern generative models is a critical, often-overlooked factor."
-```
----
-
-## Paper 4: Kusumaningsih et al_summarized.md
+## Paper 1: Kusumaningsih et al_summarized.md
 
 **Source File:** `Kusumaningsih et al_summarized.md`
 
@@ -499,7 +121,7 @@ remember_this:
 ```
 ---
 
-## Paper 5: Auer & Griffiths_summarized.md
+## Paper 2: Auer & Griffiths_summarized.md
 
 **Source File:** `Auer & Griffiths_summarized.md`
 
@@ -608,7 +230,7 @@ remember_this:
 ```
 ---
 
-## Paper 6: Carpizo et al_summarized.md
+## Paper 3: Carpizo et al_summarized.md
 
 **Source File:** `Carpizo et al_summarized.md`
 
@@ -694,7 +316,7 @@ remember_this:
 ```
 ---
 
-## Paper 7: Ataza et al_summarized.md
+## Paper 4: Ataza et al_summarized.md
 
 **Source File:** `Ataza et al_summarized.md`
 
@@ -827,7 +449,7 @@ remember_this:
 ```
 ---
 
-## Paper 8: Chepkutwo_summarized.md
+## Paper 5: Chepkutwo_summarized.md
 
 **Source File:** `Chepkutwo_summarized.md`
 
@@ -940,7 +562,7 @@ remember_this:
 ```
 ---
 
-## Paper 9: Roth et al_summarized.md
+## Paper 6: Roth et al_summarized.md
 
 **Source File:** `Roth et al_summarized.md`
 
@@ -1049,7 +671,7 @@ remember_this:
 ```
 ---
 
-## Paper 10: Wani_summarized.md
+## Paper 7: Wani_summarized.md
 
 **Source File:** `Wani_summarized.md`
 
@@ -1248,7 +870,108 @@ remember_this:
 ```
 ---
 
-## Paper 11: Espiritu F. et al_summarized.md
+## Paper 8: Onsay & Rabajante-2024_summarized.md
+
+**Source File:** `Onsay & Rabajante-2024_summarized.md`
+
+```yaml
+paper_id: "10.1016/j.sctalk.2024.100387"
+designation: "local-algorithm-specific"
+title: "When machine learning meets econometrics: Can it build a better measure to predict multidimensional poverty and examine unmeasurable economic conditions?"
+authors: "Onsay, E. A.; Rabajante, J. F."
+year: 2024
+venue: "Science Talks"
+odin_topics:
+  - "6.A"
+  - "6.B"
+  - "12.A"
+  - "12.B"
+  - "12.C"
+tldr: "Combines machine learning and econometrics to predict multidimensional poverty in Philippine indigenous communities, finding random forest outperforms other algorithms with high accuracy and R-square."
+problem_and_motivation: "Poverty measurement is costly and time-consuming, and existing methods suffer from sampling errors. Indigenous communities have complex socioeconomic conditions that are often studied qualitatively, lacking disaggregated quantitative measures. This gap hinders effective policy targeting."
+approach:
+  - "Uses census data from Goa, Camarines Sur, covering all households including indigenous communities, with 15 multidimensional socioeconomic indicators."
+  - "Applies econometric models (logit and probit) to establish causal relationships between predictors and poverty status."
+  - "Trains and compares multiple machine learning regressors and classifiers: random forest, XGBoost, LightGBM, SVM, AdaBoost, GaussianNB, and others."
+  - "Evaluates model performance using RMSE, MSE, R-square, and accuracy, and uses pipeline algorithms for classification."
+  - "Conducts causality tests to identify key poverty predictors, including household size, informal settler status, and indicators of health, education, and income."
+findings:
+  - "num: Random forest achieved the highest R-square of 0.9208 and accuracy of 0.9108 for poverty prediction."
+  - "num: For the general population, 63.70% live in poverty and 51.10% lack food access."
+  - "num: For indigenous communities, 82% live in poverty and 71% lack food access."
+  - "Household size and informal settler status are strong positive predictors of poverty."
+  - "num: Random forest had the lowest RMSE (0.3298) compared to XGBoost (0.4001) and LightGBM (0.3642) for regressors."
+  - "num: In pipeline classification, random forest achieved 94.89% accuracy for indigenous communities."
+key_figures_tables:
+  - "Figure 2: Multidimensional poverty evaluation results → Shows deprivation across education, income, and health indicators."
+  - "Figure 4: RMSE of regressors → Random forest has lowest RMSE (0.3298)."
+  - "Figure 6: R-square of regressors → Random forest highest R-square (0.9208)."
+  - "Figure 7: Performance evaluation classifiers → Random forest accuracy 0.9108, pipeline 94.89%."
+  - "Figure 13: R-square for indigenous communities → Random forest 0.9208."
+  - "Figure 14: Accuracy for indigenous communities → Random forest 90.69% random, 94.89% pipeline."
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: "Multidimensional poverty"
+    definition: "Poverty measured across multiple dimensions such as education, health, income, and living standards."
+  - term: "Indigenous People (IP)"
+    definition: "Members of indigenous communities in the Philippines, often marginalized."
+  - term: "Deprivation"
+    definition: "Lack of access to basic necessities or indicators."
+critical_citations:
+  - "[Alkire, 2005] — Capability approach to poverty measurement."
+  - "[Foster et al., 1984] — Decomposable poverty measures."
+  - "[Sobreviñas, 2020] — CBMS data for poverty dynamics."
+  - "[Onsay & Rabajante, 2024] — Data brief and dataset."
+relevance:
+  topics:
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "high"
+      justification: "Uses ML to predict poverty, demonstrating predictive modeling for financial vulnerability."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "high"
+      justification: "Compares multiple forecasting algorithms (RF, XGBoost, LightGBM) on socioeconomic data."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "high"
+      justification: "Provides systematic evaluation of ML models using RMSE, R-square, and accuracy."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "high"
+      justification: "Specifically evaluates classification and regression modules for predictive accuracy."
+    - code: "12.C"
+      name: "Evaluation Methodologies for Budget Recommendation Systems"
+      relevance: "medium"
+      justification: "Methodology of model comparison can inform evaluation of recommendation systems."
+  contribution: "This paper demonstrates the feasibility of using machine learning for predictive classification of economic vulnerability, which can inform spending forecasting and anomaly detection modules in Odin. The systematic evaluation framework comparing multiple algorithms provides a template for selecting optimal models for Odin's algorithmic components. The causal identification of poverty predictors using econometrics can guide feature engineering for user profiling and budget recommendation. The replicable methodology using publicly available census data supports data-driven policy targeting, which aligns with Odin's goal of personalized financial management."
+  directly_justifies:
+    - "Random forest can achieve over 90% accuracy in classifying poverty status."
+    - "Household size and informal settler status are strong predictors of economic status."
+    - "Econometric causal testing can identify relevant predictors for ML models."
+    - "The methodology is replicable for other regions with available data."
+  limits:
+    - "The paper focuses on poverty, not spending behavior, limiting direct applicability to expenditure forecasting."
+    - "The data is cross-sectional, not time-series, so temporal spending patterns are not modeled."
+    - "Models are trained on rural indigenous communities, which may not generalize to urban young professionals."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was conducted. Domains flagged as relevant include Spending Forecasting (6) and System Evaluation (12), as the paper directly addresses predictive modeling and algorithm evaluation. Specifically, topic 6.A and 6.B were assigned high relevance due to the use of ML for prediction and comparison of algorithms. Topics 12.A and 12.B were assigned high relevance for the evaluation frameworks and module assessment; 12.C received medium relevance as the evaluation methodology could inform budget recommendation systems. Domains related to Filipino cultural context (2), expense categorization (3), existing systems (4), behavioral profiling (5), budget recommendation (7), anomaly detection (8), mobile-first design (9), data privacy (10), user retention (11), and savings/debt management (13) were considered but rejected because the paper does not address these topics; it focuses on poverty measurement rather than personal finance management. The overall relevance to Odin is moderate, providing methodological inspiration for predictive modules rather than direct content."
+limitations:
+  - "Cross-sectional data limits temporal forecasting capabilities. [unacknowledged]"
+  - "Models are not validated on external datasets, reducing generalizability. [unacknowledged]"
+  - "The paper does not address real-time or sequential data, which are central to PFMS. [unacknowledged]"
+  - "The focus on indigenous communities may not represent the broader Filipino young professional demographic. [unacknowledged]"
+remember_this:
+  - "Random forest achieved 0.9208 R-square and 0.9108 accuracy for poverty prediction."
+  - "Household size and informal settler status are key poverty predictors."
+  - "The study demonstrates cost-effective poverty measurement using ML."
+  - "Causal econometric testing identifies robust predictors for ML models."
+  - "Methodology is replicable with available census data."
+```
+---
+
+## Paper 9: Espiritu F. et al_summarized.md
 
 **Source File:** `Espiritu F. et al_summarized.md`
 
@@ -1362,7 +1085,7 @@ remember_this:
 ```
 ---
 
-## Paper 12: Arinze_summarized.md
+## Paper 10: Arinze_summarized.md
 
 **Source File:** `Arinze_summarized.md`
 
@@ -1464,7 +1187,7 @@ remember_this:
 ```
 ---
 
-## Paper 13: Blancaflor et al_summarized.md
+## Paper 11: Blancaflor et al_summarized.md
 
 **Source File:** `Blancaflor et al_summarized.md`
 
@@ -1565,7 +1288,7 @@ remember_this:
 ```
 ---
 
-## Paper 14: Holmgren_summarized.md
+## Paper 12: Holmgren_summarized.md
 
 **Source File:** `Holmgren_summarized.md`
 
@@ -1664,7 +1387,7 @@ remember_this:
 ```
 ---
 
-## Paper 15: Ullah et al_summarized.md
+## Paper 13: Ullah et al_summarized.md
 
 **Source File:** `Ullah et al_summarized.md`
 
@@ -1786,7 +1509,7 @@ remember_this:
 ```
 ---
 
-## Paper 16: Zhang & Sussman_summarized.md
+## Paper 14: Zhang & Sussman_summarized.md
 
 **Source File:** `Zhang & Sussman_summarized.md`
 
@@ -1894,7 +1617,7 @@ remember_this:
 ```
 ---
 
-## Paper 17: Pai et al_summarized.md
+## Paper 15: Pai et al_summarized.md
 
 **Source File:** `Pai et al_summarized.md`
 
@@ -2020,7 +1743,7 @@ remember_this:
 ```
 ---
 
-## Paper 18: Reddy et al_summarized.md
+## Paper 16: Reddy et al_summarized.md
 
 **Source File:** `Reddy et al_summarized.md`
 
@@ -2176,7 +1899,7 @@ remember_this:
 ```
 ---
 
-## Paper 19: Sanchez_summarized.md
+## Paper 17: Sanchez_summarized.md
 
 **Source File:** `Sanchez_summarized.md`
 
@@ -2280,7 +2003,7 @@ remember_this:
 ```
 ---
 
-## Paper 20: Chen J. et al_summarized.md
+## Paper 18: Chen J. et al_summarized.md
 
 **Source File:** `Chen J. et al_summarized.md`
 
@@ -2410,7 +2133,7 @@ remember_this:
 ```
 ---
 
-## Paper 21: Laspinas & Murcia_summarized.md
+## Paper 19: Laspinas & Murcia_summarized.md
 
 **Source File:** `Laspinas & Murcia_summarized.md`
 
@@ -2504,7 +2227,7 @@ remember_this:
 ```
 ---
 
-## Paper 22: Cacnio & Romarate_summarized.md
+## Paper 20: Cacnio & Romarate_summarized.md
 
 **Source File:** `Cacnio & Romarate_summarized.md`
 
@@ -2633,7 +2356,7 @@ remember_this:
 ```
 ---
 
-## Paper 23: Kikkawa et al_summarized.md
+## Paper 21: Kikkawa et al_summarized.md
 
 **Source File:** `Kikkawa et al_summarized.md`
 
@@ -2783,7 +2506,7 @@ remember_this:
 ```
 ---
 
-## Paper 24: de Zarza et al_summarized.md
+## Paper 22: de Zarza et al_summarized.md
 
 **Source File:** `de Zarza et al_summarized.md`
 
@@ -2922,7 +2645,7 @@ remember_this:
 ```
 ---
 
-## Paper 25: Cedeno et al_summarized.md
+## Paper 23: Cedeno et al_summarized.md
 
 **Source File:** `Cedeno et al_summarized.md`
 
@@ -3061,7 +2784,7 @@ remember_this:
 ```
 ---
 
-## Paper 26: Yang_summarized.md
+## Paper 24: Yang_summarized.md
 
 **Source File:** `Yang_summarized.md`
 
@@ -3309,7 +3032,7 @@ remember_this:
 ```
 ---
 
-## Paper 27: Boniol et al_summarized.md
+## Paper 25: Boniol et al_summarized.md
 
 **Source File:** `Boniol et al_summarized.md`
 
@@ -3431,7 +3154,7 @@ remember_this:
 ```
 ---
 
-## Paper 28: Magno-Ballesteros et al_summarized.md
+## Paper 26: Magno-Ballesteros et al_summarized.md
 
 **Source File:** `Magno-Ballesteros et al_summarized.md`
 
@@ -3578,7 +3301,7 @@ remember_this:
 ```
 ---
 
-## Paper 29: Gavric et al_summarized.md
+## Paper 27: Gavric et al_summarized.md
 
 **Source File:** `Gavric et al_summarized.md`
 
@@ -3674,7 +3397,7 @@ remember_this:
 ```
 ---
 
-## Paper 30: Zhu-2023_summarized.md
+## Paper 28: Zhu-2023_summarized.md
 
 **Source File:** `Zhu-2023_summarized.md`
 
@@ -3783,7 +3506,7 @@ remember_this:
 ```
 ---
 
-## Paper 31: Razalan_summarized.md
+## Paper 29: Razalan_summarized.md
 
 **Source File:** `Razalan_summarized.md`
 
@@ -3921,7 +3644,7 @@ remember_this:
 ```
 ---
 
-## Paper 32: Yang & Lee_summarized.md
+## Paper 30: Yang & Lee_summarized.md
 
 **Source File:** `Yang & Lee_summarized.md`
 
@@ -4045,7 +3768,7 @@ remember_this:
 ```
 ---
 
-## Paper 33: Antonio et al_summarized.md
+## Paper 31: Antonio et al_summarized.md
 
 **Source File:** `Antonio et al_summarized.md`
 
@@ -4154,7 +3877,7 @@ remember_this:
 ```
 ---
 
-## Paper 34: Albert et al-2024_summarized.md
+## Paper 32: Albert et al-2024_summarized.md
 
 **Source File:** `Albert et al-2024_summarized.md`
 
@@ -4325,7 +4048,7 @@ remember_this:
 ```
 ---
 
-## Paper 35: Aguilar et al_summarized.md
+## Paper 33: Aguilar et al_summarized.md
 
 **Source File:** `Aguilar et al_summarized.md`
 
@@ -4475,7 +4198,7 @@ remember_this:
 ```
 ---
 
-## Paper 36: Maruf et al_summarized.md
+## Paper 34: Maruf et al_summarized.md
 
 **Source File:** `Maruf et al_summarized.md`
 
@@ -4596,7 +4319,7 @@ remember_this:
 ```
 ---
 
-## Paper 37: Sappa_summarized.md
+## Paper 35: Sappa_summarized.md
 
 **Source File:** `Sappa_summarized.md`
 
@@ -4727,7 +4450,7 @@ remember_this:
 ```
 ---
 
-## Paper 38: Salvador_summarized.md
+## Paper 36: Salvador_summarized.md
 
 **Source File:** `Salvador_summarized.md`
 
@@ -4828,7 +4551,7 @@ remember_this:
 ```
 ---
 
-## Paper 39: Hamidi & Hagdi_summarized.md
+## Paper 37: Hamidi & Hagdi_summarized.md
 
 **Source File:** `Hamidi & Hagdi_summarized.md`
 
@@ -4998,7 +4721,7 @@ remember_this:
 ```
 ---
 
-## Paper 40: Anjum & Aziz_summarized.md
+## Paper 38: Anjum & Aziz_summarized.md
 
 **Source File:** `Anjum & Aziz_summarized.md`
 
@@ -5112,7 +4835,7 @@ remember_this:
 ```
 ---
 
-## Paper 41: Hashemi et al_summarized.md
+## Paper 39: Hashemi et al_summarized.md
 
 **Source File:** `Hashemi et al_summarized.md`
 
@@ -5227,7 +4950,7 @@ remember_this:
 ```
 ---
 
-## Paper 42: Pinca et al_summarized.md
+## Paper 40: Pinca et al_summarized.md
 
 **Source File:** `Pinca et al_summarized.md`
 
@@ -5392,7 +5115,7 @@ remember_this:
 ```
 ---
 
-## Paper 43: Arena et al_summarized.md
+## Paper 41: Arena et al_summarized.md
 
 **Source File:** `Arena et al_summarized.md`
 
@@ -5501,7 +5224,7 @@ remember_this:
 ```
 ---
 
-## Paper 44: Lusardi & Mitchell_summarized.md
+## Paper 42: Lusardi & Mitchell_summarized.md
 
 **Source File:** `Lusardi & Mitchell_summarized.md`
 
@@ -5686,7 +5409,7 @@ remember_this:
 ```
 ---
 
-## Paper 45: Salminen et al_summarized.md
+## Paper 43: Salminen et al_summarized.md
 
 **Source File:** `Salminen et al_summarized.md`
 
@@ -5800,7 +5523,7 @@ remember_this:
 ```
 ---
 
-## Paper 46: Vasileiou_summarized.md
+## Paper 44: Vasileiou_summarized.md
 
 **Source File:** `Vasileiou_summarized.md`
 
@@ -5904,7 +5627,7 @@ remember_this:
 ```
 ---
 
-## Paper 47: Zhu et al_summarized.md
+## Paper 45: Zhu et al_summarized.md
 
 **Source File:** `Zhu et al_summarized.md`
 
@@ -6019,7 +5742,7 @@ remember_this:
 ```
 ---
 
-## Paper 48: D'Acunto & Rossi_summarized.md
+## Paper 46: D'Acunto & Rossi_summarized.md
 
 **Source File:** `D'Acunto & Rossi_summarized.md`
 
@@ -6168,7 +5891,7 @@ remember_this:
 ```
 ---
 
-## Paper 49: Zhou & He_summarized.md
+## Paper 47: Zhou & He_summarized.md
 
 **Source File:** `Zhou & He_summarized.md`
 
@@ -6302,7 +6025,136 @@ remember_this:
 ```
 ---
 
-## Paper 50: Brophy et al_summarized.md
+## Paper 48: Montagna_summarized.md
+
+**Source File:** `Montagna_summarized.md`
+
+```yaml
+paper_id: 8e1d7b9c-5f4a-4b3c-9e2d-1a3f5c7d9e0b # No DOI available
+designation: international
+title: Integration of Explainability in Recommender Systems to Enhance Enterprise Value Strategies
+authors: Montagna, A.
+year: 2023
+venue: University of Padova
+odin_topics:
+  - "4.A"
+  - "4.B"
+  - "6.A"
+  - "6.B"
+  - "7.B"
+  - "7.C"
+  - "8.A"
+  - "10.A"
+  - "11.A"
+  - "12.A"
+  - "12.B"
+tldr: Surveys value-aware recommender systems (VARS), proposes a novel explainable value-aware matrix factorization model (XVMF), and critiques the qualitative evaluation of explanations in graph-based recommender systems.
+problem_and_motivation: Recommender systems designed for business value (VARS) lack transparency, hindering user trust and adoption. Existing systems often prioritize either business value or explainability, without a balanced approach. A gap exists in quantitative evaluation methods for explanations, especially in emerging graph-based models.
+approach:
+  - Conducted a systematic literature review of VARS following PRISMA guidelines.
+  - Proposed a taxonomy for VARS based on technical approach and value objective.
+  - Developed XVMF, a matrix factorization model integrating explainability and value regularization terms.
+  - Evaluated XVMF on Yelp and Amazon datasets using NDCG, NDCV, and E-NDCG metrics.
+  - Critically analyzed evaluation methods for explainability in graph-based recommender systems.
+findings:
+  - "num: XVMF achieved up to 1.995% E-NDCG on Yelp, outperforming MF (0.879%) and EMF (0.810%)."
+  - "num: On Amazon, XVMF achieved 0.115% NDCV, the highest business value performance."
+  - Value optimization in VARS can degrade recommendation accuracy if not balanced with user interest.
+  - Most graph-based explainable recommender systems rely on qualitative case studies, lacking quantitative, comparable evaluations.
+  - There is a need for standardized, guideline-compliant metrics for evaluating explanation quality in recommender systems.
+key_figures_tables:
+  - "Table 2.2: Product value-aware recommender systems → Surveys VARS techniques and optimized values."
+  - "Figure 3.2: Performance analysis for Yelp dataset → Shows the trade-off between explainability and value regularization terms."
+  - "Table 3.5: Evaluation metrics for Yelp → XVMF achieves highest NDCG, NDCV, and E-NDCG scores."
+  - "Table 4.1: Graph-Based Explainable Recommender Systems → Categorizes methods and evaluation approaches."
+key_equations:
+  - equation: "L = \sum (r_{u,i} - p_u \cdot q_i^T)^2 + \frac{\beta}{2}(||p_u||^2 + ||q_i||^2) + ||p_u - q_i||^2(\lambda W_{u,i} + \delta v_i)"
+    explanation: "XVMF loss function balancing accuracy, explainability, and business value."
+  - equation: "E_{u,i} = \sum_{r \in R, r \ge P_\tau} |NN_k(u)| \times r_{i,r}"
+    explanation: "Calculates explainability power based on neighbor ratings."
+definitions:
+  - term: "VARS"
+    definition: "Value-Aware Recommender System; optimizes economic value of recommendations."
+  - term: "XVMF"
+    definition: "Explainable Value-aware Matrix Factorization; proposed model balancing explainability and value."
+  - term: "NDCG"
+    definition: "Normalized Discounted Cumulative Gain; metric for ranking quality."
+  - term: "NDCV"
+    definition: "Normalized Discounted Cumulative Value; metric for business value."
+  - term: "E-NDCG"
+    definition: "Explainable Normalized Discounted Cumulative Gain; metric for explainability performance."
+  - term: "GxRS"
+    definition: "Graph-Based Explainable Recommender System."
+critical_citations:
+  - "[Page et al., 2021] — PRISMA guidelines for systematic reviews."
+  - "[Ricci et al., 2022] — Foundational handbook on recommender systems."
+  - "[Jannach and Zanker, 2022] — Business value and impact of recommender systems."
+  - "[Tintarev and Masthoff, 2015] — Guidelines for designing and evaluating explainable RS."
+  - "[Abdollahi and Nasraoui, 2016] — Introduced Explainable Matrix Factorization."
+relevance:
+  topics:
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Provides a general review of recommender systems, a technology applicable to PFMS."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "high"
+      justification: "Identifies the lack of explainability and value-awareness in current systems, a direct gap for PFMS."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Discusses predictive modeling and forecasting in VARS, which can inform spending prediction."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "medium"
+      justification: "Surveys forecasting algorithms (RL, bandits) used for VARS that could be adapted for spending forecasting."
+    - code: "7.B"
+      name: "Budget Recommendation in Personal Finance Systems"
+      relevance: "high"
+      justification: "Proposes a model (XVMF) that directly balances recommendation value and explainability, core to budget recommendation."
+    - code: "7.C"
+      name: "Constrained Optimization Approaches for Budget Allocation"
+      relevance: "medium"
+      justification: "Reviews optimization techniques in VARS that can inform budget allocation algorithms."
+    - code: "8.A"
+      name: "Anomaly Detection in Personal Finance Systems"
+      relevance: "low"
+      justification: "Mentions anomaly detection only as a potential future direction for VARS evaluation."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "low"
+      justification: "Discusses trustworthy AI principles, including privacy, as a general concern for AI systems."
+    - code: "11.A"
+      name: "Engagement Dynamics in Personal Finance Applications"
+      relevance: "high"
+      justification: "Focuses on optimizing user engagement (a key business value) and trust through explainability."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "high"
+      justification: "Proposes a quantitative evaluation framework for explainability (E-NDCG), which is crucial for PFMS evaluation."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "high"
+      justification: "Specifically evaluates algorithmic modules (MF, EMF, XVMF) using proposed metrics."
+  contribution: "This thesis provides a systematic taxonomy of VARS, aiding in the selection and understanding of value-driven algorithms for Odin's modules. It introduces XVMF, a novel model that demonstrates how to balance the generation of business value (e.g., from savings or spending data) with the need for explainable recommendations, which is critical for user trust. The work also identifies a critical flaw in the evaluation of graph-based explainable models, advocating for quantitative metrics, which is a core requirement for any system evaluation in Odin."
+  directly_justifies:
+    - "Value-aware recommender systems can be adapted to optimize savings and debt management strategies."
+    - "Explainability is a key factor for building user trust and increasing the adoption of financial systems."
+    - "Quantitative evaluation of explanations is necessary for comparing and improving recommendation algorithms."
+  limits:
+    - "The XVMF model was evaluated only on Yelp and Amazon datasets, which may not reflect financial transaction data."
+    - "The proposed evaluation metrics (E-NDCG, NDCV) assume business value is static per item, which may not hold in PFMS."
+    - "The study does not involve user studies to validate the perceived quality of explanations generated by XVMF."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to 'Existing Systems & Gaps' (4.A, 4.B) due to its identification of the lack of explainable, value-aware models. It directly informs 'Budget Recommendation' (7.B, 7.C) and 'System Evaluation' (12.A, 12.B) through the proposed XVMF model and its quantitative evaluation metrics. The themes of 'Behavioral Profiling' (5.A) and 'Spending Forecasting' (6.A, 6.B) were considered but assigned medium/low relevance as the paper focuses on general VARS taxonomy and models rather than specific PFMS behavioral forecasting. 'Data Privacy' (10.A) and 'Anomaly Detection' (8.A) were considered contextual as they are mentioned only in passing as part of broader trustworthy AI principles. The core contribution of a balanced model and a critical view on explainability evaluation makes this paper highly relevant for informing Odin's design and evaluation strategy."
+limitations:
+  - "The systematic review is limited to articles from four databases and excludes non-English papers."
+  - "The XVMF model's performance is demonstrated only on two specific datasets; generalizability to PFMS data is unproven."
+  - "The evaluation of graph-based explainable systems in the literature lacks quantitative, comparable metrics."
+```
+---
+
+## Paper 49: Brophy et al_summarized.md
 
 **Source File:** `Brophy et al_summarized.md`
 
@@ -6429,6 +6281,115 @@ remember_this:
   - "Training instability and mode collapse are key challenges for time series GANs."
   - "No standardized benchmark or evaluation metrics exist for time series generation."
   - "The choice of GAN architecture is highly dependent on the specific application."
+```
+---
+
+## Paper 50: Uzoka et al_summarized.md
+
+**Source File:** `Uzoka et al_summarized.md`
+
+```yaml
+paper_id: c3e2b7f1-9dda-5e6a-8b4c-2f1a9e8d7c6b
+designation: international
+title: Localized Expansion Strategy Framework for Fintech Products Scaling from African to Western User Markets
+authors: Uzoka, A. C.; Olinmah, F. I.; Okolo, C. H.; Omotayo, K. V.; Adanigbo, O. S.
+year: 2023
+venue: Shodhshauryam International Scientific Refereed Research Journal
+odin_topics:
+  - 2.A
+  - 4.A
+  - 4.B
+  - 9.A
+  - 9.B
+  - 10.A
+  - 10.B
+tldr: A framework guides African fintechs entering Western markets by balancing core innovation with regulatory, cultural, and UX localization.
+problem_and_motivation: Existing frameworks for fintech globalization focus on Western startups entering emerging markets, leaving African fintechs without structured guidance for scaling into mature economies. This gap hinders their ability to systematically navigate regulatory, cultural, and user experience complexities. A reverse-flow framework is needed to preserve core innovation while adapting to new market demands.
+approach:
+  - A literature review synthesizes principles from product adaptation, regulatory alignment, and UX transformation.
+  - The framework is built on four foundational principles: contextual product adaptation, regulatory integration, trust and brand repositioning, and user-centric innovation.
+  - It operationalizes a three-phase strategy: internal readiness and product audit, localization and regulatory embedding, and market entry and iterative scaling.
+  - The framework identifies key stakeholders including product teams, legal advisors, UX researchers, and local market specialists.
+  - Strategic considerations for Western entry include regulatory navigation, UX adaptation, and competitive positioning.
+findings:
+  - The framework provides a structured, pragmatic roadmap for cross-regional fintech expansion.
+  - Successful expansion requires deep localization beyond translation, including adjustments to risk models, workflows, and compliance mechanisms.
+  - Early regulatory alignment and cross-disciplinary collaboration are critical to prevent costly retrofits and market entry delays.
+  - Rebuilding trust through transparent communication, local partnerships, and visible security features is essential for Western user acceptance.
+  - The framework advances globalization theory by highlighting the reverse flow of innovation from the Global South to the North.
+key_figures_tables:
+  - None.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: Contextual Product Adaptation
+    definition: Re-engineering core features to fit new user behaviors, infrastructures, and conditions while retaining innovation strengths.
+  - term: Regulatory Integration
+    definition: Embedding compliance requirements into product architecture from the outset rather than as post-development additions.
+  - term: Trust and Brand Repositioning
+    definition: Building credibility and fostering trust among Western users through transparent communication and local partnerships.
+  - term: User-Centric Innovation
+    definition: Continuous product evolution based on user feedback and data analytics to maintain relevance and adaptability.
+critical_citations:
+  - "[54-56] — Foundational principles for contextual product adaptation."
+  - "[54, 57] — Justification for early regulatory integration."
+  - "[58, 59] — Strategies for trust and brand repositioning."
+  - "[60, 61] — Framework for user-centric innovation."
+  - "[62-64] — Rationale for the three-phase strategy."
+relevance:
+  topics:
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Emphasizes deep cultural adaptation beyond UI for Western market entry.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Provides background on fintech innovation in African and Western markets.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Directly addresses the gap in frameworks for reverse-flow fintech globalization.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: medium
+      justification: Highlights mobile-first design as a core innovation to retain during expansion.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: medium
+      justification: Advocates comprehensive UX adaptation for Western user expectations.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: high
+      justification: Stresses rigorous compliance with Western data privacy laws like GDPR as a core requirement.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Identifies trust rebuilding through transparency and certification as crucial for Western users.
+  contribution: The proposed framework provides a structured approach for integrating regulatory compliance and UX localization into the product design of PFMS. It guides the adaptation of mobile-first features and risk models for a Western context, directly informing the design of modules like expense categorization and user onboarding. The framework's emphasis on trust and brand repositioning is directly applicable to building user confidence in a new PFMS. Its phased strategy offers a practical model for managing the complexities of entering a new market, which can be adapted for Odin's development and launch.
+  directly_justifies:
+    - A structured framework is necessary for fintech products to successfully scale across regions.
+    - Deep localization, including UX and regulatory adaptation, is essential for market entry.
+    - Early and embedded regulatory compliance prevents costly delays and penalties.
+    - Trust rebuilding through transparency and local partnerships is critical for user acceptance.
+    - Successful expansion requires a phased approach from internal readiness to iterative scaling.
+  limits:
+    - The framework is conceptual and lacks empirical validation. [unacknowledged]
+    - It focuses on African to Western expansion and may not fully generalize to other regional pairs. [unacknowledged]
+    - The specific role of AI or algorithmic modules in facilitating localization is not explored. [unacknowledged]
+    - The paper does not provide specific metrics for measuring localization effectiveness. [unacknowledged]
+  mapping_rationale: A systematic scan of all 12 functional domains was performed. The domain of 'Existing Systems & Gaps' was flagged as highly relevant (4.B) because the paper explicitly addresses the lack of frameworks for reverse-flow fintech globalization. 'Data Privacy & User Trust' was marked high (10.A, 10.B) due to the strong emphasis on GDPR, KYC/AML, and trust repositioning for Western markets. 'Mobile-First Design' (9.A, 9.B) was marked medium, as the paper identifies mobile-first and lean operations as core innovations to preserve. 'Filipino Cultural Context' (2.A) was marked medium because of the general emphasis on deep cultural localization, though not specific to the Philippines. Domains related to specific algorithmic modules (e.g., Forecasting, Anomaly Detection, Budget Recommendation) were considered but rejected as the paper is a strategy framework, not a technical or algorithmic contribution. The overall relevance is medium, providing high-level strategic guidance for system design and market entry rather than specific technical implementations.
+limitations:
+  - The framework is conceptual and lacks empirical validation. [unacknowledged]
+  - The paper does not provide specific metrics or evaluation frameworks for measuring the success of the localization strategy. [unacknowledged]
+  - The role of specific technologies, such as AI, in enabling the framework's phases is only briefly mentioned. [unacknowledged]
+remember_this:
+  - Reverse innovation flow from African fintechs to Western markets is underexplored.
+  - Deep localization includes regulatory, cultural, and UX adaptation beyond translation.
+  - Early regulatory embedding is critical to prevent costly market entry delays.
+  - A phased strategy from internal readiness to market scaling is essential for success.
+  - The framework fills a significant gap in fintech globalization research.
 ```
 ---
 

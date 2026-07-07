@@ -6,222 +6,7 @@
 
 ---
 
-## Paper 1: Sipila_summarized.md
-
-**Source File:** `Sipila_summarized.md`
-
-```yaml
-paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
-designation: international
-title: Proof of concept of centralized personal finance application
-authors: Sipilä, M.
-year: 2025
-venue: Unknown
-odin_topics:
-  - 3.A
-  - 3.B
-  - 4.A
-  - 4.B
-  - 9.A
-  - 10.A
-  - 11.A
-  - 12.A
-tldr: A proof-of-concept personal finance application was developed using DSRM to consolidate fragmented financial tracking, automate data retrieval, and generate integrated reports for a stakeholder.
-problem_and_motivation: Stakeholders managing finances over a decade rely on fragmented tools like spreadsheets and third-party apps, leading to scalability issues, high manual effort, and error-prone reporting. Existing PFM tools lack comprehensive integration and automation, failing to meet the needs of sophisticated users with specific asset tracking requirements.
-approach:
-  - The Design Science Research Methodology (DSRM) was followed, involving six iterative phases from problem identification to evaluation.
-  - A structured questionnaire identified stakeholder challenges, including complexity, lack of automation, and reporting inefficiencies.
-  - The application was built using Flutter for a cross-platform UI, ASP.NET Core for the backend API, and MongoDB for data storage.
-  - Key features include asset tracking (shares, cash, real estate), categorized cash flow monitoring, and automated PDF report generation.
-  - External integrations were implemented using Google Sheets API for stock prices and HexaRate API for exchange rates, with a focus on automating data retrieval.
-findings:
-  - num: The PoC application significantly reduced manual work and human error by centralizing financial data and automating calculations.
-  - num: The stakeholder reported a reduction in manual effort and increased trust in data accuracy, validated through task-based user testing.
-  - num: The system successfully replaced a multi-step manual reporting process with one integrated, automated PDF report generation feature.
-  - The stakeholder found the interface intuitive and the visualizations (pie charts, trend graphs) clear and informative for gaining financial insights.
-  - The application effectively addressed the core "Must have" requirements, such as data visualization and asset tagging, as defined in the design phase.
-  - User feedback highlighted the need for refinements in tooltips, label clarity, and a clearer definition of the cash flow module's purpose.
-key_figures_tables:
-  - Figure 3: Interactive doughnut chart of shares → Visualizes portfolio distribution.
-  - Figure 4: Editable tables of assets with summary stats → Enables data review and modification.
-  - Figure 5: User net worth over time → Tracks historical asset growth trends.
-  - Figure 7: Multi-layered pie charts of share distribution → Shows categorization by type, country, and subcategory.
-  - Figure 9: Cash flow tracking charts and timeline → Compares monthly income and expenses.
-  - Figure 10: User-generated financial report → Consolidates key metrics into a PDF.
-  - Table 9: Baseline vs. PoC system comparison → Highlights improvements in automation and centralization.
-key_equations:
-  - equation: None.
-    explanation: ""
-definitions:
-  - term: DSRM
-    definition: Design Science Research Methodology
-  - term: PFM
-    definition: Personal Finance Management
-  - term: PoC
-    definition: Proof-of-concept
-  - term: FR
-    definition: Functional Requirement
-  - term: QA
-    definition: Quality Attribute
-critical_citations:
-  - "[Cederberg, 2013] — Highlights user preference for automation and visual clarity."
-  - "[Torno et al., 2021] — Identifies lack of holistic integration in PFM apps."
-  - "[Stefanov et al., 2024] — Notes need for localized and centralized PFM solutions."
-  - "[Herrala et al., 2023] — Links tool complexity to user stress and distrust."
-relevance:
-  topics:
-    - code: 3.A
-      name: Expense Categorization Frameworks
-      relevance: medium
-      justification: The system implements categorization for transactions and assets, aligning with this topic.
-    - code: 3.B
-      name: Expense Category Design Considerations
-      relevance: medium
-      justification: User tagging and categorization of cash flow and assets are core to the design.
-    - code: 4.A
-      name: Landscape of Existing Personal Finance Systems
-      relevance: high
-      justification: The thesis provides a detailed literature review and analysis of PFM landscape limitations.
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      relevance: high
-      justification: Directly addresses fragmentation, manual effort, and scalability gaps in current tools.
-    - code: 9.A
-      name: Mobile-First Design Principles and Rationale
-      relevance: contextual
-      justification: Flutter was used for cross-platform support, but mobile optimization was not completed.
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: contextual
-      justification: The lack of authentication is identified as a major limitation, highlighting its importance.
-    - code: 11.A
-      name: Engagement Dynamics in Personal Finance Applications
-      relevance: medium
-      justification: Discusses how automation and visualization can improve user engagement and motivation.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: high
-      justification: Used a structured DSRM evaluation with task-based testing and stakeholder questionnaires.
-  contribution: "This research contributes a practical proof-of-concept that demonstrates how centralized financial data, automated retrieval, and integrated reporting can significantly reduce manual workload and errors for a sophisticated user. The application's design directly informs Odin's architecture for asset tracking and reporting modules. The DSRM-based iterative development and stakeholder evaluation provide a validated framework for building user-centric PFM tools. The findings on automation and data centralization justify Odin's focus on these features to address similar gaps in the Filipino context."
-  directly_justifies:
-    - "A centralized platform can solve the problem of fragmented financial data from multiple sources."
-    - "Automating data retrieval for share prices and exchange rates significantly reduces manual effort and errors."
-    - "Integrated reporting replaces time-consuming manual processes with on-demand summaries."
-    - "User-centered design and iterative feedback are critical for developing effective PFM tools."
-    - "Stakeholders value systems that are reliable, automated, and provide clear visual insights."
-  limits:
-    - "The study is based on a single stakeholder, limiting generalizability to broader populations."
-    - "Full automation through bank and broker APIs was not achieved, relying on manual entry and workarounds."
-    - "No authentication or authorization mechanisms were implemented, posing data security risks."
-    - "Mobile-specific UI optimization was not completed, focusing primarily on desktop and web platforms."
-  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. Domains directly relevant to the thesis's core contribution (expense categorization, existing systems/gaps, and system evaluation) were flagged as high priority. The paper's literature review and problem analysis strongly support topics like 3.A, 3.B, 4.A, and 4.B (high). Its practical evaluation using a DSRM framework provides a direct contribution to 12.A (high). The discussion on user engagement and motivation links to 11.A (medium). The mention of mobile-first design (9.A) and data security (10.A) is purely contextual, as these were not primary implementation focuses due to the PoC scope. Topics related to Filipino cultural context (2.A-D), behavioral profiling (5.A-C), forecasting (6.A-B), budget recommendation (7.A-D), anomaly detection (8.A-C), and savings/debt management (13.A-C) were considered but rejected as the thesis does not address these specific problem domains. The paper's overall relevance to Odin is high as it provides a validated blueprint for a centralized PFM system with automated reporting, addressing gaps found in many existing tools."
-limitations:
-  - "The system was only tested with one stakeholder, limiting generalizability of usability findings. [unacknowledged]"
-  - "User authentication and data privacy were not implemented, making it unsuitable for multi-user deployment."
-  - "Full automation via bank/broker APIs was not achieved, requiring manual data entry for some transactions."
-  - "Mobile UI optimization was not completed, limiting the 'mobile-first' aspect of the design."
-  - "Performance was not formally tested under load, and no unit/integration tests were documented."
-  - "The study's findings may be biased due to the stakeholder's high financial literacy."
-remember_this:
-  - "Centralized PFM tools reduce manual work and improve data reliability."
-  - "Automated reporting saves significant time compared to manual quarterly reviews."
-  - "Stakeholder feedback confirmed a reduction in manual effort and increased trust in data."
-  - "The PoC addressed core requirements but lacked authentication and mobile optimization."
-  - "DSRM provides an effective framework for developing user-centered financial applications."
-```
----
-
-## Paper 2: Aboud_summarized.md
-
-**Source File:** `Aboud_summarized.md`
-
-```yaml
-paper_id: 10.21070/acopen.10.2025.12858
-designation: international-algorithm-specific
-title: Goal Programming Model in Financial Planning of the International Development Bank
-authors: Aboud, M.M.S.F.
-year: 2025
-venue: Academia Open
-odin_topics:
-  - 7.C
-  - 12.C
-tldr: Goal programming optimizes conflicting financial objectives in banking under resource constraints, achieving near-optimal solutions with minimal deviations.
-problem_and_motivation: Financial institutions struggle to balance multiple conflicting objectives like profitability, cost control, and liquidity. Traditional planning models lack the capability to handle these competing goals, especially in resource-constrained environments. A quantitative method is needed to reconcile these trade-offs and improve decision-making.
-approach:
-  - A weighted-preemptive hybrid goal programming model is formulated for bank financial planning.
-  - The model incorporates multiple objectives: revenue, expenses, net profit, fixed assets, loans, and equity.
-  - WINQSB software is used to solve the model with prioritized goals and assigned weights.
-  - The case study uses annual financial data from the International Development Bank for 2016-2024.
-  - The model is evaluated by comparing actual and target values across all financial goals.
-findings:
-  - The GP model achieved near-optimal solutions for all prioritized goals.
-  - Revenue goal was slightly underachieved with a negative deviation of 0.1884.
-  - Expense goal was slightly underachieved with a negative deviation of 0.1873.
-  - Net profit goal was underachieved with a negative deviation of 0.3006.
-  - Fixed assets goal was overachieved with a positive deviation of 0.7833.
-  - Equity goal was underachieved with a negative deviation of 0.2956.
-  - The model demonstrates flexible prioritization of goals in a multi-objective setting.
-key_figures_tables:
-  - Table 1: Financial data summary 2016-2024 → Provides raw data for the model.
-  - Table 2: Scaled financial data in billion IQD → Enables analysis with smaller numbers.
-key_equations:
-  - equation: Min Z = Σ(w_i^- d_i^- + w_i^+ d_i^+)
-    explanation: Minimizes weighted deviations from multiple goals.
-  - equation: Σ a_ij X_j + d_i^- - d_i^+ = b_i
-    explanation: Defines goal constraints with deviation variables.
-definitions:
-  - term: Goal Programming
-    definition: A mathematical model for solving multi-objective problems with competing goals.
-  - term: Negative Deviation
-    definition: The amount by which an actual value is below the aspiration level.
-  - term: Positive Deviation
-    definition: The amount by which an actual value exceeds the aspiration level.
-  - term: Weighted Method
-    definition: Assigns weights to goals and minimizes total weighted deviation.
-  - term: Preemptive Method
-    definition: Prioritizes goals, satisfying higher-priority ones first.
-  - term: WINQSB
-    definition: Software used to solve the goal programming model.
-critical_citations:
-  - "[Alam, 2022] — Foundational GP model for financial planning."
-  - "[Lakshmi et al., 2021] — GP application in financial planning case study."
-  - "[Nyor et al., 2022] — GP for financial management in Nigeria."
-relevance:
-  topics:
-    - code: 7.C
-      name: Constrained Optimization Approaches for Budget Allocation
-      relevance: high
-      justification: Applies goal programming to optimize multi-objective financial planning.
-    - code: 12.C
-      name: Evaluation Methodologies for Budget Recommendation Systems
-      relevance: medium
-      justification: Demonstrates a method for evaluating optimal solutions against target values.
-  contribution: "The paper provides a practical optimization framework that can inform Odin's budget recommendation module by demonstrating how conflicting objectives (e.g., maximizing savings while minimizing expenses) can be balanced using a weighted-preemptive goal programming approach. The solution method, using WINQSB, offers a reproducible technique for solving multi-objective financial planning problems with prioritized constraints. The case study results, including deviation analysis, provide a benchmark for evaluating optimization models. The model's flexibility suggests it can be adapted for personalized budget allocation based on user-defined financial goals. The research validates the use of constrained optimization for complex financial planning in resource-limited settings, directly applicable to Odin's budget recommendation engine."
-  directly_justifies:
-    - "Goal programming can optimize financial planning with conflicting objectives."
-    - "The model achieves near-optimal solutions with minimal goal deviations."
-    - "Prioritization of goals allows flexible decision-making in resource allocation."
-    - "The approach is applicable to banking and personal finance contexts."
-  limits:
-    - "The model is demonstrated on a single bank's data and may not generalize."
-    - "User preferences and behavioral factors are not incorporated."
-    - "The study focuses on a bank, not individual personal finance management."
-  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to the 'Budget Recommendation' domain (Topic 7.C) because it directly applies constrained optimization (goal programming) to balance multiple, conflicting financial objectives. It is also relevant to 'System Evaluation' (Topic 12.C) because it demonstrates an evaluation methodology based on comparing actual outcomes to target values and analyzing deviations. The paper touches on 'Savings & Debt Management' (Topic 13.A and 13.B) tangentially through its objectives but does not focus on user-level savings goals or debt management strategies. The following domains/topics were considered and rejected: 'Filipino Cultural Context' (Topics 2.A-2.D) because the case study is based on an Iraqi bank and does not address Filipino-specific practices; 'Expense Categorization' (Topic 3.A-3.C) because the paper does not deal with categorizing expenses; 'Behavioral Profiling' (Topics 5.A-5.C) because it does not involve user behavior or profiles; 'Anomaly Detection' (Topics 8.A-8.C) because it does not address detecting outliers. Overall, the paper is most relevant for its constrained optimization methodology, which can be adapted for Odin's budget recommendation algorithm."
-limitations:
-  - "The model is based on historical data from a single bank, limiting generalizability."
-  - "The study does not consider dynamic changes in user behavior or financial conditions."
-  - "Behavioral and psychological factors influencing financial decisions are not incorporated. [unacknowledged]"
-  - "The approach is applied to banking rather than individual personal finance. [unacknowledged]"
-remember_this:
-  - "Goal programming balances conflicting financial objectives effectively."
-  - "The model achieved near-optimal solutions with minimal deviations."
-  - "Prioritization allows flexible resource allocation in financial planning."
-  - "Multi-objective optimization is feasible for complex financial systems."
-  - "The method can be adapted for personalized budget recommendation."
-```
----
-
-## Paper 3: Kim K. et al_summarized.md
+## Paper 1: Kim K. et al_summarized.md
 
 **Source File:** `Kim K. et al_summarized.md`
 
@@ -333,7 +118,7 @@ remember_this:
 ```
 ---
 
-## Paper 4: Quindoza et al_summarized.md
+## Paper 2: Quindoza et al_summarized.md
 
 **Source File:** `Quindoza et al_summarized.md`
 
@@ -451,7 +236,7 @@ remember_this:
   - "Perceptions of the role differ significantly between generations."
 ---
 
-## Paper 5: Yusuf et al_summarized.md
+## Paper 3: Yusuf et al_summarized.md
 
 **Source File:** `Yusuf et al_summarized.md`
 
@@ -575,7 +360,7 @@ remember_this:
 ```
 ---
 
-## Paper 6: Wang F. et al_summarized.md
+## Paper 4: Wang F. et al_summarized.md
 
 **Source File:** `Wang F. et al_summarized.md`
 
@@ -703,7 +488,7 @@ remember_this:
 ```
 ---
 
-## Paper 7: Agrawal et al_summarized.md
+## Paper 5: Agrawal et al_summarized.md
 
 **Source File:** `Agrawal et al_summarized.md`
 
@@ -846,7 +631,7 @@ remember_this:
 ```
 ---
 
-## Paper 8: Ram & Agoylo_summarized.md
+## Paper 6: Ram & Agoylo_summarized.md
 
 **Source File:** `Ram & Agoylo_summarized.md`
 
@@ -956,7 +741,7 @@ remember_this:
 ```
 ---
 
-## Paper 9: Mandaleeka_summarized.md
+## Paper 7: Mandaleeka_summarized.md
 
 **Source File:** `Mandaleeka_summarized.md`
 
@@ -1087,7 +872,7 @@ remember_this:
 ```
 ---
 
-## Paper 10: Chen & Tan_summarized.md
+## Paper 8: Chen & Tan_summarized.md
 
 **Source File:** `Chen & Tan_summarized.md`
 
@@ -1185,7 +970,7 @@ remember_this:
 ```
 ---
 
-## Paper 11: Espiritu M.-2025_summarized.md
+## Paper 9: Espiritu M.-2025_summarized.md
 
 **Source File:** `Espiritu M.-2025_summarized.md`
 
@@ -1286,7 +1071,7 @@ remember_this:
 ```
 ---
 
-## Paper 12: Caroprese et al_summarized.md
+## Paper 10: Caroprese et al_summarized.md
 
 **Source File:** `Caroprese et al_summarized.md`
 
@@ -1398,7 +1183,7 @@ remember_this:
 ```
 ---
 
-## Paper 13: Mehta et al_summarized.md
+## Paper 11: Mehta et al_summarized.md
 
 **Source File:** `Mehta et al_summarized.md`
 
@@ -1572,7 +1357,7 @@ remember_this:
 ```
 ---
 
-## Paper 14: Bader & Haraty_summarized.md
+## Paper 12: Bader & Haraty_summarized.md
 
 **Source File:** `Bader & Haraty_summarized.md`
 
@@ -1755,7 +1540,7 @@ remember_this:
 ```
 ---
 
-## Paper 15: Romero_summarized.md
+## Paper 13: Romero_summarized.md
 
 **Source File:** `Romero_summarized.md`
 
@@ -1915,7 +1700,7 @@ remember_this:
 ```
 ---
 
-## Paper 16: Hasan et al_summarized.md
+## Paper 14: Hasan et al_summarized.md
 
 **Source File:** `Hasan et al_summarized.md`
 
@@ -2072,7 +1857,7 @@ remember_this:
 ```
 ---
 
-## Paper 17: Zlobin & Bazylevych_summarized.md
+## Paper 15: Zlobin & Bazylevych_summarized.md
 
 **Source File:** `Zlobin & Bazylevych_summarized.md`
 
@@ -2198,7 +1983,7 @@ remember_this:
 ```
 ---
 
-## Paper 18: Carillo & Serra_summarized.md
+## Paper 16: Carillo & Serra_summarized.md
 
 **Source File:** `Carillo & Serra_summarized.md`
 
@@ -2309,7 +2094,7 @@ remember_this:
 ```
 ---
 
-## Paper 19: Tjostheim_summarized.md
+## Paper 17: Tjostheim_summarized.md
 
 **Source File:** `Tjostheim_summarized.md`
 
@@ -2455,7 +2240,7 @@ remember_this:
 ```
 ---
 
-## Paper 20: Tabak et al_summarized.md
+## Paper 18: Tabak et al_summarized.md
 
 **Source File:** `Tabak et al_summarized.md`
 
@@ -2647,7 +2432,7 @@ remember_this:
 ```
 ---
 
-## Paper 21: Balog et al_summarized.md
+## Paper 19: Balog et al_summarized.md
 
 **Source File:** `Balog et al_summarized.md`
 
@@ -2737,7 +2522,7 @@ remember_this:
 ```
 ---
 
-## Paper 22: Thakur & Jadhav_summarized.md
+## Paper 20: Thakur & Jadhav_summarized.md
 
 **Source File:** `Thakur & Jadhav_summarized.md`
 
@@ -2883,7 +2668,7 @@ remember_this:
 ```
 ---
 
-## Paper 23: Rad et al_summarized.md
+## Paper 21: Rad et al_summarized.md
 
 **Source File:** `Rad et al_summarized.md`
 
@@ -2971,7 +2756,7 @@ remember_this:
 ```
 ---
 
-## Paper 24: Aldrees et al_summarized.md
+## Paper 22: Aldrees et al_summarized.md
 
 **Source File:** `Aldrees et al_summarized.md`
 
@@ -3111,7 +2896,7 @@ remember_this:
 ```
 ---
 
-## Paper 25: Templa et al_summarized.md
+## Paper 23: Templa et al_summarized.md
 
 **Source File:** `Templa et al_summarized.md`
 
@@ -3282,7 +3067,7 @@ remember_this:
 ```
 ---
 
-## Paper 26: Ghonaim & El-Sharawy_summarized.md
+## Paper 24: Ghonaim & El-Sharawy_summarized.md
 
 **Source File:** `Ghonaim & El-Sharawy_summarized.md`
 
@@ -3426,7 +3211,7 @@ remember_this:
 ```
 ---
 
-## Paper 27: Stylianou & Pantelidou_summarized.md
+## Paper 25: Stylianou & Pantelidou_summarized.md
 
 **Source File:** `Stylianou & Pantelidou_summarized.md`
 
@@ -3539,7 +3324,7 @@ remember_this:
 ```
 ---
 
-## Paper 28: Levi_summarized.md
+## Paper 26: Levi_summarized.md
 
 **Source File:** `Levi_summarized.md`
 
@@ -3656,7 +3441,7 @@ remember_this:
 ```
 ---
 
-## Paper 29: Shakhovska & Pukach_summarized.md
+## Paper 27: Shakhovska & Pukach_summarized.md
 
 **Source File:** `Shakhovska & Pukach_summarized.md`
 
@@ -3769,7 +3554,7 @@ remember_this:
 ```
 ---
 
-## Paper 30: Pritam & Pramod_summarized.md
+## Paper 28: Pritam & Pramod_summarized.md
 
 **Source File:** `Pritam & Pramod_summarized.md`
 
@@ -3863,7 +3648,7 @@ remember_this:
 ```
 ---
 
-## Paper 31: Zhang & Duan_summarized.md
+## Paper 29: Zhang & Duan_summarized.md
 
 **Source File:** `Zhang & Duan_summarized.md`
 
@@ -4097,7 +3882,7 @@ remember_this:
 ```
 ---
 
-## Paper 32: Yachamaneni et al_summarized.md
+## Paper 30: Yachamaneni et al_summarized.md
 
 **Source File:** `Yachamaneni et al_summarized.md`
 
@@ -4241,7 +4026,7 @@ remember_this:
 ```
 ---
 
-## Paper 33: Japinye & Adedugbe_summarized.md
+## Paper 31: Japinye & Adedugbe_summarized.md
 
 **Source File:** `Japinye & Adedugbe_summarized.md`
 
@@ -4369,7 +4154,7 @@ remember_this:
 ```
 ---
 
-## Paper 34: Vijayanand & Smrithy_summarized.md
+## Paper 32: Vijayanand & Smrithy_summarized.md
 
 **Source File:** `Vijayanand & Smrithy_summarized.md`
 
@@ -4494,7 +4279,7 @@ remember_this:
 ```
 ---
 
-## Paper 35: Schipper_summarized.md
+## Paper 33: Schipper_summarized.md
 
 **Source File:** `Schipper_summarized.md`
 
@@ -4655,7 +4440,7 @@ remember_this:
 ```
 ---
 
-## Paper 36: Danach et al_summarized.md
+## Paper 34: Danach et al_summarized.md
 
 **Source File:** `Danach et al_summarized.md`
 
@@ -4820,7 +4605,7 @@ remember_this:
 ```
 ---
 
-## Paper 37: Simeonov et al_summarized.md
+## Paper 35: Simeonov et al_summarized.md
 
 **Source File:** `Simeonov et al_summarized.md`
 
@@ -4934,7 +4719,7 @@ remember_this:
 ```
 ---
 
-## Paper 38: Li & Gautam_summarized.md
+## Paper 36: Li & Gautam_summarized.md
 
 **Source File:** `Li & Gautam_summarized.md`
 
@@ -5029,7 +4814,7 @@ remember_this:
 ```
 ---
 
-## Paper 39: Lee C. et al_summarized.md
+## Paper 37: Lee C. et al_summarized.md
 
 **Source File:** `Lee C. et al_summarized.md`
 
@@ -5185,7 +4970,7 @@ remember_this:
 ```
 ---
 
-## Paper 40: Dela Torre et al_summarized.md
+## Paper 38: Dela Torre et al_summarized.md
 
 **Source File:** `Dela Torre et al_summarized.md`
 
@@ -5287,7 +5072,7 @@ remember_this:
 ```
 ---
 
-## Paper 41: Saeedian_summarized.md
+## Paper 39: Saeedian_summarized.md
 
 **Source File:** `Saeedian_summarized.md`
 
@@ -5430,7 +5215,7 @@ remember_this:
 ```
 ---
 
-## Paper 42: Dimaranan & Dy_summarized.md
+## Paper 40: Dimaranan & Dy_summarized.md
 
 **Source File:** `Dimaranan & Dy_summarized.md`
 
@@ -5559,7 +5344,7 @@ remember_this:
 ```
 ---
 
-## Paper 43: Song et al_summarized.md
+## Paper 41: Song et al_summarized.md
 
 **Source File:** `Song et al_summarized.md`
 
@@ -5691,7 +5476,7 @@ remember_this:
 ```
 ---
 
-## Paper 44: Ao et al_summarized.md
+## Paper 42: Ao et al_summarized.md
 
 **Source File:** `Ao et al_summarized.md`
 
@@ -5819,7 +5604,7 @@ remember_this:
 ```
 ---
 
-## Paper 45: Singh U. et al_summarized.md
+## Paper 43: Singh U. et al_summarized.md
 
 **Source File:** `Singh U. et al_summarized.md`
 
@@ -5915,7 +5700,7 @@ remember_this:
 ```
 ---
 
-## Paper 46: Tambuli & Villarba_summarized.md
+## Paper 44: Tambuli & Villarba_summarized.md
 
 **Source File:** `Tambuli & Villarba_summarized.md`
 
@@ -6059,7 +5844,7 @@ remember_this:
 ```
 ---
 
-## Paper 47: Huang A. et al_summarized.md
+## Paper 45: Huang A. et al_summarized.md
 
 **Source File:** `Huang A. et al_summarized.md`
 
@@ -6170,7 +5955,7 @@ remember_this:
 ```
 ---
 
-## Paper 48: Patiu et al_summarized.md
+## Paper 46: Patiu et al_summarized.md
 
 **Source File:** `Patiu et al_summarized.md`
 
@@ -6319,7 +6104,7 @@ remember_this:
 ```
 ---
 
-## Paper 49: Pisal et al_summarized.md
+## Paper 47: Pisal et al_summarized.md
 
 **Source File:** `Pisal et al_summarized.md`
 
@@ -6476,7 +6261,7 @@ remember_this:
 ```
 ---
 
-## Paper 50: Takayanagi et al_summarized.md
+## Paper 48: Takayanagi et al_summarized.md
 
 **Source File:** `Takayanagi et al_summarized.md`
 
@@ -6590,6 +6375,250 @@ remember_this:
   - Unsuccessful elicitation leads to negative correlation (-0.228), directing investors to wrong assets.
   - Users prefer extroverted advisors despite worse advice, increasing trust and intention to use.
   - Extroverted advisors use more positive language, while conscientious ones use more negative/uncertain language.
+```
+---
+
+## Paper 49: Pretnar et al_summarized.md
+
+**Source File:** `Pretnar et al_summarized.md`
+
+```yaml
+paper_id: 10.21203/rs.3.rs-7730348/v1
+designation: international-algorithm-specific
+title: Mental Accounting Through Two-stage Budgeting Under Bounded Rationality
+authors: Pretnar, N.; Olivola, C. Y.; Montgomery, A.
+year: 2025
+venue: Research Square
+odin_topics:
+  - 3.A
+  - 5.A
+  - 6.A
+  - 7.A
+  - 7.C
+  - 8.A
+  - 10.B
+tldr: A structural model generalizes two-stage budgeting with cognitive frictions to quantify mental accounting behavior from expenditure data alone.
+problem_and_motivation: Classical two-stage budgeting assumes perfect fungibility and ex-post budget adherence, yet consumers exhibit mental accounting and sticky budgets due to cognitive costs. There is a lack of empirical, agent-level quantification of how bounded rationality manifests in budgeting. This gap prevents the design of effective financial interventions that account for heterogeneous consumer decision-making.
+approach:
+  - Proposes a dynamic, two-stage budgeting model where a planner sets ex-ante budgets subject to cognitive constraints and a doer realizes expenditure shocks.
+  - Incorporates narrow choice bracketing via probabilistic budget re-evaluation (ψ) and numeracy constraints that prevent trivial budget changes.
+  - Mental accounting is captured by a state variable (over/under-spending from prior periods) that influences future budget adjustments via a parameter γ.
+  - Estimates the structural model using a hierarchical MH-within-Gibbs MCMC algorithm on weekly expenditure data from 2,509 low-income prepaid debit card users.
+  - Compares model variants with absolute ($1) and relative (%) numeracy thresholds, and tests counterfactuals by fully relaxing cognitive constraints.
+findings:
+  - num: 80% of consumer-week combinations exhibit bounded rationality, with an average of 2.11 budget updates per week under the $1-threshold model.
+  - num: A $1 numeracy threshold reduces budget updates by 14.9%, while relative thresholds of 1%, 5%, and 10% reduce updates by 41.8%, 64%, and 70% respectively.
+  - Ex-ante budgeting behavior is largely consistent with mental accounting (78.7% are budget prioritizers), but ex-post spending behavior is mixed, with 46.8% classified as spendthrifts.
+  - num: 22.3% of consumers are ex-ante budget prioritizers but ex-post habitual over-spenders (type ii), exhibiting a "planning fallacy" pattern after over-spending.
+  - Counterfactual relaxation of cognitive constraints makes 68.4% of consumers worse off, and 3.3% go bankrupt under the $1-threshold model.
+  - num: Consumers who go bankrupt when constraints are relaxed have significantly lower estimated updates (1.25/week) and are more likely to be ex-ante type (i) but ex-post type (ii).
+key_figures_tables:
+  - "Table 1: Summary statistics of agent-level means → Shows low-income sample (median weekly income $460) with substantial spending variation."
+  - "Table 2: Posterior summary statistics for baseline and $1-threshold models → Reports estimated means and standard deviations for all key behavioral parameters."
+  - "Table 3: Marginal distributions of ex-ante and ex-post types → Ex-ante most are budget prioritizers, ex-post plurality are spendthrifts."
+  - "Table 4: Joint distributions of ex-ante and ex-post types → Reveals 37.5% are budget prioritizers ex-ante but spendthrifts ex-post."
+  - "Figure 2: Time series of actual vs. predicted spending → Demonstrates the model's fit for a median-income agent across categories."
+  - "Figure 3: Posterior density of budget updates per week → Shows distribution of k under different numeracy thresholds."
+  - "Figure 4: Density of k conditional on counterfactual type → Bankrupt consumers have significantly fewer budget updates."
+key_equations:
+  - equation: $x_{ijt} = \omega_{ijt} + \zeta_{ijt}$
+    explanation: Doer's expenditure is budget plus shock.
+  - equation: $a_{ijt} = \omega_{ij,t-1} - x_{ij,t-1} = -\zeta_{ij,t-1}$
+    explanation: Mental account balance equals negative prior shock.
+  - equation: $\omega_{ijt} = \theta_{ijt} \ell_{it} + \gamma_i a_{ijt}$
+    explanation: Budget is income share plus anchored mental account.
+  - equation: $\Gamma_{ijt} \sim \text{Bernoulli}(\psi_{ij})$
+    explanation: Probability of re-evaluating a specific budget.
+  - equation: $\vartheta_{iyt}^* = \frac{\alpha_{i,\iota_{iyt}} \ell_{it} - \alpha_{i,\iota_{iyt}} \sum_{s<y} \ell_{it} \theta_{i,\iota_{ist},t} + \gamma_i a_{i,\iota_{iyt},t} + \zeta_{i,\iota_{iyt},t}}{\ell_{it}(\alpha_{i,\iota_{iyt}} + \alpha_{i,J+1})} \dots$
+    explanation: Analytical expression for optimal candidate budget share.
+definitions:
+  - term: Mental Accounting
+    definition: A book-keeping mechanism where past over/under-spending informs future budgets.
+  - term: Narrow Choice Bracketing
+    definition: Consumers re-evaluate only a subset of budgets per period due to cognitive constraints.
+  - term: Numeracy Constraint
+    definition: A threshold (absolute or relative) that a budget change must exceed to be implemented.
+  - term: Budget Prioritizer
+    definition: Consumer type that reduces budget after over-spending and increases after under-spending.
+  - term: Spendthrift
+    definition: Consumer type that increases spending regardless of prior over or under-spending.
+critical_citations:
+  - "[Thaler, 1985] — Foundational theory of mental accounting."
+  - "[Deaton and Muellbauer, 1980] — Classical two-stage budgeting framework."
+  - "[Shefrin and Thaler, 1981] — Planner/doer model of self-control."
+  - "[Gabaix, 2014] — Sparse maximization and bounded rationality."
+  - "[Kőszegi and Matějka, 2020] — Mental budgeting with attention costs."
+relevance:
+  topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: high
+      justification: The model operationalizes budget categories and estimates category-specific expenditure shares.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Empirically classifies consumers into ex-ante and ex-post behavioral types (budget prioritizers, spendthrifts).
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Develops a structural forecasting model for spending based on budgets, mental accounts, and shocks.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: high
+      justification: Models the strategic process of setting and updating budgets under cognitive frictions.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: high
+      justification: Formulates budget selection as a constrained optimization problem with cognitive and numeracy constraints.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: medium
+      justification: Expenditure shocks (ζ) are modeled as deviations from budgets, which is foundational for anomaly detection.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: contextual
+      justification: Counterfactual analysis shows that nudging via apps can harm certain users, affecting trust.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: low
+      justification: The model captures spending spikes and trends but does not focus on seasonality.
+  contribution: "The paper provides a structurally estimated model for inferring latent budgeting behavior from expenditure data, which can be used to enhance Odin's spending forecasting module (6.A) by incorporating cognitive constraints. It offers a methodology for dynamically classifying users into behavioral profiles (5.A) based on their budget-updating and spending responses, enabling adaptive budgeting strategies. The counterfactual analysis reveals critical insights for Odin's nudging features (11.A): increasing attentiveness can have adverse effects for some users, implying that interventions should be personalized and cautious. The model's framework for budget updating and mental accounting directly informs the design of Odin's budget recommendation (7.B) and anomaly detection (8.A) algorithms, providing a theoretical basis for handling infeasibility and user inertia. Finally, the identification of distinct consumer types (e.g., budget prioritizers vs. spendthrifts) supports the development of tailored financial advice and savings/debt management strategies (13.A, 13.B)."
+  directly_justifies:
+    - "Budget updates occur for approximately half of consumption categories each period, supporting a sparse-max approach for Odin's budget recommendation."
+    - "A $1 numeracy threshold is a better fit than no threshold, justifying the inclusion of an 'inertia' parameter in Odin's budget adjustment logic."
+    - "Relaxing cognitive constraints makes 68% of consumers worse off, suggesting Odin should avoid over-nudging and prioritize user autonomy."
+    - "Ex-ante budgeting behavior is distinct from ex-post spending, indicating Odin should track both planned budgets and actual expenditure separately."
+    - "Consumers who are ex-ante budget prioritizers but ex-post spendthrifts are most vulnerable to adverse outcomes, requiring targeted support."
+  limits:
+    - "Results are model-dependent and rely on unobserved latent variables, limiting the certainty of individual-type classifications."
+    - "Data is from low-income, underbanked prepaid card users in North America, which may not generalize to Filipino young professionals."
+    - "Assumes strong separability of utility, which may oversimplify substitution patterns across broad expenditure categories."
+    - "Does not explicitly model price variation, aggregating prices into indices, which may miss important consumption adjustments."
+  mapping_rationale: "A systematic scan across all 12 functional domains was conducted. The paper's core theoretical and empirical contributions on modeling bounded rationality in budgeting directly map to high relevance for domains: Expense Categorization (3.A, 3.B), Behavioral Profiling (5.A, 5.B, 5.C), Spending Forecasting (6.A, 6.B), and Budget Recommendation (7.A, 7.B, 7.C, 7.D). The structural estimation approach and consumer typing also offer medium relevance to Anomaly Detection (8.A) and System Evaluation (12.A, 12.B, 12.C). The counterfactual simulations on attentiveness inform Engagement & Retention (11.A) and Data Privacy/Trust (10.B), albeit with contextual or low relevance as the paper does not directly study app design or trust. Topics like Filipino Cultural Context (2.A, 2.B, 2.C) and Savings/Debt (13.A, 13.B) were considered but rejected as the paper's empirical setting is North American and its primary contribution is methodological, though findings on overspending cycles are tangentially relevant to debt management. Borderline cases included the mental accounting state variable (a), which relates to both expense categorization (3.A) and behavioral profiles (5.A); it was assigned to 5.A for its role in defining consumer types. The paper's overall relevance to Odin is high, providing a quantitative, micro-founded framework for modeling key user behaviors that directly informs the design of adaptive and personalized financial management features."
+limitations:
+  - "Findings are based on a model-dependent estimation of latent budgets, not directly observed." [unacknowledged]
+  - "The dataset is from a specific low-income, underbanked population in North America; applicability to other demographics (e.g., Filipino YPs) is not tested." [acknowledged]
+  - "Assumes strong separability in utility, which may not capture complex category interactions."
+  - "The model does not incorporate explicit price effects, relying on aggregated price indices." [acknowledged]
+  - "Counterfactual simulations of 'full rationality' may not reflect real-world behavioral changes from app nudges."
+remember_this:
+  - "Consumers update only about half their budgets per week, showing bounded rationality."
+  - "Most consumers are budget prioritizers ex-ante but spendthrifts ex-post."
+  - "Relaxing cognitive constraints makes 68% of consumers worse off."
+  - "3.3% of consumers go bankrupt if all budgets are updated weekly."
+  - "Sticky budgets can serve as a disciplinary tool for vulnerable consumers."
+```
+---
+
+## Paper 50: Anes & Abreu_summarized.md
+
+**Source File:** `Anes & Abreu_summarized.md`
+
+```yaml
+paper_id: 10.3390/app15074044
+designation: international-algorithm-specific
+title: Adaptive Cluster-Based Normalization for Robust TOPSIS in Multicriteria Decision-Making
+authors: Anes, V.; Abreu, A.
+year: 2025
+venue: Applied Sciences
+odin_topics:
+  - 3.A
+  - 7.C
+  - 8.A
+  - 8.B
+  - 12.A
+  - 12.B
+  - 12.C
+tldr: Proposes a cluster-based logarithmic normalization for TOPSIS that uses fuzzy numbers for uncertainty and expert-defined centroids to improve ranking stability and outlier robustness.
+problem_and_motivation: Traditional TOPSIS normalization techniques like Min-Max and Z-score are sensitive to outliers and large variance, which can distort rankings. Clustering methods also often rely on rigid, data-driven classifications that fail to capture uncertainty or expert intent. There is a need for a more flexible and robust normalization and clustering framework.
+approach:
+  - Defines cluster centroids a priori using fuzzy numbers based on expert judgment and ideal conditions for each criterion.
+  - Converts each alternative's fuzzy criterion scores into crisp centroids using the average of (a, b, c) values.
+  - Assigns each alternative to the cluster with the nearest Euclidean distance to its predefined centroid.
+  - Applies logarithmic normalization within each cluster to compress extreme values and stabilize variance.
+  - Uses the cluster centroids to derive criterion weights and then applies the standard TOPSIS procedure.
+  - Validates the approach using a case study on selecting a host city based on cost, infrastructure, safety, and accessibility.
+findings:
+  - The proposed fuzzy clustering method produced classifications nearly identical to Fuzzy K-Means but with a more logically coherent assignment for a borderline case (City K).
+  - The proposed method is computationally simpler and more deterministic than iterative Fuzzy K-Means.
+  - Logarithmic normalization provided more balanced and stable TOPSIS scores, especially in clusters with high variance, compared to Min-Max normalization.
+  - Top-ranked alternatives (City K and City C) were consistent across both normalization methods, reinforcing the robustness of the overall framework.
+key_figures_tables:
+  - Table 5: Distances to cluster centroids → Used to assign each city to its most appropriate cluster based on Euclidean distance.
+  - Table 8: Logarithmic normalization results → Shows how extreme cost values are compressed within each cluster.
+  - Table 11: TOPSIS results using logarithmic normalization → City K (0.89), City C (1.00), and City E (0.89) are top-ranked in their clusters.
+key_equations:
+  - equation: C_{cwj} = (a_w + b_w + c_w) / 3
+    explanation: Calculates the crisp centroid of a cluster for a criterion.
+  - equation: C_{Aij} = (a_i + b_i + c_i) / 3
+    explanation: Calculates the crisp centroid of an alternative for a criterion.
+  - equation: X' = (log(X) - log(X_min)) / (log(X_max) - log(X_min))
+    explanation: Logarithmic normalization formula to scale data and reduce outlier impact.
+definitions:
+  - term: TOPSIS
+    definition: Technique for Order of Preference by Similarity to Ideal Solution, a multi-criteria decision-making method.
+  - term: MCDM
+    definition: Multi-criteria decision-making, a field for evaluating multiple conflicting factors.
+  - term: Fuzzy Number
+    definition: A representation of uncertainty using a triplet (a, b, c) for lower, central, and upper bounds.
+  - term: Cluster Centroid
+    definition: The ideal point representing the optimal position for a cluster across all criteria.
+critical_citations:
+  - "[Vafaei et al., 2021] — Compares normalization techniques on data with outliers."
+  - "[Zavadskas & Turskis, 2008] — Introduces a novel logarithmic normalization method in game theory."
+  - "[Štilic´ & Puška, 2023] — Comprehensive review of MCDM methods in sustainable engineering."
+relevance:
+  topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: contextual
+      justification: Provides a methodological framework for categorizing alternatives (cities) based on cost and other criteria.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: low
+      justification: The case study involves budget allocation (cost criterion), but the method does not address constraint optimization.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: The method mitigates the effect of outliers, which is conceptually similar to handling anomalies in financial data.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: low
+      justification: Focuses on algorithmic robustness to outliers, a key challenge in anomaly detection.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: The paper presents a novel evaluation methodology (TOPSIS with cluster-based normalization) that can be used to rank financial options.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Directly evaluates the performance of the proposed clustering and normalization algorithms within the TOPSIS framework.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: high
+      justification: The TOPSIS-based ranking methodology can be applied to evaluate and rank budget recommendation strategies for Odin.
+  contribution: The paper provides a methodological framework for evaluating and ranking alternatives under uncertainty, which can be directly applied to Odin's recommendation system. Its cluster-based normalization approach can enhance the robustness of the Budget Recommendation (7.B) and Anomaly Detection (8.A) modules by mitigating the impact of outliers in financial data. The use of expert-defined profiles offers a way to incorporate Filipino cultural context and user preferences into the ranking process. Finally, the deterministic clustering method provides a computationally efficient and transparent approach for grouping users with similar financial behavior profiles.
+  directly_justifies:
+    - "Cluster-based normalization improves ranking stability by reducing the influence of outliers."
+    - "Logarithmic normalization is effective for datasets with high variance and non-linear distributions."
+    - "Using predefined cluster centroids allows for expert judgment to guide the classification process."
+    - "The proposed TOPSIS framework is computationally simple and easy to implement."
+  limits:
+    - "The definition of cluster centroids is based on expert judgment, introducing subjectivity."
+    - "The method's performance on large-scale, high-dimensional datasets remains untested."
+    - "The study does not compare its method against a wide array of modern optimization or machine learning baselines. [unacknowledged]"
+    - "The applicability of the method to streaming or real-time data is not explored. [unacknowledged]"
+  mapping_rationale: A systematic scan of all 12 functional domains was performed to map the paper's contributions to Odin's topics. The paper's core contribution is algorithmic and methodological, leading to the selection of topics under `12.A`, `12.B`, and `12.C` as `high` relevance, as it provides a framework for evaluating systems and algorithms. The case study's context of selecting an option based on multiple criteria (like cost) relates to `3.A` (`contextual`) and `7.A` (`low`). The method's ability to handle outliers directly informs the principles for anomaly detection (`8.A`, `8.B` - both `low`). The domain of "Behavioral Profiling" (`5.A`) was considered but rejected because the paper does not classify individuals. "Filipino Cultural Context" (`2.A`, `2.B`, `2.C`, `2.D`) was rejected as the case study is not culturally specific. The "Data Privacy" (`10.A`, `10.B`) and "Engagement" (`11.A`, `11.B`) domains were not addressed. The paper's overall relevance to Odin is high in its capacity to provide a robust, outlier-resistant, and expert-guided evaluation framework, which can be adapted for modules like budget recommendation and anomaly detection, despite its abstract, algorithm-focused nature.
+limitations:
+  - "The definition of ideal cluster centroids is based on expert judgment, introducing subjectivity."
+  - "The method's performance on large-scale, high-dimensional datasets remains untested."
+  - "The study does not compare its method against a wide array of modern optimization or machine learning baselines. [unacknowledged]"
+  - "The applicability of the method to streaming or real-time data is not explored. [unacknowledged]"
+remember_this:
+  - "Logarithmic normalization in TOPSIS improves ranking stability with high-variance data."
+  - "Fuzzy numbers enable the representation of uncertainty in expert-defined cluster profiles."
+  - "The proposed clustering method is computationally simpler than Fuzzy K-Means."
+  - "City K was more logically assigned to a cluster by the proposed method than by Fuzzy K-Means."
 ```
 ---
 

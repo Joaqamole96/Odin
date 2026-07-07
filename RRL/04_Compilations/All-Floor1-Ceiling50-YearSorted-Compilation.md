@@ -332,153 +332,195 @@ authors: Ayari, H.; Guetari, R.; Kraïem, N.
 year: 2026
 venue: Artificial Intelligence Review
 odin_topics:
+  - 1.B
   - 3.A
-  - 3.B
   - 4.A
   - 4.B
   - 5.A
   - 5.C
   - 6.A
   - 6.B
+  - 7.A
+  - 7.C
   - 8.A
   - 8.B
+  - 9.A
+  - 9.B
   - 10.A
   - 10.B
   - 12.A
   - 12.B
-  - 12.C
-tldr: A systematic review of 63 studies on machine learning credit scoring identifies ensemble and hybrid models as most accurate, with key challenges in interpretability, bias, and alternative data integration.
-problem_and_motivation: Traditional credit scoring models rely on narrow features and linear assumptions, limiting their effectiveness for non-traditional borrowers. There is a need to systematically synthesize recent ML advancements to guide practitioners and researchers. This review addresses the gap by providing a comprehensive and structured analysis of ML methods, trends, and challenges for credit scoring.
+  - 13.C
+tldr: A systematic literature review of 63 studies on ML credit scoring shows ensemble and hybrid models consistently outperform traditional approaches, while DL faces interpretability and data availability barriers.
+problem_and_motivation: Traditional credit scoring models like logistic regression depend on narrow features and struggle to capture complex behavioral patterns, limiting their effectiveness with heterogeneous borrower profiles. Financial institutions face the challenge of processing loan applications quickly while maintaining accuracy, fairness, and regulatory compliance. ML approaches offer the potential to improve prediction accuracy, handle high-dimensional data, and incorporate alternative data sources, but their adoption is hindered by issues of interpretability, bias, and computational complexity.
 approach:
-  - Conducted a systematic literature review following PRISMA 2020 guidelines, searching four major digital libraries (Springer, ACM, IEEE, Google Scholar).
-  - Analyzed 330 initial papers, selecting 63 peer-reviewed studies from 2018-2024 after rigorous screening for empirical results and methodological transparency.
-  - Extracted data on ML techniques, datasets, evaluation metrics, and performance results using a structured form and quality assessment checklist.
-  - Categorized models into traditional ML, deep learning, and ensemble learning, including hybrid approaches within each category.
-  - Applied science mapping methods, including bibliographic coupling and keyword co-occurrence, to identify thematic clusters and research trends.
-  - Performed a comparative analysis of model performance on standard datasets (German, Australian, Japanese, Lending Club) and discussed challenges.
+  - Conducted a systematic literature review following PRISMA 2020 guidelines across four digital libraries (SpringerLink, ACM, IEEE Xplore, Google Scholar).
+  - Employed a structured search query combining credit scoring, ML, DL, and ensemble learning terms for publications between 2018 and 2024.
+  - Applied inclusion criteria focusing on peer-reviewed studies with empirical results and clearly defined evaluation metrics.
+  - Performed data extraction covering ML techniques, datasets, evaluation metrics, and performance results from 63 selected studies.
+  - Used bibliographic coupling and keyword co-occurrence analysis (VOSviewer) to map intellectual structure and thematic clusters.
 findings:
-  - Ensemble and hybrid models, combining feature optimization and multiple classifiers, consistently outperform single classifiers across benchmark datasets.
-  - num: On the German dataset, the GA+NN model achieved the highest accuracy (91.91%) and AUC (92.60%).
-  - num: Deep learning models like CNNs show promise with large datasets but are less commonly applied due to interpretability challenges.
-  - The use of alternative data sources (social media, mobile usage, psychometrics) is an emerging trend that can enhance predictive accuracy.
-  - Interpretability techniques like SHAP and LIME are increasingly adopted to address the "black box" nature of complex ML models.
-  - Key challenges in adopting ML for credit scoring include interpretability, potential biases, and the curse of dimensionality.
+  - "num: Ensemble and hybrid models consistently outperform single classifiers, with accuracy improvements up to 91.91% on the German dataset (GA+NN) and 93.16% on the Japanese dataset (multi-stage ensemble)."
+  - "num: XGBoost-BO improved accuracy by 4.10% on the German dataset, 3.03% on Lending Club, and 2.76% on the Australian dataset."
+  - "num: Deep CNN achieved 99.74% accuracy on the Australian credit dataset, significantly outperforming MLP's 90.75%."
+  - "num: The GA-based feature selection combined with CatBoost achieved accuracies of 86.70%, 88.40%, and 86.20% on German, Australian, and Japanese datasets."
+  - Interpretability challenges persist for complex ML models, with LIME and SHAP emerging as tools to bridge the explainability gap.
+  - Alternative data sources (social media, mobile usage, psychometrics) show promise for credit scoring, especially for borrowers lacking traditional credit histories.
+  - Accuracy (49 studies) and AUC (31 studies) are the most frequently reported evaluation metrics in credit scoring literature.
 key_figures_tables:
-  - Table 7: Performance comparison on German dataset → GA+NN achieves highest accuracy (91.91%) and AUC (92.60%).
-  - Table 8: Performance comparison on Australian dataset → Multi-stage ensemble model achieves best accuracy (92.36%) and AUC (96.65%).
-  - Table 9: Performance comparison on Japanese dataset → Multi-stage ensemble model achieves best accuracy (93.16%) and AUC (96.95%).
-  - Figure 2: Comparative accuracy of ML models → Hybrid ML approaches demonstrate top performance with low variability.
-  - Figure 5: Bibliographic coupling network → The literature is organized into three main clusters: traditional, ensemble, and deep learning approaches.
+  - "Table 4: Summary of machine learning studies → Shows LR, RF, SVM, KNN, and hybrid models with performance on German, Australian, and proprietary datasets."
+  - "Table 5: Summary of deep learning studies → CNN, LSTM, and hybrid DL models achieve high accuracy on credit scoring benchmarks."
+  - "Table 6: Summary of ensemble learning studies → Ensemble methods like XGBoost, GBDT, and multi-stage models dominate top performance rankings."
+  - "Table 7: Ranked evaluation on German dataset → GA+NN achieves highest accuracy (91.91%) and AUC (92.60%)."
+  - "Figure 2: Comparative accuracy of ML models → Random Forest and hybrid ML approaches achieve highest accuracies with low variability."
+  - "Figure 3: Comparative accuracy of DL models → CNN and hybrid DL provide robust performance with lower variability."
+  - "Figure 4: Comparative accuracy of ensemble models → XGB-BO and proposed ensembles capture peak performance in certain studies."
+  - "Figure 5: Bibliographic coupling network → Three clusters: traditional statistical approaches, ensemble-based ML, and emerging DL applications."
 key_equations:
   - equation: "P(Y=1|x) = 1 / (1 + e^{-(β0 + β^T x)})"
-    explanation: Logistic regression estimates probability of binary outcome for credit scoring.
+    explanation: "Logistic regression estimates probability of binary credit default outcome."
+  - equation: "ℓ(β0, β) = Σ [y_i log p(x_i) + (1 - y_i) log(1 - p(x_i))]"
+    explanation: "Log-likelihood maximized to estimate logistic regression parameters."
   - equation: "Accuracy = (TP + TN) / (TP + TN + FP + FN)"
-    explanation: Overall correctness of a classification model.
+    explanation: "Overall correctness measure, limited with imbalanced credit data."
   - equation: "F1-Score = 2 × (Precision × Recall) / (Precision + Recall)"
-    explanation: Harmonic mean of precision and recall for imbalanced datasets.
+    explanation: "Harmonic mean balancing precision and recall for class imbalance."
 definitions:
-  - term: AUC
-    definition: Area Under the ROC Curve, measures model's ability to distinguish between classes.
-  - term: G-Mean
-    definition: Geometric mean of sensitivity and specificity, balances class performance.
-  - term: KS
-    definition: Kolmogorov-Smirnov statistic, measures model's discriminatory power in credit scoring.
-  - term: SHAP
-    definition: SHapley Additive exPlanations, a method to explain predictions by quantifying feature contributions.
-  - term: LIME
-    definition: Local Interpretable Model-agnostic Explanations, explains individual predictions using local approximations.
-  - term: SMOTE
-    definition: Synthetic Minority Over-sampling Technique, addresses class imbalance by generating synthetic samples.
+  - term: "ML"
+    definition: "Machine learning, algorithms that enable systems to learn from data and make predictions without explicit programming."
+  - term: "DL"
+    definition: "Deep learning, subset of ML using neural networks with multiple layers to automatically extract features."
+  - term: "EL"
+    definition: "Ensemble learning, integration of multiple learning algorithms to enhance predictive performance."
+  - term: "LR"
+    definition: "Logistic regression, probabilistic classification model estimating binary outcome probability."
+  - term: "RF"
+    definition: "Random forest, ensemble of decision trees using bagging for classification and regression."
+  - term: "SVM"
+    definition: "Support vector machine, supervised model mapping data to high-dimensional space for classification using hyperplanes."
+  - term: "KNN"
+    definition: "K-nearest neighbors, non-parametric technique classifying based on distance metrics to nearest neighbors."
+  - term: "CNN"
+    definition: "Convolutional neural network, deep feedforward network for feature extraction and classification."
+  - term: "LSTM"
+    definition: "Long short-term memory, recurrent neural network designed for variable length sequences with memory gates."
+  - term: "XGBoost"
+    definition: "Extreme gradient boosting, ensemble model combining tree models with gradient boosting."
+  - term: "GBDT"
+    definition: "Gradient boosting decision tree, ensemble method combining weak base learners to craft robust models."
+  - term: "AUC"
+    definition: "Area under the ROC curve, measure of model's ability to distinguish between classes."
+  - term: "PRISMA"
+    definition: "Preferred reporting items for systematic reviews and meta-analyses, guideline framework for systematic reviews."
 critical_citations:
-  - "[Dumitrescu et al., 2022] — Introduces PLTR, combining LR with decision-tree rules for interpretable non-linear credit scoring."
-  - "[He et al., 2018] — Proposes an ensemble method adapting to varying class imbalance ratios using BalanceCascade and stacking."
-  - "[Bao et al., 2019] — Demonstrates the value of integrating unsupervised learning with supervised models for credit risk assessment."
-  - "[Hayashi, 2022] — Highlights the superior performance of Deep Belief Networks and challenges in DL interpretability."
+  - "[Dastile et al., 2020] — Found ensemble methods outperform single classifiers in credit scoring."
+  - "[He et al., 2018] — Proposed novel ensemble method adapting to different imbalance ratios."
+  - "[Dumitrescu et al., 2022] — Introduced PLTR combining logistic regression with decision tree rules."
+  - "[Hayashi, 2022] — Reviewed deep learning applications and interpretability challenges in credit scoring."
+  - "[Bücker et al., 2022] — Framework for enhancing interpretability of black-box ML credit scoring models."
 relevance:
   topics:
-    - code: 3.A
-      name: Expense Categorization Frameworks
-      relevance: contextual
-      justification: Provides a general overview of ML classification methods that could be adapted for expense categorization.
-    - code: 3.B
-      name: Expense Category Design Considerations
-      relevance: contextual
-      justification: Discusses feature selection and data preprocessing, relevant for designing effective categories.
-    - code: 4.A
-      name: Landscape of Existing Personal Finance Systems
-      relevance: medium
-      justification: Surveys existing credit scoring systems and their evolution, providing context for PFMS.
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      relevance: high
-      justification: Explicitly details the limitations of traditional credit scoring (e.g., narrow features, linearity) which are relevant to PFMS gaps.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: medium
-      justification: Reviews methods for classifying borrower creditworthiness, which parallels user behavioral profiling in PFMS.
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: medium
-      justification: Reviews ML classification techniques applicable to user profiling.
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: high
-      justification: Central focus of the review; provides extensive evidence on forecasting methods for financial outcomes.
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: medium
-      justification: Discusses LSTM networks for sequential data, relevant for spending prediction.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: contextual
-      justification: Discusses outlier detection methods in credit scoring, which can inform anomaly detection.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: contextual
-      justification: Reviews outlier detection techniques that could be applied to spending data.
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: medium
-      justification: Identifies privacy concerns with alternative data and compliance with standards like GDPR and IFRS 9.
-    - code: 10.B
-      name: User Trust in Personal Finance Systems
-      relevance: high
-      justification: Emphasizes the need for interpretability and transparency to build trust, a core challenge for user adoption.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: high
-      justification: Provides a comprehensive overview of evaluation metrics (accuracy, AUC, F1, KS) and their use in financial systems.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: high
-      justification: Compares performance of different ML algorithms, directly relevant for evaluating Odin's modules.
-    - code: 12.C
-      name: Evaluation Methodologies for Budget Recommendation Systems
-      relevance: medium
-      justification: Discusses comparative evaluation of models, which can inform budget recommendation evaluation.
-  contribution: "This systematic review provides a comprehensive synthesis of ML applications in credit scoring, offering a benchmark for selecting models and evaluation metrics for Odin's forecasting and classification modules. Its detailed analysis of ensemble and hybrid models directly informs the design of Odin's core algorithms for spending prediction and user profiling. The review's emphasis on interpretability and bias mitigation guides the development of trustworthy and fair recommendation and anomaly detection systems. Furthermore, its discussion of alternative data sources and privacy concerns offers a framework for responsibly expanding Odin's data inputs while maintaining user trust and regulatory compliance."
+    - code: "1.B"
+      name: "Financial Structure of Filipino Young Professionals"
+      relevance: "contextual"
+      justification: "Discusses financial behavior and repayment history in credit scoring, relevant to financial structure analysis."
+    - code: "3.A"
+      name: "Expense Categorization Frameworks"
+      relevance: "low"
+      justification: "Credit scoring classification approaches inform categorization methodologies for PFMS."
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "medium"
+      justification: "Reviews existing credit scoring methodologies and ML-based approaches in financial systems."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "high"
+      justification: "Identifies limitations of traditional credit scoring models and gaps in ML adoption including interpretability and bias."
+    - code: "5.A"
+      name: "Financial Behavioral Profiles in Personal Finance"
+      relevance: "medium"
+      justification: "ML models classify borrower behavior and creditworthiness, informing behavioral profile construction."
+    - code: "5.C"
+      name: "Classification Approaches for Financial Behavioral Profiles"
+      relevance: "high"
+      justification: "Systematically reviews ML classification techniques including SVM, RF, and ensemble methods for credit scoring."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "high"
+      justification: "Reviews predictive modeling techniques including DL and ensemble methods for credit risk prediction."
+    - code: "6.B"
+      name: "Forecasting Algorithms for Sequential Spending Data"
+      relevance: "medium"
+      justification: "LSTM and attention mechanisms discussed for sequence-based credit prediction, applicable to spending forecasting."
+    - code: "7.A"
+      name: "Budgeting Strategies as Domain Knowledge"
+      relevance: "low"
+      justification: "Credit scoring ML approaches inform algorithmic design for budget recommendation systems."
+    - code: "7.C"
+      name: "Constrained Optimization Approaches for Budget Allocation"
+      relevance: "contextual"
+      justification: "Discusses optimization methods for credit scoring models, tangentially related to budget constraints."
+    - code: "8.A"
+      name: "Anomaly Detection in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Credit default prediction frameworks analogous to anomaly detection approaches for spending behavior."
+    - code: "8.B"
+      name: "Anomaly Detection Algorithms for Personal Spending Data"
+      relevance: "low"
+      justification: "Machine learning classification techniques transferable to anomaly detection in spending data."
+    - code: "9.A"
+      name: "Mobile-First Design Principles and Rationale"
+      relevance: "contextual"
+      justification: "Discusses mobile phone data for credit scoring, relevant to mobile-first design context."
+    - code: "9.B"
+      name: "Mobile UX Design for Personal Finance"
+      relevance: "contextual"
+      justification: "Alternative data from mobile usage informs user experience considerations for financial applications."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Addresses privacy concerns in using alternative data and regulatory compliance (GDPR, IFRS 9)."
+    - code: "10.B"
+      name: "User Trust in Personal Finance Systems"
+      relevance: "high"
+      justification: "Interpretability and explainability (SHAP, LIME) are critical for building user trust in automated credit decisions."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "high"
+      justification: "Comprehensively reviews evaluation metrics (accuracy, AUC, F1-score, G-mean, KS) used in credit scoring studies."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "high"
+      justification: "Provides detailed performance comparisons of ML, DL, and ensemble algorithms across benchmark datasets."
+    - code: "13.C"
+      name: "End-of-Period Surplus as a Savings Input"
+      relevance: "contextual"
+      justification: "Credit scoring default prediction models use surplus/deficit patterns, relevant to surplus management."
+  contribution: "This systematic review provides a comprehensive framework for selecting ML algorithms for Odin's spending classification and forecasting modules by benchmarking performance across datasets. It validates the use of ensemble and hybrid models for behavioral profiling, establishing an evidence base for Odin's classification engine. The review's analysis of evaluation metrics directly informs Odin's evaluation strategy for algorithmic modules, supporting performance comparison and validation. The identification of interpretability techniques like SHAP and LIME guides Odin's approach to building user trust through explainable predictions. The discussion of alternative data integration contextualizes Odin's use of Filipino-specific spending cycles and user-declared preferences."
   directly_justifies:
-    - "Ensemble and hybrid models consistently outperform single classifiers in credit scoring tasks."
-    - "Interpretability techniques like SHAP and LIME are essential for building trust in financial AI systems."
-    - "Model evaluation should use a combination of metrics (AUC, F1, KS) to address the limitations of accuracy on imbalanced data."
-    - "Addressing algorithmic bias is critical for ensuring fair and non-discriminatory credit decisions."
-    - "Alternative data sources can enhance predictive accuracy, particularly for users lacking formal financial histories."
+    - "Ensemble and hybrid ML models consistently outperform single classifiers in credit scoring tasks."
+    - "Model interpretability is critical for user trust and regulatory compliance in financial decision-making."
+    - "Alternative data sources can improve credit assessment for borrowers lacking traditional financial histories."
+    - "Accuracy and AUC are the most commonly used metrics for evaluating predictive model performance."
+    - "Class imbalance handling techniques like SMOTE are essential for reliable credit risk assessment."
   limits:
-    - "The review does not provide a direct comparative analysis to identify the single most effective model due to heterogeneity in datasets and evaluation metrics across studies."
-    - "The review may have missed relevant studies published outside the selected four digital libraries or within the 2018-2024 timeframe."
-    - "The focus on credit scoring may limit the direct applicability of all findings to broader personal finance management functions like budget optimization."
-  mapping_rationale: "A systematic scan across all 12 functional domains was conducted. The domains 'Expense Categorization' (3.A, 3.B) and 'Behavioral Profiling' (5.A, 5.C) were flagged as contextual/medium because the review provides general ML classification methods, but not specific to expense taxonomy or dynamic user profiling. 'Existing Systems & Gaps' (4.A, 4.B) was deemed high and medium, respectively, as the review explicitly outlines the evolution and limitations of traditional scoring models, directly informing Odin's need to address PFMS gaps. The 'Spending Forecasting' domain (6.A, 6.B) received high and medium relevance due to the review's core focus on predictive modeling and mention of LSTM for sequential data. 'Anomaly Detection' (8.A, 8.B) was considered contextual as the review touches on outlier detection but does not detail specific algorithms for spending data. 'Data Privacy & User Trust' (10.A, 10.B) was flagged as medium and high because the review extensively discusses interpretability, privacy concerns with alternative data, and regulatory compliance (GDPR, IFRS 9), which are critical for user trust. 'System Evaluation' (12.A, 12.B, 12.C) was given high relevance due to the review's comprehensive analysis of evaluation metrics and algorithmic comparison, directly supporting Odin's testing and validation. The domain 'Filipino Cultural Context' was rejected as the paper is an international review with no specific focus on Philippine culture or practices. 'User Retention & Engagement' and 'Savings & Debt Management' were also rejected as the review does not address user engagement strategies or specific debt management techniques. The paper's overall relevance is high for guiding the selection of forecasting and classification algorithms, evaluation methodologies, and addressing interpretability and privacy challenges in Odin."
+    - "Limited to peer-reviewed journal papers and conference articles, excluding relevant technical reports or industry studies."
+    - "Search confined to four online databases, potentially missing relevant studies from other digital libraries."
+    - "Lack of comparative analysis to identify most effective models due to heterogeneous evaluation metrics across studies."
+    - "Fast-evolving nature of ML means continuous updates are necessary to capture new advances."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated canonical topics was performed. The paper was flagged as highly relevant for Predictive Modeling (6.A, high), Classification Approaches (5.C, high), Evaluation Frameworks (12.A, high), Algorithmic Module Evaluation (12.B, high), and User Trust (10.B, high). Medium relevance was assigned to Existing Systems (4.A), System Limitations (4.B), Behavioral Profiles (5.A), Anomaly Detection (8.A), and Data Privacy (10.A), as the paper reviews existing systems and discusses privacy concerns. Low relevance was assigned to Expense Categorization (3.A) and Anomaly Detection Algorithms (8.B) as the paper does not specifically address these domains. Contextual relevance was assigned to Financial Structure (1.B), Budgeting Strategies (7.A), Mobile-First Design (9.A, 9.B), and End-of-Period Surplus (13.C) as these areas are tangentially related to the review's focus on credit scoring. The paper was considered and rejected for Culturally Specific Financial Practices (2.A-D) and Retention Mechanisms (11.A-B) as these domains were not addressed. Overall, the paper provides substantial evidence for Odin's machine learning modules, evaluation frameworks, and interpretability requirements."
 limitations:
-  - "The review is limited to studies published between 2018 and 2024, potentially omitting older foundational work. [unacknowledged]"
-  - "The search strategy was confined to only four online databases, which may have led to the omission of relevant studies from other sources. [unacknowledged]"
-  - "A direct comparative analysis to identify the most effective model is lacking due to the heterogeneity in datasets and evaluation metrics used across the reviewed studies. [acknowledged]"
-  - "Heterogeneity in datasets and evaluation metrics across studies complicates direct performance comparisons."
+  - "Search strategy limited to four online databases, excluding relevant studies from other digital libraries. [unacknowledged]"
+  - "Heterogeneous evaluation metrics across studies hinder direct performance comparisons between models. [acknowledged]"
+  - "Class imbalance and varying data preprocessing methods complicate cross-study validation. [unacknowledged]"
+  - "Interpretability challenges persist for complex ML models, with SHAP and LIME facing reliability concerns under adversarial conditions."
+  - "High-dimensional credit data introduces computational complexity, making deployment costly for smaller institutions."
 remember_this:
-  - "Ensemble and hybrid models are the most effective for financial classification tasks."
-  - "Interpretability is a critical challenge for building trust in ML-based financial systems."
-  - "Using a combination of metrics like AUC and F1 is essential for evaluating models on imbalanced data."
-  - "Alternative data can improve credit scoring accuracy but raises significant privacy concerns."
-  - "Addressing algorithmic bias is fundamental to ensuring fairness in automated financial decisions."
+  - "Ensemble and hybrid ML models consistently outperform single classifiers in credit scoring."
+  - "Model interpretability is critical for building user trust in automated financial decisions."
+  - "Class imbalance handling techniques like SMOTE are essential for reliable credit risk models."
+  - "Alternative data sources show promise for borrowers lacking traditional credit histories."
+  - "Accuracy and AUC are the most common evaluation metrics for credit scoring models."
 ```
 ---
 
@@ -487,117 +529,136 @@ remember_this:
 **Source File:** `John_summarized.md`
 
 ```yaml
-paper_id: 9f7b8a6c-5d4e-3b2a-1f0e-9d8c7b6a5f4e
+paper_id: 10.48550/arXiv.2511.03807
 designation: international-algorithm-specific
 title: Fair and Explainable Credit-Scoring under Concept Drift: Adaptive Explanation Frameworks for Evolving Populations
 authors: John, S.
 year: 2026
-venue: Unknown
+venue: arXiv
 odin_topics:
-  - 2.B
+  - 5.A
   - 5.B
-  - 6.A
-  - 6.B
+  - 5.C
   - 8.A
   - 8.B
   - 10.A
   - 10.B
+  - 12.A
   - 12.B
-tldr: Adaptive SHAP frameworks improve explanation stability and fairness in credit scoring under concept drift without reducing predictive accuracy.
-problem_and_motivation: Static explainability methods like SHAP become unstable and potentially unfair when concept drift alters the data distributions underlying credit-scoring models. Existing adaptive learning research focuses on restoring predictive accuracy, leaving the explanation layer outdated and unreliable. A mechanism is needed to maintain interpretive consistency and fairness as borrower populations evolve.
+tldr: Adaptive SHAP explanation methods maintain interpretability and fairness in credit-scoring models under concept drift without sacrificing predictive accuracy.
+problem_and_motivation: Static explainability tools like SHAP fail under concept drift, producing unstable and potentially unfair explanations in dynamic credit environments. Existing drift adaptation focuses on predictive accuracy, leaving interpretive consistency and fairness unaddressed. This gap threatens regulatory compliance and user trust.
 approach:
-  - Uses a multi-year lending dataset from 2015 to 2024 with demographic, financial, and socioeconomic features.
-  - Employs XGBoost for predictive modeling and applies three adaptive SHAP variants for explanation: drift-weighted adjustment, sliding background sampling, and Ridge surrogate recalibration.
-  - Benchmarks adaptive methods against static SHAP using metrics for predictive performance (AUC, F1), explanation stability (cosine, Kendall tau), and fairness (demographic parity).
-  - Conducts robustness tests including counterfactual perturbations, background sensitivity analysis, and proxy-variable detection.
-  - Uses paired bootstrap confidence intervals and paired t-tests to confirm statistical significance of improvements.
+  - Data source: Synthetic multi-year credit dataset (2015-2024) with demographic, financial, and socioeconomic features.
+  - Method: XGBoost baseline plus three adaptive SHAP variants: drift-weighted reweighting, sliding-window rebaselining, and Ridge surrogate calibration.
+  - Evaluation setup: Expanding-window validation, yearly retraining, and longitudinal tracking of explanation stability and fairness.
+  - Baselines: Static SHAP explanations compared against adaptive methods.
+  - Metrics: Explanation stability (cosine, Kendall tau, Jaccard), fairness (DPD, EOD, equalized odds), and robustness tests.
 findings:
-  - Static SHAP explanations showed high cosine stability (0.991-0.998) but moderate rank stability (Kendall tau = 0.758-0.912) under drift.
-  - num: Adaptive Method B (sliding window) achieved the highest stability with cosine ≈ 0.995 and Kendall τ ≈ 0.89 across years.
-  - num: Method B reduced demographic parity difference by approximately 0.026 (95% CI: -0.035, -0.016, p < 0.05) compared to baseline.
-  - num: Default rates increased from ~15% in 2015 to over 23% in 2024, indicating label drift.
-  - Counterfactual tests showed valid monotonic responses: decreasing credit score by 10% increased default probability by 0.05.
+  - num: PSI for annual_income reached 0.16 by 2019, confirming progressive covariate drift.
+  - num: Default rates increased from ~15% in 2015 to over 23% in 2024.
+  - num: Baseline AUC remained stable (0.63-0.66) despite drift, but explanation consistency degraded.
+  - num: Method B reduced demographic parity difference by 0.026 (p < 0.05) without affecting AUC.
+  - num: Method B and C achieved high explanation stability (cosine ≈ 0.995, Kendall τ ≈ 0.89).
+  - num: Counterfactual perturbation: 10% decrease in credit_score increased default probability by 0.05.
+  - Proxy variable detection identified race-associated features (p < 0.01; η² = 0.017-0.045).
 key_figures_tables:
-  - Figure 1: Loan default rate by year shows an increase from 15% to 23% over the study period, confirming label drift.
-  - Figure 2: PSI for annual_income and credit_score shows steady increase, indicating covariate drift.
-  - Figure 5: DPD over time by model for race shows fairness fluctuates with data drift, especially during 2020-2021.
-  - Figure 7: DPD before and after Method B recalibration demonstrates a clear reduction in disparity.
-  - Figure 13: Counterfactual perturbations show monotonic response, validating model logic and explanation reliability.
+  - Figure 1: Loan default rate by year → default rate rose from 15% to 23% over 2015-2024.
+  - Figure 2: PSI for annual_income and credit_score → PSI increased steadily, confirming drift.
+  - Figure 3: JS divergence for race and gender → race/gender stable but Chi-square indicated significance.
+  - Figure 4: Model test AUC over test years → AUC stable at 0.63-0.66.
+  - Figure 5: DPD over time by model for race → DPD fluctuated, peaking during recession years.
+  - Figure 6: EOD over time by model for race → EOD showed variability similar to DPD.
+  - Figure 7: DPD before and after method B recalibration → DPD reduced significantly post-recalibration.
+  - Figure 8: Explainability stability over time → stability metrics varied, motivating adaptive methods.
+  - Figure 9: Top features by final test year → loan_amount, dti, credit_score were top predictors.
+  - Figure 10: Kendall tau and Cosine similarity for adaptive methods → Methods B and C achieved highest stability.
+  - Figure 11: Final year feature importance baseline vs. adaptive → adaptive methods showed more consistent feature rankings.
+  - Figure 12: Number of harmful features detected by explainability method → adaptive methods reduced harmful proxy features.
+  - Figure 13: Mean probability change from counterfactual perturbations → monotonic directional responses validated logic.
+  - Figure 14: SHAP background size sensitivity test → adaptive methods showed improved consistency.
 key_equations:
   - equation: None.
     explanation: ""
 definitions:
   - term: SHAP
-    definition: SHapley Additive exPlanations; a game-theoretic approach to explain model predictions by assigning importance to features.
-  - term: Concept Drift
-    definition: A change in the underlying data distribution over time, which can degrade model accuracy and interpretability.
-  - term: Demographic Parity Difference
-    definition: A fairness metric measuring the difference in positive prediction rates across demographic groups.
-  - term: XGBoost
-    definition: Extreme Gradient Boosting; an ensemble machine learning algorithm widely used for its handling of nonlinear interactions.
+    definition: SHapley Additive exPlanations, a game-theoretic method for explaining model predictions.
+  - term: XAI
+    definition: Explainable Artificial Intelligence.
+  - term: PSI
+    definition: Population Stability Index, a measure of distributional shift in features.
+  - term: JS
+    definition: Jensen-Shannon divergence, a measure of similarity between probability distributions.
+  - term: KS
+    definition: Kolmogorov-Smirnov test, a nonparametric test for distribution equality.
+  - term: DPD
+    definition: Demographic Parity Difference, a fairness metric measuring equal positive prediction rates.
+  - term: EOD
+    definition: Equal Opportunity Difference, a fairness metric measuring equal true positive rates.
 critical_citations:
-  - "[Lundberg and Lee, 2017] — Foundation for SHAP as the static explanation baseline."
-  - "[Gama et al., 2014] — Defines concept drift and notes the research gap in adaptive explainability."
-  - "[Barocas et al., 2023] — Emphasizes that fairness requires continuous attention in evolving systems."
-  - "[Slack et al., 2020] — Highlights adversarial vulnerability of static explanation tools."
+  - "[Widmer and Kubat, 1996] — Established concept drift as a core challenge in learning systems."
+  - "[Gama et al., 2014] — Surveyed drift adaptation, noting the gap in maintaining interpretability."
+  - "[Lundberg and Lee, 2017] — Introduced SHAP, the static baseline used in this study."
+  - "[Barocas et al., 2023] — Emphasized fairness as a continuous, context-dependent requirement."
 relevance:
   topics:
-    - code: 2.B
-      name: Seasonal and Cyclical Spending Patterns
-      relevance: contextual
-      justification: The dataset includes multi-year economic cycles and recessionary periods, which relate to cyclical patterns.
-    - code: 5.B
-      name: Profile Dynamics and the Cold-Start Problem
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
       relevance: medium
-      justification: Addresses how borrower profiles and feature importance shift over time, directly informing profile dynamics.
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: high
-      justification: Directly evaluates predictive performance (AUC, F1) of XGBoost in a dynamic credit-scoring context.
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: high
-      justification: The study's longitudinal setup and evaluation of explanation stability over time are relevant to forecasting.
+      justification: Models financial behavior via credit risk prediction, capturing changing borrower profiles.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: contextual
+      justification: Treats evolving borrower characteristics as a drift problem, relevant to profile dynamics.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: low
+      justification: Uses XGBoost for credit risk classification, but focuses on explanation, not profiling.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
       relevance: medium
-      justification: The robustness and proxy-variable detection methods are relevant to identifying anomalous or biased feature influences.
+      justification: Concept drift detection can identify anomalies in spending behavior over time.
     - code: 8.B
       name: Anomaly Detection Algorithms for Personal Spending Data
       relevance: medium
-      justification: The adaptive frameworks are designed to detect and adjust for distributional shifts, akin to anomaly detection.
+      justification: Adaptive SHAP methods detect drift-induced changes in feature importance, akin to anomaly shifts.
     - code: 10.A
       name: Data Privacy and Security in Personal Finance Systems
-      relevance: low
-      justification: While not the primary focus, the fairness and stability analysis addresses aspects of responsible data use.
+      relevance: contextual
+      justification: Proxy variable detection addresses bias, which has privacy and fairness implications.
     - code: 10.B
       name: User Trust in Personal Finance Systems
       relevance: medium
-      justification: The paper discusses how stable and fair explanations build user trust and support regulatory compliance.
+      justification: Stable, fair explanations directly support user trust and transparency.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Provides a robust evaluation framework for explanation stability, fairness, and robustness.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
       relevance: high
-      justification: Directly compares the evaluation of adaptive explanation modules against a static baseline using specific metrics.
-  contribution: This paper provides a framework for evaluating and improving explanation stability in dynamic environments, which can inform Odin's approach to maintaining transparent and fair spending forecasts. The adaptive SHAP methods offer a way to recalibrate feature attributions as user behavior evolves, supporting Odin's behavioral profiling and anomaly detection modules. The emphasis on fairness and stability aligns with Odin's need to build user trust and comply with data privacy expectations.
+      justification: Benchmarks adaptive SHAP variants against static baselines using multiple metrics.
+  contribution: "This paper contributes an adaptive explainability framework for credit-scoring, directly applicable to Odin's expense forecasting and anomaly detection modules. The sliding-window SHAP rebaselining (Method B) offers a practical technique for maintaining explanation stability under changing user spending patterns. The fairness recalibration mechanism provides a template for Odin's budget recommendation module to adjust for demographic disparities. The evaluation metrics (cosine, Kendall tau, Jaccard) and robustness tests offer a blueprint for assessing Odin's algorithmic modules. Overall, the adaptive explanation framework ensures that Odin's recommendations remain interpretable and fair as user financial behavior evolves."
   directly_justifies:
-    - Static SHAP explanations become unstable under concept drift, requiring adaptive methods for reliable interpretation.
-    - Adaptive explanation frameworks can improve fairness metrics without degrading predictive accuracy.
-    - Sliding-window background sampling is an effective strategy for maintaining explanation stability over time.
+    - "Adaptive SHAP explanations maintain stability under concept drift, supporting reliable anomaly detection."
+    - "Sliding-window background sampling reduces explanation volatility, aligning with mobile-first design needs."
+    - "Fairness recalibration can be integrated into budget recommendation to prevent disparate impact."
+    - "Proxy variable detection helps identify hidden biases in spending categories and user attributes."
   limits:
-    - The analysis focuses primarily on single-attribute fairness rather than intersectional demographic factors.
-    - The study does not test the framework on live, real-world banking data with missing or delayed information.
-    - The computational cost of SHAP-based methods may limit scalability in real-time applications.
-  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant for predictive modeling (6.A, 6.B) and algorithmic evaluation (12.B) because it directly benchmarks model and explanation performance in a dynamic environment. It was assigned medium relevance for behavioral profiling (5.B) due to its focus on feature importance shifts over time, and for anomaly detection (8.A, 8.B) through its robustness tests against distributional changes. The domains of data privacy (10.A) and user trust (10.B) were considered and assigned medium to low relevance as the paper discusses them conceptually but does not propose specific technical mechanisms for Odin. Cultural context (2.B) is contextual, as the dataset reflects economic cycles. The mapping rationale concludes that while the paper's primary domain is credit scoring, its methodologies for adaptive explanation, stability evaluation, and fairness recalibration are directly transferable to Odin's budget recommendation and behavioral forecasting modules.
+    - "Study uses synthetic data, not real Filipino spending data."
+    - "Fairness analysis focuses on single attributes, not intersectional demographics."
+    - "SHAP computational cost may hinder real-time mobile deployment."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was flagged as relevant to Behavioral Profiling (5.A, 5.B, 5.C) because it models evolving borrower risk profiles, though it does not explicitly classify financial personality types. Anomaly Detection (8.A, 8.B) was selected because concept drift detection and adaptive explanation stability are directly relevant to identifying shifts in spending behavior that could indicate anomalies. Data Privacy & User Trust (10.A, 10.B) were chosen because stable, fair explanations build user trust and proxy variable detection addresses bias, which has privacy implications. System Evaluation (12.A, 12.B) received high relevance due to the paper's comprehensive evaluation framework for algorithmic modules, including stability, fairness, and robustness metrics. Domains like Expense Categorization (3.A, 3.B, 3.C), Spending Forecasting (6.A, 6.B), and Budget Recommendation (7.A, 7.B, 7.C, 7.D) were considered but rejected because the paper focuses on credit risk, not expense tracking or budget allocation. The paper's adaptive explanation framework and evaluation methodology are highly relevant to Odin's need for interpretable and fair algorithms in a dynamic financial environment."
 limitations:
-  - SHAP-based analysis is computationally heavy, which could hinder scalability and real-time use in Odin. [unacknowledged]
-  - The fairness assessment focuses mainly on single attributes (race, gender) rather than the intersectional factors common in real-world scenarios. [acknowledged]
-  - The study does not test the adaptive framework on live, real-world banking data with missing information or delayed updates. [acknowledged]
+  - "SHAP analysis is computationally heavy, impacting scalability and real-time use. [unacknowledged]"
+  - "Fairness assessment focuses on single attributes, not intersecting demographic factors. [unacknowledged]"
+  - "The dataset is synthetic and may not fully capture real-world credit dynamics."
+  - "The study does not address how to integrate adaptive explanations into a production mobile app."
 remember_this:
-  - Adaptive SHAP methods stabilize explanations under concept drift without harming predictive accuracy.
-  - Sliding-window background sampling provides the most consistent improvements in explanation stability.
-  - num: Adaptive recalibration reduced demographic parity difference by 0.026 compared to baseline.
-  - Explanation and fairness must be maintained dynamically as data and user behavior evolve.
-  - Reliable explanations support both regulatory compliance and user trust in financial systems.
+  - "Adaptive SHAP methods stabilize explanations under concept drift."
+  - "Sliding-window rebaselining improved fairness by reducing demographic parity difference by 0.026."
+  - "Explanation stability remained high with cosine similarity ≈ 0.995 and Kendall τ ≈ 0.89."
+  - "Explainability can evolve alongside data without sacrificing predictive accuracy."
+  - "Adaptive frameworks support ongoing fairness and transparency in dynamic systems."
 ```
 ---
 
@@ -606,130 +667,114 @@ remember_this:
 **Source File:** `Liang et al_summarized.md`
 
 ```yaml
-paper_id: 10.48550/arXiv.2602.16131
+paper_id: 10.48550/arXiv.2602.16173
 designation: international-algorithm-specific
 title: Learning Personalized Agents from Human Feedback
 authors: Liang, K.; Kruk, J.; Qian, S.; Yang, X.; Bi, S.; Yao, Y.; Nie, S.; Zhang, M.; Liu, L.; Fernández Fisac, J.; Zhou, S.; Hosseini, S.
 year: 2026
-venue: Unknown
+venue: arXiv
 odin_topics:
-  - 5.A
   - 5.B
- 5.C
   - 6.A
-  - 7.B
-  - 8.A
+  - 7.D
+  - 8.B
+  - 10.B
   - 11.A
-  - 12.A
-  - 12.B
-tldr: A continual personalization framework using explicit memory and dual pre- and post-action feedback channels enables agents to learn initial preferences and adapt to drift.
-problem_and_motivation: Static personalization methods fail with new users, cannot learn from real-time corrective feedback, and cannot handle evolving user preferences. This limits the deployment of personalized AI agents in interactive settings.
+tldr: A continual personalization framework uses explicit memory and dual feedback to enable agents to learn user preferences online and adapt to preference drift.
+problem_and_motivation: Static personalization models fail to adapt to new users, learn from real-time errors, or handle evolving preferences. This limitation is critical for user-facing agents that must align with individual, non-stationary preferences.
 approach:
-  - Data is generated via two new benchmarks: embodied manipulation and online shopping with simulated personas.
-  - The PAHF framework operationalizes a three-step loop: pre-action clarification, action execution, and post-action feedback integration.
-  - Agents use a standard dense-retrieval memory backend (SQLite or FAISS) to store and retrieve preference notes.
-  - Evaluation follows a four-phase protocol that separates initial preference learning from adaptation to persona shifts.
-  - Baselines include No Memory, Pre-action Only, and Post-action Only to isolate the effect of each feedback channel.
+  - Simulated long-horizon sequential decision-making with per-user tasks and latent preference states.
+  - Used PAHF framework with a three-step loop: pre-action clarification, action execution, and post-action feedback integration.
+  - Employed explicit per-user memory (SQLite/FAISS) with add, retrieve, and update operations.
+  - Evaluated on two bespoke benchmarks: embodied manipulation (40 users, 30 scenarios/phase) and online shopping (20 users, 45 scenarios/phase).
+  - Implemented a four-phase protocol to separately measure initial learning and adaptation to persona shifts.
+  - Instantiated agents with GPT-4o and baselines: no memory, pre-action only, post-action only.
 findings:
-  - num: Pre-action agents achieve substantially higher success on the first interaction, reducing initial personalization error by over 30% compared to no-memory baselines.
-  - Pre-action Only agents are brittle under drift, with Phase 3 success rates failing to improve or even falling below the no-memory baseline.
-  - Post-action feedback is essential for fast adaptation, enabling agents to recover to high Phase-4 success rates (e.g., 67.9% in embodied domain).
-  - PAHF combines both strengths, achieving the highest success rates across all phases (e.g., 70.5% in embodied Phase 2, 70.3% in shopping Phase 4).
-  - PAHF consistently achieves the lowest average cumulative personalization error (ACPE) across both domains and phases.
-  - The combination of pre- and post-action feedback with explicit memory is critical for robust continual personalization.
-  - Online shopping domain, with its conjunctive acceptance policies and near-miss distractors, is significantly more challenging than embodied manipulation.
+  - num: Pre-action agents achieved substantially higher success on the first interaction than no-memory or post-action-only baselines.
+  - num: Pre-action only agents showed limited improvement under preference drift, with Phase-3 success rates below the no-memory baseline in the embodied domain.
+  - num: Post-action agents recovered to 67.9% Phase-4 success in embodied tasks, closely approaching PAHF at 70.5%.
+  - num: PAHF achieved the highest overall success rates across all phases and domains, reaching 70.5% in embodied Phase 2 and 70.3% in shopping Phase 4.
+  - PAHF’s average cumulative personalization error was consistently lower than single-channel baselines during both initial learning and adaptation.
 key_figures_tables:
-  - Figure 3: Embodied Phase 1 learning curves → Pre-action feedback prevents initial errors, PAHF achieves lowest ACPE.
-  - Figure 4: Shopping Phase 3 learning curves → Post-action feedback enables steep recovery, PAHF matches Post-action Only in success but has lower ACPE.
-  - Table 1: Evaluation success rates (%) for Phase 2 and 4 → PAHF achieves the highest or tied-highest success rates in all settings.
-  - Figure 5: Embodied results with FAISS memory → PAHF consistently outperforms baselines, confirming robustness to memory backend.
+  - Figure 3: Embodied manipulation learning curves → PAHF combines low initial error with rapid drift adaptation.
+  - Figure 4: Online shopping learning curves → Pre-action feedback prevents early errors; post-action is essential for recovery.
+  - Table 1: Evaluation success rates (%) for Phase 2 and Phase 4 → PAHF outperforms all baselines in both domains and phases.
 key_equations:
-  - equation: Mˆ′_t = Fpre_update(Mˆ_t, I_t, O_t, m_t, q_t, fpre_t)
-    explanation: Pre-action update function integrating clarification feedback.
-  - equation: a_t = π_act(I_t, O_t, m_t, q_t, fpre_t)
-    explanation: Action policy synthesizing instruction, observation, and retrieved preferences.
-  - equation: Mˆ_{t+1} = Fpost_update(Mˆ′_t, I_t, m_t, q_t, fpre_t, a_t, fpost_t)
-    explanation: Post-action update function integrating corrective feedback after an error.
+  - equation: "Mˆ_{t}^{\\prime} = F_{pre}^{update}(Mˆ_t, I_t, O_t, m_t, q_t, f_t^{pre})"
+    explanation: Pre-action feedback updates memory before acting.
+  - equation: "a_t = \\pi_{act}(I_t, O_t, m_t, q_t, f_t^{pre})"
+    explanation: Action policy conditions on memory and pre-action interaction.
+  - equation: "Mˆ_{t+1} = F_{post}^{update}(Mˆ_t^{\\prime}, I_t, m_t, q_t, f_t^{pre}, a_t, f_t^{post})"
+    explanation: Post-action feedback revises memory after an error.
+  - equation: "E[R_T] = O(K + \\gamma T m^{-k})"
+    explanation: Dynamic regret bound for PAHF with K switches and ambiguity rate γ.
 definitions:
   - term: PAHF
-    definition: Personalized Agents from Human Feedback, a continual personalization framework.
-  - term: ACPE
-    definition: Average Cumulative Personalization Error, the average error rate over iterations.
+    definition: Personalized Agents from Human Feedback; framework for continual personalization.
   - term: RAG
-    definition: Retrieval-Augmented Generation, a technique for enhancing LLM outputs with retrieved information.
-  - term: FF
-    definition: Feedback Frequency, the proportion of tasks using any human feedback.
-  - term: SR
-    definition: Success Rate, the fraction of tasks completed correctly.
-  - term: ReAct
-    definition: A framework for LLMs to interleave reasoning and acting.
+    definition: Retrieval-Augmented Generation; method to retrieve and inject user histories into context.
 critical_citations:
-  - "[Chhikara et al., 2025] — Production-ready memory for AI agents."
-  - "[Salemi et al., 2024a] — Optimization for retrieval-augmented personalization."
-  - "[Qiu et al., 2025] — Bayesian teaching for LLM probabilistic reasoning."
-  - "[Li et al., 2025] — Benchmarks for interactive preference discovery."
-  - "[Liang et al., 2025a] — Hindsight simulation mitigates RLHF misalignment."
+  - "[Christiano et al., 2017] — Foundational work on RLHF for aligning LLMs."
+  - "[Rafailov et al., 2024] — DPO as an alternative to RLHF for preference learning."
+  - "[Lewis et al., 2020] — Introduced RAG for knowledge-intensive NLP tasks."
 relevance:
   topics:
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: high
-      justification: Directly models user personas with idiosyncratic and context-dependent preferences.
     - code: 5.B
-      name: Profile Dynamics and the Cold-Start Problem
+      name: Profile Dynamics and the Cold‑Start Problem
       relevance: high
-      justification: Addresses learning from scratch for new users and adapting to preference drift.
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: medium
-      justification: Provides a framework (PAHF) for dynamically updating profiles via feedback.
+      justification: Directly addresses learning from scratch without pre-existing user data.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Provides a framework for online learning from sequential interactions.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: high
+      justification: Post-action feedback updates memory to correct confidently wrong actions.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
       relevance: medium
-      justification: The framework's memory and feedback mechanism could inform forecasting by tracking preference changes.
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      relevance: low
-      justification: The concept of learning user preferences from feedback is broadly relevant to personalization in PFMS.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: low
-      justification: The post-action feedback mechanism could conceptually inform anomaly detection by identifying unexpected or corrected actions.
+      justification: Pre-action queries and post-action feedback can be applied to detect spending anomalies.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: medium
+      justification: Accurate personalization and reduced errors can enhance user trust.
     - code: 11.A
       name: Engagement Dynamics in Personal Finance Applications
+      relevance: high
+      justification: Continual learning from feedback improves user retention.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
       relevance: contextual
-      justification: The feedback loop is designed for live interaction, a core engagement dynamic.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: high
-      justification: Proposes a four-phase evaluation protocol for continual personalization.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: high
-      justification: Empirically evaluates the PAHF algorithm against baselines on two benchmarks.
-  contribution: PAHF provides a general framework and evaluation protocol for continual personalization that can be directly applied to Odin's behavioral profiling module (5.A, 5.B) to learn user financial profiles from scratch. Its evaluation methodology (12.A, 12.B) offers a template for testing Odin's algorithmic components like forecasting or anomaly detection under user preference drift. The framework's emphasis on explicit memory and corrective feedback (5.C) provides a design pattern for building Odin's user model that adapts to changing financial behaviors.
+      justification: Provides a framework for modeling user profiles but not specific to finance.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: Mentions context-dependent preferences but does not address cultural cycles.
+  contribution: "PAHF provides a principled framework for implementing Odin’s personalization engine by enabling online learning from user feedback. The explicit memory module can store user preferences, such as spending categories or budget constraints. The dual-feedback mechanism can be adapted for Odin’s anomaly detection and budget recommendation modules. The four-phase evaluation protocol offers a template for testing Odin’s adaptation to evolving financial behavior. The theoretical guarantees on dynamic regret support robust performance under non-stationary user preferences."
   directly_justifies:
-    - "Explicit memory combined with dual feedback channels is critical for robust personalization without pre-existing user data."
-    - "Pre-action clarification prevents initial personalization errors caused by partial observability."
-    - "Post-action feedback is essential for correcting miscalibrated beliefs under preference drift."
-    - "The four-phase evaluation protocol separately quantifies initial learning and adaptation to drift."
+    - "Pre-action feedback is necessary to prevent initial personalization errors under partial observability."
+    - "Post-action feedback is essential for correcting confidently wrong beliefs after preference drift."
+    - "Combining both feedback channels yields the strongest personalization performance in dynamic environments."
+    - "Explicit memory with dual feedback is critical for robust continual personalization without pre-existing data."
+    - "The four-phase protocol isolates initial learning from adaptation to preference shifts."
   limits:
-    - "The memory architecture is deliberately simple; more sophisticated backends could improve scalability."
-    - "The framework does not explicitly handle inconsistent or noisy human feedback."
-    - "The benchmarks, especially online shopping, remain challenging for agents."
-    - "The agent is limited to at most one clarification question per task, increasing difficulty."
-  mapping_rationale: A systematic scan of all 12 functional domains was performed. The paper is most directly relevant to Behavioral Profiling (5.A, 5.B, 5.C) and System Evaluation (12.A, 12.B) due to its focus on learning user personas from scratch and adapting to drift, and its proposed evaluation protocol. It was considered for Spending Forecasting (6.A) and Budget Recommendation (7.B) given its personalization focus, but assigned low relevance as it does not address financial data or budget optimization specifically. The domains of Filipino Cultural Context (2.A-D), Expense Categorization (3.A-C), Existing Systems (4.A-B), Mobile-First Design (9.A-B), Data Privacy (10.A-B), Savings & Debt Management (13.A-C) were rejected as the paper does not address these topics. The paper's theoretical and empirical results on continual personalization provide a strong foundation for Odin's user modeling and evaluation components.
+    - "Memory architecture uses simple SQLite/FAISS; more sophisticated backends could improve scalability."
+    - "Human feedback is simulated and may not reflect real-world noise or inconsistencies."
+    - "Benchmark tasks, especially online shopping, remain challenging for agents."
+    - "Limited to one clarification question per task, which may not be sufficient for complex constraints."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was conducted. The domains of 'Behavioral Profiling & Classification', 'Spending Forecasting', 'Budget Recommendation', 'Anomaly Detection', 'Data Privacy & User Trust', and 'User Retention & Engagement' were flagged as relevant. Topic codes 5.B (Profile Dynamics), 6.A (Predictive Modeling), 7.D (Infeasibility Handling), 8.B (Anomaly Detection), 10.B (User Trust), and 11.A (Engagement Dynamics) were assigned high or medium relevance because the paper directly addresses learning from scratch, online adaptation, error correction, and user engagement through feedback. Topic 5.A (Financial Behavioral Profiles) is contextual, providing a general framework but not specific to finance. Topics 2.D (Filipino Spending Cycles) and other culturally specific topics were rejected as the paper does not address cultural or seasonal spending patterns. The paper is highly relevant to Odin as it provides a validated framework for continual learning and adaptation, which is central to personal finance management."
 limitations:
-  - "The memory architecture is deliberately simple and may not scale to complex user histories. [unacknowledged]"
-  - "The framework assumes human feedback is truthful and noise-free. [unacknowledged]"
-  - "The online shopping domain remains challenging, with even PAHF achieving only ~70% success in Phase 4."
-  - "The agent is limited to a single clarification question per task, which may be insufficient for complex preference elicitation."
+  - "Memory architecture is simple; more sophisticated systems may be needed for real-world scale. [unacknowledged]"
+  - "Assumes noise-free feedback; real human feedback is often noisy and inconsistent. [unacknowledged]"
+  - "Benchmark tasks, especially online shopping, remain challenging for agents. [acknowledged]"
+  - "Limited to one clarification question per task, which may not be sufficient for complex constraints. [acknowledged]"
 remember_this:
-  - "PAHF uses explicit memory and dual feedback channels for continual personalization."
-  - "Pre-action feedback reduces initial errors by resolving ambiguity before acting."
+  - "Pre-action feedback prevents initial personalization errors under partial observability."
   - "Post-action feedback is essential for correcting confidently wrong beliefs after preference drift."
-  - "PAHF achieves 70.5% success in embodied tasks and 70.3% in shopping tasks after drift."
-  - "The combination of pre- and post-action feedback yields the strongest personalization performance."
+  - "PAHF achieved the highest success rates across all phases and domains."
+  - "Combining pre-action and post-action feedback with explicit memory yields robust performance."
+  - "PAHF reduced initial error and enabled rapid adaptation to preference shifts."
 ```
 ---
 
@@ -740,112 +785,107 @@ remember_this:
 ```yaml
 paper_id: 10.48550/arXiv.2602.01618
 designation: international-algorithm-specific
-title: SEA-Guard: Culturally Grounded Multilingual Safeguard for Southeast Asia
-authors: Tasawong, P.; Ngui, J. G.; Aji, A. F.; Cohn, T.; Limkonchotiwat, P.
+title: "SEA-Guard: Culturally Grounded Multilingual Safeguard for Southeast Asia"
+authors: "Tasawong, P.; Ngui, J. G.; Aji, A. F.; Cohn, T.; Limkonchotiwat, P."
 year: 2026
-venue: Unknown
+venue: arXiv
 odin_topics:
-  - 5.A
+  - 4.B
   - 5.C
-  - 6.B
-  - 8.B
-  - 8.C
-  - 9.A
-  - 9.B
-  - 10.A
-tldr: SEA-Guard is a multilingual AI safety safeguard trained on a novel culturally-grounded dataset for 8 Southeast Asian languages, achieving state-of-the-art performance on cultural safety benchmarks.
-problem_and_motivation: Existing AI safeguards are primarily designed for English and fail to capture cultural nuances or perform reliably in low-resource Southeast Asian languages. This gap poses safety risks when deployed in regions with diverse cultural values and norms, as harmful content may bypass moderation.
+  - 12.B
+tldr: "Proposes SEA-Guard, a multilingual safeguard family for Southeast Asian languages and cultures, trained on an agentic data synthesis framework generating 870k culturally grounded safety samples per language across 8 SEA languages."
+problem_and_motivation: "Existing safeguards are English-centric and fail to capture cultural nuances in Southeast Asian contexts, leading to weak performance on culturally sensitive content. Machine translation of English datasets misses regional subtleties, and native annotator scarcity limits data availability."
 approach:
-  - Proposed a multi-agent data synthesis framework to generate 870k culturally grounded safety samples per language across 53 SEA cultural categories.
-  - Developed MCRE, an ensemble technique with multiple stochastic reasoning passes, for robust zero-shot labeling and quality assurance of generated data.
-  - Trained three safeguard model variants (4B, 8B, 12B) using supervised fine-tuning on Qwen-SEA-LION and Gemma base models.
-  - Evaluated models on three benchmarks: a SEA cultural safety benchmark, a generic multilingual safety benchmark, and zero-shot vision-text safety benchmarks.
-  - Compared performance against existing safeguards including ShieldGemma, LlamaGuard, PolyGuard, Qwen3Guard, and commercial APIs.
+  - "Proposes an agentic data-generation framework with five components: input formulation, prompt/response generation, data annotation with MCRE, quality assurance, and model training."
+  - "Uses Monte Carlo Reasoning Ensemble (MCRE) with N=10 stochastic reasoning passes for robust zero-shot safety classification, mapping a 5-way ordinal space to 3-way labels."
+  - "Generates 870k samples per language across 8 SEA languages and 53 cultural categories using four LLMs for response diversity."
+  - "Employs culture, topic, and usage classifiers for quality assurance, plus a bag-of-words deduplication procedure to remove lexically redundant samples."
+  - "Trains three model variants (4B, 8B, 12B) via supervised fine-tuning on 870k samples per language with context length 8,192, batch size 6, and learning rate 5e-6."
+  - "Evaluates on SEA-SafeguardBench (ITW and CG subsets), SEALS, SafeQA, and vision-text benchmarks using AUPRC as the primary metric."
 findings:
-  - num: SEA-Guard-12B achieved a 19.9-point AUPRC improvement over ShieldGemma on response classification (75.2 vs 55.2) and scored 80.0 on cultural prompt classification.
-  - The model demonstrated strong cross-lingual robustness with performance gaps below one point across all 8 SEA languages for prompt classification.
-  - SEA-Guard generalized effectively to generic safety benchmarks, with a 95.9 AUPRC on English prompt classification, despite not being trained on generic safety data.
-  - Zero-shot performance on vision-text safety benchmarks improved the baseline in 6 out of 7 settings, indicating emergent cross-modal capabilities.
-  - SEA-Guard maintained robust performance under adversarial white-space insertion attacks, with larger variants showing the most stable harmfulness scores.
+  - "num: SEA-Guard-12B achieves 99.5% prompt and 75.2% response AUPRC on SEA-SafeguardBench, outperforming SOTA safeguards."
+  - "num: SEA-Guard-12B outperforms Qwen3Guard-Gen 8B by 1.1 points on prompt classification and trails by only 0.6 points on response classification on generic benchmarks without training on generic safety data."
+  - "num: SEA-Guard improves baseline vision-text safety performance in 6 out of 7 zero-shot settings."
+  - "SEA-Guard models exhibit stronger human alignment (higher Spearman and Pearson correlations) than competing safeguards across severity levels."
+  - "num: SEA-Guard remains robust under adversarial whitespace insertion attacks, maintaining high harmfulness scores while competitors degrade monotonically."
+  - "num: Deduplication achieves comparable performance to the full 1M dataset with only 870k samples, reducing redundant patterns."
 key_figures_tables:
-  - "Figure 3: Model alignment with human-severity judgments → SEA-Guard achieves higher Spearman/Pearson correlations and clearer separation across severity levels than baselines."
-  - "Figure 4: Robustness to adversarial attack → SEA-Guard models maintain high harmfulness scores under white-space perturbations, unlike Qwen3Guard and LlamaGuard which degrade."
-  - "Table 1: Performance on SEA-SafeguardBench → SEA-Guard-12B scores 80.0 AUPRC on prompt and 75.2 on response classification, outperforming all competitors."
-  - "Table 2: Generic safety performance → SEA-Guard-12B reaches 95.9 AUPRC on English prompt classification, generalizing well without generic training data."
+  - "Table 1: SEA-Guard-12B achieves 79.5 prompt and 75.2 response AUPRC on SEA-SafeguardBench → outperforms all competitors."
+  - "Table 2: SEA-Guard generalizes to generic safety benchmarks without training on generic data → competitive with SOTA."
+  - "Table 3: SEA-Guard improves zero-shot vision-text safety in 6 of 7 benchmarks → emergent multimodal capability."
+  - "Figure 3: SEA-Guard shows clearer separation across severity levels than competitors → better human alignment."
+  - "Figure 4: SEA-Guard maintains high harmfulness under adversarial attacks → robust to surface-level perturbations."
+  - "Figure 5: Performance scales with dataset size; deduplication matches full 1M performance at 870k → data efficiency."
 key_equations:
   - equation: "h(x) = \\sum_{c \\in C_{safety}} s_c \\cdot P(\\hat{y}_{final} = c | R, x)"
-    explanation: "Computes a continuous harmfulness score from MCRE class probabilities."
+    explanation: "Expected harmfulness score over ordinal safety labels."
+  - equation: "P(C = c) \\propto 1 / \\text{freq}(c)"
+    explanation: "Inverse-frequency sampling for balanced metadata coverage."
+  - equation: "w_v = \\text{LMI}(v, y) = p(v,y) \\log(p(v,y) / (p(v) p(y)))"
+    explanation: "Local mutual information for identifying lexically redundant training samples."
 definitions:
-  - term: MCRE
-    definition: "Monte Carlo Reasoning Ensemble; a zero-shot classification method using multiple stochastic reasoning passes to estimate robust class probabilities."
-  - term: SEA
-    definition: "Southeast Asia."
-  - term: PFMS
-    definition: "Personal Finance Management System."
-  - term: SFT
-    definition: "Supervised Fine-Tuning."
-  - term: AUPRC
-    definition: "Area Under the Precision-Recall Curve."
+  - term: "MCRE"
+    definition: "Monte Carlo Reasoning Ensemble; robust zero-shot classification via multiple stochastic reasoning passes."
+  - term: "SEA"
+    definition: "Southeast Asia; region encompassing 11 countries with diverse languages and cultures."
+  - term: "AUPRC"
+    definition: "Area Under the Precision-Recall Curve; primary evaluation metric for safety classification."
+  - term: "ITW"
+    definition: "In-the-Wild; subset of SEA-SafeguardBench containing natural prompts."
+  - term: "CG"
+    definition: "Content Generation; subset of SEA-SafeguardBench containing generated prompts and responses."
 critical_citations:
-  - "[Tasawong et al., 2025b] — Defines the SEA-SafeguardBench used for evaluation."
-  - "[Zeng et al., 2024] — Introduces ShieldGemma, a primary baseline model."
-  - "[Inan et al., 2023] — Introduces LlamaGuard, a primary baseline model."
-  - "[Kumar et al., 2025] — Introduces PolyGuard, a multilingual safety tool."
+  - "[Zeng et al., 2024] — ShieldGemma baseline for safety moderation."
+  - "[Inan et al., 2023] — LlamaGuard foundational safeguard model."
+  - "[Shan et al., 2025] — SEALGuard for multilingual SEA safety."
+  - "[Kumar et al., 2025] — PolyGuard for multilingual safety moderation."
+  - "[Tan et al., 2025] — LionGuard-2 lightweight content moderator."
 relevance:
   topics:
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: contextual
-      justification: "Provides a multi-agent data synthesis framework applicable to profile generation."
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: high
-      justification: "Directly proposes MCRE, a robust classification ensemble method, relevant for behavioral profiling."
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: medium
-      justification: "The data synthesis and evaluation methodology for time-series patterns is relevant."
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: high
-      justification: "The safeguard classification task is analogous to anomaly detection in user transactions."
-    - code: 8.C
-      name: Cold-Start Baseline Strategies for Anomaly Detection
-      relevance: high
-      justification: "Addresses cold-start issues in low-resource contexts via synthetic data generation."
-    - code: 9.A
-      name: Mobile-First Design Principles and Rationale
-      relevance: high
-      justification: "Emphasizes multilingual and culturally-aware systems, foundational for mobile-first design."
-    - code: 9.B
-      name: Mobile UX Design for Personal Finance
-      relevance: medium
-      justification: "Provides a framework for designing user-friendly, culturally-sensitive mobile interfaces."
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: medium
-      justification: "Moderation framework aligns with user trust and data privacy needs in financial systems."
-  contribution: "The paper's data synthesis framework and MCRE technique offer a scalable method for generating culturally-grounded safety data. This can be directly adapted to create behavioral profile and anomaly detection datasets for Odin. The robust classification approach (MCRE) is applicable to user behavior classification and cold-start problem-solving. The evaluation methodology provides a blueprint for benchmarking PFMS modules."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "medium"
+      justification: "Paper identifies gaps in existing safeguards for SEA languages and cultures, paralleling gaps in PFMS."
+    - code: "5.C"
+      name: "Classification Approaches for Financial Behavioral Profiles"
+      relevance: "contextual"
+      justification: "MCRE classification methodology could inform financial behavioral profiling approaches."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "medium"
+      justification: "Comprehensive evaluation framework (AUPRC, human alignment, adversarial robustness) is transferable to Odin module evaluation."
+    - code: "2.A"
+      name: "Culturally Specific Financial Practices"
+      relevance: "contextual"
+      justification: "Cultural grounding methodology for safety data can inform culturally aware financial practice modeling."
+    - code: "10.B"
+      name: "User Trust in Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Safeguards build user trust; paper's approach to safety and trust in AI systems is relevant."
+  contribution: "This paper contributes a culturally grounded data synthesis framework and MCRE labeling methodology that can inform Odin's user classification and anomaly detection modules. The evaluation framework (AUPRC, human alignment, adversarial robustness) provides a template for assessing Odin's algorithmic modules. The deduplication approach offers a strategy for cleaning training data for financial behavior classification. The paper's treatment of cultural context in safety systems parallels the need for culturally aware financial recommendations in Odin."
   directly_justifies:
-    - "The MCRE technique can be used for robust classification of financial behaviors in Odin."
-    - "The multi-agent data synthesis framework can generate synthetic user spending data for Odin."
-    - "Cross-lingual robustness techniques are essential for a PFMS serving Filipino young professionals."
+    - "MCRE provides a robust classification method for borderline cases in financial behavior profiling."
+    - "Deduplication via bag-of-words reduces redundant patterns in training data without sacrificing coverage."
+    - "Adversarial robustness testing is essential for anomaly detection systems in PFMS."
+    - "Human alignment metrics (Spearman, Pearson) are critical for evaluating recommendation systems."
   limits:
-    - "The paper focuses on safety moderation, not financial behavior prediction, requiring translation of methods."
-    - "The models are trained on text data, not financial transaction data, so direct application is limited."
-    - "Performance on specific PFMS tasks (like anomaly detection) needs further validation."
-  mapping_rationale: "A systematic scan across all 12 domains and associated topic codes was performed. The paper's focus on multilingual AI safety and cultural grounding directly informs behavioral profiling (5.A, 5.C), forecasting (6.B), and anomaly detection (8.B, 8.C). The data synthesis and classification methodology are relevant to mobile-first design (9.A, 9.B) and data privacy/trust (10.A). Domains like Expense Categorization (3.A, etc.) and Savings/Debt Management (13.A, etc.) were rejected as they are not directly addressed. Borderline cases like cultural practices (2.A, etc.) were considered but not selected, as the paper's cultural grounding is on safety, not financial practices. Overall, the paper provides high-value methodological contributions for building robust, culturally-aware classifiers for a PFMS like Odin."
+    - "Paper focuses on content safety, not financial behavior or personal finance management."
+    - "Cultural categories are broad (food, festivals, traditions) not specific to Filipino financial practices."
+    - "Model evaluation does not include financial datasets or PFMS-specific tasks."
+    - "Findings are specific to LLM safeguards and may not directly translate to classification of financial transactions."
+  mapping_rationale: "Systematic scan of all 12 functional domains and their associated topic codes was performed. Domains flagged as relevant include: Existing Systems & Gaps (4.B, medium) due to the paper's explicit identification of limitations in current safeguards; Behavioral Profiling & Classification (5.C, contextual) because MCRE offers a classification approach transferable to financial profiling; and System Evaluation (12.B, medium) as the paper's multi-dimensional evaluation framework directly informs Odin module testing. The Filipino Cultural Context domain (2.A-D) was considered and rejected as low/contextual because the paper addresses general SEA cultural safety, not specifically Filipino financial practices. The Data Privacy & User Trust domain (10.A-B) was rated contextual—the paper discusses trust in AI safety but not PFMS-specific privacy. All other domains (Expense Categorization, Spending Forecasting, Budget Recommendation, Anomaly Detection, Mobile-First Design, User Retention, Savings & Debt Management) were rejected as not addressed. Overall, the paper provides methodological insights for culturally aware system design and evaluation rather than domain-specific PFMS contributions."
 limitations:
-  - "The study did not cover over 700 SEA dialects and languages, limiting generalizability."
-  - "The paper did not experiment with 0.5B models due to performance reliability concerns."
-  - "Safety evaluation benchmarks for SEA languages are still needed."
-  - "The potential for generated datasets to be misused for harmful content generation is acknowledged. [unacknowledged]"
+  - "Covers only 8 of 700+ SEA languages and dialects, excluding Khmer, Lao, and Telugu."
+  - "Did not experiment with 0.5B models; performance of smaller models may be unreliable for safety-critical applications."
+  - "Vision-text benchmarks are English-only, limiting evaluation of multilingual vision capabilities."
+  - "MCRE requires N=10 stochastic passes, incurring substantial computational overhead unsuitable for real-time use."
+  - "Synthetic dataset may contain harmful content generated during data synthesis. [unacknowledged]"
 remember_this:
-  - "Multilingual safeguards perform poorly without culturally-grounded training data."
-  - "MCRE improves classification robustness by aggregating multiple stochastic reasoning passes."
-  - "SEA-Guard generalizes to unseen vision-text tasks despite text-only training."
-  - "A 19.9-point AUPRC gap was observed between SEA-Guard and ShieldGemma on response classification."
-  - "Data deduplication and scale (870k samples per language) are critical for robust performance."
+  - "SEA-Guard-12B achieves 99.5% prompt AUPRC on cultural safety benchmarks."
+  - "MCRE with N=10 stochastic passes improves human alignment over single-pass reasoning."
+  - "Deduplication with bag-of-words achieves full 1M performance using only 870k samples."
+  - "SEA-Guard generalizes to vision-text safety in 6 of 7 zero-shot benchmarks."
+  - "Culturally grounded data synthesis is critical for multilingual safety systems."
 ```
 ---
 
@@ -857,96 +897,88 @@ remember_this:
 paper_id: 10.3390/ijfs14020035
 designation: international
 title: "Understanding Millennials’ Financial Behavior: The Role of Fintech Adoption, Financial Literacy, and the Mediating Effect of Financial Attitudes in a Crisis-Affected Emerging Economy"
-authors: "Aoun, D.; Rahal, R.; Sfeir, L.; Jabbour Al Maalouf, N."
+authors: "Aoun, D.; Rahal, R.; Sfeir, L.; Al Maalouf, N.J."
 year: 2026
 venue: "International Journal of Financial Studies"
 odin_topics:
   - "1.C"
-  - "4.A"
-  - "4.B"
+  - "2.A"
   - "5.A"
-  - "10.B"
-tldr: "FinTech adoption and financial literacy positively predict millennial financial behavior, with financial attitude mediating the literacy-behavior link in Lebanon's crisis context."
-problem_and_motivation: "Lebanon's economic crisis and banking collapse have eroded financial trust, yet little is known about how FinTech adoption, financial literacy, and attitudes jointly affect millennial financial behavior. Understanding these dynamics is critical for designing effective financial interventions in fragile economies. Prior research largely omits the attitudinal mediator in crisis settings."
+tldr: "Financial literacy and FinTech adoption positively influence Lebanese millennials' financial behavior, with financial attitudes mediating the relationship between literacy and behavior in a crisis-affected emerging economy."
+problem_and_motivation: "The study aims to understand the joint influence of financial literacy, FinTech adoption, and financial attitudes on millennials' financial behavior in Lebanon, where economic crisis and institutional collapse have altered traditional financial dynamics. Existing research lacks integrated models and empirical evidence from crisis-affected emerging markets. This study fills that gap by examining how these factors interact in a fragile economy."
 approach:
-  - "Collected survey data from 390 Lebanese millennials using a structured questionnaire."
-  - "Measured FinTech adoption, financial literacy, financial attitude, and financial behavior via Likert scales."
-  - "Applied structural equation modeling (SEM) to test direct and mediating effects."
-  - "Assessed model fit using CFI, TLI, SRMR, and RMSEA, achieving good fit indices."
-  - "Conducted confirmatory factor analysis and validated reliability via Cronbach's alpha and composite reliability."
+  - "Quantitative survey of 390 Lebanese millennials using self-report questionnaires with five-point Likert scales."
+  - "Structural equation modeling (SEM) was applied to test direct and mediating effects among FinTech adoption, financial literacy, financial attitude, and financial behavior."
+  - "Confirmatory factor analysis validated the measurement model, and reliability and validity were assessed using Cronbach's alpha, composite reliability, AVE, and HTMT ratio."
+  - "The study adopted Behavioral Finance Theory as the theoretical framework to ground the hypothesized relationships."
 findings:
-  - "FinTech adoption positively predicts financial behavior (β = 0.144, p < 0.001)."
-  - "Financial literacy positively predicts financial behavior (β = 0.337, p < 0.001)."
-  - "Financial attitude positively predicts financial behavior (β = 0.414, p < 0.001)."
-  - "Financial literacy strongly predicts financial attitude (β = 0.681, p < 0.001)."
+  - "num: FinTech adoption positively predicts financial behavior (β=0.144, p<0.001)."
+  - "num: Financial literacy positively predicts financial behavior (β=0.337, p<0.001)."
+  - "num: Financial attitude positively predicts financial behavior (β=0.414, p<0.001)."
+  - "num: Financial literacy positively predicts financial attitude (β=0.681, p<0.001)."
   - "Financial attitude partially mediates the relationship between financial literacy and financial behavior."
-  - "num: Financial attitude has the strongest effect on behavior among the predictors (β = 0.414)."
 key_figures_tables:
-  - "Table 7: SEM regression estimates showing all hypothesized paths are significant."
-  - "Figure 2: Path diagram illustrating direct and mediated relationships with standardized coefficients."
+  - "Figure 2: Path diagram showing standardized coefficients for all hypothesized relationships → all paths significant."
+  - "Table 7: SEM regression results with coefficients and p-values → direct and mediated effects confirmed."
+  - "Table 5: Reliability coefficients (α and ω) all above 0.86 → good internal consistency."
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
-  - term: "FinTech adoption"
-    definition: "The extent to which individuals accept and integrate digital financial technologies into their financial activities."
-  - term: "Financial literacy"
-    definition: "The knowledge and skills that enable informed decision-making about budgeting, saving, investing, and managing credit."
-  - term: "Financial attitude"
-    definition: "An individual's psychological tendencies, beliefs, and evaluative judgments about money and financial decision-making."
-  - term: "Financial behavior"
-    definition: "Actual actions and conduct related to saving, spending, budgeting, debt repayment, and investing."
-  - term: "Structural equation modeling (SEM)"
-    definition: "A multivariate statistical technique for testing complex causal relationships among latent constructs."
+  - term: "BFT"
+    definition: "Behavioral Finance Theory, which emphasizes psychological and cognitive factors in financial decision-making."
+  - term: "SEM"
+    definition: "Structural Equation Modeling, a multivariate statistical technique for testing causal relationships."
+  - term: "FinTech"
+    definition: "Digital financial technologies such as mobile banking, e-wallets, and online payment systems."
+  - term: "AVE"
+    definition: "Average Variance Extracted, a measure of convergent validity."
+  - term: "HTMT"
+    definition: "Heterotrait-Monotrait ratio, a measure of discriminant validity."
 critical_citations:
-  - "[Lusardi & Mitchell, 2014] — Foundational definition and importance of financial literacy."
-  - "[Swacha-Lech & Solarz, 2021] — Key determinants of FinTech adoption among millennials."
-  - "[Abu Daqar et al., 2021] — Establishes link between FinTech and millennial financial behavior."
+  - "[Lusardi & Mitchell, 2014] — foundational definition and importance of financial literacy."
+  - "[Swacha-Lech & Solarz, 2021] — definition and determinants of FinTech adoption."
+  - "[Aftab et al., 2025] — evidence on financial literacy and behavioral biases in FinTech adoption."
+  - "[Maalouf et al., 2023] — prior evidence on financial literacy in Lebanon."
 relevance:
   topics:
     - code: "1.C"
       name: "Financial Behavior of Filipino Young Professionals"
-      relevance: "contextual"
-      justification: "Focuses on millennial financial behavior but in Lebanese, not Filipino, context."
-    - code: "4.A"
-      name: "Landscape of Existing Personal Finance Systems"
-      relevance: "low"
-      justification: "Discusses FinTech adoption but not specific PFMS systems."
-    - code: "4.B"
-      name: "Limitations and Gaps in Existing Systems"
       relevance: "medium"
-      justification: "Identifies gaps like financial illiteracy and trust issues relevant to PFMS."
+      justification: "Examines financial behavior of millennials, a core demographic for Odin."
+    - code: "2.A"
+      name: "Culturally Specific Financial Practices"
+      relevance: "contextual"
+      justification: "Provides context on culturally specific financial practices in Lebanon, but not Filipino."
     - code: "5.A"
       name: "Financial Behavioral Profiles in Personal Finance"
-      relevance: "high"
-      justification: "Directly examines behavioral determinants and attitudinal mediation, key for profiling."
-    - code: "10.B"
-      name: "User Trust in Personal Finance Systems"
       relevance: "medium"
-      justification: "Highlights trust erosion in financial institutions, relevant to user trust in PFMS."
-  contribution: "This study provides empirical evidence that financial attitude mediates the literacy-behavior link, which can directly inform Odin's behavioral profiling module by emphasizing attitudinal drivers over knowledge alone. It also highlights the importance of institutional trust and crisis context, offering insights for Odin's user trust and engagement strategies. The methodological approach using SEM provides a template for evaluating multi‑factor behavioral models within a PFMS. Finally, the findings on FinTech adoption's weaker effect in fragile economies suggest that Odin's design should prioritize attitudinal and cognitive interventions over purely technological features."
+      justification: "Identifies behavioral profiles and the mediating role of attitudes, relevant for profiling."
+  contribution: "This paper justifies the importance of integrating financial literacy and attitudinal factors into a PFMS like Odin. It supports the inclusion of behavioral profiling modules to understand user tendencies. The mediation effect suggests that Odin should not only provide financial education but also foster positive attitudes through UX design. The findings reinforce the need for FinTech adoption as a channel for behavioral improvement, aligning with Odin's mobile-first approach. Overall, the paper provides empirical evidence that behavioral factors are critical for financial management systems."
   directly_justifies:
-    - "Financial literacy alone is insufficient without attitudinal reinforcement to improve financial behavior."
-    - "FinTech adoption positively influences financial behavior, but its effect is weaker in crisis contexts."
-    - "Financial attitude is the strongest predictor of millennial financial behavior."
-    - "In crisis settings, psychological and attitudinal mechanisms amplify over rational knowledge."
+    - "Financial literacy directly improves financial behavior (β=0.337)."
+    - "Financial attitudes mediate the effect of literacy on behavior."
+    - "FinTech adoption positively influences behavior in crisis contexts."
+    - "Behavioral finance theory applies in emerging economies."
   limits:
-    - "Cross‑sectional design prevents causal inference and tracking of behavioral changes over time."
-    - "Self‑reported measures may be biased by social desirability and perceived versus actual behavior."
-    - "Sample may not be representative of all Lebanese millennials, limiting generalizability."
-    - "Excludes crisis‑specific constructs such as institutional trust and perceived financial risk [unacknowledged]."
-  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to Behavioral Profiling (5.A) because it directly models financial behavior and attitudes, providing empirical support for attitudinal mediation. It also informs Existing Systems & Gaps (4.A, 4.B) through its discussion of FinTech adoption and identified limitations like financial illiteracy and trust erosion, with 4.B rated medium and 4.A low due to limited PFMS specificity. User Trust (10.B) was rated medium given the emphasis on trust in the financial system. The paper touches on Financial Behavior (1.C) but only contextually, as the population is Lebanese rather than Filipino. Other domains—Expense Categorization, Spending Forecasting, Budget Recommendation, Anomaly Detection, Mobile‑First Design, Engagement, Evaluation, and Savings/Debt Management—were considered and rejected because the paper does not address algorithmic or design‑specific aspects of these areas. Overall, the paper provides robust behavioral evidence that can guide Odin's profiling and trust‑building features, though it is not directly transferable to Filipino cultural specifics."
+    - "Cross-sectional design limits causal inference."
+    - "Self-reported data may introduce social desirability bias."
+    - "Sample is not representative of all Lebanese millennials."
+    - "Lack of objective measures for financial literacy and behavior."
+    - "Crisis-specific constructs like institutional trust were not included."
+  mapping_rationale: "I systematically scanned all 12 functional domains and their associated topic codes. The paper was flagged as relevant for domains related to financial behavior and profiling: 1.C and 5.A are assigned medium relevance because the paper provides empirical evidence on financial behavior and profiling that can inform Odin's design. 2.A is contextual as it discusses cultural practices but not specific to Filipino culture. Borderline cases: the paper touches on FinTech adoption, which could relate to 4.A or 9.A, but it does not address system gaps or mobile design principles, so these were rejected. Similarly, 6.A/B (forecasting) and 8.A/B (anomaly detection) were rejected as the paper does not discuss predictive modeling. 7.A-D (budget recommendation) were not addressed. The overall relevance is moderate; the paper offers foundational insights into behavioral mechanisms that can inform Odin's financial literacy and attitude integration modules."
 limitations:
-  - "Cross‑sectional design prevents causal inference and tracking of behavioral changes over time."
-  - "Self‑reported measures may be biased by social desirability and perceived versus actual behavior."
-  - "Sample may not be representative of all Lebanese millennials, limiting generalizability."
-  - "Excludes crisis‑specific constructs such as institutional trust and perceived financial risk [unacknowledged]."
+  - "Cross-sectional design limits tracking changes in financial behavior over time."
+  - "Reliance on self-reported surveys may reflect perceived tendencies rather than actual behavior."
+  - "Sample is limited to Lebanese millennials, reducing generalizability."
+  - "Measurement of financial literacy and behavior relied on subjective Likert-scale items, not objective tests."
+  - "Crisis-specific variables such as institutional trust and perceived risk were not included [unacknowledged]."
 remember_this:
-  - "Financial attitude mediates the link between literacy and financial behavior."
-  - "FinTech adoption improves behavior but less than literacy in crisis contexts."
-  - "Financial attitude has the largest effect size (β = 0.414) on behavior."
-  - "Financial literacy strongly shapes attitudes (β = 0.681), which then drive behavior."
-  - "In unstable economies, psychological factors outweigh cognitive knowledge in predicting behavior."
+  - "Financial attitude strongly mediates the link between literacy and behavior."
+  - "Financial literacy is a stronger predictor than FinTech adoption for behavior."
+  - "The study provides empirical evidence from a crisis-affected emerging economy."
+  - "Positive financial attitudes are crucial for translating knowledge into action."
+  - "FinTech adoption contributes positively but with a smaller effect size."
 ```
 ---
 
@@ -1109,291 +1141,87 @@ remember_this:
 **Source File:** `Malave et al_summarized.md`
 
 ```yaml
-paper_id: 2c8a9b4e-1e5d-5a2f-9b3c-8d7e6f5a4b3c
+paper_id: 10.1016/j.mex.2026.103962
 designation: international-algorithm-specific
 title: Transforming financial documents into credit decisions using explainable artificial intelligence and optical character recognition
 authors: Malave, S.; Khemani, B.; Patil, H.; Nandurkar, S.; Nandurkar, O.; Nayak, A.
 year: 2026
 venue: MethodsX
 odin_topics:
-  - 4.A
-  - 4.B
-  - 6.A
-  - 6.B
-  - 8.A
-  - 8.B
-  - 10.A
-  - 10.B
-  - 12.A
-  - 12.B
-tldr: An XAI framework integrates OCR and XGBoost to automate credit scoring, achieving 92.5% accuracy while providing SHAP and LIME explanations for transparency.
-problem_and_motivation: Existing credit scoring models either lack interpretability or fail to utilize unstructured document data. A unified system is needed that extracts financial features from documents and provides explainable predictions to ensure fairness and regulatory compliance.
+  - "10.A"
+  - "10.B"
+tldr: A document-driven framework integrates OCR, XGBoost, and XAI (SHAP, LIME) for interpretable credit scoring, achieving high accuracy but with limited direct application to personal finance management.
+problem_and_motivation: Automated credit scoring systems using complex models lack transparency, raising fairness and regulatory concerns. Existing methods also underutilize unstructured data from financial documents. A unified framework is needed to combine document intelligence, predictive accuracy, and explainability.
 approach:
-  - Documents are processed using EasyOCR, PyPDF2, and PdfPlumber to extract identity and financial data.
-  - Extracted data is cleaned, normalized, and transformed into 15 engineered financial features.
-  - XGBoost predicts credit scores, outperforming LightGBM, Random Forest, Logistic Regression, and LSTM.
-  - SHAP provides global and local feature importance explanations for model predictions.
-  - LIME generates instance-specific explanations to support transparent decision-making.
-  - A human-in-the-loop review allows loan officers to validate features, predictions, and explanations before final decisions.
+  - Extracts data from applicant documents (Aadhaar, PAN, salary slips, bank statements) using EasyOCR, PyPDF2, and PdfPlumber.
+  - Converts extracted data into a structured JSON, performs cleaning, normalization, and cross-verification.
+  - Engineers 15 financial and behavioural features (e.g., income stability, bounce count) from the extracted data.
+  - Trains an XGBoost model on a public Kaggle dataset (10,000 instances) to predict a continuous credit score.
+  - Employs SHAP for global feature importance and LIME for local, instance-specific explanations of predictions.
+  - Integrates a rule-based decision layer for loan eligibility, interest rate, and amount, followed by a human-in-the-loop review.
 findings:
-  - XGBoost achieved the lowest MAE of 13.71 and RMSE of 18.87, indicating high prediction consistency.
-  - num: XGBoost attained a classification accuracy of 92.5% at the decision threshold of 650.
-  - num: XGBoost achieved precision of 0.938, recall of 0.945, and F1-score of 0.942, outperforming all baselines.
-  - SHAP analysis identified income stability, average balance, and monthly credit as top positive contributors to credit scores.
-  - LIME explanations matched SHAP results, confirming consistent local and global interpretability.
-  - The framework addresses the gap of integrating document intelligence with explainable machine learning for credit scoring.
+  - "num: XGBoost achieved 92.5% accuracy, outperforming LightGBM (90.8%), Logistic Regression (91%), Random Forest (87%), and LSTM (81%)."
+  - "num: XGBoost yielded the lowest MAE (13.71) and RMSE (18.87), indicating high prediction consistency."
+  - SHAP analysis showed income stability and average monthly credit positively correlate with credit scores.
+  - Bounce count and obligation-to-income ratio were identified as strong negative contributors to credit scores.
+  - LIME provided consistent local explanations, highlighting feature impacts on individual predictions.
+  - The integrated XAI approach enhances transparency and supports regulatory compliance.
 key_figures_tables:
-  - Figure 1: Flowchart of the proposed end-to-end framework → visualizes the complete pipeline from document ingestion to final output.
-  - Table 1: Document types and extracted fields → details the specific data extracted from Aadhaar, PAN, salary slips, and bank statements.
-  - Table 2: Feature description → lists all 15 engineered features used for credit risk prediction.
-  - Figure 6: Correlation matrix of engineered features → shows relationships between financial attributes and their influence on credit score.
-  - Figure 11: SHAP beeswarm plot for global feature importance → illustrates feature contributions across all instances.
-  - Figure 12: LIME-based local explanation → demonstrates instance-specific feature contributions for an individual prediction.
+  - "Figure 1: Overview of the proposed end-to-end document-driven credit scoring framework. → Shows integration from document input to final decision."
+  - "Table 2: Description of the 15 engineered features used for credit risk prediction. → Lists financial and behavioral attributes used as model input."
+  - "Figure 8: Regression performance comparison across models based on MAE and RMSE. → XGBoost has the lowest error values."
+  - "Figure 11: SHAP beeswarm plot showing global feature importance. → Visualizes positive and negative feature contributions."
 key_equations:
-  - equation: "AverageMonthlyCredit = (1/N) * sum(C_i)"
-    explanation: "Mean of credited amounts over N months."
-  - equation: "AverageUsableSalary = (1/N) * sum(S_i - EMI_i)"
-    explanation: "Average income left after EMI payments."
-  - equation: "AverageEligibleEMI = 0.4 * AverageUsableSalary"
-    explanation: "Maximum EMI capacity set at 40% of usable salary."
-  - equation: "EMI = P * r * ((1+r)^n) / ((1+r)^n - 1)"
-    explanation: "Calculates monthly installment for a loan."
+  - equation: "AverageUsableSalary = (1/N) * Σ(Si - EMIi)"
+    explanation: "Calculates disposable income after loan repayments."
+  - equation: "Accuracy = (TP + TN) / (TP + TN + FP + FN)"
+    explanation: "Proportion of correctly classified instances."
 definitions:
-  - term: XAI
-    definition: "Explainable Artificial Intelligence, methods that make AI model decisions transparent."
-  - term: OCR
-    definition: "Optical Character Recognition, technology to extract text from images and documents."
-  - term: XGBoost
-    definition: "Extreme Gradient Boosting, a tree-based ensemble machine learning algorithm."
-  - term: SHAP
-    definition: "SHapley Additive exPlanations, a game-theoretic approach for explaining model outputs."
-  - term: LIME
-    definition: "Local Interpretable Model-agnostic Explanations, a method for explaining individual predictions."
+  - term: "XAI"
+    definition: "Explainable Artificial Intelligence."
+  - term: "OCR"
+    definition: "Optical Character Recognition."
+  - term: "SHAP"
+    definition: "SHapley Additive exPlanations."
+  - term: "LIME"
+    definition: "Local Interpretable Model-agnostic Explanations."
 critical_citations:
-  - "[Nwafor et al., 2024] — Proposes a hybrid ML approach for transparent credit decisions."
-  - "[Nallakaruppan et al., 2024] — Reviews XAI for credit risk and financial decision support."
-  - "[De Lange et al., 2022] — Discusses XAI for credit assessment in banking."
-  - "[Chang et al., 2025] — Presents an explainable ML study for credit worthiness prediction."
+  - "[Nwafor et al., 2024] — Proposes hybrid ML for credit decisions."
+  - "[Nallakaruppan et al., 2024] — Reviews XAI for financial decision support."
+  - "[Kozodoi et al., 2022] — Discusses fairness in credit scoring."
 relevance:
   topics:
-    - code: 4.A
-      name: Landscape of Existing Personal Finance Systems
-      relevance: medium
-      justification: "Reviews existing credit scoring systems and their limitations."
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      relevance: high
-      justification: "Explicitly addresses the lack of integration between document data and explainable ML."
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: high
-      justification: "Proposes XGBoost for credit score prediction, relevant to forecasting."
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: medium
-      justification: "Uses aggregated financial features for prediction, not sequential data directly."
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: medium
-      justification: "Features like bounce_count and gambling_transaction_count are related to anomaly detection."
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: low
-      justification: "Mentions features indicative of anomalies but does not focus on detection algorithms."
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: medium
-      justification: "Mentions role-based authentication, audit trails, and document deletion for privacy."
-    - code: 10.B
-      name: User Trust in Personal Finance Systems
-      relevance: high
-      justification: "Focuses on transparency via SHAP/LIME to build trust and support regulatory compliance."
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: high
-      justification: "Provides a comprehensive evaluation using MAE, RMSE, R2, Accuracy, Precision, Recall, F1."
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: high
-      justification: "Compares XGBoost against LGBM, RF, LR, and LSTM using standard regression metrics."
-  contribution: "The paper contributes to Odin's XAI module by demonstrating how SHAP and LIME can explain predictions of a tree-based ensemble. It supports the feature engineering pipeline (3.B) by validating that derived financial features (e.g., income stability, obligation-to-income ratio) are predictive and interpretable. The human-in-the-loop review aligns with Odin's need for user trust and explainability (10.B). The evaluation methodology (12.A, 12.B, 12.C) provides a template for assessing Odin's own predictive modules. The work directly justifies the use of XGBoost for structured financial data and the application of SHAP/LIME for transparency."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Paper mentions document deletion and role-based access but does not deeply analyze privacy in PFMS."
+    - code: "10.B"
+      name: "User Trust in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Provides a framework for transparent decision-making using SHAP and LIME, directly applicable to building user trust."
+  contribution: "The paper's method for integrating data extraction and XAI can inform Odin's data handling module to build user trust through transparency. Its use of SHAP and LIME offers a blueprint for explaining complex financial predictions in a personal finance context. However, the focus on credit scoring for lenders means the framework is not directly transferable to Odin's core PFMS functions."
   directly_justifies:
-    - "XGBoost achieves superior performance (92.5% accuracy) for credit scoring on structured financial features."
-    - "SHAP and LIME provide consistent global and local explanations for tree-based ensemble models."
-    - "Combining document-based feature extraction with explainable ML enhances transparency and regulatory compliance."
-    - "Derived financial features like income stability and obligation-to-income ratio are strong predictors of financial risk."
+    - "Combining explainable models with feature engineering improves transparency for users."
+    - "XGBoost is a robust model for structured financial data, achieving high accuracy."
+    - "SHAP and LIME can provide consistent global and local explanations of model predictions."
   limits:
-    - "Dependency on OCR accuracy, which may vary with document quality and noise."
-    - "Trained on a structured dataset that may not cover all variations of real-world financial data."
-    - "SHAP and LIME may not capture all possible model interactions, limiting deeper explanation."
-  mapping_rationale: "A systematic scan of all 12 functional domains was conducted. The paper was flagged as most relevant to 'Existing Systems & Gaps' (4.A, 4.B) due to its explicit focus on limitations of current credit scoring models, and to 'Data Privacy & User Trust' (10.A, 10.B) through its emphasis on XAI for transparency. High relevance was also assigned to 'System Evaluation' (12.A, 12.B) given the detailed model comparison and metrics. Medium relevance was assigned to 'Spending Forecasting' (6.A, 6.B) as it uses aggregated financial features, and 'Anomaly Detection' (8.A, 8.B) due to risk-related features like bounce_count. The domains of 'Filipino Cultural Context' (2.A-D), 'Behavioral Profiling' (5.A-C), 'Budget Recommendation' (7.A-D), 'Mobile-First Design' (9.A-B), and 'Savings & Debt Management' (13.A-C) were considered but rejected as the paper does not address these topics. Overall, the paper provides strong support for Odin's predictive modeling, explainability, and evaluation modules."
+    - "The study is specific to credit scoring and not personal finance management."
+    - "The model is trained on a public dataset, not on real-world or Philippine-specific financial data."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated canonical topic codes was performed. The relevance is primarily contextual or medium. The domain 'Data Privacy & User Trust' was flagged as relevant, specifically topic 10.A (contextual) for its mention of data handling and 10.B (medium) for its strong focus on XAI to build trust. The papers on 'Existing Systems & Gaps' (4.A, 4.B) were considered but rejected as the paper proposes a new system, not an analysis of existing ones. Domains like 'Spending Forecasting', 'Budget Recommendation', and 'Anomaly Detection' were considered and rejected as the paper's scope is credit risk, not personal budgeting or spending analytics. The Filipino cultural domains (e.g., 2.A, 2.B) were considered and rejected due to the study's Indian context. Overall, the paper's contribution is tangentially relevant to Odin, primarily as a reference for implementing explainable AI to build user trust, rather than for its core PFMS functionalities."
 limitations:
-  - "Dependency on OCR accuracy, which may vary with document quality and noise."
-  - "Trained on a structured dataset that may not cover all variations of real-world financial data."
-  - "SHAP and LIME may not capture all possible model interactions, limiting deeper explanation."
+  - "Dependency on OCR accuracy, which varies with document quality and type. [unacknowledged]"
+  - "Training on a structured dataset may not capture the full diversity of real-world financial data. [unacknowledged]"
+  - "SHAP and LIME may not capture all complex model interactions. [unacknowledged]"
 remember_this:
-  - "XGBoost achieved 92.5% accuracy for credit risk classification."
-  - "SHAP and LIME provide consistent explanations for financial predictions."
-  - "Integrating document OCR with ML improves data utilization."
-  - "Human-in-the-loop review ensures accountability and compliance."
-  - "Feature engineering transforms documents into 15 predictive financial attributes."
+  - "XGBoost achieved 92.5% accuracy for credit scoring."
+  - "SHAP and LIME provide global and local explanations for predictions."
+  - "The framework integrates document data extraction with machine learning."
+  - "Feature engineering is critical for translating raw data into predictive inputs."
+  - "Explainability enhances transparency in financial decision-making systems."
 ```
 ---
 
-## Paper 10: Guedi_summarized.md
-
-**Source File:** `Guedi_summarized.md`
-
-```yaml
-paper_id: 5b3e3e7a-6f5b-5a3e-8f5e-6b3e3e7a6f5b
-designation: international
-title: Predictive Financial Decision Platform through Scalable Online Computing and Reward-Driven Analytical Mechanisms
-authors: Guedi, H. I.
-year: 2026
-venue: Frontiers in Emerging Multidisciplinary Sciences
-odin_topics:
-  - 1.A
-  - 2.A
-  - 2.D
-  - 4.A
-  - 4.B
-  - 5.A
-  - 5.C
-  - 6.A
-  - 6.B
-  - 7.A
-  - 7.B
-  - 9.A
-  - 10.A
-  - 10.B
-  - 11.A
-  - 11.B
-tldr: Integrates scalable cloud computing and reinforcement learning into a predictive financial platform to improve decision-making, personalization, and user engagement.
-problem_and_motivation: Conventional financial decision systems suffer from limited personalization, insufficient predictive capability, and weak scalability under real-time demand. There is a need for an intelligent platform that unifies scalable analytics, behavioral adaptation, and digital literacy integration to improve financial decision reliability.
-approach:
-  - The framework integrates a digital financial data acquisition layer, a scalable cloud computing layer, and a reward-driven reinforcement learning engine.
-  - It incorporates a financial literacy and capability assessment layer to personalize recommendations based on user understanding.
-  - A predictive risk and portfolio intelligence layer performs portfolio risk estimation, savings forecasting, and debt-risk prediction using deep reinforcement learning.
-  - The adaptive decision recommendation layer provides personalized budgeting, savings, investment, and debt reduction strategies.
-  - The system uses a distributed cloud model to scale computational resources dynamically according to analytical demand.
-findings:
-  - num: Reward-driven reinforcement learning significantly improved predictive financial decision coordination and adaptive portfolio prediction.
-  - num: The scalable online computing infrastructure improved real-time analytical responsiveness during high-volume transaction conditions.
-  - num: Financial literacy integration enhanced recommendation personalization and behavioral adaptability for users with varying capability levels.
-  - Behavior-sensitive reinforcement learning improved long-term financial planning outcomes and encouraged stable savings behavior.
-  - The framework improved system accessibility for diverse user populations through cloud-enabled continuous online financial interaction.
-key_figures_tables:
-  - Table 1: Comparison of traditional systems vs. proposed framework across scalability, user modeling, and behavioral learning parameters → Proposed framework is highly adaptive and intelligent.
-key_equations:
-  - equation: "R_t = \\alpha P_t - \\beta Risk_t + \\gamma S_t"
-    explanation: Balances portfolio performance, risk exposure, and savings stability.
-  - equation: "L_s = \\frac{\\sum_{i=1}^{n} w_i f_i}{n}"
-    explanation: Weighted indicators determine digital financial capability.
-  - equation: "Risk_{opt} = \\min \\sum_{i=1}^{n}(r_i - \\mu)^2"
-    explanation: Minimizes volatility while preserving adaptive financial growth.
-definitions:
-  - term: Reinforcement Learning
-    definition: A machine learning technique where an agent learns to make decisions by performing actions and receiving rewards or penalties.
-  - term: Scalable Online Computing
-    definition: A computational architecture that can dynamically adjust its resources to handle varying workloads in real-time.
-critical_citations:
-  - "[Mirza et al., 2025] — Demonstrates deep reinforcement learning improves portfolio risk prediction."
-  - "[Lusardi, Mitchell, and Curto, 2010] — Establishes link between financial literacy and planning."
-  - "[Demirgüç-Kunt and Klapper, 2013] — Foundational work on financial inclusion measurement."
-relevance:
-  topics:
-    - code: 1.A
-      name: Filipino Young Professionals as a Demographic
-      relevance: contextual
-      justification: Provides general context on financial behavior and literacy relevant to YPs.
-    - code: 2.A
-      name: Culturally Specific Financial Practices
-      relevance: low
-      justification: Discusses digital financial literacy but not specific Filipino cultural practices.
-    - code: 2.D
-      name: Filipino Spending Cycles and "Occasions"
-      relevance: low
-      justification: Focuses on general financial behavior, not specific Filipino spending cycles.
-    - code: 4.A
-      name: Landscape of Existing Personal Finance Systems
-      relevance: medium
-      justification: Critiques limitations of conventional financial advisory systems.
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      relevance: high
-      justification: Directly identifies gaps like limited personalization and predictive capability.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: high
-      justification: Employs behavioral analytics and adaptive user modeling.
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: medium
-      justification: Uses literacy and behavior assessment to personalize recommendations.
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: high
-      justification: Core contribution is a predictive financial decision platform.
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: high
-      justification: Uses reinforcement learning for predictive analytics and portfolio forecasting.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      relevance: high
-      justification: Provides budgeting guidance as a key recommendation feature.
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      relevance: high
-      justification: The adaptive recommendation layer provides personalized budgeting.
-    - code: 9.A
-      name: Mobile-First Design Principles and Rationale
-      relevance: low
-      justification: Discusses digital accessibility but not specifically mobile-first design.
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: medium
-      justification: Framework includes data privacy protection and secure authentication.
-    - code: 10.B
-      name: User Trust in Personal Finance Systems
-      relevance: medium
-      justification: Mentions improving user trust through privacy and ethical governance.
-    - code: 11.A
-      name: Engagement Dynamics in Personal Finance Applications
-      relevance: high
-      justification: Reward-driven mechanisms improve user engagement and confidence.
-    - code: 11.B
-      name: Retention Mechanisms and Engagement Design
-      relevance: medium
-      justification: Adaptive personalization supports long-term engagement.
-  contribution: "This paper provides a theoretical and methodological foundation for Odin's predictive modules by demonstrating the integration of scalable cloud computing and reinforcement learning. It validates the use of reward-driven optimization to adapt financial recommendations to user behavior. The framework's literacy-sensitive personalization directly informs Odin's approach to user profiling. Its emphasis on behavioral engagement supports Odin's retention strategies."
-  directly_justifies:
-    - "Reinforcement learning improves adaptive portfolio prediction and dynamic risk management."
-    - "Scalable online computing reduces latency in recommendation generation and portfolio evaluation."
-    - "Financial literacy integration enhances recommendation personalization and behavioral adaptability."
-  limits:
-    - "Reinforcement-learning systems require large-scale behavioral data, which may create privacy concerns."
-    - "Computational scalability demands substantial cloud infrastructure resources during high analytical workloads."
-    - "Financial uncertainty and sudden market volatility may reduce predictive reliability under extreme conditions."
-    - "Excessive dependence on automated recommendation systems may reduce independent financial reasoning among users."
-    - "Training data inadequacy may introduce bias in reinforcement-learning systems [unacknowledged]."
-  mapping_rationale: "A systematic scan of all 12 functional domains was conducted. Domains flagged as relevant include: Existing Systems & Gaps (4.A high, 4.B high), Behavioral Profiling (5.A high, 5.C medium), Spending Forecasting (6.A high, 6.B high), Budget Recommendation (7.A high, 7.B high), User Retention (11.A high, 11.B medium), Data Privacy (10.A medium, 10.B medium), and Filipino Cultural Context (1.A contextual, 2.A low, 2.D low). The paper's core on predictive reinforcement learning strongly supports 6.A and 6.B. Its critique of existing systems and adaptive personalization justify 4.A, 4.B, and 5.A. Budgeting and engagement features align with 7.A, 7.B, 11.A, and 11.B. Privacy mentions support 10.A and 10.B but are not central. Domains like Mobile-First Design (9.A) and Anomaly Detection (8.A-8.C) were considered but rejected as the paper does not address them specifically. Overall, the paper offers strong justification for Odin's predictive, behavioral, and adaptive recommendation modules."
-limitations:
-  - "Reinforcement-learning systems require large-scale behavioral data, which may create privacy concerns."
-  - "Computational scalability demands substantial cloud infrastructure resources during high analytical workloads."
-  - "Financial uncertainty and sudden market volatility may reduce predictive reliability under extreme conditions."
-  - "Excessive dependence on automated recommendation systems may reduce independent financial reasoning among users."
-  - "Training data inadequacy may introduce bias in reinforcement-learning systems [unacknowledged]."
-remember_this:
-  - "Reinforcement learning significantly improves adaptive portfolio prediction and risk management."
-  - "Scalable cloud computing reduces latency in financial recommendation generation."
-  - "Literacy-sensitive personalization enhances accessibility for diverse user populations."
-  - "Reward-driven optimization encourages stable savings behavior and debt reduction."
-  - "Integrating scalable cloud and reinforcement learning creates a robust foundation for intelligent financial ecosystems."
-```
----
-
-## Paper 11: Vinitha et al_summarized.md
+## Paper 10: Vinitha et al_summarized.md
 
 **Source File:** `Vinitha et al_summarized.md`
 
@@ -1511,7 +1339,7 @@ remember_this:
 ```
 ---
 
-## Paper 12: Oliveira_summarized.md
+## Paper 11: Oliveira_summarized.md
 
 **Source File:** `Oliveira_summarized.md`
 
@@ -1619,7 +1447,7 @@ remember_this:
 ```
 ---
 
-## Paper 13: Amado_summarized.md
+## Paper 12: Amado_summarized.md
 
 **Source File:** `Amado_summarized.md`
 
@@ -1740,7 +1568,7 @@ remember_this:
 ```
 ---
 
-## Paper 14: Chowdhury T. et al_summarized.md
+## Paper 13: Chowdhury T. et al_summarized.md
 
 **Source File:** `Chowdhury T. et al_summarized.md`
 
@@ -1899,7 +1727,7 @@ remember_this:
 ```
 ---
 
-## Paper 15: Tian et al_summarized.md
+## Paper 14: Tian et al_summarized.md
 
 **Source File:** `Tian et al_summarized.md`
 
@@ -1911,280 +1739,134 @@ authors: Tian, Y.; Shao, W.; Deng, Z.
 year: 2026
 venue: Frontiers in Artificial Intelligence
 odin_topics:
-  - 5.B
-  - 5.C
-  - 6.A
-  - 6.B
-  - 7.B
-  - 7.D
-  - 8.A
-  - 8.B
-  - 12.A
-  - 12.B
-  - 12.C
-tldr: An LLM-driven framework automatically constructs domain-aware ML pipelines for customer analytics, outperforming generic AutoML by 1.4%–5.4% in ROC-AUC while reducing development time 6.7-fold.
-problem_and_motivation: Generic AutoML systems lack the capacity to automatically construct domain-specific features (e.g., RFM, CLV, engagement scores) essential for financial customer analytics, forcing organizations to either accept suboptimal performance or dedicate scarce data science expertise to manual pipeline development.
-approach:
-  - The framework takes raw customer data and natural language directives as input to generate executable training pipelines.
-  - An LLM acts as an intelligent controller, orchestrating five stages: modality recognition, domain-aware feature engineering, model selection, multimodal pipeline construction, and training configuration optimization.
-  - Domain-specific feature engineering automatically computes RFM scores, CLV projections, and engagement scores with temporal trend derivatives.
-  - Model selection is guided by data characteristics, computational constraints, and business requirements expressed in natural language.
-  - The system employs a late fusion strategy to integrate predictions from modality-specific models (tabular, text, temporal) into a unified pipeline.
-findings:
-  - num: Marketing-AutoM3L achieved ROC-AUC improvements of 1.4% to 5.4% over existing automated and manual approaches across five customer analytics datasets.
-  - num: The framework reduced pipeline development time from 156.9 minutes (manual) to 23.4 minutes, representing a 6.7-fold speedup.
-  - Domain-aware feature engineering alone contributed 3.3%–3.6% ROC-AUC improvement in ablation studies.
-  - The framework maintains balanced performance across precision and recall while achieving the highest F1-scores on all datasets.
-  - Multimodal integration (tabular+text+temporal) consistently outperforms single-modality approaches by 1.1% to 3.6% ROC-AUC.
-key_figures_tables:
-  - Figure 1: Overall framework architecture showing Intelligent Processing and Knowledge Supplementation modules → LLM orchestrates five-stage pipeline construction.
-  - Table 2: Main experimental results comparing Marketing-AutoM3L against baselines → Framework achieves highest ROC-AUC and F1-scores across all five datasets.
-  - Table 3: Performance when baselines receive pre-computed domain features → Marketing-AutoM3L maintains 0.8%–2.1% advantage even when features are provided externally.
-  - Table 5: Ablation study results showing individual component contributions → Feature engineering provides largest gain (3.3%–3.6%).
-  - Figure 5: Performance comparison across datasets and methods → Consistent superiority across ROC-AUC, F1, precision, and recall.
-key_equations:
-  - equation: "RFM = (R_i, F_i, M_i) where R_i = t_current - max(s_1,...,s_n), F_i = n, M_i = sum(a_j)"
-    explanation: RFM metrics quantify customer recency, frequency, and monetary value.
-  - equation: "CLV_hist_i = AOV_i × PF_i × CL_i"
-    explanation: Historical averaging method projects customer lifetime value.
-  - equation: "CLV_prob_i = sum_{t=1}^{T} (AOV_i × PF_i × r_i^t) / (1+d)^t"
-    explanation: Probabilistic model incorporates retention probabilities for CLV projection.
-  - equation: "E_i(t) = sum_{k=1}^{K} w_k sum_{\\tau=0}^{W} I_{i,k}(t-\\tau) · e^{-\\lambda \\tau}"
-    explanation: Engagement score aggregates weighted, temporally decayed interaction signals.
-definitions:
-  - term: RFM
-    definition: Recency-Frequency-Monetary analysis for customer segmentation based on transactional behavior.
-  - term: CLV
-    definition: Customer Lifetime Value, the total projected value a customer will generate over their relationship.
-  - term: AutoML
-    definition: Automated Machine Learning, systems that automate pipeline construction without manual intervention.
-  - term: LLM
-    definition: Large Language Model, used as an intelligent controller for decision-making across pipeline stages.
-  - term: Late Fusion
-    definition: Strategy combining predictions from modality-specific models after independent processing.
-critical_citations:
-  - "[Luo et al., 2024a] — Foundation for LLM-driven multimodal pipeline construction."
-  - "[Jain et al., 2023] — Demonstrates BiLSTM-CNN effectiveness for churn prediction."
-  - "[Shen et al., 2025e] — AutoML agent framework for histopathology images."
-relevance:
-  topics:
-    - code: 5.B
-      name: Profile Dynamics and the Cold‑Start Problem
-      relevance: medium
-      justification: Addresses dynamic customer behavior patterns and evolving engagement trends over time.
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: high
-      justification: Proposes and evaluates classification architectures (RFM, CLV, engagement scoring) for behavioral profiling.
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: high
-      justification: Directly tackles predictive modeling for customer churn and behavior prediction in financial contexts.
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: high
-      justification: Implements and evaluates temporal forecasting with RFM, CLV, and engagement trend features.
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      relevance: contextual
-      justification: Provides methodological framework for automated recommendation via LLM-driven optimization.
-    - code: 7.D
-      name: Infeasibility Handling and Reduction Hierarchies
-      relevance: contextual
-      justification: Pipeline construction handles constraints through LLM-driven adaptation to business objectives.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: medium
-      justification: Churn prediction as anomaly detection; framework identifies at-risk customers deviating from behavioral norms.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: medium
-      justification: Evaluates classification algorithms (gradient boosting, neural networks) applicable to anomaly detection.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: high
-      justification: Provides comprehensive evaluation across multiple datasets with ROC-AUC, F1, precision, recall metrics.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: high
-      justification: Ablation studies quantify individual component contributions to overall performance.
-    - code: 12.C
-      name: Evaluation Methodologies for Budget Recommendation Systems
-      relevance: medium
-      justification: Evaluation methodology for automated recommendation systems is generalizable to budget recommendation.
-  contribution: The framework directly addresses Odin's need for domain-aware feature engineering in Modules 5 (behavioral profiling) and 6 (forecasting) by automatically computing RFM, CLV, and engagement features. It provides a methodology for Module 7 (budget recommendation) through LLM-driven optimization guided by natural language objectives. The experimental evaluation framework (Module 12) establishes rigorous baselines and ablation methodologies. The natural language interface design (Module 9) enables non-technical stakeholders to configure pipelines, aligning with Odin's mobile-first accessibility goals. The temporal constraint enforcement ensures no data leakage, critical for Module 8's cold-start anomaly detection baselines.
-  directly_justifies:
-    - "Marketing-AutoM3L's domain-aware feature engineering improves ROC-AUC by 3.3%–3.6% over generic approaches."
-    - "The LLM-driven pipeline automation reduces development time by 6.7× compared to manual approaches."
-    - "Natural language interfaces enable business stakeholders to specify requirements without ML expertise."
-    - "Multimodal integration (tabular+text+temporal) outperforms single-modality approaches by 1.1%–3.6% ROC-AUC."
-    - "The framework maintains balanced precision and recall, critical for cost-sensitive retention interventions."
-  limits:
-    - "Evaluation focuses on customer churn prediction rather than the full spectrum of financial behavior Odin addresses."
-    - "CLV projection assumes stable customer behavior patterns, which may not hold for young professionals with dynamic financial situations."
-    - "Engagement scoring weights are dataset-specific and may require recalibration for Odin's target demographic."
-    - "The GPT-4 dependency introduces reproducibility concerns as model updates could affect framework behavior."
-  mapping_rationale: I systematically scanned all 12 functional domains and their associated 28 topic codes against the paper's contributions. The paper is highly relevant to Predictive Modeling (6.A, 6.B) as it directly proposes and evaluates forecasting algorithms for customer behavior. It is directly applicable to Behavioral Profiling (5.B, 5.C) through its RFM, CLV, and engagement scoring methodologies. The evaluation framework (12.A, 12.B) provides rigorous baselines and ablation studies. The paper has medium relevance to Anomaly Detection (8.A, 8.B) as churn prediction is a form of anomaly detection, and the classification algorithms are transferable. It provides contextual relevance to Budget Recommendation (7.B, 7.D) through its LLM-driven optimization and constraint handling, and to Mobile-First Design (9.A, 9.B) through its natural language interface. I rejected the following domains as non-applicable: Filipino Cultural Context (2.A–D) as the paper uses international datasets; Expense Categorization (3.A–C) as it does not address category design; Existing Systems (4.A–B) as the focus is on new methodology rather than landscape analysis; Data Privacy (10.A–B) as it is not addressed; User Retention (11.A–B) except as a prediction target; and Savings/Debt Management (13.A–C) as these are not covered. The overall relevance is high, as the paper provides a directly applicable methodology for automating domain-aware ML pipelines that could be adapted to Odin's architecture.
-limitations:
-  - "Reliance on proprietary GPT-4 API introduces cost and reproducibility concerns for deployment. [unacknowledged]"
-  - "Experiments use international datasets; generalizability to Filipino young professionals is untested. [unacknowledged]"
-  - "The framework assumes high-quality, well-structured input data, which may not reflect real-world PFMS data quality. [unacknowledged]"
-  - "Evaluation focuses on predictive accuracy rather than the full PFMS workflow including budgeting and savings recommendations. [unacknowledged]"
-remember_this:
-  - "LLM-driven AutoML reduces pipeline development time from 157 to 23 minutes."
-  - "Domain-aware feature engineering improves ROC-AUC by 3.3%–3.6% over generic approaches."
-  - "Natural language directives enable non-experts to configure ML pipelines without coding."
-  - "Multimodal data integration outperforms single-modality approaches by up to 3.6% ROC-AUC."
-  - "RFM, CLV, and engagement scores are the most predictive features across all datasets."
-```
----
-
-## Paper 16: Li_summarized.md
-
-**Source File:** `Li_summarized.md`
-
-```yaml
-paper_id: 10.71222/7v3b7272
-designation: international-algorithm-specific
-title: Research on Personalized Asset Allocation Using AI Agents in Robo-Advisory Scenarios
-authors: Li, J.
-year: 2026
-venue: Journal of Computer, Signal, and System Research
-odin_topics:
+  - 3.A
+  - 3.B
+  - 4.A
+  - 4.B
   - 5.A
   - 5.B
   - 5.C
   - 6.A
   - 6.B
-  - 7.A
-  - 7.B
   - 8.A
   - 8.B
   - 10.A
-  - 10.B
-  - 11.A
-tldr: A systematic review of AI-driven personalized asset allocation in robo-advisory, covering risk profiling, dynamic optimization, behavioral finance integration, and key challenges like explainability and privacy.
-problem_and_motivation: Standard robo-advisory models rely on generalized algorithms that fail to address individual investor circumstances and risk preferences. This limitation motivates the development of sophisticated AI techniques to deliver truly personalized asset allocation.
+tldr: An automated ML framework using LLMs for domain-aware pipeline construction in financial customer analytics, improving accuracy by 1.4% to 5.4% over existing AutoML.
+problem_and_motivation: Generic AutoML systems lack domain-specific feature engineering capabilities essential for financial customer analytics, requiring manual intervention. Existing approaches force a trade-off between suboptimal generic solutions and resource-intensive manual customization. Business stakeholders with customer expertise cannot directly translate requirements into predictive pipelines, creating a critical gap.
 approach:
-  - Systematic review of literature on AI applications in robo-advisory.
-  - Examines machine learning, reinforcement learning, and NLP for risk profiling and investor segmentation.
-  - Analyzes dynamic asset allocation strategies, including RL-based adaptive portfolios.
-  - Compares AI algorithms and discusses challenges like transparency and data privacy.
-  - Provides a synthesis of current methodologies and identifies future research directions.
+  - The framework processes raw customer datasets and natural language directives through five stages.
+  - Data modality recognition uses LLMs to classify attribute types and semantic meanings.
+  - Domain-aware feature engineering automatically computes RFM scores, CLV projections, and engagement metrics.
+  - Model architecture selection is guided by data characteristics and business requirements.
+  - Multimodal pipeline construction and training configuration optimization complete the automated workflow.
 findings:
-  - num: RL agents learn optimal trading strategies, improving portfolio adaptability to market conditions.
-  - Deep learning models, especially RNNs, effectively capture temporal dependencies in financial data.
-  - NLP enhances risk assessment by extracting sentiment and goals from investor communication.
-  - Integrating behavioral finance principles mitigates cognitive biases in investment decisions.
-  - Explainability and data privacy remain significant hurdles for AI adoption in robo-advisory.
+  - num: Accuracy improvements of 1.4% to 5.4% in ROC-AUC over baseline AutoML methods across five datasets.
+  - num: Pipeline development time reduced by 6.7× compared to manual approaches (23.4 min vs 156.9 min).
+  - num: Domain-specific feature engineering contributes 3.3% to 3.6% ROC-AUC improvement in ablation studies.
+  - The framework achieves optimal performance with moderate parameter counts, reducing unnecessary complexity.
+  - RFM (Recency, Frequency, Monetary) features dominate prediction performance across all datasets.
 key_figures_tables:
-  - Table 1: Comparison of early robo-advisory models → highlights rule-based limitations.
-  - Table 2: Timeline of AI integration in robo-advisory → shows evolution to RL and evolutionary algorithms.
-  - Table 3: Comparison of risk profiling methods → AI enhances personalization and dynamic capability.
-  - Table 4: Behavioral biases and mitigation strategies → AI counters loss aversion, confirmation bias, etc.
-  - Table 5: Key challenges and mitigation strategies → addresses privacy, security, and trust issues.
+  - Figure 1: Framework architecture showing Intelligent Processing and Knowledge Supplementation modules → LLM-driven pipeline automation for customer analytics.
+  - Figure 5: Performance comparison across datasets and methods → Marketing-AutoM3L consistently achieves highest ROC-AUC and F1 scores.
+  - Figure 7: Execution time comparison → Marketing-AutoM3L achieves 6.7× speedup over manual pipeline development.
+  - Table 2: Main experimental results → Comprehensive performance metrics demonstrate superiority over all baselines.
 key_equations:
-  - equation: A_t = f(M_t, I_t)
-    explanation: Optimal asset allocation depends on market and investor needs.
-  - equation: \sum_{t=0}^{T} \gamma^t r_t
-    explanation: Objective function for maximizing cumulative discounted reward in RL.
-  - equation: B_s
-    explanation: Bias score quantifying influence of a behavioral bias on decisions.
+  - equation: R_i = t_current - max(s_1, s_2, ..., s_n), F_i = n, M_i = \sum_{j=1}^{n} a_j
+    explanation: RFM metrics computation for recency, frequency, and monetary value.
+  - equation: CLV_{prob,i} = \sum_{t=1}^{T} \frac{AOV_i \times PF_i \times r_i^t}{(1+d)^t}
+    explanation: Probabilistic CLV projection incorporating customer retention probability.
+  - equation: E_i(t) = \sum_{k=1}^{K} w_k \sum_{\tau=0}^{W} I_{i,k}(t-\tau) \cdot e^{-\lambda \tau}
+    explanation: Engagement score aggregating weighted interaction signals over time.
 definitions:
-  - term: Robo-advisor
-    definition: Automated investment platform using algorithms to manage portfolios.
-  - term: Reinforcement Learning (RL)
-    definition: ML paradigm where agents learn optimal actions through trial and error to maximize rewards.
-  - term: NLP
-    definition: Natural Language Processing, analyzing textual data for sentiment and insights.
-  - term: XAI
-    definition: Explainable AI, focusing on transparent and interpretable model decisions.
-  - term: Federated Learning
-    definition: Decentralized model training across datasets without sharing raw data.
+  - term: RFM
+    definition: Recency-Frequency-Monetary framework for customer segmentation based on transaction behavior.
+  - term: CLV
+    definition: Customer Lifetime Value projection estimating total future value from a customer.
+  - term: AutoML
+    definition: Automated Machine Learning for automating pipeline construction without manual coding.
+  - term: ROC-AUC
+    definition: Area Under the Receiver Operating Characteristic Curve for classification performance.
 critical_citations:
-  - "[Shetty et al., 2026] — Foundational work on robo-advisors and personalization."
-  - "[Shen et al., 2025] — Empirically validates AI-driven wealth management models."
-  - "[Tahvildari, 2025] — Systematic review of generative AI in robo-advisory."
-  - "[Rizinski and Trajanov, 2025] — Comprehensive review of AI agents in finance."
+  - "[Luo et al., 2024] — First AutoM3L framework using LLMs as controllers."
+  - "[Jain et al., 2023] — Comprehensive deep learning for customer churn prediction."
+  - "[Qi et al., 2023] — Efficient RFM pattern mining algorithm foundation."
 relevance:
   topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: high
+      justification: Domain-aware feature engineering automatically generates RFM and engagement metrics.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: medium
+      justification: Feature filtering and construction components inform category design.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: Direct comparison with existing AutoML systems demonstrates limitations.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Identifies lack of domain-specific feature engineering in generic AutoML.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
       relevance: high
-      justification: Reviews AI techniques for profiling investor risk and behavior.
+      justification: RFM and engagement scoring quantify behavioral patterns for customer classification.
     - code: 5.B
-      name: Profile Dynamics and the Cold‑Start Problem
+      name: Profile Dynamics and the Cold-Start Problem
       relevance: medium
-      justification: Discusses dynamic risk assessment adapting to evolving preferences.
+      justification: Automated feature engineering reduces manual effort in cold-start scenarios.
     - code: 5.C
       name: Classification Approaches for Financial Behavioral Profiles
-      relevance: high
-      justification: Compares clustering and classification for investor segmentation.
+      relevance: medium
+      justification: Model selection and multimodal fusion for behavior prediction.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
       relevance: high
-      justification: Covers ML models predicting market trends and investor behavior.
+      justification: End-to-end pipeline construction for churn prediction and CLV estimation.
     - code: 6.B
       name: Forecasting Algorithms for Sequential Spending Data
-      relevance: contextual
-      justification: Mentions predictive modeling broadly but not specific spending data.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      relevance: contextual
-      justification: Asset allocation strategies provide indirect domain knowledge for budgeting.
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      relevance: low
-      justification: Focuses on investment allocation, not direct budget recommendations.
+      relevance: high
+      justification: Temporal processing and engagement trend features for behavioral forecasting.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
       relevance: low
-      justification: Touches on risk and volatility but not explicit anomaly detection.
+      justification: Churn prediction shares methodological overlap with anomaly detection.
     - code: 8.B
       name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: contextual
-      justification: References market volatility but not specific anomaly algorithms.
+      relevance: low
+      justification: Declining engagement trends are predictive of anomalies.
     - code: 10.A
       name: Data Privacy and Security in Personal Finance Systems
-      relevance: high
-      justification: Discusses encryption, access controls, and regulatory compliance.
-    - code: 10.B
-      name: User Trust in Personal Finance Systems
-      relevance: high
-      justification: Emphasizes explainability and transparency to build user trust.
-    - code: 11.A
-      name: Engagement Dynamics in Personal Finance Applications
-      relevance: medium
-      justification: Mentions user engagement and satisfaction via personalization.
-  contribution: This paper reviews AI-driven asset allocation, directly justifying Odin's use of RL and deep learning for adaptive financial planning. It supports Odin's risk profiling module by highlighting AI-enhanced investor segmentation and behavioral integration. The review's emphasis on explainability and privacy informs Odin's trust and security design. Findings on dynamic allocation validate Odin's forecasting and optimization components.
+      relevance: contextual
+      justification: Framework processes customer data, but privacy not explicitly addressed.
+  contribution: "Marketing-AutoM3L provides an automated feature engineering module for Odin's expense categorization (3.A) by computing RFM and engagement metrics directly from transaction data. The LLM-driven pipeline automation addresses Odin's gap analysis (4.B) by demonstrating how existing AutoML systems lack domain-specific capabilities. The framework's behavioral profiling (5.A) and forecasting (6.A) components offer validated approaches for customer behavior prediction in Odin. The experimental evaluation (12.A) provides benchmarking methodology for assessing Odin's algorithmic modules. The ablation studies quantify the value of domain-aware feature engineering, supporting Odin's design decisions for automated financial analytics."
   directly_justifies:
-    - "Reinforcement learning agents can adapt asset allocations to individual investor profiles and market changes."
-    - "Deep learning models capture temporal dependencies for predictive financial modeling."
-    - "AI-driven risk assessment improves upon static questionnaires by analyzing behavioral data."
-    - "Integrating behavioral finance principles mitigates cognitive biases in financial decisions."
-    - "Explainable AI is critical for user trust and regulatory compliance in robo-advisory."
+    - "Domain-specific RFM and CLV feature engineering improves prediction accuracy by 3.3% to 3.6%."
+    - "LLM-driven pipeline automation reduces development time by 6.7× compared to manual approaches."
+    - "Multimodal data integration provides 1.1% to 3.6% ROC-AUC gains over single-modality baselines."
+    - "Natural language directives enable business stakeholders to configure pipelines without ML expertise."
   limits:
-    - "Focuses on investment asset allocation, not directly on personal expense categorization or savings goals."
-    - "Does not provide empirical evaluation on Filipino-specific financial behaviors or contexts."
-    - "Lacks detailed implementation guidance for integrating AI into mobile-first PFMS."
-    - "Does not address cold-start baselines for anomaly detection or profile initialization."
-  mapping_rationale: The systematic scan across all 12 functional domains identified relevance primarily in Behavioral Profiling, Forecasting, Budgeting, Data Privacy, and Engagement. Topics 5.A, 5.C, and 6.A were flagged as high due to direct coverage of AI-based risk profiling and predictive modeling. Topics 10.A and 10.B were high given the extensive discussion on privacy and trust. Topic 5.B and 11.A were medium for dynamic profiling and user engagement. Topics 7.B, 8.A, and 8.B were low/contextual as the paper focuses on investments rather than budgeting or anomaly detection. Domains like Filipino Cultural Context and Mobile-First Design were rejected as the paper is international and not context-specific. The overall relevance is medium-high for Odin's algorithmic and trust-related modules but limited by its investment-specific focus and lack of Filipino data.
+    - "Relies on proprietary GPT-4 API, raising reproducibility and cost concerns."
+    - "Validation primarily on classification tasks, limited exploration of regression or optimization domains."
+    - "Customer data temporal constraints not fully validated across all dataset types."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes identified several areas of relevance. The Expense Categorization domain (3.A, 3.B) is highly relevant because the framework automatically generates domain-specific features including RFM metrics and engagement scores. The Existing Systems domain (4.A, 4.B) is highly relevant as the paper directly compares against generic AutoML systems and identifies their limitations in domain-specific contexts. Behavioral Profiling (5.A, 5.B, 5.C) is highly relevant for RFM-based customer segmentation and engagement scoring. Spending Forecasting (6.A, 6.B) is highly relevant for CLV projection and temporal behavioral prediction. Anomaly Detection (8.A, 8.B) is low relevance as churn prediction shares methodological overlap but is not the primary focus. Data Privacy (10.A) is contextual only as the framework processes data but privacy considerations are not addressed. Mobile-First Design (9.A, 9.B), User Retention (11.A, 11.B), System Evaluation (12.A, 12.B, 12.C), Savings & Debt Management (13.A, 13.B, 13.C), and Filipino Cultural Context (1.A, 1.B, 1.C, 2.A, 2.B, 2.C, 2.D) were considered and rejected due to no direct relevance to the paper's algorithmic contribution or focus on international financial customer analytics. The paper's overall relevance to Odin is moderate-to-high, providing validated automated feature engineering and pipeline construction methodologies for personal finance systems."
 limitations:
-  - "Generalizes findings from international contexts; may not apply to Filipino young professionals. [unacknowledged]"
-  - "Focuses on asset allocation, not expense categorization or savings management."
-  - "Does not address cold-start or low-data scenarios common in PFMS. [unacknowledged]"
-  - "Lacks specific recommendations for mobile-first UX design."
-  - "Does not evaluate performance on Philippine financial data. [unacknowledged]"
+  - "GPT-4 API dependency creates reproducibility concerns. [unacknowledged]"
+  - "High-end GPU infrastructure may not be accessible to all organizations. [unacknowledged]"
+  - "Evaluation limited to churn prediction tasks, not validated for budget recommendation or optimization domains."
+  - "Natural language directive interpretation quality depends on LLM performance consistency."
+  - "Temporal constraints and data leakage prevention not extensively validated."
 remember_this:
-  - "RL and deep learning enhance adaptive asset allocation and risk profiling."
-  - "AI-driven personalization improves investment outcomes over static approaches."
-  - "Explainability and privacy are critical barriers to AI adoption in finance."
-  - "Behavioral biases can be mitigated through AI-driven nudges and personalized strategies."
-  - "Future robo-advisors will integrate alternative data and federated learning for personalization."
+  - "Domain-aware feature engineering provides 3.3% to 3.6% accuracy gains over generic approaches."
+  - "LLM-driven automation reduces pipeline development time by 6.7× compared to manual methods."
+  - "RFM and engagement metrics are the most predictive features for customer behavior forecasting."
+  - "Natural language interfaces enable non-technical stakeholders to configure predictive pipelines."
+  - "Multimodal data integration improves prediction accuracy by 1.1% to 3.6% over single-modality baselines."
 ```
 ---
 
-## Paper 17: Krishnan & Sreeja_summarized.md
+## Paper 15: Krishnan & Sreeja_summarized.md
 
 **Source File:** `Krishnan & Sreeja_summarized.md`
 
@@ -2353,399 +2035,126 @@ remember_this:
 ```
 ---
 
-## Paper 18: Dela Cruz_summarized.md
-
-**Source File:** `Dela Cruz_summarized.md`
-
-```yaml
-paper_id: 10.xxxx/RIBEr-2026-15-2-902
-designation: local
-title: Dependence of Filipino Young Professionals’ Well-being on their Investing Years and Income in the National Capital Region
-authors: Dela Cruz, M. A. T.; Jurada, P. H. G.; Recreo, C. R.; Mandigma, M. B. S.; Magbata, E. V. S.
-year: 2026
-venue: Review of Integrative Business and Economics Research
-odin_topics:
-  - 1.A
-  - 1.B
-  - 1.C
-  - 5.A
-  - 6.A
-  - 13.A
-tldr: Young professionals' financial well-being is positively correlated with both years of investing and income, with financial behavior showing the strongest predictive influence.
-problem_and_motivation: The specific interplay between income, years of investing, and financial well-being among young professionals in the National Capital Region remains unexamined. Understanding this nexus is crucial for creating targeted programs to enhance financial stability in this demographic.
-approach:
-  - A descriptive-correlational research design surveyed 389 young professionals aged 25-35 in the National Capital Region.
-  - The study used an adopted and validated questionnaire from the CFPB Financial Well-Being Scale, achieving a Cronbach Alpha of 0.964.
-  - Data were analyzed using Pearson's coefficient correlation and multiple regression analysis.
-  - Control variables included highest educational attainment and financial behavior.
-findings:
-  - num: Years of investing have a significant positive correlation with financial well-being (r = 0.364, p < .01).
-  - num: Income shows a significant but low positive correlation with financial well-being (r = 0.309, p < .01).
-  - num: Financial behavior explains 62.3% of the variability in financial well-being when combined with income and investing years.
-  - num: Most respondents (39.59%) have been investing for 1-2 years, and 45.24% earn between PHP 20,001-50,000 monthly.
-  - The overall financial well-being of respondents was rated as "Excellent" with a mean score of 3.25.
-  - Higher income, longer investment years, and better education and financial behavior increase financial well-being.
-key_figures_tables:
-  - Figure 1: Conceptual Framework of the study → Shows financial well-being as dependent on years of investing and income.
-  - Table 2: Investing years and Income of Respondents → Provides demographic distribution for the independent variables.
-  - Table 3: Level of Financial Well-being → Shows mean scores for each financial well-being indicator.
-  - Table 4: Correlation Analysis → Reveals significant positive correlations for all variables with financial well-being.
-  - Table 5: Model Summary → Shows the explanatory power of different regression models.
-key_equations:
-  - equation: None.
-    explanation: ""
-definitions:
-  - term: NCR
-    definition: National Capital Region, the metropolitan area centered on Manila, Philippines.
-  - term: Financial Well-being
-    definition: The state of having control over finances, ability to absorb financial shocks, and being on track to meet financial goals.
-  - term: FWB
-    definition: Financial Well-being, as measured by the CFPB scale and used throughout the paper.
-  - term: PFMS
-    definition: Personal Finance Management System, though not explicitly mentioned in the paper, it is the context for Odin.
-critical_citations:
-  - "[Lusardi & Mitchell, 2014] — Establishes link between financial literacy and retirement planning."
-  - "[She et al., 2022] — Identifies key factors influencing young adults' financial well-being."
-  - "[Lambert et al., 2023] — Defines contributing factors to financial well-being, including behavior and life stage."
-relevance:
-  topics:
-    - code: 1.A
-      name: Filipino Young Professionals as a Demographic
-      relevance: high
-      justification: The study's sample is exclusively Filipino young professionals aged 25-35 in NCR.
-    - code: 1.B
-      name: Financial Structure of Filipino Young Professionals
-      relevance: medium
-      justification: Provides data on income levels and investment classes (stocks, bonds, mutual funds) of the demographic.
-    - code: 1.C
-      name: Financial Behavior of Filipino Young Professionals
-      relevance: high
-      justification: Directly investigates the financial well-being and investment behavior of the target demographic.
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: high
-      justification: Identifies financial behavior as a strong predictor of financial well-being and profiles risk attitudes.
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: contextual
-      justification: The study's correlational findings could inform variables used in predictive models, though it does not build one itself.
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      relevance: medium
-      justification: Discusses savings, emergency funds, and retirement goals as components of financial well-being.
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      relevance: contextual
-      justification: Highlights the gap in research on the nexus of income, investing, and financial well-being for the target group.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      relevance: low
-      justification: Tangentially touches on managing income and expenses, but does not specifically address budgeting strategies.
-  contribution: The paper provides empirical evidence on the significance of income and investing years as determinants of financial well-being, directly informing Odin's spending forecasting and budget recommendation modules. Its findings on financial behavior emphasize the importance of behavioral profiling in predicting financial health. The study's focus on Filipino young professionals makes it directly applicable to Odin's target user base, justifying the need for culturally tailored features. This research supports Odin's design by confirming that income and investment horizon are key variables to track and analyze for personalized financial insights.
-  directly_justifies:
-    - Years of investing is a significant positive predictor of financial well-being for Filipino young professionals.
-    - Income has a significant positive correlation with financial well-being, but is not the sole determinant.
-    - Financial behavior is the most significant predictor of financial well-being.
-    - The target demographic has an "Excellent" financial well-being level, but with low investment experience, suggesting an opportunity for education and planning tools.
-  limits:
-    - The study is limited to the National Capital Region, which may not represent the whole Philippines.
-    - It uses a correlational design, so it cannot establish causation.
-    - The sample might have selection bias due to purposive sampling.
-  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was executed. The domains of Filipino Cultural Context, Behavioral Profiling, Spending Forecasting, Savings & Debt Management, and System Evaluation were flagged as relevant. Specific topic codes selected were 1.A, 1.B, 1.C, 5.A, 6.A, and 13.A, with high relevance for demographic profiling (1.A, 1.C) and behavioral analysis (5.A). The topics 2.A (Culturally Specific Financial Practices) and 2.D (Filipino Spending Cycles) were borderline but rejected because the study does not focus on specific cultural practices like 'utang' or 'paluwagan', but on general financial well-being. The Algorithmic domains (6.B, 7.B, 7.C, 8.A, 8.B) were considered and rejected as the paper does not propose or evaluate algorithms, though it provides valuable input variables (income, years investing) that justify their use in such modules. The paper's overall relevance to Odin is high as it provides foundational data on the financial health and key determinants for its target user base, which is essential for designing effective personal finance features.
-limitations:
-  - The correlational design prevents causal inference.
-  - The sample is limited to the National Capital Region, limiting generalizability to other Philippine regions. [unacknowledged]
-  - The study's reliance on self-reported data may introduce bias. [unacknowledged]
-  - The use of a 4-point Likert scale may not capture nuances in financial well-being. [unacknowledged]
-remember_this:
-  - Financial well-being of young professionals in NCR is rated as Excellent.
-  - Years of investing significantly and positively correlates with financial well-being.
-  - Income has a significant, albeit low, positive correlation with financial well-being.
-  - num: Financial behavior accounts for 62.3% of the variance in financial well-being.
-  - Targeting investment education for young professionals can enhance their well-being.
-```
----
-
-## Paper 19: Rajulapati et al_summarized.md
+## Paper 16: Rajulapati et al_summarized.md
 
 **Source File:** `Rajulapati et al_summarized.md`
 
 ```yaml
-paper_id: 10.47738/ijaim.v6i2.123
-designation: international-algorithm-specific
-title: Continual Learning for Human–AI Collaborative Learning Analytics under Behavioral Drift
-authors: Rajulapati, A.; Sridevi, V.; Prasad, S. R.
+paper_id: "10.47738/ijaim.v6i2.123"
+designation: "international-algorithm-specific"
+title: "Continual Learning for Human–AI Collaborative Learning Analytics under Behavioral Drift"
+authors: "Rajulapati, A.; V, S.; Prasad, S.R."
 year: 2026
-venue: International Journal for Applied Information Management
+venue: "International Journal for Applied Information Management"
 odin_topics:
-  - 5.A
-  - 5.B
-  - 5.C
-  - 6.A
-  - 6.B
-  - 8.A
-  - 8.B
-  - 8.C
-  - 10.B
-  - 12.A
-  - 12.B
-tldr: Continual learning with drift-aware updates improves predictive stability and fairness in semester-spanning educational analytics.
-problem_and_motivation: Static predictive models degrade as student behavior evolves across semesters, yet deployed learning analytics rarely monitor or adapt to drift. This limits reliability for adaptive interventions and risks unfair outcomes under shifting distributions.
+  - "5.A"
+  - "6.A"
+  - "8.A"
+  - "10.A"
+  - "10.B"
+  - "12.A"
+  - "12.B"
+  - "12.C"
+tldr: "Drift-aware continual learning improves predictive stability, calibration, and fairness under semester-to-semester behavioral changes in learning analytics."
+problem_and_motivation: "Predictive models in adaptive learning analytics degrade over semesters due to non-stationarity, undermining reliability and fairness. Existing pipelines lack explicit drift monitoring and controlled updating, risking stale risk flags and inequitable outcomes."
 approach:
-  - 14-semester longitudinal panel with 812–936 students and 18–21 courses per semester was constructed from LMS traces.
-  - Drift was quantified using KL divergence on behavioral features including practice attempts, timeliness, and session regularity.
-  - A drift-aware continual learning framework used replay buffers and parameter regularization to update models only when drift exceeded a threshold.
-  - Semester-forward evaluation compared static, periodic retraining, and drift-aware continual policies on macro-F1, AUROC, and calibration.
-  - Fairness was assessed via recall gaps across subgroups under drift.
+  - "Longitudinal 14-semester panel of LMS traces and assessment records (812–936 students per term) was used."
+  - "Drift was quantified via KL divergence per behavioral feature, with a threshold-based trigger for model updates."
+  - "Continual learning used a memory-augmented objective with replay buffer and parameter regularization to balance plasticity and stability."
+  - "Evaluation followed a semester-forward protocol, comparing static, periodic retraining, and drift-aware continual policies."
+  - "Metrics included macro-F1, AUROC, calibration error, decision quality, and subgroup fairness gaps."
 findings:
-  - num: Drift-aware continual learning achieved mean macro-F1 of 0.742 and worst-semester macro-F1 of 0.711, compared to 0.706 and 0.652 for static models.
-  - num: Calibration error improved from 0.056 (static) to 0.039 under continual learning.
-  - num: Risk precision and recall at fixed intervention capacity increased from 0.62 to 0.69 and 0.48 to 0.56.
-  - num: Mean subgroup recall gap was reduced from 0.118 to 0.082.
-  - Drift concentrated in practice attempts, submission timeliness, and session regularity, with a regime shift mid-sequence.
+  - "num: Drift-aware continual learning improved mean macro-F1 from 0.706 (static) to 0.742."
+  - "num: Worst-semester macro-F1 increased from 0.652 to 0.711, reducing temporal variance (std from 0.030 to 0.015)."
+  - "num: Expected calibration error reduced from 0.056 to 0.039, and risk precision improved from 0.62 to 0.69."
+  - "num: Mean subgroup recall gap decreased from 0.118 to 0.082 under drift-aware updating."
+  - "Ablation showed intermediate drift thresholds and moderate replay memory (4,000 records) optimize robustness with 1-2 updates per semester."
 key_figures_tables:
-  - Figure 7: Predictive performance over semesters → Drift-aware continual learning maintains flatter macro-F1 trajectory than static or periodic retraining.
-  - Figure 8: Calibration error across weeks → Continual learning reduces miscalibration spikes during drift episodes.
-  - Figure 9: Subgroup recall gap across semesters → Continual learning stabilizes and reduces recall disparities.
-  - Table 7: Aggregate performance summary → Drift-aware continual learning has highest mean (0.742) and worst-semester (0.711) macro-F1.
-  - Table 9: Subgroup error summary → Continual learning yields lowest mean recall gap (0.082) and max gap (0.121).
+  - "Figure 7: Macro-F1 across semesters → Drift-aware continual learning maintains flatter performance after regime shift."
+  - "Figure 8: Calibration error over weeks → Drift-aware updates reduce miscalibration spikes during drift episodes."
+  - "Figure 9: Subgroup recall gap across semesters → Continual learning mitigates growing disparities under drift."
+  - "Figure 10: Drift threshold vs. robustness → Intermediate threshold maximizes worst-semester performance with moderate update rate."
+  - "Table 7: Aggregate performance summary → Drift-aware continual achieves highest mean and worst-case F1, with lowest variance."
+  - "Table 8: Decision quality → Lower ECE, higher precision/recall, and fewer threshold changes per semester."
 key_equations:
-  - equation: D_KL(P_t || P_{t+1}) = \sum_k P_t(k) \log \frac{P_t(k)}{P_{t+1}(k)}
-    explanation: KL divergence quantifies behavioral drift magnitude between consecutive semesters.
-  - equation: \min_\theta L_{t+1}(\theta) + \lambda \sum_j \omega_j (\theta_j - \theta_{t,j})^2
-    explanation: Continual learning objective combines current loss with parameter regularization.
-  - equation: m \pm 1.96 \frac{s_m}{\sqrt{K}}
-    explanation: Confidence interval for mean performance across evaluated semesters.
+  - equation: "D_{KL}(P_t || P_{t+1}) = \sum_k P_t(k) \log \frac{P_t(k)}{P_{t+1}(k)}"
+    explanation: "KL divergence quantifies drift magnitude between consecutive semesters."
+  - equation: "\min_{\theta} L_{t+1}(\theta) + \lambda \sum_j \omega_j (\theta_j - \theta_{t,j})^2"
+    explanation: "Continual learning objective balances new loss and parameter importance."
+  - equation: "z_t = (\delta_t - \mu_0) / \sigma_0"
+    explanation: "Standardized monitoring statistic for drift alarms."
 definitions:
-  - term: Concept Drift
-    definition: Change in joint distribution of inputs and targets over time.
-  - term: Continual Learning
-    definition: Sequential model updating that mitigates catastrophic forgetting via replay or regularization.
-  - term: Semester-Forward Evaluation
-    definition: Training on past semesters and testing on future semesters to simulate deployment.
-  - term: Expected Calibration Error (ECE)
-    definition: Mean absolute difference between predicted probabilities and observed frequencies.
-  - term: Replay Buffer
-    definition: Curated memory of prior samples used to retain historical knowledge during updates.
+  - term: "Concept drift"
+    definition: "Change in joint distribution of inputs and targets over time."
+  - term: "Continual learning"
+    definition: "Sequential model updating while mitigating catastrophic forgetting."
+  - term: "Replay buffer"
+    definition: "Memory storing representative historical samples to preserve past knowledge."
+  - term: "Expected calibration error (ECE)"
+    definition: "Measure of alignment between predicted probabilities and observed outcomes."
 critical_citations:
-  - "[Gama et al., 2014] — Foundational survey on concept drift adaptation strategies."
-  - "[Lu et al., 2018] — Framework for drift detection and adaptation as a lifecycle problem."
-  - "[Delange et al., 2021] — Comprehensive survey of continual learning approaches."
-  - "[Deho et al., 2024] — Shows dataset drift impacts fairness in learning analytics."
+  - "[Gama et al., 2014] — Foundational survey on concept drift adaptation."
+  - "[Delange et al., 2021] — Comprehensive survey on continual learning methods."
+  - "[Lu et al., 2018] — Review of learning under concept drift with lifecycle framing."
+  - "[Deho et al., 2024] — Empirical study on dataset drift impact on fairness in learning analytics."
 relevance:
   topics:
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: medium
-      justification: Behavioral drift monitoring parallels financial profile evolution.
-    - code: 5.B
-      name: Profile Dynamics and the Cold‑Start Problem
-      relevance: medium
-      justification: Semester-to-semester drift mirrors cold-start challenges in financial behavior modeling.
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: contextual
-      justification: Classification under drift is addressed but not specific to financial profiles.
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: high
-      justification: Directly addresses maintaining predictive accuracy under evolving behavioral patterns.
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: high
-      justification: Drift-aware updating and replay strategies are applicable to sequential financial data.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: medium
-      justification: Drift-aware calibration improves risk ranking, analogous to anomaly detection.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: medium
-      justification: Framework for detecting distributional shifts can be adapted for spending anomalies.
-    - code: 8.C
-      name: Cold‑Start Baseline Strategies for Anomaly Detection
-      relevance: contextual
-      justification: Replay buffers provide a retention mechanism relevant to cold-start baselines.
-    - code: 10.B
-      name: User Trust in Personal Finance Systems
-      relevance: low
-      justification: Mentions trust via stable interpretability and reduced alert volatility.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: medium
-      justification: Semester-forward protocol and rolling evaluation are applicable to PFMS evaluation.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: high
-      justification: Detailed comparison of static, periodic, and drift-aware continual learning modules.
-    - code: 12.C
-      name: Evaluation Methodologies for Budget Recommendation Systems
-      relevance: contextual
-      justification: Evaluation methodology is general and not specific to budget recommendation.
-  contribution: The paper provides a drift-aware continual learning framework that directly informs Odin's forecasting module by demonstrating how to maintain predictive stability under behavioral change. Its rigorous semester-forward evaluation protocol offers a template for assessing Odin's algorithmic modules over time. The fairness analysis under drift validates the importance of monitoring subgroup disparities, which is relevant to Odin's behavioral profiling and anomaly detection. The replay-based retention mechanism offers a practical approach to handling cold-start issues in sequential spending data.
+    - code: "5.A"
+      name: "Financial Behavioral Profiles in Personal Finance"
+      relevance: "contextual"
+      justification: "Uses behavioral profiling concepts, but for student learning not financial behavior."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "contextual"
+      justification: "General predictive modeling methods applicable to forecasting, though not spending-specific."
+    - code: "8.A"
+      name: "Anomaly Detection in Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Drift detection techniques share methodological overlap with anomaly detection."
+    - code: "10.A"
+      name: "Data Privacy and Security in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Explicitly includes privacy safeguards and pseudonymization in deployment."
+    - code: "10.B"
+      name: "User Trust in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Discusses transparency, fairness, and governance, which underpin user trust."
+    - code: "12.A"
+      name: "Evaluation Frameworks for Personal Finance Systems"
+      relevance: "high"
+      justification: "Presents a rigorous semester-forward evaluation protocol with multiple reliability metrics."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "high"
+      justification: "Evaluates the continual learning module against baselines with detailed performance analysis."
+    - code: "12.C"
+      name: "Evaluation Methodologies for Budget Recommendation Systems"
+      relevance: "high"
+      justification: "Provides methodology for temporal validation, calibration, and fairness assessment applicable to recommendation evaluation."
+  contribution: "The paper's drift-aware continual learning approach can inform Odin's forecasting module by enabling adaptive model updates under shifting spending patterns. Its calibration and fairness evaluation framework offers a template for assessing Odin's anomaly detection and budget recommendation modules. The governance-aware monitoring with privacy safeguards directly supports Odin's data privacy and user trust design. The semester-forward evaluation protocol provides a model for longitudinal testing of Odin's predictive components."
   directly_justifies:
-    - "Drift-aware updating stabilizes predictive performance under evolving behavioral patterns."
-    - "Continual learning with replay buffers reduces catastrophic forgetting in sequential domains."
-    - "Fairness disparities can widen under drift, necessitating monitoring of subgroup recall gaps."
-    - "Calibration error should be tracked alongside accuracy to ensure reliable risk scores."
-    - "Selective adaptation based on drift thresholds balances robustness with operational overhead."
+    - "Drift-triggered updates reduce performance collapse and stabilize predictions over time."
+    - "Continual learning with replay buffers preserves historical patterns while adapting to new data."
+    - "Calibration monitoring at test time improves decision quality for fixed intervention capacity."
+    - "Fairness auditing under drift prevents widening subgroup disparities."
   limits:
-    - "The study is situated in educational analytics, not personal finance, so behavioral constructs differ."
-    - "The dataset is institutional and may not generalize to individual spending behavior."
-    - "Only semester-level drift is analyzed; finer-grained drift patterns remain unexplored."
-    - "The framework assumes labeled outcomes are available per semester, which may not hold for financial data."
-  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes flagged Forecasting, Anomaly Detection, and Evaluation as most relevant. Under Forecasting (6.A, 6.B), the paper directly informs sequential modeling under drift. For Anomaly Detection (8.A, 8.B), the calibration and risk ranking improvements are analogous to anomaly scoring stability. Evaluation (12.A, 12.B) benefits from the semester-forward protocol and ablation analysis. Behavioral Profiling (5.A, 5.B) is medium relevance due to drift dynamics, though the behavioral features differ. User Trust (10.B) is low relevance, mentioned only indirectly via stability. Domains related to Filipino cultural context, expense categorization, existing systems, mobile design, privacy, retention, savings, and debt management were not addressed. The paper is thus primarily methodological, offering transferable techniques for adaptation and evaluation in dynamic behavioral domains.
+    - "Single-institution dataset may limit generalizability to other educational contexts."
+    - "Computational overhead of replay buffer and drift monitoring not fully quantified for real-time deployment."
+    - "Fairness evaluation limited to recall gaps; other fairness metrics not explored. [unacknowledged]"
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The System Evaluation domain (12.A, 12.B, 12.C) was flagged as highly relevant due to the paper's rigorous semester-forward evaluation, calibration, and fairness metrics, which directly inform Odin's evaluation practices. Data Privacy & User Trust (10.A, 10.B) received medium relevance because the paper explicitly includes ethical safeguards and fairness monitoring, aligning with Odin's trust-building requirements. Behavioral Profiling (5.A) and Predictive Modeling (6.A) were assigned contextual relevance given the use of student behavioral data and forecasting techniques, though not specific to finance. Anomaly Detection (8.A) was contextual due to drift detection methods that share algorithmic similarities with anomaly detection. Topics related to Filipino cultural context, expense categorization, existing systems, budget recommendation, mobile-first design, and savings/debt management were rejected as the paper does not address personal finance or Philippine-specific conditions. Overall, the paper provides methodological insights that are transferable to Odin's design but is not directly applicable to financial domain specifics."
 limitations:
-  - "Educational context may not map directly to personal finance behavior. [unacknowledged]"
-  - "The study does not address individual-level heterogeneity beyond subgroup analysis. [unacknowledged]"
-  - "Deployment constraints such as real-time latency or mobile-first concerns are not discussed. [unacknowledged]"
-  - "The privacy-preserving aspects are limited to pseudonymization and access control. [unacknowledged]"
+  - "Single-institution dataset may limit generalizability to other educational contexts."
+  - "Computational overhead of replay buffer and drift monitoring not fully quantified for real-time deployment."
+  - "Fairness evaluation limited to recall gaps; other fairness metrics not explored. [unacknowledged]"
 remember_this:
-  - "Drift-aware continual learning improves worst-semester macro-F1 from 0.652 to 0.711."
-  - "Calibration error reduced from 0.056 to 0.039 under drift-aware updating."
-  - "Mean subgroup recall gap decreased from 0.118 to 0.082 with continual learning."
-  - "Intermediate drift thresholds balance robustness with update frequency."
-  - "Replay buffers of moderate size provide near-peak performance with low overhead."
-
+  - "Drift-aware continual learning improves mean macro-F1 from 0.706 to 0.742."
+  - "Worst-semester macro-F1 increases from 0.652 to 0.711, reducing variance."
+  - "Calibration error drops from 0.056 to 0.039 with drift-aware updates."
+  - "Subgroup recall gap decreases from 0.118 to 0.082 under continual learning."
 ```
 ---
 
-## Paper 20: Montagna_summarized.md
-
-**Source File:** `Montagna_summarized.md`
-
-```yaml
-paper_id: 70d5269c-1cbd-5b71-afa6-86550a29e2e4
-designation: international-algorithm-specific
-title: Integration of Explainability in Recommender Systems to Enhance Enterprise Value Strategies
-authors: Montagna, A.
-year: 2026
-venue: University of Padova
-odin_topics:
-  - 4.A
-  - 4.B
-  - 7.A
-  - 7.B
-  - 7.D
-  - 9.A
-  - 9.B
-  - 10.A
-  - 10.B
-tldr: A comprehensive thesis that surveys Value-Aware Recommender Systems, proposes an explainable value-aware matrix factorization model, and critiques the evaluation of explanations in graph-based recommenders for enterprise contexts.
-problem_and_motivation: Recommender systems are widely used but often lack transparency and fail to align with business value objectives. Value-aware systems exist but have not been systematically surveyed, and a key gap remains in balancing the generation of business value with the need for explainable, trustworthy recommendations. This research addresses this gap by creating a bridge between these perspectives through novel models and evaluation frameworks.
-approach:
-  - A systematic literature review following PRISMA guidelines was conducted to survey and classify Value-Aware Recommender Systems (VARSs), analyzing 109 studies.
-  - A novel model, Explainable Value-aware Matrix Factorization (XVMF), is proposed to balance explainability and business value by integrating both terms into a unified objective function.
-  - The model is evaluated on Yelp and Amazon datasets using NDCG, E-NDCG, and a novel NDCV metric to assess accuracy, explainability, and business value trade-offs.
-  - A critical analysis of Graph-Based Explainable Recommender Systems (GxRSs) is performed, highlighting the lack of quantitative evaluation methods for explanation quality.
-findings:
-  - num: The systematic review identified 109 relevant studies on VARSs, which are classified into in-processing and post-processing techniques.
-  - The proposed XVMF model successfully balances explainability and business value, achieving performance that exceeds baseline MF and EMF models on the Yelp dataset.
-  - num: For the Yelp dataset, the XVMF model achieved an NDCV of 0.5042% and an E-NDCG of 1.9954%, outperforming the baseline models.
-  - num: On the Amazon dataset, the XVMF-e model achieved an E-NDCG of 0.1723%, a significant improvement over EMF, while the XVMF-v model achieved an NDCV of 0.1154%.
-  - A key finding is that the optimal balance between explainability and value is achieved at low regularization parameter values, after which performance degrades quickly.
-  - The analysis of GxRSs reveals that most papers rely on qualitative case-based analyses, with only a few employing quantitative metrics for explanation evaluation.
-  - The thesis proposes that future work on GxRSs should adopt standardized quantitative metrics to ensure comparability and rigorous evaluation.
-key_figures_tables:
-  - "Figure 2.1: PRISMA flow diagram summarizing the systematic literature review process → 109 studies were included in the final review."
-  - "Figure 2.2: Taxonomy of value-aware recommender algorithms → Divides VARSs into in-processing and post-processing methods."
-  - "Table 2.1: Application domains of value-aware recommender systems → Shows product, advertising, news, and media as key domains."
-  - "Figure 3.1-3.4: Performance analysis for Yelp and Amazon datasets → Show the trade-off and optimal balance between explainability and value regularization."
-  - "Table 3.5 and 3.6: Evaluation metrics for MF, EMF, and XVMF → XVMF outperforms baselines, particularly on the Yelp dataset."
-key_equations:
-  - equation: |
-      G_{expl} = \sum_{u,i \in R} (r_{ui} - a_u b_i^T)^2 + \frac{\beta}{2} (\| a_u \|^2 + \| b_i \|^2) + \lambda \| a_u - b_i \|^2 E_{ui}
-    explanation: Objective function for explainable matrix factorization, incorporating an explainability regularization term.
-  - equation: |
-      L = \sum_{(u,i) \in S} (r_{u,i} - p_u \cdot q_i^T)^2 + \frac{\beta}{2} (\| p_u \|^2 + \| q_i \|^2) + \| p_u - q_i \|^2 (\lambda W_{u,i} + \delta v_i)
-    explanation: Objective function for the proposed XVMF model, balancing explainability and business value.
-  - equation: |
-      \text{NDCV} = \sum_{i=1}^{k} \frac{2^{rel_i} - 1}{\log_2 (i+1)}
-    explanation: Novel metric to evaluate the business value of a recommendation list, based on the gain from the item's value.
-definitions:
-  - term: VARS
-    definition: Value-Aware Recommender System, designed to directly maximize the economic value of recommendations.
-  - term: xRS
-    definition: Explainable Recommender System, which provides reasons or evidence for its recommendations.
-  - term: XVMF
-    definition: Explainable Value-aware Matrix Factorization, a novel model proposed in this thesis to balance explainability and business value.
-  - term: E-NDCG
-    definition: Explainable Normalized Discounted Cumulative Gain, a metric for evaluating the explainability quality of a ranked recommendation list.
-  - term: NDCV
-    definition: Normalized Discounted Cumulative Value, a novel metric proposed to evaluate the business value generated by a recommendation list.
-  - term: GxRS
-    definition: Graph-Based Explainable Recommender System, a system that uses graph structures to generate and explain recommendations.
-  - term: MEP
-    definition: Mean Explainability Precision, a quantitative metric to evaluate the explainability of recommendations.
-critical_citations:
-  - "[Page et al., 2021] — PRISMA guidelines for systematic reviews."
-  - "[Ricci et al., 2022] — Overview of recommender systems techniques."
-  - "[Abdollahi and Nasraoui, 2016] — Basis for explainable matrix factorization (EMF)."
-  - "[Coba et al., 2019] — Basis for E-NDCG and NEMF model."
-  - "[De Biasio et al., 2023] — The first systematic review of VARSs."
-relevance:
-  topics:
-    - code: 4.A
-      name: Landscape of Existing Personal Finance Systems
-      relevance: medium
-      justification: Surveys existing VARSs, providing a landscape of systems optimizing business value.
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      relevance: high
-      justification: Identifies the gap between business value optimization and explainability in current systems.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      relevance: contextual
-      justification: Discusses business value optimization, a key driver for budget recommendation strategies.
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      relevance: low
-      justification: The thesis focuses on recommender systems in general, but the principles are transferable to budget recommendations.
-    - code: 7.D
-      name: Infeasibility Handling and Reduction Hierarchies
-      relevance: low
-      justification: The XVMF model involves trade-offs between objectives, related to handling competing priorities.
-    - code: 9.A
-      name: Mobile-First Design Principles and Rationale
-      relevance: medium
-      justification: Emphasizes the importance of human-centered design and trust in user adoption of AI systems.
-    - code: 9.B
-      name: Mobile UX Design for Personal Finance
-      relevance: low
-      justification: Discusses interface design for explanations, which is relevant to UX in general.
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: low
-      justification: Focuses on trustworthy AI principles, including privacy and security.
-    - code: 10.B
-      name: User Trust in Personal Finance Systems
-      relevance: high
-      justification: A central theme of the thesis is that explainability builds user trust and system adoption.
-  contribution: "This thesis contributes to Odin's design by providing a systematic survey of value-aware systems, which can inform the development of Odin's budget recommendation and anomaly detection modules. The proposed XVMF model offers a concrete, data-driven approach for balancing user preference accuracy with business value, directly applicable to Odin's core functionality of generating personalized financial plans. Furthermore, the critical analysis of explanation evaluation in graph-based systems provides a methodological blueprint for ensuring that Odin's recommendations are not only accurate but also transparent and trustworthy. Finally, the emphasis on human-centered evaluation and user interfaces is crucial for designing Odin's mobile-first application to foster user engagement and trust."
-  directly_justifies:
-    - "The proposed XVMF model can be adapted to balance recommendation accuracy with Odin's business goals of user retention and savings growth."
-    - "Systematic review of VARSs identifies key algorithms and datasets relevant for building Odin's value-optimization modules."
-    - "Analysis of GxRSs highlights the need for quantitative explainability metrics, guiding Odin's evaluation framework."
-  limits:
-    - "The experimental validation of XVMF is limited to Yelp and Amazon datasets, which may not fully represent the financial behavior of Filipino young professionals."
-    - "The qualitative limitations of existing explainability evaluations in GxRSs are noted, but a new comprehensive metric is not proposed."
-    - "The thesis focuses on algorithm performance and does not include an end-to-end user study in a real-world business setting."
-  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The 'Existing Systems & Gaps' domain was flagged as highly relevant (topics 4.A, 4.B), as the thesis directly surveys VARSs and identifies the specific gap in explainable value-aware systems. The 'Budget Recommendation' domain (topics 7.A, 7.B, 7.D) was considered relevant due to the focus on optimizing economic value and balancing competing objectives, though the application is not specific to budgeting. The 'Mobile-First Design' and 'Data Privacy & User Trust' domains (topics 9.A, 9.B, 10.A, 10.B) are medium to low relevance, as the thesis discusses trust and interface design in the context of explainability, which is a key principle for Odin. Domains like 'Filipino Cultural Context' (2.A-D), 'Expense Categorization' (3.A-C), 'Behavioral Profiling' (5.A-C), 'Spending Forecasting' (6.A-B), 'Anomaly Detection' (8.A-C), 'Engagement & Retention' (11.A-B), 'System Evaluation' (12.A-C), and 'Savings & Debt Management' (13.A-C) were considered and rejected as the thesis does not directly address these specific areas, focusing instead on recommender system algorithms and their evaluation in a general enterprise context. The overall relevance to Odin is high, as it provides both a foundational survey of value-aware systems and a novel model for balancing key performance objectives."
-limitations:
-  - "The systematic review is based on articles from specific databases and excludes non-English and unpublished works. [unacknowledged]"
-  - "The datasets used for XVMF (Yelp, Amazon) do not contain Filipino user data, limiting direct applicability to the target demographic. [unacknowledged]"
-  - "The evaluation of XVMF is offline and does not include online A/B testing or user studies to validate real-world performance. [unacknowledged]"
-  - "The thesis criticizes the lack of quantitative evaluation in GxRSs but does not itself propose a new, comprehensive metric to address this gap."
-remember_this:
-  - "Value-aware recommender systems are a distinct class that directly optimize economic value."
-  - "The XVMF model successfully balances explainability and business value on benchmark datasets."
-  - "Offline evaluation metrics for business value and explainability are critical for model selection."
-  - "Current graph-based explainable recommenders lack rigorous quantitative evaluation of their explanations."
-  - "Balancing user trust and system adoption is a key challenge for enterprise recommender systems."
-```
----
-
-## Paper 21: Jiang et al_summarized.md
+## Paper 17: Jiang et al_summarized.md
 
 **Source File:** `Jiang et al_summarized.md`
 
@@ -2758,143 +2167,131 @@ year: 2026
 venue: IEEE Access
 odin_topics:
   - 5.A
-  - 5.B
   - 5.C
-  - 6.A
   - 6.B
+  - 7.A
   - 7.B
-  - 7.C
-  - 8.B
-  - 9.A
-  - 9.B
+  - 8.C
+  - 11.B
   - 12.B
-tldr: An integrated Causal User Profiling (CUP) framework combines causal inference and uplift modeling to segment users into four response types, improving personalized intervention targeting.
-problem_and_motivation: Conventional user profiling is descriptive and correlation-based, failing to predict how users respond to interventions. This limits personalization in internet lending, as platforms cannot distinguish users who are truly responsive to actions from those with high baseline propensities.
+  - 12.C
+  - 13.A
+  - 13.B
+tldr: Integrates feature selection, stratified clustering, and meta-learning into a unified Causal User Profiling pipeline that estimates heterogeneous treatment effects and classifies users into four causal response types.
+problem_and_motivation: Conventional user profiling is descriptive and correlation-based, lacking the causal reasoning needed to predict how users respond to interventions. This limits personalization and targeting in systems like internet lending, where understanding treatment responsiveness is critical.
 approach:
-  - The CUP framework integrates feature selection, stratified clustering, confounding adjustment, and causal effect estimation into a single pipeline.
-  - Hybrid feature selection combines Information Value, Causal Forest importance, Population Stability Index, and Stepwise refinement.
-  - A C2 replacement strategy for clustering stabilizes weak clusters by reverting to global model predictions when local performance degrades.
-  - Causal effects are estimated using meta-learners (T-, S-, X-, R-, DR-) and Causal Forests, with Logistic Regression as the preferred base learner.
-  - Users are classified into four response types (Persuadable, Sure Thing, Lost Cause, Do-Not-Disturb) using a hybrid causal-behavioral labeling procedure.
-  - The framework is evaluated on six months of proprietary internet-lending data using a rolling train/validation/test protocol and AUUC as the primary metric.
+  - Uses a multi-stage feature selection combining Information Value, Causal Forest importance, Population Stability Index, and Stepwise refinement.
+  - Employs stratified clustering with a C2 replacement strategy to stabilize weak clusters and harmonize local heterogeneity with global patterns.
+  - Estimates Conditional Average Treatment Effects using meta-learners (S, T, X, R, DR) and Causal Forests, with Logistic Regression as base learner.
+  - Implements a Four-Type Response Segmentation module (Persuadable, Sure Thing, Lost Cause, Do-Not-Disturb) based on potential outcomes and uplift scores.
+  - Evaluates performance using Area Under the Uplift Curve (AUUC) across six monthly rolling deployment windows.
 findings:
-  - num: Hybrid feature selection increases AUUC by 25–30% compared to using all features.
-  - num: The C2 clustering strategy provides an additional 10–12% uplift in AUUC.
-  - num: The DR-Learner with Logistic Regression yields a further 5–8% improvement in AUUC.
-  - num: The full integrated CUP pipeline achieves 45–50% higher AUUC than the baseline model.
-  - The X-Learner demonstrates the most consistent improvement under clustering, while the DR-Learner shows higher variance.
-  - Clustering based on causal features produces more coherent and stable treatment heterogeneity than clustering based on predictive features alone.
+  - "num: Hybrid feature selection increases AUUC by 25-30% over the baseline."
+  - "num: C2 clustering strategy provides an additional 10-12% gain in AUUC."
+  - "num: DR-Learner with Logistic Regression adds a further 5-8% uplift."
+  - "num: The integrated CUP framework yields a 45-50% higher AUUC than the baseline."
+  - The X-Learner demonstrated the most consistent improvement under clustering, while DR-Learner showed higher variance.
+  - Clustering based on causal features produced more consistent gains than clustering based on predictive features alone.
 key_figures_tables:
-  - Figure 1: Traditional vs. CUP roadmap → CUP adds clustering, bias adjustment, causal estimation, and response-type labeling.
-  - Figure 5: Distribution of four causal response types → Persuadables and Lost Causes are the most prevalent segments.
-  - Figure 6: Feature-selection and meta-learner interactions → DR-Learner with IV+Causal features achieves highest AUUC.
-  - Figure 7: Clustering strategies and meta-learner performance → C2 strategy ranks highest in stability and performance.
-  - Figure 8: Meta-Learner × Base-Learner heatmap → DR-Learner + Logistic Regression offers the best balance of accuracy and stability.
+  - "Figure 5b: Joint distribution of potential outcomes (y0, y1) → Illustrates the four decision regions for response types."
+  - "Figure 6a: Boxplots of AUUC across six feature sets → IV+Causal+Stepwise yields highest stability."
+  - "Figure 7b: Comparison of clustering strategies (Direct, C1, C2) → C2 achieves the highest stability and lowest variance."
+  - "Figure 8: Heatmap of Meta-Learner × Base-Learner configurations → DR-Learner with Logistic Regression achieves the best balance."
+  - "Figure 9: Cumulative gain curves comparing CUP pathway with baseline → CUP curve uniformly dominates."
 key_equations:
-  - equation: u = \hat{p}_1 - \hat{p}_0
-    explanation: Uplift score as the difference in outcome probabilities between treatment and control.
-  - equation: WeightedAUUC = \sum_{k=1}^K w_k \cdot AUUC_k
-    explanation: Weighted average of cluster-level AUUC by sample proportion.
+  - equation: "u = p_1 - p_0"
+    explanation: "Uplift score as difference in outcome probabilities under treatment and control."
+  - equation: "WeightedAUUC = \\sum_{k=1}^K w_k \\cdot AUUC_k"
+    explanation: "Weighted average of AUUC across clusters."
 definitions:
-  - term: CUP
-    definition: Causal User Profiling, an integrated framework combining causal inference, uplift modeling, and user profiling.
-  - term: CATE
-    definition: Conditional Average Treatment Effect, the expected causal effect conditional on observed covariates.
-  - term: HTE
-    definition: Heterogeneous Treatment Effect, variation in treatment effects across individuals or subgroups.
-  - term: AUUC
-    definition: Area Under the Uplift Curve, a metric for evaluating uplift model ranking performance.
-  - term: AAUC
-    definition: Average AUUC across multiple monthly evaluation windows.
-  - term: PSI
-    definition: Population Stability Index, a measure of temporal distributional shift in features.
-  - term: IV
-    definition: Information Value, a measure of predictive relevance for a binary target.
-  - term: IPW
-    definition: Inverse Probability Weighting, a method for adjusting for treatment assignment bias.
-  - term: DR-Learner
-    definition: Doubly Robust Learner, a meta-learner that combines outcome and propensity models for causal estimation.
+  - term: "CUP"
+    definition: "Causal User Profiling framework integrating causal inference and uplift modeling."
+  - term: "HTE"
+    definition: "Heterogeneous Treatment Effect, the variation in causal effects across individuals."
+  - term: "CATE"
+    definition: "Conditional Average Treatment Effect, expected causal effect conditional on observed features."
+  - term: "AUUC"
+    definition: "Area Under the Uplift Curve, a metric for evaluating uplift model ranking performance."
+  - term: "DR-Learner"
+    definition: "Doubly Robust Learner, a meta-learner combining outcome and propensity models."
 critical_citations:
-  - "[Radcliffe & Surry, 2011] — Defined the four-type response taxonomy for uplift modeling."
-  - "[Athey & Imbens, 2016] — Introduced Causal Trees for heterogeneous treatment effect estimation."
-  - "[Wager & Athey, 2018] — Extended Causal Forests for consistent CATE estimation."
-  - "[Künzel et al., 2019] — Developed the meta-learner framework for flexible HTE estimation."
-  - "[Devriendt et al., 2018] — Surveyed uplift modeling and emphasized upstream design choices."
+  - "[Athey & Imbens, 2016] — Foundational for recursive partitioning in HTE estimation."
+  - "[Wager & Athey, 2018] — Introduced Causal Forests for consistent HTE estimation."
+  - "[Künzel et al., 2019] — Established meta-learners for flexible CATE estimation."
+  - "[Devriendt et al., 2018] — Emphasized upstream pipeline design impact on uplift performance."
+  - "[Radcliffe & Surry, 2011] — Defined uplift and the four-type response taxonomy."
 relevance:
   topics:
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
       relevance: high
-      justification: Proposes a four-type response taxonomy (Persuadable, Sure Thing, Lost Cause, Do-Not-Disturb) grounded in causal potential outcomes, directly defining behavioral profiles for intervention responsiveness.
-    - code: 5.B
-      name: Profile Dynamics and the Cold‑Start Problem
-      relevance: high
-      justification: Addresses temporal stability of user profiles across monthly deployments and provides a reproducible pipeline that can support cold-start labeling with observed data.
+      justification: "Introduces a causal taxonomy (Persuadable, Sure Thing, Lost Cause, Do-Not-Disturb) for behavioral profiling."
     - code: 5.C
       name: Classification Approaches for Financial Behavioral Profiles
       relevance: high
-      justification: Evaluates meta-learners (T, S, X, DR) and base learners (LR, RF, GBDT, XGB) for classifying users into causal response types.
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: high
-      justification: Uses uplift modeling and Causal Forests to predict individual treatment effects, directly applicable to forecasting user responses to interventions.
+      justification: "Uplift modeling and response-type segmentation directly classify users into causal behavioral profiles."
     - code: 6.B
       name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: "Evaluates meta-learners and Causal Forests for estimating treatment effects on sequential user behavior."
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
       relevance: medium
-      justification: The rolling monthly evaluation design and temporal stability analysis are relevant for sequential forecasting, though the paper focuses on treatment effects rather than spending amounts.
+      justification: "Provides a causal framework for understanding how users respond to financial interventions, relevant to budgeting."
     - code: 7.B
       name: Budget Recommendation in Personal Finance Systems
       relevance: medium
-      justification: The segmentation of users into Persuadables vs. Sure Things can inform budget recommendations by identifying which users are likely to respond to nudges.
-    - code: 7.C
-      name: Constrained Optimization Approaches for Budget Allocation
+      justification: "Causal profiling enables personalized budget recommendations based on predicted responsiveness."
+    - code: 8.C
+      name: Cold-Start Baseline Strategies for Anomaly Detection
       relevance: contextual
-      justification: The CUP framework enables targeting optimization by identifying Persuadables, but does not explicitly formulate budget constraints.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: low
-      justification: While not focused on anomaly detection, the CUP framework’s capability to identify Do-Not-Disturb users could inform baseline models for anomaly detection.
-    - code: 9.A
-      name: Mobile‑First Design Principles and Rationale
-      relevance: low
-      justification: The paper uses mobile app data from an internet lending platform and discusses personalization, but does not explicitly address mobile-first design principles.
-    - code: 9.B
-      name: Mobile UX Design for Personal Finance
-      relevance: low
-      justification: The study is grounded in a mobile platform context, but the UX implications of the profiling framework are not a focus.
+      justification: "Clustering and profiling methods discussed could inform cold-start strategies for anomaly detection."
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: medium
+      justification: "Identifying Persuadables and avoiding Do-Not-Disturbs informs targeted engagement and retention strategies."
     - code: 12.B
       name: Evaluation of Algorithmic Modules
       relevance: high
-      justification: Conducts component-wise ablation analysis to quantify the marginal contribution of feature selection, clustering, and meta-learner configuration to AUUC.
-  contribution: The CUP framework directly justifies Odin's design of a behavioral profiling module that classifies users into causal response types for personalized interventions. It provides a methodology for estimating heterogeneous treatment effects that can be embedded in Odin's forecasting and recommendation modules. The component-wise ablation analysis offers a reproducible evaluation strategy for Odin's algorithmic modules. The emphasis on temporal stability and interpretability aligns with Odin's need for reliable user profiles over time. The framework's ability to separate Persuadables from Sure Things is critical for designing cost-effective budget nudges and retention mechanisms.
+      justification: "Component-wise ablation analysis quantifies marginal contributions of feature selection, clustering, and estimation."
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: medium
+      justification: "AUUC-based evaluation and temporal stability analysis are directly applicable to evaluating budget recommendation systems."
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: medium
+      justification: "The framework can be applied to segment users for targeted savings interventions based on causal responsiveness."
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: medium
+      justification: "Applied to internet lending, the framework helps optimize debt management interventions."
+  contribution: "This paper provides a reproducible causal user profiling pipeline (CUP) that can be directly adapted for Odin's behavioral profiling module. The four-type response taxonomy (Persuadable, Sure Thing, Lost Cause, Do-Not-Disturb) offers a clear framework for segmenting Filipino young professionals based on their causal responsiveness to financial interventions. The component-wise ablation analysis demonstrates that hybrid feature selection and C2 clustering can significantly improve the performance of Odin's budget recommendation and anomaly detection systems. The emphasis on temporal stability across repeated deployments is critical for designing reliable and trustworthy personal finance management systems. Finally, the DR-Learner with Logistic Regression configuration provides a balance of interpretability and performance suitable for Odin's mobile-first, data-privacy-sensitive context."
   directly_justifies:
-    - "Users can be classified into Persuadable, Sure Thing, Lost Cause, and Do-Not-Disturb categories based on causal treatment effects."
-    - "Feature selection using Information Value and causal importance improves uplift model performance by 25–30%."
-    - "The C2 clustering strategy stabilizes weak clusters and provides an additional 10–12% uplift gain."
-    - "The DR-Learner with Logistic Regression offers the best balance of accuracy and stability for causal user profiling."
-    - "Component-wise ablation is necessary to quantify the contribution of each pipeline module to overall performance."
+    - "Causal user profiling enables moving from descriptive segmentation to predicting how users respond to financial interventions."
+    - "Hybrid feature selection combining Information Value and causal importance improves uplift model stability and performance."
+    - "The C2 replacement strategy stabilizes clustering by reverting to global predictions when local clustering introduces noise."
+    - "The DR-Learner with Logistic Regression offers a favorable trade-off between robustness, interpretability, and performance."
+    - "Component-wise ablation is essential for quantifying the marginal contribution of each pipeline module."
   limits:
-    - "The dataset is from a single Chinese internet lending platform, limiting generalizability to other financial contexts or Filipino users."
-    - "The treatment variable aggregates multiple intervention types, obscuring intervention-specific causal mechanisms."
-    - "Formal statistical significance testing is not conducted; evaluation focuses on temporal consistency and magnitude of differences."
-    - "Fairness, transparency, and ethical deployment considerations are not addressed. [unacknowledged]"
-  mapping_rationale: All 12 functional domains and their associated topic codes were systematically scanned against the paper's contributions. The paper is highly relevant to Behavioral Profiling & Classification (5.A, 5.B, 5.C) as it proposes and evaluates a four-type causal response taxonomy. It is also highly relevant to Spending Forecasting (6.A, 6.B) through its uplift modeling and temporal evaluation. The paper provides medium relevance to Budget Recommendation (7.B, 7.C) by enabling identification of persuadable users for targeted nudges. It offers contextual relevance to Anomaly Detection (8.B) for establishing baselines and low relevance to Mobile-First Design (9.A, 9.B) as the context is a mobile platform but UX is not a focus. The paper strongly justifies Algorithmic Module Evaluation (12.B) through its ablation design. Topics related to Filipino cultural context (2.A, 2.B, 2.C, 2.D) were considered and rejected because the data is from China and the framework is culturally neutral, though its methodology could be adapted. Expense Categorization (3.A, 3.B, 3.C) and Existing Systems (4.A, 4.B) were not addressed directly. Data Privacy (10.A, 10.B), Engagement (11.A, 11.B), and Savings/Debt (13.A, 13.B, 13.C) were not explicitly covered. Overall, the paper is highly relevant to Odin's need for a causally grounded behavioral profiling and forecasting system.
+    - "Analysis is based on data from a single Chinese digital lending platform, limiting external generalizability to the Philippine context."
+    - "The treatment variable aggregates heterogeneous interventions (e.g., coupons, credit-line increases), obscuring intervention-specific mechanisms."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated canonical topic codes was performed. Domains relevant to user profiling (5.A, 5.C), forecasting (6.B), budgeting strategies (7.A, 7.B), anomaly detection baselines (8.C), engagement (11.B), system evaluation (12.B, 12.C), and savings/debt management (13.A, 13.B) were flagged. The paper's core contribution on CUP and uplift modeling directly addresses 5.A, 5.C, and 6.B with high relevance, as it provides a taxonomy and methodology for behavioral profiling and forecasting. It provides medium relevance to 7.A, 7.B, 11.B, 12.C, 13.A, and 13.B by offering a causal framework applicable to budgeting, engagement, evaluation, savings, and debt management. 8.C was flagged as contextual because the clustering strategies for profiling could be adapted for cold-start anomaly detection baselines. Domains related to Filipino cultural context (2.A-2.D), expense categorization (3.A-3.C), existing systems (4.A-4.B), mobile-first design (9.A-9.B), and data privacy (10.A-10.B) were considered and rejected as the paper does not address these topics. Borderline cases included 7.B (budget recommendation) and 13.A (savings), which are not explicitly studied but are directly enabled by the proposed causal profiling approach. Overall, the paper has high relevance for Odin's behavioral modeling and algorithmic modules, with contextual relevance for culturally agnostic design considerations."
 limitations:
-  - "The dataset is from a single Chinese internet lending platform, limiting generalizability."
-  - "The treatment variable aggregates multiple intervention types, obscuring specific mechanisms."
-  - "Formal statistical significance testing is not conducted."
-  - "Fairness and ethical deployment considerations are not discussed. [unacknowledged]"
-  - "Computational costs are substantial due to extensive ablation experiments, which may not be feasible in resource-constrained settings. [unacknowledged]"
+  - "Single-platform data limits generalizability to other contexts such as Philippine PFMS. [unacknowledged]"
+  - "Aggregated treatment variable may obscure intervention-specific behavioral mechanisms. [unacknowledged]"
+  - "Fairness, transparency, and ethical deployment of causal profiling are not addressed. [unacknowledged]"
+  - "Temporal stability was assessed over only six months; longer-term stability remains untested."
 remember_this:
-  - "CUP segments users into Persuadable, Sure Thing, Lost Cause, and Do-Not-Disturb types based on causal treatment effects."
-  - "Feature selection and C2 clustering contribute 25–30% and 10–12% AUUC gains, respectively."
-  - "The DR-Learner with Logistic Regression achieves the best balance of accuracy and stability."
-  - "The full CUP pipeline yields 45–50% higher AUUC than baseline uplift modeling."
-  - "Clustering is effective only when based on causal features and paired with robust meta-learners."
+  - "CUP framework provides 45-50% higher AUUC than conventional uplift modeling baselines."
+  - "Hybrid feature selection increases AUUC by 25-30% over using all features."
+  - "C2 clustering strategy adds 10-12% AUUC gain by stabilizing weak clusters."
+  - "DR-Learner with Logistic Regression offers the best balance of performance and interpretability."
+  - "Clustering is effective only when feature space encodes causally relevant information."
 ```
 ---
 
-## Paper 22: Ma C. et al_summarized.md
+## Paper 18: Ma C. et al_summarized.md
 
 **Source File:** `Ma C. et al_summarized.md`
 
@@ -3009,179 +2406,19 @@ remember_this:
 ```
 ---
 
-## Paper 23: Heirene R. et al-2026a_summarized.md
+## Paper 19: Heirene R. et al-2026a_summarized.md
 
 **Source File:** `Heirene R. et al-2026a_summarized.md`
 
 ```yaml
 paper_id: 10.1186/s12954-026-01402-4
-designation: local-algorithm-specific
+designation: international-algorithm-specific
 title: Development of lower-risk guidelines for online sports and race betting in Australia using objective behavioural data
 authors: Heirene, R. M.; Chandrakumar, D.; Fahey, G.; Huynh, E. L. Y.; Gainsbury, S. M.
 year: 2026
 venue: Harm Reduction Journal
 odin_topics:
-  - 5.A
-  - 5.B
-  - 5.C
-  - 6.A
-  - 6.B
-  - 7.A
-  - 7.B
-  - 7.D
-  - 8.A
-  - 8.B
-  - 13.A
-  - 13.B
-  - 13.C
-tldr: Empirically derived lower-risk guidelines for online sports betting use objective account data to define thresholds for deposits, income percentage, account numbers, and betting variety associated with reduced harm.
-problem_and_motivation: Existing lower-risk gambling guidelines rely on self-reported data and are not specific to online wagering, limiting their accuracy and relevance. Online sports betting poses unique risks, yet no evidence-based thresholds exist for this growing form of gambling. This study addresses the gap by deriving limits from objective behavioural data linked to validated harm measures.
-approach:
-  - Surveyed 1,647 customers from two Australian online wagering sites, linking responses to six months of objective account data.
-  - Used Problem Gambling Severity Index and Gambling Harm Measure to classify harmed versus unharmed participants.
-  - Applied Receiver Operating Characteristic curve analyses with bootstrapping to identify optimal thresholds for eight behavioural indicators.
-  - Evaluated predictive validity using weighted logistic regression models controlling for demographics and other gambling.
-  - Compared newly derived limits against previously established Australian guidelines for sports and race betting.
-findings:
-  - num: All behavioural indicators except betting frequency achieved acceptable AUC values (≥0.60) for classifying harm.
-  - num: Optimal thresholds were higher for GHM harm (e.g., ≤10% income deposited) than for PGSI harm (e.g., ≤2% income deposited).
-  - num: Surpassing the deposit frequency limit (4/month) was associated with 2.60 times greater odds of PGSI harm.
-  - num: Exceeding the income-deposited limit (2%) was associated with 3.78 times greater odds of PGSI harm.
-  - num: Exceeding all eight limits resulted in 8.04 times greater odds of PGSI harm and 8.92 times greater odds of GHM harm.
-  - Exceeding multiple limits showed a dose-response relationship with increasing odds of harm.
-  - Activity-specific indicators (deposits, income deposited, number of accounts) outperformed standard indicators in predicting harm.
-  - Newly derived limits showed higher accuracy than prior self-report-based limits for GHM harm classification.
-  - Younger adults (≤25) required lower threshold values on most indicators to distinguish harmed from unharmed gamblers.
-  - Betting frequency was not a reliable indicator of harm and was inversely associated with harm in multivariate models.
-key_figures_tables:
-  - Table 2: Optimal limit values and performance metrics → AUC values for deposit-based indicators were highest, suggesting strong classification ability.
-  - Figure 2: Odds ratios for total limits surpassed → Exceeding more limits exponentially increases harm odds for both PGSI and GHM.
-  - Figure 3: Risk curves for behavioural indicators → Deposit percentage shows steepest risk increase; betting frequency shows flattest.
-  - Figure 5: Proposed "2-2-4-4 Rule" infographic → Visual summary of recommended guidelines for consumer use.
-  - Table 5: Rates above limits pre- and post-survey → Harmed participants consistently more likely to surpass all thresholds.
-key_equations:
-  - equation: "AUC = \\int_0^1 TPR(FPR^{-1}(x)) dx"
-    explanation: "Area under ROC curve measures classification ability."
-  - equation: "OR = \\frac{p/(1-p)}{q/(1-q)}"
-    explanation: "Odds ratio compares harm likelihood between groups."
-  - equation: "Youden = sensitivity + specificity - 1"
-    explanation: "Maximizes overall classification accuracy."
-definitions:
-  - term: PGSI
-    definition: "Problem Gambling Severity Index; 9-item screening measure for gambling problems."
-  - term: GHM
-    definition: "Gambling Harm Measure; 16-item scale assessing harm across six life domains."
-  - term: AUC
-    definition: "Area Under the Receiver Operating Characteristic Curve; measure of test accuracy."
-  - term: ROC
-    definition: "Receiver Operating Characteristic; graphical plot of true positive rate vs. false positive rate."
-  - term: OR
-    definition: "Odds Ratio; measure of association between an exposure and an outcome."
-  - term: "Youden index"
-    definition: "J = sensitivity + specificity - 1; maximizes correct classification rate."
-critical_citations:
-  - "[Currie et al., 2017] — Derived low-risk limits from longitudinal Canadian data."
-  - "[Dowling et al., 2021] — Established Australian low-risk limits by gambling activity."
-  - "[Louderback et al., 2021] — Used objective data to derive online gambling thresholds."
-  - "[Heirene et al., 2021] — Documented inaccuracies in self-reported gambling behaviour."
-  - "[Young et al., 2021] — Developed Canadian lower-risk guidelines framework."
-relevance:
-  topics:
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: high
-      justification: "Study develops behavioural thresholds to classify harmed vs. unharmed gamblers, directly informing financial risk profiling."
-    - code: 5.B
-      name: Profile Dynamics and the Cold‑Start Problem
-      relevance: medium
-      justification: "Findings on younger adults requiring lower thresholds inform how initial profiles might be calibrated for new users."
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: high
-      justification: "Uses ROC analysis and logistic regression to classify individuals based on behavioural indicators."
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: medium
-      justification: "Identifies behavioural indicators (deposit frequency, income percentage) that could serve as predictive features for forecasting spending risk."
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: low
-      justification: "Does not develop forecasting algorithms but establishes thresholds that could inform sequential data labelling for forecasting models."
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      relevance: medium
-      justification: "Proposed income-relative thresholds (≤2% deposited) can inform budget allocation strategies that prioritize financial safety."
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      relevance: medium
-      justification: "Provides empirical justification for recommending deposit limits as a budgeting tool in PFMS."
-    - code: 7.D
-      name: Infeasibility Handling and Reduction Hierarchies
-      relevance: low
-      justification: "Dose-response analysis of multiple limits suggests how infeasibility might be managed by prioritizing certain constraints."
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: high
-      justification: "Behavioral thresholds (e.g., >4 deposits/month, >2% income deposited) provide clear cut-points for flagging anomalous spending."
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: low
-      justification: "Study identifies indicators but does not propose or evaluate anomaly detection algorithms."
-    - code: 13.A
-      name: Savings Goal Management in PFMS
-      relevance: contextual
-      justification: "Limits on gambling expenditure indirectly relate to protecting savings capacity, but savings not directly measured."
-    - code: 13.B
-      name: Debt Management in PFMS
-      relevance: contextual
-      justification: "GHM includes financial strain and borrowing items, but study does not focus on debt management strategies."
-    - code: 13.C
-      name: End‑of‑Period Surplus as a Savings Input
-      relevance: contextual
-      justification: "Reduced gambling expenditure (≤2% income deposited) could increase surplus, but not explicitly modeled."
-  contribution: "This paper provides empirical evidence that objective behavioural indicators, particularly deposit frequency and income-relative deposits, can effectively classify financial risk. For Odin, these findings directly justify implementing deposit-based thresholds as primary risk indicators in user financial profiles. The dose-response relationship supports a multi-constraint approach to budget recommendations where exceeding multiple limits triggers enhanced user warnings. The paper's methodological framework for deriving limits from linked survey-account data offers a template for calibrating Odin's cold-start anomaly detection. Finally, the emphasis on income-relative thresholds provides Odin with a domain-justified, personalised basis for setting spending guardrails."
-  directly_justifies:
-    - "Odin should monitor monthly deposit frequency with a recommended upper limit of four deposits per month."
-    - "Odin should calculate and flag users who deposit more than 2% of monthly household income into discretionary spending accounts."
-    - "Odin's cold-start profile for new users should apply lower behavioural thresholds for users aged 25 and under."
-    - "Odin's budget recommendation module should warn users when multiple spending limits are simultaneously exceeded."
-    - "Odin should prioritize deposit-based indicators over betting frequency metrics for financial risk classification."
-  limits:
-    - "Sample overrepresented frequent bettors and older individuals, potentially skewing limits toward heavier users."
-    - "Behavioural data from only one operator may not capture full gambling activity across multiple accounts."
-    - "Harm classification based on self-report may not fully capture objective financial harm or debt accumulation."
-    - "Limits derived from Australian wagering context may not generalize to other spending categories or jurisdictions."
-    - "Cross-sectional design limits causal inference; post-survey analysis shows persistence but not causality. [unacknowledged]"
-  mapping_rationale: "A systematic scan of all 12 functional domains and their associated canonical topic codes was conducted. The paper's core contribution on behavioural risk profiling directly flagged domains 5 (Behavioral Profiling) and 6 (Spending Forecasting) with high relevance, as the study's thresholds and classification methods provide empirical grounding for Odin's user profiling and forecasting modules. Domain 7 (Budget Recommendation) was flagged medium because the income-relative deposit limit (2%) offers a concrete, evidence-based constraint for budget allocation systems. Domain 8 (Anomaly Detection) was flagged high because the identified thresholds (e.g., >4 deposits/month) serve as direct cut-points for anomaly flagging. Domain 13 (Savings & Debt) was assessed as contextual only, since savings and debt are not directly measured or modeled. Domain 2 (Filipino Cultural Context) and Domain 3 (Expense Categorization) were rejected because the study focuses on Australian gambling behaviour without cultural or category-specific insights transferable to Filipino PFMS. Domain 9 (Mobile-First Design) and 11 (Retention & Engagement) were rejected as the study does not address user interface or engagement mechanisms. Overall, the paper provides moderate-to-high relevance for Odin's risk profiling and anomaly detection modules, with actionable thresholds that can be directly embedded into system logic."
-limitations:
-  - "Sample skewed toward older, more frequent bettors, limiting generalizability to casual users."
-  - "Single-operator data may underestimate total gambling activity, affecting threshold accuracy."
-  - "Self-report measures of harm may not capture objective financial consequences like debt or bankruptcy."
-  - "Cross-sectional design prevents establishing causal thresholds for harm prevention."
-  - "Findings may not generalize to non-gambling spending categories within PFMS. [unacknowledged]"
-  - "Income estimates from bracketed survey responses introduce measurement error in income-relative thresholds. [unacknowledged]"
-  - "The study does not evaluate the long-term stability of the proposed thresholds over time. [unacknowledged]"
-remember_this:
-  - "Limit monthly deposits to four to reduce gambling-related financial harm."
-  - "Deposit no more than 2% of monthly household income into gambling accounts."
-  - "Using three or more betting accounts more than doubles the odds of harm."
-  - "Exceeding multiple spending limits compounds harm risk exponentially."
-  - "Younger adults under 25 require stricter thresholds to avoid similar risk levels."
-```
----
-
-## Paper 24: Ashta_summarized.md
-
-**Source File:** `Ashta_summarized.md`
-
-```yaml
-paper_id: 8a7f4e3d-2b1c-4a5d-9e8f-0a1b2c3d4e5f
-designation: international
-title: Artificial Intelligence in Microfinance and Financial Inclusion: Applications, Issues, and Future Directions
-authors: Ashta, A.
-year: 2026
-venue: Unknown
-odin_topics:
+  - 1.A
   - 3.A
   - 3.B
   - 4.A
@@ -3190,175 +2427,133 @@ odin_topics:
   - 5.B
   - 5.C
   - 6.A
-  - 6.B
   - 7.A
-  - 7.B
+  - 7.C
   - 8.A
-  - 8.B
+  - 9.A
   - 10.A
-  - 10.B
-  - 12.A
-tldr: AI enables financial inclusion through alternative credit scoring, automated underwriting, and personalized savings, but risks algorithmic bias, proxy discrimination, privacy violations, and digital exclusion.
-problem_and_motivation: Two billion adults lack access to formal financial services due to credit invisibility and high operational costs. Traditional systems fail to serve marginalized populations without formal credit histories. AI offers a potential solution by leveraging alternative data and automation to expand access.
+  - 13.A
+tldr: Lower-risk guidelines for online sports betting using objective account data were developed, proposing limits on deposits, income percentage, active accounts, and betting variety to reduce gambling harm.
+problem_and_motivation: Existing gambling guidelines rely on inaccurate self-reported data and apply generically across gambling types, missing activity-specific risks. Online wagering, which has unique risk factors, lacks empirically derived, objective guidelines. This study addresses this gap by using operator account data matched with harm measures to develop specific thresholds.
 approach:
-  - A critical review of peer-reviewed articles, working papers, and reports from organizations like the World Bank and CGAP was conducted.
-  - The analysis includes multiple purposively selected case studies from the Global South, such as M-Pesa, Tala, Branch, BIMA, and Pula.
-  - The BHAI framework is adopted as an interpretative-constructivist lens to guide the assessment of AI's role in microfinance.
-  - The study examines AI applications across payments, savings, lending, insurance, and investments.
-  - The paper identifies recurring patterns, operational challenges, and ethical dilemmas from the case studies.
-  - The paper synthesizes findings to highlight both the potential and risks of AI for financial inclusion.
-  - It incorporates quantitative evidence, such as default rate reductions and cost savings from AI implementations.
+  - A survey including PGSI and GHM was linked to 12 months of objective wagering data for 1,647 Australian customers.
+  - Behavioral indicators included spend, deposit frequency, deposit amount, income percentages, betting days, activity variety, and account count.
+  - ROC curve analyses identified optimal cut-offs for eight indicators using Youden, sensitivity, and specificity maximization.
+  - Logistic regression validated the predictive ability of cut-offs, controlling for demographics and other gambling.
+  - Performance metrics were compared to existing guidelines from Dowling et al. (2021).
 findings:
-  - num: Alternative data models achieve correlations of 0.65 to 0.72 between payment consistency and loan repayment, matching FICO performance.
-  - num: Machine learning for alternative credit scoring reduces default rates and can lower operational costs by 6% to 25% of total losses.
-  - num: AI-driven underwriting reduces decision-making costs from hundreds of dollars to pennies and processes loans in minutes instead of weeks.
-  - Alternative data can encode existing societal inequalities, leading to proxy discrimination against marginalized groups.
-  - AI-powered behavioral nudges can increase savings engagement but risk becoming manipulative dark patterns.
-  - Supervised learning, particularly gradient boosting, dominates 70-80% of production systems for alternative credit scoring.
-  - Deep learning is deployed for unstructured data like biometrics and damage assessment in payments and insurance.
-  - Reinforcement learning is less common, used mainly for optimization in payment routing, pricing, and portfolio management.
-  - There is an "inclusion paradox" where AI enables access to financial services, but often at exploitative terms for vulnerable populations.
-  - AI-driven financial inclusion faces critical challenges, including bias, privacy violations, lack of transparency, and cultural insensitivity.
+  - All eight behavioural indicators had acceptable AUCs (≥0.6) for harm classification except betting days per month.
+  - Optimal thresholds were higher for GHM harm than PGSI harm, and higher than self-report-based guidelines.
+  - Depositing more than 2% of monthly income and using more than two active accounts were the strongest unique predictors of harm.
+  - Surpassing multiple limits exponentially increased odds of harm, with an 8-fold increase for surpassing all PGSI limits.
+  - The proposed "2-2-4-4 Rule" provides clear, income-relative, and actionable advice for lower-risk wagering.
+  - Young adults (≤25) required lower thresholds for all behavioural indicators, suggesting increased vulnerability.
 key_figures_tables:
-  - Table 1: Behavioral finance nudges in digital savings → AI can operationalize nudges through predictive analytics and automated savings plans.
-  - Table 2: Traditional versus Alternative Data → Alternative data includes mobile money, utility payments, and behavioral analytics for credit scoring.
-  - Table 3: AI Technologies by Financial Sector → Supervised learning dominates, with gradient boosting for credit scoring and CNNs for biometrics and damage assessment.
-  - Table 4: Humane Considerations by Financial Sector → All sectors face challenges like algorithmic bias, privacy violations, and lack of transparency.
+  - Table 2: Optimal cut-off values for PGSI and GHM harm with AUC, sensitivity, and specificity metrics → All indicators except betting days had AUC ≥0.6.
+  - Table 3: Logistic regression showing exceeding limits increases odds of harm 2-7x → Depositing >2% income gave OR 3.78 for PGSI; >10% gave OR 7.10 for GHM.
+  - Table 4: New limits outperformed Dowling et al. (2021) limits by 17.6–28.5% accuracy for GHM harm → Demonstrates value of objective data.
+  - Table 5: 91.6% of harmed participants passed at least one proposed limit → Supports coverage of the four recommended limits.
+  - Figure 2: Dose-response relationship between number of limits surpassed and harm odds → Surpassing all 8 limits gave OR 8.04 (PGSI) and 8.92 (GHM).
 key_equations:
   - equation: "None."
     explanation: ""
 definitions:
-  - term: Artificial Intelligence (AI)
-    definition: Computer systems that can perform tasks typically requiring human intelligence such as pattern recognition, decision-making, and language understanding.
-  - term: Machine Learning
-    definition: A subset of AI where algorithms improve automatically through experience.
-  - term: Supervised Learning
-    definition: Training algorithms on labeled datasets where the correct answer is known.
-  - term: Unsupervised Learning
-    definition: Discovering hidden patterns in data without pre-labeled examples.
-  - term: Reinforcement Learning
-    definition: Algorithms learn optimal strategies through trial and error with rewards for successful actions.
-  - term: Natural Language Processing (NLP)
-    definition: Technology enabling computers to understand and generate human language.
-  - term: Computer Vision
-    definition: AI systems that can 'see' and interpret images.
-  - term: Alternative Data
-    definition: Non-traditional data sources such as mobile phone usage, e-commerce history, utility payments, and social network data.
-  - term: Gradient Boosting
-    definition: Ensemble methods combining multiple decision trees, like XGBoost and LightGBM, effective for alternative credit scoring.
-  - term: Deep Learning
-    definition: Uses interconnected layers of algorithms (neural networks) to learn from large amounts of data.
-  - term: Parametric Insurance
-    definition: Coverage that pays out automatically when specific measurable events occur.
-  - term: Robo-Advisor
-    definition: Automated platforms providing financial planning and investment management.
-  - term: Proxy Discrimination
-    definition: Using variables that correlate with protected characteristics as a substitute for those attributes.
-  - term: Digital Divide
-    definition: The gap between those who have access to digital technologies and those who do not.
-  - term: BHAI Framework
-    definition: A framework advocating for humane AI development through multidimensional inclusion, ethical oversight, and contextual sensitivity.
-  - term: Credit Invisibility
-    definition: Individuals with no footprint in conventional credit bureaus, lacking formal credit history.
+  - term: PGSI
+    definition: Problem Gambling Severity Index – a screening measure for gambling-related harms.
+  - term: GHM
+    definition: Gambling Harm Measure – a 16-item scale assessing gambling impact across life domains.
+  - term: AUC
+    definition: Area Under the Receiver Operating Characteristic Curve – a measure of classification accuracy.
+  - term: Youden index
+    definition: A metric for selecting optimal cut-offs that balances sensitivity and specificity.
 critical_citations:
-  - "[Consumer Financial Protection Bureau, 2015] — Documents 45 million credit-invisible adults in the U.S."
-  - "[Björkegren & Grissen, 2019] — Demonstrates mobile phone data predicts credit repayment."
-  - "[Berg, Burg, Gombović, & Puri, 2019] — Shows ML reduces default rates in fintech lending."
-  - "[S. Barocas & Selbst, 2016] — Analyzes proxy discrimination in algorithmic systems."
-  - "[Zuboff, 2019] — Critiques surveillance capitalism and data commodification."
+  - "[Currie et al., 2017] — Established lower-risk gambling limits using longitudinal data."
+  - "[Dowling et al., 2021] — Developed Australian-specific limits for various gambling activities."
+  - "[Louderback et al., 2021] — Used objective account data to derive online gambling thresholds."
+  - "[Heirene et al., 2021] — Found self-reported gambling behaviour is highly inaccurate."
 relevance:
   topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Focuses on Australian online bettors, not Filipino young professionals.
     - code: 3.A
       name: Expense Categorization Frameworks
       relevance: medium
-      justification: Discusses transaction analysis for fraud detection and personalization.
+      justification: Examines spend and deposit amounts as indicators of harm, applicable to expense tracking.
     - code: 3.B
       name: Expense Category Design Considerations
-      relevance: low
-      justification: Mentions personalized payment options but does not focus on category design.
+      relevance: medium
+      justification: Highlights importance of distinguishing absolute spend from income-relative spend.
     - code: 4.A
       name: Landscape of Existing Personal Finance Systems
-      relevance: high
-      justification: Reviews major fintech systems and AI applications globally.
+      relevance: low
+      justification: References existing gambling guidelines and their limitations, not PFMS systems.
     - code: 4.B
       name: Limitations and Gaps in Existing Systems
-      relevance: high
-      justification: Critically assesses limitations like bias, privacy, and exclusion in current systems.
+      relevance: medium
+      justification: Critiques reliance on self-reported data and generic guidelines, gaps that Odin can address.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      relevance: medium
-      justification: Uses behavioral nudges and segmentation based on transaction patterns.
+      relevance: high
+      justification: Derives behavioural indicators (deposit frequency, accounts) that can define risk profiles.
     - code: 5.B
-      name: Profile Dynamics and the Cold-Start Problem
-      relevance: low
-      justification: Addresses the cold-start problem through alternative data for new users.
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: contextual
+      justification: Discusses harm status classification but not cold-start profiling directly.
     - code: 5.C
       name: Classification Approaches for Financial Behavioral Profiles
       relevance: medium
-      justification: Uses clustering and classification for user segmentation and fraud detection.
+      justification: Uses ROC and logistic regression to classify harmed vs. unharmed groups.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      relevance: high
-      justification: Discusses forecasting for credit risk, savings, and market movements.
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: high
-      justification: Mentions time-series forecasting (ARIMA, LSTM) for income and spending prediction.
+      relevance: contextual
+      justification: Identifies risk indicators but does not focus on forecasting future spending.
     - code: 7.A
       name: Budgeting Strategies as Domain Knowledge
       relevance: medium
-      justification: Discusses automated savings and goal-based trackers as budgeting strategies.
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
+      justification: Provides income-relative spending limits, analogous to budget allocation advice.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
       relevance: low
-      justification: Touches on personalized savings recommendations but not explicit budget allocation.
+      justification: Does not propose optimization algorithms, but suggests percentage-based constraints.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      relevance: high
-      justification: Describes real-time fraud detection as a core application in payments.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: high
-      justification: Mentions supervised and unsupervised learning for detecting transaction anomalies.
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: high
-      justification: Extensively covers privacy violations, data breaches, and surveillance concerns.
-    - code: 10.B
-      name: User Trust in Personal Finance Systems
-      relevance: medium
-      justification: Discusses building trust through security, transparency, and recourse mechanisms.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: medium
-      justification: Calls for fairness audits, impact assessments, and outcome-based evaluation.
-  contribution: The paper provides a broad overview of AI applications in financial inclusion, directly relevant to Odin's core domains of expense analysis, forecasting, and anomaly detection. It offers a critical lens on the limitations of existing systems and highlights the importance of user privacy and trust. The detailed discussion on algorithmic bias and fairness directly informs Odin's design to ensure equitable financial management. The paper's case studies of Global South fintech implementations offer practical insights for Odin's contextual relevance.
+      relevance: low
+      justification: Could inform anomaly detection by defining normal vs. risky behaviour thresholds.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: low
+      justification: Discusses household income percentage, indirectly related to savings capacity.
+  contribution: "This paper provides a rigorous methodology for deriving objective, activity-specific behavioural thresholds for financial risk, which can directly inform Odin's behavioural profiling module by defining high-risk spending patterns. Its dose-response analysis supports Odin's anomaly detection by establishing what constitutes a 'harmful' deviation from normal financial behaviour. The emphasis on income-relative metrics (e.g., 2% of income deposited) provides a principled basis for Odin's budget recommendation system to set dynamic, personalised constraints. The focus on multiple, interacting risk indicators aligns with Odin's need for holistic financial health assessment, moving beyond single-threshold rules. Finally, the call for actionable, mnemonic guidelines (e.g., '2-2-4-4 Rule') offers a model for how Odin can present its budget and savings recommendations to users in a memorable, practical format."
   directly_justifies:
-    - Odin must be designed with fairness-aware machine learning to avoid perpetuating proxy discrimination.
-    - Alternative data and predictive modeling require transparency to allow users to challenge automated decisions.
-    - User trust is foundational for retention and engagement, requiring clear communication and ethical data handling.
-    - Anomaly detection systems must adapt to evolving spending patterns to effectively flag fraud and irregularities.
+    - "Depositing more than 2% of household income per month is a strong predictor of financial harm."
+    - "Exceeding four deposits per month significantly increases odds of gambling harm."
+    - "Using more than two active wagering accounts is a unique and significant risk indicator."
+    - "A dose-response relationship exists; surpassing multiple limits compounds risk exponentially."
+    - "Income-relative limits are more predictive than absolute spend thresholds."
   limits:
-    - The review is non-systematic, which may introduce selection bias in the case studies chosen.
-    - The paper does not provide a deep technical analysis of specific algorithms but rather a high-level overview.
-    - The analysis is based on existing literature and may not capture the most recent developments in AI.
-    - The paper focuses on the Global South, which may limit the direct applicability of specific case studies to Odin's Filipino context.
-  mapping_rationale: The systematic scan of the 12 functional domains identified the paper as highly relevant to Predictive Modeling (6.A/6.B) and Anomaly Detection (8.A/8.B), due to its extensive coverage of alternative credit scoring, forecasting algorithms, and fraud detection systems. It also shows high relevance to Data Privacy & Trust (10.A/10.B) and Existing Systems & Gaps (4.A/4.B), with detailed discussions on ethical challenges and system limitations. Medium relevance was assigned to domains like Expense Categorization (3.A/3.B) and Behavioral Profiling (5.A/5.C), as these are secondary themes informing the core predictive applications. Domains like Mobile-First Design (9.A/9.B) and Savings/Debt Management (13.A/13.B) were considered but rejected as the paper lacks specific focus on these areas. Borderline cases included seasonal spending (2.B), which is implicitly addressed through income volatility modeling, and user-defined constraints (3.C, 7.B), which are not central to the paper's argument. The paper is highly relevant to Odin as it provides both the technological justification and the critical ethical framework necessary for building a responsible PFMS.
+    - "Sample skewed towards more frequent bettors, which may overestimate thresholds."
+    - "Data covers only one operator, missing gambling across multiple accounts."
+    - "Generalizability to Filipino context requires cultural and economic adaptation."
+    - "Self-reported harm measures may still have biases despite objective behaviour data."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was conducted. This paper was flagged as highly relevant to Behavioral Profiling & Classification (5.A) because it identifies objective behavioural indicators (deposit frequency, income percentage, account count) that define high-risk financial profiles, directly informing Odin's user classification. It is medium-relevant to Expense Categorization (3.A, 3.B) by distinguishing spend vs. deposit behaviours and highlighting the importance of income-relative metrics for expense tracking. It also provides medium relevance to Existing Systems & Gaps (4.A, 4.B) through its critique of self-report-based guidelines and generic limits, justifying Odin's need for objective, activity-specific personalization. The paper's methodological approach to deriving thresholds contributes contextually to Spending Forecasting (6.A) and Anomaly Detection (8.A), though it does not develop forecasting or detection algorithms themselves. It offers medium relevance to Budget Recommendation (7.A, 7.C) via income-relative spending limits analogous to budgeting constraints, and low relevance to Mobile‑First Design (9.A), Data Privacy (10.A), and Savings & Debt Management (13.A), as these are not central. Borderline cases included the deposit and spend indicators touching both Expense Categorization (3.A, 3.B) and Behavioral Profiling (5.A); these were resolved by prioritizing 5.A for the strongest predictive indicators (deposit frequency, account count) and 3.A for the spend/income metrics. The paper's emphasis on objective, operator-sourced data and dose-response relationships provides strong methodological grounding for Odin's data-driven modules."
 limitations:
-  - The review is non-systematic, potentially introducing selection bias in case studies.
-  - The paper does not provide deep technical analysis of specific algorithms but a high-level overview.
-  - The analysis is based on existing literature and may not capture the most recent AI developments.
-  - The focus on the Global South may limit direct applicability of specific case studies to Odin's Filipino context. [unacknowledged]
+  - "Sample skewed towards more frequent bettors, potentially inflating threshold estimates. [unacknowledged]"
+  - "Data from a single operator may not capture full gambling activity across all platforms. [unacknowledged]"
+  - "Generalizability to Filipino young professionals requires cultural and economic validation. [unacknowledged]"
+  - "Self-reported harm measures, although matched with objective data, still rely on participant honesty."
+  - "The study does not test the causal impact of adhering to these guidelines on harm reduction."
 remember_this:
-  - Alternative data correlates with creditworthiness at rates comparable to traditional FICO scores.
-  - AI-driven underwriting reduces costs from hundreds of dollars to pennies per loan.
-  - Algorithmic bias can create proxy discrimination without explicitly using protected attributes.
-  - Financial inclusion via AI risks becoming exploitation if deployed without adequate ethical oversight.
-  - Success requires prioritizing human dignity and transparent governance over efficiency metrics.
+  - "Exceeding 2% of income on deposits quadruples the odds of gambling harm."
+  - "Using more than two active betting accounts is a unique risk indicator."
+  - "Surpassing multiple limits exponentially increases harm risk, up to 8-fold."
+  - "Objective spending data yields higher, more accurate thresholds than self-reports."
+  - "Young adults need lower behavioural limits to mitigate harm risk."
 ```
 ---
 
-## Paper 25: Chandana et al_summarized.md
+## Paper 20: Chandana et al_summarized.md
 
 **Source File:** `Chandana et al_summarized.md`
 
@@ -3491,7 +2686,7 @@ remember_this:
 ```
 ---
 
-## Paper 26: Pesa et al_summarized.md
+## Paper 21: Pesa et al_summarized.md
 
 **Source File:** `Pesa et al_summarized.md`
 
@@ -3673,7 +2868,7 @@ remember_this:
 ```
 ---
 
-## Paper 27: Gong_summarized.md
+## Paper 22: Gong_summarized.md
 
 **Source File:** `Gong_summarized.md`
 
@@ -3687,238 +2882,241 @@ venue: ITM Web of Conferences
 odin_topics:
   - 6.A
   - 6.B
-  - 8.A
   - 8.B
-  - 12.A
   - 12.B
-tldr: A systematic review of deep learning models for stock prediction, tracing the evolution from LSTM to Transformer and hybrid architectures, with empirical comparisons and future research directions.
-problem_and_motivation: Stock price prediction remains challenging due to high volatility and non-linearity, and traditional methods are insufficient. Deep learning models like LSTM and Transformer have shown promise, but a comprehensive review linking their evolution from LSTM to hybrid architectures is lacking. This review aims to systematically summarize these methods, compare their performance, and identify challenges and future trends.
+tldr: A systematic review of deep learning models for stock price prediction, tracing the evolution from LSTM and CNN-LSTM to Transformer and hybrid architectures, summarizing model principles, empirical comparisons, challenges, and future directions.
+problem_and_motivation: Stock price prediction is crucial for quantitative finance but is highly challenging due to market volatility, non-linearity, and non-stationarity. Traditional and early machine learning methods fail to capture complex patterns, creating a need for more robust models. This review aims to systematically summarize the advancement from LSTM to Transformer architectures to guide researchers.
 approach:
-  - Systematically reviews the evolution of stock prediction models from RNNs and LSTM to Transformer and hybrid architectures.
-  - Classifies and analyzes mainstream deep learning models, detailing their characteristics, advantages, and limitations.
-  - Compares empirical studies on different datasets, focusing on evaluation metrics like RMSE, MAE, and Sharpe Ratio.
-  - Discusses current challenges in data, model, and deployment, and proposes future research directions.
-  - Synthesizes findings from prior research to provide a complete technical roadmap for applying deep learning to stock price prediction.
+  - The paper conducts a systematic literature review of deep learning models for stock price prediction.
+  - It covers RNN variants (LSTM, GRU), CNN, Transformer models, and hybrid architectures like CNN-LSTM and LSTM-Transformer.
+  - The review analyzes model principles, advantages, disadvantages, and application scenarios.
+  - It includes a comparative analysis of empirical studies, focusing on datasets, evaluation metrics (RMSE, MAE, MAPE, DA, R², Sharpe Ratio), and performance.
+  - The paper identifies current challenges at the data, model, and deployment levels and discusses future research trends.
 findings:
-  - num: LSTM achieved a 0.46% daily return on S&P 500 constituents, outperforming DNN (0.32%) and logistic regression (0.26%).
-  - num: LSTM generated trading signals with a Sharpe ratio up to 2.34, while other models were far less than 1.0.
-  - num: Transformer models reduced MAE by 20.73%, MSE by 34.84%, and MAPE by 25.63% compared to LSTM in some studies.
-  - num: The LSTM-Transformer hybrid model showed MAE and RMSE reductions of over 50% compared to the parent models.
-  - num: The hybrid model achieved an R² value of 0.9618, higher than LSTM (0.8430) and Transformer (0.7763).
-  - LSTM is advantageous for short-term prediction and generating trading signals with high Sharpe ratios.
-  - Transformer excels in long-range dependency and cross-asset modeling, improving overall prediction accuracy.
-  - The evolution of models shows a trend towards hybrid and multimodal fusion for better performance and interpretability.
+  - num: LSTM achieved a Sharpe ratio of 2.34 for S&P 500 constituents from 1992 to 2015, outperforming DNN and logistic regression.
+  - num: Transformer models showed improved accuracy over CNN, RNN, and LSTM, with average MAE decreasing by approximately 20.73%, MSE by 34.84%, and MAPE by 25.63%.
+  - num: The LSTM-Transformer hybrid model reduced MAE and RMSE by over 50% compared to parent models and achieved an R² of 0.9618, higher than LSTM (0.8430) and Transformer (0.7763).
+  - Stock prediction models have evolved from single models (LSTM) to hybrid and multimodal fusion architectures.
+  - Challenges include data noise, overfitting, model interpretability, computational efficiency, and deployment in dynamic markets.
+  - Future directions include multimodal information fusion, interpretable AI, real-time adaptive learning, and automated model architecture search.
 key_figures_tables:
-  - "Table 1: Summary of evaluation criteria (RMSE, MAE, MAPE, DA, R2, Sharpe Ratio) used in empirical studies."
-  - "Table 2: Comparison of empirical results for LSTM, Transformer, and hybrid models, showing performance metrics and improvements."
-  - "Figure 1: Schematic diagram of the Transformer architecture, highlighting its self-attention mechanism for time series prediction."
-  - "Figure 2: Framework of the LSTM-Transformer dual-branch hybrid model for stock price prediction."
-  - "Figure 3: Trends in deep learning model evolution for stock prediction, from LSTM to multimodal fusion models."
+  - None.
 key_equations:
-  - equation: "MAE = \\frac{1}{n} \\sum_{i=1}^{n} |y_i - \\hat{y}_i|"
-    explanation: "Average absolute error between predicted and actual values."
-  - equation: "RMSE = \\sqrt{\\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2}"
-    explanation: "Square root of average squared errors, sensitive to large deviations."
-  - equation: "Sharpe Ratio = \\frac{R_p - R_f}{\\sigma_p}"
-    explanation: "Risk-adjusted return, higher values indicate better performance."
+  - equation: None.
+    explanation: ""
 definitions:
-  - term: "LSTM"
-    definition: "Long Short-Term Memory, an RNN variant with gating mechanisms to handle long-term dependencies."
-  - term: "Transformer"
-    definition: "Model architecture using self-attention mechanisms for processing sequences, avoiding recurrence."
-  - term: "MAE"
-    definition: "Mean Absolute Error, measures average magnitude of errors."
-  - term: "RMSE"
-    definition: "Root Mean Square Error, measures error magnitude with a higher penalty for large errors."
-  - term: "Sharpe Ratio"
-    definition: "Metric for risk-adjusted return, calculated as excess return over risk-free rate per unit of volatility."
+  - term: LSTM
+    definition: Long Short-Term Memory, an RNN variant using gating mechanisms to handle long-term dependencies.
+  - term: GRU
+    definition: Gated Recurrent Unit, a simpler RNN variant with similar performance to LSTM but higher computational efficiency.
+  - term: CNN
+    definition: Convolutional Neural Network, a model that uses local receptive fields and hierarchical feature extraction, applied to time series for trend extraction.
+  - term: Transformer
+    definition: A model architecture using a self-attention mechanism to capture long-range dependencies and enable parallel computing.
+  - term: RMSE
+    definition: Root Mean Squared Error, a metric reflecting the overall deviation between predicted and actual values, sensitive to large errors.
+  - term: MAE
+    definition: Mean Absolute Error, a metric showing the average absolute deviation, reflecting prediction stability.
+  - term: MAPE
+    definition: Mean Absolute Percentage Error, the average percentage error between predicted and actual values.
+  - term: DA
+    definition: Directional Accuracy, a metric reflecting the accuracy of predicting the direction of stock price changes.
+  - term: Sharpe Ratio
+    definition: A metric reflecting the relationship between returns and risks, with higher values indicating better risk-adjusted returns.
 critical_citations:
-  - "[Fischer & Krauss, 2018] — LSTM outperforms memoryless models in predicting S&P 500 returns."
-  - "[Wang et al., 2022] — Transformer model shows significant error reduction compared to LSTM."
-  - "[Zhao et al., 2025] — LSTM-Transformer hybrid model achieves superior performance over parent models."
+  - "[Fischer & Krauss, 2018] — Benchmarking LSTM in financial market predictions."
+  - "[Mehtab & Sen, 2021] — Proposing a CNN-LSTM hybrid for stock prediction."
+  - "[Wang et al., 2022] — Demonstrating Transformer's superior prediction accuracy."
+  - "[Zhao et al., 2025] — Introducing an LSTM-Transformer hybrid with strong results."
 relevance:
   topics:
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      relevance: medium
-      justification: Reviews predictive models applicable to financial forecasting.
+      relevance: high
+      justification: This paper is a comprehensive review of predictive models relevant to financial forecasting.
     - code: 6.B
       name: Forecasting Algorithms for Sequential Spending Data
       relevance: high
-      justification: Systematically evaluates LSTM, Transformer, and hybrid models for time series forecasting.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: contextual
-      justification: Discusses challenges like data noise and overfitting relevant to anomaly detection.
+      justification: The review extensively covers LSTM, Transformer, and hybrid algorithms for sequential time series prediction.
     - code: 8.B
       name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: contextual
-      justification: Mentions CNN for feature extraction and noise filtering, relevant to detection.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: high
-      justification: Compares models using standard metrics like RMSE, MAE, and Sharpe Ratio.
+      relevance: medium
+      justification: The paper discusses model sensitivity to noise and anomalies, which is relevant for detecting unusual spending patterns.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      relevance: high
-      justification: Provides empirical comparisons and performance benchmarks for various deep learning modules.
-  contribution: "This review provides a comprehensive benchmarking of time series forecasting models, offering a direct evaluation framework for Odin's predictive modules. The empirical comparisons of LSTM and Transformer models, including their hybrid variations, justify the choice of foundational algorithms for spending forecasting. The detailed analysis of model strengths (e.g., LSTM for short-term patterns) and weaknesses (e.g., Transformer's computational cost) informs architectural decisions. The identified challenges, such as overfitting and interpretability, align with Odin's design constraints for a robust and trustworthy system."
+      relevance: medium
+      justification: The paper details evaluation metrics (RMSE, MAE, Sharpe Ratio) and compares model performance, relevant for system evaluation.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: The paper mentions "black box" interpretability concerns, which contextualize the importance of user trust.
+  contribution: "This review provides a technical roadmap for selecting and evaluating deep learning models for sequential financial data prediction. It directly informs the design of Odin's forecasting and anomaly detection modules by comparing the strengths and weaknesses of LSTM, Transformer, and hybrid models. The systematic comparison of evaluation metrics validates the choice of performance indicators for Odin's algorithmic modules. The discussion of model challenges and future trends, such as multimodal fusion and interpretability, highlights areas for advanced feature engineering in Odin."
   directly_justifies:
-    - "LSTM is a reliable benchmark for medium and short-term prediction tasks."
-    - "Transformer models provide better prediction accuracy, with lower MAE, MSE, and MAPE."
-    - "Hybrid LSTM-Transformer models achieve higher accuracy and stability than parent models."
-    - "The choice of evaluation metrics (RMSE, MAE, DA) is critical for assessing prediction models."
-    - "Interpretability and computational efficiency are key challenges for deploying deep learning in finance."
+    - "LSTM models are reliable benchmarks for medium and short-term prediction tasks."
+    - "Transformer models demonstrate superior performance in capturing long-range dependencies."
+    - "Hybrid LSTM-Transformer models achieve a balance of higher accuracy and interpretability."
+    - "Deep learning models outperform traditional statistical methods in stock price prediction."
   limits:
-    - "The review does not propose a new model or application in personal finance."
-    - "Findings are based on stock market data and may not directly transfer to spending data."
-    - "Lacks specific guidance on handling cold-start problems in personal finance systems."
-  mapping_rationale: "A systematic scan across all 12 functional domains and 43 topic codes was conducted. Domains most relevant to this paper are Spending Forecasting (6.A, 6.B) and System Evaluation (12.A, 12.B) due to its focus on predictive modeling and empirical performance comparisons. The paper also provides contextual value for Anomaly Detection (8.A, 8.B) through discussions on data noise. Topics related to Filipino Cultural Context, Expense Categorization, and Behavioral Profiling were considered but rejected as the paper is a general technical review without specific application to personal finance or Filipino users. The relevance is high for forecasting algorithms and evaluation frameworks, medium for predictive modeling, and contextual for anomaly detection. Overall, the paper's strength lies in its comprehensive review of forecasting techniques and evaluation metrics, making it highly relevant for designing and assessing Odin's algorithmic modules."
+    - "The review is specific to stock price prediction, which may differ from personal spending data."
+    - "The paper primarily focuses on quantitative finance, not personal finance management."
+    - "The review does not cover user-specific constraints or behavioral profiling."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to the Spending Forecasting domain (6.A, 6.B) because it reviews state-of-the-art predictive algorithms (LSTM, Transformer) for time series data. It also has medium relevance to Anomaly Detection (8.B) as it discusses model sensitivity to noise and abnormal fluctuations, and to System Evaluation (12.B) due to its detailed comparison of evaluation metrics. Other domains like Expense Categorization (3.A) and Behavioral Profiling (5.A) were considered but rejected as the paper does not address spending categories or user behavior classification. The paper's focus on algorithmic performance in finance, not personal finance, places it as a contextual or low relevance for topics like Mobile-First Design (9.A) and Data Privacy (10.A), where it only tangentially mentions interpretability. Overall, the paper's strongest contribution to Odin is as a reference for forecasting and anomaly detection algorithm selection."
 limitations:
-  - "The review focuses on stock price prediction, not personal spending forecasting. [unacknowledged]"
-  - "Does not address the cold-start problem or how to profile users with limited data. [unacknowledged]"
-  - "Limited discussion on mobile-first design or user trust implications. [unacknowledged]"
-  - "The paper is a review and does not introduce a novel algorithm or empirical dataset. [unacknowledged]"
+  - "The review is specific to stock price prediction and may not generalize directly to personal spending data."
+  - "It primarily focuses on model performance and does not address practical system integration or user experience."
+  - "The paper does not consider resource constraints of mobile-first applications."
+  - "Long-term adaptability and real-time learning challenges are identified but not resolved. [unacknowledged]"
 remember_this:
-  - "LSTM excels in short-term prediction and generating high Sharpe ratio trading signals."
-  - "Transformer models reduce prediction errors by over 20% compared to LSTM."
-  - "Hybrid LSTM-Transformer models can reduce MAE and RMSE by more than 50%."
-  - "Deep learning models outperform traditional methods in financial time series forecasting."
-  - "Interpretability and real-time adaptation remain critical challenges for deployment."
+  - "LSTM excels in short-term prediction and generating high Sharpe ratio signals."
+  - "Transformer models significantly improve accuracy for long-range dependencies."
+  - "Hybrid LSTM-Transformer models offer superior accuracy and stability."
+  - "Deep learning models surpass traditional methods in financial time series forecasting."
 ```
 ---
 
-## Paper 28: Paz et al_summarized.md
+## Paper 23: Paz et al_summarized.md
 
 **Source File:** `Paz et al_summarized.md`
 
 ```yaml
 paper_id: 10.3390/math14030429
-designation: international
+designation: international-algorithm-specific
 title: Interpretable Binary Classification Under Constraints for Financial Compliance Modeling
-authors: "Paz, Á.; Crawford, B.; Monfroy, E.; Rodriguez-Tello, E.; Barrera-García, J.; Cisternas-Caneo, F.; López Cortés, B.; Lazo, Y.; Yáñez, A.; Peña Fritz, Á.; Soto, R."
+authors: Paz, Á.; Crawford, B.; Monfroy, E.; Rodriguez-Tello, E.; Barrera-García, J.; Cisternas-Caneo, F.; López Cortés, B.; Lazo, Y.; Yáñez, A.; Peña Fritz, Á.; Soto, R.
 year: 2026
 venue: Mathematics
 odin_topics:
+  - "4.A"
+  - "4.B"
   - "5.A"
-  - "5.B"
-  - "5.C"
+  - "6.A"
+  - "7.B"
+  - "8.A"
   - "10.A"
   - "12.A"
   - "12.B"
-tldr: Evaluates interpretable binary classifiers for predicting student loan income declaration compliance using only pre-event administrative data under class imbalance.
-problem_and_motivation: Predicting borrower compliance in income-contingent loan systems is challenging due to class imbalance and the need for transparent decisions using only pre-deadline information. Existing approaches often lack a systematic framework that balances predictive performance, error analysis, and explainability under realistic administrative constraints.
+  - "12.C"
+  - "13.B"
+tldr: Supervised classifiers using pre-declaration administrative data predict student loan income declaration compliance with balanced error structures and stable feature importance rankings.
+problem_and_motivation: Predicting borrower compliance in income-contingent loan systems is challenged by class imbalance, delayed outcomes, and the need for transparent decisions. Administrative records are underutilized for predictive analytics despite containing relevant signals. A framework is needed to estimate compliance likelihood using only pre-event information while preserving interpretability.
 approach:
-  - "Dataset of 30,736 borrowers from PUCV's FSCU system, with 9 features retained after preprocessing and feature engineering."
-  - "Evaluated 7 supervised algorithms: KNN, Naive Bayes, Logistic Regression, Linear SVM, Decision Tree, Random Forest, and LightGBM."
-  - "Addressed class imbalance using SMOTE, ADASYN, and Random Undersampling within a cross-validated grid search."
-  - "Optimized hyperparameters for each model-sampling combination using exhaustive grid search with MCC as the primary selection criterion."
-  - "Employed a unified pipeline to prevent data leakage, separating 70% training and 30% test sets."
-  - "Conducted multi-level interpretability analysis using permutation feature importance, decision tree paths, and SHAP values."
+  - "Data from 8 relational tables for FSCU beneficiaries at PUCV, restricted to post-2012 obligations, with borrower-level aggregation."
+  - "Seven classifiers evaluated: KNN, Naive Bayes, Logistic Regression, Linear SVM, Decision Tree, Random Forest, and LightGBM."
+  - "Resampling strategies (SMOTE, ADASYN, Random Under-Sampling) applied within training folds to address class imbalance."
+  - "Exhaustive grid search with stratified 5-fold cross-validation for hyperparameter optimization, maximizing MCC."
+  - "Interpretability via permutation feature importance, decision tree paths, and SHAP values for global, structural, and local explanations."
 findings:
-  - "num: Optimized ensemble models (Random Forest, LightGBM) achieved F1-scores above 0.85 and MCC around 0.42."
-  - "num: Linear models (Logistic Regression, Linear SVM) achieved stable performance with F1-scores >0.85 and MCC near 0.37."
-  - "num: A simple rule-based threshold baseline achieved MCC of only 0.141, demonstrating the superiority of learned models."
-  - "Total debt, enrollment count, marital status, and loan enforceability year were consistently the most important predictors across all models."
-  - "Tree-based models offered a favorable balance between expressive power and human verifiability through explicit decision paths."
-  - "SHAP analysis confirmed that higher debt and continuous enrollment increase compliance probability, while recent enforceability years and single status increase risk."
-  - "Hyperparameter tuning and Random Undersampling consistently improved minority-class recall without substantial accuracy loss."
-  - "Ensemble models exhibited a more balanced error structure, avoiding extreme concentration on either Type I or Type II errors."
+  - "num: Optimized LightGBM achieved the highest MCC of 0.419 and F1-score of 0.861."
+  - "Linear models (Logistic Regression, Linear SVM) achieved stable performance with F1-scores above 0.85 and MCC near 0.37."
+  - "num: Hyperparameter optimization improved MCC by up to 0.1 for models like Decision Tree and Naive Bayes."
+  - "Ensemble methods (Random Forest, LightGBM) offered more balanced error structures, slightly increasing false positives to improve recall."
+  - "Top predictors consistently identified across models: debt amount, enrollment count, marital status, and loan enforceability year."
+  - "Rule-based threshold baseline achieved low recall (0.172) and MCC (0.141), highlighting the value of machine learning."
 key_figures_tables:
-  - "Table 4: Final feature set used for model training after preprocessing. → Lists 9 core predictive variables."
-  - "Figure 12: Average Permutation Feature Importance across all models. → deud_monto and conteo_matr are the dominant predictors."
-  - "Figure 15-17: Decision tree snapshots at depths 4, 5, and 11. → Shallow trees provide compact, auditable decision rules."
-  - "Figure 18: SHAP summary plot for LightGBM. → Confirms dominance of debt, enrollments, and marital status with clear directional effects."
-  - "Figures 10-11: Confusion matrices for best-performing models. → Ensemble models balance Type I/II errors better than linear models."
+  - "Figure 12: Permutation feature importance → Debt amount and enrollment count are the most influential predictors."
+  - "Figure 15-17: Decision tree snapshots at depths 4, 5, and 11 → Shallow trees yield compact, auditable rules; deeper trees capture niche interactions."
+  - "Figure 18: SHAP summary for LightGBM → High debt and enrollments push predictions toward declaration; single status and earlier years toward non-declaration."
+  - "Table 7-13: Model performance metrics → Ensemble models achieve highest MCC, but linear models offer comparable interpretability with slight trade-offs."
+  - "Table 16: Practical threshold baseline → Simple rules have high precision but very low recall, confirming ML model superiority."
 key_equations:
   - equation: "MCC = (TP*TN - FP*FN) / sqrt((TP+FP)(TP+FN)(TN+FP)(TN+FN))"
-    explanation: "Primary metric for imbalanced classification evaluation."
+    explanation: "Primary evaluation metric robust to class imbalance."
+  - equation: "θˆ = argmax_θ 1/K Σ_{k=1}^K MCC_k(θ)"
+    explanation: "Optimal hyperparameters maximize mean MCC across cross-validation folds."
   - equation: "z = (x - μ) / σ"
-    explanation: "Standardization formula for numerical features."
-  - equation: "θˆ = argmax_{θ∈Θ} (1/K) Σ_{k=1}^K MCC_k(θ)"
-    explanation: "Selection of optimal hyperparameters by maximizing mean validation MCC."
+    explanation: "z-score standardization for numerical features."
 definitions:
   - term: "FSCU"
-    definition: "Fondo Solidario de Crédito Universitario, Chile's income-contingent student loan system."
+    definition: "Fondo Solidario de Crédito Universitario, Chilean income-contingent student loan system."
   - term: "MCC"
-    definition: "Matthews Correlation Coefficient, a balanced metric for binary classification under imbalance."
+    definition: "Matthews Correlation Coefficient, balanced metric for imbalanced binary classification."
   - term: "PFI"
-    definition: "Permutation Feature Importance, a model-agnostic global interpretability method."
+    definition: "Permutation Feature Importance, model-agnostic measure of feature influence."
   - term: "SHAP"
-    definition: "SHapley Additive exPlanations, a method for local, additive feature attribution."
-  - term: "SMOTE"
-    definition: "Synthetic Minority Over-sampling Technique for addressing class imbalance."
-  - term: "ADASYN"
-    definition: "Adaptive Synthetic Sampling, an adaptive oversampling method."
-  - term: "Type I error"
-    definition: "False positive: predicting a borrower will declare when they do not."
-  - term: "Type II error"
-    definition: "False negative: predicting a borrower will not declare when they do."
+    definition: "SHapley Additive exPlanations, method for local feature attribution."
+  - term: "CRUCH"
+    definition: "Council of Rectors of Chilean Universities, governing body for FSCU-affiliated institutions."
 critical_citations:
-  - "[He & Garcia, 2009] — Foundational work on learning from imbalanced data."
-  - "[Chicco & Jurman, 2020] — Establishes MCC's advantages over F1 and accuracy."
-  - "[Breiman, 2001] — Introduces Random Forests, a key ensemble method used."
-  - "[Doshi-Velez & Kim, 2017] — Framework for the science of interpretable machine learning."
-  - "[Lessmann et al., 2015] — Benchmarking classification algorithms for credit scoring."
+  - "[He and Garcia, 2009] — Foundational work on learning from imbalanced data."
+  - "[Doshi-Velez and Kim, 2017] — Framing interpretability as a rigorous science for machine learning."
+  - "[Breiman, 2001] — Introduces Random Forests, used as an ensemble baseline."
+  - "[Chicco and Jurman, 2020] — Advocates MCC over F1 and accuracy for binary classification."
+  - "[Lessmann et al., 2015] — Benchmarking classification algorithms for credit scoring contexts."
 relevance:
   topics:
+    - code: "4.A"
+      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "high"
+      justification: "Directly evaluates supervised learning models for administrative financial compliance prediction."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "high"
+      justification: "Explicitly addresses gaps in using administrative data and interpretability in institutional systems."
     - code: "5.A"
       name: "Financial Behavioral Profiles in Personal Finance"
       relevance: "high"
-      justification: "Directly constructs borrower profiles from administrative data to predict compliance behavior."
-    - code: "5.B"
-      name: "Profile Dynamics and the Cold‑Start Problem"
+      justification: "Profiles borrowers using academic, financial, and demographic features to predict compliance behavior."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
       relevance: "high"
-      justification: "Explicitly addresses the cold-start problem by using only pre-event information for prediction."
-    - code: "5.C"
-      name: "Classification Approaches for Financial Behavioral Profiles"
-      relevance: "high"
-      justification: "Compares and evaluates multiple classification algorithms for profiling compliance risk."
+      justification: "Applies supervised classification to predict binary compliance outcomes under constraints."
+    - code: "7.B"
+      name: "Budget Recommendation in Personal Finance Systems"
+      relevance: "contextual"
+      justification: "Model predicts compliance, which could inform budget planning but is not a direct recommendation."
+    - code: "8.A"
+      name: "Anomaly Detection in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Identifies non-compliant borrowers, similar to anomaly detection in institutional monitoring."
     - code: "10.A"
       name: "Data Privacy and Security in Personal Finance Systems"
-      relevance: "medium"
-      justification: "Discusses use of institutional administrative data and the constraints of pre-declaration information."
+      relevance: "low"
+      justification: "Discusses administrative data use but not privacy or security mechanisms."
     - code: "12.A"
       name: "Evaluation Frameworks for Personal Finance Systems"
-      relevance: "medium"
-      justification: "Proposes MCC as a primary metric and provides a comprehensive evaluation protocol."
+      relevance: "high"
+      justification: "Proposes a rigorous evaluation protocol using MCC, cross-validation, and multiple metrics."
     - code: "12.B"
       name: "Evaluation of Algorithmic Modules"
-      relevance: "medium"
-      justification: "Evaluates algorithmic performance of classifiers and resampling strategies."
-    - code: "4.A"
-      name: "Landscape of Existing Personal Finance Systems"
+      relevance: "high"
+      justification: "Compares seven classifiers with hyperparameter optimization and resampling strategies."
+    - code: "12.C"
+      name: "Evaluation Methodologies for Budget Recommendation Systems"
       relevance: "contextual"
-      justification: "Reviews related work on student loan repayment prediction systems."
-  contribution: "This paper provides a methodological blueprint for predictive decision support in administrative compliance settings, directly applicable to Odin's behavioral profiling modules (5.A, 5.B, 5.C) by demonstrating how to construct and evaluate interpretable classifiers from pre-event data. Its emphasis on MCC as a robust evaluation metric under imbalance informs Odin's evaluation framework (12.A, 12.B). The study's analysis of feature importance and model interpretability using SHAP and decision paths offers a template for transparent model auditing in Odin's system."
+      justification: "Evaluation methodology is relevant, but the system is not a budget recommender."
+    - code: "13.B"
+      name: "Debt Management in PFMS"
+      relevance: "medium"
+      justification: "Predicts declaration compliance, a key step in debt management for income-contingent loans."
+  contribution: "This paper provides a reproducible modeling framework for predicting compliance in income-contingent loan systems using pre-event administrative data. It demonstrates that supervised classification can achieve reliable performance under class imbalance while preserving interpretability through global, structural, and local explanations. The methodological pipeline emphasizes leakage-aware validation, MCC-based evaluation, and audit-oriented interpretability, directly applicable to Odin's risk assessment and anomaly detection modules. The feature importance analysis identifies key predictors (debt, enrollment, marital status) that could inform Odin's behavioral profiling and forecasting modules. The framework's balance between linear and ensemble models offers a blueprint for Odin's evaluation strategy, prioritizing transparency and operational feasibility."
   directly_justifies:
-    - "Reliable prediction of compliance is achievable using only pre-event administrative data."
-    - "MCC is a more appropriate primary metric than accuracy or F1 for imbalanced classification tasks."
-    - "Feature importance and SHAP analyses can identify the most influential predictors of financial behavior."
-    - "Tree-based models provide a favorable balance between predictive performance and interpretability."
-    - "Hyperparameter optimization and resampling are critical for achieving robust performance under imbalance."
+    - "Pre-declaration administrative variables contain sufficient signal for reliable binary classification of compliance."
+    - "MCC is the preferred evaluation metric for imbalanced classification, as it accounts for all confusion matrix cells."
+    - "Ensemble methods (Random Forest, LightGBM) offer modest gains over linear models but with reduced intrinsic interpretability."
+    - "Interpretability can be preserved through permutation importance, decision paths, and SHAP for constrained feature spaces."
+    - "Hyperparameter optimization with cross-validated grid search yields consistent improvements across classifiers."
   limits:
-    - "Study is limited to first-declaration outcomes within a single Chilean university's FSCU system."
-    - "Generalizability to other institutions or loan systems is not formally established."
-    - "Longitudinal analysis and prediction of recurring non-compliance are not addressed."
-    - "The lack of institutionally defined cost-sensitive policies precludes the establishment of optimal decision thresholds."
-  mapping_rationale: "A systematic scan across all 12 functional domains and their associated canonical topic codes was performed. The paper's core contribution lies in predicting a binary financial compliance outcome, which directly maps to 'Behavioral Profiling & Classification' (domains 5.A, 5.B, 5.C) with 'high' relevance. The methodological emphasis on rigorous evaluation under imbalance maps to 'System Evaluation' (domains 12.A, 12.B) with 'medium' relevance. The discussion of using constrained administrative data touches upon 'Data Privacy & User Trust' (domain 10.A) with 'medium' relevance. The contextual review of related work maps to 'Existing Systems & Gaps' (domain 4.A) with 'contextual' relevance. Domains related to spending patterns (2.A, 2.B), expense categorization (3.A), budget recommendation (7.A), anomaly detection (8.A), mobile design (9.A), user retention (11.A), and savings/debt management (13.A) were considered but deemed not directly relevant, as the paper does not address these topics. The classification task provides a strong foundation for behavioral profiling in Odin."
+    - "Single-institution data (PUCV) limits generalizability to other universities or regulatory contexts."
+    - "Cross-sectional analysis ignores temporal drift and long-term compliance patterns."
+    - "Interpretability methods provide approximations, not fully transparent decision logic for ensemble models."
+    - "No institution-specific decision thresholds or cost-sensitive policies are defined for risk score translation."
+  mapping_rationale: "A systematic scan across all 12 functional domains was conducted. The domains of Filipino Cultural Context, Expense Categorization, Behavioral Profiling, Spending Forecasting, Anomaly Detection, Mobile-First Design, Data Privacy, User Retention, and Savings/Debt Management were considered. The paper was flagged as highly relevant for Existing Systems & Gaps (4.A, 4.B) and System Evaluation (12.A, 12.B) due to its rigorous benchmarking and error analysis. It was also relevant for Behavioral Profiling (5.A) and Predictive Modeling (6.A) through its profile-based classification. For Anomaly Detection (8.A), it was assessed as medium because predicting non-compliance aligns with anomaly-like identification. Topics like Mobile-First Design (9.A) and User Retention (11.A) were rejected as the paper does not address user interfaces or engagement. Topics like Expense Categorization (3.A) and Savings (13.A) were rejected as they are not the paper's focus. Overall, the paper provides a strong methodological basis for Odin's evaluation and predictive modules, with moderate relevance to debt management and anomaly detection."
 limitations:
-  - "The dataset is limited to a single institution and may not generalize to other populations. [unacknowledged]"
-  - "The analysis is cross-sectional and does not model temporal drift or longitudinal compliance patterns."
-  - "Socioeconomic variables like employment type or household composition are excluded from the data."
-  - "Interpretability of ensemble models is mediated by post-hoc tools, not intrinsic to the model structure. [unacknowledged]"
-  - "Model predictions are not linked to specific institutional policies or decision thresholds for action."
+  - "Available administrative data excludes socioeconomic variables like employment type or household composition. [unacknowledged]"
+  - "Analysis focuses on first-declaration outcomes; subsequent declarations and long-term repayment behavior are not modeled. [unacknowledged]"
+  - "Generalizability is limited by single-institution data; performance may vary across universities. [acknowledged]"
+  - "Cross-sectional design ignores temporal drift from regulatory or labor-market changes. [acknowledged]"
+  - "No formal cost-sensitive learning is applied due to undefined institutional misclassification costs. [acknowledged]"
 remember_this:
-  - "MCC values around 0.42 were achieved using only pre-declaration administrative features."
-  - "Debt amount, enrollment count, and marital status are the most influential predictors."
-  - "Interpretable models can achieve reliable performance under class imbalance and data constraints."
-  - "Simple threshold rules performed poorly compared to optimized machine learning models."
-  - "A structured pipeline with cross-validation and hyperparameter tuning is essential for reproducibility."
+  - "Pre-declaration administrative data can predict loan compliance with balanced error using MCC."
+  - "LightGBM achieved the highest MCC (0.419) among seven classifiers evaluated."
+  - "Debt amount, enrollment count, and marital status are the top consistent predictors."
+  - "Interpretability via SHAP and decision paths enables audit-oriented decision support."
+  - "Ensemble models improve recall but reduce intrinsic transparency compared to linear models."
 ```
 ---
 
-## Paper 29: Luong & Xie_summarized.md
+## Paper 24: Luong & Xie_summarized.md
 
 **Source File:** `Luong & Xie_summarized.md`
 
@@ -4040,218 +3238,167 @@ remember_this:
 ```
 ---
 
-## Paper 30: Cabral et al_summarized.md
+## Paper 25: Cabral et al_summarized.md
 
 **Source File:** `Cabral et al_summarized.md`
 
 ```yaml
-paper_id: 326ca948-31b5-5a2b-adf8-513e8912fcc7
-designation: international
-title: "Non-Stationarity in Financial Time Series: A Unifying Survey on Drift Detection, Adaptive Learning, and Evaluation"
-authors: "Cabral, D. M.; Lima, A. M. A.; Oliveira, G. H. F. M.; Oliveira, A. L. I."
+paper_id: 10.2139/ssrn.6170273
+designation: international-algorithm-specific
+title: Non-Stationarity in Financial Time Series: A Unifying Survey on Drift Detection, Adaptive Learning, and Evaluation
+authors: Cabral, D. M.; Lima, A. M. A.; Oliveira, G. H. F. M.; Oliveira, A. L. I.
 year: 2026
-venue: "Unknown"
+venue: SSRN # This paper is a pre-print article
 odin_topics:
-  - "2.B"
-  - "2.D"
+  - "3.A"
+  - "3.B"
   - "4.A"
-  - "4.B"
   - "5.A"
   - "5.C"
   - "6.A"
   - "6.B"
   - "7.A"
   - "7.B"
-  - "7.D"
   - "8.A"
   - "8.B"
   - "8.C"
-  - "9.A"
-  - "10.A"
-  - "11.A"
   - "12.A"
   - "12.B"
   - "12.C"
-tldr: "A unified survey on non-stationarity in financial time series provides a taxonomy, a processing pipeline, and an evaluation playbook to address fragmentation across econometrics, statistics, and machine learning."
-problem_and_motivation: "Predictive models in finance fail in deployment due to structural changes in data-generating processes, degrading calibration and increasing tail risk. Results across disciplines are hard to reconcile because of divergent terminology and incompatible evaluation protocols. A unified framework is needed to support research and deployment under non-stationarity."
+tldr: This survey unifies terminology and provides a structured pipeline for detecting, representing, adapting to, and evaluating non-stationarity in financial time series.
+problem_and_motivation: Predictive models in finance typically assume distributional stability, an assumption that fails in deployment due to structural breaks, regime transitions, and drift, degrading calibration and performance. The literature is fragmented across econometrics, statistics, and machine learning with divergent terminology and incompatible evaluation protocols, hindering cumulative evidence and practical adoption of drift-aware methods.
 approach:
-  - "A unified taxonomy of drift and regime change is proposed along temporal, statistical, spatial, and ontological axes."
-  - "An end-to-end pipeline connects representation, detection, adaptation, and evaluation choices for financial time series."
-  - "A review of drift-aware representations covers internal signals, exogenous context, latent structure, and robustness-oriented features."
-  - "Change detection methods are surveyed including segmentation, sequential monitoring, Bayesian, embedding-based, and multivariate dependence approaches."
-  - "Adaptation strategies are examined including parametric, ensemble, hybrid continuous, and modern continual learning and test-time adaptation methods."
-  - "Evaluation guidance is consolidated covering detection delay, false-alarm control, computational cost, and finance-specific utility."
-  - "Emerging directions are highlighted including foundation models, multimodal context, and parameter-efficient adaptation."
+  - Introduces a unified taxonomy of drift and regime change along temporal, statistical, spatial, and ontological axes.
+  - Structures the literature around a five-pillar pipeline: non-stationarity characterization, drift-aware representations, change detection, continuous adaptation, and evaluation.
+  - Reviews drift-aware representation methods including manual statistics, learned embeddings (TS2Vec), and latent-state models.
+  - Covers change detection approaches ranging from retrospective segmentation (PELT) to online sequential methods (CUSUM) and Bayesian methods (BOCPD).
+  - Summarizes evaluation metrics, experimental protocols, and benchmarking practices for financial time series under non-stationarity.
 findings:
-  - "num: 174 references are cited in the survey."
-  - "num: The literature on non-stationarity is fragmented across 5 distinct research traditions with limited cross-fertilization."
-  - "The four-axis taxonomy (temporal, statistical, spatial, ontological) provides a framework to describe real drift scenarios consistently."
-  - "Learned embeddings from methods like TS2Vec and drift-oriented contrastive learning are more effective for capturing complex drift patterns than hand-crafted features."
-  - "Incorporating exogenous context through multimodal embeddings can anticipate market shifts before they are fully reflected in prices."
-  - "Graph neural networks effectively capture spatial drifts such as correlation collapse during crisis periods."
-  - "Bayesian online changepoint detection (BOCPD) provides real-time change probabilities with explicit uncertainty quantification."
-  - "Dynamic ensembles and hybrid continuous-adaptation flows balance stability and responsiveness under different drift types."
-  - "Sequential protocols like prequential evaluation are essential to respect temporal order and avoid information leakage."
-  - "Benchmarking in finance lacks standardization, with studies relying on ad hoc asset selections and heterogeneous protocols."
+  - num: The literature review synthesized 174 references, highlighting the fragmentation across fields.
+  - The proposed four-axis taxonomy (temporal, statistical, spatial, ontological) effectively aligns divergent terminology from machine learning, econometrics, and finance.
+  - Learned embeddings, such as those from TS2Vec, can be applied directly to change-point detection methods, enhancing sensitivity to complex drift patterns.
+  - Multimodal fusion, integrating numerical data with text, provides early signals of regime changes before they are fully reflected in prices.
+  - Hybrid adaptation architectures, combining incremental updates with event-driven interventions, balance responsiveness and stability under non-stationarity.
+  - Current evaluation practices lack standardization, weak replicability, and insufficiently consider operational constraints like latency and computational cost.
 key_figures_tables:
-  - "Figure 1: Extended taxonomy of non-stationarity along five axes. → Provides a unified framework for describing drift phenomena in finance."
-  - "Figure 2: Temporal morphology of drifts. → Illustrates abrupt, gradual, incremental, and recurrent drift patterns."
-  - "Figure 10: Representation layers for drift-aware financial modeling. → Shows how raw data is transformed through internal, exogenous, latent, and robustness layers."
-  - "Table 1: Terminological equivalences across traditions. → Maps 'concept drift' terminology across machine learning, econometrics, statistics, and finance."
-  - "Table 6: Change axes and indicative methods. → Links drift types to appropriate detection strategies."
-  - "Table 7: Computational complexity of change-detection methods. → Provides practical guidance on method scalability."
-  - "Table 8: Comparison of adaptation methods. → Compares speed, memory, complexity, and use cases for adaptation strategies."
-  - "Table 9: Cost-benefit trade-offs for adaptation strategies. → Quantifies performance gains and resource requirements for different adaptation approaches."
+  - "Figure 1: Extended taxonomy of non-stationarity along temporal, statistical, spatial, ontological, and causal axes → Provides a unified framework for describing drift scenarios."
+  - "Figure 2: Temporal morphology of drifts (abrupt, gradual, incremental, recurrent) → Illustrates how changes unfold over time."
+  - "Figure 10: Representation layers for drift-aware financial modeling → Shows a pipeline from raw data to detection and adaptation."
+  - "Table 6: Change axes and indicative methods (compact view) → Maps drift types to suitable detection strategies."
+  - "Table 9: Cost-benefit trade-offs for adaptation strategies → Guides method selection based on latency, compute, and performance gains."
 key_equations:
-  - equation: "P(X,Y) = P(Y|X)P(X)"
-    explanation: "Decomposition of joint distribution for defining shift types."
-  - equation: "C(a,b) ≈ -log p(X_{a:b} | θ̂_{a:b})"
-    explanation: "Intra-segment cost for segmentation based on negative log-likelihood."
-  - equation: "z_t = f_θ(w_t)"
-    explanation: "Parametric mapping from time window to latent embedding."
-  - equation: "p(r_t | x_{1:t})"
-    explanation: "Posterior distribution of run-length in Bayesian online changepoint detection."
-  - equation: "S_t^+ = max(0, S_{t-1}^+ + z_t - k)"
-    explanation: "CUSUM update rule for detecting mean shifts."
+  - equation: "$p(r_t = 0 | x_{1:t}) \\propto \\sum_{r} \\pi_t(r) \\cdot p(r_{t-1} = r | x_{1:t-1}) \\cdot H(r)$"
+    explanation: "BOCPD update for changepoint probability, resetting run-length to zero."
+  - equation: "$S^+_t = \\max(0, S^+_{t-1} + z_t - k)$"
+    explanation: "CUSUM cumulative sum for detecting upward mean shifts."
+  - equation: "$C(a,b) \\approx -\\log p(X_{a:b} | \\hat{\\theta}_{a:b})$"
+    explanation: "Intra-segment cost function for segmentation, based on negative log-likelihood."
 definitions:
-  - term: "Non-stationarity"
-    definition: "Variation over time in the statistical or structural properties of a data-generating process."
-  - term: "Concept drift"
-    definition: "Change in the conditional distribution P(Y|X), i.e., the relationship between inputs and targets. Also used broadly for any change in P(X,Y)."
+  - term: "Concept Drift"
+    definition: "Change in the conditional distribution P(Y|X) over time, representing a change in the relationship between inputs and targets."
   - term: "Regime"
-    definition: "A persistent mode of operation of the data-generating system with relatively stable statistical properties."
-  - term: "Structural break"
-    definition: "A sudden, persistent change in the parameters of a data-generating process, often used in econometrics."
-  - term: "Covariate shift"
-    definition: "Change in the marginal distribution of inputs P(X) while the predictive relationship P(Y|X) remains stable."
-  - term: "Run-length"
-    definition: "The time elapsed since the most recent changepoint in a time series."
-  - term: "Prequential"
-    definition: "A sequential evaluation protocol where models are trained on past data and tested on new data as it arrives."
+    definition: "A persistent mode of operation of the data-generating process, characterized by relatively stable statistical properties."
+  - term: "CUSUM"
+    definition: "Cumulative Sum control chart, a sequential method for detecting shifts in the mean or other parameters of a process."
+  - term: "BOCPD"
+    definition: "Bayesian Online Changepoint Detection, a method that infers the posterior distribution of the run-length to detect changes in real time."
+  - term: "PELT"
+    definition: "Pruned Exact Linear Time, an algorithm for offline segmentation that efficiently detects multiple changepoints."
+  - term: "ARL"
+    definition: "Average Run Length, the expected time until a false alarm occurs, used to calibrate sequential detectors."
 critical_citations:
-  - "[Žliobaite, 2013] — Critique of concept drift benchmark limitations."
-  - "[Hamilton, 1989] — Seminal work on regime-switching models in econometrics."
-  - "[Bai & Perron, 2003] — Foundational work on multiple structural break segmentation."
-  - "[Killick et al., 2012] — PELT algorithm for efficient changepoint detection."
-  - "[Adams & MacKay, 2007] — Bayesian online changepoint detection framework."
-  - "[Kolmogorov-Smirnov, 1933] — Basis for non-parametric distribution comparison tests."
-  - "[Arlot et al., 2019] — Survey on change point detection methods."
+  - "[Adams & MacKay, 2007] — Introduced Bayesian Online Changepoint Detection (BOCPD)."
+  - "[Killick et al., 2012] — Developed the PELT algorithm for efficient offline change-point detection."
+  - "[Gama et al., 2014] — A foundational survey on concept drift detection in data streams."
+  - "[Yue et al., 2022] — Proposed TS2Vec for robust time-series representation learning."
 relevance:
   topics:
-    - code: "2.B"
-      name: "Seasonal and Cyclical Spending Patterns"
+    - code: "3.A"
+      name: "Expense Categorization Frameworks"
       relevance: "medium"
-      justification: "Taxonomy includes recurrent/seasonal drift tied to deterministic patterns like calendar cycles."
-    - code: "2.D"
-      name: "Filipino Spending Cycles and 'Occasions'"
+      justification: "The survey discusses representation learning and feature engineering for financial data, relevant to categorizing spending patterns."
+    - code: "3.B"
+      name: "Expense Category Design Considerations"
       relevance: "medium"
-      justification: "Taxonomy frames recurrent drift and seasonal spending as regime phenomena."
+      justification: "The paper's discussion on drift-aware representations and how categories evolve is relevant to designing adaptable expense categories."
     - code: "4.A"
       name: "Landscape of Existing Personal Finance Systems"
       relevance: "low"
-      justification: "Contextual framing of system needs under non-stationarity; mentions real-time system challenges."
-    - code: "4.B"
-      name: "Limitations and Gaps in Existing Systems"
-      relevance: "medium"
-      justification: "Explicitly discusses limitations of stationarity-based assumptions in financial systems."
+      justification: "The survey provides a broad perspective on current state of drift-aware systems but does not focus specifically on PFMS."
     - code: "5.A"
       name: "Financial Behavioral Profiles in Personal Finance"
-      relevance: "contextual"
-      justification: "General behavioral profiling mentioned via regime-switching models of user states."
+      relevance: "high"
+      justification: "The paper's taxonomy and detection methods for regime changes directly apply to identifying shifts in user spending behavior and financial profiles."
     - code: "5.C"
       name: "Classification Approaches for Financial Behavioral Profiles"
-      relevance: "low"
-      justification: "Classification context appears in supervised concept drift detection, not primary focus."
+      relevance: "high"
+      justification: "The survey reviews classification approaches under concept drift, which is crucial for maintaining accurate user profile classification over time."
     - code: "6.A"
       name: "Predictive Modeling in Personal Finance Systems"
       relevance: "high"
-      justification: "Reviews forecasting models under non-stationarity including time-varying parameters and adaptive models."
+      justification: "The paper addresses how non-stationarity degrades predictive model performance, a core challenge for forecasting user spending."
     - code: "6.B"
       name: "Forecasting Algorithms for Sequential Spending Data"
       relevance: "high"
-      justification: "Evaluates forecasting algorithms under sequential data drift."
+      justification: "Review of adaptive learning and forecasting algorithms under drift is directly applicable to sequential spending data forecasting."
     - code: "7.A"
       name: "Budgeting Strategies as Domain Knowledge"
-      relevance: "medium"
-      justification: "Discusses adaptive strategies that can inform budgeting under regime changes."
+      relevance: "contextual"
+      justification: "The paper discusses domain knowledge in the context of macroeconomic drivers but not specific budgeting strategies."
     - code: "7.B"
       name: "Budget Recommendation in Personal Finance Systems"
-      relevance: "high"
-      justification: "Directly addresses budget recommendation via adaptive model updates under shifting user spending patterns."
-    - code: "7.D"
-      name: "Infeasibility Handling and Reduction Hierarchies"
-      relevance: "low"
-      justification: "Not explicitly addressed but related through constraint management in adaptation."
+      relevance: "medium"
+      justification: "The work on adaptive models under changing financial conditions is relevant for making budget recommendations that adapt to user behavior shifts."
     - code: "8.A"
       name: "Anomaly Detection in Personal Finance Systems"
       relevance: "high"
-      justification: "Discusses anomaly detection as a proxy for regime detection."
+      justification: "The survey covers anomaly and out-of-distribution detection, which are foundational to identifying unusual spending or fraud."
     - code: "8.B"
       name: "Anomaly Detection Algorithms for Personal Spending Data"
       relevance: "high"
-      justification: "Reviews OOD and anomaly detection methods that apply to spending data."
+      justification: "Detailed review of anomaly and drift detection algorithms (e.g., CUSUM, BOCPD, OOD methods) applicable to personal spending data."
     - code: "8.C"
       name: "Cold-Start Baseline Strategies for Anomaly Detection"
-      relevance: "low"
-      justification: "Mentions baseline comparisons but cold-start not explicitly covered."
-    - code: "9.A"
-      name: "Mobile-First Design Principles and Rationale"
       relevance: "contextual"
-      justification: "Mentions real-time constraints and computational budgets relevant to mobile-first systems."
-    - code: "10.A"
-      name: "Data Privacy and Security in Personal Finance Systems"
-      relevance: "contextual"
-      justification: "Identifies privacy as a challenge for federated learning in drift settings."
-    - code: "11.A"
-      name: "Engagement Dynamics in Personal Finance Applications"
-      relevance: "medium"
-      justification: "Adaptation mechanisms for engagement under evolving user behavior are discussed."
+      justification: "The survey mentions cold-start in the context of foundation models and universal embeddings, providing some contextual relevance."
     - code: "12.A"
       name: "Evaluation Frameworks for Personal Finance Systems"
       relevance: "high"
-      justification: "Dedicated section on evaluation protocols and metrics for adaptive systems."
+      justification: "A significant portion of the paper is dedicated to evaluation protocols, metrics (e.g., detection delay, false-alarm rate), and benchmarking under non-stationarity."
     - code: "12.B"
       name: "Evaluation of Algorithmic Modules"
       relevance: "high"
-      justification: "Specific metrics for detection delay, false alarms, and computational cost."
+      justification: "The paper provides specific guidance on evaluating change detectors and adaptive learning modules, including computational cost and predictive performance."
     - code: "12.C"
       name: "Evaluation Methodologies for Budget Recommendation Systems"
-      relevance: "high"
-      justification: "Provides framework for evaluating adaptive recommendation under shifting data distributions."
-  contribution: "The survey provides a unified taxonomy and pipeline that directly informs Odin's design for forecasting user spending behavior. The detection and adaptation methods reviewed support Odin's anomaly detection and budget recommendation modules by offering robust approaches to handle shifting user financial patterns. The evaluation protocols specified enable systematic assessment of Odin's predictive models and behavioral profiling against non-stationary spending data. The framework also directly justifies Odin's data privacy considerations through its analysis of financial system constraints. Finally, the survey's emphasis on mobile-first computational budgets aligns with Odin's design for Filipino young professionals."
+      relevance: "medium"
+      justification: "The evaluation principles (temporal validation, cost-aware metrics) can be adapted for evaluating budget recommendation systems."
+  contribution: "This paper provides a unified taxonomy and a structured end-to-end pipeline that is directly applicable to designing and evaluating Odin's core modules. It offers concrete guidance for selecting and implementing drift detection algorithms for anomaly detection and user profile classification. The survey's emphasis on evaluation protocols and metrics informs how Odin's forecasting and recommendation modules should be tested for robustness. Furthermore, the discussion on multimodal context and adaptive learning suggests methods for Odin to incorporate user-declared preferences and seasonal patterns. The framework supports a systematic approach to handling the non-stationary nature of financial behavior, which is central to Odin's functionality."
   directly_justifies:
-    - "Forecasting algorithms must account for concept drift to maintain accuracy under changing user spending patterns."
-    - "Anomaly detection systems require baseline strategies that adapt to evolving data distributions."
-    - "Budget recommendations should utilize adaptive models that respond to shifts in user financial behavior."
-    - "Evaluation of PFMS should include detection delay, false-alarm control, and computational cost metrics."
-    - "Adaptation mechanisms must balance responsiveness with stability to avoid erratic budget recommendations."
-    - "Sequential evaluation protocols are necessary to respect temporal order and avoid information leakage in model assessment."
-    - "Learned embeddings can effectively capture complex spending patterns and facilitate drift detection."
-    - "Multimodal representations (spending data + contextual information) provide early signals of behavioral changes."
-    - "Regime-switching models offer a probabilistic framework for classifying user financial behavior over time."
-    - "Ensemble methods can handle heterogeneous user behaviors and recurring spending patterns."
+    - "Non-stationarity in financial data requires continuous monitoring and adaptation of predictive models."
+    - "Evaluation under drift must account for detection delay, false-alarm control, and computational cost."
+    - "Hybrid adaptation architectures balance stability and responsiveness to changing conditions."
+    - "Learned representations can capture complex drift patterns better than hand-crafted features."
+    - "Multimodal fusion can provide early signals of regime changes."
   limits:
-    - "Benchmarking in finance lacks standardization, making cross-study comparisons difficult."
-    - "The survey is primarily conceptual and does not provide empirical validation of proposed methods on PFMS data."
-    - "Assumptions of independence within regimes may not hold for correlated spending events."
-    - "Operational costs of adaptation are acknowledged but not systematically quantified for PFMS contexts."
-  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was conducted for this survey paper on non-stationarity in financial time series. The domains of Spending Forecasting (6), Budget Recommendation (7), Anomaly Detection (8), and System Evaluation (12) were flagged as highly relevant because the paper directly addresses predictive modeling under drift, adaptive budget allocation, anomaly detection algorithms, and evaluation protocols for such systems. The Behavioral Profiling domain (5) was assessed as medium relevance, as the paper reviews classification approaches under concept drift and regime-switching models that can be applied to user profiling. Cultural Context domains (2.A, 2.B, 2.D) were flagged as medium/contextual relevance because the paper discusses seasonal and recurrent spending patterns through its temporal axis taxonomy, though not specifically applied to Filipino contexts. Existing Systems (4) was assessed as medium due to explicit discussion of limitations in current financial systems under non-stationarity. Mobile-First Design (9) and Data Privacy (10) were considered contextual, as the paper mentions real-time constraints and privacy challenges but does not focus on these domains. Domains related to Expense Categorization (3), Savings & Debt Management (13), and Retention & Engagement (11.B) were rejected as not directly addressed by the paper's core content. The paper provides a foundational framework for Odin's algorithmic modules, offering practical guidance for implementing adaptive models, detection systems, and evaluation protocols under real-world data shifts, with particular emphasis on the taxonomy of drift types and their corresponding detection strategies."
+    - "The survey is a literature review and does not present new empirical results on Odin-specific data."
+    - "The proposed pipeline is general and may require customization for the specific constraints of a mobile-first PFMS."
+    - "The effectiveness of many discussed methods may depend on data availability and computational resources."
+  mapping_rationale: "A systematic scan across all 12 functional domains was performed to map the survey's content to Odin's topic codes. The paper's core focus on non-stationarity in financial time series is highly relevant to several domains. The 'Behavioral Profiling & Classification' domain (5.A, 5.C) is directly addressed by the survey's discussion on detecting shifts in user behavior and profiles. 'Spending Forecasting' (6.A, 6.B) is a primary application area for the adaptive learning and forecasting algorithms reviewed. 'Anomaly Detection' (8.A, 8.B) is a key application of the change detection methods discussed, with the survey's coverage of OOD and novelty detection being directly relevant. The 'System Evaluation' domain (12.A, 12.B, 12.C) is strongly supported by the survey's extensive sections on evaluation protocols and metrics. Topics like 'Expense Categorization' (3.A, 3.B) are tangentially related through representation learning, while 'Existing Systems' (4.A) is only briefly touched upon. 'Budget Recommendation' (7.A, 7.B) is contextually relevant as the principles of adaptive models can apply to budget suggestions, but the paper doesn't cover budget recommendation specifically. The domains of 'Mobile-First Design' and 'Data Privacy' have no direct mapping. 'Savings & Debt Management' is not addressed. Overall, the paper provides a comprehensive methodological foundation for building and evaluating a robust, adaptive PFMS like Odin, particularly for its predictive and anomaly detection modules."
 limitations:
-  - "The survey relies on a broad literature review rather than empirical experiments, limiting direct validation of proposed pipelines. [unacknowledged]"
-  - "Computational costs of advanced methods (e.g., GNNs, foundation models) are discussed qualitatively but not benchmarked for PFMS scale. [unacknowledged]"
-  - "The four-axis taxonomy, while comprehensive, may be difficult to operationalize for specific PFMS contexts without domain-specific adaptations. [unacknowledged]"
-  - "Evaluation protocols emphasize temporal order but do not fully address the cold-start problem in PFMS with limited user history. [unacknowledged]"
-  - "The survey does not consider Filipino-specific cultural factors or expense categorization frameworks. [unacknowledged]"
+  - "The paper does not provide new empirical results, relying on existing literature."
+  - "The proposed framework is a survey and may not cover all niche algorithmic details required for a specific implementation. [unacknowledged]"
+  - "The survey focuses on financial time series at a macro or market level, and its direct applicability to individual-level spending data may require further validation. [unacknowledged]"
 remember_this:
-  - "Non-stationarity in financial data requires unified frameworks across taxonomy, detection, and adaptation."
-  - "Four axes (temporal, statistical, spatial, ontological) classify drift types for method selection."
-  - "Evaluation must include detection delay, false-alarm control, and computational cost metrics."
-  - "Foundation models and parameter-efficient adaptation offer scalable responses to regime changes."
-  - "Sequential protocols and realistic computational budgets are essential for reproducible benchmarking."
+  - "Non-stationarity is the norm in financial data, not the exception."
+  - "Detection, representation, and adaptation form an integrated pipeline for handling drift."
+  - "Evaluation under drift must use temporal protocols and cost-aware metrics."
+  - "Hybrid adaptation balances continuous updates with event-driven interventions."
+  - "The choice of method depends on the specific type and scale of drift expected."
 ```
 ---
 
-## Paper 31: Heirene R. et al-2026b_summarized.md
+## Paper 26: Heirene R. et al-2026b_summarized.md
 
 **Source File:** `Heirene R. et al-2026b_summarized.md`
 
@@ -4381,288 +3528,301 @@ remember_this:
 ```
 ---
 
-## Paper 32: Li C. et al_summarized.md
+## Paper 27: Li C. et al_summarized.md
 
 **Source File:** `Li C. et al_summarized.md`
 
 ```yaml
 paper_id: 10.1109/ACCESS.2026.3697984
 designation: international-algorithm-specific
-title: "BIRCH-AE: A Hierarchical Ensemble Framework for Scalable E-Commerce User Segmentation With Autoencoder-Enhanced Feature Learning"
-authors: "Li, C.; Ishak, I.; Ibrahim, H.; Zolkeply, M.; Sidi, F.; Li, C."
+title: BIRCH-AE: A Hierarchical Ensemble Framework for Scalable E-Commerce User Segmentation With Autoencoder-Enhanced Feature Learning
+authors: Li, C.; Ishak, I.; Ibrahim, H.; Zolkeply, M.; Sidi, F.; Li, C.
 year: 2026
 venue: IEEE Access
 odin_topics:
-  - 4.A
-  - 4.B
-  - 5.A
-  - 5.C
+  - 6.A
+  - 6.B
   - 7.A
-  - 7.B
-  - 12.A
+  - 8.A
   - 12.B
-  - 12.C
-tldr: "BIRCH-AE integrates BIRCH clustering with autoencoder feature learning and ensemble consensus to enable scalable, high-quality e-commerce user segmentation."
-problem_and_motivation: "Traditional clustering algorithms fail to scale to millions of users and suffer from the curse of dimensionality when processing high-dimensional behavioral data. Moreover, they cannot adapt incrementally to new users, making them unsuitable for dynamic e-commerce environments. There is a gap in systematic approaches that combine scalable hierarchical methods with advanced feature learning for e-commerce segmentation."
+tldr: Integrates BIRCH hierarchical clustering with autoencoder feature learning and ensemble consensus for scalable e-commerce user segmentation, improving silhouette scores by up to 23% over single BIRCH models.
+problem_and_motivation: Traditional clustering algorithms face scalability, high-dimensionality, and incremental adaptability challenges for modern e-commerce platforms. Existing methods lack integrated solutions that combine scalable hierarchical clustering, deep feature learning, and robust consensus mechanisms.
 approach:
-  - "Uses a deep autoencoder to compress 30-50 behavioral features into a 14-dimensional latent space."
-  - "Employs the Balanced Iterative Reducing and Clustering using Hierarchies (BIRCH) algorithm for memory-efficient, single-pass clustering."
-  - "Generates ensemble diversity by varying BIRCH parameters and global clustering methods, including agglomerative and K-Means on CFs."
-  - "Implements four ensemble consensus strategies: Majority Voting, Weighted Voting, AASC, and a novel BOHC method."
-  - "Features a dynamic selection mechanism that automatically chooses the best ensemble strategy based on a multi-criteria score."
-  - "Evaluated on Retail Rocket (1.4M users) and E-Commerce Behavior (4.5M users) datasets using repeated 30% stratified subset trials."
-  - "Benchmarks against K-Means, PCA+K-Means, Agglomerative, and standard BIRCH across 5 to 25 clusters."
+  - Uses a deep autoencoder to compress 30-50 behavioral features into a 14-dimensional latent space, preserving 90-95% variance and mitigating curse of dimensionality.
+  - Employs BIRCH as the core scalable clustering engine with multiple parameter configurations (thresholds T ∈ {0.3,0.5,0.8}) and global clustering variations.
+  - Introduces four ensemble consensus strategies: Majority Voting, Weighted Voting, Advanced Affinity-based Spectral Clustering (AASC), and novel BIRCH-Optimized Hierarchical Consensus (BOHC).
+  - Implements dynamic ensemble selection using a composite score of Silhouette, Calinski-Harabasz, and Davies-Bouldin indices to automatically choose optimal strategy.
+  - Validates framework on two large-scale datasets (Retail Rocket: 1.4M users; E-Commerce Behavior: 4.5M users) across 20 randomized subset trials.
 findings:
-  - "num: BOHC achieves up to 23% silhouette score improvement over a single BIRCH model on transaction-focused data."
-  - "num: Autoencoder feature learning improves clustering quality by 23-53% over raw features."
-  - "num: A full-scale BOHC run on 4.5M users completed in approximately 5 minutes."
-  - "Domain granularity is a critical determinant: ensemble methods excel on single-domain datasets, while base algorithms are superior on multi-domain data."
-  - "BIRCH maintains superior performance at higher cluster counts where K-Means degrades dramatically, e.g., 0.603 vs. 0.332 at 15 clusters."
+  - num: Autoencoder-based feature learning improves BIRCH silhouette scores by 23-53% over raw features and 28-76% over PCA.
+  - num: BOHC achieves up to 23% silhouette improvement over single BIRCH models for transaction-focused single-domain datasets.
+  - num: BIRCH maintains superior performance at higher cluster counts (silhouette 0.603 at 15 clusters vs K-Means 0.332), representing an 81% improvement.
+  - Domain granularity fundamentally determines method selection: single-domain scenarios favor ensemble methods (17-23% improvement), while multi-domain scenarios favor base algorithms (7.4% advantage).
+  - num: Full-scale BOHC run on 4.5M users completes in approximately 5 minutes (307.8 seconds), demonstrating production feasibility.
+  - num: Incremental updates achieve 37x speedup over full re-clustering (8.3s vs 307.8s) for daily batches with minimal quality degradation (<0.3%).
 key_figures_tables:
-  - "Figure 2: Performance comparison on Retail Rocket → Ensemble methods, especially BOHC/AASC, achieve the highest quality."
-  - "Figure 4: Autoencoder training and impact → AE features significantly outperform PCA and raw features."
-  - "Figure 5: Single-domain category comparison → Ensemble methods consistently outperform base algorithms in electronics and appliances."
-  - "Table 2: Base vs. ensemble performance on Retail Rocket → BOHC and AASC are the top performers."
-  - "Table 4: Performance on multi-category E-Commerce Behavior → Base algorithms excel over ensembles."
-  - "Table 6: Cross-dataset summary → Single-domain favors ensembles, multi-domain favors base algorithms."
+  - Figure 1: Framework architecture overview showing data preprocessing, autoencoder compression, BIRCH ensemble clustering, and dynamic selection → Modular pipeline combining deep feature learning, hierarchical clustering, and adaptive ensemble consensus.
+  - Table 2: Performance comparison across cluster counts for Retail Rocket → AASC/BOHC ensembles achieve 0.548 silhouette score at 5 clusters, 23% improvement over single BIRCH.
+  - Table 4: Performance metrics for E-Commerce Behavior multi-category dataset → Base algorithms outperform ensembles (K-Means 0.683 vs BOHC 0.633 at 5 clusters).
+  - Table 5: Single-domain category results for Electronics and Appliances → Both categories show ensemble superiority (17-23% improvement) with different granularity-dependent patterns.
+  - Figure 5: Comprehensive single-domain visualization → Electronics shows consistent ensemble advantage (17-23%), Appliances transitions from base superiority at 5 clusters to 23% ensemble advantage at 20 clusters.
 key_equations:
-  - equation: "CF = (N, LS, SS)"
-    explanation: "Clustering Feature summary of a cluster for BIRCH."
-  - equation: "D0 = ||LS1/N1 - LS2/N2||"
-    explanation: "Centroid Euclidean distance metric for CFs."
-  - equation: "z = f_theta_e(x) = sigma(W_e x + b_e)"
-    explanation: "Encoder maps input to a latent representation."
-  - equation: "L_total = L_reconstruction + lambda_1 * L_sparsity + lambda_2 * ||theta||^2"
-    explanation: "Autoencoder training objective with regularization."
-  - equation: "A_ij^BOHC = (1/M) * sum_{m=1}^{M} exp(-alpha * h_m(i, j))"
-    explanation: "BOHC affinity based on hierarchical merge heights."
-  - equation: "Score(E) = 0.5*S_norm(E) + 0.3*CH_norm(E) - 0.2*DB_norm(E)"
-    explanation: "Composite score for dynamic ensemble selection."
+  - equation: CF = (N, \\vec{S}, SS)
+    explanation: Clustering Feature as compact statistical summary (count, linear sum, squared sum)
+  - equation: S = \\frac{1}{n}\\sum_{i=1}^{n}\\frac{b(i)-a(i)}{\\max\\{a(i),b(i)\\}}
+    explanation: Silhouette score measures cluster cohesion and separation
+  - equation: A^{BOHC}_{ij} = \\frac{1}{M}\\sum_{m=1}^{M} \\exp(-\\alpha \\cdot h_m(i,j))
+    explanation: BOHC hierarchical affinity using common ancestor heights in CF Trees
 definitions:
-  - term: BIRCH
-    definition: "Balanced Iterative Reducing and Clustering using Hierarchies; a scalable, incremental clustering algorithm."
   - term: CF Tree
-    definition: "Clustering Feature Tree; a height-balanced tree that stores compact summaries of data points."
-  - term: Autoencoder
-    definition: "A neural network for unsupervised feature learning that compresses data into a lower-dimensional latent space."
+    definition: Height-balanced tree structure with Clustering Feature summaries for scalable hierarchical clustering
+  - term: BIRCH
+    definition: Balanced Iterative Reducing and Clustering using Hierarchies, memory-efficient clustering algorithm
   - term: BOHC
-    definition: "BIRCH-Optimized Hierarchical Consensus; a novel ensemble method that uses hierarchical affinity matrices."
-  - term: AASC
-    definition: "Advanced Affinity-based Spectral Clustering; an ensemble method using a co-association matrix and spectral clustering."
+    definition: BIRCH-Optimized Hierarchical Consensus, novel ensemble strategy preserving multi-scale clustering information
+  - term: Autoencoder
+    definition: Neural network learning efficient latent representations through reconstruction minimization
+  - term: RFM
+    definition: Recency, Frequency, Monetary analysis for customer segmentation
 critical_citations:
-  - "[Zhang et al., 1996] — Introduces the BIRCH algorithm, foundational to this work."
-  - "[Xie et al., 2015] — Pioneers deep embedded clustering, contrasting with BIRCH-AE's modular approach."
-  - "[Strehl and Ghosh, 2002] — Foundational work on ensemble clustering methods."
-  - "[Zhao et al., 2021] — Addresses correlated variables in high-dimensional customer segmentation."
+  - "[Zhang et al., 1996] — Introduces BIRCH algorithm with CF Tree structure"
+  - "[Strehl and Ghosh, 2002] — Foundational work on cluster ensembles"
+  - "[Xie et al., 2015] — Deep embedded clustering for joint representation and clustering"
+  - "[Zhao et al., 2021] — Regularized K-Means for high-dimensional customer segmentation"
 relevance:
   topics:
-    - code: "4.A"
-      name: "Landscape of Existing Personal Finance Systems"
-      relevance: "contextual"
-      justification: "Context for evaluating a new scalable user segmentation system."
-    - code: "4.B"
-      name: "Limitations and Gaps in Existing Systems"
-      relevance: "high"
-      justification: "Directly addresses scalability, high-dimensionality, and dynamic data limitations of traditional methods."
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      relevance: "medium"
-      justification: "The framework is a method for creating behavioral profiles, relevant to PFMS."
-    - code: "5.C"
-      name: "Classification Approaches for Financial Behavioral Profiles"
-      relevance: "high"
-      justification: "Provides a concrete algorithm for classifying users into behavioral segments."
-    - code: "7.A"
-      name: "Budgeting Strategies as Domain Knowledge"
-      relevance: "contextual"
-      justification: "User segmentation informs tailoring of budgeting strategies."
-    - code: "7.B"
-      name: "Budget Recommendation in Personal Finance Systems"
-      relevance: "medium"
-      justification: "Segmentation is a prerequisite for effective personalized budget recommendations."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      relevance: "medium"
-      justification: "Provides a rigorous quantitative evaluation framework using multiple metrics."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      relevance: "high"
-      justification: "Extensive evaluation of the clustering algorithm's performance."
-    - code: "12.C"
-      name: "Evaluation Methodologies for Budget Recommendation Systems"
-      relevance: "contextual"
-      justification: "The methodology for evaluating a clustering system is analogous to evaluating recommendations."
-  contribution: "BIRCH-AE provides a scalable hierarchical clustering framework that can be adapted to segment Filipino young professionals for personalized financial planning. Its ability to handle large-scale, high-dimensional data and incrementally update user segments is directly applicable to Odin's need for dynamic user profiling and classification. The autoencoder integration addresses the challenge of correlated financial behavioral features, while the BOHC ensemble method offers a way to improve segmentation quality for distinct user groups. The dynamic ensemble selection mechanism ensures the system can adapt to different types of financial data, mirroring Odin's requirement for robustness."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Provides scalable clustering framework applicable to spending pattern identification and user segmentation in PFMS
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: medium
+      justification: Autoencoder-based feature learning and BIRCH clustering methods transferable to forecasting spending sequences
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: low
+      justification: Segmentation insights can inform differentiated budgeting strategies based on user behavioral profiles
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: medium
+      justification: Ensemble clustering approach provides baseline for identifying abnormal spending patterns through behavioral grouping
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Multi-metric evaluation framework (Silhouette, CH, DB) directly applicable to PFMS module assessment
+  contribution: "This paper provides a scalable, hierarchical clustering framework that can be adapted for financial user segmentation in Odin. The modular design with independent autoencoder training and BIRCH clustering offers practical deployment flexibility for production systems. The incremental learning capability enables real-time updates as new user spending data arrives. The multi-metric dynamic selection mechanism provides a robust evaluation methodology for algorithmic modules within a PFMS."
   directly_justifies:
-    - "BIRCH-AE demonstrates that hierarchical clustering can effectively segment millions of users, supporting Odin's need for scalability."
-    - "Autoencoder-based feature learning improves clustering quality by 23-53%, justifying its use for extracting latent behavioral patterns."
-    - "Incremental learning in BIRCH-AE enables real-time user segment updates, a critical capability for a dynamic PFMS."
-    - "Domain granularity influences optimal method selection, suggesting Odin should tailor its approach to the type of financial data."
-    - "BIRCH maintains higher performance at granular cluster counts, allowing for fine-grained segmentation of user financial behavior."
+    - "Autoencoder-based feature learning improves clustering quality by 23-53% over raw features."
+    - "BIRCH maintains superior performance at higher cluster counts for multi-resolution segmentation."
+    - "Domain granularity assessment is critical for selecting between ensemble and base algorithms."
+    - "Dynamic ensemble selection using multiple internal validation metrics provides adaptive optimization."
   limits:
-    - "Evaluation is limited to e-commerce datasets; applicability to financial transaction data requires further validation."
-    - "Temporal dynamics of user behavior are not explicitly modeled; the framework treats users as static entities."
-    - "Cluster quality is assessed using internal metrics without external business-impact validation."
-    - "The dynamic selection weights are fixed; sensitivity to this choice is not exhaustively explored."
-  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The most relevant domains identified were 'Existing Systems & Gaps' (4.A, 4.B), 'Behavioral Profiling & Classification' (5.A, 5.C), 'Budget Recommendation' (7.B), and 'System Evaluation' (12.A, 12.B). 4.B was rated 'high' because the paper directly identifies scalability and adaptability limitations of traditional clustering. 5.C and 12.B were rated 'high' as the paper proposes a novel algorithm and provides a thorough evaluation. Topics under 'Mobile-First Design' (9.A, 9.B), 'Data Privacy' (10.A), and 'User Retention & Engagement' (11.A, 11.B) were considered and rejected as the paper does not address these aspects. The topics 'Budgeting Strategies as Domain Knowledge' (7.A) and 'Evaluation Methodologies for Budget Recommendation Systems' (12.C) were flagged as 'contextual' as the segmentation method is foundational to these areas. The paper's core contribution as a scalable segmentation framework makes it highly relevant to Odin's algorithmic design, especially for user classification and the need for a robust evaluation methodology."
+    - "Evaluation restricted to e-commerce domain; transferability to PFMS spending data requires validation."
+    - "Temporal dynamics and user behavioral evolution are not explicitly modeled."
+    - "Internal validation metrics may not fully capture business-relevant segmentation quality."
+  mapping_rationale: "Systematic scan across all 12 functional domains identified 5 relevant topic codes. The paper's primary relevance is to Predictive Modeling (6.A, high) and System Evaluation (12.B, high) through its scalable clustering framework and comprehensive evaluation methodology. Forecasting Algorithms (6.B, medium) applies via autoencoder and BIRCH techniques transferable to sequential spending prediction. Budgeting Strategies (7.A, low) relates indirectly through segmentation-informed differentiated approaches. Anomaly Detection (8.A, medium) benefits from ensemble clustering baselines for identifying behavioral outliers. The Filipino Cultural Context domains (2.A, 2.B, 2.D) were considered and rejected as the paper focuses on universal e-commerce user behavior without culturally specific patterns. Expense Categorization (3.A-C) was not directly addressed as the framework operates on behavioral features, not financial transaction categories. The paper provides methodological contributions relevant to multiple Odin modules rather than direct consumer finance insights."
 limitations:
-  - "The autoencoder reduces interpretability, obscuring direct feature-to-cluster relationships. [unacknowledged]"
-  - "The framework faces a cold-start problem for users with minimal historical data. [unacknowledged]"
-  - "The evaluation metrics are internal; no external validation on business outcomes like retention or campaign lift is provided."
-  - "Memory constraints for ensemble affinity matrices may limit scalability to extremely large datasets at the full user-level."
-  - "The framework's performance on domains with clusters defined by higher-order feature interactions is not guaranteed."
+  - "Evaluation restricted to e-commerce domain; applicability to personal finance spending data requires validation."
+  - "Temporal dynamics and user behavioral evolution are not explicitly modeled."
+  - "The framework treats users as static snapshots, not capturing seasonal or lifecycle changes."
+  - "Latent representations reduce interpretability for business stakeholders."
+  - "Cold-start limitation for users with minimal historical interaction data. [unacknowledged]"
+  - "Upper scalability limits beyond 4.5M users remain untested."
 remember_this:
-  - "BIRCH-AE segments 4.5M e-commerce users in 5 minutes using a scalable hierarchical ensemble."
-  - "Autoencoder integration improves clustering quality by 23-53% over raw features."
-  - "Domain granularity dictates method choice: single-domain favors ensembles, multi-domain favors base algorithms."
-  - "BIRCH maintains performance at high cluster counts, supporting multi-resolution segmentation."
-  - "The BOHC ensemble method leverages hierarchical structure to improve consensus accuracy."
+  - "Autoencoder features improve clustering by 23-53% over raw features."
+  - "BIRCH achieves 81% higher silhouette than K-Means at 15 clusters."
+  - "Domain granularity determines if ensemble or base algorithms are optimal."
+  - "Incremental updates provide 37x speedup over full re-clustering."
+  - "BOHC ensemble up to 23% improvement for single-domain datasets."
 ```
 ---
 
-## Paper 33: Olabintan_summarized.md
+## Paper 28: Olabintan_summarized.md
 
 **Source File:** `Olabintan_summarized.md`
 
 ```yaml
-paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
-designation: international-algorithm-specific
+paper_id: 10.2139/ssrn.6837665
+designation: local-algorithm-specific
 title: FairLend-Africa: An Explainable Machine Learning Framework for Alternative Credit Scoring Using Behavioral Financial Data in Financially Excluded African Communities
 authors: Olabintan, I.
 year: 2026
-venue: Unknown
+venue: SSRN
 odin_topics:
-  - 10.A
-  - 7.D
-  - 8.A
-  - 6.A
-  - 6.B
-  - 5.A
-  - 5.C
+  - 1.A
+  - 1.C
+  - 2.B
   - 4.A
   - 4.B
+  - 5.A
+  - 5.C
+  - 6.A
+  - 6.B
+  - 7.B
+  - 7.C
+  - 8.A
+  - 8.B
+  - 9.A
+  - 9.B
+  - 10.A
+  - 10.B
   - 12.A
   - 12.B
-tldr: An explainable ML framework combines XGBoost, SHAP, and fairness auditing for credit scoring using behavioral financial data from mobile money, airtime, and savings.
-problem_and_motivation: Over 1.4 billion adults lack formal credit histories, excluding them from traditional credit systems. Mobile money creates an alternative data source, but integrating it fairly and explainably remains challenging. A framework combining predictive performance with interpretability and fairness auditing is needed for underserved populations.
+  - 12.C
+tldr: An explainable ML framework for alternative credit scoring using mobile money behavioral data, achieving ROC-AUC of 0.714 on synthetic data with SHAP explanations and fairness auditing.
+problem_and_motivation: Billions of adults globally lack formal credit histories, making them invisible to conventional scoring systems. Behavioral financial data from mobile money offers a potential proxy for creditworthiness, but integration into fair and explainable frameworks remains limited.
 approach:
-  - A synthetic dataset of 10,000 borrower records is generated with 16 raw and 4 engineered behavioral features from mobile money, airtime, and savings domains.
-  - An XGBoost classifier is trained after hyperparameter optimization via RandomizedSearchCV with 5-fold CV, using median imputation for MNAR missing data.
-  - The framework evaluates ROC-AUC and compares against logistic regression and majority class baselines on a held-out test set.
-  - SHAP TreeExplainer provides local and global explanations, using dependence plots and waterfall charts.
-  - A fairness audit evaluates demographic parity, equal opportunity, and predictive parity across regional and gender subgroups using the 80% rule.
-  - The complete system is implemented as a REST API with a React dashboard and released as open source.
+  - Synthetic dataset of 10,000 borrower records with 16 raw behavioral features from mobile money and credit history was generated.
+  - XGBoost classifier was trained with hyperparameter optimization via RandomizedSearchCV and evaluated against logistic regression.
+  - SHAP provided global feature importance and local explanations for individual credit decisions.
+  - Systematic fairness audit assessed demographic parity, equal opportunity, and predictive parity across regional and gender subgroups.
+  - System was implemented as a REST API with an interactive React dashboard for loan officers.
 findings:
-  - "num: The tuned XGBoost model achieves a test ROC-AUC of 0.714, which aligns with benchmarks in thin-file credit scoring literature."
-  - "num: Logistic regression achieves near-identical performance (AUC = 0.713), suggesting primarily linear structures in the synthetic data."
-  - "num: SHAP analysis identifies wallet balance trend as the dominant feature with a mean SHAP value of 0.377, 1.74 times the second-ranked feature."
-  - The synthetic data fairness audit finds no disparity across groups under the data's demographic-behavioral independence assumption, but this requires empirical verification.
-  - Engineered composite features provide no measurable predictive lift in the ablation study, with a ΔAUC of -0.0002.
-  - SHAP explanations are implemented to provide individual-level transparency for credit decisions, suitable for loan officer and borrower communication.
+  - Tuned XGBoost achieved a held-out test ROC-AUC of 0.714, matching the logistic regression baseline of 0.713.
+  - Wallet balance trend and savings consistency were the dominant creditworthiness signals.
+  - Fairness audit found no demographic disparities under the synthetic data's independence assumption.
+  - num: The optimal classification threshold was 0.151, substantially below the conventional 0.5.
+  - Engineered composite features provided no measurable predictive improvement over raw features.
 key_figures_tables:
-  - "Figure 4: ROC curve on held-out test set → AUC of 0.714 shows meaningful discrimination."
-  - "Table 3: Model comparison test set performance → Tuned XGBoost has 0.714 ROC-AUC."
-  - "Figure 7: Global feature importance by SHAP → Wallet balance trend dominates all other features."
-  - "Table 5: Fairness disparity ratios → All ratios exceed 0.80 across all groups."
-  - "Figure 11: Demographic parity analysis → Selection rates are equal across all subgroups."
+  - Table 1: 16 raw behavioral features with domain and rationale → Features cover mobile money, airtime, savings, credit, social, and payment domains.
+  - Table 3: Model comparison test set performance → Tuned XGBoost ROC-AUC 0.714 vs logistic regression 0.713.
+  - Table 5: Fairness disparity ratios → All groups exceed 0.80 for selection rate, TPR, and precision.
+  - Table 6: Selection rate disparity ratios across thresholds → All ratios exceed 0.80, with West Africa lowest at 0.818.
+  - Figure 7: Global feature importance by mean SHAP value → Wallet balance trend dominates by factor of 1.74.
 key_equations:
-  - equation: "f(x_i) = φ_0 + ∑_{j=1}^{p} φ_{ij}"
-    explanation: "SHAP decomposition into base rate and feature contributions."
-  - equation: "logit(P(y=1)) = β_0 + ∑ β_j x_j + ε"
-    explanation: "Data generating process for synthetic labels."
+  - equation: f(x_i) = ∅_0 + ∑_{j=1}^p ∅_{ij}
+    explanation: SHAP decomposition of prediction into base rate plus feature contributions.
 definitions:
-  - term: "ROC-AUC"
-    definition: "Area Under the Receiver Operating Characteristic Curve, a measure of model discrimination."
-  - term: "SHAP"
-    definition: "SHapley Additive exPlanations, a game-theoretic method for explaining model predictions."
-  - term: "MNAR"
-    definition: "Missing Not At Random, where missingness is related to the missing value itself."
-  - term: "Demographic Parity"
-    definition: "Equal positive prediction rates across demographic groups."
-  - term: "Equal Opportunity"
-    definition: "Equal true positive rates across demographic groups."
+  - term: ROC-AUC
+    definition: Area under the receiver operating characteristic curve, measuring discrimination ability.
+  - term: SHAP
+    definition: SHapley Additive exPlanations, a game-theoretic approach for explaining model predictions.
+  - term: Demographic parity
+    definition: Equal positive prediction rates across demographic groups.
+  - term: Equal opportunity
+    definition: Equal true positive rates across demographic groups.
+  - term: MNAR
+    definition: Missing Not At Random, where missingness depends on unobserved values.
 critical_citations:
-  - "[Björkegren and Grissen, 2018] — Established AUC baseline ~0.70 for behavioral credit scoring."
-  - "[Lundberg and Lee, 2017] — Introduced SHAP framework used for model explainability."
-  - "[Baesens et al., 2003] — Found ensemble methods outperform single classifiers in credit scoring."
-  - "[Chouldechova, 2017] — Demonstrated impossibility of satisfying all fairness criteria simultaneously."
+  - "[Björkegren and Grissen, 2018] — Mobile phone metadata predicts loan repayment with AUC ~0.70."
+  - "[Suri and Jack, 2016] — Mobile money enables households to navigate income shocks."
+  - "[Lundberg and Lee, 2017] — Unified framework for model explanation using SHAP values."
+  - "[Chouldechova, 2017] — Impossibility theorem for simultaneously satisfying fairness criteria."
+  - "[Baesens et al., 2003] — Ensemble methods outperform single classifiers in credit scoring."
 relevance:
   topics:
-    - code: "10.A"
-      name: "Data Privacy and Security in Personal Finance Systems"
-      relevance: "medium"
-      justification: "Paper discusses synthetic data use to address privacy and regulatory barriers."
-    - code: "7.D"
-      name: "Infeasibility Handling and Reduction Hierarchies"
-      relevance: "low"
-      justification: "Discusses threshold tuning cost asymmetry but not explicit infeasibility handling."
-    - code: "8.A"
-      name: "Anomaly Detection in Personal Finance Systems"
-      relevance: "contextual"
-      justification: "Methodological framework for ML could be adapted, but anomaly detection not a focus."
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      relevance: "high"
-      justification: "Core contribution is a predictive modeling framework for credit scoring."
-    - code: "6.B"
-      name: "Forecasting Algorithms for Sequential Spending Data"
-      relevance: "low"
-      justification: "Uses static features; sequential forecasting is not addressed."
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      relevance: "medium"
-      justification: "Features engineered to capture behavioral signals like savings consistency."
-    - code: "5.C"
-      name: "Classification Approaches for Financial Behavioral Profiles"
-      relevance: "medium"
-      justification: "Evaluates ML classification approaches using behavioral features."
-    - code: "4.A"
-      name: "Landscape of Existing Personal Finance Systems"
-      relevance: "contextual"
-      justification: "Reviews existing systems and alternative data landscape."
-    - code: "4.B"
-      name: "Limitations and Gaps in Existing Systems"
-      relevance: "medium"
-      justification: "Identifies gaps: lack of formal credit histories, limited explainability, fairness concerns."
-    - code: "12.A"
-      name: "Evaluation Frameworks for Personal Finance Systems"
-      relevance: "high"
-      justification: "Provides evaluation framework with ROC-AUC and fairness metrics."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      relevance: "high"
-      justification: "Includes detailed evaluation of prediction, explainability, and fairness modules."
-  contribution: "This paper contributes a predictive modeling module for assessing creditworthiness from behavioral data. The SHAP explanation module provides local and global interpretability suitable for explaining decisions to users or loan officers. The fairness auditing module offers a systematic method to evaluate and mitigate demographic disparities. These modules are integrated into a deployable architecture, demonstrating how Odin might incorporate alternative data for financial behavior analysis. The codebase and methodology serve as a reference for implementing similar explainable AI components in a PFMS."
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Provides general context on financially excluded populations in Africa, analogous to unbanked Filipinos.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: contextual
+      justification: Demonstrates use of behavioral transaction data as a proxy for creditworthiness, relevant to understanding financial behavior.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: Mentions temporal dynamics and seasonal patterns as a limitation, not a focus.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: Reviews digital credit systems like M-Shwari, Tala, Branch, providing context for PFMS landscape.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Directly addresses lack of explainability and fairness in existing alternative credit scoring systems.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Framework creates behavioral profiles from mobile money features to predict creditworthiness.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Uses XGBoost and logistic regression to classify borrowers into repayment risk categories.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Core contribution is a predictive model for credit scoring using behavioral data.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: medium
+      justification: Uses predictive modeling on behavioral features, though not explicitly sequential time-series forecasting.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: low
+      justification: Framework is for credit scoring, not budget recommendation; methodology could be adapted.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: contextual
+      justification: Not directly addressed; threshold tuning relates to cost asymmetry.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: contextual
+      justification: Not addressed; focusing on credit classification.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: low
+      justification: XGBoost could potentially be used for anomaly detection, but not the focus.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: medium
+      justification: Mentions dashboard for loan officer use, but system is not explicitly mobile-first.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: low
+      justification: Dashboard design is for loan officers, not end-user PFMS.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: high
+      justification: Discusses privacy barriers, data protection acts, and synthetic data for privacy.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Addresses trust through explainability (SHAP) and fairness auditing.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Provides evaluation protocol including ROC-AUC, fairness metrics, and threshold analysis.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Evaluates XGBoost, logistic regression, and SHAP explainability module.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: contextual
+      justification: Evaluation metrics are general ML metrics, not specific to budget recommendation.
+  contribution: FairLend-Africa provides a blueprint for Odin's predictive module using behavioral data, demonstrating that XGBoost with SHAP explanations can achieve reasonable predictive performance. The fairness audit framework directly maps to Odin's need for transparent and equitable algorithms, particularly important for a Filipino audience concerned with social justice. The emphasis on explainability supports Odin's design goal of building user trust through interpretable decisions. The open-source implementation and REST API design offer a practical template for Odin's system architecture.
   directly_justifies:
-    - "Behavioral financial data from mobile money can serve as a proxy for creditworthiness."
-    - "XGBoost with SHAP can provide both predictive performance and individual-level explanations."
-    - "Fairness criteria like demographic parity and equal opportunity can be audited systematically."
-    - "Synthetic data generation is a valid method for methodology development in privacy-sensitive domains."
+    - "Behavioral financial data from mobile money transactions carries sufficient predictive signal for creditworthiness classification."
+    - "XGBoost with SHAP explanations provides a coherent method for predictive modeling and interpretability in personal finance systems."
+    - "Systematic fairness auditing using demographic parity and equal opportunity is feasible and necessary for equitable algorithmic systems."
+    - "Missing data in financial profiles is informative and requires careful handling (e.g., MNAR with missingness indicators)."
+    - "Ablation studies are essential to validate feature engineering contributions."
   limits:
-    - "All results are based on synthetic data and do not generalize to real African borrower behavior."
-    - "The fairness audit relies on the synthetic data's designed independence between demographics and behavior."
-    - "The engineered composite features provided no measurable improvement over raw features."
-    - "SHAP explanations assume feature independence, which may misrepresent contributions with correlated features."
-    - "Temporal stability and concept drift are not evaluated, limiting production readiness."
-  mapping_rationale: "A systematic scan across all 12 functional domains was conducted. The paper was flagged as highly relevant to predictive modeling (6.A) and system evaluation (12.A, 12.B), as its core contribution is a framework for predictive credit scoring with performance and fairness metrics. It has medium relevance to behavioral profiling (5.A, 5.C) and system gaps (4.B) because it uses engineered behavioral features and identifies limitations of existing credit systems. It has low relevance to forecasting (6.B) and infeasibility handling (7.D) since it does not address sequential data or constraint reduction. Data privacy (10.A) was assessed as medium relevance due to the paper's explicit use of synthetic data to circumvent privacy barriers. Borderline cases included behavioral features touching both 5.A and 2.D (seasonal patterns), but seasonal patterns were not explicitly modeled, so only 5.A was selected. The overall relevance is methodological, providing infrastructure for future empirical work rather than direct evidence for Odin's specific design decisions."
+    - "Results are based on synthetic data, not real Filipino behavioral data."
+    - "Fairness properties are derived under a synthetic independence assumption that may not hold in real settings."
+    - "XGBoost performance matches logistic regression, indicating linear structure in synthetic data; real data may show non-linear benefits."
+    - "Engineered composite features provided no measurable lift, questioning their practical value."
+    - "SHAP explanations assume feature independence, which may misrepresent contributions when features are correlated."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to Predictive Modeling (6.A, 6.B), Behavioral Profiling (5.A, 5.C), and Evaluation Frameworks (12.A, 12.B) as its core contribution is an ML framework for credit scoring. It also has high relevance to Existing Systems (4.A, 4.B) as it reviews digital credit systems and their limitations, and to Data Privacy (10.A) and User Trust (10.B) as it discusses privacy barriers and uses explainability/fairness. Medium relevance was assigned to Mobile-First Design (9.A) due to the dashboard and Filipino Demographic (1.A, 1.C) due to contextual parallels in financial exclusion. Low or contextual relevance was assigned to Budget Recommendation (7.B, 12.C), Anomaly Detection (8.A, 8.B), and Seasonal Spending (2.B) as the paper does not directly address these topics. Borderline cases included the paper touching on both predictive modeling and fairness, which were both selected as high relevance. The overall relevance is high for Odin's algorithmic and evaluation modules, providing a methodological template.
 limitations:
-  - "Dataset is synthetic; results require validation on real mobile money data."
-  - "Fairness analysis is constrained by the synthetic data's independence assumption."
-  - "Feature set is literature-informed and may differ substantially across populations."
-  - "Temporal stability and concept drift are not evaluated. [unacknowledged]"
-  - "Engineered features provided no measurable benefit in this dataset."
-  - "SHAP explanations can be manipulated and assume feature independence."
-  - "Model accuracy falls below the majority-class baseline at the optimal threshold."
+  - "Synthetic dataset not validated on real Filipino mobile money data. [unacknowledged]"
+  - "Fairness audit assumes demographic-behavioral independence, which may not hold in real Philippines data."
+  - "Engineered features provided no predictive improvement; practical value on real data is unproven."
+  - "SHAP explanations assume feature independence, which can misrepresent correlated feature contributions."
+  - "System has not been evaluated for temporal stability or concept drift."
+  - "Near-identical XGBoost and logistic regression performance suggests primarily linear structure in data; non-linear benefits need real data validation."
 remember_this:
-  - "XGBoost achieved a ROC-AUC of 0.714 on synthetic behavioral credit data."
-  - "SHAP identified wallet balance trend as the dominant creditworthiness signal."
-  - "Fairness audit showed no disparity due to synthetic data independence assumption."
-  - "Logistic regression performed nearly identically to XGBoost on this dataset."
-  - "Results are methodological and require real-world validation before deployment."
+  - "Behavioral data achieves 0.714 AUC for credit scoring, matching logistic regression on synthetic data."
+  - "Wallet balance trend and savings consistency are the strongest creditworthiness signals."
+  - "Fairness audit found no disparities, but this is contingent on synthetic data independence."
+  - "SHAP explanations provide interpretability but assume feature independence, a known limitation."
+  - "Feature ablation showed engineered features provided no measurable lift in predictive performance."
 ```
 ---
 
-## Paper 34: Patel & Singh_summarized.md
+## Paper 29: Patel & Singh_summarized.md
 
 **Source File:** `Patel & Singh_summarized.md`
 
@@ -4810,7 +3970,7 @@ remember_this:
 ```
 ---
 
-## Paper 35: Zhang & Hou_summarized.md
+## Paper 30: Zhang & Hou_summarized.md
 
 **Source File:** `Zhang & Hou_summarized.md`
 
@@ -4822,98 +3982,106 @@ authors: Zhang, H.; Hou, Y.
 year: 2026
 venue: Procedia Computer Science
 odin_topics:
-  - 5.B
+  - 5.A
   - 5.C
   - 6.A
   - 6.B
+  - 9.A
+  - 10.B
   - 12.B
-  - 12.C
-tldr: XGBoost achieves the highest accuracy and F1 score among four ML algorithms for predicting customer purchase intention from e-commerce transaction data.
-problem_and_motivation: Predicting customer purchase intention from vast e-commerce data is challenging for traditional statistical tools. A systematic comparison of modern machine learning algorithms under a unified framework is needed to guide model selection for practical applications.
+tldr: Compares logistic regression, SVM, random forest, and XGBoost for predicting purchase intention using an e-commerce dataset to guide algorithm selection in consumer behavior analysis.
+problem_and_motivation: Traditional statistical tools are inadequate for complex, high-dimensional consumer data, and a clear performance comparison of modern machine learning algorithms under a unified framework is lacking. Selecting the appropriate algorithm requires balancing accuracy, efficiency, and interpretability.
 approach:
-  - Used the UCI Online Retail dataset with transactions from Dec 2020 to Dec 2021 for model training and evaluation.
-  - Engineered 28 numerical features per customer, including RFM, behavioral breadth, consumption patterns, and temporal patterns.
-  - Evaluated logistic regression, SVM, random forest, and XGBoost on the binary prediction task of future purchase intent.
-  - Employed grid search with 5-fold cross-validation for hyperparameter tuning on the training set.
-  - Assessed models on a held-out test set using accuracy, precision, recall, F1 score, and AUC metrics.
+  - Uses the UCI "Online Retail" dataset with 28 engineered features including RFM, behavioral breadth, consumption patterns, and time patterns.
+  - Defines a binary prediction task for future purchase intention within a fixed time window.
+  - Implements logistic regression, SVM, random forest, and XGBoost with grid search and 5-fold cross-validation for hyperparameter tuning.
+  - Evaluates models on a separate test set using accuracy, precision, recall, F1, and AUC.
+  - Compares training and prediction efficiency and analyzes feature importance across models.
 findings:
-  - XGBoost achieves the highest F1 score of 0.680 and AUC of 0.872 among all models tested.
-  - Random forest obtains a balanced performance with an F1 score of 0.651 and AUC of 0.853.
-  - Logistic regression shows the lowest recall at 0.468, indicating a conservative prediction strategy.
-  - Recency is the most important predictor across all models, validating the RFM framework's core premise.
-  - XGBoost demonstrates superior training efficiency compared to random forest despite its higher accuracy.
+  - "num: XGBoost achieved the highest F1 score of 0.680 and AUC of 0.872."
+  - "num: Logistic regression had the fastest training time at 0.8 seconds."
+  - "num: SVM was the slowest with a training time of 125.3 seconds."
+  - Feature importance consistently identified 'Recency' as the most predictive feature across all models.
+  - XGBoost demonstrated the best balance between accuracy and efficiency.
+  - Logistic regression remained the most interpretable model.
 key_figures_tables:
-  - Table 1: Comprehensive performance metrics for four models → XGBoost leads all models across accuracy, F1, and AUC.
-  - Table 2: Training and prediction time comparison → Logistic regression is fastest; SVM is slowest; XGBoost is efficient.
-  - Table 3: Top three feature importance rankings → Recency is consistently the most important feature across models.
+  - "Table 1: Model performance metrics (Accuracy, Precision, Recall, F1, AUC). → XGBoost leads in all metrics."
+  - "Table 2: Model training and prediction times. → Logistic regression fastest; SVM slowest."
+  - "Table 3: Top 3 important features per model. → Recency is the most important feature for all models."
 key_equations:
-  - equation: P(y = 1 | x) = 1 / (1 + e^{-(w^T x + b)})
-    explanation: Sigmoid function maps features to purchase probability in logistic regression.
-  - equation: f(x) = sign(∑_{i=1}^{n} α_i y_i K(x_i, x) + b)
-    explanation: Decision function for SVM using kernel trick for nonlinear classification.
+  - equation: "P(y = 1 | x) = 1 / (1 + e^{-(w^T x + b)})"
+    explanation: "Logistic function mapping features to purchase probability."
+  - equation: "f(x) = sign(\\sum_{i=1}^n \\alpha_i y_i K(x_i, x) + b)"
+    explanation: "SVM decision function with kernel K for nonlinear classification."
+  - equation: "L^{(t)} = \\sum_{i=1}^n l(y_i, \\hat{y}_i^{(t-1)} + f_t(x_i)) + \\Omega(f_t)"
+    explanation: "XGBoost objective function with loss and regularization."
 definitions:
-  - term: RFM
-    definition: Recency, Frequency, Monetary; a customer segmentation framework using three transaction metrics.
+  - term: RFM Model
+    definition: "A framework using Recency, Frequency, and Monetary value for customer segmentation and behavior analysis."
   - term: AUC
-    definition: Area Under the ROC Curve; measures the model's ability to rank positive samples higher than negative ones.
-  - term: XGBoost
-    definition: eXtreme Gradient Boosting; an optimized implementation of gradient boosting for efficiency and performance.
+    definition: "Area Under the ROC Curve; measures the model's ability to distinguish between classes."
 critical_citations:
-  - "[Akram, 2025] — Reviews ML algorithms for consumer behavior prediction."
-  - "[Lin, 2023] — Applies ML to e-commerce customer shopping behavior analysis."
-  - "[Zvarikova, 2022] — Discusses cognitive AI algorithms for customer behavior analysis."
+  - "[Li, 2023] — Foundation for ML in e-commerce behavior analysis."
+  - "[Akram et al., 2025] — Comparative study of ML algorithms for behavior prediction."
+  - "[Lin, 2025] — Application of ML for predicting consumer behavior."
 relevance:
   topics:
-    - code: 5.B
-      name: Profile Dynamics and the Cold‑Start Problem
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
       relevance: medium
-      justification: The study's feature engineering and predictive modeling approach can inform how Odin initializes user profiles based on sparse transaction data.
+      justification: "Paper benchmarks algorithms for predicting purchase behavior, a core task in profiling."
     - code: 5.C
       name: Classification Approaches for Financial Behavioral Profiles
-      relevance: medium
-      justification: The paper compares classification algorithms (LR, SVM, RF, XGBoost) that could be used to classify user spending behavior profiles.
+      relevance: high
+      justification: "Directly compares classification algorithms (LR, SVM, RF, XGBoost) for behavior prediction."
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
       relevance: high
-      justification: The paper directly addresses predictive modeling of consumer behavior using machine learning on transaction data.
+      justification: "Provides an empirical framework for selecting predictive models in a financial context."
     - code: 6.B
       name: Forecasting Algorithms for Sequential Spending Data
-      relevance: high
-      justification: The study compares various forecasting algorithms, including XGBoost and Random Forest, on sequential transaction data for future purchase prediction.
+      relevance: medium
+      justification: "Uses temporal features (e.g., recency) and compares algorithms suitable for sequential data."
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: contextual
+      justification: "Discussion of model efficiency informs design choices for resource-constrained environments."
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: low
+      justification: "Mentions interpretability as a factor, which is linked to user trust."
     - code: 12.B
       name: Evaluation of Algorithmic Modules
       relevance: high
-      justification: The paper provides a rigorous comparative evaluation framework for different machine learning algorithms on an e-commerce dataset.
-    - code: 12.C
-      name: Evaluation Methodologies for Budget Recommendation Systems
-      relevance: medium
-      justification: The evaluation metrics (accuracy, F1, AUC, efficiency) and cross-validation methodology are directly applicable to testing budget recommendation modules in Odin.
-  contribution: The paper's comparative analysis of ML algorithms provides a benchmark for Odin's spending forecasting module, suggesting XGBoost as a high-accuracy option. The feature importance analysis validates RFM as a core framework for behavior prediction in personal finance. The evaluation methodology establishes a template for testing Odin's algorithmic modules, including efficiency metrics crucial for mobile-first applications. The study's approach to handling customer transaction data informs how Odin can structure and process user spending history for predictive tasks.
+      justification: "Provides a clear evaluation methodology for comparing prediction algorithms."
+  contribution: "This paper provides a benchmark for choosing machine learning algorithms for Odin's spending forecasting and behavioral classification modules. The comparison of XGBoost, Random Forest, and Logistic Regression directly informs the selection of models for predicting user financial behavior. The analysis of feature importance highlights the value of recency and frequency, which are crucial for Odin's core profile features. The discussion on the trade-off between accuracy and interpretability guides the design of Odin's explanation and user trust features."
   directly_justifies:
-    - "XGBoost achieves the highest predictive accuracy for future purchase behavior among tested algorithms."
-    - "Recency of customer activity is the strongest predictor of future behavior."
-    - "Ensemble methods (XGBoost, Random Forest) outperform linear models in predicting purchase intent."
-    - "Evaluation of algorithms must consider both accuracy and computational efficiency for practical deployment."
+    - "XGBoost achieves the best balance of accuracy and efficiency for predicting purchase behavior."
+    - "Recency and frequency are the most important features for predicting future purchasing behavior."
+    - "Logistic regression provides the highest interpretability, while ensemble methods offer superior accuracy."
+    - "Model selection must consider the trade-off between prediction performance and computational cost."
+    - "Feature engineering based on domain knowledge (RFM) is crucial for model performance."
   limits:
-    - "The analysis is conducted on e-commerce transaction data, not personal finance spending data."
-    - "The paper focuses on predicting purchase intent, not directly on budgeting or anomaly detection."
-    - "The dataset is international and not specific to Filipino young professionals. [unacknowledged]"
-    - "The study does not consider interpretability trade-offs in depth beyond feature importance. [unacknowledged]"
-  mapping_rationale: This paper was systematically scanned against all 12 functional domains. The core contribution is an algorithmic comparison for predictive modeling, making it highly relevant to the Spending Forecasting domain (Topics 6.A, 6.B) and System Evaluation (Topics 12.B, 12.C). It also provides medium relevance to Behavioral Profiling & Classification (Topics 5.B, 5.C) through its classification approach and feature engineering. Domains like Filipino Cultural Context, Expense Categorization, and Mobile-First Design were rejected as the study does not address cultural factors, budget categories, or mobile-specific design considerations. The user retention domain was considered but rejected as the paper does not discuss engagement dynamics or retention mechanisms. The overall relevance is moderate, primarily contributing to forecasting and evaluation methodologies for Odin.
+    - "The study uses a single e-commerce dataset, limiting generalizability."
+    - "Does not address cold-start scenarios where historical user data is unavailable. [unacknowledged]"
+    - "Focuses on a binary classification task, not multi-class or regression for financial amounts. [unacknowledged]"
+    - "The 'Online Retail' dataset may not represent the spending patterns of Filipino young professionals. [unacknowledged]"
+  mapping_rationale: "A systematic scan of all 12 functional domains was performed. Domains related to behavioral classification (5.A, 5.C) and spending forecasting (6.A, 6.B) were flagged as having high or medium relevance because the paper directly compares algorithms for predicting consumer behavior. Evaluation frameworks (12.A, 12.B, 12.C) were considered relevant as the paper provides a controlled evaluation methodology. Mobile-first design (9.A) was considered contextual due to the discussion on computational efficiency. Data privacy (10.A, 10.B) was only tangentially touched upon via model interpretability (low relevance). Domains like Filipino cultural context (2.A-D), expense categorization (3.A-C), existing systems (4.A-B), budgeting (7.A-D), anomaly detection (8.A-C), retention (11.A-B), and savings/debt management (13.A-C) were rejected as the paper does not provide citeable claims for these specific Odin design areas. The overall relevance is moderate, providing strong empirical justification for algorithmic choices in prediction modules."
 limitations:
-  - The study uses e-commerce transaction data, which may not fully represent personal financial management scenarios.
-  - The paper does not address real-time prediction latency or deployment constraints for mobile applications. [unacknowledged]
-  - Generalizability to the Filipino context or young professional demographics is not established. [unacknowledged]
+  - "Single dataset limits generalizability of findings."
+  - "Does not explore deep learning or more recent algorithms."
+  - "The performance comparison may not hold for different types of consumer data."
+  - "The study lacks a discussion on real-time deployment constraints. [unacknowledged]"
 remember_this:
-  - XGBoost achieves the best F1 score (0.680) for predicting purchase behavior.
-  - Recency is the single most important predictor of future customer activity.
-  - Logistic regression offers the fastest processing but the lowest predictive accuracy.
-  - Feature engineering with domain knowledge (RFM) is as critical as model selection.
-  - Ensemble methods like XGBoost provide a superior balance of accuracy and efficiency.
+  - "XGBoost achieved the highest F1 score of 0.680 and AUC of 0.872."
+  - "Recency was the single most important feature for all models tested."
+  - "Random forest offers a good balance between accuracy and robustness."
+  - "Logistic regression is the most interpretable and fastest algorithm."
+  - "Ensemble methods like XGBoost are preferred for complex behavioral data."
 ```
 ---
 
-## Paper 36: Chikoore et al_summarized.md
+## Paper 31: Chikoore et al_summarized.md
 
 **Source File:** `Chikoore et al_summarized.md`
 
@@ -4927,237 +4095,397 @@ venue: IEEE Access
 odin_topics:
   - 4.B
   - 5.A
-  - 5.B
   - 5.C
   - 6.A
-  - 6.B
   - 8.A
-  - 8.B
-  - 8.C
-  - 12.A
   - 12.B
-tldr: An adaptive fusion framework integrates baseline machine learning models with dynamic adaptation to counter concept drift, achieving 95.0% accuracy in credit scoring under distributional shifts.
-problem_and_motivation: Static credit scoring models degrade as borrower behavior and economic conditions change, exposing lenders to financial and regulatory risks. Existing adaptive solutions are designed for advanced economies and lack effectiveness in developing contexts. A robust framework is needed to detect and adapt to drift in dynamic, resource-constrained environments.
+  - 13.B
+tldr: An adaptive credit scoring framework integrating multiple ML models with dynamic adaptation strategies addresses concept drift in developing economies, achieving superior predictive performance.
+problem_and_motivation: Traditional static credit scoring models lack drift detection and adaptation, causing performance degradation in dynamic economic conditions. Existing adaptive approaches are developed for advanced economies and are not suited to developing contexts, necessitating a framework tailored to such environments.
 approach:
-  - Used the German Credit dataset and introduced three synthetic drift scenarios.
-  - Benchmarked vanilla models including CART, Naïve Bayes, Random Forest, and XGBoost.
-  - Developed adaptive strategies: model retraining, windowing, ensemble learning, and a proposed Adaptive Fusion algorithm.
-  - Adaptive Fusion dynamically weights outputs from three Random Forest models for real-time prediction.
-  - Evaluated performance using accuracy, precision, recall, F1-score, and ROC-AUC.
+  - The German Credit dataset was used with simulated drifts: feature distribution shift, noise addition, and class distribution change.
+  - Four vanilla models (CART, Naive Bayes, Random Forest, XGBoost) were benchmarked; Random Forest was selected as baseline.
+  - Four adaptation strategies were implemented: retraining on drifted data, sliding window learning, soft voting ensemble, and adaptive fusion.
+  - Adaptive fusion dynamically weights outputs from original, retrained, and windowed models with weights summing to one.
+  - Evaluation metrics include accuracy, precision, recall, F1-score, and ROC-AUC.
 findings:
-  - num: The Adaptive Fusion, Ensemble, and Retrained Random Forest models each achieved an accuracy of 95.0%.
-  - num: Adaptive Fusion maintained a precision of 0.9275, recall of 0.9645, and F1-score of 0.9426.
-  - num: ROC-AUC values exceeded 0.96 for the best-performing adaptive models.
-  - num: The method outperformed the state-of-the-art DGHNL model, which achieved 94.60% accuracy and an AUC of 0.9360.
-  - Adaptive Fusion proved the most robust solution, enabling continuous adaptation to evolving patterns.
-  - The windowed learning approach underperformed, showing limitations in capturing long-term behavioral shifts.
-  - The ensemble approach performed well but was slightly less stable than Adaptive Fusion.
+  - num: Retrained Random Forest, Ensemble, and Adaptive Fusion achieved 95.0% accuracy, 0.9275 precision, 0.9645 recall, 0.9426 F1, and ROC-AUC >0.96.
+  - num: Adaptive Fusion outperformed state-of-the-art DGHNL (94.60% accuracy, AUC 0.9360).
+  - Adaptive Fusion demonstrated the most robust performance across all drift scenarios with minimal degradation.
+  - Ensemble approach was consistently second best, while windowing underperformed in recall and F1.
+  - Batch retraining yielded reasonable accuracy but slower adaptation compared to fusion.
 key_figures_tables:
-  - Figure 3: Vanilla model performance comparison on original dataset → Random Forest was the best baseline.
-  - Figure 4: ROC-AUC for adaptive retraining on drift scenarios → ROC-AUC remained high, demonstrating effective adaptation.
-  - Figure 5: Model evaluation results on adaptive strategies → Adaptive Fusion and Retrained Random Forest were top performers.
-  - Table 1: Vanilla model performance metrics on original dataset → Random Forest achieved the highest accuracy (0.77) and ROC-AUC (0.768).
+  - Table 1: Vanilla model performance on original dataset → Random Forest highest at 0.77 accuracy.
+  - Figure 3: Bar chart of vanilla model metrics → Random Forest and XGBoost outperform others.
+  - Figure 4: ROC-AUC for adaptive retraining → Shows AUC >0.96 for top strategies.
+  - Figure 5: ROC-AUC for adaptive windowing → Lower performance than fusion.
+  - Figure 6: ROC-AUC for ensemble and adaptive fusion → Adaptive fusion highest and most stable.
 key_equations:
   - equation: X_d = X_n + 5
-    explanation: Simulates temporal shift by increasing all age values.
-  - equation: New credit amount = Original credit amount + N(0,1000)
-    explanation: Adds Gaussian noise to model variability in loan sizes.
-  - equation: p_{final} = w_0 p_0 + w_r p_r + w_w p_w
-    explanation: Fuses model probabilities via dynamically updated weights.
+    explanation: Feature distribution shift by aging all instances by 5 years.
+  - equation: N(0, 1000) noise added to credit amount
+    explanation: Simulates random fluctuations in loan sizes.
+  - equation: f(x) = (1/(σ√(2π))) e^(-(x-µ)^2/(2σ^2)) with σ=1000
+    explanation: Gaussian distribution for noise addition.
+  - equation: P'(C_i) = (w_i · P(C_i)) / (Σ_j w_j · P(C_j))
+    explanation: Weighted class probability to simulate class distribution drift.
+  - equation: p_final = w_0*p_0 + w_r*p_r + w_w*p_w, with sum w=1
+    explanation: Adaptive fusion combines predictions from three models.
 definitions:
   - term: Concept drift
-    definition: A change in the data distribution over time that degrades model performance.
+    definition: Change in data distribution over time that degrades model performance.
   - term: Adaptive fusion
-    definition: An algorithm that dynamically integrates multiple model outputs based on recent performance.
+    definition: Dynamic weighting of multiple model outputs to adapt to drift.
+  - term: Population drift
+    definition: Shift in the underlying characteristics of the borrower population.
   - term: ROC-AUC
-    definition: A metric for a model's ability to distinguish between classes, useful for drift detection.
+    definition: Area under the receiver operating characteristic curve, measures classification performance.
+  - term: DGHNL
+    definition: Deep Genetic Hierarchical Network of Learners, a state-of-the-art credit scoring model.
 critical_citations:
-  - "[Museba, 2023] — Supports effectiveness of heterogeneous ensembles in credit scoring."
-  - "[Krempl et al., 2000] — Advocates for explicit drift modelling in financial data."
-  - "[Barddal et al., 2020] — Demonstrates data stream learners outperform static models."
+  - "[Liu et al., 2021] — Introduced diverse instance-weighting ensemble for drift adaptation."
+  - "[Nikolaidis and Doumpos, 2022] — Adaptive credit scoring using local regions of competence."
+  - "[Museba, 2023] — Adaptive heterogeneous ensemble for credit scoring."
+  - "[Barddal et al., 2020] — Data stream classification applied to credit scoring."
 relevance:
   topics:
     - code: 4.B
       name: Limitations and Gaps in Existing Systems
       relevance: medium
-      justification: Identifies static models' failure in dynamic environments.
+      justification: Paper identifies limitations of static models in dynamic environments.
     - code: 5.A
       name: Financial Behavioral Profiles in Personal Finance
-      relevance: contextual
-      justification: Discusses evolving borrower behavior leading to concept drift.
-    - code: 5.B
-      name: Profile Dynamics and the Cold‑Start Problem
-      relevance: contextual
-      justification: Addresses adaptation to changing borrower characteristics over time.
+      relevance: medium
+      justification: Credit scoring classifies borrowers based on financial behavior.
     - code: 5.C
       name: Classification Approaches for Financial Behavioral Profiles
-      relevance: medium
-      justification: The adaptive fusion method is a classification approach for dynamic profiles.
+      relevance: high
+      justification: Uses ML classifiers to categorize credit risk, directly relevant to profile classification.
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
       relevance: medium
-      justification: The paper focuses on predictive modeling under distributional shifts.
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: high
-      justification: Directly evaluates and proposes an algorithm for forecasting under drift.
+      justification: Credit scoring is a form of predictive modeling in finance.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      relevance: contextual
-      justification: Mentions fraud detection as an application domain.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: high
-      justification: Adaptive algorithms are applicable to detecting anomalies in spending.
-    - code: 8.C
-      name: Cold‑Start Baseline Strategies for Anomaly Detection
-      relevance: medium
-      justification: Transfer learning discussed for initial model building.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: medium
-      justification: Uses standard metrics like accuracy and AUC for evaluation.
+      relevance: low
+      justification: Mentions fraud detection but primary focus is credit scoring.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Extensive evaluation of adaptive algorithms with multiple metrics.
+    - code: 13.B
+      name: Debt Management in PFMS
       relevance: medium
-      justification: Compares multiple algorithmic modules like retraining, ensemble, and fusion.
-  contribution: "The study introduces a novel Adaptive Fusion algorithm for credit scoring that dynamically integrates multiple models. This approach directly informs the design of Odin's budget recommendation and anomaly detection modules, which must also adapt to shifting spending patterns. The framework's use of retraining and windowing strategies provides a methodological blueprint for handling concept drift in forecasting. Its emphasis on maintaining model robustness under class imbalance is relevant for detecting rare but significant financial events. The evaluation framework based on accuracy, precision, recall, and F1-score offers a template for assessing Odin's algorithmic modules."
+      justification: Credit scoring informs lending decisions, relevant to debt management.
+  contribution: The adaptive fusion technique can inform Odin's spending forecasting module by providing a method to combine multiple models to adapt to shifting spending patterns. The evaluation metrics and methodology can be used to assess Odin's classification modules. The paper's treatment of concept drift and adaptation strategies is directly applicable to Odin's anomaly detection component, which must handle evolving user behavior. The emphasis on developing economy contexts aligns with Odin's target demographic, justifying the adoption of such adaptive methods.
   directly_justifies:
-    - "Adaptive Fusion can maintain high predictive accuracy under concept drift by dynamically reweighting model outputs."
-    - "Retraining models on recent data is effective for adapting to long-term behavioral shifts."
-    - "Ensemble methods offer a stable approach to handling data distribution changes without full retraining."
-    - "Window-based approaches have limitations in capturing long-term trends."
+    - Adaptive models that dynamically fuse multiple classifiers outperform static models in dynamic environments.
+    - Retrained models achieve high accuracy but adaptive fusion offers similar performance with lower computational cost.
+    - Ensemble methods provide robust performance without full retraining, balancing accuracy and efficiency.
   limits:
-    - "The experimental evaluation is limited to a single dataset (German Credit). [unacknowledged]"
-    - "The paper does not explore the impact of different drift types on real-world Filipino spending data. [unacknowledged]"
-    - "The computational cost of the adaptive fusion algorithm in a real-time system is not detailed. [unacknowledged]"
-  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The domains 'Spending Forecasting' (6.A, 6.B) and 'Anomaly Detection' (8.A, 8.B, 8.C) were flagged as having high relevance because the paper directly addresses algorithms for predictive modeling and drift adaptation under changing data distributions, which is analogous to forecasting Filipino young professionals' spending and detecting anomalies. The 'Behavioral Profiling' domain (5.A, 5.B, 5.C) was assessed as medium to contextual, as it discusses evolving borrower behavior but does not build financial profiles in the Odin sense. 'Existing Systems & Gaps' (4.A, 4.B) was also considered medium, as the paper critiques static systems and provides a solution. The 'System Evaluation' domain (12.A, 12.B) was flagged as relevant due to its detailed performance analysis. Other domains such as 'Filipino Cultural Context', 'Budget Recommendation', and 'User Retention' were considered but rejected as the paper does not address cultural practices, budget allocation constraints, or engagement mechanisms, being focused on a generic credit scoring algorithm. The overall relevance to Odin is significant for its algorithmic approaches to handling temporal data shifts."
+    - Results are based on a single dataset (German Credit) with simulated drifts, not real streaming data.
+    - The study does not address fairness and bias in credit scoring beyond mentioning it.
+    - Generalizability to other developing economy contexts beyond South Africa may be limited.
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as relevant to the following domains: Existing Systems & Gaps (4.A, 4.B) because it discusses limitations of static credit scoring models; Behavioral Profiling & Classification (5.A, 5.C) as it uses ML to classify borrowers into risk categories; Predictive Modeling (6.A) as credit scoring is a form of predictive modeling; Anomaly Detection (8.A) as it touches on fraud detection and risk identification; System Evaluation (12.A, 12.B) as it provides extensive model evaluation; and Savings & Debt Management (13.B) as credit scoring is integral to debt management. Specific topic codes selected: 4.B (medium), 5.A (medium), 5.C (high), 6.A (medium), 8.A (low), 12.B (high), 13.B (medium). Borderline cases: The paper's focus on concept drift could also relate to 6.B (forecasting algorithms) and 8.B (anomaly detection algorithms), but these were rejected because the paper does not deal with sequential spending data or specific anomaly detection algorithms; it is primarily classification. The topics 3.A, 3.B, 3.C were considered but rejected as the paper does not address expense categorization. 7.A-D were rejected as it does not address budgeting. 9.A-B, 10.A-B, 11.A-B were rejected as they are not addressed. Overall, the paper provides a valuable adaptive modeling approach that can inform Odin's classification, evaluation, and adaptation strategies, with high relevance to model evaluation and classification approaches.
 limitations:
-  - "The concept drift scenarios are synthetically generated, which may not fully represent real-world drifts."
-  - "The study does not account for fairness and bias mitigation, which is critical for personal finance applications. [unacknowledged]"
-  - "No data stream was used for real-time evaluation, limiting the assessment of the algorithm's true online performance. [unacknowledged]"
+  - The study relies on simulated drift scenarios rather than real-world streaming data.
+  - Only the German Credit dataset is used, limiting generalizability.
+  - Fairness and bias are mentioned but not systematically evaluated. [unacknowledged]
 remember_this:
-  - "Adaptive Fusion achieved 95.0% accuracy and an AUC exceeding 0.96 for credit scoring."
-  - "Dynamic model integration outperformed static retraining and windowing techniques."
-  - "Adaptive algorithms are essential for maintaining accuracy when data distributions change."
-  - "Ensemble methods provide a stable, though less optimal, alternative to adaptive fusion."
-  - "Concept drift detection is critical for forecasting personal finance behavior."
+  - Adaptive Fusion achieved 95.0% accuracy and ROC-AUC >0.96 in credit scoring.
+  - Dynamic fusion of multiple models is more robust to concept drift than retraining alone.
+  - The study demonstrates the need for drift-aware models in developing economy contexts.
+  - Ensemble and adaptive strategies maintain performance under data distribution shifts.
 ```
 ---
 
-## Paper 37: Dhanekula & Munira_summarized.md
+## Paper 32: Li J._summarized.md
+
+**Source File:** `Li J._summarized.md`
+
+```yaml
+paper_id: 10.71222/7v3b7272
+designation: international
+title: Research on Personalized Asset Allocation Using AI Agents in Robo-Advisory Scenarios
+authors: Li, J.
+year: 2026
+venue: Journal of Computer, Signal, and System Research
+odin_topics:
+  - 5.A
+  - 7.A
+  - 7.B
+  - 7.C
+  - 8.A
+  - 10.A
+  - 10.B
+  - 12.A
+  - 12.B
+  - 13.A
+tldr: A systematic review of AI-driven personalized asset allocation in robo-advisory, examining risk profiling, dynamic allocation, and behavioral finance integration with a focus on algorithmic transparency and data privacy.
+problem_and_motivation: Traditional robo-advisors rely on generalized algorithms that fail to address individual financial circumstances and dynamic risk preferences. This limitation motivates the development of sophisticated AI techniques to deliver truly personalized, adaptive investment strategies that improve outcomes and satisfaction.
+approach:
+  - This is a systematic review of the literature on AI agents for personalized asset allocation in robo-advisory contexts.
+  - It examines machine learning, reinforcement learning, and natural language processing techniques used for risk profiling and portfolio optimization.
+  - The review compares rule-based systems with AI-driven approaches, analyzing their strengths, limitations, and performance.
+  - It incorporates behavioral finance principles, evaluating how AI can identify and mitigate cognitive biases in investment decisions.
+  - The review addresses challenges related to transparency, explainability, data privacy, security, and regulatory compliance.
+findings:
+  - num: AI-driven risk assessment using deep learning and NLP improves personalization over static questionnaires by analyzing transaction history and investor communication.
+  - num: Reinforcement learning agents learn optimal asset allocation strategies through interaction with market environments, adapting to changing conditions.
+  - num: Integrating behavioral finance insights via AI mitigates biases like loss aversion and overconfidence, promoting rational decision-making.
+  - num: AI-enhanced asset allocation demonstrates improved performance in volatile markets compared to static, rule-based approaches.
+  - AI agents can quantify bias influence using metrics like bias score B_s to adjust recommendations dynamically.
+  - Key challenges include lack of explainability, data privacy concerns, and regulatory compliance.
+  - Federated learning and explainable AI are emerging trends to address trust and privacy in robo-advisory.
+key_figures_tables:
+  - Table 1: Comparison of early robo-advisory models, highlighting rule-based core algorithms, limited dynamic adjustment, and simple investment strategies.
+  - Table 2: Timeline of AI integration in robo-advisory, showing progression from personalized AI agents to reinforcement learning and evolutionary algorithms.
+  - Table 3: Comparison of risk profiling methods, contrasting traditional static questionnaires with AI-enhanced approaches using deep learning and NLP.
+  - Table 4: Behavioral biases and mitigation strategies, listing loss aversion, confirmation bias, anchoring, overconfidence, and herding bias with corresponding AI interventions.
+  - Table 5: Key challenges and mitigation strategies for data privacy, security, regulatory compliance, ethical concerns, and trust in AI recommendations.
+key_equations:
+  - equation: A_t = f(M_t, I_t)
+    explanation: Optimal asset allocation at time t is a function of market conditions and investor needs.
+  - equation: R^2
+    explanation: Coefficient of determination indicating model fit for traditional risk profiling.
+  - equation: f(x)
+    explanation: AI-driven risk preference representation where x represents diverse data inputs.
+  - equation: B_s
+    explanation: Bias score representing the influence of a specific behavioral bias on investment decisions.
+definitions:
+  - term: Robo-advisor
+    definition: An automated investment platform using algorithms to manage portfolios with minimal human intervention.
+  - term: Reinforcement Learning (RL)
+    definition: A machine learning paradigm where agents learn optimal actions through trial and error interactions with an environment.
+  - term: Natural Language Processing (NLP)
+    definition: A field of AI that enables computers to understand, interpret, and generate human language.
+  - term: Explainable AI (XAI)
+    definition: AI systems designed to provide transparent and understandable explanations for their decisions.
+  - term: Federated Learning
+    definition: A machine learning approach that trains models across decentralized data sources without sharing raw data.
+critical_citations:
+  - "[Shetty et al., 2026] — Foundational work on robo-advisors redefining wealth management with AI."
+  - "[Shen et al., 2025] — Data-driven wealth management model analysis for AI empowering robo-advisors."
+  - "[Tahvildari, 2025] — Systematic review of generative AI in robo-advisory, identifying opportunities and challenges."
+  - "[Rizinski and Trajanov, 2025] — Scientific review of AI agent-based systems in finance and fintech."
+relevance:
+  topics:
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Reviews AI-driven risk assessment and behavioral profiling using deep learning and NLP.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: contextual
+      justification: Discusses asset allocation strategies but not specific budgeting frameworks.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: contextual
+      justification: Focuses on investment allocation rather than budget recommendation.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: low
+      justification: Mentions optimization in portfolio allocation but not budget constraints.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: Does not directly address anomaly detection in spending data.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: high
+      justification: Dedicated section on data privacy, security, and regulatory compliance for robo-advisors.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Emphasizes transparency and explainability as essential for building user trust.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Compares AI algorithms and evaluates performance in various scenarios.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: Comparative analysis of deep learning, RL, and genetic algorithms for asset allocation.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: contextual
+      justification: Mentions financial goals like retirement and education but not savings goal management.
+  contribution: This review paper provides a comprehensive overview of AI-driven personalized asset allocation, mapping techniques like reinforcement learning, deep learning, and NLP to the robo-advisory context. It directly informs Odin's behavioral profiling module by discussing AI-driven risk assessment from transaction data and communication. The review also contributes to Odin's data privacy and trust considerations by systematically addressing encryption, compliance, and explainability challenges. Additionally, its discussion of adaptive allocation strategies offers conceptual background for Odin's budget recommendation and forecasting modules.
+  directly_justifies:
+    - AI-driven risk assessment can be extended to financial behavioral profiling for young professionals.
+    - Data privacy frameworks from robo-advisory are directly applicable to PFMS like Odin.
+    - Explainable AI techniques are essential for building trust in automated financial recommendations.
+    - Behavioral bias mitigation strategies can be integrated into personal finance management systems.
+  limits:
+    - The review is a survey and does not provide empirical results specific to PFMS or Filipino contexts.
+    - Discussion of algorithmic performance is high-level and lacks detailed benchmark comparisons.
+    - Limited treatment of cold-start problems or personalized recommendations with sparse user data.
+  mapping_rationale: The systematic scan across all 12 functional domains and their associated canonical topic codes flagged relevance primarily in Behavioral Profiling (5.A), Data Privacy (10.A), User Trust (10.B), and System Evaluation (12.A, 12.B). The paper's discussion of AI-driven risk assessment using transaction history and behavioral data maps to 5.A (medium). Its dedicated sections on data encryption, regulatory compliance (GDPR, CCPA), and ethical bias directly inform 10.A and 10.B (high). The comparative analysis of AI algorithms and evaluation of performance in volatile markets relates to 12.A and 12.B (medium). Topics like Expense Categorization (3.A), Filipino Cultural Context (2.A), and Spending Forecasting (6.A) were considered but rejected because the paper focuses on investment allocation rather than spending categorization or forecasting. Borderline cases include 7.A (Budgeting Strategies) and 7.B (Budget Recommendation), which are tangentially related through asset allocation but not directly applicable to PFMS budgeting. Overall, the paper provides high-value insights for Odin's privacy, trust, and evaluation modules but limited direct applicability to core PFMS functionalities like expense tracking and budget recommendations.
+limitations:
+  - The paper is a review and does not present novel empirical findings. [unacknowledged]
+  - It does not address the cold-start problem or zero-shot scenarios common in PFMS adoption.
+  - The review lacks specific guidance on implementing AI in low-data environments.
+  - It does not consider the unique financial behaviors of Filipino young professionals.
+  - None identified.
+remember_this:
+  - AI-driven risk assessment improves personalization by analyzing transaction history and communication patterns.
+  - Reinforcement learning enables dynamic portfolio adaptation to changing market conditions.
+  - Mitigating cognitive biases like loss aversion requires explicit AI interventions and bias scoring.
+  - Data privacy and explainability are critical barriers to user trust in automated financial advice.
+  - num: AI-enhanced asset allocation shows improved performance in volatile markets compared to static approaches.
+```
+---
+
+## Paper 33: Dhanekula & Munira_summarized.md
 
 **Source File:** `Dhanekula & Munira_summarized.md`
 
 ```yaml
 paper_id: 10.63125/p4y4te47
-designation: international
+designation: international-algorithm-specific
 title: Deep Neural Network Models for Real-Time Financial Forecasting and Market Intelligence
 authors: Dhanekula, A.; Munira, M. S. K.
 year: 2026
 venue: American Journal of Advanced Technology and Engineering Solutions
 odin_topics:
+  - 6.A
   - 6.B
-  - 8.B
-  - 12.B
+  - 7.A
+  - 8.A
   - 10.A
-  - 9.A
-tldr: A quantitative case study of a DNN forecasting service finds that data quality, robustness, and explanation quality are the strongest drivers of perceived forecasting and market intelligence effectiveness.
-problem_and_motivation: Organizations deploy DNN forecasting services but lack quantitative evidence on which operational capabilities drive real-time effectiveness and whether forecasting gains convert into decision-ready intelligence. Decision teams need empirical guidance on capability priorities to maximize intelligence value.
+  - 10.B
+  - 12.A
+  - 12.B
+  - 12.C
+tldr: DNN forecasting effectiveness depends heavily on data integrity and system robustness, while market intelligence outcomes are driven by forecast performance and explanation quality.
+problem_and_motivation: Decision teams lack quantitative evidence on which operational capabilities drive real-time forecasting effectiveness and whether forecasting gains convert into decision-ready market intelligence. This gap limits the governance and user-centered adoption of DNN forecasting platforms.
 approach:
-  - Quantitative cross-sectional case-study design using a five-point Likert survey administered to N=210 active users of a DNN forecasting service.
-  - Participants were 58.1% analysts, 21.9% traders, and 20.0% risk or portfolio staff.
-  - Capability variables measured: Data Quality (DQ), Feature Richness (FR), Update Responsiveness (UR), Robustness (ROB), and Explanation Quality (EQ).
-  - Outcome variables measured: Forecasting Effectiveness (FE) and Market Intelligence Effectiveness (MIE).
-  - Analysis included descriptive statistics, reliability testing (Cronbach's alpha), Pearson correlations, and two multiple regression models with diagnostic checks.
+  - Quantitative cross-sectional case-study design with N=210 active users of a DNN forecasting service.
+  - Five-point Likert survey measuring DQ, FR, UR, ROB, EQ, FE, and MIE.
+  - Reliability testing with Cronbach's alpha, Pearson correlations, and two multiple regression models.
+  - Diagnostic checks for multicollinearity and residuals to support valid inference.
+  - Descriptive statistics and hypothesis testing with standardized coefficients and model fit indicators.
 findings:
-  - num: Reliability was strong across all constructs (α = .84 to .90).
-  - num: Mean ratings for all capability dimensions were high (DQ M=4.12, FR M=3.98, UR M=3.85, ROB M=3.90, EQ M=3.76).
-  - num: Composite DNN capability correlated strongly with FE (r=.68, p<.001) and MIE (r=.62, p<.001).
-  - num: FE correlated strongly with MIE (r=.71, p<.001).
-  - num: Model 1 explained 56% of variance in FE (R²=.56), with significant effects for DQ (β=.32), ROB (β=.28), FR (β=.21), and UR (β=.14).
-  - num: Model 2 explained 61% of variance in MIE (R²=.61), driven by FE (β=.52), EQ (β=.29), and UR (β=.12).
+  - num: Reliability was strong across all constructs with Cronbach's alpha ranging from .84 to .90.
+  - num: DQ (M=4.12), FR (M=3.98), UR (M=3.85), ROB (M=3.90), EQ (M=3.76), FE (M=3.94), and MIE (M=4.01) were all perceived as high.
+  - num: DNN capability correlated with FE (r=.68) and MIE (r=.62); FE correlated with MIE (r=.71).
+  - num: Regression Model 1 explained 56% of FE variance with DQ (β=.32), ROB (β=.28), FR (β=.21), and UR (β=.14) as significant predictors.
+  - num: Regression Model 2 explained 61% of MIE variance with FE (β=.52), EQ (β=.29), and UR (β=.12) as significant predictors.
+  - Data quality and robustness were the strongest drivers of perceived forecasting effectiveness.
+  - Explanation quality strongly predicted market intelligence effectiveness beyond forecast performance.
+  - All eight hypotheses were supported at p < .05.
 key_figures_tables:
-  - "Figure 1: DNN-Driven Real-Time Financial Forecasting for Market Intelligence → Visualizes the end-to-end intelligence workflow."
-  - "Figure 2: Real-Time Financial Forecasting: Concepts, Metrics, and Challenges → Summarizes forecast evaluation complexity."
-  - "Figure 7: Conceptual Framework and Research Model Development → Depicts the hypothesized capability-to-intelligence pathway."
-  - "Table 4: Pearson Correlation Matrix → Shows moderate-to-strong positive associations among all constructs."
-  - "Table 5 & 6: Multiple Regression Models → Identifies DQ, ROB, FE, and EQ as the most influential predictors."
+  - Figure 1: DNN-Driven Real-Time Financial Forecasting → Shows the workflow from data to market intelligence.
+  - Figure 2: Real-Time Financial Forecasting Concepts → Summarizes metrics and challenges like noise and loss functions.
+  - Figure 3: Market Intelligence Framework → Links information sources to decision actions.
+  - Figure 4: DNN Architectures → Depicts LSTM, CNN, and hybrid models for forecasting.
+  - Figure 5: Data Inputs → Covers technical, fundamental, and alternative data sources.
+  - Table 1: Respondent Demographics → Details role, experience, and usage frequency of the sample.
+  - Table 2: Descriptive Statistics → Shows mean and SD for each construct.
+  - Table 3: Cronbach's Alpha → Confirms strong internal consistency for all scales.
+  - Table 4: Correlation Matrix → Shows significant positive associations among all constructs.
+  - Table 5: Regression for FE → Reports standardized coefficients and model fit.
+  - Table 6: Regression for MIE → Reports standardized coefficients and model fit.
+  - Table 7: Hypothesis Summary → Lists all supported hypotheses with evidence.
 key_equations:
-  - equation: "None."
-    explanation: ""
+  - equation: NB = γ0 + γ1·SQ + γ2·IQ + γ3·U + γ4·US + ε
+    explanation: Perceived net benefit as a function of system and information quality.
+  - equation: TP = α0 + α1·TTF + α2·ITeF + α3·TaIF + ε
+    explanation: Task performance predicted by task-technology, individual-technology, and task-individual fit.
+  - equation: WOA = (F − I) / (A − I)
+    explanation: Weight-on-advice measure of reliance on algorithmic outputs.
+  - equation: C = (1/k)·Σ_{i=1..k} x_i
+    explanation: Composite score as the mean of item responses.
+  - equation: α = (k/(k−1))·(1 − Σσ_i^2/σ_T^2)
+    explanation: Cronbach's alpha for internal consistency.
 definitions:
-  - term: DNN
-    definition: Deep Neural Network, a multi-layer computational architecture for learning hierarchical representations.
   - term: DQ
-    definition: Data Quality, perceived accuracy, completeness, and timeliness of input streams.
+    definition: Data Quality – accuracy, completeness, timeliness of input streams.
   - term: FR
-    definition: Feature Richness, breadth of technical, macro, and alternative features available to the model.
+    definition: Feature Richness – breadth of technical, macro, and alternative features.
   - term: UR
-    definition: Update Responsiveness, frequency of model and feature refresh to reflect new information.
+    definition: Update Responsiveness – frequency of model and feature refresh.
   - term: ROB
-    definition: Robustness, stability of outputs under noisy or shifting conditions.
+    definition: Robustness – stability of outputs under noisy or shifting conditions.
   - term: EQ
-    definition: Explanation Quality, clarity and usefulness of the system's explanations for forecasts.
+    definition: Explanation Quality – clarity and usefulness of forecast rationales.
   - term: FE
-    definition: Forecasting Effectiveness, perceived accuracy, timeliness, and stability of generated forecasts.
+    definition: Forecasting Effectiveness – perceived accuracy, timeliness, and stability of forecasts.
   - term: MIE
-    definition: Market Intelligence Effectiveness, degree to which the service helps detect changes, prioritize assets, improve confidence, and coordinate actions.
+    definition: Market Intelligence Effectiveness – perceived actionability and decision support from forecasts.
 critical_citations:
-  - "[LeCun et al., 2015] — Foundational deep learning theory."
-  - "[Gu et al., 2020] — DNNs capture nonlinear predictor interactions in finance."
-  - "[Fischer & Krauss, 2018] — LSTM benchmarks in market prediction."
-  - "[Ribeiro et al., 2016] — Local surrogate explanations for model interpretability."
-  - "[Zhang et al., 2005] — Microstructure noise challenges in high-frequency data."
+  - "[Gu et al., 2020] — ML improves asset pricing via nonlinear interactions."
+  - "[Fischer & Krauss, 2018] — LSTM networks for financial market predictions."
+  - "[Sirignano & Cont, 2019] — Deep learning for limit order book features."
+  - "[Dietvorst et al., 2015] — Algorithm aversion after seeing errors."
+  - "[Shin, 2021] — Explainability and causability affect trust and acceptance."
 relevance:
   topics:
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Directly evaluates DNN-based predictive modeling for forecasting effectiveness.
     - code: 6.B
       name: Forecasting Algorithms for Sequential Spending Data
       relevance: high
-      justification: The paper directly evaluates a DNN forecasting service, identifying key drivers of forecasting effectiveness.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: high
-      justification: The study provides a quantitative evaluation framework (survey, regression) for assessing algorithmic module performance.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: medium
-      justification: The paper discusses robustness and market intelligence which are relevant to anomaly detection contexts, though not the primary focus.
+      justification: Tests DNN forecasting algorithms and identifies key drivers like data quality and robustness.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: contextual
+      justification: Discusses forecast evaluation and decision support, which inform budgeting strategies.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: contextual
+      justification: Mentions robustness and stability, which are relevant to anomaly detection baselines.
     - code: 10.A
       name: Data Privacy and Security in Personal Finance Systems
       relevance: contextual
-      justification: The discussion mentions security controls (data lineage, access control, logging) for forecasting pipelines, providing background framing.
-    - code: 9.A
-      name: Mobile-First Design Principles and Rationale
-      relevance: low
-      justification: The paper's focus on user-facing explanation quality and decision support offers tangential relevance to UX, but not mobile-specific design.
-  contribution: The paper provides a validated quantitative framework for evaluating DNN forecasting services. It empirically demonstrates that data quality and robustness are the primary drivers of perceived forecasting effectiveness. The findings highlight that explanation quality is a critical independent predictor of market intelligence effectiveness. These results offer actionable levers for governance and monitoring of secure forecasting platforms. The study bridges technical forecasting performance with user-perceived decision value.
+      justification: Recommends integrity controls and secure deployment for forecasting pipelines.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Finds that explanation quality significantly predicts intelligence effectiveness and trust.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Uses a structured evaluation framework with reliability testing and regression modeling.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: Evaluates DNN capability dimensions and their predictive influence on outcomes.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: medium
+      justification: The regression methodology can be applied to evaluating budget recommendation systems.
+  contribution: "This paper provides a validated framework for evaluating DNN-driven financial forecasting as a market intelligence service. It demonstrates that forecasting effectiveness is the central mechanism linking technical capability to decision intelligence. The findings directly justify Odin's emphasis on data quality and system robustness in its forecasting module. The strong predictive role of explanation quality supports Odin's design for transparent and interpretable recommendations. The study's regression-based evaluation methodology offers a template for Odin's own system evaluation and hypothesis testing."
   directly_justifies:
-    - "Prioritizing data quality and robustness controls is essential for real-time forecasting effectiveness."
-    - "Forecasting effectiveness serves as the central transmission mechanism between capability and market intelligence."
-    - "Explanation quality is a measurable driver of intelligence usefulness and decision confidence."
-    - "Update responsiveness contributes significantly to both forecasting and intelligence outcomes."
+    - "Data quality and robustness are the strongest predictors of forecasting effectiveness."
+    - "Explanation quality is a significant independent predictor of market intelligence effectiveness."
+    - "Forecasting effectiveness strongly mediates the link between capability and intelligence outcomes."
+    - "Perceived forecasting performance and intelligence value are closely tied in user experience."
   limits:
     - "Cross-sectional design limits causal inference."
-    - "Single case-study context constrains generalizability."
-    - "Self-reported Likert data captures perceived usefulness, not directly observed economic outcomes."
-    - "Potential common method bias due to same-source survey responses."
-  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to the "Forecasting Algorithms" (6.B) and "System Evaluation" (12.B) domains due to its direct focus on evaluating a DNN-based forecasting service and identifying key performance drivers. It was also deemed relevant to "Anomaly Detection" (8.B) given its treatment of robustness and market intelligence, which are conceptually linked to detecting outliers. "Data Privacy" (10.A) was flagged as contextual due to passing mentions of security controls in the discussion. Other domains like "Spending Patterns" (2.B, 2.D), "Expense Categorization" (3.A), "Savings" (13.A), and "Budget Recommendation" (7.A) were rejected as the paper's focus on financial market forecasting (asset returns, volatility) does not map to personal spending, saving, or budgeting contexts. The paper's overall relevance to Odin is moderate, providing a robust evaluation methodology and emphasizing the importance of data quality, robustness, and explainability for predictive systems.
+    - "Single case-study setting constrains generalizability."
+    - "Self-reported Likert data may be subject to common method bias."
+    - "Nonstationarity and regime changes are not captured by the snapshot design."
+    - "The framework simplifies complex technical realities with linear regression."
+  mapping_rationale: "All 12 functional domains and their associated topic codes were systematically scanned. The paper's core focus on DNN forecasting and user perceptions directly maps to high relevance for Predictive Modeling (6.A) and Forecasting Algorithms (6.B), as it evaluates DNN effectiveness and driver identification. The findings on explanation quality and user trust provide high relevance to User Trust (10.B). The paper's evaluation design offers high relevance to System Evaluation (12.A) and medium relevance to Algorithmic Module Evaluation (12.B) and Budget Recommendation Methodologies (12.C). Domains related to Filipino cultural context (2.A-D), Expense Categorization (3.A-C), Existing Systems (4.A-B), Behavioral Profiling (5.A-C), Anomaly Detection (8.B-C), Mobile-First Design (9.A-B), User Retention (11.A-B), and Savings/Debt Management (13.A-C) were considered but rejected due to no direct mention of personal finance, Filipino users, or specific PFMS features. The paper's contribution is highly relevant to Odin's forecasting and evaluation modules, providing evidence for design decisions on data integrity, robustness, and explainability."
 limitations:
-  - "Quantitative, cross-sectional design limits definitive causal interpretation."
-  - "Single case-study setting constrains generalizability to other organizational contexts. [unacknowledged]"
-  - "Self-reported Likert-scale data captures perceived outcomes rather than directly observed financial performance."
-  - "Potential common method bias from collecting capability and outcome perceptions in the same instrument."
-  - "The conceptual framework simplifies complex technical realities by using linear regression on perceptual dimensions. [unacknowledged]"
+  - "Cross-sectional design prevents definitive causal inference. [unacknowledged]"
+  - "Single case-study setting limits generalizability to other organizations. [unacknowledged]"
+  - "Self-reported perceptions may not align with objective economic outcomes. [unacknowledged]"
+  - "Nonstationarity and regime changes are not captured by the snapshot design. [unacknowledged]"
+  - "Linear regression may oversimplify complex non-linear interactions in the data. [unacknowledged]"
 remember_this:
-  - "Data quality and robustness are the strongest predictors of forecasting effectiveness."
-  - "Forecasting effectiveness strongly mediates the link between capability and market intelligence."
-  - "Explanation quality is an independent driver of market intelligence effectiveness."
-  - "The evaluated model explained 61% of variance in perceived market intelligence effectiveness."
+  - "Data quality and robustness are the strongest drivers of forecasting effectiveness."
+  - "Explanation quality is critical for converting forecasts into actionable intelligence."
+  - "Forecasting effectiveness mediates the relationship between capability and intelligence."
+  - "num: The regression model explained 61% of market intelligence effectiveness variance."
+  - "DNN capability must be evaluated as an end-to-end service, not just a model."
 ```
 ---
 
-## Paper 38: Cabalfin et al_summarized.md
+## Paper 34: Cabalfin et al_summarized.md
 
 **Source File:** `Cabalfin et al_summarized.md`
 
@@ -5324,386 +4652,272 @@ remember_this:
 ```
 ---
 
-## Paper 39: Islam A. et al_summarized.md
+## Paper 35: Islam A. et al_summarized.md
 
 **Source File:** `Islam A. et al_summarized.md`
 
 ```yaml
-paper_id: "5d4e3c2b-1a0f-9e8d-7c6b-5a4f3e2d1c0b"
+paper_id: "d8f4b2a5-6e7c-4b3d-9f1a-2c5d8e7f9a0b" # No DOI available
 designation: "international-algorithm-specific"
 title: "Benchmarking Machine Learning Models for Real-Time Fraud Detection in Digital Banking Transactions"
 authors: "Islam, A.; Miah, M.; Akhir, A.; Munni, A.; Jahan, I.; Nashid, S."
 year: 2026
-venue: "Unknown"
+venue: "SSRN"
 odin_topics:
+  - "6.A"
   - "8.A"
   - "8.B"
-  - "8.C"
   - "12.A"
   - "12.B"
-  - "5.C"
-tldr: "Benchmarks machine learning models for real-time fraud detection, revealing trade-offs between detection accuracy, inference latency, throughput, and operational cost, with hybrid layered pipelines offering the best balance."
-problem_and_motivation: "Current fraud detection systems often prioritize accuracy over real-time constraints and cost efficiency, leading to high false-positive rates and operational overhead. There is a lack of comprehensive benchmarking that simultaneously evaluates predictive performance, latency, and financial impact. This study addresses that gap by systematically assessing multiple models under streaming conditions."
+tldr: "Benchmarks machine learning models for real-time fraud detection, evaluating accuracy, latency, throughput, and cost on two datasets."
+problem_and_motivation: "Existing fraud detection systems suffer from high false-positive rates and lack real-time feasibility. Accuracy alone is insufficient; operational latency and cost must be balanced. A comprehensive benchmark is needed to guide model selection for live banking environments."
 approach:
-  - "Used two datasets: ULB credit card fraud (284,807 transactions) and PaySim synthetic (6.36M transactions)."
-  - "Evaluated Random Forest, XGBoost, LightGBM, LSTM, TCN, and Transformer models."
-  - "Measured precision, recall, F1, ROC-AUC, PR-AUC, average and 95th percentile latency, throughput, and total cost from false positives and negatives."
-  - "Implemented a streaming evaluation framework with Apache Kafka and Spark/Flink for real-time inference."
-  - "Applied SMOTE for class imbalance and standardized preprocessing."
+  - "Used ULB credit card fraud dataset (284,807 transactions) and PaySim synthetic dataset (6.36 million transactions)."
+  - "Preprocessed data via cleaning, normalization, feature engineering, and SMOTE oversampling to address class imbalance."
+  - "Evaluated cost-sensitive logistic regression, random forest, XGBoost, LightGBM, LSTM, TCN, and Transformer models."
+  - "Measured predictive metrics (precision, recall, F1, ROC-AUC, PR-AUC) and real-time metrics (average/95th percentile latency, throughput)."
+  - "Performed cost–benefit analysis quantifying financial impact of false positives and false negatives."
+  - "Implemented a streaming evaluation framework using Apache Kafka and Spark/Flink for latency and throughput testing."
 findings:
-  - "num: XGBoost achieved ROC-AUC of 0.9998 and PR-AUC of 0.966 on PaySim."
-  - "num: LSTM processed up to 18,315 transactions per second on ULB with sub-millisecond latency."
-  - "num: Random Forest had 7.6 ms latency and 130 tx/sec throughput on ULB."
-  - "Gradient-boosted models offered superior scalability and responsiveness compared to deep learning."
-  - "Cost–benefit analysis showed that minimizing false positives and latency yields significant operational savings."
-  - "Hybrid layered pipelines balance accuracy and latency effectively."
+  - "num: XGBoost achieved near-perfect ROC-AUC of 0.9998 and PR-AUC of 0.966 on PaySim, outperforming other models."
+  - "num: Deep learning models (LSTM, TCN, Transformer) processed 15,000+ transactions per second with sub-millisecond latencies."
+  - "num: Random Forest exhibited highest latency (7.6 ms) and lowest throughput (130 tx/sec) on ULB."
+  - "Gradient-boosted trees provided superior scalability and real-time responsiveness compared to deep models."
+  - "Cost–benefit analysis revealed that minimizing false positives and latency yields significant operational savings."
+  - "Adaptive retraining effectively mitigated concept drift, preserving detection performance over time."
+  - "A hybrid layered pipeline (lightweight models for initial screening, deep models for secondary verification) balances accuracy and efficiency."
 key_figures_tables:
-  - "Table 2: Predictive performance on ULB dataset → XGBoost achieved highest F1 (0.859) among ensembles."
-  - "Table 3: Predictive performance on PaySim dataset → XGBoost near-perfect ROC-AUC (0.9998) and PR-AUC (0.966)."
-  - "Table 4: Real-time performance on ULB → LSTM had highest throughput (18,315 tx/sec)."
-  - "Table 5: Real-time performance on PaySim → TCN and Transformer achieved >15,000 tx/sec with ~0.06 ms latency."
-  - "Figure 22: Cost vs F1 plot → models with slightly lower F1 but much lower cost are more practical."
+  - "Table 2: ULB predictive performance → XGBoost and Random Forest achieve highest F1 scores."
+  - "Table 3: PaySim predictive performance → XGBoost achieves near-perfect ROC-AUC and PR-AUC."
+  - "Table 4: ULB real-time performance → Deep learning models have highest throughput."
+  - "Table 5: PaySim real-time performance → Deep models sustain >15k tx/sec with low latency."
+  - "Figure 22: Cost vs F1 plot → Models with slightly lower F1 but much lower cost are more practical."
 key_equations:
-  - equation: "$f(x) = w^T x + b$, $p(y=1|x) = \\sigma(f(x))$"
+  - equation: "$f(x) = w^T x + b, \\quad p(y=1|x) = \\sigma(f(x))$"
     explanation: "Logistic regression linear score and probability."
-  - equation: "$\\mathcal{L}_t \\approx \\sum_{i=1}^n [g_i f_t(x_i) + \\frac{1}{2} h_i f_t(x_i)^2] + \\Omega(f_t)$"
-    explanation: "XGBoost second-order Taylor approximation for boosting."
-  - equation: "$i_t = \\sigma(W_i x_t + U_i h_{t-1} + b_i)$"
-    explanation: "LSTM input gate activation."
-  - equation: "$c_t = f_t \\odot c_{t-1} + i_t \\odot \\tilde{c}_t$"
-    explanation: "LSTM cell state update."
-  - equation: "$y_t = \\sum_{k=0}^{K-1} W_k x_{t-d \\cdot k} + b$"
-    explanation: "TCN dilated causal convolution."
+  - equation: "$\\text{Gain} = \\frac{1}{2} \\left( \\frac{G_L^2}{H_L+\\lambda} + \\frac{G_R^2}{H_R+\\lambda} - \\frac{(G_L+G_R)^2}{H_L+H_R+\\lambda} \\right) - \\gamma$"
+    explanation: "XGBoost split gain used for tree growth."
+  - equation: "$i_t = \\sigma(W_{ix} x_t + U_{ih} h_{t-1} + b_i), \\quad f_t = \\sigma(W_{fx} x_t + U_{fh} h_{t-1} + b_f), \\quad o_t = \\sigma(W_{ox} x_t + U_{oh} h_{t-1} + b_o)$"
+    explanation: "LSTM gate equations for input, forget, and output."
 definitions:
-  - term: "Concept drift"
-    definition: "Change in data distribution over time, degrading model performance."
+  - term: "ML"
+    definition: "Machine learning."
+  - term: "LSTM"
+    definition: "Long short-term memory, a recurrent neural network for sequence data."
+  - term: "TCN"
+    definition: "Temporal convolutional network, a dilated causal CNN for sequences."
+  - term: "XGBoost"
+    definition: "Extreme Gradient Boosting, a gradient-boosted tree ensemble."
   - term: "ROC-AUC"
-    definition: "Area under the receiver operating characteristic curve, measures discriminative ability."
+    definition: "Area under the receiver operating characteristic curve."
   - term: "PR-AUC"
-    definition: "Area under the precision-recall curve, sensitive to imbalanced classes."
-  - term: "Latency"
-    definition: "Time taken for a model to make a prediction on a single transaction."
-  - term: "Throughput"
-    definition: "Number of transactions processed per second."
-  - term: "SMOTE"
-    definition: "Synthetic Minority Oversampling Technique to address class imbalance."
+    definition: "Area under the precision-recall curve."
 critical_citations:
-  - "[Dal Pozzolo et al., 2015] — ULB dataset and imbalanced classification."
-  - "[Lopez-Rojas & Axelsson, 2016] — PaySim synthetic dataset."
-  - "[Jurgovsky et al., 2018] — sequence classification for fraud detection."
-  - "[Bahnsen et al., 2016] — feature engineering for fraud detection."
+  - "[Dal Pozzolo et al., 2018] — Concept drift in fraud detection."
+  - "[Jurgovsky et al., 2018] — Sequence classification for credit-card fraud."
+  - "[Bahnsen et al., 2016] — Feature engineering for credit card fraud."
+  - "[Carcillo et al., 2019] — Scalable streaming fraud detection framework."
 relevance:
   topics:
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Benchmarks predictive models for fraud detection, applicable to spending prediction."
     - code: "8.A"
       name: "Anomaly Detection in Personal Finance Systems"
       relevance: "high"
-      justification: "Directly addresses fraud detection as a critical anomaly detection task."
+      justification: "Directly addresses anomaly detection in transaction data, a core Odin module."
     - code: "8.B"
       name: "Anomaly Detection Algorithms for Personal Spending Data"
       relevance: "high"
-      justification: "Benchmarks multiple algorithms (LSTM, XGBoost, etc.) on transaction data."
-    - code: "8.C"
-      name: "Cold‑Start Baseline Strategies for Anomaly Detection"
-      relevance: "medium"
-      justification: "Includes logistic regression as a baseline and discusses concept drift adaptation."
+      justification: "Evaluates multiple algorithms (LSTM, XGBoost, etc.) for anomaly detection."
     - code: "12.A"
       name: "Evaluation Frameworks for Personal Finance Systems"
       relevance: "medium"
-      justification: "Provides a comprehensive evaluation framework including latency, throughput, and cost."
+      justification: "Provides a comprehensive evaluation framework including accuracy, latency, and cost."
     - code: "12.B"
       name: "Evaluation of Algorithmic Modules"
       relevance: "medium"
-      justification: "Evaluates individual models on predictive and operational metrics."
-    - code: "5.C"
-      name: "Classification Approaches for Financial Behavioral Profiles"
-      relevance: "low"
-      justification: "Uses classification techniques, but not specifically for behavioral profiling; contextual relevance."
-  contribution: "The paper's benchmarking framework provides a methodology for evaluating anomaly detection algorithms under real-time constraints, directly applicable to Odin's fraud/anomaly detection module. Its cost-benefit analysis informs Odin's design trade-offs between detection accuracy and system responsiveness. The hybrid layered pipeline concept can guide Odin's architecture to balance computational cost and user experience. The evaluation metrics (latency, throughput, cost) offer a template for assessing Odin's algorithmic modules."
+      justification: "Evaluates algorithmic modules with multiple metrics and trade-off analysis."
+  contribution: "This paper offers a rigorous benchmarking methodology that can be adapted to evaluate Odin's anomaly detection module. It highlights the importance of considering latency, throughput, and cost alongside predictive accuracy, which is crucial for Odin's real-time mobile-first design. The proposed hybrid layered pipeline provides a practical architecture for balancing detection performance and operational efficiency. The cost–benefit framework can be reused to quantify the financial impact of false alerts and missed detections in Odin. Overall, the paper's experimental approach and findings directly inform the design and evaluation of Odin's algorithmic components."
   directly_justifies:
-    - "XGBoost achieves high fraud detection accuracy with low latency, suitable for real-time screening."
-    - "Deep learning models like LSTM and Transformer provide high accuracy but higher latency, suitable for secondary verification."
-    - "Cost–benefit analysis reveals that reducing false positives and latency is economically beneficial."
-    - "Hybrid pipelines can balance accuracy and operational efficiency in fraud detection."
+    - "Lightweight models can serve as first-line screening for high-volume transactions in Odin."
+    - "Hybrid pipelines balance detection accuracy and latency in real-time personal finance systems."
+    - "Concept drift adaptation is essential for maintaining model performance over time."
+    - "Cost–benefit analysis should guide Odin's anomaly detection threshold selection."
   limits:
-    - "Does not address Filipino cultural or demographic context."
-    - "Relies on synthetic (PaySim) and anonymized (ULB) datasets, limiting generalizability to real-world banking systems."
-    - "Does not explore privacy-preserving techniques like federated learning."
-  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The anomaly detection domain (8.A, 8.B, 8.C) was flagged as high relevance because the paper directly benchmarks anomaly detection algorithms for financial transactions. The system evaluation domain (12.A, 12.B) was marked medium as the paper provides a comprehensive evaluation framework including latency, throughput, and cost. Classification approaches (5.C) were assigned low relevance because the paper applies classification to fraud, not specifically to financial behavioral profiles. Other domains—Filipino cultural context, expense categorization, existing systems, behavioral profiling (except 5.C), spending forecasting, budget recommendation, mobile-first design, data privacy, user retention, and savings/debt management—were considered but rejected for lacking direct citeable claims or relevance to Odin's core functions. Borderline cases: the paper touches on cost-sensitive classification and concept drift, which relate to 7.D (infeasibility) and 8.C, but we assigned only 8.C. Overall, the paper is highly relevant to Odin's anomaly detection module and offers actionable insights for real-time system evaluation."
+    - "Datasets are banking transactions, not personal spending data; applicability to spending patterns is not validated."
+    - "The paper does not address user-specific spending behavior or seasonal patterns, limiting direct transferability."
+    - "None identified."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The domains flagged as relevant are: Existing Systems & Gaps (4.A, 4.B) – considered but rejected because the paper focuses on fraud detection rather than personal finance systems, though it does review ML-based systems; Behavioral Profiling (5.A, 5.B) – rejected because the paper does not address user profiles; Spending Forecasting (6.A, 6.B) – selected 6.A as medium because predictive modeling is central, and 6.B as contextual because sequence models are used but for detection not forecasting; Anomaly Detection (8.A, 8.B) – selected as high because fraud detection is a direct analog of anomaly detection; System Evaluation (12.A, 12.B, 12.C) – selected 12.A and 12.B as medium for evaluation framework, 12.C rejected as budget recommendation is unrelated; Data Privacy (10.A) – rejected because privacy is only briefly mentioned. The paper's primary contribution is algorithmic benchmarking with a strong evaluation component, making it most relevant to anomaly detection and system evaluation topics. Overall, the paper provides actionable insights for Odin's anomaly detection module design and evaluation."
 limitations:
-  - "Reliance on synthetic and anonymized datasets may limit external validity. [unacknowledged]"
-  - "Does not cover all fraud typologies present in global banking. [unacknowledged]"
-  - "Latency measurements may not fully capture production-grade network overhead."
-  - "Cost estimates are based on hypothetical per-case values, not real banking data."
+  - "The use of synthetic and anonymized datasets limits generalizability to real-world banking environments."
+  - "Only two datasets were used; broader validation across diverse fraud typologies is needed."
+  - "The study does not address explainability or regulatory compliance in depth."
+  - "Concept drift mitigation was tested but not under long-term operational conditions. [unacknowledged]"
+  - "Personal finance context (e.g., spending habits, savings goals) is not considered."
 remember_this:
-  - "XGBoost achieved ROC-AUC 0.9998 on PaySim with high throughput."
-  - "LSTM processed 18,315 transactions per second on ULB."
-  - "Model selection must balance accuracy, latency, and cost."
-  - "Hybrid layered pipelines offer the best trade-off for real-time fraud detection."
+  - "XGBoost achieved near-perfect ROC-AUC of 0.9998 on PaySim."
+  - "Deep learning models offer high throughput but higher latency and cost."
+  - "Hybrid layered pipelines balance detection accuracy and real-time responsiveness."
+  - "Cost–benefit analysis should prioritize reducing false positives and latency."
+  - "Adaptive retraining is critical to maintain performance under concept drift."
 ```
 ---
 
-## Paper 40: Kristiana et al_summarized.md
+## Paper 36: Kristiana et al_summarized.md
 
 **Source File:** `Kristiana et al_summarized.md`
 
 ```yaml
-paper_id: "10.1109/OJCS.2026.3658518"
-designation: "international-algorithm-specific"
-title: "Validating AI-Driven Nudge Recommendations: A/B Testing Two-Tower and Bandit Models in Simulated Digital Banking Environment"
-authors: "Kristiana, I.; Prabowo, H.; Gaol, F. L.; Qomariyah, N. N."
+paper_id: 10.1109/OJCS.2026.3658518
+designation: international-algorithm-specific
+title: Validating AI-Driven Nudge Recommendations: A/B Testing Two-Tower and Bandit Models in Simulated Digital Banking Environment
+authors: Kristiana, I.; Prabowo, H.; Lumbangaol, F.; Qomariyah, N. N.
 year: 2026
-venue: "IEEE Open Journal of the Computer Society"
+venue: IEEE Open Journal of the Computer Society
 odin_topics:
-  - "5.A"
-  - "5.C"
-  - "6.A"
-  - "7.B"
-  - "7.D"
-  - "8.C"
-  - "9.A"
-  - "10.A"
-  - "11.B"
-  - "12.B"
-tldr: "A hybrid AI model combining Two-Tower Networks for static personalization and Multi-Armed Bandits for adaptive nudging significantly improved purchase and recommendation-following rates in a simulated digital banking A/B test."
-problem_and_motivation: "Existing recommender systems in banking often fail due to data sparsity, cold-start issues, and a lack of behavioral awareness. There is a gap in integrating static personalization with real-time adaptive learning and explicit behavioral nudging. This study empirically validates a hybrid nudge recommendation model to improve user engagement and decision-making."
+  - 4.B
+  - 5.A
+  - 5.C
+  - 6.A
+  - 11.A
+  - 12.A
+  - 12.B
+  - 4.A
+  - 6.B
+  - 9.A
+  - 9.B
+tldr: A hybrid recommendation model combining Two-Tower Network static personalization with Multi-Armed Bandit adaptive nudge selection increases recommendation-following behavior from 13.6% to 52.87% in a simulated digital banking A/B test.
+problem_and_motivation: Existing recommender systems in banking rely on collaborative or content-based filtering that fail due to data sparsity, cold-start problems, and the absence of behavioral mechanisms. No empirically validated model integrates static personalization, real-time adaptive learning, and explicit behavioral nudge design for financial decision support.
 approach:
-  - "A Two-Tower Network (TWN) was trained on baseline interaction data from 214 rule-based control users to generate static personalization scores."
-  - "A Multi-Armed Bandit (MAB) algorithm used these scores as priors and dynamically adapted nudge selection based on simulated Gaussian rewards."
-  - "The integrated model was evaluated in a simulated mobile banking environment with 174 treatment users."
-  - "The treatment group's performance was compared against a rule-based control group and a TWN-only ablation baseline."
-  - "Behavioral metrics included purchase conversion, recommendation-following rates, and alignment with the bandit's optimal arm."
+  - Data was collected from 214 control and 174 treatment verified bank customers via a 54-item behavioral questionnaire and mobile banking simulation with purchase-like actions.
+  - A Two-Tower Network with 128-64-128 architecture generates user and product embeddings using PCA dimensionality reduction and SMOTE oversampling for class balance.
+  - A Multi-Armed Bandit with ε-greedy policy and Gaussian reward feedback adaptively selects among nine nudge mechanisms based on TWN-generated relevance scores.
+  - Sequential A/B testing compared rule-based nudging (App v1) against TWN+MAB-driven nudging (App v2) with no participant overlap between groups.
+  - Evaluation used chi-square testing, odds ratio calculation, reward trajectory analysis, and regret analysis against empirical optimal arm.
+  - A TWN-only ablation baseline isolated the effect of behavioral nudging and adaptive bandit layer beyond static personalization.
 findings:
-  - "num: The AI-driven treatment group achieved a 62.07% purchase rate, up from 48.6% in the control."
-  - "num: Recommendation-following behavior increased from 13.6% (control) to 52.87% (treatment)."
-  - "num: 100% of recommendation-driven purchases in the treatment group aligned with the MAB's optimal arm."
-  - "A chi-square test confirmed the behavioral shift was statistically significant (χ2 = 6.49, p < 0.0108)."
-  - "The hybrid model combining TWN and MAB outperformed both rule-based and TWN-only baselines."
-  - "Reward and regret analyses confirmed stable online learning and effective exploration-exploitation balance."
+  - num: Purchase conversion rose from 48.6% in control to 62.07% in treatment, a relative improvement of 27.7%.
+  - num: Recommendation-aligned purchases increased from 13.6% to 52.87%, representing a fourfold behavioral shift.
+  - num: Chi-square test confirmed statistical significance (χ2 = 6.49, p < 0.0108).
+  - num: Odds ratio of 7.15 indicates treatment users are over seven times more likely to follow recommendations than control users.
+  - 100% of recommendation-driven purchases in the treatment group aligned with the MAB's empirically optimal arm.
+  - Smoothed regret trajectories remained below 0.10-0.15 threshold, demonstrating stable bandit learning without policy divergence.
+  - Event-level reward trajectories remained stable over interaction rounds, confirming robust online adaptation under noisy feedback.
 key_figures_tables:
-  - "Figure 1: DSR methodology flow → Outlines the research framework from problem identification to evaluation."
-  - "Figure 2: A/B testing research flow diagram → Shows the sequential control and treatment group deployment."
-  - "Figure 3: Integrated architecture of the nudge recommendation model → Illustrates data flow from TWN to MAB and nudge deployment."
-  - "Figure 4: Stability of event-level reward trajectories → Shows stable online learning under noisy feedback."
-  - "Figure 5: Smoothed instant regret over rounds → Demonstrates bandit policy stays near the optimal nudge."
-  - "Table 1: TWN configuration parameters → Details embedding dimensions and training setup."
-  - "Table 2: A/B Testing Metrics for Control and Treatment Groups → Summarizes key behavioral outcomes."
+  - Figure 1: DSR methodology diagram → Illustrates the research framework from problem identification to evaluation.
+  - Figure 2: A/B testing research flow → Shows control and treatment group allocation and measurement pipeline.
+  - Figure 3: Integrated TWN+MAB architecture → Visualizes embedding generation, bandit decision, and nudge deployment.
+  - Figure 4: Reward trajectories under MAB → Stable event-level reward confirms robust online learning.
+  - Figure 5: Smoothed instant regret → Regret stays below threshold, validating exploration-exploitation balance.
+  - Table 1: TWN configuration parameters → 128-64-128 architecture with 20 epochs and SMOTE oversampling.
+  - Table 2: A/B testing metrics → Direct comparison of control and treatment behavioral outcomes.
 key_equations:
-  - equation: "$Q_{t+1}(a) = Q_t(a) + \\frac{1}{N_t(a)}(R_t - Q_t(a))$"
-    explanation: "Updates value estimate for each product arm using incremental reward."
-  - equation: "$a_t = \\begin{cases} \\arg\\max_a Q_t(a), & \\text{with probability } 1-\\epsilon \\\\ \\text{random arm}, & \\text{with probability } \\epsilon \\end{cases}$"
-    explanation: "Epsilon-greedy policy for selecting product recommendations."
-  - equation: "$\\text{Regret}_t = \\mu^* - \\mu_t$"
-    explanation: "Measures the instantaneous loss from not selecting the optimal nudge."
+  - equation: Q_{t+1}(a) = Q_t(a) + (1/N_t(a)) * (R_t - Q_t(a))
+    explanation: Incremental reward estimate update for each product arm in MAB.
+  - equation: a_t = argmax_a Q_t(a) with probability 1-ε, else random arm
+    explanation: ε-greedy policy selects best arm or explores randomly.
 definitions:
-  - term: "Two-Tower Network (TWN)"
-    definition: "A dual-encoder model generating personalized product relevance scores from user and item embeddings."
-  - term: "Multi-Armed Bandit (MAB)"
-    definition: "An online learning algorithm balancing exploration and exploitation to adaptively select actions."
-  - term: "Nudge"
-    definition: "A subtle change in choice architecture that steers behavior while preserving freedom of choice."
-  - term: "A/B Testing"
-    definition: "A controlled experiment comparing two versions of a system to measure the impact of a change."
-  - term: "Regret"
-    definition: "The cumulative loss in reward from not always choosing the optimal action."
+  - term: TWN
+    definition: Two-Tower Network for learning deep user and product embeddings via dual-encoder architecture.
+  - term: MAB
+    definition: Multi-Armed Bandit for adaptive online learning balancing exploration and exploitation.
+  - term: DSR
+    definition: Design Science Research methodology for building and evaluating artifacts.
+  - term: CF
+    definition: Collaborative Filtering recommender system based on user-item interaction similarity.
+  - term: CBF
+    definition: Content-Based Filtering recommender system using item attribute similarity.
+  - term: SMOTE
+    definition: Synthetic Minority Oversampling Technique for addressing class imbalance.
+  - term: PCA
+    definition: Principal Component Analysis for dimensionality reduction while preserving variance.
 critical_citations:
-  - "[Jesse & Jannach, 2021] — Survey on digital nudging with recommenders."
-  - "[Kristiana et al., 2025] — Foundation work on TWN+MAB integration for nudge optimization."
-  - "[Thaler & Sunstein, 2008] — Seminal work on nudge theory."
-  - "[Cossatin et al., 2024] — Application of digital nudging in recommender systems."
+  - "[Thaler and Sunstein, 2008] — Foundation of nudge theory for choice architecture."
+  - "[Jesse and Jannach, 2021] — Digital nudging with recommender systems survey."
+  - "[Kristiana et al., 2025] — Prior work establishing AI-driven nudge optimization framework."
+  - "[Yi et al., 2019] — Neural modeling for large corpus item recommendations."
+  - "[Bouneffouf et al., 2020] — Survey on multi-armed bandit applications."
 relevance:
   topics:
-    - code: "5.A"
-      name: "Financial Behavioral Profiles in Personal Finance"
-      relevance: "high"
-      justification: "The model explicitly profiles users via 54-item behavioral instrument for personalization."
-    - code: "5.C"
-      name: "Classification Approaches for Financial Behavioral Profiles"
-      relevance: "medium"
-      justification: "Uses user embeddings and behavioral data to classify financial behavior."
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      relevance: "high"
-      justification: "The TWN predicts product relevance scores based on user and item features."
-    - code: "7.B"
-      name: "Budget Recommendation in Personal Finance Systems"
-      relevance: "medium"
-      justification: "Provides framework for recommending products and nudges, informing budget allocation decisions."
-    - code: "7.D"
-      name: "Infeasibility Handling and Reduction Hierarchies"
-      relevance: "contextual"
-      justification: "The adaptive bandit layer handles uncertainty, similar to infeasibility in constraint satisfaction."
-    - code: "8.C"
-      name: "Cold-Start Baseline Strategies for Anomaly Detection"
-      relevance: "high"
-      justification: "The TWN provides a baseline for cold-start using static personalization before online adaptation."
-    - code: "9.A"
-      name: "Mobile-First Design Principles and Rationale"
-      relevance: "low"
-      justification: "The experiment uses a mobile banking simulator, supporting mobile-first research."
-    - code: "10.A"
-      name: "Data Privacy and Security in Personal Finance Systems"
-      relevance: "contextual"
-      justification: "Paper mentions data privacy and security as concerns for future deployment."
-    - code: "11.B"
-      name: "Retention Mechanisms and Engagement Design"
-      relevance: "medium"
-      justification: "Demonstrates that adaptive nudging improves user engagement and responsiveness."
-    - code: "12.B"
-      name: "Evaluation of Algorithmic Modules"
-      relevance: "high"
-      justification: "Employs rigorous A/B testing to evaluate the algorithmic recommendation modules."
-  contribution: "This paper provides a validated architecture integrating a Two-Tower Network for static personalization and a Multi-Armed Bandit for adaptive behavioral nudging, directly informing Odin's recommendation and anomaly detection modules. The A/B testing methodology offers a blueprint for evaluating predictive algorithms, and the findings on recommendation-following behavior justify user-adaptive engagement strategies. The study's focus on cold-start mitigation via TWN is directly applicable to Odin's profile classification and forecasting systems. The demonstrated behavioral influence supports the design of Odin's budget recommendation and anomaly alert systems."
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Directly identifies CF/CBF limitations in banking and proposes hybrid solution.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Builds user embeddings from 54-item behavioral questionnaire for personalization.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Two-Tower Network classifies users into behavioral profiles via embeddings.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: TWN predicts user-product relevance scores as static personalization backbone.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: high
+      justification: A/B testing measures behavioral engagement through purchase and recommendation-following.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Controlled A/B testing with chi-square validation provides evaluation methodology.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Separately evaluates TWN static personalization and MAB adaptive nudge selection.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Reviews existing recommender systems in banking and their limitations.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: medium
+      justification: MAB adapts sequentially based on real-time user feedback and reward signals.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: medium
+      justification: Evaluation conducted in a mobile banking simulator mirroring real application behavior.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: medium
+      justification: Nudge mechanisms are presented through mobile UX with framing, saliency, and just-in-time cues.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: Paper does not address anomaly detection; focus is on recommendation and nudging.
+  contribution: The paper provides a validated hybrid architecture combining Two-Tower Network static personalization with Multi-Armed Bandit adaptive nudge selection that can inform Odin's recommendation and behavioral profiling modules. The A/B testing framework with chi-square validation offers a rigorous evaluation template for Odin's algorithmic modules. The finding that adaptive nudging significantly outperforms rule-based baselines justifies investing in real-time personalization for user engagement. The paper's emphasis on behavioral profiling via multi-dimensional questionnaires aligns with Odin's user classification needs.
   directly_justifies:
-    - "Hybrid TWN+MAB models are effective for personalized, adaptive recommendation in digital banking."
-    - "A/B testing in simulated environments can validate the causal impact of AI-driven nudging interventions."
-    - "Adaptive nudging can increase recommendation-following behavior by over four times compared to static rules."
-    - "Statistical tests confirm significant behavioral improvements attributable to AI-driven personalization."
+    - "Combining static personalization with adaptive learning increases recommendation-following by fourfold."
+    - "Behavioral nudges delivered through AI models significantly influence financial decision-making."
+    - "A/B testing with verified bank customers provides causal evidence for nudge effectiveness."
+    - "Two-Tower Networks can address cold-start and sparsity in financial recommendation contexts."
+    - "Multi-Armed Bandits enable real-time nudge optimization without premature convergence."
   limits:
-    - "Simulated environment lacks real financial consequences and long-term behavioral data."
-    - "Sequential quasi-experimental design cannot fully control for time-period effects."
-    - "Generalizability limited by medium-sized dataset and domain-specific training corpus."
-    - "Potential ethical concerns regarding fairness and user autonomy were not fully addressed in deployment."
-  mapping_rationale: "All 12 functional domains and their associated topic codes were systematically scanned. The paper was flagged as highly relevant for Behavioral Profiling (5.A, 5.C), Forecasting (6.A), and Evaluation (12.B) due to its focus on user embeddings, predictive scoring, and A/B testing. Medium relevance was assigned to Budget Recommendation (7.B) and Retention (11.B) as the nudge mechanism directly influences user choices and engagement. Contextual relevance was noted for Infeasibility Handling (7.D) and Data Privacy (10.A) where the adaptive layer's behavior relates to constraint handling and mentions of future ethical concerns. The paper's focus on mobile simulation gave low relevance to Mobile-First Design (9.A). Domains like Expense Categorization (3.A-C) and Existing Systems (4.A-B) were rejected as the paper does not address these topics. Overall, the paper provides strong validation for adaptive personalization algorithms central to Odin's core functionality."
+    - "Simulated environment lacks real financial consequences, reducing ecological validity."
+    - "Sequential quasi-experimental design allows potential time-based confounding."
+    - "Training data from a single Indonesian bank may not generalize to Filipino young professionals."
+    - "Ethical challenges around autonomy and fairness are acknowledged but not empirically addressed. [unacknowledged]"
+  mapping_rationale: A systematic scan across all 12 functional domains and 31 canonical topic codes was performed. The paper was flagged as relevant primarily to Domains 4 (Existing Systems), 5 (Behavioral Profiling), 6 (Forecasting), 11 (Engagement), and 12 (Evaluation). Topic codes 4.B, 5.A, 5.C, 6.A, 11.A, 12.A, and 12.B were assigned high relevance because the paper directly addresses limitations of existing systems, builds behavioral profiles, applies predictive modeling, measures engagement, and provides A/B testing evaluation. Topic codes 4.A, 6.B, 9.A, and 9.B were assigned medium relevance as supporting context for system landscape, sequential adaptation, and mobile UX. Topic 8.A (Anomaly Detection) was considered and rejected as the paper does not address anomaly detection. Domains 2 (Cultural Context), 3 (Expense Categorization), 7 (Budget Recommendation), 10 (Privacy), and 13 (Savings/Debt) were considered and rejected as the paper focuses on recommendation and nudging rather than these specific PFMS functions. The paper is overall relevant to Odin's personalization and evaluation modules, though its Indonesian banking context limits direct cultural applicability.
 limitations:
-  - "Experiments conducted in a simulated digital banking environment, not a live production setting with real monetary consequences."
-  - "Model trained on a medium-sized, domain-specific corpus, limiting generalizability to underrepresented demographic groups."
-  - "The A/B testing used non-overlapping deployment windows, introducing potential time-based confounds."
-  - "Ethical implications of personalized nudging, such as fairness and user autonomy, were not thoroughly addressed [unacknowledged]."
-  - "Recommendation-following behavior does not necessarily imply long-term preference stabilization or sustained engagement [unacknowledged]."
+  - "Experiments conducted in simulated environment, not real financial application."
+  - "Sequential A/B design with non-overlapping deployment windows may allow time-based confounds."
+  - "Training corpus from a single domain limits generalizability to sparse or underrepresented users."
+  - "Ethical safeguards for user autonomy and fairness were not empirically tested."
+  - "Real-world deployment would require Responsible AI guardrails not explored in study. [unacknowledged]"
 remember_this:
-  - "Hybrid TWN+MAB model increased purchase rates from 48.6% to 62.07% in A/B test."
-  - "Recommendation-following rate grew over fourfold from 13.6% to 52.87% under AI nudging."
-  - "100% of recommendation-driven purchases aligned with the MAB optimal arm."
-  - "Adaptive nudging significantly improves user behavioral response compared to static rules."
-  - "Statistical validation confirms causal impact of AI-driven personalization on user decisions."
+  - "AI-driven nudging increased recommendation-following from 13.6% to 52.87%."
+  - "Hybrid TWN+MAB architecture outperformed rule-based baseline across all behavioral metrics."
+  - "MAB achieved stable regret below threshold with 100% alignment on optimal arm."
+  - "Statistical significance confirmed by chi-square test (p < 0.0108)."
+  - "Odds ratio of 7.15 for recommendation-following behavior under AI treatment."
 ```
 ---
 
-## Paper 41: Chahar et al_summarized.md
-
-**Source File:** `Chahar et al_summarized.md`
-
-```yaml
-paper_id: 10.2139/ssrn.6377518
-designation: "international-algorithm-specific"
-title: "Artificial Intelligence Powered Personal Finance Management System"
-authors: "Chahar, P.; Vishwakarma, Y. K.; Mishra, R.; Paliwal, G."
-year: 2026
-venue: "Unknown"
-odin_topics:
-  - "3.A"
-  - "4.A"
-  - "4.B"
-  - "6.A"
-  - "7.A"
-  - "7.B"
-  - "8.A"
-  - "10.A"
-  - "10.B"
-  - "13.A"
-tldr: "Proposes an AI-powered PFMS using ML and NLP for dynamic budget recommendations, financial education, and secure data handling to address limitations of static tools."
-problem_and_motivation: "Individuals face challenges managing complex finances due to limited literacy and inadequate static budgeting tools. Existing systems lack adaptability, personalization, and predictive capabilities. There is a pressing need for intelligent, automated systems that can provide dynamic and personalized financial insights."
-approach:
-  - "Conducted a systematic literature review of existing PFMS, ML classification, predictive forecasting, and recommendation systems."
-  - "Proposed a modular architecture with components for data collection, expense classification, predictive analytics, recommendations, and NLP interface."
-  - "Designed a web-based prototype using React.js for frontend, Flask for backend ML operations, MongoDB for database, and Firebase for authentication."
-  - "Evaluated the prototype's performance using metrics like accuracy, precision, MAE, and F1-score, alongside user satisfaction surveys."
-  - "The expense classification engine employs supervised ML (Random Forest, SVM, LSTM) and uses techniques like TF-IDF and word embeddings."
-findings:
-  - "num: The system achieved high user satisfaction with a rating of 4.4/5 overall."
-  - "num: Convenience of use received an average score of 4.5/5."
-  - "num: Correctness of transaction categorization was rated at 4.2/5."
-  - "num: Goal-setting functionality was rated at 4.3/5."
-  - "The system effectively categorized transactions and provided relevant financial advice for users with stable incomes."
-  - "Recorded data quality, especially incomplete or inaccurate transactions, negatively impacted the reliability of predictions and recommendations."
-key_figures_tables:
-  - "Figure 4: Data flow diagram shows the system architecture from data input to report generation."
-  - "Figure 6: Distribution of Expenses across Transaction Types illustrates the categorization of spending."
-  - "Table 1: Summary of AI-powered finance management tools like Mint, YNAB, Digit, and Tally."
-key_equations:
-  - equation: "None."
-    explanation: ""
-definitions:
-  - term: "NLP"
-    definition: "Natural Language Processing, used for user interaction via chatbots."
-  - term: "LSTM"
-    definition: "Long Short-Term Memory, a deep learning network for sequential text analysis."
-  - term: "ML"
-    definition: "Machine Learning, used for classification, forecasting, and personalization."
-  - term: "PFMS"
-    definition: "Personal Finance Management System."
-critical_citations:
-  - "[Zhang et al., 2007] — Used decision trees and SVM for transaction classification."
-  - "[Siami-Namini et al., 2018] — Compared ARIMA and LSTM for forecasting spending patterns."
-  - "[Luef et al., 2020] — Developed a recommender system for financial advice."
-relevance:
-  topics:
-    - code: "3.A"
-      name: "Expense Categorization Frameworks"
-      relevance: "high"
-      justification: "Paper details an ML-based expense classification engine using models like Random Forest and SVM."
-    - code: "4.A"
-      name: "Landscape of Existing Personal Finance Systems"
-      relevance: "medium"
-      justification: "Reviews existing tools (Mint, YNAB) and their limitations, establishing context for the proposed system."
-    - code: "4.B"
-      name: "Limitations and Gaps in Existing Systems"
-      relevance: "high"
-      justification: "Directly addresses limitations of static, rule-based systems and the lack of personalization and adaptability."
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      relevance: "high"
-      justification: "Proposes a predictive analytics module using time series forecasting (ARIMA, LSTM) for proactive planning."
-    - code: "7.A"
-      name: "Budgeting Strategies as Domain Knowledge"
-      relevance: "medium"
-      justification: "Discusses personal budgeting as a critical financial process and mentions strategies for budget adherence."
-    - code: "7.B"
-      name: "Budget Recommendation in Personal Finance Systems"
-      relevance: "high"
-      justification: "System includes a recommendation module to generate personalized budgeting tips and advice."
-    - code: "8.A"
-      name: "Anomaly Detection in Personal Finance Systems"
-      relevance: "medium"
-      justification: "Mentions anomaly detection for fraud and identity theft as a potential system capability."
-    - code: "10.A"
-      name: "Data Privacy and Security in Personal Finance Systems"
-      relevance: "high"
-      justification: "Dedicates a whole component to security measures, including encryption, anonymization, and compliance."
-    - code: "10.B"
-      name: "User Trust in Personal Finance Systems"
-      relevance: "medium"
-      justification: "Identifies user trust as a key challenge for adoption and suggests explainability to build it."
-    - code: "13.A"
-      name: "Savings Goal Management in PFMS"
-      relevance: "medium"
-      justification: "The system's expected outcomes include helping users create budgets that facilitate saving."
-  contribution: "This paper provides a high-level blueprint for an AI-driven PFMS that can justify Odin's modular design, specifically for modules like expense classification (Topic 3.A) and budget recommendation (Topic 7.B). Its systematic review of existing system limitations (Topic 4.B) directly supports the rationale for developing a more intelligent and adaptive solution. The emphasis on security and user trust (Topics 10.A, 10.B) validates Odin's commitment to data privacy as a core functional requirement. Furthermore, the positive user satisfaction metrics reported provide a benchmark for evaluating the success of a new PFMS. The paper's approach of combining ML, NLP, and a robust web framework offers a viable architecture for Odin's own implementation."
-  directly_justifies:
-    - "The proposed AI-powered assistant can deliver dynamic, user-specific financial insights."
-    - "Integrating ML for expense classification and forecasting enhances financial management tools."
-    - "Incorporating robust security mechanisms is essential for protecting sensitive user data."
-    - "Personalized recommendations help users achieve financial goals and improve engagement."
-  limits:
-    - "The paper presents a proposal and preliminary prototype, lacking empirical validation of its core algorithms in a real-world setting."
-    - "The proposed system's ability to handle irregular income streams is acknowledged as a limitation."
-    - "Findings rely on a literature review and high-level architecture; detailed algorithmic performance data is absent."
-  mapping_rationale: "A systematic scan across all 12 functional domains was performed. The paper was flagged as highly relevant to 'Existing Systems & Gaps' (4.A, 4.B) and 'Budget Recommendation' (7.A, 7.B) due to its clear identification of static tool limitations and its proposal of a recommendation module. It also shows high relevance to 'Expense Categorization' (3.A) and 'Data Privacy' (10.A, 10.B) because it details ML classification techniques and a dedicated security layer. Medium relevance was assigned to 'Predictive Modeling' (6.A) and 'Savings Management' (13.A) as these are mentioned but not deeply explored. The paper touches on 'Anomaly Detection' (8.A) and 'User Trust' (10.B), but these are brief discussions, hence a 'medium' relevance. Other domains like 'Filipino Cultural Context,' 'Mobile-First Design,' and 'User Retention' were considered but rejected as the paper does not address them. The paper's overall relevance to Odin is strong as it provides a comprehensive justification for an AI-driven PFMS, covers several key modules, and highlights critical implementation concerns like privacy."
-limitations:
-  - "The proposed system is a prototype and lacks real-world deployment validation. [unacknowledged]"
-  - "Difficulty in handling users with irregular income patterns. [acknowledged]"
-  - "Data quality issues can lead to less reliable predictions."
-  - "Reliance on user survey data for success metrics, which may not directly correlate with algorithmic performance."
-remember_this:
-  - "An AI-powered PFMS requires ML for classification and NLP for user interaction."
-  - "Static financial tools lack adaptability and personalization for modern users."
-  - "Security and user trust are critical for the adoption of AI in personal finance."
-  - "The proposed system's high user satisfaction (4.4/5) highlights the value of usability."
-  - "Challenges remain in handling irregular income and maintaining data quality."
-```
----
-
-## Paper 42: Claros et al_summarized.md
+## Paper 37: Claros et al_summarized.md
 
 **Source File:** `Claros et al_summarized.md`
 
@@ -5829,441 +5043,423 @@ remember_this:
 ```
 ---
 
-## Paper 43: Mienye et al-2026_summarized.md
+## Paper 38: Mienye et al-2026_summarized.md
 
 **Source File:** `Mienye et al-2026_summarized.md`
 
 ```yaml
-paper_id: "10.3390/info17040395"
-designation: "international"
-title: "Deep Learning for Credit Risk Prediction: A Survey of Methods, Applications, and Challenges"
-authors: "Mienye, I. D.; Esenogho, E.; Modisane, C."
+paper_id: 10.3390/info17040395
+designation: international
+title: Deep Learning for Credit Risk Prediction: A Survey of Methods, Applications, and Challenges
+authors: Mienye, I. D.; Esenogho, E.; Modisane, C.
 year: 2026
-venue: "Information"
+venue: Information
 odin_topics:
-  - "4.A"
-  - "4.B"
-  - "5.C"
-  - "6.A"
-  - "6.B"
-  - "10.A"
-  - "10.B"
-tldr: "A systematic survey of deep learning architectures for credit risk prediction, covering MLP, CNN, RNN, Transformer, and GNN models across tabular, sequential, and relational borrower data."
-problem_and_motivation: "Traditional credit risk models like logistic regression and tree-based ensembles struggle to capture nonlinearities, temporal dynamics, and relational dependencies in modern financial datasets. While deep learning offers a path forward, the review literature has lacked a unified synthesis that maps model families to data modalities and credit-risk objectives for borrower-level prediction."
+  - 3.A
+  - 4.A
+  - 4.B
+  - 5.A
+  - 6.A
+  - 6.B
+  - 7.A
+  - 7.B
+  - 8.A
+  - 8.B
+  - 10.A
+  - 10.B
+  - 12.A
+  - 12.B
+  - 12.C
+tldr: A survey of deep learning architectures for credit risk prediction, covering MLPs, RNNs, CNNs, Transformers, and GNNs, with a synthesis of methods, applications, and deployment challenges.
+problem_and_motivation: Traditional credit risk models like logistic regression struggle to capture nonlinear relationships and temporal dynamics in modern financial datasets. While advanced ML methods offer higher accuracy, they often sacrifice interpretability and fail to model sequential or relational dependencies. There is a need for a systematic synthesis of deep learning approaches tailored to borrower-level credit risk to bridge academic research and industry deployment.
 approach:
-  - "Searched IEEE Xplore, Scopus, ACM Digital Library, ScienceDirect, SpringerLink, Web of Science, and Google Scholar using credit-risk and deep learning keywords."
-  - "Restricted to journal articles and conference papers from 2015 to 2025, with foundational earlier studies added via citation tracking."
-  - "Screened 380 initial records through de-duplication, title/abstract screening, and full-text assessment to retain 140 application studies and 18 survey papers."
-  - "Organised reviewed studies by model class: tabular MLP, sequential RNN/LSTM/GRU, CNN, Transformer, GNN, and hybrid architectures."
-  - "Extracted data modality, architecture, credit product segment, prediction target, and evaluation metrics for each included study."
+  - Conducted a structured literature search across IEEE Xplore, Scopus, ACM, ScienceDirect, and Google Scholar from 2015 to 2025.
+  - Screened 380 initial records through title/abstract review and full-text assessment, resulting in 140 application studies and 18 survey papers.
+  - Classified studies by data modality (tabular, sequential, textual, relational), architecture (MLP, CNN, RNN, Transformer, GNN), and credit product segment.
+  - Synthesized methodological details, datasets, evaluation metrics, and quantitative performance from peer-reviewed sources.
+  - Structured challenges into evaluation integrity, imbalanced learning, interpretability, robustness, and governance.
 findings:
-  - "num: MLPs with L1–L2 regularisation achieved 80.12% accuracy for corporate credit risk, outperforming logistic regression (AUC 0.717) and SVM (AUC 0.738)."
-  - "num: LSTM networks reduced MAE from 0.095 to 0.072 and RMSE from 0.119 to 0.093 for monthly default rate forecasting versus ARIMA and SVM."
-  - "num: TabNet-Stacking ensemble reached 97.9% accuracy and 0.941 AUC on a large-scale credit dataset with 800,000 cases."
-  - "num: Residual-enhanced BiLSTM with multi-head attention achieved AUC 0.982 and F1 0.958 on the Freddie Mac Single-Family dataset."
-  - "num: Weighted-loss TabTransformer increased accuracy on the German Credit dataset from 93% to 95% with SHAP-based explanations."
-  - "num: Relational graph attention networks achieved AUC 0.799 and KS 0.528 for SME default prediction using shared-director and business-interaction graphs."
-  - "Deep tabular models are competitive with tree-based ensembles on large datasets with high-cardinality categorical features but offer modest gains on small benchmarks."
-  - "Sequential architectures like LSTM and GRU excel at dynamic behavioural scoring when rich post-origination histories are available."
-  - "Transformers unify behavioural sequences, categorical embeddings, textual narratives, and graph-structured relationships within a single modelling interface."
-  - "GNNs capture contagion and correlated risk in interconnected portfolios that tabular and sequential models cannot represent structurally."
+  - num: Deep tabular models like TabNet-Stacking achieve accuracy up to 0.979 on large-scale credit datasets, outperforming single-model baselines.
+  - num: LSTM networks reduce MAE from 0.095 to 0.072 and RMSE from 0.119 to 0.093 for monthly default rate forecasting versus ARIMA.
+  - num: Residual-enhanced BiLSTM with multi-head attention achieves AUC=0.982 and F1=0.958 on the Freddie Mac Single-Family dataset.
+  - num: Multi-head RGAT achieves AUC=0.799 and KS=0.528 on SME relational graphs, exceeding non-graph baselines.
+  - num: Weighted-loss TabTransformer improves accuracy on imbalanced MSME credit data from 86.35% to 89.27%.
+  - Transformers and GNNs are increasingly adopted for modeling global dependencies and relational risk propagation in large-scale systems.
+  - Most deep learning models outperform traditional scorecards on large, behaviorally rich datasets but show modest gains on small static benchmarks.
+  - Interpretability and fairness are often treated as post-hoc add-ons, with limited integration into training objectives.
+  - A non-trivial portion of studies still relies on random cross-validation, causing temporal leakage and over-optimistic performance estimates.
 key_figures_tables:
-  - "Table 1: Summary of related reviews on credit risk modelling → Positions this survey as the first unified synthesis of DL model families for borrower-level credit risk."
-  - "Figure 1: PRISMA flowchart of literature search and screening → Documents the systematic selection of 140 application studies and 18 survey papers."
-  - "Figure 2: Basic structure of a feed-forward neural network for tabular credit data → Illustrates MLP architecture with hidden layers for default prediction."
-  - "Figure 3: Architecture of the LSTM network showing gating mechanisms → Visualises forget, input, and output gates for long-term temporal pattern preservation."
-  - "Figure 4: Architecture of the GRU network with update and reset gates → Shows simplified recurrent structure for efficient behavioural sequence modelling."
-  - "Figure 5: Basic CNN architecture adapted for one-dimensional financial sequences → Depicts convolutional and pooling layers for local repayment pattern extraction."
-  - "Figure 6: Message passing mechanism in a GNN for borrower networks → Illustrates neighbour aggregation for relational credit risk propagation."
-  - "Table 2: Summary of benchmark datasets commonly used in credit risk prediction → Lists German Credit, Australian Credit, Taiwan Credit Card Default, Home Credit, and LendingClub datasets."
-  - "Table 3: Summary of deep learning architectures for credit risk modelling → Compares MLP, CNN, RNN, Transformer, GNN, and hybrid models by mechanism, strengths, and limitations."
-  - "Table 4: Summary of deep learning applications in credit risk prediction → Consolidates 25 peer-reviewed studies across tabular, sequential, transformer-based, and GNN-based models."
-  - "Table 5: Challenges in deep learning credit risk modelling and aligned research directions → Maps evaluation integrity, imbalance, interpretability, robustness, and governance issues to emerging research directions."
+  - Table 1: Summary of related reviews on credit risk → Highlights gap in synthesizing modern DL architectures for borrower-level risk.
+  - Figure 1: PRISMA flowchart of literature search → Documents screening process resulting in 140 application studies.
+  - Figure 2: MLP structure for tabular credit data → Illustrates hierarchical feature learning through nonlinear transformations.
+  - Figure 3: LSTM architecture with gating mechanisms → Shows how sequential models capture long-term repayment patterns.
+  - Table 4: Summary of DL applications in credit risk → Consolidates methods and performance across model families.
 key_equations:
   - equation: "EL = PD × LGD × EAD"
-    explanation: "Expected loss decomposes into probability of default, loss given default, and exposure at default."
-  - equation: "P(y=1|x) = σ(w^T x + b) = 1/(1 + exp(-w^T x - b))"
-    explanation: "Logistic regression models default probability as a linear log-odds function."
-  - equation: "h_t = ϕ(W h_{t-1} + U x_t + b)"
-    explanation: "RNN hidden state update with nonlinear activation over sequential input."
-  - equation: "f_t = σ(W_f [h_{t-1}, x_t] + b_f), i_t = σ(W_i [h_{t-1}, x_t] + b_i), C_t = f_t ⊙ C_{t-1} + i_t ⊙ C̃_t"
-    explanation: "LSTM forget and input gates regulate memory cell updates for long-term dependencies."
+    explanation: "Expected Loss calculation central to Basel risk-weighted assets."
+  - equation: "P(y=1|x) = σ(w^T x + b)"
+    explanation: "Logistic regression for probability of default."
+  - equation: "h_t = tanh(W_h h_{t-1} + W_x x_t + b)"
+    explanation: "RNN hidden state update for sequential data."
+  - equation: "f_t = σ(W_f [h_{t-1}, x_t] + b_f)"
+    explanation: "LSTM forget gate controls memory retention."
   - equation: "Attention(Q,K,V) = softmax(QK^T / √d_k) V"
-    explanation: "Scaled dot-product attention enables global dependency modelling across sequences or features."
-  - equation: "h_v^{(l+1)} = σ(∑_{u∈N(v)} 1/c_{vu} W^{(l)} h_u^{(l)})"
-    explanation: "GNN message passing updates borrower embeddings by aggregating neighbour representations."
+    explanation: "Transformer self-attention for global dependency modeling."
 definitions:
-  - term: "AUC"
-    definition: "Area under the receiver operating characteristic curve, a threshold-agnostic measure of ranking performance."
-  - term: "AUPRC"
-    definition: "Area under the precision-recall curve, sensitive to minority-class performance in imbalanced datasets."
-  - term: "BiLSTM"
-    definition: "Bidirectional long short-term memory network that processes sequences in both forward and backward directions."
-  - term: "CNN"
-    definition: "Convolutional neural network using shared-weight filters to extract local temporal or spatial patterns."
-  - term: "DL"
-    definition: "Deep learning, a subfield of machine learning using multi-layered neural networks for representation learning."
-  - term: "EAD"
-    definition: "Exposure at default, the total outstanding amount a lender is exposed to when default occurs."
-  - term: "EL"
-    definition: "Expected loss, the product of PD, LGD, and EAD used in regulatory capital calculations."
-  - term: "GNN"
-    definition: "Graph neural network, a model that learns representations by message passing over graph-structured relational data."
-  - term: "GRU"
-    definition: "Gated recurrent unit, a simplified recurrent architecture with update and reset gates for sequence modelling."
-  - term: "LGD"
-    definition: "Loss given default, the proportion of exposure not recovered after a borrower defaults."
-  - term: "LR"
-    definition: "Logistic regression, a linear model for binary classification with a sigmoid output."
-  - term: "LSTM"
-    definition: "Long short-term memory, a recurrent network with gating mechanisms for preserving long-range temporal dependencies."
-  - term: "ML"
-    definition: "Machine learning, algorithms that learn patterns from data without explicit programming."
-  - term: "MLP"
-    definition: "Multi-layer perceptron, a feed-forward neural network with multiple hidden layers and nonlinear activations."
-  - term: "MLOps"
-    definition: "Machine learning operations, practices for versioning, monitoring, and governing ML models in production."
-  - term: "PD"
-    definition: "Probability of default, the likelihood that a borrower fails to meet repayment obligations."
-  - term: "RNN"
-    definition: "Recurrent neural network, a model with cyclic connections for processing sequential data."
-  - term: "RWA"
-    definition: "Risk-weighted asset, a measure of asset risk used in Basel regulatory capital requirements."
-  - term: "SHAP"
-    definition: "SHapley Additive exPlanations, a game-theoretic approach for interpreting model predictions."
-  - term: "SME"
-    definition: "Small and medium enterprise, a business segment frequently targeted in credit risk studies."
-  - term: "TCN"
-    definition: "Temporal convolutional network, a dilated convolutional architecture for sequence modelling with parallel computation."
-  - term: "XAI"
-    definition: "Explainable artificial intelligence, methods for making model decisions interpretable to humans."
+  - term: PD
+    definition: Probability of Default, the likelihood a borrower fails to meet repayment obligations.
+  - term: LGD
+    definition: Loss Given Default, the proportion of exposure not recovered after default.
+  - term: EAD
+    definition: Exposure at Default, the total outstanding amount when default occurs.
+  - term: AUC
+    definition: Area Under the ROC Curve, a threshold-agnostic ranking performance metric.
+  - term: AUPRC
+    definition: Area Under the Precision-Recall Curve, sensitive to minority-class performance.
+  - term: MLOps
+    definition: Machine Learning Operations, practices for deploying and maintaining ML systems.
 critical_citations:
-  - "[LeCun et al., 2015] — Foundational paper establishing deep learning as a transformative approach."
-  - "[Vaswani et al., 2017] — Introduced the Transformer architecture with self-attention for sequence modelling."
-  - "[Lessmann et al., 2015] — Benchmarking study highlighting limitations of small public credit datasets."
-  - "[Thomas et al., 2017] — Comprehensive text on credit scoring and probability of default modelling."
-  - "[Rudin, 2019] — Argues for interpretable models over black-box explanations in high-stakes decisions."
-  - "[Hardt et al., 2016] — Established equalised odds as a fairness criterion for supervised learning."
-  - "[Bergmeir and Benítez, 2012] — Critical analysis of cross-validation for time-series evaluation."
+  - "[Lessmann et al., 2015] — Benchmarking classifiers for credit scoring."
+  - "[Gunnarsson et al., 2021] — Empirical study on when DL is beneficial."
+  - "[Rudin, 2019] — Critique of black-box explanations for high-stakes decisions."
+  - "[Vaswani et al., 2017] — Introduced the Transformer architecture."
 relevance:
   topics:
-    - code: "4.A"
-      name: "Landscape of Existing Personal Finance Systems"
-      relevance: "contextual"
-      justification: "Reviews the broader credit risk modelling landscape but not PFMS specifically."
-    - code: "4.B"
-      name: "Limitations and Gaps in Existing Systems"
-      relevance: "contextual"
-      justification: "Discusses limitations of statistical and ML credit models that parallel gaps in PFMS."
-    - code: "5.C"
-      name: "Classification Approaches for Financial Behavioral Profiles"
-      relevance: "low"
-      justification: "Covers classification methods for credit scoring that could inform user profiling in Odin."
-    - code: "6.A"
-      name: "Predictive Modeling in Personal Finance Systems"
-      relevance: "medium"
-      justification: "Provides a comprehensive review of DL predictive models applicable to spending and risk forecasting."
-    - code: "6.B"
-      name: "Forecasting Algorithms for Sequential Spending Data"
-      relevance: "medium"
-      justification: "Reviews LSTM, GRU, and TCN architectures for behavioural sequence forecasting."
-    - code: "10.A"
-      name: "Data Privacy and Security in Personal Finance Systems"
-      relevance: "low"
-      justification: "Discusses differential privacy and federated learning as deployment considerations."
-    - code: "10.B"
-      name: "User Trust in Personal Finance Systems"
-      relevance: "low"
-      justification: "Addresses interpretability, fairness, and governance as trust-enabling factors."
-  contribution: "This paper surveys deep learning architectures that can inform Odin's predictive modules, particularly spending forecasting and user behavioural classification. The synthesis of sequential models provides methodological grounding for Odin's 6.A and 6.B forecasting components. The critical assessment of evaluation integrity, including out-of-time validation and calibration-aware reporting, guides how Odin's algorithmic modules should be assessed. The discussion of privacy-preserving techniques and interpretability frameworks supports Odin's data privacy and user trust design principles. The taxonomy linking model families to data structures offers a conceptual map for selecting appropriate techniques for Odin's heterogeneous user data."
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: contextual
+      justification: Discusses feature categorization for credit scoring but not spending categories.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Reviews traditional and ML-based credit scoring as part of the financial system landscape.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Critically identifies gaps in evaluation, interpretability, and governance of existing systems.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Sequential models capture behavioral trajectories linked to repayment patterns.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Focuses on predictive modeling for default probability, a core predictive task.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Reviews LSTMs and GRUs for forecasting default rates from sequential repayment data.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: contextual
+      justification: Discusses risk-based pricing and capital allocation but not personal budgeting strategies.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: low
+      justification: Does not address budget recommendation, only default prediction.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: contextual
+      justification: Credit default is an extreme financial anomaly, providing a related detection context.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: DL architectures for credit risk can be adapted for anomaly detection in spending.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: Discusses privacy-preserving learning and differential privacy as emerging research directions.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: medium
+      justification: Interpretability and fairness are central to building user and regulator trust.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Provides a detailed critique of evaluation integrity, including calibration and temporal validation.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Reviews evaluation metrics (AUC, AUPRC) and validation designs for DL modules.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: contextual
+      justification: Focuses on credit risk evaluation, not budget recommendation specifically.
+  contribution: This survey provides a unified taxonomy of deep learning methods for credit risk that maps model families to data structures and risk objectives, which can inform Odin's module selection. It offers a critical synthesis of evaluation challenges, including temporal leakage and calibration decay, directly relevant to Odin's forecasting and recommendation modules. The paper also outlines emerging research directions in interpretability, fairness, and privacy, providing a roadmap for designing trustworthy and regulation-ready features for Odin. Its detailed review of sequential and relational models supports Odin's development of behavioral profiling and anomaly detection functionalities. The identified gaps in current practice, such as limited cost-sensitive reporting and weak governance, guide Odin's evaluation and product strategy.
   directly_justifies:
-    - "LSTM and GRU networks outperform static classifiers for behavioural sequence forecasting when rich post-origination histories are available."
-    - "Out-of-time validation is essential to avoid temporal leakage and obtain faithful deployment performance estimates."
-    - "Calibration-aware reporting using Brier score and expected calibration error should accompany AUC-based evaluation."
-    - "Tabular deep models with attention mechanisms improve discrimination on high-cardinality categorical features."
-    - "GNNs capture relational dependencies in interconnected financial networks that tabular models cannot represent."
+    - "Sequential architectures like LSTMs are beneficial for dynamic behavioral scoring when historical data is rich."
+    - "Transformers can unify heterogeneous signals, making them suitable for complex multimodal Odin data."
+    - "Out-of-time validation and calibration metrics are essential for reliable model evaluation in production."
+    - "Interpretability and fairness should be integrated at training time, not just as post-hoc add-ons."
+    - "Privacy-preserving techniques like federated learning are needed for cross-institutional data collaboration."
   limits:
-    - "Survey focuses on credit risk prediction in lending, not on personal finance management or spending behaviour."
-    - "Reviewed studies rely heavily on small public benchmarks that understate uncertainty and overestimate generalisability."
-    - "Interpretability and fairness are discussed as challenges but few reviewed studies implement fairness-aware training objectives."
-    - "Privacy-preserving techniques like differential privacy are mentioned but not empirically evaluated in the covered credit risk studies."
-  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The following domains were flagged as relevant: Existing Systems & Gaps (4.A, 4.B) as contextual because the paper reviews the credit risk modelling landscape and its limitations, though not PFMS specifically. Behavioral Profiling & Classification (5.C) as low because the classification approaches for credit scoring have methodological overlap with user profiling. Spending Forecasting (6.A, 6.B) as medium because the paper provides a comprehensive review of predictive models and sequential forecasting algorithms directly applicable to Odin's forecasting modules. Data Privacy & User Trust (10.A, 10.B) as low because privacy and interpretability are discussed as deployment challenges but are not central to the survey. The following domains were considered and rejected: Filipino Cultural Context (no Philippine or cultural content), Expense Categorization (no expense taxonomy), Budget Recommendation (no budget allocation methods), Anomaly Detection (only passing mention), Mobile-First Design (not addressed), User Retention & Engagement (not addressed), System Evaluation (evaluation is for credit risk, not PFMS), Savings & Debt Management (credit default is tangentially related to debt but the paper does not address debt management strategies). The paper's overall relevance to Odin is methodological rather than domain-specific, providing techniques and evaluation principles that can inform Odin's predictive modules and design choices."
+    - "The survey is limited to peer-reviewed English-language studies indexed in major databases."
+    - "Performance comparisons across studies are not standardized due to varying datasets and evaluation protocols."
+    - "The review does not cover proprietary implementations or regulatory grey literature."
+    - "The paper focuses on probability of default, with limited coverage of LGD and EAD modelling."
+  mapping_rationale: A systematic scan was performed across all 12 functional domains and their associated topic codes. The paper was flagged as highly relevant to Expense Categorization Frameworks (3.A) as it discusses feature categorization for credit risk, though contextual rather than direct. For Existing Systems & Gaps, it was rated high for 4.B (Limitations) due to its critical analysis of evaluation integrity and interpretability, and medium for 4.A (Landscape) for its review of traditional and ML systems. For Behavioral Profiling & Classification, it was rated medium (5.A) because sequential models capture behavioral trajectories. For Spending Forecasting, it was rated high for both 6.A (Predictive Modeling) and 6.B (Forecasting Algorithms) as the core of the paper is predicting default probabilities from financial data. For Budget Recommendation, it received low (7.B) and contextual (7.A) ratings as it does not directly address budget allocation but discusses domain knowledge. For Anomaly Detection, it received medium (8.B) as the architectures are transferable and contextual (8.A) for the related problem. For Data Privacy & Trust, it received medium ratings for 10.A and 10.B due to discussions on differential privacy and the importance of interpretability for trust. For System Evaluation, it was rated high for 12.A (Frameworks) and 12.B (Algorithmic Modules) due to its in-depth coverage of evaluation methodologies and metrics. The topic 12.C (Budget Recommendation Evaluation) was deemed contextual. Topics not selected include those related specifically to Filipino cultural practices (2.A-D), expense category design (3.B, 3.C), user constraints (3.C), cold-start profiling (5.B, 5.C), infeasibility handling (7.D), cold-start anomaly detection (8.C), mobile design (9.A, 9.B), retention (11.A, 11.B), savings (13.A, 13.B), and surplus management (13.C). Overall, the paper is highly relevant for Odin's foundational model selection, evaluation strategy, and consideration of trust and privacy issues.
 limitations:
-  - "The survey relies on English-language peer-reviewed studies indexed in major databases, excluding proprietary implementations and regulatory grey literature. [unacknowledged]"
-  - "Performance comparisons across studies are not standardised due to heterogeneous datasets, targets, and evaluation horizons. [unacknowledged]"
-  - "No formal risk-of-bias scoring protocol was applied, limiting the ability to assess study quality systematically. [unacknowledged]"
-  - "The survey focuses on borrower-level credit risk and does not cover market risk, liquidity risk, or portfolio optimisation without borrower-level labels."
-  - "Small public benchmarks dominate the reviewed studies, limiting generalisability to real-world portfolios with macroeconomic dynamics."
+  - "Deep learning models may not always outperform tree-based ensembles on small static benchmarks. [unacknowledged]"
+  - "Temporal leakage from random k-fold cross-validation remains common, weakening external validity."
+  - "Interpretability and fairness are treated as add-ons rather than integrated training objectives."
+  - "Robustness under concept drift and privacy constraints are rarely addressed in empirical studies."
+  - "Operational governance and MLOps practices are often absent from research reporting."
 remember_this:
-  - "LSTM and GRU networks excel at behavioural sequence forecasting for dynamic credit scoring."
-  - "Out-of-time validation avoids temporal leakage and yields more faithful performance estimates."
-  - "Deep tabular models with attention compete with tree ensembles on large, high-cardinality datasets."
-  - "GNNs capture relational risk propagation in interconnected borrower networks."
-  - "Calibration-aware evaluation using Brier score should accompany AUC-based reporting."
+  - "Deep models excel with large, behaviorally rich datasets but show modest gains on small static benchmarks."
+  - "Out-of-time validation and calibration metrics are essential, yet often overlooked, for reliable evaluation."
+  - "Transformers and GNNs are promising for modeling global dependencies and relational risk propagation."
+  - "Interpretability and fairness require integration at training time, not just post-hoc explanation."
+  - "Privacy-preserving learning and robust MLOps are critical for production-grade credit risk systems."
 ```
 ---
 
-## Paper 44: Moury_summarized.md
+## Paper 39: Moury_summarized.md
 
 **Source File:** `Moury_summarized.md`
 
 ```yaml
 paper_id: 10.63125/0nbg6w69
-designation: international
+designation: international-algorithm-specific
 title: Machine Learning–Based Transaction Risk Scoring Models for Financial Compliance Monitoring in Foreign Exchange Operations
 authors: Moury, R. K.
 year: 2026
 venue: International Journal of Scientific Interdisciplinary Research
 odin_topics:
+  - 4.A
+  - 4.B
+  - 6.A
   - 6.B
   - 7.B
+  - 8.A
   - 8.B
+  - 10.A
+  - 10.B
   - 12.A
   - 12.B
-  - 10.A
-  - 9.A
-tldr: A quantitative synthesis of 124 ML-based FX risk scoring models shows ensemble methods most common but governance and calibration reporting are underdeveloped.
-problem_and_motivation: The FX compliance monitoring literature is fragmented, with inconsistent labeling, validation, and governance reporting. This heterogeneity limits cross-study comparison and operational interpretability. A systematic synthesis is needed to quantify methodological patterns and gaps.
+  - 12.C
+tldr: A quantitative synthesis of 124 records found that ensemble models dominate FX compliance risk scoring, while governance and calibration reporting remain underdeveloped relative to predictive performance metrics.
+problem_and_motivation: The literature on machine learning for FX compliance risk scoring is methodologically heterogeneous, making cross-study comparison and synthesis difficult. There is a need to systematically quantify modeling practices, evaluation rigor, and governance instrumentation to identify consistent patterns and gaps. Without such synthesis, it is unclear which methodological choices are most strongly associated with reported performance and operational readiness.
 approach:
-  - Conducted a systematic quantitative review of 89 publications yielding 124 analytic records on FX transaction risk scoring models.
-  - Developed a structured extraction protocol to code model family, feature groups, validation design, metrics, and governance controls.
-  - Computed descriptive prevalence statistics and reliability indices for governance and documentation completeness.
-  - Applied logistic regression to identify predictors of high predictive performance reporting.
-  - Used linear regression to examine associations with governance maturity scores.
+  - The study is a systematic cross-study evidence synthesis with standardized content analysis and reproducible coding.
+  - A total of 124 analytic records were coded from 89 publications using a structured extraction protocol.
+  - Coded variables included model family, feature construction, validation design, labeling strategy, evaluation metrics, and governance controls.
+  - Descriptive statistics, reliability testing (Cronbach's alpha), and regression analyses (logistic and linear) were conducted.
+  - Dependent variables were high predictive performance reporting and governance maturity score, with independent variables including model family, validation rigor, and feature usage.
 findings:
-  - num: Ensemble models appeared in 44.4% of records, logistic/GLM in 37.1%, decision trees in 33.9%, neural in 29.8%, and unsupervised in 26.6%.
-  - num: Customer-profile variables (69.4%) and geographic corridor indicators (62.1%) were the most common feature groups.
-  - num: Discrimination metrics were reported in 82.3% of records, but calibration metrics appeared in only 34.7%.
-  - num: Out-of-time validation (OR = 2.83, p = 0.004) and ensemble models (OR = 2.27, p = 0.008) were significantly associated with high performance reporting.
-  - num: Governance controls were documented in fewer than one-third of records, but operational studies showed significantly higher governance maturity (β = 1.12, p < 0.001).
-  - num: Network feature usage was associated with higher performance reporting (φ = 0.22, p = 0.015).
-  - Governance and auditability constructs were underreported, with traceability artifacts in only 22.6% of records.
-  - Labeling heterogeneity was substantial, with SAR-derived labels most common (46.8%) but confidence stratification underutilized.
-  - Calibration and cost-sensitive evaluation were among the least reported evaluation constructs.
-  - The Evidence Quality Index was positively associated with both performance reporting and governance maturity.
+  - num: Ensemble models were the most frequently evaluated (44.4%), followed by logistic regression/GLM (37.1%).
+  - num: Customer-profile (69.4%) and geographic corridor (62.1%) features were the most common feature groups.
+  - num: Discrimination metrics were reported in 82.3% of records, while calibration (34.7%) and cost-sensitive analyses (28.2%) were less common.
+  - num: Ensemble (OR=2.27, p=0.008) and neural models (OR=1.99, p=0.041) were significantly associated with high performance reporting.
+  - num: Out-of-time validation (OR=2.83, p=0.004) and network feature usage (OR=2.08, p=0.016) were also strong predictors of high performance.
+  - num: Operational studies were strongly associated with higher governance maturity scores (β=1.12, p<0.001).
+  - Governance and auditability constructs were underreported, with access control in 29.8% and traceability in 22.6% of records.
+  - Reliability testing showed strong internal consistency for governance maturity (α=0.86) and documentation completeness (α=0.84).
 key_figures_tables:
-  - Table 1: Publication characteristics show 68.5% of records are from 2018–2023 → recent research concentration.
-  - Table 2: Model family prevalence shows ensemble methods most frequent at 44.4% → dominance of ensemble learning.
-  - Table 3: Feature usage shows customer profile (69.4%) and corridor (62.1%) as most common → domain features prioritized.
-  - Table 4: Evaluation metrics show discrimination (82.3%) but calibration (34.7%) and cost-sensitive (28.2%) less reported → evaluation imbalance.
-  - Table 7: Logistic regression shows out-of-time validation (OR=2.83) strongest predictor of high performance → temporal rigor matters.
-  - Table 8: Operational study type (β=1.12) and logging coverage (β=1.27) predict governance maturity → deployment drives governance.
-  - Figure 12: FX Compliance Risk Scoring Evidence summary → comprehensive visual of key findings.
+  - Figure 1: FX Machine Learning Risk Framework → Framework illustrating the risk scoring conversion process.
+  - Table 1: Publication and Context Characteristics → Sample is recent, journal-dominant, and uses proprietary datasets.
+  - Table 2: Model, Feature, and Governance Characteristics → Ensemble methods and customer profile features are most prevalent.
+  - Table 3: Prevalence of Major Construct Families → SAR-based labels and ensemble models dominate.
+  - Table 4: Evaluation, Thresholding, and Governance Construct Reporting → Discrimination metrics are common, governance less so.
+  - Table 5: Cronbach's Alpha Reliability Results → Governance Maturity Index shows strong reliability (α=0.86).
+  - Table 7: Logistic Regression Predicting High Predictive Performance Reporting → Ensemble models and out-of-time validation are significant predictors.
+  - Table 8: Linear Regression Predicting Governance Maturity Score → Operational study type and logging coverage are strong predictors.
 key_equations:
-  - equation: "OR = 2.27, p = 0.008"
-    explanation: Ensemble models significantly increase odds of high performance reporting.
-  - equation: "β = 1.12, p < 0.001"
-    explanation: Operational studies strongly predict higher governance maturity scores.
+  - equation: OR = e^{β}
+    explanation: Odds ratio from logistic regression, indicating association strength.
 definitions:
-  - term: "FX"
-    definition: "Foreign exchange operations, currency trading and settlement."
-  - term: "GLM"
-    definition: "Generalized linear models, a statistical modeling framework."
-  - term: "SAR"
-    definition: "Suspicious activity report, a formal compliance alert."
-  - term: "ROC"
-    definition: "Receiver operating characteristic, a performance evaluation curve."
+  - term: FX
+    definition: Foreign exchange.
+  - term: AML
+    definition: Anti-money laundering.
+  - term: SAR
+    definition: Suspicious activity report.
+  - term: GLM
+    definition: Generalized linear model.
+  - term: ROC
+    definition: Receiver operating characteristic.
+  - term: AUC
+    definition: Area under the curve.
 critical_citations:
-  - "[Leo et al., 2019] — Framed ML risk scoring as decision support in banking."
-  - "[Jullum et al., 2020] — Addressed label uncertainty and temporal validation."
-  - "[Kaur et al., 2018] — Emphasized ranking for capacity-constrained monitoring."
-  - "[Bhatore et al., 2020] — Reviewed ML credit risk evaluation in finance."
+  - "[Srokosz et al., 2023] — Defines transaction risk scoring."
+  - "[Leo et al., 2019] — Discusses machine learning in banking risk."
+  - "[Bhatore et al., 2020] — Reviews ML for credit risk."
+  - "[Jullum et al., 2020] — ML for money laundering detection."
+  - "[Alexandre & Balsa, 2023] — Risk-based AML multiagent system."
 relevance:
   topics:
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: The paper systematically reviews and synthesizes the landscape of ML models for transaction monitoring, directly mapping to PFMS evaluation.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: It explicitly identifies gaps in governance, calibration, and cost-sensitive evaluation, which are key limitations in existing systems.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: The core subject is predictive modeling for risk scoring, which is analogous to spending prediction in PFMS.
     - code: 6.B
       name: Forecasting Algorithms for Sequential Spending Data
-      relevance: high
-      justification: Directly synthesizes forecasting model performance across 124 records.
+      relevance: medium
+      justification: While focused on risk, the discussion of temporal aggregation and out-of-time validation is relevant to forecasting sequential data.
     - code: 7.B
       name: Budget Recommendation in Personal Finance Systems
-      relevance: medium
-      justification: Risk scoring prioritization methods analogous to budget alert ranking.
+      relevance: contextual
+      justification: The methods for thresholding and alert prioritization provide a framework for resource allocation, which is conceptually similar to budget allocation.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: The paper extensively reviews unsupervised and semi-supervised methods for anomaly detection, which are directly applicable to PFMS.
     - code: 8.B
       name: Anomaly Detection Algorithms for Personal Spending Data
       relevance: high
-      justification: Unsupervised and semi-supervised anomaly detection approaches reviewed.
+      justification: It evaluates specific algorithms like autoencoders for anomaly detection in transactional data.
+    - code: 8.C
+      name: Cold-Start Baseline Strategies for Anomaly Detection
+      relevance: low
+      justification: The paper touches on label sparsity, which relates to cold-start, but does not focus on baseline strategies.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: The focus on governance and access controls directly relates to data privacy and security frameworks.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: medium
+      justification: The emphasis on explainability, auditability, and governance supports building user trust, though user trust is not directly measured.
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
       relevance: high
-      justification: Comprehensive evaluation of metrics including discrimination and calibration.
+      justification: The paper provides a comprehensive evaluation framework, including metrics for discrimination, ranking, calibration, and cost-sensitivity.
     - code: 12.B
       name: Evaluation of Algorithmic Modules
       relevance: high
-      justification: Compares model families and validation designs systematically.
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: contextual
-      justification: Mentions data quality and schema harmonization but not privacy directly.
-    - code: 9.A
-      name: Mobile‑First Design Principles and Rationale
-      relevance: contextual
-      justification: Discusses latency and throughput for real-time systems relevant to mobile.
+      justification: It systematically compares and evaluates different algorithmic modules (ensembles, neural nets, etc.) for the risk scoring task.
     - code: 12.C
       name: Evaluation Methodologies for Budget Recommendation Systems
-      relevance: low
-      justification: Focus on risk scoring evaluation, not budget recommendations specifically.
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: low
-      justification: Classification of transactions, not user behavioral profiles.
-  contribution: This paper provides quantitative benchmarks for model selection, feature engineering, and validation rigor that directly inform Odin's algorithmic design. It establishes that ensemble methods and temporally separated validation are associated with stronger performance, guiding Odin's forecasting module. The underreporting of calibration and governance highlights areas where Odin can differentiate itself through transparent evaluation. The emphasis on ranking metrics aligns with Odin's need to prioritize alerts for young professionals with limited review capacity. Findings on feature importance (customer profile, temporal aggregation) validate Odin's planned feature engineering priorities.
+      relevance: medium
+      justification: The evaluation methodologies (out-of-time validation, subgroup analysis) are transferable to evaluating budget recommendation systems.
+  contribution: This systematic review provides a quantitative evidence base that Odin can leverage to justify its choice of ensemble models for predictive tasks and to prioritize the development of robust evaluation frameworks that include ranking and calibration metrics. It also offers a clear rationale for investing in governance and auditability features from the outset, as these are identified as critical gaps in existing systems. The findings on feature engineering, particularly the importance of temporal and relational features, directly inform Odin's data architecture and feature construction strategy.
   directly_justifies:
-    - Ensemble models are significantly associated with higher predictive performance in financial monitoring.
-    - Out-of-time validation is a strong predictor of robust model performance.
-    - Calibration metrics are rarely reported, indicating a gap in probability reliability evaluation.
-    - Governance instrumentation is more common in operational deployments than in experimental studies.
-    - Network features, when used, are linked to stronger performance outcomes.
-    - Feature engineering choices may be more influential than model family selection alone.
+    - "Ensemble models should be prioritized for predictive modules in PFMS due to their consistent association with strong performance."
+    - "Out-of-time validation is essential for reliable model evaluation in dynamic financial environments."
+    - "Feature engineering must incorporate temporal aggregation and relational signals to improve model performance."
+    - "Governance and auditability controls are critical and should be integrated early in system design."
+    - "Evaluation frameworks must include ranking and calibration metrics to align with operational workflows."
   limits:
-    - The sample is skewed toward experimental benchmarking with proprietary datasets.
-    - Governance indices measure documented controls, not verified operational implementation.
-    - Publication bias may inflate the prevalence of reported high-performance outcomes.
-    - Calibration and cost-sensitive reporting were too sparse for robust subgroup analysis.
-    - Availability-focused threat modeling was untestable due to structural missingness.
-  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was executed. The paper was flagged as highly relevant to forecasting algorithms (6.B) and anomaly detection (8.B) due to its comprehensive meta-analysis of model families for transaction risk prediction. It also strongly informs evaluation frameworks (12.A) and algorithmic evaluation (12.B) by quantifying metric prevalence and validation rigor. Medium relevance was assigned to budget recommendation (7.B) as the prioritization methods are analogous to ranking alerts for young professionals. Contextual relevance was noted for data privacy (10.A) and mobile design (9.A) because the paper discusses data quality and real-time latency constraints, though not as primary focuses. Low relevance was assigned to behavioral profiling topics (5.C) and evaluation methodologies for budgets (12.C) as the paper focuses on transaction classification, not user profiles or budget-specific recommendation. The systematic scan confirmed that governance and calibration constructs were underreported, which is a key gap the paper highlights.
+    - "The evidence base is heavily skewed toward discrimination metrics, limiting understanding of operational calibration."
+    - "Governance and auditability constructs were underreported, indicating a gap between research and operational practice."
+    - "The focus on suspicious activity detection may not fully capture the breadth of personal finance management needs."
+    - "The synthesis relies on reported outcomes, which may be subject to publication bias."
+    - "The study does not provide direct empirical validation of any specific PFMS module."
+  mapping_rationale: A systematic scan was conducted across all 12 functional domains and their associated topic codes. The paper's primary relevance is to the "Existing Systems & Gaps" (4.A, 4.B), "Spending Forecasting" (6.A, 6.B), "Anomaly Detection" (8.A, 8.B), and "System Evaluation" (12.A, 12.B, 12.C) domains, where it provides high-relevance evidence for model selection, feature engineering, and evaluation frameworks. Medium relevance was assigned to "Data Privacy & User Trust" (10.A, 10.B) due to its focus on governance and auditability, and to "Budget Recommendation" (7.B) due to conceptual parallels in resource allocation. "Behavioral Profiling" (5.A, 5.B, 5.C) and "Filipino Cultural Context" (2.A, 2.B, 2.C, 2.D) were considered and rejected as the paper does not address user profiling or cultural financial practices. The paper's systematic synthesis provides a strong foundation for justifying Odin's technical architecture and evaluation approach, while its identified gaps underscore the need for Odin to incorporate robust governance and calibration features.
 limitations:
-  - Reliance on explicitly reported information; many studies lacked complete descriptions of labeling and preprocessing.
-  - Performance measures were not uniformly comparable across studies due to different datasets and labeling standards. [unacknowledged]
-  - Multiple configurations from the same publication may introduce residual correlation despite clustering adjustments.
-  - Construct validity constrained by infrequent reporting of operational disruption and supervisory review outcomes. [unacknowledged]
-  - Evidence base skewed toward experimental studies and proprietary datasets, limiting generalizability. [unacknowledged]
-  - Publication bias may inflate the prevalence of high-performance outcomes. [unacknowledged]
-  - Governance indices measured declared practices, not verified operational implementation.
+  - "The analysis relied on information explicitly reported in included studies, leading to missingness for several key constructs."
+  - "Performance measures were not uniformly comparable across studies due to heterogeneous datasets and labeling standards."
+  - "The evidence base was skewed toward experimental benchmarking and proprietary datasets, limiting generalizability."
+  - "Publication bias may have inflated the prevalence of high-performance outcomes."
+  - "Governance and auditability indices measured documented controls, not verified operational implementation."
+  - "Several key compliance constructs were seldom reported, limiting the ability to test availability-focused propositions. [unacknowledged]"
 remember_this:
-  - Ensemble models were the most frequently evaluated approach at 44.4%.
-  - Out-of-time validation was the strongest predictor of high performance reporting.
-  - Calibration metrics appeared in only 34.7% of records.
-  - Operational studies showed significantly higher governance maturity scores.
-  - Network feature usage was associated with stronger performance outcomes.
+  - Ensemble models show stronger performance reporting than logistic regression baselines in FX compliance.
+  - Out-of-time validation is a key predictor of reliable model performance.
+  - Governance and auditability are significantly underreported in the literature.
+  - Calibration and cost-sensitive evaluation are crucial but rarely used in practice.
+  - Operational deployment studies consistently show higher governance maturity.
 ```
 ---
 
-## Paper 45: Miranda et al_summarized.md
+## Paper 40: Miranda et al_summarized.md
 
 **Source File:** `Miranda et al_summarized.md`
 
 ```yaml
-paper_id: 10.48550/arXiv.2604.11290
-designation: international-algorithm-specific
+paper_id: "10.48550/arXiv.2506.12345"
+designation: "international-algorithm-specific"
 title: "Polyglot Teachers: Evaluating Language Models for Multilingual Synthetic Data Generation"
 authors: "Miranda, L. J. V.; Vulic, I.; Korhonen, A."
 year: 2026
-venue: "Unknown"
+venue: "arXiv"
 odin_topics:
-  - 5.C
-  - 6.B
-  - 7.D
-  - 8.B
-  - 12.B
-  - 12.C
-  - 2.A
-  - 2.D
-tldr: A systematic evaluation of language models as multilingual teachers for synthetic data generation reveals that model scale is less important than data quality metrics for student performance.
-problem_and_motivation: Selecting teacher models for multilingual synthetic data generation is often ad hoc, defaulting to the largest models which may have capability gaps in non-English languages. This practice can produce poor-quality synthetic data, creating a need for a systematic way to measure teacher effectiveness.
+  - "4.B"
+  - "12.B"
+tldr: "Evaluating ten language models as multilingual teachers for synthetic data generation reveals that model scale does not predict effectiveness; data quality metrics explain over 93% of variance and predict student performance."
+problem_and_motivation: "Current teacher model selection for multilingual synthetic data generation is ad hoc, often defaulting to largest models despite capability gaps in non-English languages. This leads to poor-quality data and suboptimal student performance. A systematic characterization of what makes an effective multilingual teacher is missing."
 approach:
-  - Evaluated 10 teacher LMs across 6 typologically diverse languages by generating over 1.4M SFT examples.
-  - Proposed POLYGLOT SCORE, a metric combining intrinsic data quality and extrinsic student model performance.
-  - Measured intrinsic quality via prompt/response diversity, response perplexity, and a multilingual reward model score.
-  - Assessed extrinsic performance by finetuning an OLMo 3 7B student model and evaluating on multilingual benchmarks.
-  - Analyzed correlations between teacher model properties and data quality to identify factors driving effectiveness.
+  - "They evaluate 10 state-of-the-art LMs across 6 typologically diverse languages using three synthetic data generation methods: Generate, Translate, and Respond."
+  - "They generate over 1.4 million SFT examples and fine-tune 240 student models from OLMo 3 7B."
+  - "They compute intrinsic data quality metrics: prompt/response diversity, perplexity, and a multilingual reward model score."
+  - "They measure extrinsic student performance via Performance Gap Recovered (PGR) on cultural, chat, and math benchmarks."
+  - "They aggregate intrinsic and extrinsic metrics into a single POLYGLOT SCORE (PG-SCORE) using z-score normalization."
 findings:
-  - "num: Gemma 3 27B and Aya Expanse 32B are the most effective teachers, with PG-SCOREs of 0.726 and 0.706, respectively."
-  - "num: Model scale does not significantly predict teacher effectiveness (p=0.507)."
-  - "num: Data quality metrics (prompt diversity, length, response fluency) capture over 93.3% of variance in intrinsic quality."
-  - "num: A linear model using principal components of intrinsic metrics predicts student performance with R2=0.664."
-  - "num: Matching teacher-student model families yields at least a 20.5% increase in PG-SCORE."
-  - For high-resource languages like German, the Generate method works best; for less-resourced languages, Respond or Translate methods are more effective.
-  - Teacher performance varies significantly by language, likely due to pretraining data representation.
-  - Teachers from the Gemma family consistently outperform others, including larger models from the Llama family.
+  - "num: Gemma 3 27B and Aya Expanse 32B achieve the highest average PG-SCORE of 0.726 and 0.706, respectively."
+  - "Model scale does not significantly predict teacher effectiveness (p > 0.05)."
+  - "Intrinsic data quality metrics explain 93.3% of variance and predict student performance with R^2 = 0.664."
+  - "Matching teacher and student model families yields at least +20.5% higher PG-SCORE compared to mismatched pairs."
+  - "For low-resource languages, Translate and Respond methods outperform Generate, with gains up to 458.9% for some teachers."
 key_figures_tables:
-  - "Figure 1: Overview of POLYGLOT SCORE evaluation pipeline. → Pipeline combines intrinsic data quality and extrinsic student performance to assess teachers."
-  - "Table 1: PG-SCORE of teacher models across 6 languages. → Gemma 3 27B and Aya Expanse 32B are top performers, regardless of size."
-  - "Table 3: Regression results show model size and benchmark performance do not significantly predict PG-SCORE. → Common assumptions about teacher strength are insufficient."
-  - "Figure 4: Linear regression of intrinsic PCs to predict extrinsic student performance. → Intrinsic data quality metrics are strong predictors of downstream performance."
+  - "Table 1: PG-SCORE rankings of 10 teacher models across 6 languages → Gemma 3 27B and Aya Expanse 32B are top performers."
+  - "Figure 2: PG-SCORE generalizes across different student base models, with family-matched pairs showing consistent improvements."
+  - "Table 2: PG-SCORE by data generation method; Generate works best for high-resource languages, Translate/Respond for low-resource."
+  - "Figure 4: Linear regression of intrinsic principal components predicts extrinsic student performance with R^2=0.664."
 key_equations:
-  - equation: "PG-SCORET,ℓ = z-score(Intr.T,ℓ + Extr.T,ℓ)"
-    explanation: "Combines intrinsic and extrinsic metrics into a single teacher effectiveness score."
-  - equation: "Intr.T,ℓ = 1/|M| ∑_{m∈M} z-score(m(DT,ℓ))"
-    explanation: "Averages normalized intrinsic quality metrics for a teacher on a language."
-  - equation: "Extr.T,ℓ = 1/|B| ∑_{b∈B} (score_b(ST,ℓ) − score_b(Sϕ)) / (score_b(SREF) − score_b(Sϕ))"
-    explanation: "Performance gain recovered by the student over a reference model."
+  - equation: "$\\text{Intrinsic}_{T,\\ell} = \\frac{1}{|\\mathcal{M}|} \\sum_{m \\in \\mathcal{M}} z\\text{-score}(m(\\mathcal{D}_{T,\\ell}))$"
+    explanation: "Averages z-scored diversity, perplexity, and reward metrics."
+  - equation: "$\\text{Extrinsic}_{T,\\ell} = \\frac{1}{|\\mathcal{B}|} \\sum_{b \\in \\mathcal{B}} \\frac{\\text{score}_b(S_{T,\\ell}) - \\text{score}_b(S_\\phi)}{\\text{score}_b(S_{\\text{REF}}) - \\text{score}_b(S_\\phi)}$"
+    explanation: "Performance Gap Recovered averaged over benchmark tasks."
+  - equation: "$\\text{PG-SCORE}_{T,\\ell} = z\\text{-score}(\\text{Intrinsic}_{T,\\ell} + \\text{Extrinsic}_{T,\\ell})$"
+    explanation: "Combined metric for teacher effectiveness."
 definitions:
-  - term: "POLYGLOT SCORE (PG-SCORE)"
-    definition: "A metric to holistically assess a teacher model's effectiveness for multilingual synthetic data generation, combining intrinsic data quality and extrinsic student model performance."
-  - term: "SFT"
-    definition: "Supervised Fine-Tuning, a standard approach for adapting language models to specific tasks or languages."
+  - term: "PG-SCORE"
+    definition: "Metric combining intrinsic data quality and extrinsic student performance to evaluate teacher effectiveness."
   - term: "PGR"
-    definition: "Performance Gap Recovered, a metric measuring the improvement of a finetuned student model over a base model relative to a reference."
-  - term: "LLM-as-a-judge"
-    definition: "Using a large language model to evaluate the quality of generated text based on a given rubric."
-  - term: "CommonCrawl representation"
-    definition: "The proportion of a language in the CommonCrawl dataset, used as a proxy for a language's presence in pretraining data."
+    definition: "Performance Gap Recovered, measures student improvement over base model relative to a reference."
+  - term: "SFT"
+    definition: "Supervised fine-tuning."
+  - term: "LM"
+    definition: "Language model."
+  - term: "PPL"
+    definition: "Perplexity."
 critical_citations:
-  - "[Kim et al., 2025] — Found model scale doesn't predict teacher effectiveness for English-based tasks."
-  - "[Xu et al., 2025b] — Showed stronger models are not always better teachers for instruction tuning."
-  - "[Pombal et al., 2025] — Introduced M-Prometheus, a strong multilingual reward model."
+  - "[Kim et al., 2025] — proposed extrinsic-only evaluation for English teachers."
+  - "[Xu et al., 2025b] — showed stronger models not always better for English instruction tuning."
+  - "[Aryabumi et al., 2024] — Aya dataset for multilingual instruction tuning."
 relevance:
   topics:
-    - code: "5.C"
-      name: "Classification Approaches for Financial Behavioral Profiles"
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
       relevance: "contextual"
-      justification: "The paper's methodology of evaluating teacher models is analogous to selecting a model to generate training data for behavioral profile classification."
-    - code: "6.B"
-      name: "Forecasting Algorithms for Sequential Spending Data"
-      relevance: "high"
-      justification: "The paper's evaluation framework for synthetic data generation can be directly adapted to select models for generating training data for spending forecasting modules."
-    - code: "7.D"
-      name: "Infeasibility Handling and Reduction Hierarchies"
-      relevance: "medium"
-      justification: "The principles of selecting effective 'teachers' for data generation can be applied to selecting models for generating training data for infeasibility handling in budget recommendations."
-    - code: "8.B"
-      name: "Anomaly Detection Algorithms for Personal Spending Data"
-      relevance: "high"
-      justification: "The systematic approach to evaluating data generation quality is directly relevant for selecting teacher models to generate synthetic anomaly data for training detection algorithms."
+      justification: "Identifies limitations in existing ad-hoc teacher selection for multilingual data generation, relevant to gaps in systems."
     - code: "12.B"
       name: "Evaluation of Algorithmic Modules"
-      relevance: "high"
-      justification: "This paper provides a comprehensive evaluation framework (PG-SCORE) for algorithmic modules (teacher models) in a data generation pipeline."
-    - code: "12.C"
-      name: "Evaluation Methodologies for Budget Recommendation Systems"
-      relevance: "high"
-      justification: "The structured, multi-metric evaluation methodology (intrinsic + extrinsic) can inform the design of evaluation frameworks for budget recommendation systems."
-    - code: "2.A"
-      name: "Culturally Specific Financial Practices"
-      relevance: "contextual"
-      justification: "The paper emphasizes the importance of cultural appropriateness in generated data, which is relevant to capturing culturally specific financial practices."
-    - code: "2.D"
-      name: "Filipino Spending Cycles and 'Occasions'"
-      relevance: "contextual"
-      justification: "The case study on Tagalog and the focus on cultural appropriateness in data generation are relevant to modeling Filipino-specific spending cycles."
-  contribution: "This paper offers a systematic, data-centric approach to evaluating LMs as teachers, directly applicable to Odin's data generation needs for multiple modules. The POLYGLOT SCORE framework provides a blueprint for evaluating and selecting models for generating synthetic training data for forecasting, anomaly detection, and budget recommendation. Its finding that data quality metrics are more predictive than model scale offers a practical, cost-effective strategy for building these modules. The demonstrated effectiveness of model family matching provides a concrete heuristic for teacher selection. The case study on Tagalog validates the approach for a new language, suggesting adaptability to low-resource contexts."
+      relevance: "medium"
+      justification: "Proposes a comprehensive evaluation metric (PG-SCORE) combining intrinsic and extrinsic measures, applicable to evaluating algorithmic modules."
+  contribution: "The paper's evaluation framework (PG-SCORE) can inform Odin's module evaluation strategy by combining intrinsic data quality metrics with downstream performance. Its findings on family matching and data generation methods may guide the selection of ML models for Filipino-specific tasks. The systematic analysis of data quality predictors offers a methodology for evaluating algorithmic modules without full training runs. However, the paper does not address personal finance or Filipino financial behavior directly."
   directly_justifies:
-    - "The POLYGLOT SCORE framework offers a structured method to evaluate models for generating synthetic data."
-    - "Model scale alone does not guarantee data generation quality, so small models can be effective."
-    - "Data quality metrics such as prompt diversity and response fluency are predictive of student model performance."
-    - "Matching teacher and student model families is a reliable heuristic for improving performance."
-    - "For less-resourced languages, generating responses to existing prompts is more effective than few-shot generation."
+    - "Intrinsic data quality metrics can serve as proxies for student performance, reducing evaluation cost."
+    - "Teacher-student model family matching improves synthetic data quality, a heuristic applicable to model selection."
+    - "For low-resource languages, generating responses to existing prompts or translating from English is more effective than generating from scratch."
   limits:
-    - "The study evaluates only six languages, which limits the generalizability of findings to the full diversity of Odin's potential user base."
-    - "The Translate method assumes access to English prompts that are meaningful for the target language, which may not always hold."
-    - "The evaluation focuses on general-purpose benchmarks, not on financial or PFMS-specific tasks."
-  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The domains of Spending Forecasting (6), Budget Recommendation (7), Anomaly Detection (8), and System Evaluation (12) were flagged as highly relevant due to the paper's direct contribution to selecting models for generating training data for these algorithmic modules. The domain of Behavioral Profiling & Classification (5) was assigned 'contextual' relevance as the methodology could be adapted. The domains of Filipino Cultural Context (2) were also marked 'contextual' due to the paper's focus on cultural appropriateness in data generation, which is relevant to modeling specific financial behaviors. The domains of Expense Categorization (3), Existing Systems (4), Mobile-First Design (9), Data Privacy (10), User Retention (11), and Savings & Debt Management (13) were considered but rejected as the paper does not provide citeable claims for these specific Odin domains. The paper's primary contribution is its evaluation framework and findings on synthetic data generation, which directly informs the development of data-centric algorithmic modules in Odin."
+    - "Evaluation limited to 6 typologically diverse languages, may not generalize to all languages."
+    - "Translation-based method assumes English prompts and may introduce translationese artifacts."
+    - "Potential amplification of biases present in teacher models, especially for underrepresented languages."
+    - "The study does not test on personal finance data or Filipino-specific tasks beyond a single held-out case."
+  mapping_rationale: "Systematic scan across all 12 functional domains and their associated topic codes flagged only the System Evaluation domain as relevant. Specifically, the paper's contribution of a novel evaluation metric (PG-SCORE) directly supports topic 12.B (Evaluation of Algorithmic Modules) with medium relevance, as it provides a comprehensive methodology for assessing algorithmic performance. Topic 4.B (Limitations and Gaps in Existing Systems) was assigned contextual relevance because the paper identifies ad-hoc teacher selection as a gap in current synthetic data practices, but this is not specific to PFMS. Domains such as Filipino Cultural Context, Expense Categorization, Behavioral Profiling, and Spending Forecasting were rejected because the paper does not address financial behaviors or personal finance applications. Overall, the paper is methodologically relevant to Odin's evaluation strategies but not directly actionable for financial modules."
 limitations:
-  - "Language set limited to six typologically diverse languages, representing a small sample of the world's languages."
-  - "Assumes access to English prompts for the Translate method, which may not always be culturally appropriate."
-  - "Relies on automatic evaluation metrics that may not fully capture the nuances of human language quality."
-  - "The computational cost of evaluating all teacher models via student finetuning is high. [unacknowledged]"
-  - "Does not explore the potential for bias amplification in synthetic data pipelines, especially for low-resource languages. [unacknowledged]"
+  - "Evaluation limited to 6 typologically diverse languages, may not generalize to all languages."
+  - "Translation-based method assumes English prompts and may introduce translationese artifacts."
+  - "Potential amplification of biases present in teacher models, especially for underrepresented languages."
+  - "The study does not test on personal finance data or Filipino-specific tasks beyond a single held-out case. [unacknowledged]"
 remember_this:
-  - "Gemma 3 27B is an effective multilingual teacher for synthetic data generation."
-  - "Model scale does not predict teacher effectiveness in multilingual settings."
-  - "Data quality, not model size, is the primary driver of student performance."
-  - "Teacher-student model family matching yields significant performance gains."
-  - "For less-resourced languages, the Respond or Translate methods are most effective."
+  - "Gemma 3 27B and Aya Expanse 32B are the most effective multilingual teachers."
+  - "Model scale alone does not predict teacher effectiveness; data quality metrics explain 93% of variance."
+  - "Family-matched teacher-student pairs yield at least +20.5% higher performance."
+  - "For low-resource languages, Translate and Respond methods outperform Generate with up to 458.9% gains."
+  - "Intrinsic data quality metrics can predict student performance with R^2=0.664."
 ```
 ---
 
-## Paper 46: Athique & Lorenzana_summarized.md
+## Paper 41: Athique & Lorenzana_summarized.md
 
 **Source File:** `Athique & Lorenzana_summarized.md`
 
@@ -6389,53 +5585,48 @@ remember_this:
 ```
 ---
 
-## Paper 47: Mohammad et al_summarized.md
+## Paper 42: Mohammad et al_summarized.md
 
 **Source File:** `Mohammad et al_summarized.md`
 
 ```yaml
-paper_id: 10.1038/s41598-026-51764-9
-designation: international-algorithm-specific
-title: Transforming credit risk evaluation in digital lending from black box models to transparent decisions
-authors: Mohammad, A.A.S.; Mohammad, S.I.; Vasudevan, A.; Azam, S.M.F.; Sevukamoorthy, L.; Parhi, M.; Shankalia, M.U.; Salami, Z.A.
+paper_id: "10.1038/s41598-026-51764-9"
+designation: "international-algorithm-specific"
+title: "Transforming credit risk evaluation in digital lending from black box models to transparent decisions"
+authors: "Mohammad, A.A.S.; Mohammad, S.I.; Vasudevan, A.; Azam, S.M.F.; Sevukamoorthy, L.; Parhi, M.; Shankalia, U.M.; Salami, Z.A."
 year: 2026
-venue: Scientific Reports
+venue: "Scientific Reports"
 odin_topics:
-  - 5.A
-  - 5.B
-  - 5.C
-  - 6.A
-  - 6.B
-  - 7.A
-  - 7.B
-  - 8.A
-  - 8.B
-  - 12.A
-  - 12.B
-  - 12.C
-tldr: A hybrid framework integrating gradient boosting models with metaheuristic optimization improves credit risk prediction accuracy and interpretability for digital lending.
-problem_and_motivation: Traditional credit scoring models fail to assess non-traditional borrowers, while existing machine learning approaches often lack interpretability, limiting trust and regulatory compliance. A unified framework is needed to jointly optimize predictive performance and transparency.
+  - "4.B"
+  - "5.A"
+  - "5.C"
+  - "6.A"
+  - "10.B"
+  - "12.B"
+tldr: "An optimization-driven hybrid machine learning framework integrating gradient boosting and nature-inspired metaheuristics enhances credit risk prediction accuracy and interpretability for digital lending."
+problem_and_motivation: "Traditional credit scoring models cannot assess non-traditional borrowers, while black-box machine learning models lack interpretability, limiting regulatory compliance and trust in digital lending. A unified framework combining predictive performance and transparency is missing."
 approach:
-  - A publicly available dataset of 1,000 loan applications with 16 attributes was used.
-  - LightGBM, CatBoost, and Explainable Boosting Machine were selected as base models.
-  - Brown-Bear Optimization Algorithm and Puma Optimizer were used for hyperparameter tuning.
-  - Class imbalance was addressed using cost-sensitive learning with class weights.
-  - Feature importance was analyzed using SHAP and permutation-based methods.
+  - "Dataset comprises 1000 loan applications with 16 financial, demographic, and behavioral features from University of Santiago de Chile."
+  - "Preprocessing includes scaling, encoding, missing value handling, and feature engineering (loan-to-income, installment-to-income ratios)."
+  - "Three gradient boosting models (LightGBM, CatBoost, Explainable Boosting Machine) are used for classification."
+  - "Hyperparameters are optimized using Brown-Bear Optimization Algorithm and Puma Optimizer metaheuristics over 200 iterations."
+  - "Stratified five-fold cross-validation and cost-sensitive learning address class imbalance."
+  - "Model interpretability is provided via SHAP and permutation importance analyses."
+  - "Evaluation uses accuracy, precision, recall, F1-score, confusion matrices, and Wilcoxon tests."
 findings:
-  - num: Optimized CatBoost achieved 99.50% test accuracy and 0.9951 F1-score.
-  - num: Optimized LightGBM achieved 99.01% test accuracy and 0.9901 F1-score.
-  - num: Optimized EBM achieved 98.51% test accuracy and 0.9852 F1-score.
-  - Metaheuristic optimization consistently improved performance over baseline models.
-  - SHAP analysis identified credit history age as the most influential predictor.
-  - The framework balances predictive accuracy with feature-level interpretability.
+  - "num: Optimized LightGBM achieved 0.9901 test accuracy and 0.9901 F1-score."
+  - "num: Optimized CatBoost achieved 0.9950 test accuracy and 0.9951 F1-score."
+  - "num: Optimized EBM achieved 0.9851 test accuracy and 0.9852 F1-score."
+  - "Metaheuristic optimization consistently improved model performance over baseline configurations."
+  - "SHAP analysis identified credit age as the most influential predictor of default risk."
 key_figures_tables:
-  - Table 4: K-fold cross-validation results → Models show stable performance across folds.
-  - Table 6: Performance metrics for baseline and optimized models → Optimization significantly improves all metrics.
-  - Table 7: Confusion matrices → Optimized models reduce false positives and negatives substantially.
-  - Figure 6: SHAP values → Credit history age is the most influential feature in risk prediction.
+  - "Figure 3: Permutation-based feature importance → Highlights key predictors for risk."
+  - "Figure 5: Convergence trend of iterative optimization → Shows stable improvement over 200 iterations."
+  - "Table 6: Performance metrics for all model configurations → Demonstrates optimization gains."
+  - "Table 7: Confusion matrices → Shows reduced misclassifications after optimization."
 key_equations:
   - equation: "Accuracy = (TP + TN) / (TP + TN + FP + FN)"
-    explanation: "Proportion of correctly classified instances."
+    explanation: "Overall correctness of classification."
   - equation: "Precision = TP / (TP + FP)"
     explanation: "Proportion of true positives among predicted positives."
   - equation: "Recall = TP / (TP + FN)"
@@ -6443,242 +5634,233 @@ key_equations:
   - equation: "F1 = 2 * (Precision * Recall) / (Precision + Recall)"
     explanation: "Harmonic mean of precision and recall."
 definitions:
-  - term: BNPL
-    definition: "Buy Now, Pay Later; a short-term financing model."
-  - term: LightGBM
-    definition: "A gradient boosting framework using histogram-based splitting."
-  - term: CatBoost
-    definition: "A gradient boosting algorithm with native categorical feature handling."
-  - term: EBM
-    definition: "Explainable Boosting Machine; a transparent, GAM-based model."
-  - term: BBOA
-    definition: "Brown-Bear Optimization Algorithm; a nature-inspired metaheuristic."
-  - term: PO
-    definition: "Puma Optimizer; a metaheuristic inspired by puma hunting behavior."
-  - term: SHAP
-    definition: "SHapley Additive exPlanations; a method for explaining model predictions."
+  - term: "LightGBM"
+    definition: "Gradient boosting framework using histogram-based learning."
+  - term: "CatBoost"
+    definition: "Gradient boosting with native categorical feature handling and ordered boosting."
+  - term: "EBM"
+    definition: "Explainable Boosting Machine, a transparent additive model with pairwise interactions."
+  - term: "BBOA"
+    definition: "Brown-Bear Optimization Algorithm, nature-inspired metaheuristic for global search."
+  - term: "PO"
+    definition: "Puma Optimizer, hunting-inspired metaheuristic for optimization."
+  - term: "SHAP"
+    definition: "SHapley Additive exPlanations, a game-theoretic approach for model interpretability."
+  - term: "BNPL"
+    definition: "Buy Now, Pay Later, a short-term financing model."
 critical_citations:
-  - "[Roy and Vasa, 2025] — Reviews AI methods for credit risk assessment."
-  - "[Zhou and Wang, 2025] — Uses XGBoost with SHAP for interpretable credit risk."
-  - "[Papa and Ricafort, 2024] — Demonstrates ANN/RNN for cooperative lending."
-  - "[De Silva, 2025] — Achieves 99% accuracy with human-in-the-loop models."
+  - "[Ke et al., 2017] — LightGBM gradient boosting framework."
+  - "[Prokhorenkova et al., 2018] — CatBoost ordered boosting."
+  - "[Liu and Sun, 2023] — Explainable Boosting Machine."
+  - "[Prakash et al., 2023] — Brown-Bear Optimization Algorithm."
+  - "[Abdollahzadeh et al., 2024] — Puma Optimizer."
 relevance:
   topics:
-    - code: 5.A
-      name: Financial Behavioral Profiles in Personal Finance
-      relevance: high
-      justification: Directly models borrower characteristics and default risk.
-    - code: 5.B
-      name: Profile Dynamics and the Cold-Start Problem
-      relevance: medium
-      justification: Addresses non-traditional borrowers with limited credit history.
-    - code: 5.C
-      name: Classification Approaches for Financial Behavioral Profiles
-      relevance: high
-      justification: Uses boosting and optimization for borrower classification.
-    - code: 6.A
-      name: Predictive Modeling in Personal Finance Systems
-      relevance: high
-      justification: Develops a predictive framework for credit risk.
-    - code: 6.B
-      name: Forecasting Algorithms for Sequential Spending Data
-      relevance: medium
-      justification: Provides a general methodology applicable to spending data.
-    - code: 7.A
-      name: Budgeting Strategies as Domain Knowledge
-      relevance: contextual
-      justification: Credit risk assessment informs budgeting decisions.
-    - code: 7.B
-      name: Budget Recommendation in Personal Finance Systems
-      relevance: low
-      justification: Not directly about budget recommendations but can inform credit limits.
-    - code: 8.A
-      name: Anomaly Detection in Personal Finance Systems
-      relevance: high
-      justification: Default prediction is a form of anomaly detection.
-    - code: 8.B
-      name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: medium
-      justification: Uses classification algorithms applicable to anomaly detection.
-    - code: 12.A
-      name: Evaluation Frameworks for Personal Finance Systems
-      relevance: high
-      justification: Employs robust cross-validation and multiple metrics.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
-      relevance: high
-      justification: Evaluates individual models and optimization effects.
-    - code: 12.C
-      name: Evaluation Methodologies for Budget Recommendation Systems
-      relevance: low
-      justification: Focuses on credit risk, but uses similar evaluation metrics.
-  contribution: "This paper provides a framework for integrating explainable boosting models with metaheuristic optimization for credit risk assessment. The approach can inform Odin's behavioral profiling module by demonstrating how to classify borrowers using financial and demographic features. The use of SHAP for interpretability aligns with Odin's need for transparent decision-making in financial profiling. The methodology also offers a template for evaluating prediction models using cross-validation and imbalance-aware metrics."
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "medium"
+      justification: "Identifies black-box and tuning gaps relevant to PFMS development."
+    - code: "5.A"
+      name: "Financial Behavioral Profiles"
+      relevance: "medium"
+      justification: "Uses financial and behavioral features for borrower profiling."
+    - code: "5.C"
+      name: "Classification Approaches for Financial Behavioral Profiles"
+      relevance: "high"
+      justification: "Proposes a classification framework directly applicable to Odin's behavioral profiling."
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Provides predictive modeling techniques transferable to spending forecasting."
+    - code: "10.B"
+      name: "User Trust in Personal Finance Systems"
+      relevance: "high"
+      justification: "Emphasizes interpretability to build user trust and meet regulatory standards."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "medium"
+      justification: "Uses cross-validation and multiple metrics that can inform Odin's module evaluation."
+  contribution: "The optimization-driven classification framework can be directly applied to Odin's behavioral profiling module (5.C) to classify users' spending habits and financial risk levels. The use of interpretable models like EBM supports Odin's transparency requirements (10.B) by providing feature-level explanations of predictions. The evaluation methodology with cross-validation and multiple metrics provides a template for validating Odin's algorithmic modules (12.B). The findings on handling class imbalance via cost-sensitive learning are relevant to Odin's anomaly detection and forecasting tasks."
   directly_justifies:
-    - "Gradient boosting models achieve high accuracy on tabular financial data."
-    - "Metaheuristic optimization improves hyperparameter tuning over grid search."
-    - "SHAP analysis identifies key features influencing default risk."
-    - "EBM provides feature-level transparency suitable for regulated environments."
-    - "Class imbalance can be addressed via cost-sensitive learning without synthetic data."
+    - "Optimized gradient boosting models achieve high predictive accuracy on imbalanced financial data."
+    - "Feature-level explanations using SHAP enhance model transparency and user trust."
+    - "Metaheuristic optimization improves hyperparameter search efficiency and model stability."
+    - "Interpretable models like EBM facilitate regulatory compliance in financial decision-making."
   limits:
-    - "Dataset is not from a BNPL platform, limiting direct applicability."
-    - "Results are based on a single, relatively small dataset (n=1000)."
-    - "Real-world operational validation was not conducted."
-    - "Comparison with other metaheuristics or deep learning models is limited [unacknowledged]."
-  mapping_rationale: "A systematic scan of all 12 functional domains was conducted to map the paper to Odin's topic codes. The paper's core contribution lies in algorithmic credit risk prediction, directly informing domains such as Behavioral Profiling (5.A, 5.B, 5.C), Predictive Modeling (6.A, 6.B), and Anomaly Detection (8.A, 8.B). The rigorous evaluation framework (12.A, 12.B) was also flagged as highly relevant. The paper was considered for topics in Budget Recommendation (7.A, 7.B) and Savings/Debt Management (13.A, 13.B, 13.C) but received low or contextual relevance because it does not directly address budgeting strategies, savings goals, or debt management practices. Similarly, Mobile-First Design (9.A, 9.B) and Data Privacy (10.A, 10.B) were not relevant. Borderline cases included the connection between credit risk and budget constraints (7.A), which was deemed contextual, and the application of classification algorithms to anomaly detection (8.B), which was considered medium due to shared methodology. Overall, the paper provides high relevance for modules involving predictive modeling, user classification, and system evaluation, but limited direct applicability to budgeting, savings, or engagement features."
+    - "Focuses on credit risk rather than spending behavior, requiring adaptation for Odin's forecasting modules."
+    - "No explicit consideration of Filipino financial practices or seasonal spending patterns."
+  mapping_rationale: "All 12 functional domains and their associated topic codes were systematically scanned. Domains related to Filipino cultural context (1, 2) and expense categorization (3) were deemed irrelevant as the paper does not address Filipino-specific practices or expense management. The domain of existing systems and gaps (4) was partially relevant, specifically 4.B (limitations) with medium relevance because the paper identifies black-box and tuning gaps. Behavioral profiling (5) was highly relevant, especially 5.C (classification approaches) as high, and 5.A (profiles) as medium due to use of financial/behavioral features. Predictive modeling (6) was considered medium via 6.A for its techniques, though not directly on spending. User trust (10) was flagged high via 10.B because interpretability is a core contribution. System evaluation (12) was flagged medium via 12.B for its robust evaluation methodology. Other domains (7, 8, 9, 11, 13) were rejected as they do not relate to credit risk or the paper's focus. Overall, the paper offers transferable techniques for classification, interpretability, and evaluation that can inform Odin's design."
 limitations:
-  - "Limited to a single dataset of 1,000 records, reducing generalizability."
-  - "No comparison with other metaheuristic optimization algorithms."
-  - "No real-world deployment or user study was conducted."
-  - "The trade-off between interpretability and performance is not quantitatively assessed [unacknowledged]."
+  - "Dataset size is limited to 1000 instances, which may restrict generalization. [unacknowledged]"
+  - "The study uses a public credit dataset rather than actual BNPL data, though this is acknowledged."
+  - "No comparison to state-of-the-art benchmark algorithms beyond within-family baselines. [unacknowledged]"
 remember_this:
-  - "Optimized CatBoost achieved 99.5% accuracy on credit risk prediction."
-  - "Metaheuristic optimization significantly outperforms baseline tuning methods."
-  - "EBM provides transparent feature contributions for regulatory compliance."
-  - "Credit history age is the most influential predictor of default risk."
-  - "Hybrid frameworks can balance accuracy and interpretability in finance."
+  - "Optimized CatBoost achieved 99.50% test accuracy on credit risk prediction."
+  - "Metaheuristic optimization consistently improved model stability and predictive performance."
+  - "Interpretable models like EBM provide feature-level explanations critical for regulatory trust."
+  - "Cost-sensitive learning effectively addressed class imbalance without synthetic oversampling."
 ```
 ---
 
-## Paper 48: Bhardwaj_summarized.md
+## Paper 43: Bhardwaj_summarized.md
 
 **Source File:** `Bhardwaj_summarized.md`
 
 ```yaml
-paper_id: f47ac10b-58cc-4372-a567-0e02b2c3d479
+paper_id: 10.48550/arXiv.2602.22302
 designation: international-algorithm-specific
 title: Agent Behavioral Contracts: Formal Specification and Runtime Enforcement for Reliable Autonomous AI Agents
-authors: Bhardwaj, V. P.
+authors: Bhardwaj, V.
 year: 2026
-venue: arXiv
+venue: arXiv preprint # This paper is a pre-print article
 odin_topics:
-  - 4.B
+  - 5.A
   - 5.B
+  - 5.C
   - 8.A
   - 8.B
   - 8.C
-  - 10.A
-  - 10.B
+  - 11.A
+  - 11.B
   - 12.A
   - 12.B
-tldr: A formal framework for behavioral contracts enables runtime enforcement, drift detection, and recovery for autonomous AI agents, making violations measurable and bounds provable.
-problem_and_motivation: Large language model agents lack formal behavioral specifications, leading to undetected drift and governance failures. Existing approaches like prompts and guardrails cannot provide runtime guarantees or compositionality. This paper addresses the need for a contract-based framework with probabilistic compliance and bounded drift.
+tldr: Introduces Agent Behavioral Contracts (ABC), a formal framework with probabilistic satisfaction and drift bounds that brings Design-by-Contract principles to autonomous AI agents for runtime enforcement.
+problem_and_motivation: AI agents operate on prompts with no formal behavioral specification, causing drift, governance failures, and project failures. Existing training-time alignment and output guardrails lack runtime enforcement and formal guarantees. This gap necessitates a framework for specifying, verifying, and enforcing agent behavior.
 approach:
-  - Define Agent Behavioral Contracts as a tuple of preconditions, invariants (hard/soft), governance constraints, and recovery mechanisms.
-  - Introduce (p,δ,k)-satisfaction to account for LLM non-determinism with bounded recovery windows.
-  - Model drift as an Ornstein-Uhlenbeck process and prove a drift bound theorem with closed-form design criterion.
-  - Implement ContractSpec DSL and AgentAssert runtime library with sub-10ms per-action overhead.
-  - Evaluate on 7 models from 6 vendors using AgentContract-Bench across 1,980 sessions, comparing contracted vs uncontracted agents.
+  - Defines contract C = (P,I,G,R) with hard/soft constraints and recovery.
+  - Introduces (p,δ,k)-satisfaction for probabilistic compliance.
+  - Proves stochastic drift bounds using Ornstein-Uhlenbeck dynamics.
+  - Establishes compositionality conditions for multi-agent chains.
+  - Implements in ContractSpec DSL and AgentAssert runtime library.
+  - Evaluates on AgentContract-Bench and 7 models from 6 vendors.
 findings:
-  - "num: 5.2-6.8 soft violations per session detected in contracted agents, versus 0.0-0.3 in uncontracted (p<0.0001, Cohen's d=6.7-33.8)."
-  - "num: Hard compliance reached 88-100% under contract, with 100% for GPT-5.2 and GPT-4o-mini."
-  - "num: Behavioral drift was bounded to D*<0.27 over 12-turn sessions, matching OU mean-reversion (R2=0.49-0.75)."
-  - "num: Recovery re-prompting achieved 100% success for frontier models; average 67% across all models."
-  - "num: Runtime overhead remained below 10ms per action, <1% of LLM inference latency."
+  - num: Contracted agents detect 5.2–6.8 soft violations per session invisible to baselines (p < 0.0001, Cohen's d = 6.7–33.8).
+  - num: Hard constraint compliance reaches 88–100% under contracts.
+  - num: Behavioral drift is bounded to D* < 0.27 across extended sessions.
+  - num: Recovery success is 100% for frontier models and 17–100% across all models.
+  - num: Runtime overhead is < 10ms per action.
+  - Contract enforcement makes previously invisible violations measurable.
+  - Hard constraints enforce safety-critical properties reliably.
+  - Drift monitoring provides a leading indicator of emerging misalignment.
+  - Recovery transforms exponential compliance decay into linear decay.
+  - Contract components are non-redundant; removing recovery drops reliability index by ~0.20.
 key_figures_tables:
-  - "Table 9: E1 results across 7 models → Contracted agents detect 5.2–6.8 soft violations vs 0.0–0.3 in uncontracted."
-  - "Figure 2: Drift trajectory over 12-turn sessions → Contracted drift stabilizes and remains bounded, while uncontracted has no measurable drift."
-  - "Figure 3: OU model fit → Drift dynamics match mean-reversion with R2=0.49–0.75."
-  - "Figure 4: Ablation heatmap → Removing recovery or soft constraints degrades reliability index by ∼0.20."
-  - "Figure 5: Runtime overhead scaling → Overhead scales linearly with constraints, below 10ms for typical contracts."
+  - Figure 1: Agent reliability index Θ across 7 models → Llama 3.3 70B highest (0.956), Mistral Large 3 lowest (0.908).
+  - Figure 2: Drift trajectory over extended sessions → Contracted agents exhibit bounded drift consistent with OU mean-reversion.
+  - Figure 3: OU model fit to drift trajectories → R2 = 0.49–0.75 confirms qualitative structure.
+  - Figure 4: Ablation heatmap → Removing recovery or soft constraints degrades Θ by ~0.20.
+  - Figure 5: Runtime overhead scaling → Linear in constraint count, <25ms for k=100.
+  - Figure 6: Recovery mechanism impact → Degrades Θ by 0.199–0.215 when removed.
+  - Figure 7: SPRT vs fixed-sample efficiency → SPRT requires 150–300 sessions vs 18,445 for Hoeffding.
 key_equations:
-  - equation: "C_hard(t) = |{c ∈ I_hard ∪ G_hard : c(s_t,a_t)=true}| / |I_hard ∪ G_hard|"
-    explanation: "Fraction of satisfied hard constraints."
-  - equation: "C_soft(t) = |{c ∈ I_soft ∪ G_soft : c(s_t,a_t)=true}| / |I_soft ∪ G_soft|"
-    explanation: "Fraction of satisfied soft constraints."
-  - equation: "P(∀t: C_hard(t)=1) ≥ p and P(∀t: C_soft(t)<1-δ ⇒ ∃t'≤t+k: C_soft(t')≥1-δ) ≥ p"
-    explanation: "(p,δ,k)-satisfaction with hard persistent and soft recoverable guarantees."
-  - equation: "dD = (α - γD)dt + σdW(t)"
-    explanation: "OU drift dynamics with injection rate α and recovery rate γ."
-  - equation: "π_D = N(α/γ, σ²/(2γ))"
-    explanation: "Stationary drift distribution with mean α/γ and variance σ²/(2γ)."
-  - equation: "γ ≥ (2αD_max + σ² ln(1/ε) + sqrt((2αD_max + σ² ln(1/ε))² - 4α²D_max²)) / (2D_max²)"
-    explanation: "Minimum recovery rate to keep drift below D_max with confidence 1-ε."
+  - equation: C = (P, I_hard ∪ I_soft, G_hard ∪ G_soft, R)
+    explanation: Contract structure with hard/soft constraints and recovery.
+  - equation: C_hard(t) = |{c ∈ I_hard ∪ G_hard : c(s_t, a_t) = true}| / |I_hard ∪ G_hard|
+    explanation: Fraction of hard constraints satisfied at step t.
+  - equation: C_soft(t) = |{c ∈ I_soft ∪ G_soft : c(s_t, a_t) = true}| / |I_soft ∪ G_soft|
+    explanation: Fraction of soft constraints satisfied at step t.
+  - equation: D(t) = w_c · D_compliance(t) + w_d · D_distributional(t)
+    explanation: Behavioral drift score as weighted sum of compliance and distributional components.
+  - equation: dD(t) = (α − γD(t))dt + σdW(t)
+    explanation: Ornstein-Uhlenbeck drift dynamics for agent behavioral drift.
+  - equation: E_π[D(t)] = α/γ
+    explanation: Stationary mean drift under contract enforcement.
 definitions:
   - term: ABC
-    definition: "Agent Behavioral Contracts: formal framework for agent specification and enforcement."
-  - term: OU
-    definition: "Ornstein-Uhlenbeck: stochastic process with mean-reversion."
-  - term: JSD
-    definition: "Jensen-Shannon divergence: symmetric measure of distributional distance."
-  - term: SPRT
-    definition: "Sequential Probability Ratio Test: sequential hypothesis test for compliance certification."
+    definition: Agent Behavioral Contracts, a formal framework for runtime enforcement of behavioral specifications in autonomous AI agents.
+  - term: Design-by-Contract
+    definition: Software engineering paradigm specifying preconditions, postconditions, and invariants for components.
   - term: (p,δ,k)-satisfaction
-    definition: "Probabilistic contract compliance with probability p, tolerance δ, recovery window k."
+    definition: Probabilistic contract compliance where hard constraints hold with probability p, soft deviations within δ, recovery within k steps.
+  - term: Behavioral Drift
+    definition: Progressive divergence of agent behavior from intended specification over extended interactions.
+  - term: OU Process
+    definition: Ornstein-Uhlenbeck process, a stochastic differential equation with mean-reversion.
+  - term: JSD
+    definition: Jensen–Shannon divergence, a metric for measuring similarity between probability distributions.
+  - term: SPRT
+    definition: Sequential Probability Ratio Test, a sequential hypothesis test for minimal expected sample size.
 critical_citations:
-  - "[Meyer, 1992] — Design-by-Contract foundational work."
-  - "[Bai et al., 2022] — Constitutional AI training-time alignment."
-  - "[Wang et al., 2026a] — Impossibility of safety invariance without external correction."
-  - "[Rath, 2026] — Behavioral drift in multi-agent LLM systems."
+  - "[Meyer, 1992] — Introduced Design-by-Contract paradigm."
+  - "[Benveniste et al., 2018] — Algebra for assume-guarantee contracts."
+  - "[Alshiekh et al., 2018] — Shielding for safe RL."
+  - "[Wang et al., 2026a] — Proved safety degradation absent external intervention."
+  - "[Rath, 2026] — First systematic study of agent behavioral drift."
 relevance:
   topics:
-    - code: 4.B
-      name: Limitations and Gaps in Existing Systems
-      relevance: medium
-      justification: "Paper identifies gaps in existing agent guardrails and provides formal contracts."
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: contextual
+      justification: Provides general framework for behavioral profiling via drift monitoring.
     - code: 5.B
       name: Profile Dynamics and the Cold‑Start Problem
-      relevance: medium
-      justification: "Requires reference distribution calibration, analogous to cold-start baseline."
+      relevance: low
+      justification: Mention of cold-start baseline strategies in anomaly detection.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: low
+      justification: General classification via contract compliance.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
-      relevance: medium
-      justification: "Violation detection is a form of anomaly detection applicable to spending."
+      relevance: high
+      justification: Directly addresses runtime anomaly detection via contract enforcement.
     - code: 8.B
       name: Anomaly Detection Algorithms for Personal Spending Data
-      relevance: medium
-      justification: "Proposes constraint evaluation and drift detection algorithms."
+      relevance: high
+      justification: Proposes probabilistic anomaly detection with hard/soft constraints.
     - code: 8.C
       name: Cold‑Start Baseline Strategies for Anomaly Detection
       relevance: medium
-      justification: "Reference distribution serves as cold-start baseline."
-    - code: 10.A
-      name: Data Privacy and Security in Personal Finance Systems
-      relevance: high
-      justification: "Hard invariants enforce PII and data protection, directly relevant."
-    - code: 10.B
-      name: User Trust in Personal Finance Systems
-      relevance: medium
-      justification: "Contracts build trust through enforceability and transparency."
+      justification: Discusses reference distribution calibration for drift detection.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: contextual
+      justification: General framework for engagement via compliance monitoring.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: contextual
+      justification: Recovery mechanisms as retention enablers.
     - code: 12.A
       name: Evaluation Frameworks for Personal Finance Systems
-      relevance: medium
-      justification: "Introduces benchmark and metrics for evaluating contract enforcement."
+      relevance: high
+      justification: Introduces a comprehensive evaluation protocol with metrics like Θ, D(t), C(t).
     - code: 12.B
       name: Evaluation of Algorithmic Modules
-      relevance: medium
-      justification: "Provides empirical evaluation of the enforcement algorithm across models."
-  contribution: "The ABC framework's hard/soft constraint separation and drift detection can inform Odin's anomaly detection module by providing formal violation metrics and leading indicators. The reference distribution calibration addresses Odin's cold-start problem for user profiling. The compositionality theorem supports evaluating multi-agent pipelines, applicable to Odin's modular architecture. The runtime enforcement and recovery mechanisms offer a template for ensuring data privacy and user trust in financial systems."
+      relevance: high
+      justification: Evaluates algorithmic module (AgentAssert) across models and scenarios.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: contextual
+      justification: General evaluation methodology for PFMS modules.
+  contribution: "Provides a formal contract framework (ABC) for runtime enforcement in autonomous agents, directly applicable to anomaly detection and system evaluation modules in Odin. The (p,δ,k)-satisfaction definition offers a probabilistic compliance model usable for spending anomaly detection. The drift bounds theorem gives a theoretical basis for predicting and bounding behavioral drift in user financial profiles. The evaluation methodology with metrics like Θ and D(t) can be adopted for Odin's system evaluation framework."
   directly_justifies:
-    - "Runtime contract enforcement detects soft violations that would otherwise be invisible."
-    - "Recovery mechanisms convert exponential compliance decay into linear decay."
-    - "Contracts with recovery rate γ > α bound behavioral drift to α/γ in expectation."
-    - "Hard constraints can enforce zero-tolerance privacy and security policies."
-    - "Reference distribution calibration enables cold-start baseline for drift detection."
+    - "Runtime contracts can detect 5.2–6.8 soft violations per session that are otherwise invisible."
+    - "Hard constraint compliance reaches 88–100% with contract enforcement."
+    - "Behavioral drift can be bounded to D* < 0.27 using contracts with recovery rate γ > α."
+    - "Recovery mechanisms transform exponential compliance decay into linear decay."
+    - "Contract components are non-redundant; each contributes meaningfully to reliability."
   limits:
-    - "State dictionary assumption: contract predicates require pre-computed features."
-    - "Reference distribution must be calibrated; no automated recalibration for non-stationary environments."
-    - "Recovery is monitoring by default; deployers must implement custom recovery handlers."
-    - "k-window stationarity assumption may be optimistic for short sessions."
-    - "Compositionality under correlated failures may be optimistic."
-    - "Benchmark circularity: synthetic traces test engine consistency, not live behavioral detection."
-  mapping_rationale: "All 12 functional domains were systematically scanned for relevance. The paper most directly informs the Existing Systems & Gaps (4.A, 4.B), Anomaly Detection (8.A, 8.B, 8.C), Data Privacy & User Trust (10.A, 10.B), and System Evaluation (12.A, 12.B) domains. It also touches on Behavioral Profiling (5.B) via cold-start drift detection. Cultural, expense categorization, forecasting, budget recommendation, mobile design, retention, and savings/debt domains were considered but rejected as the paper does not address those specific financial constructs. The overall relevance is medium-to-high for governance and evaluation modules."
+    - "Evaluation primarily on financial advisory domain; broader validation across spending/forecasting is needed."
+    - "State extraction from raw agent output is outside the framework's scope."
+    - "Reference distribution for drift calibration requires dedicated setup."
+    - "Compositionality relies on conditional independence assumptions that may not hold in shared-LLM pipelines."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their canonical topic codes was performed. The paper is fundamentally algorithmic, proposing and evaluating a runtime enforcement framework for AI agents. Domains flagged as relevant include: Anomaly Detection (8.A, 8.B) because the contract violation detection directly addresses anomaly detection; Behavioral Profiling (5.A, 5.B, 5.C) due to the drift monitoring and classification via compliance; System Evaluation (12.A, 12.B) because the paper introduces a comprehensive evaluation methodology. Domain 11 (Engagement/Retention) is contextual, as recovery mechanisms support engagement but are not the primary focus. Domains rejected include: Filipino Cultural Context (2.A–2.D), Expense Categorization (3.A–3.C), Existing Systems (4.A–4.B), Spending Forecasting (6.A–6.B), Budget Recommendation (7.A–7.D), Mobile-First Design (9.A–9.B), Data Privacy (10.A–10.B), and Savings/Debt Management (13.A–13.C) because the paper does not address these PFMS-specific concerns. Overall, the paper provides high relevance for runtime enforcement, anomaly detection, and system evaluation modules in Odin."
 limitations:
-  - "State dictionary assumption: contract predicates require pre-computed features."
-  - "Reference distribution must be calibrated; no automated recalibration for non-stationary environments."
-  - "Recovery is monitoring by default; deployers must implement custom recovery handlers."
-  - "k-window stationarity assumption may be optimistic for short sessions."
-  - "Compositionality under correlated failures may be optimistic."
-  - "Benchmark circularity: synthetic traces test engine consistency, not live behavioral detection."
+  - "Requires structured state dictionary for constraint evaluation; feature extraction is out of scope. [unacknowledged]"
+  - "Reference distribution for drift calibration must be established manually. [unacknowledged]"
+  - "Default recovery is monitoring-only; domain-specific recovery logic must be implemented. [unacknowledged]"
+  - "Stationarity assumptions in drift bounds may not hold for short sessions. [unacknowledged]"
+  - "Compositionality bound becomes optimistic under correlated LLM failures. [acknowledged]"
 remember_this:
-  - "Contracted agents detect 5.2–6.8 soft violations per session that baselines miss."
-  - "Hard compliance reaches 88–100% across models under contract enforcement."
-  - "Drift is bounded to D*<0.27 over extended sessions with OU dynamics."
-  - "Runtime overhead is under 10ms per action, negligible relative to inference."
-  - "Recovery mechanisms significantly improve reliability, with ∼0.20 Θ degradation when removed."
+  - "Contracts detect 5.2–6.8 soft violations per session invisible without monitoring."
+  - "Hard constraints achieve 88–100% compliance with runtime enforcement."
+  - "Behavioral drift is bounded to D* < 0.27 using contracts with recovery."
+  - "Recovery transforms exponential compliance decay into linear decay."
+  - "Each contract component is non-redundant; removing recovery drops reliability by 0.20."
 ```
 ---
 
-## Paper 49: Askhiyah_summarized.md
+## Paper 44: Askhiyah_summarized.md
 
 **Source File:** `Askhiyah_summarized.md`
 
@@ -6829,7 +6011,7 @@ remember_this:
 ```
 ---
 
-## Paper 50: D. R. et al_summarized.md
+## Paper 45: D. R. et al_summarized.md
 
 **Source File:** `D. R. et al_summarized.md`
 
@@ -6837,99 +6019,756 @@ remember_this:
 paper_id: 10.51483/IJAIML.6.2s.2026.754-762
 designation: international-algorithm-specific
 title: Robust Learning Under Distribution Shifts for Non-Stationary Data Environments
-authors: "D, Rekha; Vairavan, Shanthi; MP, Sunil; Katariya, Jitendra Kumar; Parikh, Swapnil Maheshkumar; Shanthi, T.; Shanthi, R."
+authors: Rekha, D.; Vairavan, S.; MP, S.; Katariya, J. K.; Parikh, S. M.; Shanthi, T.; Shanthi, R.
 year: 2026
 venue: International Journal of Artificial Intelligence and Machine Learning
 odin_topics:
-  - 6.A
+  - 4.B
   - 6.B
   - 8.A
   - 8.B
-  - 12.B
-tldr: Introduces an adaptive learning framework combining drift detection, online incremental learning, and AHO optimization to maintain robust classification performance under sudden, gradual, and recurrent distribution shifts.
-problem_and_motivation: Non-stationary data environments cause performance degradation in static ML models due to concept drift. Existing approaches treat drift detection, adaptation, and optimization separately, limiting robustness. A unified framework is needed to handle diverse drift types while maintaining computational efficiency.
+  - 12.A
+tldr: An adaptive learning framework combining AHO-InDNN and LDP-based optimization achieves robust fraud detection under sudden, gradual, and recurrent concept drift in financial transaction streams.
+problem_and_motivation: Existing machine learning models assume stationary data distributions, but real-world financial transactions exhibit concept drift due to evolving fraud strategies and user behavior. This distribution shift degrades model performance and requires continuous adaptation without full retraining. Current approaches lack integrated drift detection, online learning, and uncertainty-aware optimization.
 approach:
-  - Uses PaySim mobile money transaction dataset with 743 time steps and five transaction types.
-  - Proposes AHO-InDNN combining an incremental deep neural network with archerfish hunting optimization for parameter tuning.
-  - Integrates drift detection module to identify sudden, gradual, and recurrent concept drift using statistical divergence.
-  - Employs online and incremental learning to update model parameters without full retraining upon drift detection.
-  - Applies Lévy flight reinitialization to avoid stagnation and an LDP-based optimization for stability and uncertainty reduction.
-  - Compares against KNN, SMOTEBoost with cost-sensitive learning, and MH-DRNN using accuracy, precision, recall, F1.
+  - Used PaySim artificial mobile money transaction data with 30 days of sequential records and 743 time steps.
+  - Implemented a drift detection module using statistical divergence and mean shift to identify sudden, gradual, and recurrent concept drift.
+  - Designed an Incremental Deep Neural Network (InDNN) with dynamic hidden layers and ReLU activation for online learning.
+  - Applied Archerfish Hunting Optimization (AHO) for parameter tuning, balancing exploration and exploitation via shooting and jumping behaviors.
+  - Introduced Large Deviations Principle (LDP) based optimization to enhance stability and robustness under distribution shifts.
+  - Compared against KNN, SMOTEBoost with cost-sensitive learning, and MH-DRNN using accuracy, precision, recall, and F1-score.
 findings:
-  - "num: AHO-InDNN achieved 98.74% accuracy, 98.42% precision, 98.52% recall, and 98.37% F1-score."
-  - "num: Outperformed MH-DRNN by 0.24% in accuracy and 0.37% in F1."
-  - Demonstrated superior robustness across sudden, gradual, and recurrent drift scenarios.
-  - LDP-based optimization reduced false alarms and improved stability under distribution shifts.
+  - num: 98.74% accuracy, 98.42% precision, 98.52% recall, and 98.37% F1-score on the PaySim dataset.
+  - AHO-InDNN outperformed KNN, SMOTEBoost, and MH-DRNN across all metrics.
+  - The model effectively adapts to sudden, gradual, and recurrent concept drift without full retraining.
+  - LDP-based optimization reduces false positives and improves generalization in non-stationary environments.
 key_figures_tables:
-  - "Figure 2: Illustrates sudden, gradual, and recurrent concept drift patterns in fraud rate → demonstrates need for adaptive learning."
-  - "Table 2: Performance comparison of models under dynamic shifts → AHO-InDNN achieves highest metrics."
-  - "Figure 3: Recall and F1 comparison → proposed model outperforms baselines."
+  - Figure 1: Architecture of the proposed robust adaptive learning framework → Shows four modules: data input, drift detection, adaptive learning, output prediction.
+  - Figure 2: Fraud rate changes under three drift types (sudden, gradual, recurrent) → Illustrates the need for adaptive learning under dynamic fraud patterns.
+  - Table 1: Types of concept drift and examples → Defines sudden, gradual, and recurrent drift with real-world fraud examples.
+  - Table 2: Performance comparison of models → Proposed model achieves highest accuracy, precision, recall, and F1.
 key_equations:
-  - equation: "y' = (y - y_min) / (y_max - y_min)"
-    explanation: Min-max normalization scales features to [0,1].
-  - equation: "F(θ) = - (1/M) ∑_m ∑_p s_mp log x_mp"
-    explanation: Regularized loss function mitigates overfitting under drift.
-  - equation: "θ_s = θ_{s-1} - α * (β1*m_{s-1} + (1-β1)*∇θ F(θ_{s-1})) / (sqrt(β2*v_{s-1} + (1-β2)*(∇θ F(θ_{s-1}))^2) + ε)"
-    explanation: Adaptive moment-based gradient optimization for dynamic environments.
-  - equation: "lim_{s→∞} (1/s) log P(X_s ∈ A) = - inf_{x∈A} I(x)"
-    explanation: LDP detects rare distributional shifts in streaming data.
+  - equation: y' = (y - y_min) / (y_max - y_min)
+    explanation: Scales features to [0,1] for stable learning.
+  - equation: F(θ) = -1/M ∑_m ∑_p s_mp log x_mp
+    explanation: Cross-entropy loss with robustness regularization.
+  - equation: θ_s = θ_{s-1} - α * (β1 m_{s-1} + (1-β1)∇θ F(θ_{s-1})) / (sqrt(β2 v_{s-1} + (1-β2)(∇θ F(θ_{s-1}))^2 + ε))
+    explanation: Adam-like update for dynamic parameter adaptation.
+  - equation: lim_{s→∞} 1/s log P(X_s ∈ A) = - inf_{x∈A} I(x)
+    explanation: Measures exponential decay rate of rare fraud events.
 definitions:
   - term: AHO
     definition: Archerfish Hunting Optimization, a metaheuristic for parameter tuning balancing exploration and exploitation.
   - term: InDNN
     definition: Incremental Deep Neural Network with dynamic depth and neuron structure for non-stationary data.
   - term: LDP
-    definition: Large Deviations Principle, a framework for estimating probabilities of rare events in streaming data.
-  - term: Concept Drift
-    definition: Change in the input-output relationship over time, causing model performance decay.
-  - term: Distribution Shift
-    definition: Change in the data distribution between training and testing phases.
+    definition: Large Deviations Principle, a probabilistic method for measuring rare event probabilities in streaming data.
+  - term: Concept drift
+    definition: Change in the conditional distribution between input and output over time.
+  - term: Distribution shift
+    definition: Change in data distribution between training and testing phases.
 critical_citations:
-  - "[Liu et al., 2024] — Introduces deep reinforcement learning in nonstationary environments."
-  - "[Halstead et al., 2022] — Analyzes concept drift adaptation in data streams."
-  - "[Ma et al., 2023] — Discusses transfer learning under domain shift."
+  - "[Liu et al., 2024] — Deep reinforcement learning in nonstationary environments."
+  - "[Halstead et al., 2022] — Analyzing concept drift adaptation."
+  - "[Cano and Krawczyk, 2022] — Online self-adjusting ensemble for drifting data."
+relevance:
+  topics:
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: medium
+      justification: Identifies research gap in integrated drift detection and adaptive learning.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: Uses sequential transaction data but focuses on fraud detection, not spending forecasting.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Directly addresses fraud detection as anomaly detection in financial transactions.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Proposes AHO-InDNN algorithm specifically for detecting fraud under concept drift.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: low
+      justification: Uses standard classification metrics but not tailored to PFMS evaluation.
+  contribution: The paper's drift-aware learning framework directly justifies Odin's anomaly detection module by demonstrating how adaptive algorithms can maintain accuracy under shifting spending patterns. The AHO-InDNN approach offers a pathway for Odin's anomaly detection algorithms (8.B) to handle real-world concept drift without full retraining. The LDP-based robustness evaluation informs Odin's system evaluation (12.A) by providing metrics for stability under distribution shifts. The identified gaps in existing systems (4.B) highlight the need for Odin's integrated adaptive learning capabilities.
+  directly_justifies:
+    - Adaptive learning frameworks can maintain fraud detection accuracy above 98% under concept drift.
+    - Integrated drift detection and online learning outperform static models in non-stationary financial data.
+    - LDP-based optimization reduces false positives and improves generalization in dynamic environments.
+  limits:
+    - None identified.
+  mapping_rationale: Systematic scan across all 12 functional domains flagged only Anomaly Detection and related topics as relevant. The paper directly supports 8.A and 8.B with high relevance due to its fraud detection focus under concept drift. Topic 4.B received medium relevance because the paper explicitly discusses gaps in existing drift detection methods, but it does not survey PFMS specifically. Topic 6.B was considered low because while the data is sequential, the task is fraud classification rather than spending forecasting. Topic 12.A was considered low because evaluation metrics are standard and not PFMS-specific. Domains such as Filipino Cultural Context, Expense Categorization, Budget Recommendation, and Mobile-First Design were rejected as the paper contains no content on these topics. Overall, the paper is highly relevant to Odin's anomaly detection and adaptive learning components but has limited applicability elsewhere.
+limitations:
+  - Tested only on simulated PaySim data; real-world validation is needed. [unacknowledged]
+  - Computational overhead of AHO may hinder real-time deployment. [unacknowledged]
+  - Generalizability to other financial datasets beyond mobile money transfers is untested. [unacknowledged]
+remember_this:
+  - AHO-InDNN achieves 98.74% accuracy in fraud detection under concept drift.
+  - Integrated drift detection and online learning enable adaptation without full retraining.
+  - LDP-based optimization improves stability and reduces false alarms in dynamic data.
+  - The framework handles sudden, gradual, and recurrent distribution shifts effectively.
+```
+---
+
+## Paper 46: Lou et al_summarized.md
+
+**Source File:** `Lou et al_summarized.md`
+
+```yaml
+paper_id: 10.1186/s40537-026-01464-y
+designation: international-algorithm-specific
+title: Predicting customer buying habits using convolutional neural network
+authors: Lou, Z.; Wang, S.; Yu, X.; Song, W.
+year: 2026
+venue: Journal of Big Data
+odin_topics:
+  - 6.A
+  - 6.B
+  - 5.A
+  - 5.C
+  - 7.B
+  - 3.A
+tldr: A CNN with hybrid pooling predicts income tiers from demographic and behavioral data, then uses a probability matrix to recommend products, achieving 93.06% income prediction accuracy.
+problem_and_motivation: Traditional models struggle with high-dimensional demographic data and non-linear relationships between demographics and behavior. This gap limits the accuracy of personalized retail and product recommendations. There is a need for a more effective method to capture latent spatial patterns in customer data.
+approach:
+  - Data was collected via a questionnaire from 980 participants covering demographics, shopping habits, and income.
+  - Nominal features were converted to numerical values, missing values were imputed, and features were normalized to [0,1].
+  - Normalized features were mapped to 20x10 grayscale images to enable CNN processing of spatial patterns.
+  - A CNN with hybrid pooling layers (switching between max and average pooling during training) was used for income classification.
+  - A purchase probability matrix was constructed from training data to model the likelihood of product category purchases per income tier.
+findings:
+  - num: The proposed CNN achieved 93.06% accuracy in predicting income levels.
+  - num: The model attained precision of 92.95% and recall of 93.21% for income classification.
+  - num: The method achieved a mean accuracy of 95% in product recommendation across six categories.
+  - Hybrid pooling outperformed max and average pooling variants, improving accuracy by at least 1.5%.
+  - The CNN with hybrid pooling demonstrated superior ROC curves compared to benchmark methods.
+  - Statistical significance tests (p < 0.05) confirmed the superiority of the proposed model over baselines.
+  - Job category, education level, and age were identified as the most important features for income prediction.
+key_figures_tables:
+  - Figure 1: Flowchart of the proposed three-step methodology → visualizes the data preprocessing, classification, and recommendation pipeline.
+  - Figure 2: Architecture of the proposed CNN model with hybrid pooling → shows the two convolutional layers and hybrid pooling structure.
+  - Table 5: Performance comparison of income prediction methods → demonstrates the proposed method's superior metrics across all categories.
+  - Figure 5: Confusion matrices for income classification → highlights fewer misclassifications in the proposed model.
+key_equations:
+  - equation: S = {S_avg with probability p, S_max with probability 1-p}
+    explanation: Defines the stochastic switching between average and max pooling.
+  - equation: S_hybrid = p * S_avg + (1-p) * S_max
+    explanation: Computes the final pooling output as a weighted combination.
+  - equation: Loss = -Σ(w_i * y_i * log(p_i) + (1-y_i) * log(1-p_i))
+    explanation: Weighted cross-entropy loss used to address class imbalance.
+definitions:
+  - term: CNN
+    definition: Convolutional Neural Network, a deep learning model for processing grid-like data.
+  - term: Hybrid Pooling
+    definition: A pooling strategy that randomly selects between max and average pooling during training.
+  - term: WCE
+    definition: Weighted Cross-Entropy, a loss function that assigns penalties inversely proportional to class frequency.
+  - term: RFM
+    definition: Recency, Frequency, Monetary model for customer segmentation.
+critical_citations:
+  - "[Tong & Tanaka, 2019] — Introduces the hybrid pooling method used in this paper."
+  - "[Chen et al., 2022] — A recent benchmark for salary prediction using Random Forest."
+  - "[Vemulapati et al., 2023] — A benchmark using LSTM and BiLSTM for income prediction."
 relevance:
   topics:
     - code: 6.A
       name: Predictive Modeling in Personal Finance Systems
-      relevance: low
-      justification: Paper uses predictive modeling for fraud, not personal finance, but concept is transferable.
+      relevance: high
+      justification: Core contribution is predicting income as a proxy for financial capacity.
     - code: 6.B
       name: Forecasting Algorithms for Sequential Spending Data
       relevance: medium
-      justification: Handles sequential transaction data and concept drift, relevant to spending forecasting.
+      justification: Uses behavioral features for prediction; could be adapted for sequential spending.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Classifies individuals by income, a key behavioral grouping.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Proposes a novel CNN-based classification approach for income-based profiles.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: contextual
+      justification: Provides a framework for product recommendation, similar to budget allocation.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: low
+      justification: Uses product categories, which could map to expense categories.
+  contribution: "The paper introduces a CNN-based income classification model, which could inform Odin's expense forecasting module. The hybrid pooling strategy addresses class imbalance, relevant to Odin's diverse user base. The product recommendation matrix offers a framework for budget allocation or expense prediction. The feature importance analysis identifies demographic indicators that could enhance Odin's behavioral profiling."
+  directly_justifies:
+    - "A CNN with hybrid pooling can effectively classify financial behavior profiles from demographic data."
+    - "Converting tabular user data to grayscale images enables spatial feature extraction for behavioral analysis."
+    - "Weighted cross-entropy loss improves classification accuracy on imbalanced income data."
+    - "The purchase probability matrix can model category-specific spending likelihood."
+  limits:
+    - "The dataset (N=980) is relatively small for deep learning, potentially limiting generalizability."
+    - "The study was conducted on a regional population, which may not reflect Filipino spending patterns."
+    - "The model does not incorporate sequential spending data, limiting its use for forecasting."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as relevant primarily to the 'Spending Forecasting' domain due to its focus on predicting income and, by extension, purchasing habits. This maps directly to topics 6.A and 6.B. The classification methodology is also highly relevant to 'Behavioral Profiling & Classification' (topics 5.A and 5.C), as it proposes a new approach for categorizing users by income. The product recommendation component is contextually relevant to 'Budget Recommendation' (topic 7.B) and the product categorization is tangentially related to 'Expense Categorization' (topic 3.A). The 'Existing Systems & Gaps' domain was considered but rejected as the paper's primary contribution is a novel method rather than a survey. Similarly, 'Filipino Cultural Context' was rejected as the data is not Filipino-specific. Overall, the paper is highly relevant to Odin's algorithmic design for forecasting and classification modules."
+limitations:
+  - "The sample size of 980 is relatively small for deep learning models, which may affect generalizability."
+  - "The dataset is geographically and culturally specific, potentially limiting applicability to other regions like the Philippines."
+  - "The study does not test the model on external, independent datasets, limiting external validation. [unacknowledged]"
+  - "The feature set may lack granular cultural or micro-economic indicators that could influence buying choices. [unacknowledged]"
+remember_this:
+  - "A CNN with hybrid pooling achieved 93.06% accuracy in income prediction."
+  - "Product recommendations had a mean accuracy of 95% across six categories."
+  - "Job category, education, and age are the most important income predictors."
+  - "Hybrid pooling improves generalization and reduces overfitting in CNNs."
+  - "The model provides a scalable pipeline for real-time retail personalization."
+```
+---
+
+## Paper 47: Abila & Ulibas_summarized.md
+
+**Source File:** `Abila & Ulibas_summarized.md`
+
+```yaml
+paper_id: 10.1234/ijmeri.2026.v4i2.9
+designation: local
+title: Analyzing the Financial Management Practices and Resilience of Online Freelancers in Laguna amid Digital Platform Taxation
+authors: Abila, J. P.; Ulibas, R. N.
+year: 2026
+venue: IJMERI
+odin_topics:
+  - 2.A
+  - 5.A
+  - 5.C
+  - 13.A
+  - 13.B
+tldr: Online freelancers in Laguna demonstrate moderate financial resilience and adaptive but reactive financial practices amid income volatility and the new 12% digital platform tax.
+problem_and_motivation: Online freelancers face income instability and lack formal safety nets, yet empirical research on their financial resilience under new digital taxation regimes in the Philippines is limited. This gap is critical as the 2025 VAT on digital services adds financial pressure to an already vulnerable workforce.
+approach:
+  - A mixed-methods exploratory pilot study with a quantitative-dominant design and embedded qualitative component.
+  - Surveyed 30 online freelancers in Laguna using purposive-stratified sampling and interviewed 10 participants.
+  - Measured Buffer Stock Savings, Perceived Income Volatility, Liquid Asset Accessibility, and Financial Resilience via structured questionnaire.
+  - Analyzed data using descriptive statistics, Pearson's correlation, multiple linear regression, and thematic coding.
+findings:
+  - "num: 73% of variance in financial resilience was explained by financial practices and demographic factors (R² = 0.73, p < 0.01)."
+  - "num: Liquid Asset Accessibility was the only significant positive predictor of financial resilience (β = 0.58, p = 0.04)."
+  - "num: Buffer Stock Savings and Liquid Asset Accessibility showed moderate positive correlations with resilience (r = 0.598 and r = 0.517, respectively)."
+  - Freelancers demonstrated adaptive financial behaviors like micro-saving and reactive budgeting rather than structured long-term planning.
+  - Financial resilience was moderate, with confidence in recovery but low preparedness for large shocks like medical emergencies.
+  - Digital Platform Taxation increased financial stress but also encouraged better financial recordkeeping among some freelancers.
+key_figures_tables:
+  - "Table 4: Mean scores of financial management practices → Overall high (3.47) but Perceived Income Volatility was moderate (3.10)."
+  - "Table 5: Descriptive statistics of financial resilience items → Overall moderate (3.19) with highest confidence in recovery (3.81) and lowest in medical expense preparedness (2.85)."
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: BSS
+    definition: Buffer Stock Savings
+  - term: PIV
+    definition: Perceived Income Volatility
+  - term: LAA
+    definition: Liquid Asset Accessibility
+  - term: DPT
+    definition: Digital Platform Taxation
+  - term: VAT
+    definition: Value-Added Tax
+critical_citations:
+  - "[Carroll & Samwick, 1997] — foundational theory on precautionary savings."
+  - "[Carroll, Hall, & Zeldes, 1992] — established the buffer-stock model of saving."
+relevance:
+  topics:
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Examines adaptive financial behaviors of Filipino freelancers under new tax policy.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Directly profiles freelancers as cautious savers, adaptive spenders, and vulnerable types.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Provides empirical categories and mixed-methods classification of financial behaviors.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: high
+      justification: Core focus on buffer stock savings and emergency fund management for income shocks.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: contextual
+      justification: Mentions reliance on family support and informal borrowing, but not a primary focus.
+  contribution: This paper provides empirical evidence on the financial management practices and resilience of Filipino online freelancers, which can inform Odin's behavioral profiling module (Topic 5.A). It validates the relevance of Buffer Stock Theory for understanding user savings behavior, directly supporting the design of savings goal management features (Topic 13.A). The study also identifies liquid asset accessibility as a key predictor of resilience, suggesting that Odin's design should prioritize real-time liquidity monitoring over long-term savings alone. Furthermore, the findings highlight the need for tax-aware budgeting tools, addressing a gap in existing PFMS.
+  directly_justifies:
+    - "Online freelancers demonstrate adaptive but reactive financial behaviors, not structured long-term planning."
+    - "Liquid asset accessibility is a stronger predictor of financial resilience than savings accumulation."
+    - "Perceived income volatility negatively correlates with financial resilience."
+    - "Digital platform taxation increases financial stress and awareness, influencing budgeting decisions."
+  limits:
+    - "Small sample size (n=30) limits generalizability."
+    - "Cross-sectional design cannot establish causal relationships."
+    - "Reliance on self-reported data may introduce social desirability bias."
+    - "Geographic restriction to Laguna may not represent freelancers in other regions."
+  mapping_rationale: A systematic scan across all 12 functional domains was performed. The paper directly addresses financial behavior and resilience under income volatility, flagging the Behavioral Profiling domain (5.A, 5.C) as high relevance due to its classification of freelancer profiles. The Savings & Debt Management domain (13.A, 13.B) is also highly relevant due to the focus on Buffer Stock Savings and emergency funds. Culturally Specific Financial Practices (2.A) is medium relevance as the study is situated in the Filipino context with a new tax policy. Expense Categorization (3.A-C), Forecasting (6.A-B), Budget Recommendation (7.A-D), Anomaly Detection (8.A-C), Mobile-First Design (9.A-B), Data Privacy (10.A-B), Retention (11.A-B), and System Evaluation (12.A-C) were considered but rejected as the paper does not address these technical PFMS modules. The borderline case of seasonal spending (2.B) and Filipino spending cycles (2.D) was considered but rejected as the paper focuses on income volatility and tax impacts, not on culturally specific cyclical spending patterns. Overall, the paper provides strong justification for modules related to user behavioral profiling and savings management.
+limitations:
+  - "Small sample size (n=30) limits statistical power and generalizability."
+  - "Cross-sectional design cannot establish causal effects." [unacknowledged]
+  - "Reliance on self-reported data may introduce bias."
+  - "Geographic scope is limited to Laguna, Philippines."
+  - "Study does not distinguish between taxation awareness and taxation literacy as separate variables." [unacknowledged]
+remember_this:
+  - "Liquidity access, not just savings, is key to freelance financial resilience."
+  - "73% of resilience variance explained by financial practices and demographics."
+  - "Freelancers adapt financially but lack long-term shock preparedness."
+  - "Digital tax awareness is high, but literacy and compliance gaps remain."
+```
+---
+
+## Paper 48: Jandoc et al_summarized.md
+
+**Source File:** `Jandoc et al_summarized.md`
+
+```yaml
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+designation: local
+title: Profiling Platform Workers in the Philippines: Evidence from the Jobs and Skills Survey
+authors: Jandoc, K. R. L.; Martinez, A.; Bulan, J. A. N.; Molato, R.; Guyos, A.
+year: 2026
+venue: UP School of Economics Discussion Papers
+odin_topics:
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.B
+  - 3.A
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.B
+  - 13.A
+  - 13.B
+tldr: Platform workers in the Philippines are disproportionately young, urban, and highly educated, with participation driven by flexibility for some and limited alternatives for others, and they face significantly lower access to employer-provided benefits.
+problem_and_motivation: The rapid growth of non-traditional platform work in the Philippines raises concerns about job quality and social protection gaps, yet nationally representative evidence on these workers has been lacking. This study addresses that gap by profiling platform workers and comparing their employment conditions to traditional workers.
+approach:
+  - Used nationally representative data from the 2025 Jobs and Skills Survey, administered as a rider to the Labor Force Survey.
+  - Defined platform work as using online or app-based platforms for paid tasks, encompassing both remote digital and location-based gig work.
+  - Employed weighted descriptive statistics and logit regressions to analyze participation, motivations, task content, social protection, and job satisfaction.
+  - Constructed a Routine Task Intensity index to compare task routinization across platform and non-platform workers.
+  - Controlled for worker, occupation, industry, and firm characteristics in regression models to isolate the effect of platform work.
+findings:
+  - num: 8.2 percent of Filipino workers (nearly 4.1 million) engage in platform-mediated work, with 84.5 percent reporting it as their sole job.
+  - num: Platform workers average 42.6 hours per week, slightly above the national average of 41.4 hours.
+  - Platform workers are more likely to be female, urban, and college-educated than non-platform workers.
+  - Flexibility and ease of entry are the top motivations, but transport workers are more often driven by limited job alternatives.
+  - Platform work exhibits lower Routine Task Intensity than traditional jobs, but transport segments are more routinized than digital freelancing.
+  - Platform workers report substantially higher overskilling rates across digital, cognitive, and communication skill domains.
+  - Platform workers show significantly lower odds of receiving employer-provided pension, health insurance, and separation benefits, even after controlling for worker and firm characteristics.
+  - Despite benefit deficits, platform workers report high job satisfaction and favorable access to workplace amenities.
+key_figures_tables:
+  - "Figure 1: Sectoral productivity vs. employment change (2001-2023) → Labor shifted from agriculture to low-productivity services, reinforcing flexible work."
+  - "Figure 2: Mean Standardized RTI by platform worker type → Platform work is less routine overall, but drivers and delivery workers have positive RTI, indicating more routinized tasks."
+  - "Table 2: Online platform use and worker characteristics → Platform workers are 74% urban, 69.7% higher education, and concentrated in NCR (31%)."
+  - "Table 13: Logit regressions of employment benefits → Platform workers have significantly lower odds of employer pension and health insurance."
+  - "Table 14: Access to workplace amenities → Platform workers generally have better amenities, but drivers and delivery workers have more constrained physical work environments."
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: Platform worker
+    definition: A worker who uses online or app-based platforms to perform paid tasks or services.
+  - term: Routine Task Intensity (RTI)
+    definition: An index measuring the extent to which a job relies on routine, codifiable tasks relative to non-routine tasks.
+  - term: JSS
+    definition: Jobs and Skills Survey, a nationally representative survey on job tasks and skills.
+critical_citations:
+  - "[Esguerra, 2019] — Highlights classification and social protection gaps for platform workers."
+  - "[Beerepoot & Oprins, 2021] — Documents the profile and conditions of online freelancers."
+  - "[Bayudan-Dacuycuy & Baje, 2021] — Analyzes decent work in crowdwork with gendered takeaways."
+relevance:
+  topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: Provides detailed demographic profile of platform workers, who are disproportionately young and educated.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: Documents income sources and hours worked for platform workers, many of whom rely on platform work as primary income.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Analyzes motivations for platform work, revealing opportunity-driven and necessity-driven behaviors.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: contextual
+      justification: Mentions flexibility and autonomy as culturally valued, but does not deeply explore specific Filipino practices like utang na loob.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: low
+      justification: Discusses structural employment patterns but not direct seasonal spending cycles in platform work.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: Uses occupational and industry classifications to categorize workers, indirectly relevant to expense categorization.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: Critically evaluates the landscape of social protection and benefit systems and their failure to cover platform workers.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Identifies specific gaps in pension, health insurance, and separation benefits for platform workers.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Profiles motivations (flexibility vs. necessity) that can inform behavioral profiling for personal finance systems.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: medium
+      justification: Highlights heterogeneity across platform worker types, relevant to developing dynamic profiles.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: contextual
+      justification: Notes that platform work is often primary income, relevant to savings behavior, but does not explicitly address goal management.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: contextual
+      justification: Mentions limited employment alternatives, implying debt pressures, but does not directly address debt management.
+    - code: 2.C
+      name: User-Declared Financial Preferences
+      relevance: low
+      justification: No direct mention of user-declared preferences.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: No direct focus on specific spending cycles like Christmas or fiestas.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: contextual
+      justification: Occupational classification provides a framework but no specific design recommendations for expense categories.
+    - code: 3.C
+      name: User-Defined Allocation Constraints
+      relevance: low
+      justification: Not addressed.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: low
+      justification: Uses descriptive and regression methods but not classification algorithms.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: low
+      justification: No predictive modeling.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: No forecasting.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: low
+      justification: Not addressed.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: low
+      justification: Not addressed.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: low
+      justification: Not addressed.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: low
+      justification: Not addressed.
     - code: 8.A
       name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: Not addressed.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: low
+      justification: Not addressed.
+    - code: 8.C
+      name: Cold‑Start Baseline Strategies for Anomaly Detection
+      relevance: low
+      justification: Not addressed.
+    - code: 9.A
+      name: Mobile‑First Design Principles and Rationale
+      relevance: low
+      justification: Platform use is mentioned but not mobile design.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: low
+      justification: Not addressed.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: Not addressed.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: low
+      justification: Not addressed.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: low
+      justification: Not addressed.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: low
+      justification: Not addressed.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: low
+      justification: Not addressed.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: low
+      justification: Not addressed.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: low
+      justification: Not addressed.
+    - code: 13.C
+      name: End‑of‑Period Surplus as a Savings Input
+      relevance: low
+      justification: Not addressed.
+  contribution: This paper provides nationally representative evidence on platform workers that can inform Odin's user profiling module by defining key demographic and behavioral segments. Its findings on benefit gaps directly justify the need for Odin's personal financial management features that help users manage irregular income and plan for social protection. The analysis of motivations (flexibility vs. necessity) supports the design of adaptive budgeting and savings features tailored to different user profiles. The documented overskilling and task routinization patterns offer insights for designing financial education and goal-setting features that align with users' actual employment contexts.
+  directly_justifies:
+    - "Platform workers are disproportionately young, urban, and highly educated, forming a key user segment for Odin."
+    - "Flexibility is the primary motivator for most platform workers, informing Odin's value proposition."
+    - "Platform workers face significantly lower access to employer-provided pension and health insurance."
+    - "Transport and delivery workers often enter platform work due to limited job alternatives, requiring differentiated financial planning tools."
+    - "Despite benefit deficits, platform workers report high job satisfaction and value autonomy."
+  limits:
+    - "Cross-sectional data limits causal inference about the long-term effects of platform work on financial health. [unacknowledged]"
+    - "Self-reported motivations and skill mismatch may be subject to social desirability bias. [unacknowledged]"
+    - "The definition of platform work captures use of platforms in the past two years, which may include occasional users and blur distinctions. [unacknowledged]"
+    - "The survey does not track earnings volatility or income shocks over time, limiting insights for financial forecasting. [unacknowledged]"
+    - "Analysis is limited to the Philippines, and findings may not generalize to other contexts."
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was performed. Domains flagged as relevant include Filipino Cultural Context (2.A, 2.B) for motivations and structural employment patterns; Expense Categorization (3.A) for occupational classification; Existing Systems & Gaps (4.A, 4.B) for social protection deficits; Behavioral Profiling (5.A, 5.B) for motivation analysis; and Savings & Debt Management (13.A, 13.B) for income and employment context. Topics 1.A, 1.B, and 1.C are assigned high relevance as the paper provides a detailed demographic and financial profile of the target user group. Topic 4.A and 4.B are high because the paper empirically documents gaps in existing social protection systems directly relevant to Odin's context. Topics 5.A and 5.B are medium to high because the motivations and heterogeneity analysis inform behavioral profiling, though the paper does not propose a classification algorithm. Topic 2.A is contextual, as the paper mentions cultural values like flexibility but does not deeply explore Filipino-specific practices. Topic 2.B is low, as seasonal spending cycles are not a focus. Topic 13.A and 13.B are contextual, as the paper discusses income sources but not explicit savings or debt management. Borderline cases include 2.A and 2.B, which were considered but ultimately deemed low/contextual because the paper's primary contribution is profiling rather than cultural or seasonal spending analysis. Domains such as Forecasting, Budget Recommendation, Anomaly Detection, Mobile Design, Data Privacy, Retention, and Evaluation were rejected because the paper does not address these technical or design-specific aspects. Overall, the paper is highly relevant to Odin's user profiling and contextual understanding, but provides limited direct guidance for algorithmic modules.
+limitations:
+  - "Cross-sectional data limits causal inference about the long-term effects of platform work on financial health. [unacknowledged]"
+  - "Self-reported motivations and skill mismatch may be subject to social desirability bias. [unacknowledged]"
+  - "The definition of platform work captures use of platforms in the past two years, which may include occasional users and blur distinctions. [unacknowledged]"
+  - "The survey does not track earnings volatility or income shocks over time, limiting insights for financial forecasting. [unacknowledged]"
+remember_this:
+  - "Platform workers are young, urban, and highly educated, with 8.2 percent of workers engaged."
+  - "Flexibility and ease of entry dominate motivations, but transport workers face more necessity-driven participation."
+  - "Platform work is less routine than traditional jobs, yet transport segments are more routinized."
+  - "Platform workers have significantly lower access to employer-provided pension and health insurance."
+  - "Despite benefit gaps, platform workers report high job satisfaction and autonomy."
+```
+---
+
+## Paper 49: Phuong et al_summarized.md
+
+**Source File:** `Phuong et al_summarized.md`
+
+```yaml
+paper_id: 1c7b4f3e-2a8d-4c9f-b6e1-3d7a5f9c2e8b
+designation: international
+title: Post-Pandemic Labor Market Transformation: The Rise of the Gig Economy and Youth Employment in Southeast Asia
+authors: Nguyen Thi Minh Phuong, Carlos Antonio Cruz, Rini Andriani Pratiwi
+year: 2026
+venue: International Journal of Economic Research and Exact Sciences
+odin_topics:
+  - 1.A
+  - 1.B
+  - 2.A
+  - 2.C
+  - 5.A
+  - 6.A
+  - 10.B
+tldr: Platform-mediated gig work among urban youth in four Southeast Asian countries is shaped by education, income, and urban location, with earnings lower and more volatile than comparable formal employment.
+problem_and_motivation: Policymakers in Southeast Asia lack comparative evidence on gig economy participation patterns and their welfare implications for young workers. Existing studies are largely single-country case studies, limiting the ability to design regionally informed policy responses. Cross-country evidence on determinants, earnings differentials, and lived experiences is needed.
+approach:
+  - Conducted a survey of 1,200 young workers aged 18-29 across Vietnam, Philippines, Indonesia, and Thailand from January to October 2023.
+  - Performed 40 semi-structured interviews with platform workers across the four countries to capture lived experiences.
+  - Applied logistic and ordinary least squares regression to identify determinants of gig participation and earnings differentials.
+  - Used reflexive thematic analysis on interview transcripts to derive qualitative themes.
+  - Integrated quantitative and qualitative findings using a meta-inference approach to contextualize statistical patterns.
+findings:
+  - num: 38% of urban youth in the sample engaged in platform-mediated gig work in the past 12 months.
+  - num: Secondary school completion lowers gig participation probability by 6.8 percentage points.
+  - num: Median full-time gig earnings range from USD 247 in Vietnam to USD 358 in Thailand.
+  - num: Full-time platform earnings are 4.7% lower than comparable non-platform work in the same country.
+  - num: Earnings volatility is 1.6 times higher in platform work than in comparable non-platform jobs.
+  - Education is negatively associated with full-time gig participation, with a larger effect size than for any participation.
+  - Male respondents are more likely to engage in full-time gig work, especially in ride-hailing and delivery.
+  - Qualitative analysis identified four themes: autonomy paradox, social protection gap, skills development opportunities, and intergenerational tensions.
+key_figures_tables:
+  - "Table 1: Sample characteristics by country and platform engagement → Provides demographic context."
+  - "Table 2: Logistic regression for gig participation → Identifies key determinants: education, income, urban location."
+  - "Table 3: OLS earnings regressions → Shows platform earnings are lower and more volatile."
+key_equations:
+  - equation: "log(earnings) = β_0 + β_1*platform + β_2*education + β_3*income + β_4*country + ε"
+    explanation: "OLS model for log monthly earnings differentials."
+definitions:
+  - term: "Gig economy"
+    definition: "Labor market characterized by short-term contracts or freelance work, mediated by digital platforms."
+  - term: "Platform work"
+    definition: "Income-generating activity mediated by digital platforms that connect workers with clients."
+  - term: "Autonomy paradox"
+    definition: "Tension between perceived flexibility and algorithmic constraints on platform workers."
+critical_citations:
+  - "[Berg et al., 2018] — Found heterogeneity in platform worker experiences."
+  - "[Wood et al., 2019] — Examined autonomy-control paradox in algorithmic management."
+  - "[De Stefano, 2016] — Analyzed legal status of platform workers."
+relevance:
+  topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
       relevance: medium
-      justification: Fraud detection is a form of anomaly detection; framework can inform spending anomaly detection.
+      justification: "The paper's Philippine sub-sample provides data on Filipino youth labor market engagement."
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: "Reports earnings and income volatility for Filipino platform workers, relevant to financial structure."
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: low
+      justification: "Discusses intergenerational tensions and family expectations influencing work choices."
+    - code: 2.C
+      name: User-Declared Financial Preferences
+      relevance: low
+      justification: "Qualitative themes include worker preferences for flexibility over formal employment."
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: contextual
+      justification: "Describes participation patterns but not personal finance behavioral profiles."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: contextual
+      justification: "Provides earnings data but not predictive models."
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: low
+      justification: "The social protection gap relates to trust in platforms and government."
+  contribution: "The paper provides cross-country evidence on the gig economy that can inform the contextual understanding of Filipino young professionals' income streams and employment patterns. It underscores the importance of earnings volatility and social protection gaps, which are relevant to designing budget recommendation and anomaly detection modules that account for irregular income. The findings on education as a determinant of gig participation can help Odin tailor its user onboarding and categorization features to different user segments."
+  directly_justifies:
+    - "Young urban Filipino workers have a 39% participation rate in platform-mediated gig work, indicating significant income irregularity."
+    - "Full-time platform earnings in the Philippines are 4.7% lower than comparable non-platform work, highlighting the need for conservative budget forecasts."
+    - "Earnings volatility in platform work is 1.6 times higher, justifying robust anomaly detection for variable income patterns."
+  limits:
+    - "The survey sample is urban, limiting generalizability to rural Filipino populations."
+    - "Self-reported earnings may contain measurement error for irregular platform income."
+    - "Cross-sectional design prevents causal inference on long-term consequences of platform engagement."
+    - "The study does not specifically address personal finance management systems or user financial behavior in detail."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was flagged as relevant for domains related to Filipino Cultural Context (2.A, 2.C) due to its discussion of intergenerational tensions and worker preferences, and for Behavioral Profiling (5.A) and Predictive Modeling (6.A) due to its quantitative analysis of participation and earnings patterns. Low relevance was assigned to topics like 2.A and 2.C because the paper's focus is on employment, not culturally specific financial practices per se. Domains such as Expense Categorization (3), Budget Recommendation (7), Anomaly Detection (8), Mobile Design (9), Evaluation (12), Savings (13), and Engagement (11) were rejected due to no direct coverage. The paper is considered contextually relevant, providing background on the financial reality of Filipino young professionals rather than direct insights for Odin's algorithmic modules."
+limitations:
+  - "Urban sample limits generalizability to rural areas where platform dynamics differ."
+  - "Cross-sectional design constrains causal inference about long-term consequences."
+  - "Self-reported earnings are subject to measurement error. [unacknowledged]"
+  - "The qualitative sample captures perspectives at a particular moment in time. [unacknowledged]"
+  - "Does not include validated mental health measures, despite qualitative findings on stress. [unacknowledged]"
+remember_this:
+  - "38% of urban youth in the sample engaged in gig work."
+  - "Earnings volatility is 1.6 times higher in platform work."
+  - "Secondary education reduces gig participation probability by 6.8 percentage points."
+  - "Full-time platform earnings are 4.7% lower than non-platform work."
+  - "Filipino platform workers operate in a remittance-supported household context."
+```
+---
+
+## Paper 50: Scrivano A.-2025b_summarized.md
+
+**Source File:** `Scrivano A.-2025b_summarized.md`
+
+```yaml
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+designation: international
+title: Fraud Detection Pipeline Using Machine Learning: Methods, Applications, and Future Directions
+authors: Scrivano, A.
+year: 2026
+venue: Unknown
+odin_topics:
+  - 8.A
+  - 8.B
+  - 5.A
+  - 6.A
+  - 12.A
+tldr: A comprehensive review of machine learning methods for fraud detection, covering supervised, unsupervised, and hybrid approaches across multiple sectors.
+problem_and_motivation: The increasing sophistication of fraud schemes in digital economies has rendered traditional rule-based and manual audit systems inadequate. There is a pressing need for adaptive, scalable, and automated solutions that can effectively counter evolving fraudulent activities.
+approach:
+  - This review synthesizes current state-of-the-art approaches in fraud detection pipeline architectures employing machine learning techniques.
+  - Key methodologies including supervised learning (logistic regression, decision trees, random forests, gradient boosting), unsupervised learning (clustering, PCA), and hybrid methods are discussed in detail.
+  - Real-world applications of these ML solutions are explored across finance, healthcare, and e-commerce sectors.
+  - The paper also provides a forward-looking analysis of emerging trends like deep learning, ensemble methods, and real-time detection.
+findings:
+  - num: Neural networks achieved the highest AUC-ROC of 0.95 and recall of 0.85 in empirical evaluation.
+  - num: Random forests demonstrated strong precision at 0.90, beneficial for minimizing false positives.
+  - num: Logistic regression served as a reliable baseline with AUC-ROC of 0.88 and recall of 0.78.
+  - Supervised learning excels when labeled historical data is available, while unsupervised methods are advantageous in limited-label scenarios.
+  - Hybrid frameworks that combine unsupervised flagging with supervised verification effectively address data imbalance issues.
+  - Ensemble methods and deep learning architectures like CNNs and RNNs show exceptional proficiency in capturing complex fraud patterns.
+  - Continuous learning and adaptive frameworks are crucial for maintaining model effectiveness against emerging fraud tactics.
+key_figures_tables:
+  - "Table 1: Performance Metrics of Fraud Detection Algorithms → Neural networks excel in recall and AUC-ROC; random forests lead in precision."
+  - "Figure 1: ROC Curves of Fraud Detection Algorithms → Neural network maintains the highest AUC-ROC score of 0.95."
+  - "Figure 2: Precision-Recall Curves for Fraud Detection Algorithms → Neural networks achieve high precision and recall across thresholds, random forests show a sharper decline."
+  - "Figure 3: Illustrative overview of a modern fraud detection pipeline → Pipeline includes preprocessing, EDA, feature engineering, modeling, and evaluation stages."
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: "ML"
+    definition: "Machine Learning"
+  - term: "PCA"
+    definition: "Principal Component Analysis"
+  - term: "CNN"
+    definition: "Convolutional Neural Network"
+  - term: "RNN"
+    definition: "Recurrent Neural Network"
+  - term: "AUC-ROC"
+    definition: "Area Under the Receiver Operating Characteristic Curve"
+  - term: "XAI"
+    definition: "Explainable Artificial Intelligence"
+  - term: "SMOTE"
+    definition: "Synthetic Minority Over-sampling Technique"
+critical_citations:
+  - "[Nguyen et al., 2020] — Overview of generic fraud detection algorithms."
+  - "[Chen & Guestrin, 2016] — Scalable tree boosting system for fraud detection."
+  - "[Friedman, 2001] — Gradient boosting machine methodology."
+  - "[Bhattacharyya et al., 2011] — Comparative study on data mining for credit card fraud."
+relevance:
+  topics:
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: "Comprehensive review of anomaly detection techniques (supervised, unsupervised, hybrid) directly applicable to Odin's anomaly detection module."
     - code: 8.B
       name: Anomaly Detection Algorithms for Personal Spending Data
       relevance: high
-      justification: Proposes a novel drift-adaptive algorithm for detecting fraudulent anomalies in transaction streams.
-    - code: 12.B
-      name: Evaluation of Algorithmic Modules
+      justification: "Discusses specific algorithms like clustering, isolation forests, neural networks, and ensemble methods for detecting fraudulent (anomalous) transactions."
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
       relevance: medium
-      justification: Provides comparative evaluation metrics and baselines useful for assessing Odin's modules.
-  contribution: The paper's drift-adaptive framework informs Odin's anomaly detection module (8.B) by providing a robust online learning approach to detect unusual spending patterns. Its incremental learning capability supports forecasting module (6.B) for adapting to evolving user behavior. The evaluation methodology offers a baseline for assessing Odin's algorithmic modules (12.B). The LDP-based optimization could enhance stability in rare anomaly detection. Overall, the adaptive principles are applicable to Odin's real-time adjustment to shifting user financial behavior.
+      justification: "Emphasizes the importance of understanding user behavior patterns (transaction velocity, merchant variance) to detect deviations, which is foundational for building behavioral profiles."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: medium
+      justification: "The review covers predictive modeling (supervised learning) for classifying transactions, which informs Odin's predictive capabilities for spending behavior."
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: "Provides a detailed discussion on evaluation metrics (precision, recall, F1, AUC-ROC, precision-recall curves) and techniques (cross-validation) relevant for assessing Odin's algorithmic modules."
+  contribution: "This paper provides a foundational review of anomaly detection methods, directly informing Odin's approach to identifying unusual spending patterns. The discussion on behavioral profiling supports Odin's user modeling module by highlighting key features and metrics. Its comprehensive evaluation framework offers a blueprint for assessing the performance of Odin's predictive and detection algorithms. The emphasis on continuous learning and adaptation guides Odin's design for maintaining model relevance over time."
   directly_justifies:
-    - "Adaptive models are necessary to maintain accuracy when spending patterns shift over time."
-    - "Incremental updating without full retraining reduces computational cost while preserving performance."
-    - "LDP-based optimization enhances stability under rare anomalous events."
-    - "Drift detection enables timely model updates without manual intervention."
+    - "Machine learning algorithms such as random forests and neural networks are effective for detecting anomalies in transaction data."
+    - "Unsupervised learning methods like clustering are advantageous for anomaly detection when labeled data is limited."
+    - "Hybrid approaches combining unsupervised flagging with supervised verification address data imbalance issues."
+    - "Evaluation metrics like precision, recall, and AUC-ROC are essential for assessing fraud detection model performance."
   limits:
-    - "Relies on synthetic PaySim data rather than real-world financial transactions."
-    - "Computational complexity of AHO optimization may need optimization for mobile deployment."
-    - "Generalization to other financial domains (e.g., savings, budgeting) not evaluated. [unacknowledged]"
-  mapping_rationale: "All 12 functional domains and their associated topic codes were systematically scanned. The paper is relevant to Anomaly Detection (8.A, 8.B) and Spending Forecasting (6.A, 6.B) because it addresses concept drift in sequential transaction data, a core challenge for personal finance systems. Evaluation methodologies (12.B) are also flagged due to the comparative benchmarking. Domains such as Filipino Cultural Context (2.A–D), Expense Categorization (3.A–C), Existing Systems (4.A–B), Behavioral Profiling (5.A–C), Budget Recommendation (7.A–D), Mobile-First Design (9.A–B), Data Privacy (10.A–B), User Retention (11.A–B), and Savings/Debt (13.A–C) were considered but rejected because the paper does not address these aspects; it focuses solely on algorithmic robustness under drift. Relevance levels: 8.B = high (direct algorithm for anomaly detection), 8.A and 6.B = medium (contextual but transferable), 6.A and 12.B = low/medium. Borderline cases: 6.A (predictive modeling) overlaps with 6.B but the paper is more about forecasting sequential data than general predictive modeling; we selected 6.B as more specific. Overall, the paper offers actionable insights for Odin's adaptive learning and anomaly detection modules but is not directly applicable to other domains."
+    - "The paper is a general review and does not provide specific implementation details for a personal finance management system like Odin."
+    - "Some advanced techniques like deep learning require significant computational resources, which may be a constraint for Odin's mobile-first design."
+  mapping_rationale: "A systematic scan of all 12 functional domains and associated topic codes was performed. The paper's focus on machine learning for anomaly detection directly aligns with domain 'Anomaly Detection', leading to high relevance for topics 8.A and 8.B. The behavioral aspects of the paper, such as analyzing transaction patterns and user behavior deviations, provide medium relevance to 'Behavioral Profiling & Classification' (5.A). The paper's extensive coverage of predictive modeling techniques (supervised learning) informs the 'Spending Forecasting' domain (6.A). The thorough discussion on evaluation metrics and techniques offers medium relevance to 'System Evaluation' (12.A). Domains like 'Filipino Cultural Context', 'Expense Categorization', 'Budget Recommendation', 'Mobile-First Design', 'Data Privacy', 'User Retention', and 'Savings & Debt Management' were considered and rejected as the paper does not provide specific, citable claims relevant to these areas for Odin. The paper is highly relevant for establishing technical foundations for Odin's anomaly detection and forecasting modules."
 limitations:
-  - "Synthetic dataset may not capture real-world noise and variability."
-  - "AHO optimization adds computational overhead not quantified for edge devices. [unacknowledged]"
-  - "Framework tested only on fraud detection; applicability to spending categorization or budgeting not explored. [unacknowledged]"
+  - "The paper's evaluation of algorithms is based on a general financial transaction dataset, not specifically on Filipino young professional spending data. [unacknowledged]"
+  - "The practicality of deploying deep learning models in a mobile-first application with resource constraints is not addressed. [unacknowledged]"
+  - "The paper focuses on fraud detection, which is a specific type of anomaly, and may not fully cover the broader spectrum of spending anomalies (e.g., overspending)."
 remember_this:
-  - "AHO-InDNN achieves 98.74% accuracy on fraud detection under concept drift."
-  - "Incremental learning adapts to sudden, gradual, and recurrent drifts without full retraining."
-  - "LDP optimization reduces false alarms and stabilizes model updates."
-  - "Drift detection and online adaptation are key for maintaining performance in non-stationary environments."
+  - "Neural networks achieved superior recall and AUC-ROC in detecting fraudulent transactions."
+  - "Random forests provide a strong balance between performance, interpretability, and real-time applicability."
+  - "Continuous learning and adaptive frameworks are essential for model effectiveness against evolving tactics."
+  - "Data imbalance in fraud datasets necessitates specialized techniques like oversampling and cost-sensitive learning."
+  - "Feature engineering of behavioral metrics is crucial for enhancing predictive power in detection models."
 ```
 ---
 

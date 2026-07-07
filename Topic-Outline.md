@@ -187,7 +187,7 @@
 
 ---
 
-## 5. Financial Behavioral Profiling [/behavioral-profiling]
+## [O] 5. Financial Behavioral Profiling [/behavioral-profiling]
 
 ### [O] 5.A Financial Behavioral Profiles in Personal Finance [/profile-domain]
 
@@ -228,7 +228,7 @@
 
 ---
 
-### 5.C Classification Approaches for Financial Behavioral Profiles [/profile-classification]
+### [O] 5.C Classification Approaches for Financial Behavioral Profiles [/profile-classification]
 
 > **Note:** This section surveys *classification methods in general* as applied to user profiling tasks. The literature reviewed here may cover any classification algorithm (Random Forest, SVM, logistic regression, gradient boosting, etc.) applied to similar profile‑assignment problems.
 
@@ -249,15 +249,15 @@
 #### [O] 5.C.V Progressive reclassification: periodic, continuous, and drift‑triggered profile update strategies [/progressive-reclassification]
 > *Scholar query: What strategies exist for progressively reclassifying users into updated financial behavioral profiles over time — including periodic batch reclassification, continuous online learning, and drift‑triggered reassessment? I am looking for research that evaluates these update strategies in terms of classification stability, responsiveness to genuine behavioral change, and resistance to noise‑driven spurious reclassifications.*
 
-#### 5.C.VI Tradeoffs across candidate classifiers: predictive accuracy, interpretability, and mobile feasibility [/classifier-tradeoffs]
+#### [0] 5.C.VI Tradeoffs across candidate classifiers: predictive accuracy, interpretability, and mobile feasibility [/classifier-tradeoffs]
 > *Scholar query: What are the tradeoffs among candidate classification algorithms for financial user profiling when evaluated along dimensions of predictive accuracy, interpretability of predictions, and mobile deployment feasibility? I am looking for comparative analyses that show how algorithms differ when the deployment environment is a resource‑constrained mobile application and when the classification decision must be explainable or auditable.*
 
 > **Cross‑reference:** Mobile feasibility constraints are detailed in Topic 9.A.III. The findings there should inform this tradeoff analysis.
 
-#### 5.C.VII Evaluation metrics for profile classification: accuracy, precision, recall, and F1‑score [/classifier-eval-metrics]
+#### [0] 5.C.VII Evaluation metrics for profile classification: accuracy, precision, recall, and F1‑score [/classifier-eval-metrics]
 > *Scholar query: What evaluation metrics are appropriate for assessing the performance of a supervised classification model applied to financial behavioral user profiling, and how are accuracy, precision, recall, and F1‑score interpreted and applied in this context? I am looking for research that discusses metric selection for multi‑class classification tasks where class imbalance may exist and where the cost of misclassification differs across profile types.*
 
-#### 5.C.VIII Explainability for profile classification: feature‑contribution explanations and their effect on user acceptance [/classifier-explainability]
+#### [O] 5.C.VIII Explainability for profile classification: feature‑contribution explanations and their effect on user acceptance [/classifier-explainability]
 > *Scholar query: What methods exist for explaining profile classification decisions to end‑users — including feature‑importance visualizations, counterfactual explanations, and natural‑language justifications — and what evidence exists that providing such explanations increases user trust, acceptance, or willingness to accept the assigned profile? I am looking for studies that evaluate explainability techniques in financial or behavioral profiling contexts, including cases where explanations reduced trust or created confusion.*
 
 ---
@@ -266,7 +266,7 @@
 
 ### 6.A Predictive Modeling in Personal Finance Systems [/predictive-modeling-domain]
 
-#### [X] 6.A.I Survey of forecasting methods applied to personal or household spending data [/forecasting-methods-survey]
+#### 6.A.I Survey of forecasting methods applied to personal or household spending data [/forecasting-methods-survey]
 > *Scholar query: What forecasting methods have been applied to personal spending or household expenditure data, and how do they compare in accuracy and practical suitability? I am looking for comparative studies that benchmark approaches such as statistical time‑series models (ARIMA, exponential smoothing), tree‑based methods, and sequence‑based models (RNN, LSTM, GRU) against personal finance or consumer spending datasets — with attention to which methods handle irregular spending patterns, categorical breakdowns, and small individual‑level datasets most effectively. Also include literature on specific training techniques: Huber loss, early stopping, and walk‑forward validation.*
 
 #### 6.A.II Temporal dependency in spending data: prior periods as predictors of subsequent periods [/temporal-dependency]
@@ -289,7 +289,7 @@
 
 > **Note:** This section surveys *forecasting methods in general* as applied to personal spending time series. The literature reviewed may cover statistical, tree‑based, or deep learning approaches, and should focus on the forecasting problem rather than advocating for a specific algorithm.
 
-#### [X] 6.B.I Candidate forecasting algorithms for sequential personal spending data [/forecast-algo-candidates]
+#### 6.B.I Candidate forecasting algorithms for sequential personal spending data [/forecast-algo-candidates]
 > *Scholar query: What algorithms are most commonly applied to sequential personal or household spending forecasting tasks, and what are the documented strengths and weaknesses of each? I am looking for comparative literature covering statistical approaches such as ARIMA and exponential smoothing, tree‑based methods such as gradient boosting, and deep learning approaches such as LSTM and GRU — with attention to how each handles non‑linearity, temporal dependency, and sparse individual‑level data.*
 
 #### 6.B.II Comparative performance of candidate algorithms on time‑series forecasting tasks [/forecast-algo-comparison]
@@ -317,7 +317,7 @@
 
 > **Note:** This subtopic establishes the domain knowledge that motivates the recommendation module's constraint logic and allocation structure. Budgeting strategies are treated here as theoretical grounding — the literature basis for why certain design decisions (minimum floors, savings prioritization, category caps) are valid — rather than as user‑selectable configurations. User‑configurable preferences are covered under Topic 2.C.
 
-#### [X] 7.A.I Core mechanics of documented budgeting strategies [/strategy-mechanics]
+#### 7.A.I Core mechanics of documented budgeting strategies [/strategy-mechanics]
 > *Scholar query: What are the core mechanics and structural logic of the major budgeting strategies documented in personal finance literature — including zero‑based budgeting, the envelope method, proportional allocation rules such as 50‑30‑20, and pay‑yourself‑first? I am looking for studies or reviews that explain how each strategy defines categories, divides income, and allocates spending — and what behaviors each strategy is designed to reinforce.*
 
 > **Note – Search result:** The original scholar query for 7.A.I returned no relevant results. Alternative approach: use foundational personal finance textbooks (e.g., Garman & Forgue, “Personal Finance”) or handbooks rather than peer‑reviewed articles. Cite authoritative sources that define these strategies as domain knowledge. If no peer‑reviewed literature exists, this may be acknowledged as a gap and the definitions derived from practitioner literature.
@@ -332,7 +332,7 @@
 
 ### 7.B Budget Recommendation in Personal Finance Systems [/budget-rec-domain]
 
-#### [X] 7.B.I Approaches to budget recommendation in existing systems: rule‑based, optimization‑based, and data‑driven [/budget-rec-approaches]
+#### 7.B.I Approaches to budget recommendation in existing systems: rule‑based, optimization‑based, and data‑driven [/budget-rec-approaches]
 > *Scholar query: What approaches to budget recommendation have been implemented in personal finance management systems, and how do they compare? I am looking for research that describes rule‑based systems with fixed allocation proportions, constraint‑based optimization approaches that maximize savings subject to spending floors, and data‑driven or ML‑based recommendation engines — with attention to the tradeoffs between simplicity, adaptability, and user acceptance.*
 
 #### 7.B.II Constraint‑based allocation: encoding hard and soft constraints, protected categories, and feasibility [/constraint-allocation-encoding]
