@@ -1,0 +1,122 @@
+```yaml
+paper_id: 10.1109/ACCESS.2026.3663161
+designation: international
+title: Explainable Artificial Intelligence (XAI): Concepts, Applications, Challenges, and Future Perspectives
+authors: Kaya, O.; Shahenshah, A. F. M.; Karabulut, M. A.; Karahan, S. N.; Osmanca, M. S.; Acır, N.
+year: 2026
+venue: IEEE Access
+odin_topics:
+  - 10.A
+  - 10.B
+  - 12.A
+  - 8.A
+tldr: XAI faces a critical paradox where explanations create attack surfaces, lack human-centered evaluation, and fail to align with regulatory requirements.
+problem_and_motivation: AI decision-making is opaque, creating a lack of trust and accountability in high-stakes applications like finance and healthcare. Regulations such as GDPR demand explainability, but current XAI methods are insufficient. A gap exists between technical advancements and practical deployment needs.
+approach:
+  - This review conducted a structured thematic synthesis of XAI literature from 2018 to 2025 across IEEE Xplore, ACM Digital Library, Scopus, and arXiv.
+  - It classifies XAI methods according to model dependency, scope of explanation, and timing (ante-hoc vs post-hoc).
+  - The review analyzed applications in finance, healthcare, and cybersecurity to identify domain-specific requirements and constraints.
+  - It examined security challenges including adversarial attacks and fairwashing, as well as evaluation practices, distinguishing computational and human-centered metrics.
+  - The study synthesizes recent advances and open challenges to propose a roadmap toward XAI 2.0, emphasizing human alignment and regulatory compliance.
+findings:
+  - "num: Adversarial attacks can manipulate explanations with over ninety percent success while preserving model accuracy."
+  - "num: Only twenty-six percent of user studies follow human-centered protocols."
+  - "num: Fewer than twenty-three percent of user studies involve domain experts."
+  - "num: Certified robust explanation methods can reduce attack success from 90% to 34% but increase explanation time by 3 to 5 times."
+  - Current research emphasizes algorithmic innovation over practical deployment, leading to systems that fail in real-world settings.
+  - The accuracy-interpretability trade-off is not universal, as interpretable models can achieve competitive performance.
+key_figures_tables:
+  - "Figure 1: Conceptual classification of XAI methods based on model dependency, coverage, and timing → Provides a unified framework for understanding XAI design space."
+  - "Table 1: Comparison of the current survey with previous surveys on scope and contribution → Shows this review integrates technical, application, and regulatory perspectives."
+  - "Table 3: Practical guide matching XAI methods to user needs → Translates taxonomy into recommendations for different user types and contexts."
+  - "Table 4: Domain-specific applications of XAI → Highlights XAI use cases in finance, healthcare, and cybersecurity."
+  - "Table 6: Evaluating XAI disclosures → Organizes evaluation into human-centered frameworks and challenges with standardization."
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: XAI
+    definition: Explainable artificial intelligence; techniques that make AI decisions understandable to humans.
+  - term: Ante-hoc
+    definition: Methods that integrate interpretability directly into the model architecture before training.
+  - term: Post-hoc
+    definition: Methods that generate explanations after a model has been trained.
+  - term: Model-specific
+    definition: Explanations designed for a particular model family, leveraging its internal structure.
+  - term: Model-agnostic
+    definition: Explanations that treat the model as a black box and analyze input-output relationships.
+  - term: LIME
+    definition: Local Interpretable Model-agnostic Explanations; trains simple surrogate models for local explanations.
+  - term: SHAP
+    definition: SHapley Additive exPlanations; uses game theory to attribute feature importance.
+  - term: Grad-CAM
+    definition: Gradient-weighted Class Activation Mapping; visual explanations for CNNs using heatmaps.
+  - term: Fidelity
+    definition: The extent to which an explanation accurately represents the model's actual decision-making process.
+  - term: GDPR
+    definition: General Data Protection Regulation; EU law mandating transparency in automated decision-making.
+critical_citations:
+  - "[Slack et al., 2020] — Demonstrated adversarial attacks on LIME and SHAP."
+  - "[Zhang et al., 2018] — Showed medical image explanations can be manipulated."
+  - "[Edwards and Veale, 2018] — Discussed GDPR right to explanation and its technical challenges."
+  - "[Rudin, 2019] — Argued for using interpretable models instead of explaining black boxes."
+  - "[Goodman and Flaxman, 2017] — Analyzed EU regulations on algorithmic decision-making."
+relevance:
+  topics:
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: high
+      justification: Directly addresses adversarial attacks on explanations, creating new security vulnerabilities for PFMS.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Discusses how adversarial manipulation and evaluation gaps undermine user trust, a critical issue for Odin.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Provides a comprehensive critique of current evaluation practices, arguing for human-centered metrics over computational ones.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: medium
+      justification: The discussion of adversarial robustness and explanation stability is relevant to designing reliable anomaly detection explanations.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: The paper evaluates XAI methods themselves, offering insights on how to assess algorithmic modules like forecasting and classification.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: contextual
+      justification: While not directly about categorization, the XAI methods discussed (e.g., SHAP) can be applied to explain categorization decisions.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: contextual
+      justification: The review covers forecasting algorithms, but its primary focus is on explainability rather than prediction accuracy.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: contextual
+      justification: The paper discusses how explanations can support decision-making, which is relevant to budget recommendations.
+  contribution: "This paper provides a critical framework for evaluating the trustworthiness of XAI systems, which is directly applicable to Odin's explanation modules. Its analysis of adversarial attacks and fairwashing highlights security risks that Odin must mitigate to maintain user trust. The systematic critique of evaluation practices, particularly the lack of human-centered studies, informs how Odin should validate its explanations through user studies. The paper's roadmap for XAI 2.0, emphasizing human-aligned and regulation-aware systems, provides a high-level design philosophy for Odin's development."
+  directly_justifies:
+    - "Odin must implement robust explanation methods to resist adversarial manipulation."
+    - "The effectiveness of Odin's explanations should be evaluated through human-centered user studies, not just computational metrics."
+    - "Odin's design must consider the gap between regulatory requirements and technical capabilities."
+    - "User trust in Odin is contingent on the reliability and security of its explanations."
+    - "Odin should prioritize interactive and adaptive explanation systems to improve user comprehension."
+  limits:
+    - "The review is primarily a survey and does not provide empirical validation of its proposed XAI 2.0 framework."
+    - "The analysis of adversarial attacks is technical and may not fully translate to practical, user-friendly defense mechanisms."
+    - "The paper does not specifically address the Filipino context, so its findings must be generalized carefully."
+    - "The regulatory analysis is based on GDPR and may not directly apply to Philippine financial regulations."
+  mapping_rationale: "The systematic scan across all twelve functional domains revealed that this paper is most relevant to the 'Data Privacy & User Trust', 'System Evaluation', and 'Anomaly Detection' domains. High relevance was assigned to topics 10.A and 10.B because the paper directly addresses how adversarial manipulation and evaluation gaps can undermine trust, which is central to Odin's design. Topic 12.A was also rated high as the paper provides a detailed critique of evaluation practices, advocating for human-centered frameworks essential for Odin's validation. Topic 8.A was rated medium, as the discussion on explanation robustness is relevant for anomaly detection modules to ensure reliable alerts. Topics 3.A, 6.A, and 7.B were rated as contextual because, while the methods discussed (like SHAP) can be applied to expense categorization and forecasting, the paper's primary focus is on the meta-level problem of explainability itself, not on these specific modules. Domains like 'Filipino Cultural Context' (2.A-D), 'Expense Categorization' (3.B-C), 'Existing Systems & Gaps' (4.A-B), 'Behavioral Profiling' (5.A-C), 'Budget Recommendation' (7.A, 7.C-D), 'Mobile-First Design' (9.A-B), 'User Retention & Engagement' (11.A-B), and 'Savings & Debt Management' (13.A-C) were considered and rejected as the paper does not provide claims directly supporting Odin's design in these areas. The borderline case of topic 7.B was considered but rejected because the paper focuses on explaining decisions rather than recommending them. Overall, the paper offers high-value guidance on how to build trustworthy, explainable systems and is highly relevant to Odin's security, trustworthiness, and evaluation strategies."
+limitations:
+  - "The review restricts its scope to English-language publications, potentially excluding relevant XAI research from non-English speaking regions."
+  - "The domain focus on finance, healthcare, and cybersecurity may not cover all relevant areas for a PFMS, such as behavioral finance or cultural contexts."
+  - "The survey's thematic analysis prioritizes conceptual synthesis over exhaustive documentation, which may affect reproducibility." [unacknowledged]
+  - "XAI is a rapidly evolving field, and some methods discussed may be superseded by newer research." [unacknowledged]
+remember_this:
+  - "Explainability creates new attack surfaces that can be exploited to undermine user trust."
+  - "Computational metrics for XAI do not correlate with improved human decision-making."
+  - "Regulatory requirements like GDPR lack clear technical implementation standards for explanations."
+  - "Moving to XAI 2.0 requires systems that are human-aligned, robust, and regulation-aware."
+  - "Adversarial attacks on explanations can succeed with over 90% efficacy while preserving model accuracy."
+```
