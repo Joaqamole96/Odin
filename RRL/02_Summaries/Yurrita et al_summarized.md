@@ -1,0 +1,104 @@
+```yaml
+paper_id: 10.1145/3544548.3581161
+designation: international
+title: Disentangling Fairness Perceptions in Algorithmic Decision-Making: the Effects of Explanations, Human Oversight, and Contestability
+authors: Yurrita, M.; Draws, T.; Balayn, A.; Murray-Rust, D.; Tintarev, N.; Bozzon, A.
+year: 2023
+venue: Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems
+odin_topics:
+  - 10.A
+  - 10.B
+  - 11.A
+  - 12.A
+  - 12.B
+tldr: Explanations and contestability improve informational and procedural fairness perceptions respectively, but human oversight shows no effect in algorithmic loan decisions.
+problem_and_motivation: Prior work on fairness perceptions in algorithmic decision-making has largely studied factors like explanations and human oversight in isolation, ignoring their entangled nature and the need for multi-dimensional measurement. This limits understanding of how these factors co-mediate decision subjects' perceptions of justice. A nuanced, faceted approach is needed to inform the design of fairer algorithmic systems.
+approach:
+  - A preliminary study (N=58) explored understandability, actionability, and contestability support of five explanation types to inform main study design.
+  - A 2x2x3x2 between-subjects experiment (N=267) manipulated explanations, human oversight, contestability, and task stakes in a loan approval scenario.
+  - Multi-way ANOVAs and multiple linear regression were used to test hypotheses on informational, procedural, and overall fairness perceptions.
+  - Exploratory analyses examined effects on sub-elements of fairness dimensions, and a reflexive thematic analysis was conducted on open-ended responses.
+  - Participants were recruited via Prolific, with AI literacy, affinity to technology, and personal experience measured as control variables.
+findings:
+  - num: Explanations significantly increased informational fairness perceptions (F(1,260)=74.21, p<0.001, η²p=0.22).
+  - num: Contestability significantly increased procedural fairness perceptions (F(2,254)=20.60, p<0.001, η²p=0.14).
+  - No evidence was found for an effect of human oversight on procedural fairness perceptions (F(1,254)=0.004, p=0.95).
+  - Informational and procedural fairness perceptions both positively predicted overall fairness, with procedural fairness being the stronger predictor.
+  - Qualitative analysis revealed tensions between information overload and understanding, human involvement and timely decision-making, and standardized processes and personal circumstances.
+  - num: Perceptions of procedural voice and outcome influence remained negative across all contestability configurations, despite improved procedural fairness scores.
+  - AI literacy moderated the effect of explanations on informational fairness, with stronger effects for participants with lower AI literacy.
+  - The stakes of the task did not moderate the effects of explanations, human oversight, or contestability on fairness perceptions.
+  - Human oversight was perceived to slightly decrease perceptions of process consistency and lack of bias.
+key_figures_tables:
+  - "Figure 3: Effects of explanations, human oversight, and contestability on fairness perceptions → Explanations and contestability increase fairness perceptions; human oversight shows no effect."
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: XAI
+    definition: Explainable Artificial Intelligence, techniques to make AI decisions understandable to humans.
+  - term: GDPR
+    definition: General Data Protection Regulation, EU law on data protection and privacy.
+  - term: PFMS
+    definition: Personal Finance Management System, an application for managing personal finances.
+  - term: AI literacy
+    definition: The ability to understand, use, and critically evaluate artificial intelligence systems.
+  - term: Human oversight
+    definition: Configuration where human intelligence is applied to identify and correct potential mistakes made by an algorithmic system.
+critical_citations:
+  - "[Colquitt, 2001] — Validated multi-dimensional measure of organizational justice."
+  - "[Schoefer et al., 2022] — Showed explanations increase informational fairness perceptions."
+  - "[Binns et al., 2018] — Demonstrated scenario effects obscure explanation effects on fairness."
+relevance:
+  topics:
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Discusses user trust and perceptions, but not specifically privacy or security mechanisms.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Directly investigates factors (explanations, oversight, contestability) that influence user trust via fairness perceptions.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Findings on fairness perceptions and procedural justice can inform design for sustained user engagement.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Provides a multi-dimensional framework for evaluating user perceptions of fairness in algorithmic systems.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: Offers an experimental methodology for evaluating user-facing algorithmic features like explanations and contestability.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: contextual
+      justification: Not directly addressed; loan approval scenario is a different domain.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: contextual
+      justification: Not directly addressed; focuses on decision-making fairness, not budgeting.
+  contribution: This paper provides empirical evidence that explanations and contestability mechanisms directly influence users' informational and procedural fairness perceptions, which are key drivers of overall trust in algorithmic systems. These findings justify the inclusion of transparent explanation modules and contestation workflows in Odin's design to foster user trust. The study also validates a multi-dimensional evaluation approach that can be adapted for assessing Odin's user-facing features. Furthermore, the identified tensions between standardization and personalization highlight design challenges relevant to Odin's expense categorization and budget recommendation modules. Finally, the null effect of human oversight suggests that Odin's design should focus on meaningful user agency rather than simple human-in-the-loop configurations.
+  directly_justifies:
+    - "Explanations are necessary to improve informational fairness perceptions in algorithmic decisions."
+    - "Contestability mechanisms enhance procedural fairness perceptions by giving users a sense of voice."
+    - "Informational and procedural fairness are independent predictors of overall fairness perceptions."
+    - "The stakes of the decision do not moderate the effects of explanations, oversight, or contestability on fairness."
+  limits:
+    - "The study uses a third-person loan scenario, limiting generalizability to first-person financial management contexts."
+    - "The single-shot interaction may not capture fairness perceptions over repeated use, as in a PFMS."
+    - "The study population from the Global North may not represent Filipino young professionals."
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to User Trust (10.B) because it directly investigates factors influencing trust via fairness perceptions. It is also highly relevant to System Evaluation (12.A) as it proposes and validates a multi-dimensional fairness evaluation framework. The papers' experimental methodology is relevant to Evaluation of Algorithmic Modules (12.B) and its findings on engagement dynamics are relevant to Engagement Dynamics (11.A). The paper was considered for Data Privacy (10.A) but was deemed contextual as privacy is not a focal variable. Topics related to expense categorization (3.A), budgeting strategies (7.A), and behavioral classification (5.A-5.C) were considered but rejected as the loan approval scenario is distinct from personal expense management. Borderline cases included the connection between explanations (information cue) and trust, which spans 10.B and 12.A; this was resolved by assigning high relevance to both. Overall, the paper provides foundational empirical evidence for designing trustworthy and fair algorithmic systems, directly applicable to Odin's user experience and evaluation strategy.
+limitations:
+  - "The study was conducted on a Western population, limiting generalizability to Filipino users. [unacknowledged]"
+  - "The one-shot interaction does not capture the dynamics of repeated use in a PFMS. [unacknowledged]"
+  - "The loan scenario may not fully represent the financial decision-making contexts relevant to Odin."
+  - "The term 'artificial intelligence' may have influenced perceptions in ways not generalizable to other algorithmic descriptors."
+remember_this:
+  - "Explanations significantly improve informational fairness perceptions in algorithmic decisions."
+  - "Contestability enhances procedural fairness but does not fully grant users a sense of voice."
+  - "Human oversight alone does not increase fairness perceptions in algorithmic decision-making."
+  - "Multi-dimensional fairness measurement provides a more nuanced understanding than single-item overall fairness."
+  - "Informational and procedural fairness are independent predictors of overall fairness in algorithmic systems."
+```
