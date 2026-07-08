@@ -1,0 +1,96 @@
+```yaml
+paper_id: 0b7e8f9a-1c2d-3e4f-5a6b-7c8d9e0f1a2b # No DOI available
+designation: international-algorithm-specific
+title: Cost-Sensitive Neural Architectures for Handling Class Imbalance in High-Stakes Fraud Detection Systems
+authors: Serdan, J. L.
+year: 2025
+venue: Ethiopian International Journal of Multidisciplinary Research
+odin_topics:
+  - 5.C
+  - 6.B
+  - 8.A
+  - 8.B
+  - 10.A
+  - 10.B
+  - 12.B
+tldr: Cost-sensitive neural networks with weighted error functions significantly improve recall for rare fraudulent transactions compared to standard DNNs and SVMs.
+problem_and_motivation: Automated fraud detection systems are crippled by severe class imbalance where fraudulent transactions are extremely rare. Standard neural networks optimized for global accuracy fail to detect these high-cost events. A mechanism is needed to explicitly penalize misclassification of the minority class during training.
+approach:
+  - A Cost-Sensitive Deep Neural Network (CS-DNN) framework is proposed and evaluated.
+  - The architecture comprises an input layer, four hidden layers (64,32,16,8 neurons) with ReLU and dropout, and a sigmoid output.
+  - A cost matrix weighting false negatives significantly higher than false positives is integrated into the backpropagation error derivative.
+  - The Adam optimizer with dynamic learning rate decay and gradient clipping is used to ensure training stability.
+  - Experiments on a synthetic credit card dataset (500k transactions, 0.17% fraud) benchmark CS-DNN against standard DNN, SVM, and Random Forest.
+findings:
+  - num: Standard DNN achieved 99.89% accuracy but only 0.58 recall for the fraud class.
+  - num: CS-DNN with a 10:1 cost ratio improved recall to 0.82 while maintaining 0.78 precision.
+  - num: Increasing the cost ratio to 50:1 further improved recall to 0.91 but reduced precision to 0.65.
+  - The marginal gain in recall diminishes beyond a certain cost ratio, leading to an explosion in false positives.
+  - Cost-sensitive learning modifies the internal feature representation, dedicating more neurons to detect outlier patterns.
+  - Adam optimizer and gradient clipping were essential to mitigate volatility and exploding gradients from high-cost weights.
+key_figures_tables:
+  - "Table 3.1: Performance comparison of models; CS-DNN (10:1) achieved 0.82 recall, 0.78 precision, outperforming SVM and Random Forest."
+  - "Figure 3.2: Sensitivity analysis shows non-linear relationship between cost weight and recall; gains diminish after 50:1 ratio."
+key_equations:
+  - equation: "L_{CS} = -\\frac{1}{N} \\sum_{i=1}^N [ w_{pos} y_i \\log(\\hat{y}_i) + w_{neg} (1-y_i) \\log(1-\\hat{y}_i) ]"
+    explanation: Cost-weighted binary cross-entropy loss penalizing false negatives more heavily.
+definitions:
+  - term: CS-NN
+    definition: Cost-Sensitive Neural Network that modifies the loss function to penalize misclassification of the minority class.
+  - term: AUPRC
+    definition: Area Under the Precision-Recall Curve, a key metric for imbalanced classification problems.
+critical_citations:
+  - "[Chawla, 2005] — Foundational overview of the class imbalance problem."
+  - "[Zhou and Liu, 2006] — Seminal work on training cost-sensitive neural networks."
+  - "[Patel, 2025] — Comparative study showing neural networks' superiority over traditional algorithms."
+relevance:
+  topics:
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Employs a classification model specifically designed to identify rare, high-risk financial behaviors.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: The CS-DNN framework is a predictive algorithm applicable to sequential transaction data for fraud forecasting.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Directly addresses the core problem of detecting anomalous fraudulent transactions in financial data.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Proposes and evaluates a cost-sensitive deep learning algorithm specifically for anomaly detection.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Discusses the use of PCA-transformed synthetic data to obscure sensitive user details.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: contextual
+      justification: Mentions that excessive false positives (flagging legitimate transactions) can erode customer trust.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Provides a rigorous comparative evaluation of the CS-DNN algorithm against baselines using metrics like recall and F1-score.
+  contribution: The paper's cost-sensitive neural network framework provides a directly applicable technique for Odin's anomaly detection module. By embedding misclassification costs into the loss function, Odin can be tuned to be highly sensitive to rare, high-importance events like fraud or severe overspending. The methodology for evaluating imbalanced classifiers using precision, recall, and AUPRC can be adopted for Odin's internal testing. The findings on optimization stability (e.g., gradient clipping for weighted losses) offer concrete design guidance for implementing robust models in Odin's backend.
+  directly_justifies:
+    - "Cost-sensitive learning can significantly improve recall for rare financial events like fraud without destroying precision."
+    - "The optimal cost ratio should be tuned empirically and is not simply equal to the class imbalance ratio."
+    - "Gradient clipping is essential for stabilizing the training of cost-sensitive neural networks with high weights."
+    - "Adam optimizer with learning rate decay is effective for cost-sensitive loss functions."
+  limits:
+    - "The study relies on synthetic data which may not fully capture the 'dirty' nature of real-world transaction logs."
+    - "The cost matrix (ratio) is treated as a hyperparameter, requiring manual tuning for optimal performance."
+  mapping_rationale: A systematic scan across all 12 functional domains revealed that this paper is most relevant to 'Anomaly Detection' and 'System Evaluation'. Topics under this domain (8.A, 8.B) were assigned 'high' relevance as the paper directly tackles the problem of detecting rare anomalous events and proposes a specific algorithm. The 'Behavioral Profiling' domain's classification approach (5.C) was rated 'medium' because the work involves a classification methodology for identifying fraudulent behavior. 'Forecasting' (6.B) and 'Data Privacy/Trust' (10.A, 10.B) were rated 'low' or 'contextual' as they are secondary or tangential. Domains like 'Filipino Cultural Context', 'Expense Categorization', and 'Budget Recommendation' were rejected as the paper does not address them. The overall relevance to Odin is strong for its anomaly detection and algorithmic evaluation modules.
+limitations:
+  - "Use of synthetic data, which may not represent real-world data complexities. [unacknowledged]"
+  - "The optimal cost ratio is determined empirically and is not derived from a formal business cost model."
+  - "Potential for concept drift where fraud patterns evolve over time, rendering a static model obsolete."
+remember_this:
+  - "Cost-sensitive learning improves fraud recall from 0.58 to 0.82 with a 10:1 cost ratio."
+  - "False negatives are financially devastating and must be penalized during training."
+  - "Gradient clipping stabilizes training when minority class errors are heavily weighted."
+  - "Accuracy is a misleading metric for high-stakes anomaly detection systems."
+  - "Cost weights should be tuned carefully to balance recall and false positive rates."
+```
