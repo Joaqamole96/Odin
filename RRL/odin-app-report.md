@@ -7,8 +7,8 @@ This report answers the 10 questions using only materials already present in thi
 Odin is proposed as a **personal budget management system for Filipino young professionals in Metro Manila**. Its purpose is not just to record expenses, but to provide **predictive, behavior-aware financial guidance** through spending forecasting, anomaly detection, behavioral profiling, and budget recommendations. The proposal frames Odin as a response to the lack of locally grounded budgeting tools that account for Filipino income structures, obligation patterns, and culturally specific expenses. It is also designed to be available on both **mobile and web**, with mobile as the primary access point for the target users.
 
 **Sources in repo:**
-- [Documents/Research-Proposal.md](../Documents/Research-Proposal.md)
-- [Documents/Panel-Comments-and-Suggestions.md](../Documents/Panel-Comments-and-Suggestions.md)
+- [Research-Proposal.md](../Documents/Research%20Proposal/Research-Proposal.md)
+- [Panel-Comments-and-Suggestions.md](../Documents/Research%20Proposal/Proposal%20Panel%27s%20Comments%20%26%20Suggestions/Panel-Comments-and-Suggestions.md)
 
 ## 2. What are the modules that these researchers are trying to aim for?
 
@@ -25,8 +25,8 @@ Based on the proposal, panel notes, and data handoff documents, Odin is aiming f
 The `Data/` handoff also makes the internal forecasting structure explicit by defining the second-node budget architecture as **Essentials, Obligatory, Discretionary, and Financial Allocation**, which the forecasting and recommendation modules will use.
 
 **Sources in repo:**
-- [Documents/Research-Proposal.md](../Documents/Research-Proposal.md)
-- [Documents/Panel-Comments-and-Suggestions.md](../Documents/Panel-Comments-and-Suggestions.md)
+- [Research-Proposal.md](../Documents/Research%20Proposal/Research-Proposal.md)
+- [Panel-Comments-and-Suggestions.md](../Documents/Research%20Proposal/Proposal%20Panel%27s%20Comments%20%26%20Suggestions/Panel-Comments-and-Suggestions.md)
 - [Data/data-synthesis-handoff.md](../Data/data-synthesis-handoff.md)
 
 ## 3. What are the justifications for those modules?
@@ -42,11 +42,11 @@ The modules are justified by a mix of local behavioral evidence and system desig
 At the local evidence level, the proposal cites pilot findings that only **6.7%** of respondents used a dedicated budgeting app, while major problems included not having enough income, difficulty tracking spending, and lack of discipline. BSP and CFS-based materials in the repo also support the need for tools that handle real Filipino spending and obligations.
 
 **Sources in repo:**
-- [Documents/Research-Proposal.md](../Documents/Research-Proposal.md)
-- [Documents/Panel-Comments-and-Suggestions.md](../Documents/Panel-Comments-and-Suggestions.md)
-- [RRL/02_Related Literature/Bangko-Sentral-ng-Pilipinas.md](./02_Related%20Literature/Bangko-Sentral-ng-Pilipinas.md)
-- [RRL/02_Related Literature/Cacnio_Romarate.md](./02_Related%20Literature/Cacnio_Romarate.md)
-- [RRL/02_Related Literature/Dimaunahan_et-al.md](./02_Related%20Literature/Dimaunahan_et-al.md)
+- [Research-Proposal.md](../Documents/Research%20Proposal/Research-Proposal.md)
+- [Panel-Comments-and-Suggestions.md](../Documents/Research%20Proposal/Proposal%20Panel%27s%20Comments%20%26%20Suggestions/Panel-Comments-and-Suggestions.md)
+- [Bangko-Sentral-ng-Pilipinas](../RRL/02_Summaries/Bangko%20Sentral%20ng%20Pilipinas-2021_summarized.md)
+- [Cacnio & Romarate](../RRL/02_Summaries/Cacnio%20%26%20Romarate_summarized.md)
+- [Dimaunahan et al](../RRL/02_Summaries/Dimaunahan%20et%20al_summarized.md)
 
 ## 4. What are Financial Behavioral Profiling, the 4 profiles mentioned, and the paper they are based on?
 
@@ -75,11 +75,10 @@ So the most defensible answer from the repository is: **the exact four-profile s
 An important limitation should also be stated here: the repository supports the **conceptual dimensions** behind the four profiles, but it does **not yet provide empirical or literature-backed proof for the exact decision thresholds** used to separate those dimensions in implementation. In practice, the current profile structure is academically strongest when described as a **locally grounded but still provisional operational model**. The BSP/CFS/FIES-backed evidence supports using dimensions such as income structure, expenditure composition, remittances, debt, and savings behavior, but the study still needs statistical justification for the exact numeric cutoffs currently used to divide users into Stable vs Variable and Obligated vs Flexible groups.
 
 **Sources in repo:**
-- [Documents/Panel-Comments-and-Suggestions.md](../Documents/Panel-Comments-and-Suggestions.md)
+- [Panel-Comments-and-Suggestions.md](../Documents/Research%20Proposal/Proposal%20Panel%27s%20Comments%20%26%20Suggestions/Panel-Comments-and-Suggestions.md)
 - [Data/data-synthesis-handoff.md](../Data/data-synthesis-handoff.md)
-- [RRL/02_Related Literature/Bangko-Sentral-ng-Pilipinas.md](./02_Related%20Literature/Bangko-Sentral-ng-Pilipinas.md)
-- [RRL/02_Related Literature/Cacnio_Romarate.md](./02_Related%20Literature/Cacnio_Romarate.md)
-- [RRL/01_Reviews/Bangko-Sentral-ng-Pilipinas_summarized.md](./01_Reviews/Bangko-Sentral-ng-Pilipinas_summarized.md)
+- [Bangko-Sentral-ng-Pilipinas](../RRL/02_Summaries/Bangko%20Sentral%20ng%20Pilipinas-2021_summarized.md)
+- [Cacnio & Romarate](../RRL/02_Summaries/Cacnio%20%26%20Romarate_summarized.md)
 
 ## 5. What are the algorithms that they will be using?
 
@@ -105,9 +104,9 @@ That means the repository currently contains a design tension:
 If you want the report to reflect the current internal design thinking of the repo, the safest wording is that Odin is centered on **LSTM for forecasting**, while profile assignment, overage detection, and budgeting are increasingly being pushed toward **deterministic logic** for thesis defensibility.
 
 **Sources in repo:**
-- [Documents/Research-Proposal.md](../Documents/Research-Proposal.md)
-- [Documents/Panel-Comments-and-Suggestions.md](../Documents/Panel-Comments-and-Suggestions.md)
-- [algorithm-approach-comparison.md](../algorithm-approach-comparison.md)
+- [Research-Proposal.md](../Documents/Research%20Proposal/Research-Proposal.md)
+- [Panel-Comments-and-Suggestions.md](../Documents/Research%20Proposal/Proposal%20Panel%27s%20Comments%20%26%20Suggestions/Panel-Comments-and-Suggestions.md)
+
 
 ## 6. How about statistics and data?
 
@@ -138,7 +137,7 @@ This statistical design is grounded in NCR-specific FIES figures rather than nat
 **Sources in repo:**
 - [Data/data-synthesis-handoff.md](../Data/data-synthesis-handoff.md)
 - [Data/synthetic-data-parameters-handoff.md](../Data/synthetic-data-parameters-handoff.md)
-- [RRL/02_Related Literature/Bangko-Sentral-ng-Pilipinas.md](./02_Related%20Literature/Bangko-Sentral-ng-Pilipinas.md)
+- [Bangko-Sentral-ng-Pilipinas](../RRL/02_Summaries/Bangko%20Sentral%20ng%20Pilipinas-2021_summarized.md)
 
 ## 7. How will they classify people on what behavioral profile they belong?
 
@@ -159,7 +158,7 @@ The formula explicitly stated in the repo is:
 - `CV = σ / μ`
 - `Obligated Ratio = (Essentials + Obligatory) / Total Spend`
 
-There is also evidence from the panel comments that the earlier idea was to classify from onboarding questions alone, but the panel pushed back and required a more defensible clustering or classification basis. The `algorithm-approach-comparison.md` document then shows two possible paths: a real classifier such as Decision Tree/Random Forest, or the current simplified rule-based classification.
+There is also evidence from the panel comments that the earlier idea was to classify from onboarding questions alone, but the panel pushed back and required a more defensible clustering or classification basis. The project materials show two possible paths: a real classifier such as Decision Tree/Random Forest, or the current simplified rule-based classification.
 
 However, an important academic limitation must be stated clearly: while the **dimensions themselves** are supported by BSP/CFS/FIES-style variables, the exact thresholds `CV = 0.2` and `Obligated Ratio = 0.5` are **not yet empirically or literature-backed in the repository as fixed validated cutoffs**. At present, these values function as **project-defined operational thresholds** for system design. The repository materials support the use of:
 
@@ -175,8 +174,8 @@ This means the current logic should be described as **provisional**. A stronger 
 
 **Sources in repo:**
 - [Data/data-synthesis-handoff.md](../Data/data-synthesis-handoff.md)
-- [algorithm-approach-comparison.md](../algorithm-approach-comparison.md)
-- [Documents/Panel-Comments-and-Suggestions.md](../Documents/Panel-Comments-and-Suggestions.md)
+
+- [Panel-Comments-and-Suggestions.md](../Documents/Research%20Proposal/Proposal%20Panel%27s%20Comments%20%26%20Suggestions/Panel-Comments-and-Suggestions.md)
 
 ## 8. Does behavioral profile change from time to time?
 
@@ -191,9 +190,9 @@ There are two versions of that idea in the repo:
 So the repo’s position is not only that profile change is possible, but that it is expected and should be treated as part of the adaptive logic of the app.
 
 **Sources in repo:**
-- [Documents/Panel-Comments-and-Suggestions.md](../Documents/Panel-Comments-and-Suggestions.md)
+- [Panel-Comments-and-Suggestions.md](../Documents/Research%20Proposal/Proposal%20Panel%27s%20Comments%20%26%20Suggestions/Panel-Comments-and-Suggestions.md)
 - [Data/data-synthesis-handoff.md](../Data/data-synthesis-handoff.md)
-- [algorithm-approach-comparison.md](../algorithm-approach-comparison.md)
+
 
 ## 9. What is the basis of this study?
 
@@ -216,11 +215,11 @@ The `Data/` handoff files formalize how NCR statistics, synthetic data, behavior
 So the study is based both on **local financial behavior literature** and on **project-specific system design documents** already contained in this repository.
 
 **Sources in repo:**
-- [Documents/Research-Proposal.md](../Documents/Research-Proposal.md)
-- [RRL/02_Related Literature/Bangko-Sentral-ng-Pilipinas.md](./02_Related%20Literature/Bangko-Sentral-ng-Pilipinas.md)
-- [RRL/02_Related Literature/Cacnio_Romarate.md](./02_Related%20Literature/Cacnio_Romarate.md)
-- [RRL/02_Related Literature/Dimaunahan_et-al.md](./02_Related%20Literature/Dimaunahan_et-al.md)
-- [RRL/02_Related Literature/Albert_et-al.md](./02_Related%20Literature/Albert_et-al.md)
+- [Research-Proposal.md](../Documents/Research%20Proposal/Research-Proposal.md)
+- [Bangko-Sentral-ng-Pilipinas](../RRL/02_Summaries/Bangko%20Sentral%20ng%20Pilipinas-2021_summarized.md)
+- [Cacnio & Romarate](../RRL/02_Summaries/Cacnio%20%26%20Romarate_summarized.md)
+- [Dimaunahan et al](../RRL/02_Summaries/Dimaunahan%20et%20al_summarized.md)
+- [Albert et al](../RRL/02_Summaries/Albert%20et%20al_summarized.md)
 - [Data/data-synthesis-handoff.md](../Data/data-synthesis-handoff.md)
 
 ## 10. How will they take into account seasonal spendings and Filipino cultural expenses?
@@ -259,9 +258,8 @@ So the repository’s answer is that seasonal and cultural spending will be hand
 **Sources in repo:**
 - [Data/data-synthesis-handoff.md](../Data/data-synthesis-handoff.md)
 - [Data/synthetic-data-parameters-handoff.md](../Data/synthetic-data-parameters-handoff.md)
-- [Documents/Research-Proposal.md](../Documents/Research-Proposal.md)
-- [CHAPTER-1/definition-of-terms-list.md](../CHAPTER-1/definition-of-terms-list.md)
-- [RRL/02_Related Literature/Bangko-Sentral-ng-Pilipinas.md](./02_Related%20Literature/Bangko-Sentral-ng-Pilipinas.md)
+- [Research-Proposal.md](../Documents/Research%20Proposal/Research-Proposal.md)
+- [Bangko-Sentral-ng-Pilipinas](../RRL/02_Summaries/Bangko%20Sentral%20ng%20Pilipinas-2021_summarized.md)
 
 ## Short conclusion
 

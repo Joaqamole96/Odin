@@ -291,8 +291,6 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
 ### Section 1. Financial Behavioral Profile Classifier
 
-> PROP: The following 
-
 ### Section 2. Data Collection
 
 ### Section 3. Data Preprocessing and Cleaning
