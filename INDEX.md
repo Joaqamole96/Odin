@@ -19,7 +19,7 @@
 | RRL topic hierarchy and search prompts | `Topic-Outline.md` |
 | Chapter 1 draft | `Documents/Thesis/Paper/CHAPTER-1/purpose-and-description.md` |
 | Survey instrument | `Survey/PRESURVEY - ODIN.md` |
-| Data synthesis and model training handoffs | `Data/` |
+| Data synthesis and model training handoffs | `Odin-ML/` (separate repo) |
 | RRL source store, summaries, conversions | `RRL/` |
 | Agent navigation and standards | `AGENTS.md` |
 
@@ -36,7 +36,6 @@
 | `Notes.md` | Research notes with addenda on data synthesis. |
 | `Documents/` | Proposal, PRD, specification, alignment reports, screen descriptions, panel feedback. |
 | `RRL/` | Review of Related Literature: PDFs, conversions, summaries, compilations, scripts. |
-| `Model/` | ML model design documents, data analysis, classifier prep. |
 | `Data/` | Data sources: FIES CSV, BSP/PSA data, synthetic data handoffs. |
 | `Survey/` | Pre-survey instrument and notes. |
 | `PDF-to-MD/` | Standalone PDF-to-Markdown converter utility. |
@@ -187,31 +186,14 @@ Full reference: `docs/standards/rrl-naming-conventions.md`
 
 ---
 
-## Model/
-
-| Path | Purpose |
-| :--- | :--- |
-| `Model/MDD.md` | Model Design Document for FBP Classifier (v1.0). |
-| `Model/5.X - Model Design.md` | Model design versions. |
-| `Model/6.X - Model Design.md` | Model design versions. |
-| `Model/8.X - Model Design.md` | Model design versions. |
-| `Model/MDD - Template.md` | MDD template. |
-| `Model/00_Analysis/` | PSA FIES data analysis files. |
-| `Model/00_Preparation/` | Random Forest classifier prep notes. |
-| `Model/01_Design/` | Training data design, synthetic data parameters. |
-
----
-
 ## Data/
 
 | Path | Purpose |
 | :--- | :--- |
-| `Data/Family Income and Expenditure.csv` | FIES CSV data source. |
-| `Data/data-synthesis-handoff.md` | Synthetic data generation pipeline. |
-| `Data/BSP/` | Bangko Sentral ng Pilipinas data (Excel). |
-| `Data/PSA/` | Philippine Statistics Authority data. |
 | `Data/FIDashboard_1Q2023.pdf` | BSP Financial Inclusion Dashboard. |
 | `Data/archive.zip` | Compressed data archive. |
+
+> Model design documents, FIES CSV, BSP/PSA data, and data synthesis handoffs have been moved to `Odin-ML/`.
 
 ---
 
@@ -240,8 +222,8 @@ Standalone local PDF-to-Markdown converter. See `PDF-to-MD/README.md` for usage.
 | Detailed system rules | `Documents/Thesis/System/Specification.md` |
 | Fix specification/PRD mismatches | `Documents/Specification-PRD-Alignment-Report.md` |
 | Review unresolved items | `Open-Items.md` |
-| Plan ML/model implementation | `Model/MDD.md`, `Model/01_Design/`, `Data/data-synthesis-handoff.md` |
-| Ground synthetic data parameters | `Data/synthetic-data-parameters-handoff.md` (in `Model/01_Design/`) |
+| Plan ML/model implementation | `Odin-ML/` (separate repo: `docs/`, `scripts/`) |
+| Ground synthetic data parameters | `Odin-ML/docs/data-synthesis-handoff.md` |
 | Draft RRL topic sections | `Topic-Outline.md`, `RRL/04_Compilations/` |
 | Evaluate one paper's relevance | `RRL/02_Summaries/` |
 | Convert a PDF | `PDF-to-MD/README.md` or `RRL/00_Proc/Z_Marker.py` |

@@ -63,8 +63,7 @@ Odin-Paper/
   Notes.md               # Research notes and addenda
   Documents/             # Formal thesis materials (proposal, PRD, specification, chapters)
   RRL/                   # Review of Related Literature workspace (largest component)
-  Model/                 # ML model design documents and data analysis
-  Data/                  # Statistical data sources (FIES, BSP, PSA)
+  Data/                  # Remaining data sources (FIDashboard, archive)
   Survey/                # Pre-survey instrument
   PDF-to-MD/             # Standalone PDF-to-Markdown converter utility
   docs/                  # Standards and documentation
@@ -129,11 +128,8 @@ Full reference: `docs/standards/rrl-workflow.md`
 
 ## Model & Data
 
-- `Model/00_Analysis/` — PSA FIES data analysis in Markdown
-- `Model/00_Preparation/PREP-RandomForest.md` — RF classifier prep notes
-- `Model/01_Design/` — `model-training-data-design.md`, `synthetic-data-parameters-handoff.md`
-- `Model/MDD.md` — Model Design Document for FBP Classifier (v1.0)
-- `Data/` — FIES CSV, BSP data, PSA data, synthetic data handoff documents
+- `Data/` — Remaining data sources (FIDashboard PDF, archive zip)
+- Model design docs, FIES CSV, BSP/PSA data, synthetic data handoffs are in `Odin-ML/`
 
 ---
 
