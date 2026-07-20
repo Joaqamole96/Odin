@@ -7,7 +7,7 @@
 
 ## Repository Role
 
-This is the **academic documentation repository** for the Odin thesis. It contains thesis documents, literature reviews (RRL), model design specifications, data sources, and survey instruments. It does **not** contain application code, API servers, or ML model implementations — those live in `Odin-App/` and `Odin-ML/` respectively.
+This is the **academic documentation repository** for the Odin thesis. It contains thesis documents, literature reviews (RRL), and survey instruments. It does **not** contain application code, API servers, or ML model implementations — those live in `Odin-App/` and `Odin-ML/` respectively.
 
 ---
 
@@ -39,7 +39,7 @@ Always include a scope. Use imperative mood. 50-72 characters.
 
 | Scope | Use For |
 |-------|---------|
-| `rrl` | RRL corpus: papers, summaries, compilations |
+| `rrl` | RRL corpus: papers, summaries, compilations, syntheses |
 | `model` | Model design documents and data analysis |
 | `data` | Data sources, synthetic data, FIES/BSP files |
 | `docs` | Thesis documents, specifications, chapter drafts |
@@ -58,15 +58,10 @@ Full reference: `docs/standards/git-commit-standards.md`
 Odin-Paper/
   AGENTS.md              # This file — agent navigation and standards
   INDEX.md               # Master navigation index (authoritative)
-  Topic-Outline.md       # RRL topic taxonomy (13 topics, codes 1.A–13.C)
-  Open-Items.md          # Unresolved specification and validation items
-  Notes.md               # Research notes and addenda
-  Documents/             # Formal thesis materials (proposal, PRD, specification, chapters)
-  RRL/                   # Review of Related Literature workspace (largest component)
-  Data/                  # Remaining data sources (FIDashboard, archive)
-  Survey/                # Pre-survey instrument
-  PDF-to-MD/             # Standalone PDF-to-Markdown converter utility
-  docs/                  # Standards and documentation
+  requirements.txt       # Python dependencies for RRL scripts
+  rrl/                   # Review of Related Literature workspace (largest component)
+  docs/                  # Thesis documents and standards
+  survey/                # Survey instruments
 ```
 
 ---
@@ -76,23 +71,23 @@ Odin-Paper/
 | Document | Purpose |
 |----------|---------|
 | **`INDEX.md`** | Master index. Authoritative navigation for all files. |
-| **`Topic-Outline.md`** | RRL topic taxonomy (13 topics, codes 1.A–13.C). Authoritative for topic mapping. |
-| **`Documents/Thesis/System/Specification.md`** | Technical specification (v4.0). The main design contract. |
-| **`Documents/Thesis/System/PRD-Full-Odin-App.md`** | Product requirements. 24 screen descriptions in `SCREEN-DESCRIPTIONS/`. |
-| **`Documents/Research Proposal/Research-Proposal.md`** | Formal RP2 proposal. Authoritative for objectives/scope. |
-| **`Open-Items.md`** | Unresolved specification and validation items. |
+| **`rrl/topic-outline.md`** | RRL topic taxonomy (14 topics, codes 1.A–14.C). Authoritative for topic mapping. |
+| **`docs/thesis/system/Specification.md`** | Technical specification (v4.0). The main design contract. |
+| **`docs/thesis/system/PRD-Full-Odin-App.md`** | Product requirements. 24 screen descriptions in `docs/thesis/system/screen-descriptions/`. |
+| **`docs/research-proposal/Research-Proposal.md`** | Formal RP2 proposal. Authoritative for objectives/scope. |
 
 ---
 
 ## RRL Structure
 
-Every curated paper has three files (same `{stem}`):
+Every curated paper has up to four files (same `{stem}`):
 
 | File | Location |
 |------|----------|
-| `{stem}.pdf` | `RRL/01_Papers/` |
-| `{stem}_marked.md` | `RRL/03_Conversions/` |
-| `{stem}_summarized.md` | `RRL/02_Summaries/` |
+| `{stem}.pdf` | `rrl/papers/` |
+| `{stem}_marked.md` | `rrl/conversions/` |
+| `{stem}_summarized.json` | `rrl/summaries/` |
+| `{stem}_Compilation.md` | `rrl/compilations/` (generated) |
 
 ### File Prefix Convention
 
@@ -104,53 +99,66 @@ Full reference: `docs/standards/rrl-naming-conventions.md`
 
 | Script | Deps | What it does |
 |--------|------|-------------|
-| `RRL/00_Proc/Z_Marker.py` | `markitdown` | Converts PDFs in a dir → `_marked.md` + empty `_summarized.md` |
-| `RRL/00_Proc/Z_Mover.py` | stdlib | Moves processed files from working dir → `01_Papers/`, `02_Summaries/`, `03_Conversions/` |
-| `RRL/Z_Compiler.py` | stdlib | Compiles `_summarized.md` files → single `_Compilation.md` with filters, sorting, range |
-| `RRL/Z_Counter.py` | `pypdf` | Lists PDFs with page counts, optional `--lte`/`--gte` filtering |
-| `RRL/Z_Dupechecker.py` | `PyPDF2` (+ opt `fitz`, `PIL`, `imagehash`) | Finds duplicate PDFs by hash cascade |
-| `PDF-to-MD/pdf_to_md.py` | `pdftotext` in PATH | Standalone PDF→MD converter |
-| `PDF-to-MD/pdf_to_md_server.py` | `pdftotext` in PATH | Web UI at `http://127.0.0.1:8000` |
+| `rrl/scripts/prepare_pdf.py` | `markitdown`, `pypdf` | Converts PDFs → `_marked.md` with YAML frontmatter (metadata, SHA-256, page count) + empty `_summarized.json` |
+| `rrl/scripts/pipeline.py` | stdlib | Orchestrates the full pipeline: convert, manifest, validate, compile |
+| `rrl/scripts/compile_summaries.py` | stdlib | Compiles summaries → single `_Compilation.md` or `.json` with filters, sorting, range |
+| `rrl/scripts/count_pdf_pages.py` | `pypdf` | Lists PDFs with page counts, optional `--lte`/`--gte` filtering |
+| `rrl/scripts/check_dupe_pdfs.py` | `PyPDF2` (+ opt `PyMuPDF`, `Pillow`, `imagehash`) | Finds duplicate PDFs by hash cascade |
 
-### RRL Workflow
+### RRL Workflow (9 Steps)
 
-1. Place candidate PDFs in `RRL/00_Bucket/` or `RRL/00_Proc/`
-2. Convert: `python3 RRL/00_Proc/Z_Marker.py [dir]`
-3. Summarize: use `RRL/00_Proc/0_Summarizer.md` as AI prompt
-4. Move: `python3 RRL/00_Proc/Z_Mover.py` (run from working dir)
-5. Classify into topic folders: copy outputs into matching `RRL/04_Compilations/{Topic}.{Letter}/` folder
-6. Compile: `python3 RRL/Z_Compiler.py -i <dir> -o <outdir> [--topic 7.C] [--designation local] [--sort year]`
-7. Cull: use `RRL/04_Compilations/0_Culler.md` as AI prompt on a compilation
+1. Place candidate PDFs in `rrl/bucket/`
+2. Convert: `python3 rrl/scripts/prepare_pdf.py rrl/bucket/ --page-aware`
+3. Summarize: use `rrl/skills/paper-summarizer-skill.md` as AI prompt (produces JSON)
+4. Move converted/summarized files into `rrl/conversions/` and `rrl/summaries/`
+5. Classify into topic folders: copy outputs into matching `rrl/compilations/{Topic}.{Letter}/` folder
+6. Compile: `python3 rrl/scripts/compile_summaries.py -i <dir> -o <outdir>`
+7. **Synthesize** (per-topic): use `rrl/skills/synthesis-compiler-skill.md` as AI prompt
+8. **Cross-synthesize** (cross-topic): use `rrl/skills/cross-topic-synthesis-skill.md` as AI prompt
+9. Cull: use `rrl/skills/paper-culler-skill.md` as AI prompt on a compilation
 
 Full reference: `docs/standards/rrl-workflow.md`
+
+### AI Agent Skills
+
+| Skill | Purpose |
+|-------|---------|
+| `paper-summarizer-skill.md` | Objective, unbiased JSON summary from `_marked.md` with structured citations |
+| `synthesis-compiler-skill.md` | Per-topic synthesis from a compilation of summaries |
+| `cross-topic-synthesis-skill.md` | Cross-topic synthesis spanning multiple topic domains |
+| `paper-culler-skill.md` | Classify papers as Crucial, Supporting, or Irrelevant |
+| `paper-scorer-skill.md` | Score paper relevance with weighted dimensions |
+| `paper-verifier-skill.md` | Verify summary completeness and designation correctness |
 
 ---
 
 ## Model & Data
 
-- `Data/` — Remaining data sources (FIDashboard PDF, archive zip)
 - Model design docs, FIES CSV, BSP/PSA data, synthetic data handoffs are in `Odin-ML/`
 
 ---
 
 ## Python Environment
 
-A `.venv/` exists (gitignored). Scripts use standard library + these optional packages:
+A `.venv/` exists (gitignored). Install dependencies from the repository root:
+
+```bash
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
 | Package | Required By |
 |---------|------------|
-| `markitdown` | `Z_Marker.py` |
-| `pypdf` | `Z_Counter.py` |
-| `PyPDF2` | `Z_Dupechecker.py` |
-
-Activate before running scripts: `source .venv/bin/activate`
+| `markitdown` | `prepare_pdf.py` |
+| `pypdf` | `count_pdf_pages.py`, `prepare_pdf.py` (--page-aware) |
+| `PyPDF2` | `check_dupe_pdfs.py` |
 
 ---
 
 ## Important Gotchas
 
-- `Documents/Thesis/System/` contains `Specification-(OUTDATED).md` and `Model-&-Algorithm-Plan-(OUTDATED).md` — these are stale. Prefer the non-OUTDATED versions.
-- `RRL/05_Archived/` is empty and should not be used.
-- `Topic-Outline.md` has 13 topics, but `Specification.md` still says "twelve topics" in places.
-- 520 PDFs (~969 MB) are tracked via Git LFS. New clones require `git lfs pull` to fetch binary content.
-- Generated compilation files in `RRL/04_Compilations/` are gitignored. Regenerate with `Z_Compiler.py`.
+- `docs/thesis/system/` contains `Specification-(OUTDATED).md` and `Model-&-Algorithm-Plan-(OUTDATED).md` — these are stale. Prefer the non-OUTDATED versions.
+- `rrl/topic-outline.md` has 14 topics, but `docs/thesis/system/Specification.md` still says "twelve topics" in places.
+- 518 PDFs (~969 MB) are tracked via Git LFS. New clones require `git lfs pull` to fetch binary content.
+- Generated compilation files in `rrl/compilations/` are gitignored. Regenerate with `compile_summaries.py`.
+- Legacy summaries (`.yaml`, `.md`) are still readable by `compile_summaries.py` but new summaries must be `.json`.

@@ -1,16 +1,10 @@
 # Odin-Paper
 
-Academic documentation repository for the thesis **"Development of Odin: A Personal Budget Management System Using Random Forest, LSTM, and Isolation Forest"** by Group 4, III-DCSAD, University of Makati.
+Academic documentation repository for the thesis **"Development of Odin: A Personal Finance Management System For Filipino Working Young Adults Using Random Forest, LSTM, and Isolation Forest"** by Group 4 - Aesir, IV-DCSAD, University of Makati.
 
 ## Purpose
 
-This repository contains thesis documents, the Review of Related Literature (RRL), model design specifications, data sources, and survey instruments. It does not contain application code — those live in sibling repositories:
-
-| Repository | Purpose |
-|------------|---------|
-| `Odin-App/` | Expo React Native mobile app + Express API backend |
-| `Odin-ML/` | FastAPI ML microservice (model training, inference) |
-| `Odin-Paper/` | This repository — thesis documentation and research |
+This repository contains thesis documents, the Review of Related Literature (RRL), and survey instruments.
 
 ## Setup
 
@@ -22,8 +16,8 @@ git clone <repo-url>
 python3 -m venv .venv
 source .venv/bin/activate
 
-# Install optional dependencies for RRL scripts
-pip install markitdown pypdf PyPDF2
+# Install Python dependencies for RRL scripts
+pip install -r requirements.txt
 ```
 
 ## Quick Navigation
@@ -32,22 +26,21 @@ pip install markitdown pypdf PyPDF2
 |----------|------|
 | Master index | `INDEX.md` |
 | Agent guide | `AGENTS.md` |
-| RRL topic taxonomy | `Topic-Outline.md` |
-| Technical specification | `Documents/Thesis/System/Specification.md` |
-| Product requirements | `Documents/Thesis/System/PRD-Full-Odin-App.md` |
-| Research proposal | `Documents/Research Proposal/Research-Proposal.md` |
-| Model design document | `Model/MDD.md` |
-| Data synthesis handoff | `Data/data-synthesis-handoff.md` |
+| RRL topic taxonomy | `rrl/topic-outline.md` |
+| RRL directory | `rrl/README.md` |
+| Technical specification | `docs/thesis/system/Specification.md` |
+| Product requirements | `docs/thesis/system/PRD-Full-Odin-App.md` |
+| Research proposal | `docs/research-proposal/Research-Proposal.md` |
 
 ## RRL Workflow
 
-1. Place PDFs in `RRL/00_Bucket/`
-2. Convert: `python3 RRL/00_Proc/Z_Marker.py [dir]`
-3. Summarize with AI using `RRL/00_Proc/0_Summarizer.md`
-4. Move: `python3 RRL/00_Proc/Z_Mover.py`
-5. Classify into topic folders under `RRL/04_Compilations/`
-6. Compile: `python3 RRL/Z_Compiler.py -i <dir> -o <outdir>`
-7. Cull with AI using `RRL/04_Compilations/0_Culler.md`
+1. Place PDFs in `rrl/bucket/`
+2. Convert: `python3 rrl/scripts/prepare_pdf.py rrl/bucket/`
+3. Summarize with AI using `rrl/skills/paper-summarizer-skill.md`
+4. Move converted/summarized files into `rrl/conversions/` and `rrl/summaries/`
+5. Classify into topic folders under `rrl/compilations/{Topic}.{Letter}/`
+6. Compile: `python3 rrl/scripts/compile_summaries.py -i <dir> -o <outdir>`
+7. Cull with AI using `rrl/skills/paper-culler-skill.md`
 
 ## Git LFS
 
