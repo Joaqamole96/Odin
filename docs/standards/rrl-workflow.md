@@ -1,91 +1,128 @@
 # RRL Processing Workflow
 
-Seven-step workflow for adding and processing literature in the Review of Related Literature.
+Nine-step workflow for adding, processing, and synthesizing literature in the Review of Related Literature.
 
 ## Steps
 
 ### 1. Intake
 
-Place candidate PDFs in `RRL/00_Bucket/` (intake pool) or directly in `RRL/00_Proc/` (active processing).
+Place candidate PDFs in `rrl/bucket/` (intake pool).
 
 ### 2. Convert
 
-Run the Markdown converter on the target directory:
+Run the pipeline orchestrator or the converter directly:
 
 ```bash
-python3 RRL/00_Proc/Z_Marker.py <directory>
+# Full pipeline (recommended):
+python3 rrl/scripts/pipeline.py --input-dir rrl/bucket/ --step convert --page-aware
+
+# Or directly:
+python3 rrl/scripts/prepare_pdf.py rrl/bucket/ --page-aware
 ```
 
-Produces `{stem}_marked.md` in `RRL/03_Conversions/` and an empty `{stem}_summarized.md` in `RRL/02_Summaries/`.
+Produces `{stem}_marked.md` with YAML frontmatter (conversion metadata, SHA-256 hash, page count) and an empty `{stem}_summarized.json`.
 
-Requires: `pip install markitdown`
+Options:
+- `--page-aware`: Add `<!-- PAGE N -->` markers extracted via pypdf
+- `--json-sidecar`: Write a separate `{stem}_conversion_meta.json`
+
+Requires: `markitdown`, `pypdf` (for `--page-aware`)
 
 ### 3. Summarize
 
-Use `RRL/00_Proc/0_Summarizer.md` as an AI agent prompt. Feed it the `_marked.md` file. The agent fills the corresponding `_summarized.md` with a structured YAML summary.
+Use `rrl/skills/paper-summarizer-skill.md` as an AI agent prompt. Feed it the `_marked.md` file. The agent fills the corresponding `_summarized.json` with a structured JSON summary.
+
+The summarizer is **objective and unbiased** — it describes what the paper says without application-specific framing. Page and paragraph references are included in structured `citations` objects.
 
 See `docs/standards/summary-format.md` for the schema reference.
 
 ### 4. Move
 
-Run the file organizer from the working directory:
+Move converted and summarized files into their curated stores:
 
 ```bash
-python3 RRL/00_Proc/Z_Mover.py
+mv <file>_marked.md rrl/conversions/
+mv <file>_summarized.json rrl/summaries/
 ```
-
-Moves processed files from the working directory into `01_Papers/`, `02_Summaries/`, and `03_Conversions/`.
 
 ### 5. Classify into Topics
 
-Copy relevant `_marked.md`, `_summarized.md` files into the matching topic folder:
+Copy relevant `_marked.md`, `_summarized.json` files into the matching topic folder:
 
 ```
-RRL/04_Compilations/{Topic}.{Letter}/
+rrl/compilations/{Topic}.{Letter}/
 ```
 
-Use `Topic-Outline.md` codes (e.g., `5.C/`, `8.B/`) to determine placement.
+Use `rrl/topic-outline.md` codes (e.g., `5.C/`, `8.B/`) to determine placement.
 
 ### 6. Compile
 
 Run the compiler for the relevant topic folder:
 
 ```bash
-python3 RRL/Z_Compiler.py -i <input-dir> -o <output-dir> [--topic 7.C] [--designation local] [--sort year]
+# Markdown compilation (default):
+python3 rrl/scripts/compile_summaries.py -i <dir> -o <outdir> [--topic 7.C] [--designation local] [--sort year]
+
+# JSON compilation:
+python3 rrl/scripts/compile_summaries.py -i <dir> -o <outdir> --format json
+
+# Or use the pipeline orchestrator:
+python3 rrl/scripts/pipeline.py --input-dir <dir> --output-dir <outdir> --step compile
 ```
 
-Produces a single `_Compilation.md` combining all summaries in the directory.
+Produces a single `_Compilation.md` (or `.json`) combining all summaries in the directory.
 
-### 7. Cull
+### 7. Synthesize (per-topic)
 
-Use `RRL/04_Compilations/0_Culler.md` as an AI agent prompt on a compilation file. The agent classifies each paper as **Crucial**, **Supporting**, or **Irrelevant**.
+Use `rrl/skills/synthesis-compiler-skill.md` as an AI agent prompt on a compilation file. The agent produces a synthesis document that integrates findings across papers for a single topic.
 
-Papers judged irrelevant are moved to `RRL/04_Compilations/01_Irrelevant/`.
+Output: `rrl/syntheses/{Topic}.{Letter}_Synthesis.md`
+
+The synthesis identifies:
+- Areas of agreement across papers
+- Areas of disagreement or diverging findings
+- Gaps in the literature (methodological, empirical, conceptual)
+- Key claims with structured citations
+
+### 8. Cross-Synthesize (cross-topic)
+
+Use `rrl/skills/cross-topic-synthesis-skill.md` as an AI agent prompt on two or more per-topic synthesis documents. The agent produces a cross-topic synthesis.
+
+Output: `rrl/syntheses/{TopicA}x{TopicB}_Cross-Synthesis.md`
+
+The cross-synthesis identifies:
+- Cross-cutting themes spanning multiple topics
+- Dependencies and interactions between topics
+- Tensions where findings pull in opposite directions
+- Cross-cutting gaps requiring multi-topic research
+
+### 9. Cull
+
+Use `rrl/skills/paper-culler-skill.md` as an AI agent prompt on a compilation. The agent classifies each paper as **Crucial**, **Supporting**, or **Irrelevant**.
 
 ## Python Dependencies
 
 | Package | Required By |
 |---------|------------|
-| `markitdown` | `Z_Marker.py` |
-| `pypdf` | `Z_Counter.py` |
-| `PyPDF2` | `Z_Dupechecker.py` |
+| `markitdown` | `prepare_pdf.py` |
+| `pypdf` | `count_pdf_pages.py`, `prepare_pdf.py` (--page-aware) |
+| `PyPDF2` | `check_dupe_pdfs.py` |
 
-Standard library only: `Z_Mover.py`, `Z_Compiler.py`.
+Standard library only: `compile_summaries.py`, `pipeline.py`.
 
-Activate `.venv` before running any script:
+Install from repository root:
 
 ```bash
 source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ## Utility Scripts
 
 | Script | Purpose |
 |--------|---------|
-| `RRL/00_Proc/Z_Marker.py` | Convert PDFs to Markdown |
-| `RRL/00_Proc/Z_Mover.py` | Sort processed files into curated stores |
-| `RRL/Z_Compiler.py` | Compile summaries into a single document |
-| `RRL/Z_Counter.py` | List PDFs with page counts |
-| `RRL/Z_Dupechecker.py` | Find duplicate PDFs by hash cascade |
-| `PDF-to-MD/pdf_to_md.py` | Standalone PDF-to-Markdown converter |
-| `PDF-to-MD/pdf_to_md_server.py` | Browser-based PDF conversion UI |
+| `rrl/scripts/prepare_pdf.py` | Convert PDFs to Markdown with metadata |
+| `rrl/scripts/pipeline.py` | Orchestrate the full pipeline |
+| `rrl/scripts/compile_summaries.py` | Compile summaries into a single document |
+| `rrl/scripts/count_pdf_pages.py` | List PDFs with page counts |
+| `rrl/scripts/check_dupe_pdfs.py` | Find duplicate PDFs by hash cascade |

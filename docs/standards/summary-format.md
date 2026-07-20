@@ -1,52 +1,63 @@
 # RRL Summary Format
 
-Reference for the structured YAML summary schema used in `RRL/02_Summaries/`.
+Reference for the structured JSON summary schema used in `rrl/summaries/`.
 
-Full prompt: `RRL/00_Proc/0_Summarizer.md`
+Full prompt: `rrl/skills/paper-summarizer-skill.md`
 
 ## Schema
 
-```yaml
-paper_id: string        # DOI or UUIDv5, never null
-designation: string     # "local" | "international" | "local-algorithm-specific" | "international-algorithm-specific"
-title: string
-authors: string         # "Last, F.; Last, F." or "Unknown"
-year: integer
-venue: string           # full name or "Unknown"
-odin_topics:            # list of topic codes (max 20)
-  - string
-tldr: string            # one sentence, max 50 words, no "This paper" start
-problem_and_motivation: string   # max 3 sentences, no methodology
-approach:               # list of strings, each <=50 words, max 10
-  - string
-findings:               # list of strings. Use "num: " prefix for quantitative.
-  - string
-key_figures_tables:     # list of strings, each "Figure X: description -> takeaway"
-  - string
-key_equations:          # list of objects with "equation" and "explanation" fields
-  - equation: string
-    explanation: string # <=15 words
-definitions:            # list of {term, definition}
-  - term: string
-    definition: string
-critical_citations:     # list of strings, each "[Author, Year] -- reason"
-  - string
-relevance:
-  topics:               # list of objects with code, name, relevance, justification
-    - code: string
-      name: string
-      relevance: string  # "high" | "medium" | "low" | "contextual"
-      justification: string
-  contribution: string  # 3-5 sentences as a single string
-  directly_justifies:   # list of strings, each a citable claim <=30 words
-    - string
-  limits:               # list of strings; if none, list contains "None identified."
-    - string
-  mapping_rationale: string  # paragraph describing the systematic scan across all domains
-limitations:            # list of strings; use "[unacknowledged]" suffix if needed
-  - string
-remember_this:          # list of strings, each a key takeaway <=20 words
-  - string
+```json
+{
+  "paper_id": "string — DOI (10.XXXX/...) or UUIDv5, never null",
+  "designation": "local | international | local-algorithm-specific | international-algorithm-specific",
+  "title": "string",
+  "authors": "string — 'Last, F.; Last, F.' or 'Unknown'",
+  "year": 0,
+  "venue": "string — full name or 'Unknown'",
+  "odin_topics": ["string — topic codes, max 20"],
+  "tldr": "string — one sentence, max 50 words, no 'This paper' start",
+  "problem_and_motivation": "string — max 3 sentences, no methodology",
+  "approach": ["string — each <=50 words, max 10 items"],
+  "findings": ["string — prefix quantitative with 'num: ', max 10 items"],
+  "key_figures_tables": ["string — 'Figure X: description → takeaway'"],
+  "key_equations": [{"equation": "string", "explanation": "string — <=15 words"}],
+  "definitions": [{"term": "string", "definition": "string"}],
+  "citations": [
+    {
+      "author": "string",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "string — <=30 words",
+      "role": "methodology | finding | baseline | critique | context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "string",
+        "name": "string",
+        "relevance": "high | medium | low | contextual",
+        "justification": "string"
+      }
+    ],
+    "contribution_to_field": "string — 3-5 sentences",
+    "directly_justifies": ["string — citable claims, <=30 words each"],
+    "limits": ["string — or 'None identified.'"],
+    "topic_mapping_rationale": "string — paragraph"
+  },
+  "limitations": ["string — use '[unacknowledged]' suffix if needed"],
+  "remember_this": ["string — key takeaways, <=20 words, 3-5 items"],
+  "summarization_metadata": {
+    "summarized_at": "ISO-8601 timestamp",
+    "summarizer_model": "string",
+    "conversion_reference": {
+      "file": "string — source _marked.md filename",
+      "converted_at": "ISO-8601 timestamp or null",
+      "converter_tool": "string or null"
+    }
+  }
+}
 ```
 
 ## Designation Decision Tree
@@ -70,6 +81,16 @@ remember_this:          # list of strings, each a key takeaway <=20 words
 | `low` | Tangentially related, mentions topic in passing |
 | `contextual` | Background framing only, no actionable insight |
 
+## Citation Roles
+
+| Role | Definition |
+|------|-----------|
+| `methodology` | Cited work provides the method, framework, or approach |
+| `finding` | Cited work provides a specific empirical result |
+| `baseline` | Cited work serves as comparison or prior art |
+| `critique` | Cited work challenges or qualifies the paper's claims |
+| `context` | Cited work provides background or motivation |
+
 ## Field Rules
 
 - `tldr`: One sentence, max 50 words. Never starts with "This paper" or "The authors."
@@ -77,4 +98,18 @@ remember_this:          # list of strings, each a key takeaway <=20 words
 - `approach`: Each item <=50 words, ends with period. Max 10 items.
 - `findings`: Prefix quantitative results with `"num: "`. Max 10 items.
 - `remember_this`: 3-5 items, each <=20 words. No emojis, no numbering.
-- `relevance.mapping_rationale`: Must explicitly state that all 13 topics were systematically scanned.
+- `topic_relevance.topic_mapping_rationale`: Must explicitly state that all topic domains were systematically scanned.
+- `citations`: Maximum 15 entries. Each `claim` must be specific and <=30 words.
+- `summarization_metadata.conversion_reference`: Populated from the YAML frontmatter of the source `_marked.md` file.
+
+## Summary File Naming
+
+```
+{stem}_summarized.json
+```
+
+Example: `Cabalfin et al_summarized.json`
+
+## Legacy Formats
+
+YAML (`.yaml`) and Markdown (`.md`) summaries are still supported for reading by `compile_summaries.py`, but all new summaries must be produced as JSON.

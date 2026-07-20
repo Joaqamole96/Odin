@@ -18,14 +18,38 @@ Every curated paper file uses a prefix to indicate geographic/institutional orig
 
 ## Processing Suffixes
 
-Each paper has up to three files, distinguished by suffix:
+Each paper has up to four files, distinguished by suffix:
 
 | Suffix | Meaning | Location |
 |--------|---------|----------|
-| `.pdf` | Source paper PDF | `RRL/01_Papers/` |
-| `_marked.md` | Markdown conversion (extracted text) | `RRL/03_Conversions/` |
-| `_summarized.md` | Structured YAML summary | `RRL/02_Summaries/` |
-| `_Compilation.md` | Multi-paper compilation for a topic | `RRL/04_Compilations/` |
+| `.pdf` | Source paper PDF | `rrl/papers/` |
+| `_marked.md` | Markdown conversion with YAML frontmatter | `rrl/conversions/` |
+| `_summarized.json` | Structured JSON summary | `rrl/summaries/` |
+| `_Compilation.md` | Multi-paper compilation for a topic | `rrl/compilations/` |
+
+### Legacy Suffixes
+
+The following suffixes are still supported for reading but should not be produced for new files:
+
+| Suffix | Legacy Meaning |
+|--------|---------------|
+| `_summarized.yaml` | YAML summary (pre-v6.0) |
+| `_summarized.md` | Markdown summary (pre-v6.0) |
+
+## Synthesis File Naming
+
+Per-topic and cross-topic synthesis documents use this convention:
+
+```
+{Topic}.{Letter}_Synthesis.md
+```
+
+Examples:
+- `6.A_Synthesis.md` — synthesis for Topic 6.A (Predictive Modeling)
+- `5.C_Synthesis.md` — synthesis for Topic 5.C (Classification Approaches)
+- `7x8_Cross-Synthesis.md` — cross-topic synthesis for Topics 7 and 8
+
+Location: `rrl/syntheses/`
 
 ## File Stem Format
 
@@ -42,12 +66,12 @@ The `LetterSuffix` (a, b, c...) is used when multiple papers share the same auth
 
 ## Topic-Subtopic Folder Codes
 
-RRL compilation folders use codes from `Topic-Outline.md`:
+RRL compilation folders use codes from `topic-outline.md`:
 
 ```
-RRL/04_Compilations/{Topic}.{Letter}/
+rrl/compilations/{Topic}.{Letter}/
 ```
 
-Examples: `1.A/`, `5.C/`, `8.B/`, `13.A/`
+Examples: `1.A/`, `5.C/`, `8.B/`, `14.A/`
 
 The special folder `01_Irrelevant/` holds papers culled from the active corpus.
