@@ -1,0 +1,140 @@
+
+paper_id: 10.2139/ssrn.6377518
+designation: international
+title: Artificial Intelligence Powered Personal Finance Management System
+authors: Chahar, P.; Vishwakarma, Y.; Mishra, R.; Paliwal, G.
+year: 2025
+venue: International Conference on Innovative Computing and Communication
+odin_topics:
+  - 3.A
+  - 3.B
+  - 4.A
+  - 4.B
+  - 6.A
+  - 7.A
+  - 7.B
+  - 8.A
+  - 10.A
+  - 11.A
+tldr: Proposes an AI-powered personal finance assistant using ML and NLP for dynamic, user-specific financial insights, budget recommendations, and financial education.
+problem_and_motivation: Existing personal finance solutions rely on static budgeting and generic advice, lacking adaptability and personalization. Individuals struggle with financial planning due to complex financial systems and limited literacy. This paper aims to address these gaps with an intelligent, adaptive, and educational system.
+approach:
+  - The system architecture comprises six modules: data collection, expense classification, predictive analytics, recommendation, NLP interface, and security.
+  - Expense classification uses supervised ML (Random Forest, SVM, LSTM) on transaction metadata and text descriptions, employing TF-IDF and word embeddings.
+  - Predictive analytics applies time series forecasting (ARIMA, LSTM) to predict future expenses and income for proactive planning.
+  - A recommendation system provides personalized financial advice and budgeting tips based on user behavior, goals, and predictive insights.
+  - The system is implemented with React.js for the frontend, Flask for the backend and ML operations, and MongoDB for data storage.
+  - Security is addressed with end-to-end encryption, role-based access control, and anonymization for training data, complying with GDPR.
+findings:
+  - num: The system achieved a user satisfaction rating of 4.4/5, with high scores for ease of use (4.5/5) and goal-setting functionality (4.3/5).
+  - num: Transaction categorization accuracy was rated 4.2/5, though some users noted issues with ambiguous or vendor-specific transactions.
+  - The system effectively provides a comprehensive financial overview through automated data aggregation and analysis.
+  - Adaptive budgets based on spending habits and income sources were successfully generated using ML techniques.
+  - Incorporating educational modules was identified as a key feature for improving financial literacy.
+  - The system performed well for users with stable incomes but struggled with irregular income streams and highly variable expenses.
+  - Model adaptability was a challenge, particularly for users with fluctuating earnings or atypical spending patterns.
+  - Data quality and accessibility were identified as critical factors influencing the accuracy of predictions and recommendations.
+  - User trust and adoption remain significant challenges, requiring transparent interfaces and clear explanations of AI decision-making.
+  - Regulatory compliance and risk management, including algorithmic bias and model drift, require ongoing attention.
+key_figures_tables:
+  - "Figure 1: Real-time budget display → Shows a dashboard for current budget tracking."
+  - "Figure 2: Jinja2 HTML template for expense data submission and visualization → Displays a user interface for expense input and chart rendering."
+  - "Figure 3: SQL view for monthly financial summary → Defines a database view for calculating income, expenses, and savings per user."
+  - "Figure 4: Data flow diagram → Illustrates the flow from user data input to the AI engine and back to the UI."
+  - "Figure 6: Distribution of expenses across transaction types → Pie chart showing percentage breakdown of spending categories."
+  - "Table 1: AI-powered finance management tools → Summarizes features, AI techniques, strengths, and limitations of existing tools like Mint, YNAB, Digit, and Tally."
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: "PFMS"
+    definition: "Personal Finance Management System"
+  - term: "NLP"
+    definition: "Natural Language Processing"
+  - term: "ML"
+    definition: "Machine Learning"
+  - term: "GDPR"
+    definition: "General Data Protection Regulation"
+  - term: "ARIMA"
+    definition: "Autoregressive Integrated Moving Average"
+  - term: "LSTM"
+    definition: "Long Short-Term Memory"
+  - term: "SVM"
+    definition: "Support Vector Machine"
+critical_citations:
+  - "[Zhang et al., 2007] — Uses decision trees and SVM for classification."
+  - "[Siami-Namini et al., 2018] — Compares ARIMA and LSTM for forecasting."
+  - "[Luef et al., 2020] — Applies recommendation systems in finance."
+  - "[Galperti, 2019] — Provides a theory of personal budgeting."
+  - "[Paliwal et al., 2025] — Discusses trust in AI systems."
+relevance:
+  topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: high
+      justification: "Proposes ML models (RF, SVM, LSTM) for automated expense categorization."
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: medium
+      justification: "Discusses categorization into meaningful groups like food, transport, utilities."
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: high
+      justification: "Reviews existing tools (Mint, YNAB, Digit) and their limitations."
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: "Critiques static, rule-based designs and lack of personalization in current systems."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: medium
+      justification: "Applies ARIMA and LSTM for expense and income forecasting."
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: contextual
+      justification: "Mentions LSTM for sequential analysis but does not detail the algorithm."
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: high
+      justification: "Discusses goal-based and adaptive budgeting strategies."
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: high
+      justification: "Generates personalized budget recommendations based on spending behavior."
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: low
+      justification: "Mentions fraud and anomaly detection but does not specify the approach."
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: "Describes encryption, access control, and GDPR compliance for data protection."
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: low
+      justification: "Mentions user satisfaction and engagement as key to system success."
+  contribution: "This paper provides a high-level blueprint for an AI-powered PFMS, justifying the integration of ML and NLP to address the limitations of static budgeting tools. It directly supports Odin's rationale for using predictive analytics and expense classification as core modules by reviewing relevant techniques and their applications. The paper's discussion of user trust and data security underlines the importance of these non-functional requirements for Odin's design. The systematic literature review and proposed architecture offer a foundation for building Odin's recommendation and classification engines, although it does not provide deep algorithmic details. The evaluation using user satisfaction metrics provides a benchmark for assessing Odin's user-centered design goals."
+  directly_justifies:
+    - "AI systems can learn from individual spending patterns to provide predictive insights and tailored advice."
+    - "Expense classification models using ML are fundamental for budget management and visualizing spending habits."
+    - "Predictive analytics enable users to plan budgets proactively and anticipate financial shortfalls."
+    - "Recommendation systems enhance engagement by tailoring financial guidance to individual user profiles and goals."
+    - "Security and privacy measures like encryption and anonymization are critical for user trust in PFMS."
+  limits:
+    - "The paper is a proposal and literature review, lacking empirical evaluation of its own AI models."
+    - "The proposed system's performance for users with irregular income is acknowledged as a challenge, but not fully resolved."
+    - "The paper does not provide a detailed comparison of the proposed system against existing state-of-the-art AI techniques."
+    - "The security and privacy measures are mentioned at a high level, without implementation details or validation."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The domains of 'Expense Categorization' (3.A, 3.B), 'Existing Systems & Gaps' (4.A, 4.B), and 'Budget Recommendation' (7.A, 7.B) were flagged as high relevance because the paper directly addresses these with proposed ML solutions and reviews existing tools. 'Spending Forecasting' (6.A) was medium relevance as the paper discusses forecasting methods. 'Data Privacy & User Trust' (10.A) and 'User Retention & Engagement' (11.A) were low/medium relevance, as they are mentioned but not the core focus. Topics like 'Anomaly Detection' (8.A) and 'Forecasting Algorithms for Sequential Spending Data' (6.B) were considered but rejected or given low/contextual relevance due to the paper's lack of algorithmic depth. The paper was also considered for 'Savings & Debt Management' (13.A-C), but it only briefly mentions savings, not in a specific module, so it was rejected. Overall, the paper provides a strong high-level justification for the core modules of an AI-powered PFMS but lacks the technical specificity required for direct implementation of Odin's algorithms."
+limitations:
+  - "As a proposal paper, it does not present empirical results for its own proposed system, limiting the validation of its claims."
+  - "The evaluation is based on a literature review and preliminary prototype feedback, not a fully deployed system."
+  - "The paper acknowledges challenges with data quality and adaptability for irregular incomes but does not offer concrete solutions."
+  - "The discussion of AI techniques is high-level and lacks the detail necessary for a direct implementation in Odin."
+  - "User trust and adoption challenges are identified but the paper does not propose novel methods to address these beyond transparency."
+remember_this:
+  - "Achieved a 4.4/5 user satisfaction rating for its PFMS prototype."
+  - "Uses ML for expense classification and LSTM for spending prediction."
+  - "Identifies user trust and data quality as key adoption barriers."
+  - "Recommends adaptive budgeting based on income and spending habits."
+  - "Emphasizes financial literacy education as a core system feature."

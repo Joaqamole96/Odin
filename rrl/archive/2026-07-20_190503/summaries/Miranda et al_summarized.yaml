@@ -1,0 +1,83 @@
+
+paper_id: "10.48550/arXiv.2506.12345"
+designation: "international-algorithm-specific"
+title: "Polyglot Teachers: Evaluating Language Models for Multilingual Synthetic Data Generation"
+authors: "Miranda, L. J. V.; Vulic, I.; Korhonen, A."
+year: 2026
+venue: "arXiv"
+odin_topics:
+  - "4.B"
+  - "12.B"
+tldr: "Evaluating ten language models as multilingual teachers for synthetic data generation reveals that model scale does not predict effectiveness; data quality metrics explain over 93% of variance and predict student performance."
+problem_and_motivation: "Current teacher model selection for multilingual synthetic data generation is ad hoc, often defaulting to largest models despite capability gaps in non-English languages. This leads to poor-quality data and suboptimal student performance. A systematic characterization of what makes an effective multilingual teacher is missing."
+approach:
+  - "They evaluate 10 state-of-the-art LMs across 6 typologically diverse languages using three synthetic data generation methods: Generate, Translate, and Respond."
+  - "They generate over 1.4 million SFT examples and fine-tune 240 student models from OLMo 3 7B."
+  - "They compute intrinsic data quality metrics: prompt/response diversity, perplexity, and a multilingual reward model score."
+  - "They measure extrinsic student performance via Performance Gap Recovered (PGR) on cultural, chat, and math benchmarks."
+  - "They aggregate intrinsic and extrinsic metrics into a single POLYGLOT SCORE (PG-SCORE) using z-score normalization."
+findings:
+  - "num: Gemma 3 27B and Aya Expanse 32B achieve the highest average PG-SCORE of 0.726 and 0.706, respectively."
+  - "Model scale does not significantly predict teacher effectiveness (p > 0.05)."
+  - "Intrinsic data quality metrics explain 93.3% of variance and predict student performance with R^2 = 0.664."
+  - "Matching teacher and student model families yields at least +20.5% higher PG-SCORE compared to mismatched pairs."
+  - "For low-resource languages, Translate and Respond methods outperform Generate, with gains up to 458.9% for some teachers."
+key_figures_tables:
+  - "Table 1: PG-SCORE rankings of 10 teacher models across 6 languages → Gemma 3 27B and Aya Expanse 32B are top performers."
+  - "Figure 2: PG-SCORE generalizes across different student base models, with family-matched pairs showing consistent improvements."
+  - "Table 2: PG-SCORE by data generation method; Generate works best for high-resource languages, Translate/Respond for low-resource."
+  - "Figure 4: Linear regression of intrinsic principal components predicts extrinsic student performance with R^2=0.664."
+key_equations:
+  - equation: "$\\text{Intrinsic}_{T,\\ell} = \\frac{1}{|\\mathcal{M}|} \\sum_{m \\in \\mathcal{M}} z\\text{-score}(m(\\mathcal{D}_{T,\\ell}))$"
+    explanation: "Averages z-scored diversity, perplexity, and reward metrics."
+  - equation: "$\\text{Extrinsic}_{T,\\ell} = \\frac{1}{|\\mathcal{B}|} \\sum_{b \\in \\mathcal{B}} \\frac{\\text{score}_b(S_{T,\\ell}) - \\text{score}_b(S_\\phi)}{\\text{score}_b(S_{\\text{REF}}) - \\text{score}_b(S_\\phi)}$"
+    explanation: "Performance Gap Recovered averaged over benchmark tasks."
+  - equation: "$\\text{PG-SCORE}_{T,\\ell} = z\\text{-score}(\\text{Intrinsic}_{T,\\ell} + \\text{Extrinsic}_{T,\\ell})$"
+    explanation: "Combined metric for teacher effectiveness."
+definitions:
+  - term: "PG-SCORE"
+    definition: "Metric combining intrinsic data quality and extrinsic student performance to evaluate teacher effectiveness."
+  - term: "PGR"
+    definition: "Performance Gap Recovered, measures student improvement over base model relative to a reference."
+  - term: "SFT"
+    definition: "Supervised fine-tuning."
+  - term: "LM"
+    definition: "Language model."
+  - term: "PPL"
+    definition: "Perplexity."
+critical_citations:
+  - "[Kim et al., 2025] — proposed extrinsic-only evaluation for English teachers."
+  - "[Xu et al., 2025b] — showed stronger models not always better for English instruction tuning."
+  - "[Aryabumi et al., 2024] — Aya dataset for multilingual instruction tuning."
+relevance:
+  topics:
+    - code: "4.B"
+      name: "Limitations and Gaps in Existing Systems"
+      relevance: "contextual"
+      justification: "Identifies limitations in existing ad-hoc teacher selection for multilingual data generation, relevant to gaps in systems."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "medium"
+      justification: "Proposes a comprehensive evaluation metric (PG-SCORE) combining intrinsic and extrinsic measures, applicable to evaluating algorithmic modules."
+  contribution: "The paper's evaluation framework (PG-SCORE) can inform Odin's module evaluation strategy by combining intrinsic data quality metrics with downstream performance. Its findings on family matching and data generation methods may guide the selection of ML models for Filipino-specific tasks. The systematic analysis of data quality predictors offers a methodology for evaluating algorithmic modules without full training runs. However, the paper does not address personal finance or Filipino financial behavior directly."
+  directly_justifies:
+    - "Intrinsic data quality metrics can serve as proxies for student performance, reducing evaluation cost."
+    - "Teacher-student model family matching improves synthetic data quality, a heuristic applicable to model selection."
+    - "For low-resource languages, generating responses to existing prompts or translating from English is more effective than generating from scratch."
+  limits:
+    - "Evaluation limited to 6 typologically diverse languages, may not generalize to all languages."
+    - "Translation-based method assumes English prompts and may introduce translationese artifacts."
+    - "Potential amplification of biases present in teacher models, especially for underrepresented languages."
+    - "The study does not test on personal finance data or Filipino-specific tasks beyond a single held-out case."
+  mapping_rationale: "Systematic scan across all 12 functional domains and their associated topic codes flagged only the System Evaluation domain as relevant. Specifically, the paper's contribution of a novel evaluation metric (PG-SCORE) directly supports topic 12.B (Evaluation of Algorithmic Modules) with medium relevance, as it provides a comprehensive methodology for assessing algorithmic performance. Topic 4.B (Limitations and Gaps in Existing Systems) was assigned contextual relevance because the paper identifies ad-hoc teacher selection as a gap in current synthetic data practices, but this is not specific to PFMS. Domains such as Filipino Cultural Context, Expense Categorization, Behavioral Profiling, and Spending Forecasting were rejected because the paper does not address financial behaviors or personal finance applications. Overall, the paper is methodologically relevant to Odin's evaluation strategies but not directly actionable for financial modules."
+limitations:
+  - "Evaluation limited to 6 typologically diverse languages, may not generalize to all languages."
+  - "Translation-based method assumes English prompts and may introduce translationese artifacts."
+  - "Potential amplification of biases present in teacher models, especially for underrepresented languages."
+  - "The study does not test on personal finance data or Filipino-specific tasks beyond a single held-out case. [unacknowledged]"
+remember_this:
+  - "Gemma 3 27B and Aya Expanse 32B are the most effective multilingual teachers."
+  - "Model scale alone does not predict teacher effectiveness; data quality metrics explain 93% of variance."
+  - "Family-matched teacher-student pairs yield at least +20.5% higher performance."
+  - "For low-resource languages, Translate and Respond methods outperform Generate with up to 458.9% gains."
+  - "Intrinsic data quality metrics can predict student performance with R^2=0.664."

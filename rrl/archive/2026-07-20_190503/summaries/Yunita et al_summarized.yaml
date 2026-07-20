@@ -1,0 +1,139 @@
+
+paper_id: 10.1016/j.mex.2025.103462
+designation: international-algorithm-specific
+title: Performance analysis of neural network architectures for time series forecasting: A comparative study of RNN, LSTM, GRU, and hybrid models
+authors: Yunita, A.; Pratama, M. I.; Almuzakki, M. Z.; Ramadhan, H.; Akhir, E. A. P.; Mansur, A. B. F.; Basori, A. H.
+year: 2025
+venue: MethodsX
+odin_topics:
+  - 6.A
+  - 6.B
+  - 8.B
+  - 8.C
+  - 12.A
+  - 12.B
+  - 12.C
+tldr: Benchmarks nine RNN, LSTM, GRU, and hybrid architectures using Monte Carlo simulation across three datasets; Friedman test shows no statistically significant performance differences despite descriptive advantages for LSTM-based hybrids.
+problem_and_motivation: The inherent variability in neural network performance due to random weight initialization raises concerns about the reliability and consistency of these architectures for time series analysis. Previous studies proposing hybrid models often train them only once, failing to account for performance variance. A systematic benchmark that evaluates model stability across multiple runs is needed to guide reliable architecture selection.
+approach:
+  - Evaluated nine architectures: vanilla RNN, LSTM, GRU, and six hybrids (RNN-LSTM, RNN-GRU, LSTM-RNN, GRU-RNN, LSTM-GRU, GRU-LSTM).
+  - Used three real-world time series datasets: sunspot activity (monthly, n=3625), Indonesian COVID-19 cases (daily, n=634), and dissolved oxygen readings (daily, n=1033).
+  - Implemented Monte Carlo simulation with 100 independent iterations per model, each with 100 training epochs, using a 70:30 or 80:20 train-test split.
+  - Evaluated performance using MAE, MAPE, RMSE, and computation time, with results analyzed via 95% confidence interval trimming.
+  - Applied the Friedman test as a non-parametric statistical comparison to assess performance differences across architectures and datasets.
+findings:
+  - num: The Friedman test revealed no statistically significant differences among the nine architectures (χ²=12.593, df=8, p=.127).
+  - num: LSTM-GRU achieved the lowest mean rank (2.23) across all datasets, while vanilla RNN showed the highest (8.57).
+  - num: For sunspot forecasting, LSTM-GRU had the lowest RMSE (23.205 ± 0.827), and GRU-LSTM achieved the best MAPE (36.242% ± 3.627%).
+  - num: For COVID-19 case prediction, standalone LSTM performed best with the lowest MAPE (9.036% ± 0.778%) and competitive MAE (0.903 ± 0.091).
+  - num: For dissolved oxygen forecasting, LSTM-RNN achieved the lowest MAE (2.970 ± 0.229) and RMSE (4.041 ± 0.242).
+  - LSTM-based hybrid architectures consistently demonstrated superior descriptive performance and stability across datasets compared to single architectures.
+  - Vanilla RNN exhibited the fastest computation time but showed the highest error rates and largest variance across all datasets.
+  - The LSTM-RNN hybrid offered an optimal balance between prediction accuracy and computational efficiency.
+  - Hybrid architectures generally outperformed single-architecture models in descriptive analysis.
+key_figures_tables:
+  - Table 1: Dataset characteristics including record counts, interval types, and value ranges → Provides context for evaluating model performance across diverse data distributions.
+  - Table 2: Detailed architecture specifications with layer types and parameter counts → Shows the structural design and complexity of each benchmarked model.
+  - Table 3: Performance comparison across all architectures with mean ranks → Demonstrates relative performance tiers despite non-significant statistical differences.
+  - Table 4: Overall model rankings based on Friedman test → Shows LSTM-GRU as best performer (rank 2.23) and vanilla RNN as worst (rank 8.57).
+  - Figure 4: Box plots of error metrics for sunspot dataset → Visualizes performance stability and variance across architectures.
+  - Figure 6: Benchmark results for COVID-19 dataset → Shows vanilla LSTM's superior performance for epidemiological forecasting.
+  - Figure 8: Evaluation metrics for oxygen dataset → Demonstrates LSTM-RNN's balanced accuracy and stability.
+key_equations:
+  - equation: "MAE = (1/n) Σ |y_i - ŷ_i|"
+    explanation: Average magnitude of prediction errors in original units.
+  - equation: "MAPE = (100/n) Σ |(y_i - ŷ_i) / y_i|"
+    explanation: Scale-independent percentage error for comparing across magnitudes.
+  - equation: "RMSE = sqrt((1/n) Σ (y_i - ŷ_i)²)"
+    explanation: Penalizes larger errors heavily, sensitive to outliers.
+  - equation: "h_t^R = g(W · x_t + U · h_{t-1}^R + b)"
+    explanation: RNN hidden state update with activation function.
+  - equation: "z_t = σ(W_xz x_t + W_hz h_{t-1} + b_z)"
+    explanation: GRU update gate controlling information retention.
+definitions:
+  - term: RNN
+    definition: Recurrent Neural Network; processes sequential data using hidden states that capture temporal dependencies.
+  - term: LSTM
+    definition: Long Short-Term Memory; RNN variant with cell state and three gates to address vanishing gradient and long-term dependencies.
+  - term: GRU
+    definition: Gated Recurrent Unit; LSTM variant with two gates (update and reset) offering simpler architecture.
+  - term: Monte Carlo simulation
+    definition: Probabilistic evaluation method using repeated random sampling to quantify model performance uncertainty.
+  - term: Hybrid model
+    definition: Neural network combining two different recurrent architectures in stacked configuration.
+  - term: MAE
+    definition: Mean Absolute Error; average absolute difference between predicted and actual values.
+  - term: MAPE
+    definition: Mean Absolute Percentage Error; relative error measure expressed as percentage.
+  - term: RMSE
+    definition: Root Mean Square Error; square root of average squared differences, penalizing larger errors.
+  - term: Friedman test
+    definition: Non-parametric statistical test comparing multiple models across datasets using rank-based analysis.
+critical_citations:
+  - "[Demšar, 2006] — Standard reference for statistical comparisons of classifiers."
+  - "[Chung et al., 2014] — Empirical evaluation of GRU architecture and parameter efficiency."
+  - "[Hochreiter & Schmidhuber, 1997] — Original LSTM paper establishing the architecture."
+  - "[Le et al., 2024] — Prior use of Monte Carlo evaluation for neural network benchmarking."
+  - "[Shewalkar et al., 2019] — Comparative analysis of RNN, LSTM, and GRU for speech recognition."
+relevance:
+  topics:
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Directly benchmarks forecasting architectures applicable to spending prediction.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Evaluates RNN, LSTM, GRU, and hybrids specifically for time series forecasting.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: Provides methodology for evaluating time series prediction stability that could extend to anomaly detection.
+    - code: 8.C
+      name: Cold-Start Baseline Strategies for Anomaly Detection
+      relevance: medium
+      justification: Monte Carlo evaluation addresses model stability concerns relevant to cold-start scenarios.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Demonstrates systematic benchmarking methodology with multiple metrics and statistical testing.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Provides rigorous comparative evaluation of different neural network architectures.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: medium
+      justification: Monte Carlo and Friedman test methodology applicable to budget recommendation evaluation.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: low
+      justification: Uses LSTM and RNN architectures that could be adapted for behavioral classification.
+  contribution: This paper provides a validated benchmarking methodology for evaluating time series forecasting architectures that can directly inform Odin's spending forecasting module selection. The Monte Carlo evaluation framework offers a reliable approach to assess model stability, which is critical for financial prediction systems where prediction consistency is as important as accuracy. The comparative analysis shows that while statistical differences may be non-significant, LSTM-based hybrids offer practical advantages in stability across diverse data patterns, guiding Odin's architectural decisions for its predictive engine. The study's methodology for handling performance variance due to random initialization provides a template for Odin's model evaluation pipeline.
+  directly_justifies:
+    - Odin's forecasting module should evaluate models using Monte Carlo simulation across multiple runs to assess stability.
+    - LSTM-based hybrid architectures offer practical advantages for spending prediction despite statistical equivalence.
+    - The Friedman test provides an appropriate statistical framework for comparing forecasting architectures.
+    - Vanilla RNN architectures are less reliable for time series forecasting in financial applications.
+    - Hybrid LSTM-RNN and LSTM-GRU configurations provide optimal balance of accuracy and efficiency.
+  limits:
+    - The study uses only three datasets, limiting the generalizability of findings to spending data specifically.
+    - The COVID-19 and oxygen datasets are non-financial, reducing direct applicability to personal finance forecasting.
+    - Models were evaluated only on univariate time series, whereas financial data often includes multiple features.
+    - The study did not investigate optimal hyperparameter tuning for each architecture individually. [unacknowledged]
+    - The computational constraints of the hybrid models in mobile-first applications were not explored. [unacknowledged]
+    - Only two hidden layers were used for all architectures, potentially limiting performance of deeper models.
+  mapping_rationale: The systematic scan across all 12 functional domains identified high relevance primarily in Predictive Modeling (6.A, 6.B) and System Evaluation (12.A, 12.B, 12.C) because the paper directly benchmarks forecasting architectures and provides rigorous evaluation methodology. Medium relevance was assigned to Anomaly Detection (8.B, 8.C) due to the shared methodological concerns of temporal pattern prediction and cold-start stability. Low relevance was assigned to Behavioral Profiling (5.C) as the architectures could be adapted for classification tasks. Domains concerning Filipino cultural context (2.A-D), expense categorization (3.A-C), existing systems (4.A-B), budgeting strategies (7.A-D), mobile design (9.A-B), data privacy (10.A-B), user retention (11.A-B), and savings/debt management (13.A-C) were rejected because the paper focuses solely on algorithmic performance without addressing financial context, user behavior, or practical financial management applications. The overall relevance is medium: the paper provides valuable methodological guidance for evaluating forecasting models but lacks direct application to Filipino young professional spending or financial management tasks. Borderline cases included the applicability to cold-start scenarios (8.C) due to the stability assessment, and to classification approaches (5.C) due to potential adaptation of the same neural architectures.
+limitations:
+  - Statistical significance was not achieved due to limited sample size of only three datasets.
+  - Findings are based on non-financial datasets (sunspot, COVID-19, oxygen), limiting direct applicability to spending data.
+  - Only two hidden layers were used for all architectures based on minimal requirements, not optimized per model.
+  - The study did not investigate hyperparameter optimization for each architecture. [unacknowledged]
+  - Computational constraints and suitability for mobile-first applications were not evaluated. [unacknowledged]
+  - The study focuses only on univariate forecasting, whereas personal finance predictions often require multivariate inputs. [unacknowledged]
+remember_this:
+  - LSTM-GRU hybrid achieved the best mean rank of 2.23 across all datasets.
+  - Monte Carlo simulation across 100 iterations provides reliable model stability assessment.
+  - Vanilla RNN showed consistently the highest error rates and most variability.
+  - LSTM-RNN hybrid offers the best balance of accuracy and computational efficiency.
+  - Statistical equivalence across architectures suggests practical considerations should guide selection.

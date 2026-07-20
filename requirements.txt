@@ -1,0 +1,4 @@
+markitdown
+pypdf
+pdfminer.six
+PyPDF2

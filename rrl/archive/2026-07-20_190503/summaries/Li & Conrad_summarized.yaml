@@ -1,0 +1,96 @@
+
+paper_id: 10.48550/arXiv.2603.27056
+designation: international-algorithm-specific
+title: Persona-Based Simulation of Human Opinion at Population Scale
+authors: Li, M.; Conrad, F. G.
+year: 2026
+venue: Unknown
+odin_topics:
+  - 5.B
+  - 5.C
+  - 9.B
+  - 11.B
+  - 2.B
+tldr: SPIRIT infers semi-structured personas from social media to simulate individual survey responses, producing more accurate and diverse outputs than demographic-only personas when validated against a U.S. probability panel.
+problem_and_motivation: Demographic-only personas in LLM simulations are insufficient for capturing the nuance of individual opinions and behaviors, leading to unrealistic and homogenized responses. There is a lack of frameworks that can create rich, reusable person-representations and calibrate them for reliable population-level inference.
+approach:
+  - The SPIRIT framework uses a Painter module to infer a structured JSON persona (Big Five traits, world beliefs, values, etc.) and a narrative from a user's social media posts.
+  - A Reasoner module then conditions an LLM on the inferred persona to answer survey questions, optionally using a web search for time-sensitive topics.
+  - The framework was evaluated using 1,410 Twitter/X and 893 Reddit users linked to the Ipsos KnowledgePanel, a U.S. probability-based sample.
+  - Performance was benchmarked against 52 held-out non-demographic survey questions, comparing SPIRIT personas against a baseline of 7 demographic attributes.
+  - Calibration weights were constructed via raking to align the persona bank with U.S. Census and ACS margins.
+findings:
+  - num: SPIRIT personas improved user-level inference accuracy by 8–9% over demographic-only personas across all tested models.
+  - SPIRIT personas produce substantially broader and more heterogeneous response distributions that more closely resemble human response patterns.
+  - Qualitative rationales from SPIRIT agents show a "deliberation bias," where they construct more analytic causal chains than typical human survey respondents.
+  - The Persona Bank, after weighting, reproduced coherent within-cluster directional trends that aligned with external polling benchmarks on political issues.
+key_figures_tables:
+  - Figure 1A: Box plots of per-user composite scores. → SPIRIT distributions show greater human-like heterogeneity than demographic personas.
+  - Figure 1B: Bar chart of inference accuracy. → SPIRIT consistently outperforms demographic personas across all model sizes.
+  - Figure 2: Bar charts comparing persona-bank and polling benchmarks. → Weighted Twitter-based estimates closely track benchmark magnitudes and directions.
+key_equations:
+  - equation: w_i \leftarrow w_i \times \frac{T_{v,c}}{\hat{P}_{v,c}}
+    explanation: Raking adjustment factor for each margin during iterative proportional fitting.
+definitions:
+  - term: SPIRIT
+    definition: A framework for inferring semi-structured personas from social media to simulate individual opinions.
+  - term: Persona Bank
+    definition: A collection of SPIRIT personas treated as a virtual respondent panel for surveying.
+  - term: Painter Module
+    definition: The component of SPIRIT that infers the structured persona profile from raw social media posts.
+  - term: Reasoner Module
+    definition: The component of SPIRIT that conditions an LLM on the persona to answer downstream tasks.
+  - term: Raking
+    definition: Iterative proportional fitting used to calibrate sample weights to population benchmarks.
+  - term: Position-Weighted Mean
+    definition: A composite score aggregating survey responses, weighted by survey sequence order.
+  - term: "None."
+    definition: ""
+critical_citations:
+  - "[Argyle et al., 2023] — Foundation for LLM-based human sample simulation."
+  - "[Horton, 2023] — Illustrates LLMs as simulated economic agents."
+  - "[Park et al., 2024] — Demonstrates generative agent simulations of individuals."
+  - "[Kosinski et al., 2013] — Shows digital records predict personal attributes."
+relevance:
+  topics:
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: high
+      justification: Introduces a framework for enriching cold-start profiles from social media to improve simulation fidelity.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: The process of inferring structured personas is a transferable method for classifying profiles from text.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: contextual
+      justification: Insights on richer persona data could inform UX personalization, but the paper focuses on survey simulation.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: medium
+      justification: The persona bank concept offers a method for testing engagement mechanisms on a simulated user base.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: medium
+      justification: The framework's ability to infer behavioral patterns could be applied to detect cyclical spending from user text.
+  contribution: The paper provides a validated methodology for building reusable, rich user personas from digital traces, which can be directly applied to Odin's user profiling module to overcome the cold-start problem. The SPIRIT framework's two-stage design (inference then reasoning) offers a blueprint for creating interpretable financial behavior profiles. Its Persona Bank concept suggests a strategy for testing Odin's features on a representative simulated user base, aiding evaluation frameworks. The study's focus on using non-demographic data to improve prediction supports Odin's rationale for leveraging behavioral and contextual data.
+  directly_justifies:
+    - SPIRIT personas, inferred from user text, significantly outperform demographic-only baselines in simulating individual responses.
+    - Weighted persona banks can produce population-level estimates that align with external benchmarks.
+    - A two-stage framework of persona inference and reasoning is effective for LLM-based simulation.
+  limits:
+    - The paper focuses on simulating survey opinions, not financial behaviors, which are a specific use case for Odin.
+    - The evaluation is on a U.S. population panel, and results may not directly generalize to the Filipino context.
+    - The "deliberation bias" in agents indicates that simulations may not perfectly replicate human satisficing behavior.
+  mapping_rationale: A systematic scan across all 12 functional domains identified relevant work primarily in Behavioral Profiling & Classification (Domain 5). Within this domain, topic 5.B (Profile Dynamics) is flagged as high, as SPIRIT directly solves the cold-start problem by enriching profiles from social media. Topic 5.C (Classification Approaches) is medium, as the persona inference is a specific classification methodology. For User Retention & Engagement (Domain 11), topic 11.B is medium, as the Persona Bank offers a way to test retention strategies. For Mobile-First Design (Domain 9), topic 9.B is contextual, as the persona concept could inform personalization. For Filipino Cultural Context (Domain 2), topic 2.B is medium, as the method of inferring behavioral patterns is applicable to detecting cyclical spending. Other domains like Expense Categorization (3), Anomaly Detection (8), and Savings & Debt Management (13) were considered but rejected as the paper lacks specific methodologies or findings for these financial decision-making tasks. The overall relevance is high for profiling and simulation, providing a methodological foundation for building and evaluating user models in Odin.
+limitations:
+  - The requirement for active social media accounts introduces selection bias, acknowledged and addressed via weighting.
+  - Persona quality is dependent on the richness of the user's text traces, limiting effectiveness for non-expressive users.
+  - LLMs exhibit a "deliberation bias," over-analyzing survey questions compared to satisficing human respondents. [unacknowledged]
+  - The study's persona schema is comprehensive but may need adaptation for financial-specific attributes like risk tolerance.
+remember_this:
+  - Non-demographic signals from social media improve simulation accuracy by over 8%.
+  - SPIRIT personas create more heterogeneous responses than demographic-only prompts.
+  - A persona bank can be a reusable virtual panel for testing and evaluation.
+  - Calibration weights are essential for aligning biased samples with population benchmarks.
+  - A key LLM limitation is its deliberation bias, which differs from human satisficing.

@@ -1,0 +1,117 @@
+
+paper_id: 10.3390/jrfm17100470
+designation: international
+title: Enhancing Financial Advisory Services with GenAI: Consumer Perceptions and Attitudes Through Service-Dominant Logic and Artificial Intelligence Device Use Acceptance Perspectives
+authors: Yang, Q.; Lee, Y.-C.
+year: 2024
+venue: Journal of Risk and Financial Management
+odin_topics:
+  - 4.A
+  - 4.B
+  - 10.B
+  - 11.A
+  - 12.A
+tldr: Personalized suggestions, human-like empathy, and continuous improvement of GenAI financial advice positively influence perceived authenticity, which fosters utilitarian attitudes that increase willingness to communicate and reduce resistance.
+problem_and_motivation: Prior research on robo-advisors has largely overlooked how distinct GenAI attributes—personalization, empathy, and continuous learning—reshape consumer experiences with financial advice. A gap exists in understanding specific contributors to consumer attitudes and reactions toward GenAI-based financial guidance.
+approach:
+  - Survey data from 822 mobile banking users who had engaged with GenAI for financial guidance.
+  - Structural equation modeling (SEM) used to test the integrated SDL and AIDUA framework.
+  - Measurement model assessed via factor loadings, CR, AVE, and discriminant validity using Fornell-Larcker criterion.
+  - Harman's single-factor test confirmed no common method bias (first factor accounted for 31.95% of variance).
+  - Moderating effects of AI literacy on the relationship between GenAI attributes and perceived authenticity were tested.
+findings:
+  - num: Personalized investment suggestions positively associated with perceived authenticity (β=0.318, p<0.001).
+  - num: Human-like empathy positively associated with perceived authenticity (β=0.338, p<0.001).
+  - num: Continuous improvement positively associated with perceived authenticity (β=0.287, p<0.001).
+  - num: Perceived authenticity positively associated with utilitarian attitudes (β=0.71, p<0.001), explaining 50.5% of variance.
+  - num: Utilitarian attitudes positively associated with willingness to communicate (β=0.709, p<0.001) and negatively associated with resistance (β=-0.739, p<0.001).
+  - num: AI literacy positively moderates the relationships between GenAI attributes and perceived authenticity (β=0.097 to 0.108, p<0.001).
+  - The model explains 56.9% of variance in perceived authenticity, 50.3% in willingness to communicate, and 54.6% in resistance.
+  - All factor loadings exceeded 0.6, Cronbach's α ranged from 0.845 to 0.949, and all AVE values exceeded 0.5.
+key_figures_tables:
+  - Table 1: Demographic characteristics of 822 respondents → sample balanced across gender, age, and income.
+  - Table 2: Reliability, CR, and AVE for all constructs → all measures exceed recommended thresholds.
+  - Table 3: Discriminant validity via Fornell-Larcker criterion → square root of AVE exceeds inter-construct correlations.
+  - Table 5: Hypothesis test results → all nine hypotheses supported with p<0.001.
+  - Figure 1: Research model integrating SDL and AIDUA frameworks → visualizes hypothesized relationships.
+  - Figure 2: Path coefficients of the research model → shows standardized coefficients and significance levels.
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: GenAI
+    definition: Generative artificial intelligence platforms capable of producing personalized, conversational financial advice through NLP and ML.
+  - term: SDL
+    definition: Service-dominant logic, a framework emphasizing value co-creation through provider-consumer interactions.
+  - term: AIDUA
+    definition: Artificial Intelligence Device Use Acceptance, a model explaining consumer acceptance of AI devices across appraisal stages.
+  - term: Perceived authenticity
+    definition: Consumer perception of the truthfulness, dependability, and genuineness of GenAI-provided financial advice.
+  - term: Utilitarian attitude
+    definition: Consumer evaluation of a technology's efficiency, effectiveness, and practical usefulness in achieving financial goals.
+  - term: AI literacy
+    definition: Skills and competencies needed to effectively use, understand, and interpret AI technologies and their outputs.
+critical_citations:
+  - "[Gursoy et al., 2019] — Foundational AIDUA model for AI device acceptance."
+  - "[Vargo and Lusch, 2004] — Core SDL theory on value co-creation."
+  - "[Pelau et al., 2021] — Human-like characteristics and AI acceptance."
+  - "[Ng et al., 2021] — Conceptual foundation of AI literacy."
+relevance:
+  topics:
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Reviews evolution from robo-advisors to GenAI in financial advisory.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Identifies robo-advisor limitations (lack of customization, empathy, learning) motivating GenAI adoption.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Perceived authenticity directly measures trust formation in AI financial advice.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: high
+      justification: Willingness to communicate and resistance model engagement and adoption dynamics.
+    - code: 11.B
+      name: Retention Mechanisms and Engagement Design
+      relevance: medium
+      justification: Continuous improvement and empathy as design levers for sustained user engagement.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Demonstrates SEM as a valid evaluation methodology for user perception studies.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: low
+      justification: Does not evaluate specific algorithmic modules; focuses on user perceptions.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: contextual
+      justification: Provides background on user attitudes but does not profile financial behaviors.
+  contribution: The paper provides a validated model linking GenAI feature perceptions to user engagement and resistance, directly informing Odin's user trust module (10.B) and engagement dynamics (11.A). Its findings on personalization and continuous improvement justify Odin's design emphasis on adaptive, user-aware financial guidance. The AI literacy moderation effect informs Odin's onboarding and user education strategies. The SEM framework offers a methodological template for evaluating Odin's user-facing modules.
+  directly_justifies:
+    - "Perceived authenticity of AI financial advice is a prerequisite for user trust and engagement."
+    - "Personalized recommendations and human-like empathy increase perceived authenticity of financial advice."
+    - "Continuous improvement of AI systems maintains user trust over time."
+    - "AI literacy amplifies the positive effects of AI features on perceived authenticity."
+    - "Utilitarian attitudes mediate the relationship between authenticity and engagement or resistance."
+  limits:
+    - "Sample limited to mobile banking users in South Korea; may not generalize to other cultural contexts or user segments. [unacknowledged]"
+    - "Cross-sectional design cannot establish causal direction of relationships. [unacknowledged]"
+    - "Self-reported survey data may be subject to social desirability and recall bias. [unacknowledged]"
+    - "Does not examine objective financial outcomes or actual usage behavior beyond intentions."
+  mapping_rationale: Systematic scan across all 12 functional domains and their associated topic codes flagged the following as relevant: Existing Systems & Gaps (4.A, 4.B), Data Privacy & User Trust (10.B), and User Retention & Engagement (11.A, 11.B). The paper's literature review on robo-advisor limitations directly justifies 4.B (high), while the empirical model of perceived authenticity and utilitarian attitudes strongly supports 10.B (high) and 11.A (high). The findings on continuous improvement and empathetic design provide supporting evidence for 11.B (medium). The SEM methodology offers a template for 12.A (medium) but does not evaluate algorithmic modules (12.B, low) or budget-specific evaluation (12.C, not selected). Behavioral Profiling domains (5.A-5.C) were rejected as the paper does not classify user financial behaviors; Forecasting domains (6.A-6.B) were rejected as no predictive modeling is performed; Budget Recommendation domains (7.A-7.D) were rejected as budgeting is not the focus; Anomaly Detection (8.A-8.C) was rejected as the paper does not address anomaly identification; Mobile-First Design (9.A-9.B) was rejected as mobile context is incidental to the sample, not a design focus; Savings & Debt Management (13.A-13.C) was rejected as savings and debt are not addressed. Overall, the paper is highly relevant to Odin's trust, engagement, and system-gap domains, providing empirical justification for human-centered AI design principles.
+limitations:
+  - "Sample limited to mobile banking users in South Korea; may not generalize to Filipino context. [unacknowledged]"
+  - "Cross-sectional design cannot establish causal direction of relationships. [unacknowledged]"
+  - "Self-reported survey data subject to social desirability and recall bias. [unacknowledged]"
+  - "Does not examine objective financial outcomes or actual usage behavior beyond intentions."
+  - "Measurement of AI literacy is self-reported, not objective assessment."
+remember_this:
+  - "Personalization, empathy, and continuous improvement explain 56.9% of perceived authenticity variance."
+  - "Perceived authenticity drives utilitarian attitudes, which increase engagement and reduce resistance."
+  - "AI literacy amplifies the positive effects of GenAI features on perceived authenticity."
+  - "Utilitarian attitudes explain 50.3% of willingness to communicate and 54.6% of resistance."
+  - "Perceived authenticity is foundational to user trust in AI financial advice systems."

@@ -1,0 +1,136 @@
+
+paper_id: 10.71443/er.ar16
+designation: international-algorithm-specific
+title: AI-Driven Goal Based Financial Planning System: A Framework for Contextual Feasibility Validation
+authors: Patra, B.; Sarkar, S.; Pal, S.; Ghosh, S.; Datta, S.
+year: 2025
+venue: Engineering Research
+odin_topics:
+  - 3.A
+  - 5.A
+  - 6.A
+  - 6.B
+  - 7.A
+  - 7.B
+  - 7.C
+  - 7.D
+  - 8.A
+  - 13.A
+  - 13.B
+  - 13.C
+tldr: An AI framework integrates predictive modeling, reinforcement learning, and Monte Carlo simulation to validate the feasibility of achieving personal financial goals under uncertainty.
+problem_and_motivation: Conventional financial planning relies on static assumptions and fails to adapt to dynamic economic conditions and individual behavioral factors. A gap exists in integrating real-time data, adaptive decision-making, and probabilistic feasibility validation into a single goal-oriented system.
+approach:
+  - Financial factors, including income, expenditure, savings, risk, and market dynamics, are modeled as a multi-dimensional vector for holistic analysis.
+  - Time-series forecasting using LSTM networks predicts future income, expenses, and savings from historical data.
+  - A reinforcement learning agent optimizes investment allocation strategies by interacting with financial simulations and receiving rewards for goal progress.
+  - Monte Carlo simulations generate probabilistic distributions of future wealth by varying return rates and economic parameters.
+  - The framework comprises data, AI, and decision layers, enabling modularity and real-time updates based on new data.
+  - Feasibility of goals is computed as the proportion of simulated scenarios where final wealth exceeds a target.
+findings:
+  - The proposed AI system increases forecasting accuracy, adaptability, and goal feasibility evaluations compared to traditional rule-based approaches.
+  - num: The integration of contextual awareness significantly enhances the system's performance in providing personalized financial plans.
+  - Reinforcement learning enables dynamic strategy adaptation, improving decision-making in response to changing financial circumstances.
+  - Incorporating behavioral factors (e.g., risk tolerance) and macroeconomic data leads to more realistic and relevant financial advice.
+  - The framework provides quantitative feasibility scores and actionable recommendations, supporting informed financial decision-making.
+key_figures_tables:
+  - Figure 2: Monthly income-expense dynamics → Highlights cash flow variability, crucial for time-series modeling.
+  - Figure 3: Monthly savings variability → Savings fluctuate significantly, including deficits, impacting goal feasibility.
+  - Figure 6: Income distribution → Income is not stable, supporting the need for probabilistic forecasting.
+  - Figure 7: Risk score distribution → Risk tolerance is dynamic, requiring adaptive behavioral profiling.
+  - Table 1: Monthly income and expense data → Quantifies the variability used for LSTM forecasting and simulation.
+key_equations:
+  - equation: S_t = I_t - E_t - C_t
+    explanation: Savings model adjusted for contextual factors like inflation.
+  - equation: X_t = [I_t, E_t, S_t, R_t, B_t, M_t]
+    explanation: Financial state as a vector for machine learning models.
+  - equation: W_{t+1} = W_t + S_t + A_t * r_t
+    explanation: Wealth evolution from savings and investment returns.
+  - equation: P(G) = (1/N) * sum_{i=1}^N I(W_T^(i) >= G)
+    explanation: Probability of achieving a financial goal via simulation.
+definitions:
+  - term: LSTM
+    definition: Long Short-Term Memory network for time-series forecasting.
+  - term: Reinforcement Learning
+    definition: A method for adaptive decision-making through reward-based learning.
+  - term: Monte Carlo Simulation
+    definition: A technique to model uncertainty by generating multiple random scenarios.
+  - term: Feasibility Score
+    definition: A probabilistic measure of the likelihood of achieving a financial goal.
+critical_citations:
+  - "[Kahneman and Tversky, 1979] — Basis for behavioral biases in finance."
+  - "[Hochreiter and Schmidhuber, 1997] — Introduced LSTM for temporal data."
+  - "[Markowitz, 1952] — Foundation for Modern Portfolio Theory."
+relevance:
+  topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: Provides empirical expense distribution data (Figure 8, Table 4) relevant for categorization.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Directly models risk tolerance and behavioral factors as input variables.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Proposes LSTM-based forecasting for income and expenses.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Uses LSTM specifically for time-series forecasting of financial data.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Offers a goal-based planning framework that informs budgeting decisions.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: medium
+      justification: Generates recommendations on savings, investment, and goal timelines.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: medium
+      justification: Uses reinforcement learning for optimization under user constraints.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: high
+      justification: Core focus on feasibility validation and providing corrective recommendations.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: contextual
+      justification: Mentions risk assessment but not explicit anomaly detection algorithms.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: high
+      justification: Explicitly models savings and evaluates goal achievement probabilities.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: low
+      justification: Briefly mentions liabilities but focuses more on savings and investments.
+    - code: 13.C
+      name: End-of-Period Surplus as a Savings Input
+      relevance: high
+      justification: Uses surplus (savings) as the primary driver for wealth accumulation and feasibility.
+  contribution: The paper directly justifies Odin's goal-based financial planning module by providing a framework for feasibility validation. Its approach to using LSTM for forecasting supports Odin's predictive analytics component. The reinforcement learning method for investment allocation can inform Odin's budget recommendation and optimization algorithms. The Monte Carlo simulation for scenario analysis provides a methodology for Odin's feasibility assessment and risk evaluation. The emphasis on integrating behavioral factors validates Odin's need for behavioral profiling within its system.
+  directly_justifies:
+    - Dynamic financial planning requires AI-driven models for forecasting and adaptation.
+    - Feasibility validation should be probabilistic, using simulation to handle uncertainty.
+    - Incorporating behavioral factors and risk tolerance is essential for personalization.
+    - Reinforcement learning can optimize financial strategies by learning from dynamic environments.
+    - A layered, modular architecture is suitable for building intelligent and scalable PFMS.
+  limits:
+    - The empirical evaluation is limited to a small, illustrative dataset rather than a large-scale real-world user base.
+    - The paper does not provide a detailed comparative analysis against state-of-the-art baseline algorithms.
+    - The framework's practical deployment aspects, such as latency and data privacy, are not addressed. [unacknowledged]
+  mapping_rationale: A systematic scan of all 12 functional domains was conducted. Domains 6 (Spending Forecasting), 7 (Budget Recommendation), and 13 (Savings & Debt Management) were flagged with high relevance due to the paper's core contribution on feasibility validation and goal-based planning. Domain 5 (Behavioral Profiling) was assessed as medium relevance because risk tolerance is modeled as a key variable. Domain 3 (Expense Categorization) was marked medium due to the presentation of expense distribution data. Domain 8 (Anomaly Detection) was considered contextual as the paper discusses risk but not explicit anomaly detection. Domains 1 (Filipino Context), 2 (Cultural Practices), 4 (Existing Systems), 9 (Mobile-First), 10 (Data Privacy), 11 (Retention), and 12 (Evaluation) were rejected as they are not the subject of the paper. The overall relevance is high, providing a methodological foundation for Odin's algorithmic modules.
+limitations:
+  - The empirical validation uses a limited synthetic dataset, not real-world user data.
+  - The paper does not discuss the computational cost or scalability of the integrated AI models.
+  - Integration with existing mobile or web-based applications is not explored. [unacknowledged]
+  - Data privacy and security concerns in a real fintech deployment are not addressed. [unacknowledged]
+remember_this:
+  - Integrating predictive, adaptive, and probabilistic models enhances financial planning realism.
+  - Feasibility validation via Monte Carlo simulation provides quantitative goal success probabilities.
+  - LSTM forecasting captures non-linear patterns in income and expense data.
+  - Dynamic risk profiling is essential for tailoring investment strategies effectively.
+  - num: The proposed system outperforms traditional rule-based approaches in accuracy and adaptability.

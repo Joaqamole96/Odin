@@ -1,0 +1,99 @@
+
+paper_id: 10.1145/3610219
+designation: international
+title: Understanding the Role of Human Intuition on Reliance in Human-AI Decision-Making with Explanations
+authors: Chen, V.; Liao, Q. V.; Vaughan, J. W.; Bansal, G.
+year: 2023
+venue: Proceedings of the ACM on Human-Computer Interaction
+odin_topics:
+  - 5.A
+  - 5.B
+  - 12.A
+  - 2.C
+  - 3.C
+tldr: A mixed-methods study reveals three types of human intuition that drive non-reliance on AI, explaining why feature-based explanations increase overreliance while example-based explanations improve decision-making.
+problem_and_motivation: AI explanations are intended to improve human-AI decision-making, but empirical studies show they often increase overreliance on incorrect AI predictions. A critical gap in understanding is how decision-makers integrate their own intuition with AI predictions and explanations during the decision-making process.
+approach:
+  - A think-aloud, mixed-methods study was conducted with 26 participants.
+  - Participants performed two prediction tasks (income and biography classification) under three conditions: no AI, AI support with feature-based explanations, and AI support with example-based explanations.
+  - Feature-based explanations used LIME to show feature contributions, while example-based explanations displayed the two nearest training examples with their AI predictions and ground-truth labels.
+  - The study measured decision accuracy and used qualitative analysis of think-aloud and interview data to investigate the decision-making process.
+findings:
+  - num: Feature-based explanations did not improve accuracy over no AI and increased overreliance on incorrect AI predictions.
+  - num: Example-based explanations led to complementary human-AI performance, achieving 71.1% accuracy versus 60.6% for feature-based and 61.1% for no AI in the income task.
+  - Three intuition-driven pathways to override AI predictions were identified: strong outcome intuition, intuition about features to discredit explanations, and intuition about AI limitations via unreliability signals.
+  - num: Example-based explanations provided stronger signals of prediction unreliability, such as when the AI was wrong on both similar examples, which was highly correlated with AI incorrectness.
+  - num: Participants with the lowest domain knowledge (43.8% accuracy) improved significantly with example-based explanations (70.0%) but not with feature-based (52.5%).
+key_figures_tables:
+  - Figure 2: Participant accuracy across conditions → Example-based explanations achieve complementary performance, outperforming human and AI alone.
+  - Table 1: Accuracy breakdown by scenario (AI/P2 correctness) and explanation type → Example-based explanations outperform feature-based in most scenarios, especially when AI is wrong.
+  - Figure 3: Examples of explanations signaling unreliability → LowDiff feature-based and BothWrong example-based explanations indicate prediction unreliability.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: XAI
+    definition: Explainable Artificial Intelligence.
+  - term: ML
+    definition: Machine Learning.
+  - term: LIME
+    definition: Local Interpretable Model-agnostic Explanations.
+  - term: SHAP
+    definition: SHapley Additive exPlanations.
+  - term: PFMS
+    definition: Personal Financial Management System.
+critical_citations:
+  - "[Bansal et al., 2021] — Found feature-based explanations increase overreliance."
+  - "[Wang and Yin, 2021] — Compared feature- and example-based explanations."
+  - "[Zhang et al., 2020] — Studied effect of explanations and confidence on reliance."
+relevance:
+  topics:
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Directly informs how users' pre-existing financial intuition influences their reliance on AI-based financial advice, a core component of profile dynamics.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: high
+      justification: The study's findings on intuition-driven pathways for non-reliance are directly relevant to modeling user behavior, especially in cold-start scenarios where user data is sparse.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Provides a framework for evaluating how explanation types affect user reliance and decision accuracy in AI-assisted systems, relevant to system evaluation.
+    - code: 2.C
+      name: User-Declared Financial Preferences
+      relevance: medium
+      justification: Demonstrates that users apply their own intuition (preferences, beliefs) to override AI, which is directly analogous to how users might apply declared financial rules or constraints.
+    - code: 3.C
+      name: User-Defined Allocation Constraints
+      relevance: medium
+      justification: The user's application of intuition to override AI predictions mirrors how users might apply their own financial constraints to challenge or accept a budget recommendation.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: contextual
+      justification: The study's general findings on explanation effectiveness are contextual for designing budget recommendation systems, but it does not specifically address budget allocation.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: low
+      justification: The paper focuses on human interaction with AI predictions, not the predictive models themselves, so relevance to the core algorithm is low.
+  contribution: This paper provides a fundamental understanding of how human intuition shapes reliance on AI in decision-making, identifying three specific pathways users follow to override AI predictions. These pathways offer a framework for designing AI systems that better accommodate user intuition, such as adaptive explanations or personalized support. The work directly justifies the need for example-based explanations over feature-based ones in systems like Odin, particularly for supporting users with varying domain knowledge. It also highlights the risk of overreliance when using feature-based explanations, a critical design consideration for a PFMS where user trust and correct financial decisions are paramount. The findings can inform the development of Odin's explanation module and user interface to encourage appropriate reliance.
+  directly_justifies:
+    - "Example-based explanations are less disruptive of natural intuition and can improve decision-making in AI-assisted tasks."
+    - "Feature-based explanations can increase overreliance on incorrect AI predictions, a pitfall for any AI-assisted decision system."
+    - "Signals of prediction unreliability, such as incorrect predictions on similar examples, help users form intuition about AI limitations."
+    - "Users with low domain knowledge benefit more from example-based explanations than from feature-based ones."
+  limits:
+    - "The study was conducted with a convenience sample of highly educated and ML-experienced individuals, limiting generalizability."
+    - "The two tasks (income prediction and biography classification) are low-stakes and may not represent high-stakes financial decision-making."
+    - "The think-aloud protocol may have encouraged more cognitive engagement than in a realistic setting."
+  mapping_rationale: A systematic scan of all 12 functional domains was performed. The paper was flagged as highly relevant to Behavioral Profiling & Classification (5.A, 5.B) because it directly examines how users' pre-existing intuition and knowledge influence their interaction with and reliance on AI, which is a core aspect of profiling user behavior. It was also relevant to System Evaluation (12.A) for its mixed-methods framework. The domains of User-Declared Financial Preferences (2.C) and User-Defined Allocation Constraints (3.C) were deemed medium relevance, as the concept of users applying their own intuition to override AI is analogous to how they might apply personal financial rules. Domains like Expense Categorization (3.A, 3.B) and Predictive Modeling (6.A, 6.B) were considered low relevance because the paper does not address specific financial domains or algorithms. The paper provides contextual relevance to Budget Recommendation (7.B) as a broad area. Overall, the paper's primary value to Odin lies in its insights into user behavior and decision-making, rather than specific financial algorithms.
+limitations:
+  - "Participants were not domain experts in the tasks, which may affect the transferability of findings to expert users."
+  - "The study did not explore how explanations impact user trust or satisfaction over time."
+  - "The think-aloud method may not fully capture the decision-making process in a natural, low-stakes setting. [unacknowledged]"
+remember_this:
+  - "Feature-based explanations increase overreliance on incorrect AI predictions."
+  - "Example-based explanations support complementary human-AI performance."
+  - "Users override AI through intuition about outcomes, features, or AI limitations."
+  - "Unreliability signals, like wrong predictions on similar examples, are key to appropriate reliance."
+  - "Low domain knowledge users improve more with example-based than feature-based explanations."

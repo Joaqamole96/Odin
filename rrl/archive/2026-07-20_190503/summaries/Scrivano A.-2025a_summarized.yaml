@@ -1,0 +1,121 @@
+
+paper_id: 10.13140/RG.2.2.34766.78490
+designation: international
+title: Time-Series Forecasting Using Deep Learning and Data Mining Models
+authors: Scrivano, A.
+year: 2025
+venue: Unknown
+odin_topics:
+  - 6.A
+  - 6.B
+  - 7.A
+  - 7.B
+  - 12.A
+  - 12.B
+  - 12.C
+tldr: A review of deep learning and data mining models for time-series forecasting, comparing their strengths, limitations, and performance across finance, energy, and retail domains.
+problem_and_motivation: Time-series forecasting is critical across finance, healthcare, and engineering, yet traditional statistical models like ARIMA struggle with non-linear dynamics and complex patterns. The emergence of deep learning and advanced data mining offers new opportunities to improve prediction accuracy and efficiency.
+approach:
+  - Data sourced from public and proprietary financial, energy consumption, and retail transaction datasets.
+  - Preprocessing included differencing, smoothing, logarithmic transformations, and feature extraction of lagged variables and seasonal indicators.
+  - Models evaluated included RNNs, LSTMs, TCNs, Transformers, Random Forests, and Gradient Boosting Machines.
+  - Training used backpropagation with Adam or RMSProp, and data was split chronologically into training, validation, and test sets.
+  - Evaluation metrics included MAE, RMSE, MAPE, and quantile loss functions for probabilistic forecasts.
+findings:
+  - num: Transformers achieved a 12% reduction in MSE and 17% reduction in MAE compared to recurrent and convolutional models on retail datasets.
+  - num: LSTM models reduced mean absolute error by 15% in web traffic prediction compared to conventional methods.
+  - num: TCNs attained 20% higher accuracy in early-stage anomaly detection for industrial monitoring.
+  - Gradient Boosting Machines consistently outperformed Random Forests across all domains, especially in retail sales forecasting.
+  - Probabilistic forecasting with quantile loss functions highlighted Transformers and GBMs as superior in uncertainty estimation.
+key_figures_tables:
+  - Table 1: Comparative evaluation of LSTM, TCN, and Transformer models on retail data → Transformer achieved lowest MAE and MSE.
+  - Table 2: Performance comparison of RNN, LSTM, TCN, and Transformer across energy, finance, and retail → Transformer consistently shows superior accuracy.
+  - Table 3: Direct comparison of Random Forest and Gradient Boosting Machines → GBM consistently achieves lower error metrics.
+  - Figure 2: Temporal investigation of forecast errors in retail → Transformers show the most stable error reduction.
+  - Figure 4: Quantile loss assessment for probabilistic models → Transformers exhibit strongest capability in handling predictive uncertainty.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: RNN
+    definition: Recurrent Neural Network
+  - term: LSTM
+    definition: Long Short-Term Memory
+  - term: TCN
+    definition: Temporal Convolutional Network
+  - term: GBM
+    definition: Gradient Boosting Machine
+  - term: MAE
+    definition: Mean Absolute Error
+  - term: RMSE
+    definition: Root Mean Squared Error
+  - term: MAPE
+    definition: Mean Absolute Percentage Error
+critical_citations:
+  - "[Hochreiter & Schmidhuber, 1997] — Introduced LSTM architecture for sequential data."
+  - "[Vaswani, 2017] — Introduced Transformer architecture with self-attention mechanism."
+  - "[Friedman, 2001] — Developed Gradient Boosting Machine ensemble method."
+  - "[Lea, 2017] — Proposed TCNs for action segmentation and sequence modeling."
+  - "[Breiman, 2001] — Established Random Forests as robust ensemble method."
+relevance:
+  topics:
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Compares deep learning and data mining models for sequential spending prediction.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Evaluates LSTM, TCN, Transformer, and GBM on time-series forecasting tasks.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: medium
+      justification: Provides performance benchmarks for algorithms that could underpin budget recommendation.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: medium
+      justification: Evaluation of forecasting models informs budget recommendation accuracy.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Detailed discussion of evaluation metrics (MAE, RMSE, MAPE) applicable to PFMS.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Provides empirical comparison of multiple forecasting algorithms under identical conditions.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: medium
+      justification: Discusses domain-specific metrics like MARD for perishable inventory, analogous to budget adherence.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: contextual
+      justification: Mentions anomaly detection in industrial monitoring but not personal finance.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: low
+      justification: Not addressed.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: Mentions privacy in future directions but not as core contribution.
+  contribution: This review provides a comprehensive benchmark of state-of-the-art forecasting models, offering quantitative evidence for selecting LSTM, Transformer, or GBM for predictive modules in Odin. The comparative performance data across multiple domains directly justifies algorithm choice for spending forecasting, anomaly detection, and budget recommendation. The discussion of evaluation metrics and probabilistic forecasting frames how Odin's algorithmic modules should be assessed and validated.
+  directly_justifies:
+    - LSTM models effectively capture non-linear dynamics in sequential data, relevant for spending patterns.
+    - Transformers reduce prediction error by 12-17% over recurrent models in multi-step forecasting.
+    - Gradient Boosting Machines offer a computationally efficient alternative with strong interpretability.
+    - TCNs achieve 20% higher accuracy in anomaly detection, suitable for identifying unusual spending.
+  limits:
+    - Limited generalizability to personal finance-specific spending data, as benchmarks use energy and retail.
+    - Does not address cold-start problems or user-level behavioral profiles.
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to Predictive Modeling (6.A), Forecasting Algorithms (6.B), and Algorithm Evaluation (12.B) due to its direct comparison of forecasting models on time-series data. Medium relevance was assigned to Budgeting Strategies (7.A), Budget Recommendation (7.B), and Evaluation Frameworks (12.A, 12.C) as the performance data can inform algorithm selection and validation for these Odin modules. The paper touches on Anomaly Detection (8.A) contextually through industrial examples but not personal finance, and Mobile Design (9.A), Data Privacy (10.A), and Retention (11.A) were rejected as not addressed. Borderline cases included forecasting methods applicable to spending forecasting (6.B) and budget recommendation (7.B), resolved by assigning high to the core forecasting topics and medium to the downstream budget topics. Overall, the paper is highly relevant for informing Odin's predictive algorithm selection and evaluation methodology.
+limitations:
+  - Models were not tested on personal financial transaction data. [unacknowledged]
+  - No discussion of handling irregular or sparse spending sequences common in personal finance.
+  - Computational constraints of Transformers may limit deployment in mobile-first PFMS.
+remember_this:
+  - LSTM and Transformer models excel at capturing complex temporal dependencies.
+  - Transformers achieved a 12% reduction in MSE over recurrent models on retail data.
+  - Gradient Boosting Machines offer interpretable and computationally efficient forecasting.
+  - TCNs provide superior anomaly detection accuracy in industrial sensor data.
+  - Evaluation metrics like MAE, RMSE, and MAPE are critical for model comparison.

@@ -1,0 +1,109 @@
+
+paper_id: 10.11594/ijmaber.05.08.32
+designation: local
+title: The Traditional Way of Saving Money Versus the Modern Style of Investment: The Financial Management Styles of Sorsogon State University (Sorsu) Bulan Campus Faculty Members
+authors: Bongalonta, M. B.; Bongalonta, M. M.; Gigantoca, S. E.
+year: 2024
+venue: International Journal of Multidisciplinary: Applied Business and Education Research
+odin_topics:
+  - 1.A
+  - 1.B
+  - 1.C
+  - 3.A
+  - 4.A
+  - 7.A
+  - 7.B
+  - 13.A
+tldr: Faculty members adopt both traditional (budgeting, paluwagan, piggy banks) and modern (bank deposits, stock investments) saving methods, facing challenges from rising costs, low financial literacy, poor debt management, and low/delayed salaries.
+problem_and_motivation: Faculty members at Sorsogon State University experience financial difficulties despite stable government salaries, often resorting to high-cost borrowing that undermines their savings capacity. A significant gap exists in understanding their specific financial management practices and the problems they face, which hinders the development of targeted interventions to improve their financial well-being. This study addresses this gap by identifying the saving and investment practices of these faculty members to formulate a relevant financial management model.
+approach:
+  - A mixed-methods design was used with a survey and focus group discussions (FGDs).
+  - The study involved 40 faculty members from Sorsogon State University Bulan Campus.
+  - Quantitative data gathered faculty profiles, while qualitative FGDs explored practices and problems.
+  - Thematic analysis of FGD transcripts identified patterns in financial management behaviors.
+  - The findings informed the development of the Bongalonta’s Financial Model.
+findings:
+  - Most faculty members (62.5%) earn between P40,001-P50,000 monthly, but 82.5% spend over P12,000, leaving limited room for savings.
+  - num: 60% of faculty members save only 0-15% of their income.
+  - Faculty members use both traditional (budgeting, paluwagan, piggy banks) and modern (bank deposits, stock investments) methods to save.
+  - Primary problems in handling finances include increasing cost of utilities and unexpected expenses, lack of financial literacy, poor debt management, and low/delayed salaries.
+  - The "paluwagan" system, while used for saving, often leads to debt and default issues among participants.
+  - Financial literacy is low, with faculty members stating they have no background or ideas in financial management.
+  - High debt from loans (e.g., GSIS, Land Bank) consumes a large portion of salaries, hindering savings.
+  - Delayed salaries, especially for non-permanent faculty, disrupt the ability to save.
+  - A proposed financial model was created to guide faculty in budgeting, minimizing debt, saving for emergencies, and investing in retirement.
+key_figures_tables:
+  - Chart 9: Saving models used by faculty → Shows piggy bank and paluwagan are the most common.
+  - Chart 6: Percentage of savings → Shows 60% of faculty save only 0-15% of their income.
+key_equations:
+  - equation: Savings = Income - Expenses
+    explanation: Faculty savings are the residual after all expenses.
+definitions:
+  - term: Paluwagan
+    definition: A traditional Filipino informal savings and credit system where members contribute a fixed amount and take turns receiving the pooled funds.
+  - term: Piggy Bank
+    definition: A container used to hold and save small amounts of money.
+  - term: Bongalonta’s Financial Model
+    definition: A four-step model designed to enhance faculty savings through budgeting, debt minimization, emergency funds, and retirement investment.
+critical_citations:
+  - "[Gage et al., 2020] — Found faculty face significant financial insecurity."
+  - "[Chinn et al., 2019] — Showed faculty lack basic financial knowledge."
+  - "[Goldrick-Rab & Kendall, 2016] — Linked part-time faculty to higher debt."
+relevance:
+  topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: medium
+      justification: Focuses on faculty, a subset of Filipino professionals.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: Provides detailed data on income, expenses, and savings of faculty.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly examines financial management practices and problems.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: contextual
+      justification: Discusses budgeting and expense tracking practices.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Describes traditional and modern saving/investment methods.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: high
+      justification: Explores budgeting as a primary saving practice.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: medium
+      justification: Proposes a model to enhance savings, implicitly recommending budget allocation.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: high
+      justification: Directly deals with practices and problems in saving money.
+  contribution: This paper provides empirical data on the financial behavior of a specific Filipino professional group (faculty), which can inform the design of Odin's financial profiling and budgeting modules. The findings on the prevalence of traditional methods like "paluwagan" highlight the need for culturally-aware expense categorization and savings features. The identified problems, such as low financial literacy and poor debt management, justify the inclusion of educational components and debt management tools in Odin. The study's mixed-methods approach offers a model for understanding user needs, which is crucial for developing Odin's user-defined allocation constraints and behavioral classification. Overall, the research underscores the importance of designing for real-world constraints like irregular income and high debt burden.
+  directly_justifies:
+    - "Faculty members adopt both traditional and modern saving methods, indicating a hybrid approach."
+    - "High monthly expenses (82.5% spend >P12,000) limit the capacity for savings."
+    - "Lack of financial literacy is a significant barrier to effective money management."
+    - "Debt repayment consumes a large portion of salary, reducing savings potential."
+    - "Paluwagan systems, while popular, can lead to financial problems due to defaults."
+  limits:
+    - "Study is limited to a single campus, restricting generalizability to other institutions."
+    - "Data relies on self-reporting, which may be subject to social desirability bias."
+    - "The study is descriptive and does not employ a statistical model to infer causality."
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was flagged as highly relevant to 'Financial Structure of Filipino Young Professionals' (1.B) and 'Financial Behavior...' (1.C) due to its detailed survey of income, expenses, and saving practices. It also provided high relevance to 'Budgeting Strategies' (7.A) and 'Savings Goal Management' (13.A) as it discusses specific budgeting practices, saving models, and the problems hindering saving. Medium relevance was assigned to 'Landscape of Existing Systems' (4.A) as it describes traditional and modern methods, and 'Budget Recommendation' (7.B) due to the proposed financial model. Low and contextual relevance were assigned to other topics like 'Anomaly Detection' (8.A-C) as the paper does not address algorithmic detection, and 'Data Privacy' (10.A-B) as it is not a focus. Borderline cases like the 'paluwagan' system, which touches on culturally specific practices (2.A) and cyclical spending (2.D), were ultimately categorized under 1.C and 4.A for their behavioral and systemic insights, as the paper's core focus is on financial management. Domains such as 'Behavioral Profiling' (5.A-C), 'Forecasting' (6.A-B), and 'System Evaluation' (12.A-C) were rejected as the paper is purely descriptive and does not engage with algorithmic or predictive approaches. Overall, the paper provides foundational behavioral and financial structure data relevant to Odin's design.
+limitations:
+  - "The study focuses on a single campus, limiting generalizability to other Filipino professionals."
+  - "The sample size of 40 is relatively small for quantitative analysis."
+  - "The research is descriptive and does not test for statistical associations between variables."
+  - "The reliance on self-reported data may be subject to social desirability and recall bias. [unacknowledged]"
+  - "The proposed financial model is not empirically validated. [unacknowledged]"
+remember_this:
+  - "Faculty save only 0-15% of their income despite earning P40,000-P50,000 monthly."
+  - "Traditional methods like piggy banks and paluwagan are as common as bank deposits."
+  - "High expenses and debt service are the primary barriers to saving for faculty."
+  - "Lack of financial literacy is a major impediment to effective financial management."
+  - "Delayed salary releases severely disrupt the saving capacity of faculty."

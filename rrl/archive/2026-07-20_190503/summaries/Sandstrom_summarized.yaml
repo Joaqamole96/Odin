@@ -1,0 +1,99 @@
+
+paper_id: 10.15662/IJEETR.2024.0602004
+designation: international-algorithm-specific
+title: AI-Driven Risk-Adaptive Cloud Intelligence for Large-Scale Fraud Detection
+authors: Sandström, F. T.
+year: 2024
+venue: International Journal of Engineering & Extended Technologies Research
+odin_topics:
+  - 4.A
+  - 4.B
+  - 6.A
+  - 6.B
+  - 8.A
+  - 8.B
+  - 12.B
+tldr: Integrates Grey Relational Analysis with Apache Spark and Hadoop to create a scalable, interpretable fraud detection system for multi-tenant cloud environments.
+problem_and_motivation: Traditional fraud detection systems struggle with the scale, heterogeneity, and evolving patterns of data in multi-tenant cloud environments. Supervised methods require extensive labeled data and lack interpretability, while existing unsupervised methods often fail to integrate multiple weak signals. There is a need for a scalable, interpretable, and adaptive system that can operate under uncertainty.
+approach:
+  - Implements RACIS with layers for data ingestion, preprocessing, GRA scoring, and tenant-aware alerting.
+  - Uses Apache Kafka for streaming and Hadoop for batch ETL, storing data in a centralized data lake.
+  - Extracts features from transactional, behavioral, and system-level metrics to create a risk profile.
+  - Applies Grey Relational Analysis to compute a fraud risk score by comparing each transaction to a legitimate reference profile.
+  - Supports per-tenant configuration of feature weights, distinguishing coefficients, and risk thresholds.
+findings:
+  - "num: The system achieved a fraud detection recall of 93-95%."
+  - "num: The precision ranged from 62-70%, with a false positive rate of 0.4-1.2%."
+  - "num: The system processed approximately 1 x 10^9 transactions per hour with an average streaming latency of ~1.2 seconds."
+  - The GRA-based scoring is highly interpretable, allowing analysts to identify which features contribute most to a high-risk score.
+  - Performance varied across tenants, with more homogeneous transaction patterns yielding higher precision.
+  - False positives primarily arose from legitimate but atypical behavior, such as large purchases or travel.
+key_figures_tables:
+  - "Table 1: Overall detection performance → Aggregated recall 93-95%, precision 62-70%, FPR 0.4-1.2%."
+key_equations:
+  - equation: '\gamma(x_0(j), x_k(j)) = \frac{\min_i \min_j |x_0(j) - x_i(j)| + \xi \max_i \max_j |x_0(j) - x_i(j)|}{|x_0(j) - x_k(j)| + \xi \max_i \max_j |x_0(j) - x_i(j)|}'
+    explanation: Computes Grey Relational Coefficient for each feature.
+  - equation: '\Gamma(X_0, X_k) = \sum_{j=1}^{n} w(j) \gamma(x_0(j), x_k(j))'
+    explanation: Computes overall Grey Relational Grade (risk score).
+definitions:
+  - term: GRA
+    definition: Grey Relational Analysis, a method to compare multiple criteria under uncertainty.
+  - term: GRG
+    definition: Grey Relational Grade, a composite similarity score relative to an ideal reference.
+  - term: RACIS
+    definition: Risk-Adapted Cloud Intelligence System, the proposed fraud detection framework.
+critical_citations:
+  - "[Carcillo et al., 2017] — Foundational for scalable fraud detection using Apache Spark."
+  - "[Udayakumar et al., 2023] — Comparison point for ML-based fraud detection."
+  - "[Oleti, 2023] — Relevant for credit risk assessment using AI."
+relevance:
+  topics:
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Paper reviews big-data fraud detection systems as a broader landscape.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Explicitly identifies limitations of supervised ML and unsupervised methods for fraud detection.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: contextual
+      justification: Discusses predictive risk assessment but focuses on detection, not forecasting.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: The GRA method is used for scoring, not sequential forecasting.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Directly proposes a system for detecting fraudulent anomalies in transaction data.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Evaluates GRA as an anomaly detection algorithm for transactional data.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: Provides a detailed experimental evaluation of the GRA-based detection module.
+  contribution: The paper justifies Odin's need for a scalable and interpretable anomaly detection module by demonstrating GRA's effectiveness in a multi-tenant context. It provides a concrete example of using grey relational analysis to score transactions, which can inform the design of Odin's spending anomaly detection. The system's tenant-aware configuration highlights the importance of user-specific thresholds, a key consideration for Odin. Furthermore, the discussion of limitations, such as high false positives, directly informs the need for hybrid approaches in Odin's design.
+  directly_justifies:
+    - "GRA can produce interpretable risk scores without requiring labeled data."
+    - "Scalable distributed processing is essential for handling large-scale transaction data."
+    - "Per-tenant configuration is necessary to adapt to diverse user profiles."
+  limits:
+    - "The system's high false positive rate may lead to alert fatigue and requires downstream filtering."
+    - "GRA's static reference profiles may become outdated as user behavior evolves."
+    - "The system cannot detect relational fraud patterns like collusion. [unacknowledged]"
+  mapping_rationale: A systematic scan across all 12 functional domains identified the paper's primary relevance to 'Existing Systems & Gaps' (4.A, 4.B) and 'Anomaly Detection' (8.A, 8.B). The paper's problem statement directly critiques the limitations of current systems, justifying topic 4.B as high relevance. Its core contribution is a novel anomaly detection algorithm, establishing high relevance for 8.A and 8.B. Topic 6.A (Predictive Modeling) was considered but deemed contextual as the paper focuses on detection, not forecasting. Topic 12.B (Evaluation) was assigned medium relevance due to its detailed performance analysis. Topics related to Filipino cultural context, user retention, and savings were rejected as the paper is a general technical work with no specific focus on these areas. Overall, the paper provides strong justification for Odin's anomaly detection module's design requirements, emphasizing the need for a scalable, interpretable, and tenant-aware approach.
+limitations:
+  - "The evaluation uses synthetic data, which may not fully represent real-world complexity."
+  - "The prototype relies on static reference profiles that require manual updating."
+  - "The choice of features and their normalization heavily influences detection performance."
+  - "Integrating external reputation feeds at scale may introduce latency or storage overhead."
+  - "The high absolute number of false positives may overwhelm human analysts. [unacknowledged]"
+remember_this:
+  - "GRA achieved 93-95% recall for fraud detection in a multi-tenant system."
+  - "Scalable architecture processed 10^9 transactions per hour with low latency."
+  - "Precision was lower at 62-70%, indicating a need for downstream filtering."
+  - "Interpretable scoring allows analysts to understand risk factors for each transaction."

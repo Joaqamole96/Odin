@@ -1,0 +1,88 @@
+
+paper_id: 10.5281/zenodo.10049652
+designation: local-algorithm-specific # Published in University of Mindanao, Philippines
+title: Machine Learning Approaches in Classifying Income Levels
+authors: Laspiñas, E. L.; Murcia, J. V. B.
+year: 2024
+venue: TWIST
+odin_topics:
+  - 12.A
+  - 12.B
+  - 5.C
+tldr: A comparison of six machine learning classifiers for income prediction shows RandomForest and Random Tree achieve 98% accuracy, underscoring the importance of model selection and tuning.
+problem_and_motivation: Traditional econometric models fail to capture complex income dynamics due to linear assumptions. Machine learning offers a more sophisticated, data-driven approach. There is a research gap in applying ML to predict adult income levels accurately.
+approach:
+  - Used the Adult Income Prediction dataset with 16,281 instances and 13 attributes.
+  - Applied six classifiers: Logistic, J48, RandomForest, Random Tree, IBk (k-NN), and NaiveBayes.
+  - Evaluated using 10-fold cross-validation and metrics TP rate, FP rate, precision, recall, and F-measure.
+  - Tuned J48 confidence factor (0.25, 0.50, 0.75) and k-NN k values (3,5,7,9).
+  - Used Weka for implementation and feature selection via InfoGainAttributeEval.
+findings:
+  - "num: RandomForest and Random Tree achieved 98.35% and 98.37% accuracy, respectively."
+  - "num: J48 accuracy improved from 87.21% to 90.84% as confidence increased from 0.25 to 0.75."
+  - "num: k-NN accuracy decreased from 89.11% (k=3) to 85.74% (k=9)."
+  - "num: NaiveBayes had the lowest accuracy at 82.24%."
+  - RandomForest and Random Tree had F-measures of 0.983 and 0.984, indicating superior balance.
+  - Feature selection identified 'Relationship' as most predictive (info gain 0.16575).
+  - Ensemble methods reduce overfitting and generalize well.
+key_figures_tables:
+  - "Table 2: Classification accuracy for six classifiers → RandomForest and Random Tree highest at ~98%."
+  - "Table 3: Performance metrics (TP, FP, precision, recall, F-measure) → RandomForest and Random Tree have highest F-measure."
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: ML
+    definition: Machine learning, a subset of AI enabling systems to learn from data.
+  - term: k-NN
+    definition: k-nearest neighbors, a classification algorithm based on majority vote of nearest neighbors.
+  - term: J48
+    definition: An implementation of the C4.5 decision tree algorithm in Weka.
+  - term: TP rate
+    definition: True positive rate, proportion of actual positives correctly identified.
+  - term: FP rate
+    definition: False positive rate, proportion of negatives incorrectly classified as positive.
+  - term: Precision
+    definition: Proportion of positive predictions that are correct.
+  - term: Recall
+    definition: Same as TP rate, proportion of actual positives identified.
+  - term: F-measure
+    definition: Harmonic mean of precision and recall.
+critical_citations:
+  - "[Athey, 2018] — Machine learning enhances economic analysis."
+  - "[Delen et al., 2010] — ML can detect non-linear income indicators."
+  - "[Atkinson et al., 2011] — Econometric models have limitations in income dynamics."
+relevance:
+  topics:
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Provides cross-validation and performance metrics applicable to evaluating Odin's modules.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Directly compares classifier performance and tuning, informing algorithm selection for Odin.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: low
+      justification: Income classification is a related predictive task but not specifically behavioral profiles.
+  contribution: This paper's comparative evaluation of classifiers can guide Odin's selection of algorithms for spending forecasting and anomaly detection. Its emphasis on hyperparameter tuning (confidence factor, k) helps avoid overfitting in Odin's predictive modules. The use of 10-fold cross-validation and multiple performance metrics provides a robust template for evaluating Odin's system components. Additionally, the finding that ensemble methods (RandomForest) perform best supports their adoption for high-stakes predictions in personal finance.
+  directly_justifies:
+    - RandomForest and Random Tree classifiers achieve high accuracy and are suitable for income or spending prediction tasks.
+    - Hyperparameter tuning significantly affects classifier performance, so Odin should tune its models.
+    - Cross-validation with multiple metrics ensures reliable model evaluation.
+  limits:
+    - Dataset is from U.S. census, not Filipino, so generalizability to Filipino young professionals is limited. [unacknowledged]
+    - Only binary income classification, not multi-level or continuous.
+  mapping_rationale: The systematic scan across all 12 functional domains and their associated topic codes identified relevance in the System Evaluation domain (12.A, 12.B) due to the paper's comparative evaluation of classifiers and hyperparameter tuning, and to a lesser degree in Behavioral Profiling (5.C) as income classification is a related predictive task. The paper does not address Filipino cultural context, expense categorization, existing systems, forecasting, budgeting, anomaly detection, mobile design, privacy, retention, or savings/debt, so those topics were rejected. Borderline cases: the paper's methodology could inform spending forecasting (6.A) but it does not use spending data, so we classified 6.A as not selected; 5.C is included as low because classification approaches are relevant but not specific to financial behavior. Overall, the paper is most relevant for guiding the evaluation and selection of machine learning algorithms within Odin's predictive modules.
+limitations:
+  - Uses a single U.S.-based dataset, limiting applicability to Philippine context. [unacknowledged]
+  - Only binary classification, not multi-class or regression.
+  - Does not address temporal dynamics or spending behavior.
+remember_this:
+  - RandomForest and Random Tree outperform other classifiers with over 98% accuracy.
+  - Hyperparameter tuning can improve J48 accuracy by over 3 percentage points.
+  - Increasing k in k-NN reduces classification accuracy for this dataset.
+  - Ensemble methods reduce overfitting and are recommended for predictive tasks.
+  - 10-fold cross-validation provides robust performance estimates.
+

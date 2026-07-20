@@ -1,0 +1,110 @@
+
+paper_id: 10.1108/JEFAS-10-2025-0378
+designation: international
+title: Retail investor behavior and social media signals: exploring attention dynamics
+authors: Bustamante, D.; Ubilla, A.
+year: 2026
+venue: Journal of Economics, Finance and Administrative Science
+odin_topics:
+  - 1.C
+  - 2.D
+  - 4.B
+  - 5.A
+  - 5.C
+  - 10.B
+  - 11.A
+  - 12.A
+tldr: Social media influencer attention increases stock investment propensity, but digital financial literacy's moderating role varies significantly across countries.
+problem_and_motivation: The influence of social media recommendations on retail investor behavior is underexplored, particularly regarding how digital financial literacy (DFL) moderates this relationship across diverse national contexts. Existing studies often rely on single-country samples or aggregated data, limiting generalizability and understanding of underlying mechanisms.
+approach:
+  - Analyzed microdata from the OECD/INFE 2023 Adult Financial Literacy Survey covering Brazil, Finland, Philippines, and Saudi Arabia.
+  - Employed logistic regression with country fixed effects to model stock investment as a function of investor attention and DFL.
+  - Constructed a DFL index using principal component analysis across three dimensions: digital financial behavior, knowledge, and attitude.
+  - Addressed endogeneity using instrumental variable (two-stage residual inclusion) and propensity score matching techniques.
+  - Examined interaction effects between attention and DFL to test for moderation across countries.
+findings:
+  - num: Investor attention increases the probability of stock investment by 12.2% in the pooled sample, remaining robust across countries.
+  - num: Digital financial literacy (DFL) raises stock investment probability by 5.8% in the pooled sample, driven primarily by digital financial knowledge.
+  - The moderating effect of DFL on the attention-investment relationship is heterogeneous: negative in the Philippines, positive in Saudi Arabia, and insignificant in Brazil and Finland.
+  - Endogeneity corrections confirm the positive effect of social media attention on investment decisions remains significant.
+  - Socioeconomic factors like gender, education, employment, and income consistently predict stock market participation.
+key_figures_tables:
+  - "Table 1: Descriptive statistics showing 21.4% stock investment and 17.7% investor attention rates → Baseline participation and attention levels are adequate for analysis."
+  - "Table 2: Marginal effects from logistic regressions show attention increases investment by 12-28% across models → Attention is a robust predictor of stock investment."
+  - "Table 3: Interaction effects reveal DFL moderates attention differently by country → The buffering role of DFL is not universal."
+  - "Table 5: Two-stage residual inclusion results confirm attention remains significant after endogeneity correction → Main findings are robust to reverse causality concerns."
+  - "Table 6: Propensity score matching shows a 10% ATT for attention on investment → Selection bias does not explain the attention effect."
+key_equations:
+  - equation: "Pr(SI_i = 1 | X) = Λ(β_0 + β_1·Atten_i + β_2·DFL_i + Σβ_k·Controls_ki + ΣCountry_h)"
+    explanation: "Logistic model for stock investment probability as function of attention, DFL, and controls."
+definitions:
+  - term: "SI"
+    definition: "Stock investment, a binary variable indicating direct ownership of stocks."
+  - term: "Atten"
+    definition: "Investor attention, coded 1 if decisions were influenced by social media or unknown individuals."
+  - term: "DFL"
+    definition: "Digital financial literacy, a PCA-based index of digital financial behavior, knowledge, and attitude."
+  - term: "DFK"
+    definition: "Digital financial knowledge, based on correct responses to questions on digital finance and regulation."
+  - term: "2SRI"
+    definition: "Two-stage residual inclusion, a control function method for endogeneity in nonlinear models."
+critical_citations:
+  - "[Barber and Odean, 2008] — Attention theory for investor behavior."
+  - "[Hirshleifer and Teoh, 2003] — Limited attention and information processing."
+  - "[OECD, 2023] — Source of DFL definition and survey data."
+relevance:
+  topics:
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: medium
+      justification: "Provides behavioral evidence on investment decisions influenced by social media, relevant to Filipino sample."
+    - code: 2.D
+      name: Filipino Spending Cycles and 'Occasions'
+      relevance: contextual
+      justification: "Includes Philippines in cross-country analysis, offering context for financial behavior but not specific spending cycles."
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: low
+      justification: "Highlights gaps in understanding DFL's moderating role, which is relevant for system design but not directly evaluating existing PFMS."
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: "Directly examines how attention and DFL shape investment behavior, contributing to behavioral profiling."
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: "Uses logistic regression to classify investment behavior based on attention and DFL, informing classification approaches."
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: low
+      justification: "Discusses trust implications of social media influence and DFL, tangentially related to user trust in systems."
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: contextual
+      justification: "Addresses attention as a driver of engagement, providing background but not direct design insights."
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: low
+      justification: "Uses econometric evaluation methods that could inform system evaluation frameworks."
+  contribution: "This paper validates that social media attention is a significant driver of investment behavior, which Odin must account for when modeling user financial decisions. It demonstrates that digital financial literacy does not uniformly moderate this effect, suggesting Odin's behavioral profiling (Topic 5.A) must be context-sensitive. The cross-country comparison provides a template for evaluating how Odin's algorithms might perform differently across user segments. The methodological approach, including endogeneity correction, offers a framework for robustly evaluating Odin's predictive modules."
+  directly_justifies:
+    - "Social media attention significantly increases the likelihood of stock investment, requiring Odin to consider external digital signals."
+    - "Digital financial literacy's moderating role is context-dependent, necessitating adaptive profiling in Odin."
+    - "Endogeneity concerns in behavioral data must be addressed in Odin's evaluation framework."
+  limits:
+    - "Relies on cross-sectional self-reported data, limiting causal inference."
+    - "Attention measure is binary and does not capture intensity or content characteristics."
+    - "DFL index components vary across countries, complicating cross-national comparisons."
+  mapping_rationale: "Systematic scan across 12 functional domains flagged behavioral profiling (5.A, 5.C) as highly relevant due to direct analysis of attention and DFL on investment decisions. The Filipino context (1.C, 2.D) was considered relevant because the Philippines is a sample country, though the paper does not focus on Filipino-specific practices. Existing systems gaps (4.B) and evaluation frameworks (12.A) were noted as low relevance because the paper does not evaluate PFMS but provides methodological insights. Domains like expense categorization (3.A) and budget recommendation (7.A) were rejected as the paper focuses on investment, not expense management. The overall relevance is moderate: it offers behavioral and methodological insights for Odin's profiling and evaluation modules but does not directly address core PFMS functionalities."
+limitations:
+  - "Cross-sectional design limits causal inference and dynamic analysis. [unacknowledged]"
+  - "Self-reported data may introduce reporting and social desirability biases. [unacknowledged]"
+  - "The attention question was newly introduced, preventing longitudinal comparisons. [acknowledged]"
+  - "Results are based on only four countries, limiting generalizability. [acknowledged]"
+  - "DFL moderating effect is heterogeneous, requiring context-specific interpretation. [acknowledged]"
+remember_this:
+  - "Social media attention increases stock investment propensity by 12.2% on average."
+  - "Digital financial literacy's moderating role varies significantly by country context."
+  - "DFL does not universally buffer against social media persuasion."
+  - "Endogeneity concerns in behavioral finance require robust econometric correction."
+  - "Context-sensitive digital literacy is critical for financial system design."

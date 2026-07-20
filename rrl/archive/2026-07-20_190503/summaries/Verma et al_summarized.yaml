@@ -1,0 +1,100 @@
+
+paper_id: 10.1145/3677119
+designation: international
+title: Counterfactual Explanations and Algorithmic Recourses for Machine Learning: A Review
+authors: Verma, S.; Boonsanong, V.; Hoang, M.; Hines, K.; Dickerson, J.; Shah, C.
+year: 2024
+venue: ACM Computing Surveys
+odin_topics:
+  - 1.A
+  - 5.C
+  - 6.B
+  - 7.D
+  - 8.B
+  - 10.B
+tldr: A comprehensive survey categorizing over 350 counterfactual explanation algorithms for machine learning classifiers.
+problem_and_motivation: Machine learning models often make high-stakes decisions without human-understandable explanations. Counterfactual explanations provide actionable feedback to individuals but lack a unified evaluation framework.
+approach:
+  - Surveyed over 350 papers published up to May 2022 focusing on counterfactual explanations for classifiers on tabular data.
+  - Collected papers via snowballing from seminal works and keyword searches on Semantic Scholar and Google Scholar.
+  - Assessed algorithms against a rubric of 10 properties including model access, sparsity, data manifold adherence, and causality.
+  - Categorized papers by their handling of feature actionability, categorical variables, and evaluation metrics.
+findings:
+  - num: Most CFE algorithms require per-instance optimization, with only 8 methods offering amortized inference.
+  - num: 47% of surveyed algorithms are black-box and model-agnostic.
+  - num: Only 12% of methods consider both data manifold adherence and causal feature relations.
+  - Causal constraints in CFEs remain under-addressed, with most approaches requiring complete causal graphs.
+  - Evaluation metrics often conflict, with diversity traded off against data manifold closeness.
+key_figures_tables:
+  - Table 1: Assessment of CFE algorithms across model access, optimization amortization, and feature handling → enables easy comparison of algorithm capabilities.
+  - Figure 1: Two paths crossing a decision boundary → illustrates trade-off between sparsity and data manifold adherence in CFEs.
+key_equations:
+  - equation: "\argmin_{x'} \max_{\lambda} (f(x') - y')^2 + d(x, x')"
+    explanation: Original optimization formulation for a valid counterfactual.
+  - equation: "\argmin_{x' \in A} \max_{\lambda_1, \lambda_2} \lambda_1 (f(x') - y')^2 + \lambda_2 * g(x' - x) + d(x, x')"
+    explanation: Loss function extended with sparsity and actionability constraints.
+definitions:
+  - term: Counterfactual Explanation (CFE)
+    definition: An explanation that provides the smallest change to an input to achieve a desired model prediction.
+  - term: Algorithmic Recourse
+    definition: Actionable feedback that helps an individual change their features to obtain a desirable outcome.
+  - term: Actionability
+    definition: The property that recommended feature changes must be feasible and under the individual's control.
+  - term: Data Manifold
+    definition: The underlying distribution of the training data that CFEs should adhere to for plausibility.
+critical_citations:
+  - "[Wachter et al., 2017] — Seminal paper that formalized CFE optimization for ML models."
+  - "[Ustun et al., 2019] — Introduced actionable recourse with causal constraints and fairness implications."
+  - "[Verma et al., 2020] — Previous version of this survey establishing the CFE rubric."
+  - "[Dandl et al., 2020] — Proposed genetic algorithm for multi-objective diverse CFE generation."
+relevance:
+  topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: contextual
+      justification: Provides general motivation for explainability in financial decision systems.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: The surveyed CFE methods are directly applicable to explaining profile classifications.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: Focuses on classification not sequential data, but principles may extend to forecasting.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: high
+      justification: Directly informs how to handle infeasible budget allocations via actionable recourses.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: CFEs can explain anomalies, as noted in applications like autoencoder-based detection.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Emphasizes trust through transparent, actionable explanations, aligning with Odin's retention goals.
+  contribution: |
+    This survey provides a systematic evaluation framework for counterfactual explanation algorithms, which can be directly applied to Odin's budget recommendation module to generate actionable spending adjustments. The findings on sparsity, data manifold, and causal constraints inform how Odin should balance feasibility and user preference when suggesting budget changes. The review of existing systems and their gaps, particularly regarding categorical features and user preferences, guides Odin's design to avoid known pitfalls. The emphasis on user trust through transparent recourses supports Odin's user retention and engagement strategies.
+  directly_justifies:
+    - "CFEs provide a principled method to generate actionable advice from black-box models."
+    - "Sparsity constraints ensure suggested budget changes are limited to a few key categories."
+    - "Data manifold adherence ensures recommendations are grounded in realistic spending patterns."
+    - "Causal constraints prevent infeasible advice like changing immutable features."
+  limits:
+    - "Focuses on classification, whereas Odin may need regression for spending forecasting."
+    - "Assumes static models, while Odin's environment may have concept drift."
+    - "User studies in the paper are limited; Odin would require localized user testing."
+  mapping_rationale: |
+    The systematic scan across all 12 functional domains and their associated topic codes identified 6 relevant topic codes. High relevance was assigned to 7.D (Infeasibility Handling) and 10.B (User Trust) because the paper directly provides algorithms for generating actionable recourses that can handle infeasible budget allocations and transparency frameworks that build user trust. Medium relevance was assigned to 5.C (Behavioral Profiling) and 8.B (Anomaly Detection) because the CFE algorithms are directly applicable to explaining model decisions in these areas. Low relevance was assigned to 6.B (Forecasting) and 1.A (Demographic) as the paper primarily covers classification, though the techniques may extend. Domains like 2.A (Cultural Practices), 3.A (Categorization Frameworks), and 9.B (Mobile UX) were rejected because the paper does not address cultural contexts, category design, or user interfaces. The paper's overall relevance to Odin is high due to its comprehensive coverage of algorithmic recourse, a key requirement for Odin's feedback mechanisms.
+limitations:
+  - "The survey did not include papers published after May 2022."
+  - "Focuses exclusively on tabular data, which may not cover Odin's future multi-modal inputs."
+  - "The evaluation frameworks rely on proxy metrics, not direct user studies. [unacknowledged]"
+  - "Assumes model access and query budgets that may not hold in production. [unacknowledged]"
+  - "The trade-off between diversity and plausibility remains an open challenge. [unacknowledged]"
+remember_this:
+  - "Valid and sparse CFEs are generated by optimizing proximity to the original input."
+  - "Actionability constraints prevent advice that changes immutable features like age or race."
+  - "Only 12% of surveyed methods consider both data manifold and causal constraints."
+  - "Amortized inference methods are crucial for real-time applications like Odin."
+  - "User trust in CFEs increases when explanations are sparse and causally grounded."

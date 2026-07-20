@@ -1,0 +1,100 @@
+
+paper_id: 10.48550/arXiv.2412.19241
+designation: international-algorithm-specific
+title: Latenrgy: Model Agnostic Latency and Energy Consumption Prediction for Binary Classifiers
+authors: Pittman, J. M.
+year: 2024
+venue: Unknown
+odin_topics:
+  - 6.B
+  - 7.D
+  - 8.B
+  - 9.A
+  - 10.A
+  - 12.B
+tldr: A model-agnostic theoretical framework and predictive equations for latency and energy consumption during inference in binary classification models with RAI guardrails.
+problem_and_motivation: The scalability and sustainability of ML systems are constrained by compute overhead during inference, yet no generalized predictive techniques exist for latency and energy consumption across classifiers. The literature lacks cross-comparison of algorithms and has unquantified impacts of RAI guardrails on inference performance.
+approach:
+  - The study employed Theory Construction Methodology to derive a model-agnostic equation.
+  - Core variables were identified from prior empirical findings and theoretical reasoning.
+  - Variables are organized into three sets: classification algorithm type, RAI guardrails, and dataset characteristics.
+  - Relationships among variables, such as the inverse correlation between latency and energy, were proposed.
+  - Two prediction equations were formalized for latency (with logarithmic scaling for dataset size) and energy consumption (with linear scaling).
+findings:
+  - The framework synthesizes algorithm characteristics, dataset properties, and computational overhead of RAI guardrails into a unified analytical tool.
+  - The approach offers generalizability and scalability across diverse classifiers like SVM, k-NN, Random Forest, and Neural Networks.
+  - The work establishes a theoretical foundation for balancing computational efficiency with ethical robustness in ML systems.
+key_figures_tables:
+  - Table 1: Foundational variables in a model-agnostic equation → Lists variable sets and symbols for A, G, D, and O.
+  - Table 2: Coefficients for model-agnostic prediction equations → Details coefficients for baseline, error, algorithm type, dataset size, feature dimensionality, data type, and guardrails.
+key_equations:
+  - equation: O = f(A, D, G)
+    explanation: General equation unifying latency and energy dimensions.
+  - equation: L = α + β_A A + β_D log(n) + γ_D p + δ_D t + ∑ φ_{G,i} g_i + ε
+    explanation: Latency prediction equation with logarithmic scaling for dataset size.
+  - equation: E = α' + β'_A A + β'_D n + γ'_D p + δ'_D t + ∑ φ'_{G,i} g_i + ε'
+    explanation: Energy consumption equation with linear scaling for dataset size.
+definitions:
+  - term: Responsible AI (RAI)
+    definition: A framework of principles ensuring AI technologies are ethical, fair, and trustworthy.
+  - term: Guardrails
+    definition: Measures implemented in deployed models to assess runtime behavior and ensure responsible operation.
+  - term: Latency
+    definition: The time required to produce a prediction during inference.
+  - term: Energy Consumption
+    definition: The power expended to perform inference operations.
+critical_citations:
+  - "[Henderson et al., 2020] — Highlights inference overhead in resource-constrained environments."
+  - "[Mallik et al., 2023] — Identifies lack of generalized predictive techniques for latency and energy."
+  - "[Mattson et al., 2020] — MLPerf benchmark for standardized performance evaluation."
+  - "[Li et al., 2024] — Computational costs of RAI guardrails are underexplored."
+relevance:
+  topics:
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: low
+      justification: Provides a model-agnostic framework that could be adapted for spending forecasting.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: low
+      justification: General trade-off modeling may inform handling of infeasible budget constraints.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: low
+      justification: Framing of inference performance is relevant to real-time anomaly detection modules.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: low
+      justification: Addresses resource-constrained deployment, relevant to mobile-first PFMS design.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Mentions RAI guardrails including privacy but does not address PFMS-specific privacy.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: low
+      justification: Theoretical framework could contribute to evaluating algorithmic efficiency in PFMS.
+  contribution: The paper provides a theoretical foundation for predicting inference performance, which could inform the design of efficient algorithmic modules in Odin. Its model-agnostic approach is relevant for evaluating and optimizing modules like spending forecasting or anomaly detection. The integration of RAI guardrails, including privacy, aligns with Odin's data privacy concerns. The work enables informed trade-offs between computational efficiency and ethical robustness, applicable to mobile-first system design.
+  directly_justifies:
+    - "A model-agnostic framework is necessary for predicting latency and energy consumption across diverse classifiers."
+    - "Computational overhead of RAI guardrails must be quantified during inference."
+    - "Benchmarking studies must incorporate RAI considerations to remain relevant."
+  limits:
+    - "The predictive equations rely on assumptions about variable relationships that may not fully capture real-world complexities."
+    - "The focus on binary classification excludes multi-class and other ML tasks."
+    - "The representation of RAI guardrails simplifies potential computational impact."
+    - "The framework abstracts dataset characteristics, excluding factors like data quality or sparsity."
+    - "The study presents theoretical equations without empirical validation. [unacknowledged]"
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. Domains flagged as relevant include Spending Forecasting (6.A, 6.B), Anomaly Detection (8.A, 8.B, 8.C), Mobile-First Design (9.A, 9.B), Data Privacy & User Trust (10.A, 10.B), and System Evaluation (12.A, 12.B, 12.C). Topic 6.B (Forecasting Algorithms) was selected with low relevance because the paper provides a general predictive framework that could be adapted for spending forecasting but does not address sequential spending data. Topic 8.B (Anomaly Detection Algorithms) was selected with low relevance because the inference performance framing is applicable to real-time detection modules. Topic 9.A (Mobile-First Design Principles) was selected with low relevance due to the paper's emphasis on resource-constrained environments. Topic 10.A (Data Privacy and Security) was classified as contextual because it mentions RAI guardrails including privacy but does not address PFMS-specific privacy concerns. Topic 12.B (Evaluation of Algorithmic Modules) was selected with low relevance as the theoretical framework could contribute to evaluating algorithmic efficiency. Domains such as Filipino Cultural Context (2.A-D), Expense Categorization (3.A-C), Existing Systems (4.A-B), Behavioral Profiling (5.A-C), Budget Recommendation (7.A-D), User Retention (11.A-B), and Savings & Debt (13.A-C) were rejected as the paper does not address these PFMS-specific topics. The paper's overall relevance to Odin is low but contextual, as it provides a general technical foundation for evaluating and optimizing algorithmic modules and mobile deployment.
+limitations:
+  - "The prediction equations rely on assumptions about variable relationships that may not fully capture real-world complexities."
+  - "The focus on binary classification excludes multi-class and other ML tasks."
+  - "The representation of RAI guardrails simplifies potential computational impact."
+  - "The framework abstracts dataset characteristics, excluding factors like data quality or sparsity."
+  - "The study presents theoretical equations without empirical validation. [unacknowledged]"
+remember_this:
+  - "A model-agnostic theoretical framework for predicting inference latency and energy consumption is proposed."
+  - "The framework integrates the computational cost of RAI guardrails into a predictive tool."
+  - "Latency and energy equations use logarithmic and linear scaling for dataset size, respectively."
+  - "The approach offers generalizability across SVM, k-NN, Random Forest, and Neural Networks."
+  - "Empirical validation is needed to calibrate coefficients and ensure practical applicability."

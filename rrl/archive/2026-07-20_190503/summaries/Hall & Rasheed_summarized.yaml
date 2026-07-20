@@ -1,0 +1,134 @@
+
+paper_id: 10.3390/app15115957
+designation: international
+title: A Survey of Machine Learning Methods for Time Series Prediction
+authors: Hall, T.; Rasheed, K.
+year: 2025
+venue: Applied Sciences
+odin_topics:
+  - 6.A
+  - 6.B
+  - 12.A
+  - 12.B
+  - 5.C
+  - 7.D
+  - 8.B
+  - 9.A
+  - 5.A
+  - 10.A
+tldr: Tree-based and recurrent neural network models show comparable predictive performance, with tree-based methods offering significant computational efficiency advantages.
+problem_and_motivation: Existing literature reviews on time series prediction fail to draw meaningful comparisons between models due to heterogeneous experimental setups. This prevents robust conclusions about the relative strengths of tree-based and deep learning approaches.
+approach:
+  - A systematic review was conducted on 79 papers published between 2017 and 2024 from Web of Science.
+  - Inclusion required studies comparing at least one tree-based and one deep learning model on identical datasets.
+  - Models were evaluated using a First Place Aggregation (FPA) score and a Weighted Rank Aggregation (WRA) score.
+  - Analysis investigated performance variations based on task category, dataset size, time interval, and research focus.
+  - Training time and hyperparameter optimization techniques were also examined for the reviewed models.
+findings:
+  - Tree-based models outperform deep learning models in 54.55% of tasks, achieving a WRA score of 0.6910.
+  - Recurrent neural networks are the strongest deep learning models, while SPTB (XGBoost, LightGBM, CatBoost) models lead for tree-based methods.
+  - num: Tree-based models are on average 126,934.94% faster to train than deep learning models, with a median speed advantage of 5603.43%.
+  - num: In the largest dataset range (206,573–11,275,200 samples), SPTB models outperform RNNs with a WRA advantage of 0.3833.
+  - num: In the M5 Accuracy Competition, 4 of the top 5 submissions relied on LightGBM models.
+  - LightGBM and CatBoost emerge as top performers, but the limited representation of CatBoost calls for further validation.
+  - Research focus introduces bias, with papers favoring deep learning or tree-based methods showing inflated performance for their preferred model class.
+  - Bayesian Optimization and OPTUNA are computationally efficient alternatives to the frequently used but expensive Grid Search.
+key_figures_tables:
+  - Figure 3: FPA and WRA scores comparing TBML and DL classes → TBML has a slight edge over DL overall.
+  - Figure 5: FPA scores for each model → CatBoost, Transformers, LSTMs, and LightGBM are top performers.
+  - Figure 6: WRA scores for each model → CatBoost and LSTM show strong and consistent performance.
+  - Table 3: Best-performing models by dataset size, task, time interval, and efficiency → Practical guide for model selection.
+  - Table 2: Training time advantage of TBML models → TBML can be orders of magnitude faster than DL.
+key_equations:
+  - equation: FPA = (N_first / N_total) * 100
+    explanation: Percentage of comparisons where a model ranks first.
+  - equation: WRA = 1 - (N_rank - 1) / (N_total - 1)
+    explanation: Normalized score based on a model's rank in each comparison.
+definitions:
+  - term: TBML
+    definition: Tree-Based Machine Learning, including Random Forests and GBDT.
+  - term: DL
+    definition: Deep Learning, using neural networks with multiple layers.
+  - term: SPTB
+    definition: Specialized Tree-Based models like XGBoost, LightGBM, and CatBoost.
+  - term: RNN
+    definition: Recurrent Neural Network, designed for sequential data.
+  - term: LSTM
+    definition: Long Short-Term Memory, a popular RNN variant with memory gates.
+  - term: FPA
+    definition: First Place Aggregation, the frequency a model is the top performer.
+  - term: WRA
+    definition: Weighted Rank Aggregation, a normalized score based on average rank.
+  - term: ARIMA
+    definition: Autoregressive Integrated Moving Average, a traditional statistical model.
+critical_citations:
+  - "[Chen, 2016] — Introduced XGBoost as a scalable tree boosting system."
+  - "[Ke, 2017] — Developed LightGBM, known for its computational efficiency."
+  - "[Prokhorenkova, 2018] — Created CatBoost for handling categorical data effectively."
+  - "[Sherstinsky, 2020] — Fundamental overview of RNN and LSTM networks."
+  - "[Vaswani, 2017] — Introduced the Transformer model with a self-attention mechanism."
+relevance:
+  topics:
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: This paper is a comprehensive survey of predictive ML models directly relevant to Odin's core forecasting functions.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: It provides a detailed evaluation of LSTM, GRU, XGBoost, and LightGBM, which are prime candidates for spending forecasting.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: The paper extensively analyzes error metrics (RMSE, MAE, MAPE, etc.) and proposes a methodology for comparing model performance.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: The survey's systematic comparison of TBML vs. DL models provides a framework for evaluating Odin's individual algorithms.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: While not about user profiles, the review of classification models and metrics can inform behavioral profile classification.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: contextual
+      justification: The paper's discussion of hybrid models provides context for more robust, ensemble-based systems, but does not address infeasibility.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: contextual
+      justification: The survey includes models and metrics applicable to anomaly detection, such as classification techniques.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: contextual
+      justification: The paper's findings on computational efficiency (training time) are critical for mobile-first deployment, but does not discuss UX.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: low
+      justification: The paper is a methodological survey, not a study of user behavior, making its relevance to profiling only indirect.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: The paper does not address privacy or security. It mentions data quality but not the sensitivity of personal data.
+  contribution: The paper provides a high-level comparison of tree-based and deep learning models for time series prediction, establishing a broad performance baseline for Odin's forecasting module. Its detailed analysis of model performance across task types, dataset sizes, and computational costs directly informs the selection of algorithms for spending forecasting and anomaly detection. The extensive review of error metrics and evaluation methodologies provides a standard framework against which Odin's system evaluation can be validated. The findings on hybrid models and the importance of ensemble methods suggest a robust architectural direction for improving the system's predictive reliability. The paper's explicit identification of LightGBM and LSTM as top performers provides strong justification for prioritizing these algorithms in the system's development roadmap.
+  directly_justifies:
+    - "LightGBM and LSTM are among the best-performing models for time series forecasting."
+    - "Tree-based models offer a significant computational advantage over deep learning models."
+    - "The choice of data and feature engineering is as critical as the choice of the forecasting model."
+    - "Hybrid models, particularly those combining SPTB and RNNs, often yield superior predictive performance."
+    - "Bayesian Optimization and OPTUNA are efficient alternatives to Grid Search for hyperparameter tuning."
+  limits:
+    - "The survey covers papers only up to 2024, limiting insight into the latest state-of-the-art transformer models."
+    - "The analysis groups diverse model variants (e.g., all RNNs), which may obscure specific advantages of models like Bi-LSTM."
+    - "The findings on domain-specific performance are based on a small number of samples for some task categories, limiting their generalizability."
+    - "The paper's analysis of research bias highlights potential methodological flaws in comparative model studies, which should be considered when evaluating the source literature."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated canonical topic codes was performed. The domains of `Spending Forecasting`, `System Evaluation`, and `Behavioral Profiling & Classification` were flagged as highly relevant. Within `Spending Forecasting`, topic codes 6.A and 6.B were assigned a `high` relevance because the paper is a direct survey of predictive models for sequential data. For `System Evaluation`, codes 12.A and 12.B were rated `high` as the paper's methodology for evaluating and comparing algorithms provides a practical framework for Odin's testing. Code 5.C was rated `medium` because the survey covers classification approaches that could be adapted for user profiling. Topic codes 7.D (Infeasibility Handling), 8.B (Anomaly Detection), and 9.A (Mobile-First Design) were rated `contextual`; the paper discusses model ensembles and anomaly detection methods but does not directly address Odin's specific challenges in these areas. Codes 5.A and 10.A were considered and rejected due to the paper's exclusive focus on computational methods rather than user behavior or privacy. The survey's overall relevance to Odin is high as it serves as a foundational guide for selecting and evaluating the core forecasting and classification algorithms.
+limitations:
+  - "The survey's classification of model categories (e.g., grouping all RNNs) may obscure the nuanced performance of specific architectures like Bi-LSTM or GRU."
+  - "The analysis of temporal resolution did not reveal clear trends, suggesting that time interval may be less important than domain-specific data characteristics."
+  - "The findings on bias based on research focus reveal a potential weakness in the methodology of the surveyed papers themselves."
+remember_this:
+  - "LightGBM and LSTM are top-performing models for time series prediction."
+  - "Tree-based models are orders of magnitude faster to train than deep learning models."
+  - "Model combination and ensemble methods consistently improve predictive performance."
+  - "Data quality and feature engineering can be more important than the choice of the model."
+  - "Research focus bias can significantly affect reported comparative model performance."

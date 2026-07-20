@@ -1,0 +1,109 @@
+
+paper_id: 10.1016/j.bir.2026.100800
+designation: international-algorithm-specific
+title: Machine learning for risk profiling: An analysis of pension fund participants
+authors: Göncü, A.; Kuzubaş, T.U.; Saltoğlu, B.
+year: 2026
+venue: Borsa Istanbul Review
+odin_topics:
+  - 5.A
+  - 5.C
+  - 6.A
+  - 12.A
+  - 12.B
+  - 2.C
+tldr: Boosting methods modestly improve risk profiling over regulatory benchmarks by identifying a concise set of four predictors, though overall explanatory power remains low.
+problem_and_motivation: Existing risk questionnaires have limited predictive power and create operational friction for pension providers. Accurate risk assessment is critical for aligning investor preferences with portfolio choices, yet current tools often fail to predict actual behavior. The lack of systematic comparison of machine learning methods against regulatory benchmarks in emerging markets leaves room for improvement.
+approach:
+  - Analyzed 81,563 participants from a Turkish pension fund with portfolio risk as dependent variable.
+  - Applied recursive feature elimination (RFE) across eight models to select the most predictive variables.
+  - Compared ordinary least squares, ridge, Lasso, CART, random forest, and three boosting algorithms.
+  - Used 20‑fold cross‑validation with grid search for hyperparameter tuning.
+  - Included age‑squared to capture the nonlinear age‑risk relationship.
+findings:
+  - "num: LightGBM achieved R² of 0.167 vs. the regulatory benchmark of 0.131, a 27% relative increase."
+  - "num: Four variables (self‑reported risk, lottery choice, age, and age‑squared) capture most of the predictive power."
+  - Age exhibits an inverted‑U relationship with portfolio risk, peaking in middle age.
+  - Boosting methods show less performance variability across cross‑validation folds than the benchmark.
+  - The performance using just four variables is comparable to using the full questionnaire.
+key_figures_tables:
+  - "Figure 1: Age vs. average portfolio risk → Inverted‑U relationship with peak at 35–44 age group."
+  - "Figure 2: R² distribution across folds for all features → Boosting methods have higher mean and lower variance."
+  - "Figure 3: R² distribution for selected features → Simplified model still outperforms regulatory benchmark."
+key_equations:
+  - equation: "\\sigma = \\sqrt{52 \\times \\frac{1}{T-1} \\sum_{t=1}^{T} (r_{f,t} - \\bar{r})^2}"
+    explanation: "Annualized weekly return volatility used as portfolio risk measure."
+definitions:
+  - term: RFE
+    definition: "Recursive feature elimination, an iterative feature selection method."
+  - term: CMB
+    definition: "Capital Markets Board of Türkiye, the regulatory body that mandates risk questionnaires."
+  - term: OLS
+    definition: "Ordinary least squares, a linear regression method."
+  - term: Lasso
+    definition: "Least absolute shrinkage and selection operator, a linear model with L1 regularization."
+  - term: CART
+    definition: "Classification and regression tree, a decision‑tree algorithm."
+  - term: GBoost
+    definition: "Gradient boosting, an ensemble method that builds models sequentially."
+  - term: XGBoost
+    definition: "Extreme gradient boosting, a scalable boosting implementation."
+  - term: LightGBM
+    definition: "Light gradient boosting machine, a fast boosting framework."
+critical_citations:
+  - "[Dohmen et al., 2011] — Established low R² for risk preference prediction."
+  - "[Beauchamp et al., 2017] — Similar modest explanatory power in risk preference studies."
+  - "[Kuzubaş & Saltoğlu, 2024] — Factor analysis of the same pension context."
+relevance:
+  topics:
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: "Directly models risk tolerance as a behavioral profile using portfolio choices."
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: "Compares multiple ML algorithms for profiling risk behavior."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: medium
+      justification: "Applies predictive models to forecast revealed risk from questionnaire responses."
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: "Uses cross‑validation and multiple performance metrics to evaluate models."
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: "Provides systematic comparison of algorithmic performance (boosting vs. linear models)."
+    - code: 2.C
+      name: User-Declared Financial Preferences
+      relevance: contextual
+      justification: "Uses self‑reported risk attitudes as predictors, but does not address preference elicitation for PFMS."
+  contribution: "This paper's feature selection method can inform Odin's behavioral profiling module by identifying the most predictive user attributes for financial risk. Its comparison of ML models provides a benchmark for evaluating Odin's predictive algorithms, particularly for forecasting spending or risk. The finding that a small set of variables suffices supports efficient user onboarding in Odin's mobile‑first design, reducing friction. The study's cross‑validation framework offers a template for Odin's system evaluation, ensuring robust performance assessment. However, the modest explained variance reminds that risk‑taking is inherently difficult to predict, guiding realistic expectations for Odin's models."
+  directly_justifies:
+    - "Boosting methods can improve predictive accuracy for financial risk profiling."
+    - "A four‑variable model can match the predictive power of a full questionnaire."
+    - "Age has a nonlinear relationship with risk‑taking behavior."
+    - "Self‑reported risk attitude is the single most important predictor."
+    - "Simplified assessments can reduce operational friction without substantial loss of accuracy."
+  limits:
+    - "The study uses cross‑sectional data, limiting insights on temporal dynamics."
+    - "Modest R² indicates that risk‑taking is not well explained by standard demographic and survey variables."
+    - "Generalizability to other cultural contexts (e.g., the Philippines) is untested."
+    - "No consideration of cold‑start scenarios or initial user onboarding [unacknowledged]."
+    - "Does not address data privacy or user trust concerns [unacknowledged]."
+  mapping_rationale: "A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper was flagged as relevant for Behavioral Profiling & Classification (5.A, 5.C) because it directly models and classifies risk tolerance using ML. It also touches on Predictive Modeling (6.A) as it forecasts portfolio risk, and on Evaluation Frameworks (12.A, 12.B) due to its extensive cross‑validation and model comparisons. User‑Declared Preferences (2.C) was considered but assigned contextual because the survey responses are used as predictors rather than as a design consideration for PFMS. Domains related to Expense Categorization (3.A–3.C), Budgeting (7.A–7.D), Anomaly Detection (8.A–8.C), Mobile‑First Design (9.A–9.B), Data Privacy (10.A–10.B), Engagement (11.A–11.B), and Savings/Debt (13.A–13.C) were rejected because the paper does not address these areas. Overall, the paper provides moderate direct justification for Odin's behavioral profiling and evaluation components, but its findings are primarily methodological and not specific to PFMS or Filipino context."
+limitations:
+  - "Cross‑sectional analysis prevents studying changes in risk preferences over time."
+  - "The dependent variable (portfolio risk) may be influenced by advisor recommendations or defaults, not solely individual preferences."
+  - "Overall explanatory power is modest (R² 0.13–0.17), indicating unobserved factors dominate."
+  - "Findings may not generalize to other cultural or regulatory environments."
+  - "No exploration of cold‑start or initial user profiling [unacknowledged]."
+  - "Lacks discussion of interpretability trade‑offs for regulatory compliance [unacknowledged]."
+remember_this:
+  - "Boosting improves R² from 0.131 to 0.167, a 27% relative gain."
+  - "Four predictors (risk attitude, lottery choice, age, age²) capture most power."
+  - "Age‑risk relationship is inverted‑U, peaking in middle age."
+  - "Simplified questionnaires can maintain accuracy and reduce operational friction."
+  - "Overall predictive power remains low, highlighting inherent difficulty in risk prediction."

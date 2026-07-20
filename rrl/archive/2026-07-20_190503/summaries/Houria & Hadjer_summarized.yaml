@@ -1,0 +1,123 @@
+
+paper_id: a48c6c7e-9e14-57ba-a40c-5b06b3d15090 # No DOI available
+designation: international-algorithm-specific
+title: Towards Privacy-Preserving Federated Learning with Explainable AI: Applications in IoT Networks
+authors: Khouildat, H.; Hideb, H.
+year: 2025
+venue: Kasdi Merbah University
+odin_topics:
+  - 6.A
+  - 8.A
+  - 8.B
+  - 8.C
+  - 10.A
+  - 10.B
+  - 12.B
+  - 12.C
+tldr: Integrates federated learning with explainable AI via GradCAM and NormGrad to balance privacy and transparency in decentralized IoT environments.
+problem_and_motivation: Standard AI models rely on centralized data, posing privacy risks and regulatory challenges, especially in sensitive domains like healthcare and IoT. Federated learning protects privacy but creates a "black box" where model decisions are opaque, limiting trust and adoption. The core challenge is balancing privacy preservation with the need for transparent, interpretable decision-making in decentralized systems.
+approach:
+  - Implements a convolutional neural network within a federated learning framework using the Flower library.
+  - Evaluates FL strategies FedAvg, FedAdam, FedYogi, and FedOpt across balanced, random, and skewed data distributions.
+  - Tests synchronous and asynchronous client synchronization modes.
+  - Integrates visual interpretability techniques GradCAM and NormGrad at the client level to generate heatmaps without sharing raw data.
+  - Analyzes the trade-off between privacy (via Gaussian noise injection) and model performance/interpretability.
+  - Assesses the impact of client numbers, model complexity, and weight sharing effectiveness on accuracy and interpretability.
+findings:
+  - num: FedAvg and FedOpt achieved stable performance (~71% accuracy), while FedAdam and FedYogi showed higher sensitivity to data heterogeneity.
+  - num: Synchronous FL achieved a higher final accuracy (0.74) compared to asynchronous FL (0.70), offering more stable client performance.
+  - num: Adding Gaussian noise for privacy protection decreased model accuracy from high to low and degraded the clarity of GradCAM/NormGrad heatmaps, confirming a privacy-interpretability trade-off.
+  - Multi-task federated learning produced more focused and precise heatmaps than standard FL, despite a slight drop in accuracy (69.7% vs. 70.7%).
+  - num: Increasing the number of clients from 2 to 20 reduced overall accuracy (0.74 to 0.58) but improved the focus and visual precision of interpretability heatmaps.
+key_figures_tables:
+  - Figure 4.14: Accuracy comparison of FedAvg under Equal, Random, and Unequal data distribution → Equal distribution yields the highest and most stable accuracy.
+  - Figure 4.21: Accuracy comparison of Sync vs. Async in FedAvg → Sync mode achieves higher final accuracy and more consistent client performance.
+  - Figure 4.30: Accuracy during different privacy noise levels → Increasing noise progressively reduces model accuracy.
+  - Table 4.5: Impact of privacy noise on model accuracy and visual explanations → Higher noise improves privacy scores but severely degrades interpretability quality.
+  - Table 4.9: Impact of client number on model performance and heatmap interpretability → More clients improve heatmap focus but reduce overall accuracy.
+key_equations:
+  - equation: $L_{CrossEntropy} = -\sum_{i=1}^{C} y_i \log(\hat{y}_i)$
+    explanation: Loss function for multi-class classification.
+  - equation: $L_{GradCAM}^{c} = ReLU\left(\sum_{k} \alpha_k^c A^k\right)$
+    explanation: Generates class-discriminative localization heatmap.
+  - equation: $\hat{H}(x) = \frac{\|\nabla_x f_y(x)\| - \min(\|\nabla_x f_y(x)\|)}{\max(\|\nabla_x f_y(x)\|) - \min(\|\nabla_x f_y(x)\|) + \varepsilon}$
+    explanation: Normalizes gradient saliency for local interpretability.
+  - equation: $w_{t+1} = \sum_{k=1}^{K} \frac{n_k}{n} w_t^{(k)}$
+    explanation: FedAvg weighted aggregation of client model weights.
+definitions:
+  - term: Federated Learning (FL)
+    definition: Decentralized training where models learn locally on devices and only parameter updates are shared.
+  - term: Explainable AI (XAI)
+    definition: Set of techniques to make AI decision-making transparent and understandable to humans.
+  - term: GradCAM
+    definition: Gradient-weighted Class Activation Mapping, a technique to visualize important regions in an image for model prediction.
+  - term: NormGrad
+    definition: Normalized Gradient, a saliency method providing fine-grained, localized interpretations of input influence.
+  - term: Differential Privacy
+    definition: Technique adding calibrated noise to data or model updates to prevent inference of individual records.
+  - term: FedAvg
+    definition: Federated Averaging, a baseline FL algorithm that computes a weighted average of client model updates.
+critical_citations:
+  - "[McMahan et al., 2017] — Introduces FedAvg, foundational to this work's aggregation."
+  - "[Selvaraju et al., 2017] — Proposes GradCAM, the primary interpretability method used."
+  - "[Kairouz et al., 2021] — Surveys open problems in FL, including interpretability challenges."
+  - "[Abadi et al., 2016] — Establishes differential privacy, relevant to the noise injection analysis."
+relevance:
+  topics:
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: contextual
+      justification: FL and XAI integration offers a methodological foundation for predictive models that require both privacy and transparency.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: medium
+      justification: The FL-XAI framework could be applied to anomaly detection in financial transactions to balance fraud detection and data privacy.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: The evaluation of FL strategies (FedAvg, FedAdam, etc.) provides comparative performance insights relevant to selecting algorithms for anomaly detection.
+    - code: 8.C
+      name: Cold-Start Baseline Strategies for Anomaly Detection
+      relevance: low
+      justification: Discussion of distribution strategies (IID, non-IID) relates to challenges in modeling new users with limited data, a cold-start scenario.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: high
+      justification: Directly addresses the core challenge of preserving data privacy in decentralized learning, a primary concern for financial systems.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Argues that explainability (XAI) is essential for building user trust, a critical factor for user adoption and retention in PFMS.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: The empirical evaluation of FL algorithms (FedAvg, FedAdam, etc.) and privacy techniques provides a robust evaluation framework.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: low
+      justification: The paper's methodology for evaluating performance-accuracy and privacy-interpretability trade-offs offers insights for evaluating recommendation systems.
+  contribution: This thesis provides an end-to-end framework for privacy-preserving federated learning that integrates visual explainability, a critical need for Odin's predictive and anomaly detection modules. The rigorous comparison of FL strategies offers evidence-based guidance for selecting the appropriate aggregation algorithm to handle heterogeneous user spending data. The empirical analysis of the privacy-interpretability trade-off, including how noise affects both accuracy and explanation quality, directly informs the design decisions for Odin's differential privacy mechanisms. The scalability insights regarding the number of clients and communication overhead are vital for deploying Odin as a mobile-first PFMS with potentially many users.
+  directly_justifies:
+    - Federated learning can effectively train models on decentralized data while preserving user privacy.
+    - The integration of visual explainability techniques enhances model transparency without requiring raw data access.
+    - Synchronous aggregation yields more stable and accurate global models than asynchronous updates.
+    - There exists a direct trade-off between privacy protection (via noise) and model performance/interpretability.
+    - Multi-task learning can improve model interpretability at a minimal cost to predictive accuracy.
+  limits:
+    - Simulation uses CIFAR-10 image data, not financial transaction data, limiting direct generalizability.
+    - Privacy score metric (1 - Accuracy) is simplistic and does not provide formal differential privacy guarantees. [unacknowledged]
+    - The analysis of asynchronous FL is limited and does not fully explore the impact of client staleness.
+    - The paper does not evaluate the computational overhead of GradCAM/NormGrad on resource-constrained mobile devices.
+  mapping_rationale: A systematic scan across all 12 functional domains was performed. The paper's primary relevance lies in its exploration of privacy-preserving (Domain 10) and interpretable (Domain 8) AI, as it directly investigates the trade-off between data protection and model transparency, which are foundational for user trust and effective anomaly detection in a PFMS. Its algorithmic contributions and empirical evaluation (Domain 12) are highly relevant for selecting and benchmarking Odin's predictive modules. While the paper focuses on IoT and healthcare, its core FL-XAI framework and findings on data distributions and client scalability are applicable to the financial domain. Domains related to Filipino cultural context (2), expense categorization (3), behavioral profiling (5), and savings/debt management (13) were considered but rejected as the paper does not address these specific financial topics. The borderline case was between privacy (10.A/10.B) and algorithm evaluation (12.B/12.C), both deemed highly/medium relevant as the paper provides both a methodological framework and a performance benchmark.
+limitations:
+  - The study uses a generic image dataset (CIFAR-10) rather than domain-specific financial or medical data.
+  - Privacy metric is a proxy, lacking formal guarantees from differential privacy or other rigorous frameworks. [unacknowledged]
+  - Communication overhead and resource consumption (RAM/CPU) are measured but not thoroughly optimized for mobile or IoT devices.
+  - The framework is not tested against malicious attacks (e.g., Byzantine or poisoning), a common concern in federated learning. [unacknowledged]
+  - Interpretability analysis is qualitative; no quantitative metrics are used to assess explanation quality.
+remember_this:
+  - Federated learning balances privacy and performance through decentralized training.
+  - Explainable AI is critical for building user trust in opaque models.
+  - Synchronous aggregation yields more stable and accurate models than asynchronous.
+  - Privacy noise degrades both model accuracy and the clarity of explanations.
+  - num: Increasing clients from 2 to 20 reduced accuracy from 0.74 to 0.58.

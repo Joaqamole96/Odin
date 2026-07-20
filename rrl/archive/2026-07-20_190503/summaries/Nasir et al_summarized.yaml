@@ -1,0 +1,99 @@
+
+paper_id: 10.32604/cmc.2024.055192
+designation: international-algorithm-specific
+title: Data-Driven Decision-Making for Bank Target Marketing Using Supervised Learning Classifiers on Imbalanced Big Data
+authors: Nasir, F.; Ahmed, A. A.; Kiraz, M. S.; Yevseyeva, I.; Saif, M.
+year: 2024
+venue: Computers, Materials & Continua
+odin_topics:
+  - 5.B
+  - 5.C
+  - 7.B
+  - 8.C
+  - 12.A
+  - 12.B
+tldr: Evaluates supervised learning classifiers on imbalanced bank marketing data, finding XGBoost with BorderlineSMOTE2 significantly improves F-1 and AUC scores.
+problem_and_motivation: Imbalanced target variables in big data hinder supervised learning classifier performance, limiting effectiveness in applications like bank target marketing. Restricted availability of real-world imbalanced datasets for classification accentuates research deficiencies.
+approach:
+  - Applied data analysis, feature engineering (binning, label encoding), and five sampling techniques to a Portuguese bank marketing dataset with 45,211 instances.
+  - Implemented Decision Tree, Random Forest, Grid-Search RF, Random-Search RF, AdaBoost, and XGBoost classifiers.
+  - Evaluated performance using Accuracy, Precision, Recall, F-1 score, and AUC.
+  - Used XGBoost as a baseline to test the impact of Random Over-Sampling, Random Under-Sampling, SMOTE, AdaSyn SMOTE, and BorderlineSMOTE2.
+findings:
+  - XGBoost outperformed other classifiers on the imbalanced dataset, achieving F-1 and AUC scores of 0.50 and 0.91, respectively.
+  - num: BorderlineSMOTE2 with XGBoost yielded the best results, with F-1 score of 0.87 and AUC of 0.94.
+  - Grid-Search RF and Random-Search RF excelled in Precision and AUC on the imbalanced data.
+  - Features 'durationcat', 'housing', and 'loan' were identified as the most critical for predicting marketing campaign success.
+  - num: The target variable was highly imbalanced with 11.69% 'yes' and 88.31% 'no' responses.
+  - Applying sampling techniques significantly enhanced the performance of XGBoost across all metrics.
+key_figures_tables:
+  - Table 7: Results of classifiers performance on imbalanced data → XGBoost has the highest F-1 score of 0.50.
+  - Table 8: Results of XGBoost performance after sampling → BorderlineSMOTE2 gives the best F-1 (0.87) and AUC (0.94).
+  - Figure 11: Feature importance graph for XGBoost with BorderlineSMOTE2 → 'durationcat' is the most important feature.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: AUC
+    definition: Area Under the ROC Curve, a performance metric for classification.
+  - term: F-1 score
+    definition: Harmonic mean of precision and recall, used to evaluate classifier performance.
+  - term: SMOTE
+    definition: Synthetic Minority Oversampling Technique, creates synthetic samples for the minority class.
+  - term: XGBoost
+    definition: Extreme Gradient Boosting, an optimized gradient boosting algorithm.
+  - term: BorderlineSMOTE2
+    definition: A SMOTE variant that generates synthetic data near the minority class borderline.
+critical_citations:
+  - "[Moro et al., 2014] — Provides the bank marketing dataset used in the study."
+  - "[Gupta et al., 2023] — Demonstrates effectiveness of XGBoost with sampling on imbalanced data."
+  - "[Wongvorachan et al., 2023] — Recommends Random Forest with hyperparameter tuning for imbalanced data."
+relevance:
+  topics:
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: medium
+      justification: Addresses classifier performance on imbalanced data relevant for initial user profiling.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: Directly evaluates supervised classifiers like XGBoost and Random Forest for classification tasks.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: contextual
+      justification: Context of target marketing classification provides a parallel to predicting user responses.
+    - code: 8.C
+      name: Cold‑Start Baseline Strategies for Anomaly Detection
+      relevance: low
+      justification: The focus on handling imbalanced data has implications for setting anomaly detection baselines.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Uses rigorous evaluation with F-1, AUC, Precision, and Recall, which are applicable to PFMS.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Provides a systematic comparison of various classifier algorithms and sampling techniques.
+  contribution: The study's systematic evaluation of classifiers and sampling techniques on imbalanced data directly informs the selection of algorithms and preprocessing methods for Odin's behavioral profiling module. The finding that XGBoost with BorderlineSMOTE2 significantly improves F-1 and AUC provides a citable benchmark for handling class imbalance in user spending data. The comparative evaluation of different classifiers (RF, XGBoost, AdaBoost) offers a methodological template for algorithm selection within Odin's forecasting and anomaly detection components.
+  directly_justifies:
+    - "XGBoost with BorderlineSMOTE2 achieves an F-1 score of 0.87 on imbalanced bank marketing data."
+    - "Supervised learning classifiers performance is significantly improved by applying sampling techniques."
+    - "Random Forest with hyperparameter tuning excels in Precision and AUC."
+    - "Feature engineering, including binning and label encoding, is crucial for classifier performance."
+  limits:
+    - "The study is limited to a single dataset (bank marketing), which may not generalize to other financial data or domains."
+    - "The paper focuses on classification, whereas Odin requires forecasting and recommendation capabilities, which are not directly addressed."
+    - "The evaluation is based on a target marketing problem, which differs from personal financial management tasks, such as expense categorization and budget allocation."
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. Domains flagged as relevant include Behavioral Profiling & Classification (5.B, 5.C) due to the paper's focus on predicting user behavior, and System Evaluation (12.A, 12.B) due to its rigorous comparative methodology. Topic 8.C (Cold‑Start Baseline Strategies for Anomaly Detection) was considered relevant at a low level because the methods for handling imbalanced data could inform baseline anomaly thresholds. Topics like 7.B (Budget Recommendation) and 3.A (Expense Categorization) were considered contextual, as the problem of classifying user responses is analogous but not directly applicable. Domains like Filipino Cultural Context (2.A-2.D), Mobile-First Design (9.A, 9.B), and Data Privacy (10.A, 10.B) were rejected as the paper does not address them. The overall relevance is methodological, offering strong evidence for classifier and sampling technique selection, which is central to Odin's data-driven modules.
+limitations:
+  - "The dataset used is specific to a single bank and marketing campaign, limiting generalizability to other financial contexts and demographics."
+  - "The study does not address cold-start scenarios, which are crucial for Odin's initial user engagement. [unacknowledged]"
+  - "Potential overfitting is mentioned but not rigorously addressed across all models."
+  - "The paper evaluates only classification, not forecasting or budget optimization, key functions of Odin. [unacknowledged]"
+  - "Privacy concerns in accessing larger banking datasets are noted but not explored as a design constraint. [unacknowledged]"
+remember_this:
+  - XGBoost with BorderlineSMOTE2 gives an F-1 score of 0.87.
+  - BorderlineSMOTE2 sampling significantly boosts classifier performance on imbalanced data.
+  - Duration, housing, and loan status are key predictors in marketing success.
+  - Hyperparameter tuning of Random Forest improves precision and AUC.
+  - Handling imbalanced data is crucial for accurate classification in finance.

@@ -1,0 +1,727 @@
+5202
+yaM
+82
+]AM.sc[
+1v52122.5052:viXra
+SENTIMENT SIMULATION USING GENERATIVE AI AGENTS
+MelroseTia1,JezreelSophiaLanuzo1,LeiRigiBaltazar1,
+MarieJoyLopez-Relente2,DiwaMalayaQuiñones3,JasonAlbia1∗
+1NetopiaAI,Inc.,Manila,Philippines
+2InstituteofStatistics,UniversityofthePhilippinesLosBaños,Laguna
+3DepartmentofPsychology,UniversityofthePhilippinesDiliman,QuezonCity
+{melrose, sophia, lei, jason}@netopia.ai, {daquinones, mflopez2}@up.edu.ph
+ABSTRACT
+Traditionalsentimentanalysisreliesonsurface-levellinguisticpatternsandretrospectivedata,limiting
+itsabilitytocapturethepsychologicalandcontextualdriversofhumansentiment. Theselimitations
+constrain its effectiveness in applications that require predictive insight, such as policy testing,
+narrativeframing,andbehavioralforecasting.Wepresentarobustframeworkforsentimentsimulation
+usinggenerativeAIagentsembeddedwithpsychologicallyrichprofiles. Agentsareinstantiated
+fromanationallyrepresentativesurveyof2,485Filipinorespondents,combiningsociodemographic
+informationwithvalidatedconstructsofpersonalitytraits,values,beliefs,andsocio-politicalattitudes.
+The framework includes three stages: (1) agent embodiment via categorical or contextualized
+encodings, (2) exposure to real-world political and economic scenarios, and (3) generation of
+sentiment ratings accompanied by explanatory rationales. Using Quadratic Weighted Accuracy
+(QWA), we evaluated alignment between agent-generated and human responses. Contextualized
+encodingachieved92%alignmentinreplicatingoriginalsurveyresponses. Insentimentsimulation
+tasks,agentsreached81%–86%accuracyagainstgroundtruthsentiment,withcontextualizedprofile
+encodings significantly outperforming categorical (p < 0.0001, Cohen’s d = 0.70). Simulation
+results remained consistent across repeated trials (±0.2−0.5% SD) and resilient to variation in
+scenarioframing(p=0.9676,Cohen’sd=0.02). Ourfindingsestablishascalableframeworkfor
+sentimentmodelingthroughpsychographicallygroundedAIagents. Thisworksignalsaparadigm
+shiftinsentimentanalysisfromretrospectiveclassificationtoprospectiveanddynamicsimulation
+groundedinpsychologyofsentimentformation.
+Keywords agenticsimulation·sentimentanalysis·sentimentsimulation·generativeAIagents·behavioralscience
+1 Introduction
+Sentimentanalysisinvolvesassessingtheopinionsandattitudestowardspecificareasofinterests,playingapivotal
+role in influencing decisions across business, societal, and individual domains [1, 2]. While the term sentiment
+analysisgainedprominenceintheearly2000s[3,4],thebroaderpracticeofgaugingpublicopinionhaslongshaped
+policy-making,democraticdiscourse,andmarketingstrategies[5]. Asdigitalplatformsanduser-generatedcontent
+increasinglyserveaschannelsforpublicexpression,sentimentanalysisenablesorganizationstoharnessopinion-rich
+andunstructureddatatorefinecommunicationstrategiesandtorespondeffectivelytosocietaltrends.
+Inthesocio-politicaldomain,sentimentanalysishassupportedapplicationsrangingfrompolicyevaluationtocampaign
+strategybyenablinglarge-scaleinterpretationofpublicopinion. Examplesincludeassessmentsofpublicengagement
+with government initiatives [6, 7, 8, 9], political campaign analysis [10, 11, 12], and citizen feedback monitoring
+viasocialmedia[13]. Forinstance,Sandoval-Almazanetal. (2020)[10]examinedFacebookreactionstopolitical
+campaignpostsinMexico,uncoveringpatternsinpublicengagement. InIndonesia,Sukmaetal. (2020)[7]analyzed
+TwitterresponsestotheOmnibusLaw,revealinglevelsofpublicsupportanddissenttothepolicy. InthePhilippines,
+∗Correspondingauthor:jason@netopia.ai
+
+SentimentSimulationUsingGenerativeAIAgents
+Mirandaetal. (2021)[12]trackedsentimentaroundpresidentialstateaddresses,whileUmalietal. (2020)[13]assessed
+citizensatisfactionwithvariousgovernmentagenciesbasedonsocialmediacommentary.
+Beyondpolitics,sentimentanalysisiswidelyusedintheprivatesector,whereitservesasacriticaltoolinmarketing,
+advertising,andcustomerexperiencestrategies. Rathoreetal. (2020)[14],forexample,analyzedemotionalpatternsin
+onlinecommentsbeforeandafterproductlaunchestoassessmarketreceptionandproductfit. Giannakisetal. (2022)
+[15]showedhowconsumersentimentfromsocialmediacaninformearly-stageproductdevelopment,whileYinetal.
+(2022)[16]studiedbrandloyaltyandsatisfactionthroughTwittersentimenttowarde-commerceplatformsLazadaand
+Shopee. Inaddition,sentimentanalysishasalsobeenappliedtoevaluateconsumerreviewsforpredictingbehavior
+andsatisfaction[17,18]andtogeneratereal-timecustomerinsights[19],therebycontributingtoproductrefinement,
+enhancedcustomerengagement,anddata-drivenbusinessstrategies.
+TraditionalSentimentAnalysisandTheirLimitations
+Traditionalsentimentanalysisoftenreliesonstructuredmethodssuchassurveys,opinionpolls,andfocusgroups,
+alongsidemorerecentdigitalsourceslikesocialmedia[2]. Theseapproacheshavepavedthewayintocomputational
+techniques leveraging machine learning (ML) and natural language processing (NLP) to classify sentiment (e.g.,
+negative,neutral,positive)basedonlarge-scaletextanalysis. Thesemethodsanalyzelinguisticpatterns,including
+theuseofemotionallychargedwords(e.g.,“happy”,“disappointed”)andsyntacticstructuresthatconveyopinionor
+emotions.
+Despite advances in ML and deep learning models that boost classification accuracy [20], these approaches are
+fundamentallylimited. First,theyprimarilycapturesurface-levellinguisticcues,oftenoversimplifyingthecomplexity
+andnuanceofhumanemotionandopinion. Second,thesemodelsfunctionasblack-boxsystemsthatlacktransparency,
+offeringlimitedinsightintothereasoningbehindsentimentpredictions[21]. Thislackofinterpretabilityimpairstrust,
+accountability,andapplicabilityindomainsrequiringnuancedunderstanding.
+Third, and perhaps most critically, current sentiment analysis techniques often fail to account for contextual and
+psychologicalfactors,includingindividualbiases,personalitytraits,values,ortemporalcircumstances[22,23,24]. For
+example,Mahmoudi(2021)[22]emphasizeshowuser-levelbiasescanleadtodivergentinterpretationsofthesame
+event,whichareoftenignoredintraditionalmodels. Becausethesesystemstypicallyofferretrospectivesummaries
+ratherthandynamicsimulations,theystruggletosupportforward-lookingapplicationssuchaspolicytesting,narrative
+impactstudies,orsyntheticfocusgroups[25].
+Toillustrate,asentimentmodeltrainedonsocialmediapostsfromapriorelectionmayaccuratelyclassifypolitical
+opinionsfromthatperiod[26,27],butitcannotsimulatehowaspecificgroup—suchasrural,first-timevoters,might
+react to a new policy announcement or media event. These limitations reveal a broader issue: these models are
+inadequatetomodelsentimentassituatedcognition,thatis,anemergent,psychologicallygroundedresponseshapedby
+internaldispositionsandexternalstimuli[28].
+SentimentSimulationusingAIandBehavioralScience
+Rooted in the above challenges, we propose a conceptual shift: from retrospective sentiment classification to AI
+andbehavioralscience-drivensentimentsimulation. Thisapproachintegratestwocoreparadigms: (1)abehavioral
+scienceframeworkthatexplainshowsentimentsarisefrompsychologicaldrivers,and(2)asimulation-basedmodeling
+paradigmenabledbygenerativeAI.
+Behavioralscienceprovidesthetheoreticalfoundationforthisshift. Itconceptualizessentimentasadynamicconstruct
+shapedbycognition,emotion,andsituationalcontext. Socialpsychologysuggeststhatsentimentreflectsattitudes
+formedfrombeliefs,values,andenvironmentalfactors—factorsthat,inturn,shapebehavior[29]. Acomplementary
+analysisbyLiandHovy(2017)[30]furtherarguethatsentimentoriginatesfromemotionallydrivenpreferencesand
+thepursuitofpersonalgoals. Theseperspectivessuggestthatsentimentisnotjustatextualartifactbutabehavioral
+expressionrootedinindividualpsychology.
+In methodical perspective, unlike traditional models that classify past sentiment, generative models such as large
+languagemodels(LLMs)enableprospectivesimulationsthatcangeneratebehaviorallyrich,context-sensitivesenti-
+ment. Thesegenerativemodelscansimulatetrustdynamics[31],personalityexpression[32],andopinionformation
+[33]—capabilitiesthatalignwellwithpsychologicalrealism. Inaddition,generativemodelshasalsocatalyzednew
+researchonsyntheticpopulationsandsimulatedhumanstudies[34,35],positioninggenerativeAIasapowerfultool
+forbehavioralscience. RepresentativestudiesillustratingtheseadvancesaresummarizedinTable1.
+2
+
+SentimentSimulationUsingGenerativeAIAgents
+Table1: Recentstudiesthatinformandsupportthiswork,highlightingtheirdomainsandkeyfindings.
+Study Domain KeyFindings
+UsingLLMstoSimulate BehavioralEconomics Simulatedclassicbehavioralstudies(e.g.,Ultimatum
+MultipleHumansand andSocialPsychology Game, Milgram)andfoundthatlargerLLMs(GPT-
+ReplicateHumanSubject 3.5/4)couldreplicateestablishedfindingsacrosseco-
+Studies[32] nomics,psycholinguistics,andsocialpsychology.
+GenerativeAgents: Human-AIInteraction Introduced"generativeagents"—LLM-drivenagents
+InteractiveSimulationsof withmemory,planning,andreflection. Demonstrated
+HumanBehavior[36] emergentbehaviorininteractiveenvironments(e.g.,
+autonomously organizing a Valentine’s Day party)
+fromasingleprompt.
+GenerativeAgentSimulations SocialScience DevelopedanLLM-basedagentarchitecturetosimu-
+of1000People[24] late1,052realindividualsbasedoninterviews.Agents
+replicated survey responses with ≈ 85% accuracy,
+comparabletohumans’ownretestaccuracy,andpre-
+dictedpersonalitytraitswell.
+UserBehaviorSimulation UserBehavior DevelopedanLLM-basedframeworkforsimulating
+withLLM-basedAgents[37] Simulation userbehaviors(e.g.,webnavigation). Capturedsocial
+dynamicslikeconformityandinformationcocooning.
+CanLargeLanguageModel BehavioralEconomics UsedTrustGamestoevaluateagentbehavior. GPT-4
+AgentsSimulateHumanTrust agentsshowedtrust-likebehaviorandstrongalignment
+Behavior? [31] withhumanresponsesinsocialdilemmas.
+EvaluatingtheAbilityof PersonalityModeling GPT-4 simulated individuals with Big Five profiles.
+LLMstoEmulatePersonality Generatedresponsesshowedhighinternalconsistency
+[38] andstrongcorrelationwithself-reportedpersonality
+scores.
+WhiletheabovepriorstudieshaveillustratedpotentialofLLMstosimulatebehaviors,replicatehumanexperiments,or
+modeltrust,nonehaveyetgroundedsentimentsimulationinrealpsychographicsurveydata. Ourworkfillsthisgapby
+embeddingpsychologicallyvalidatedprofilesintogenerativeAIagentstosimulatehowrealpeoplemightrespondto
+socio-politicalandeconomicscenarios.
+ContributionoftheArticle
+Inthisstudy, wepresentasimpleandscalablegenerativeAIagenticframeworkviastructuredLLMpromptingto
+simulatethesentimentresponseofthesurveyrespondentsonseveralsocio-politicalandeconomicscenarios. The
+AIagentswereinstantiatedtoembodythepsychologicalprofilesderivedfromnationallyrepresentativesurveyand
+theirsimulatedresponseiscomparedwiththegroundtruthdata. Moreprecisely,thecontributionsofthisworkareas
+follows:
+• WedemonstratethatAIagentscanbeeffectivelyinstantiatedtoembodythepsychologicalprofilesconstructed
+from empirically generated data. These profiles incorporate socio-demographic data and variables from
+validatedpsychologicalframeworksandattitudesonkeysocio-politicalandeconomicissues,providingagents
+withpsychographicallygroundedpriors.
+• We show that these AI agents are capable of replicating survey results, as well as sentiment distributions
+observed in real-world responses, achieving high levels of individual-level alignment. Furthermore, we
+demonstratethatagentresponsesarerobustacrossalternativeframingsofthesamescenarios,indicatingthe
+consistencyandstabilityofoursimulationframework.
+3
+
+SentimentSimulationUsingGenerativeAIAgents
+2 Methodology
+2.1 SurveyDesignandDataCollection
+The survey instrument was designed to provide an interdisciplinary understanding of Filipino citizens’ profiles by
+integratingmultiplewell-establishedpsychologicalframeworkstocaptureadeeperunderstandingofpublicsentiment
+towardsvarioussocio-politicalandeconomicissuesinthePhilippines.
+Theinstrumentconsistsof150items,integratingbothsociodemographicvariables(age,sex,educationalattainment,
+religion, and other key identifiers) and different psychological dimensions (personality traits, values, attitudinal
+frameworks,beliefs,andsocialandpoliticalbehavior). Theseframeworksaretheoreticallygroundedandconsidered
+temporallystable[39,40,41],allowingfortheabstractionofconsistentpsychographicprofiles. Forgreatersensitivity
+incapturingtheintensityanddirectionofrespondents’responses,mostframeworksweremeasuredusinga7-point
+Likertscale. Respondentswereaskedtoexpresstheirlevelofagreementordisagreementwithstatementsaboutselected
+majorsocio-politicalandeconomicissues[42].
+Descriptivestatisticsofanationallyrepresentativesampleof2,485registeredFilipinovoterswith95%confidence
+leveland1.97%marginoferroraresummarizedinTable2. Therespondents’agerangedfrom18to89yearsold,
+withthemajority(33%)fallingwithintheadultagegroup(28−42yearsold). Thesamplewasgender-balanced(50%
+female,50%male),andthemajorityweremarried(57%). Intermsofsocioeconomicstatus,nearlyhalfofthesample
+(49%)reportednomonthlyincome,while30%werecategorizedaslowincome. Mostparticipantshadcompletedat
+leasthighschool(52%)orcollege(21%).
+Table2: Descriptivestatisticsofthestudysample(N =2,485).
+Variable Category Count(RelativeProportion)
+AgeGroup
+YoungAdults(18–27YearsOld) 399(16%)
+Adults(28–43YearsOld) 820(33%)
+Middle-AgedAdults(44–59YearsOld) 736(30%)
+Seniors(60+YearsOld) 530(21%)
+MaritalStatus
+Single 380(15%)
+Live-In 395(16%)
+Married 1413(57%)
+Separated 77(3%)
+Widowed 220(9%)
+MonthlyIncome-BasedSocioeconomicStatus
+NoIncome 1213(49%)
+LowIncome 740(30%)
+MiddleIncome 530(21%)
+HighIncome 2(<1%)
+HighestEducationalAttainment
+NoFormalEducation 8(<1%)
+AtleastElementary 502(20%)
+AtleastHighSchool 1294(52%)
+AtleastVocational 152(6%)
+AtleastCollege 525(21%)
+AtleastGraduateStudies 4(<1%)
+Toourknowledge,ourdatarepresentsthelargestandmostdemographicallydiversesamplesinthePhilippinesusedto
+examinepsychologicalframeworks,offeringarobustbasisforgeneralizingthefindingstothebroaderadultpopulation.
+PreviouspsychologicalstudiesintheFilipinosamples,suchasthosebyChurchetal. (1997)[43](N =629),DelPilar
+(2017)[44](N =576),andWapaño(2021)[45](N =828),wereconductedwithsmaller,morelocalizedsamples.
+4
+
+SentimentSimulationUsingGenerativeAIAgents
+2.2 SentimentSimulation
+ThesentimentsimulationframeworkleveragesgenerativeAIagents,embodiedwithpsychographicandcontextual
+variables,tomodelthesentimentofrespondentsinresponsetovaryingsocio-politicalandeconomicscenarios. The
+frameworkenablesgenerativeagentstoproducedynamicsentimentresponsesthatarenotonlyreactivetoinputstimuli
+butalsoalignedwiththeirinternalpsychologicalattributesandcontextualstimuli. AsshowninFigure1,thesimulation
+frameworkconsistsofthree(3)corestages: AgentEmbodiment,AgentExposuretoScenarios,andAgentResponseto
+Scenarios.
+AllsimulationswereconductedusingLlama3.170B1,astate-of-the-artopen-weightLLMoptimizedforinstruction
+following,long-contextreasoning,andalignmentwithhumanintent. Thismodeliswell-suitedforsimulatingagent
+behaviorwithinpsychologicalframeworksduetoitsarchitecturethatsupportsmulti-turncoherenceandrobustlanguage
+understanding[47].
+Figure1: SentimentSimulationFrameworkUsingAIAgents.
+2.2.1 AgentEmbodiment
+EachAIagentisembodiedwithauniquesetofsociodemographicandpsychographicvariablesderivedfromempirical
+survey. Thesevariableswereembeddedintoprompttemplatesusingoneoftwoencodingstrategies: categoricalor
+contextualized.
+• Categoricalencodinginvolvedassigningdiscretelabels(e.g.,Low,Moderate,High)toeachpsychological
+variable,producingastructuredbutabstractrepresentationofpersonalityandattitudes.
+• Contextualizedencoding,bycontrast,translatedthesecategoriesintonarrativedescriptionsthatreflecthow
+psychologicalvariablesmightmanifestinscenario-relevantcontexts. Forexample,highopennessinpolicy
+domainmightbeexpressedasreceptivetonewpolicyideasorpronetoconsideringmultipleperspectives.
+1Llama3.170BwasselectedfollowingrigorousexperimentationwithvariousLLMsevaluatingtheirsensitivitytopoliticaland
+linguisticbias.[46]
+5
+
+SentimentSimulationUsingGenerativeAIAgents
+Toevaluatetheeffectivenessofembodiment,weconductedasurveyreplicationtaskwhereineachagent,embodied
+withaspecificrespondent’sprofile,answeredthesameLikert-scalesurveyitemsasthehumanparticipant. Thistask
+assessedwhethertheagentcouldfaithfullyreflecttheindividual’spsychologicalprofilethroughsimulatedresponses.
+2.2.2 AgentExposuretoScenario
+In this phase, agents were presented with real-world scenarios analogous to campaign messages, policy debates,
+economic developments, or media coverage of socio-political and economic issues: budget transparency, political
+dynasties,inflation,thejusticesystem,andwagepolicies. Thesescenariosarecraftedasnarrativepromptsdesignedto
+elicitaffective,cognitive,andpsychographicallygroundedresponses,engagingtheagent’sinternaldispositions.
+In addition, to examine the impact of scenario framing effects, each scenario was presented with either positive
+or negative polarity, simulating ideological differences in real-world discourse (e.g., progressive vs. conservative
+perspective). Respondentswererandomlyassignedtooneframingtype,whileensuringequaldistributionofframing
+acrosstheentiresamplepopulation.
+2.2.3 AgentResponsetoScenario
+Followingscenarioexposure,eachagentproducedastructuredsentimentresponse,ratedona5-pointLikertscale
+(Negative,SlightlyNegative,Neutral,SlightlyPositive,andPositive),alongwithabriefexplanatoryrationaleforits
+simulatedsentiment.
+Aftergeneratingitsinitialsentiment,theagentwaspromptedwithaself-assessmenttask,askingwhetheritsresponse
+was logically consistent with its psychographic profile and the characteristics of the scenario (see Supplementary
+MaterialD).Thisiterativevalidationstepreinforcedcoherenceandinternalconsistencywithinthesimulatedresponses.
+2.3 PerformanceEvaluationMetrics
+2.3.1 QuadraticWeightedAccuracy(QWA)
+QWAwasemployedastheprimarymetrictoevaluatealignmentbetweenagent-generatedandhumanresponsesonan
+ordinalscale. Itpenalizesdistantmisclassificationsmoreheavilythannear-misserrors,makingitparticularlysuitable
+forLikert-scaleclassificationtasks,whereresponsecategoriesareinherentlyordered.
+TheQWAscoreiscomputedusingEq.(1),withweightsthatincreasequadraticallybasedonthedistancebetween
+simulatedandactualresponses. Thisscoringmethodallowsforamorenuancedassessmentofmodelperformance,
+rewardingresponsepredictionsthatareclosetotheexpectedvalueevenwhentheyarenotexactmatches.
+(cid:18)
+d
+(cid:19)2
+w =1− ij (1)
+ij d
+max
+where:
+w isthescoreassignedtothepairofcategoriesi(trueresponse)andj (simulatedresponse);
+ij
+d istheabsolutedistancebetweenthetrueandsimulatedresponsecategories;and
+ij
+d isthemaximumpossibledistancegiventherangeofallpossibleresponsecategories.
+max
+HigherQWAscoresindicatethattheagents’responsesarestatisticallyaccurateandinternallycoherent,i.e.,interpretable
+withinthecontextoftheirembodiedpsychologicalprofiles. ScorematricesarevisualizedinSupplementaryMaterials
+E.1andE.2.
+2.3.2 StatisticalTests
+Toevaluatethestatisticalsignificanceofobserveddifferencesinagent–humanalignment,weemployedbothparametric
+(pairedt-test)andnon-parametric(Wilcoxonsigned-rank)analysis,dependingonthedistributionalpropertiesofthe
+QWAscores. Specifically,pairedt-testwasusedwhentheassumptionofnormalitywassatisfied,whereasWilcoxon
+signed-ranktestwasappliedwhenthisassumptionwasviolated,duetotheirrobustnesstonon-normaldistributions. A
+commonlyusedthresholdofp<0.05wasusedtodeterminestatisticalsignificance.
+Inadditiontohypothesistesting,wecomputedCohen’sdtoestimateeffectsizesandassessthepracticalrelevanceof
+observeddifferences. Effectsizeswereinterpretedusingstandardbenchmarks: d≈0.2(small),d≈0.5(medium),
+andd ≥ 0.8(large). Thisdualapproachenabledarobustinterpretationensuringthatthereportedimprovementsin
+alignmentwerenotonlystatisticallysignificantbutalsopracticallymeaningful.
+6
+
+SentimentSimulationUsingGenerativeAIAgents
+3 ResultsandDiscussion
+3.1 AgentEmbodimentEvaluation
+Agentembodimentwasimplementedusingtwodistinctencodingstrategies: categoricalencoding,whichusesranked
+labels(e.g.,Low,Moderate,High),andcontextualizedencoding,whichembedspsychologicalvariablesintonarrative
+descriptions. Thesestrategiesofferdifferinglevelsofabstractioninrepresentingindividualprofiles,allowingusto
+comparetheireffectsonsimulatedsentimentalignment.
+TheseencodingstrategiesdrawfromrecentworksthatattempttoembedpsychologicaltraitsintoLLMprompts. For
+example,Wangetal. (2025)[38]usedpersonalityassessmentdata,albeitlimitedtonumericBigFivescores,toprompt
+GPT-4insimulatingindividualbehaviors. Theirmethodmirrorsourcategoricalencodingapproach,whichalsodraws
+fromempiricaldatabuttranslatesscoresintorankedlabelssuchasLow,Moderate,orHigh. Incontrast,Xieetal.
+(2024)[31]usedstructuredpromptswithdemographicandbackgrounddetails,similartoourcontextualizedstrategy,
+toelicittrustbehaviorsfromLLMs. Ourstudyadvancestheseeffortsbygroundingbothencodingstrategiesinreal
+large-scalesurveydata,allowingsystematiccomparisonsbetweenencodinglevels.
+AgentalignmentwithhumansurveyresponsesismeasuredusingQWA,whereidenticalratingsyield100%accuracy
+scoreandone-pointdifferencesresultinproportionallylowerscoreof97%,capturingthedegreeofordinalmisalignment.
+SeeSupplementaryMaterialE.1fordetails.
+Figure2illustratesthedistributionofQWAscoresforthetwoencodingstrategies. Thecontextualizedgroup’scurve
+(blue) is consistently right-shifted, indicating that a larger proportion of agents achieved higher alignment scores
+compared to their categorically encoded counterparts. This population-level trend suggests that narrative profile
+encodingenablesmorehuman-consistentresponses.
+Figure2: CumulativeDistributionFunction(CDF)Plot: Distributional
+ComparisonofQWAScoresAcrossProfileEncodingStrategies.
+Figure3offersanagent-levelcomparison. Eachlineconnectsthecategoricalandcontextualizedscoresforasingle
+agent, highlighting changes in alignment. Most lines extend rightward, reinforcing that contextualized encoding
+generallyresultsinimprovedalignmentforindividualagents.
+To determine whether the observed performance difference was statistically significant, we employed a Wilcoxon
+signed-ranktest. PreliminarydiagnosticsusingtheShapiro–Wilktestindicatedviolationsofnormality(p=0.0004,
+justifyingtheuseofanon-parametricapproach.TheWilcoxonsigned-ranktestyieldedasignificantresult(p<0.0001),
+suggestingthatthealignmentadvantageofcontextualizedprofileencodingisunlikelytobeattributabletorandom
+variation. Toassessthepracticalsignificanceofthiseffect,wecalculatedCohen’sd = 0.70,indicatingamoderate
+effectsize. Interpretedprobabilistically,thisreflectsa76%chancethatarandomlyselectedagentwithcontextualized
+encoding would outperform one using categorical encoding in response alignment [48]. These findings provide
+statisticalandpracticalevidencethatcontextualizedprofileencodingyieldsbetteralignmentwithhumanresponses
+comparedtocategoricalencoding.
+7
+
+SentimentSimulationUsingGenerativeAIAgents
+| Figure3: PairedDotPlot:                                                       | Per-AgentComparisonofQWAScoresAcrossProfile |     |     |
+| ----------------------------------------------------------------------------- | ------------------------------------------- | --- | --- |
+| EncodingStrategies. Theverticalaxisrepresentsagentsthatareindexedarbitrarily. |                                             |     |     |
+Onaverage,agentsusingcontextualizedprofilesachieved92%alignmentwithoriginalhumanresponses,demonstrating
+themodel’scapacitytosimulateindividual-levelpsychographicdatawithhighfidelity. Theseresultscomparefavorably
+withprioreffortssuchas[49],whichintroducedtheLLM-MirrorframeworktoassesstheconsistencybetweenLLM-
+generatedresponsesandhumansurveydata. Whiletheirpersona-basedpromptingachieved69%to73%consistency
+indomainslikeonlineadvertising,corporatereputation,andcustomerloyalty,ourapproachreachesnotablyhigher
+alignmentlevelsacrossabroaderarrayofpsychologicalconstructs. Similarly,Yeykelisetal. (2024)[50]foundthat
+AIpersonascouldreproducefindingsfromexperimentalmediastudieswitha76%successrate. Our92%alignment
+suggestsastrongercapacitytosimulatenuancedattitudinaldata,particularlywhennarrativecontextisusedtoexpress
+psychologicalvariables.
+Collectively,theseresultsdemonstratethatcontextualizedpsychologicalprofileencodingsignificantlyenhancesagent-
+humanalignmentandproducesmoreconsistentresponses. Contextualizedencodingsguideagentsmoreeffectively
+by embedding psychological traits within descriptive, scenario-relevant narratives. The performance gap between
+categorical and contextualized encodings highlights the benefits of translating psychological variable labels into
+richpsychographiccontexts,enablingagentstorespondmoreaccuratelyinalignmentwiththeirprofiles—acritical
+foundationforgeneratingpsychologicallycoherentsentimentsimulations.
+3.2 SentimentSimulationPerformance
+Followingthehighalignmentobservedintheagentembodimenttask,wenextevaluatetheabilityofpsychographically
+groundedagentstosimulatehumansentimentacrossasetofsocio-politicalandeconomicscenarios: wagepolicies,
+budgettransparency,inflation,thejusticesystem,andpoliticaldynasties. Thisanalysisprovidesabroadertestofthe
+model’sabilitytogeneratehumansentimentresponsesinreal-worldcontexts.
+Table3: SentimentSimulationAccuracyAcrossSocio-PoliticalandEconomicScenarios.
+| Scenario           | Categorical |        | Contextualized |
+| ------------------ | ----------- | ------ | -------------- |
+|                    | Average     | SD     | Average SD     |
+| WagePolicies       | 80.3%       | ±0.19% | 83.4% ±0.20%   |
+| BudgetTransparency | 80.1%       | ±0.21% | 82.9% ±0.33%   |
+| Inflation          | 74.9%       | ±0.32% | 81.8% ±0.17%   |
+| JusticeSystem      | 86.7%       | ±0.39% | 86.2% ±0.26%   |
+| PoliticalDynasties | 68.4%       | ±0.20% | 81.2% ±0.51%   |
+Table3summarizessentimentalignmentperformanceacrossthescenarios,comparingcategoricalandcontextualized
+encodingstrategies. Asshown,contextualizedencodingconsistentlyoutperformedcategoricalencodinginfouroutof
+fivescenarios,withalignmentaccuracygainsrangingfrom2.8%to12.8%points. Whilecategoricalencodingachieved
+8
+
+SentimentSimulationUsingGenerativeAIAgents
+accuracylevelsrangingfrom68%to87%,contextualizedprofileencodingyieldedmorestableandhigherperformance
+of81%to86%.
+Thelargestaccuracygainoccurredinthepoliticaldynastiesscenario(+12.8%),followedbyinflation(+6.9%). For
+wage and budget transparency, improvements were more modest (+2.8% and +3.1%, respectively). Interestingly,
+performancewasnearlyidenticalinthejusticesystemscenario(−0.5%),suggestingthatsomescenariosmaybeless
+influencedbyinternalpsychologicalfactorsandmoredrivenbyideologicalalignmentorexternalcues.
+Thesefindingsreinforcethatsentimentsimulationisenhancedwhenagentsaregroundedincontextuallyexpressed
+psychologicaltraits,notmerelycategoricalsummaries. Themorerealisticallyanagent’sinternaldispositionismodeled,
+themoreaccuratelyitmirrorshumanresponses. Thissupportsexistingresearch[31]indicatingthatcontextualrichness
+improvesbehavioralrealisminLLMsimulations.
+Considering the inherent variability of LLMs, stemming from prompt sensitivity and randomness introduced by
+stochasticdecoding,weevaluatedthestabilityofsimulationoutputsoverrepeatedtrials. Eachscenariowassimulated
+five (5) times, and performance was averaged to assess internal consistency. As shown also in Table 3, sentiment
+alignment scores were highly stable, with standard deviations for contextualized encoding ranging from ±0.17%
+to±0.51%,indicatingminimalvariabilityinperformanceacrosstrials. Moreprecisely,thejusticesystemscenario
+exhibitedthehighestandmoststableperformance,withQWAscoresrangingnarrowlyfrom86.0%to86.7%. Wage
+policiesandbudgettransparencyalsoshowedstrongstability,withQWAscoresclusteredtightlyaroundthemid-83%
+range. Inflationfollowedasimilartrend,withminorfluctuationsaround82%. Althoughpoliticaldynastieshadthe
+lowestoverallscores,rangingfrom80.1%to81.4%,thevariationacrosstrialswasstillminimal,indicatinginternal
+consistencyevenincomparativelymorecomplexorideologicallyloadedscenarios.
+Ultimately,ourframeworkachievedhighalignmentperformanceacrossalltestedscenarios(81%to86%),reflectingnot
+onlythepredictiveaccuracyofthemodel,butalsoitsbehavioralplausibility. Theframework’sconsistencyacrosstrials
+isillustrativeofitssuitabilityforuseinreplicableandscalablebehavioralsimulations. Ourfindingshighlightthree
+pillarsofeffectivesimulationinbehavioralsciencespecificallyinsocialsciences: (1)psychologicalgroundingthrough
+contextualizedtraits,(2)consistencyofperformanceacrossdiverseandcomplexscenarios,and(3)sentimentalignment
+withempiricallyplausiblehumanbehavior[51,52]. Moreover,inlightofthevariabilityinherentinemotionalreasoning
+andtheinfluenceofframingonanindividual’sjudgment[53],ourresultsspeaknotonlytotechnicalperformance,but
+tothepsychologicalcredibilityofthesimulatedagentsthemselves.
+3.2.1 SimulationRobustnesstoScenarioFraming
+Tofurtherevaluatetheframework’sgeneralizability,weinvestigateditssensitivitytoframingeffects,i.e.,whether
+sentimentalignmentvariedsubstantiallydependingonwhetherascenariowaspresentedinapositiveornegativelight
+(e.g.,performingwellunderpositiveframingbutpoorlyundernegativeframing). Thisstepisimportantgiventhat
+priorstudiesinbehavioralsciencesandcommunicationhaveshownthatframingcansubstantiallyalterpublicopinion
+[54,55].
+Figure4: QuadraticWeightedAccuracyBetweenSurveyandSimulatedSentiments
+AcrossFramingTypesoftheDifferentScenarios.
+Figure4showsaplotcomparisonbetweentheaverageQWAforpositive(blue)andnegative(orange)framingsfor
+eachscenario. Acrossthefivesocio-politicalandeconomicscenarios,QWAscoresremainedhigh77%to88%,withno
+consistentperformancedegradationoramplificationduetoframing. Whiledifferencesbetweenthepositively-and
+9
+
+SentimentSimulationUsingGenerativeAIAgents
+negatively-framedscenariosrangedfrom0.4%to9.7%,thedirectionalityandmagnitudeofthesedifferencesvaried
+acrossscenarios. Forexample,negatively-framedscenariosyieldedhigheralignmentininflation(+9.7%)andpolitical
+dynastytopics(+0.4%),whereaspositively-framedscenariosoutperformedinjusticesystem(+4.3%),wagepolicies
+(+4.4%),andbudgettransparency(+0.9%).
+Inaddition,tofurtherevaluatewhetherscenarioframinginfluencessentimentsimulationaccuracy,weconducteda
+pairedsamplet-testcomparingagent–humanalignmentscoresacrosspositively-andnegatively-framedversionsof
+eachissue. Thepairedt-testwaschosentoassessmeandifferencesbetweenframingconditions,withtheShapiro–Wilk
+testconfirmingthatthenormalityassumptionwassufficientlymet(p=0.1388). Theanalysisyieldedanon-significant
+result(p=0.9676),indicatingnostatisticallymeaningfuldifferenceinsimulationaccuracyacrossframingconditions.
+Furthermore,toquantifythemagnitudeofanypotentialeffect,wecomputedCohen’sd=0.02,reflectinganegligible
+effectsize. ThissuggeststhatthedifferenceinQWAscoresbetweenframingconditionsispracticallyinsignificant,
+withsentimentalignmentperformanceremainingstableregardlessofscenariopromptframing.
+Collectively,theseresultsindicatethatscenarioframingdoesnotexertaconsistentormeaningfulinfluenceonsimulation
+accuracy. Theframeworkallowsagentstoanchortheirevaluationstotheirpsychologicalattributes,ratherthanbeing
+influencedbythedifferencesinthescenariopolarityframing.
+These findings suggest that the agents remained anchored to their psychographic grounding, even under affective
+variationinscenarioprompts. Fromabehavioralscienceperspective,thismirrorstheconsistencyofhumanbehavior
+acrossvariedcontexts,asdocumentedinresearchontrait-basedmodels[56]. Thiscoherencesupportsthenotionthat
+rich,context-sensitiveembeddingsenablepsychologicallygroundedratherthancontext-reactiveresponses.
+4 Conclusion
+Thisstudypresentsapsychographicallygroundedframeworkforsentimentsimulation,leveraginglanguagemodel
+agentsembodiedwithempiricallyderivedpsychologicalprofiles. Byintegratingvalidatedconstructsintostructured
+prompts,weenableAIagentstosimulatesentimentresponsesthatarecontext-sensitive,psychologicallycoherent,and
+behaviorallyplausible.
+Ourevaluationdemonstratesthatagentsinstantiatedwithcontextualizedprofileencodingscloselyreplicateindividual-
+levelsentimentpatterns. Inasurveyreplicationtask,theseagentsachievedalignmentscoresofupto92%,significantly
+outperformingcategoricalencodingstrategies. Thisresultunderscorestheimportanceofnarrative-richrepresentations
+incapturingthedepthandnuanceofhumansentiment.
+Beyondstaticreplication,theframeworkalsoperformsreliablyindynamicsimulationtasks. Whenexposedtoreal-
+worldsocio-politicalandeconomicscenarios,agentsachievedhighalignmentaccuraciesindicatingtheircapacityto
+modelrealisticsentimentresponses. Importantly,theseresultsremainedhighlystableacrossfiveindependenttrials
+anddifferentscenarioframings,highlightingtheinternalconsistencyoftheframeworkdespitethestochasticnatureof
+languagemodels.
+Overall,theseresultsestablishareliable,scalable,andpsychologicallyinformedmethodformodelingpublicsentiment.
+The framework offers practical applications in policy testing, narrative framing analysis, and the development of
+syntheticpopulationsforlarge-scalesocialsimulation. Morebroadly,thisworkmarksaparadigmshift—fromretro-
+spectivesentimentclassificationtowardprospective,psychologicallygroundedsimulationleveragingtheintersectionof
+generativeAIandbehavioralsciences.
+Acknowledgments
+WeextendoursincerethankstoMojhuneGabrielManzanilloforhisdedicatedworkingeneratingtheexperimental
+results for this study. We also gratefully acknowledge Adrian Gabonada for his insightful contributions, which
+significantlyenrichedthebehavioralscienceinterpretationandthediscussionofourfindings. WefurtherthankDannah
+ZemirahJunioforherguidanceonstatisticalanalysis;herinputwasinstrumentalinensuringtherigorandvalidityof
+ourevaluationmethods. Modelinferencesandsentimentsimulationwereperformedusingcomputeresourcesprovided
+bytheGoogleCloudforStartupsProgram.
+References
+[1] BoPang,LillianLee,etal. Opinionminingandsentimentanalysis. FoundationsandTrends®ininformation
+retrieval,2(1–2):1–135,2008.
+10
+
+SentimentSimulationUsingGenerativeAIAgents
+[2] BingLiu. Sentimentanalysisandopinionmining. SpringerNature,2012.
+[3] TetsuyaNasukawaandJeongheeYi. Sentimentanalysis: Capturingfavorabilityusingnaturallanguageprocessing.
+InProceedingsofthe2ndinternationalconferenceonKnowledgecapture,pages70–77,2003.
+[4] KushalDave,SteveLawrence,andDavidMPennock. Miningthepeanutgallery:Opinionextractionandsemantic
+classificationofproductreviews. InProceedingsofthe12thinternationalconferenceonWorldWideWeb,pages
+519–528,2003.
+[5] VincentPriceandPeterNeijens. Opinionqualityinpublicopinionresearch. InternationalJournalofPublic
+OpinionResearch,9(4):336–360,1997.
+[6] YannisCharalabidis,ManolisMaragoudakis,andEuripidesLoukis. Opinionminingandsentimentanalysisin
+policyformulationinitiatives:Theeu-communityapproach.InElectronicParticipation:7thIFIP8.5International
+Conference,ePart2015,Thessaloniki,Greece,August30–September2,2015,Proceedings7,pages147–160.
+Springer,2015.
+[7] EkiAidioSukma,AchmadNizarHidayanto,AdamImansyahPandesenda,ArifNurYahya,PuntoWidharto,and
+UntungRahardja. Sentimentanalysisofthenewindonesiangovernmentpolicy(omnibuslaw)onsocialmedia
+twitter. In2020InternationalConferenceonInformatics,Multimedia,CyberandInformationSystem(ICIMCIS),
+pages153–158.IEEE,2020.
+[8] JiriHradec,NicoleOstlaender,AlbaBernini,etal. Fables: frameworkforautonomousbehaviour-richlanguage-
+drivenemotion-enabledsyntheticpopulations. Technicalreport,JointResearchCentre,2023.
+[9] JanaFlorVVizmanos,SheilaVSiar,JoseRamonGAlbert,JaninaLuzCSarmiento,andAngeloCHernandez.
+Like,comment,andshare: Analyzingpublicsentimentsofgovernmentpoliciesinsocialmedia. Technicalreport,
+PIDSDiscussionPaperSeries,2023.
+[10] RodrigoSandoval-AlmazanandDavidValle-Cruz. Sentimentanalysisoffacebookusersreactingtopolitical
+campaignposts. DigitalGovernment: ResearchandPractice,1(2):1–13,2020.
+[11] CharlesCrabtree,MattGolder,ThomasGschwend,andIndrid¯iHIndrid¯ason. Itisnotonlywhatyousay,itisalso
+howyousayit: Thestrategicuseofcampaignsentiment. TheJournalofPolitics,82(3):1044–1060,2020.
+[12] JohnPaulPMirandaandRexPBringula. ExploringphilippinepresidentsâC™speeches: Asentimentanalysis
+andtopicmodelingapproach. CogentSocialSciences,7(1):1932030,2021.
+[13] JulietaMUmali,JohnPaulPMiranda,andAniciaLFerrer. Sentimentanalysis: Acasestudyamongtheselected
+governmentagenciesinthephilippines. InternationalJournal,9(3),2020.
+[14] AshishKumarRathoreandPVigneswaraIlavarasan. Pre-andpost-launchemotionsinnewproductdevelopment:
+Insightsfromtwitteranalyticsofthreeproducts. InternationalJournalofInformationManagement,50:111–127,
+2020.
+[15] Mihalis Giannakis, Rameshwar Dubey, Shishi Yan, Konstantina Spanaki, and Thanos Papadopoulos. Social
+mediaandsensemakingpatternsinnewproductdevelopment: demystifyingthecustomersentiment. Annalsof
+OperationsResearch,308:145–175,2022.
+[16] JennyYowBeeYin,NorHaslizaMdSaad,andZulnaidiYaacob. Exploringsentimentanalysisone-commerce
+business: Lazadaandshopee. Temjournal,11(4):1508,2022.
+[17] Praphula Kumar Jain, Rajendra Pamula, and Gautam Srivastava. A systematic literature review on machine
+learningapplicationsforconsumersentimentanalysisusingonlinereviews. Computersciencereview,41:100413,
+2021.
+[18] PawanjitSinghGhatora,SeyedEbrahimHosseini,ShahbazPervez,MuhammadJavedIqbal,andNabilShaukat.
+Sentiment analysis of product reviews using machine learning and pre-trained llm. Big Data and Cognitive
+Computing,8(12):199,2024.
+[19] JanOleKrugmannandJochenHartmann. Sentimentanalysisintheageofgenerativeai. CustomerNeedsand
+Solutions,11(1):3,2024.
+[20] YanyingMao,QunLiu,andYuZhang. Sentimentanalysismethods,applications,andchallenges: Asystematic
+literaturereview. JournalofKingSaudUniversity-ComputerandInformationSciences,page102048,2024.
+[21] Jamin Rahman Jim, Md Apon Riaz Talukder, Partha Malakar, Md Mohsin Kabir, Kamruddin Nur, and Mo-
+hammedFirozMridha. Recentadvancementsandchallengesofnlp-basedsentimentanalysis: Astate-of-the-art
+review. NaturalLanguageProcessingJournal,page100059,2024.
+[22] AminMahmoudi. Identifyingbiasedusersinonlinesocialnetworkstoenhancetheaccuracyofsentimentanalysis:
+Auserbehavior-basedapproach. arXivpreprintarXiv:2105.05950,2021.
+11
+
+SentimentSimulationUsingGenerativeAIAgents
+[23] JunjieLin,WenjiMao,andDanielDZeng. Personality-basedrefinementforsentimentclassificationinmicroblog.
+Knowledge-BasedSystems,132:204–214,2017.
+[24] JiyoungParkandSangEunWoo. Personalityassociationswithattitudestowardai. InTheImpactofArtificial
+IntelligenceonSocieties: UnderstandingAttitudeFormationTowardsAI,pages57–70.Springer,2024.
+[25] PujenShrestha,DarioKrpan,FatimaKoaik,RobinSchnider,DimaSayess,andMaySaadBinbaz. Beyondweird:
+Cansyntheticsurveyparticipantssubstituteforhumansinglobalpolicyresearch? BehavioralScience&Policy,
+page23794607241311793,2025.
+[26] PriyavratChauhan,NonitaSharma,andGeetaSikka. Theemergenceofsocialmediadataandsentimentanalysis
+inelectionprediction. JournalofAmbientIntelligenceandHumanizedComputing,12:2601–2627,2021.
+[27] AsifKhan,HuapingZhang,NadaBoudjellal,ArshadAhmad,andMaqboolKhan. Improvingsentimentanalysis
+inelection-basedconversationsontwitterwithelecbertlanguagemodel. Computers,Materials&Continua,76(3),
+2023.
+[28] Wolff-MichaelRothandAlfredoJornet. Situatedcognition. WileyInterdisciplinaryReviews: CognitiveScience,
+4(5):463–478,2013.
+[29] DavidMyers,JackieAbell,andFabioSani. EBook: SocialPsychology3e. McGrawHill,2020.
+[30] JiweiLiandEduardHovy. Reflectionsonsentiment/opinionanalysis. Apracticalguidetosentimentanalysis,
+pages41–59,2017.
+[31] ChengxingXie,CanyuChen,FeiranJia,ZiyuYe,ShiyangLai,KaiShu,JindongGu,AdelBibi,ZiniuHu,David
+Jurgens,etal. Canlargelanguagemodelagentssimulatehumantrustbehavior? InTheThirty-eighthAnnual
+ConferenceonNeuralInformationProcessingSystems,2024.
+[32] GatiVAher,RosaIArriaga,andAdamTaumanKalai. Usinglargelanguagemodelstosimulatemultiplehumans
+andreplicatehumansubjectstudies. InInternationalConferenceonMachineLearning,pages337–371.PMLR,
+2023.
+[33] XiaoqingZhang,XiuyingChen,YuhanLiu,JianzhouWang,ZhenxingHu,andRuiYan. Llm-drivenagentsfor
+influencerselectionindigitaladvertisingcampaigns. arXive-prints,pagesarXiv–2403,2024.
+[34] CarolynQ.ZouAaronShawBenjaminMakoHillCarrieCaiMeredithRingelMorrisRobbWillerPercyLiang
+Park,JoonSungandMichaelS.Bernstein. Generativeagentsimulationsof1,000people. arXivpreprint,page
+arXiv:2411.10109,2024.
+[35] XiuyingChenYaqiWangRuidiChangShichaoPeiNiteshV.ChawlaOlafWiestGuo,TaichengandXiangliang
+Zhang. Largelanguagemodelbasedmulti-agents: Asurveyofprogressandchallenges. arXivpreprint,page
+arXiv:2402.01680,2024.
+[36] JoonSungPark,JosephO’Brien,CarrieJunCai,MeredithRingelMorris,PercyLiang,andMichaelSBernstein.
+Generativeagents: Interactivesimulacraofhumanbehavior. InProceedingsofthe36thannualacmsymposium
+onuserinterfacesoftwareandtechnology,pages1–22,2023.
+[37] LeiWang,JingsenZhang,HaoYang,ZhiyuanChen,JiakaiTang,ZeyuZhang,XuChen,YankaiLin,Ruihua
+Song,WayneXinZhao,etal. Userbehaviorsimulationwithlargelanguagemodelbasedagents. arXivpreprint
+arXiv:2306.02552,2023.
+[38] YileiWang,JiabaoZhao,DenizSOnes,LiangHe,andXinXu. Evaluatingtheabilityoflargelanguagemodelsto
+emulatepersonality. Scientificreports,15(1):519,2025.
+[39] AmericanPsychologicalAssociation. Personality. https://dictionary.apa.org/personality,n.d. APA
+DictionaryofPsychology.
+[40] Claudia Russo, Francesca Danioni, Ioana Zagrean, and Daniela Barni. Changing personal values through
+value-manipulationtasks: asystematicliteraturereviewbasedonschwartzâC™stheoryofbasichumanvalues.
+EuropeanJournalofInvestigationinHealth,PsychologyandEducation,12(7):692–715,2022.
+[41] FrankTian-fangYe,BryantPHHui,JackyCKNg,BenCPLam,AlgaeKYAu,WesleyCHWu,HilaryKY
+Ng, and Sylvia Xiaohua Chen. Social axioms and psychological toll: A study of emotional, behavioral, and
+cognitiveresponsesacross35culturesduringthecovid-19pandemic. AppliedPsychology:HealthandWell-Being,
+16(4):1679–1698,2024.
+[42] PulseAsiaResearchInc. Ulatngbayan: June2024nationwidesurveyonnationalconcernspriortothesona.
+Researchreport,PulseAsiaResearchInc.,July2024. Accessed: 2025-04-16.
+[43] ATimothyChurch,JoseAlbertoSReyes,MarciaSKatigbak,andStephanieDGrimm. Filipinopersonality
+structureandthebigfivemodel: Alexicalapproach. JournalofPersonality,65(3):477–528,1997.
+12
+
+SentimentSimulationUsingGenerativeAIAgents
+[44] GregorioEHDelPilar. Thedevelopmentofthemasaklawnapanukatngloob(mapangloob). PhilippineJournal
+OfPsychology,50(1):103–141,2017.
+[45] MaryRachelleRWapaño. Personalitydisordersandthefive-factormodelamongfilipinonon-clinicalsample.
+InternationalJournalofResearchandInnovationinSocialScience(IJRISS),V,2021.
+[46] MelroseTia,JeromeEspina,andJasonAlbia. Measuringpoliticalbiasandframingeffectsinlargelanguage
+models(llms): Asensitivityanalysis. Manuscriptinpreparation,2025.
+[47] AaronGrattafiori,AbhimanyuDubey,AbhinavJauhri,AbhinavPandey,AbhishekKadian,AhmadAl-Dahle,
+AieshaLetman,AkhilMathur,AlanSchelten,AlexVaughan,etal. Thellama3herdofmodels. arXivpreprint
+arXiv:2407.21783,2024.
+[48] Kenneth O McGraw and Seok P Wong. A common language effect size statistic. Psychological bulletin,
+111(2):361,1992.
+[49] SunwoongKim,JonghoJeong,JinSooHan,andDonghyukShin. Llm-mirror: Agenerated-personaapproachfor
+surveypre-testing. arXive-prints,pagesarXiv–2412,2024.
+[50] LeoYeykelis,KaavyaPichai,JamesJCummings,andByronReeves. Usinglargelanguagemodelstocreateai
+personasforreplicationandpredictionofmediaeffects: Anempiricaltestof133publishedexperimentalresearch
+findings. arXivpreprintarXiv:2408.16073,2024.
+[51] ArminFalkandJamesJHeckman. Labexperimentsareamajorsourceofknowledgeinthesocialsciences.
+science,326(5952):535–538,2009.
+[52] DavidLazer,DevonBrewer,NicholasChristakis,JamesFowler,andGaryKing. Lifeinthenetwork: thecoming
+ageofcomputationalsocialscience. Science,323(5915):721–723,2009.
+[53] DanielKahnemanandAmosTversky. Choices,values,andframes. Americanpsychologist,39(4):341,1984.
+[54] DennisChongandJamesNDruckman. Framingtheory. Annu.Rev.Polit.Sci.,10(1):103–126,2007.
+[55] PaulMSnidermanandSeanMTheriault. Thestructureofpoliticalargumentandthelogicofissueframing.
+Studiesinpublicopinion: Attitudes,nonattitudes,measurementerror,andchange,3(03):133–65,2004.
+[56] RobertRMcCraeandPaulTCostaJr. Personalitytraitstructureasahumanuniversal. Americanpsychologist,
+52(5):509,1997.
+[57] CommissiononElections(COMELEC). 2022registeredvotersandvoterswithaccessiblepollingplaces(final).
+https://comelec.gov.ph/?r=2022NLE/Statistics/2022RVVAVmcocfinal, 2022. Accessed: 2024-10-
+01.
+13
+
+SentimentSimulationUsingGenerativeAIAgents
+SupplementaryMaterial
+A.SurveyDesignandImplementationDetails
+A.1 SurveyDesignandInstrumentSpecifics
+Specificpsychologicalframeworksincludepersonalitytraits(e.g.,HEXACOpersonality),values(e.g.,BasicPersonal
+Values), attitudinal frameworks (e.g., Affective Intelligence Theory), and beliefs (e.g., Social Axioms). It also
+encompasses social and political behavior (e.g., Civic Engagement). In addition to the sociodemographics and
+psychologicalframeworks,thesurveyinstrumentalsoincludesanadditionalsectiontoassessgeneralcitizenattitudes
+toward four major economic issues (e.g., inflation, minimum wage, etc) and four key social issues (e.g., the West
+PhilippineSeadispute,corruption,etc).
+A.2 SurveySampling
+A multi-stage stratified random sampling design was used to obtain a nationally representative sample of 2,485
+Filipinoadults[57]. Thesamplewasproportionallydistributedacrossthe17administrativeregionsusingprobability
+proportionaltosize. Systematicintervalsamplingselectedfive(5)householdspersampledbarangay, andone(1)
+respondentperhouseholdwasrandomlychosenusinggender-rotatedprobabilitytoensurebalancedmaleandfemale
+representation. Thissamplingdesignaccountedforclusteringatmultiplegeographiclevelsandstratificationbyregion
+andurbanicity. Datawerecollectedthroughface-to-faceinterviewsfromNovember22toDecember9,2024. Ahybrid
+systemofdigitaltabletsandprintedformswasusedinthefieldtoensurebothflexibilityandhighdatafidelity.
+A.3 WeightingProcedure
+Tocorrectforunequalselectionprobabilitiesinherentinthesamplingdesign, designweights(baseweights)were
+computedfromthejointprobabilitiesofselectionateachsamplingstage: cities/municipalities,barangays,households,
+andeligiblerespondents. Thesebaseweightswerethenadjustedusingpost-stratificationtechniques, anchoredon
+the official registered voter count data [57] by region and gender. This procedure ensured that the final weighted
+samplereflectedtheactualdistributionofregisteredvoters,therebyimprovingthegeneralizabilityandprecisionof
+population-levelinferencesandestimates.
+A.4 SurveyImplementation
+Randomizationtechniqueswereappliedtominimizeselectionbias,andintervalsamplingwasemployedtoensure
+systematiccoverageofbothurbanandruralareas. Theuseofin-personinterviewsallowedforgreaterengagementand
+clarificationofquestionswhennecessary,contributingtohigherresponsequalityandcompleteness.
+B.AgentEmbodimentSetup
+Figures5and6presentthepromptformatsusedintheagentembodimentsectionofthesentimentsimulation. Both
+formats operationalize the presentation of sociodemographic and psychographic attributes to the language model,
+servingasthefoundationforgeneratingagent-specificresponses. Thecategoricalformat(Figure5)conveystraitsand
+attributesthroughcompact,labeledvariables(e.g.,Extraversion: HIGH),whilethecontextualizedformat(Figure6)
+embedsthesameinformationwithinbriefnarrativedescriptions,enrichingeachvariablewithinterpretivecontext.
+Inbothcases,bracketedfields(e.g.,<age>,<incomerange>)representplaceholdersdynamicallypopulatedwith
+realsurveydataduringpromptinstantiation. Textsegmentsrenderedinboldcorrespondtofixedpromptcomponents
+thatremainconsistentacrossallagents.
+C.AgentExposuretoScenario
+Figure 7 presents the prompt structure used to expose an embodied agent to a situational stimulus and elicit a
+correspondingaffectivejudgmentorsentimentresponse. Inthisformat,thelanguagemodelispromptedtoimagine
+beingpresentedwithaparticularevent,scenario,orstatement,andtoreflectonhowitwouldpersonallyresonatebased
+ontheagent’sencodedbackgroundandperspective.
+The<scenario>placeholderisdynamicallyfilledwiththetargetstimulus,whileallboldedtextconstitutesfixed
+instructionallanguageconsistentacrossallprompts. Themodelisthenaskedtoidentifythesentimentthatbestreflects
+howsomeonewithitsassignedprofilewouldmostlikelyfeelinresponse.
+14
+
+SentimentSimulationUsingGenerativeAIAgents
+Figure5: PromptFormatforCategoricalProfileEncoding.
+Figure6: PromptFormatforContextualizedProfileEncoding.
+15
+
+SentimentSimulationUsingGenerativeAIAgents
+Figure7: PromptFormatforInstantiatingAgentExposuretoScenario.
+D.AgentResponsetoScenario
+Figure 8 presents the full instruction sequence used to elicit a sentiment judgment, accompanying rationale, and
+self-assessedalignmentfromanembodiedagentprofile. Afterbeingexposedtoascenario,theagentisinstructedto
+identifythesentimentthatmostaccuratelyreflectshowapersonwiththatprofilewouldlikelyrespond.
+Inadditiontoselectingasentimentfromastandardized5-pointscale(NegativetoPositive),themodelispromptedto
+articulateabriefexplanationforitsjudgment. The<reason>placeholderdenotesthepositionwherethemodelis
+expectedtogeneratethisresponse. Followingthis,themodelisaskedtocriticallyevaluatewhetheritschosensentiment
+logicallyalignswiththeprofile’sdescribedcharacteristics,includingvalues,personaltraits,andcontextualbackground,
+andtoanswerwithabinaryYesorNo. Thispromptformatsupportsdeeperanalysisofthemodel’sinternalcoherence,
+linkingsentimentexpressiontoreasoningandvaluealignmentwithinanembodiedsimulationcontext. Similarly,all
+boldedsegmentsrepresentfixedinstructionaltextpresenteduniformlyacrossprompts.
+Figure8: PromptFormatforGeneratingAgent’sResponsetoScenario.
+E.QuadraticWeightedAccuracy(QWA)asEvaluationMetric
+Figures9and10presentheatmapsofpairwiseQWAscores,capturingthedegreeofalignmentbetweenagent-generated
+responsesandhumanresponsesacrosstwocoretasks: agentembodimentandsentimentsimulation. Inbothfigures,
+eachmatrixcellrepresentstheaverageagreementscoreforaspecificpairofsimulatedandsurveyresponsevalues.
+16
+
+SentimentSimulationUsingGenerativeAIAgents
+E.1 OnAgentEmbodimentSurveyReplicationTask
+Figure9presentstheQWAmatrixforthesurveyreplicationtask,wherethemodelwaspromptedtogenerateLikert-scale
+responsestopsychographicsurveyitemsfromtheperspectiveofanembodiedagentprofile. Thematrixshowspairwise
+QWAscoresbetweeneachsimulatedagentresponse(rows)andthecorrespondinghumanresponse(columns)ona
+7-pointordinalscale.
+Figure9: QWAMatrixofSimulatedandHumanResponsesintheAgentEmbodimentTask.
+E.2 OnSentimentSimulationTask
+Similarly,Figure10showstheQWAmatrixforthesentimentsimulationtask. Here,simulatedsentimentresponsesare
+comparedtohumansentimentratingsona5-pointordinalscalerangingfromNegativetoPositive.
+Figure10: QWAMatrixofSimulatedandHumanSentimentResponsesintheSentimentSimulationTask.
+17
+
+SentimentSimulationUsingGenerativeAIAgents
+F.StatisticalTests
+Pairedt-testwasusedwhentheassumptionofnormalitywassatisfied. Theformulaisgivenbelow:
+d
+| t= √  |     | (2) |
+| ----- | --- | --- |
+| s d / | n   |     |
+where:
+disthemeanofthedifferencesbetweenpairedobservations;
+s isthestandarddeviationofthedifferences;and
+d
+nisthenumberofpairs.
+Forgroupcomparisonsinwhichthenormalityassumptionwasnotmet,weusedtheWilcoxonsigned-ranktest,see
+Equation3.
+| W =min(W+,W−) |     | (3) |
+| ------------- | --- | --- |
+where:
+W+isthesumofpositiveranks;
+W−isthesumofnegativeranks;and
+misitssamplesize
+Accordingly,theZ-scoreformulaisgivenbelow:
+W −µ
+W
+| Z = |     | (4) |
+| --- | --- | --- |
+σ
+W
+where:
+(cid:114)
+n(n+1) n(n+1)(2n+1)
+| µ W = and σ W | =   |     |
+| ------------- | --- | --- |
+| 4             | 24  |     |
+nisthesamplesizeofthegroups.
+Inadditiontohypothesistesting,wecomputedCohen’s|d|toquantifytheeffectsizeandassessthepracticalrelevance
+ofobserveddifferences. Cohen’s|d|iscalculatedas:
+| (cid:12)               | (cid:12)  |     |
+| ---------------------- | --------- | --- |
+| (cid:12) µ −µ          | (cid:12)  |     |
+| (cid:12) 1             | 2(cid:12) |     |
+| |d|= (cid:12)(cid:113) | (cid:12)  | (5) |
+(cid:12) s2+s2(cid:12)
+| (cid:12) 1 | 2(cid:12) |     |
+| ---------- | --------- | --- |
+2
+where:
+µ andµ arethemeansofeachgroup;and
+1 2
+s2ands2arethestandarddeviationsofeachgroup.
+1 2
+18

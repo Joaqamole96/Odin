@@ -1,0 +1,95 @@
+
+paper_id: 10.1057/s41599-024-03605-1
+designation: international
+title: A qualitative investigation of financial decision-making and enabling factors among ethnic minority young adults in Hong Kong
+authors: Cho, E. Y.-N.
+year: 2024
+venue: Humanities and Social Sciences Communications
+odin_topics:
+  - 1.C
+  - 2.A
+  - 2.B
+  - 4.B
+  - 5.A
+  - 10.A
+  - 13.B
+tldr: Ethnic minority young adults in Hong Kong employ diverse strategies for budgeting, saving, and spending, yet remain vulnerable to fraud and high-interest debt.
+problem_and_motivation: Financial decision-making among racial/ethnic minority young adults is under-examined, particularly regarding day-to-day management and in non-Western contexts. Existing research is predominantly quantitative and often overlooks the specific challenges and strategies of this demographic. This study addresses these gaps by exploring their financial practices, perceptions, and enabling factors.
+approach:
+  - Qualitative study using individual semi-structured interviews.
+  - Sample of 53 Pakistani, Indian, Nepalese, and Filipino participants aged 18-29 in Hong Kong.
+  - Thematic analysis was used to identify major themes in financial decision-making.
+  - Investigated a range of financial decisions: budgeting, spending, planning, using products, debt, and fraud detection.
+  - Explored factors enabling sound financial decisions, such as family social capital and intrapersonal characteristics.
+findings:
+  - Most participants had developed budgeting habits using digital tools, parental monitoring, or mental bucketing.
+  - Many saved approximately one-third of their monthly income for goals like education, property, and business.
+  - Informal borrowing from family and friends was common, though some used government or high-interest lending institution loans.
+  - Around one-third used credit cards, with occasional risks arising from minimum payments or using others' cards.
+  - Participants employed passive strategies like ignoring messages to avoid scams but still fell victim to various frauds.
+  - Five enabling factors for financial decision-making were identified: family social capital, intrapersonal characteristics, social dynamics factors, command of knowledge, and facilitative contextual circumstances.
+key_figures_tables:
+  - None.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: None.
+    definition: ""
+critical_citations:
+  - "[Lusardi and Mitchell, 2011b] — Documents lower financial literacy among US racial/ethnic minorities."
+  - "[Atkinson and Messy, 2012] — Defines financial literacy and its components."
+  - "[Goodstein et al., 2021] — Highlights racial/ethnic differences in credit use."
+relevance:
+  topics:
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly examines budgeting, saving, and spending behaviors of ethnic minority young adults.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: high
+      justification: Explores family social capital and informal borrowing as culturally influenced practices.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: Mentions saving for cyclical events like weddings but does not focus on seasonal patterns.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: medium
+      justification: Identifies gaps in financial education and system support for ethnic minorities.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Provides qualitative data on spending philosophies and saving behaviors, informing profile construction.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: Discusses fraud victimization and tactics, but not data privacy or security systems.
+    - code: 13.B
+      name: Debt Management in PFMS
+      relevance: high
+      justification: Details practices and perceptions of borrowing, credit card use, and debt repayment.
+  contribution: This study provides qualitative insights into the financial behaviors and enabling factors of ethnic minority young adults. It directly informs the design of Odin's user profiling and behavioral classification modules (5.A). Its findings on enabling factors can be used to shape culturally-aware user models and engagement strategies for Filipino young professionals. The detailed accounts of budgeting, saving, and debt management practices offer a foundation for developing relevant financial features and recommendations.
+  directly_justifies:
+    - "Ethnic minority young adults use digital tools, parental monitoring, and mental bucketing for budgeting."
+    - "Saving approximately one-third of monthly income is a common practice among this group."
+    - "Informal borrowing from family and friends is a prevalent debt management strategy."
+    - "Vulnerability to fraud is high, even with protective tactics, highlighting a need for better education."
+  limits:
+    - "The study is qualitative with a small sample size, limiting generalizability."
+    - "Findings are based on a relatively well-educated and English-proficient sample."
+    - "The research was conducted in Hong Kong, which may limit applicability to other Asian contexts."
+  mapping_rationale: A systematic scan was conducted across all 12 functional domains. The domain on Financial Behavior of Filipino Young Professionals (1.C) was identified as most directly relevant, receiving a 'high' rating, as the study's core focus is on financial actions. The Culturally Specific Financial Practices domain (2.A) was also rated 'high' due to its examination of family social capital, informal borrowing, and spending philosophies as culturally informed practices. Debt Management (13.B) was rated 'high' as borrowing and credit card use are major themes. The Limitations and Gaps domain (4.B) was rated 'medium' as the paper identifies gaps in financial literacy education for ethnic minorities. Behavioral Profiling (5.A) was rated 'medium' for its rich descriptions of behavioral patterns and philosophies. Seasonal Patterns (2.B) and Data Privacy (10.A) were considered and rejected or rated 'low/contextual' because they are not the paper's primary focus. The overall relevance is high, providing rich qualitative data to inform the design of user-centric and culturally-aware features.
+limitations:
+  - "Sample size is small and may not be representative of all ethnic minority young adults."
+  - "Findings are context-specific to Hong Kong and may not generalize to the Philippines."
+  - "The study did not include ethnic Chinese young adults for comparison."
+  - "Potential for social desirability bias in self-reported financial behaviors. [unacknowledged]"
+  - "The reliance on interviews may not capture the full complexity of real-world financial decisions. [unacknowledged]"
+remember_this:
+  - "Many saved at least 30% of income for long-term goals like education and property."
+  - "Budgeting is often supported by digital tools, family monitoring, and mental accounting."
+  - "Informal borrowing from family and friends is a common and culturally embedded practice."
+  - "Fraud victimization occurs despite passive avoidance strategies like ignoring suspicious calls."
+  - "Peer and family mentorship are key enabling factors for financial decision-making."

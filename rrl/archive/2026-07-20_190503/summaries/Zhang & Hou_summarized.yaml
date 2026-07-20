@@ -1,0 +1,104 @@
+
+paper_id: 10.1016/j.procs.2026.05.035
+designation: international-algorithm-specific
+title: Consumer Behavior Data Mining and Analysis Using Machine Learning Algorithms
+authors: Zhang, H.; Hou, Y.
+year: 2026
+venue: Procedia Computer Science
+odin_topics:
+  - 5.A
+  - 5.C
+  - 6.A
+  - 6.B
+  - 9.A
+  - 10.B
+  - 12.B
+tldr: Compares logistic regression, SVM, random forest, and XGBoost for predicting purchase intention using an e-commerce dataset to guide algorithm selection in consumer behavior analysis.
+problem_and_motivation: Traditional statistical tools are inadequate for complex, high-dimensional consumer data, and a clear performance comparison of modern machine learning algorithms under a unified framework is lacking. Selecting the appropriate algorithm requires balancing accuracy, efficiency, and interpretability.
+approach:
+  - Uses the UCI "Online Retail" dataset with 28 engineered features including RFM, behavioral breadth, consumption patterns, and time patterns.
+  - Defines a binary prediction task for future purchase intention within a fixed time window.
+  - Implements logistic regression, SVM, random forest, and XGBoost with grid search and 5-fold cross-validation for hyperparameter tuning.
+  - Evaluates models on a separate test set using accuracy, precision, recall, F1, and AUC.
+  - Compares training and prediction efficiency and analyzes feature importance across models.
+findings:
+  - "num: XGBoost achieved the highest F1 score of 0.680 and AUC of 0.872."
+  - "num: Logistic regression had the fastest training time at 0.8 seconds."
+  - "num: SVM was the slowest with a training time of 125.3 seconds."
+  - Feature importance consistently identified 'Recency' as the most predictive feature across all models.
+  - XGBoost demonstrated the best balance between accuracy and efficiency.
+  - Logistic regression remained the most interpretable model.
+key_figures_tables:
+  - "Table 1: Model performance metrics (Accuracy, Precision, Recall, F1, AUC). → XGBoost leads in all metrics."
+  - "Table 2: Model training and prediction times. → Logistic regression fastest; SVM slowest."
+  - "Table 3: Top 3 important features per model. → Recency is the most important feature for all models."
+key_equations:
+  - equation: "P(y = 1 | x) = 1 / (1 + e^{-(w^T x + b)})"
+    explanation: "Logistic function mapping features to purchase probability."
+  - equation: "f(x) = sign(\\sum_{i=1}^n \\alpha_i y_i K(x_i, x) + b)"
+    explanation: "SVM decision function with kernel K for nonlinear classification."
+  - equation: "L^{(t)} = \\sum_{i=1}^n l(y_i, \\hat{y}_i^{(t-1)} + f_t(x_i)) + \\Omega(f_t)"
+    explanation: "XGBoost objective function with loss and regularization."
+definitions:
+  - term: RFM Model
+    definition: "A framework using Recency, Frequency, and Monetary value for customer segmentation and behavior analysis."
+  - term: AUC
+    definition: "Area Under the ROC Curve; measures the model's ability to distinguish between classes."
+critical_citations:
+  - "[Li, 2023] — Foundation for ML in e-commerce behavior analysis."
+  - "[Akram et al., 2025] — Comparative study of ML algorithms for behavior prediction."
+  - "[Lin, 2025] — Application of ML for predicting consumer behavior."
+relevance:
+  topics:
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: "Paper benchmarks algorithms for predicting purchase behavior, a core task in profiling."
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: high
+      justification: "Directly compares classification algorithms (LR, SVM, RF, XGBoost) for behavior prediction."
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: "Provides an empirical framework for selecting predictive models in a financial context."
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: medium
+      justification: "Uses temporal features (e.g., recency) and compares algorithms suitable for sequential data."
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: contextual
+      justification: "Discussion of model efficiency informs design choices for resource-constrained environments."
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: low
+      justification: "Mentions interpretability as a factor, which is linked to user trust."
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: "Provides a clear evaluation methodology for comparing prediction algorithms."
+  contribution: "This paper provides a benchmark for choosing machine learning algorithms for Odin's spending forecasting and behavioral classification modules. The comparison of XGBoost, Random Forest, and Logistic Regression directly informs the selection of models for predicting user financial behavior. The analysis of feature importance highlights the value of recency and frequency, which are crucial for Odin's core profile features. The discussion on the trade-off between accuracy and interpretability guides the design of Odin's explanation and user trust features."
+  directly_justifies:
+    - "XGBoost achieves the best balance of accuracy and efficiency for predicting purchase behavior."
+    - "Recency and frequency are the most important features for predicting future purchasing behavior."
+    - "Logistic regression provides the highest interpretability, while ensemble methods offer superior accuracy."
+    - "Model selection must consider the trade-off between prediction performance and computational cost."
+    - "Feature engineering based on domain knowledge (RFM) is crucial for model performance."
+  limits:
+    - "The study uses a single e-commerce dataset, limiting generalizability."
+    - "Does not address cold-start scenarios where historical user data is unavailable. [unacknowledged]"
+    - "Focuses on a binary classification task, not multi-class or regression for financial amounts. [unacknowledged]"
+    - "The 'Online Retail' dataset may not represent the spending patterns of Filipino young professionals. [unacknowledged]"
+  mapping_rationale: "A systematic scan of all 12 functional domains was performed. Domains related to behavioral classification (5.A, 5.C) and spending forecasting (6.A, 6.B) were flagged as having high or medium relevance because the paper directly compares algorithms for predicting consumer behavior. Evaluation frameworks (12.A, 12.B, 12.C) were considered relevant as the paper provides a controlled evaluation methodology. Mobile-first design (9.A) was considered contextual due to the discussion on computational efficiency. Data privacy (10.A, 10.B) was only tangentially touched upon via model interpretability (low relevance). Domains like Filipino cultural context (2.A-D), expense categorization (3.A-C), existing systems (4.A-B), budgeting (7.A-D), anomaly detection (8.A-C), retention (11.A-B), and savings/debt management (13.A-C) were rejected as the paper does not provide citeable claims for these specific Odin design areas. The overall relevance is moderate, providing strong empirical justification for algorithmic choices in prediction modules."
+limitations:
+  - "Single dataset limits generalizability of findings."
+  - "Does not explore deep learning or more recent algorithms."
+  - "The performance comparison may not hold for different types of consumer data."
+  - "The study lacks a discussion on real-time deployment constraints. [unacknowledged]"
+remember_this:
+  - "XGBoost achieved the highest F1 score of 0.680 and AUC of 0.872."
+  - "Recency was the single most important feature for all models tested."
+  - "Random forest offers a good balance between accuracy and robustness."
+  - "Logistic regression is the most interpretable and fastest algorithm."
+  - "Ensemble methods like XGBoost are preferred for complex behavioral data."

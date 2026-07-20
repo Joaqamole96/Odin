@@ -1,0 +1,80 @@
+
+paper_id: "10.54610/aeis.v1i1.178"
+designation: "local-algorithm-specific"
+title: "Predictive Modeling for Loan Eligibility Assessment: A Comparative Study of Logistic Regression, Random Forest, and Support Vector Machine with Detailed Oversampling"
+authors: "Pandiin, J. D.; Matias, J. B."
+year: 2025
+venue: "AEIS"
+odin_topics:
+  - "6.A"
+  - "12.B"
+tldr: "Compares Logistic Regression, Random Forest, and SVM for loan approval prediction using oversampling and GA feature selection, with Random Forest achieving the highest balanced accuracy."
+problem_and_motivation: "Manual loan approval processes are inefficient and error‑prone; existing ML approaches lack robust feature selection and fail to handle class imbalance, limiting predictive performance and fairness. This study addresses these gaps by comparing classifiers with advanced feature selection and oversampling."
+approach:
+  - "Data sourced from Kaggle loan dataset; categorical encoding and missing value imputation applied."
+  - "Oversampling via resampling of minority class to balance the target variable."
+  - "Feature selection methods: Correlation‑Based, RFE, SelectKBest, Lasso, and Genetic Algorithm (GA) optimized for each classifier."
+  - "Classifiers: Logistic Regression, Random Forest, and Support Vector Machine (SVM) with hyperparameters tuned via GA."
+  - "Model evaluation using accuracy, precision, recall, F1, AUC, and 5‑fold cross‑validation."
+  - "Deployment via a user‑friendly web application for operational use."
+findings:
+  - "num: Random Forest achieved accuracy 85%, precision 86%, recall 84%, and F1 85%."
+  - "num: 5‑fold cross‑validation mean accuracy for Random Forest was 92%, demonstrating robustness."
+  - "num: SVM attained recall 99% but lower precision 63% and accuracy 71%."
+  - "num: Logistic Regression showed accuracy 67%, with high recall (90%) but low precision (62%)."
+  - "Feature importance: Credit_History (26.8%), ApplicantIncome (19.7%), LoanAmount (19.2%) as top predictors; demographic features had minimal impact."
+  - "Random Forest provided the best balance between false positives and false negatives, making it suitable for risk management."
+key_figures_tables:
+  - "Figure 2: Distribution of loan status before and after oversampling → imbalance corrected."
+  - "Table 1: Accuracy of classifiers with four feature selection methods → Random Forest + Lasso best (88.5%)."
+  - "Table 2: Variable importance percentages → Credit_History dominates."
+  - "Table 3: Comparative performance matrix → Random Forest has highest AUC (0.94)."
+  - "Figure 8: 5‑fold cross‑validation scores → Random Forest consistently above 0.90."
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: "GA"
+    definition: "Genetic Algorithm, an optimization technique inspired by natural selection."
+  - term: "RFE"
+    definition: "Recursive Feature Elimination, an iterative feature selection method."
+  - term: "SVM"
+    definition: "Support Vector Machine, a supervised learning algorithm for classification."
+  - term: "Oversampling"
+    definition: "Resampling the minority class to balance the dataset."
+critical_citations:
+  - "[Ruud & Nilsen, 2021] — comparative study on loan eligibility prediction."
+  - "[Chawla et al., 2002] — SMOTE oversampling technique."
+  - "[Mehrabi et al., 2021] — bias and fairness in ML."
+relevance:
+  topics:
+    - code: "6.A"
+      name: "Predictive Modeling in Personal Finance Systems"
+      relevance: "medium"
+      justification: "Compares classifiers for predictive modeling of financial outcomes, informing Odin's forecasting module design."
+    - code: "12.B"
+      name: "Evaluation of Algorithmic Modules"
+      relevance: "medium"
+      justification: "Provides a comparative evaluation methodology with metrics and cross‑validation for algorithmic modules, applicable to Odin's evaluation."
+  contribution: "The comparative evaluation of classifiers informs Odin's predictive modeling module selection. The use of Genetic Algorithms for feature selection can optimize forecasting inputs. The cross‑validation and metrics framework provides a template for evaluating algorithmic performance in Odin. The emphasis on handling class imbalance is relevant to financial data. The feature importance analysis guides feature engineering for spending prediction."
+  directly_justifies:
+    - "Random Forest outperforms other classifiers on imbalanced financial data."
+    - "Feature selection via GA improves predictive accuracy."
+    - "Credit history and income are dominant predictors in financial decisions."
+    - "Oversampling is critical for fair classification in unbalanced datasets."
+  limits:
+    - "Dataset is from Kaggle and not Filipino‑specific, limiting direct applicability to Odin's target population. [unacknowledged]"
+    - "Study focuses on loan approval, not spending or budgeting, so direct transferability is limited. [unacknowledged]"
+    - "No real‑world deployment evaluation beyond a web prototype."
+  mapping_rationale: "A systematic scan across all 12 functional domains and their associated topic codes was performed. Only topics related to predictive modeling and system evaluation were flagged as relevant: 6.A (Predictive Modeling) is assigned medium because the paper compares classifiers that could inform Odin's forecasting module; 12.B (Evaluation of Algorithmic Modules) is medium because the study provides a rigorous comparison methodology with metrics and cross‑validation. Domains such as cultural context, expense categorization, behavioral profiling, budgeting, anomaly detection, mobile design, privacy, retention, and savings/debt were considered and rejected because the paper does not address them. The paper's focus on loan eligibility rather than personal financial management makes it contextual for most Odin modules, but the algorithmic comparison and evaluation techniques offer actionable insights for predictive and evaluative components."
+limitations:
+  - "The dataset is not from the Philippines, so findings may not generalize to Filipino young professionals. [unacknowledged]"
+  - "Only three classifiers and a limited set of feature selection methods were tested."
+  - "Oversampling via simple resampling may introduce overfitting; other techniques like SMOTE were not explored."
+remember_this:
+  - "Random Forest achieved 85% accuracy and 92% cross‑validation mean, outperforming SVM and Logistic Regression."
+  - "Credit History, Applicant Income, and Loan Amount are the most influential predictors."
+  - "SVM achieved 99% recall but low precision, making it unsuitable for strict risk management."
+  - "Genetic Algorithm optimized feature selection significantly improved Random Forest performance."
+  - "Balancing the dataset via oversampling is essential for fair loan approval predictions."
+

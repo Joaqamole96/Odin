@@ -1,0 +1,23 @@
+{
+  "run_at": "2026-07-20T15:12:42.296861+00:00",
+  "input_dir": "/home/joaquin/Repositories/Odin Repositories/Odin-Paper/rrl/papers",
+  "output_dir": "/home/joaquin/Repositories/Odin Repositories/Odin-Paper/rrl/conversions",
+  "limit": 100,
+  "max_size_mb": 5.0,
+  "page_aware": false,
+  "total_pdfs": 518,
+  "processed": 92,
+  "failed": 0,
+  "skipped_too_large": 8,
+  "skipped_files": [
+    "Abdullahi et al.pdf",
+    "Akarlar.pdf",
+    "Asemi et al-2023.pdf",
+    "Asemi et al-2024.pdf",
+    "Balbal & Birant.pdf",
+    "Bangko Sentral ng Pilipinas-2021.pdf",
+    "Bauer A. et al.pdf",
+    "Bertrand et al.pdf"
+  ],
+  "elapsed_seconds": 3138.3
+}

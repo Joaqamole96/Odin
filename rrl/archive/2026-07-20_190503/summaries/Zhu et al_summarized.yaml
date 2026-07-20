@@ -1,0 +1,108 @@
+
+paper_id: 10.1016/j.dim.2023.100041
+designation: international
+title: Not transparent and incomprehensible: A qualitative user study of an AI-empowered financial advisory system
+authors: Zhu, H.; Sallnäs Pysander, E.-L.; Söderberg, I.-L.
+year: 2023
+venue: Data and Information Management
+odin_topics:
+  - 4.A
+  - 4.B
+  - 9.A
+  - 9.B
+  - 10.B
+  - 11.A
+  - 12.A
+tldr: A qualitative user study of a retail bank robo-advisor reveals that non-transparency and incomprehensible information cause distrust and reduce adoption, while interactive data visualization shows promise.
+problem_and_motivation: Few empirical studies investigate customer experience with fully functional robo-advisors in real-life scenarios. The relationship between automated system design and customer perception and adoption remains unknown. This gap is critical because financial decisions are high-stake and users are vulnerable.
+approach:
+  - 24 participants with diverse financial backgrounds used a retail bank robo-advisor on a mobile device.
+  - Participants performed three tasks including investment scenario exploration and final recommendation review.
+  - Data collection included pre-surveys, screen recordings, and retrospective post-test interviews.
+  - Analysis used inductive coding of interview transcripts and video interaction logs.
+  - The study compared expert and non-expert participants based on self-reported financial knowledge.
+  - The RA system followed a standard flow: configuration, matching, and maintenance phases.
+  - Google Translate assisted non-native language participants, verified by bilingual checks.
+  - Pilot tests with 2 participants were excluded; final analysis included 24 participants.
+  - The study focused on user perception and adoption, not system usability or algorithm performance.
+findings:
+  - num: Only 4 out of 24 participants input the exact investment amount suggested by the RA.
+  - Participants perceived the RA as sales-centric rather than advisory, failing to see it as providing personalized financial advice.
+  - Non-transparency in risk assessment and portfolio recommendation mechanisms led to distrust and low adoption willingness.
+  - Incomprehensible information, especially for non-experts, hindered understanding and decision-making.
+  - Interactive data visualization (risk color bars and performance line charts) was positively received and improved comprehension.
+  - Participants expected more personalized questions and a holistic understanding of their financial situation.
+  - Automated maintenance and rebalancing features were not perceived by participants until explained.
+  - Participants who encountered contradictory inputs felt blamed and abandoned by the system.
+  - Expert participants were more confident in using the RA, while non-experts required more guidance.
+  - Most participants preferred human advisor involvement for calibration and to mitigate miscommunication risks.
+key_figures_tables:
+  - Figure 2 left: risk assessment visualization with color-coded bars → concrete risk understanding.
+  - Figure 2 right: interactive line diagram for growth and loss projection → enables envisioning financial outcomes over time.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: RA
+    definition: Robo-advisor, an algorithm-driven automated financial advisory system.
+  - term: ETF
+    definition: Exchange-Traded Fund, a basket of investments like stocks and bonds.
+critical_citations:
+  - "[Jung, Dorner, Weinhardt, & Pusmaz, 2018] — provides design principles for RA systems."
+  - "[Belanche, Casaló, & Flavián, 2019] — links AI adoption to customer trust in FinTech."
+  - "[Ben-David & Sade, 2020] — examines RA adoption during COVID-19."
+  - "[Dikmen & Burns, 2022] — shows domain knowledge affects trust in XAI."
+relevance:
+  topics:
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: The paper describes a functional robo-advisor as an example of an existing system.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: The study identifies lack of transparency and incomprehensibility as key gaps.
+    - code: 9.A
+      name: Mobile-First Design Principles and Rationale
+      relevance: medium
+      justification: The RA is a mobile application, and the study discusses mobile interface issues.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: high
+      justification: The study provides empirical UX findings on interaction, navigation, and visualization in a mobile RA.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: high
+      justification: Trust is a central theme; lack of transparency negatively affects trust and adoption.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Participants' willingness to adopt and continue using the RA reflects engagement dynamics.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: The user study methodology (observations, interviews) serves as an evaluation framework.
+  contribution: This paper provides empirical evidence that transparency and comprehensibility are critical for user trust and adoption in automated financial advisory systems. For Odin, the findings directly inform the design of transparent expense categorization (3.A) and budget recommendation interfaces (7.B) to reduce user uncertainty. The study's user-centered evaluation approach (12.A) validates the use of qualitative methods for assessing PFMS user experience. The observed demand for interactive data visualization (9.B) suggests that Odin should incorporate visual aids to enhance financial literacy and decision support. Additionally, the paper's emphasis on user trust (10.B) underscores the need for Odin to prioritize clear explanations and user control.
+  directly_justifies:
+    - Non-transparency in automated financial systems reduces user trust and adoption.
+    - Interactive data visualization improves user comprehension of financial risk and performance.
+    - Non-expert users require additional guidance and domain knowledge to understand system outputs.
+    - Users expect personalized questions and holistic understanding rather than standardized profiling.
+    - Automated systems lacking human-like interaction may fail to meet user expectations for advice.
+  limits:
+    - The study focuses on investment advice, which differs from the budgeting and expense management scope of Odin.
+    - Participants were Swedish, and the RA was from a Scandinavian bank, limiting cultural generalizability to Filipino users.
+    - The small sample size (24) and qualitative nature limit statistical generalizability.
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was performed. The domains of 'Existing Systems & Gaps' (4.A, 4.B) and 'Mobile-First Design' (9.A, 9.B) were flagged as highly relevant, as the paper directly examines a real-world RA and its mobile UX. 'Data Privacy & User Trust' (10.B) was also high, given the centrality of trust. 'User Retention & Engagement' (11.A) and 'System Evaluation' (12.A) were medium, as the study touches on adoption willingness and uses a qualitative evaluation framework. The 'Behavioral Profiling & Classification' domain (5.A, 5.B, 5.C) was considered but rejected because the paper does not focus on classification algorithms or profile dynamics; it only uses risk assessment as a context. The 'Spending Forecasting' (6.A, 6.B) and 'Budget Recommendation' (7.A-D) domains were rejected because the paper addresses investment, not spending or budget allocation. 'Anomaly Detection' (8.A-C) was irrelevant. 'Savings & Debt Management' (13.A-C) was also not applicable. Overall, the paper is highly relevant to Odin's design considerations for transparency, trust, and UX, though its investment focus limits direct applicability to budgeting.
+limitations:
+  - Financial literacy was self-reported, not measured with a standardized test.
+  - The study did not track long-term adoption or retention, only behavioral intention. [unacknowledged]
+  - The RA was from a single bank, limiting generalizability to other systems.
+  - Participants used a test account, which may have reduced the realism of high-stake decisions. [unacknowledged]
+  - The study did not compare different levels of anthropomorphism or explainability features systematically. [unacknowledged]
+remember_this:
+  - Non-transparency in automated financial advice significantly undermines user trust.
+  - Interactive data visualization enhances user understanding of risk and performance.
+  - Only 4 of 24 participants trusted the RA's suggested investment amount.
+  - Non-expert users need clearer explanations and domain knowledge support.
+  - Users expect a more holistic and personalized advisory experience beyond standardized questions.

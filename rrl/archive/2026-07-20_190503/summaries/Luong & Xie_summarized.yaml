@@ -1,0 +1,115 @@
+
+paper_id: 10.1016/j.jfds.2026.100195
+designation: international-algorithm-specific
+title: Explainable ensemble machine learning for financial transaction fraud detection: Insights from XGBoost and deep neural networks
+authors: Luong, N.D.A.; Xie, S.
+year: 2026
+venue: The Journal of Finance and Data Science
+odin_topics:
+  - 8.A
+  - 8.B
+  - 8.C
+  - 5.C
+  - 12.A
+  - 12.B
+tldr: A hybrid XGBoost and deep neural network ensemble with SHAP-based interpretability detects financial fraud with high accuracy and recall on imbalanced transaction data.
+problem_and_motivation: Fraud detection systems must balance accuracy, interpretability, and regulatory compliance, yet existing approaches often sacrifice one for the other. Extreme class imbalance and high-dimensional data complicate the identification of rare fraudulent transactions. A unified framework that integrates advanced machine learning, imbalance handling, and explainability is needed for practical deployment.
+approach:
+  - Data source: IEEE-CIS dataset with ~590k records merged from transaction and identity files, containing 434 features.
+  - Preprocessing: Median imputation for numerical features, label encoding for categoricals, and z-score normalization for neural networks.
+  - Imbalance handling: Cost-sensitive learning via class weighting for XGBoost and focal loss for DNN, plus threshold optimization for F1.
+  - Models: Logistic regression, random forest, XGBoost, enhanced XGBoost, shallow ANN, deep DNN, and a weighted hybrid XGB+DNN ensemble.
+  - Evaluation: Stratified 80/20 split; metrics include ROC-AUC, PR-AUC, precision, recall, F1, and inference time.
+  - Interpretability: SHAP global feature importance and local beeswarm plots to explain predictions.
+  - Benchmarking: Compared against OLightGBM, LSTM, and Kaggle top solutions.
+findings:
+  - num: The hybrid XGB+DNN ensemble achieved the highest F1-score of 0.74, PR-AUC of 0.7897, and ROC-AUC of 0.9638.
+  - num: Enhanced XGBoost attained a recall of 0.83 and precision of 0.42, outperforming standard XGBoost.
+  - num: The proposed cost-sensitive approach outperformed SMOTE-based ensemble, with ROC-AUC of 0.9638 vs. 0.9037.
+  - num: LSTM performed near-randomly with ROC-AUC 0.502, indicating weak sequential structure in the dataset.
+  - Transaction amount and identity-related features (card6, C14, C13) are the most influential predictors.
+  - Fraud patterns concentrate in low-value test transactions, high-value opportunistic purchases, and late-night hours.
+  - Free email domains, mobile devices, and specific device identifiers are disproportionately associated with fraud.
+  - SHAP analysis reveals that feature effects are context-dependent, with anonymized V-series features capturing interaction patterns.
+key_figures_tables:
+  - Table 3: SMOTE vs. cost-sensitive learning → cost-sensitive approach yields superior PR-AUC and F1.
+  - Table 4: Model performance comparison → XGB+DNN ensemble achieves best F1 and PR-AUC.
+  - Figure 2: Fraud by amount and product → fraud concentrated at extremes and in product categories C and S.
+  - Figure 3: Temporal/spatial patterns → fraud peaks late-night and weekends, varies by region and country.
+  - Figure 6: SHAP global importance → TransactionAmt and identity features dominate importance.
+key_equations:
+  - equation: L_focal = -∑[α(1-ŷ_i)^γ y_i log ŷ_i + (1-α)ŷ_i^γ (1-y_i) log(1-ŷ_i)]
+    explanation: Focal loss down-weights easy examples to focus on hard fraud cases.
+  - equation: ŷ_i = λ⋅ŷ_i^XGB + (1-λ)⋅ŷ_i^DNN
+    explanation: Weighted averaging combines XGBoost and DNN probabilities.
+definitions:
+  - term: XGBoost
+    definition: Extreme Gradient Boosting, a scalable tree-based ensemble method.
+  - term: DNN
+    definition: Deep Neural Network with multiple hidden layers and non-linear activations.
+  - term: SHAP
+    definition: SHapley Additive exPlanations, a game-theoretic method for model interpretability.
+  - term: Focal Loss
+    definition: A loss function that down-weights well-classified examples to focus on hard ones.
+  - term: PR-AUC
+    definition: Area Under the Precision-Recall Curve, suited for imbalanced classification.
+  - term: ROC-AUC
+    definition: Area Under the Receiver Operating Characteristic curve, measures discriminative ability.
+critical_citations:
+  - "[Deotte et al., 2019] — Kaggle 1st place ensemble achieved ROC-AUC ~0.94-0.95."
+  - "[Bahnsen et al., 2016] — Feature engineering reduced financial losses by 13%."
+  - "[Alamri and Ykhlef, 2024] — BCB-SMOTE achieved F1-score 85.2% with reduced overlap."
+  - "[Lin and Gao, 2022] — SHAP reveals complex financial feature interactions."
+  - "[Taha and Malebary, 2020] — OLightGBM achieved ROC-AUC 0.9288."
+relevance:
+  topics:
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Fraud detection is a core anomaly detection problem addressed directly.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: high
+      justification: Evaluates XGBoost, DNN, and hybrid ensembles for fraud detection.
+    - code: 8.C
+      name: Cold-Start Baseline Strategies for Anomaly Detection
+      relevance: medium
+      justification: Class weighting and focal loss are strategies applicable to cold-start scenarios.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Uses behavioral and identity features to classify fraudulent vs. legitimate transactions.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Provides a comprehensive multi-metric evaluation for imbalanced classification.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: medium
+      justification: Compares multiple algorithms and imbalance handling techniques systematically.
+  contribution: The paper's hybrid ensemble model offers a blueprint for Odin's anomaly detection module, balancing predictive performance and interpretability. Its cost-sensitive learning strategies (focal loss, class weighting) are directly transferable to Odin's spending anomaly detection. The SHAP-based explainability framework aligns with Odin's need for transparent, user-trustworthy AI. The evaluation methodology provides a template for assessing Odin's algorithmic modules under imbalanced conditions. Moreover, the emphasis on identity and temporal features mirrors Odin's data structure, making the approach applicable to Filipino user spending patterns.
+  directly_justifies:
+    - An ensemble of XGBoost and DNN improves fraud detection F1-score to 0.74.
+    - Focal loss and class weighting are effective for handling extreme class imbalance.
+    - SHAP analysis identifies transaction amount and identity features as key predictors.
+    - Feature engineering for time-of-day and day-of-week captures periodic fraud patterns.
+    - Inference time of 0.35 ms/transaction supports real-time deployment feasibility.
+  limits:
+    - Dataset anonymization limits interpretability of merchant and demographic patterns.
+    - Offline evaluation does not simulate real-world latency or streaming constraints.
+    - Concept drift in evolving fraud tactics was not addressed.
+    - Deep neural network interpretability remains less mature than tree-based SHAP. [unacknowledged]
+    - The study uses a fixed historical snapshot, not accounting for data distribution shifts. [unacknowledged]
+  mapping_rationale: Systematic scanning across all 12 functional domains and associated topic codes flagged the following as relevant: Anomaly Detection (8.A, 8.B, 8.C) at high relevance because the paper directly addresses fraud detection as an anomaly detection problem; Behavioral Profiling & Classification (5.C) at medium relevance as it uses classification to distinguish fraud from legitimate behavior; System Evaluation (12.A, 12.B) at medium relevance for its comprehensive evaluation framework. Borderline case: the paper's temporal analysis (e.g., hour of day) touches 6.A/6.B but does not forecast spending, so it was rejected for those codes. Domains such as Filipino Cultural Context, Expense Categorization, Budget Recommendation, Savings & Debt Management were considered but rejected due to no direct content. Overall, the paper provides strong empirical and methodological support for Odin's anomaly detection and evaluation modules.
+limitations:
+  - Dataset is anonymized, lacking merchant categories and customer demographics.
+  - Real-world deployment constraints like latency and streaming were not simulated.
+  - Concept drift and evolving fraud tactics were not addressed.
+  - Interpretability of deep neural networks remains limited compared to tree models. [unacknowledged]
+  - The static offline validation may not generalize to live production environments. [unacknowledged]
+remember_this:
+  - Hybrid XGB+DNN ensemble achieved F1-score 0.74 on imbalanced fraud data.
+  - Transaction amount and identity features are the strongest fraud predictors.
+  - SHAP enables transparent, case-level explanations for regulatory compliance.
+  - Cost-sensitive learning with focal loss outperforms SMOTE-based oversampling.
+  - Ensemble model has 0.35 ms inference time, viable for real-time detection.

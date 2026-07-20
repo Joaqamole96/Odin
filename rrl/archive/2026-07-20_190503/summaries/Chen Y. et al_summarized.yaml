@@ -1,0 +1,106 @@
+
+paper_id: 10.69987/JACS.2024.40407
+designation: international-algorithm-specific
+title: Going Concern and Bankruptcy Prediction under Extreme Class Imbalance: Cost-Sensitive Learning, Resampling, and Focal Loss with Explainable Financial-Ratio Portraits
+authors: Chen, Y.; Zhang, Y.; Sherman, M.
+year: 2024
+venue: Journal of Advanced Computing Systems
+odin_topics:
+  - 6.A
+  - 6.B
+  - 8.A
+  - 8.B
+  - 12.A
+  - 12.B
+tldr: Evaluates cost-sensitive learning, resampling, and focal loss for bankruptcy prediction, finding that random forests with missingness indicators achieve superior ranking under audit budgets.
+problem_and_motivation: Auditors face a going-concern screening problem where failing to identify a distressed firm is substantially costlier than issuing a false alarm. Standard classifiers optimized for overall accuracy are biased toward the majority class in rare-event settings. Existing methods lack audit-aligned evaluation that reflects constrained review capacity.
+approach:
+  - Used Polish Companies Bankruptcy dataset with five forecasting horizons, 64 ratios, and 43,405 firm-year records.
+  - Compared three imbalance-aware strategy families: cost-sensitive learning via class-weighted objectives, resampling (ROS, RUS, SMOTE), and focal loss.
+  - Employed logistic regression and random forests as base learners with fixed random seed for reproducibility.
+  - Evaluated models using AUPRC and Recall@Top-k, where k represents the fraction of firms audited under a constrained sampling budget.
+  - Augmented the best model with missingness indicator features to exploit predictive missingness patterns.
+  - Constructed explainable financial-ratio portraits for high-risk cohorts using median scaled ratios.
+findings:
+  - num: Cost-sensitive RF+MI improved AUPRC from 0.480 to 0.640 in the 1stYear case.
+  - num: At top 5% audit budget, RF+MI recovered 62.96% of bankruptcies versus 12.35% for logistic regression.
+  - num: Adding missingness indicators increased AUPRC in every horizon, with the largest gain in 1stYear (0.480 to 0.640).
+  - num: In 1stYear at k=1%, RF+MI achieved Precision@Top-1% of 0.909, corresponding to 23.6x lift over the base bankruptcy rate.
+  - Tree ensembles consistently dominated linear models across all five forecasting horizons.
+  - Missingness indicators, especially Missing(Attr27), were predictive and interpretable as reporting-structure cues.
+  - Focal loss with linear model did not improve over standard logistic regression with fixed hyperparameters.
+key_figures_tables:
+  - Figure 3: Precision-recall curves for 1stYear → RF+MI dominates, maintaining high precision at low recall.
+  - Figure 4: Audit cost curves for 1stYear → RF+MI reaches 50% recall at ~2.5% audit budget, LR never reaches 50%.
+  - Figure 6: Financial-ratio portrait for high-risk cohort → flagged firms show higher leverage and weaker liquidity.
+  - Table 5: AUPRC results across methods and horizons → RF+MI achieves best AUPRC in all cases.
+  - Table 11: Missingness indicator importances → Missing(Attr27) is the most predictive missingness feature.
+key_equations:
+  - equation: FL(p_t) = -α(1-p_t)^γ log(p_t)
+    explanation: Focal loss down-weights easy negatives to focus on hard examples.
+  - equation: x_new = x_i + λ(x_nn - x_i), λ∈[0,1]
+    explanation: SMOTE generates synthetic minority points by interpolating between neighbors.
+definitions:
+  - term: AUPRC
+    definition: Area under the precision-recall curve, also known as average precision.
+  - term: Recall@Top-k
+    definition: Fraction of all positive instances found in the top k% of a ranked list.
+  - term: ROS
+    definition: Random over-sampling duplicates minority examples to balance class distribution.
+  - term: RUS
+    definition: Random under-sampling removes majority examples to balance class distribution.
+  - term: SMOTE
+    definition: Synthetic minority over-sampling technique that interpolates between minority neighbors.
+critical_citations:
+  - Altman, 1968 — Foundational Z-score model for bankruptcy prediction using financial ratios.
+  - Ohlson, 1980 — Probabilistic logit framework for bankruptcy prediction.
+  - Chawla et al., 2002 — Introduced SMOTE for imbalanced learning.
+  - Lin et al., 2017 — Proposed focal loss for dense object detection.
+relevance:
+  topics:
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Paper directly addresses predictive modeling with financial ratio data.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Compares multiple forecasting algorithms for rare-event prediction.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: medium
+      justification: Bankruptcy prediction is framed as rare-event anomaly detection.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: Evaluates algorithms suitable for anomaly detection in rare-event settings.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Provides rigorous evaluation with AUPRC and Recall@Top-k audit metrics.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Systematically evaluates algorithmic modules with paired comparability.
+  contribution: The paper's audit-aligned evaluation protocol using Recall@Top-k directly justifies Odin's evaluation framework for predictive modules. The finding that missingness patterns carry predictive signal informs Odin's preprocessing design for spending data with incomplete entries. The comparison of cost-sensitive learning, resampling, and focal loss provides empirical guidance for selecting anomaly detection techniques in Odin's spending forecasting module. The cohort-level ratio portrait methodology offers a template for explainable risk summaries in Odin's user-facing reports.
+  directly_justifies:
+    - Audit-aligned Recall@Top-k is more actionable than threshold-based recall for constrained review budgets.
+    - Missingness indicators should be treated as predictive signals rather than noise to be imputed away.
+    - Tree ensembles outperform linear models for rare-event prediction on tabular financial data.
+    - Cost-sensitive learning with class weights improves rare-event retrieval but interacts with model capacity.
+  limits:
+    - Results are based on Polish corporate data and may not generalize to personal spending patterns.
+    - The fixed random split provides reproducibility but lacks uncertainty estimates from repeated validation.
+    - Focal loss was only tested with linear models and fixed hyperparameters; tuning may alter conclusions.
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes identified that the paper's core contributions align with predictive modeling (6.A, 6.B), anomaly detection (8.A, 8.B), and system evaluation (12.A, 12.B). These were assigned high or medium relevance because the paper provides citeable claims about algorithmic comparison, rare-event detection, and evaluation metrics. The domains of Filipino cultural context (2.A-D), expense categorization (3.A-C), budget recommendation (7.A-D), mobile-first design (9.A-B), data privacy (10.A-B), user retention (11.A-B), and savings/debt management (13.A-C) were rejected as the paper neither addresses personal finance contexts nor Filipino-specific financial behaviors. The paper's techniques are transferable to personal finance anomaly detection, but its corporate bankruptcy framing means direct applicability is contextual rather than direct. Overall, the paper provides strong methodological guidance for Odin's predictive and evaluation modules while being less directly relevant to user-facing or culturally specific features.
+limitations:
+  - Results based on a single stratified split with fixed seed; repeated or time-based validation would provide additional robustness. [unacknowledged]
+  - Dataset is Polish corporate firms and may not generalize to Filipino personal finance or other jurisdictions. [acknowledged]
+  - Focal loss evaluated only in linear configuration with fixed hyperparameters; broader tuning may yield different conclusions. [acknowledged]
+  - Cross-sectional data does not model within-firm temporal trajectories or macroeconomic indicators. [acknowledged]
+remember_this:
+  - Random forests with missingness indicators improved AUPRC by 0.16 in the most imbalanced case.
+  - Auditing the top 5% of ranked firms recovered 63% of bankruptcies, versus 12% for logistic regression.
+  - Missingness patterns are predictive and should be used as features rather than imputed away.
+  - Evaluation should use Recall@Top-k to align with constrained review budgets.
+  - Tree ensembles dominate linear models for rare-event prediction on tabular financial data.

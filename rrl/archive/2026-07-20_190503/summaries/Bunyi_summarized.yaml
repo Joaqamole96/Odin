@@ -1,0 +1,153 @@
+
+paper_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8 # No DOI available
+designation: local
+title: Unpacking the Determinants of Financial Resilience in the Philippines
+authors: Bunyi, M. K. C.
+year: 2024
+venue: Bangko Sentral ng Pilipinas Discussion Paper
+odin_topics:
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.B
+  - 2.D
+  - 3.A
+  - 4.A
+  - 5.A
+  - 5.C
+  - 7.A
+  - 10.A
+  - 10.B
+  - 12.A
+  - 13.A
+  - 13.C
+tldr: Examines financial resilience determinants in the Philippines using 2017 and 2021 Global Findex data, finding income, saving behavior, and gender as top predictors.
+problem_and_motivation: Financial resilience is critical for Filipinos facing economic shocks, but its determinants are underexplored in the Philippines. Policymakers lack baseline data to design targeted interventions for the financially vulnerable.
+approach:
+  - Uses 2017 and 2021 World Bank Global Findex survey data for the Philippines with 1,000 respondents each.
+  - Defines financial resilience as the ability to raise 5% of GNI per capita within 30 days.
+  - Applies Logistic LASSO Regression and Decision Tree models to predict resilience and identify key predictors.
+  - Evaluates model performance using accuracy scores, ROC curves, and confusion matrices.
+findings:
+  - Income quintile, saving behavior, and gender emerged as the top predictors of financial resilience in both 2017 and 2021.
+  - num: Model accuracy scores ranged from 59-65% for 2017 data and 62-68% for 2021 data.
+  - The gender gap in financial resilience widened from 7.5 percentage points in 2017 to 16.8 percentage points in 2021.
+  - Tertiary education became a key predictor in 2021, second only to income quintile.
+  - Borrowing for medical purposes showed a strong negative association with resilience in 2021.
+  - Financial inclusion indicators like account ownership did not consistently translate to higher resilience.
+key_figures_tables:
+  - Figure 1: Financial resilience self-ratings in 2017 and 2021 → Resilience rates were 49.4% and 59.0%, respectively.
+  - Figure 2: Financial resilience by age → Respondents aged 20-40 showed higher resilience in 2017.
+  - Figure 4: Financial resilience by income quintile → Richer households reported higher resilience in both years.
+  - Table 2: Financial resilience by sex → Gender gap widened from 7.5 to 16.8 percentage points between 2017 and 2021.
+  - Figure 10: Logistic LASSO regression coefficients → Income quintile consistently had the largest positive coefficient.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: Financial Resilience
+    definition: The ability to withstand unexpected income loss or financial shocks.
+  - term: Financial Inclusion
+    definition: Accessibility, usage, and quality of financial products and services.
+  - term: Logistic LASSO Regression
+    definition: A regression method that uses L1 penalty to shrink irrelevant coefficients to zero.
+  - term: Decision Tree
+    definition: A non-parametric method that splits data into homogeneous groups based on predictor values.
+  - term: Global Findex
+    definition: World Bank database on individuals' access to and use of financial services.
+critical_citations:
+  - "[Salignac et al., 2019] — Provides the multidimensional financial resilience framework used for variable selection."
+  - "[Demirgüç-Kunt et al., 2022] — Source of 2021 Global Findex data and financial resilience measure."
+  - "[Klapper & Lusardi, 2019] — Links financial literacy to financial resilience."
+relevance:
+  topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: medium
+      justification: Analyzes financial resilience across Filipino adults including young professionals.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Examines income, savings, and debt patterns relevant to financial structure.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly investigates saving behavior and financial decision-making.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Analyzes remittance behavior which reflects Filipino cultural practices.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: Discusses pandemic-related spending shifts but not seasonal patterns.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: low
+      justification: Mentions consumption patterns but not specifically occasion-based spending.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: low
+      justification: Discusses borrowing purposes but not expense categorization frameworks.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: References BSP Financial Inclusion Survey and National Strategy for Financial Inclusion.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Identifies behavioral predictors like saving and borrowing for medical purposes.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Uses classification models (Logistic LASSO, Decision Tree) to profile resilience.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: low
+      justification: Mentions financial literacy and planning but not specific budgeting strategies.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: Acknowledges limitations of survey data but not system privacy concerns.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: low
+      justification: Not directly addressed.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Evaluates model performance using accuracy, ROC, and confusion matrices.
+    - code: 13.A
+      name: Savings Goal Management in PFMS
+      relevance: high
+      justification: Saving behavior is a top predictor of financial resilience.
+    - code: 13.C
+      name: End-of-Period Surplus as a Savings Input
+      relevance: low
+      justification: Discusses savings but not specifically end-of-period surplus.
+  contribution: This paper provides empirical evidence on key demographic and behavioral determinants of financial resilience in the Philippines, which can inform Odin's user profiling and risk assessment modules. The finding that income and saving behavior are top predictors justifies Odin's focus on income tracking and savings goal features. The identification of gender and education gaps supports Odin's need for personalized financial recommendations. The modest model accuracy highlights the need for more granular data, which Odin could collect through user interactions.
+  directly_justifies:
+    - Income quintile and saving behavior are the strongest predictors of financial resilience.
+    - Financial inclusion does not guarantee financial resilience.
+    - Gender and education are significant factors in financial vulnerability.
+    - Borrowing for medical purposes is strongly associated with lower financial resilience.
+  limits:
+    - The narrow proxy measure for financial resilience may not capture all dimensions of the concept.
+    - The survey data lacks demographic variables like home ownership and employment status.
+    - The shift to phone-based surveys in 2021 may have introduced selection bias.
+    - Model accuracy remained below 70%, suggesting unmeasured factors are important.
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was conducted. The paper was flagged as highly relevant for domains related to Filipino demographics (1.A, 1.B, 1.C), behavioral profiling (5.A), and savings management (13.A), as it directly analyzes these constructs using survey data and machine learning. Medium relevance was assigned to domains concerning cultural practices (2.A) and existing systems (4.A) due to contextual mentions. Low relevance was assigned to domains like expense categorization (3.A) and budgeting strategies (7.A) because the paper does not address these specific mechanisms. Borderline cases included seasonal spending (2.B, 2.D) which were considered contextual due to pandemic-related discussions, and classification approaches (5.C) which were relevant due to the use of Logistic LASSO and Decision Tree models. Domains such as forecasting (6.A, 6.B), anomaly detection (8.A, 8.B, 8.C), and mobile-first design (9.A, 9.B) were rejected as they were not addressed. Overall, the paper provides foundational evidence for Odin's user profiling and savings features but has limited direct applicability to algorithmic modules like forecasting or anomaly detection.
+limitations:
+  - The financial resilience measure is a narrow proxy (5% of GNI per capita).
+  - The dataset is limited to 1,000 respondents per year.
+  - Model accuracy is modest (below 70%).
+  - The shift to phone-based surveys in 2021 may have introduced selection bias.
+  - Causal relationships cannot be established from the predictive models.
+  - The variables are predominantly binary, limiting granularity.
+remember_this:
+  - Income quintile is the strongest predictor of financial resilience.
+  - Saving behavior is critical for resilience, especially for lower-income groups.
+  - The gender gap in resilience widened significantly from 2017 to 2021.
+  - num: Model accuracy remained below 70%, indicating unmeasured factors are important.
+  - Financial inclusion does not automatically translate to financial resilience.

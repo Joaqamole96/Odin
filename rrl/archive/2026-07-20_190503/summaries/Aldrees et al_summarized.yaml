@@ -1,0 +1,133 @@
+
+paper_id: 10.1007/s44196-025-00776-w
+designation: international-algorithm-specific
+title: Behavioral Patterns in Micro‑lending: Enhancing Credit Risk Assessment with Collaborative Filtering and Federated Learning
+authors: Aldrees, A.; Shahab, S.; Dutta, A. K.; Ahmad, W.; Anjum, M.
+year: 2025
+venue: International Journal of Computational Intelligence Systems
+odin_topics:
+  - 6.A
+  - 6.B
+  - 7.D
+  - 8.A
+  - 8.B
+  - 8.C
+  - 10.A
+  - 12.A
+tldr: A collaborative filtering method using lending pattern analysis and federated learning improves credit risk assessment for micro-lending by evaluating borrower behaviour patterns across repayment tenures.
+problem_and_motivation: Micro-lending platforms face substantial challenges in credit risk assessment due to limited borrower data and fluctuating financial patterns. Traditional credit scoring algorithms depend on centralized data collection and lack privacy-preserving methods, while current machine learning techniques often fail to capture the diverse behavioural patterns and security requirements of decentralized financial ecosystems.
+approach:
+  - A Collaborative Filtering Method using Lending Pattern Analysis (CFM-LPA) is introduced for credit risk assessment.
+  - The method is enhanced with federated learning to enable decentralized analysis of lending patterns across institutions.
+  - It evaluates return rates, credit limits, and consumer response behaviours to identify behavioural factors.
+  - The behavioural factor is updated for each return period, influencing credit risk for subsequent periods.
+  - The model is trained individually on identified factors, allowing the behavioural factor to be filtered for new credit risk identification.
+findings:
+  - num: The proposed method enhances risk detection accuracy by 14.03% compared to existing methods.
+  - num: The method improves return rate analysis by 13.28% across financed amounts.
+  - num: The CFM-LPA achieves a risk detection rate of 95.21%.
+  - num: The return rate analysis achieves 0.97.
+  - Federated learning allows continuous updates to lending patterns, ensuring accurate predictions while preserving data privacy.
+key_figures_tables:
+  - Figure 1: Data used for evaluation from Kaggle dataset → Dataset features for behavior factor analysis.
+  - Figure 2: Return rate and credit limit relation → Relationship influences credit risk assessment.
+  - Figure 3: Credit risk analysis over time → Risk factors and credit limits monitored over lending periods.
+  - Figure 4: Lending pattern analysis → Patterns used to predict credit risk and repayment defaults.
+  - Figure 5: Behaviour factor estimation using federated learning → Federated learning assesses behaviour patterns.
+  - Figure 6: Behaviour factor analysis across credit periods → Behaviour factor values reflect positive or negative financial behavior.
+  - Figure 7: Filtering ratio analysis → High filtering ratio indicates effective separation of risk-prone borrowers.
+  - Figure 8: New risk detection over tenure → Proposed method minimizes emergence of new risks.
+  - Figure 9: Return rate analysis across limits → Proposed method improves return rate stability.
+  - Table 1: Summary of existing models and their limitations → Highlights gaps in current approaches.
+key_equations:
+  - equation: L(t) = C_lm + Br_C × I_rate + B_fact + C_risk × (1 + B_fact(t+1))
+    explanation: Measures micro-lending factors to monitor and predict environmental risk over time.
+  - equation: R_rate = R_amt−tot / R_amt × exp(C_lm × Br_C + M_L(t))
+    explanation: Computes the ratio of return amount to borrowed amount, adjusting for credit limit.
+  - equation: C_lm = B_fact × Br_risk + (1 + C_hist) × C_risk / E_con
+    explanation: Measures the credit limit based on borrower risk, credit history, and environmental factors.
+  - equation: Len_pat = Σ (amt×C_risk / (1−(1+I_rate))) + (1−Dr_i) × C_lm + H_res(t)
+    explanation: Analyzes lending patterns for credit risk using return rate, credit limit, and response rate.
+definitions:
+  - term: CFM-LPA
+    definition: Collaborative Filtering Method using Lending Pattern Analysis for credit risk assessment.
+  - term: Federated Learning
+    definition: Decentralized machine learning approach that trains models across multiple institutions without sharing raw data.
+  - term: Micro-lending
+    definition: Provision of small loans to individuals or businesses, often in underserved markets.
+  - term: Behavioural Factor
+    definition: A metric derived from borrower repayment patterns and credit history used to assess credit risk.
+  - term: Return Rate
+    definition: The proportion of loan amount that is repaid by the borrower over a given period.
+  - term: Credit Limit
+    definition: The maximum amount of credit extended to a borrower.
+  - term: Collaborative Filtering
+    definition: A method that uses historical patterns and similarities between borrowers to predict credit risk.
+  - term: FedAvg
+    definition: Federated Averaging, an algorithm used to aggregate local model updates in federated learning.
+  - term: SMOTE-ENN
+    definition: Synthetic Minority Over-sampling Technique with Edited Nearest Neighbour, a method for balancing class distribution.
+  - term: LightGBM-GAN
+    definition: Light Gradient Boosting Machine with Generative Adversarial Networks, a hybrid credit risk model.
+critical_citations:
+  - "[Zhuang et al., 2024] — GAN-LightGBM model for credit risk assessment."
+  - "[Aruleba et al., 2024] — Ensemble classifiers with SMOTE-ENN for credit risk prediction."
+  - "[Yang et al., 2024] — Feature enhanced ensemble modeling for credit risk assessment."
+  - "[Rao et al., 2023] — PSO-XGBoost model for personal auto loan credit risk."
+relevance:
+  topics:
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Proposes a collaborative filtering method with federated learning for predictive credit risk assessment.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Evaluates forecasting of return rates and risk patterns across sequential repayment periods.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: medium
+      justification: Addresses risk factor filtering and reduction through pattern analysis and federated learning.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: high
+      justification: Detects risky borrower behaviour patterns as anomalies in credit risk assessment.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: medium
+      justification: Uses collaborative filtering and pattern analysis to identify risky repayment anomalies.
+    - code: 8.C
+      name: Cold-Start Baseline Strategies for Anomaly Detection
+      relevance: medium
+      justification: Addresses limited borrower data challenges using federated learning for new borrower risk assessment.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: high
+      justification: Employs federated learning to ensure data privacy by training models locally without sharing raw data.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: medium
+      justification: Provides comparative analysis with existing models using risk detection and return rate metrics.
+  contribution: The paper contributes a novel credit risk assessment method (CFM-LPA) that integrates collaborative filtering and federated learning, which can directly inform Odin's risk detection and forecasting modules. Its privacy-preserving approach supports Odin's data security requirements, while the pattern-based behavioural analysis provides a foundation for user profiling and anomaly detection. The federated learning framework offers a scalable architecture for distributed financial data analysis, relevant to Odin's system evaluation and forecasting components.
+  directly_justifies:
+    - Federated learning enables privacy-preserving analysis of borrowing patterns across decentralized financial data sources.
+    - Continuous behavioural factor updates improve risk detection accuracy by 14.03%.
+    - Collaborative filtering effectively identifies lending patterns from historical repayment data.
+    - Behavioural pattern analysis enhances return rate predictions across varying financial conditions.
+  limits:
+    - The model's reliance on collaborative filtering may introduce biases with sparse or imbalanced lending data.
+    - Federated learning requires significant computational resources and robust synchronization across institutions.
+    - Model drift due to changing data distributions over time is not fully addressed.
+    - The approach focuses on micro-lending and may not generalize directly to broader personal finance contexts.
+  mapping_rationale: A systematic scan of all 12 functional domains and their associated topic codes was performed. The paper is directly relevant to Predictive Modeling (6.A, 6.B) and Anomaly Detection (8.A, 8.B, 8.C) due to its CFM-LPA method for credit risk prediction and anomaly identification. It also addresses Data Privacy (10.A) through federated learning, and its evaluation framework relates to System Evaluation (12.A). The budgeting and savings domains were considered but rejected, as the paper focuses on credit risk rather than budget allocation or savings management. The Filipino cultural context domains (1, 2) were rejected as the study uses international data and does not address specific Filipino financial practices. The paper provides medium relevance to Infeasibility Handling (7.D) through its risk filtering process and Cold-Start strategies (8.C) through federated learning for new borrower assessment. Overall, the paper offers actionable insights for Odin's risk assessment, privacy-preserving modeling, and predictive analytics modules.
+limitations:
+  - The model's collaborative filtering may introduce biases with sparse or imbalanced data. [unacknowledged]
+  - Federated learning requires significant computational resources and synchronization, posing scalability challenges. [unacknowledged]
+  - Model drift from changing data distributions over time is not thoroughly addressed. [unacknowledged]
+  - The approach focuses on micro-lending, potentially limiting generalizability to broader PFMS contexts. [unacknowledged]
+remember_this:
+  - The CFM-LPA method improves risk detection accuracy by 14.03%.
+  - Federated learning enables privacy-preserving analysis of lending patterns.
+  - Behavioural factors are updated each return period to refine risk assessment.
+  - The method improves return rate analysis by 13.28% across financed amounts.
+  - Collaborative filtering identifies patterns to predict credit risk and repayment defaults.

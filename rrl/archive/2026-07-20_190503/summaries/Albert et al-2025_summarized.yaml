@@ -1,0 +1,182 @@
+
+paper_id: 10.62986/dp2025.35
+designation: local
+title: Gender Equality, Disability, and Social Inclusion in the Philippines: Progress, Challenges, and Opportunities in SDG 5 and SDG 10
+authors: Albert, J.R.G.; Dacuycuy, C.B.; Quisumbing, A.R.; Basillote, L.B.; Cabalfin, D.L.D.; Vargas, A.R.P.; Luzon, P.E.D.; Mahmoud, M.A.
+year: 2025
+venue: PIDS Discussion Paper Series
+odin_topics:
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.B
+  - 2.D
+  - 3.C
+  - 4.A
+  - 4.B
+  - 5.A
+  - 5.B
+  - 7.A
+  - 7.D
+  - 8.C
+  - 9.A
+  - 10.A
+  - 10.B
+  - 11.A
+  - 12.A
+  - 13.C
+tldr: Legal progress on GEDSI in the Philippines masks persistent implementation gaps; intersectional analysis reveals compound marginalization for women, PWDs, and IPs, requiring integrated, data-driven policy reforms.
+problem_and_motivation: The Philippines has strong GEDSI laws but struggles with implementation, leaving marginalized groups excluded. Existing single-identity policies fail to address compounded disadvantages from gender, disability, and ethnicity intersections, limiting progress toward SDG 5 and SDG 10.
+approach:
+  - Mixed-methods combining longitudinal analysis of PSA surveys (FIES, LFS, NDHS) with Shapley decomposition and intersectional analytics.
+  - Qualitative data from key informant interviews and focus group discussions with government officials, CSOs, and marginalized communities.
+  - Quantifies relative contributions of gender, education, and geography to inequality using decomposition of FIES-LFS merged data for 2018, 2021, and 2023.
+  - Examines GEDSI outcomes across SDG 5 and SDG 10 targets, with cross-cutting analysis on education, employment, and transportation access.
+  - Evaluates policy effectiveness and implementation gaps through stakeholder perspectives and administrative data from DSWD, PNP, and other agencies.
+findings:
+  - num: Female disability prevalence (15%) is 50% higher than male (10%), with rates reaching 55% among women with no formal education.
+  - num: Income inequality decreased, with the Gini coefficient falling from 0.453 in 2015 to 0.406 in 2023.
+  - num: Teenage pregnancy rates declined from 8.6% in 2017 to 5.4% in 2022, but remain high among poor (10.3%) and less-educated (19.1%) women.
+  - Intersectional analysis shows that spatial inequalities often exceed ethnic disparities, while ethnic inequality in education strongly correlates with poverty.
+  - Women's labor force participation (51.6%) lags behind men's (73.1%), with underemployment persistently higher for men, masking women's exclusion from quality work.
+  - The GAD budget has become compliance-oriented, with weak enforcement and misuse limiting its transformational potential.
+  - Approximately 37% of Indigenous Peoples live in Geographically Isolated and Disadvantaged Areas, compounding ethnic exclusion with geographic marginalization.
+key_figures_tables:
+  - Table 1: Philippines' WEF Global Gender Gap rankings (2006-2025) → Volatility in rankings reflects discretionary political appointments, not steady progress.
+  - Figure 7: Teenage pregnancy rates by educational attainment → Low education is a major risk factor; rates are 19.1% for primary-educated vs. 1.9% for college-educated.
+  - Table 15: Inequality decomposition using household per capita income → Education is the primary driver of between-group income inequality.
+  - Figure 18: IP Population overlapping with GIDAs → 2.9 million IPs live in GIDAs, facing severe service access barriers.
+  - Table 34: Methodological concordance between NDPS severe and Washington Group classifications → NDPS identifies additional PWDs through environmental context.
+key_equations:
+  - equation: Total Hours Worked = α + β(sex) + γ(education) + δ(wealth) + ζ(urban) + η(NCR) + ε
+    explanation: Regression model identifying determinants of weekly working hours.
+definitions:
+  - term: GEDSI
+    definition: Gender Equality, Disability, and Social Inclusion.
+  - term: GAD
+    definition: Gender and Development budget policy (5% of agency budgets).
+  - term: IP
+    definition: Indigenous Peoples.
+  - term: PWD
+    definition: Persons with Disabilities.
+  - term: 4Ps
+    definition: Pantawid Pamilyang Pilipino Program (conditional cash transfer).
+  - term: GIDA
+    definition: Geographically Isolated and Disadvantaged Areas.
+  - term: FPIC
+    definition: Free, Prior, and Informed Consent.
+critical_citations:
+  - "[Crenshaw, 1989] — Foundational intersectionality theory adapted for Philippine context."
+  - "[UN, 2015] — Establishes SDG 5 and SDG 10 targets and indicators."
+  - "[World Bank, 2023] — Documents persistent gender gaps in asset access in East Asia."
+  - "[David et al., 2018] — Assesses Philippines' progress on SDG 5."
+  - "[Pérez-Brito et al., 2024] — Provides comprehensive data on IP exclusion and 'statistical invisibility'."
+relevance:
+  topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: Provides detailed demographic, income, and employment data on Filipino young adults and labor market patterns.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: high
+      justification: Analyzes income distribution, wealth quintiles, and employment sectors relevant to financial structure.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: medium
+      justification: Discusses labor force participation, underemployment, and time use patterns that shape financial behaviors.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Documents family-based care work and resource sharing norms that influence financial practices.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: Provides context on poverty cycles and pandemic impacts but not specific seasonal spending data.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: contextual
+      justification: Provides background on care work and family obligations that drive spending cycles.
+    - code: 3.C
+      name: User-Defined Allocation Constraints
+      relevance: contextual
+      justification: Discusses constraints from care work and low income but not user-defined budget allocation.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Reviews existing social protection systems (4Ps) and financial inclusion barriers.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Critically assesses implementation failures of GAD budget, disability laws, and social programs.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Provides behavioral data on labor participation, care work, and risk tolerance relevant to financial profiles.
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: contextual
+      justification: Discusses data gaps and "statistical invisibility" for PWDs and IPs, relevant to profile initialization challenges.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: high
+      justification: Evaluates GAD budget allocation and policy frameworks for inclusive budgeting.
+    - code: 7.D
+      name: Infeasibility Handling and Reduction Hierarchies
+      relevance: contextual
+      justification: Discusses policy implementation gaps and resource constraints but not algorithmic feasibility.
+    - code: 8.C
+      name: Cold‑Start Baseline Strategies for Anomaly Detection
+      relevance: contextual
+      justification: Highlights data scarcity for marginalized groups, relevant to baseline challenges for anomaly detection.
+    - code: 9.A
+      name: Mobile‑First Design Principles and Rationale
+      relevance: low
+      justification: Discusses ICT access and digital divide but not mobile-first design specifically.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: medium
+      justification: Discusses ethical data collection, privacy, and confidentiality for vulnerable populations.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: medium
+      justification: Highlights mistrust in government systems and need for community engagement, relevant to trust.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: contextual
+      justification: Notes program awareness and compliance gaps, relevant to engagement challenges.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Provides a comprehensive evaluation of GEDSI policies using mixed-methods and SDG monitoring frameworks.
+    - code: 13.C
+      name: End‑of‑Period Surplus as a Savings Input
+      relevance: contextual
+      justification: Discusses income growth and poverty reduction among bottom 40%, relevant to surplus capacity.
+  contribution: This paper provides a comprehensive, data-driven baseline for understanding intersectional financial exclusion in the Philippines, directly justifying Odin's need for culturally-aware profiling (topics 1.A, 1.B, 1.C) and highlighting the limitations of current systems (4.B). Its analysis of GAD budget failures (7.A) and "statistical invisibility" (5.B, 8.C) informs Odin's design for inclusive, data-driven personal finance management that must account for compound marginalization.
+  directly_justifies:
+    - "Single-identity approaches fail to capture compound disadvantages experienced by marginalized groups."
+    - "The GAD budget has become compliance-oriented, requiring outcome-based reform for effective allocation."
+    - "Data gaps and 'statistical invisibility' hinder evidence-based policy and service delivery for PWDs and IPs."
+    - "Labor market inequalities are driven primarily by geographic location and education, not just gender."
+    - "Unpaid care work significantly reduces women's economic participation and financial autonomy."
+  limits:
+    - Data limitations and "statistical invisibility" of IPs and PWDs underrepresent their experiences. [unacknowledged]
+    - Lack of formal IRB approval for qualitative components. [acknowledged]
+    - Rapid policy changes make it hard to isolate specific intervention effects. [acknowledged]
+    - Findings are specific to the Philippine context and may not generalize to other settings. [unacknowledged]
+    - The focus on SDG 5 and SDG 10 limits exploration of other SDG interlinkages. [unacknowledged]
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. Domains for Filipino Cultural Context (2.A, 2.B, 2.D) and Behavioral Profiling (5.A, 5.B) were flagged as highly relevant due to the paper's focus on cultural practices, seasonal patterns (like pandemic impacts), and labor market behaviors. The Existing Systems & Gaps domain (4.A, 4.B) is directly addressed through critiques of the GAD budget and social programs, assigned high relevance. Budget Recommendation (7.A, 7.D) is informed by the GAD budget analysis, though infeasibility handling is only contextual. Anomaly Detection (8.C) is contextual due to data scarcity discussions. Mobile-First (9.A) and Data Privacy (10.A, 10.B) are medium/low relevance. User Retention (11.A) and System Evaluation (12.A) are contextual/high respectively. Savings (13.C) is contextual. Borderline cases included seasonal spending (2.B, 2.D) which was resolved by assigning both as contextual. User-defined constraints (3.C) were considered rejected because the paper does not analyze user-defined budget allocation; the focus is on policy-level constraints. The overall relevance is high for informing Odin's design with evidence on structural barriers and the need for intersectional, data-sensitive approaches.
+limitations:
+  - Official statistics under-represent IPs and PWDs due to geographic and documentation barriers. [acknowledged]
+  - Small sample sizes for highly marginalized intersectional categories limit robust statistical analysis. [acknowledged]
+  - Lack of formal Institutional Review Board approval. [acknowledged]
+  - Rapid policy changes during the research period complicate causal attribution. [acknowledged]
+  - Comprehensive time-use survey data is lacking, limiting care work analysis. [unacknowledged]
+remember_this:
+  - Legal frameworks are progressive but implementation fails, especially for GAD budgets.
+  - Women with disabilities face 50% higher prevalence and severe education-related disparities.
+  - Income inequality decreased but remains high, with education as the key driver.
+  - Intersectional analysis is essential; single-identity policies miss compounded marginalization.
+  - Data gaps create "statistical invisibility" for IPs and PWDs, undermining policy design.

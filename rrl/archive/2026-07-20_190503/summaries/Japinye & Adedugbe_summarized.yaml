@@ -1,0 +1,121 @@
+
+paper_id: 10.5281/zenodo.17155174
+designation: international-algorithm-specific
+title: Explainable AI for Credit Scoring with SHAP-Calibrated Ensembles: A Multi-Market Evaluation on Public Lending Data
+authors: Japinye, A. O.; Adedugbe, A. A.
+year: 2025
+venue: SSR Journal of Artificial Intelligence
+odin_topics:
+  - 4.A
+  - 4.B
+  - 5.C
+  - 6.A
+  - 8.A
+  - 10.A
+  - 12.A
+  - 12.B
+tldr: XGBoost with SHAP explanations, isotonic calibration, and fairness-constrained thresholding achieves high predictive accuracy, stable explanations, and significant bias reduction across diverse lending datasets.
+problem_and_motivation: Machine learning credit scoring models improve accuracy but create opacity and fairness concerns. Existing systems lack integrated explainability, calibration, and fairness mechanisms for regulatory compliance. A unified framework is needed to balance predictive performance with transparency and equity.
+approach:
+  - Data: Three public lending datasets (Home Credit, Credit Card, LendingClub) with varying data-richness and default rates.
+  - Method: XGBoost and LightGBM with TreeSHAP explanations, LIME for comparison, and isotonic regression for probability calibration.
+  - Design: Integrated framework coupling SHAP/LIME, cost-aware threshold selection, and multi-criteria fairness monitoring.
+  - Evaluation: Five-fold stratified cross-validation with borrower-level grouping and out-of-time validation for temporal splits.
+  - Baselines: Logistic regression, decision tree, random forest, and neural network models were compared.
+  - Fairness: Constrained threshold optimisation applied to demographic parity, equalised odds, and predictive parity.
+findings:
+  - num: XGBoost with SHAP achieved an AUC of 0.892±0.009 to 0.923±0.008 across datasets.
+  - num: Isotonic calibration improved Brier scores significantly, with XGBoost achieving 0.119±0.003 to 0.154±0.004.
+  - num: SHAP explanations demonstrated high stability with a mean Kendall τ of 0.930±0.033.
+  - num: Fairness-constrained thresholding reduced demographic-parity gaps by 59-67% with cost increases of 3.2±0.8% to 5.8±1.3%.
+  - num: Alternative data features provided 5.3× more predictive value in limited-bureau environments compared to data-rich settings.
+  - num: XGBoost achieved a mean AUC advantage of +0.163 over logistic regression across all datasets.
+  - num: Intersectional fairness analysis showed consistent bias reduction across gender and age combinations.
+  - XAI-enhanced models scored substantially higher on regulatory compliance readiness for adverse action requirements.
+  - Traditional credit features showed 3.2× greater importance in data-rich environments compared to limited-bureau settings.
+  - Out-of-time validation showed modest performance degradation of 1-3% over 24-96 months.
+key_figures_tables:
+  - Table 2: Model AUC performance across datasets → XGBoost significantly outperforms all baselines.
+  - Table 3: Calibration metrics after isotonic regression → XGBoost achieves superior Brier scores and calibration slopes.
+  - Table 4: Explanation stability analysis → SHAP demonstrates high Kendall τ stability exceeding 0.90 threshold.
+  - Table 5: Fairness constraint optimisation → Reduces demographic parity gaps by 59-67% at low cost.
+  - Table 7: Feature family ablation analysis → Alternative signals provide most value in limited-bureau environments.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: XGBoost
+    definition: Extreme Gradient Boosting, a scalable tree boosting system.
+  - term: SHAP
+    definition: SHapley Additive exPlanations, a game-theoretic approach to explaining model predictions.
+  - term: LIME
+    definition: Local Interpretable Model-agnostic Explanations, a perturbation-based explanation method.
+  - term: AUC
+    definition: Area Under the Receiver Operating Characteristic Curve.
+  - term: ECE
+    definition: Expected Calibration Error, a measure of probability calibration quality.
+critical_citations:
+  - "[Lundberg & Lee, 2017] — Foundational SHAP framework for model explanations."
+  - "[Chen & Guestrin, 2016] — XGBoost algorithm for gradient boosting."
+  - "[Hardt et al., 2016] — Fairness-constrained optimisation methodology."
+  - "[Niculescu-Mizil & Caruana, 2005] — Isotonic regression for probability calibration."
+relevance:
+  topics:
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: medium
+      justification: Benchmarks machine learning credit scoring systems against traditional approaches.
+    - code: 4.B
+      name: Limitations and Gaps in Existing Systems
+      relevance: high
+      justification: Identifies opacity, calibration, and fairness gaps in current scoring systems.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Evaluates classification performance of gradient boosting models for credit risk.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: medium
+      justification: Demonstrates predictive modelling techniques applicable to spending and risk forecasting.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: contextual
+      justification: Framework could be adapted for anomaly detection in spending patterns.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: low
+      justification: Mentions data privacy considerations but not a primary focus.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: Comprehensive evaluation methodology with AUC, calibration, fairness, and stability metrics.
+    - code: 12.B
+      name: Evaluation of Algorithmic Modules
+      relevance: high
+      justification: Rigorous evaluation of explanation stability and fairness-constrained optimisation.
+  contribution: This paper provides a methodological template for integrating explainability and fairness into predictive financial systems. It directly justifies the use of gradient-boosting models with SHAP explanations for Odin's core forecasting and anomaly detection modules. The fairness-constrained thresholding approach offers a practical technique for Odin's budget recommendation system to ensure equitable treatment. The comprehensive evaluation framework with calibration and stability metrics can be adopted for Odin's system evaluation and algorithmic module testing. The empirical finding on alternative data value in limited-bureau environments supports Odin's design for Filipino young professionals with varying financial histories.
+  directly_justifies:
+    - XGBoost with SHAP explanations maintains high predictive accuracy while providing stable local explanations.
+    - Isotonic regression effectively calibrates gradient-boosting model probabilities for improved decision-making.
+    - Fairness-constrained thresholding reduces demographic parity gaps by 59-67% with cost increases under 6%.
+    - Alternative data signals provide substantial predictive value in environments with limited traditional credit data.
+    - Explanation stability (Kendall τ = 0.93) enables reliable adverse action reasoning and regulatory compliance.
+  limits:
+    - Public datasets may not reflect operational lending complexity, including real-time data streams.
+    - Cross-sectional design cannot assess explanation stability under model retraining cycles or economic regime changes.
+    - Protected attribute availability varies significantly across datasets, limiting comprehensive fairness analysis.
+    - Alternative data features may encode protected characteristics as proxies, requiring ongoing monitoring.
+    - Fairness metrics may not capture all relevant equity dimensions, particularly for intersectional identities with small sample sizes.
+  mapping_rationale: A systematic scan across all 12 functional domains and their associated topic codes was performed. Domains flagged as relevant include Existing Systems & Gaps (4.A, 4.B - high/medium), Behavioral Profiling (5.C - medium), Spending Forecasting (6.A - medium), Anomaly Detection (8.A - contextual), Data Privacy (10.A - low), and System Evaluation (12.A, 12.B - high). The paper's primary relevance lies in its comprehensive evaluation framework, explanation stability methodology, and fairness-constrained optimisation, directly informing Odin's algorithmic evaluation and design considerations for equity. Borderline cases include the paper's applicability to Anomaly Detection (8.A) and Budget Recommendation (7.B), where the techniques are transferable but not directly demonstrated. Topics related to Filipino Cultural Context (2.A-D), Mobile-First Design (9.A-B), and Savings/Debt Management (13.A-C) were considered and rejected as the paper does not address these culturally or design-specific domains. Overall, the paper provides strong methodological and empirical justification for Odin's algorithmic choices, evaluation standards, and fairness implementation.
+limitations:
+  - Public datasets may not reflect operational lending complexity, including real-time data streams, adversarial behaviour, and regulatory constraints specific to individual institutions. [unacknowledged]
+  - The cross-sectional design cannot assess explanation stability under model retraining cycles or economic regime changes. [unacknowledged]
+  - Protected attribute availability varies significantly across datasets, limiting comprehensive fairness analysis.
+  - Alternative data features may encode protected characteristics as proxies, requiring ongoing monitoring for disparate impact despite explicit fairness constraints.
+  - Current fairness metrics may not capture all relevant equity dimensions, particularly for intersectional identities with small sample sizes.
+remember_this:
+  - XGBoost with SHAP achieved AUC of 0.892-0.923 across diverse credit datasets.
+  - SHAP explanations demonstrated high stability with Kendall tau of 0.930.
+  - Fairness constraints reduced demographic parity gaps by 59-67% with cost increases under 6%.
+  - Alternative data provided 5.3 times more value in limited-bureau environments.
+  - Integrated explainability and fairness frameworks enable regulatory compliance without sacrificing accuracy.

@@ -1,0 +1,118 @@
+
+paper_id: 10.59256/indjcst.20240302026
+designation: international-algorithm-specific
+title: ExpenseXpert: Transforming Financial Management with AI-Driven Predictive Analytics and Efficient Tracking
+authors: Pawar, S.; Dhole, A.; Jaybhaye, D.; Gosawi, T.; Gaikwad, S.
+year: 2024
+venue: Indian Journal of Computer Science and Technology
+odin_topics:
+  - 3.A
+  - 3.B
+  - 6.A
+  - 6.B
+  - 7.B
+  - 7.C
+  - 8.A
+  - 8.B
+  - 9.B
+  - 11.A
+tldr: Presents a web application using ARIMA for personalized budget planning, LSTM for stock prediction, and a GPT-3.5 chatbot to enhance financial management for individuals.
+problem_and_motivation: Individuals struggle with managing personal finances due to low financial literacy and a lack of personalized, automated budgeting tools. Existing systems fail to provide adaptive budget plans based on spending patterns or offer integrated financial advice.
+approach:
+  - Forecasts expenses using an ARIMA model, optimized with hyperparameter tuning and differencing to handle non-stationary daily expense data from 2020-2023.
+  - Compares ARIMA against an LSTM model for expense forecasting, determining ARIMA is more suitable for small, short-term datasets.
+  - Implements a financial chatbot leveraging the GPT-3.5 Turbo API within a Django framework to provide personalized financial assistance and advice.
+  - Integrates the NewsAPI to provide users with real-time financial news and an "Investment Helper" using an LSTM model for stock price prediction.
+  - Provides features for exporting expense summaries in PDF, CSV, and Excel formats and sends budget exceedance alerts.
+findings:
+  - The ARIMA model outperformed LSTM for forecasting expense categories, achieving a MAPE of 0.0756 for the personal care category.
+  - The LSTM model for stock price prediction demonstrated notable success in accurately forecasting market trends.
+  - The financial chatbot, using the GPT-3.5 API, provides more accurate and contextually relevant financial responses than existing solutions.
+  - The application identifies a gap in traditional expense trackers for automated, personalized budget plan generation.
+  - It offers enhanced usability through multi-format data downloads and a visually appealing interface with graphical data representations.
+key_figures_tables:
+  - Figure 1: LSTM model test vs predict data graph → Shows LSTM's attempt to capture patterns in expense data.
+  - Figure 2: ARIMA model test vs predict data graph → Demonstrates ARIMA's fit and forecast on expense data.
+  - Figure 3: ARIMA model forecast vs actual value graph → Displays the accuracy of ARIMA forecasts for personal care expenses.
+  - Figure 4: LSTM model's predicted vs actual stock price graph → Illustrates the LSTM model's accuracy in forecasting price movements.
+key_equations:
+  - equation: "None."
+    explanation: ""
+definitions:
+  - term: "ARIMA"
+    definition: "Autoregressive Integrated Moving Average, a statistical model for time series forecasting that captures trends and seasonality."
+  - term: "LSTM"
+    definition: "Long Short-Term Memory, a recurrent neural network capable of learning long-term dependencies in sequential data."
+  - term: "MLP"
+    definition: "Multilayer Perceptron, a class of feedforward artificial neural network."
+  - term: "MAPE"
+    definition: "Mean Absolute Percentage Error, a metric for measuring the accuracy of a forecasting method."
+  - term: "GPT-3.5"
+    definition: "A state-of-the-art language model by OpenAI used for natural language processing tasks like the financial chatbot."
+critical_citations:
+  - "[Jiao, 2020] — Developed a finance chatbot using Rasa with better performance than RNN."
+  - "[Hashemi et al., 2010] — Found MLPs outperform LSTMs for interday stock price prediction."
+  - "[Lo & MacKinlay, 1988] — Proved historical data has strong predictive ability for stock prices."
+relevance:
+  topics:
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: medium
+      justification: Categorizes expenses into eight groups (education, food, etc.) for analysis and forecasting.
+    - code: 3.B
+      name: Expense Category Design Considerations
+      relevance: medium
+      justification: Uses a defined set of categories for personalized budget planning, demonstrating a practical application.
+    - code: 6.A
+      name: Predictive Modeling in Personal Finance Systems
+      relevance: high
+      justification: Directly applies ARIMA and LSTM for forecasting user expenses to generate budget plans.
+    - code: 6.B
+      name: Forecasting Algorithms for Sequential Spending Data
+      relevance: high
+      justification: Compares ARIMA and LSTM on sequential daily expense data for short-term forecasting.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: high
+      justification: The system generates custom budget plans based on user spending patterns using ARIMA forecasts.
+    - code: 7.C
+      name: Constrained Optimization Approaches for Budget Allocation
+      relevance: contextual
+      justification: Generates budgets based on forecasted spending but does not explicitly discuss optimization under constraints.
+    - code: 8.A
+      name: Anomaly Detection in Personal Finance Systems
+      relevance: contextual
+      justification: Mentions proactive notifications for budget exceedance as a form of financial discipline.
+    - code: 8.B
+      name: Anomaly Detection Algorithms for Personal Spending Data
+      relevance: low
+      justification: Does not implement specific anomaly detection algorithms but uses threshold-based alerts.
+    - code: 9.B
+      name: Mobile UX Design for Personal Finance
+      relevance: medium
+      justification: Designed as a web application with a focus on user experience, clarity, and ease of use.
+    - code: 11.A
+      name: Engagement Dynamics in Personal Finance Applications
+      relevance: medium
+      justification: Features like chatbots, news, and graphical reports are designed to increase user motivation and engagement.
+  contribution: The paper contributes a comparative analysis of ARIMA and LSTM for short-term expense forecasting, which is directly applicable to Odin's budget recommendation module. It provides empirical evidence for selecting ARIMA for small, short-term datasets. The findings on personalized budget plan generation can justify the approach for Odin's personalized financial management features.
+  directly_justifies:
+    - The ARIMA model effectively captures short-term trends and seasonality, making it suitable for forecasting a user's spending for the next period.
+    - For small datasets, ARIMA outperforms LSTM for forecasting expenses, indicating a need for careful model selection.
+    - Users benefit from automated budget plans based on their historical spending patterns rather than static allocations.
+  limits:
+    - The study uses a limited dataset (2020-2023) with eight broad categories, which may not reflect the granularity needed for a PFMS.
+    - The forecast horizon is limited to 15 days, which may be too short for monthly budgeting.
+    - The paper acknowledges that LSTMs require larger datasets, and its implementation was not successful, limiting its generalizability.
+  mapping_rationale: The systematic scan across all 12 functional domains and associated topic codes flagged several as relevant. Domains on forecasting (6.A, 6.B) and budget recommendation (7.B) were identified as high relevance due to the paper's core contribution. Expense categorization (3.A, 3.B), user engagement (11.A), and mobile-first design (9.B) were marked medium, as the paper provides examples and rationales for these features. The domain of anomaly detection (8.A, 8.B) was considered but marked contextual/low, as the paper's alert system is a simple threshold, not a complex detection algorithm. Domains such as Filipino cultural context, behavioral profiling, and data privacy were considered and rejected as the study is not contextually specific to the Philippines and does not address these topics. The overall relevance is medium-high, providing algorithmic and design insights for predictive and budget recommendation modules in Odin.
+limitations:
+  - The ARIMA model's performance is evaluated on a limited dataset from a single institution.
+  - The paper provides minimal detail on the LSTM model's architecture and hyperparameter tuning for the Investment Helper. [unacknowledged]
+  - The study does not report user satisfaction or system usability metrics beyond accuracy. [unacknowledged]
+  - It does not address data privacy or security concerns in the context of financial management. [unacknowledged]
+remember_this:
+  - ARIMA model achieved 7.56% MAPE for forecasting personal care expenses.
+  - ARIMA is preferred over LSTM for short-term forecasting with small datasets.
+  - Personalized budget plans are generated automatically from historical spending patterns.
+  - GPT-3.5 API can be effectively used for a financial assistance chatbot.
+  - ExpenseXpert provides multi-format downloads and proactive budget exceedance alerts.

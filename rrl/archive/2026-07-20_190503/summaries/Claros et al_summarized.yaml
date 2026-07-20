@@ -1,0 +1,119 @@
+
+paper_id: 10.5281/ZENODO.18884267
+designation: local
+title: Determinants of Saving Behavior Among Filipino University Students: A Psychological and Social Perspective
+authors: Claros, J. R.; Gaza, J. A.; Villaverde, Z. A.; Angeles, I. T.
+year: 2026
+venue: Journal of Interdisciplinary and Multidisciplinary Research (JIMRES)
+odin_topics:
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 3.A
+  - 4.A
+  - 5.A
+  - 5.C
+  - 12.A
+  - 12.C
+tldr: Financial literacy and parental influence positively predict saving behavior among Filipino university students, while peer influence is insignificant and self-control shows a negative effect.
+problem_and_motivation: University students face increasing financial pressures and often do not prioritize saving despite formal financial education. There is a gap in understanding the specific psychological and social factors that contribute to intentional saving behavior among Filipino university students.
+approach:
+  - A quantitative, explanatory research design using PLS-SEM was employed to examine the impact of financial literacy, self-control, peer influence, and parental influence on savings behavior.
+  - Data was collected from 377 university students aged 18-25 from private and public universities across the Philippines using a structured, closed-ended online and in-person survey.
+  - The questionnaire used validated six-point Likert scales to measure financial literacy, self-control, peer influence, parental influence, and saving behavior.
+  - The study assessed the measurement model for reliability, convergent validity, and discriminant validity, followed by a structural model assessment to test hypotheses.
+  - Model fit was evaluated using CFI, TLI, NFI, GFI, and AGFI, all exceeding the 0.90 cutoff, confirming a good fit.
+findings:
+  - num: The model explains 62.3% of the variance in saving behavior (R² = 0.623), which is considered substantial.
+  - num: Financial literacy is the strongest predictor of saving behavior (β = 0.684, p < .001).
+  - num: Parental influence has a significant positive effect on saving behavior (β = 0.284, p < .001).
+  - Peer influence does not significantly predict saving behavior (β = -0.041, p = 0.423).
+  - num: Self-control has a significant negative effect on saving behavior (β = -0.201, p < .001).
+key_figures_tables:
+  - Table 1: Model fit indices → All indices (CFI, TLI, NFI, GFI, AGFI) exceed 0.90, confirming a good model fit.
+  - Table 2: Measurement model → All factor loadings are significant, with Financial Attitudes and Self-Control showing the highest loadings.
+  - Table 3: Reliability measures → All constructs exceed Cronbach's Alpha and AVE thresholds, indicating strong reliability and convergent validity.
+  - Table 4: HTMT correlation ratio → All HTMT ratios are below 0.85, confirming discriminant validity.
+  - Table 5: Factors affecting saving behavior → Financial literacy and parental influence are significant positive predictors; self-control is a significant negative predictor.
+  - Figure 3: Structural equation model → Visual representation of the significant and non-significant path relationships in the model.
+key_equations:
+  - equation: None.
+    explanation: ""
+definitions:
+  - term: PLS-SEM
+    definition: Partial Least Squares Structural Equation Modeling, a statistical technique for analyzing complex relationships between latent variables.
+  - term: AVE
+    definition: Average Variance Extracted, a measure of convergent validity in a construct.
+  - term: HTMT
+    definition: Heterotrait-Monotrait ratio, a criterion for assessing discriminant validity.
+critical_citations:
+  - "[Hair et al., 2021] — Justifies the use of PLS-SEM for predictive, complex models."
+  - "[Katona, cited in Fisher & Anong, 2012] — Core theory linking psychological factors and saving."
+  - "[Modigliani and Brumberg, cited in Martini & Spataro, 2024] — Provides the Life-Cycle Hypothesis framework."
+relevance:
+  topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: Focuses on Filipino university students, a key demographic for Odin.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Discusses the financial situation and challenges of students, analogous to young professionals.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: Directly investigates the saving behavior and its psychological determinants among Filipino students.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: medium
+      justification: Highlights the role of parental influence and family socialization, reflecting culturally specific practices.
+    - code: 3.A
+      name: Expense Categorization Frameworks
+      relevance: contextual
+      justification: Provides foundational context on how financial literacy influences saving, but not on specific categorization.
+    - code: 4.A
+      name: Landscape of Existing Personal Finance Systems
+      relevance: contextual
+      justification: Offers background on financial literacy levels in the Philippines, contextualizing the need for PFMS.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: medium
+      justification: Identifies key psychological determinants (financial literacy, self-control) for behavioral profiling.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Uses PLS-SEM to classify and quantify the influence of psychological factors on saving behavior.
+    - code: 12.A
+      name: Evaluation Frameworks for Personal Finance Systems
+      relevance: high
+      justification: The PLS-SEM methodology provides a rigorous evaluation framework applicable to Odin's modules.
+    - code: 12.C
+      name: Evaluation Methodologies for Budget Recommendation Systems
+      relevance: high
+      justification: The use of PLS-SEM to assess predictive models is directly applicable to evaluating Odin's recommendation systems.
+  contribution: The paper validates a PLS-SEM model that explains a substantial portion (62.3%) of variance in saving behavior, highlighting financial literacy and parental influence as critical factors. This finding directly informs the design of Odin's behavioral profiling module by identifying key psychological variables to track. The significant negative effect of self-control challenges conventional assumptions, which is crucial for developing accurate forecasting algorithms. The non-significant influence of peers suggests that Odin's social features should be secondary to family-oriented or personal goal-setting tools. The model's robust fit provides a strong methodological benchmark for evaluating Odin's own algorithmic modules.
+  directly_justifies:
+    - "Financial literacy is the strongest predictor of saving behavior among young Filipinos."
+    - "Parental influence has a positive and significant effect on saving behavior, highlighting the importance of social learning."
+    - "Peer influence does not significantly affect the saving behavior of university students."
+    - "Self-control has a negative effect on saving behavior, challenging the conventional positive association."
+    - "PLS-SEM is an effective methodology for modeling the complex factors influencing financial behavior."
+  limits:
+    - "The study lacks demographic data like age and gender, which could allow for more nuanced subgroup analysis. [unacknowledged]"
+    - "The sample consists of university students who rely on parental allowance, which may limit generalizability to young professionals. [unacknowledged]"
+    - "The cross-sectional design prevents causal inference about the determinants of saving behavior. [unacknowledged]"
+    - "The unexpected negative effect of self-control is not fully explained and requires further investigation. [acknowledged]"
+  mapping_rationale: A systematic scan of all 12 functional domains was conducted. The paper is highly relevant to the 'Filipino Cultural Context' domain (specifically 2.A) by examining culturally specific practices like parental influence. It also strongly informs the 'Behavioral Profiling & Classification' domain (5.A, 5.C) by identifying key psychological predictors and using PLS-SEM for classification. For 'System Evaluation' (12.A, 12.C), the paper provides a validated methodology and benchmark (PLS-SEM, R²=0.623) for evaluating Odin's predictive modules. The topic 1.A (Filipino Young Professionals as a Demographic) is directly relevant as the study focuses on Filipino students. Topics like 1.B (Financial Structure) and 3.A (Expense Categorization) were considered but deemed contextual, as the paper addresses saving behavior, not income or budget allocation mechanisms. The 'Spending Forecasting' (6.A, 6.B) and 'Budget Recommendation' (7.A) domains were rejected because the paper does not involve predictive modeling of time-series data or specific allocation strategies. Overall, the paper provides strong empirical evidence on the factors driving saving behavior and a robust evaluation framework, making it highly relevant for designing and assessing Odin's behavioral and analytical modules.
+limitations:
+  - "The sample is limited to university students, potentially limiting generalizability to all Filipino young professionals. [unacknowledged]"
+  - "The cross-sectional design precludes causal interpretations of the relationships found. [unacknowledged]"
+  - "Demographic variables like age and gender were not included in the survey instrument for subgroup analysis. [acknowledged]"
+  - "The negative effect of self-control was observed but the reasons remain speculative, indicating a need for further study. [acknowledged]"
+remember_this:
+  - Financial literacy is the strongest predictor of saving behavior among Filipino students.
+  - Parental influence positively shapes saving habits, highlighting the role of family.
+  - Peer influence does not significantly affect student saving behavior.
+  - The model explains 62.3% of the variance in saving behavior.
+  - Self-control showed an unexpected negative effect on saving behavior.

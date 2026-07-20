@@ -1,0 +1,142 @@
+
+paper_id: 3187f7d0-7d47-530b-8c3e-492a21f406bb
+designation: local
+title: Unraveling the Investment Puzzle: Do Behavioral Biases and Financial Literacy Matter?
+authors: Patiu, L. S.; Ang, L. K. C.; Masanque, J. A. A.; Nacario, J. M. C.; Paguntalan, R. M. M.
+year: 2025
+venue: Review of Integrative Business and Economics Research
+odin_topics:
+  - 1.A
+  - 1.B
+  - 1.C
+  - 2.A
+  - 2.B
+  - 2.D
+  - 5.A
+  - 5.B
+  - 5.C
+  - 7.A
+  - 7.B
+  - 10.A
+  - 10.B
+tldr: Filipino Gen Y and Gen Z investment decisions are significantly influenced by behavioral biases, with financial literacy moderating these effects and exhibiting a negative direct impact on Generation Y.
+problem_and_motivation: Investors in emerging markets often make irrational decisions due to low financial literacy and behavioral biases, yet the specific interplay of these factors for Filipino young professionals remains underexplored. Understanding these dynamics is crucial for designing effective financial advisory and educational interventions.
+approach:
+  - A structured survey was administered online to 385 Filipino retail investors in Metro Manila, using Google Forms.
+  - The study employed a quantitative explanatory design and utilized the Ordinary Least Square method for regression analysis.
+  - Hierarchical regression was applied to measure the unique variance added by each behavioral bias (overconfidence, herding, disposition effect, risk aversion) to investment decisions.
+  - Moderation analysis was conducted to measure the influence of the interaction between behavioral biases and financial literacy.
+  - The study used adapted scales from Adil et al. (2022) for behavioral biases, financial literacy, and investment decisions, with reliability confirmed via Cronbach's Alpha.
+findings:
+  - Herding bias significantly and positively affects investment decisions for both Generation Y (β=0.189***) and Generation Z (β=0.213***).
+  - Risk aversion significantly affects Generation Y (β=0.245***) but not Generation Z, while overconfidence is significant for Generation Z (β=0.199**) but not Generation Y.
+  - Financial literacy has a significant negative influence on Generation Y's investment decisions (β=-0.391*), but an insignificant negative influence on Generation Z.
+  - The inclusion of herding bias (∆R2=0.2189 for Gen Y) and disposition effect bias (∆R2=0.0554 for Gen Y) significantly improved predictive power for both groups.
+  - Risk aversion added significant variance (∆R2=0.0561) for Generation Y but not for Generation Z (∆R2=0.0008).
+  - Financial literacy significantly moderates the effect of overconfidence (β=1.111**) and disposition effect (β=0.696*) on Generation Y's investment decisions, but shows no significant moderation for Generation Z.
+  - num: The addition of risk aversion bias in Model 4 accounted for 5.61% of the variance in investment decisions for Generation Y.
+  - num: Herding bias added a 21.89% variance in investment decisions for Generation Y investors, compared to 15.87% for Gen Z.
+  - The study found that 50.3% of respondents were Millennials (Gen Y) and 49.7% were Gen Z, with a majority being female (54.6%) and employees (60.5%).
+key_figures_tables:
+  - "Table 1: Demographic profile showing 196 Gen Y and 194 Gen Z respondents, majority female and employees → sample is predominantly employed females from two generations."
+  - "Table 2: Regression results showing that herding and disposition effect are significant for both generations, while overconfidence and risk aversion differ → behavioral biases impact varies across generations."
+  - "Table 3: Hierarchical regression model fits for Gen Y and Gen Z, showing R^2 values from 0.021 to 0.352 → adding biases improves model explanatory power."
+  - "Table 4: Model comparisons showing ∆R^2 and p-values for each step of hierarchical regression → risk aversion only adds significant variance for Gen Y."
+  - "Table 5: Regression results for financial literacy, showing a negative significant effect for Gen Y only → financial literacy has a different effect between the two generations."
+  - "Table 6: Moderation results showing that financial literacy significantly moderates only two biases for Gen Y → moderation effect is limited to the older cohort."
+key_equations:
+  - equation: Investment Decision = β0 + β1OB + β2HB + β3DB + β4RAB + β5FL
+    explanation: Regression model measuring impact of four behavioral biases and financial literacy.
+definitions:
+  - term: Overconfidence bias
+    definition: Tendency to overestimate one's ability and knowledge to predict future information.
+  - term: Herding bias
+    definition: Investor's tendency to imitate the investment decisions of others.
+  - term: Disposition effect
+    definition: Tendency to sell winning stocks too early and hold losing stocks too long.
+  - term: Risk aversion
+    definition: Investor's preference to avoid risk or losses, favoring safer investments.
+  - term: Financial literacy
+    definition: Ability and skills to manage personal finances to decrease potential errors in financial decisions.
+critical_citations:
+  - "[Adil et al., 2022] — Found herding bias negatively impacts Pakistani millennial investors."
+  - "[Almansour et al., 2023] — Found herding and risk aversion positively affect Saudi investors."
+  - "[Mahmood et al., 2024] — Found negative impact of risk aversion on investment decisions."
+  - "[Prasetyo et al., 2023] — Found negative moderation of FL on herding/overconfidence."
+relevance:
+  topics:
+    - code: 1.A
+      name: Filipino Young Professionals as a Demographic
+      relevance: high
+      justification: Directly studies Filipino Gen Y and Z retail investors as its core population.
+    - code: 1.B
+      name: Financial Structure of Filipino Young Professionals
+      relevance: medium
+      justification: Investigates investment decisions, a key aspect of financial structure for these cohorts.
+    - code: 1.C
+      name: Financial Behavior of Filipino Young Professionals
+      relevance: high
+      justification: The entire study is an empirical investigation of investment behavior and its drivers.
+    - code: 2.A
+      name: Culturally Specific Financial Practices
+      relevance: low
+      justification: Focuses on behavioral biases and literacy, not uniquely Filipino cultural practices.
+    - code: 2.B
+      name: Seasonal and Cyclical Spending Patterns
+      relevance: contextual
+      justification: Does not directly examine spending cycles; provides context on investor behavior.
+    - code: 2.D
+      name: Filipino Spending Cycles and "Occasions"
+      relevance: contextual
+      justification: Provides background on financial behavior but does not study spending cycles.
+    - code: 5.A
+      name: Financial Behavioral Profiles in Personal Finance
+      relevance: high
+      justification: Directly profiles investors by four key behavioral biases (overconfidence, herding, disposition, risk aversion).
+    - code: 5.B
+      name: Profile Dynamics and the Cold‑Start Problem
+      relevance: low
+      justification: Does not address cold-start problems, but confirms that different biases affect decisions.
+    - code: 5.C
+      name: Classification Approaches for Financial Behavioral Profiles
+      relevance: medium
+      justification: Uses regression to classify and measure the impact of each bias, providing data for profile classification.
+    - code: 7.A
+      name: Budgeting Strategies as Domain Knowledge
+      relevance: contextual
+      justification: Provides knowledge on investor decision-making behavior, but not budgeting strategies.
+    - code: 7.B
+      name: Budget Recommendation in Personal Finance Systems
+      relevance: contextual
+      justification: Offers insights on biases and literacy that could inform recommendation systems, but not directly.
+    - code: 10.A
+      name: Data Privacy and Security in Personal Finance Systems
+      relevance: contextual
+      justification: Does not address data privacy, but its findings on literacy and behavior are relevant to user trust.
+    - code: 10.B
+      name: User Trust in Personal Finance Systems
+      relevance: low
+      justification: Does not examine trust but provides context on factors influencing financial decisions.
+  contribution: This paper's findings on behavioral biases are foundational for Odin's user behavioral profiling module (Topic 5.A), providing empirical evidence that overconfidence, herding, disposition effect, and risk aversion significantly influence Filipino young professionals' financial decisions. The significant moderating role of financial literacy on these biases, particularly for Generation Y, directly informs Odin's cold-start profiling (Topic 5.B) and suggests that an initial financial literacy assessment is crucial for accurate user classification. The observed generational differences in the influence of overconfidence and risk aversion justify the need for dynamic, age-aware behavioral models that can adapt to different user profiles. Moreover, the negative impact of financial literacy on Generation Y's investment decisions challenges simple assumptions and highlights the importance of nuanced, non-prescriptive design in financial applications.
+  directly_justifies:
+    - Odin's behavioral profiling module must measure overconfidence, herding, disposition effect, and risk aversion for Filipino users.
+    - Financial literacy is a significant moderator of behavioral biases and should be part of the user profiling process.
+    - Generation-specific differences in behavioral bias impact require adaptive models in a PFMS.
+    - A low financial literacy score may not predict poor financial decisions, requiring careful interpretation in system design.
+  limits:
+    - The sample is limited to Filipino retail investors in Metro Manila, potentially limiting generalizability.
+    - The study uses a self-reported online survey, which is subject to social desirability and recall bias.
+    - The analysis is correlational and does not establish causal relationships between biases and investment decisions.
+    - The study does not investigate the user's actual financial behavior, only their reported decisions.
+  mapping_rationale: A systematic scan of all 12 functional domains revealed that the paper's core contribution directly aligns with Domain 5 (Behavioral Profiling) and Domain 2 (Cultural Context). The paper's empirical findings on the influence of overconfidence, herding, disposition effect, and risk aversion on Filipino Gen Y and Z investors provide high-relevance evidence for Topic 5.A (Financial Behavioral Profiles) and Topic 1.C (Financial Behavior of Filipino Young Professionals). The significant moderating effect of financial literacy offers medium relevance to Topic 5.B (Profile Dynamics) and Topic 5.C (Classification Approaches) by informing how initial user states can be estimated. The contextual relevance to Domains 7 (Budget Recommendation) and 10 (Data Privacy) is noted, as the insights on user behavior can inform system design and trust, but the paper does not directly address those topics. Other domains (3, 4, 6, 8, 9, 11, 12, 13) were considered and rejected as the paper does not cover expense categorization, forecasting, anomaly detection, or engagement mechanisms. Overall, this paper provides strong empirical justification for integrating behavioral bias measurement into Odin's user profiling and is moderately relevant for designing classification and cold-start strategies.
+limitations:
+  - The sample of 385 Filipino retail investors from Metro Manila may not represent all Filipino young professionals. [unacknowledged]
+  - The study relies on self-reported data, which may be subject to social desirability bias. [unacknowledged]
+  - The cross-sectional design prevents establishing causality between biases, literacy, and decisions. [unacknowledged]
+  - The research instrument was adapted, but its full validity for the Philippine context was not extensively discussed.
+remember_this:
+  - Herding bias significantly drives investment decisions for both Gen Y and Gen Z in the Philippines.
+  - Risk aversion impacts Gen Y investment decisions but not Gen Z's.
+  - Financial literacy negatively influences Gen Y's investment decisions in this sample.
+  - Financial literacy moderates overconfidence and disposition effect only for Generation Y.
+  - Overconfidence significantly impacts Gen Z but not Gen Y investment decisions.
