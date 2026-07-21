@@ -1,0 +1,177 @@
+{
+  "paper_id": "10.1145/3785706.3785906",
+  "designation": "international-algorithm-specific",
+  "title": "LSTM-Based Consumer Behavior Prediction Model Research",
+  "authors": "Chen, S.; Tan, W.",
+  "year": 2025,
+  "venue": "2025 2nd International Conference on Digital Economy and Computer Science (DECS2025)",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "5.A",
+    "4.A",
+    "12.A",
+    "14.B"
+  ],
+  "tldr": "An LSTM-based model with self-attention mechanisms achieves 94.2% accuracy in predicting consumer purchasing behavior for e-commerce personalization.",
+  "problem_and_motivation": "Traditional consumer behavior analysis methods rely on statistical models and simple machine learning that fail to capture temporal features and complex dependencies in high-dimensional data. E-commerce platforms need accurate prediction of future purchasing behavior for personalized recommendations and precision marketing. Deep learning approaches have not been fully explored for multi-dimensional consumer behavior sequences.",
+  "approach": [
+    "Constructed a multi-dimensional feature dataset from 500,000 users with 80 million interaction records over 12 months.",
+    "Developed a bidirectional LSTM architecture with self-attention mechanisms for enhanced temporal feature extraction.",
+    "Implemented distributed computing framework with Apache Spark achieving 300% efficiency improvement.",
+    "Applied adaptive dropout scheduling from 0.5 to 0.3 and cosine annealing learning rate scheduling.",
+    "Evaluated model against logistic regression, random forest, SVM, basic RNN, and standard LSTM baselines."
+  ],
+  "findings": [
+    "num: Proposed LSTM model achieved 94.2% accuracy, 93.8% precision, 94.7% recall, and 94.2% F1-score.",
+    "num: 3.0 percentage point improvement over best baseline (standard LSTM) and average 10.7 percentage points over traditional methods.",
+    "num: High-frequency users achieved 96.1% accuracy, new users 91.8%, and high-value customers 96.7%.",
+    "num: Self-attention mechanism improved key feature identification accuracy by 12.5%.",
+    "num: Statistical significance testing showed p<0.001 for performance improvements."
+  ],
+  "key_figures_tables": [
+    "Table 2: Model performance comparison across metrics → LSTM model outperforms all baselines.",
+    "Table 3: Performance by user groups → Model generalizes well across different user segments.",
+    "Table 4: Feature importance ranking → Purchase frequency sequence is most important feature.",
+    "Figure 3: Training loss curves comparison → LSTM converges faster and achieves lower loss.",
+    "Figure 4: Attention weight visualization → Recency bias and seasonal patterns identified."
+  ],
+  "key_equations": [
+    {
+      "equation": "\\alpha_t = \\text{softmax}(e_t)",
+      "explanation": "Self-attention mechanism calculates importance weights for each timestep."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "LSTM",
+      "definition": "Long Short-Term Memory network, a recurrent neural network architecture with gating mechanisms for sequential data processing."
+    },
+    {
+      "term": "Self-Attention",
+      "definition": "Mechanism that calculates importance weights for different parts of input sequences."
+    },
+    {
+      "term": "Non-IID",
+      "definition": "Non-independent and identically distributed data characteristics."
+    },
+    {
+      "term": "F1-Score",
+      "definition": "Harmonic mean of precision and recall for comprehensive model evaluation."
+    },
+    {
+      "term": "AUC-ROC",
+      "definition": "Area under the receiver operating characteristic curve for model performance analysis."
+    }
+  ],
+  "citations": [
+    {
+      "author": "McMahan",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Federated Learning introduced as a paradigm for decentralized model training.",
+      "role": "context"
+    },
+    {
+      "author": "Abadi",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Differential Privacy mechanisms for adding calibrated noise to model updates.",
+      "role": "context"
+    },
+    {
+      "author": "Li",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "FedProx introduced proximal term to stabilize training on heterogeneous data.",
+      "role": "baseline"
+    },
+    {
+      "author": "Wang",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "FedNova sought to normalize updates to mitigate client drift in federated learning.",
+      "role": "baseline"
+    },
+    {
+      "author": "Zhang",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Federated learning with adaptive communication compression under dynamic bandwidth.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus on LSTM-based prediction of consumer purchasing behavior."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Models sequential consumer behavior data with temporal patterns."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Analyzes consumer behavioral patterns and preferences."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Reviews existing ML methods for consumer behavior analysis."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Evaluates model performance across multiple metrics and user groups."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "medium",
+        "justification": "Discusses distributed computing and model optimization strategies."
+      }
+    ],
+    "contribution_to_field": "This paper contributes an LSTM-based consumer behavior prediction model that integrates self-attention mechanisms with bidirectional LSTM architecture. It demonstrates significant performance improvements over traditional machine learning methods through advanced feature engineering and optimization strategies. The work validates the effectiveness of deep learning for sequential consumer behavior analysis in e-commerce contexts. The model provides insights into temporal patterns and long-term dependencies in purchasing behavior.",
+    "directly_justifies": [
+      "LSTM networks effectively solve gradient vanishing problems through gating mechanisms.",
+      "Self-attention mechanisms improve feature identification accuracy by 12.5%.",
+      "Behavioral features dominate predictive importance over demographic features."
+    ],
+    "limits": [
+      "Evaluation limited to single e-commerce platform dataset.",
+      "Model complexity may hinder real-time deployment on resource-constrained devices.",
+      "Does not address privacy concerns in consumer data collection and usage.",
+      "External environmental factors not integrated into prediction model."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all topic domains identified high relevance for predictive modeling (6.A) and forecasting algorithms (6.B) due to core focus on LSTM-based sequential prediction. Medium relevance for financial behavioral profiles (5.A), landscape of existing systems (4.A), evaluation frameworks (12.A), and ML model serving (14.B) as supporting aspects. Domains related to Filipino demographics, budgeting strategies, anomaly detection, and mobile design were considered and rejected as not covered by this e-commerce consumer behavior prediction paper."
+  },
+  "remember_this": [
+    "None identified."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T19:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Chen & Tan_marked.md",
+      "converted_at": null,
+      "converter_tool": null
+    }
+  },
+  "limitations": [
+    "None identified."
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "paper_id": "91a5e34a-8fd2-5653-a35e-0b95bbb84b53",
+  "designation": "local-algorithm-specific",
+  "title": "Data-Driven Decision Making in Scholarship Programs: Leveraging Decision Trees and Clustering Algorithms",
+  "authors": "Espiritu, F. V.; Natividad, M. C. B.; Velasco, R. A.",
+  "year": 2024,
+  "venue": "International Journal in Information Technology in Governance, Education and Business",
+  "odin_topics": ["None"],
+  "tldr": "Decision trees and K-means clustering applied to 57,342 scholarship applications achieved 80% predictive accuracy and a 31% success rate improvement through an integrated online platform.",
+  "problem_and_motivation": "The BRO-Ed Scholarship program in Isabela province faces a 541.1% surge in applications, from 5,368 to 34,426 per cycle, overwhelming manual review processes. Subjective and time-consuming evaluation methods risk missing crucial success factors and reducing program effectiveness. There is no systematic, data-driven approach for scholarship application assessment or budget allocation optimization.",
+  "approach": [
+    "Integrated historical scholarship application data from the BRO-Ed program into a unified dataset of 57,342 records after removing 3,100 duplicate entries.",
+    "Applied data preprocessing including missing value handling, outlier detection, standardization, normalization, and categorical encoding.",
+    "Implemented the C4.5 decision tree algorithm for classification of scholarship application outcomes using information gain ratio.",
+    "Applied K-means clustering to group similar applications and identify common characteristics among successful applicants.",
+    "Developed an online registration platform using Handlebars.js, Node.js with Express.js, MySQL, and W3.CSS for accessibility.",
+    "Evaluated model performance using accuracy, precision, recall, and F1-score metrics."
+  ],
+  "findings": [
+    "num: Predictive accuracy reached 80% for successful scholarship outcomes and 70% for failure prediction.",
+    "num: Online system achieved a 31% higher success rate compared to traditional methods.",
+    "num: Dataset completeness improved from 58,892 entries to 57,342 unique entries after duplicate removal.",
+    "Academic performance, financial need, and parental occupation were identified as the highest-impact factors for scholarship success.",
+    "User satisfaction surveys showed strong preference for the online system due to ease of use and accessibility.",
+    "Previous achievements had medium impact on outcomes, while demographic characteristics had low impact."
+  ],
+  "key_figures_tables": [
+    "Table 1: Duplicate entry removal reduced dataset from 58,892 to 57,342 entries → improved data quality.",
+    "Table 4: User satisfaction metrics show high preference for online system → accessibility improved for remote areas.",
+    "Table 5: Factor impact scores identify parental occupation, academic performance, and financial need as top predictors.",
+    "Figure 4: Online registration system success rates over time → consistent improvement versus traditional methods.",
+    "Figure 5: Algorithm accuracy comparison showing 80% success vs 70% failure prediction rates."
+  ],
+  "key_equations": [
+    {"equation": "Accuracy = (TP + TN) / (TP + TN + FP + FN)", "explanation": "Measures overall classification correctness of the model."},
+    {"equation": "Precision = TP / (TP + FP)", "explanation": "Measures proportion of true positives among all predicted positives."},
+    {"equation": "Recall = TP / (TP + FN)", "explanation": "Measures proportion of true positives captured from all actual positives."},
+    {"equation": "F1-score = 2 * (Precision * Recall) / (Precision + Recall)", "explanation": "Harmonic mean balancing precision and recall for imbalanced datasets."}
+  ],
+  "definitions": [
+    {"term": "C4.5", "definition": "A decision tree algorithm that uses information gain ratio to select split attributes for classification."},
+    {"term": "K-means", "definition": "A clustering algorithm that partitions data into K groups by minimizing within-cluster variance."},
+    {"term": "TP", "definition": "True Positives - correctly classified positive instances."},
+    {"term": "TN", "definition": "True Negatives - correctly classified negative instances."},
+    {"term": "FP", "definition": "False Positives - negative instances incorrectly classified as positive."},
+    {"term": "FN", "definition": "False Negatives - positive instances incorrectly classified as negative."},
+    {"term": "PII", "definition": "Personally Identifiable Information - data that can identify a specific individual."},
+    {"term": "SDG", "definition": "Sustainable Development Goal - United Nations goals for global development targets."}
+  ],
+  "citations": [
+    {"author": "Yagci", "year": 2022, "page": 0, "paragraph": 2, "claim": "Machine learning algorithms predict students' academic performance, providing directions for scholarship program data mining.", "role": "methodology"},
+    {"author": "Alyahyan", "year": 2020, "page": 0, "paragraph": 2, "claim": "Literature review and best practices for predicting academic success in higher education form a basis for predictive modeling.", "role": "context"},
+    {"author": "Rosado", "year": 2019, "page": 0, "paragraph": 2, "claim": "eMineProve demonstrates practical implications of educational data mining for predicting performance improvement.", "role": "baseline"},
+    {"author": "Kurniadi", "year": 2018, "page": 0, "paragraph": 3, "claim": "K-nearest neighbor algorithm applied to predict scholarship recipients provides insights into algorithmic selection approaches.", "role": "baseline"},
+    {"author": "Ferreira-Mello", "year": 2019, "page": 0, "paragraph": 3, "claim": "Text mining in education emphasizes potential benefit of textual analysis in improving scholarship program administration.", "role": "context"},
+    {"author": "Sugiyarti", "year": 2018, "page": 0, "paragraph": 3, "claim": "Decision support system for scholarship grantee selection demonstrates integration of data-driven approaches into scholarship administration.", "role": "baseline"},
+    {"author": "Delima", "year": 2019, "page": 1, "paragraph": 2, "claim": "Predicting scholarship grants using data mining techniques reinforces the need for incorporating data-driven procedures.", "role": "context"},
+    {"author": "Santana", "year": 2017, "page": 0, "paragraph": 3, "claim": "Efficiency of educational data mining methods for predicting students' academic failure early provides practical implications for predictive modeling.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "None", "name": "None", "relevance": "contextual", "justification": "Paper addresses educational scholarship management, not personal finance or budget management. The ODIN taxonomy does not contain education-specific topic domains."}
+    ],
+    "contribution_to_field": "This paper contributes to educational data mining by demonstrating how decision trees and clustering algorithms can be integrated with online systems to improve scholarship program management. It provides a practical framework for processing large volumes of scholarship applications using C4.5 and K-means algorithms. The study establishes that data-driven approaches achieve higher accuracy than manual review processes in educational resource allocation. It also contributes a web-based platform architecture for accessibility in educational support programs serving underprivileged communities.",
+    "directly_justifies": [
+      "Decision tree and clustering models achieve 80% predictive accuracy for scholarship outcomes.",
+      "Online registration system yields a 31% higher success rate than traditional methods.",
+      "Academic performance, financial need, and parental occupation are the strongest predictors of scholarship success.",
+      "57,342 unique records were processed after removing 3,100 duplicates from the original dataset."
+    ],
+    "limits": [
+      "Study focuses on educational scholarship management rather than personal finance, limiting direct applicability to financial management systems.",
+      "Only C4.5 and K-means algorithms were tested, with no comparison to ensemble or deep learning methods.",
+      "The dataset is specific to a single scholarship program in one Philippine province, limiting generalizability.",
+      "No cross-validation or holdout testing methodology is described for model evaluation."
+    ],
+    "topic_mapping_rationale": "All topic domains in the ODIN taxonomy were systematically scanned. Domain 6 (Predictive Modeling) was considered but rejected as contextual because the paper applies predictive modeling to educational scholarship data, not personal finance. Domain 12 (Evaluation Frameworks) was considered but rejected as contextual since the evaluation is of a scholarship management system, not a personal finance system. No other domains from the 14-topic taxonomy matched the paper's content on educational data mining, scholarship program management, or web platform development for education. The paper falls entirely outside the personal finance domain, resulting in a 'None' assignment with contextual relevance only."
+  },
+  "limitations": [
+    "Scope limited to a single scholarship program in Isabela province, reducing generalizability to other contexts.",
+    "Only C4.5 decision tree and K-means clustering were evaluated, without comparison to modern ensemble or deep learning methods.",
+    "No cross-validation or systematic train-test splitting methodology is described for robust model evaluation.",
+    "The study does not address real-time processing or scalability for the reported 34,426 annual applications.",
+    "Ethical considerations are listed but not empirically evaluated in the results."
+  ],
+  "remember_this": [
+    "Decision trees and K-means clustering achieve 80% accuracy for scholarship outcome prediction.",
+    "Online platform delivers 31% higher success rate than traditional manual review methods.",
+    "Academic performance, financial need, and parental occupation are top success predictors.",
+    "57,342 records processed after cleaning improved data quality for analysis.",
+    "The BRO-Ed program faced a 541.1% application surge motivating the data-driven solution."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Espiritu F. et al_marked.md",
+      "converted_at": "2026-07-21T06:06:27Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

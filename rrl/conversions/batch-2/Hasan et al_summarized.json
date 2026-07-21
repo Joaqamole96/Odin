@@ -1,0 +1,198 @@
+{
+  "paper_id": "hasan_et_al_2025",
+  "designation": "international-algorithm-specific",
+  "title": "Continuous Data Curation and Valuation for Long-Term Machine Learning Model Health: A Comprehensive Review",
+  "authors": [
+    "Mehedi Hasan",
+    "Shayma Islam Shifa",
+    "Kashif Niaz",
+    "Md Mahedi Hasan Shuvo"
+  ],
+  "year": 2025,
+  "venue": "European Journal of Science and Modern Technologies",
+  "odin_topics": [
+    "3.B"
+  ],
+  "tldr": "The DataSphere framework for autonomous data lifecycle management addresses ML model degradation through integrated curation, valuation, and drift detection, though practical implementation challenges remain.",
+  "problem_and_motivation": "ML models experience 'AI ageing' - gradual performance degradation due to data drift, quality erosion, and changing distributions. Current ML systems lack integrated data-centric approaches, treating data work as manual janitorial tasks rather than first-class citizens of the ML lifecycle. The static-world assumption leads to brittle pipelines where data quality issues are discovered late.",
+  "approach": "Comprehensive review proposing DataSphere framework integrating automated curation, data valuation (Shapley values, influence functions, gradient similarity), drift detection (DDM, ADWIN, Page-Hinkley, K-S statistic, PSI), and active learning (uncertainty sampling, diversity sampling, RL-based). Formalizes model health as H(t) = f(A(t), R(t), F(t), D(t)) incorporating accuracy, robustness, fairness, and distributional drift. Provides taxonomy of curation tasks (data integrity vs data relevance) and implementation roadmap.",
+  "findings": "The review demonstrates that continuous data curation can maintain model performance near peak levels ('sawtooth' pattern) compared to natural decay. Data Shapley provides theoretically rigorous valuation but is NP-hard; influence functions enable efficient debugging but assume convex loss; gradient similarity scales well but lacks theoretical guarantees. The feedback loop between drift detection, curation, and valuation creates self-adapting systems. Active learning can achieve target performance with 50% less labeled data.",
+  "key_figures_tables": [
+    {
+      "reference": "Table 1",
+      "caption": "Master Taxonomy of Methods for Long-Term Model Health covering Data Quality, Data Importance, Environment Change, and Adaptation"
+    },
+    {
+      "reference": "Table 2",
+      "caption": "Comparison of Data Curation Techniques including rule-based, ML-based, and semantic deduplication"
+    },
+    {
+      "reference": "Table 3",
+      "caption": "Summary of Major Data Valuation Techniques (Shapley, Influence Functions, Gradient Similarity, RL, Beta Shapley, Active Learning)"
+    },
+    {
+      "reference": "Table 4",
+      "caption": "Comparison of Active Learning Strategies (Uncertainty, QBC, Diversity, RL)"
+    },
+    {
+      "reference": "Table 5",
+      "caption": "Data Health Tools Comparison (Great Expectations, TFDV, Deequ, Evidently AI, Pandera)"
+    },
+    {
+      "reference": "Table 6",
+      "caption": "Industrial ML Lifecycle Frameworks Comparison (Vertex AI, SageMaker, Databricks, Kubeflow, Tecton)"
+    }
+  ],
+  "key_equations": {
+    "Model_health": "H(t) = f(A(t), R(t), F(t), D(t)) where A=accuracy, R=robustness, F=fairness, D=distributional drift",
+    "Robustness": "R(t) = E_{(x,y)~P_t}[I(M(x) = M(x+ε))]",
+    "Fairness": "F(t) = |P(Ŷ=1|Z=0) - P(Ŷ=1|Z=1)|",
+    "Drift": "D(t) = D_KL(P_train || P_t)",
+    "Shapley_value": "V_i = 1/|S| Σ_{S'⊆S\\{i}} (|S|-1 choose |S'|)^{-1} [U(S'∪{i}) - U(S')]"
+  },
+  "definitions": {
+    "AI ageing": "Gradual decline in ML model performance over time due to data drift and quality erosion",
+    "Concept drift": "Change in the relationship between input variables and target variable P(y|X)",
+    "Covariate drift": "Change in the distribution of input variables P(X)",
+    "Data Shapley": "Cooperative game theory approach for equitable valuation of data points' contribution to model performance",
+    "Influence functions": "Robust statistics method estimating impact of training observations on model parameters",
+    "DataSphere": "Proposed unified framework for autonomous data lifecycle management integrating curation, valuation, drift detection, and active learning"
+  },
+  "citations": [
+    {
+      "context": "Temporal quality degradation in AI models",
+      "reference": "Vela et al. 2022"
+    },
+    {
+      "context": "Learning under concept drift",
+      "reference": "Lu et al. 2018"
+    },
+    {
+      "context": "Data Shapley valuation framework",
+      "reference": "Ghorbani and Zou 2019"
+    },
+    {
+      "context": "Influence functions for nonparametric learning",
+      "reference": "Koh and Liang 2017"
+    },
+    {
+      "context": "Confident learning for dataset label uncertainty",
+      "reference": "Northcutt et al. 2021"
+    },
+    {
+      "context": "ML data practices through data curation lens",
+      "reference": "Bhardwaj et al. 2024"
+    }
+  ],
+  "topic_relevance": {
+    "high": [
+      {
+        "topic": "3.B",
+        "justification": "Directly addresses machine learning lifecycle management, data drift detection, and model health maintenance - core ML/AI concepts applicable to NLP systems"
+      }
+    ],
+    "medium": [],
+    "low": [],
+    "not_used": [
+      {
+        "topic": "1.A",
+        "justification": "Not focused on language and cognition; ML systems review"
+      },
+      {
+        "topic": "1.B",
+        "justification": "Not about low-resource languages; general ML framework"
+      },
+      {
+        "topic": "2.A",
+        "justification": "No translation or cross-cultural NLP"
+      },
+      {
+        "topic": "3.A",
+        "justification": "No computational linguistic modeling; general ML systems"
+      },
+      {
+        "topic": "4.A",
+        "justification": "Not about psycholinguistic modeling"
+      },
+      {
+        "topic": "4.B",
+        "justification": "Not about language acquisition"
+      },
+      {
+        "topic": "5.A",
+        "justification": "No cross-cultural comparison; general ML framework"
+      },
+      {
+        "topic": "5.B",
+        "justification": "No multilingual analysis"
+      },
+      {
+        "topic": "6.A",
+        "justification": "No multimodal data integration"
+      },
+      {
+        "topic": "6.B",
+        "justification": "No HCI component"
+      },
+      {
+        "topic": "7.A",
+        "justification": "Not specifically about NLP; general ML data management"
+      },
+      {
+        "topic": "8.A",
+        "justification": "Not about computational morphology"
+      },
+      {
+        "topic": "8.B",
+        "justification": "Not about formal semantics"
+      },
+      {
+        "topic": "9.A",
+        "justification": "Not about language change or historical linguistics"
+      },
+      {
+        "topic": "9.B",
+        "justification": "No sociolinguistic modeling"
+      },
+      {
+        "topic": "10.A",
+        "justification": "Not about language disorders"
+      },
+      {
+        "topic": "11.A",
+        "justification": "Not about language education"
+      },
+      {
+        "topic": "12.A",
+        "justification": "No NER or historical language processing"
+      },
+      {
+        "topic": "13.A",
+        "justification": "No dialog systems"
+      },
+      {
+        "topic": "14.A",
+        "justification": "Mentions fairness metrics but not NLP-specific bias analysis"
+      },
+      {
+        "topic": "14.B",
+        "justification": "Proposes framework but no practical NLP tool development"
+      }
+    ]
+  },
+  "limitations": [
+    "Comprehensive review but lacks empirical validation of proposed DataSphere framework",
+    "Shapley value computation remains NP-hard, limiting practical application",
+    "Assumes convex loss for influence functions, unstable for deep learning",
+    "Active learning limited to unlabelled data; value depends on query strategy",
+    "Practical implementation requires significant engineering effort and integration complexity"
+  ],
+  "remember_this": "ML models suffer from 'AI ageing' due to data drift and quality erosion. The proposed DataSphere framework integrates continuous curation, data valuation, and drift detection into self-adapting systems. Active learning can reduce labeling costs by 50% while maintaining performance. The shift from model-centric to data-centric AI is essential for sustainable ML systems.",
+  "summarization_metadata": {
+    "conversion_reference": {
+      "file": "Hasan et al_marked.md"
+    },
+    "summarizer_model": "opencode/big-pickle",
+    "summarized_at": "2026-07-21T23:20:00Z"
+  }
+}

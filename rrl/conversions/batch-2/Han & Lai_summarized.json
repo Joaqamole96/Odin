@@ -1,0 +1,182 @@
+{
+  "paper_id": "10.69987/JACS.2026.60403",
+  "designation": "international-algorithm-specific",
+  "title": "Temporal Feature Engineering and Threshold Optimization for Early Warning in Healthcare Claims Anomaly Detection",
+  "authors": "Han, M.; Lai, J.",
+  "year": 2026,
+  "venue": "Journal of Advanced Computing Systems (JACS)",
+  "odin_topics": [
+    "8.A",
+    "8.B",
+    "6.A",
+    "6.B",
+    "12.A"
+  ],
+  "tldr": "Develops a comprehensive framework for temporal feature engineering and adaptive threshold optimization for early warning in healthcare claims anomaly detection, achieving 87% detection rate with 6% false positive rate on Medicare Part B claims data.",
+  "problem_and_motivation": "Healthcare expenditure in the US exceeds $4.3 trillion annually, with fraud rates ranging from 3-10% ($129-430 billion in potential losses). Existing approaches rely on manually engineered features limiting discovery of novel fraud patterns, while threshold selection challenges include balancing detection sensitivity with operational constraints and managing false positive rates.",
+  "approach": [
+    "Developed a systematic temporal feature engineering framework combining statistical analysis, machine learning-based feature construction, and deep learning representations.",
+    "Extracted 127 distinct temporal features from Medicare Part B claims data (2020-2022) including service interval patterns, claim frequency characteristics, and seasonal variation indicators.",
+    "Implemented LSTM autoencoder embeddings to learn compact temporal representations of claims sequences.",
+    "Proposed adaptive threshold optimization methodology that adjusts detection thresholds based on historical false positive rates and investigative capacity constraints.",
+    "Conducted comprehensive evaluation using stratified five-fold cross-validation on 47.3 million claims from 892,450 healthcare providers."
+  ],
+  "findings": [
+    "Detection rates improved from 0.73 for baseline features to 0.87 for the complete temporal feature set.",
+    "False positive rates decreased from 0.14 to 0.06 while maintaining operational feasibility.",
+    "Area under the ROC curve increased from 0.84 to 0.93, indicating significantly improved discrimination.",
+    "Service-to-submission lag standard deviation ranked highest in feature importance with score of 0.089.",
+    "LSTM autoencoder embeddings provided 0.06 improvement over statistical features alone.",
+    "Net annual savings of $156 million for Medicare program operations with the optimized approach.",
+    "Adaptive framework maintained stable detection rates within 0.03 range despite concept drift events."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Temporal Billing Frequency Distributions → Shows multi-panel comparative analysis of monthly claim submission frequencies for legitimate versus fraudulent provider billing behaviors.",
+    "Figure 2: LSTM Autoencoder Embedding Space Visualization → Displays t-SNE projections of 128-dimensional embeddings showing natural separation of legitimate and fraudulent providers.",
+    "Figure 3: Threshold Performance Trade-off Curves → Multi-curve graph showing detection rate, false positive rate, investigation volume, and cost savings as functions of threshold values.",
+    "Table 1: Temporal Interval Feature Taxonomy → Comprehensive taxonomy of temporal interval features including service-to-submission lag, inter-service intervals, and beneficiary patterns.",
+    "Table 4: Deep Learning Feature Construction Performance → Comparison of LSTM autoencoder, LSTM with attention, bidirectional LSTM, and graph neural network architectures.",
+    "Table 7: Cost-Benefit Analysis for Threshold Selection → Shows detection rates, false positive rates, and net benefits for different threshold values."
+  ],
+  "key_equations": [
+    {
+      "equation": "MA_t = Σ(x_{t-i})/n for i=0 to n-1",
+      "explanation": "Simple moving average formula for smoothing short-term fluctuations to reveal underlying trends."
+    },
+    {
+      "equation": "EWMA_t = α·x_t + (1-α)·EWMA_{t-1}",
+      "explanation": "Exponentially weighted moving average providing adaptive smoothing emphasizing recent observations."
+    },
+    {
+      "equation": "D_KL(P||Q) = Σ P(x)·log(P(x)/Q(x))",
+      "explanation": "Kullback-Leibler divergence measuring information loss when using a reference distribution to approximate observed patterns."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Temporal Feature Engineering",
+      "definition": "Process of extracting meaningful temporal features from claims sequential data including service interval patterns, claim frequency characteristics, and seasonal variation indicators."
+    },
+    {
+      "term": "LSTM Autoencoder",
+      "definition": "Deep learning architecture that learns compact representations of temporal claims sequences through encoder-decoder networks, where reconstruction error serves as an anomaly indicator."
+    },
+    {
+      "term": "Adaptive Threshold Optimization",
+      "definition": "Methodology that dynamically adjusts detection thresholds based on historical false positive rates and operational constraints to balance detection sensitivity with investigation capacity."
+    },
+    {
+      "term": "Concept Drift",
+      "definition": "Occurs when statistical properties of fraud patterns change over time, requiring threshold recalibration to maintain detection effectiveness."
+    },
+    {
+      "term": "FPCA",
+      "definition": "Functional Principal Component Analysis providing dimensionality reduction for temporal trajectories while preserving essential dynamic characteristics."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Ahmed",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Anomaly detection for temporal data survey establishing the foundation for healthcare claims detection methods.",
+      "role": "methodology"
+    },
+    {
+      "author": "Malhotra",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Long short term memory networks for anomaly detection in time series demonstrating superior performance in capturing long-range temporal dependencies.",
+      "role": "methodology"
+    },
+    {
+      "author": "Chen",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Embedding for anomaly detection on health insurance claims using graph-based approaches.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zhang",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep neural network for unsupervised anomaly detection and diagnosis in multivariate time series data.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection Algorithms",
+        "relevance": "high",
+        "justification": "Core contribution is developing temporal feature engineering and threshold optimization for anomaly detection in healthcare claims."
+      },
+      {
+        "code": "8.B",
+        "name": "Fraud Detection in Personal Finance",
+        "relevance": "high",
+        "justification": "Directly addresses healthcare claims fraud detection, which shares principles with personal finance fraud detection."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Implements predictive modeling for anomaly detection using LSTM autoencoders and temporal features."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Temporal feature engineering captures sequential patterns in claims data applicable to spending forecasts."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Provides comprehensive evaluation methodology using stratified cross-validation and multiple performance metrics."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a comprehensive framework for temporal feature engineering and adaptive threshold optimization for early warning in healthcare claims anomaly detection. The key innovation is the systematic extraction of 127 temporal features combined with LSTM autoencoder embeddings, achieving 87% detection rate with 6% false positive rate. The adaptive threshold mechanism maintains stable performance despite concept drift, while the cost-benefit analysis demonstrates $156 million annual savings potential. The framework processes 15,000 providers per hour with 2.4-second latency, enabling practical deployment.",
+    "directly_justifies": [
+      "Detection rates improved from 0.73 to 0.87 through temporal feature engineering.",
+      "False positive rates decreased from 0.14 to 0.06 while maintaining operational feasibility.",
+      "Area under ROC curve increased from 0.84 to 0.93 indicating significantly improved discrimination.",
+      "Service-to-submission lag standard deviation ranked highest in feature importance with 0.089 score.",
+      "Net annual savings of $156 million for Medicare program operations."
+    ],
+    "limits": [
+      "Evaluation relies exclusively on Medicare Part B claims data, which may not generalize to other healthcare systems.",
+      "Fraud prevalence of 0.43% poses challenges for model calibration in low-prevalence settings.",
+      "Computational requirements for deep learning feature construction may limit accessibility for smaller organizations.",
+      "Threshold optimization assumes stable cost parameters while actual costs exhibit uncertainty and temporal variation."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domains 8.A and 8.B received high relevance as the paper's core contribution is anomaly detection for fraud. Domain 6.A received high relevance for predictive modeling implementation. Domain 6.B received medium relevance for sequential pattern analysis. Domain 12.A received high relevance for comprehensive evaluation methodology. Other domains were considered but rejected as the paper focuses on healthcare claims rather than personal finance, budgeting, or expense categorization."
+  },
+  "limitations": [
+    "Evaluation relies exclusively on Medicare Part B claims data with fee-for-service reimbursement structures.",
+    "Class imbalance with 0.43% fraud prevalence poses challenges for model calibration and performance estimation.",
+    "Computational requirements for deep learning feature construction may limit accessibility for smaller healthcare organizations.",
+    "Threshold optimization assumes stable cost parameters while actual costs exhibit uncertainty and temporal variation."
+  ],
+  "remember_this": [
+    "Temporal feature engineering improved detection rates from 0.73 to 0.87 with 6% false positive rate.",
+    "LSTM autoencoder embeddings provided 0.06 improvement over statistical features alone.",
+    "Service-to-submission lag standard deviation ranked highest in feature importance.",
+    "Adaptive threshold framework maintained stable performance despite concept drift events.",
+    "Net annual savings of $156 million demonstrated through cost-benefit analysis."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T15:20:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Han & Lai_marked.md",
+      "converted_at": "2026-07-21T06:21:50Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

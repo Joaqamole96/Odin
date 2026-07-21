@@ -1,0 +1,92 @@
+{
+  "paper_id": "10.4018/JGIM.395852",
+  "designation": "international-algorithm-specific",
+  "title": "Dynamic Calibration of Decision Thresholds for Financial Anomaly Detection: Verification With Payment Platform Information and Data",
+  "authors": "Huang, A.; Zhang, X.; Wang, Y.; Tsai, S.; Zhou, P.; Chen, L.",
+  "year": 2025,
+  "venue": "Journal of Global Information Management",
+  "odin_topics": ["8.A", "8.B", "6.B", "4.A", "4.B"],
+  "tldr": "A Temporal-Attention Isolation Forest with Dynamic Calibration (TA-IFDC) adaptively adjusts anomaly-score thresholds online and models inter-transaction temporal dependencies to detect payment fraud under distribution drift.",
+  "problem_and_motivation": "Isolation Forest (IF) deployments in payment fraud detection rely on fixed anomaly-score thresholds that deteriorate when traffic shifts or is actively manipulated. Real payment traffic is non-stationary due to seasonal campaigns, macro shifts, and coordinated fraud rings. A robust, feedback-aware way to adjust cutoffs in unsupervised settings under streaming constraints remains underexplored.",
+  "approach": [
+    "Sliding window preprocessing segments transaction streams into overlapping windows for online threshold adaptation.",
+    "Temporal attention encoder captures periodic patterns and behavior drift using Fourier-based positional encoding and scaled dot-product attention.",
+    "Isolation Forest scores each attention-enhanced transaction vector for unsupervised anomaly detection.",
+    "Dynamic threshold calibration module updates the decision boundary using a quantile-based smoothing rule blending historical and current score distributions.",
+    "Feedback-informed calibration optionally refines thresholds using delayed ground truth labels via false-positive and false-negative correction terms.",
+    "Evaluated on five payment datasets: IEEE-CIS, PaySim, CCFD, SFD-FD, and BankSim under streaming protocols with concept drift and delayed labels.",
+    "Benchmarked against six baselines: Online-iForest, Hybrid-AI, GNN-IF, XGB-Anomaly, SSR-RVFL, and autoencoder-based detector."
+  ],
+  "findings": [
+    "num: TA-IFDC consistently outperforms all six baselines across five datasets in precision, recall, F1, and AUC.",
+    "num: Per-transaction latency stays within millisecond bounds, meeting real-time payment gateway requirements.",
+    "Ablation studies confirm that both dynamic calibration and temporal attention contribute independently to performance gains.",
+    "Dynamic thresholding maintains stable alert rates under induced concept drift conditions.",
+    "num: Quantile selection at 95th percentile balances precision and recall, with +/-1-2% guardrails under drift.",
+    "Delayed label feedback further refines threshold calibration without requiring frequent supervision."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Overview of TA-IFDC processing stages → Shows four-component architecture: sliding window, temporal attention, IF scoring, dynamic calibration.",
+    "Table 1: Comparison of baseline models → Highlights methodological gaps in dynamic threshold calibration and temporal modeling.",
+    "Table 2: Dataset characteristics → Five datasets span real and synthetic payment streams with varied class priors."
+  ],
+  "key_equations": [
+    {"equation": "s(z_i) = 2^{-E(h(z_i))/c(n)}", "explanation": "Isolation Forest anomaly score based on average path length."},
+    {"equation": "theta_k = (1-lambda)*theta_{k-1} + lambda*Quantile_beta(S_k)", "explanation": "Percentile-based dynamic threshold update with smoothing."},
+    {"equation": "Delta_theta_k = eta*(alpha*FP_k/W_k - (1-alpha)*FN_k/W_k)", "explanation": "Feedback correction factor balancing false positives and negatives."}
+  ],
+  "definitions": [
+    {"term": "TA-IFDC", "definition": "Temporal-Attention Isolation Forest with Dynamic Calibration, the proposed anomaly detection framework."},
+    {"term": "Concept Drift", "definition": "Change in the statistical properties of incoming data over time that degrades model performance."},
+    {"term": "Isolation Forest", "definition": "Unsupervised anomaly detection algorithm that isolates anomalies through random recursive partitioning."},
+    {"term": "Prequential Evaluation", "definition": "Online evaluation protocol that tests each sample before training on it, preserving temporal order."}
+  ],
+  "citations": [
+    {"author": "Liu", "year": 2008, "page": 0, "paragraph": 0, "claim": "Isolation Forest isolates observations by randomly selecting features and split values, assuming anomalies are more susceptible to early isolation.", "role": "methodology"},
+    {"author": "Sonani", "year": 2022, "page": 0, "paragraph": 0, "claim": "Static thresholds become misaligned when score distributions drift due to seasonal campaigns or traffic spikes.", "role": "context"},
+    {"author": "Vanini", "year": 2023, "page": 0, "paragraph": 0, "claim": "In streaming fraud detection, each transaction must be scored in milliseconds while labels often arrive late or not at all.", "role": "context"},
+    {"author": "Janjua", "year": 2024, "page": 0, "paragraph": 0, "claim": "IF runs fast on large datasets and does not rely on labels, making it attractive for unsupervised screening.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "high", "justification": "Core contribution is an anomaly detection framework for financial transaction streams."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "high", "justification": "Proposes and benchmarks IF-based anomaly detection algorithms on payment datasets."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "medium", "justification": "Temporal attention module models sequential transaction dependencies."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "medium", "justification": "Reviews existing fraud detection frameworks and identifies gaps in threshold calibration."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "medium", "justification": "Identifies static threshold limitation as a key gap in unsupervised fraud detection."}
+    ],
+    "contribution_to_field": "This paper contributes a novel anomaly detection framework that treats threshold selection as an adaptive component rather than a static post-processing step. It demonstrates that combining temporal attention with dynamic threshold calibration addresses the gap between raw anomaly scoring and real-time decision-making in financial fraud detection. The extensive evaluation across five datasets establishes a comprehensive benchmark for streaming anomaly detection in payment systems.",
+    "directly_justifies": [
+      "Dynamic threshold calibration enables IF to operate adaptively in non-stationary payment data environments.",
+      "Temporal attention module improves detection accuracy for sequential or contextual anomalies.",
+      "TA-IFDC consistently outperforms competitive baselines across multiple real and synthetic payment datasets."
+    ],
+    "limits": [
+      "Evaluation limited to five specific datasets and six baselines; broader generalizability remains unverified.",
+      "Transformer-based detectors were excluded due to computational cost, leaving a comparison gap.",
+      "Real-world deployment at production scale with live traffic not demonstrated."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains found strong relevance in Domain 8 (Anomaly Detection), where the paper directly addresses anomaly detection algorithms and framework design. Domain 6 (Predictive Modeling) is relevant through the temporal dependency modeling component. Domain 4 (Landscape of Existing Systems) is relevant as the paper benchmarks against existing fraud detection approaches. Domains 1-3, 5, 7, 9-14 were considered but rejected as the paper does not address personal budgeting, user behavior profiling in personal finance, mobile-first design, or privacy concerns in personal finance systems. The paper is primarily an anomaly detection and fraud detection study rather than a personal finance management system."
+  },
+  "limitations": [
+    "Transformer-based detectors excluded from benchmarks due to GPU cost, potentially underestimating achievable performance.",
+    "Evaluation on synthetic datasets (PaySim, BankSim, SFD-FD) may not fully reflect real-world complexity.",
+    "No real-time deployment evaluation in a production payment system was conducted."
+  ],
+  "remember_this": [
+    "TA-IFDC treats threshold selection as an adaptive component rather than a static post-processing step.",
+    "Dynamic calibration uses quantile-based smoothing with delayed feedback to track score distribution drift.",
+    "Temporal attention captures inter-transaction dependencies that pure IF scoring misses.",
+    "Extensive ablation confirms both calibration and temporal modules independently improve performance.",
+    "Framework maintains millisecond-level latency suitable for high-throughput payment gateways."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T18:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Huang A. et al_marked.md",
+      "converted_at": "2026-07-21T06:36:56Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

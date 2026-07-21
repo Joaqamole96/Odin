@@ -1,0 +1,167 @@
+{
+  "paper_id": "10.1109/ACCESS.2025.3541878",
+  "designation": "international-algorithm-specific",
+  "title": "A Novel Weighted Loss TabTransformer Integrating Explainable AI for Imbalanced Credit Risk Datasets",
+  "authors": "Hartomo, K.; Arthur, C.; Nataliani, Y.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "odin_topics": ["8.B", "12.B", "4.B"],
+  "tldr": "A weighted loss TabTransformer with SHAP-based explainability improves credit risk classification on imbalanced datasets, raising BISAID accuracy from 86.35% to 89.27% and German Credit from 93% to 95%.",
+  "problem_and_motivation": "Credit risk assessment suffers from class imbalance where defaults are underrepresented, causing biased predictions toward the majority class. Traditional ML models are opaque black boxes that erode trust among stakeholders. Financial institutions lack interpretable tools to explain credit decisions to borrowers, particularly for MSMEs where information asymmetry is prevalent.",
+  "approach": [
+    "Proposed a TabTransformer model enhanced with weighted cross-entropy loss to address class imbalance in credit risk datasets.",
+    "Applied the framework to two datasets: BISAID (2563 Indonesian MSME records) and German Credit (1000 instances from UCI).",
+    "Computed class weights inversely proportional to class frequency, assigning higher penalties to minority classes during training.",
+    "Integrated SHAP (SHapley Additive exPlanations) for post-modeling interpretability, identifying key predictors like Financing Needs and Credit Amount.",
+    "Conducted hyperparameter tuning with 10-fold cross-validation, optimizing dim, depth, heads, and dropout parameters."
+  ],
+  "findings": [
+    "num: Weighted loss improved BISAID accuracy from 86.35% to 89.27%, with minority class AUC increasing from 0.88 to 0.91.",
+    "num: German Credit accuracy improved from 93% to 95%, with minority class precision rising from 0.85 to 0.88 and recall from 0.93 to 0.97.",
+    "SHAP analysis identified Financing Needs (average SHAP value 0.65) as the most significant predictor in BISAID, and Credit Amount (0.12) in German Credit.",
+    "Weighted loss smoothed training and validation loss curves, reducing overfitting tendency observed in non-weighted training.",
+    "Minority classes (classes 2 and 3 in BISAID) showed notable AUC improvement from 0.88/0.86 to 0.91/0.91 respectively."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Proposed framework pipeline → data collection through preprocessing, TabTransformer training with weighted loss, and SHAP post-modeling.",
+    "Figure 5: Train vs validation loss curves → weighted loss produces smoother, more stable loss curves compared to non-weighted training.",
+    "Figure 7: ROC curves for BISAID → minority classes 2 and 3 show noticeable AUC improvement with weighted loss.",
+    "Figure 9: SHAP feature importance for BISAID → Financing Needs dominates with highest SHAP value around 0.65.",
+    "Table 5: Classification metrics comparison → weighted loss improves accuracy and minority class recall while maintaining majority class performance."
+  ],
+  "key_equations": [
+    {
+      "equation": "w_i = \\frac{N}{N_i}",
+      "explanation": "Class weight calculation where N is total samples and Ni is samples in class i."
+    },
+    {
+      "equation": "L_{WeightedCross-EntropyLoss} = -\\sum_{i=1}^{C} w_i \\cdot y_i \\cdot \\log(\\hat{y}_i)",
+      "explanation": "Weighted cross-entropy loss assigning higher penalties to minority classes."
+    },
+    {
+      "equation": "\\phi_i = \\sum_{S \\subseteq N \\setminus \\{i\\}} \\frac{|S|! \\cdot (|N| - |S| - 1)!}{|N|!} [f(S \\cup \\{i\\}) - f(S)]",
+      "explanation": "SHAP value calculation using Shapley values from cooperative game theory."
+    },
+    {
+      "equation": "Accuracy = \\frac{TP + TN}{TP + TN + FP + FN}",
+      "explanation": "Overall classification accuracy metric."
+    },
+    {
+      "equation": "F2 = \\frac{5 \\times Precision \\times Recall}{4 \\times Precision + Recall}",
+      "explanation": "F2 score emphasizing recall over precision for imbalanced classification."
+    }
+  ],
+  "definitions": [
+    {"term": "TabTransformer", "definition": "Transformer architecture adapted for tabular data with categorical embedding and self-attention."},
+    {"term": "SHAP", "definition": "SHapley Additive exPlanations, a game-theoretic approach to explain ML predictions."},
+    {"term": "XAI", "definition": "Explainable Artificial Intelligence"},
+    {"term": "MSME", "definition": "Micro, Small, and Medium Enterprises"},
+    {"term": "BISAID", "definition": "Bank Indonesia SME Integrated Database"},
+    {"term": "AUC", "definition": "Area Under the ROC Curve"},
+    {"term": "PGSI", "definition": "Problem Gambling Severity Index"},
+    {"term": "MLP", "definition": "Multi-Layer Perceptron"},
+    {"term": "LIME", "definition": "Local Interpretable Model-agnostic Explanations"},
+    {"term": "VIF", "definition": "Variance Inflation Factor"}
+  ],
+  "citations": [
+    {
+      "author": "Huang",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "TabTransformer outperforms state-of-the-art deep learning methods for tabular data by at least 1.0% on mean AUC while matching tree-based ensemble performance.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lundberg",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SHAP provides a unified approach to interpreting model predictions using Shapley values from cooperative game theory.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ahadian",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Transfer learning with weighted loss achieved nearly 90% accuracy and substantial F-score increase for imbalanced disease classification.",
+      "role": "baseline"
+    },
+    {
+      "author": "Bussmann",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Explainable machine learning in credit risk management addresses the black-box nature of traditional models.",
+      "role": "context"
+    },
+    {
+      "author": "Vaswani",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Attention is all you need introduced the Transformer architecture with self-attention mechanisms replacing recurrence.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "medium",
+        "justification": "Applies classification algorithms to detect anomalous credit risk patterns in imbalanced financial datasets, with techniques applicable to spending anomaly detection."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Systematic evaluation of TabTransformer with weighted loss using accuracy, precision, recall, F1, F2, and AUC metrics with 10-fold cross-validation."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "medium",
+        "justification": "Addresses limitations of black-box ML models in credit risk assessment and information asymmetry in MSME lending."
+      }
+    ],
+    "contribution_to_field": "This paper proposes a novel framework combining TabTransformer with weighted cross-entropy loss to address class imbalance in credit risk classification. It demonstrates that weighted loss significantly improves minority class performance without degrading majority class accuracy. The integration of SHAP provides transparent feature attribution, identifying Financing Needs and Credit Amount as key predictors. The framework establishes a reliable, equitable, and transparent approach to credit evaluation that balances predictive accuracy with interpretability for financial institutions and borrowers.",
+    "directly_justifies": [
+      "Weighted loss improves minority class AUC from 0.88 to 0.91 on BISAID and overall accuracy from 86.35% to 89.27%.",
+      "German Credit minority class precision and recall rose from 0.85/0.93 to 0.88/0.97 with weighted loss.",
+      "SHAP identifies Financing Needs (average SHAP 0.65) as the most significant predictor in BISAID dataset.",
+      "Weighted loss smooths training curves and reduces overfitting tendency compared to non-weighted training."
+    ],
+    "limits": [
+      "Limited to two datasets (BISAID and German Credit) which may not represent all credit risk scenarios.",
+      "Does not compare against other imbalanced learning techniques like SMOTE or cost-sensitive learning beyond weighted loss.",
+      "The TabTransformer hyperparameters were manually tuned rather than using automated optimization methods.",
+      "No real-time deployment or integration with existing financial institution systems was demonstrated."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Topic 8.B (Anomaly Detection Algorithms for Personal Spending Data) was flagged as medium relevance because the paper applies classification algorithms to detect anomalous patterns in financial data, though the focus is on credit risk rather than personal spending. Topic 12.B (Evaluation of Algorithmic Modules) was flagged as high relevance because the paper systematically evaluates model performance using multiple metrics and cross-validation. Topic 4.B (Limitations and Gaps in Existing Systems) was flagged as medium relevance for addressing black-box limitations and information asymmetry in credit assessment. Topics 1-3 (Filipino demographics, cultural practices, expense categorization) were rejected as the paper uses Indonesian and German datasets. Topics 5-7 (behavioral profiles, predictive modeling, budgeting) were considered but rejected as the paper focuses on classification rather than profiling or budgeting. Topics 9-14 were rejected as the paper does not cover mobile design, privacy, engagement, savings, debt, synthetic data, or ML deployment. The paper is most aligned with algorithmic evaluation and credit risk classification domains.",
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Topic 12.B (Evaluation of Algorithmic Modules) is high relevance for systematic model evaluation. Topic 8.B (Anomaly Detection Algorithms) is medium relevance for financial pattern detection. Topic 4.B (Limitations and Gaps) is medium relevance for addressing black-box limitations. Topics 1-3, 5-14 were rejected as the paper focuses on credit risk classification, not personal finance management."
+  },
+  "limitations": [
+    "Limited to two datasets which may not represent all credit risk scenarios.",
+    "Does not compare against other imbalanced learning techniques like SMOTE.",
+    "TabTransformer hyperparameters were manually tuned rather than using automated optimization.",
+    "No real-time deployment or integration with existing financial systems was demonstrated."
+  ],
+  "remember_this": [
+    "Weighted loss significantly improves minority class performance in imbalanced credit risk datasets.",
+    "SHAP identifies Financing Needs and Credit Amount as key predictors in credit risk assessment.",
+    "TabTransformer with weighted loss achieves 89.27% accuracy on BISAID and 95% on German Credit.",
+    "Weighted loss smooths training curves and reduces overfitting compared to standard cross-entropy.",
+    "Explainable AI through SHAP provides transparent feature attribution for credit decisions."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:20:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Hartomo et al_marked.md",
+      "converted_at": "2026-07-21T06:23:07Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

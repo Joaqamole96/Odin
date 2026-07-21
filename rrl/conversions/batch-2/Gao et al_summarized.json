@@ -1,0 +1,226 @@
+{
+  "paper_id": "10.1145/3539618.3591774",
+  "designation": "international-algorithm-specific",
+  "title": "Leveraging Transferable Knowledge Concept Graph Embedding for Cold-Start Cognitive Diagnosis",
+  "authors": "Gao, W.; Wang, H.; Liu, Q.; Wang, F.; Lin, X.; Yue, L.; Zhang, Z.; Lv, R.; Wang, S.",
+  "year": 2023,
+  "venue": "SIGIR '23: Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval",
+  "odin_topics": [
+    "5.B",
+    "5.C"
+  ],
+  "tldr": "TechCD uses a knowledge concept graph with GCN embeddings and bottom-layer discarding to propagate student cognitive states across domains for zero-shot diagnosis in cold-start educational systems.",
+  "approach": [
+    "Proposed TechCD, a two-stage framework combining knowledge concept graph embedding (KCGE) and domain adaptive diagnosis (DAD).",
+    "Applied multi-layer GCN over a pedagogical knowledge concept graph (KCG) to learn entity embeddings, using bottom-layer discarding to extract transferable student cognitive states.",
+    "Treated exercises as part of the KCG for joint modeling with concept entities, absorbing structural and semantic information from the graph.",
+    "Instantiated the framework with three diagnostic models: IRT, MIRT, and NeuralCD, demonstrating modularity across existing CDMs.",
+    "Evaluated on four real-world datasets (CoreMath, AdvancedMath, Junyi, ASSISTments) in domain-level zero-shot settings."
+  ],
+  "findings": [
+    "TechCD consistently outperforms baselines including NLP-based and GCN-based methods on zero-shot student performance prediction across all datasets.",
+    "Discarding only the bottom-layer student embeddings (DS) achieves best performance, while discarding both student and exercise embeddings weakens results.",
+    "TechCD enables diagnostic report generation and exercise recommendation in cold-start target domains where traditional CDMs cannot operate.",
+    "Out-domain datasets from other platforms can further improve TechCD performance when accessible student records are available.",
+    "The KCG effectively bridges domains through conceptual dependency relations (similarity, prerequisite, hierarchy) connecting knowledge concepts."
+  ],
+  "key_figures_tables": [
+    "Figure 1: KCG example linking Math and Programming domains via shared concepts → demonstrates cross-domain bridging through knowledge concept graph.",
+    "Figure 2: TechCD architecture overview → KCGE stage learns entity embeddings, DAD stage conducts domain-adaptive diagnosis.",
+    "Table 3: Performance comparison across datasets → Tech-NeuralCD achieves best zero-shot ACC and AUC on most target domains.",
+    "Table 4: Out-domain dataset performance → ASD and LA settings show TechCD can absorb out-domain data effectively."
+  ],
+  "key_equations": [
+    {
+      "equation": "y_{uv} = F_{CDM}(u, v, \\Theta^*)",
+      "explanation": "General cognitive diagnosis model predicting student performance from latent traits."
+    },
+    {
+      "equation": "z_i^{(l)} = \\frac{1}{|P_i^r|} \\sum W_r z_j^{(l-1)}",
+      "explanation": "GCN message-passing operation aggregating neighboring entity information across relation types."
+    },
+    {
+      "equation": "z_i^* = \\frac{1}{L-\\lambda+1} \\sum_{l=\\lambda}^{L} z_i^{(l)}",
+      "explanation": "Transferable embedding construction by discarding bottom GCN layers and aggregating upper layers."
+    },
+    {
+      "equation": "L = -\\sum (y_{uv} \\log \\hat{y}_{uv} + (1-y_{uv}) \\log (1-\\hat{y}_{uv}))",
+      "explanation": "Cross-entropy loss for optimizing student performance prediction."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "CD",
+      "definition": "Cognitive Diagnosis"
+    },
+    {
+      "term": "DZCD",
+      "definition": "Domain-level Zero-shot Cognitive Diagnosis"
+    },
+    {
+      "term": "KCG",
+      "definition": "Knowledge Concept Graph"
+    },
+    {
+      "term": "KCGE",
+      "definition": "Knowledge Concept Graph Embedding"
+    },
+    {
+      "term": "DAD",
+      "definition": "Domain Adaptive Diagnosis"
+    },
+    {
+      "term": "GCN",
+      "definition": "Graph Convolutional Network"
+    },
+    {
+      "term": "IRT",
+      "definition": "Item Response Theory"
+    },
+    {
+      "term": "MIRT",
+      "definition": "Multidimensional Item Response Theory"
+    },
+    {
+      "term": "CDM",
+      "definition": "Cognitive Diagnosis Model"
+    },
+    {
+      "term": "TechCD",
+      "definition": "Transferable Knowledge Concept Graph framework for Cognitive Diagnosis"
+    },
+    {
+      "term": "MLP",
+      "definition": "Multi-Layer Perceptron"
+    },
+    {
+      "term": "AUC",
+      "definition": "Area Under the ROC Curve"
+    },
+    {
+      "term": "ACC",
+      "definition": "Accuracy"
+    },
+    {
+      "term": "RMSE",
+      "definition": "Root Mean Square Error"
+    }
+  ],
+  "citations": [
+    {
+      "author": "Wang",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "NeuralCD uses neural networks to learn student-exercise interaction functions automatically for cognitive diagnosis.",
+      "role": "methodology"
+    },
+    {
+      "author": "Gao",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "RCD uses relation map driven cognitive diagnosis incorporating conceptual relations to enhance diagnostic accuracy.",
+      "role": "methodology"
+    },
+    {
+      "author": "Liu",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "EKT utilizes exercise-aware knowledge tracing incorporating textual contents for student performance prediction.",
+      "role": "baseline"
+    },
+    {
+      "author": "Zhuo",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "TIGER transfers interest graph embeddings for domain-level zero-shot recommendation, inspiring the bottom-layer discarding operation.",
+      "role": "methodology"
+    },
+    {
+      "author": "Li",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "HierCDF uses Bayesian networks for hierarchical cognitive diagnosis incorporating prerequisite relations.",
+      "role": "baseline"
+    },
+    {
+      "author": "Embretson",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Item Response Theory models unidimensional student and exercise features with logistic-like functions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Huang",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Exploring multi-objective exercise recommendations balances smoothness and engagement in online education systems.",
+      "role": "context"
+    },
+    {
+      "author": "Devlin",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "BERT pre-training of deep bidirectional transformers used as NLP baseline for encoding exercise text contents.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.B",
+        "name": "Profile Dynamics and the Cold-Start Problem",
+        "relevance": "high",
+        "justification": "Directly addresses domain-level zero-shot cold-start problem using transferable embeddings to propagate user states across domains."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "Demonstrates profile classification and trait estimation techniques applicable to behavioral profiling in other domains."
+      }
+    ],
+    "contribution_to_field": "This paper introduces the domain-level zero-shot cognitive diagnosis (DZCD) task, addressing the practical challenge of diagnosing student proficiency in new educational domains without interaction data. The TechCD framework demonstrates how knowledge concept graphs can serve as intermediaries to propagate user cognitive states across domains through transferable embeddings. The bottom-layer discarding operation provides an effective mechanism for extracting universal patterns from graph neural network representations while preserving domain-specific information. The framework's modularity allows integration with existing diagnostic models, making it adaptable to diverse application scenarios.",
+    "directly_justifies": [
+      "Bottom-layer discarding extracts transferable student embeddings by aggregating upper GCN layers containing universal patterns.",
+      "Knowledge concept graphs bridge isolated domains through educational dependency relations linking knowledge concepts.",
+      "TechCD enables zero-shot diagnosis by propagating student cognitive signals from source domains to target domains via the KCG.",
+      "Out-domain datasets from other platforms can refine the KCG and improve zero-shot prediction performance."
+    ],
+    "limits": [
+      "The paper focuses on educational cognitive diagnosis rather than personal finance management systems.",
+      "Requires a pre-existing knowledge concept graph connecting domains, which may not always be available.",
+      "Evaluated only on mathematical education datasets, limiting generalizability to other domains."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Topic 5.B (Profile Dynamics and Cold-Start Problem) is high relevance for directly addressing zero-shot cold-start diagnosis. Topic 5.C (Classification Approaches) is medium relevance for trait estimation techniques. Topics 1-4, 6-14 were rejected as the paper focuses on educational cognitive diagnosis, not personal finance."
+  },
+  "limitations": [
+    "Focuses on educational cognitive diagnosis rather than personal finance management systems.",
+    "Requires a pre-existing knowledge concept graph connecting domains, which may not always be available.",
+    "Evaluated only on mathematical education datasets, limiting generalizability to other domains."
+  ],
+  "remember_this": [
+    "TechCD propagates student cognitive states across domains via knowledge concept graph embeddings for zero-shot diagnosis.",
+    "Bottom-layer discarding extracts transferable embeddings by aggregating upper GCN layers with universal patterns.",
+    "The framework is modular and can integrate with existing diagnostic models like IRT, MIRT, and NeuralCD.",
+    "Out-domain datasets from other platforms can refine the KCG and improve cold-start prediction performance.",
+    "Knowledge concept graphs bridge isolated domains through educational dependency relations."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:10:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Gao et al_marked.md",
+      "converted_at": "2026-07-21T06:11:58Z",
+      "converter_tool": "markitdown"
+    }
+  },
+  "problem_and_motivation": "No problem and motivation field was extracted from the source document."
+}

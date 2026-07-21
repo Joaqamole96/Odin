@@ -1,0 +1,99 @@
+{
+  "paper_id": "7a2e1d4b-8c5f-4e3a-9b6d-3f8a2c7e5d1b",
+  "designation": "international-algorithm-specific",
+  "title": "A Conformal Martingales Approach for Recurrent Concept Drift",
+  "authors": "Eliades, C.; Papadopoulos, H.",
+  "year": 2025,
+  "venue": "Proceedings of Machine Learning Research 266: Conformal and Probabilistic Prediction with Applications",
+  "odin_topics": ["6.B", "8.B"],
+  "tldr": "Pool ICM maintains a pool of past classifiers and reuses them upon recurrent drift detection, reducing retraining events by up to 94% while limiting accuracy loss to under 3 percentage points.",
+  "problem_and_motivation": "In many real-world data streams, previously seen distributions reappear (recurrent concept drift), yet existing methods waste computational resources by retraining after every detected change instead of reusing previously trained models. A method that can recognize and exploit recurring patterns while maintaining statistical guarantees on drift detection is needed.",
+  "approach": [
+    "Inductive Conformal Martingales (ICM) monitors data streams for exchangeability violations indicating concept drift.",
+    "A pool of previously trained classifiers is maintained and evaluated upon each detected drift event.",
+    "Each stored model is tested by merging its post-training nonconformity scores with recent data and checking exchangeability.",
+    "Models passing the exchangeability test are ranked by F1 score on recent data, with selection thresholded against historical performance.",
+    "A new model is trained and added to the pool only when no existing model satisfies both criteria.",
+    "Experiments on STAGGER, AIRLINES, and ELEC datasets benchmark against AWE and DWM state-of-the-art methods."
+  ],
+  "findings": [
+    "num: Retraining events reduced by up to 94% on STAGGER dataset, training only 3-6 models versus ~100 detected drifts.",
+    "num: Relative gain in prediction instances ranges from 22% to 33% across datasets.",
+    "num: Accuracy on STAGGER with 10% noise reaches 0.933, compared to 0.948 for Standard ICM.",
+    "num: On AIRLINES, Pool ICM achieves 0.568 accuracy with 10 model retrainings versus 2.6 with Standard ICM.",
+    "num: On ELEC, model retrainings reduced to approximately one-third of detected changes.",
+    "num: Mean detection delay reduced from 215.09 to 18.39 on STAGGER when using cautious betting function.",
+    "num: False alarm rate reduced to 0.02 on STAGGER with cautious betting enabled."
+  ],
+  "key_figures_tables": [
+    "Table 1: Pool ICM performance across STAGGER, AIRLINES, and ELEC → demonstrates significant retraining reduction.",
+    "Table 2: Comparison with Standard ICM, AWE, and DWM-NB → Pool ICM trades slight accuracy for major efficiency gains."
+  ],
+  "key_equations": [
+    {"equation": "p_j = (|{i in H_j : alpha_i > alpha_j}| + U_j * |{i in H_j : alpha_i = alpha_j}|) / (j - k)", "explanation": "Computes p-value for a new example based on nonconformity score ranking."},
+    {"equation": "S_n = product_{i=1}^{n} f_i(p_i)", "explanation": "Exchangeability martingale value as product of betting function outputs."},
+    {"equation": "Relative Gain (%) = ((K - L)(NoDr - NoM)) / (K * NoDr) * 100", "explanation": "Percentage of prediction instances gained by model reuse versus retraining."}
+  ],
+  "definitions": [
+    {"term": "ICM", "definition": "Inductive Conformal Martingales, a distribution-free method for detecting exchangeability violations in data streams."},
+    {"term": "Exchangeability", "definition": "Property where joint probability distribution remains invariant under permutation of variables, equivalent to i.i.d. assumption."},
+    {"term": "Nonconformity Score", "definition": "Numerical value measuring how unusual a new example is compared to training examples."},
+    {"term": "Ville's Inequality", "definition": "States that probability of a martingale exceeding threshold C is bounded by 1/C."},
+    {"term": "Recurrent Concept Drift", "definition": "Type of concept drift where previously seen data distributions reappear over time."},
+    {"term": "AWE", "definition": "Accuracy Weighted Ensemble, a supervised ensemble method for handling concept drift."},
+    {"term": "DWM", "definition": "Dynamic Weighted Majority, an ensemble method that incrementally trains and weights online learners."},
+    {"term": "NCM", "definition": "Nonconformity Measure, function assigning numerical values indicating how unusual examples are."}
+  ],
+  "citations": [
+    {"author": "Lu", "year": 2019, "page": 0, "paragraph": 0, "claim": "Comprehensive survey examining over 130 publications and analyzing ten synthetic benchmarks and fourteen real-world datasets for concept drift.", "role": "context"},
+    {"author": "Suarez-Cetrulo", "year": 2023, "page": 0, "paragraph": 0, "claim": "RCD approaches grouped into supervised learning, meta-learning, and unsupervised clustering categories.", "role": "context"},
+    {"author": "Wang", "year": 2003, "page": 0, "paragraph": 0, "claim": "AWE algorithm trains new classifiers per chunk and weights existing models by recent accuracy, discarding those exceeding random baseline error.", "role": "baseline"},
+    {"author": "Kolter", "year": 2007, "page": 0, "paragraph": 0, "claim": "DWM incrementally trains online learners, weights by predictive accuracy, removes underperformers, and introduces new experts.", "role": "baseline"},
+    {"author": "Vovk", "year": 2003, "page": 0, "paragraph": 0, "claim": "Exchangeability testing framework using p-values and martingale construction for online change detection.", "role": "methodology"},
+    {"author": "Ville", "year": 1939, "page": 0, "paragraph": 0, "claim": "Inequality bounding the probability that a martingale exceeds a fixed threshold C by 1/C.", "role": "methodology"},
+    {"author": "Fedorova", "year": 2012, "page": 0, "paragraph": 0, "claim": "Plug-in martingales asymptotically achieve at least the same growth rate as any fixed-function martingale.", "role": "finding"},
+    {"author": "Eliades", "year": 2024, "page": 0, "paragraph": 0, "claim": "ICM ensemble with cautious betting function and multiple density estimators matches or surpasses three state-of-the-art algorithms.", "role": "baseline"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "medium", "justification": "Recurrent concept drift detection directly applicable to identifying recurring patterns in sequential financial data."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "high", "justification": "Core contribution is an algorithm for detecting distribution changes (drift) in streaming data, directly relevant to anomaly detection in spending streams."}
+    ],
+    "contribution_to_field": "This paper introduces Pool ICM, a novel framework that extends conformal martingale-based drift detection with model reuse for recurrent concept drift scenarios. The key innovation is combining statistical exchangeability testing with F1-score-based model selection from a pool of previously trained classifiers. This approach achieves significant computational savings by avoiding unnecessary retraining while maintaining competitive accuracy compared to always-retraining baselines. The work provides a principled, distribution-free method with provable guarantees on false detection rates, addressing a gap in existing reactive and heuristic drift handling approaches.",
+    "directly_justifies": [
+      "num: Pool ICM reduces retraining events by up to 94% while maintaining accuracy within 3 percentage points of always-retraining.",
+      "The method uses distribution-free conformal martingales with provable false detection rate guarantees.",
+      "num: Relative gain in prediction instances ranges from 22% to 33% across benchmark datasets.",
+      "Model reuse is triggered by exchangeability testing combined with F1 score thresholding."
+    ],
+    "limits": [
+      "Requires labeled data for both drift detection and model evaluation.",
+      "Accuracy slightly lower than always-retraining approaches on complex datasets.",
+      "Experiments limited to three benchmark datasets without financial domain validation.",
+      "Model pool growth management not fully addressed for very long streams."
+    ],
+    "topic_relevance": "All 14 topic domains were systematically scanned. Domain 8 (Anomaly Detection) received high relevance through subtopic 8.B, as the paper's core contribution is a drift detection algorithm for streaming data. Domain 6 (Predictive Modeling) received medium relevance through 6.B, since recurrent pattern detection is applicable to sequential spending data forecasting. Domains 1-5, 7, 9-14 were considered and rejected: the paper does not address Filipino demographics, financial behavior, expense categorization, budgeting, mobile design, privacy, engagement, evaluation frameworks, savings/debt management, or synthetic data generation. The paper's primary contribution is a general-purpose streaming classification algorithm rather than a personal finance system component."
+  },
+  "limitations": [
+    "Requires labeled data for both exchangeability testing and model selection.",
+    "Accuracy slightly lower than always-retraining baselines, particularly on complex real-world datasets.",
+    "Experiments limited to three benchmark datasets without financial domain validation.",
+    "Pool growth management and memory constraints for very long streams not fully addressed."
+  ],
+  "remember_this": [
+    "Pool ICM reduces retraining events by up to 94% through model reuse on recurrent drift.",
+    "The method uses conformal martingales for distribution-free drift detection with statistical guarantees.",
+    "num: Relative gain in prediction instances reaches 22-33% across benchmark datasets.",
+    "Model selection combines exchangeability testing with F1 score thresholding.",
+    "Accuracy trade-off is within 3 percentage points compared to always retraining."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:10:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Eliades & Papadopoulos_marked.md",
+      "converted_at": "2026-07-21T06:05:16Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

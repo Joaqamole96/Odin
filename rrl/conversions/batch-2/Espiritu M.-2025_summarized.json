@@ -1,0 +1,100 @@
+{
+  "paper_id": "10.69569/jip.2025.063a",
+  "designation": "local",
+  "title": "Knowledge, Attitudes, and Practices in Financial Literacy among Business Administration Students in Urban College in the Philippines",
+  "authors": "Espiritu, M. J.",
+  "year": 2025,
+  "venue": "Journal of Interdisciplinary Perspectives",
+  "odin_topics": ["1.A", "1.B", "1.C"],
+  "tldr": "A correlational survey of 2,313 Filipino business administration students found strong relationships between financial knowledge, attitudes, and practices, with significant demographic variation by age, sex, and year level.",
+  "problem_and_motivation": "Filipino college students face complex financial landscapes but only 25% of Filipino adults are considered financially literate according to S&P Global Ratings. Business administration students are expected to navigate financial decisions yet their financial knowledge, attitudes, and practices remain underexplored in the Philippine context. There is a need to identify curriculum gaps and inform targeted financial education programs.",
+  "approach": [
+    "Employed a correlational research design to examine relationships between financial literacy dimensions among 2,313 Business Administration students in Quezon City.",
+    "Developed a structured survey questionnaire with four sections covering demographics, financial knowledge, attitudes, and practices validated by expert panel review.",
+    "Achieved Cronbach's alpha of 0.916 overall, though individual construct reliabilities were notably low (knowledge 0.459, attitudes 0.172, practices 0.158).",
+    "Distributed surveys through both online and in-person methods to ensure inclusivity across students with varying digital access.",
+    "Analyzed data using descriptive statistics (grand means) and inferential tests (ANOVA for demographic differences, correlation for relationships among KAP dimensions)."
+  ],
+  "findings": [
+    "num: Overall Cronbach's alpha was 0.916, but individual construct reliabilities were 0.459 for knowledge, 0.172 for attitudes, and 0.158 for practices.",
+    "num: Knowledge, attitude, and practice dimensions showed a significant strong relationship with R-value of 0.697 and p-value of 0.000.",
+    "Financial knowledge grand means ranged from 2.98 (income) to 3.13 (debt), all interpreted as agree.",
+    "Financial attitude grand means ranged from 3.03 (savings) to 3.12 (income), all interpreted as agree.",
+    "Financial practice grand means ranged from 3.00 (income) to 3.13 (expenses and credit), all interpreted as agree.",
+    "Knowledge varied significantly by age (p=0.013), sex (p=0.020), and year level (p=0.000) but not by monthly income (p=0.092).",
+    "Attitudes varied significantly by age (p=0.049), monthly income (p=0.038), and year level (p=0.000) but not by sex (p=0.359).",
+    "Practices varied significantly across all demographic factors (p=0.000 for all)."
+  ],
+  "key_figures_tables": [
+    "Table 1: Demographic profile showing 48.9% aged 18-20, 65.9% male, 48.1% earning PHP 10,001-20,000 monthly → majority are young, male, lower-middle income students.",
+    "Table 2: Knowledge assessment across five financial concepts → debt knowledge highest at 3.13, income lowest at 2.98.",
+    "Table 3: Attitude assessment across five financial concepts → income attitude highest at 3.12, savings lowest at 3.03.",
+    "Table 4: Practice assessment across five financial concepts → expenses and credit practices highest at 3.13, income lowest at 3.00.",
+    "Table 5: Demographic difference analysis → knowledge significant for age, sex, year level; practices significant for all demographics.",
+    "Table 6: Correlation among KAP dimensions → R=0.697, p=0.000 indicating strong positive relationship."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "KAP", "definition": "Knowledge, Attitudes, and Practices - a survey framework measuring what people know, believe, and do regarding a topic."},
+    {"term": "Cronbach's alpha", "definition": "A measure of internal consistency reliability, with values closer to 1 indicating higher reliability."},
+    {"term": "Grand Mean", "definition": "The average score across all items within a construct, used to interpret overall agreement levels."},
+    {"term": "ANOVA", "definition": "Analysis of Variance - a statistical test comparing means across multiple groups."},
+    {"term": "Correlational Research", "definition": "A research design examining associations between variables without manipulating any factors."}
+  ],
+  "citations": [
+    {"author": "Lusardi", "year": 2019, "page": 0, "paragraph": 1, "claim": "The rapid evolution of financial products including digital banking and cryptocurrency has heightened the need for financial literacy.", "role": "context"},
+    {"author": "Cull", "year": 2011, "page": 0, "paragraph": 2, "claim": "Previous studies have shown low college students' personal finance knowledge.", "role": "context"},
+    {"author": "Martinez", "year": 2024, "page": 0, "paragraph": 2, "claim": "S&P Global ranked the Philippines among the bottom 30 of 144 countries, with only 25% of Filipino adults considered financially literate.", "role": "context"},
+    {"author": "Rosacker", "year": 2009, "page": 0, "paragraph": 1, "claim": "Financial literacy is increasingly important for students pursuing business-related degrees navigating complex financial landscapes.", "role": "context"},
+    {"author": "Kuntze", "year": 2019, "page": 0, "paragraph": 1, "claim": "Students entering the workforce must be prepared to manage student loans, retirement planning, and investment strategies.", "role": "context"},
+    {"author": "Carnevale", "year": 2021, "page": 1, "paragraph": 4, "claim": "Individuals with higher education degrees earned significantly more and had lower unemployment rates.", "role": "context"},
+    {"author": "Lusardi", "year": 2015, "page": 2, "paragraph": 2, "claim": "Credit scores reflect creditworthiness based on credit history, and late payments or high debt levels negatively impact scores.", "role": "context"},
+    {"author": "Gross", "year": 2020, "page": 2, "paragraph": 3, "claim": "Understanding one's financial situation, creating a budget, and having an emergency fund are key aspects of saving.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals as a Demographic", "relevance": "high", "justification": "Directly surveys 2,313 Filipino business administration students as the primary study population."},
+      {"code": "1.B", "name": "Financial Structure of Filipino Young Professionals", "relevance": "medium", "justification": "Assesses income sources, expenses, debt, credit, and savings patterns among Filipino students."},
+      {"code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "high", "justification": "Evaluates actual financial practices and self-reported behaviors across five financial domains."}
+    ],
+    "contribution_to_field": "This paper contributes empirical data on the financial literacy levels of Filipino business administration students across knowledge, attitudes, and practices dimensions. It identifies significant demographic variations in financial literacy, particularly by age, sex, and year level, providing evidence for targeted educational interventions. The study establishes a strong correlational relationship between KAP dimensions (R=0.697), reinforcing the interconnected nature of financial literacy components. It also highlights curriculum gaps by showing that despite positive attitudes, actual financial practices remain at moderate agreement levels. The findings inform educators and policymakers about designing context-specific financial education programs for Filipino youth.",
+    "directly_justifies": [
+      "Knowledge, attitude, and practice dimensions of financial literacy are strongly correlated with R-value of 0.697.",
+      "Only 25% of Filipino adults are considered financially literate according to S&P Global Ratings.",
+      "Financial practices vary significantly across all demographic factors including age, sex, income, and year level.",
+      "Students from higher-income families may have greater access to financial resources fostering better literacy."
+    ],
+    "limits": [
+      "Individual construct reliabilities were notably low (knowledge 0.459, attitudes 0.172, practices 0.158) despite high overall Cronbach's alpha.",
+      "Self-reported data may be subject to social desirability bias and inaccurate recall of financial behaviors.",
+      "Study limited to a single institution in Quezon City, limiting generalizability to other Philippine contexts.",
+      "Cross-sectional design prevents establishing causal relationships between demographic factors and financial literacy."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domain 1 (Filipino Young Professionals) was flagged as the primary domain with high relevance for 1.A (demographic profile), medium for 1.B (financial structure), and high for 1.C (financial behavior). Domain 2 (Culturally Specific Financial Practices) was considered but assigned low relevance as cultural context appears only in background discussion, not as a core contribution. Domain 3 (Expense Categorization) was considered but rejected as the paper does not develop or evaluate categorization frameworks. Domain 4 (Existing Systems) was rejected as the paper does not survey existing personal finance systems. Domain 10 (Data Privacy) was considered but rejected as trust and privacy are not addressed. The paper's topical coverage centers on demographic profiling and behavioral assessment of Filipino young professionals' financial literacy."
+  },
+  "limitations": [
+    "Individual construct reliabilities (knowledge 0.459, attitudes 0.172, practices 0.158) are unacceptably low, suggesting measurement inconsistency within subscales.",
+    "Self-reported financial practices may not accurately reflect actual financial behaviors due to social desirability bias.",
+    "Single-institution study limits generalizability to other Philippine college populations or regional contexts.",
+    "Cross-sectional design cannot establish causal relationships between demographics and financial literacy levels.",
+    "The study does not measure actual financial outcomes or financial well-being, relying solely on self-assessment."
+  ],
+  "remember_this": [
+    "Knowledge, attitudes, and practices in financial literacy are strongly correlated at R=0.697 among Filipino students.",
+    "Only 25% of Filipino adults are considered financially literate per S&P Global Ratings.",
+    "Financial practices vary significantly across all demographic factors tested.",
+    "Debt knowledge scored highest at 3.13 while income knowledge scored lowest at 2.98.",
+    "The study surveyed 2,313 business administration students in Quezon City."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Espiritu M.-2025_marked.md",
+      "converted_at": "2026-07-21T06:06:45Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

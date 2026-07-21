@@ -1,0 +1,182 @@
+{
+  "paper_id": "garcia_2025",
+  "designation": "local",
+  "title": "Financial Literacy and Financial Health of Public Junior High School Teachers",
+  "authors": [
+    "Eduardo C. Garcia Jr."
+  ],
+  "year": 2025,
+  "venue": "Journal of Interdisciplinary Perspectives",
+  "odin_topics": [
+    "9.B"
+  ],
+  "tldr": "Filipino public school teachers demonstrate high financial literacy but are 'financially coping,' with notable gaps in retirement planning and emergency fund building, highlighting the need for targeted financial wellness training.",
+  "problem_and_motivation": "Despite the critical role of public school teachers, there is a scarcity of localized research examining their financial literacy and financial health. Low wages, rising living costs, and limited financial planning support create financial insecurity among Filipino educators, which may affect their professional effectiveness and quality of life.",
+  "approach": "Quantitative-descriptive research using validated questionnaires (adapted from Financial Health Network 2024 and Surendar & Subramanya Sarma 2018) with 241 public junior high school teachers from District VI, Quezon City. Used Kruskal-Wallis H and Mann-Whitney U tests for group comparisons. Financial literacy assessed across: financial knowledge, behavior, attitude, budgeting/tax, liquidity management, investment, and retirement planning. Financial health assessed across: spending, saving, borrowing, and planning.",
+  "findings": "Teachers demonstrated high overall financial literacy (mean 4.02) but were classified as 'financially coping' (financial health mean 61.2). Notable gaps emerged in retirement planning (3.75), emergency fund preparedness, and balancing savings with borrowing. Significant demographic differences in financial literacy were found by sex, age, income, education, position, experience, and specialization. Financial health showed significant differences by sex, age, civil status, number of children, education, position, experience, and specialization.",
+  "key_figures_tables": [
+    {
+      "reference": "Table 1",
+      "caption": "Respondents' Assessment of the Level of Financial Literacy in Terms of Financial Knowledge"
+    },
+    {
+      "reference": "Table 10",
+      "caption": "Respondents' Assessment of the Level of Financial Health in Terms of Spending"
+    },
+    {
+      "reference": "Table 11",
+      "caption": "Respondents' Assessment of the Level of Financial Health in Terms of Saving"
+    },
+    {
+      "reference": "Table 12",
+      "caption": "Respondents' Assessment of the Level of Financial Health in Terms of Borrowing"
+    },
+    {
+      "reference": "Table 13",
+      "caption": "Respondents' Assessment of the Level of Financial Health in Terms of Planning"
+    }
+  ],
+  "key_equations": [],
+  "definitions": {
+    "Financial Literacy": "The ability to make informed decisions regarding budgeting, saving, investing, and planning",
+    "Financially Coping": "A classification indicating individuals can manage daily financial demands but face challenges in building long-term financial security",
+    "Financially Vulnerable": "A classification indicating limited financial reserves and susceptibility to financial shocks"
+  },
+  "citations": [
+    {
+      "context": "Financial literacy evolution across life stages",
+      "reference": "Chen and Volpe 2002"
+    },
+    {
+      "context": "Financial well-being of teachers in the Philippines",
+      "reference": "Ferrer 2017"
+    },
+    {
+      "context": "Financial literacy among the young and its impact",
+      "reference": "Lusardi et al. 2010"
+    },
+    {
+      "context": "Financial literacy and retirement planning",
+      "reference": "Lusardi and Mitchell 2011"
+    },
+    {
+      "context": "Education's positive influence on financial literacy",
+      "reference": "Mandell 2008"
+    },
+    {
+      "context": "Financial literacy and stock market participation",
+      "reference": "Van Rooij et al. 2011"
+    },
+    {
+      "context": "Financial management skills of public school teachers in Tanjay City",
+      "reference": "Villagonzalo and Mibato 2020"
+    }
+  ],
+  "topic_relevance": {
+    "high": [],
+    "medium": [
+      {
+        "topic": "9.B",
+        "justification": "Uses established financial literacy assessment questionnaires as research instruments; does not develop new NLP tools but demonstrates standard survey-based financial behavior research methodology"
+      }
+    ],
+    "low": [],
+    "not_used": [
+      {
+        "topic": "1.A",
+        "justification": "Not focused on language and cognition; primarily a financial health assessment study"
+      },
+      {
+        "topic": "2.A",
+        "justification": "No translation or cross-cultural NLP; focused on quantitative financial survey data"
+      },
+      {
+        "topic": "3.A",
+        "justification": "No computational linguistic modeling; uses standard statistical analysis"
+      },
+      {
+        "topic": "3.B",
+        "justification": "Does not apply ML/NLP methods; uses traditional statistical tests (Kruskal-Wallis, Mann-Whitney)"
+      },
+      {
+        "topic": "4.A",
+        "justification": "Not focused on psycholinguistic modeling; financial behavior study"
+      },
+      {
+        "topic": "4.B",
+        "justification": "Not about language acquisition or developmental processes"
+      },
+      {
+        "topic": "5.A",
+        "justification": "Single-country study; does not compare cross-cultural linguistic phenomena"
+      },
+      {
+        "topic": "5.B",
+        "justification": "No multilingual analysis; Filipino context only in terms of participant demographics"
+      },
+      {
+        "topic": "6.A",
+        "justification": "No multimodal data integration; survey-based quantitative study"
+      },
+      {
+        "topic": "6.B",
+        "justification": "No HCI component; focused on financial literacy assessment"
+      },
+      {
+        "topic": "7.A",
+        "justification": "No NLP or computational language processing methods"
+      },
+      {
+        "topic": "8.A",
+        "justification": "Not focused on morphology or formal linguistic analysis"
+      },
+      {
+        "topic": "8.B",
+        "justification": "Not focused on semantics or formal linguistic modeling"
+      },
+      {
+        "topic": "9.A",
+        "justification": "Not about language change or historical linguistics"
+      },
+      {
+        "topic": "10.A",
+        "justification": "Not about language disorders or clinical applications"
+      },
+      {
+        "topic": "11.A",
+        "justification": "Not about language education or pedagogy"
+      },
+      {
+        "topic": "12.A",
+        "justification": "No NER or historical language processing"
+      },
+      {
+        "topic": "13.A",
+        "justification": "No dialog systems or conversation modeling"
+      },
+      {
+        "topic": "14.A",
+        "justification": "No NLP bias, fairness, or ethical aspects addressed"
+      },
+      {
+        "topic": "14.B",
+        "justification": "No NLP tool development; traditional survey methodology"
+      }
+    ]
+  },
+  "limitations": [
+    "Cross-sectional design limits ability to establish causation",
+    "Self-reported data may introduce response bias",
+    "Focus on a single district in Quezon City limits generalizability",
+    "Only public junior high school teachers studied; excludes other educator levels",
+    "Does not account for broader socioeconomic factors beyond demographics"
+  ],
+  "remember_this": "Filipino public school teachers have high financial literacy knowledge but are 'financially coping' — managing daily expenses but struggling with long-term security. Targeted financial wellness training is needed, especially in retirement planning, emergency fund building, and debt management strategies.",
+  "summarization_metadata": {
+    "conversion_reference": {
+      "file": "Garcia_marked.md"
+    },
+    "summarizer_model": "opencode/big-pickle",
+    "summarized_at": "2026-07-21T23:08:00Z"
+  }
+}

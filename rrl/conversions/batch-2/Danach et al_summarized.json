@@ -1,0 +1,221 @@
+{
+  "paper_id": "10.29020/nybg.ejpam.v18i4.6707",
+  "designation": "international",
+  "title": "Toward Transparent Optimization: A Systematic Review of Explainable AI in Decision-Making Systems",
+  "authors": "Danach, K.; Aly, W. H. F.; Tarhini, A.; Laouadi, S.",
+  "year": 2025,
+  "venue": "European Journal of Pure and Applied Mathematics",
+  "odin_topics": ["None"],
+  "tldr": "A systematic review of 112 papers examining how explainable AI techniques are integrated with optimization algorithms to enhance transparency in decision-making systems.",
+  "problem_and_motivation": "Optimization-based AI systems, particularly metaheuristics, reinforcement learning, and mathematical programming, function as black boxes that undermine trust and hinder adoption in high-stakes domains. Existing surveys address explainable ML or interpretable optimization in isolation but have not systematically unified both areas. The integration of XAI with optimization remains scattered, domain-specific, and lacking a unified framework.",
+  "approach": [
+    "Systematic literature search across Scopus, Web of Science, IEEE Xplore, and ACM Digital Library for studies from 2010 through December 2024.",
+    "Boolean search combining 'Explainable AI' OR 'XAI' with 'optimization' OR 'decision-making' and 'interpretability' OR 'transparency'.",
+    "Three-stage screening process: title/abstract filtering, full-text review, and final inclusion, yielding 112 papers from 642 identified records.",
+    "Structured taxonomy introduced to classify hybrid XAI-optimization approaches by explainability level, optimization complexity, and domain specificity.",
+    "Analysis of XAI methods such as SHAP, LIME, saliency maps integrated with genetic algorithms, simulated annealing, MILP, and reinforcement learning."
+  ],
+  "findings": [
+    "num: 642 records identified; 187 after screening; 112 included for in-depth synthesis.",
+    "Publication growth accelerated sharply after 2020, reflecting surging interest in XAI-optimization integration.",
+    "Explainable path constraints typically increase solution cost by only a small margin in practice.",
+    "The EXALT framework reduces explanation generation time by 72% compared to post-hoc methods while maintaining 98% solution optimality.",
+    "Early implementations in healthcare logistics and derivatives pricing show 41-68% error reduction compared to black-box optimization.",
+    "Straightforward explainable optimization formulations are NP-hard, but tractability is preserved under specific polynomial problem structures.",
+    "Explainability constraints can act as regularizers that improve solution robustness, making explainability and optimality complementary rather than competitive."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Conceptual framework of XAI taxonomy, evaluation criteria, regulatory context, and application domains → Post-hoc, interpretable, and example-based methods address transparency demands across sectors.",
+    "Figure 2: Overview of optimization methods in exact, approximate, and hybrid approaches → Growing need for integrating explainability directly into optimization pipelines.",
+    "Figure 3: Annual publication trends 2010-2024 for XAI-optimization intersection → Accelerating growth after 2020 underscores timeliness of this review.",
+    "Figure 4: Top recurring keywords in analyzed corpus → 'Explainable AI', 'optimization', 'transparency', and 'decision-making' dominate alongside sector terms.",
+    "Figure 5: AutoXAI integration within optimization workflows → Balances performance constraints, explanation needs, and workflow automation.",
+    "Figure 6: Multi-objective clustering optimization framework → Pareto frontier represents trade-offs between clustering quality and interpretability.",
+    "Figure 7: Key limitations and research gaps → Scalability issues, absent benchmarks, and enterprise integration complexity are primary barriers.",
+    "Table 1: Comparative evaluation of XAI-optimization approaches across scalability, fidelity, and computational cost → Rule-based and certificate-based approaches excel in fidelity but face scalability challenges.",
+    "Table 2: Application domains mapped to XAI-optimization techniques with advantages, limitations, and research opportunities → Finance, healthcare, logistics, and energy systems each present unique integration challenges.",
+    "Table 3: Practical cross-domain mapping of techniques to sector-specific implementations → Complementary insights for explainable hyper-heuristics, AutoXAI, and interpretable solvers."
+  ],
+  "key_equations": [
+    {
+      "equation": "min_x f(x) + lambda sum_{j=1}^{k} w_j ||x - x_j^*||^2",
+      "explanation": "EXALT framework objective combining original cost with weighted deviation from historical optimal solutions."
+    },
+    {
+      "equation": "x_{t+1}^* = argmin_x [ f_t(x) + gamma ||x - x_t^*||^2 ]",
+      "explanation": "Explanation-aware re-optimization with temporal smoothing to mitigate explanation jitter across decision points."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "XAI",
+      "definition": "Explainable Artificial Intelligence — techniques making AI outputs understandable to human stakeholders."
+    },
+    {
+      "term": "AutoXAI",
+      "definition": "Automated XAI frameworks that automate selection and tuning of explanation methods using evaluation metrics and user constraints."
+    },
+    {
+      "term": "L2O",
+      "definition": "Learning to Optimize — approaches encoding prior knowledge and data-driven insights through optimization processes."
+    },
+    {
+      "term": "MILP",
+      "definition": "Mixed-Integer Linear Programming — exact optimization method combining integer and continuous variables."
+    },
+    {
+      "term": "SHAP",
+      "definition": "SHapley Additive exPlanations — post-hoc method providing local or global interpretability without altering the underlying model."
+    },
+    {
+      "term": "LIME",
+      "definition": "Local Interpretable Model-agnostic Explanations — post-hoc technique generating locally faithful interpretable approximations."
+    },
+    {
+      "term": "Grad-CAM",
+      "definition": "Gradient-weighted Class Activation Mapping — visualization technique highlighting influential regions in deep learning predictions."
+    },
+    {
+      "term": "GAM",
+      "definition": "Generalized Additive Model — intrinsically interpretable model using additive combinations of smooth functions."
+    },
+    {
+      "term": "MCDM",
+      "definition": "Multi-Criteria Decision-Making — framework for evaluating alternatives across multiple conflicting criteria."
+    },
+    {
+      "term": "B&B",
+      "definition": "Branch and Bound — exact optimization algorithm exploring solution spaces by partitioning and pruning inferior regions."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Arrieta",
+      "year": 2020,
+      "page": 2,
+      "paragraph": 0,
+      "claim": "Provides the foundational taxonomy of XAI concepts, taxonomies, opportunities and challenges toward responsible AI.",
+      "role": "context"
+    },
+    {
+      "author": "Molnar",
+      "year": 2020,
+      "page": 2,
+      "paragraph": 0,
+      "claim": "Establishes the theoretical framework for interpretable machine learning as a standalone discipline.",
+      "role": "context"
+    },
+    {
+      "author": "Goerigk",
+      "year": 2024,
+      "page": 14,
+      "paragraph": 0,
+      "claim": "Feature-based interpretable surrogates improve both solution quality and comprehensibility compared to decision trees.",
+      "role": "methodology"
+    },
+    {
+      "author": "Heaton",
+      "year": 2023,
+      "page": 11,
+      "paragraph": 0,
+      "claim": "EXALT framework formalizes explainable AI via learning to optimize with certificate-based verification.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bertsimas",
+      "year": 2020,
+      "page": 18,
+      "paragraph": 0,
+      "claim": "Interpretable clustering formulates cluster quality and interpretability as multi-objective optimization problems.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zhang",
+      "year": 2023,
+      "page": 16,
+      "paragraph": 0,
+      "claim": "AutoXAI automates selection and optimization of explainable AI methods using evaluation metrics.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bastani",
+      "year": 2021,
+      "page": 2,
+      "paragraph": 0,
+      "claim": "Interpretable multi-objective optimization via feature-based rules balances solution quality with explanation power.",
+      "role": "methodology"
+    },
+    {
+      "author": "NIST",
+      "year": 2021,
+      "page": 12,
+      "paragraph": 0,
+      "claim": "Four principles of explainable artificial intelligence provide standards for explanation quality and verification.",
+      "role": "context"
+    },
+    {
+      "author": "Verma",
+      "year": 2020,
+      "page": 2,
+      "paragraph": 0,
+      "claim": "Explainable AI for financial services survey identifies regulatory compliance and accountability requirements.",
+      "role": "context"
+    },
+    {
+      "author": "Holzinger",
+      "year": 2017,
+      "page": 2,
+      "paragraph": 0,
+      "claim": "Medical domain XAI systems require interpretability aligned with clinical decision-making processes.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "None",
+        "name": "None",
+        "relevance": "contextual",
+        "justification": "Cross-cutting survey of XAI and optimization not tied to personal finance system research domains."
+      }
+    ],
+    "contribution_to_field": "The paper provides the first systematic unification of explainable AI and optimization into a comprehensive taxonomy spanning exact, heuristic, matheuristic, and learning-to-optimize paradigms. It identifies that explainability should be treated as a primary design criterion rather than a post-hoc add-on, fundamentally reshaping how optimization problems are modeled and solved. The review establishes a structured classification of hybrid approaches organized by explainability level, optimization complexity, and domain specificity across healthcare, finance, logistics, and energy systems. It identifies critical research gaps including scalability to industrial-scale problems, standardization of explainability metrics, and integration with enterprise workflows. The paper proposes promising future directions including explainable hyper-heuristics, domain-adaptable interpretable solvers, and AI frameworks aligned with regulatory standards such as the EU AI Act.",
+    "directly_justifies": [
+      "The integration of XAI techniques with optimization algorithms remains in its infancy, characterized by scattered studies and domain-specific implementations.",
+      "Explainability constraints can act as regularizers that improve robustness, making explainability and optimality complementary rather than competitive.",
+      "The EXALT framework reduces explanation generation time by 72% compared to post-hoc methods while maintaining 98% solution optimality.",
+      "Explainable optimization formulations are typically NP-hard, but tractability is preserved under specific polynomial problem structures.",
+      "Early implementations demonstrate 41-68% error reduction rates compared to black-box optimization approaches."
+    ],
+    "limits": [
+      "The review is restricted to publications from 2010 through December 2024 and may exclude earlier foundational work.",
+      "Standardization of explainability metrics remains an open challenge that the review identifies but does not resolve.",
+      "The taxonomy is constructed from 112 papers, which may not capture all emerging hybrid approaches in fast-moving subfields.",
+      "The review acknowledges limited attention to enterprise integration and legacy system compatibility challenges."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains in the taxonomy were systematically scanned. The paper is a broad cross-cutting survey on the integration of explainable AI with optimization algorithms for decision-making systems, spanning healthcare, finance, logistics, energy, and policy domains. It does not specifically address Filipino young professionals, personal finance management systems, budgeting recommendation algorithms, or any domain-specific subtopics in the taxonomy. The paper provides contextual background on optimization and explainability methods that could inform multiple thesis domains but does not contribute directly to any single topic code. No topic codes were assigned because the paper's content is entirely methodological and survey-oriented, offering no domain-specific empirical findings or claims applicable to the Odin thesis research domains."
+  },
+  "limitations": [
+    "The review covers publications from 2010 through December 2024, potentially excluding earlier foundational contributions.",
+    "Scalability of explainable optimization to large-scale industrial problems remains unresolved with only small to medium-scale demonstrations.",
+    "Standardization of explainability metrics and evaluation frameworks is identified as a critical gap but not addressed in the review.",
+    "Enterprise integration and legacy system compatibility challenges receive limited attention relative to their practical importance.",
+    "The 112-paper corpus may underrepresent emerging hybrid approaches in rapidly evolving subfields."
+  ],
+  "remember_this": [
+    "Systematic review unified explainable AI and optimization into a structured taxonomy spanning four optimization paradigms.",
+    "Explainability constraints can act as regularizers that improve robustness, making explainability and optimality complementary.",
+    "The EXALT framework reduces explanation generation time by 72% while maintaining 98% solution optimality.",
+    "Early implementations demonstrate 41-68% error reduction compared to black-box optimization approaches.",
+    "Key barriers to deployment include scalability, absent benchmarks, and enterprise integration complexity."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T20:45:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Danach et al_marked.md",
+      "converted_at": "2026-07-21T05:59:36Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "paper_id": "hassine_et_al_2025",
+  "designation": "local",
+  "title": "Inequality, Education and Occupational Change in the Philippines",
+  "authors": [
+    "Nadia Belhaj Hassine",
+    "Francine Claire Fernandez",
+    "Benjamin Aaron Lavin"
+  ],
+  "year": 2025,
+  "venue": "Journal of Asian Development Studies",
+  "odin_topics": [
+    "9.B"
+  ],
+  "tldr": "The Philippines' slow expansion in college-educated workers has maintained high wage premiums, sustaining inequality despite declining Gini coefficients, while emerging occupational polarization threatens recent gains.",
+  "problem_and_motivation": "Despite sustained economic growth and declining poverty in the Philippines, wage inequality remains among the highest in Southeast Asia. The relationship between educational attainment, occupational structure, and wage distribution remains underexplored, particularly regarding how skill supply and employment composition have shaped wage gaps over the past two decades.",
+  "approach": "Analysis of Philippine Labour Force Survey data (2002-2024) using RIF (Recentered Influence Function) regressions of unconditional quantiles of log real weekly wage income. Construction of occupation crosswalk harmonizing PSOC versions. Kernel density reweighting technique (DFL) to isolate impact of occupational reallocation on wage trends. Classification of occupations into high-skill, middle-skill routine, middle-skill nonroutine, and low-skill categories.",
+  "findings": "The college wage premium remained persistently high (80% in 2024), driven by slow growth in college-educated workers. Returns to college education and high-skill occupations increase monotonically across the wage distribution, benefiting higher-income workers disproportionately. Between 2012-2016, middle-skilled job growth contributed to narrowing wage inequality. Recent trends (2016-2024) show declining middle-skilled employment and early signs of occupational polarization, though it remains unclear if structural or cyclical.",
+  "key_figures_tables": [
+    {
+      "reference": "Figure 1",
+      "caption": "Income and Wage Inequality trends 2002-2024 showing Gini coefficients"
+    },
+    {
+      "reference": "Figure 5",
+      "caption": "Composition-Adjusted College/High-School Log Wage Ratio, 2002-2024"
+    },
+    {
+      "reference": "Figure 8",
+      "caption": "Returns to Education and Occupation by Quantile showing monotonic increase"
+    },
+    {
+      "reference": "Figure 10",
+      "caption": "Changes in Occupational Employment Shares, 2002-2024, Percentage Points"
+    },
+    {
+      "reference": "Figure 12",
+      "caption": "Observed and Counterfactual Changes in Log Wages, 2002-2024"
+    },
+    {
+      "reference": "Table 1A",
+      "caption": "RIF Regression of Wage Gini showing education and occupation effects"
+    },
+    {
+      "reference": "Table 2A",
+      "caption": "Unconditional Quantile Regression Coefficients on Log Wage across quantiles"
+    }
+  ],
+  "key_equations": {
+    "DFL_reweighting": "f_{xt0}(w) = ∫f(w|x,t_w=t_0)*ψ_x*dF(x|t_z=t_0) where ψ_x = [Pr(t_x=t_1|x)/Pr(t_x=t_0|x)]*[Pr(t_x=t_0)/Pr(t_x=t_1)]",
+    "College_wage_premium": "Ratio of composition-adjusted mean log wages for college graduates to high school graduates estimated annually"
+  },
+  "definitions": {
+    "College wage premium": "Wage gap between college graduates and high school graduates, serving as proxy for market's valuation of skills",
+    "RIF regression": "Recentered Influence Function regression for analyzing unconditional quantiles of wage distribution",
+    "Occupational polarization": "Pattern where employment grows in both high-skill and low-skill occupations while declining in middle-skill occupations",
+    "Skill premium": "The wage premium associated with higher education levels relative to lower education levels",
+    "DFL decomposition": "DiNardo-Fortin-Lemieux kernel density reweighting technique to isolate impact of compositional changes on wage distribution"
+  },
+  "citations": [
+    {
+      "context": "Task-based models of occupational classification and labor market changes",
+      "reference": "Acemoglu and Autor 2011"
+    },
+    {
+      "context": "Work of the past, work of the future framework",
+      "reference": "Autor 2019"
+    },
+    {
+      "context": "Job polarization and structural change",
+      "reference": "Bárány and Siegel 2018"
+    },
+    {
+      "context": "Recentered influence function regressions for wage distribution analysis",
+      "reference": "Firpo et al. 2018"
+    },
+    {
+      "context": "Income polarization in the Philippines",
+      "reference": "Gochoco-Bautista et al. 2013"
+    },
+    {
+      "context": "Structural inequality in the Philippines",
+      "reference": "Tuano and Cruz 2019"
+    }
+  ],
+  "topic_relevance": {
+    "high": [],
+    "medium": [
+      {
+        "topic": "9.B",
+        "justification": "Analyzes Philippine labor market dynamics using economic data, though not focused on NLP or computational methods. Provides valuable context for understanding socioeconomic factors affecting financial literacy and well-being in the Philippines."
+      }
+    ],
+    "low": [],
+    "not_used": [
+      {
+        "topic": "1.A",
+        "justification": "Not focused on language and cognition; economic labor market analysis"
+      },
+      {
+        "topic": "1.B",
+        "justification": "Not about language resources or low-resource NLP"
+      },
+      {
+        "topic": "2.A",
+        "justification": "No translation or cross-cultural NLP"
+      },
+      {
+        "topic": "3.A",
+        "justification": "No computational linguistic modeling; econometric analysis"
+      },
+      {
+        "topic": "3.B",
+        "justification": "No ML/NLP methods; traditional econometric analysis"
+      },
+      {
+        "topic": "4.A",
+        "justification": "Not about psycholinguistic modeling"
+      },
+      {
+        "topic": "4.B",
+        "justification": "Not about language acquisition"
+      },
+      {
+        "topic": "5.A",
+        "justification": "Single-country focus (Philippines); no cross-cultural linguistic comparison"
+      },
+      {
+        "topic": "5.B",
+        "justification": "No multilingual analysis"
+      },
+      {
+        "topic": "6.A",
+        "justification": "No multimodal data integration"
+      },
+      {
+        "topic": "6.B",
+        "justification": "No HCI component"
+      },
+      {
+        "topic": "7.A",
+        "justification": "No NLP or computational language processing"
+      },
+      {
+        "topic": "8.A",
+        "justification": "Not about computational morphology"
+      },
+      {
+        "topic": "8.B",
+        "justification": "Not about formal semantics"
+      },
+      {
+        "topic": "9.A",
+        "justification": "Not about language change or historical linguistics"
+      },
+      {
+        "topic": "10.A",
+        "justification": "Not about language disorders"
+      },
+      {
+        "topic": "11.A",
+        "justification": "Not about language education"
+      },
+      {
+        "topic": "12.A",
+        "justification": "No NER or historical language processing"
+      },
+      {
+        "topic": "13.A",
+        "justification": "No dialog systems"
+      },
+      {
+        "topic": "14.A",
+        "justification": "No NLP bias or fairness analysis"
+      },
+      {
+        "topic": "14.B",
+        "justification": "No NLP tool development"
+      }
+    ]
+  },
+  "limitations": [
+    "Wage data only available from 2002 onwards, limiting analysis period",
+    "LFS only publishes wage data starting 2002, restricting historical comparison",
+    "Income Gini data from FIES available only every 3 years (every 2 years since 2021), requiring interpolation",
+    "Analysis focuses only on wage workers, excluding self-employed and family workers",
+    "Cannot definitively determine whether recent middle-skilled employment decline is structural or cyclical"
+  ],
+  "remember_this": "The Philippines' slow expansion in college-educated workers has maintained a high wage premium (80% in 2024), sustaining inequality. While middle-skilled job growth between 2012-2016 helped narrow wage gaps, recent trends show emerging occupational polarization that could reverse these gains.",
+  "summarization_metadata": {
+    "conversion_reference": {
+      "file": "Hassine et al_marked.md"
+    },
+    "summarizer_model": "opencode/big-pickle",
+    "summarized_at": "2026-07-21T23:15:00Z"
+  }
+}

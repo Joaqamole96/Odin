@@ -1,0 +1,198 @@
+{
+  "paper_id": "10.3390/app15115957",
+  "designation": "international",
+  "title": "A Survey of Machine Learning Methods for Time Series Prediction",
+  "authors": "Hall, T.; Rasheed, K.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "12.A"
+  ],
+  "tldr": "Comprehensive survey of 79 papers reveals tree-based methods like LightGBM and deep learning methods like LSTM deliver best performance in time series forecasting, with tree-based methods offering significant computational efficiency advantages.",
+  "problem_and_motivation": "Existing literature reviews struggle to draw meaningful comparisons between models because they analyze independent studies with different implementations and datasets. This heterogeneity prevents direct model comparisons and obscures true performance differences. The survey addresses this gap by reviewing studies that compare both tree-based and deep learning approaches within the same experimental framework.",
+  "approach": [
+    "Conducts systematic survey of 79 influential papers comparing tree-based machine learning and deep learning approaches for time series prediction.",
+    "Focuses exclusively on studies with direct comparisons using identical datasets and experimental setups.",
+    "Develops two evaluation metrics: First Place Aggregation (FPA) and Weighted Rank Aggregation (WRA) for model comparison.",
+    "Analyzes performance across 46 unique time series prediction tasks grouped into 10 categories.",
+    "Examines impact of dataset size, time interval, and research focus on model performance.",
+    "Evaluates training time efficiency and hyperparameter optimization techniques across studies."
+  ],
+  "findings": [
+    "num: Tree-based models outperform deep learning models in 54.55% of tasks studied with FPA metric.",
+    "num: LSTM demonstrates strong consistent performance with 58.97% FPA and 0.7222 WRA score across 39 evaluations.",
+    "num: Tree-based models are on average 126,934.94% faster than deep learning models in training time.",
+    "RNN models excel in environmental, healthcare, and finance-related tasks due to ability to remember long-term dependencies.",
+    "Hybrid models generally outperform individual models, with combinations of tree-based and RNN models yielding strong results.",
+    "Research focus bias affects observed performance: deep learning-focused papers show DL models outperforming by 33.79% FPA."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Architectural differences between RF and GBDT → Shows structural differences with RF attributes in green and GBDT in blue.",
+    "Figure 3: FPA and WRA score distribution for each class → Tree-based models marginally outperform deep learning models overall.",
+    "Figure 4: FPA and WRA scores for each model subclass → RNNs and SPTB models emerge as best performers within their categories.",
+    "Figure 7: Distribution of time series prediction tasks by category → Shows 46 tasks across 10 categories with energy and utilities most common.",
+    "Table 1: 46 time series prediction tasks → Illustrates tasks covered in surveyed papers with frequency and group assignments.",
+    "Table 2: TBML training advantage → Shows tree-based models are significantly faster than deep learning models across studies."
+  ],
+  "key_equations": [
+    {
+      "equation": "FPA = (N_first / N_total) × 100",
+      "explanation": "First Place Aggregation: frequency with which a model achieves top rank."
+    },
+    {
+      "equation": "WRA = 1 - (N_rank - 1) / (N_total - 1)",
+      "explanation": "Weighted Rank Aggregation: accounts for relative performance across all comparisons."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "TBML",
+      "definition": "Tree-Based Machine Learning, includes Random Forest, XGBoost, LightGBM, CatBoost."
+    },
+    {
+      "term": "SPTB",
+      "definition": "Specialized Tree-Based Models, specifically XGBoost, LightGBM, and CatBoost."
+    },
+    {
+      "term": "DL",
+      "definition": "Deep Learning, subset of machine learning using neural networks for classification and regression."
+    },
+    {
+      "term": "LSTM",
+      "definition": "Long Short-Term Memory, type of recurrent neural network with gating mechanisms to mitigate vanishing gradient."
+    },
+    {
+      "term": "FPA",
+      "definition": "First Place Aggregation, measure of a model's dominance in performance comparisons."
+    },
+    {
+      "term": "WRA",
+      "definition": "Weighted Rank Aggregation, accounts for relative performance across all comparisons."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Lim",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Time-series forecasting with deep learning survey provides overview of approaches.",
+      "role": "context"
+    },
+    {
+      "author": "Liu",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Forecast methods for time series data survey analyzes various approaches.",
+      "role": "context"
+    },
+    {
+      "author": "Chen",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "XGBoost is a scalable tree boosting system with computational efficiency improvements.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ke",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LightGBM is a highly efficient gradient boosting decision tree algorithm.",
+      "role": "methodology"
+    },
+    {
+      "author": "Prokhorenkova",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "CatBoost provides unbiased boosting with categorical features using symmetric decision trees.",
+      "role": "methodology"
+    },
+    {
+      "author": "Sherstinsky",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Fundamentals of recurrent neural networks and LSTM networks with gating mechanisms.",
+      "role": "context"
+    },
+    {
+      "author": "Vaswani",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Attention is all you need introduces transformer architecture for sequence modeling.",
+      "role": "context"
+    },
+    {
+      "author": "Makridakis",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "M5 accuracy competition results show LightGBM dominance among top performing teams.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Survey covers predictive modeling techniques applicable to financial time series forecasting."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Directly reviews forecasting algorithms for sequential time series data including financial applications."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Provides evaluation framework using FPA and WRA metrics for comparing forecasting models."
+      }
+    ],
+    "contribution_to_field": "This survey contributes a comprehensive analysis of machine learning methods for time series prediction by reviewing 79 papers with direct model comparisons using identical datasets. The work establishes two novel evaluation metrics (FPA and WRA) for systematic model comparison across studies. The survey provides evidence that tree-based methods like LightGBM and deep learning methods like LSTM deliver the best performance, with tree-based methods offering significant computational efficiency advantages. The research offers practical recommendations for approaching time series forecasting tasks based on domain, data characteristics, and computational constraints.",
+    "directly_justifies": [
+      "Tree-based models outperform deep learning models in 54.55% of tasks studied.",
+      "LSTM demonstrates strong consistent performance with 58.97% FPA across 39 evaluations.",
+      "Tree-based models are on average 126,934.94% faster than deep learning models in training.",
+      "Hybrid models generally outperform individual models when combining tree-based and RNN architectures.",
+      "Research focus bias affects observed performance outcomes significantly."
+    ],
+    "limits": [
+      "Survey limited to papers published between 2017 and 2024 from Web of Science database.",
+      "Analysis focuses on comparative studies with identical experimental setups, potentially missing independent evaluations.",
+      "Limited representation for some task categories ranging from 3.85% to 21.8% of total papers."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all topic domains identified relevant coverage in domains 6 (predictive modeling) and 12 (evaluation frameworks). Domain 6.A is highly relevant as the survey covers predictive modeling techniques for time series. Domain 6.B is highly relevant as it directly reviews forecasting algorithms for sequential data. Domain 12.A is relevant due to evaluation framework using FPA and WRA metrics. Domains 1-5 (Filipino demographics, cultural practices, expense categorization, existing systems, behavioral profiles) were considered and rejected as not directly relevant. Domains 7-11 (budgeting, anomaly detection, mobile design, privacy, engagement) were considered and rejected as not addressed. Domain 13 (savings/debt management) was considered but rejected as the paper focuses on general time series forecasting rather than personal finance management. Domain 14 (synthetic data and model serving) was considered but rejected as the paper reviews real-world datasets rather than synthetic data generation."
+    },
+  "limitations": [
+    "Survey limited to papers published between 2017 and 2024 from Web of Science database.",
+    "Analysis focuses on comparative studies with identical experimental setups, potentially missing independent evaluations.",
+    "Limited representation for some task categories ranging from 3.85% to 21.8% of total papers."
+  ],
+  "remember_this": [
+    "Tree-based methods like LightGBM and deep learning methods like LSTM deliver best performance.",
+    "Tree-based models are on average 126,934.94% faster than deep learning models in training.",
+    "Hybrid models combining tree-based and RNN architectures generally outperform individual models.",
+    "Research focus bias significantly affects observed performance outcomes in comparative studies.",
+    "Starting with tree-based models provides a low-cost baseline for time series forecasting."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T15:40:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Hall & Rasheed_marked.md",
+      "converted_at": "2026-07-21T06:18:54Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "paper_id": "b539417c-ef49-5e0e-ab5f-d09618cb078e",
+  "designation": "international-algorithm-specific",
+  "title": "Robust Learning Under Distribution Shifts for Non-Stationary Data Environments",
+  "authors": ["D, R.", "Vairavan, S.", "MP, S.", "Katariya, J.", "Parikh, S.", "Shanthi, T.", "R, S."],
+  "year": 2026,
+  "venue": "International Journal of Artificial Intelligence and Machine Learning",
+  "odin_topics": ["4.A", "6.A", "8.A", "8.B"],
+  "tldr": "AHO-InDNN combines drift detection with online incremental learning and LDP-based optimization to achieve 98.74% accuracy in fraud detection under non-stationary conditions.",
+  "problem_and_motivation": "Machine learning systems trained on stationary assumptions fail when data distributions evolve due to changing user behavior, new fraud strategies, or seasonal patterns. Existing approaches address drift detection, adaptive learning, or optimization in isolation, lacking integrated robust frameworks. Model uncertainty and robustness optimization remain under-explored in non-stationary financial data environments.",
+  "approach": [
+    "AHO-InDNN framework integrates drift detection, online incremental learning, and Lévy-based parameter optimization for non-stationary environments.",
+    "Drift detection module uses hybrid statistical divergence and mean shift to identify sudden, gradual, and recurrent concept drift in transaction streams.",
+    "InDNN architecture with dynamic depth and neuron structure handles distribution shifts through 64 input neurons, 7 hidden layers, and 64 output neurons.",
+    "Online incremental learning updates model parameters without full retraining when distribution changes are detected.",
+    "Archerfish Hunting Optimization (AHO) balances exploration and exploitation through shooting, jumping, and Lévy flight behaviors.",
+    "LDP-based optimization measures probability of exceptional bursts in streaming data to enhance model stability and robustness.",
+    "Model evaluated on PaySim artificial mobile money transaction data under simulated concept drift scenarios."
+  ],
+  "findings": [
+    "num: AHO-InDNN achieves 98.74% accuracy, 98.42% precision, 98.52% recall, and 98.37% F1-score on PaySim dataset.",
+    "num: Proposed model outperforms KNN (91.67% accuracy), SMOTEBoost (78% precision), and MH-DRNN (98.5% accuracy).",
+    "num: Model demonstrates robust performance under sudden, gradual, and recurrent drift scenarios.",
+    "num: LDP optimization effectively distinguishes normal transaction variation from fraudulent anomalies.",
+    "num: Drift-aware updates enable incremental learning when significant distribution changes are detected.",
+    "num: Lévy flight reinitialization prevents stagnation and improves adaptation under dynamic distribution shifts."
+  ],
+  "key_figures_tables": [
+    "Table 1: Types of Concept Drift → Sudden, gradual, and recurrent drift types each require different adaptation strategies.",
+    "Table 2: Performance Comparison → AHO-InDNN achieves highest metrics across accuracy (98.74%), precision (98.42%), recall (98.52%), and F1 (98.37%).",
+    "Figure 2: Data Distribution Shift Analysis → Illustrates fraud rate changes under sudden, gradual, and recurrent drift scenarios.",
+    "Figure 3: Recall and F1-score Comparison → Visual comparison showing AHO-InDNN outperforming baseline models."
+  ],
+  "key_equations": [
+    {"equation": "y' = (y - y_min) / (y_max - y_min)", "explanation": "Min-Max normalization scaling input features to [0,1] range for stable learning."},
+    {"equation": "x_{m+1,p} = σ(Σ_{j=1}^n ω_{jp} x_p + ω_{n+1,p})", "explanation": "Neuron output computation with activation function, weights, and bias."},
+    {"equation": "F(θ) = -1/M Σ_m Σ_p s_{mp} log x_{mp}", "explanation": "Regularized loss function with robustness term to mitigate overfitting under drift."},
+    {"equation": "θ_s = θ_{s-1} - α * (β_1 m_{s-1} + (1-β_1) ∇F(θ_{s-1})) / √(β_2 v_{s-1} + (1-β_2)(∇F(θ_{s-1}))^2 + ε)", "explanation": "Adaptive moment-based gradient optimization for dynamic environments."},
+    {"equation": "lim_{s→∞} 1/s log P(X_s ∈ A) = -inf_{x∈A} I(x)", "explanation": "Large Deviation Principle measuring probability of exceptional bursts in streaming data."},
+    {"equation": "q(j,s+1) = -(q(j,s) - q_in(j,s)) * f(-||q_in(j,s)-q(j,s)||_2^2) + q(j,s)", "explanation": "AHO shooting behavior for global search in exploration phase."},
+    {"equation": "q_in(j,s) = q(j,s) + (0, ..., u_2/(2g) * sin²φ, ..., 0) + ε", "explanation": "Estimated optimal adaptive solution with uncertainty perturbation."}
+  ],
+  "definitions": [
+    {"term": "AHO", "definition": "Archerfish Hunting Optimization, a metaheuristic algorithm inspired by archerfish hunting behavior for parameter tuning."},
+    {"term": "InDNN", "definition": "Incremental Deep Neural Network, a dynamic architecture with adjustable depth and neurons for non-stationary data."},
+    {"term": "LDP", "definition": "Large Deviation Principle, a mathematical framework measuring probability of rare events in streaming data."},
+    {"term": "Concept Drift", "definition": "Change in the conditional distribution between input and output variables over time."},
+    {"term": "PaySim", "definition": "Artificial mobile money transaction dataset simulating real financial transactions for fraud detection research."},
+    {"term": "SMOTEBoost", "definition": "Synthetic Minority Over-Sampling Technique combined with boosting for handling class imbalance."},
+    {"term": "MH-DRNN", "definition": "Multi-Head Deep Recurrent Neural Network, a sequential model for financial fraud detection."},
+    {"term": "KL-Divergence", "definition": "Kullback-Leibler divergence, a measure of how one probability distribution differs from another."}
+  ],
+  "citations": [
+    {"author": "Liu", "year": 2024, "page": 0, "paragraph": 0, "claim": "Deep reinforcement learning struggles in nonstationary environments with unknown change points.", "role": "context"},
+    {"author": "Wang", "year": 2023, "page": 0, "paragraph": 0, "claim": "Data properties in non-stationary environments evolve due to user behavior, system dynamics, or external forces.", "role": "context"},
+    {"author": "Halstead", "year": 2022, "page": 0, "paragraph": 0, "claim": "Concept drift involves shift in input-output relations, while domain shift involves shift in input distributions.", "role": "context"},
+    {"author": "Li", "year": 2024, "page": 0, "paragraph": 0, "claim": "Traditional ML models trained in stationary form lack continuous adaptation processes.", "role": "context"},
+    {"author": "Desale", "year": 2023, "page": 0, "paragraph": 0, "claim": "DNN combined with autoencoder uses reconstruction error and 3σ rule for drift identification.", "role": "baseline"},
+    {"author": "Mehmood", "year": 2024, "page": 0, "paragraph": 0, "claim": "Ensemble variational autoencoder with Kolmogorov-Smirnov testing achieves high F-scores for cloud drift detection.", "role": "baseline"},
+    {"author": "Friedrich", "year": 2023, "page": 0, "paragraph": 0, "claim": "Variational autoencoders with KL-divergence testing achieve over 91% F1-score for behavior abnormality detection.", "role": "baseline"},
+    {"author": "Usman", "year": 2024, "page": 0, "paragraph": 0, "claim": "KNN achieves 91.67% accuracy but lacks adaptability due to fixed learning constraints.", "role": "baseline"},
+    {"author": "Al-Daoud", "year": 2025, "page": 0, "paragraph": 0, "claim": "SMOTEBoost handles class imbalance but cannot adapt to continuous distribution changes.", "role": "baseline"},
+    {"author": "Wang", "year": 2026, "page": 0, "paragraph": 0, "claim": "MH-DRNN achieves 98.5% accuracy but lacks real-time adaptability in dynamic fraud situations.", "role": "baseline"}
+  ],
+  "topic_relevance": {
+    "4.A": "medium",
+    "6.A": "high",
+    "8.A": "high",
+    "8.B": "high"
+  },
+  "limitations": [
+    "Experiments conducted on synthetic PaySim data rather than real financial transaction datasets [unacknowledged].",
+    "No comparison with state-of-the-art deep learning fraud detection models beyond the three baselines [unacknowledged].",
+    "Computational complexity analysis missing for the AHO optimization component [unacknowledged].",
+    "Real-time deployment feasibility not validated in production banking environments [unacknowledged].",
+    "LDP mathematical formulation lacks empirical validation on edge cases."
+  ],
+  "remember_this": [
+    "AHO-InDNN integrates drift detection, online learning, and metaheuristic optimization for non-stationary fraud detection.",
+    "num: Model achieves 98.74% accuracy, 98.42% precision, 98.52% recall, and 98.37% F1-score.",
+    "LDP-based optimization distinguishes normal transaction variation from fraudulent anomalies.",
+    "Framework handles sudden, gradual, and recurrent concept drift in financial data streams.",
+    "Online incremental learning enables continuous adaptation without full retraining."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T07:37:03Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "D. R. et al_marked.md",
+      "converted_at": "2026-07-21T05:59:21Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

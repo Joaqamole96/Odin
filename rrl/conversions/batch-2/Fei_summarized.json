@@ -1,0 +1,68 @@
+{
+  "paper_id": "ad2b5eef-ff7f-59d3-a7ba-6633f736d87c",
+  "designation": "international",
+  "title": "Impact of Mental Representation on Consumer Behaviors: Implications for Mental Budgeting and Prediction Algorithm Preferences",
+  "authors": ["Lin Fei"],
+  "year": 2023,
+  "venue": "University of Chicago Booth School of Business (dissertation)",
+  "odin_topics": ["3.A", "7.A"],
+  "tldr": "A dissertation investigating how consumers mentally represent expenditures and prediction events, finding that hierarchical taxonomy influences spending adjustments and that people prefer prediction algorithms that replicate the generative process of the event being predicted.",
+  "problem_and_motivation": "Understanding how people represent the world around them can help predict their reactions and behaviors. Specifically, how people represent monetary values and prediction events has implications for budgeting and algorithm preferences.",
+  "approach": "Four sets of studies across two chapters. Chapter 1 uses successive pile-sort paradigm to recover expenditure taxonomy and tests spending adjustment predictions through surveys and grocery purchase data. Chapter 2 examines algorithm preferences through die roll prediction tasks and real-world outcome prediction scenarios.",
+  "findings": [
+    "num: When consumers deviate from budget on one item, they are more likely to adjust spending for items closer in representation than further",
+    "num: People prefer to use prediction algorithms that replicate the same process of the event being predicted, even when the algorithms might perform worse",
+    "num: Study 1 recovered the taxonomy that people use to represent common expenditures with a successive pile-sort paradigm"
+  ],
+  "key_figures_tables": [
+    "Figure 1.1: Possible Representation of Expenditures",
+    "Figure 1.3: Multidimensional Scaling Reduction with Clustered Groups from Study 1",
+    "Figure 1.4: Dendrogram of the Products on Aggregate Level from Study 1",
+    "Figure 1.5: Spending Adjustment on Comparison Items from Study 2a",
+    "Figure 2.1: Likelihood-to-Use and Replicativeness Rating from Study 1b",
+    "Figure 2.2: Replicativeness & Willingness-to-Use Ratings from Study 2c"
+  ],
+  "key_equations": [],
+  "definitions": [
+    {
+      "term": "Mental Budgeting",
+      "definition": "The cognitive process people use to manage their budgets by categorizing expenditures and making adjustments based on the taxonomic distance between items."
+    },
+    {
+      "term": "Taxonomic Distance",
+      "definition": "The conceptual distance between expenditure categories in people's mental representation of their spending."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Stewart, Charter, and Brown",
+      "year": 2006,
+      "work": "Concave utility function, loss aversion, and hyperbolic discounting"
+    },
+    {
+      "author": "Thaler",
+      "year": 2015,
+      "work": "Economically optimal behavior"
+    },
+    {
+      "author": "Moreau, Markman, and Lehmann",
+      "year": 2001,
+      "work": "Consumer reactions and behaviors in new product launches"
+    }
+  ],
+  "topic_relevance": {
+    "3.A": "high",
+    "3.B": "medium",
+    "7.A": "high",
+    "7.B": "medium"
+  },
+  "limitations": "The dissertation is based on laboratory and survey studies. The generalizability to real-world budgeting systems and algorithm preferences may require further investigation. The focus on expenditure categories may not fully represent all budgeting contexts.",
+  "remember_this": "Mental representation of expenditures influences spending adjustment behavior. People prefer prediction algorithms that replicate the generative process of the event being predicted, which has implications for algorithm design and recommendation.",
+  "summarization_metadata": {
+    "summarizer_model": "opencode/big-pickle",
+    "summarized_at": "2026-07-21T00:43:00Z",
+    "conversion_reference": {
+      "file": "Fei_marked.md"
+    }
+  }
+}

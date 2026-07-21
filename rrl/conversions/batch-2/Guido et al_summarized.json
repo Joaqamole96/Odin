@@ -1,0 +1,196 @@
+{
+  "paper_id": "10.1007/s00500-022-06768-8",
+  "designation": "international-algorithm-specific",
+  "title": "A hyper-parameter tuning approach for cost-sensitive support vector machine classifiers",
+  "authors": "Guido, R.; Groccia, M.; Conforti, D.",
+  "year": 2023,
+  "venue": "Soft Computing",
+  "odin_topics": [
+    "6.A",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "Multi-objective genetic algorithm combined with decision trees optimizes cost-sensitive SVM hyper-parameters for imbalanced data classification, reducing computational time while improving performance metrics.",
+  "problem_and_motivation": "Hyper-parameter tuning for machine learning models significantly affects performance, especially for imbalanced datasets where accuracy is misleading. Traditional grid search is time-consuming and unsuitable for multiple parameters. Cost-sensitive SVMs require simultaneous optimization of multiple conflicting performance measures.",
+  "approach": [
+    "Proposes multi-objective optimization approach using NSGA-II genetic algorithm for cost-sensitive SVM hyper-parameter tuning.",
+    "Introduces improved algorithm combining genetic algorithms with decision trees to reduce computational time.",
+    "Optimizes three fitness functions simultaneously: accuracy, G-Mean, and average cost.",
+    "Tests on six benchmark imbalanced medical datasets from UCI repository.",
+    "Uses decision tree to predict fitness values for similar chromosomes, reducing k-fold cross-validation evaluations.",
+    "Compares basic and improved versions in both sequential and parallel implementations."
+  ],
+  "findings": [
+    "num: Improved algorithm reduces computational time by over 70% in some experiments compared to basic version.",
+    "Both algorithms converge and find same best values for three fitness functions.",
+    "num: On WDBC dataset, achieves 97.42% accuracy and 97.73% G-Mean.",
+    "Multi-objective optimization finds sparser solutions without major loss in predictive performance compared to single-objective.",
+    "Accuracy is not suitable measure for imbalanced data as it can be misleading.",
+    "G-Mean is more suitable than accuracy for evaluating classification performance on imbalanced data."
+  ],
+  "key_figures_tables": [
+    "Table 2: Datasets characteristics → Shows six medical datasets with varying attributes and imbalance ratios.",
+    "Table 4: Best metric values by optimized hyper-parameters → Compares results with literature across accuracy, G-Mean, and average cost.",
+    "Figure 6: Performance measures of Pareto points → Shows trade-offs between sensitivity, specificity, and other metrics.",
+    "Figure 7: Performance measures for WDBC and WPBC → Illustrates balance accuracy decreases as sensitivity decreases."
+  ],
+  "key_equations": [
+    {
+      "equation": "f_1 = max(TP + TN) / (TP + FP + TN + FN)",
+      "explanation": "First fitness function: maximization of accuracy."
+    },
+    {
+      "equation": "f_2 = max(Sensitivity × Specificity)",
+      "explanation": "Second fitness function: maximization of G-Mean."
+    },
+    {
+      "equation": "f_3 = min(C_1 × FN + C_2 × FP) / (TP + TN + FP + FN)",
+      "explanation": "Third fitness function: minimization of average cost."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "CS-SVM",
+      "definition": "Cost-Sensitive Support Vector Machine, uses two penalty weights for different classes."
+    },
+    {
+      "term": "NSGA-II",
+      "definition": "Non-dominated Sorting Genetic Algorithm II, multi-objective optimization algorithm."
+    },
+    {
+      "term": "G-Mean",
+      "definition": "Geometric Mean, balanced performance measure between sensitivity and specificity."
+    },
+    {
+      "term": "Imbalanced dataset",
+      "definition": "Dataset where one or more classes have very low proportions compared to other classes."
+    },
+    {
+      "term": "Pareto front",
+      "definition": "Set of non-dominated solutions representing trade-offs between conflicting objectives."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Cortes",
+      "year": 1995,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Support vector machines introduced as class of algorithms for classification, regression and other applications.",
+      "role": "methodology"
+    },
+    {
+      "author": "Vapnik",
+      "year": 1998,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Statistical learning theory provides foundation for support vector machines.",
+      "role": "context"
+    },
+    {
+      "author": "Deb",
+      "year": 2002,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "NSGA-II improved with elitism, diversity-preserving mechanisms, and emphasis on non-dominated solutions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Holland",
+      "year": 1975,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Genetic algorithms developed as model based on Charles Darwin's theory of natural selection.",
+      "role": "context"
+    },
+    {
+      "author": "Tao",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Self-adaptive cost weights-based SVM cost-sensitive ensemble shows higher classification accuracy than other methods.",
+      "role": "baseline"
+    },
+    {
+      "author": "Yu",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Novel hybrid classification framework using SVM and differential evolution for optimal hyper-parameter tuning.",
+      "role": "baseline"
+    },
+    {
+      "author": "Chawla",
+      "year": 2002,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SMOTE generates new samples similar to minority samples to balance data.",
+      "role": "context"
+    },
+    {
+      "author": "Japkowicz",
+      "year": 2002,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Class imbalance problem is systematic issue where datasets have unequal class distributions.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Provides hyper-parameter tuning methodology applicable to predictive models in financial classification."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justificance": "Proposes multi-objective evaluation framework using accuracy, G-Mean, and average cost for model performance."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Evaluates algorithmic performance of genetic algorithm and decision tree combination for hyper-parameter optimization."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a multi-objective hyper-parameter tuning approach for cost-sensitive SVM classifiers that addresses the challenge of imbalanced data classification. The work demonstrates that combining genetic algorithms with decision trees can significantly reduce computational time while maintaining optimization quality. The research provides empirical evidence that accuracy alone is insufficient for evaluating classification models on imbalanced data, advocating for alternative metrics like G-Mean and average cost. The proposed approach offers a practical solution for optimizing multiple conflicting performance objectives simultaneously.",
+    "directly_justifies": [
+      "Multi-objective optimization finds sparser solutions without major loss in predictive performance.",
+      "G-Mean is more suitable than accuracy for evaluating classification performance on imbalanced data.",
+      "Improved algorithm reduces computational time by over 70% compared to basic version.",
+      "Cost-sensitive SVM requires simultaneous optimization of multiple conflicting performance measures.",
+      "Decision tree prediction of fitness values reduces number of k-fold cross-validation evaluations."
+    ],
+    "limits": [
+      "Study limited to six benchmark medical datasets from UCI repository.",
+      "Performance may vary on different types of imbalanced data beyond medical diagnosis.",
+      "Computational time reduction depends on similarity between chromosomes in populations."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all topic domains identified relevant coverage in domains 6 (predictive modeling) and 12 (evaluation frameworks). Domain 6.A is relevant as the paper provides hyper-parameter tuning methodology applicable to predictive models. Domains 12.A and 12.B are highly relevant due to multi-objective evaluation framework and algorithmic performance evaluation. Domains 1-5 (Filipino demographics, cultural practices, expense categorization, existing systems, behavioral profiles) were considered and rejected as not directly relevant. Domains 7-11 (budgeting, anomaly detection, mobile design, privacy, engagement) were considered and rejected as not addressed. Domain 13 (savings/debt management) was considered but rejected as the paper focuses on classification methodology rather than personal finance management. Domain 14 (synthetic data and model serving) was considered but rejected as the paper uses benchmark datasets rather than synthetic data generation."
+    },
+  "limitations": [
+    "Study limited to six benchmark medical datasets from UCI repository.",
+    "Performance may vary on different types of imbalanced data beyond medical diagnosis.",
+    "Computational time reduction depends on similarity between chromosomes in populations."
+  ],
+  "remember_this": [
+    "Multi-objective optimization simultaneously optimizes accuracy, G-Mean, and average cost.",
+    "Improved algorithm reduces computational time by over 70% using decision tree prediction.",
+    "G-Mean is more suitable than accuracy for imbalanced data classification.",
+    "Cost-sensitive SVM requires tuning of multiple conflicting performance objectives.",
+    "Decision tree reduces k-fold cross-validation evaluations by predicting similar chromosome fitness."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T15:35:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Guido et al_marked.md",
+      "converted_at": "2026-07-21T06:17:16Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "paper_id": "f676104a-c07f-5897-a8a2-f9298b7dbb67",
+  "designation": "local",
+  "title": "WEKA-BASED DECISION-TREE MODEL FOR USER SUBSCRIPTION PLAN PREDICTION",
+  "authors": ["Josef Christopher R. Guban", "Christian Dayne R. Menderico", "Don Marco G. Montalban"],
+  "year": 2025,
+  "venue": "Technological University of the Philippines - Manila (IT323 Business Intelligence course project)",
+  "odin_topics": ["None"],
+  "tldr": "A WEKA-based decision-tree model using the J48 algorithm to predict streaming subscription plans based on demographic and behavioral attributes, achieving 72% accuracy with country identified as the most influential predictor.",
+  "problem_and_motivation": "Understanding user preferences in subscription plan selection is vital for implementing data-driven strategies in competitive streaming landscapes. There is a gap in analyzing how individual user attributes affect subscription plan selection.",
+  "approach": "Supervised classification model using J48 decision-tree algorithm in WEKA with an 80/20 train-test split on 2,500 anonymized user records. Performance evaluated using accuracy, Kappa statistic, precision, recall, F-measure, and ROC area.",
+  "findings": [
+    "num: The model achieved 72% overall accuracy with country identified as the most influential predictor",
+    "num: Country was followed by age and device type as the next most important predictors",
+    "num: Standard category achieved the highest precision (0.793) and ROC area (0.871)"
+  ],
+  "key_figures_tables": [
+    "Table 1: Split Percentage Testing Summary",
+    "Table 2: Identifying User Profile Combinations that Predict Specific Subscription Plans",
+    "Table 3: Predictive Performance of Decision Tree Model",
+    "Table 4: Confusion Matrix"
+  ],
+  "key_equations": [],
+  "definitions": [
+    {
+      "term": "J48 Decision Tree",
+      "definition": "An implementation of the C4.5 algorithm in WEKA that generates human-readable classification rules."
+    },
+    {
+      "term": "Kappa Statistic",
+      "definition": "A metric measuring inter-rater agreement that accounts for chance agreement, ranging from -1 to 1."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Chaurasia and Pal",
+      "year": 2019,
+      "work": "Data mining techniques for Netflix subscription prediction"
+    },
+    {
+      "author": "Dey and Haque",
+      "year": 2021,
+      "work": "Predictive analytics in subscription-based services"
+    },
+    {
+      "author": "Kim, Lee, and Park",
+      "year": 2022,
+      "work": "Customer churn prediction using decision trees"
+    }
+  ],
+  "topic_relevance": {
+    "4.B": "medium",
+    "8.A": "medium"
+  },
+  "limitations": "The study is limited to a single streaming platform with only 2,500 anonymized records. The dataset excludes behavioral indicators such as watch time, session frequency, or genre preferences that could further improve prediction accuracy.",
+  "remember_this": "Decision tree models can effectively predict subscription plans based on demographic attributes, with country being the most influential predictor. The model achieved 72% accuracy, meeting the 70% benchmark for commercial applications.",
+  "summarization_metadata": {
+    "summarizer_model": "opencode/big-pickle",
+    "summarized_at": "2026-07-21T00:50:00Z",
+    "conversion_reference": {
+      "file": "Guban et al_marked.md"
+    }
+  }
+}

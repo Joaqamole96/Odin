@@ -1,0 +1,109 @@
+{
+  "paper_id": "10.1109/ACCESS.2026.3703181",
+  "designation": "international-algorithm-specific",
+  "title": "Adaptive Credit Scoring Model With Concept Drift Detection and Adaptation Technique for a Dynamic Environment",
+  "authors": "Chikoore, R.; Ojo, S.O.; Kogeda, O.P.",
+  "year": 2026,
+  "venue": "IEEE Access",
+  "odin_topics": ["6.A", "5.C", "4.B", "12.B"],
+  "tldr": "An adaptive fusion credit scoring framework combines retrained, windowed, and ensemble Random Forest models with dynamic weighting to address concept drift, achieving 95% accuracy on the German Credit benchmark.",
+  "problem_and_motivation": "Static credit scoring models degrade over time due to evolving borrower behavior and shifting data distributions, known as concept drift. Existing adaptive approaches are largely designed for advanced economies and are unsuitable for developing contexts where economic conditions are more dynamic. There is a need for a drift-aware framework that maintains accuracy and fairness in resource-constrained environments.",
+  "approach": [
+    "Benchmarks four vanilla classifiers (CART, Naive Bayes, Random Forest, XGBoost) on the German Credit dataset, selecting Random Forest as the baseline.",
+    "Introduces three drift simulation scenarios: population drift (age shift), noise injection (credit amount perturbation), and class distribution change (default rate reduction to 20%).",
+    "Maintains three Random Forest variants: original pre-drift model, retrained model on drifted data, and windowed model on recent samples.",
+    "Proposes Adaptive Fusion that dynamically weights class probabilities from all three models based on recent performance.",
+    "Compares four adaptation strategies: retraining, windowing, ensemble voting, and adaptive fusion across all drift scenarios.",
+    "Uses the Gaussian probability density function to model noise-based drift in credit amount features."
+  ],
+  "findings": [
+    "num: Adaptive Fusion achieves 95.0% accuracy, 0.9275 precision, 0.9645 recall, 0.9426 F1-score, and ROC-AUC exceeding 0.96 across all drift scenarios.",
+    "num: Retrained Random Forest matches Adaptive Fusion in all metrics, demonstrating that comprehensive retraining remains effective.",
+    "num: Vanilla Random Forest achieves 0.77 accuracy and 0.768 ROC-AUC on the original static dataset.",
+    "Windowed Random Forest performs worst among adaptive strategies, failing to capture long-term behavioral shifts.",
+    "Ensemble voting matches retrained model in accuracy, precision, recall, and F1 but slightly trails in ROC-AUC.",
+    "Adaptive Fusion outperforms state-of-the-art DGHNL which achieves 94.60% accuracy and 0.9360 AUC."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Generic concept drift detection scheme → Null hypothesis testing identifies distribution changes between old and new data.",
+    "Figure 2: Model adaptation architecture → Three RF models (original, retrained, windowed) feed into Adaptive Fusion.",
+    "Figure 3: Vanilla model performance comparison → Random Forest and XGBoost outperform CART and Naive Bayes.",
+    "Figure 4: ROC-AUC for adaptive retraining → Retrained model maintains high AUC across drift scenarios.",
+    "Figure 5: Model evaluation on adaptive strategies → Adaptive Fusion delivers strongest and most stable performance.",
+    "Figure 6: ROC-AUC for adaptive windowing → Windowed model shows degradation under drift.",
+    "Figure 7: ROC-AUC for ensemble and adaptive fusion → Both maintain high discrimination capability.",
+    "Table 1: Vanilla model performance metrics → RF achieves best accuracy (0.77), precision (0.737), F1 (0.680), AUC (0.768)."
+  ],
+  "key_equations": [
+    {"equation": "X_d = X_n + 5", "explanation": "Population drift simulation by shifting all age instances by five years."},
+    {"equation": "f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}", "explanation": "Gaussian probability density function used for noise-based credit amount drift."},
+    {"equation": "P'(C_i) = \\frac{w_i \\cdot P(C_i)}{\\sum_j W_j \\cdot P(C_j)}", "explanation": "Class distribution drift simulation via weighting factor applied to class probabilities."},
+    {"equation": "p_{final}(x) = w_0 \\cdot p_0(x) + w_r \\cdot p_r(x) + w_w \\cdot p_w(x)", "explanation": "Adaptive Fusion weighted combination of class probabilities from three models."}
+  ],
+  "definitions": [
+    {"term": "Concept Drift", "definition": "Change in the statistical properties of the target variable over time, rendering previously learned relationships unstable."},
+    {"term": "Population Drift", "definition": "Shift in the distribution of input features within a population over time."},
+    {"term": "Label Drift", "definition": "Change in the distribution of the target variable independently of input features."},
+    {"term": "Adaptive Fusion", "definition": "Algorithm that dynamically weights and integrates outputs from multiple classifiers based on evolving data patterns."},
+    {"term": "ROC-AUC", "definition": "Area under the Receiver Operating Characteristic curve, measuring a model's ability to distinguish between classes."},
+    {"term": "German Credit Dataset", "definition": "Benchmark dataset from UCI Machine Learning Repository used for credit scoring evaluation."},
+    {"term": "Ensemble Learning", "definition": "Machine learning paradigm combining multiple classifiers to improve overall predictive performance."}
+  ],
+  "citations": [
+    {"author": "Liu", "year": 2021, "page": 0, "paragraph": 0, "claim": "DiwE algorithm fosters diversity in ensemble learning to tackle concept drift in evolving data streams.", "role": "methodology"},
+    {"author": "Nikolaidis", "year": 2022, "page": 0, "paragraph": 0, "claim": "Local logistic regression models outperform global counterparts for adaptive behavioral credit scoring under population drift.", "role": "finding"},
+    {"author": "Wang", "year": 2021, "page": 0, "paragraph": 0, "claim": "Instance-based transfer learning with rebalanced sample weights achieves 24% AUC improvement over conventional ML in credit risk.", "role": "finding"},
+    {"author": "Barddal", "year": 2020, "page": 0, "paragraph": 0, "claim": "Batch ML models are limited in dynamic credit scoring; data-stream classification techniques are necessary for evolving environments.", "role": "context"},
+    {"author": "Museba", "year": 2023, "page": 0, "paragraph": 0, "claim": "Adaptive dynamic heterogeneous ensemble model effectively handles concept drift in credit scoring.", "role": "baseline"},
+    {"author": "Greco", "year": 2025, "page": 0, "paragraph": 0, "claim": "DriftLens detects concept drift in deep learning representations in less than 0.2 seconds with correlation index above 0.85.", "role": "finding"},
+    {"author": "Ren", "year": 2018, "page": 0, "paragraph": 0, "claim": "Knowledge-Maximized Ensemble achieves 85-95% accuracy on synthetic datasets with different concept drift types.", "role": "finding"},
+    {"author": "Abadifard", "year": 2023, "page": 0, "paragraph": 0, "claim": "DynED framework emphasizes diversity and dynamic selection in ensembles for effective concept drift handling.", "role": "baseline"},
+    {"author": "Krempl", "year": 2000, "page": 0, "paragraph": 0, "claim": "Explicit drift modeling is advocated for evolving financial datasets in scoring applications.", "role": "context"},
+    {"author": "Bayram", "year": 2020, "page": 0, "paragraph": 0, "claim": "Card-based incremental GBT maintains high fraud detection AUC with minimal training time through daily incremental updates.", "role": "baseline"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Core contribution is an adaptive predictive model for credit scoring under concept drift conditions."},
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "high", "justification": "Evaluates multiple classifiers (RF, XGBoost, CART, NB) for credit risk classification with drift adaptation."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "high", "justification": "Identifies that existing adaptive credit scoring models are designed for advanced economies and lack drift mechanisms."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "medium", "justification": "Provides comprehensive evaluation across four adaptation strategies with multiple performance metrics."}
+    ],
+    "contribution_to_field": "This paper introduces the Adaptive Fusion algorithm, a novel credit scoring framework that dynamically integrates retrained, windowed, and original classifier outputs to address concept drift in developing economy contexts. It systematically evaluates four adaptation strategies on the German Credit benchmark under three simulated drift scenarios. The work demonstrates that adaptive ensemble approaches can outperform state-of-the-art models like DGHNL while remaining computationally feasible. The framework fills a gap in the literature by targeting dynamic, resource-constrained financial environments rather than stable advanced-economy settings.",
+    "directly_justifies": [
+      "Adaptive Fusion dynamically weights multiple model outputs to achieve 95% accuracy under concept drift.",
+      "Comprehensive retraining matches adaptive fusion in all metrics, validating retraining as a strong baseline.",
+      "Windowed learning fails to capture long-term behavioral shifts, limiting its utility for drift adaptation.",
+      "State-of-the-art DGHNL is outperformed with 94.60% accuracy versus 95.0% for the proposed approach."
+    ],
+    "limits": [
+      "Uses only one benchmark dataset (German Credit); no real-world credit bureau data validation.",
+      "Drift is simulated rather than observed from genuine temporal data distributions.",
+      "Computational cost comparison with state-of-the-art methods is not provided.",
+      "Fairness and bias evaluation metrics are discussed but not quantitatively reported."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 6 (Predictive Modeling) is highly relevant through 6.A as the paper proposes adaptive predictive models for credit scoring. Domain 5 (Financial Behavioral Profiles) is highly relevant through 5.C given its evaluation of multiple classification approaches for credit risk. Domain 4 (Landscape of Existing Systems) is highly relevant through 4.B as the paper identifies gaps in existing adaptive systems for developing economies. Domain 12 (Evaluation Frameworks) is relevant through 12.B with its systematic comparison of four adaptation strategies. Domains 1, 2, 3, 7, 8, 9, 10, 11, 13, and 14 were considered and rejected as the paper does not address Filipino demographics, culturally specific practices, expense categorization, budgeting optimization, anomaly detection, mobile design, privacy, engagement, savings goals, or synthetic data generation for ML training."
+  },
+  "limitations": [
+    "Uses only the German Credit benchmark dataset without validation on real-world credit bureau data.",
+    "Drift scenarios are simulated through synthetic perturbations rather than genuine temporal data.",
+    "Computational cost and inference latency are not compared against state-of-the-art baselines.",
+    "Fairness and bias metrics are discussed conceptually but not quantitatively evaluated.",
+    "Single dataset limits generalizability claims across different credit markets and demographics."
+  ],
+  "remember_this": [
+    "Adaptive Fusion dynamically integrates three RF models to achieve 95% accuracy under concept drift.",
+    "Windowed learning underperforms due to inability to capture long-term behavioral shifts.",
+    "Comprehensive retraining is a competitive baseline matching fusion in all metrics.",
+    "Three drift types (population, noise, class distribution) were simulated on German Credit data.",
+    "The approach outperforms DGHNL state-of-the-art by 0.4% in accuracy."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:05:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Chikoore et al_marked.md",
+      "converted_at": "2026-07-21T05:55:52Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

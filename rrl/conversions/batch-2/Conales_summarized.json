@@ -1,0 +1,191 @@
+{
+  "paper_id": "10.64753/jcasc.v10i2.1862",
+  "designation": "philippine-specific",
+  "title": "Examining Debt and Financial Literacy Through a Cultural Lens",
+  "authors": "Conales, A.",
+  "year": 2025,
+  "venue": "Journal of Cultural Analysis and Social Change",
+  "odin_topics": ["1.C", "2.A", "13.B"],
+  "tldr": "A survey of 1240 Marawi HEI educators found financial behavior and attitude strongly predict household financial management, while financial knowledge alone does not.",
+  "problem_and_motivation": "Financial literacy gaps persist among higher education institution educators in conflict-affected, culturally diverse regions of the Philippines, particularly regarding debt literacy. Prior studies have not simultaneously examined how debt literacy, financial knowledge, attitudes, and behaviors interact within household financial management among Muslim and Christian educators in Mindanao. Understanding these dynamics is essential for designing culturally responsive financial education interventions.",
+  "approach": [
+    "Administered a structured survey to 1240 HEI educators across 18 universities in Marawi City, Lanao del Sur.",
+    "Used the Lusardi and Mitchell financial knowledge quiz and a modified financial literacy assessment covering cash flow, credit, investment, and savings management.",
+    "Applied Structural Equation Modeling (SEM) using SmartPLS 4 to test paths from financial knowledge, behavior, attitude, and debt literacy to four household financial management outcomes.",
+    "Classified respondents into financial profiles based on self-reported financial behaviors including budgeting, debt management, investment, and savings practices."
+  ],
+  "findings": [
+    "num: Average financial knowledge score was 5.6 out of 7, with 89% answering basic interest questions correctly but only 9% answering debt-related questions correctly.",
+    "Financial behavior was the strongest predictor across all four financial management dimensions (beta = 0.154 to 0.196, p < .05 to p < .001).",
+    "Financial attitude significantly predicted cash flow (beta = 0.101, p < .01), investment (beta = 0.069, p < .05), and saving management (beta = 0.113, p < .01).",
+    "Financial knowledge showed no significant effect on any financial management dimension.",
+    "Debt literacy had only a marginal positive association with credit responsibility (beta = 0.245, p < .10) and no effect on other dimensions.",
+    "num: 63% of respondents invested in PAG-IBIG MP2, while only 12% invested in the stock market.",
+    "num: 73% of respondents owned their homes, indicating a degree of financial security.",
+    "Muslim respondents scored lower in financial knowledge and had lower debt literacy scores, likely influenced by religious prohibitions on interest-bearing debt."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Financial Knowledge Quiz scores → 89% answered basic interest correctly, only 9% answered debt literacy questions correctly.",
+    "Figure 2: Financial profile distribution → most respondents showed positive budgeting behavior but limited engagement with financial products.",
+    "Figure 3: SEM model of household financial management → financial behavior and attitude were the only significant predictors.",
+    "Table 11: Path coefficients and significance → financial behavior had highest beta values across all dimensions.",
+    "Table 12: Summary of structural model results → financial knowledge was not significant for any outcome."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {"term": "HEI", "definition": "Higher Education Institution"},
+    {"term": "SEM", "definition": "Structural Equation Modeling"},
+    {"term": "DL", "definition": "Debt Literacy"},
+    {"term": "FA", "definition": "Financial Attitude"},
+    {"term": "FB", "definition": "Financial Behavior"},
+    {"term": "FK", "definition": "Financial Knowledge"},
+    {"term": "CF", "definition": "Cash Flow Management"},
+    {"term": "CR", "definition": "Credit Responsibility"},
+    {"term": "IM", "definition": "Investment Management"},
+    {"term": "SM", "definition": "Saving Management"},
+    {"term": "PAG-IBIG MP2", "definition": "Modified Pag-IBIG II, a government-backed savings program in the Philippines"}
+  ],
+  "citations": [
+    {
+      "author": "Lusardi",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy around the world: an overview establishing the global framework for measuring financial literacy.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Debt literacy, financial experiences, and over-indebtedness provides the foundational debt literacy measurement approach.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kaiser",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial education affects financial knowledge and downstream behaviors, arguing knowledge is often dormant unless coupled with motivation.",
+      "role": "finding"
+    },
+    {
+      "author": "Riitsalu",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "From security to freedom, the meaning of financial well-being changes with age, supporting the knowledge-action gap.",
+      "role": "finding"
+    },
+    {
+      "author": "Nanda",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial behaviors such as budgeting, tracking expenses, and saving discipline are the most robust predictors of financial well-being.",
+      "role": "finding"
+    },
+    {
+      "author": "Amagir",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Debt-specific knowledge tends to improve loan repayment behavior and borrowing practices while having little impact on savings or investment.",
+      "role": "finding"
+    },
+    {
+      "author": "Shim",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Future-oriented financial attitudes create psychological commitment to long-term goals, driving systematic saving and investment.",
+      "role": "finding"
+    },
+    {
+      "author": "Potrich",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial attitudes play a crucial mediating role between financial knowledge and behavior, influencing resource allocation and long-term savings.",
+      "role": "finding"
+    },
+    {
+      "author": "World Bank Group",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Enhancing financial capability and inclusion in the Philippines provides demand-side assessment context.",
+      "role": "context"
+    },
+    {
+      "author": "Casingal",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy status of public-school teachers in the Philippines provides baseline local context.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Directly examines financial behaviors (budgeting, saving, investing, debt management) of Filipino HEI educators."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "high",
+        "justification": "Investigates how Islamic religious beliefs against interest-bearing debt shape financial literacy and debt practices among Muslim educators."
+      },
+      {
+        "code": "13.B",
+        "name": "Debt Management in PFMS",
+        "relevance": "high",
+        "justification": "Core focus on debt literacy and its relationship to credit management among Filipino educators."
+      }
+    ],
+    "contribution_to_field": "This paper contributes empirical evidence on the interplay between debt literacy, financial knowledge, attitudes, behaviors, and household financial management in a culturally diverse, conflict-affected Philippine setting. It demonstrates that behavioral and attitudinal factors are stronger predictors of financial management outcomes than knowledge alone, challenging the assumption that financial education focused on cognitive knowledge is sufficient. The study provides culturally grounded insights by comparing Muslim and Christian educators, revealing how religious beliefs against interest-bearing debt influence financial literacy patterns. The SEM-based framework offers a validated model for examining financial literacy dimensions in similar contexts.",
+    "directly_justifies": [
+      "Financial behavior is the strongest and most consistent predictor of household financial management across all four domains.",
+      "Financial knowledge alone shows no significant effect on any financial management dimension, supporting the knowledge-action gap.",
+      "Debt literacy has limited influence, primarily affecting credit-related decisions rather than broader financial practices.",
+      "Muslim respondents scored lower in financial knowledge and debt literacy, suggesting socio-cultural and religious influences on financial behavior."
+    ],
+    "limits": [
+      "Cross-sectional survey design limits causal inference about the relationships between financial literacy components and management outcomes.",
+      "Self-reported financial behaviors may be subject to social desirability bias, particularly in a culturally sensitive context.",
+      "Study confined to HEI educators in Marawi City, limiting generalizability to other Filipino demographics or regions."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Topic 1.C (Financial Behavior of Filipino Young Professionals) was flagged as high relevance because the paper directly examines financial behaviors including budgeting, saving, investing, and debt management among Filipino educators. Topic 2.A (Culturally Specific Financial Practices) was flagged as high relevance because the paper investigates how Islamic religious beliefs shape financial literacy and debt practices, comparing Muslim and Christian respondents. Topic 13.B (Debt Management in PFMS) was flagged as high relevance because debt literacy and credit management are core constructs in the study. Topics 1.A and 1.B were considered but rejected as the sample consists of established professionals rather than young professionals. Topics 4.A and 4.B were considered as the paper discusses financial products and literacy gaps but these are not the primary focus. Topic 14.A (Synthetic Data) was rejected as the paper uses empirical survey data only. The paper is most strongly aligned with financial behavior, cultural financial practices, and debt management domains."
+  },
+  "limitations": [
+    "Cross-sectional survey design limits causal inference.",
+    "Self-reported financial behaviors may be subject to social desirability bias.",
+    "Study confined to HEI educators in Marawi City, limiting generalizability."
+  ],
+  "remember_this": [
+    "Financial behavior, not knowledge, is the strongest predictor of household financial management outcomes.",
+    "Only 9% of respondents answered debt literacy questions correctly, indicating widespread debt illiteracy.",
+    "Financial knowledge showed no significant effect on any financial management dimension in the SEM model.",
+    "Muslim respondents had lower financial knowledge and debt literacy, influenced by religious beliefs against interest.",
+    "Behavioral training and attitudinal shifts may be more effective than cognitive knowledge-based financial education."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Conales_marked.md",
+      "converted_at": null,
+      "converter_tool": null
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "paper_id": "10.14419/c73kcb17",
+  "designation": "international",
+  "title": "Advanced fraud detection using machine learning models: enhancing financial transaction security",
+  "authors": "Fariha, N.; Khan, M. N. M.; Hossain, M. I.; Reza, S. A.; Bortty, J. C.; Sultana, K. S.; Jawad, M. S. I.; Safat, S.; Ahad, M. A.; Begum, M.",
+  "year": 2025,
+  "venue": "International Journal of Accounting and Economics Studies",
+  "odin_topics": ["8.A", "8.B"],
+  "tldr": "A composite unsupervised anomaly detection framework using Isolation Forest, One-Class SVM, and deep autoencoders flags approximately 1-2 percent of credit card transactions as anomalies and surfaces high-risk entities for prioritized investigation.",
+  "problem_and_motivation": "Traditional rule-based fraud detection systems suffer from high false-positive rates and fail to adapt to evolving fraud typologies. Undetected financial fraud costs organizations roughly 5 percent of annual revenues globally. There is a need for scalable, unsupervised pipelines that can detect anomalies in real time without relying on scarce labeled fraud data.",
+  "approach": [
+    "Merged 12-month credit card transaction data with cardholder, merchant, and merchant-category datasets from a relational database to form a unified analytical view.",
+    "Engineered behavioral features including amount deviation, inter-transaction intervals, temporal markers, and merchant-category frequency metrics.",
+    "Trained and compared three unsupervised models: Isolation Forest, One-Class SVM with RBF kernel, and a deep autoencoder with bottleneck architecture.",
+    "Applied K-Means clustering and DBSCAN to segment the transaction landscape and isolate sparse suspicious regions.",
+    "Proposed an Adaptive Risk-Scoring Framework (ARF) that aggregates binary flags from all detectors with domain-specific behavioral indicators into a composite risk score."
+  ],
+  "findings": [
+    "num: Approximately 1-2 percent of transactions were flagged as anomalies by the unsupervised pipeline.",
+    "num: The autoencoder achieved the best balance between detection sensitivity and false-positive rate at a 99th-percentile reconstruction error threshold.",
+    "num: Nighttime transactions (12 AM to 6 AM) showed the highest average risk score despite lower transaction counts.",
+    "num: About 3 percent of all transactions were identified as requiring immediate review by the combined risk metric.",
+    "num: The top 10 riskiest cardholders and merchants exhibited fraud ratios exceeding 20 percent."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Transaction amount distribution → Over 90 percent of purchases fall below $100 with a pronounced right skew.",
+    "Figure 2: Transaction count by merchant category → Pub, food truck, and restaurant dominate with over half of all transactions.",
+    "Figure 3: Transaction analysis across time and behavioral indicators → High-value spending concentrated during late evening hours.",
+    "Figure 4: Elbow method for K-Means → k=3 clusters identified with silhouette scores above 0.5.",
+    "Figure 5: Epsilon selection for DBSCAN → eps=0.25 chosen from 5-nearest-neighbor distance plot.",
+    "Table 1: Model development summary → Compares key parameters, threshold strategy, anomaly rate, strengths, and weaknesses across all five models."
+  ],
+  "key_equations": [
+    {
+      "equation": "R_ARF(T_t) = w_1(t) * f_IF(T_t) + w_2(t) * f_OCSVM(T_t) + w_3(t) * f_AE(T_t) + w_4(t) * delta_spend(T_t) + w_5(t) * delta_time(T_t)",
+      "explanation": "Weighted risk contribution of each detector and behavioral indicator in the Adaptive Risk-Scoring Framework."
+    },
+    {
+      "equation": "w_i(t+1) = w_i(t) - alpha * partial(L)/partial(w_i)",
+      "explanation": "Mini-batch gradient descent weight update rule for dynamic ARF calibration."
+    }
+  ],
+  "definitions": [
+    {"term": "Isolation Forest", "definition": "Unsupervised ensemble method that isolates anomalies by randomly partitioning feature space with short path lengths."},
+    {"term": "One-Class SVM", "definition": "Support vector machine variant trained on a single class to detect outliers by learning a decision boundary around normal data."},
+    {"term": "Autoencoder", "definition": "Neural network that compresses input into a latent representation and reconstructs it; high reconstruction error signals anomalies."},
+    {"term": "DBSCAN", "definition": "Density-based spatial clustering algorithm that groups closely packed points and marks low-density points as noise."},
+    {"term": "ARF", "definition": "Adaptive Risk-Scoring Framework that dynamically calibrates weights of multiple anomaly detectors based on transaction context."},
+    {"term": "PCA", "definition": "Principal Component Analysis, a dimensionality reduction technique used to project high-dimensional data into interpretable latent spaces."}
+  ],
+  "citations": [
+    {"author": "Rahman", "year": 2023, "page": 1, "paragraph": 1, "claim": "Credit card fraud has diversified across numerous vectors including card-not-present fraud and merchant collusion.", "role": "context"},
+    {"author": "Islam", "year": 2025, "page": 1, "paragraph": 2, "claim": "Cybercriminals use automation, botnets, and AI to execute high-frequency adaptive scams in near real-time.", "role": "context"},
+    {"author": "Sizan", "year": 2025, "page": 1, "paragraph": 2, "claim": "Unsupervised anomaly detection techniques provide powerful tools for identifying atypical transaction behaviours without labelled data.", "role": "methodology"},
+    {"author": "Chouksey", "year": 2023, "page": 2, "paragraph": 3, "claim": "Unsupervised autoencoders can effectively isolate over 90 percent of anomalous transactions by reconstructing normal behaviour.", "role": "finding"},
+    {"author": "ACFE", "year": 2024, "page": 2, "paragraph": 3, "claim": "Organizations lose about 5 percent of annual revenues to fraud, amounting to over $4.6 trillion in global losses annually.", "role": "finding"},
+    {"author": "Bolton", "year": 2002, "page": 2, "paragraph": 4, "claim": "Rule-based systems suffer from high false-positive rates and require labour-intensive maintenance as fraudsters change methods.", "role": "baseline"},
+    {"author": "Phua", "year": 2010, "page": 2, "paragraph": 5, "claim": "Rule-based alerts frequently overwhelm analysts and fail to uncover multidimensional fraud schemes.", "role": "baseline"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus of the paper: unsupervised anomaly detection pipeline for credit card transaction fraud."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Evaluates Isolation Forest, One-Class SVM, and autoencoders on real transaction data with feature engineering."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "ARF framework uses online learning to dynamically predict fraud risk scores from streaming transaction data."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a comprehensive unsupervised fraud detection pipeline that integrates multiple anomaly detection algorithms into a single composite risk score. The Adaptive Risk-Scoring Framework introduces context-sensitive, dynamically calibrated weights that adjust to transaction origin, merchant volatility, and regulatory environment. The study demonstrates the effectiveness of combining Isolation Forest, One-Class SVM, and autoencoder signals for real-time fraud surveillance in dynamic financial ecosystems.",
+    "directly_justifies": [
+      "Unsupervised autoencoders can isolate over 90 percent of anomalous transactions using reconstruction error as an anomaly score.",
+      "Approximately 1-2 percent of transactions are flagged as anomalies by the unsupervised framework.",
+      "A composite risk score aggregating multiple detector outputs effectively surfaces the riskiest cardholders and merchants."
+    ],
+    "limits": [
+      "Single-institution dataset may limit generalizability across different banking contexts.",
+      "Contamination rate of 1 percent was empirically set rather than learned from data.",
+      "ARF relies on pseudo-labels in absence of ground-truth fraud data, which can introduce confirmation bias."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. The paper directly addresses domains 8.A and 8.B as its core contribution on anomaly detection algorithms for financial transactions. Domain 6.A is relevant at medium level due to the predictive risk scoring component of ARF. Domains 1-5, 7, 9-14 were considered and rejected as the paper does not address Filipino demographics, budgeting, mobile design, privacy, engagement, or savings goals. The paper is purely focused on transaction-level anomaly detection and does not engage with personal finance management systems."
+  },
+  "limitations": [
+    "Dataset sourced from a single mid-sized financial institution limits external validity.",
+    "The contamination parameter for Isolation Forest and One-Class SVM was manually tuned at 1 percent.",
+    "ARF's effectiveness depends on continuous availability of high-frequency transactional data.",
+    "Pseudo-labels used when ground truth is unavailable may introduce confirmation bias. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Unsupervised anomaly detection can flag 1-2 percent of transactions as suspicious without labeled fraud data.",
+    "Autoencoders using reconstruction error at the 99th percentile effectively isolate anomalous transactions.",
+    "Nighttime transactions show highest average risk despite lower overall counts.",
+    "A composite risk score combining multiple detectors surfaces the riskiest cardholders and merchants.",
+    "Context-sensitive adaptive weighting improves fraud scoring across diverse transaction environments."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Fariha et al_marked.md",
+      "converted_at": "2026-07-21T06:10:45Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

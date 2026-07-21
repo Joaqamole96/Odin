@@ -1,0 +1,913 @@
+---
+conversion_metadata:
+  converted_at: "2026-07-21T07:21:34Z"
+  converter_tool: "markitdown"
+  converter_version: "0.1.6"
+  source_pdf: "Luong & Xie.pdf"
+  source_pdf_sha256: "0eb20ae488844cfbc78e6e0375a08f15c6f91f4fd7235563057479a0eac07928"
+  page_count: 20
+  markdown_char_count: 84260
+---
+
+TheJournalofFinanceandDataScience12(2026)100195
+ContentslistsavailableatScienceDirect
+The Journal of Finance and Data Science
+journal homepage: www.keaipublishing.com/en/journals/jfds
+Research Article
+Explainable ensemble machine learning for financial transaction
+fraud detection: Insights from XGBoost and deep neural networks
+Nguyen Duy Anh Luong , Shengkun Xie *
+Global Management Studies, Ted Rogers School of Management, Toronto Metropolitan University, 350 Victoria Street, Toronto, ON M5B2K3,
+Canada
+A R T I C L E I N F O A B S T R A C T
+Keywords: The rapid digitalization of financial services has enhanced transaction speed and accessibility but
+Fraud detection also amplified exposure to fraud activities that undermine institutional integrity and consumer
+Machine learning trust. Effective fraud detection requires analytical frameworks that are not only accurate and
+XGBoost
+Deep learning
+adaptive butalsoint erpretabl eandco mpliantwit hfi nancialre gulat ions.This studydevel opsa
+Ensemble models
+sc alable, explainab lem achinel earningfr amework fordetecti ngfr audfi nancial transaction susing
+ahybridensembleofExtremeGradientBoosting(XGBoost)andDeepNeuralNetworks(DNN).
+Theproposedmodelintegratestransactional,temporal,andidentity-linkedfeaturestocapture
+behavioralandcontextualpatternsinlarge-scale,high-frequencydata.Toaddresstheextreme
+classimbalanceinherentinfrauddetection,weevaluatemultiplestrategiesincludingfocalloss,
+class weighting, and threshold optimization. Model transparency is enhanced through SHAP-
+basedinterpretabilityanalysis,providinggranularinsightsintothefeatureinteractionsdriving
+fraudrisk.Empiricalevaluationonareal-worldtransactiondatasetdemonstratesthatthehybrid
+ensemble achieves superior detection accuracy and recall relative to baseline models while
+maintainingexplainabilitysuitableforregulatedfinancialenvironments.Theresultshighlightthe
+potential of combining interpretable machine learning with adaptive ensemble learning to
+enhanceresilienceandtrustworthinessinmodernfinancialriskmanagementsystems.
+1. Introduction
+Therapiddigitalizationoffinancialservices(Broby,2021)hasfundamentallytransformedthewayindividualsandbusinesses
+conducttransactionsacrosse-commerce,mobilepayments,andon-linebanking.Whiletheseinnovationshaveenabledunprecedented
+convenienceandefficiency,theyhavealsointroducednewvulnerabilities,exposingfinancialsystemstoincreasinglysophisticated
+fraudactivities.Creditcardfraud,inparticular,remainsoneofthemostpervasiveandcostlyfinancialcrimes,causingdirectmonetary
+lossesanderodingpublictrustinfinancialinstitutions(Dingetal.,2025).Accuratelyidentifyingfraudischallengingbecausemali-
+cious activities are often concealed within massive streams of legitimate transactions, making traditional detection approaches
+insufficient.
+Earlyfrauddetectionsystemswerepredominantlyrule-based,relyingonstaticthresholdsandhandcraftedanomalydetectionrules
+to flag suspicious transactions (Bolton and Hand, 2002). Although such approaches were initially effective, they fail to adapt to
+* Correspondingauthor.TorontoMetropolitanUniversity,350VictoriaStreet,Toronto,ONM5B2K3,Canada.1-(416)-9795000.
+E-mailaddresses:nguyenduyanh.luong@torontomu.ca(N.D.AnhLuong),shengkun.xie@torontomu.ca(S.Xie).
+PeerreviewundertheresponsibilityofKeAiCommunicationsCo.,Ltd.
+https://doi.org/10.1016/j.jfds.2026.100195
+Received3November2025;Receivedinrevisedform29May2026;Accepted2June2026
+Availableonline9June2026
+2405-9188/© 2026 The Authors. Publishing services by Elsevier B.V. on behalf of KeAi Communications Co. Ltd. This is an open access article under
+theCCBYlicense(http://creativecommons.org/licenses/by/4.0/).
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+evolvingfraudpatterns.Fraudsterscontinuouslymodifytheirtactics,renderingfixedrulesobsoleteandleadingtohighfalse-positive
+rateswhileallowinggenuinefraudcasestogoundetected(Dingetal.,2025).Theselimitationshavedrivenaparadigmshifttoward
+machine learning (ML) and deep learning (DL), which can automatically learn complex, non-linear patterns from data, adapt to
+emergingfraudtactics,anduncoverrelationshipsthataredifficulttomodelmanually(Roselineetal.,2022).
+MLhasshownparticularstrengthinanalyzinglarge-scale,high-dimensionaltransactiondata(Talukderetal.,2024;Zhangetal.,
+2019).Cost-sensitivelearninghasbeenproposedtoexplicitlyaccountforthefinancialconsequencesofmisclassification,strikinga
+balance between minimizing false positives and maximizing fraud detection (Roseline et al., 2022). To address scalability re-
+quirements, distributed learning frameworks have been developed to process high-velocity data streams in near real time (Theo-
+dorakopoulos et al., 2025). In addition, various algorithms have been explored: support vector machines and neural networks
+effectivelycapturenon-linearrelationships,whereasgradientboostingmethodssuchasXGBoostofferrobustperformanceandstrong
+predictiveaccuracyfortabular,structureddata(Noviandyetal.,2023).
+Despitetheseadvances,frauddetectionstillfacesseveralchallenges.Oneofthemostpersistentistheextremeclassimbalance
+betweenlegitimateandfraudtransactions,wherefraudoftenaccountsforlessthan1%ofallrecords(BreskuvieneandDzemyda,
+2024). This imbalance biases models toward the majority class and reduces recall for fraud cases, which is particularly costly in
+real-world applications. Existing solutions include active learning to prioritize informative samples (Riskiyadi, 2024), ensemble
+boostingmethodstailoredtominorityclasses,andresamplingstrategiessuchasSMOTEandundersamplingtorebalancethedata
+distribution(Ludera,2021).
+Anothermajorchallengeisthehighdimensionalityandstructuralcomplexityoffinancialtransactiondata,whichinvolvenon-
+linear feature interactions. Feature engineering has therefore become central to improving model performance, with techniques
+such as time-window aggregation to capture sequential spending behavior (Saputra et al., 2019). Recent research highlights the
+promise of hybrid ML–DL approaches, which combine the predictive power of deep neural networks with the interpretability of
+tree-basedmodels(Gandharetal.,2024).Advancedfeatureselectionframeworksthatintegratestatisticalandevolutionarymethods
+havealsobeenproposedtoreduceredundantfeatures,lowercomputationalcost,butretaindiscriminativepower(Siametal.,2025).
+DLhasemergedasadominantparadigminrecentyearsduetoitsabilitytoautomaticallyextracthigh-levelrepresentationsfrom
+rawtransactiondata(Duetal.,2023;Ziovirisetal.,2024).Deepneuralnetworkshavebeenshowntoscalewelltodistributedsystems
+andmaintaingeneralizationindynamicenvironments(PrasadandSrikanth,2024).Furthermore,theirabilitytoperformanomaly
+detectionandrepresentationlearningmakesthemhighlyeffectivewhenfraudpatternsevolveovertime(Mehbodniyaetal.,2021).
+Nevertheless,DLmodelsoftenrequirelargevolumesoflabeleddata,demandsubstantialcomputationalresources,andsufferfrom
+limitedinterpretability,posingchallengesfordeploymentinhighlyregulatedfinancialenvironments(Mienyeetal.,2024).
+Buildingontheseinsights,thepresentstudyaddressesthesegapsthroughacomprehensiveinvestigationofsupervisedMLap-
+proachesforfrauddetectionoffinancialtransactions.Specifically,thestudy(i)systematicallycomparessevenMLmodels,including
+logisticregression,randomforests,XGBoost,shallowanddeepneuralnetworks,andanovelhybridensemble;(ii)evaluatesimbalance
+handlingstrategies,suchasclassweighting,focalloss,andthresholdoptimization;(iii) incorporatestransactional,temporal, and
+identity-linked features to improve contextual predictive power; and (iv) applies SHAP-based interpretability analysis to ensure
+transparencyandregulatorycompliance.Themaincontributionsofthisresearcharethreefold:(1)adetailedcharacterizationoffraud
+patternsacrosstransactional,temporal,andidentitydimensions;(2)ahybridensemblemodelintegratingEnhancedXGBoostanda
+DeepNeuralNetwork,achievingstrongpredictiveperformanceonthedatasetweconsider;and(3)anadaptiveevaluationframework
+thatintegratesmodelinterpretabilityanddynamicthresholdoptimizationtosupportpracticalapplicationinfrauddetectionsystems.
+2. Relatedwork
+ResearchonfrauddetectionhaslargelyfocusedonsupervisedMLapproaches,aimingtoaddressthechallengesposedbyreal-
+world datasets that are highly imbalanced, high-dimensional, complex and often noisy. Existing studies can be broadly classified
+intofourthemes:(i)modelselection,(ii)imbalance-handlingtechniques,(iii)featureengineering,and(iv)theintegrationofidentity-
+basedvariablestoimprovepredictivepowerofthemodel.
+Supervisedlearningmodelsremainfundamentalformostmodernfrauddetectionsystems(BinSulaiman,SchetininandSant,2022;
+Georgeetal.,2025).Thesemodelslearnparametersorhyper-parametersfromlabeledhistoricaldataandbuildthemodeltopredict
+whethernewtransactionsarefraudorlegitimate.Anotableadvancementinthisareaisthedistributeddeepneuralnetwork(DDNN)
+proposedbyLeietal.(2023),whichbalancespredictiveaccuracywithuserprivacybyallowinginstitutionstotrainlocalmodelsand
+share onlymodelparameterswithacentralserver.Thisfederated-styleapproach notonlypreservesdataconfidentialitybutalso
+improves efficiency through distributed computation, yielding superior accuracy, precision, recall, and F1-scores compared to
+centralizedmodels(XiaandSaha,2025).
+Interpretablemodelssuchasdecisiontreesandrandomforestshavealsobeenwidelyusedinfrauddetection(Leeetal.,2025;Sun,
+2025;Wajgietal.,2024).Decisiontreesarevaluedfortheirtransparencybutarepronetooverfitting,whereasrandomforestsmitigate
+thisissuethroughtreeaggregationandhyperparametertuning(ShahandSharma,2023).However,bothapproachesaresensitiveto
+severe class imbalance. A comprehensive evaluation of 66 algorithm–resampling combinations by Alfaiz and Fati (2022) highlighted
+thatpairingstrongclassifierssuchasCatBoostwitheffectiveundersamplingmethodslikeAllKNNcanachievestate-of-the-artper-
+formanceintermsofF1-score,recall,andAUC.
+Classimbalanceremainsoneofthemostcriticalobstaclesinfrauddetection(Baisholanetal.,2025;Velardeetal.,2023).When
+fraudcasesaccountforlessthan1%oftransactions,modelsaresignificantlybiasedtowardthemajorityclass,leadingtopoorrecall.
+Numerousresamplingandreweightingtechniqueshavebeenproposedtomitigatethischallenge.Forexample,AlamriandYkhlef
+2
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+(2024)introducedBCB-SMOTE,ahybridmethodcombiningTomeklinks,clustering,andborderlinesyntheticoversampling,which
+achievedanF1-scoreof85.2%whilereducingoverlapbetweenclasses.Similarly,Ileberietal.(2021)showedthatcombiningSMOTE
+withAdaBoostimproveddetectionratesacrossclassifiers,andLahbissandChtouki(2024)reportedthatSMOTE-ENNwithadvanced
+modelssuchasRandomForestandLongShortTermMemory(LSTM)significantlyenhancedAUC-ROC.Moreover,Jiaoetal.(2022)
+proposed DES-ICD, which integrates adaptive oversampling (AnnSMOTE) with dynamic ensemble selection to handle both class
+imbalance and concept drift. By generating minority samples that reflect new concepts and selecting classifiers based on local
+neighborhoodperformance,DES-ICDachievedsuperioraccuracyandrecallacrossmultiplerealandsyntheticdatasets.Thesefindings
+highlightthatcarefuldesignofimbalancehandlingtechniquesiscrucialforachievinghighrecallwithoutsacrificingprecision.
+Beyondclassimbalance,featureengineeringplaysapivotalroleinfrauddetection(AlamriandYkhlef,2024;Sharmaetal.,2025).
+Theinclusionofbehavioralandidentity-basedattributeshasbeenshowntosignificantlyimprovemodelperformance.Forinstance,
+Shiminetal.(2020)demonstratedthatcombiningfinancialtransactiondatawithidentity-linkedfeatures(e.g.,devicetype,email
+domain)significantlyenhancedXGBoost'sROC-AUCto0.942ontheIEEE-CISdataset.Similarly,Lucasetal.(2019)appliedHidden
+Markov Models to capture sequential spending behavior, which, when combined with Random Forest, improved precision–recall AUC.
+Bahnsenetal.(2016)furtherextendedthislineofworkbymodelingperiodicspendingpatternswithvonMisesdistributions,yielding
+a 13% reduction in financial losses. These studies collectively underscore that well-designed feature engineering strategies are
+essentialforbuildingrobustanddiscriminativefrauddetectionmodels.
+Ensembleandhybridlearningmethodsrepresentagrowingtrendinfrauddetectionresearch.Carcilloetal.(2021)combined
+unsupervised anomaly detection with supervised learning, feeding outlier scores as features into classifiers to enable multi-level
+detection. Dynamic ensemble selection approaches, such as the one proposed by Achakzai and Peng (2023), adaptively choose
+classifiersbasedonlocalcompetenceandconsistentlyoutperformstaticensembles.Hybridmodelshavealsodemonstratedpromise;
+for example, Jahnavi et al. (2024) combined decision trees with logistic regression to achieve 98.1% accuracy for the data they
+considered,whileChaurasia,Kesharwani,Sharma,Sharma,andChugh(2024)confirmedthatXGBoostpairedwithdatabalancing
+strategiesofferssuperiorrecallinrare-eventdetection.
+Severalcomparativereviewshavesynthesizedfindingsacrossmodelsanddatasets.Pateletal.(2024)reportedthatwhiledeep
+neuralnetworksoftenachievethehighestaccuracy(upto98.9%),simplermodelssuchaslogisticregressionandNaiveBayesremain
+competitiveduetotheirinterpretabilityandhighefficiency.Similarly,Bhardwajetal.(2024)foundthatdeepneuralnetworkstrained
+usingtheAdamoptimizerreached99.4%accuracyontheEuropeancreditcarddatasetandwerecomputationallyefficient,making
+themwell-suitedforlarge-scaledataimplementation.
+Taken together, prior work demonstrates that deep learning and advanced ensemble approaches frequently deliver superior
+predictiveperformance,yetsimplermodelsretainvaluefortheirinterpretability,scalability,andeaseofapplication.Despitethese
+advances,few studieshave simultaneouslyaddressedall major challenges, including classimbalance, feature selection, interpret-
+ability,andintegrationofidentity-basedfeatures,withinaunifiedframework.Thisworkseekstoclosethisgapbysystematically
+comparingmultiplesupervisedMLmodels,integratingadvancedimbalancehandlingtechniques,andleveragingfeatureengineering
+todeliverascalable,interpretable,androbustfrauddetectionframework.
+3. Materialsandmethods
+Thisstudyadoptsasystematicandrigorousmethodologyforevaluatingsupervisedmachinelearningmodelsinthecontextof
+financial fraud detection. The proposed framework is explicitly designed to address two major challenges inherent to large-scale
+financial transaction data: high dimensionality and severe class imbalance. The methodological design is organized into four
+sequentialphases,datapreprocessing,imbalancemitigation,modeltrainingwithhyperparameteroptimization,andpost-hocinter-
+pretabilityanalysis.Eachphaseisimplementedtoensurebothmodelrobustnessandtransparency.Thefollowingsectionsprovide
+detaileddescriptionsoftheproceduresandtechniquesappliedwithineachphase.
+3.1. Dataanditsdescription
+ThedatausedinthisstudyistheIEEE-CISfrauddetectiondataset,releasedthroughaKagglecompetitionincollaborationwith
+Vesta,aglobalfraudpreventioncompany.Thisdatareflectsreal-worlde-commerceenvironmentswithanonymizedtransactionand
+identityinformation,anditsverysuitedfortestingalgorithmsandcomputationalframeworkdesignedforfrauddetectioninfinancial
+transactions.Thetrainingsetcontainsover590,000records,ofwhichonlyabout3.5%arelabeledasfraud,whilethetestsetcontains
+similarfeaturesbutdoesnotincludefraudlabels.ThedatasetcanbedownloadedfromtheofficialKagglecompetitionportal(https://
+www.kaggle.com/competitions/ieee-fraud-detection/data).
+Twomainfileswereprovidedforbothtrainingandtest:transaction.csv,whichcontainstransaction-levelattributes,andidentity.
+csv, which includes device and identity-related variables. These files were merged using the TransactionID field to produce a
+comprehensiveviewofeachtransaction.Thefeaturescanbegroupedintoseveralcategories,assummarizedinTable1.
+Beyondthefeaturetypes,itisalsoimportanttoconsidertheoverallstatisticalprofileofthedataset.Basicdescriptivestatisticsare
+providedinTable2.Thedatasetishighlyimbalanced,withfraudcasesrepresentingonlyasmallfractionoftransactions.Transaction
+amounts vary widely, ranging from a few cents to over $10,000, with a median value of approximately $68. Additionally, many
+identity-relatedfieldscontainsubstantialmissingvalues,highlightingthechallengesinherentinreal-worldfrauddetectionproblems.
+These characteristics emphasize the dual challenges of extreme class imbalance and data high-dimensionality. These insights
+directlyinformedthepreprocessingstrategiesandmodelingdecisionsdescribedinthefollowingsections.
+3
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+Table1
+SummaryoffeaturegroupsintheIEEE-CISdataset.
+Feature Group Description/Examples
+Transaction features TransactionAmt, TransactionDT, ProductCD
+Card attributes card1–card6 (e.g., card type, issuer, category)
+Address codes addr1, addr2 (geographic location codes)
+Engineered features C1–C14, D1–D15, V1–V339 (anonymized signals)
+Email domains P_emaildomain, R_emaildomain
+Identity features DeviceType, DeviceInfo, id12–id38 (browser, OS, network)
+3.2. Datapreprocessing
+The training dataset was constructed by merging transaction dataset and identity dataset on the TransactionID field, thereby
+integratingtransaction-levelpaymentattributeswithdevice-andidentity-relatedfeatures.Thismergingstepwascrucialtocapture
+bothbehavioralandcontextualfeaturesthatcandistinguishfraudfromlegitimatetransactions.Toaddressmissingdata,categorical
+variables were imputed with the string “missing” so that models could treat absence of information as an additional informative
+category.Fornumericalattributes,twodifferentstrategieswereadopteddependingonthemodeltype.Fortree-basedmethodssuchas
+XGBoostandRandomForest,missingvalueswereretainedasNaN,allowingthesemodelstohandlemissingnessnativelyduringsplit
+optimization.
+Sinceneuralnetworkmodels(bothANNandDNN)cannotprocessmissingvaluesdirectly,forallneuralnetwork-basedmodels,
+numerical features with missing values were imputed using the median of each feature computed from the training set. Median
+imputationwaschosenduetoitsrobustnesstoskeweddistributionsandextremevalues,whicharecommoninfinancialtransaction
+data.Afterimputation,numericalfeatureswerestandardizedusingz-scorenormalizationtoensurestableandefficienttrainingofthe
+neuralnetworks.Thishybridpreprocessingstrategyensuresthateachmodeltypeoperatesunderconditionsbestsuitedtoitsun-
+derlyingassumptionswhilemaintainingconsistencyacrosstheexperimentalpipeline.
+Categoricalfeatures,includingProductCD,card4,andDeviceType,weretransformedusinglabelencodingtoconvertstringcat-
+egoriesintonumericalformwhilepreservingtheirdistinctidentities.Althoughmoresophisticatedencoders(e.g.,targetorone-hot
+encoding) could be applied, label encoding was selected to maintain consistency across a high-dimensional feature space and
+reducememoryoverhead.Inaddition,atemporalfeature,hour_of_day,wasderivedfromthecontinuousTransactionDTtimestampto
+capture periodic spending behaviors that may indicate fraud, such as late-night or off–hour activity.
+Following data preprocessing, the dataset was partitioned into training and validation subsets using an 80/20 stratified split.
+Stratificationensuredthattheproportionoffraudtolegitimatetransactionswasmaintainedinbothsets,enablingafairandrepre-
+sentativeevaluation.ThecomputationaldetailsofthispreprocessingandsplittingarepresentedinAlgorithm1.Thisapproachpre-
+served the natural distribution of the data, which is essential for imbalanced classification problems. However, it also retained
+potentialnoisefromweakorredundantfeatures,meaningthatsubsequentfeatureselectionandmodelregularizationwerecriticalfor
+improvingrobustness.
+4
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+Table2
+DescriptivestatisticsoftheIEEE-CIStrainingdataset.
+Statistic Value
+Total records ~590,000
+Fraud proportion 3.5%
+Transaction amount range $0.01 – $10,000+
+Median transaction amount $68
+Number of features (after merge) 434
+3.3. Handlingclassimbalance
+Fraudtransactionsrepresentedonlyabout3.5%ofthedataset,creatingasevereclassimbalancethatposedasignificantchallenge
+formodeltraining.Ifleftunaddressed,mostclassifierswouldbecomebiasedtowardpredictingthemajorityclass(legitimatetrans-
+actions),thereby achievingdeceptivelyhighaccuracybutfailingtoidentifytherarefraudcasesthat mattermostinpractice.To
+mitigate this imbalance, cost-sensitive learning approaches were adopted. For gradient boosting models such as XGBoost, the
+parametervalueofscale_pos_weightwassettotheratioofmajoritytominorityclassinstances,therebyinstructingthealgorithmto
+assignhigherimportancetofraudcasesduringtraining.Forneuralnetworks,afocallossfunctionwasused.Unliketraditionalcross-
+entropy,focallossdynamicallydown-weightswell-classifiedexamplesandfocuseslearningonharder,misclassifiedfraudcases.This
+adaptationisparticularlyeffectivewhenfraudbehaviorexhibitshighdiversityandoverlapswithlegitimatetransactionpatterns.This
+strategypreservedthenaturalclassdistributionofthedatasetandavoidedtheintroductionofsyntheticartifacts,whichareoftena
+drawbackofoversamplingorSMOTE-basedtechniques.However,whilecost-sensitivemethodsimproverecall,theymaynotfully
+resolveimbalanceinscenarioswherethedecisionboundarybetweenclassesishighlynon-linearoroverlapping.
+3.4. Machinelearningmodels
+Inthissection,weprovideabriefoverviewofthemachinelearningmodelsusedinthisstudytoensurethepaperremainsself-
+contained. Five models were selected based on their suitability for handling structured, imbalanced data classification problems
+and their diversity in algorithmic approach. Let {x i ;y i }n i=1 denote a training set of financial transaction data, where x i ∈ ℝ p is the p-
+dimensional feature vector, and y i ∈ {0, 1} is the class label of fraud or non-fraud. We first consider Logistic Regression (LR), a linear
+baselinemodelthatestimatestheconditionalprobabilityofthepositive(fraud)classas
+̂y i = P(y i = 1|x i ) = σ(w ⊤ x i + b); (1)
+where σ(z) = 1+ 1 e(cid:0) z is the logistic sigmoid function, and ̂y i ∈ [0; 1] represents the predicted probability of fraud. The unknown pa-
+rameterswandbcanbeestimatedusingtheleastsquaresmethodormaximumlikelihoodestimation.
+To capture non-linear patterns, we also apply a Random Forest (RF) model, which is an ensemble of T decision trees {ht }T t=1 . Each
+treeistrainedonabootstrapsampleofthedatawithrandomfeaturesubsampling.Thefinalpredictionistheaverageofindividualtree
+predictionsofprobability,
+1 ∑T
+̂y i = T h t (x i ); (2)
+t=1
+where ht (x i) ∈ [0, 1] denotes the probability assigned by tree t.
+Asamorepowerfulalternative,XGBoostusesgradientboostingtoiterativelyconstructanadditivemodel,
+̂y( i t)= ̂y( i t(cid:0) 1) + f t (x i ); (3)
+whereft representstheregressiontreeaddedatiterationt.Theobjectivefunctionminimizedateachstepis
+∑n
+L( t) = ℓ(y i ; ̂y( i t)) + Ω(f t ); (4)
+i=1
+where ℓ(⋅) is a differentiable loss function, such as logistic loss, and Ω(⋅) is a regularization term penalizing tree complexity to prevent
+overfitting.
+Wefurtherexploreneuralnetwork-basedapproaches.TheArtificialNeuralNetwork(ANN)consideredhereisashallowfeed-
+forward network with a single hidden layer. For hidden representations computed as h ¼ ϕ(W1 xi þ b1 ), where ϕ(⋅) is an activa-
+tionfunctionsuchasReLU,thepredictedprobabilityisgivenby
+̂y i = σ(w⊤ 2 h + b 2 ): (5)
+Finally,weutilizeaDeepNeuralNetwork(DNN)withLhiddenlayers.Thepredictionisexpressedas
+5
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+(cid:0) )
+̂y i = σ f (L) ∘f (L(cid:0) 1) ∘⋯∘f (1) (x i ) ; (6)
+where f (l) (⋅) represents the non-linear transformation at layer l. To address class imbalance, the DNN is trained using the focal loss
+functiondefinedasfollows
+∑n
+L f ocal = (cid:0) α(1 (cid:0) ̂y i )γ y i loĝy i + (1 (cid:0) α)̂y γ i (1 (cid:0) y i )log(1 (cid:0) ̂y i ); (7)
+i=1
+where α balances the class weights and γ down-weights well-classified examples, focusing learning on harder cases.
+The inclusion of these models provided both breadth and depth in evaluation. Logistic regression offered transparency and
+interpretability,servingasabenchmarkforassessinggainsfrommorecomplexmodels.RandomforestsandXGBoostcapturednon-
+linearinteractionsthroughensemblelearning,withXGBoosteffectivelyhandlingimbalanceviaclassweighting.Neuralnetworks
+representedhigher-capacitylearners:theANNprovidedashallowdeeplearningbaseline,whiletheDNNleverageddeeperarchi-
+tecturesandfocallossforimprovedrepresentationlearninginimbalancedfrauddetectiontasks.
+To combine the strengths of gradient boosting and deep neural networks, a hybrid ensemble model was constructed using a
+weightedaveragingstrategy.Inthisapproach,XGBoostandtheDNNweretrainedindependentlyonthesametrainingdata,andtheir
+predictedprobabilitieswerecombinedusingaweightedlinearcombination.Specifically,thefinalensemblepredictionisgivenby
+̂y i = λ⋅̂yX i GB+ (1 (cid:0) λ)⋅̂yD i NN; (8)
+where ̂yXGBand ̂yDNNdenote the predicted probabilities from XGBoost and the DNN respectively, and λ is a weighting parameter.
+i i
+Inthishybridapproach,XGBoostcontributesstructuredfeaturelearningandinterpretability,whiletheDNNcapturesnon-linear
+patterns,enablingrobustfrauddetectioninimbalancedandhigh-dimensionalenvironments.Theweights(0.6forXGBoost,0.4for
+DNN)wereselectedbasedonvalidationperformance,givingslightlygreaterinfluencetoXGBoostduetoitsstabilityontabulardata
+whilestillleveragingtheDNN'scapacitytorefinedecisionboundaries.Thisweightingschemeproducedthebestbalancebetween
+recallandprecision,ensuringthattheensembleremainsbothaccurateandadaptableforpracticaldeployment.
+For further clarification, in Algorithm 2, “tuning the threshold to maximize F1 on (y val) ” refers to selecting an optimal decision
+thresholdthatconvertspredictedprobabilitiesintobinarylabels.Insteadofusingafixedthreshold(e.g.,0.5),arangeofcandidate
+thresholdsisevaluated,andtheonethatmaximizestheF1-scoreonthevalidationsetischosen.Thisstepisparticularlyimportantin
+imbalancedsettingssuchasfrauddetection,wherethedefaultthresholdoftenyieldspoorrecallfortheminorityclass.Optimizingthe
+threshold with respect to the F1-score enables a better balance between precision and recall, improving detection performance.
+Importantly,thresholdtuningisapost-trainingcalibrationstepratherthanpartofmodellearning.Modelparametersaretrained
+exclusively on the training set, while the validation set is used only to determine the operating point on the precision–recall curve. No
+parameterupdatesareperformedonthevalidationdata.Tolimitpotentialbias,thevalidationsetisstrictlyseparatedfromtraining
+data,andtheselectedthresholdisfixedbeforefinalevaluation.Thispracticeisstandardinimbalancedclassificationandreflectsreal-
+worlddeployment,wheredecisionthresholdsarecalibratedtomeetoperationalobjectives.Whilemoreconservativeapproaches(e.g.,
+nestedcross-validation)couldfurtherreducebias,theyarecomputationallyexpensiveatthisscale.
+6
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+3.5. Modelarchitectureandhyperparameterconfiguration
+TheArtificialNeuralNetwork(ANN)modelconsistsoftwohiddenlayerswith128and64neurons,respectively.Bothhiddenlayers
+employtheReLUactivationfunction,followedbydropoutlayerswitharateof0.3tomitigateoverfitting.Theoutputlayercontainsa
+singleneuronwithasigmoidactivationfunctiontoproduceprobabilisticpredictionsforbinaryclassification.Themodelistrained
+usingtheAdamoptimizerwithalearningrateof0.001andbinarycross-entropyloss.Trainingisconductedforupto20epochswitha
+batchsizeof512,andearlystoppingwithapatienceof3epochsisappliedtopreventoverfitting.
+The DeepNeural Network (DNN)is designedas a deeperarchitecture withthreehidden layers containing512, 256, and 128
+neurons, respectively. Instead of standard ReLU activation, LeakyReLU is employed to mitigate the “dying ReLU” problem and improve
+gradientpropagationindeepernetworks.Eachhiddenlayerisfollowedbybatchnormalizationanddropoutwithratesof0.4,0.4,and
+0.3,respectively,toenhancetrainingstabilityandgeneralization.Theoutputlayerusesasigmoidactivationfunctiontoproduce
+probabilityestimates.ThemodelistrainedusingtheAdamoptimizerwithalearningrateof0.001andfocalloss,whichisparticularly
+effectiveinhandlingclassimbalancebyemphasizingdifficult-to-classifysamples.Trainingisperformedforupto20epochswitha
+batchsizeof1024,withearlystoppingandlearningratereductionappliedtoimproveconvergence.
+TheRandomForestmodelconsistsof100decisiontreeswithamaximumdepthof15.Classimbalanceishandledthroughbuilt-in
+classweighting,ensuringthatminorityclasssamplesreceivehigherimportanceduringtraining.ThemodelutilizesallavailableCPU
+cores to improve computational efficiency. The choice of tree depth and number of estimators reflects a balance between model
+expressivenessandoverfittingcontrol.
+Regularizationisincorporatedacrossallmodelstoenhancegeneralizationperformance.Intheneuralnetworkmodels,dropoutis
+used to reduce overfitting by preventing co-adaptation of neurons, while batch normalization stabilizes training and accelerates
+convergence.Classimbalanceisaddressedthroughcost-sensitivelearningtechniques,includingclassweightingandfocalloss,which
+adjustthelearningprocesswithoutmodifyingtheoriginaldatadistribution.Earlystoppingisappliedtopreventoverfittingbyhalting
+trainingwhenvalidationperformancenolongerimproves.
+Regardingactivationfunctions,ReLUisusedintheANNduetoitscomputationalefficiencyandstrongempiricalperformance.In
+thedeeperDNNarchitecture,LeakyReLUisadoptedtoavoidinactiveneuronsandimprovegradientflow.Thesigmoidactivation
+functionisusedexclusivelyintheoutputlayer,asitisstandardforbinaryclassificationtasksandenablesprobabilisticinterpretation
+ofpredictions.
+Hyperparameterswereselectedbasedonacombinationofpriorliterature,empiricalvalidation,andcomputationalconsiderations.
+While systematic hyperparameter tuning methods such as grid search or Bayesian optimization could potentially yield marginal
+performanceimprovements,theseapproachesarecomputationallyexpensivegiventhescaleanddimensionalityofthedata.Instead,
+weadoptapragmaticapproachbyusingwell-establishedconfigurationsandvalidatingthemthroughstratifiedtrain-validationsplits.
+Furthermore,techniquessuchasearlystoppingandadaptivelearningrateschedulingprovideimplicittuningduringtraining,allowing
+themodelstoconvergetosuitableparametersettingsefficiently.
+3.6. Experimentaldesign
+Themethodologicalframeworkdiscussedintheprevioussectionslaidthefoundationforastructuredexperimentaldesign.Having
+defined the preprocessing pipeline, imbalance handling strategies, and predictive models, the next step was to implement these
+methodsinacontrolledseriesofexperiments.Theseexperimentswerecarefullystructuredtotestmodelsofvaryingcomplexityunder
+realisticfrauddetectionconditions.
+3.6.1. Objectivesandrationale
+Theprimaryobjectiveoftheexperimentswastoevaluatetheeffectivenessofvarioussupervisedmachinelearningmodelsfor
+detecting fraud transactions using the IEEE-CIS dataset. Three considerations guided the experimental design. First, simple and
+interpretablemodelswereassessedasbaselineapproaches.Second,ensemblemethods,includingRandomForestandXGBoost,were
+examinedfortheirabilitytoimprovediscriminationundersevereclassimbalance.Third,deepneuralnetworksandhybridensembles
+wereinvestigatedtocapturenon-linearpatternspotentiallymissedbytree-basedmethods.
+Thisapproachreflectstheoperationalprioritiesoffrauddetection,whichrequireabalancebetweenpredictiveaccuracy,inter-
+pretability, scalability, and computational efficiency. The experiments followed a staged workflow: dataset preparation and pre-
+processing,classimbalancemitigation,evaluationofincreasinglycomplexmodelfamilies,andperformanceassessmentusingmetrics
+appropriateforimbalancedclassification.TheoverallworkflowandtherangeofmodelsareillustratedinFig.1.
+Scalabilityandcomputationalefficiencywerekeyfactorsinbothmodelselectionandexperimentaldesign,giventhelargescale
+andhighdimensionalityofthedata.Theseconsiderationsinfluencednotonlywhichmodelswereevaluated,butalsohowtheywere
+configuredandcompared.
+Modelselectionwasguidedbytheneedtobalancepredictiveperformancewithcomputationalfeasibility.Tree-basedensemble
+modelssuchasRandomForestandXGBoostwerechosenbecausetheyscaleefficientlytolargetabulardatasetsandprovidestrong
+performancewithrelativelylowtrainingcomplexity.Inparticular,XGBoostincorporatesparallelizedtreeconstructionandoptimized
+memoryusage,makingitsuitableforhigh-volumetransactionaldata.RandomForestservesasacomputationallyefficientbaseline,
+enablingcomparisonwithmoreadvancedmodelswhilemaintainingstableandscalabletrainingbehavior.
+Deeplearningmodels,includingANNandDNN,wereintroducedtocapturecomplexnon-linearrelationshipsthatmaynotbefully
+exploited by tree-based methods. However, these models are computationally more expensive due to iterative gradient-based
+7
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+Fig.1. Stagedworkflowoftheexperimentaldesign,fromdatasetpreparationtoevaluation.
+Table3
+Comparisonofperformancemetricsduetodifferentimbalancehandlingstrategies.
+Method ROC-AUC PR-AUC F1-score Precision Recall
+SMOTE + ensemble 0.9037 0.6068 0.60 0.73 0.51
+Class weighting þ focal loss (proposed) 0.9638 0.6582 0.74 0.78 0.69
+optimization and the requirement for feature scaling. To ensure computational efficiency, the neural network architectures were
+constrainedindepthandsize,andtrainingwascontrolledusingearlystopping,batchprocessing,andlearningratescheduling.
+In addition to training efficiency, inference time was explicitly evaluated to assess the suitability of each model for real-time
+deployment.Inferencelatencywasmeasured astheaveragepredictiontimepertransaction(millisecondspertransaction)onthe
+validationset.Thismetricisparticularlyimportantinfrauddetectionsystems,wheremodelsmustprocesslargevolumesoftrans-
+actionswithminimaldelay.ThemeasuredinferencetimesforallmodelsarereportedinTable4.
+Thehybridensemblemodelwasexplicitlydesignedtobalancescalabilityandpredictiveperformance.XGBoostcontributeseffi-
+cientfeaturelearningandfastinference,whiletheDNNenhancespredictivecapabilitythroughnon-linearrepresentationlearning.
+Whileneuralnetworkmodelsincurhigherinferencecostduetoforwardpropagationthroughmultiplelayers,tree-basedmodelssuch
+Table4
+Comparativeperformanceofmodelsonfrauddetectiontask,includingexternalbenchmarkandinferencetime.
+Model Accuracy Recall Precision F1-Score ROC-AUC PR-AUC InferenceTime
+(ms/transaction)
+Logistic regression (LR) 77% 0.69 0.10 0.18 0.7959 0.1772 0.02
+Random forest (RF) 94% 0.68 0.33 0.45 0.9122 0.5856 0.15
+XGBoost (XGB) 89% 0.81 0.22 0.35 0.9276 0.6187 0.08
+Enhanced XGBoost (XGB-adv) 95% 0.83 0.42 0.55 0.9628 0.7676 0.09
+Artificial neural network (ANN) 98% 0.43 0.91 0.59 0.9160 0.6403 0.25
+Deep neural network (DNN) 98% 0.51 0.82 0.63 0.9182 0.6582 0.30
+XGB + DNN ensemble 98% 0.69 0.78 0.74 0.9638 0.7897 0.35
+OLightGBM (Taha and Malebary (2020)) 98% – 0.97 0.5695 0.9288 – –
+8
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+as XGBoost provide lower latency through efficient decision-tree traversal. The hybrid ensemble introduces a modest additional
+overheadbycombiningpredictionsfrombothmodels,butremainswithinpracticallimitsforreal-timeapplications.
+Fromanapplicationperspective,thesefactorsarecritical.Frauddetectionsystemsmustprocesslargevolumesoftransactionswith
+lowlatency.Theinclusionofinference-timeevaluationensuresthattheproposedapproachisnotonlyaccuratebutalsopracticalfor
+deploymentinlatency-sensitiveenvironments.
+3.6.2. Modelsunderevaluation
+Sixmodels,representingdistinctmethodologicalfamilies,wereselectedtoevaluateperformanceacrossthecomparativeframe-
+work.TraditionalbaselinesandensemblelearnersincludedLogisticRegressionasatransparent,low-costbenchmark;RandomForest,
+whichcapturesnon-linearinteractionsandhandlesmissingdataeffectively;andXGBoost,agradientboostingalgorithmdesignedfor
+high performance on imbalanced data through iterative boosting, regularization, and class weighting. Neural network models
+comprisedashallowANNtoassesswhethermodestarchitecturescoulddetectfraudpatternsbeyondtree-basedmethods,andadeeper
+DNNwithadditionalhiddenlayers,dropoutregularization,andfocallosstoenhancerepresentationandhandleclassimbalance.Both
+modelsweretrainedindependently,andtheirpredictedprobabilitieswerecombinedusingalinearweightingscheme.Thisapproach
+avoids the complexity of stacking while still leveraging the complementary strengths of boosting and deep learning models. This
+hybridintegrationleveragedbothstructuredfeaturelearninganddeeprepresentations,aimingtoimprovepredictiveperformancein
+real-worldfrauddetection.
+3.6.3. Evaluationframework
+Modelevaluationinfrauddetectionrequirescarefulconsiderationofextremeclassimbalance.Overallaccuracywasexcludeddue
+to its tendency to overstate performance in majority-dominated datasets. Instead, a combination of complementary metrics was
+employedtoassessbothdetectioneffectivenessandoperationalimpact.Recall(sensitivity)wasprioritizedtominimizecostlyfalse
+negatives,whileprecisionensuredthatgainsinrecalldidnotleadtoexcessivefalsealarms.TheF1-scoreprovidedabalancedmeasure
+ofthistrade-off.DiscriminativeabilitywascapturedviaROC-AUC,withadditionalemphasisonPR-AUC,whichbetterreflectsper-
+formanceontheminority(fraud)class.Finally,acost-sensitiveadjustmentpenalizedfalsenegativesmoreheavilythanfalsepositives,
+aligningevaluationwiththefinancialconsequencesofundetectedfraud.Thismulti-metricframeworkensuredmodelswereassessed
+forbothpredictiveaccuracyandpracticalutility.
+4. Results
+Thissectionintegratesbothexploratorydataanalysisandmodeling,providingaunifiedpresentationoffindings.Exploratorydata
+analysisisincorporateddirectlyintotheresultstoillustratehowtransactioncharacteristicsandfeaturedistributionsinformsubse-
+quentmodelperformance.Thesubsectionsarestructuredtohighlightspecificaspectsofthedataandconnectthemtofrauddetection
+outcomes.
+4.1. Frauddistributionandclassimbalance
+The firststepin characterizingthe dataset wasto assessthe distribution offraud versuslegitimatetransactions. Based on the
+processeddatasetusedinthisstudy,thereare16,530fraudtransactionsoutofatotalof472,432records,correspondingtoafraud
+proportionofapproximately3.5%.Thisvaluewasverifieddirectlyfromthedataas
+∑
+n y 16530
+Fraud Ratio = i=1 i= ≈ 0:035:
+n 472432
+Althoughthislevelofimbalanceislessextremethanincertainreal-worldfinancialdatasets,itstillpresentsasignificantchallenge
+forclassificationmodels.Anaiveclassifierthatalwayspredictsthemajority(non-fraud)classwouldachieveapproximately96.5%
+accuracy,yetitwouldfailtodetectanyfraudtransactions.Thisdemonstratesthataccuracyaloneisnotanappropriatemetricfor
+evaluatingfrauddetectionperformance.Toaddressthisissue,evaluationmetricssuchasprecision,recall,F1-score,ROC-AUC,and
+PR-AUCareusedthroughoutthisstudy,astheybetterreflectperformanceontheminorityclass.
+4.2. Evaluationofclassimbalancehandlingstrategies-SMOTE
+Classimbalanceisafundamentalchallengeinfrauddetection,wherefraudtransactionstypicallyconstituteonlyasmallfractionof
+thedataset.Inthisstudy,weprimarilyaddressclassimbalancethroughcost-sensitivelearningtechniques,includingclassweighting,
+focal loss, and threshold optimization. To provide a more comprehensive evaluation, we also investigate the effectiveness of the
+SyntheticMinorityOver-samplingTechnique(SMOTE).SMOTEgeneratessyntheticminorityclasssamplesbyinterpolatingbetween
+existingminorityinstances,therebyincreasingtherepresentationoffraudtransactionsinthetrainingdata.SMOTEwasappliedtothe
+trainingdatasetpriortomodelfitting.Specifically,asamplingratioof0.2wasused,meaningthattheminorityclasswasincreasedto
+20%ofthemajorityclass.AfterapplyingSMOTE,theaugmenteddatasetwasusedtotrainboththeXGBoostanddeepneuralnetwork
+componentsoftheensemblemodel,followingthesamepipelineasthebaselineapproach.
+Theresultsindicatethattheproposedcost-sensitiveapproachsignificantlyoutperformstheSMOTE-basedmodelacrossalleval-
+uationmetrics.Inparticular,theproposedmethodachieveshigherROC-AUC,PR-AUC,andF1-score,demonstratingbetteroverall
+9
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+discriminationandbalancebetweenprecisionandrecall.Forcompleteness,wenotethatgenerativeapproachessuchasGAN-based
+methodshavealsobeenproposedforimbalancehandling.However,thesemethodsintroducesignificantcomputationalcomplexity
+andaredifficulttostabilizeinhigh-dimensionaltabulardata.Giventhesechallenges,andthestrongperformanceofcost-sensitive
+learning observed in our experiments, we do not pursue GAN-based methods in this study. Overall, the experimental results in
+Table3demonstratethatcost-sensitivelearningprovidesamoreeffectiveandstableapproachtohandlingclassimbalanceinthe
+datasetcomparedtoSMOTE,makingitamoresuitablechoicefortabularfrauddetectiontasks.
+4.3. Transactionandproductpatterns
+Fraud activity often manifests through systematic behaviors rather than random noise, making transaction characteristics an
+importantsourceofdiscriminativefeatures.Inparticular,monetaryvalueandproducttyperevealcleardifferencesbetweenfraudand
+legitimatetransactions, asillustratedinFig. 2.Fig.2a presentsthe distributionoftransaction amountsby class.Fraud activity is
+disproportionately concentrated in very low value transactions, often below 200 USD, which suggests that fraudsters frequently
+conduct small “test” purchases to confirm the validity of stolen credentials before escalating to larger transactions. At the other
+extreme,thereisalsoavisibleconcentrationoffraudinveryhighvaluepurchases,reflectingopportunisticattemptstomaximize
+financialgainonceanaccounthasbeencompromised.Legitimatetransactions,bycontrast,aremoreevenlyspreadacrosstherange
+butclustermostheavilyinthemidvaluesegment,particularlybelow500USD,afterwhichtheirfrequencydeclinessharply.This
+divergence between fraud and legitimate spending behaviors highlights the deliberate strategies used by fraudsters to balance
+concealmentandprofitability.Fig.2bshowsfraudprevalenceacrossproductcategories.FraudratesarehighestincategoryC,fol-
+lowedbycategoryS,whereascategoriesH,R,andespeciallyWexhibitmuchlowerlevelsoffraudactivity.Thesediscrepanciesalign
+with differences in product risk profiles: categories dominated by digital or card not present transactions are more vulnerable to
+exploitation,whilethosetiedtophysicalgoodsorrequiringstrongerverificationdemonstrategreaterresilience.Incorporatingsuch
+product level distinctions into predictive models provides highly discriminative signals that enhance the effectiveness of both
+ensembleandneuralnetworkbasedapproachestofrauddetection.
+4.4. Temporalandgeolocationpatternsoffraud
+Fraudtransactionsalsoexhibitsystematictemporalandgeographicalbehaviorsratherthanoccurringuniformlyacrosstimeand
+space.Thesepatterns,summarizedinFig.3,revealhowfraudriskisinfluencedbydailycycles,weeklyrhythms,andregionalcontexts.
+Fig.3ashowsfrauddistributionacrosshoursoftheday.Fraudactivitypeaksduringlate-nightandearly-morninghours,apattern
+consistentwithreducedcustomervigilanceandlowerinstitutionalmonitoringduringoff-peakperiods.Fig.3bpresentsthedistri-
+bution of fraud rates by day of the week. The x-axis represents the seven days (Monday to Sunday), obtained by mapping the
+transactiontimelineintoaweeklycycleusingmodulararithmeticonthetransactiondayindex.Thistransformationconvertsthe
+continuoustransactiontimelineintoacategoricalrepresentationthatcapturesweeklyperiodicbehavior.Theresultsindicatethat
+fraudratesarerelativelystableacrossweekdays,withaslightdecreaseobservedonFridaysandmoderateincreasesduringweekends,
+particularlyonSaturdayandSunday.Thispatternmayreflectreducedmonitoringandloweroperationaloversightduringweekends,
+aswellasincreasedonlinetransactionactivity,whichcancreatemoreopportunitiesforfraudbehavior.Thelowerfraudrateon
+Fridays may be associated with more structured transaction patterns and stronger institutional controls during standard business
+periods.Whiletemporalvariationexists,fraudisnotstronglyconcentratedonasingledaybutinsteadreflectsbroaderbehavioraland
+operationaldynamics.Byexplicitlyencodingtheday-of-weekstructure,thisvisualizationprovidesaclearerandmoreinterpretable
+representationofweeklyfraudpatternscomparedtotheoriginalsequentialtime-basedplot.Fig.3canddhighlightgeographical
+differences. Fraud rates vary significantly across regions and countries, with certain locations showing disproportionately high
+prevalence. These discrepancies may reflect both differences in fraudster targeting strategies and variability in regional payment
+Fig.2. Fraudpatternsacrosstransactionamountsandproductcategories.
+10
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+Fig.3. Temporalandspatialfraudpatterns:(a)hourofday;(b)dayofweek;(c)region;(d)country.
+infrastructures.Suchspatialheterogeneityreinforcesthevalueofincorporatinggeolocationfeaturesintofrauddetectionmodels,as
+theyprovidepowerfuldiscriminativesignalswhencombinedwithtransactionandidentityattributes.
+Temporal and geolocation information are explicitly incorporated into the predictive models through feature engineering and
+preprocessing,ratherthanbeingusedsolelyforexploratoryvisualization.TemporalinformationisderiveddirectlyfromtheTrans-
+actionDTvariable,whichrepresentstheelapsedtimesinceareferencepoint.Fromthisvariable,thehourofthedayisconstructedas:
+( )
+TransactionDT
+hour_of_day = mod 24: (9)
+3600
+Thistransformationconvertsrawtimestampsintoacyclicaldailyfeaturethatcapturestime-of-dayfraudpatternsobservedduring
+exploratoryanalysis.Theresultingvariableisincludedasanumericalfeatureinthemodelinput.
+Geolocationinformationisincorporatedusingtheaddr1(region)andaddr2(country)variablesprovidedinthedataset.Asthese
+variablesarecategorical,theyareencodedusinglabelencodingduringpreprocessing,whereeachuniquecategoryismappedtoa
+numericalvalue.Thisrepresentationenablesbothtree-basedmodelsandneuralnetworkstolearnlocation-specificfraudpatterns.
+Followingfeatureengineeringandencoding,alltemporalandgeolocationvariablesareincludedinthefinalfeaturematrixX,
+whichisusedtotrainallmodelsinthisstudy,includingRandomForest,XGBoost,ANN,DNN,andthehybridensemble.Consequently,
+themodelsareabletodirectlylearnfromtemporalcyclesandgeographicalriskpatternsidentifiedinthedata.Byincorporatingthese
+engineeredfeaturesintothetrainingprocess,thetemporalandspatialpatternsdiscussedinSection4.3arenotonlyobservedbutare
+activelyleveragedtoimprovefrauddetectionperformance.
+4.5. Identity-basedfeatureinsights
+Identity-related features provide some of the strongest discriminative signals in fraud detection, and Fig. 4 highlights three
+representativepatterns.Fig.4ashowsthatfreeemaildomainsaredisproportionatelyassociatedwithfraudactivity,whereasinsti-
+tutional or corporate domains exhibit much lower fraud rates, reflecting fraudsters’ preference for anonymous or disposable services.
+Fig. 4b compares fraud rates across device types, with mobile and tablet transactions showing higher fraud levels than desktop,
+consistentwithweakerauthenticationmechanismsandlessreliabledevicefingerprinting.Fig.4cillustratesvariationbydevicein-
+formation,wherecertainidentifiersappeardisproportionatelyinfraudtransactions,suggestingtheuseofemulatedorspoofeddevices
+11
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+Fig.4. Identity-basedfraudpatterns:(a)emaildomain;(b)devicetype;(c)deviceinformation.
+or the systematic reuse of compromised profiles. Together, these findings underscore why identity-linked attributes are heavily
+weightedbybothtree-basedensemblesanddeeplearningmodelsinfrauddetection.
+4.6. Resultsofmodelperformance
+Thissectionpresentsacomparativeevaluationofallsevenmachinelearningmodelsdevelopedfortransactionfrauddetection:
+LogisticRegression(LR),RandomForest(RF),XGBoost(XGB),EnhancedXGBoost(XGB-Adv),ArtificialNeuralNetwork(ANN),Deep
+Neural Network (DNN), and the XGBoost + DNN Ensemble. Table 4 summarizes the validation performance of all models.
+MetricsincludeROC-AUCandPR-AUCforrankingcapability,aswellasaccuracy,precision,recall,andF1-scoreforfrauddetection
+effectiveness.Inaddition,inferencetime(measuredinmillisecondspertransaction)isreportedtoassesscomputationalefficiencyin
+real-timedeploymentscenarios.
+Theresultsshowaclearperformancegapbetweenbaselinemodelsandadvancedapproaches.LogisticRegressionsuffersfromlow
+precision(0.10)andF1-score(0.18),makingitunsuitableforfrauddetection.RandomForestimprovesonthesemetrics,reachingan
+F1-scoreof0.45,butstillfallsbehindgradientboostingmethodsincapturingcomplexrelationshipsinthedata.StandardXGBoost
+raisesrecallto0.81,boostingfraudcapturerates,butprecision(0.22)remainslow,leadingtoahigherfalse-positiverate.
+EnhancedXGBoostdemonstratesthemostsignificantimprovementamongsinglemodels,deliveringthehighestrecall(0.83)and
+substantially better precision (0.42) than standard XGBoost. This balance results in a higher F1-score (0.55) and strong PR-AUC
+(0.7676), reflecting better performance in the imbalanced fraud detection setting. The improvement can be attributed to careful
+hyperparameter tuning and regularization, which reduce overfitting while improving fraud detection sensitivity. For use cases
+prioritizingmaximumfraudcapturewithacceptablefalsepositives,EnhancedXGBoostisastrongcandidate.
+The XGB + DNN Ensemble outperforms all other models in overall balance, achieving the highest F1-score (0.74) and PR-AUC
+(0.7897), alongside a high recall (0.69) and precision (0.78). By combining Enhanced XGBoost's structuredfeature learning with
+theDNN'sdeeprepresentationcapability,theensemblereducesweaknessespresentineachstandalonemodel.Thismakesitwell-
+suitedforreal-worldusage,wherebothdetectingfraudandminimizingfalsepositivesarecriticalforefficiencyandcustomertrust.
+12
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+WhileTable4showsthatsomeperformancedifferences(e.g.,ROC-AUCof0.9638vs.0.9628)appearsmall,itisimportantto
+determine whether these improvements are statistically meaningful and consistent rather than artifacts of a particular train–validation
+split.Toaddressthis,additionalexperimentswereconductedusingmultiplerandomdatapartitions.Specifically,thedatasetwassplit
+intotraining (80%) andvalidation (20%) setsacrossthree differentrandom seeds,using stratifiedsamplingto preservetheclass
+imbalance. For each split, both the Enhanced XGBoost model and the proposed XGB + DNN Ensemble were trained independently and
+evaluatedonthecorrespondingvalidationset.
+The evaluation metric used for comparison is ROC-AUC. Results are summarized as mean ± standard deviation across the three
+runs. The Enhanced XGBoost model achieved an average ROC-AUC of 0.9223 ± 0.0019, while the proposed ensemble achieved
+0.9274 ± 0.0025. The ensemble consistently outperformed the baseline model across all splits. To formally assess whether this
+improvementisstatisticallysignificant,apairedt-testwasconductedontheROC-AUCscoresobtainedfromeachsplit.Thistestis
+appropriatesincebothmodelsareevaluatedonidenticalvalidationpartitions,enablingadirectpairedcomparison.Theresultingp-
+valueis0.0054,whichiswellbelowtheconventionalsignificancethresholdof0.05,indicatingthattheimprovementisstatistically
+significantandunlikelytobeduetorandomvariation.
+Furthermore,thesmallstandarddeviationobservedforbothmodelsindicatesstableperformanceacrossdifferentdatasplits.This
+demonstrates that the results are robust and not sensitive to the specific 80/20 partition of the data, despite the relatively small
+proportionoffraudcases.TheoverallevaluationprocedurefollowsthetrainingandvalidationpipelinedescribedinAlgorithm2,
+extended across multiple randomized splits. Overall, these results demonstrate that the proposed XGB + DNN Ensemble provides a
+consistentandstatisticallysignificantimprovementoverthebaselinemodel.Whilemoreextensivevalidationstrategiessuchask-fold
+cross-validationcouldfurtherstrengthenthisanalysis,thecurrentfindingsalreadyprovidestrongempiricalevidencesupportingthe
+robustnessandreliabilityoftheproposedapproach.
+OLightGBM,anoptimizedversionoftheLightGradientBoostingMachine(LightGBM),proposedbyTahaandMalebary(2020),is
+incorporatedintothemaincomparativeresults(Table4)toprovideaunifiedandconsistentbenchmarkacrossallmodels,ratherthan
+beingpresentedinaseparatesubsection.OLightGBMenhancesthestandardframeworkthroughBayesian-basedhyperparameteropti-
+mizationtoautomaticallytunemodelparametersandimprovepredictiveperformance.LightGBMitselfisagradientboostingalgorithm
+basedondecisiontrees,designedforefficiencyandscalability.Itemploystechniquessuchasgradient-basedone-sidesampling(GOSS)
+andexclusivefeaturebundling(EFB)toreducecomputationalcomplexitywhilemaintaininghighpredictiveaccuracy.TheOLightGBM
+approachbuildsuponthisfoundationbyoptimizinghyperparametersgoverningtreegrowthandlearningdynamics.
+ThereportedresultsforOLightGBMaretakendirectlyfromtheoriginalstudy,whereitachievedaROC-AUCof0.9288,accuracyof
+98.40%(roundedto98%),precisionof97.34%(roundedto0.97),andF1-scoreof0.5695.AsshowninTable4,boththeEnhanced
+XGBoost and the proposed XGB + DNN Ensemble outperform OLightGBM in terms of ROC-AUC, achieving 0.9628 and 0.9638,
+respectively. This indicates that the proposed models provide improved discriminative capability relative to a strong published
+benchmark.
+ItisimportanttonotethattheOLightGBMresultsaretakenfromtheoriginalpublicationandmaybebasedondifferentdatasets,
+preprocessingpipelines,andevaluationprotocols.Therefore,thiscomparisonisintendedtoprovidecontextualbenchmarkingrather
+thanastrictlycontrolledexperimentalcomparison.Nevertheless,theresultssuggestthattheproposedmodelsarecompetitivewith,
+andinthiscaseoutperform,existingstate-of-the-artapproaches.
+Inadditiontopredictiveperformance,inferencetimeresultsreportedinTable4provideimportantinsightsintothecomputational
+efficiency of each model in real-time deployment scenarios. Tree-based models, particularly XGBoost (0.08 ms/transaction) and
+EnhancedXGBoost(0.09ms/transaction),achievelowinferencelatencyduetoefficientdecision-treetraversal,makingthemhighly
+suitableforlarge-scale,low-latencyfrauddetectionsystems.LogisticRegressionexhibitsthelowestlatencyoverall(0.02ms/trans-
+action),althoughitspredictiveperformanceissubstantiallyweaker.
+Incontrast,neuralnetworkmodelssuchasANN(0.25ms/transaction)andDNN(0.30ms/transaction)incurhigherinferencetimes
+due to forward propagation through multiple layers. The hybrid XGB + DNN ensemble introduces additional computational overhead
+bycombiningpredictionsfrombothmodels,resultinginthehighestlatency(0.35ms/transaction)amongtheevaluatedapproaches.
+These results highlight a clear trade-off between predictive performance and computational efficiency. While the proposed
+ensemble achieves the best overall detection performance, its higher latency may limitits applicability in ultra-low-latencyenvi-
+ronments.Insuchcases,XGBoostprovidesastrongalternative,offeringcompetitivepredictiveperformancewithsignificantlylower
+inferencetime,makingitparticularlyattractiveforreal-timefrauddetectionsystemswhererapiddecision-makingiscritical.
+4.7. Comparisonwithsequentialmodel(LSTM)
+To evaluate whether sequence-based modeling improves fraud detection performance, we implemented a Long Short-Term
+Memory (LSTM) network as a representative state-of-the-art temporal model. Fraud detection is often considered inherently
+sequential, as user behavior over time may reveal anomalous patterns. Therefore, incorporating an LSTM provides a meaningful
+benchmarktoassesswhethermodelingtemporaldependenciesyieldsperformancegainsforthisdataset.
+TheLSTMmodelwastrainedusingsliding-windowsequencesconstructedfromthetransactiondata,witheachsequencerepre-
+sentingashorttemporalcontextoftransactions.Classimbalancewasaddressedusingaweightedbinarycross-entropylossfunctionto
+ensurethatthemodeldoesnottriviallypredictthemajorityclass.However,experimentalresultsdemonstratethattheLSTMperforms
+substantiallyworsethantheproposedhybridensemblemodelacrossallevaluationmetrics(asshowninTable5).Specifically,the
+LSTM achievesa ROC-AUC of 0.502,PR-AUC of 0.036, and F1-score of 0.013,indicating near-random classification behavior. In
+13
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+contrast, the proposed XGBoost + DNN ensemble achieves substantially higher performance, with a ROC-AUC of 0.9638, PR-AUC of
+0.6582,andF1-scoreof0.74(seeTable6).
+ThepoorperformanceoftheLSTMcanbeattributedtothestructuralcharacteristicsoftheIEEE-CISdataset.Althoughthedataset
+includesatemporalfeature(TransactionDT),itdoesnotprovideconsistentuser-levelsequencesorlong-termbehavioralhistories.
+Transactionsarenotreliablygroupedbyindividualusers,andtemporalorderingalonedoesnotguaranteemeaningfulsequential
+dependencies.Asaresult,theconstructedsequenceslackcoherentbehavioralpatterns,limitingtheabilityofsequence-basedmodels
+tolearndiscriminativetemporalfeatures.Incontrast,theproposedhybridensemblemodelisbetteralignedwiththetabularandhigh-
+dimensionalnatureofthedataset.XGBoosteffectivelycapturescomplexfeatureinteractions,handlesmissingvalues,andisrobustto
+noisyandsparsefeaturescommonlyfoundinfrauddetectiondata.The DNNcomponentcomplementsthisbylearning nonlinear
+representations and capturinghigher-order feature interactions. By combining these twomodels, theensemble leverages comple-
+mentarystrengths,resultinginimprovedgeneralizationandsignificantlyhigherpredictiveperformance.
+Thesefindingshighlightanimportantinsight:modeleffectivenessisstronglydependentontheunderlyingdatastructure.While
+sequence-basedmodelssuchasLSTMarepowerfulfortaskswithwell-definedtemporaldependencies,theyarelesssuitablefortabular
+fraud detection datasets with weak or irregular sequential patterns. In such cases, hybrid ensemble approaches provide a more
+effectiveandpracticalsolution.
+4.8. Comparisonwithkagglestate-of-the-art
+Tofurtherevaluatetheeffectivenessoftheproposedmodel,wecompareourresultswithtop-performingsolutionsfromtheIEEE-
+CISKagglefrauddetectioncompetition.
+Accordingtothe1stplacesolutionoftheIEEE-CISKagglecompetition(Deotteetal.,2019),thefinalmodelwasanensembleof
+gradientboostingalgorithms,includingXGBoost,LightGBM,andCatBoost,combinedwithextensivefeatureengineering,validation
+strategies,andstackingtechniques.ThisapproachachievedaprivateleaderboardROC-AUCofapproximately0.9459andapublic
+leaderboardscoreof0.9677.Similarly,the5thplacesolution(H.M.etal.,2019)reliedonanensembleofLightGBMmodelswith
+user-levelfeatureaggregationandachievedaprivateleaderboardscoreof0.9425.Theseresultsdemonstratethattree-basedensemble
+methodsareconsistentlyeffectiveforthisdataset.
+Incomparison,theproposedhybridensembleachievesaROC-AUCof0.9638andF1-scoreof0.74,demonstratingcompetitive
+performancerelativetothesestate-of-the-artsolutions.ItisimportanttonotethatdirectcomparisonwithKaggleleaderboardresults
+isnotstrictlyequivalent,ascompetitionsettingsinvolvehiddentestsetsandmorestringentvalidationprotocols.Nevertheless,the
+resultsindicatethattheproposedmodelachievesstrongpredictiveperformancewithinastandardexperimentalframework.Unlike
+the Kaggle-winning solutions, which rely heavily on complex feature engineering and dataset-specific techniques, the proposed
+methodemphasizesaprincipledintegrationoftree-basedlearninganddeepneuralnetworks.Thisresultsinasimpler,morerepro-
+ducible modeling pipeline while maintaining strong predictive performance and interpretability through SHAP-based analysis.
+Interestingly,theobservationsreportedintheKagglewinningsolutionfurthersupportourfindings.
+4.9. ROC and Precision–Recall curve analysis
+Thissectioncomparesfourmodelstoevaluatehowtheproposedapproachesperformagainststrongbaselines.RandomForestis
+includedasarepresentativeoftraditionalmachinelearningmethods,whiletheDeepNeuralNetworkrepresentsdeeplearningap-
+proaches. These are compared with the Enhanced XGBoost (XGB-Adv) and the XGB + DNN Ensemble, which combine boosting and
+neuralnetworks.Thiscomparisonhighlightstheimprovementsoftheproposedmethodsoverbothclassicalanddeeplearningmodels.
+Fig. 6 presents the ROC and Precision–Recall (PR) curves for the four models. Both plots confirm the superior performance of the
+proposed methods over the baselines. In Fig. 5a, the XGB + DNN Ensemble achieved the highest ROC-AUC of 0.9638, followed closely
+byXGB-Advat0.9628.Amongthebaselines,theDNN(0.9182)slightlyoutperformedtheRF(0.9122).Thesteepinitialslopeand
+proximity of the proposed models’ curves to the top-left corner illustrate their strong discriminative ability across thresholds. Fig. 5b
+shows the PR curves, which are more informative for imbalanced datasets. The XGB + DNN Ensemble again outperformed all models
+Table5
+PerformancecomparisonbetweenLSTMandtheproposedensemblemodel.
+Model ROC-AUC PR-AUC F1-score Precision Recall
+LSTM 0.502 0.036 0.013 0.030 0.008
+XGB + DNN ensemble 0.9638 0.6582 0.74 0.78 0.69
+Table6
+ComparisonwithKaggletopsolutions.
+Method ROC-AUC PR-AUC F1-score
+Kaggle 1st place ensemble [46] 0.94–0.95 – –
+Kaggle 5th place LightGBM ensemble [47] 0.94 – –
+Proposed XGB þ DNN ensemble 0.9638 0.6582 0.74
+14
+
+N.D. Anh Luong, S. Xie  The Journal of Finance and Data Science 12 (2026) 100195
+|     |     |     |     |     |     |     |     |     |     |     |       |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- |
+Fig. 5. ROC and Precision–Recall curve analysis for baseline and proposed models: (a) ROC curves; (b) PR curves.
+|     |     |     |     |     |      |           |     importance–bar |     |       |     |     |     |     |
+| --- | --- | --- | --- | --- | ---- | --------- | ------------------ | --- | ----- | --- | --- | --- | --- |
+|     |     |     |     |     | Fig. | 6. Global | feature            |     | plot. |     |     |     |     |
+withanAveragePrecision(AP)of0.7897,followedbyXGB-Advat0.7676.Amongthebaselines,theDNNachieved0.6403,out-
+performingtheRFat0.5856.Theproposedmodelsmaintainhigherprecisionatvaryingrecalllevels,demonstratingsuperiorhandling
+| oftheminorityfraudclass.   |     |     |     |     |     |     |     |     |     |     |     |     |     |
+| -------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|                            |     |     |     |     |     |     |     |     |     |     |     |     |     |
+TheresultsdemonstratethatwhiletraditionalmodelssuchasLogisticRegressionandRandomForestprovideusefulbaselines,they
+|     |     |     |     |     |     |     |     |     |     |     |     |  +    |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- |
+fall short under severe class imbalance. Enhanced XGBoost achieved substantial gains, and the hybrid XGB DNN Ensemble
+|     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+consistentlyoutperformedallotherapproaches,deliveringthehighestrecall,F1-score,ROC-AUC,andPR-AUC.Exploratoryanalyses
+|     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+furtherrevealedclearfraudpatternsacrosstransactionamounts,productcategories,temporalcycles,andidentity-relatedfeatures,
+|     |     |     |     |     |     |     |     |     |     |     |       |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- |
+confirming their importance as discriminative signals. Taken together, these findings underscore both the necessity of advanced
+|     |     |     |     |     |     |     |     |     |     |     |     |       |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----- | --- |
+ensemblemethodsandthevalueofincorporatingdomain-specificpatterns,providingacomprehensivefoundationforfrauddetection
+pipelines.
+15
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+4.10. Resultsonfeatureinterpretability-SHAPbasedfeatureanalysis
+Thissectionextendstheanalysisbeyondperformancemetricstointerprettheresultsandtheirpracticalsignificance.Whilethe
+previoussectionidentifiedthebest-performingmodelsunderclassimbalance,thefocushereisonunderstandingthemechanisms
+drivingtheirsuccess,theinsightsprovidedbykeyfeatures,andtheirimplicationsforreal-worldfrauddetection.Interpretabilityis
+particularlycriticalinfinancialapplications,wheretransparencyandaccountabilityarerequiredfordeployment.Tothisend,SHAP
+valuesarecomputedfortheEnhancedXGBoostmodel,thebest-performingsinglelearner,toquantifybothglobalandlocalfeature
+contributions.Theanalysisisconductedfromtwocomplementaryperspectives:(i)globalfeatureimportance,usingmeanabsolute
+SHAPvaluestoidentifythemostinfluentialpredictorsacrossalltransactions,and(ii)localinterpretation,usingSHAPbeeswarmplots
+toexaminehowfeaturevalues,theirdirection,anddistributioninfluencefraudpredictionsattheinstancelevel.
+4.10.1. Globalfeatureimportanceinfraudcontext
+TheglobalSHAPimportanceplot(Fig.6)showsthatTransactionAmtisthemostinfluentialfeature,followedbyidentity-related
+featuressuchascard6,C14,C1,andC13,aswellasbehavioralvariablesincludingV70andV258.
+Thisrankingisconsistentwithpriorfrauddetectionstudies,wheretransactionamountandidentityconsistencyareprimaryin-
+dicators of fraud. Fraud transactions often occur at extreme values: low-value transactions are used as “test” transactions to validate
+stolen credentials, while high-value transactions reflect attempts to maximize financial gain. Identity-related features capture de-
+viationsfromnormaluserbehavior.Inlegitimatetransactions,thesefeaturestendtobestable,whereasfraudintroducesanomalies
+suchasunusualtransactioncountsorinconsistentcardusage.Theimportanceofthesefeaturesconfirmsthatfrauddetectionrelies
+heavilyonidentifyingsuchdeviations.
+4.10.2. LocalSHAPinterpretationandfeatureeffects
+The SHAP beeswarm plot shown in Fig. 7 provides detailed transaction-level insights by combining feature values with their
+contributionstomodelpredictions.Inthebeeswarmplot,thehorizontalaxisrepresentsSHAPvalues,indicatingthemagnitudeand
+directionofeachfeature'scontribution.PositiveSHAPvaluesincreasefraudlikelihood,whilenegativevaluesdecreaseit.Thecolor
+gradient represents feature values (red = high, blue = low), allowing us to infer whether high or low values of a feature are associated
+withfraud.
+ForTransactionAmt,highvalues(redpoints)arepredominantlyassociatedwithpositiveSHAPvalues,indicatingincreasedfraud
+risk.However,somelowvaluesalsocontributepositively,suggestingthatfrauddetectioncapturesbothhigh-valueexploitationand
+low-valueprobingbehavior.Thisdemonstratesthatfraudriskcannotbeexplainedbysimplethresholdsbutdependsoncontextual
+Fig. 7. Local explanation–beeswarm plot.
+16
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+interactions.Forcard6,distinctclustersofSHAPvaluesindicatethatspecificcategoriesconsistentlyincreasefraudprobability.This
+suggeststhatcertaincardtypesortransactionchannelsaremorevulnerable,likelyduetodifferencesinauthenticationmechanisms.
+FeaturessuchasC14andC13exhibitasymmetricdistributions,whereextremevaluescorrespondtostrongpositiveSHAPcontri-
+butions.Thisindicatesthatdeviationsfromnormalbehavioralpatternssignificantlyincreasefraudlikelihood,providingevidenceof
+anomaly-baseddetection.TheV-seriesfeatures(e.g.,V70,V258)showwideandoverlappingSHAPdistributions,indicatingstrong
+interactioneffects.Thesefeaturesdonotactindependentlybutcontributedifferentlydependingonthecontextofothervariables.This
+highlightstheimportanceofmodelscapableofcapturingnon-linearrelationships.
+4.10.3. Comparisonwithrandomforest
+Forcomparison,theRandomForestfeatureimportanceplot(SeeFig.8)showsabroaderdistributionofinfluentialvariablesrather
+thandominancebyasmallsubset.FeaturessuchasC14andC13emergeasthestrongestcontributors,whiletransaction-basedat-
+tributeslikeTransactionAmt,V258,andV265,alongwithseveralV-seriesvariables,alsorankhighly.Thisbalanceindicatesthat
+RandomForestreliesonbothidentitysignalsandbehavioraltransactionfeatures,capturingmultipledimensionsoffraudrisk.Im-
+portances are more evenly spread across categories, suggesting that no single variable alone drives the predictions but rather a
+combinationofcomplementarysignals.
+Whilethisconfirmstherelevanceofkeyfeatures,RandomForestimportancesprovideonlyrelativeweightsandlacktheabilityto
+explainwhetherafeatureincreasesordecreasesthelikelihoodoffraud.Theyalsodonotaccountforinteractionsbetweenfeaturesor
+variationacrossindividualcases.TheselimitationshighlightwhymoreinterpretablemethodssuchasSHAParebettersuitedforhigh-
+stakesfrauddetection,wherefine-grainedreasoningandcase-levelexplanationsareessentialforoperationaluse.
+4.10.4. Consistencywithpriorliteratureandnovelinsights
+TheSHAPanalysisdemonstratesstrongagreementwithpriorresearchinfinancialfrauddetection.Previousstudieshaveidentified
+transactionamount,identityconsistency,andbehavioralirregularitiesaskeyindicatorsoffraud.Theprominenceofthesefeaturesin
+ouranalysisconfirmsthattheproposedmodelscaptureestablishedfraudpatterns.
+Atthesametime,theresultsprovideadditionalinsightsbeyondpriorwork.Inparticular,theanalysishighlightstheimportanceof
+anonymizedbehavioralfeatures(V-series),whichencodelatentinteractionpatternsnotdirectlyobservableinrawdata.Thesefeatures
+exhibitcontext-dependentcontributions,indicatingthatfrauddetectionisdrivenbyinteractionsratherthanisolatedfeatureeffects.
+Thisobservationalignswithrecentworkby(LinandGao,2022),whodemonstratethatSHAP-basedmethodscanrevealcomplex
+relationshipsbetweenfinancialfeaturesandimproveinterpretabilityinfrauddetectionmodels.
+4.10.5. Practicalimplications
+TheenhancedSHAPinterpretationprovidesactionableinsightsforreal-worldfrauddetectionsystems.Financialinstitutionscan
+leveragethesefindingstocombinerule-baseddetection(e.g.,abnormaltransactionamountsoridentityinconsistencies)withmachine
+learningmodelscapableofcapturingcomplexfeatureinteractions.Furthermore,SHAP-basedexplanationsimprovetransparencyby
+providing case-level justifications for predictions. This is critical for regulatory compliance and operational trust in financial
+applications.
+Fig.8. Randomforest-top20featureimportances.
+17
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+5. Discussions
+Theresultscarrydirectimplicationsforreal-worldfrauddetectionsystems,wherepredictiveperformancemustbebalancedwith
+operationalconsiderations.ModelselectioncannotrelysolelyonROC-AUCorPR-AUCvalues;institutionsmustalsoconsiderinter-
+pretability,latency,andthetrade-offbetweenfalsepositivesandfalsenegatives.
+Whilethisstudydemonstratestheeffectivenessofadvancedensemblemodelsforfrauddetection,severallimitationsshouldbe
+acknowledged. First, the dataset, although large and representative of real-world payment transactions, is anonymized and lacks
+certaincontextualfeatures(e.g.,merchantcategorycodes,customerdemographics,andreal-timesessioninformation).Theabsenceof
+thesevariablesrestrictstheinterpretabilityoffraudpatternsandmaylimitthegeneralizabilityofthefindingsacrossdifferentfinancial
+institutionsandgeographies.
+Second, the evaluation was conducted in an offline validation setting. Although metrics such as ROC-AUC and PR-AUC are
+informative, they do not capture all operational trade-offs. Real-world deployment involves latency constraints, streaming data
+pipelines,andintegrationwithfraudinvestigationteams.Theseaspectswerenotsimulatedinthisstudy,andfutureresearchshould
+extendvalidationtoproduction-likeenvironments,includingstresstestingunderhightransactionvolumesandadversarialattack
+scenarios.
+Third,whileSHAPprovidedvaluableexplainabilityfortree-basedmodels,interpretabilityfordeepneuralnetworksremainsless
+developed.MethodssuchasLIMEorintegratedgradientsofferpartialinsights,buttheirstabilityandregulatoryacceptancearestill
+evolving.Thiscreateschallengesfordeployingcomplexmodelsinstrictlyregulatedfinancialdomainswheretransparencyisanon-
+negotiablerequirement.
+AkeylimitationofthisstudyisthattheIEEE-CISdatasetrepresentsafixedhistoricalsnapshotoftransactiondata.Inreal-world
+frauddetectionsystems,transactionpatternsandfraudstrategiesevolvecontinuouslyovertime,aphenomenoncommonlyreferredto
+asconceptdrift.Thisoccurswhentheunderlyingdatadistributionortherelationshipbetweenfeaturesandthetargetvariablechanges,
+oftenduetoadaptivebehaviorbyfraudsters.Asfrauddetectionmodelsaretrainedonhistoricaldata,theirperformancemaydegrade
+whendeployedinaliveenvironmentifthestatisticalpropertiesofincomingtransactionsdifferfromthoseobservedduringtraining.
+Forexample,fraudstersmayshiftfromlow-valueprobingtransactionstomoresophisticatedattacksinvolvingdevicespoofingor
+identityobfuscation,renderingpreviouslylearnedpatternslesseffective.
+While the models proposed in this study demonstrate strong performance under a static evaluation setting, maintaining their
+effectivenessinpracticewouldrequirecontinuousmonitoringandadaptation.Thismayinvolveperiodicretrainingonrecentdata,
+online learning strategies, or drift detection mechanisms that trigger model updates when significant distributional changes are
+observed. Furthermore, ensemble approaches such as the proposed XGBoost + DNN model may offer some robustness to moderate drift
+duetotheirabilitytocapturecomplementarypatterns.However,theyarenotinherentlyimmunetoconceptdrift,andtheirlong-term
+performancedependsontimelyupdatesanddatarefreshcycles.
+6. Conclusion
+Thisstudyaddressedthepersistentchallengeoffrauddetectioninhighlyimbalancedfinancialtransactiondatabysystematically
+comparingtraditional,ensemble-based,anddeeplearningapproaches.Throughrigorousexperimentation,itwasdemonstratedthat
+classicalbaselinessuchasLogisticRegressionandRandomForest,whileinterpretable,failtoprovidetheprecisionandrecallbalance
+required for real-world applications. Enhanced XGBoost improved performance by leveraging gradient boosting with advanced
+handling of imbalance, yet it was the proposed hybrid XGB + DNN Ensemble that delivered the most effective and robust results across
+all evaluation metrics. Beyond raw performance scores, the study emphasized the importance of interpretability and operational
+readiness.SHAP-basedfeatureattributionhighlightedthecentralroleoftransactionamounts,identity-linkedattributes,andtemporal
+patternsindetectingfraudbehavior,underscoringtheneedformulti-dimensionalrepresentationsofcustomeractivity.
+The hybrid XGB + DNN Ensemble, embedded within a structured and adaptive framework, represents a powerful and practical
+solutionformodernfrauddetection.Byaligningmethodologicalinnovationwithoperationalrealities,thisstudydemonstratesthat
+effectivefrauddetectionrequiresnotonlystrongalgorithmsbutalsotransparent,adaptive,andinstitutionallyalignedsystemscapable
+ofwithstandingtheevolvingtacticsoffinancialfraud.Together,thesefindingsadvancebothacademicunderstandingandpractical
+implementationoffrauddetectionsystems.Nevertheless,limitationsremain.Theanonymizeddatasetconstrainedinterpretabilityof
+certainfraudpatterns,andevaluationwasrestrictedtoofflinevalidation.Addressingthesegapsthroughricherfeaturesets,real-time
+testing,andadvancedlearningparadigmssuchasgraph-basedorfederatedlearningofferspromisingdirectionsforfutureresearch.
+CRediTauthorshipcontributionstatement
+Nguyen Duy Anh Luong: Writing – review & editing, Writing – original draft, Visualization, Validation, Software, Methodology,
+Investigation, Formal analysis, Data curation, Conceptualization. Shengkun Xie: Writing – review & editing, Writing – original draft,
+Supervision,Methodology,Fundingacquisition,Formalanalysis,Conceptualization.
+Grantinformation
+ThisworkisfundedbyNaturalSciencesandEngineeringResearchCouncilofCanadaDiscoveryGrant.
+18
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+Declarationofcompetinginterest
+Theauthorsdeclarethattheyhavenoknowncompetingfinancialinterestsorpersonalrelationshipsthatcouldhaveappearedto
+influencetheworkreportedinthispaper.
+References
+Achakzai, M.A.K., Peng, J., 2023. Detecting financial statement fraud using dynamic ensemble machine learning. Int. Rev. Financ. Anal. 89, 102827.
+Alamri, M., Ykhlef, M., 2024. Hybrid feature engineering based on customer spending behavior for credit card anomaly and fraud detection. Electronics 13 (20), 3978.
+Alfaiz, N.S., Fati, S.M., 2022. Enhanced credit card fraud detection model using machine learning. Electronics 11 (4), 662.
+Bahnsen, A.C., Aouada, D., Stojanovic, A., Ottersten, B., 2016. Feature engineering strategies for credit card fraud detection. Expert Syst. Appl. 51, 134–142.
+Baisholan, N., Dietz, J.E., Gnatyuk, S., Turdalyuly, M., Matson, E.T., Baisholanova, K., 2025. A systematic review of machine learning in credit card fraud detection
+under original class imbalance. Computers 14 (10), 437.
+Bhardwaj, K., Kumar, M., Verma, R., Kumar, D., 2024. Machine learning and deep learning for credit card fraud detection: a comparative analysis. In: Proc. 2024 Int.
+Conf. Artificial Intelligence and Emerging Technology (Global AI Summit), pp. 131–136.
+Bin Sulaiman, R., Schetinin, V., Sant, P., 2022. Review of machine learning approach on credit card fraud detection. Human-Centric Intelligent Systems 2 (1), 55–68.
+Bolton, R.J., Hand, D.J., 2002. Statistical fraud detection: a review. Stat. Sci. 17 (3), 235–255.
+Breskuviene, D., Dzemyda, G., 2024. Enhancing credit card fraud detection: highly imbalanced data case. J. Big Data 11 (1), 182.
+Broby, D., 2021. Financial technology and the future of banking. Financ. Innov. 7 (1), 47.
+Carcillo, F., Le Borgne, Y.-A., Caelen, O., Kessaci, Y., Obl�e, F., Bontempi, G., 2021. Combining unsupervised and supervised learning in credit card fraud detection. Inf.
+Sci. 557, 317–331.
+Chaurasia, S., Kesharwani, S., Sharma, S., Sharma, S., Chugh, B., 2024. Analysis of ensemble machine learning models for fraud detection. In: Proc. 2024 Int. Conf.
+Intelligent Systems for Cybersecurity (ISCS), pp. 1–6.
+Deotte, C., et al., 2019. IEEE-CIS fraud detection: 1st place solution. Kaggle Competition Write-up. https://www.kaggle.com/competitions/ieee-fraud-detection/
+writeups/fraudsquad-1st-place-solution-part-2.
+Ding, N., Ruan, X., Wang, H., Liu, Y., 2025. Automobile insurance fraud detection based on PSO-XGBoost model and interpretable machine learning method. Insur.
+Math. Econ. 120, 51–60.
+Du, H., Lv, L., Guo, A., Wang, H., 2023. Autoencoder and LightGBM for credit card fraud detection problems. Symmetry 15 (4), 870.
+Gandhar, A., Gupta, K., Pandey, A.K., Raj, D., 2024. Fraud detection using machine learning and deep learning. SN Comput. Sci. 5 (5), 453.
+George, M.Z.H., Alam, M.K., Hasan, M.T., 2025. Machine learning for fraud detection in digital banking: a systematic literature review. arXiv preprint arXiv:
+2510.05167.
+H. M, et al., 2019. IEEE-CIS fraud detection: 5th place solution (Lions). Kaggle Competition Write-up. https://www.kaggle.com/competitions/ieee-fraud-detection/
+writeups/lions-5th-place-solution-lions.
+Ileberi, E., Sun, Y., Wang, Z., 2021. Performance evaluation of machine learning methods for credit card fraud detection using SMOTE and AdaBoost. IEEE Access 9,
+165286–165294.
+Jahnavi, D., Mona, A., Pulata, S., Sami, S., Vakamullu, B., 2024. Robust hybrid machine learning model for financial fraud detection in credit card transactions. In:
+Proc. 2024 2nd Int. Conf. Intelligent Data Communication Technologies and Internet of Things (IDCIoT), pp. 680–686.
+Jiao, B., Guo, Y., Gong, D., Chen, Q., 2022. Dynamic ensemble selection for imbalanced data streams with concept drift. IEEE Transact. Neural Networks Learn. Syst.
+35 (1), 1278–1291.
+Lahbiss, M.M., Chtouki, Y., 2024. Credit card fraud detection in imbalanced datasets: a comparative analysis of machine learning techniques. In: Proc. 2024 Int. Conf.
+Computer and Applications (ICCA), pp. 1–6.
+Lee, C.-W., Fu, M.-W., Wang, C.-C., Azis, M.I., 2025. Evaluating machine learning algorithms for financial fraud detection: insights from Indonesia. Mathematics 13
+(4), 600.
+Lei, Y.-T., Ma, C.-Q., Ren, Y.-S., Chen, X.-Q., Narayan, S., Huynh, A.N.Q., 2023. A distributed deep neural network model for credit card fraud detection. Finance Res.
+Lett. 58, 104547.
+Lin, K., Gao, Y., 2022. Model interpretability of financial fraud detection by group SHAP. Expert Syst. Appl. 202.
+Lucas, Y., Portier, P.-E., Laporte, L., Calabretto, S., Caelen, O., He-Guelton, L., Granitzer, M., 2019. Multiple perspectives HMM-based feature engineering for credit
+card fraud detection. In: Proc. 34th ACM/SIGAPP Symposium on Applied Computing, pp. 1359–1361.
+Ludera, D.T., 2021. Credit card fraud detection by combining synthetic minority oversampling and edited nearest neighbours. In: Future of Information and
+Communication Conference, pp. 735–743.
+Mehbodniya, A., Alam, I., Pande, S., Neware, R., Rane, K.P., Shabaz, M., Madhavan, M.V., 2021. [Retracted] financial fraud detection in healthcare using machine
+learning and deep learning techniques. Secur. Commun. Network. 2021, 9293877.
+Mienye, E., Jere, N., Obaido, G., Mienye, I.D., Aruleba, K., 2024. Deep learning in finance: a survey of applications and techniques. A.I. 5 (4), 2066–2091.
+Noviandy, T.R., Idroes, G.M., Maulana, A., Hardi, I., Ringga, E.S., Idroes, R., 2023. Credit card fraud detection for contemporary financial management using XGBoost-
+driven machine learning and data augmentation techniques. Indatu Journal of Management and Accounting 1 (1), 29–35.
+Patel, A., Patel, M., Patel, P., 2024. Exploring supervised machine learning techniques for detecting credit card fraud: an investigative review. In: ITM Web of
+Conferences, vol. 65, 03006.
+Prasad, M., Srikanth, T., 2024. Multi-Entity real-time Fraud Detection System Using Machine Learning: Improving Fraud Detection Efficiency Using FROST-enhanced
+Oversampling.
+Riskiyadi, M., 2024. Detecting future financial statement fraud using a machine learning model in Indonesia: a comparative study. Asian Rev. Account. 32 (3),
+394–422.
+Roseline, J.F., Naidu, G., Pandi, V.S., Rajasree, S.A., Mageswari, N., 2022. Autonomous credit card fraud detection using machine learning approach. Comput. Electr.
+Eng. 102, 108132.
+Saputra, A., et al., 2019. Fraud detection using machine learning in e-commerce. Int. J. Adv. Comput. Sci. Appl. 10 (9).
+Shah, D., Sharma, L.K., 2023. Credit card fraud detection using decision tree and random forest. In: ITM Web of Conferences, vol. 53, 02012.
+Sharma, A., Sharma, S., Malik, A., Sobti, R., Suryana, A., 2025. Dynamic feature engineering for adaptive fraud detection. Eng. Proc. 107 (1), 68.
+Shimin, L., Ke, X., Xinye, S., et al., 2020. An XGBoost-based system for financial fraud detection. In: E3S Web of Conferences, vol 214, 02042.
+Siam, A.M., Bhowmik, P., Uddin, M.P., 2025. Hybrid feature selection framework for enhanced credit card fraud detection using machine learning models. PLoS One
+20 (7), e0326975.
+Sun, J., 2025. Decision tree-based credit card fraud detection system: design and optimization. Economics & Management Information 1–5.
+Taha, A.A., Malebary, S., 2020. An intelligent approach to credit card fraud detection using an optimized light gradient boosting machine. IEEE Access 8,
+25579–25587.
+Talukder, M.A., Khalid, M., Uddin, M.A., 2024. An integrated multi-stage ensemble machine learning model for fraudulent transaction detection. J. Big Data 11 (1),
+168.
+Theodorakopoulos, L., Theodoropoulou, A., Tsimakis, A., Halkiopoulos, C., 2025. Big data-driven distributed machine learning for scalable credit card fraud detection
+using PySpark, XGBoost, and CatBoost. Electronics 14 (9), 1754.
+19
+
+N.D. Anh Luong, S. Xie The Journal of Finance and Data Science 12 (2026) 100195
+Velarde, G., Sudhir, A., Deshmane, S., Deshmunkh, A., Sharma, K., Joshi, V., 2023. Evaluating XGBoost for balanced and imbalanced data: application to fraud
+detection. arXiv preprint arXiv:2303.15218.
+Wajgi, R., Agarkar, H., Patil, R., Rao, H., Petkar, N., 2024. Enhancing credit card transaction fraud detection with random forest and robust scaling. AIP Conf. Proc.
+3188, 040013.
+Xia, Z., Saha, S.C., 2025. FinGraphFL: financial graph-based federated learning for enhanced credit card fraud detection. Mathematics 13 (9), 1396.
+Zhang, Y.-L., Zhou, J., Zheng, W., Feng, J., Li, L., Liu, Z., et al., 2019. Distributed deep forest and its application to automatic detection of cash-out fraud. ACM Trans.
+Intell. Syst. Technol. 10 (5), 1–19.
+Zioviris, G., Kolomvatsos, K., Stamoulis, G., 2024. An intelligent sequential fraud detection model based on deep learning. J. Supercomput. 80 (10), 14824–14847.
+20

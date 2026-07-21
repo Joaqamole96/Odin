@@ -1,0 +1,201 @@
+{
+  "paper_id": "550e8400-e29b-41d4-a716-446655440001",
+  "designation": "local",
+  "title": "Financial freedom of Filipinos in personal finance management",
+  "authors": "Flores, C.A.R.",
+  "year": 2025,
+  "venue": "Unknown",
+  "odin_topics": [
+    "1.C",
+    "5.A",
+    "7.A",
+    "2.A",
+    "1.A",
+    "13.A",
+    "13.B",
+    "12.A",
+    "3.A",
+    "4.A",
+    "11.A"
+  ],
+  "tldr": "Filipinos exhibit financial literacy challenges rooted in cultural attitudes, with cash, debt, risk, and wealth management dimensions showing efficiency but needing improvement.",
+  "problem_and_motivation": "Most Filipinos lack financial awareness and do not understand the purpose of financial instruments for achieving true financial wellness. Cultural tendencies like the come-what-may attitude and reliance on traditional saving methods hinder effective budgeting, savings, and investment practices. There is a need to examine the degree of financial freedom across different personal finance dimensions.",
+  "approach": [
+    "Employed descriptive methodology with survey questionnaires for 150 respondents.",
+    "Studied employees from ten major Philippine Stock Exchange Index corporations in Metro Manila.",
+    "Assessed four dimensions: cash management, debt management, risk management, and wealth management.",
+    "Used weighted mean and linear regression analysis to evaluate financial freedom degrees.",
+    "Collected demographic and work profile data including income levels and management positions."
+  ],
+  "findings": [
+    "num: 57% of respondents are male, 63% married, 43% aged 31-40 years.",
+    "num: 40% earn ₱30,000 or above monthly, 50% have 11-18 years of work experience.",
+    "num: Cash management weighted mean of 3.73 indicates good practices needing improvement.",
+    "num: Debt management weighted mean of 3.70 shows agreement with effective strategies.",
+    "num: Cash, debt, risk, and wealth management do not significantly contribute to financial freedom."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Financial Freedom",
+      "definition": "Achieving independence through effective personal finance management across multiple dimensions."
+    },
+    {
+      "term": "Cash Management",
+      "definition": "Proper handling of liquid assets including emergency fund preparation and secure storage."
+    },
+    {
+      "term": "Debt Management",
+      "definition": "Strategic approach to reducing and eliminating debt through prioritization and budgeting."
+    },
+    {
+      "term": "Risk Management",
+      "definition": "Use of insurance to protect against financial losses from unexpected events."
+    },
+    {
+      "term": "Wealth Management",
+      "definition": "Investment strategies to generate future income and capital appreciation."
+    },
+    {
+      "term": "Alkansya",
+      "definition": "Traditional Filipino savings container like bamboo or old jar."
+    },
+    {
+      "term": "Utang",
+      "definition": "Filipino term for debt or borrowing."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Lusardi",
+      "year": 2004,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Savings and effectiveness of financial education programs.",
+      "role": "context"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "New ways to make people save through social marketing approaches.",
+      "role": "context"
+    },
+    {
+      "author": "Maur",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy for Filipinos for better living.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Core focus on financial behaviors and practices of Filipino corporate employees."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Analyzes financial knowledge, attitude, and behavior patterns."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Examines cash, debt, risk, and wealth management strategies."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "high",
+        "justification": "Discusses Filipino cultural attitudes toward saving and spending."
+      },
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "medium",
+        "justification": "Study population includes corporate employees in Metro Manila."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "medium",
+        "justification": "Examines savings practices and emergency fund preparation."
+      },
+      {
+        "code": "13.B",
+        "name": "Debt Management in PFMS",
+        "relevance": "medium",
+        "justification": "Discusses debt reduction strategies and high-interest prioritization."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Uses survey methodology with weighted mean analysis."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "low",
+        "justification": "Mentions budgeting and expense allocation practices."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Reviews existing financial practices and institutions."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "low",
+        "justification": "Discusses financial education and awareness programs."
+      }
+    ],
+    "contribution_to_field": "This study examines the financial freedom dimensions of Filipino corporate employees across cash, debt, risk, and wealth management. It identifies cultural factors like the come-what-may attitude that hinder effective financial practices. The research demonstrates that these four dimensions do not significantly predict overall financial freedom. Findings highlight the need for comprehensive financial education addressing both knowledge and behavioral aspects.",
+    "directly_justifies": [
+      "Filipinos exhibit traditional mindsets favoring physical savings over bank deposits.",
+      "Emergency fund preparedness is low leading to debt reliance during unexpected expenses.",
+      "Risk management through insurance is undervalued due to cultural perceptions.",
+      "Financial freedom requires integration of multiple personal finance practices."
+    ],
+    "limits": [
+      "Limited to employees of ten major corporations in Metro Manila.",
+      "Cross-sectional design does not capture changes in financial behavior over time.",
+      "Self-reported data may suffer from social desirability and recall bias.",
+      "Does not account for external economic factors affecting financial decisions."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all topic domains identified high relevance for financial behavior (1.C), financial behavioral profiles (5.A), budgeting strategies (7.A), and culturally specific practices (2.A) as core themes. Medium relevance for Filipino young professionals (1.A), savings management (13.A), debt management (13.B), and evaluation frameworks (12.A) as supporting aspects. Low relevance for expense categorization (3.A), landscape of existing systems (4.A), and engagement dynamics (11.A) as contextual mentions. Domains related to predictive modeling, anomaly detection, and ML model serving were considered and rejected as not covered by this personal finance management study."
+  },
+  "remember_this": [
+    "None identified."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T19:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Flores_marked.md",
+      "converted_at": null,
+      "converter_tool": null
+    }
+  },
+  "limitations": [
+    "None identified."
+  ]
+}

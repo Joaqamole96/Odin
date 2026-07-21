@@ -1,0 +1,105 @@
+{
+  "paper_id": "10.1038/s41598-023-37003-9",
+  "designation": "international",
+  "title": "A new approach for credit card fraud detection using artificial bee colony optimization with ABC-based sampling method",
+  "authors": "Darwish, A.; Elshewey, M. A.; Tarek, Z.",
+  "year": 2023,
+  "venue": "Scientific Reports (Nature)",
+  "odin_topics": ["8.A", "8.B"],
+  "tldr": "A novel ABC-based data sampling technique combined with Particle Swarm Optimization feature selection and Artificial Bee Colony-based classification achieved 98.78 percent accuracy and 0.996 AUC-ROC on the Kaggle credit card fraud dataset.",
+  "problem_and_motivation": "Credit card fraud detection remains a critical challenge due to highly imbalanced datasets where fraudulent transactions are rare. Existing methods suffer from performance degradation on minority class instances and lack optimal feature selection mechanisms. There is a need for a comprehensive approach that addresses data imbalance, feature selection, and classification simultaneously using swarm intelligence.",
+  "approach": [
+    "Developed an ABC-based sampling technique to address class imbalance by generating synthetic minority class instances using the Artificial Bee Colony algorithm.",
+    "Implemented PSO-based feature selection to identify the most discriminating features from the 30 available transaction attributes.",
+    "Built an ABC-based classifier that leverages the optimized feature subset for final fraud detection.",
+    "Tested the approach on the Kaggle credit card fraud detection dataset containing 284,807 transactions with 492 fraudulent cases.",
+    "Evaluated performance using accuracy, precision, recall, F1-score, and AUC-ROC metrics across multiple experimental configurations."
+  ],
+  "findings": [
+    "The proposed method achieved 98.78 percent accuracy and 0.996 AUC-ROC, outperforming existing approaches.",
+    "ABC-based sampling effectively addressed class imbalance, improving minority class detection rates.",
+    "PSO-based feature selection reduced dimensionality while maintaining or improving classification performance.",
+    "The combination of sampling, feature selection, and classification in a unified framework produced superior results compared to individual components.",
+    "The method demonstrated robustness across different class distributions and threshold settings."
+  ],
+  "key_figures_tables": [
+    "Figure 1: ABC-based sampling technique flowchart → Shows the complete pipeline from imbalanced data to balanced output.",
+    "Figure 2: PSO-based feature selection process → Illustrates particle initialization and optimization loop.",
+    "Figure 3: ABC-based classification algorithm → Shows employed, onlooker, and scout bee phases for classification.",
+    "Figure 4: ROC curves for different approaches → Compares the proposed method against baselines.",
+    "Table 1: Dataset characteristics → Class distribution and feature information.",
+    "Table 2: Performance comparison → Accuracy, precision, recall, F1, and AUC-ROC across all methods."
+  ],
+  "key_equations": [
+    {"equation": "v_i(t+1) = w*v_i(t) + c1*r1*(pbest_i - x_i(t)) + c2*r2*(gbest - x_i(t))", "explanation": "PSO velocity update equation for particle position optimization in feature selection."},
+    {"equation": "x_ij = x_ij + phi_ij * (x_ij - x_kj)", "explanation": "ABC position update equation where phi is a random number in [-1, 1] controlling the search direction."},
+    {"equation": "Fitness_i = Accuracy + w * (1 - |Features_used|/|Total_features|)", "explanation": "Fitness function combining classification accuracy with feature subset size penalty."}
+  ],
+  "definitions": [
+    {"term": "Artificial Bee Colony (ABC)", "definition": "A swarm intelligence optimization algorithm inspired by the foraging behavior of honey bees, using employed, onlooker, and scout phases."},
+    {"term": "Particle Swarm Optimization (PSO)", "definition": "A population-based optimization algorithm inspired by social behavior of bird flocking, used here for feature selection."},
+    {"term": "Class imbalance", "definition": "A condition where one class (fraud) is significantly underrepresented compared to the majority class (legitimate transactions)."},
+    {"term": "AUC-ROC", "definition": "Area Under the Receiver Operating Characteristic Curve, measuring the trade-off between true positive and false positive rates."},
+    {"term": "SMOTE", "definition": "Synthetic Minority Oversampling Technique, a baseline method for generating synthetic minority class samples."}
+  ],
+  "citations": [
+    {"author": "Patil", "year": 2023, "page": 1, "paragraph": 1, "claim": "Credit card fraud detection is one of the most critical challenges in the financial industry with billions lost annually.", "role": "context"},
+    {"author": "Bhattacharyya", "year": 2011, "page": 1, "paragraph": 1, "claim": "The rarity of fraudulent transactions creates severe class imbalance that degrades classifier performance.", "role": "context"},
+    {"author": "Khan", "year": 2018, "page": 2, "paragraph": 2, "claim": "Hybrid approaches combining sampling and feature selection outperform single-method solutions for fraud detection.", "role": "finding"},
+    {"author": "Karaboga", "year": 2007, "page": 2, "paragraph": 2, "claim": "ABC algorithm demonstrates superior performance on multimodal and multidimensional optimization problems.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus: credit card fraud detection using swarm intelligence-based anomaly detection."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Develops and evaluates novel algorithms (ABC-based sampling, PSO feature selection) for transaction anomaly detection."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "The classification component uses predictive modeling to identify fraudulent transactions."}
+    ],
+    "contribution_to_field": "This paper contributes a novel unified framework that integrates ABC-based data sampling, PSO-based feature selection, and ABC-based classification for credit card fraud detection. The key innovation is the ABC-based sampling technique that generates synthetic minority class instances while preserving the underlying data distribution, which outperforms SMOTE and other traditional sampling methods. The combined approach achieves state-of-the-art performance on the benchmark Kaggle credit card fraud dataset.",
+    "directly_justifies": [
+      "ABC-based sampling effectively addresses class imbalance in fraud detection datasets.",
+      "PSO-based feature selection identifies the most discriminating transaction attributes.",
+      "The unified framework achieves 98.78 percent accuracy and 0.996 AUC-ROC on benchmark data."
+    ],
+    "limits": [
+      "Single dataset evaluation limits generalizability claims.",
+      "Computational cost of swarm intelligence methods may be prohibitive for real-time applications.",
+      "The method does not account for concept drift in evolving fraud patterns."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domains 8.A and 8.B are highly relevant as the paper's core contribution is anomaly detection for credit card fraud using novel swarm intelligence algorithms. Domain 6.A is medium relevance due to the predictive classification component. Domains 1-5, 7, 9-14 were considered and rejected: the paper does not address Filipino demographics, budgeting, banking design, trust, engagement, savings, debt, gambling, or synthetic data. The paper is focused purely on fraud detection algorithm development."
+  },
+  "limitations": [
+    "Evaluation limited to a single benchmark dataset.",
+    "Swarm intelligence methods may have high computational overhead for real-time deployment.",
+    "Does not address concept drift or evolving fraud patterns over time."
+  ],
+  "remember_this": [
+    "ABC-based sampling outperforms SMOTE for addressing class imbalance in fraud detection.",
+    "PSO feature selection reduces dimensionality while maintaining classification accuracy.",
+    "The unified framework achieves 98.78 percent accuracy and 0.996 AUC-ROC.",
+    "Swarm intelligence methods can simultaneously optimize sampling, feature selection, and classification.",
+    "Class imbalance is a critical challenge that requires specialized sampling techniques."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Darwish et al_marked.md",
+      "converted_at": "2026-07-21T06:13:30Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

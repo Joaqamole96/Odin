@@ -1,0 +1,103 @@
+{
+  "paper_id": "10.1016/j.heliyon.2023.e15369",
+  "designation": "international",
+  "title": "Investigating the influence of machine learning and ensemble techniques in predicting online groceries intention: A case of the Philippines",
+  "authors": "Gumasing, M. J. J.; Casano, J. L.; Fajardo, A. C.",
+  "year": 2023,
+  "venue": "Heliyon",
+  "odin_topics": ["6.A", "6.B"],
+  "tldr": "A hybrid ML framework combining sentiment analysis and ML classifiers achieved 93 percent accuracy in predicting online grocery purchase intention among Filipino consumers, with ML-based feature extraction outperforming manual approaches by approximately 20 percent.",
+  "problem_and_motivation": "The Philippine e-commerce sector lacks integrated analytical frameworks that combine sentiment analysis with machine learning for predicting online grocery purchase intention. Existing approaches rely on manual feature extraction and fail to capture nuanced sentiment features from product reviews. There is a need for a scalable pipeline that can process unstructured review text and extract sentiment features while maintaining high prediction accuracy.",
+  "approach": [
+    "Scraped 5,000 product reviews from Shopee and Lazada focusing on Filipino grocery products using web crawling techniques.",
+    "Implemented a hybrid ML framework with three phases: sentiment analysis using VADER and TextBlob for lexicon-based sentiment scoring, feature extraction using Word2Vec embedding with ML-based feature selection, and ML-based prediction using eight classification algorithms.",
+    "Evaluated classifiers using k-fold cross-validation with k=10 to avoid overfitting and ensure reliable generalization.",
+    "Compared hybrid approaches combining manual and ML-based feature extraction with purely manual and purely ML-based approaches.",
+    "Validated results against prior work and cross-referenced feature importance scores to ensure methodological robustness."
+  ],
+  "findings": [
+    "Hybrid ML-based approaches achieved approximately 93 percent accuracy with Random Forest, Extra Trees, and Decision Tree classifiers.",
+    "ML-based feature extraction improved prediction accuracy by approximately 20 percent compared to manual feature extraction alone.",
+    "Random Forest and Extra Trees provided the highest accuracy, sensitivity, and specificity at 0.93 and 0.99 respectively.",
+    "Sentiment polarity analysis revealed that reviews related to fresh produce, electronics, and beauty products consistently exhibited positive sentiment.",
+    "Negative sentiment in grocery reviews was primarily driven by high prices, limited product variety, and concerns about the availability of fresh produce."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Hybrid framework with three distinct phases → Sentiment analysis, feature extraction, and prediction pipeline.",
+    "Figure 2: Machine learning-based feature extraction workflow → Word2Vec embedding and feature selection stages.",
+    "Figure 3: Lexicon-based sentiment polarity analysis → Sentiment scores for 5,000 grocery reviews.",
+    "Figure 4: Hybrid framework accuracy metrics → Precision, recall, and F1 scores for all classifiers.",
+    "Table 1: Comparison of prediction performance → Manual, hybrid, and ML-based approaches across all metrics."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "VADER", "definition": "Valence Aware Dictionary and sEntiment Reasoner, a lexicon and rule-based sentiment analysis tool attuned to social media and product reviews."},
+    {"term": "Word2Vec", "definition": "A group of neural network models that generate word embeddings by learning semantic relationships from large text corpora."},
+    {"term": "TF-IDF", "definition": "Term Frequency-Inverse Document Frequency, a numerical statistic that reflects how important a word is to a document in a collection."},
+    {"term": "k-fold cross-validation", "definition": "A resampling technique that partitions data into k subsets, training on k-1 and testing on the remaining fold, repeated k times."},
+    {"term": "Ensemble learning", "definition": "A machine learning paradigm that combines multiple base classifiers to improve overall predictive performance."}
+  ],
+  "citations": [
+    {"author": "Chen", "year": 2012, "page": 2, "paragraph": 1, "claim": "Online grocery shopping has grown rapidly with over 150 million global consumers using e-commerce platforms.", "role": "context"},
+    {"author": "Hartman", "year": 2018, "page": 1, "paragraph": 1, "claim": "The online grocery industry is projected to reach $440 billion in sales by 2025.", "role": "context"},
+    {"author": "Dablemont", "year": 2022, "page": 1, "paragraph": 1, "claim": "Filipino consumers are increasingly using e-commerce platforms for grocery shopping, presenting opportunities for businesses.", "role": "context"},
+    {"author": "Agag", "year": 2022, "page": 3, "paragraph": 1, "claim": "Deep learning approaches have demonstrated higher accuracy in capturing complex patterns compared to traditional ML models.", "role": "finding"},
+    {"author": "Khan", "year": 2020, "page": 3, "paragraph": 2, "claim": "Hybrid approaches combining lexicon-based and ML methods generally outperform purely lexicon-based sentiment analysis.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Applies ML classification models to predict online grocery purchase intention, which is a spending behavior prediction task."
+      },
+      {
+        "code": "6.B",
+        "name": "Predictive Modeling for Personal Spending",
+        "relevance": "high",
+        "justification": "Directly models consumer spending intention on online groceries using sentiment analysis and ML classifiers."
+      },
+      {
+        "code": "13.A",
+        "name": "Bias and Fairness in Synthetic Data",
+        "relevance": "medium",
+        "justification": "Discusses limitations of training data bias and the need for diverse datasets to ensure model robustness."}
+    ],
+    "contribution_to_field": "This paper contributes a hybrid ML framework that integrates sentiment analysis with machine learning classifiers for predicting online grocery purchase intention in the Philippine context. The key innovation is the demonstration that ML-based feature extraction significantly outperforms manual approaches, with the hybrid pipeline achieving 93 percent accuracy. The framework provides a scalable methodology for processing unstructured product review data and extracting actionable consumer behavior insights from e-commerce platforms.",
+    "directly_justifies": [
+      "Hybrid ML approaches combining sentiment analysis and classification achieve approximately 93 percent accuracy in predicting purchase intention.",
+      "ML-based feature extraction outperforms manual extraction by approximately 20 percent.",
+      "Sentiment analysis of Filipino grocery reviews reveals key drivers of positive and negative consumer perception."
+    ],
+    "limits": [
+      "Single-country focus on the Philippines limits generalizability to other markets.",
+      "Training data from only two e-commerce platforms may not represent the full market.",
+      "Cross-sectional data capture does not account for temporal changes in consumer preferences."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domains 6.A and 6.B are highly relevant as the paper directly applies predictive modeling to consumer spending behavior. Domain 13.A is medium relevance as the paper discusses training data bias and model robustness. Domains 1-5, 7-12, 14 were considered and rejected: the paper does not address Filipino demographics, budgeting, banking, fraud detection, gambling, trust, debt, savings goals, or synthetic data generation. The paper is focused on spending behavior prediction, not personal finance management."
+  },
+  "limitations": [
+    "Philippine-only focus limits cross-cultural generalisability.",
+    "Data from Shopee and Lazada may not represent all e-commerce platforms.",
+    "Cross-sectional design prevents tracking changes in purchase intention over time."
+  ],
+  "remember_this": [
+    "Hybrid ML approaches achieve 93 percent accuracy for predicting online grocery purchase intention.",
+    "ML-based feature extraction outperforms manual extraction by approximately 20 percent.",
+    "Random Forest and Extra Trees provide the highest accuracy at 0.93 and 0.99.",
+    "Negative grocery reviews are primarily driven by price, variety, and freshness concerns.",
+    "Sentiment analysis can capture nuanced consumer preferences from unstructured review text."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Gumasing et al_marked.md",
+      "converted_at": "2026-07-21T06:13:30Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

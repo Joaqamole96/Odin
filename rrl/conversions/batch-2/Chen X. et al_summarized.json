@@ -1,0 +1,167 @@
+{
+  "paper_id": "10.48550/arXiv.2505.08827",
+  "designation": "international-algorithm-specific",
+  "title": "Rethinking Time Encoding via Learnable Transformation Functions",
+  "authors": "Chen, X.; Tang, Y.; Xu, J.; Zhang, J.; Zhang, S.; Peng, S.; Zheng, X.; Xiong, Y.",
+  "year": 2025,
+  "venue": "International Conference on Machine Learning (ICML)",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "12.A",
+    "4.A"
+  ],
+  "tldr": "Proposes Learnable Transformation-based Generalized Time Encoding (LeTE), a novel time encoding method using deep function learning to parameterize learnable non-linear transformations, enabling modeling of diverse and complex time patterns including periodic, non-periodic, and mixed patterns.",
+  "problem_and_motivation": "Existing time encoding methods (hand-crafted and functional) rely on pre-defined inductive biases, particularly trigonometric functions for periodicity, making them less effective in handling diverse real-world time patterns. They struggle to capture non-periodic patterns and require additional dimensions for complex temporal dynamics. Real-world data often exhibits complex interplay of mixed patterns (periodic and non-periodic) that current methods cannot effectively model.",
+  "approach": [
+    "Proposed LeTE (Learnable Transformation-based Generalized Time Encoding) using deep function learning techniques to parameterize non-linear transformations.",
+    "Developed three variations: Fourier-based LeTE (for periodic patterns), Spline-based LeTE (for non-periodic patterns), and Combined LeTE (integrating both).",
+    "Proved that LeTE is a generalized version of previous methods (Time2Vec, FTR) and encompasses them as specific cases.",
+    "Demonstrated LeTE satisfies time rescaling invariance property required for time representations.",
+    "Applied extensive experiments across diverse domains: event-based image classification, time series forecasting, dynamic graph representation learning, and real-world applications."
+  ],
+  "findings": [
+    "LeTE achieves superior results with fewer dimensions than previous time encodings due to learnable transformations capturing complexity.",
+    "Fourier-based LeTE effectively models periodic patterns while Spline-based LeTE better captures non-periodic patterns.",
+    "Combined LeTE leverages strengths of both approaches for enhanced pattern capture.",
+    "LeTE is provably a generalized version of previous methods (Time2Vec, FTR, absolute position encoding).",
+    "LeTE satisfies time rescaling invariance property, ensuring compatibility across different time scales.",
+    "Experiments demonstrate LeTE's versatility and effectiveness across multiple domains and tasks."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Comparison of time encoding methods → Shows Hand-Crafted (a), Functional (b), and LeTE (c) approaches with their formulas and architectures.",
+    "Figure 2: Combined LeTE illustration → Shows Fourier-based and Spline-based components with LayerNorm and scaling.",
+    "Figure 3: LSTM comparison with FTE vs LeTE → Demonstrates LeTE's performance advantage in time series modeling."
+  ],
+  "key_equations": [
+    {
+      "equation": "LeTE(t)[i] = ϕ_i(ω_i t + φ_i)",
+      "explanation": "Core LeTE formula where ω_i and φ_i are learnable parameters, and ϕ_i are learnable functions parameterized by Fourier series or B-splines."
+    },
+    {
+      "equation": "ϕ_i(x) = a_0 + Σ_{k=1}^K (a_k cos(kx) + b_k sin(kx))",
+      "explanation": "Fourier-based LeTE parameterization using learnable Fourier series expansion for periodic patterns."
+    },
+    {
+      "equation": "ϕ_i(x) = Σ_{j=1}^M c_j B_j(x)",
+      "explanation": "Spline-based LeTE parameterization using B-spline basis functions for flexible non-periodic pattern modeling."
+    },
+    {
+      "equation": "TE(t)[i] = sin(ω_i t + φ_i) or ω_i t + φ_i",
+      "explanation": "Previous functional time encoding (Time2Vec) that LeTE generalizes as a special case."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "LeTE (Learnable Transformation-based Generalized Time Encoding)",
+      "definition": "A time encoding method using deep function learning to parameterize learnable non-linear transformations, enabling modeling of diverse and complex time patterns."
+    },
+    {
+      "term": "Functional Time Encoding (FTE)",
+      "definition": "Feature mappings from 1-dimensional input time to high-dimensional time embedding using pre-defined non-linear transformations like trigonometric functions."
+    },
+    {
+      "term": "Time2Vec",
+      "definition": "A functional time encoding method that uses learnable linear transformations combined with fixed sine functions for time representation."
+    },
+    {
+      "term": "Fourier Series Expansion",
+      "definition": "Mathematical representation of a function as a combination of sine and cosine functions with learnable coefficients and frequencies."
+    },
+    {
+      "term": "B-Splines",
+      "definition": "Piecewise polynomial basis functions used for flexible function approximation in Spline-based LeTE."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Kazemi",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Time2Vec introduces learnable linear transformations combined with fixed sine functions for time representation in graph neural networks.",
+      "role": "methodology"
+    },
+    {
+      "author": "Xu",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Functional Time Representation (FTR) provides feature mappings from 1-dimensional time to high-dimensional embeddings.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zhang",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep function learning leverages flexibility of parameterized functions optimized through deep learning to approximate complex functions.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "LeTE can model complex temporal patterns in financial data including transaction peaks, spending habits, and fraud detection patterns."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "LeTE provides superior time encoding for sequential data modeling including time series forecasting and dynamic patterns."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Extensive experimental evaluation across diverse domains demonstrates LeTE's effectiveness and versatility."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Comprehensive review and generalization of existing time encoding methods used in financial applications."
+      }
+    ],
+    "contribution_to_field": "This paper makes significant contributions to time encoding methods by proposing LeTE, a generalized framework that addresses limitations of previous approaches. The key innovations include: (1) using learnable non-linear transformations instead of fixed functions, (2) proving that LeTE encompasses previous methods as special cases, (3) demonstrating time rescaling invariance property, and (4) achieving superior performance with fewer dimensions. The mathematical framework provides theoretical foundation while extensive experiments validate practical effectiveness across multiple domains.",
+    "directly_justifies": [
+      "LeTE achieves superior results with fewer dimensions than previous time encodings.",
+      "LeTE is provably a generalized version of previous methods (Time2Vec, FTR).",
+      "Fourier-based LeTE effectively models periodic patterns while Spline-based captures non-periodic.",
+      "LeTE satisfies time rescaling invariance property for compatibility across time scales.",
+      "Combined LeTE leverages strengths of both Fourier and Spline approaches."
+    ],
+    "limits": [
+      "The paper focuses on theoretical foundations and may require practical implementation guidance for specific applications.",
+      "Computational complexity of learnable transformations may increase with very high-dimensional embeddings.",
+      "Experimental validation limited to specific domains; broader financial applications need further study.",
+      "The paper is from 2025 and represents early work that may evolve with further research."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domains 6.A and 6.B received high relevance as LeTE provides superior time encoding for financial time series and sequential data modeling. Domain 12.A received medium relevance for comprehensive evaluation framework. Domain 4.A received medium relevance for review and generalization of existing methods. Other domains were considered but rejected as the paper focuses on fundamental time encoding methods rather than specific personal finance applications."
+  },
+  "limitations": [
+    "Computational complexity of learnable transformations may increase with very high-dimensional embeddings.",
+    "Experimental validation limited to specific domains; broader financial applications need further study.",
+    "The paper is from 2025 and represents early work that may evolve with further research.",
+    "Practical implementation guidance for specific financial applications may be needed."
+  ],
+  "remember_this": [
+    "LeTE uses learnable non-linear transformations instead of fixed trigonometric functions for time encoding.",
+    "LeTE encompasses previous methods (Time2Vec, FTR) as special cases through mathematical proof.",
+    "Combined LeTE integrates Fourier-based (periodic) and Spline-based (non-periodic) approaches.",
+    "LeTE achieves superior performance with fewer dimensions due to learnable transformations.",
+    "LeTE satisfies time rescaling invariance property for compatibility across different time scales."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T15:40:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Chen X. et al_marked.md",
+      "converted_at": "2026-07-21T05:54:39Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

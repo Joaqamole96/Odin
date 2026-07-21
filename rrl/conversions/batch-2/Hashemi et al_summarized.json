@@ -1,0 +1,177 @@
+{
+  "paper_id": "10.1145/3675094.3677599",
+  "designation": "international-algorithm-specific",
+  "title": "A User-Centric Exploration of Axiomatic Explainable AI in Participatory Budgeting",
+  "authors": "Hashemi, M.; Darejeh, A.; Cruz, F.",
+  "year": 2024,
+  "venue": "UbiComp Companion'24",
+  "odin_topics": [
+    "7.A",
+    "7.B",
+    "10.B",
+    "12.A",
+    "4.A",
+    "11.A"
+  ],
+  "tldr": "Axiomatic explanations in participatory budgeting improve user understanding and perceived fairness, though trust effects are inconclusive.",
+  "problem_and_motivation": "Participatory budgeting mechanisms aim to allocate funds based on votes and budget constraints, but lack transparency in decision-making. Users often do not understand why certain projects are funded while others are not. There is a need for explainable approaches that enhance transparency and trust in budget allocation systems.",
+  "approach": [
+    "Proposed an axiomatic approach treating budget allocation as constraint-solving with linear constraints.",
+    "Formulated feasibility, exhaustiveness, and utilitarian welfare axioms as integer linear programming constraints.",
+    "Evaluated approach through user study with 26 participants using two participatory budgeting scenarios.",
+    "Compared understanding, trust, and perceived fairness before and after receiving explanations.",
+    "Analyzed user preferences between general and counterfactual explanation types."
+  ],
+  "findings": [
+    "num: 72.4% of participants found explanations extremely or very helpful for understanding.",
+    "num: 63.3% preferred general explanations over counterfactual ones.",
+    "num: 30% reported positive impact on perceived fairness after explanations.",
+    "num: 27% increased trust, 23% decreased trust, 50% unchanged after explanations.",
+    "num: User understanding and perceived fairness improved in both test cases."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Comparison of user reports on transparency, trust, and fairness before/after explanations → Explanations improve understanding and perceived fairness."
+  ],
+  "key_equations": [
+    {
+      "equation": "F : \\langle Vote, B, cost(x) \\rangle \\rightarrow \\{C | C \\subseteq 2^X, \\sum_{c_k \\in C} cost(c_k) \\leq B\\}",
+      "explanation": "PB voting rule mapping votes and budget to feasible allocations."
+    },
+    {
+      "equation": "\\sum_{j=1}^{m} x_j",
+      "explanation": "Objective function maximizing number of funded projects."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Participatory Budgeting (PB)",
+      "definition": "Democratic approach to allocating funds for public projects based on community votes."
+    },
+    {
+      "term": "Axioms",
+      "definition": "Desired properties or agreed-upon values used to justify voting mechanism outcomes."
+    },
+    {
+      "term": "Approval Voting",
+      "definition": "Voting system where voters can approve or disapprove each project independently."
+    },
+    {
+      "term": "Integer Linear Programming (ILP)",
+      "definition": "Optimization technique with linear constraints and integer variables."
+    },
+    {
+      "term": "Counterfactual Explanation",
+      "definition": "Explanation showing how outcomes would change under different conditions."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Aziz",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Participatory funding coordination model with axioms and rules.",
+      "role": "methodology"
+    },
+    {
+      "author": "Procaccia",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Axioms should explain solutions in social choice theory.",
+      "role": "context"
+    },
+    {
+      "author": "Caragiannis",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Unreasonable fairness of maximum Nash welfare in allocation problems.",
+      "role": "context"
+    },
+    {
+      "author": "Lundberg",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Unified approach to interpreting model predictions using feature importance.",
+      "role": "baseline"
+    },
+    {
+      "author": "Wachter",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Counterfactual explanations without opening the black box.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Core focus on participatory budgeting allocation mechanisms and axioms."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses automated budget allocation decisions and recommendations."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Evaluates how explanations affect user trust in algorithmic decisions."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "User study methodology for evaluating explanation effectiveness."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Reviews existing XAI approaches and participatory budgeting methods."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "low",
+        "justification": "Examines user engagement with explanation mechanisms."
+      }
+    ],
+    "contribution_to_field": "This paper contributes an axiomatic approach to providing transparent explanations in participatory budgeting decisions. It formulates budget allocation axioms as integer linear programming constraints for systematic outcome verification. The work evaluates explanation effectiveness through real-world user studies measuring understanding, trust, and fairness perceptions. Findings indicate explanations improve user understanding and perceived fairness, though trust effects are mixed.",
+    "directly_justifies": [
+      "Axiomatic explanations treat budget allocation as constraint-solving problem.",
+      "72.4% of users found axiomatic explanations helpful for understanding.",
+      "Users prefer general explanations over counterfactual ones in budgeting contexts."
+    ],
+    "limits": [
+      "Small pilot study with only 26 participants.",
+      "Mixed results on trust improvement from explanations.",
+      "Limited to approval voting and non-divisible project settings.",
+      "No evaluation of computational scalability for larger budgets."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all topic domains identified high relevance for budgeting strategies (7.A) due to core focus on participatory budgeting axioms and allocation mechanisms. Medium relevance for budget recommendation (7.B), user trust (10.B), and evaluation frameworks (12.A) as supporting aspects. Low relevance for landscape of existing systems (4.A) and engagement dynamics (11.A) as contextual background. Domains related to Filipino demographics, expense categorization, predictive modeling, and anomaly detection were considered and rejected as not covered by this explainable AI budgeting paper."
+  },
+  "remember_this": [
+    "None identified."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T19:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Hashemi et al_marked.md",
+      "converted_at": null,
+      "converter_tool": null
+    }
+  },
+  "limitations": [
+    "None identified."
+  ]
+}

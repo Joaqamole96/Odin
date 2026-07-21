@@ -1,0 +1,86 @@
+{
+  "paper_id": "10.59431/jda.v4i1.660",
+  "designation": "local",
+  "title": "Development of Budget Management System Using Visual Basic .NET and MySQL Database: A Desktop Application for Personal Financial Tracking",
+  "authors": "Janobe, J.",
+  "year": 2025,
+  "venue": "Journal Dekstop Application (JDA)",
+  "odin_topics": ["4.A", "4.B", "9.B", "9.C", "10.A", "10.B"],
+  "tldr": "A desktop-based Budget Management System built with Visual Basic .NET and MySQL provides offline, privacy-focused personal financial tracking with real-time summaries and color-coded balance indicators.",
+  "problem_and_motivation": "Many individuals lack reliable tools for recording, monitoring, and analyzing personal financial transactions, often relying on error-prone manual methods like handwritten ledgers or basic spreadsheets. Cloud-based financial tools raise concerns about data privacy, internet dependency, and subscription costs, leaving a gap for offline, user-controlled alternatives that maintain financial data security while remaining accessible and easy to use.",
+  "approach": ["The system was developed using a developmental research design following the Software Development Life Cycle (SDLC) framework with six phases: planning, analysis, design, implementation, testing, and deployment.", "The application adopted a two-tier client-server architecture with Visual Basic .NET 2015 for the presentation layer and MySQL 5.7+ for data management, connected via ADO.NET and MySQL Connector/NET driver.", "A database named db_budget was designed with a transactions table containing fields for transaction_id, amount, remarks, transaction_type (Received/Expense), transaction_date, and created_at timestamp.", "Core functionalities included Save, Update, Delete, Clear, and Search operations with parameterized SQL commands to prevent injection vulnerabilities and confirmation prompts for destructive actions.", "Testing included unit, integration, functional, usability, and performance evaluations with sample users of diverse technical backgrounds and datasets up to 5,000 records.", "The system was distributed as a compressed archive with project files, executable, SQL initialization script, and documentation, requiring only XAMPP and phpMyAdmin for local deployment.", "Interface design featured input panels, action toolbars, a DataGridView for transaction display, and a summary panel with color-coded indicators for surplus (green) and deficit (red).", "Date-based filtering allowed users to analyze financial data across specific periods with dynamically updated summaries and transaction lists."],
+  "findings": ["num: Transaction insertion, modification, and deletion completed in under half a second for databases up to 5,000 entries.", "Data retrieval and aggregation queries remained responsive under one second for large datasets. Usability testing confirmed the interface was easy to navigate with minimal guidance across diverse technical backgrounds.", "The system successfully maintained data consistency and integrity across all tested operations without logical or runtime errors."],
+  "key_figures_tables": ["Figure 1: Budget Management System Interface in Visual Basic .NET → Shows a dashboard with input panel, action toolbar, DataGridView, and summary panel with color-coded balance indicators."],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "SDLC", "definition": "Software Development Life Cycle — a structured process for software development consisting of planning, analysis, design, implementation, testing, and deployment phases."},
+    {"term": "ADO.NET", "definition": "A Microsoft data access technology for connecting to and interacting with databases from .NET applications."},
+    {"term": "MySQL Connector/NET", "definition": "A driver that enables communication between .NET applications and MySQL databases."},
+    {"term": "DataGridView", "definition": "A Windows Forms control for displaying and editing data in a tabular format."}
+  ],
+  "citations": [
+    {"author": "Lusardi", "year": 2014, "page": 24, "paragraph": 3, "claim": "Individuals who actively manage finances are more likely to achieve financial stability and make sound economic decisions.", "role": "context"},
+    {"author": "Fernandes", "year": 2014, "page": 24, "paragraph": 3, "claim": "Financial literacy and education influence downstream financial behaviors.", "role": "context"},
+    {"author": "Xiao", "year": 2016, "page": 24, "paragraph": 3, "claim": "Consumer financial education and financial capability are interrelated outcomes.", "role": "context"},
+    {"author": "Ameriks", "year": 2003, "page": 24, "paragraph": 5, "claim": "Consistent financial monitoring enhances awareness and financial discipline through the tracking effect.", "role": "finding"},
+    {"author": "Shim", "year": 2010, "page": 24, "paragraph": 5, "claim": "Financial socialization from parents, work, and education shapes financial behaviors.", "role": "context"},
+    {"author": "Thaler", "year": 2008, "page": 25, "paragraph": 3, "claim": "Accessible budgeting tools can encourage deliberate spending and saving behavior by enhancing financial awareness.", "role": "context"},
+    {"author": "Ramsey", "year": 2013, "page": 25, "paragraph": 3, "claim": "Financial tools should promote awareness of financial status to improve outcomes.", "role": "context"},
+    {"author": "Microsoft Corporation", "year": 2015, "page": 25, "paragraph": 6, "claim": "Visual Basic .NET facilitates rapid development of desktop applications with intuitive graphical interfaces.", "role": "methodology"},
+    {"author": "Oracle Corporation", "year": 2023, "page": 25, "paragraph": 6, "claim": "MySQL is an open-source relational database management system recognized for scalability, reliability, and standard SQL support.", "role": "methodology"},
+    {"author": "Patel", "year": 2016, "page": 25, "paragraph": 6, "claim": "Integration of Visual Basic .NET with MySQL through MySQL Connector/NET allows seamless front-end and back-end communication.", "role": "methodology"},
+    {"author": "Grable", "year": 2004, "page": 24, "paragraph": 4, "claim": "Traditional manual methods like handwritten ledgers and spreadsheets are time-consuming and prone to error for financial tracking.", "role": "context"},
+    {"author": "Troelsen", "year": 2017, "page": 25, "paragraph": 6, "claim": "Visual Basic .NET provides robust libraries for UI design, data connectivity through ADO.NET, and comprehensive error handling.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "high", "justification": "Reviews existing systems including Mint, YNAB, Quicken, and PocketGuard, identifying gaps in accessibility and privacy."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "high", "justification": "Highlights limitations of cloud-based tools including privacy concerns, subscription costs, and internet dependency."},
+      {"code": "9.B", "name": "Mobile UX Design for Personal Finance", "relevance": "medium", "justification": "Discusses interface design principles for financial applications emphasizing simplicity and user-centered design."},
+      {"code": "9.C", "name": "Offline-First Architecture", "relevance": "high", "justification": "Core design principle of the system: local data storage eliminating internet dependency and third-party services."},
+      {"code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "high", "justification": "Privacy-focused design with local storage, parameterized SQL to prevent injection, and user data ownership."},
+      {"code": "10.B", "name": "User Trust in Personal Finance Systems", "relevance": "medium", "justification": "Addresses trust through local data control, open-source transparency, and avoidance of third-party services."}
+    ],
+    "contribution_to_field": "This paper contributes to the personal finance systems domain by demonstrating that offline, privacy-focused budget management systems can effectively serve users without requiring internet connectivity or subscription-based models. The study validates that Visual Basic .NET and MySQL integration provides a reliable technical foundation for building accessible financial management tools, particularly relevant in regions with limited connectivity. The research establishes that user-centered design principles prioritizing simplicity, privacy, and affordability can produce functional alternatives to complex commercial systems. Additionally, the open-source approach and educational documentation create pathways for collaborative enhancement and adaptation across different contexts, promoting financial technology development in resource-constrained environments.",
+    "directly_justifies": [
+      "Offline-first design eliminates internet dependency while maintaining full functionality for personal finance management.",
+      "Local data storage provides users exclusive ownership of financial information, addressing privacy concerns.",
+      "Visual Basic .NET and MySQL integration enables reliable, cost-free financial management applications.",
+      "User-centered design prioritizing simplicity improves adoption across diverse technical backgrounds.",
+      "Open-source approach encourages collaborative enhancement and educational use."
+    ],
+    "limits": [
+      "Limited to desktop-only deployment on Windows, restricting cross-platform and mobile accessibility.",
+      "Single-user architecture prevents collaborative or household budgeting scenarios.",
+      "Manual database configuration through XAMPP and phpMyAdmin presents barriers for non-technical users.",
+      "No automated backup functionality creates potential risks of data loss."
+    ],
+    "topic_mapping_rationale": "The paper was systematically scanned across all 14 topic domains. Domain 4 (Landscape of Existing Personal Finance Systems) was flagged as highly relevant due to comprehensive review of existing tools like Mint, YNAB, and Quicken. Domain 9 (Mobile-First Design Principles) was partially relevant with medium relevance for interface design principles, though the paper focuses on desktop rather than mobile. Domain 10 (Data Privacy and Security) was highly relevant due to the system's core emphasis on local storage and privacy preservation. Domains 1-3 (Filipino Demographics, Financial Practices, Expense Categorization) were considered but rejected as the paper focuses on system development rather than demographic or behavioral analysis. Domains 5-8 (Financial Behavioral Profiles, Predictive Modeling, Budgeting Strategies, Anomaly Detection) were rejected as the paper does not address algorithmic or analytical approaches. Domain 11 (Engagement Dynamics) was considered but rejected due to limited discussion of engagement mechanisms. Domain 12 (Evaluation Frameworks) was partially relevant with medium relevance for testing methodology. Domains 13-14 (Savings/Debt Management, Synthetic Data Generation) were rejected as not applicable to this system development paper. The paper primarily contributes to offline-first architecture and privacy-focused personal finance system design."
+  },
+  "limitations": [
+    "The system requires manual database configuration through XAMPP and phpMyAdmin, which may challenge non-technical users.",
+    "Windows-only deployment restricts cross-platform and mobile accessibility.",
+    "Single-user architecture prevents collaborative or household budgeting scenarios.",
+    "Data backup must be performed manually, creating potential risks of data loss.",
+    "No expense categorization or graphical reporting features are currently implemented.",
+    "The system lacks automated setup processes and multi-currency support."
+  ],
+  "remember_this": [
+    "Offline-first architecture eliminates internet dependency while maintaining full financial management functionality.",
+    "Local data storage provides users exclusive ownership of financial information, addressing privacy concerns.",
+    "Transaction operations completed in under half a second for datasets up to 5,000 records.",
+    "Color-coded balance indicators provide immediate visual feedback for surplus and deficit status.",
+    "The system occupies a unique niche between basic spreadsheets and complex commercial tools like Mint or YNAB."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T16:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Janobe_marked.md",
+      "converted_at": "2026-07-21T06:42:23Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

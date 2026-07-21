@@ -1,0 +1,99 @@
+{
+  "paper_id": "10.47249/pbr.v27i3.912",
+  "designation": "international",
+  "title": "Experiences of Microfinance Borrowers in Cebu City: A Qualitative Study on Challenges and Coping Strategies",
+  "authors": "Estorba, G.; Espiritu, M.; Rendon, A.; Vistal, K.",
+  "year": 2025,
+  "venue": "International Journal of Research and Innovation in Social Science (IJRISS)",
+  "odin_topics": ["4.A", "14.A", "14.B"],
+  "tldr": "A qualitative study of 12 microfinance borrowers in Cebu City found that repayment challenges stem from irregular income, over-borrowing, and peer pressure, with borrowers coping through side hustles, flexible spending, and informal lending networks.",
+  "problem_and_motivation": "Microfinance plays a vital role in financial inclusion but borrowers often face significant repayment challenges due to irregular income streams, lack of financial literacy, and unrealistic repayment expectations. There is limited qualitative research exploring how microfinance clients in developing economies navigate financial stress and manage loan obligations in their daily lives. Understanding these lived experiences is essential for improving microfinance product design and support services.",
+  "approach": [
+    "Qualitative phenomenological study design capturing the lived experiences of microfinance borrowers in Cebu City.",
+    "Purposive sampling of 12 participants who had at least one year of active microfinance borrowing experience.",
+    "Data collection through semi-structured interviews and focus group discussions conducted in Cebuano.",
+    "Thematic analysis following Braun and Clarke methodology to identify recurring patterns and themes.",
+    "Findings organized into three main dimensions: repayment challenges, behavioral adaptations, and structural concerns."
+  ],
+  "findings": [
+    "Irregular income and delayed salary disbursements emerged as the most significant barrier to timely loan repayment.",
+    "Peer pressure and the tendency to over-borrow to meet both essential and non-essential needs exacerbated financial difficulties.",
+    "Borrowers developed coping strategies including side hustles, flexible spending adjustments, and informal lending networks.",
+    "Lack of financial literacy contributed to unrealistic expectations about repayment capacity and loan management.",
+    "Trust in lending institutions was undermined by perceived aggressive collection practices and lack of communication flexibility."
+  ],
+  "key_figures_tables": [
+    "Table 1: Participant Demographics → Age, gender, occupation, loan amount, and borrowing experience for all 12 participants.",
+    "Table 2: Themes and sub-themes → Repayment challenges, behavioral adaptations, and structural concerns with supporting quotes."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "Microfinance", "definition": "Financial services including loans, savings, and insurance provided to low-income individuals who lack access to traditional banking services."},
+    {"term": "Phenomenological study", "definition": "A qualitative research approach focused on understanding the lived experiences of individuals regarding a specific phenomenon."},
+    {"term": "Purposive sampling", "definition": "A non-probability sampling technique where participants are selected based on specific characteristics relevant to the research question."},
+    {"term": "Thematic analysis", "definition": "A qualitative method for identifying, analyzing, and reporting patterns within data through systematic coding."}
+  ],
+  "citations": [
+    {"author": "Morduch", "year": 1999, "page": 1, "paragraph": 1, "claim": "Microfinance institutions serve low-income populations who lack access to traditional banking but repayment challenges persist.", "role": "context"},
+    {"author": "Armendariz", "year": 2010, "page": 1, "paragraph": 1, "claim": "Over-indebtedness in microfinance occurs when clients borrow from multiple sources without clear repayment strategies.", "role": "context"},
+    {"author": "Bateman", "year": 2010, "page": 2, "paragraph": 1, "claim": "Repayment difficulties often stem from factors beyond individual control, including economic volatility and irregular income.", "role": "context"},
+    {"author": "Hussain", "year": 2021, "page": 2, "paragraph": 1, "claim": "Social pressure within communities can push individuals into borrowing beyond their repayment capacity.", "role": "context"},
+    {"author": "Johnson", "year": 2021, "page": 3, "paragraph": 1, "claim": "Financial literacy enables better decision-making around loan utilization, budgeting, and repayment scheduling.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Examines how microfinance borrowers navigate personal finance challenges including loan management and repayment."
+      },
+      {
+        "code": "14.A",
+        "name": "Debt Reduction and Loan Management Strategies",
+        "relevance": "high",
+        "justification": "Directly addresses challenges in loan repayment, debt management strategies, and coping mechanisms for microfinance borrowers."
+      },
+      {
+        "code": "14.B",
+        "name": "Goal-Setting and Motivation in Debt Reduction",
+        "relevance": "medium",
+        "justification": "Discusses how borrowers set repayment goals and what motivates them to continue servicing their debts despite challenges."}
+    ],
+    "contribution_to_field": "This qualitative study provides rich, contextualized insights into the lived experiences of microfinance borrowers in a developing economy, filling a gap in the predominantly quantitative microfinance literature. The findings reveal that repayment challenges are not simply individual failures but are shaped by systemic factors including irregular income, peer pressure, and institutional communication practices. The study contributes practical implications for microfinance institutions to design more flexible and supportive financial products that account for the realities of borrowers economic lives.",
+    "directly_justifies": [
+      "Irregular income and delayed salary disbursements are the most significant barriers to timely loan repayment.",
+      "Peer pressure and over-borrowing exacerbate financial difficulties for microfinance clients.",
+      "Borrowers develop coping strategies including side hustles and informal lending networks."
+    ],
+    "limits": [
+      "Small sample of 12 participants limits generalizability to other microfinance contexts.",
+      "Single-city focus on Cebu may not reflect experiences in other Philippine regions.",
+      "Phenomenological design captures perceptions rather than objective financial behaviors."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domain 4.A is highly relevant as the paper examines the landscape of microfinance as a personal finance system. Domain 14.A is highly relevant as it directly addresses debt management challenges and repayment strategies. Domain 14.B is medium relevance as it discusses goal-setting and motivation in debt repayment. Domains 1-3, 5-13 were considered and rejected: the paper does not address budgeting, mobile design, trust, engagement, savings, fraud, gambling, addiction, synthetic data, or savings goals. The paper is focused on debt management in microfinance contexts."
+  },
+  "limitations": [
+    "Small sample size limits statistical generalizability.",
+    "Single-city focus on Cebu may not represent other Philippine regions.",
+    "Phenomenological design captures subjective experiences rather than objective financial data."
+  ],
+  "remember_this": [
+    "Irregular income is the most significant barrier to timely microfinance loan repayment.",
+    "Peer pressure contributes to over-borrowing beyond repayment capacity.",
+    "Borrowers cope through side hustles, flexible spending, and informal lending networks.",
+    "Lack of financial literacy leads to unrealistic repayment expectations.",
+    "Aggressive collection practices undermine trust in lending institutions."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Estorba et al_marked.md",
+      "converted_at": "2026-07-21T06:13:30Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

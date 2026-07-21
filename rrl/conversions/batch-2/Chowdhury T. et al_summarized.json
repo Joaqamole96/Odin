@@ -1,0 +1,238 @@
+{
+  "paper_id": "10.1016/j.chbr.2025.100926",
+  "designation": "international",
+  "title": "Modeling financial literacy through explainable machine learning and behavioral segmentation in emerging economies",
+  "authors": "Tawhid Ahmed Chowdhury; Md Ariful Haque Chowdhury; Md Tahidur Rahman; Iftakhar Ahmed; Nabila Ahmed; Md Azizul Islam Tuhin; Abdulla Al Kafy",
+  "year": 2026,
+  "venue": "Computers in Human Behavior Reports",
+  "odin_topics": [
+    "3.A",
+    "5.A",
+    "6.A",
+    "10.A"
+  ],
+  "tldr": "Machine learning models reveal that institutional trust and digital comfort are stronger predictors of financial literacy than formal education in Bangladesh, with three distinct behavioral clusters requiring targeted interventions.",
+  "problem_and_motivation": "Traditional demographic methods fail to capture the complexity of digital financial behavior, hampering effective intervention design in emerging economies. Despite expanding access to digital financial tools across Bangladesh and increasing recognition of financial literacy's importance, significant gaps remain in both understanding and methodological approaches. Financial literacy remains underexplored among socioeconomically vulnerable groups, especially affecting low-income communities, rural residents, and undereducated populations. Few studies have used ML approaches specifically designed to address socio-demographic differences within developing economy contexts. This study addresses these gaps by developing and evaluating a ML framework to predict financial literacy levels among Bangladeshi adults.",
+  "approach": [
+    "Cross-sectional, quantitative design combining primary data collection through structured surveys with ML-based predictive modeling.",
+    "Surveyed 1067 adults in Bangladesh aged 18-60 with digital access, March to June 2024.",
+    "Stratified random sampling with 45:55 urban-rural ratio based on Bangladesh's population distribution.",
+    "Applied Random Forest, XGBoost, and Decision Tree classifiers for supervised learning.",
+    "K-means clustering for unsupervised behavioral segmentation with k=3 optimal clusters.",
+    "SHAP (SHapley Additive exPlanations) analysis for explainable AI and feature importance.",
+    "SMOTE and ADASYN resampling to address class imbalance (15% high literacy).",
+    "OECD/INFE financial literacy assessment framework adapted for Bangladesh context."
+  ],
+  "findings": [
+    "Rural users had 7.3% higher financial literacy than urban users (rural mean: 5.73, urban: 5.34, not significant).",
+    "Formal education did not significantly impact literacy levels (F(3,1063) = 0.74, p = 0.59, η² = 0.002).",
+    "Weak correlations between financial knowledge and actual behaviors (r < 0.10, none significant).",
+    "XGBoost achieved best performance with F1-score of 0.52, 58% improvement over random baseline.",
+    "Three behavioral clusters identified: Digitally Literate Planners (34%), Informally Active but Underskilled (41%), Digitally Excluded Traditionalists (25%).",
+    "SHAP importance: Income (0.31), Trust (0.18), Age (0.14), Sources of financial education (0.12), Digital comfort (0.11).",
+    "Education showed limited importance (0.09) while gender had minimal direct capacity (0.06).",
+    "Women benefited significantly more from tertiary education (F(3,499) = 4.83, p = 0.003) than men (F(3,562) = 0.91, p = 0.44).",
+    "Cluster 0 (Digitally Literate Planners): 94% mobile banking, 89% trust, knowledge 7.8/10.",
+    "Cluster 1 (Informally Active): 67% in savings groups, 72% budgeting, knowledge 5.4/10.",
+    "Cluster 2 (Digitally Excluded): 15% digital banking, trust 1.9/5, knowledge 3.1/10."
+  ],
+  "key_figures_tables": [
+    "Table 1: Comprehensive behavioral profiles across three clusters with intervention recommendations.",
+    "Table 2: Summary of key empirical findings with statistical evidence and policy implications.",
+    "Fig. 1: Methodological workflow from study design to policy implications.",
+    "Fig. 9: Model performance metrics - XGBoost F1=0.52, Random Forest F1=0.50, Decision Tree F1=0.47.",
+    "Fig. 11: SHAP analysis showing top predictors - income, trust, age, education sources, digital comfort.",
+    "Fig. 13: Financial behavior profiles across three identified clusters.",
+    "Fig. 15: PCA visualization confirming cluster separation with 68% variance explained."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {
+      "term": "Financial Literacy",
+      "definition": "Multidimensional concept encompassing cognitive understanding, behavioral actions, emotional attitudes, and ability to adapt to different financial contexts."
+    },
+    {
+      "term": "SHAP",
+      "definition": "SHapley Additive exPlanations - explainable AI technique that assigns feature importance values based on cooperative game theory."
+    },
+    {
+      "term": "Behavioral Segmentation",
+      "definition": "Unsupervised learning approach to identify natural population segments based on behavioral patterns rather than demographic categories."
+    },
+    {
+      "term": "XGBoost",
+      "definition": "Extreme Gradient Boosting - ensemble machine learning algorithm that builds sequential decision trees to correct previous errors."
+    },
+    {
+      "term": "SMOTE",
+      "definition": "Synthetic Minority Over-sampling Technique - method to address class imbalance by generating synthetic examples of minority classes."
+    },
+    {
+      "term": "Davies-Bouldin Index",
+      "definition": "Cluster validation metric where lower values (<1.5) indicate better clustering quality."
+    },
+    {
+      "term": "Calinski-Harabasz Index",
+      "definition": "Cluster validation metric where higher values indicate greater separation between clusters."
+    },
+    {
+      "term": "Financial Aliteracy",
+      "definition": "Situations where individuals overestimate their financial skills, leading to risky or irrational financial decisions."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Lusardi",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is crucial for economic wellbeing worldwide but traditional assessment methods often overlook many aspects.",
+      "role": "context"
+    },
+    {
+      "author": "Koskelainen",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial capability requires both ability (knowledge and skills) and opportunity (access to services and institutional support).",
+      "role": "methodology"
+    },
+    {
+      "author": "Choung",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Digital financial literacy is often a more reliable predictor of sound financial behavior than traditional literacy measures alone.",
+      "role": "baseline"
+    },
+    {
+      "author": "Garson",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Machine learning algorithms are especially good at identifying non-linear relationships and threshold effects in financial behavior.",
+      "role": "methodology"
+    },
+    {
+      "author": "Singh",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Traditional methods have limitations in capturing complex, non-linear, and multidimensional relationships in fast-changing digital environments.",
+      "role": "context"
+    },
+    {
+      "author": "Sabri",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial behavior mainly mediates the link between financial knowledge and perceived wellbeing.",
+      "role": "finding"
+    },
+    {
+      "author": "Clark",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Simply having access to digital platforms does not guarantee proper usage without basic knowledge of financial concepts.",
+      "role": "context"
+    },
+    {
+      "author": "Haag",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Gender gaps in financial literacy are driven by complex factors such as social norms, confidence differences, and disparities in educational exposure.",
+      "role": "baseline"
+    },
+    {
+      "author": "Jarupunphol",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "XGBoost tends to outperform traditional models in predicting human capital readiness in rural areas.",
+      "role": "methodology"
+    },
+    {
+      "author": "Imani",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Social science behavioral prediction typically yields F1-scores between 0.45 and 0.65, providing context for modest performance.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Categorization of Expense Types",
+        "relevance": "high",
+        "justification": "Directly examines financial literacy including budgeting practices, saving habits, and borrowing decision-making processes among Bangladeshi adults."
+      },
+      {
+        "code": "5.A",
+        "name": "Personality Traits and Behavioral Profiles",
+        "relevance": "high",
+        "justification": "Identifies three distinct behavioral clusters based on financial behaviors, digital engagement, and institutional relationships."
+      },
+      {
+        "code": "6.A",
+        "name": "Forecasting Techniques and Algorithms",
+        "relevance": "high",
+        "justification": "Applies Random Forest, XGBoost, and Decision Tree classifiers for predictive modeling of financial literacy levels."
+      },
+      {
+        "code": "10.A",
+        "name": "Privacy and Security Considerations",
+        "relevance": "medium",
+        "justification": "Addresses data anonymization, encrypted storage, and ethical considerations in collecting sensitive financial behavioral data."
+      }
+    ],
+    "contribution_to_field": "This study contributes evidence that institutional trust and digital comfort are stronger predictors of financial literacy than formal education in emerging economies. The three-cluster behavioral segmentation framework provides actionable insights for targeted financial interventions, recommending 60% resources to Digitally Excluded Traditionalists, 30% to bridge programs, and 10% to advanced services. The SHAP-based explainable AI approach transforms algorithmic outputs into transparent, policy-relevant insights. The finding that rural users show higher literacy despite lower digital access challenges urban-centric policy assumptions.",
+    "directly_justifies": [
+      "Rural users had 7.3% higher financial literacy than urban users (5.73 vs 5.34).",
+      "Trust (SHAP 0.18) is twice as important as formal education (0.09) as a predictor.",
+      "Three behavioral clusters require differentiated intervention strategies.",
+      "Weak knowledge-behavior correlations (r < 0.10) challenge traditional assumptions.",
+      "Women benefit more from tertiary education than men (F=4.83 vs F=0.91)."
+    ],
+    "limits": [
+      "Self-reported behavior may suffer from social desirability bias, overestimating positive financial behaviors.",
+      "Online-only survey excludes the most digitally excluded who are often the most vulnerable.",
+      "Cross-sectional design limits causal inferences about whether trust influences literacy or vice versa.",
+      "Modest F1-score (0.52) suggests other variables beyond survey items could improve model.",
+      "Cultural bias - survey may reflect Western financial concepts not fully suited to Bangladesh context.",
+      "Intersectionality gaps - demographic factors treated independently without considering compounded disadvantages."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all topic domains identified primary relevance in domains 3 (expense categorization), 5 (behavioral profiles), 6 (forecasting), and 10 (privacy). Domain 3.A is highly relevant through examination of budgeting, saving, and borrowing behaviors. Domain 5.A is highly relevant for the three-cluster behavioral segmentation based on financial behaviors. Domain 6.A is highly relevant for application of ML classifiers (Random Forest, XGBoost, Decision Tree) for predictive modeling. Domain 10.A is moderately relevant for data anonymization and ethical considerations. Domains 1-2 (demographics, cultural practices) were considered but rejected as not primary focus. Domain 4 (existing systems) was considered but rejected. Domains 7-9 (anomaly detection, mobile design, engagement) were considered but rejected. Domain 11 (other domains) was considered but rejected. Domains 12-14 (algorithm evaluation, topic evolution, synthetic data) were considered and rejected as not directly addressed.",
+    "limitations": [
+      "Digital-only methodology may overestimate literacy by excluding those without internet access.",
+      "Knowledge-behavior gap suggests surveys may not capture actual financial practices accurately.",
+      "Cluster analysis may not capture fluid transitions between behavioral segments over time.",
+      "SHAP importance values may vary with different model specifications or datasets.",
+      "Resource allocation recommendations (60/30/10) require validation through randomized controlled trials.",
+      "Cross-cultural generalizability to other South Asian contexts remains untested."
+    ]
+  },
+  "remember_this": [
+    "Trust (SHAP 0.18) is twice as important as formal education (0.09) for financial literacy.",
+    "Rural users had 7.3% higher financial literacy than urban users.",
+    "Three behavioral clusters: Digitally Literate Planners (34%), Informally Active (41%), Digitally Excluded (25%).",
+    "Weak knowledge-behavior correlations challenge traditional financial education assumptions.",
+    "60% of intervention resources should target Digitally Excluded Traditionalists.",
+    "Women benefit significantly more from tertiary education than men."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T17:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Chowdhury T. et al_marked.md",
+      "converted_at": "2026-07-21T05:57:07Z",
+      "converter_tool": "markitdown"
+    }
+  },
+  "limitations": [
+    "None identified."
+  ]
+}

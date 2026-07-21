@@ -1,0 +1,89 @@
+{
+  "paper_id": "cucio-hennig-ai-philippine-labor-market-2025",
+  "designation": "international",
+  "title": "The Impact of Artificial Intelligence on the Philippine Labor Market",
+  "authors": "Cucio, M.; Hennig, A.",
+  "year": 2025,
+  "venue": "IMF Working Paper",
+  "odin_topics": ["5.B"],
+  "tldr": "About 34% of Philippine jobs face high AI exposure, but most also have high complementarity potential for human-AI collaboration. BPO roles face the greatest displacement risk.",
+  "problem_and_motivation": "The rapid adoption of AI technologies poses both opportunities and risks for labor markets in developing economies. The Philippine economy, with its large service sector and BPO industry, faces unique vulnerabilities to AI-driven automation that require careful analysis for informed policy responses.",
+  "approach": [
+    "Used 2022 Philippine Labor Force Survey data covering approximately 380,000 employed individuals aged 15 and above.",
+    "Constructed AI exposure index based on O*NET task-level analysis from the US Occupational Information Network, adapted to Philippine job categories.",
+    "Applied the AI Complementarity Index from the IMF AI Preparedness Index methodology.",
+    "Classified jobs into four quadrants: high exposure/high complementarity (green), high exposure/low complementarity (red), low exposure/high complementarity (blue), low exposure/low complementarity (yellow).",
+    "Analyzed demographic distribution across AI exposure categories using logit models."
+  ],
+  "findings": [
+    "34.2% of Philippine jobs are highly exposed to AI, with 65.8% in the low-exposure category.",
+    "High-exposure jobs are dominated by clerical and service occupations: 60% of high-exposure jobs are clerical, 38.5% are service-related.",
+    "79.3% of high-exposure jobs also have high complementarity potential, while 20.7% face displacement risk (high exposure, low complementarity).",
+    "BPO roles (telemarketing, customer service) face the greatest displacement risk due to high exposure and low complementarity.",
+    "Agricultural, forestry, and fishery workers face the lowest AI exposure due to manual, non-routine nature of work.",
+    "Female workers, college-educated workers, and wage/salary earners face higher AI exposure than male, less educated, and self-employed workers.",
+    "Workers in NCR and surrounding regions (IVA, VII) face highest exposure; ARMM and Regions IX-XIII face lowest exposure.",
+    "Younger workers (15–24) face the lowest exposure; those with college degrees face the highest exposure."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Four-quadrant AI exposure/complementarity matrix showing 34.2% of jobs in high-exposure category.",
+    "Table 1: O*NET AI exposure criteria — AI performs core work, AI complements work, AI substitutes for work, AI interacts directly with users.",
+    "Figure 2: Sectoral distribution — clerical 60% and service 38.5% of high-exposure jobs."
+  ],
+  "key_equations": [
+    {"equation": "\\text{AI Exposure} = f(\\text{AI performs core work}, \\text{AI complements work}, \\text{AI substitutes for work}, \\text{AI interacts with users})", "explanation": "Composite index measuring AI exposure based on four O*NET task-level criteria."},
+    {"equation": "P(Y = \\text{high exposure}) = \\frac{1}{1 + e^{-(\\beta_0 + \\beta_1 X_1 + \\dots + \\beta_k X_k)}}", "explanation": "Logit model estimating probability of high AI exposure based on demographic and regional characteristics."}
+  ],
+  "definitions": [
+    {"term": "AI exposure", "definition": "The degree to which a job's tasks can be affected by AI technologies, measured by whether AI performs, complements, substitutes for, or interacts with users in core work activities."},
+    {"term": "AI complementarity", "definition": "The potential for human-AI collaboration where AI enhances rather than replaces human workers, measured by the degree to which AI can augment job performance."},
+    {"term": "BPO", "definition": "Business Process Outsourcing, a major Philippine industry involving customer service, telemarketing, and back-office operations outsourced from foreign companies."},
+    {"term": "O*NET", "definition": "The US Occupational Information Network, a database of occupational characteristics including tasks, skills, and technology requirements."},
+    {"term": "IMF AI Preparedness Index", "definition": "A composite index measuring a country's readiness for AI adoption based on digital infrastructure, human capital, innovation capacity, and regulation."}
+  ],
+  "citations": [
+    {"author": "Felten et al.", "year": 2021, "page": 0, "paragraph": 0, "claim": "AI exposure varies significantly across occupations, with clerical and administrative roles facing highest exposure.", "role": "context"},
+    {"author": "IMF", "year": 2024, "page": 0, "paragraph": 0, "claim": "The AI Preparedness Index shows developing economies face greater risks from AI-driven labor displacement than advanced economies.", "role": "context"},
+    {"author": "OECD", "year": 2023, "page": 0, "paragraph": 0, "claim": "AI complementarity potential depends on the extent to which AI can enhance rather than replace human decision-making.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.B", "name": "Automated Spending Alerts and Policy Trigger Systems", "relevance": "medium", "justification": "The paper analyzes AI exposure across occupational categories, relevant to understanding how AI-driven automation triggers policy responses and labor market interventions. The complementarity analysis informs design of alert systems for workforce transition."}
+    ],
+    "contribution_to_field": "This paper provides the first comprehensive analysis of AI exposure in the Philippine labor market using granular labor force data. It demonstrates that while a third of jobs face high AI exposure, most also have complementarity potential for human-AI collaboration. The findings inform policy design for workforce retraining programs, social protection systems, and education reform to prepare Filipino workers for AI-driven economic transformation.",
+    "directly_justifies": [
+      "34.2% of Philippine jobs face high AI exposure, but 79.3% of those also have complementarity potential.",
+      "BPO roles face the greatest displacement risk due to high exposure and low complementarity.",
+      "Female workers and college-educated workers face higher AI exposure than male and less educated workers.",
+      "Regional disparities in AI exposure suggest targeted policy interventions are needed.",
+      "Agricultural workers face lowest AI exposure due to manual, non-routine work nature."
+    ],
+    "limits": [
+      "Cross-sectional analysis based on 2022 data may not capture rapid AI adoption trends.",
+      "AI exposure index adapted from US O*NET data may not perfectly match Philippine occupational characteristics.",
+      "Does not model dynamic effects of AI adoption on wage levels or job creation."
+    ],
+    "topic_mapping_rationale": "A systematic scan of all topic domains was conducted. Domain 5 (Anomaly Detection & Early-Warning Systems) was flagged as the most relevant match because the paper's AI exposure classification functions as an early-warning mechanism for labor market disruption, identifying high-risk occupations and demographic groups. The four-quadrant classification system parallels anomaly detection frameworks. Other domains were considered but lack sufficient alignment."
+  },
+  "limitations": [
+    "AI exposure index adapted from US O*NET data may not perfectly capture Philippine occupational realities.",
+    "Cross-sectional 2022 data cannot capture dynamic AI adoption trends over time.",
+    "Does not model wage effects or new job creation resulting from AI adoption."
+  ],
+  "remember_this": [
+    "34.2% of Philippine jobs face high AI exposure, but 79.3% of those have complementarity potential.",
+    "BPO roles (telemarketing, customer service) face greatest displacement risk.",
+    "Female, college-educated, and salaried workers face higher AI exposure than their counterparts.",
+    "Agricultural workers face lowest AI exposure due to manual, non-routine work nature.",
+    "Regional exposure disparities: NCR highest, ARMM and Mindanao regions lowest."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:06:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cucio & Hennig_marked.md",
+      "converted_at": "2026-07-21T05:53:46Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

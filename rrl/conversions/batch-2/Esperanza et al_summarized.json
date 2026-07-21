@@ -1,0 +1,108 @@
+{
+  "paper_id": "10.5281/zenodo.esperanza2025",
+  "designation": "philippine",
+  "title": "Efficacy of Digital Lending Platforms on Debt Management Behavior Among Young Professionals in Davao City",
+  "authors": "Esperanza, K.; Belaca, A.; Dalagatan, L.",
+  "year": 2025,
+  "venue": "Unknown",
+  "odin_topics": ["4.A", "4.C", "5.A", "5.B", "7.C", "7.E", "10.A", "12.A", "12.B", "12.C"],
+  "tldr": "A mixed-methods study of 400 Davao City young professionals finds that digital lending platforms significantly influence debt management behavior, with accessibility, interest rates, and loan purpose as the strongest predictors, while convenience and social influence show unexpected negative relationships.",
+  "problem_and_motivation": "Digital lending platforms are reshaping borrowing behaviors among young Filipinos, yet limited empirical evidence exists on their specific influence on debt management practices in Philippine urban contexts. There is insufficient understanding of how factors like accessibility, convenience, interest rates, and social influence interact to affect repayment behavior and overall debt management among young professionals in Davao City.",
+  "approach": [
+    "Administered structured self-administered questionnaires to 400 young professionals aged 18-35 in Davao City.",
+    "Used stratified sampling across income brackets and employment sectors.",
+    "Measured five factors: accessibility, convenience, interest rates, loan purpose, and social influence using 5-point Likert scales.",
+    "Analyzed debt management behavior across payment regularity, budget allocation, and borrowing patterns.",
+    "Performed multiple regression analysis to determine factor influences on debt management.",
+    "Conducted thematic analysis of 20 semi-structured interviews to explore quantitative findings.",
+    "Tested reliability using Cronbach's Alpha (0.841) indicating acceptable internal consistency.",
+    "Applied construct validity testing using KMO (0.846) and Bartlett's Test (p<0.001)."
+  ],
+  "findings": [
+    "Digital lending platforms significantly influence debt management behavior among young professionals.",
+    "Accessibility is the strongest positive predictor of debt management behavior (β=0.312, p<0.001).",
+    "Interest rates significantly influence borrowing decisions and repayment discipline.",
+    "Loan purpose clarity correlates with better debt management outcomes.",
+    "Convenience shows unexpected negative relationship with effective debt management.",
+    "Social influence negatively impacts debt management when it drives uninformed borrowing.",
+    "Higher income groups demonstrate more strategic use of digital lending platforms.",
+    "Emergency and business purposes show strongest positive relationship with repayment discipline."
+  ],
+  "key_figures_tables": [
+    "Table 1: Demographic Profile of Respondents → 55% female, majority 26-30 years, earning 15,000-25,000 PHP monthly.",
+    "Table 2: Mean Scores and SD for Factors → Accessibility highest (M=4.12), social influence lowest (M=3.21).",
+    "Table 3: Regression Analysis → Accessibility (β=0.312), interest rates (β=0.245), loan purpose (β=0.198) significant.",
+    "Figure 1: Factor Influence on Debt Management → Accessibility strongest predictor across all income groups."
+  ],
+  "key_equations": [
+    {"equation": "Y = b0 + b1*X1 + b2*X2 + b3*X3 + b4*X4 + b5*X5 + e", "explanation": "Multiple regression model predicting debt management behavior (Y) from five digital lending factors."},
+    {"equation": "Cronbach's Alpha = 0.841", "explanation": "Internal consistency reliability measure for the survey instrument."},
+    {"equation": "KMO = 0.846", "explanation": "Kaiser-Meyer-Olkin measure sampling adequacy for factor analysis."}
+  ],
+  "definitions": [
+    {"term": "Digital Lending Platform", "definition": "Mobile or web-based financial service enabling loan application, approval, and repayment through digital channels."},
+    {"term": "Debt Management Behavior", "definition": "Practices related to borrowing, repaying, and managing debt including payment regularity, budget allocation, and borrowing patterns."},
+    {"term": "Accessibility", "definition": "The ease with which users can access and use digital lending platform features and services."},
+    {"term": "Social Influence", "definition": "The impact of peers, family, and social networks on borrowing decisions and financial behavior."},
+    {"term": "Loan Purpose", "definition": "The intended use of borrowed funds, categorized as emergency, business, education, or consumption."},
+    {"term": "Cronbach's Alpha", "definition": "A measure of internal consistency reliability for a set of survey items."},
+    {"term": "KMO", "definition": "Kaiser-Meyer-Olkin measure assessing sampling adequacy for factor analysis."}
+  ],
+  "citations": [
+    {"author": "Aker", "year": 2010, "page": 0, "paragraph": 0, "claim": "Mobile money services increase financial inclusion by reducing transaction costs and improving access.", "role": "context"},
+    {"author": "Demirguc-Kunt", "year": 2018, "page": 0, "paragraph": 0, "claim": "Digital financial services can significantly improve financial inclusion but may also increase over-indebtedness risk.", "role": "context"},
+    {"author": "Klontz", "year": 2011, "page": 0, "paragraph": 0, "claim": "Financial anxiety and avoidance can lead to problematic borrowing behaviors.", "role": "context"},
+    {"author": "Lusardi", "year": 2011, "page": 0, "paragraph": 0, "claim": "Financial literacy is crucial for informed borrowing and debt management decisions.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "high", "justification": "Core focus on profiling debt management behaviors and borrowing patterns among young professionals."},
+      {"code": "5.B", "name": "Classification of Financial Behavior Types", "relevance": "high", "justification": "Classifies debt management behaviors across payment regularity, budget allocation, and borrowing patterns."},
+      {"code": "7.C", "name": "Goal-Oriented Savings and Debt Planning", "relevance": "high", "justification": "Directly addresses debt management, repayment behavior, and borrowing patterns."},
+      {"code": "7.E", "name": "Financial Behavior Modeling and Adaptive Guidance", "relevance": "medium", "justification": "Models how digital lending factors influence financial decision-making and behavior."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "medium", "justification": "Reviews digital lending landscape and its role in personal financial management."},
+      {"code": "4.C", "name": "Consumer Financial Tools and Services", "relevance": "high", "justification": "Directly evaluates digital lending platforms as consumer financial tools."},
+      {"code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "medium", "justification": "Discusses data privacy concerns in digital lending platform usage."},
+      {"code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "medium", "justification": "Establishes evaluation framework for digital lending platform efficacy."},
+      {"code": "12.B", "name": "Datasets and Data Collection Protocols", "relevance": "medium", "justification": "Develops validated survey instrument with established psychometric properties."},
+      {"code": "12.C", "name": "Human Evaluation Protocols for Finance Tools", "relevance": "medium", "justification": "Uses mixed-methods approach combining quantitative and qualitative evaluation."}
+    ],
+    "contribution_to_field": "This mixed-methods study provides the first comprehensive analysis of digital lending platform efficacy on debt management among young Filipino professionals, demonstrating that accessibility is the strongest predictor of effective debt management while convenience and social influence can negatively impact borrowing behavior. It reveals that higher income groups use digital lending more strategically, and that loan purpose clarity significantly improves repayment discipline, offering insights for platform design and financial literacy interventions.",
+    "directly_justifies": [
+      "Accessibility is the strongest positive predictor of debt management behavior (β=0.312).",
+      "Convenience shows unexpected negative relationship with effective debt management.",
+      "Social influence negatively impacts debt management when driving uninformed borrowing.",
+      "Loan purpose clarity significantly improves repayment discipline.",
+      "Higher income groups demonstrate more strategic digital lending platform use."
+    ],
+    "limits": [
+      "Geographic limitation to Davao City limits generalizability.",
+      "Cross-sectional design prevents causal inference.",
+      "Self-reported data may introduce recall and social desirability bias.",
+      "Excludes users without digital lending experience."
+    ],
+    "topic_mapping_rationale": "The paper was systematically scanned across all 14 topic domains. Domain 5 (Behavioral Profiles) received high relevance for profiling debt management behaviors. Domain 7 (Budgeting/Savings) received high relevance for debt planning and repayment behavior. Domain 4 (Existing Systems) received medium relevance for reviewing digital lending platforms. Domain 10 (Privacy) received medium relevance for data privacy concerns. Domains 1-3, 6, 8, 9, 11, 13, and 14 were considered and rejected as the paper does not focus on Filipino demographics beyond Davao City young professionals, predictive modeling, anomaly detection, mobile design principles, recommendation systems, or synthetic data generation."
+  },
+  "limitations": [
+    "Davao City-specific limits generalizability.",
+    "Cross-sectional design prevents causal claims.",
+    "Self-report bias possible.",
+    "Excludes non-digital-lending users."
+  ],
+  "remember_this": [
+    "Accessibility is the strongest predictor of effective debt management among young professionals.",
+    "Convenience can negatively impact debt management when enabling impulsive borrowing.",
+    "Social influence drives uninformed borrowing that worsens debt management.",
+    "Loan purpose clarity significantly improves repayment discipline.",
+    "Higher income groups use digital lending more strategically than lower income groups."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:40:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Esperanza et al_marked.md",
+      "converted_at": "2026-07-21T05:59:15Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

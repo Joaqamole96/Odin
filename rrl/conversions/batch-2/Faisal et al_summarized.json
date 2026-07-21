@@ -1,0 +1,101 @@
+{
+  "paper_id": "10.24937/fclaet/2024.03.024",
+  "designation": "international",
+  "title": "The Role of Digital Banking Features in Bank Selection: A Study on Customer Preferences",
+  "authors": "Faisal, S. M.; Iftikhar, A.; Mahmood, A.",
+  "year": 2024,
+  "venue": "FAET: Journal of Financial, Auditing and Management",
+  "odin_topics": ["4.A", "9.A"],
+  "tldr": "A survey of 214 commercial bank customers found that mobile banking and digital payment services significantly influence bank selection, while customers perceive risks in online platforms including security, privacy, and lack of personal interaction.",
+  "problem_and_motivation": "While digital banking has become central to modern banking, there is limited research on how specific digital features influence customers choice of bank. Banks invest heavily in digital transformation but lack clarity on which features actually drive acquisition and retention. There is a need to understand customer preferences regarding digital banking features for competitive positioning.",
+  "approach": [
+    "Cross-sectional survey design using convenience sampling of 214 customers across various commercial banks.",
+    "Structured questionnaire adapted from Olanrewaju et al. (2014) and Misra and Mukherjee (2021) measuring four feature categories: mobile banking, internet banking, digital payment services, and digital customer support.",
+    "Additional questionnaire assessing perceived risks of digital banking platforms.",
+    "Descriptive and inferential statistics used for data analysis, including correlation analysis and regression.",
+    "Findings contextualized within the broader digital transformation landscape of the banking industry."
+  ],
+  "findings": [
+    "Mobile banking and digital payment services emerged as the most important features driving bank selection.",
+    "Customers highly valued 24/7 accessibility, real-time transaction monitoring, and user-friendly mobile applications.",
+    "Security and privacy concerns were the most commonly cited perceived risks of online banking platforms.",
+    "Lack of personal interaction and technical difficulties were significant barriers to full adoption of digital banking.",
+    "The study concluded that digital banking services are not just supplementary but central to bank selection in the modern era."
+  ],
+  "key_figures_tables": [
+    "Table 1: Demographic profile of respondents → Age, gender, and banking relationship distributions.",
+    "Table 2: Correlation matrix → Relationships between digital banking features and bank selection.",
+    "Table 3: Regression analysis → Digital payment services and mobile banking as significant predictors.",
+    "Table 4: ANOVA results → No significant difference in feature importance across demographic groups.",
+    "Table 5: Perceived risks of online banking → Security, privacy, and technical difficulties ranked highest."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "Digital banking features", "definition": "Technology-enabled services including mobile banking apps, internet banking portals, digital payment systems, and online customer support."},
+    {"term": "Bank selection criteria", "definition": "The factors customers consider when choosing a financial institution, increasingly including digital service quality."},
+    {"term": "Perceived risk", "definition": "Customer assessment of potential negative consequences associated with using digital banking platforms."}
+  ],
+  "citations": [
+    {"author": "Sahajwala", "year": 2020, "page": 2, "paragraph": 1, "claim": "Online banking offers customers convenience but raises concerns about security, privacy, and data protection.", "role": "context"},
+    {"author": "Chen", "year": 2021, "page": 2, "paragraph": 2, "claim": "Mobile banking apps, digital wallets, and real-time payment systems have fundamentally changed how customers interact with financial institutions.", "role": "context"},
+    {"author": "Laukkanen", "year": 2016, "page": 2, "paragraph": 2, "claim": "Mobile banking improves customer retention by providing seamless and convenient access to banking services.", "role": "finding"},
+    {"author": "Albashrawi", "year": 2019, "page": 5, "paragraph": 1, "claim": "Fintech innovations such as peer-to-peer payment platforms and integrated financial ecosystems have added new layers to competitive banking.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Directly examines how digital banking features shape customer preferences and bank selection, which is foundational to understanding the personal finance systems landscape."
+      },
+      {
+        "code": "9.A",
+        "name": "Trust, Usability, and Transparency in Financial Tools",
+        "relevance": "high",
+        "justification": "Discusses customer trust, perceived security, privacy concerns, and usability of digital banking platforms as key factors in bank selection."
+      },
+      {
+        "code": "12.A",
+        "name": "User Interface Design for Personal Finance Applications",
+        "relevance": "medium",
+        "justification": "References the importance of user-friendly mobile applications and intuitive design in driving customer adoption of digital banking."
+      }
+    ],
+    "contribution_to_field": "This study provides empirical evidence on which specific digital banking features influence customer bank selection, filling a gap in understanding the role of digital transformation in competitive positioning. The findings demonstrate that mobile banking and digital payment services are not supplementary but central to modern bank choice, and that security and privacy concerns remain the primary barriers to adoption. The research contextualizes these preferences within the broader landscape of fintech disruption and evolving customer expectations.",
+    "directly_justifies": [
+      "Mobile banking and digital payment services significantly influence bank selection among customers.",
+      "Security and privacy concerns are the most commonly cited perceived risks of online banking platforms.",
+      "User-friendly digital interfaces drive customer adoption and retention in competitive banking markets."
+    ],
+    "limits": [
+      "Convenience sampling limits generalizability of findings.",
+      "Cross-sectional design prevents assessment of how preferences change over time.",
+      "Single-country study may not reflect banking preferences in other regulatory environments."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domain 4.A is highly relevant as the paper surveys the landscape of existing digital banking systems and customer preferences. Domain 9.A is highly relevant due to focus on trust, security, and usability of digital financial tools. Domain 12.A is medium relevance as it discusses UI design principles for banking applications. Domains 1-3, 5-8, 10-14 were considered and rejected: the paper does not address Filipino demographics, budgeting, gambling, privacy policies, engagement, savings, debt, fraud detection, or synthetic data."
+  },
+  "limitations": [
+    "Convenience sampling may introduce selection bias.",
+    "Cross-sectional design captures preferences at a single point in time.",
+    "Findings may not generalise to unbanked or underbanked populations."
+  ],
+  "remember_this": [
+    "Mobile banking and digital payment services are the most important features driving bank selection.",
+    "Security and privacy concerns are primary barriers to digital banking adoption.",
+    "User-friendly interfaces are critical for customer adoption and retention.",
+    "Digital banking features are central to bank selection, not just supplementary.",
+    "Technical difficulties and lack of personal interaction remain significant concerns for customers."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Faisal et al_marked.md",
+      "converted_at": "2026-07-21T06:13:30Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "paper_id": "10.63125/p4y4te47",
+  "designation": "international-algorithm-specific",
+  "title": "Deep Neural Network Models for Real-Time Financial Forecasting and Market Intelligence",
+  "authors": "Dhanekula, A.; Munira, M.S.K.",
+  "year": 2026,
+  "venue": "American Journal of Advanced Technology and Engineering Solutions",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "12.A",
+    "4.A",
+    "11.A"
+  ],
+  "tldr": "Examines how deep neural network capability dimensions (data quality, feature richness, update responsiveness, robustness, explanation quality) influence forecasting effectiveness and market intelligence effectiveness using a quantitative cross-sectional survey of 210 users.",
+  "problem_and_motivation": "Organizations deploy DNN forecasting services in cloud and enterprise environments, yet decision teams lack quantitative evidence on which operational capabilities drive real-time forecasting effectiveness and whether forecasting gains convert into decision-ready market intelligence.",
+  "approach": [
+    "Adopted a quantitative cross-sectional case-study design with N=210 active users (58.1% analysts, 21.9% traders, 20.0% risk/portfolio staff).",
+    "Operationalized DNN capability through five latent dimensions: Data Quality (DQ), Feature Richness (FR), Update Responsiveness (UR), Robustness (ROB), and Explanation Quality (EQ).",
+    "Administered five-point Likert scale survey measuring perceived capability and outcomes.",
+    "Conducted reliability testing (Cronbach's alpha), Pearson correlations, and multiple regression modeling with diagnostic checks.",
+    "Used DeLone-McLean IS-success theory and task-individual-technology fit theory as theoretical foundations."
+  ],
+  "findings": [
+    "Regression Model 1 explained 56% of variance in Forecasting Effectiveness (R²=.56) with significant effects for DQ (β=.32), ROB (β=.28), FR (β=.21), and UR (β=.14).",
+    "Regression Model 2 explained 61% of variance in Market Intelligence Effectiveness (R²=.61) driven by FE (β=.52), EQ (β=.29), and UR (β=.12).",
+    "DNN capability index correlated strongly with FE (r=.68, p<.001) and MIE (r=.62, p<.001).",
+    "FE correlated strongly with MIE (r=.71, p<.001), supporting the mediated pathway from capability to intelligence.",
+    "Reliability was strong across all constructs (α=.84 to .90).",
+    "Descriptive results showed high perceived maturity: DQ M=4.12, FR M=3.98, ROB M=3.90, FE M=3.94, MIE M=4.01.",
+    "All hypotheses (H1-H8) were supported at p<.05."
+  ],
+  "key_figures_tables": [
+    "Figure 1: DNN-Driven Real-Time Financial Forecasting for Market Intelligence → Conceptual diagram showing the relationship between DNN components and market intelligence outcomes.",
+    "Figure 2: Real-Time Financial Forecasting: Concepts, Metrics, and Challenges → Framework for evaluating real-time forecasting performance.",
+    "Figure 3: Market Intelligence Framework for Financial Decision-Making → Structure of market intelligence as decision-support capability.",
+    "Figure 4: Deep Neural Network Architectures for Real-Time Financial Forecasting → Overview of DNN architectures (LSTM, CNN, hybrid models) used in financial forecasting.",
+    "Figure 5: Data Inputs for Deep Neural Network Forecasting → Categorization of technical, fundamental/macro, and alternative data inputs.",
+    "Figure 7: Conceptual Framework and Research Model Development → Theoretical model linking DNN capability dimensions to FE and MIE outcomes."
+  ],
+  "key_equations": [
+    {
+      "equation": "FE = β0 + β1·DQ + β2·FR + β3·UR + β4·ROB + ε1",
+      "explanation": "Multiple regression model for predicting Forecasting Effectiveness from DNN capability dimensions."
+    },
+    {
+      "equation": "MIE = γ0 + γ1·FE + γ2·EQ + γ3·ROB + ε2",
+      "explanation": "Multiple regression model for predicting Market Intelligence Effectiveness from forecasting effectiveness and capability dimensions."
+    },
+    {
+      "equation": "C = (1/k)·Σ_{i=1..k} x_i",
+      "explanation": "Composite construct score calculation by averaging item responses."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Market Intelligence Effectiveness (MIE)",
+      "definition": "The degree to which the forecasting service helps respondents detect meaningful market changes faster, prioritize assets or events, improve decision confidence, and coordinate actions using shared signals."
+    },
+    {
+      "term": "Forecasting Effectiveness (FE)",
+      "definition": "The perceived accuracy, timeliness, and stability of the generated forecasts."
+    },
+    {
+      "term": "Explanation Quality (EQ)",
+      "definition": "The extent to which the system provides understandable rationales including key drivers, confidence indicators, and traceable input summaries that enable users to judge forecast credibility."
+    },
+    {
+      "term": "Update Responsiveness (UR)",
+      "definition": "How frequently the model and features are refreshed to reflect new information, including latency handling and streaming reliability."
+    },
+    {
+      "term": "Data Quality (DQ)",
+      "definition": "Accuracy, completeness, and timeliness of the input streams used by DNN forecasting models."
+    },
+    {
+      "term": "Feature Richness (FR)",
+      "definition": "Breadth of technical, macro, and alternative features available to the forecasting model."
+    }
+  ],
+  "citations": [
+    {
+      "author": "LeCun",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "DNNs are multi-layer computational architectures that learn hierarchical representations from data through parameter optimization.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bengio",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "DNNs are distinguished from shallow models by depth, representation learning capacity, and ability to align structured and unstructured signals.",
+      "role": "methodology"
+    },
+    {
+      "author": "DeLone",
+      "year": 2003,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "IS-success theory treats artifacts as systems whose perceived system quality and information quality shape use and user satisfaction.",
+      "role": "theory"
+    },
+    {
+      "author": "Ribeiro",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Local surrogate explanations support human assessment of model behavior around specific predictions, offering practical transparency.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus is on DNN-based predictive modeling for financial forecasting, establishing how capability dimensions drive forecasting effectiveness."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Addresses real-time financial forecasting using LSTM, attention mechanisms, and hybrid DNN architectures for sequential market data."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Develops comprehensive evaluation framework using survey-based constructs, reliability testing, and regression modeling to assess DNN forecasting capability."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Provides extensive literature review of existing DNN forecasting architectures, data inputs, and market intelligence frameworks."
+      },
+      {
+        "code": "11.A",
+        "name": "User Engagement and Education Strategies",
+        "relevance": "medium",
+        "justification": "Examines how explanation quality and user trust influence adoption and effective use of DNN forecasting systems."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a quantitative framework for evaluating DNN forecasting capability and its translation into market intelligence. The key innovation is decomposing DNN capability into five measurable dimensions and demonstrating through regression modeling that data quality (β=.32) and robustness (β=.28) are the strongest drivers of forecasting effectiveness, while forecasting effectiveness (β=.52) and explanation quality (β=.29) drive market intelligence effectiveness. The theoretical grounding in DeLone-McLean IS-success theory and task-individual-technology fit theory provides a rigorous foundation. With R²=.56 for FE and R²=.61 for MIE, the models explain substantial variance in outcomes.",
+    "directly_justifies": [
+      "Regression Model 1 explained 56% of variance in Forecasting Effectiveness (R²=.56).",
+      "Data quality (β=.32) and robustness (β=.28) were the strongest drivers of FE.",
+      "Regression Model 2 explained 61% of variance in Market Intelligence Effectiveness (R²=.61).",
+      "Forecasting effectiveness (β=.52) was the dominant predictor of MIE.",
+      "Explanation quality (β=.29) showed substantial independent effect on MIE."
+    ],
+    "limits": [
+      "Cross-sectional design limits ability to establish causal relationships between capability dimensions and outcomes.",
+      "Single case setting may limit generalizability to other organizational contexts.",
+      "Synthetic dataset used for analysis, which may not reflect real-world data characteristics.",
+      "Perceived measures based on self-reported survey responses may introduce bias.",
+      "Study does not address technical implementation details of DNN architectures."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domains 6.A and 6.B received high relevance as the paper focuses on predictive modeling and forecasting algorithms for financial data. Domain 12.A received high relevance for the comprehensive evaluation framework using survey-based constructs. Domain 4.A received medium relevance for the literature review of existing DNN forecasting systems. Domain 11.A received medium relevance for examining user engagement through explanation quality and trust. Other domains were considered but rejected as the paper does not address personal finance management, budgeting, or expense categorization."
+  },
+  "limitations": [
+    "Cross-sectional design limits ability to establish causal relationships between capability dimensions and outcomes.",
+    "Single case setting may limit generalizability to other organizational contexts.",
+    "Perceived measures based on self-reported survey responses may introduce bias.",
+    "Study focuses on institutional finance rather than personal finance applications."
+  ],
+  "remember_this": [
+    "Data quality (β=.32) and robustness (β=.28) are the strongest drivers of forecasting effectiveness.",
+    "Forecasting effectiveness (β=.52) dominates market intelligence effectiveness prediction.",
+    "Explanation quality (β=.29) provides substantial independent effect on intelligence outcomes.",
+    "Combined models explain 56-61% of variance in outcomes, demonstrating strong explanatory power.",
+    "All five DNN capability dimensions (DQ, FR, UR, ROB, EQ) significantly predict outcomes."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T15:25:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Dhanekula & Munira_marked.md",
+      "converted_at": "2026-07-21T06:01:21Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

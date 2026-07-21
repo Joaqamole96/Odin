@@ -1,0 +1,110 @@
+{
+  "paper_id": "10.5281/zenodo.cortez2025",
+  "designation": "philippine",
+  "title": "Personal Financial Management Practices and Their Influence on Saving Behavior Among Bureau of the Treasury Personnel",
+  "authors": "Cortez, J.",
+  "year": 2025,
+  "venue": "Unknown",
+  "odin_topics": ["4.A", "5.A", "5.B", "7.A", "7.C", "7.D", "8.A", "12.A", "12.B", "12.D"],
+  "tldr": "A mixed-methods study of 327 Bureau of the Treasury employees finds that budgeting is the most practiced PFM behavior while saving is least practiced, with budgeting showing the strongest positive influence on saving behavior and emergency funds being the top savings objective.",
+  "problem_and_motivation": "Despite the Bureau of the Treasury's role in financial management, its employees face personal finance challenges mirroring broader population issues. There is limited research on the financial practices of government finance professionals in the Philippines, particularly those in treasury roles who should theoretically demonstrate strong financial management. Understanding their practices can provide insights applicable to broader Filipino financial wellness.",
+  "approach": [
+    "Administered structured self-administered questionnaires to 327 employees across all BTr branches nationwide.",
+    "Conducted semi-structured interviews with 15 participants selected through purposive and snowball sampling.",
+    "Analyzed demographic profiles using frequency counts and percentages.",
+    "Computed mean scores and standard deviations for PFM practice items across budgeting, saving, investing, debt management, and financial planning.",
+    "Performed Pearson correlation analysis to examine relationships between PFM practices and saving behavior.",
+    "Applied multiple regression analysis to determine influence of PFM practices on saving behavior.",
+    "Conducted thematic analysis of qualitative responses using the six-phase Braun and Clarke framework.",
+    "Tested reliability using Cronbach's Alpha (0.820) indicating acceptable internal consistency."
+  ],
+  "findings": [
+    "Budgeting is the most practiced PFM component; saving is the least practiced.",
+    "Budgeting has the strongest positive influence on saving behavior among BTr employees.",
+    "Emergency fund creation is the primary savings objective.",
+    "Multiple revenue streams do not necessarily translate to higher savings rates.",
+    "Younger employees under 30 demonstrate more disciplined financial practices than older colleagues.",
+    "Single employees exhibit stronger saving habits than married counterparts.",
+    "Informal budgeting approaches persist even among finance professionals.",
+    "Employees maintain personal finances separately from their professional roles at BTr."
+  ],
+  "key_figures_tables": [
+    "Table 1.1: Demographics of Survey Respondents → Majority female, ages 31-40, married, with 10+ years tenure.",
+    "Table 3.1: Practices in Budgeting → Budgeting is highest practiced PFM component (M=4.07).",
+    "Table 3.2: Practices in Saving → Saving is lowest practiced component (M=3.84).",
+    "Table 3.3: Practices in Investing → Investing shows moderate practice levels.",
+    "Table 3.4: Practices in Debt Management → Debt management shows moderate practice levels.",
+    "Table 3.5: Practices in Financial Planning → Financial planning shows moderate practice levels.",
+    "Table 3.6: Practices in Saving Behavior → Emergency funds are primary savings objective.",
+    "Table 3.9: Regression Analysis → Budgeting significantly predicts saving behavior (B=0.425, p<0.001)."
+  ],
+  "key_equations": [
+    {"equation": "Y = b0 + b1*X1 + b2*X2 + b3*X3 + b4*X4 + b5*X5 + e", "explanation": "Multiple regression model predicting saving behavior (Y) from five PFM practice components."},
+    {"equation": "Cronbach's Alpha = 0.820", "explanation": "Internal consistency reliability measure for the survey instrument."}
+  ],
+  "definitions": [
+    {"term": "PFM", "definition": "Personal Financial Management, the comprehensive process of managing individual financial resources across earning, spending, saving, investing, and planning."},
+    {"term": "BTr", "definition": "Bureau of the Treasury, the Philippine government agency responsible for managing government funds and debt."},
+    {"term": "Saving Behavior", "definition": "Actions and practices related to setting aside money for future use, including emergency funds, retirement, and goal-specific savings."},
+    {"term": "Budgeting", "definition": "The process of creating a plan to allocate income toward expenses, savings, and investments."},
+    {"term": "Thematic Analysis", "definition": "A qualitative research method for identifying, analyzing, and reporting patterns within data."},
+    {"term": "Snowball Sampling", "definition": "A non-probability sampling technique where existing study participants recruit future participants from their acquaintances."}
+  ],
+  "citations": [
+    {"author": "Gathergood", "year": 2012, "page": 0, "paragraph": 0, "claim": "Self-control and financial literacy are crucial determinants of financial well-being.", "role": "context"},
+    {"author": "Lown", "year": 2015, "page": 0, "paragraph": 0, "claim": "Financial well-being encompasses managing financial life effectively to reduce stress and increase security.", "role": "context"},
+    {"author": "Klontz", "year": 2011, "page": 0, "paragraph": 0, "claim": "Financial anxiety and avoidance are barriers to effective financial management.", "role": "context"},
+    {"author": "Falahati", "year": 2012, "page": 0, "paragraph": 0, "claim": "Financial planning significantly impacts financial satisfaction.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "high", "justification": "Core focus on profiling PFM practices and saving behavior among government finance professionals."},
+      {"code": "5.B", "name": "Classification of Financial Behavior Types", "relevance": "high", "justification": "Classifies financial management behaviors across budgeting, saving, investing, debt management, and planning."},
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "high", "justification": "Budgeting identified as most practiced PFM component and strongest predictor of saving behavior."},
+      {"code": "7.C", "name": "Goal-Oriented Savings and Debt Planning", "relevance": "high", "justification": "Examines savings objectives (emergency funds, retirement) and their relationship to PFM practices."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "medium", "justification": "Provides contextual landscape of PFM practices among Philippine government employees."},
+      {"code": "7.D", "name": "Savings Goal Formulation and Dynamic Adjustment", "relevance": "medium", "justification": "Analyzes savings goals and how they are prioritized differently across demographics."},
+      {"code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "medium", "justification": "Uses validated survey instruments with established psychometric properties."},
+      {"code": "12.B", "name": "Datasets and Data Collection Protocols", "relevance": "medium", "justification": "Develops and validates survey instrument with Cronbach's Alpha of 0.820."},
+      {"code": "12.D", "name": "Experimental Design for Ablation Studies", "relevance": "low", "justification": "Mixed-methods design combining quantitative and qualitative approaches."},
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "low", "justification": "Not directly addressed but spending behavior analysis relevant to anomaly context."}
+    ],
+    "contribution_to_field": "This mixed-methods study provides the first comprehensive analysis of PFM practices among Philippine government finance professionals, demonstrating that even those in treasury roles exhibit budgeting and saving behavior patterns similar to the general population. It establishes budgeting as the strongest predictor of saving behavior, identifies demographic differences in financial practices (younger employees more disciplined), and reveals that emergency fund creation is the primary savings objective, offering actionable insights for organizational financial wellness programs.",
+    "directly_justifies": [
+      "Budgeting is the most practiced PFM component and strongest predictor of saving behavior.",
+      "Saving is the least practiced PFM component despite respondents being finance professionals.",
+      "Emergency fund creation is the primary savings objective across all demographics.",
+      "Younger employees under 30 demonstrate more disciplined financial practices.",
+      "Multiple revenue streams do not necessarily translate to higher savings rates."
+    ],
+    "limits": [
+      "Cross-sectional design prevents causal inference about PFM practice influences.",
+      "Self-reported data may introduce social desirability bias among finance professionals.",
+      "Single-organization study (BTr) limits generalizability to other populations.",
+      "Convenience sampling approach may not represent all government employees."
+    ],
+    "topic_mapping_rationale": "The paper was systematically scanned across all 14 topic domains. Domain 5 (Behavioral Profiles) received high relevance as the core study profiles financial behaviors among government employees. Domain 7 (Budgeting) received high relevance for its analysis of budgeting as strongest predictor. Domain 4 (Existing Systems) received medium relevance for contextualizing PFM practices. Domains 1, 2, 3, 6, 8, 9, 10, 11, 13, and 14 were considered and rejected as the paper does not focus on Filipino demographics beyond BTr employees, financial data APIs, expense categorization, predictive modeling, anomaly detection, mobile design, or synthetic data generation."
+  },
+  "limitations": [
+    "Cross-sectional design prevents causal claims.",
+    "Self-report bias may inflate reported positive financial behaviors.",
+    "Single organization limits generalizability.",
+    "Convenience sampling may not represent broader government employee population."
+  ],
+  "remember_this": [
+    "Budgeting is the strongest predictor of saving behavior among BTr employees.",
+    "Saving is the least practiced PFM component even among finance professionals.",
+    "Emergency fund creation is the primary savings objective.",
+    "Younger employees demonstrate more disciplined financial practices than older colleagues.",
+    "Multiple income streams do not automatically lead to higher savings rates."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:25:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cortez_marked.md",
+      "converted_at": "2026-07-21T05:59:15Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "paper_id": "10.1057/s41599-026-00462-3",
+  "designation": "international",
+  "title": "Financial literacy and decision-making among ethnic minority young adults in Hong Kong",
+  "authors": "Cho, Y. W.",
+  "year": 2024,
+  "venue": "Humanities and Social Sciences Communications (Nature)",
+  "odin_topics": ["4.A", "9.A", "6.A"],
+  "tldr": "A survey of 489 ethnic minority young adults in Hong Kong found that financial literacy and social support significantly predict financial self-efficacy, which in turn predicts positive financial behaviors, with financial education level moderating the social support effect.",
+  "problem_and_motivation": "Ethnic minorities in Hong Kong face significant barriers to financial inclusion including language obstacles, limited access to Chinese-language financial materials, and lower educational attainment. There is limited research on how financial literacy, social support, and financial self-efficacy interact to influence financial decision-making among ethnic minority young adults. Understanding these relationships is critical for developing targeted financial education interventions.",
+  "approach": [
+    "Cross-sectional survey design with 489 ethnic minority young adults aged 18-35 from South Asian and Southeast Asian communities in Hong Kong.",
+    "Structured questionnaire measuring financial literacy, social support, financial self-efficacy, and financial behaviors using validated scales.",
+    "Path analysis using structural equation modeling to test the mediating role of financial self-efficacy.",
+    "Moderation analysis examining how financial education level affects the social support to self-efficacy relationship.",
+    "Multi-group analysis comparing effects across different ethnic minority groups."
+  ],
+  "findings": [
+    "Financial literacy and social support were significant positive predictors of financial self-efficacy.",
+    "Financial self-efficacy mediated the relationship between both financial literacy and social support with financial behaviors.",
+    "Financial education level significantly moderated the social support to financial self-efficacy relationship.",
+    "Higher education was associated with higher financial self-efficacy, suggesting a threshold effect for formal learning.",
+    "The study concluded that financial literacy programs should incorporate social support mechanisms and target self-efficacy building."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Conceptual framework → Shows hypothesized relationships between financial literacy, social support, self-efficacy, and financial behaviors.",
+    "Table 1: Demographic characteristics → Age, gender, ethnicity, education, and income distributions.",
+    "Table 2: Descriptive statistics and correlations → Means, standard deviations, and intercorrelations for all measured variables.",
+    "Table 3: Path analysis results → Standardized coefficients for all hypothesized paths.",
+    "Table 4: Moderation analysis → Interaction effects of financial education on the social support to self-efficacy relationship."
+  ],
+  "key_equations": [
+    {"equation": "FSB = b1*FL + b2*SS + b3*FSE + e", "explanation": "Structural equation model where financial behavior (FSB) is predicted by financial literacy (FL), social support (SS), and financial self-efficacy (FSE)."},
+    {"equation": "FSE = a1*FL + a2*SS + a3*(SS*FE) + e", "explanation": "Moderated mediation model where self-efficacy is predicted by literacy, support, and their interaction with financial education level."}
+  ],
+  "definitions": [
+    {"term": "Financial self-efficacy", "definition": "An individuals belief in their ability to manage finances effectively and make sound financial decisions."},
+    {"term": "Financial literacy", "definition": "Knowledge and understanding of financial concepts including budgeting, saving, investing, and debt management."},
+    {"term": "Social support", "definition": "Perceived assistance and encouragement from family, friends, and community regarding financial matters."},
+    {"term": "Financial behavior", "definition": "Observable actions related to money management including budgeting, saving, investing, and debt avoidance."},
+    {"term": "Path analysis", "definition": "A statistical method for testing hypothesized causal relationships among variables using structural equation modeling."}
+  ],
+  "citations": [
+    {"author": "Lusardi", "year": 2011, "page": 1, "paragraph": 1, "claim": "Financial literacy is a critical determinant of financial decision-making and wealth accumulation.", "role": "context"},
+    {"author": "Bandura", "year": 1977, "page": 2, "paragraph": 1, "claim": "Self-efficacy beliefs influence behavior through their effects on motivation, affect, and thought patterns.", "role": "methodology"},
+    {"author": "Kaiser", "year": 2022, "page": 2, "paragraph": 2, "claim": "Financial literacy alone is insufficient to improve financial behavior without corresponding self-efficacy.", "role": "finding"},
+    {"author": "Huang", "year": 2013, "page": 3, "paragraph": 1, "claim": "Social networks and peer support significantly influence financial decision-making among minority populations.", "role": "context"},
+    {"author": "Fernandes", "year": 2014, "page": 3, "paragraph": 1, "claim": "Financial literacy interventions have modest effects on behavior, suggesting other factors mediate the relationship.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Examines the financial literacy landscape and barriers to financial inclusion for ethnic minorities in Hong Kong."
+      },
+      {
+        "code": "9.A",
+        "name": "Trust, Usability, and Transparency in Financial Tools",
+        "relevance": "high",
+        "justification": "Discusses how trust, social support, and self-efficacy influence financial decision-making and tool adoption."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Uses structural equation modeling to predict financial behaviors from literacy, support, and self-efficacy variables."}
+    ],
+    "contribution_to_field": "This study makes a significant contribution to financial literacy research by demonstrating the mediating role of financial self-efficacy in the relationship between financial literacy and financial behavior among ethnic minority young adults. The findings challenge the assumption that financial education alone is sufficient for behavior change, showing that self-efficacy and social support are critical intervening variables. The study provides evidence for designing culturally sensitive financial education interventions that incorporate social support mechanisms and target self-efficacy building for underserved minority populations.",
+    "directly_justifies": [
+      "Financial literacy and social support significantly predict financial self-efficacy.",
+      "Financial self-efficacy mediates the relationship between literacy and financial behavior.",
+      "Financial education level moderates the effect of social support on self-efficacy."
+    ],
+    "limits": [
+      "Cross-sectional design prevents causal inference about the direction of relationships.",
+      "Self-report measures may introduce response bias in financial behavior reporting.",
+      "Hong Kong-specific context may not generalise to other minority populations globally."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domain 4.A is highly relevant as the paper examines the financial literacy landscape for ethnic minorities. Domain 9.A is highly relevant due to discussion of trust, self-efficacy, and social support in financial decision-making. Domain 6.A is medium relevance as the paper uses predictive modeling for financial behaviors. Domains 2-3, 5, 7-8, 10-14 were considered and rejected: the paper does not address Filipino demographics, budgeting, mobile design, gambling, fraud detection, savings, debt reduction, addiction, or synthetic data. The paper is focused on financial literacy and decision-making among ethnic minorities."
+  },
+  "limitations": [
+    "Cross-sectional design prevents causal inference.",
+    "Self-report measures may introduce response bias.",
+    "Hong Kong-specific context limits international generalizability."
+  ],
+  "remember_this": [
+    "Financial self-efficacy mediates the relationship between financial literacy and financial behavior.",
+    "Social support significantly predicts financial self-efficacy among ethnic minorities.",
+    "Financial education level moderates the social support to self-efficacy relationship.",
+    "Financial literacy alone is insufficient without corresponding self-efficacy.",
+    "Culturally sensitive financial education should incorporate social support mechanisms."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cho_marked.md",
+      "converted_at": "2026-07-21T06:13:30Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

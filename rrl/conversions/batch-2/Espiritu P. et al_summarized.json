@@ -1,0 +1,182 @@
+{
+  "paper_id": "espiritu_p_et_al_2023",
+  "designation": "international-algorithm-specific",
+  "title": "Balarila: Deep Learning for Semantic Grammar Error Correction in Low-Resource Settings",
+  "authors": [
+    "Paolo Espiritu",
+    "Joshue Jadie",
+    "Andre Ponce",
+    "Charibeth Cheng"
+  ],
+  "year": 2023,
+  "venue": "Proceedings of the First Workshop in South East Asian Language Processing (co-located with EMNLP 2023)",
+  "odin_topics": [
+    "7.A",
+    "1.B"
+  ],
+  "tldr": "Balarila demonstrates a practical, cost-effective transformer-based Filipino grammar checker using synthetic data, though its performance reveals ongoing challenges in low-resource NLP for complex semantic tasks.",
+  "problem_and_motivation": "Existing Filipino grammar checkers like Gramatika are limited to lexical errors and rely on rule-based/statistical methods. No publicly available Filipino grammar checker can address semantic errors, which are more complex. Training data is scarce for low-resource Filipino language.",
+  "approach": "Balarila adopts GECToR's iterative sequence tagging approach using transformer encoders (BERT Tagalog Base, RoBERTa Tagalog Base, RoBERTa Tagalog Large). An automated error generation pipeline creates synthetic datasets from scraped Filipino news articles (510,411 raw sentences). Two-stage fine-tuning: first on error-filled sentences, then on mixed error-free/error-filled sentences. 39 unique transformation tags covering grammatical and spelling errors.",
+  "findings": "RoBERTa-Large achieved best F0.5 score of 70.75, with RoBERTa-Base at 69.00. RoBERTa-Base was most cost-effective (1.75% F0.5 difference with fewer resources). Models struggled with duplicate words, morphological errors, wrong punctuation marks, and missing words. Error-free sentences showed higher accuracy than error-filled sentences. The datasets serve as benchmark for Filipino GEC.",
+  "key_figures_tables": [
+    {
+      "reference": "Table 2",
+      "caption": "Error Types and Transformation Tags used by Balarila (39 unique tags)"
+    },
+    {
+      "reference": "Table 3",
+      "caption": "Tagalog Verb Form Transformation Tags (morphological error categories)"
+    },
+    {
+      "reference": "Table 4",
+      "caption": "Balarila dataset composition: 155,419 error-free and 751,539 error-filled sentences (906,958 total)"
+    },
+    {
+      "reference": "Table 6",
+      "caption": "Grouped GED Performance Results of the Three Models on error-free and error-filled datasets"
+    },
+    {
+      "reference": "Figure 3",
+      "caption": "GEC Performance of the Three Models (precision, recall, F0.5 scores)"
+    }
+  ],
+  "key_equations": [],
+  "definitions": {
+    "GEC": "Grammar Error Correction - task of detecting and correcting grammatical errors in text",
+    "GED": "Grammar Error Detection - task of identifying whether a sentence contains errors",
+    "GECToR": "Grammatical Error Correction: Tag, Not Rewrite - sequence tagging approach for GEC",
+    "Transformation Tags": "Tag-encoded edit operations applied to tokens to correct errors",
+    "Tagalog Enclitics": "Small words (daw/din/roon/doon) that change based on preceding word's ending",
+    "Filipino Verb Forms": "Forms created using aspect (completed, incompleted, contemplated, recently completed) and focus (actor-focus, object-focus)"
+  },
+  "citations": [
+    {
+      "context": "Filipino grammar checker using rule-based methods and SMT",
+      "reference": "Go et al. 2017"
+    },
+    {
+      "context": "Filipino language model pre-training techniques",
+      "reference": "Cruz and Cheng 2021"
+    },
+    {
+      "context": "Filipino writing errors corpus analysis",
+      "reference": "Octaviano et al. 2016"
+    },
+    {
+      "context": "Filipino orthography rules",
+      "reference": "Komisyon sa Wikang Filipino 2013"
+    }
+  ],
+  "topic_relevance": {
+    "high": [
+      {
+        "topic": "7.A",
+        "justification": "Directly applies NLP methods (transformer encoders, sequence tagging) to Filipino language processing for grammar error correction"
+      }
+    ],
+    "medium": [
+      {
+        "topic": "1.B",
+        "justification": "Addresses low-resource language challenges in NLP, though not focused on psycholinguistics per se"
+      }
+    ],
+    "low": [],
+    "not_used": [
+      {
+        "topic": "1.A",
+        "justification": "Not focused on language and cognition; practical NLP application"
+      },
+      {
+        "topic": "2.A",
+        "justification": "Not about translation; focused on monolingual Filipino grammar correction"
+      },
+      {
+        "topic": "3.A",
+        "justification": "No computational linguistic modeling; applied ML approach"
+      },
+      {
+        "topic": "3.B",
+        "justification": "Uses ML but not specifically for sentiment/emotion analysis or language modeling"
+      },
+      {
+        "topic": "4.A",
+        "justification": "Not about psycholinguistic modeling"
+      },
+      {
+        "topic": "4.B",
+        "justification": "Not about language acquisition or development"
+      },
+      {
+        "topic": "5.A",
+        "justification": "Single-language focus (Filipino); no cross-cultural comparison"
+      },
+      {
+        "topic": "5.B",
+        "justification": "No multilingual analysis; Filipino only"
+      },
+      {
+        "topic": "6.A",
+        "justification": "No multimodal integration; text-only NLP"
+      },
+      {
+        "topic": "6.B",
+        "justification": "No HCI component; focused on model performance rather than user interaction"
+      },
+      {
+        "topic": "8.A",
+        "justification": "No computational morphology analysis; uses transformer-based features"
+      },
+      {
+        "topic": "8.B",
+        "justification": "No formal semantic analysis; practical grammar correction approach"
+      },
+      {
+        "topic": "9.A",
+        "justification": "Not about language change or corpora analysis"
+      },
+      {
+        "topic": "9.B",
+        "justification": "No sociolinguistic modeling; focused on individual grammar correction"
+      },
+      {
+        "topic": "10.A",
+        "justification": "Not about language disorders or clinical applications"
+      },
+      {
+        "topic": "11.A",
+        "justification": "Not about language education or pedagogy"
+      },
+      {
+        "topic": "12.A",
+        "justification": "No NER or historical language processing"
+      },
+      {
+        "topic": "13.A",
+        "justification": "No dialog systems or conversation modeling"
+      },
+      {
+        "topic": "14.A",
+        "justification": "Does not address bias, fairness, or ethical aspects"
+      },
+      {
+        "topic": "14.B",
+        "justification": "No practical NLP tool development beyond experimental model"
+      }
+    ]
+  },
+  "limitations": [
+    "Limited error coverage - only specific grammatical and spelling errors covered",
+    "Synthetic data may introduce bias and inaccuracy in error representations",
+    "RoBERTa-Large had memory issues during training due to GPU VRAM limitations",
+    "Error automation assumed one error per sentence, which is unrealistic",
+    "Inconsistency in correcting the same erroneous sentence with different error contexts"
+  ],
+  "remember_this": "Balarila demonstrates that transformer-based models can achieve reasonable Filipino grammar error correction (F0.5=70.75) using synthetic data, but challenges remain in handling complex semantic errors and low-resource NLP limitations.",
+  "summarization_metadata": {
+    "conversion_reference": {
+      "file": "Espiritu P. et al_marked.md"
+    },
+    "summarizer_model": "opencode/big-pickle",
+    "summarized_at": "2026-07-21T23:12:00Z"
+  }
+}

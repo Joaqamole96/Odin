@@ -1,0 +1,106 @@
+{
+  "paper_id": "10.5281/zenodo.ciric2025",
+  "designation": "international",
+  "title": "Predicting Purchase Behavior Using Long Short-Term Memory Networks and Customer Segmentation",
+  "authors": "Ciric, V.; Obradovic, N.; Pavlovic, I.",
+  "year": 2025,
+  "venue": "Unknown",
+  "odin_topics": ["4.A", "4.B", "5.A", "5.B", "6.A", "6.B", "6.C", "6.E", "7.A", "9.A"],
+  "tldr": "Two LSTM architectures—a sequence model and an attribute-enhanced model incorporating customer age, gender, and location—predict future purchases from real e-commerce data, with the attribute-enhanced model showing statistically significant improvements for short prediction windows.",
+  "problem_and_motivation": "Accurate purchase prediction is essential for optimizing inventory management and enhancing customer experience, yet existing collaborative filtering and sequence prediction methods lack granularity. Traditional methods focus on what to recommend rather than predicting precise purchase timing and quantities from sequential patterns. There is a need for models that capture fine-grained temporal dependencies while incorporating demographic attributes.",
+  "approach": [
+    "Developed two LSTM-based architectures: a pure sequence model and an attribute-enhanced model incorporating customer age, gender, and location.",
+    "Trained models on real e-commerce datasets from three distinct industries.",
+    "Implemented preprocessing pipeline to extract and encode customer demographics, product features, and sequential purchase data.",
+    "Evaluated models using predictive accuracy metrics including MAE, MSE, and RMSE.",
+    "Conducted statistical significance testing using ANOVA with Tukey HSD post-hoc analysis.",
+    "Tested prediction performance across 7, 14, and 21-day prediction windows.",
+    "Compared LSTM performance against baseline logistic regression and LSTM classifiers."
+  ],
+  "findings": [
+    "Attribute-enhanced LSTM outperforms the pure sequence model for short prediction windows (7-14 days) with statistical significance.",
+    "Prediction accuracy degrades for longer prediction windows (21 days) across all models.",
+    "Customer age and gender significantly influence purchase patterns and improve predictive performance.",
+    "Logistic regression outperforms LSTM classifiers on structured tabular data.",
+    "MAE values are approximately 10x lower than RMSE values, indicating sparse but extreme purchase events.",
+    "Performance varies across industries, reflecting differing consumer behavior patterns.",
+    "Location attributes do not significantly improve prediction accuracy."
+  ],
+  "key_figures_tables": [
+    "Figure 2.1: Accuracy of purchase prediction for 7-day window → Shows model performance comparison across industries.",
+    "Figure 2.2: Accuracy for 14-day window → Degraded performance with longer prediction horizon.",
+    "Figure 2.3: Accuracy for 21-day window → Further degradation in predictive accuracy.",
+    "Table 3: Purchase prediction accuracy → Quantitative comparison across models, industries, and time windows.",
+    "Figure 3.1: Training and validation loss over epochs → LSTM models converge after approximately 100 epochs."
+  ],
+  "key_equations": [
+    {"equation": "h_t = f(W_hh * h_{t-1} + W_xh * x_t + b_h)", "explanation": "LSTM hidden state update combining current input and previous hidden state."},
+    {"equation": "f_t = sigmoid(W_f * [h_{t-1}, x_t] + b_f)", "explanation": "Forget gate controlling retention of historical purchase information."},
+    {"equation": "i_t = sigmoid(W_i * [h_{t-1}, x_t] + b_i)", "explanation": "Input gate controlling new information incorporation into cell state."},
+    {"equation": "o_t = sigmoid(W_o * [h_{t-1}, x_t] + b_o)", "explanation": "Output gate controlling which information is passed to next hidden state."}
+  ],
+  "definitions": [
+    {"term": "LSTM", "definition": "Long Short-Term Memory, a recurrent neural network architecture with gating mechanisms for modeling long-term dependencies in sequential data."},
+    {"term": "MAE", "definition": "Mean Absolute Error, the average of absolute differences between predicted and actual values."},
+    {"term": "RMSE", "definition": "Root Mean Square Error, the square root of average squared differences between predicted and actual values, sensitive to large errors."},
+    {"term": "ANOVA", "definition": "Analysis of Variance, a statistical method for testing differences between group means."},
+    {"term": "Tukey HSD", "definition": "Tukey's Honestly Significant Difference, a post-hoc test for pairwise comparisons after ANOVA."},
+    {"term": "Collaborative Filtering", "definition": "A recommendation technique that predicts user preferences based on similar users' behaviors."},
+    {"term": "One-Hot Encoding", "definition": "A binary representation technique for categorical variables where each category becomes a separate binary feature."}
+  ],
+  "citations": [
+    {"author": "Choi", "year": 2018, "page": 0, "paragraph": 0, "claim": "Traditional methods focus primarily on what to recommend rather than predicting precise timing and quantities of purchases.", "role": "context"},
+    {"author": "Liu", "year": 2016, "page": 0, "paragraph": 0, "claim": "LSTM models effectively capture long-term temporal dependencies in financial time-series data.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Core contribution is LSTM-based purchase prediction modeling with demographic attribute integration."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Applies LSTM specifically to sequential purchase data with temporal dependency modeling."},
+      {"code": "6.C", "name": "Training and Evaluation Data Sources for Financial Models", "relevance": "medium", "justification": "Uses real e-commerce datasets with customer demographics and purchase history."},
+      {"code": "6.E", "name": "Fairness and Bias in Personal Finance Predictions", "relevance": "medium", "justification": "Incorporates age and gender attributes, raising fairness considerations in purchase prediction."},
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "medium", "justification": "Models customer behavioral profiles using purchase sequences and demographic attributes."},
+      {"code": "5.B", "name": "Classification of Financial Behavior Types", "relevance": "low", "justification": "Purchase behavior classification through LSTM sequence modeling."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "medium", "justification": "Reviews existing recommendation and prediction approaches in e-commerce."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "medium", "justification": "Identifies limitations in collaborative filtering for precise purchase timing."},
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "low", "justification": "Purchase prediction can inform budgeting recommendations."},
+      {"code": "9.A", "name": "Mobile-First Design Principles and Rationale", "relevance": "low", "justification": "E-commerce prediction applicable to mobile commerce platforms."}
+    ],
+    "contribution_to_field": "This paper contributes two LSTM architectures for purchase prediction that integrate both sequential transaction patterns and customer demographic attributes, demonstrating that attribute-enhanced models achieve statistically significant improvements over pure sequence models for short-term prediction windows. The work validates these findings across multiple e-commerce industries, showing that customer age and gender are significant predictors while location is not, and establishing that logistic regression outperforms LSTM classifiers on structured tabular purchase data.",
+    "directly_justifies": [
+      "Attribute-enhanced LSTM significantly outperforms pure sequence models for 7-14 day prediction windows.",
+      "Customer age and gender significantly improve purchase prediction accuracy.",
+      "Prediction accuracy degrades substantially for longer prediction horizons (21 days).",
+      "Logistic regression outperforms LSTM classifiers on structured tabular data.",
+      "MAE is approximately 10x lower than RMSE indicating sparse extreme purchase events."
+    ],
+    "limits": [
+      "Performance varies across industries, limiting generalizability claims.",
+      "Location attributes did not improve prediction, suggesting limited demographic feature value.",
+      "Long-term prediction (21 days) shows degraded performance across all models.",
+      "Statistical significance only established for short prediction windows."
+    ],
+    "topic_mapping_rationale": "The paper was systematically scanned across all 14 topic domains. Domain 6 (Predictive Modeling) received high relevance as the core contribution is LSTM-based purchase prediction. Domain 5 (Behavioral Profiles) received medium relevance for customer profiling using demographics. Domain 4 (Existing Systems) received medium relevance for reviewing recommendation approaches. Domains 1-3, 7-8, 10-14 were considered and rejected as the paper does not address Filipino demographics, financial data APIs, expense categorization, budgeting, anomaly detection, privacy, engagement, mobile design, evaluation frameworks, or synthetic data generation."
+  },
+  "limitations": [
+    "Industry-specific performance variation limits cross-domain generalizability.",
+    "Location attributes do not contribute to prediction accuracy.",
+    "Long-term prediction horizon (21 days) shows substantial performance degradation.",
+    "Statistical significance only demonstrated for short prediction windows."
+  ],
+  "remember_this": [
+    "Attribute-enhanced LSTM outperforms pure sequence models for short-term purchase prediction.",
+    "Customer age and gender significantly improve prediction accuracy; location does not.",
+    "Prediction accuracy degrades substantially beyond 14-day windows.",
+    "Logistic regression outperforms LSTM classifiers on structured purchase data.",
+    "Sparse extreme purchase events drive large RMSE-MAE discrepancies."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:20:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ciric et al_marked.md",
+      "converted_at": "2026-07-21T05:59:15Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

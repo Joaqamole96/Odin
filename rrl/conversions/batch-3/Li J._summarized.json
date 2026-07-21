@@ -1,0 +1,110 @@
+{
+  "paper_id": "10.XXXX/unknown-lfj2026",
+  "designation": "international",
+  "title": "Research on Personalized Asset Allocation Using AI Agents in Robo-Advisory Scenarios",
+  "authors": "Li, J.",
+  "year": 2026,
+  "venue": "Journal of Computer, Signal, and System Research",
+  "odin_topics": ["4.A", "5.A", "5.B", "7.B", "9.B", "10.B", "11.A"],
+  "tldr": "A systematic review examines how AI agents in robo-advisory platforms enable personalized asset allocation through risk profiling, dynamic portfolio optimization, and behavioral finance integration.",
+  "problem_and_motivation": "Standard robo-advisory models use generalized algorithms that fail to address individual investor risk tolerance, financial goals, and behavioral biases. Traditional risk profiling via static questionnaires lacks adaptability to dynamic market conditions and evolving investor preferences. There is a need for more sophisticated AI-driven personalization techniques that optimize both investment performance and user satisfaction.",
+  "approach": [
+    "Systematic review of AI-driven personalized asset allocation across robo-advisory platforms.",
+    "Examines evolution from rule-based systems to machine learning and reinforcement learning approaches.",
+    "Analyzes risk profiling methods using deep learning and NLP on behavioral and textual data.",
+    "Evaluates dynamic asset allocation strategies including reinforcement learning and genetic algorithms.",
+    "Synthesizes findings on transparency, explainability, and regulatory compliance challenges."
+  ],
+  "findings": [
+    "Deep learning and NLP techniques enhance risk assessment by analyzing transaction history, portfolio composition, and investor communication beyond static questionnaires.",
+    "Reinforcement learning agents learn optimal allocation strategies through interaction with market environments modeled as Markov Decision Processes.",
+    "AI-driven approaches show improved portfolio performance in volatile markets compared to traditional rule-based methods.",
+    "Significant challenges remain in algorithmic transparency, bias mitigation, and regulatory compliance."
+  ],
+  "key_figures_tables": [
+    "Table 1: Comparison of Early Robo-Advisory Models → Rule-based systems lack dynamic adjustment and adaptability.",
+    "Table 2: Timeline of AI Integration in Robo-Advisory → AI features evolved from personalized agents to reinforcement learning across 2010-present.",
+    "Table 3: Comparison of Risk Profiling Methods → AI-enhanced profiling uses diverse data sources and dynamic adaptation versus static questionnaires.",
+    "Table 4: Behavioral Biases and Mitigation Strategies → AI can counteract loss aversion, anchoring, and herding bias through personalized interventions.",
+    "Table 5: Key Challenges and Mitigation Strategies → Data privacy, security, regulatory compliance, and trust require multi-layered mitigation."
+  ],
+  "key_equations": [
+    {
+      "equation": "$A_t = f(M_t, I_t)$",
+      "explanation": "Optimal allocation at time t as a function of market conditions and investor needs."
+    },
+    {
+      "equation": "$\\sum_{t=0}^{T} \\gamma^t r_t$",
+      "explanation": "Cumulative discounted reward for reinforcement learning agent optimization."
+    },
+    {
+      "equation": "$\\pi(a_t | s_t)$",
+      "explanation": "RL policy mapping states to actions for optimal portfolio allocation."
+    }
+  ],
+  "definitions": [
+    {"term": "Robo-Advisor", "definition": "Automated investment platform using algorithms to manage portfolios based on investor profiles."},
+    {"term": "Reinforcement Learning", "definition": "Machine learning approach where agents learn optimal strategies through interaction with an environment."},
+    {"term": "NLP", "definition": "Natural Language Processing; computational techniques for understanding and generating human language."},
+    {"term": "XAI", "definition": "Explainable AI; methods providing transparent justifications for algorithmic decisions."},
+    {"term": "SHAP", "definition": "SHapley Additive exPlanations; a unified framework for explaining individual predictions."}
+  ],
+  "citations": [
+    {"author": "Shetty", "year": 2026, "page": 0, "paragraph": 0, "claim": "Robo-advisors are redefining wealth management through AI-driven personalization.", "role": "context"},
+    {"author": "Abbas", "year": 2024, "page": 0, "paragraph": 0, "claim": "AI-powered robo-advisors represent the convergence of finance and artificial intelligence.", "role": "context"},
+    {"author": "Feng", "year": 2025, "page": 0, "paragraph": 0, "claim": "Rule-based early robo-advisors lacked adaptability to changing market conditions.", "role": "baseline"},
+    {"author": "Shen", "year": 2025, "page": 0, "paragraph": 0, "claim": "ML algorithms enable nuanced risk profiling by analyzing behavioral data beyond questionnaires.", "role": "finding"},
+    {"author": "Tahvildari", "year": 2025, "page": 0, "paragraph": 0, "claim": "Generative AI integration in robo-advisory presents both opportunities and strategic challenges.", "role": "context"},
+    {"author": "Zhu", "year": 2023, "page": 0, "paragraph": 0, "claim": "Traditional questionnaire-based risk profiling has low R-squared values indicating poor fit.", "role": "finding"},
+    {"author": "Khosravi", "year": 2024, "page": 0, "paragraph": 0, "claim": "RL agents learn portfolio policies through trial and error in market environments.", "role": "methodology"},
+    {"author": "Rizinski", "year": 2025, "page": 0, "paragraph": 0, "claim": "AI agents can identify and mitigate cognitive biases like loss aversion in investment decisions.", "role": "finding"},
+    {"author": "Akhtar", "year": 2025, "page": 0, "paragraph": 0, "claim": "Genetic algorithms offer population-based approaches for evolving asset allocation strategies.", "role": "methodology"},
+    {"author": "Bhardwaj", "year": 2025, "page": 0, "paragraph": 0, "claim": "SHAP and LIME provide insights into feature importance for AI-driven investment recommendations.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "high", "justification": "Reviews existing robo-advisory platforms and their evolution from rule-based to AI-driven systems."},
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "high", "justification": "Examines AI-driven risk profiling and investor segmentation using behavioral data."},
+      {"code": "5.B", "name": "Profile Dynamics and the Cold-Start Problem", "relevance": "medium", "justification": "Discusses dynamic adaptation of investor profiles to changing preferences and market conditions."},
+      {"code": "7.B", "name": "Budget Recommendation in Personal Finance Systems", "relevance": "medium", "justification": "Covers personalized portfolio allocation strategies conditioned on individual risk preferences."},
+      {"code": "9.B", "name": "Mobile UX Design for Personal Finance", "relevance": "low", "justification": "Mentions user experience and engagement in robo-advisory platforms but not as primary focus."},
+      {"code": "10.B", "name": "User Trust in Personal Finance Systems", "relevance": "high", "justification": "Addresses transparency, explainability, and trust challenges in AI-driven financial advisory."},
+      {"code": "11.A", "name": "Engagement Dynamics in Personal Finance Applications", "relevance": "medium", "justification": "Discusses user engagement and satisfaction through personalized investment experiences."}
+    ],
+    "contribution_to_field": "This review synthesizes the current landscape of AI-driven personalized asset allocation in robo-advisory, covering risk profiling, dynamic portfolio optimization, and behavioral finance integration. It identifies key themes including the transition from rule-based to ML and RL approaches, the role of NLP in capturing investor preferences, and the critical challenges of transparency and regulatory compliance. The paper provides a comprehensive overview that maps the evolution of AI techniques in financial advisory and highlights promising future directions including explainable AI and alternative data sources.",
+    "directly_justifies": [
+      "AI-driven risk profiling using deep learning and NLP outperforms traditional questionnaire-based methods.",
+      "Reinforcement learning enables dynamic portfolio adaptation to market conditions and individual preferences.",
+      "Behavioral finance principles can be integrated into AI systems to mitigate cognitive biases.",
+      "Transparency and explainability remain critical barriers to adoption of AI in financial advisory."
+    ],
+    "limits": [
+      "The review is narrative rather than systematic, potentially missing relevant studies.",
+      "No empirical evaluation or meta-analysis of the discussed methodologies.",
+      "Limited discussion of practical deployment challenges and real-world validation."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domain 4 (Existing Systems) was flagged as high relevance because the paper provides a comprehensive review of robo-advisory platforms. Domain 5 (Behavioral Profiles) was assigned high relevance due to extensive coverage of AI-driven risk profiling and investor segmentation. Domain 7 (Budget Recommendation) received medium relevance as portfolio allocation is discussed but not budgeting per se. Domain 9 (Mobile UX) was low relevance as user interface is mentioned but not primary. Domain 10 (User Trust) was high relevance due to significant focus on transparency and explainability. Domain 11 (Engagement) was medium relevance through discussion of user satisfaction. Domains 1-3 (Filipino demographics, cultural practices, expense categorization) were considered and rejected as the paper is international in scope and does not address Filipino-specific contexts. Domains 6 (Predictive Modeling), 8 (Anomaly Detection), 12 (Evaluation Frameworks), 13 (Savings/Debt), and 14 (Synthetic Data) were considered but rejected as they are not the paper's focus."
+  },
+  "limitations": [
+    "Narrative review methodology may introduce selection bias in included studies.",
+    "No original empirical data or experimental validation presented.",
+    "Limited coverage of regulatory frameworks across different jurisdictions.",
+    "Does not address computational cost or scalability of proposed AI approaches."
+  ],
+  "remember_this": [
+    "AI agents using RL and deep learning improve personalized portfolio allocation over static rule-based robo-advisors.",
+    "NLP techniques enable risk profiling from behavioral data and investor communication beyond questionnaires.",
+    "Transparency and explainability remain critical challenges for AI-driven financial advisory adoption.",
+    "Behavioral finance integration allows AI systems to detect and mitigate investor cognitive biases.",
+    "Future directions include federated learning, XAI, and alternative data source integration."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Li J._marked.md",
+      "converted_at": "2026-07-21T07:09:42Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

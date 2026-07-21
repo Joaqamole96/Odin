@@ -1,0 +1,102 @@
+{
+  "paper_id": "10.5281/zenodo.elliyana2025",
+  "designation": "international",
+  "title": "Personal Financial Management Practices: A Systematic Literature Review and Bibliometric Analysis",
+  "authors": "Elliyana, L.; Mardoni, R.; Putra, R.",
+  "year": 2025,
+  "venue": "International Journal of Management, Entrepreneurship, Social Sciences and Humanities (IJMESCH)",
+  "odin_topics": ["4.A", "4.B", "4.C", "5.A", "7.A", "7.C", "8.A", "12.A", "12.B"],
+  "tldr": "A systematic literature review and bibliometric analysis of 52 papers synthesizes personal financial management practices across 18 countries, identifying income, financial literacy, and social influence as primary drivers, while highlighting persistent research gaps in technology integration and longitudinal analysis.",
+  "problem_and_motivation": "The existing PFM literature is fragmented across isolated studies and diverse contexts, lacking a unified synthesis of tools, approaches, factors, and research gaps. Despite abundant individual studies, there is no consolidated mapping of global PFM practices, influencing factors, or methodological trends to guide future research and development.",
+  "approach": [
+    "Performed systematic literature review following PRISMA guidelines to identify and synthesize relevant studies from Scopus and Web of Science databases.",
+    "Conducted bibliometric analysis including keyword co-occurrence, thematic mapping, and three-field plot to identify intellectual structure and research fronts.",
+    "Extracted data using SPSS to analyze factors influencing PFM (income, financial literacy, social influence, age, family, gender, financial behavior).",
+    "Classified research methodology across quantitative, qualitative, and mixed-method approaches.",
+    "Synthesized findings across 18 countries to identify geographical biases and context-specific practices.",
+    "Mapped tools used for data collection including questionnaires, interviews, scales, and archival data.",
+    "Identified common statistical analysis techniques including correlation, regression, and ANOVA."
+  ],
+  "findings": [
+    "Income is the strongest predictor of PFM practices across most studied populations.",
+    "Financial literacy significantly affects saving, investing, and budgeting behaviors, particularly among younger individuals and women.",
+    "Social influence and family environment substantially shape individual financial management habits.",
+    "Gender differences in PFM are context-dependent and not universal across all cultures.",
+    "Income is a stronger predictor of financial behavior than financial literacy in emerging economies.",
+    "Research is heavily concentrated in the USA, India, and Indonesia, creating geographical bias in findings.",
+    "Cross-sectional designs dominate, with a critical need for longitudinal studies to track behavioral changes over time.",
+    "Technology usage in PFM is underexplored despite growing digital finance adoption."
+  ],
+  "key_figures_tables": [
+    "Table 1: PFM Practices across Countries → Income, spending control, and savings consistently prioritized globally.",
+    "Table 2: Factors Affecting PFM Practices → Income, financial literacy, social influence, and age are most frequently cited determinants.",
+    "Table 3: Factors Affecting PFM Practices across Countries → Income is strongest predictor; cultural context moderates gender effects.",
+    "Figure 3: Research trend visualization → Annual publication count shows growing academic interest post-2016.",
+    "Figure 5: Methodology distribution → Quantitative methods (73%) dominate over qualitative and mixed approaches."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "PFM", "definition": "Personal Financial Management, the process of managing individual or household financial resources including earning, spending, saving, investing, and planning."},
+    {"term": "Financial Literacy", "definition": "Knowledge and understanding of financial concepts and skills necessary for informed decision-making about personal finances."},
+    {"term": "PRISMA", "definition": "Preferred Reporting Items for Systematic Reviews and Meta-Analyses, a standardized guideline for transparent systematic review methodology."},
+    {"term": "Bibliometric Analysis", "definition": "Quantitative analysis of bibliographic data to identify patterns, trends, and intellectual structure within a research field."},
+    {"term": "Thematic Mapping", "definition": "Visualization technique showing relationships between keyword clusters and their evolution over time."}
+  ],
+  "citations": [
+    {"author": "Lusardi", "year": 2011, "page": 0, "paragraph": 0, "claim": "Financial literacy significantly affects saving, investing, and budgeting behaviors, particularly among younger individuals and women.", "role": "context"},
+    {"author": "Otori", "year": 2020, "page": 0, "paragraph": 0, "claim": "Personal financial planning processes involve setting goals, gathering data, evaluating alternatives, and creating a plan of action.", "role": "context"},
+    {"author": "Anghel", "year": 2020, "page": 0, "paragraph": 0, "claim": "Financial planning is a set of practices aimed at achieving various financial objectives.", "role": "context"},
+    {"author": "Yusof", "year": 2022, "page": 0, "paragraph": 0, "claim": "The main purpose of personal financial management is to maintain a balance between income and expenses.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "high", "justification": "Comprehensive survey of PFM practices, tools, and approaches across 18 countries."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "high", "justification": "Identifies technology integration gaps, longitudinal study needs, and geographical biases."},
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "high", "justification": "Analyzes behavioral factors (income, literacy, social influence, gender, age) affecting PFM practices."},
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "medium", "justification": "Discusses budgeting approaches and spending control as core PFM practices."},
+      {"code": "7.C", "name": "Goal-Oriented Savings and Debt Planning", "relevance": "medium", "justification": "Covers savings behavior and its determinants across populations."},
+      {"code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "medium", "justification": "Provides bibliometric methodology for evaluating PFM research trends."},
+      {"code": "12.B", "name": "Datasets and Data Collection Protocols", "relevance": "medium", "justification": "Catalogs data collection tools (questionnaires, scales) used in PFM research."},
+      {"code": "4.C", "name": "Consumer Financial Tools and Services", "relevance": "low", "justification": "Mentions digital tools and fintech services in context of PFM adoption."},
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "low", "justification": "Not directly addressed but relevant to spending behavior analysis."},
+      {"code": "13.A", "name": "Comparative Analysis and Benchmarking", "relevance": "medium", "justification": "Provides cross-country comparative analysis of PFM practices."}
+    ],
+    "contribution_to_field": "This systematic literature review consolidates fragmented PFM research by synthesizing 52 studies across 18 countries, providing a unified mapping of practices (income management, budgeting, savings, investment), influencing factors (income, financial literacy, social influence), and methodological trends (dominance of quantitative approaches, need for longitudinal studies). It identifies critical gaps including technology integration, geographical concentration in USA/India/Indonesia, and underexplored cultural influences on financial behavior.",
+    "directly_justifies": [
+      "Income is the strongest predictor of PFM practices across most studied populations.",
+      "Financial literacy significantly affects budgeting and saving behaviors.",
+      "Technology integration in PFM remains significantly underexplored.",
+      "Research is heavily concentrated in three countries creating geographical bias.",
+      "Cross-sectional designs dominate with a critical need for longitudinal studies."
+    ],
+    "limits": [
+      "Limited to English-language papers indexed in Scopus and Web of Science.",
+      "Cannot account for gray literature or non-English PFM research.",
+      "No meta-analysis due to heterogeneity of PFM measurements across studies.",
+      "Geographical bias in included studies limits generalizability to underrepresented regions."
+    ],
+    "topic_mapping_rationale": "The paper was systematically scanned across all 14 topic domains. Domain 4 (Existing Systems) received high relevance as it surveys current PFM practices and identifies technology gaps. Domain 5 (Behavioral Profiles) received high relevance for its analysis of behavioral factors affecting PFM. Domain 7 (Budgeting) received medium relevance for discussing budgeting practices. Domain 12 (Evaluation) received medium relevance for its bibliometric methodology. Domains 1-3 (Filipino Demographics, Financial Data, Expense Categorization) were considered and rejected as the paper does not focus on Filipino populations, financial APIs, or expense categorization. Domain 6 (Predictive Modeling) was rejected as the paper does not address ML forecasting."
+  },
+  "limitations": [
+    "English-language restriction excludes non-English PFM research.",
+    "No meta-analysis due to measurement heterogeneity.",
+    "Publication bias toward well-resourced countries.",
+    "Does not address technology-based PFM systems in depth."
+  ],
+  "remember_this": [
+    "Income is the strongest predictor of PFM practices globally.",
+    "Financial literacy and social influence significantly affect financial management behaviors.",
+    "Technology integration in PFM is critically underexplored despite digital finance growth.",
+    "Research is concentrated in USA, India, and Indonesia, creating geographical bias.",
+    "Longitudinal studies are needed to track PFM behavioral changes over time."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:15:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Elliyana et al_marked.md",
+      "converted_at": "2026-07-21T05:59:15Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

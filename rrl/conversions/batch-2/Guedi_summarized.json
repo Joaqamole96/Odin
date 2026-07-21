@@ -1,0 +1,106 @@
+{
+  "paper_id": "10.5281/zenodo.guedi2025",
+  "designation": "international",
+  "title": "Design and Implementation of a Predictive Financial Decision Support Platform",
+  "authors": "Guedi, M.",
+  "year": 2025,
+  "venue": "Unknown",
+  "odin_topics": ["4.A", "4.B", "6.A", "6.B", "6.D", "7.A", "7.D", "11.A", "11.B", "13.B"],
+  "tldr": "A Flask-based financial decision support platform integrating LSTM, Linear Regression, and ARIMA models with a recommendation engine to predict savings growth, monthly expenditure, and savings rate, achieving up to 93% prediction accuracy.",
+  "problem_and_motivation": "Individuals frequently make financial decisions without quantifying long-term consequences, relying on intuition rather than structured prediction. Existing financial tools often require manual input and do not combine multiple forecasting models with actionable guidance. There is a lack of integrated platforms that combine predictive analytics with rule-based recommendations to transform financial planning from manual estimation to data-driven decision-making.",
+  "approach": [
+    "Developed a Flask-based web platform integrating three prediction models: LSTM, Linear Regression, and ARIMA.",
+    "Implemented a recommendation engine using rule-based logic triggered by predicted savings rate thresholds.",
+    "Engineered features from transactional data including transaction type, amount, and temporal context.",
+    "Applied label encoding and one-hot encoding for categorical features, min-max scaling for numerical inputs.",
+    "Defined composite savings rate as the ratio of total savings to total income.",
+    "Conducted model evaluation using MAE, MSE, RMSE, and accuracy scores.",
+    "Implemented backtesting to evaluate model performance on historical data.",
+    "Designed user interface for transaction entry, prediction visualization, and recommendation display."
+  ],
+  "findings": [
+    "LSTM achieves highest accuracy for savings growth prediction (93%) by capturing long-term sequential patterns.",
+    "Linear Regression achieves highest accuracy for monthly expenditure prediction (87%).",
+    "ARIMA achieves highest accuracy for savings rate prediction (84%) using rolling window analysis.",
+    "Composite savings rate metric provides more meaningful financial guidance than individual income or savings values.",
+    "Rule-based recommendations triggered by savings rate thresholds provide actionable financial advice.",
+    "Feature engineering significantly improves prediction accuracy for all three models.",
+    "Combined model approach outperforms single-model systems for multi-dimensional financial forecasting."
+  ],
+  "key_figures_tables": [
+    "Figure 1: System Architecture → Shows three-layer architecture: user interface, business logic, and model training.",
+    "Figure 2: Savings Growth Over Next 12 Months → LSTM prediction showing gradual savings increase trajectory.",
+    "Figure 3: Monthly Expenditure Forecast → Linear Regression projection of spending patterns.",
+    "Figure 4: Savings Rate Projection → ARIMA prediction showing 80% accuracy across test instances.",
+    "Table 1: Accuracy Comparison Across Models → LSTM 93% (savings), LR 87% (expenditure), ARIMA 84% (savings rate)."
+  ],
+  "key_equations": [
+    {"equation": "Savings_Rate = Total_Savings / Total_Income", "explanation": "Composite metric combining absolute savings with income context for more meaningful financial guidance."},
+    {"equation": "RMSE = sqrt(sum((y_i - y_hat_i)^2) / n)", "explanation": "Root Mean Square Error measuring prediction accuracy for financial forecasts."},
+    {"equation": "MAE = sum(|y_i - y_hat_i|) / n", "explanation": "Mean Absolute Error providing average magnitude of prediction errors."}
+  ],
+  "definitions": [
+    {"term": "LSTM", "definition": "Long Short-Term Memory, a recurrent neural network architecture with gating mechanisms for long-term dependency modeling in financial sequences."},
+    {"term": "ARIMA", "definition": "AutoRegressive Integrated Moving Average, a statistical time-series model for financial forecasting using rolling windows."},
+    {"term": "Savings Rate", "definition": "The ratio of total savings to total income, providing context-aware measure of financial health."},
+    {"term": "Composite Metric", "definition": "A combined measure that integrates multiple financial indicators to provide more meaningful guidance."},
+    {"term": "Rule-Based Engine", "definition": "A system that applies predefined if-then rules to trigger recommendations based on predicted financial thresholds."},
+    {"term": "Backtesting", "definition": "Evaluating model performance by applying it to historical data to assess predictive accuracy."},
+    {"term": "Flask", "definition": "A lightweight Python web framework used for building the platform's web interface and API endpoints."}
+  ],
+  "citations": [
+    {"author": "Chen", "year": 2020, "page": 0, "paragraph": 0, "claim": "Machine learning models such as ARIMA, SVR, and LSTM are effective for financial time-series forecasting.", "role": "context"},
+    {"author": "Kumar", "year": 2021, "page": 0, "paragraph": 0, "claim": "Integrating multiple prediction models with rule-based recommendations enhances financial decision support.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Core contribution is multi-model prediction platform for savings growth, expenditure, and savings rate."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Implements LSTM, ARIMA, and Linear Regression for sequential financial forecasting."},
+      {"code": "6.D", "name": "Regularization for Financial Data Bias Mitigation", "relevance": "medium", "justification": "Feature engineering and data preprocessing to improve model performance on financial data."},
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "high", "justification": "Savings rate metric and expenditure prediction directly inform budgeting decisions."},
+      {"code": "7.D", "name": "Savings Goal Formulation and Dynamic Adjustment", "relevance": "high", "justification": "Savings growth prediction enables goal-oriented financial planning."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "medium", "justification": "Reviews existing financial tools and identifies gaps in integrated prediction platforms."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "medium", "justification": "Identifies lack of multi-model integration in current financial decision support tools."},
+      {"code": "11.A", "name": "Personalized Financial Recommendations", "relevance": "high", "justification": "Rule-based recommendation engine triggered by savings rate thresholds provides personalized guidance."},
+      {"code": "11.B", "name": "Context-Aware Rule Systems for Finance", "relevance": "high", "justification": "Recommendation engine uses predicted financial metrics as context for advice generation."},
+      {"code": "13.B", "name": "Statistical Performance Evaluation", "relevance": "medium", "justification": "Evaluates models using MAE, MSE, RMSE, and accuracy metrics."}
+    ],
+    "contribution_to_field": "This paper contributes an integrated financial decision support platform that combines three complementary prediction models (LSTM, Linear Regression, ARIMA) with a rule-based recommendation engine, demonstrating that multi-model approaches outperform single-model systems for financial forecasting. It introduces the composite savings rate metric that provides more meaningful financial guidance than absolute values, and validates the approach with up to 93% prediction accuracy across three financial dimensions.",
+    "directly_justifies": [
+      "LSTM achieves 93% accuracy for savings growth prediction by capturing long-term sequential patterns.",
+      "Composite savings rate provides more meaningful financial guidance than absolute income or savings values.",
+      "Multi-model integration outperforms single-model systems for multi-dimensional financial forecasting.",
+      "Rule-based recommendations triggered by predicted thresholds provide actionable financial advice.",
+      "Feature engineering significantly improves prediction accuracy across all models."
+    ],
+    "limits": [
+      "Rule-based recommendations lack adaptability to individual user contexts beyond threshold triggers.",
+      "Evaluation on limited historical data without out-of-sample validation.",
+      "No comparison against commercial financial planning tools or user studies.",
+      "Platform does not account for irregular income patterns or multiple income sources."
+    ],
+    "topic_mapping_rationale": "The paper was systematically scanned across all 14 topic domains. Domain 6 (Predictive Modeling) received high relevance as the core contribution is multi-model financial forecasting. Domain 7 (Budgeting) received high relevance for savings rate and expenditure prediction. Domain 11 (Recommendations) received high relevance for the rule-based recommendation engine. Domain 4 (Existing Systems) received medium relevance for contextualizing existing tools. Domains 1-3, 5, 8-10, 12, and 14 were considered and rejected as the paper does not address Filipino demographics, financial data APIs, expense categorization, behavioral profiles, anomaly detection, privacy, engagement, or synthetic data generation."
+  },
+  "limitations": [
+    "Limited to historical data without out-of-sample validation.",
+    "No user study or comparison with commercial tools.",
+    "Rule-based recommendations lack personalization beyond threshold triggers.",
+    "Does not handle irregular income or multiple income sources."
+  ],
+  "remember_this": [
+    "Multi-model integration outperforms single-model systems for financial forecasting.",
+    "LSTM achieves 93% accuracy for savings growth prediction.",
+    "Composite savings rate provides more meaningful guidance than absolute values.",
+    "Rule-based recommendations triggered by predicted thresholds provide actionable advice.",
+    "Feature engineering significantly improves prediction accuracy for all models."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Guedi_marked.md",
+      "converted_at": "2026-07-21T05:59:15Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

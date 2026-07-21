@@ -1,0 +1,200 @@
+{
+  "paper_id": "aa19762a-0a8c-59e0-b831-43fc7d7e982c",
+  "designation": "local",
+  "title": "Understanding Monetary Policy: Student Awareness, Perceptions, and Financial Behaviors in the Philippine Context",
+  "authors": "Atento, R. G.; Espelita, C. A. M.; Rao, L.; Tian, Y.",
+  "year": 2025,
+  "venue": "International Journal of Health and Business Analytics",
+  "odin_topics": [
+    "1.A",
+    "1.B",
+    "1.C",
+    "2.C",
+    "10.B"
+  ],
+  "tldr": "A descriptive-correlational survey of 200 Filipino students reveals moderate awareness of monetary policy, with graduate and business students exhibiting significantly higher understanding, and awareness positively predicting saving and investment behaviors.",
+  "problem_and_motivation": "Filipino students demonstrate low financial literacy compared to ASEAN peers, with limited research examining how young Filipinos understand monetary policy mechanisms. This knowledge gap may hinder informed financial decision-making among future economic actors. There is a need to understand how educational exposure and demographic factors influence monetary policy comprehension and its translation into financial behaviors.",
+  "approach": [
+    "Employed a descriptive-correlational survey design grounded in the Theory of Reasoned Action and Theory of Planned Behavior frameworks.",
+    "Collected data from 200 respondents across senior high school, undergraduate, and graduate levels using stratified random sampling from selected Philippine institutions.",
+    "Developed a structured questionnaire with 5-point Likert scales covering awareness, perceptions, and financial behaviors, validated through expert review and pilot testing with Cronbach's alpha exceeding 0.70.",
+    "Analyzed data using ANOVA, t-tests, Pearson correlation, and multiple regression with Jamovi and SPSS software.",
+    "Examined relationships between demographic variables, monetary policy awareness, and financial behaviors including saving, investing, and spending."
+  ],
+  "findings": [
+    "Overall awareness of monetary policy is moderate among students, with graduate students (M = 3.75) and business/economics students (M = 3.48) exhibiting significantly higher levels than senior high (M = 2.80) and non-business peers.",
+    "Awareness is positively associated with perceptions of monetary policy effectiveness (r = 0.48, p < .001).",
+    "Awareness correlates positively with saving behavior (r = 0.31, p < .001) and investment behavior (r = 0.24, p = .001) but shows no significant relationship with spending behavior (r = -0.07, p = .310).",
+    "Regression results confirm awareness and perceptions significantly predict saving (R² = .22) and investment (R² = .15) but not spending (R² = .04).",
+    "No significant difference in awareness was found between male (M = 3.26) and female (M = 3.28) respondents (t(198) = 0.31, p = .756).",
+    "Students generally perceive monetary policy as effective in controlling inflation but express more cautious views about its role in employment and long-term growth."
+  ],
+  "key_figures_tables": [
+    "Table 4: Difference in Level of Awareness by Age → Older students (23-30, 31+) showed significantly higher awareness than the youngest group (16-18).",
+    "Table 5: Difference in Level of Awareness by Gender → No significant difference between male and female respondents.",
+    "Table 6: Difference in Level of Awareness by Educational Level → Graduate students scored highest, followed by undergraduates, then senior high students.",
+    "Table 7: Difference in Level of Awareness by Program → Business/economics students scored significantly higher than engineering, IT, and other programs.",
+    "Table 8: Correlation between Awareness and Perception → Moderate positive relationship (r = 0.48, p < .001).",
+    "Table 9: Correlation between Awareness and Saving Behavior → Significant positive relationship (r = 0.31, p < .001).",
+    "Table 10: Correlation between Awareness and Investment Behavior → Significant positive relationship (r = 0.24, p = .001).",
+    "Table 11: Correlation between Awareness and Spending Behavior → No significant relationship (r = -0.07, p = .310).",
+    "Table 12: Regression Analysis → Awareness and perceptions predict saving (R² = .22) and investment (R² = .15) but not spending (R² = .04)."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "BSP",
+      "definition": "Bangko Sentral ng Pilipinas, the central monetary authority of the Philippines."
+    },
+    {
+      "term": "TRA",
+      "definition": "Theory of Reasoned Action, a framework positing that behavior is shaped by intentions influenced by attitudes and subjective norms."
+    },
+    {
+      "term": "TPB",
+      "definition": "Theory of Planned Behavior, an extension of TRA adding perceived behavioral control as a predictor of intentions."
+    },
+    {
+      "term": "OFW",
+      "definition": "Overseas Filipino Worker, a Filipino working abroad whose remittances contribute significantly to the Philippine economy."
+    },
+    {
+      "term": "CHED",
+      "definition": "Commission on Higher Education, the Philippine government agency overseeing higher education institutions."
+    },
+    {
+      "term": "DepEd",
+      "definition": "Department of Education, the Philippine government department responsible for basic education."
+    },
+    {
+      "term": "K-12",
+      "definition": "The Philippine basic education system consisting of Kindergarten, 6 years of elementary, 4 years of junior high, and 2 years of senior high school."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Blinder",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Public awareness of economic policy is a critical determinant of its effectiveness, as expectations influence consumption, saving, and investment behaviors.",
+      "role": "context"
+    },
+    {
+      "author": "Ajzen",
+      "year": 1991,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Theory of Planned Behavior posits that behavior is shaped by intentions, which are influenced by attitudes, subjective norms, and perceived behavioral control.",
+      "role": "methodology"
+    },
+    {
+      "author": "OECD",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy in the Philippines remains below the global average, particularly among younger individuals and those outside business or economics programs.",
+      "role": "finding"
+    },
+    {
+      "author": "Kahneman",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Consumption decisions often follow heuristics and emotional impulses rather than rational calculations, explaining why awareness does not significantly influence spending.",
+      "role": "context"
+    },
+    {
+      "author": "Mishkin",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Monetary policy refers to deliberate actions of a central bank to regulate money and credit supply to achieve macroeconomic objectives.",
+      "role": "context"
+    },
+    {
+      "author": "Cepeda",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Central bank transparency enhances the effectiveness of monetary policy significantly, improving results across conventional and unconventional policies.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "high",
+        "justification": "Directly studies Filipino students across senior high, undergraduate, and graduate levels as future economic actors."
+      },
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Examines how educational level and program influence financial knowledge structures."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Investigates saving, investing, and spending behaviors among Filipino students in relation to monetary policy awareness."
+      },
+      {
+        "code": "2.C",
+        "name": "User-Declared Financial Preferences",
+        "relevance": "medium",
+        "justification": "Captures student perceptions and attitudes toward monetary policy effectiveness through survey responses."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Discusses perceptions of central bank credibility and its influence on financial decision-making."
+      }
+    ],
+    "contribution_to_field": "This study provides empirical evidence on monetary policy awareness among Filipino students, a demographic crucial to the Philippines' economic future. It demonstrates that educational exposure significantly shapes financial literacy, with graduate and business students exhibiting higher awareness. The findings validate the Theory of Reasoned Action and Theory of Planned Behavior in the Philippine context, showing that knowledge shapes attitudes which influence saving and investment behaviors. The study identifies critical gaps in financial education across non-business disciplines and recommends curricular integration of monetary policy literacy.",
+    "directly_justifies": [
+      "Awareness of monetary policy is positively associated with perceptions of effectiveness (r = 0.48, p < .001).",
+      "Awareness predicts saving behavior (R² = .22) and investment behavior (R² = .15) but not spending behavior (R² = .04).",
+      "Graduate students demonstrate significantly higher awareness (M = 3.75) than undergraduate (M = 3.25) and senior high students (M = 2.80).",
+      "Business and economics students score significantly higher in awareness (M = 3.48) than students in other disciplines.",
+      "No significant gender difference in monetary policy awareness was found among Filipino students."
+    ],
+    "limits": [
+      "Cross-sectional design prevents causal inference about the relationship between awareness and financial behaviors.",
+      "Self-reported data may introduce social desirability bias and recall errors.",
+      "Sample restricted to selected institutions, limiting generalizability to all Filipino students.",
+      "Does not account for external factors such as trust in government, media exposure, or cultural attitudes toward debt."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domains 1.A and 1.C received high relevance as the paper directly studies Filipino students' demographics and financial behaviors. Domain 1.B received medium relevance for examining how educational structures shape financial knowledge. Domain 2.C received medium relevance for capturing user-declared perceptions of monetary policy. Domain 10.B received low relevance for discussing central bank credibility and trust. Domains 3.A through 3.C were considered and rejected as the paper does not address expense categorization frameworks. Domains 4.A through 5.C were considered and rejected as the paper does not cover existing financial systems, limitations, or behavioral profiling. Domains 6.A through 8.C were rejected as predictive modeling, forecasting, budgeting, and anomaly detection are not discussed. Domains 9.A through 9.C were rejected as mobile design is not addressed. Domain 11.A received low relevance for engagement dynamics. Domains 12.A through 14.C were rejected as the paper does not cover evaluation frameworks, savings goal management, or ML deployment. The paper's overall topical coverage centers on demographic financial literacy and behavioral finance in the Philippine context."
+  },
+  "limitations": [
+    "Cross-sectional design prevents causal inference about awareness-behavior relationships.",
+    "Self-reported survey data may introduce social desirability bias and recall errors.",
+    "Sample limited to selected Philippine institutions, restricting generalizability.",
+    "Does not account for external confounders such as media exposure, parental influence, or access to financial products."
+  ],
+  "remember_this": [
+    "Filipino students demonstrate moderate monetary policy awareness, stratified by educational level and program.",
+    "Graduate and business students exhibit significantly higher awareness than senior high and non-business peers.",
+    "Monetary policy awareness positively predicts saving (R² = .22) and investment (R² = .15) behaviors.",
+    "Awareness does not significantly influence spending behavior, suggesting cultural and psychological factors dominate consumption.",
+    "No significant gender difference in monetary policy awareness was found among Filipino students."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T15:10:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Espelita et-al_marked.md",
+      "converted_at": "2026-07-21T06:05:48Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}
