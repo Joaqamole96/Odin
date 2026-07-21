@@ -1,1 +1,139 @@
-{}
+{
+  "paper_id": "10.3389/fpsyg.2024.1368663",
+  "designation": "international",
+  "title": "Advancing equity in cross-cultural psychology: embracing diverse epistemologies and fostering collaborative practices",
+  "authors": "Anjum, Gulnaz; Aziz, Mudassar",
+  "year": 2024,
+  "venue": "Frontiers in Psychology",
+  "odin_topics": ["1.B", "1.C"],
+  "tldr": "This paper addresses inequity in cross-cultural psychology, advocating for inclusion of Global South scholarship and diverse epistemologies to counter WEIRD research bias.",
+  "problem_and_motivation": "Cross-cultural psychology has been historically dominated by Western perspectives, methodologies, and interests, often at the expense of non-Western cultures and knowledge systems. Over 95% of psychological research samples are drawn from WEIRD (Western, Educated, Industrialized, Rich, Democratic) populations, despite representing only 12% of the global population. This creates intellectual extractivism where Western researchers collect data from non-Western cultures without adequate recognition, compensation, or benefit to studied communities.",
+  "approach": [
+    "Critical review of literature on colonial legacies in psychological research.",
+    "Analysis of WEIRD population bias in psychological studies from 2003-2018.",
+    "Examination of intellectual extractivism and publication disparities.",
+    "Evaluation of translation challenges and ethnocentrism in cross-cultural research.",
+    "Discussion of intra-cultural diversity and stereotyping risks.",
+    "Proposition of pathways for equitable collaborations and knowledge co-production."
+  ],
+  "findings": [
+    "Over 95% of psychological research samples are from WEIRD populations (2003-2018).",
+    "Minimal increase in diversity from 3% to 4% in non-WEIRD studies, mainly Confucian East Asian.",
+    "Research including African, Latin American, Middle Eastern cultures remains notably rare.",
+    "Intellectual extractivism mirrors colonial resource extraction in knowledge production.",
+    "Publication disparities significantly impact Global South researchers' representation.",
+    "Translation of psychological tools often fails to capture nuanced cultural meanings.",
+    "Ethnocentrism can lead to misapplication of psychological constructs across cultures.",
+    "Intra-cultural diversity often surpasses inter-cultural differences typically studied."
+  ],
+  "key_figures_tables": [],
+  "key_equations": [],
+  "definitions": [
+    {
+      "term": "WEIRD",
+      "definition": "Western, Educated, Industrialized, Rich, and Democratic populations that dominate psychological research."
+    },
+    {
+      "term": "Majority World",
+      "definition": "Countries and populations forming the bulk of world demographics but marginalized in global scholarly discourse."
+    },
+    {
+      "term": "Intellectual Extractivism",
+      "definition": "Extracting knowledge or intellectual resources from one culture without adequate recognition or benefit to the source."
+    },
+    {
+      "term": "Coloniality of Power",
+      "definition": "Persistent impact of colonial power structures on contemporary societies and knowledge production."
+    },
+    {
+      "term": "Epistemicide",
+      "definition": "Destruction of indigenous knowledge systems through colonial practices."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Anjum",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Over 95% of psychological research samples are from WEIRD populations.",
+      "role": "finding"
+    },
+    {
+      "author": "Anjum",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Minimal increase in diversity from 3% to 4% in non-WEIRD studies between 2003-2018.",
+      "role": "finding"
+    },
+    {
+      "author": "Anjum",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Intellectual extractivism mirrors colonial resource extraction in knowledge production.",
+      "role": "finding"
+    },
+    {
+      "author": "Anjum",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Translation of psychological tools often fails to capture nuanced cultural meanings.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.B",
+        "name": "Contemporary Budgeting Approaches and Technologies",
+        "relevance": "low",
+        "justification": "Discusses knowledge production systems and power dynamics relevant to understanding cultural contexts of financial practices."
+      },
+      {
+        "code": "1.C",
+        "name": "Psychology of Money and Financial Behavior",
+        "relevance": "low",
+        "justification": "Addresses psychological research biases that may affect understanding of financial behavior across cultures."
+      }
+    ],
+    "contribution_to_field": "This paper contributes to understanding how Western-centric bias in psychological research limits the generalizability of findings to non-Western populations. For personal finance systems, this highlights the importance of culturally sensitive approaches when designing financial tools for diverse populations. The critique of intellectual extractivism and the call for equitable collaborations provide frameworks for ethical research practices when studying financial behaviors across cultures.",
+    "directly_justifies": [
+      "Over 95% of psychological research samples are from WEIRD populations.",
+      "Intellectual extractivism mirrors colonial resource extraction.",
+      "Translation challenges affect validity of psychological instruments across cultures.",
+      "Intra-cultural diversity often surpasses inter-cultural differences."
+    ],
+    "limits": [
+      "Focuses on psychology rather than finance or technology disciplines.",
+      "Does not provide empirical data but synthesizes existing literature.",
+      "Limited discussion of practical implementation of proposed changes.",
+      "Primarily addresses academic research rather than industry applications."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all 14 topic domains revealed low relevance across most domains. Topic 1.B (Contemporary Budgeting Approaches) received low relevance as the paper discusses knowledge systems applicable to understanding cultural contexts. Topic 1.C (Psychology of Money) received low relevance for addressing psychological biases. The paper does not directly address Filipino demographics, financial structure, expense categorization, predictive modeling, budgeting strategies, anomaly detection, mobile design, data privacy, trust mechanisms, savings/debt management, clustering methods, algorithm evaluation, model explainability, or synthetic data generation.",
+    "note": "This paper is primarily relevant to understanding cultural biases in research methodology rather than directly applicable to the Odin thesis on personal finance ML systems."
+  },
+  "limitations": [
+    "Focuses on psychology rather than finance or technology disciplines.",
+    "Does not provide empirical data but synthesizes existing literature.",
+    "Limited discussion of practical implementation of proposed changes.",
+    "Primarily addresses academic research rather than industry applications."
+  ],
+  "remember_this": [
+    "Over 95% of psychological research samples are from WEIRD populations.",
+    "Intellectual extractivism mirrors colonial resource extraction in knowledge production.",
+    "Translation challenges affect validity of psychological instruments across cultures.",
+    "Call for equitable collaborations and knowledge co-production."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T11:10:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Anjum & Aziz_marked.md",
+      "converted_at": "2026-07-21T05:23:53Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,1 +1,103 @@
-{}
+{
+  "paper_id": "10.63125/ee5eas98",
+  "designation": "international-algorithm-specific",
+  "title": "Neural Network–Based Customer Retention Forecasting in Mobile Wallet Services Using 200k Historical User Profiles",
+  "authors": "Ahmed, N.; Dey, D.",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "odin_topics": ["5.C", "6.A", "11.B"],
+  "tldr": "A modified deep feedforward neural network with leaky ReLU, RMSProp optimization, and batch normalization achieves 89% accuracy and 0.92 AUC on 200k mobile wallet user profiles, outperforming SVM, logistic regression, and standard DNN baselines.",
+  "problem_and_motivation": "Mobile wallet providers in emerging markets face high customer churn rates that threaten financial sustainability and user trust. Existing retention models rely on traditional statistical methods that fail to capture complex nonlinear behavioral patterns in high-dimensional user data. There is a need for scalable, data-driven approaches that can accurately forecast retention using behavioral, transactional, and demographic features.",
+  "approach": [
+    "Collected 200,000 anonymized mobile wallet user profiles from a Southeast Asian telecommunications operator spanning 2023-2024.",
+    "Engineered 23 features across five categories: demographics, engagement, transactions, service usage, and device information.",
+    "Developed a modified deep feedforward neural network with leaky ReLU activation, RMSProp optimizer, batch normalization, and 0.5 dropout.",
+    "Compared performance against SVM, logistic regression, CNN, RNN, standard DNN, gradient boosting, random forest, and XGBoost baselines.",
+    "Evaluated using accuracy, precision, recall, F1 score, AUC-ROC, MAE, MSE, and RMSE metrics."
+  ],
+  "findings": [
+    "num: Modified DNN achieved 89% accuracy, outperforming all baseline models.",
+    "num: AUC score of 0.92 indicates excellent discriminative ability between retained and churned users.",
+    "num: F1 score of 91% demonstrates strong balance between precision and recall.",
+    "num: Standard DNN achieved 82% accuracy, showing 7% improvement from architectural modifications.",
+    "num: XGBoost achieved 85% accuracy, the best non-neural baseline.",
+    "Feature importance analysis revealed transaction frequency and recency as the strongest retention predictors.",
+    "Batch normalization and dropout regularization prevented overfitting across training epochs.",
+    "The model maintained stable performance across different user segments and service usage patterns."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Proposed DNN architecture → shows modified feedforward network with leaky ReLU, batch normalization, and dropout layers.",
+    "Figure 2: Training and validation loss curves → demonstrates convergence without overfitting.",
+    "Table 1: Feature categories and engineered variables → 23 features across demographics, engagement, transactions, usage, and device.",
+    "Table 2: Performance comparison across models → modified DNN outperforms SVM, logistic regression, CNN, RNN, and ensemble methods.",
+    "Table 3: AUC and F1 scores by model → modified DNN achieves 0.92 AUC and 91% F1, exceeding all baselines."
+  ],
+  "key_equations": [
+    {"equation": "L(y, \\hat{y}) = -\\frac{1}{N} \\sum_{i=1}^{N} [y_i \\log(\\hat{y}_i) + (1-y_i) \\log(1-\\hat{y}_i)]", "explanation": "Binary cross-entropy loss function used for training the retention prediction model."},
+    {"equation": "f(x) = \\max(0.01x, x)", "explanation": "Leaky ReLU activation function allowing small gradient for negative inputs to prevent dead neurons."}
+  ],
+  "definitions": [
+    {"term": "DNN", "definition": "Deep Neural Network — a multilayer neural network with multiple hidden layers for complex pattern recognition."},
+    {"term": "Leaky ReLU", "definition": "Rectified Linear Unit variant that allows a small positive gradient for negative inputs to prevent dead neurons."},
+    {"term": "RMSProp", "definition": "Root Mean Square Propagation — an adaptive learning rate optimization algorithm for training neural networks."},
+    {"term": "Batch Normalization", "definition": "Technique that normalizes layer inputs during training to stabilize and accelerate neural network convergence."},
+    {"term": "AUC-ROC", "definition": "Area Under the Receiver Operating Characteristic Curve — a metric measuring classifier discriminative ability across thresholds."},
+    {"term": "F1 Score", "definition": "Harmonic mean of precision and recall, providing a single metric for classification balance."}
+  ],
+  "citations": [
+    {"author": "Cunningham", "year": 2004, "page": 0, "paragraph": 0, "claim": "Customer churn analysis in mobile telecoms reveals behavioral patterns driving subscription termination.", "role": "context"},
+    {"author": "Kumar", "year": 2018, "page": 0, "paragraph": 0, "claim": "Churn prediction in prepaid mobile services requires behavioral feature engineering for accurate forecasting.", "role": "context"},
+    {"author": "Ahmad", "year": 2018, "page": 0, "paragraph": 0, "claim": "Ensemble methods combining multiple classifiers improve churn prediction accuracy over individual models.", "role": "finding"},
+    {"author": "Wei", "year": 2019, "page": 0, "paragraph": 0, "claim": "Deep neural networks capture nonlinear behavioral patterns in mobile user data for churn prediction.", "role": "methodology"},
+    {"author": "Shah", "year": 2020, "page": 0, "paragraph": 0, "claim": "Deep learning approaches for churn prediction outperform traditional statistical methods on large datasets.", "role": "finding"},
+    {"author": "Tsai", "year": 2021, "page": 0, "paragraph": 0, "claim": "Customer churn prediction using deep learning shows improved performance with architectural modifications.", "role": "finding"},
+    {"author": "Li", "year": 2020, "page": 0, "paragraph": 0, "claim": "Feature engineering for churn prediction benefits from behavioral, transactional, and demographic integration.", "role": "methodology"},
+    {"author": "Bhattacharya", "year": 2020, "page": 0, "paragraph": 0, "claim": "Ensemble methods for customer churn achieve higher accuracy than single-classifier approaches.", "role": "finding"},
+    {"author": "Kim", "year": 2022, "page": 0, "paragraph": 0, "claim": "Deep learning architectures for customer retention benefit from regularization techniques like dropout and batch normalization.", "role": "finding"},
+    {"author": "Jain", "year": 2022, "page": 0, "paragraph": 0, "claim": "Explainable AI methods can improve interpretability of churn prediction models for business decision-making.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "high", "justification": "Proposes DNN-based classification of user retention behavior using 23 engineered features."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Develops predictive model for customer retention in mobile financial services."},
+      {"code": "11.B", "name": "Retention Mechanisms and Engagement Design", "relevance": "medium", "justification": "Directly addresses retention prediction, which informs engagement mechanism design."}
+    ],
+    "contribution_to_field": "This paper proposes a modified deep feedforward neural network architecture for customer retention prediction in mobile wallet services, demonstrating that architectural modifications including leaky ReLU, RMSProp, batch normalization, and dropout yield measurable improvements over standard baselines. The study provides empirical evidence from 200k user profiles showing that behavioral, transactional, and demographic features can be effectively integrated for retention forecasting. The feature importance analysis identifies transaction frequency and recency as primary predictors, offering actionable insights for retention strategy design. The comparative evaluation against nine baseline models establishes a performance benchmark for mobile financial service retention prediction.",
+    "directly_justifies": [
+      "Modified DNN achieved 89% accuracy, outperforming all baseline models including XGBoost at 85%.",
+      "AUC score of 0.92 indicates excellent discriminative ability between retained and churned users.",
+      "Transaction frequency and recency emerged as the strongest predictors of customer retention.",
+      "Batch normalization and dropout regularization prevented overfitting across training epochs."
+    ],
+    "limits": [
+      "The model was trained and evaluated on data from a single Southeast Asian operator, limiting cross-market generalizability.",
+      "The static feature set does not account for temporal drift in user behavior over extended periods.",
+      "No fairness or bias analysis was conducted across demographic subgroups.",
+      "The model lacks interpretability, making it difficult to explain individual predictions to stakeholders."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 5 was flagged as highly relevant through code 5.C, as the paper classifies user retention behavior using engineered features. Domain 6 was flagged as highly relevant through code 6.A, since the paper develops predictive models for financial service retention. Domain 11 was flagged as medium relevance through code 11.B, as retention prediction directly informs engagement mechanisms. Domains 1 through 4 were considered but rejected as the paper does not address personal finance system design, cultural spending patterns, or expense categorization. Domain 7 was considered but rejected as the paper focuses on retention rather than budget allocation. Domains 8 through 10 and 12 through 14 were considered but rejected as they address anomaly detection, mobile UX, evaluation frameworks, savings and debt, or deployment concerns not covered by this paper."
+  },
+  "limitations": [
+    "Single-platform dataset limits cross-market generalizability.",
+    "Static feature set does not capture temporal drift in user behavior.",
+    "No fairness or bias analysis across demographic subgroups.",
+    "Limited model interpretability for stakeholder explanation.",
+    "No comparison with transformer-based or attention-based architectures."
+  ],
+  "remember_this": [
+    "Modified DNN achieved 89% accuracy on 200k mobile wallet user profiles.",
+    "AUC of 0.92 demonstrates excellent discriminative ability for retention prediction.",
+    "Transaction frequency and recency are the strongest retention predictors.",
+    "Architectural modifications yielded 7% accuracy improvement over standard DNN.",
+    "No fairness analysis was conducted across demographic subgroups."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ahmed & Dey_marked.md",
+      "converted_at": null,
+      "converter_tool": null
+    }
+  }
+}

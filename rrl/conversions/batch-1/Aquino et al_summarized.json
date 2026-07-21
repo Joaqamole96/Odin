@@ -1,1 +1,136 @@
-{}
+{
+  "paper_id": "10.69569/jip.2025.758",
+  "designation": "local",
+  "title": "A Systematic Literature Review: Present Bias versus Financial Literacy as Determinants of Savings Behavior Among Entrepreneurs",
+  "authors": "Aquino, Efren James S.; Sealmoy, Ruth R.; Mandap, Oliver R.",
+  "year": 2026,
+  "venue": "Journal of Interdisciplinary Perspectives",
+  "odin_topics": ["13.A"],
+  "tldr": "Present bias is a stronger predictor of poor entrepreneurial savings than financial literacy, which only improves savings when combined with high self-control.",
+  "problem_and_motivation": "Despite widespread financial literacy training, entrepreneurs frequently fail to save even when financially knowledgeable. The knowledge–action gap suggests behavioral barriers like present bias may be more influential than knowledge alone. Few studies systematically compare the relative predictive power of financial literacy versus present bias on entrepreneurial savings.",
+  "approach": [
+    "Systematic literature review following PRISMA 2020 guidelines.",
+    "Search across Google Scholar, Scopus, Web of Science with Boolean keywords.",
+    "Inclusion: peer-reviewed 2020–2025, JIF ≥1.5, entrepreneurial populations.",
+    "20 studies met criteria from 18 journals across 6 years.",
+    "Thematic synthesis comparing financial literacy and present bias effects.",
+    "Dual-pathway theoretical framework: Financial Literacy Pathway vs Behavioral Bias Pathway."
+  ],
+  "findings": [
+    "num: 9 of 20 studies used regression analysis (37%), most common method.",
+    "num: 3 studies used SEM (17%) for mediating factor models.",
+    "num: 14 studies (78%) used primary data collection.",
+    "num: 4 studies (22%) used secondary data.",
+    "num: 11 studies (56%) focused on Asian contexts.",
+    "num: Distribution peaked in 2022 with 5 articles.",
+    "Financial literacy's impact is conditional—often negligible without self-control.",
+    "Present bias consistently leads to impulsive spending and reduced savings.",
+    "Behavioral factors frequently override financial knowledge.",
+    "Self-control moderates financial literacy's effect on savings.",
+    "Integrated interventions combining education with behavioral design are essential."
+  ],
+  "key_figures_tables": [
+    "Table 1: Journal Impact Factor → Top journals: Review of Managerial Science (7.8), Entrepreneurship Theory and Practice (7.8).",
+    "Table 2: Sampled Articles → Distribution across 2020-2025, peak in 2022.",
+    "Table 3: Sources of Data → 78% primary data, 22% secondary data.",
+    "Table 4: Statistical Treatment → Regression (37%), SEM (17%), Descriptive (17%).",
+    "Figure 1: Dual-pathway theoretical framework contrasting literacy vs bias pathways."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Present bias", "definition": "Tendency to prioritize immediate rewards over future benefits, leading to impulsive spending."},
+    {"term": "Knowledge–action gap", "definition": "Disconnect between financial knowledge and actual financial behavior implementation."},
+    {"term": "Self-control", "definition": "Struggle against emotional states rather than simple cognitive trade-off between now and later."},
+    {"term": "Financial Literacy Pathway", "definition": "Traditional view that literacy directly translates into action through cognitive understanding."},
+    {"term": "Behavioral Bias Pathway", "definition": "Behavioral factors like present bias moderate or override influence of financial knowledge."}
+  ],
+  "citations": [
+    {
+      "author": "Loewenstein & Carbone",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Self-control is a struggle against emotional states, not merely a cognitive trade-off between now and later.",
+      "role": "methodology"
+    },
+    {
+      "author": "Mpaata et al",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy only improved savings among entrepreneurs with high self-control.",
+      "role": "finding"
+    },
+    {
+      "author": "McKenzie et al",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Behavioral biases lead to dissatisfaction, reduced investment, and harm entrepreneurial ventures.",
+      "role": "finding"
+    },
+    {
+      "author": "Alshebami & Al Marri",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy can promote saving and strengthen business performance.",
+      "role": "finding"
+    },
+    {
+      "author": "Cuadra et al",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Even financially literate entrepreneurs engage in impulsive spending when present bias is strong.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "high",
+        "justification": "Directly examines savings behavior determinants, comparing knowledge vs behavioral factors."
+      }
+    ],
+    "contribution_to_field": "The review establishes that present bias—not financial literacy—is the stronger predictor of poor entrepreneurial savings. Financial literacy matters but mainly when combined with high self-control. Without it, knowledge often fails to translate into action. The dual-pathway framework contrasts Financial Literacy Pathway (knowledge → confidence → savings) with Behavioral Bias Pathway (present bias → low self-control → impulsive spending → reduced savings). The evidence strongly supports the Behavioral Bias Pathway, suggesting integrated interventions combining education with behavioral tools are essential.",
+    "directly_justifies": [
+      "Present bias consistently leads to impulsive spending and reduced savings.",
+      "Financial literacy's impact is conditional—often negligible without self-control.",
+      "Behavioral factors frequently override financial knowledge.",
+      "Integrated interventions combining education with behavioral design are essential.",
+      "Self-control moderates financial literacy's effect on savings behavior."
+    ],
+    "limits": [
+      "Most studies are cross-sectional, limiting causal claims.",
+      "Geographic concentration in Asian contexts limits generalizability.",
+      "Few studies directly model comparative predictive strength in single framework.",
+      "Limited longitudinal and experimental designs in reviewed literature."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 13.A (Savings Goal Management in PFMS) flagged as high relevance due to direct examination of savings behavior determinants. All other domains rejected as paper focuses on savings behavior rather than personal finance systems, behavioral profiles, or budgeting strategies."
+  },
+  "limitations": [
+    "Most studies are cross-sectional, limiting causal claims.",
+    "Geographic concentration in Asian contexts limits generalizability.",
+    "Few studies directly model comparative predictive strength in single framework.",
+    "Limited longitudinal and experimental designs in reviewed literature."
+  ],
+  "remember_this": [
+    "Present bias is stronger predictor of poor savings than financial literacy.",
+    "Financial literacy only improves savings when combined with high self-control.",
+    "Knowledge–action gap: knowing what to do does not guarantee action.",
+    "Self-control is emotional struggle, not cognitive trade-off.",
+    "Integrated interventions combining education with behavioral design are essential."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T22:15:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Aquino et al_marked.md",
+      "converted_at": "2026-07-21T05:25:54Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

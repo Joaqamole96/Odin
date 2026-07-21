@@ -1,1 +1,121 @@
-{}
+{
+  "paper_id": "10.60087/jklst.v4.n1.012",
+  "designation": "international",
+  "title": "Adaptive Financial Recommendation Systems Using Generative AI and Multimodal Data",
+  "authors": "Chatterjee, Pushpalika; Das, Apurba",
+  "year": 2024,
+  "venue": "JKLST",
+  "odin_topics": ["4.B"],
+  "tldr": "GenAI-powered framework achieves up to 30% improvement in recommendation relevance and 25% increase in user engagement for personalized financial product recommendations.",
+  "problem_and_motivation": "Traditional financial recommendation systems built on static rules or pre-trained models struggle to adapt to fast-paced changes in consumer behavior, macroeconomic conditions, and financial product offerings. These systems lack responsiveness to behavioral drift and user sentiment, cannot adapt to real-time changes, and fail to capture non-numeric signals like emotion or intention. There is a need for hyper-personalization in financial services.",
+  "approach": [
+    "Novel framework combining LLMs, GANs, and RLHF for personalized recommendations.",
+    "Multi-modal data integration: structured (transaction logs, credit history) and unstructured (conversations, feedback).",
+    "User profiling engine using neural embeddings and unsupervised learning (K-means++, UMAP).",
+    "Generative model layer with fine-tuned LLMs (GPT-4, FinGPT, Claude) for scenario-specific narratives.",
+    "Reinforcement learning loop with human feedback (RLHF) for continuous personalization.",
+    "Ethical and XAI layer applying SHAP, LIME, and counterfactual testing.",
+    "Evaluation using synthetic financial datasets with Monte Carlo simulations."
+  ],
+  "findings": [
+    "num: 28-35% improvement in Top-N precision and recall over traditional models.",
+    "num: 30% improvement in recommendation relevance.",
+    "num: 25% increase in user engagement.",
+    "num: 22% increase in engagement duration with feedback loops.",
+    "num: 18% higher acceptance of recommended financial products.",
+    "num: 36% reduction in product rejection rate.",
+    "num: 23% reduction in disparate impact scores with fairness constraints.",
+    "num: 18% increase in equal opportunity scores.",
+    "num: 40% higher engagement rate with transparent recommendations.",
+    "System demonstrated strong performance in cold-start scenarios.",
+    "Explainability directly contributes to system usability and customer satisfaction."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Simulated user cohorts → 5 personas: Gen Z gig workers, female entrepreneurs, elderly retirees, new immigrants, salaried employees.",
+    "Figure 2: Evaluation metrics performance scores → Personalization, engagement, fairness metrics.",
+    "Figure 3: Result and analysis metrics overview → Comprehensive performance dashboard."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Generative AI (GenAI)", "definition": "Foundation models trained on massive corpora capable of synthesizing information, understanding context, and generating human-like responses."},
+    {"term": "RLHF", "definition": "Reinforcement Learning with Human Feedback - uses user feedback as reward function to optimize recommendation model."},
+    {"term": "Multimodal learning", "definition": "Integration of heterogeneous data types including structured and unstructured data for dynamic user profiles."},
+    {"term": "Explainable AI (XAI)", "definition": "Techniques like SHAP and LIME that provide transparency into model decision-making."},
+    {"term": "Differential privacy", "definition": "Privacy-preserving mechanism that adds calibrated noise to protect individual data points."}
+  ],
+  "citations": [
+    {
+      "author": "Ribeiro et al",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LIME (Local Interpretable Model-agnostic Explanations) for explaining classifier predictions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Mehrabi et al",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Survey on bias and fairness in machine learning covering mitigation strategies.",
+      "role": "background"
+    },
+    {
+      "author": "Kusner et al",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Counterfactual fairness testing where sensitive attributes are altered to assess consistency.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Directly addresses limitations of traditional recommendation systems and proposes GenAI solution."
+      }
+    ],
+    "contribution_to_field": "The framework introduces GenAI as paradigm shift for financial product recommendations, combining LLMs, GANs, and RLHF for hyper-personalization. It demonstrates 28-35% improvement in precision/recall, 30% better relevance, and 25% higher engagement. The system handles cold-start scenarios through transfer learning, integrates ethical AI principles with differential privacy and fairness constraints, and provides Explainability-as-a-Service (EaaS) for regulatory compliance. The modular architecture supports deployment across neobanks, credit unions, and financial wellness apps.",
+    "directly_justifies": [
+      "28-35% improvement in Top-N precision and recall over traditional models.",
+      "30% improvement in recommendation relevance.",
+      "25% increase in user engagement.",
+      "36% reduction in product rejection rate with feedback loops.",
+      "40% higher engagement rate with transparent recommendations."
+    ],
+    "limits": [
+      "Evaluation limited to synthetic datasets due to privacy constraints.",
+      "Absence of real demographic identifiers limits precise fairness validation.",
+      "Trade-offs between personalization depth and data minimization need further exploration.",
+      "Intersectional fairness (combined attributes) not fully addressed.",
+      "Cold-start scenarios handled but need real-world validation."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 4.B (Limitations and Gaps in Existing Systems) flagged as high relevance due to explicit critique of traditional recommendation systems and proposed GenAI solution. All other domains rejected as paper focuses on recommendation systems rather than personal finance systems, behavioral profiles, or budgeting."
+  },
+  "limitations": [
+    "Evaluation limited to synthetic datasets due to privacy constraints.",
+    "Absence of real demographic identifiers limits precise fairness validation.",
+    "Trade-offs between personalization depth and data minimization need further exploration.",
+    "Intersectional fairness (combined attributes) not fully addressed.",
+    "Cold-start scenarios handled but need real-world validation."
+  ],
+  "remember_this": [
+    "GenAI framework achieves 30% improvement in recommendation relevance.",
+    "RLHF enables continuous personalization from user feedback.",
+    "Explainability-as-a-Service (EaaS) provides modular XAI deployment.",
+    "Fairness constraints reduce disparate impact by 23%.",
+    "System handles cold-start scenarios through transfer learning."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T22:20:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Chatterjee & Das_marked.md",
+      "converted_at": "2026-07-21T05:48:17Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

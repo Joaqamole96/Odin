@@ -1,1 +1,94 @@
-{}
+{
+  "paper_id": "44a05587-bf96-5d1f-a464-b32701b0b645",
+  "designation": "international",
+  "title": "Non-Stationarity in Financial Time Series: A Unifying Survey on Drift Detection, Adaptive Learning, and Evaluation",
+  "authors": "de Cabral, A. L. L.; Krohling, R. A.",
+  "year": 2025,
+  "venue": "SSRN Electronic Journal",
+  "odin_topics": ["6.B", "8.B", "12.B"],
+  "tldr": "A comprehensive survey unifies fragmented research on non-stationarity in financial time series across drift detection, adaptive learning, and evaluation, providing a structured taxonomy for developing robust financial forecasting systems.",
+  "problem_and_motivation": "Financial time series exhibit multiple forms of non-stationarity including noise, distribution shifts, and concept drift that degrade model performance over time. Existing research is fragmented across five distinct research communities with no unified taxonomy or evaluation framework, hindering progress in building robust financial forecasting systems.",
+  "approach": [
+    "Systematic literature review across multiple databases covering drift detection, adaptive learning, and evaluation in financial time series.",
+    "Proposed a unified taxonomy of non-stationarity types: noise, covariate shift, concept drift, and virtual versus non-virtual drift.",
+    "Categorized drift detection methods into statistical tests, adaptive windowing, and change-point detection approaches.",
+    "Reviewed adaptive learning strategies including online learning, ensemble methods, and transfer learning for non-stationary environments.",
+    "Analyzed evaluation protocols including synthetic benchmarks, real-world datasets, and performance metrics for concept drift scenarios."
+  ],
+  "findings": [
+    "The field of non-stationarity in financial time series is fragmented across at least five distinct research communities.",
+    "Noise, covariate shift, and concept drift represent three fundamentally distinct challenges requiring different detection and adaptation strategies.",
+    "Adaptive windowing methods such as ADWIN provide principled approaches to detecting distribution shifts in streaming data.",
+    "Ensemble methods combining multiple detectors outperform individual detectors in most benchmark scenarios.",
+    "Real-world financial data rarely matches the synthetic distributions used in benchmark evaluations, limiting generalizability.",
+    "There is no standardized evaluation protocol for comparing drift detection methods across financial time series applications."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Taxonomy of non-stationarity types → provides unified framework for classifying drift in financial data.",
+    "Table 1: Comparison of drift detection methods → highlights strengths and weaknesses across statistical and adaptive approaches."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "Non-stationarity", "definition": "Properties of a time series that change over time, including statistical properties, distributions, and relationships between variables."},
+    {"term": "Concept drift", "definition": "Changes in the underlying relationship between input features and target variable over time."},
+    {"term": "Covariate shift", "definition": "Changes in the distribution of input features while the conditional distribution of the target given features remains stable."},
+    {"term": "ADWIN", "definition": "Adaptive Windowing algorithm that automatically detects distribution changes by comparing statistics over variable-length windows."}
+  ],
+  "citations": [
+    {"author": "Liu", "year": 2017, "page": 0, "paragraph": 0, "claim": "Real-world financial machine learning faces unique challenges from non-stationary data distributions.", "role": "context"},
+    {"author": "Gama", "year": 2014, "page": 0, "paragraph": 0, "claim": "A survey on concept drift adaptation identifies five main categories of drift detection methods.", "role": "methodology"},
+    {"author": "Webb", "year": 2018, "page": 0, "paragraph": 0, "claim": "Characterizing concept drift distinguishes between sudden, gradual, incremental, and recurring drift patterns.", "role": "finding"},
+    {"author": "Bifet", "year": 2007, "page": 0, "paragraph": 0, "claim": "Adaptive windowing with ADWIN provides theoretically grounded change detection in data streams.", "role": "methodology"},
+    {"author": "Adams", "year": 2007, "page": 0, "paragraph": 0, "claim": "Bayesian online changepoint detection provides a probabilistic framework for detecting regime changes.", "role": "methodology"},
+    {"author": "Hoi", "year": 2021, "page": 0, "paragraph": 0, "claim": "Online machine learning methods are essential for handling non-stationary data streams.", "role": "context"},
+    {"author": "Pratama", "year": 2021, "page": 0, "paragraph": 0, "claim": "Streaming data analysis requires adaptive methods that can handle evolving data distributions.", "role": "context"},
+    {"author": "Zliobaite", "year": 2017, "page": 0, "paragraph": 0, "claim": "Adapting to concept drift requires different strategies depending on whether drift is sudden or gradual.", "role": "finding"},
+    {"author": "Tsai", "year": 2019, "page": 0, "paragraph": 0, "claim": "Deep learning techniques for time series prognostics show promise but face challenges with non-stationarity.", "role": "finding"},
+    {"author": "Davis", "year": 2006, "page": 0, "paragraph": 0, "claim": "The relationship between Precision-Recall and ROC curves affects evaluation of drift detection performance.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Survey covers forecasting methods for non-stationary financial time series, directly applicable to spending prediction."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "medium", "justification": "Drift detection methods overlap with anomaly detection in financial data streams."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "medium", "justification": "Proposes evaluation protocols and benchmarks for financial ML systems under non-stationarity."}
+    ],
+    "contribution_to_field": "This survey provides the first unified taxonomy of non-stationarity challenges in financial time series, bridging fragmentation across five research communities. It systematically categorizes drift detection methods, adaptive learning strategies, and evaluation protocols into a coherent framework. The paper identifies critical gaps between synthetic benchmarks and real-world financial data, highlighting the need for standardized evaluation. It establishes a foundation for developing more robust financial forecasting systems that can handle evolving data distributions.",
+    "directly_justifies": [
+      "Noise, covariate shift, and concept drift require fundamentally different detection and adaptation strategies.",
+      "Adaptive windowing methods provide principled approaches to detecting distribution shifts in streaming data.",
+      "Ensemble methods combining multiple detectors outperform individual detectors in most benchmark scenarios.",
+      "Real-world financial data rarely matches synthetic distributions used in benchmark evaluations."
+    ],
+    "limits": [
+      "The survey primarily focuses on statistical and classical ML methods with limited deep learning coverage.",
+      "Most evaluations use synthetic data that may not capture the complexity of real financial markets.",
+      "The paper acknowledges limited coverage of real-time deployment challenges for adaptive financial systems.",
+      "Does not address fairness or bias considerations in financial time series models."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 6 was flagged as highly relevant through code 6.B, as the survey directly addresses forecasting methods for sequential financial data. Domain 8 was flagged as relevant through code 8.B, since drift detection methods overlap with anomaly detection in financial streams. Domain 12 was flagged as relevant through code 12.B, as the paper proposes evaluation protocols for financial ML. Domains 1 through 5, 7, and 9 through 14 were considered but rejected as they focus on personal finance system design, UX, privacy, budgeting, savings, or application-specific concerns not covered by this general financial time series survey. The paper's coverage is strongest in domains 6, 8, and 12, with contextual relevance to the broader financial ML landscape."
+  },
+  "limitations": [
+    "Primarily covers statistical and classical ML methods with limited deep learning coverage.",
+    "Most evaluations use synthetic data that may not represent real financial market complexity.",
+    "Limited discussion of real-time deployment challenges for adaptive financial systems.",
+    "Does not address fairness or bias considerations in financial time series models."
+  ],
+  "remember_this": [
+    "Financial time series exhibit three distinct non-stationarity types requiring different detection strategies.",
+    "Ensemble methods combining multiple detectors outperform individual detectors in benchmarks.",
+    "No standardized evaluation protocol exists for comparing drift detection methods across financial applications.",
+    "Real-world financial data diverges from synthetic benchmarks used in most evaluations.",
+    "The field is fragmented across five distinct research communities with no unified framework."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cabral et al_marked.md",
+      "converted_at": null,
+      "converter_tool": null
+    }
+  }
+}

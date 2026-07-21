@@ -1,1 +1,165 @@
-{}
+{
+  "paper_id": "10.12720/jait.17.2.378-389",
+  "designation": "local-algorithm-specific",
+  "title": "Benchmarking Federated Learning in Edge Computing Environments: A Systematic Review and Performance Evaluation",
+  "authors": "Aribe Jr., Sales G.; Cagande, Gil Nicholas T.",
+  "year": 2026,
+  "venue": "Journal of Advances in Information Technology",
+  "odin_topics": ["12.A", "12.B", "12.C"],
+  "tldr": "This systematic review benchmarks five federated learning algorithms across edge computing environments, finding SCAFFOLD achieves highest accuracy while FedAvg excels in communication and energy efficiency.",
+  "problem_and_motivation": "Edge computing generates massive data from IoT devices requiring real-time analytics with privacy preservation. Federated Learning offers distributed ML without sharing raw data, but faces challenges including non-IID data heterogeneity, communication overhead, computational limitations, and energy constraints. No comprehensive review currently categorizes FL techniques while systematically benchmarking them against practical edge performance metrics.",
+  "approach": [
+    "Conducted systematic review following PRISMA and SALSA guidelines.",
+    "Searched IEEE Xplore, Scopus, SpringerLink, ScienceDirect, ACM Digital Library, and arXiv.",
+    "Filtered 602 initial articles down to 308 for full-text review based on inclusion criteria.",
+    "Developed four-dimensional taxonomy: optimization strategies, communication models, privacy mechanisms, and system architecture.",
+    "Benchmarked algorithms using MNIST, CIFAR-10, FEMNIST, and Shakespeare datasets.",
+    "Evaluated performance across accuracy, convergence time, communication overhead, energy consumption, and non-IID robustness."
+  ],
+  "findings": [
+    "SCAFFOLD achieves highest accuracy (84.7%) with strong non-IID robustness using control variates to correct client-drift.",
+    "FedAvg excels in communication efficiency (45 MB/round) and energy efficiency (38 J/round) but struggles with non-IID data.",
+    "FedProx improves convergence under heterogeneous data with proximal term limiting local update divergence.",
+    "FEMNIST dataset has highest non-IID severity (3400 clients) compared to MNIST and CIFAR-10 (100 clients, low non-IID).",
+    "Differential privacy mechanisms reduce accuracy by ~4% and increase convergence time by ~15%.",
+    "Peer-to-peer architectures improve fault tolerance but incur higher communication overhead than client-server models.",
+    "Communication remains the primary bottleneck in FL despite privacy advantages over centralized training.",
+    "Energy consumption ranges from 35-49 Joules/round depending on algorithm and hardware profile."
+  ],
+  "key_figures_tables": [
+    "Figure 1: FL workflow in edge computing → Shows edge devices, fog node aggregator, and cloud server architecture.",
+    "Figure 2: Word cloud of author keywords → Visualizes research trends from 2017-2025.",
+    "Figure 3: Taxonomy of FL techniques → Four-dimensional classification diagram.",
+    "Figure 4: Comparison of benchmark datasets → Client count and non-IID severity comparison.",
+    "Figure 5: Radar plot of FL algorithm performance → Five metrics across five algorithms.",
+    "Table I: Performance matrix of FL algorithms → Accuracy, convergence, communication, energy, and robustness metrics."
+  ],
+  "key_equations": [
+    {
+      "equation": "FedAvg: $w_{t+1} = \\sum_{k=1}^{K} \\frac{n_k}{n} w_{t+1}^k$",
+      "explanation": "Weighted averaging of local model updates across K clients based on dataset sizes."
+    },
+    {
+      "equation": "FedProx: $\\min_w h_k(w; w_t) = F_k(w) + \\frac{\\mu}{2} \\|w - w_t\\|^2$",
+      "explanation": "Adds proximal term to limit divergence of local updates from global model."
+    },
+    {
+      "equation": "Differential Privacy: $\\Pr[\\mathcal{M}(D) \\in S] \\leq e^{\\epsilon} \\cdot \\Pr[\\mathcal{M}(D') \\in S]$",
+      "explanation": "Privacy guarantee ensuring output distribution changes minimally with single record change."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Federated Learning",
+      "definition": "Decentralized ML approach where multiple clients collaboratively train a shared model without exchanging raw data."
+    },
+    {
+      "term": "Non-IID",
+      "definition": "Non-Independent and Identically Distributed data where client data distributions differ due to user behavior or context."
+    },
+    {
+      "term": "Communication Overhead",
+      "definition": "Amount of data transmitted between clients and servers per communication round, typically in megabytes."
+    },
+    {
+      "term": "SCAFFOLD",
+      "definition": "FL algorithm using control variates to correct client-drift caused by non-IID data, achieving faster convergence."
+    },
+    {
+      "term": "Edge Computing",
+      "definition": "Decentralized computing paradigm processing data at or near the source rather than centralized cloud servers."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Aribe",
+      "year": 2026,
+      "page": 378,
+      "paragraph": 0,
+      "claim": "SCAFFOLD achieves highest accuracy (84.7%) among benchmarked FL algorithms.",
+      "role": "finding"
+    },
+    {
+      "author": "Aribe",
+      "year": 2026,
+      "page": 383,
+      "paragraph": 0,
+      "claim": "FedAvg excels in communication efficiency (45 MB/round) and energy efficiency (38 J/round).",
+      "role": "finding"
+    },
+    {
+      "author": "Aribe",
+      "year": 2026,
+      "page": 382,
+      "paragraph": 0,
+      "claim": "Communication remains the primary bottleneck in FL despite privacy advantages.",
+      "role": "finding"
+    },
+    {
+      "author": "Aribe",
+      "year": 2026,
+      "page": 383,
+      "paragraph": 0,
+      "claim": "Differential privacy reduces accuracy by approximately 4% and increases convergence time by 15%.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "12.A",
+        "name": "Clustering Methods in Finance",
+        "relevance": "high",
+        "justification": "Proposes taxonomy and classification framework for FL techniques using systematic categorization."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Benchmarks and evaluates FL algorithms across multiple performance metrics."
+      },
+      {
+        "code": "12.C",
+        "name": "Model Explainability in Finance",
+        "relevance": "medium",
+        "justification": "Discusses privacy mechanisms and algorithmic transparency in distributed systems."
+      }
+    ],
+    "contribution_to_field": "This systematic review provides a structured taxonomy and empirical benchmarking framework for Federated Learning in edge computing environments. The four-dimensional classification (optimization, communication, privacy, architecture) enables systematic comparison of approaches. The comparative matrix reveals trade-offs between accuracy, communication efficiency, and privacy guarantees, with SCAFFOLD offering best accuracy and FedAvg best efficiency. The review identifies gaps in non-IID robustness and energy efficiency research, providing direction for future FL development in resource-constrained edge environments.",
+    "directly_justifies": [
+      "SCAFFOLD achieves highest accuracy (84.7%) with strong non-IID robustness.",
+      "FedAvg excels in communication efficiency (45 MB/round) and energy efficiency (38 J/round).",
+      "Differential privacy reduces accuracy by ~4% and increases convergence time by ~15%.",
+      "Communication remains the primary bottleneck in FL deployments."
+    ],
+    "limits": [
+      "Focuses primarily on horizontal FL; vertical and transfer learning variants lack empirical benchmarks.",
+      "Energy values represent normalized comparisons rather than device-specific measurements.",
+      "Does not perform new experiments but synthesizes existing literature findings.",
+      "Limited to peer-reviewed sources which may exclude relevant industry reports."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all 14 topic domains revealed primary relevance to Domain 12 (Algorithms and Mathematical Foundations). Topic 12.A (Clustering Methods) received high relevance as the paper proposes systematic taxonomy and classification. Topic 12.B (Evaluation of Algorithmic Modules) received high relevance for comprehensive benchmarking across multiple metrics. Topic 12.C (Model Explainability) received medium relevance for privacy mechanism discussion. Domains 1-11, 13-14 were considered and rejected as the paper focuses on distributed ML systems rather than Filipino demographics, financial behavioral profiles, expense categorization, predictive modeling in personal finance, budgeting strategies, anomaly detection, mobile design, data privacy in finance, trust mechanisms, savings/debt management, or synthetic data generation."
+  },
+  "limitations": [
+    "Focuses primarily on horizontal FL; vertical and transfer learning variants lack empirical benchmarks.",
+    "Energy values represent normalized comparisons rather than device-specific measurements.",
+    "Does not perform new experiments but synthesizes existing literature findings.",
+    "Limited to peer-reviewed sources which may exclude relevant industry reports."
+  ],
+  "remember_this": [
+    "SCAFFOLD achieves highest accuracy (84.7%) using control variates for client-drift correction.",
+    "FedAvg excels in communication (45 MB/round) and energy efficiency (38 J/round).",
+    "Four-dimensional taxonomy: optimization, communication, privacy, architecture.",
+    "Differential privacy reduces accuracy by ~4% and increases convergence by ~15%.",
+    "Communication remains the primary bottleneck in FL edge deployments."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T11:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Aribe & Cagande_marked.md",
+      "converted_at": "2026-07-21T05:26:18Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

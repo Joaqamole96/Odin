@@ -1,1 +1,157 @@
-{}
+{
+  "paper_id": "10.24018/ejcomms.2022.v13i3.3303",
+  "designation": "unspecified",
+  "title": "Developing a Personalized Financial Chatbot to Reduce Financial Anxiety",
+  "authors": "Cedeno, E.; Cedeno, M.; Paredes, D.",
+  "year": 2022,
+  "venue": "European Journal of Engineering and Technology Research",
+  "odin_topics": ["1.D", "3.B", "11.A", "13.A"],
+  "tldr": "A Python-based chatbot uses NLP to deliver personalized financial guidance, reducing financial anxiety through conversational debt management and budgeting assistance.",
+  "problem_and_motivation": "Financial anxiety is a growing concern exacerbated by economic uncertainty, inflation, and high-interest environments. Many individuals lack the knowledge or access to professional financial guidance to manage debt, budgeting, and financial planning effectively. Existing financial tools are often too complex or impersonal for users experiencing financial stress.",
+  "approach": [
+    "Developed a conversational AI chatbot using Python with natural language processing libraries.",
+    "Integrated Spacy, NLTK, BeautifulSoup, NumPy, and Pandas for data processing and language understanding.",
+    "Incorporated a financial literacy knowledge base into the chatbot's response system.",
+    "Implemented financial calculators including savings, investment, and budget analysis tools.",
+    "Designed a user-friendly conversational interface with personalized guidance capabilities.",
+    "Applied a rule-based system to interpret user queries related to personal finance goals."
+  ],
+  "findings": [
+    "num: 21.9% reduction in self-reported financial anxiety.",
+    "num: 27.5% improvement in user engagement with financial information.",
+    "num: 85% positive user feedback on chatbot usability and helpfulness.",
+    "num: 500+ interactions recorded across 100 users.",
+    "num: 90% accuracy in addressing basic personal finance questions.",
+    "num: 80% success rate in correctly interpreting nuanced financial queries.",
+    "The chatbot effectively guides users toward better financial decision-making and goal setting."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Overall architecture of the chatbot showing knowledge base and NLP components.",
+    "Figure 2: User interaction flow diagram demonstrating guidance process.",
+    "Figure 3: System architecture of the conversational AI chatbot."
+  ],
+  "key_equations": [
+    {
+      "equation": "X = X0 - ((X0 * Q) / 100)",
+      "explanation": "Formula for financial anxiety reduction score where X0 is initial anxiety level, Q is improvement percentage, and X is final reduced anxiety level."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Financial Anxiety",
+      "definition": "Stress and worry associated with managing personal finances, exacerbated by economic uncertainty and lack of financial knowledge."
+    },
+    {
+      "term": "Conversational AI",
+      "definition": "Technology that simulates natural human conversation through text or voice, using NLP to understand and respond to user inputs."
+    },
+    {
+      "term": "NLP",
+      "definition": "Natural Language Processing is a field of artificial intelligence that enables computers to understand, interpret, and generate human language."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Xiao",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is a crucial factor in determining economic well-being and resilience against financial challenges.",
+      "role": "context"
+    },
+    {
+      "author": "Batty",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial stress negatively impacts health outcomes, highlighting the importance of financial education and support.",
+      "role": "context"
+    },
+    {
+      "author": "Nahapiet",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial education programs show promise in improving financial literacy and reducing anxiety.",
+      "role": "baseline"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is an important determinant of financial well-being.",
+      "role": "baseline"
+    },
+    {
+      "author": "Mottola",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy and confidence significantly impact savings behavior and financial outcomes.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.D",
+        "name": "Behavioral and Psychological Barriers to Financial Decision-Making",
+        "relevance": "high",
+        "justification": "Directly addresses financial anxiety as a psychological barrier to effective financial management."
+      },
+      {
+        "code": "3.B",
+        "name": "Behavioral Finance Insights",
+        "relevance": "high",
+        "justification": "Applies behavioral finance insights by addressing emotional and psychological aspects of financial decision-making."
+      },
+      {
+        "code": "11.A",
+        "name": "Chatbot-Based Financial Assistance",
+        "relevance": "high",
+        "justification": "Proposes a conversational AI chatbot for personalized financial guidance."
+      },
+      {
+        "code": "13.A",
+        "name": "Psychological and Behavioral Aspects of Saving",
+        "relevance": "medium",
+        "justification": "Addresses psychological barriers to saving and financial planning through anxiety reduction."
+      }
+    ],
+    "contribution_to_field": "This paper presents a chatbot-based financial assistance system designed to reduce financial anxiety through personalized guidance. It demonstrates how NLP-powered conversational interfaces can make financial education more accessible and engaging. The study validates the approach with empirical measurements showing significant reductions in financial anxiety and improvements in user engagement with financial information.",
+    "directly_justifies": [
+      "Conversational AI can effectively reduce financial anxiety through personalized financial guidance.",
+      "Chatbots can serve as accessible intermediaries between complex financial information and users in distress.",
+      "NLP techniques enable understanding of nuanced financial queries related to anxiety and stress."
+    ],
+    "limits": [
+      "Limited to 100 users in the evaluation study.",
+      "Financial anxiety measurements are self-reported and may not capture all dimensions of financial stress.",
+      "The chatbot relies on rule-based NLP which may not handle highly complex or novel queries."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 1 (Current Personal Finance Landscape) was considered but not directly applicable as the focus is psychological. Domain 3 (Psychology of Personal Finance) is highly relevant with code 3.B (Behavioral Finance Insights) addressing the emotional aspects. Domain 11 (Personalized User Engagement) applies through 11.A (Chatbot-Based Financial Assistance). Domain 13 (Savings and Debt Management) partially applies through 13.A (Psychological Aspects of Saving). Other domains like 4 (Existing Systems), 7 (Budgeting Strategies), 8 (Anomaly Detection), 9 (UX/UI), 10 (Privacy), 12 (Evaluation Frameworks), and 14 (Synthetic Data) are less directly applicable."
+  },
+  "limitations": [
+    "Small sample size of 100 users limits generalizability of findings.",
+    "Self-reported anxiety measures may introduce response bias.",
+    "Rule-based NLP approach may struggle with highly nuanced or novel financial queries.",
+    "No long-term follow-up to assess sustained impact on financial behavior."
+  ],
+  "remember_this": [
+    "Financial anxiety was reduced by 21.9% through chatbot interaction.",
+    "User engagement with financial information improved by 27.5%.",
+    "The chatbot achieved 85% positive feedback on usability and helpfulness.",
+    "85% accuracy in addressing basic personal finance questions.",
+    "The system integrates financial calculators for savings, investment, and budget analysis."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cedeno et al_marked.md",
+      "converted_at": "2026-07-21T05:15:38Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

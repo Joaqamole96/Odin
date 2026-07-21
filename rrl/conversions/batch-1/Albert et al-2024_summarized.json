@@ -1,1 +1,181 @@
-{}
+{
+  "paper_id": "10.62986/dp2024.10",
+  "designation": "local",
+  "title": "Wealth Creation for Expanding the Middle Class in the Philippines",
+  "authors": "Albert, J.R.G.; Briones, R.M.; Rivera, J.P.R.",
+  "year": 2024,
+  "venue": "PIDS Discussion Paper Series",
+  "odin_topics": ["1.B", "1.C"],
+  "tldr": "The Philippine middle class grew from 28.5% in 1991 to 39.8% in 2021, but COVID-19 reversed some gains, requiring multi-pronged strategies for inclusive expansion.",
+  "problem_and_motivation": "The Philippines aims to become a predominantly middle-class society free of poverty by 2040, but faces significant global headwinds. Growing the middle class is more closely related to new wealth creation than poverty reduction or redistribution. The COVID-19 pandemic has reversed some of the gains made in middle-class expansion.",
+  "approach": [
+    "Uses income-based definition: households with per capita incomes between 2 to 12 times the official poverty line.",
+    "Analyzes 2021 Family Income and Expenditure Survey (FIES) and Labor Force Survey (LFS) data.",
+    "Profiles middle-class characteristics including geographic distribution, demographics, education, employment, and asset ownership.",
+    "Reviews international literature on middle-class expansion drivers and policies.",
+    "Proposes four pathways: natural resource management, MSME opportunities, workforce development, and digital governance.",
+    "Examines impact of COVID-19 pandemic on middle-class households."
+  ],
+  "findings": [
+    "num: Middle-class grew from 28.5% in 1991 to 39.8% in 2021 (34.4 million Filipinos).",
+    "num: Between 2015 and 2018, middle-class expanded rapidly from 40.5% to 43.5%.",
+    "num: COVID-19 pandemic reversed gains, with middle-class share falling to 39.8% in 2021.",
+    "num: 60.6% of urban residents belong to middle-class compared to 33.8% of rural residents.",
+    "num: 40.6% of middle-class Filipinos aged 15+ completed college education.",
+    "num: 79.5% of employed middle-class individuals had permanent jobs in 2021.",
+    "num: 5.1% of Filipino families have an OFW, with 74.7% belonging to middle-class."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Size and Share of the Middle-class, 1991-2021 → Shows growth trend with COVID-19 reversal.",
+    "Figure 2: Share of Income Clusters by Urban/Rural Area, 2021 → Middle-class predominantly urban.",
+    "Figure 3: Proportion of Population by Income Classes and Region, 2021 → Significant regional variations.",
+    "Figure 6: Educational attainment by income class → Middle-class has higher education levels.",
+    "Figure 8: Nature of employment by income class → Middle-class more engaged in formal employment.",
+    "Figure 9: Primary sources of household income → Wages/salaries dominate for middle-class."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Middle-class",
+      "definition": "Households with per capita incomes between 2 to 12 times the official poverty line."
+    },
+    {
+      "term": "FIES",
+      "definition": "Family Income and Expenditure Survey, primary data source for income and expenditure analysis."
+    },
+    {
+      "term": "LFS",
+      "definition": "Labor Force Survey, provides employment and labor market data."
+    },
+    {
+      "term": "OFW",
+      "definition": "Overseas Filipino Worker, contributes significantly to family income through remittances."
+    },
+    {
+      "term": "MSMEs",
+      "definition": "Micro, Small, and Medium Enterprises, account for 99.5% of all businesses in the Philippines."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Easterly",
+      "year": 2001,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Countries with larger middle-class tend to have higher income and growth, better institutions, and more social cohesion.",
+      "role": "context"
+    },
+    {
+      "author": "Huntington",
+      "year": 1991,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Middle-class is a key driver of democratization and political stability.",
+      "role": "context"
+    },
+    {
+      "author": "Banerjee",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Middle-class is essential for entrepreneurship and innovation in developing countries.",
+      "role": "context"
+    },
+    {
+      "author": "Murphy",
+      "year": 1989,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Strong middle-class is important for creating robust domestic market through higher consumption propensity.",
+      "role": "context"
+    },
+    {
+      "author": "Ravallion",
+      "year": 2010,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed USD 2 to USD 13 at 2005 PPP as global middle-class definition.",
+      "role": "context"
+    },
+    {
+      "author": "Albert",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Middle-class Filipinos increased from 28.5% in 1991 to 40.5% in 2015 using 2-12x poverty line thresholds.",
+      "role": "finding"
+    },
+    {
+      "author": "Ducanes",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "International migration plays significant role in poverty reduction and middle-class expansion.",
+      "role": "finding"
+    },
+    {
+      "author": "Lewis",
+      "year": 1954,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Economic growth involves structural transformation from low to high-productivity sectors.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "low",
+        "justification": "Paper discusses financial structure of Filipino households broadly, including income sources, expenditure patterns, and asset ownership."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "low",
+        "justification": "Explores financial behavior through expenditure patterns, savings, and remittance utilization across income classes."
+      }
+    ],
+    "contribution_to_field": "This paper provides comprehensive demographic and economic profiling of the Philippine middle class using 2021 FIES and LFS data. It documents the growth trajectory from 28.5% in 1991 to 39.8% in 2021, identifying key characteristics including urban concentration, higher educational attainment, formal employment engagement, and significant OFW remittance dependence. The paper proposes four strategic pathways for middle-class expansion: natural resource management, MSME development, workforce readiness, and digital governance. It offers valuable context for understanding the socioeconomic landscape of Filipino households, including financial behavior patterns relevant to personal finance management.",
+    "directly_justifies": [
+      "Middle-class grew from 28.5% in 1991 to 39.8% in 2021, representing 34.4 million Filipinos.",
+      "60.6% of urban residents belong to middle-class compared to 33.8% of rural residents.",
+      "40.6% of middle-class Filipinos aged 15+ completed college education.",
+      "79.5% of employed middle-class individuals had permanent jobs in 2021.",
+      "5.1% of Filipino families have an OFW, with 74.7% belonging to middle-class."
+    ],
+    "limits": [
+      "Paper focuses on macroeconomic policy rather than personal finance systems or algorithms.",
+      "Income-based definition may not capture multidimensional aspects of middle-class status.",
+      "Data from 2021 may not reflect current post-pandemic recovery patterns."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all 14 topic domains revealed limited direct relevance to the Odin thesis topics. The paper primarily addresses Philippine economic demographics and policy, not personal finance systems or algorithms. Topic 1.B (Financial Structure of Filipino Young Professionals) received low relevance as the paper discusses financial structure of Filipino households broadly, including income sources and expenditure patterns. Topic 1.C (Financial Behavior of Filipino Young Professionals) received low relevance due to exploration of expenditure patterns and financial behavior across income classes. Domains 2-14 were considered and rejected as the paper does not address expense categorization, predictive modeling, budgeting strategies, anomaly detection, mobile design, data privacy, engagement dynamics, evaluation frameworks, savings/debt management, or synthetic data generation. Overall, the paper provides contextual socioeconomic background rather than direct contributions to personal finance system research."
+  },
+  "limitations": [
+    "Paper focuses on macroeconomic policy rather than personal finance systems or algorithms.",
+    "Income-based definition may not capture multidimensional aspects of middle-class status.",
+    "Data from 2021 may not reflect current post-pandemic recovery patterns."
+  ],
+  "remember_this": [
+    "Philippine middle class grew from 28.5% in 1991 to 39.8% in 2021.",
+    "COVID-19 pandemic reversed gains, reducing middle-class share from 43.5% in 2018.",
+    "num: 60.6% of urban residents belong to middle-class compared to 33.8% rural.",
+    "num: 40.6% of middle-class Filipinos completed college education.",
+    "Four pathways proposed: natural resources, MSMEs, workforce development, digital governance."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T10:35:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Albert et al-2024_marked.md",
+      "converted_at": "2026-07-21T05:19:55Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

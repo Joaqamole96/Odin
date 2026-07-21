@@ -1,1 +1,112 @@
-{}
+{
+  "paper_id": "10.1109/ACCESS.2025.3602791",
+  "designation": "international",
+  "title": "A Review of Time Series Prediction Models Based on Deep Learning",
+  "authors": "Ao, X.; Gong, Y.; He, A.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "odin_topics": ["6.A", "6.B"],
+  "tldr": "A systematic review of DL-based time series prediction models covering classical architectures (MLP, CNN, RNN, Transformer) and emerging approaches (GNN, diffusion, state-space models), including benchmarks on financial and weather datasets and an analysis of limitations such as noise and distribution shifts.",
+  "problem_and_motivation": "Existing reviews provide only partial coverage of deep learning for time series prediction, often restricted to single architecture families or lacking up-to-date coverage of emerging methods like diffusion models, state-space models, and large language model adaptations. A comprehensive survey is needed to support researchers working on non-stationary data characteristics common in real-world financial, energy, and weather time series.",
+  "approach": [
+    "Proposed a hierarchical taxonomy of deep learning time series prediction methods based on structural and mathematical properties: MLP variants, CNN variants, RNN variants, Transformer variants, GNN variants, generative and hybrid models, and state-space models.",
+    "Summarized commonly used benchmark datasets across domains including finance (S&P 500, Yahoo Finance, NASDAQ), traffic, weather, energy (ETTh), electricity, and COVID-19.",
+    "Analyzed common evaluation metrics: MAE, RMSE, MAPE, and MSE across benchmarked studies.",
+    "Reviewed denoising methods, data preprocessing techniques, and patching strategies for handling noisy time series.",
+    "Discussed limitations and future directions including multimodal integration, LLM adaptation, and long-term sequence modeling."
+  ],
+  "findings": [
+    "Transformer-based models (PatchTST, iTransformer) and hybrid CNN-Transformer architectures (TSMixer, TimesNet) consistently achieve top performance across multivariate long- and short-term time series prediction tasks.",
+    "GNN-based models excel at modeling spatial-temporal dependencies for multi-location weather prediction (e.g., GraphCast outperforms Google DeepMind for medium-range weather forecasting).",
+    "Diffusion-based models such as TimeGrad and SSSD effectively handle non-stationary distribution shifts and capture complex temporal dynamics via stochastic sampling.",
+    "State-space models like Mamba achieve linear time complexity while maintaining competitive performance with Transformers on long sequence modeling.",
+    "Data distribution shifts and poor data quality remain the most significant challenges for time series forecasting accuracy."
+  ],
+  "key_figures_tables": [
+    "Figure 2: Distribution of deep learning time series prediction papers over 2013-2024 showing exponential growth in Transformer research.",
+    "Figure 3: Statistics of top 10 conferences/journals showing ICLR and NeurIPS leading Transformer research publication.",
+    "Table I: Comprehensive list of deep learning methods organized by MLP, CNN, RNN, Transformer, GNN, generative, hybrid, and state-space categories.",
+    "Table II: Benchmark datasets used for evaluating deep learning models across financial, traffic, energy, weather, and healthcare domains.",
+    "Figure 4: Architecture of DeepAR showing feature processing, RNN encoder-decoder, and training with negative log-likelihood loss."
+  ],
+  "key_equations": [
+    {
+      "equation": "$\\hat{y}^{(t)} = f(x^{(t-n_s)}, ..., x^{(t-n_x)}; \\theta)$",
+      "explanation": "General notation for time series prediction where the model maps historical covariates to future predictions."
+    },
+    {
+      "equation": "$e_i = \\frac{1}{\\sqrt{d_k}} (q_i k_i^T) v_i$",
+      "explanation": "Scaled dot-product attention mechanism central to Transformer-based time series models."
+    },
+    {
+      "equation": "Cross-Correlation (CCF): $R_{xy}(\\tau) = \\frac{\\sum(x_i - \\bar{x})(y_{i+\\tau} - \\bar{y})}{\\sqrt{\\sum(x_i - \\bar{x})^2(y_{i+\\tau} - \\bar{y})^2}}$",
+      "explanation": "Measures linear correlation between two time series at different time lags to capture cross-variable dependencies."
+    }
+  ],
+  "definitions": [
+    {"term": "Univariate Time Series", "definition": "A single variable measured and recorded sequentially over time."},
+    {"term": "Multivariate Time Series", "definition": "Multiple variables measured simultaneously, requiring modeling of both temporal and cross-variable dependencies."},
+    {"term": "Stationary Time Series", "definition": "A time series whose statistical properties (mean, variance, autocovariance) remain constant over time."},
+    {"term": "Patch", "definition": "A contiguous subsequence extracted from the time series as a token for Transformer input, capturing local semantic patterns."},
+    {"term": "Non-stationarity", "definition": "A condition where the statistical characteristics of a time series change over time, making prediction more difficult."},
+    {"term": "Diffusion Model", "definition": "A generative model that progressively adds Gaussian noise to training data then learns to reverse the process for probabilistic forecasting."},
+    {"term": "State-Space Model (SSM)", "definition": "A neural network framework modeling state evolution over time using linear recurrences, enabling efficient long-sequence modeling with linear time complexity."},
+    {"term": "Graph Neural Network (GNN)", "definition": "A neural network operating on graph-structured data that learns both node representations and inter-node relationships for spatial-temporal forecasting."}
+  ],
+  "citations": [
+    {"author": "Brownlee", "year": 2018, "page": 0, "paragraph": 0, "claim": "Introduced the concept of autoregression as predicting future values based on previous observations in time series.", "role": "methodology"},
+    {"author": "Salman", "year": 2022, "page": 0, "paragraph": 0, "claim": "Noted that traditional time series prediction models require specific assumptions about time series characteristics and cannot adapt to different application scenarios.", "role": "context"},
+    {"author": "Wu", "year": 2023, "page": 0, "paragraph": 0, "claim": "Designed TimesNet to transform 1D time series into 2D tensors to capture temporal variations, achieving top performance on long- and short-term forecasting.", "role": "finding"},
+    {"author": "Liu", "year": 2024, "page": 0, "paragraph": 0, "claim": "Proposed iTransformer treating variables as tokens and attention mechanisms to capture multivariate relationships, leading in multivariate prediction.", "role": "finding"},
+    {"author": "Nie", "year": 2023, "page": 0, "paragraph": 0, "claim": "Designed PatchTST using patching and channel independence to reduce Transformer complexity and capture local semantic information for long-term forecasting.", "role": "finding"},
+    {"author": "Lam", "year": 2023, "page": 0, "paragraph": 0, "claim": "GraphCast achieved 90% superior performance to Google Deep Learning models on 1380 variables in medium-range weather forecasting.", "role": "finding"},
+    {"author": "Rasul", "year": 2021, "page": 0, "paragraph": 0, "claim": "TimeGrad uses recurrent networks and diffusion process to predict distribution of each time step and sample from it for probabilistic forecasting.", "role": "methodology"},
+    {"author": "Gupta", "year": 2022, "page": 0, "paragraph": 0, "claim": "Proposed S4 model for extremely long time series modeling using a state-space model framework with high performance on Long Range Arena.", "role": "finding"},
+    {"author": "Chen", "year": 2024, "page": 0, "paragraph": 0, "claim": "Proposed TimeMachine adapting pre-trained large language models for multivariate time series forecasting using channel-unaware prompts.", "role": "finding"},
+    {"author": "Chen", "year": 2023, "page": 0, "paragraph": 0, "claim": "Designed TimesNet as a foundation architecture for general time series analysis covering forecasting, imputation, classification, and anomaly detection.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Directly reviews DL time series prediction models applicable to financial time series forecasting including stock and market prediction."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Covers autoregressive, Transformer, and diffusion-based forecasting models suitable for sequential spending data prediction."},
+      {"code": "5.A", "name": "Anomaly Detection in Personal Financial Behavior", "relevance": "medium", "justification": "Reviews anomaly detection methods including Transformer and GNN-based approaches applicable to detecting unusual spending patterns."},
+      {"code": "8.A", "name": "Real-time Analytics and Decision Support for Personal Finances", "relevance": "low", "justification": "Mentions real-time processing limitations of existing models and potential for stream processing adaptation."}
+    ],
+    "contribution_to_field": "This paper provides the most comprehensive taxonomy of deep learning time series prediction methods to date, covering eight architectural categories from classical MLP to emerging state-space models and LLM adaptations. Its key contributions include: (1) a structured hierarchical classification based on structural and mathematical properties rather than chronological or task-based categories; (2) benchmark performance analysis across financial, weather, and energy datasets with standardized evaluation metrics; and (3) identification of critical open problems including data distribution shifts, noise sensitivity, and the need for multimodal integration in future models.",
+    "directly_justifies": [
+      "Deep learning models, especially Transformer-based and hybrid architectures, consistently outperform conventional methods for time series prediction across financial and energy domains.",
+      "Diffusion-based models effectively address non-stationary distribution shifts, a critical challenge in financial time series forecasting.",
+      "State-space models offer linear complexity competitive with Transformer performance for long sequence modeling.",
+      "Multimodal data integration and LLM adaptation represent emerging frontiers for improving time series forecasting."
+    ],
+    "limits": [
+      "Focuses primarily on general time series benchmarks rather than personal finance-specific datasets.",
+      "Limited discussion of real-world deployment constraints such as computational costs and latency requirements.",
+      "Does not address user-facing explainability requirements for financial applications.",
+      "Excludes several Transformer variants (TSMixer, TimesNet) from detailed discussion despite acknowledging their strong performance."
+    ],
+    "topic_mapping_rationale": "The systematic topic scan identified domain 6 (Predictive Modeling and Forecasting) as high relevance due to the paper's direct coverage of deep learning financial time series forecasting models including LSTM, Transformer, and diffusion architectures. Domain 5 (Anomaly Detection) received medium relevance for covering GNN and Transformer-based anomaly detection methods applicable to spending pattern anomalies. Domain 8 (Real-time Analytics) received low relevance for mentioning real-time processing limitations. Domains 1-4, 7, 9-14 were considered and rejected as the paper does not address financial behavior patterns, budgeting strategies, user profiling, mobile UX, or gamification. The paper's primary contribution is methodological rather than domain-specific to personal finance."
+  },
+  "limitations": [
+    "The survey excludes several Transformer variants such as TSMixer, TimesNet, and DLinear despite their strong benchmark performance.",
+    "Computational complexity and deployment requirements are not analyzed for the reviewed models.",
+    "Financial time series datasets are mentioned in benchmarks but not evaluated separately from other domains.",
+    "The discussion of denoising methods does not cover denoising score matching in sufficient depth for financial applications."
+  ],
+  "remember_this": [
+    "Transformer-based models (PatchTST, iTransformer) and CNN-Transformer hybrids (TimesNet, TSMixer) consistently achieve top benchmark performance for time series prediction.",
+    "Diffusion models effectively handle non-stationary distribution shifts, making them particularly suitable for financial time series forecasting.",
+    "State-space models (Mamba, S4) offer linear time complexity competitive with Transformers for long sequence modeling, enabling efficient real-time applications.",
+    "Data quality and distribution shifts remain the primary challenges affecting forecasting accuracy across all reviewed architectures.",
+    "LLM adaptation for time series is an emerging frontier with potential to improve financial prediction through natural language context integration."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T00:01:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ao et al_marked.md",
+      "converted_at": "2026-07-21T05:24:31Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

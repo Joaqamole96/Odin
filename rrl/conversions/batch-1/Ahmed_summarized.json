@@ -1,1 +1,138 @@
-{}
+{
+  "paper_id": "f42aecab-b33b-5400-a18a-7a86b0f6cc9d",
+  "designation": "international",
+  "title": "AI-Driven Credit Risk Assessment in Fintech Lending: Implications for Financial Inclusion, Systemic Risk, and Regulatory Governance",
+  "authors": "Ahmed, S.I.",
+  "year": 2026,
+  "venue": "AIJBM",
+  "odin_topics": ["6.A"],
+  "tldr": "AI credit models outperform traditional scoring but create governance challenges; the IACRF framework operationalizes SAFE AI principles across five operational stages.",
+  "problem_and_motivation": "AI and ML have revolutionized credit risk assessment in fintech lending, enhancing financial inclusion but raising governance challenges including algorithmic fairness, systemic stability, and regulatory sufficiency. Three key tensions exist: accuracy-explainability trade-off, inclusion-bias paradox, and stability-innovation dilemma. Current regulatory frameworks fail to address these interconnected challenges holistically.",
+  "approach": [
+    "Systematic literature review of 30 peer-reviewed articles published between 2012-2025.",
+    "PRISMA-inspired methodology for literature screening and selection.",
+    "Comparative analysis of ML model performance against traditional logistic regression baselines.",
+    "Theoretical framework development based on information asymmetry, financial innovation, and systemic risk theories.",
+    "Development of Integrated AI Credit Risk Framework (IACRF) operationalizing SAFE AI principles."
+  ],
+  "findings": [
+    "num: Gradient boosting models achieve AUC-ROC 0.83-0.91, 7-19 percentage points higher than logistic regression.",
+    "num: Hybrid XAI model achieves AUC-ROC 0.89 while meeting adverse action criteria.",
+    "num: LSTM architectures achieve AUC-ROC >0.90 but have very low interpretability.",
+    "num: AI credit models increase approval rates by 20-40 percentage points for thin-file borrowers.",
+    "num: Three systemic risk pathways identified: model herding, procyclicality, platform contagion.",
+    "num: EU AI Act governance gap score 2/5, emerging markets score 5/5 (highest gaps).",
+    "Ensemble and hybrid XAI models offer best balance of performance and explainability.",
+    "AI financial inclusion benefits constrained by digital exclusion and high interest rate premiums.",
+    "Five-stage IACRF framework developed operationalizing SAFE AI principles across lifecycle."
+  ],
+  "key_figures_tables": [
+    "Table 1: Comparative performance of AI/ML models → Hybrid XAI models offer best balance of performance and explainability.",
+    "Table 2: Financial inclusion metrics by region → Sub-Saharan Africa shows highest approval uplift (30-45%) but highest digital exclusion risk.",
+    "Table 3: Comparative AI credit governance frameworks → EU AI Act most comprehensive but lacks systemic risk monitoring.",
+    "Figure 1: IACRF conceptual architecture → Five-stage governance framework covering data to impact evaluation.",
+    "Figure 3: Systemic risk propagation pathways → Model herding, procyclicality, and platform contagion mechanisms."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "IACRF", "definition": "Integrated AI Credit Risk Framework - five-stage governance framework operationalizing SAFE AI principles."},
+    {"term": "SAFE AI", "definition": "Statistical accuracy, Algorithmic fairness, Financial stability, Ethical governance - normative framework for AI in finance."},
+    {"term": "XAI", "definition": "Explainable AI - techniques providing interpretability for machine learning models."},
+    {"term": "SHAP", "definition": "SHapley Additive exPlanations - method for explaining individual predictions in ML models."},
+    {"term": "AUC-ROC", "definition": "Area Under the Receiver Operating Characteristic Curve - performance metric for classification models."},
+    {"term": "P2P", "definition": "Peer-to-Peer - lending model connecting borrowers directly with investors."},
+    {"term": "BNPL", "definition": "Buy Now Pay Later - deferred payment option for consumers."},
+    {"term": "CFPB", "definition": "Consumer Financial Protection Bureau - US regulatory agency for financial consumer protection."},
+    {"term": "FSB", "definition": "Financial Stability Board - international body monitoring global financial system."}
+  ],
+  "citations": [
+    {
+      "author": "Giudici",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SAFE AI framework provides four pillars: Statistical accuracy, Algorithmic fairness, Financial stability, Ethical governance.",
+      "role": "methodology"
+    },
+    {
+      "author": "Fan",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Ensemble techniques consistently outperform logistic regression benchmarks across all datasets and evaluation metrics.",
+      "role": "finding"
+    },
+    {
+      "author": "Berg",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Fintech lending uses AI to lower underwriting expenses and serve underserved borrower groups not served by banks.",
+      "role": "context"
+    },
+    {
+      "author": "Mhlanga",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ML models on alternative data produce creditworthiness estimates as accurate as traditional scoring for thin-file borrowers.",
+      "role": "finding"
+    },
+    {
+      "author": "Das",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI systems can produce behavioral biases systematically encoded from historical training data.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Examines AI/ML predictive modeling for credit risk assessment in fintech lending."
+      }
+    ],
+    "contribution_to_field": "The paper provides systematic analysis of AI-driven credit risk assessment in fintech lending, comparing ML model performance against traditional methods. It introduces the Integrated AI Credit Risk Framework (IACRF) operationalizing SAFE AI principles across five operational stages. The research identifies three systemic risk propagation pathways specific to AI credit systems. It contributes governance frameworks addressing the accuracy-explainability trade-off, inclusion-bias paradox, and stability-innovation dilemma.",
+    "directly_justifies": [
+      "Gradient boosting models achieve AUC-ROC 0.83-0.91, outperforming logistic regression by 7-19 percentage points.",
+      "Hybrid XAI model achieves AUC-ROC 0.89 while meeting adverse action criteria.",
+      "AI credit models increase approval rates by 20-40 percentage points for thin-file borrowers.",
+      "Three systemic risk pathways identified: model herding, procyclicality, platform contagion.",
+      "Five-stage IACRF framework operationalizes SAFE AI principles across credit lifecycle."
+    ],
+    "limits": [
+      "Literature review restricts causal inference and evaluation of unpublished industry practices.",
+      "Publication bias may favor positive results of model performance.",
+      "IACRF is theoretically based but lacks empirical field testing and case studies.",
+      "Fast-changing regulatory environment may require updates to framework references."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 6.A (Predictive Modeling in Personal Finance Systems) flagged as high relevance due to examination of AI/ML models for credit risk assessment. All other domains (1-5, 7-14) rejected as paper focuses on fintech credit risk rather than personal finance systems, demographic profiles, or budgeting strategies."
+  },
+  "limitations": [
+    "Literature review restricts causal inference and evaluation of unpublished industry practices.",
+    "Publication bias may favor positive results of model performance.",
+    "IACRF is theoretically based but lacks empirical field testing and case studies.",
+    "Fast-changing regulatory environment may require updates to framework references.",
+    "Literature skewed towards North American and European contexts."
+  ],
+  "remember_this": [
+    "AI credit models outperform traditional scoring but create governance challenges.",
+    "Hybrid XAI models offer best balance of performance and explainability.",
+    "AI increases credit access but may exacerbate inequality without proper governance.",
+    "Three systemic risk pathways emerge from correlated AI credit models.",
+    "IACRF framework provides five-stage governance across credit lifecycle."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T22:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ahmed_marked.md",
+      "converted_at": "2026-07-21T05:17:59Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

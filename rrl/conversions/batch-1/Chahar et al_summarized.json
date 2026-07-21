@@ -1,1 +1,163 @@
-{}
+{
+  "paper_id": "10.1177/09746846251333451",
+  "designation": "india",
+  "title": "Transforming Financial Management Through AI and Machine Learning: An In-Depth Analysis of Investment Strategies and Budgeting Practices",
+  "authors": "Chahar, S.K.; Mahipalan, M.; Sharma, S.; Saini, D.",
+  "year": 2025,
+  "venue": "Global Business and Management Research",
+  "odin_topics": ["4.C", "7.A", "7.B", "11.A", "12.A"],
+  "tldr": "A comprehensive review of AI and ML applications in financial management covering investment strategies, budgeting, risk assessment, and fraud detection with case studies of major institutions.",
+  "problem_and_motivation": "Traditional financial management practices struggle with real-time data processing, personalized guidance, and adaptive risk management. The rapid growth of AI and ML presents opportunities to transform financial decision-making, but comprehensive analysis of their applications across investment and budgeting domains is needed.",
+  "approach": [
+    "Conducted a comprehensive review of AI and ML applications in financial management.",
+    "Analyzed applications in algorithmic trading, robo-advisors, fraud detection, and risk assessment.",
+    "Reviewed case studies of major financial institutions including Betterment, Wealthfront, and PayPal.",
+    "Explored challenges including data privacy, algorithmic bias, and regulatory compliance.",
+    "Provided insights for financial institutions and professionals on AI integration."
+  ],
+  "findings": [
+    "num: 73% of financial institutions are adopting AI by 2025.",
+    "num: 30% cost reduction and 20% revenue increase through ML-driven fraud detection.",
+    "num: 25% of financial advisory roles may be automated by 2025.",
+    "num: Betterment and Wealthfront use sophisticated algorithms for portfolio optimization and tax-loss harvesting.",
+    "num: PayPal reduced false positives in fraud detection by 50%.",
+    "num: JP Morgan's COiN platform processes 12,000 commercial credit agreements annually."
+  ],
+  "key_figures_tables": [
+    "Figure 1: AI and ML in budgeting and personal finance management with five key applications: AI-driven budgeting apps, enhanced data security, personalized insights, integration with financial tools, and automated investing.",
+    "Table 1: Comprehensive comparison of AI and ML roles in financial services spanning trading, robo-advisory, financial management, fraud detection, and risk assessment."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {
+      "term": "AI",
+      "definition": "The simulation of human intelligence processes by machines, especially computer systems, including learning, reasoning, and self-correction."
+    },
+    {
+      "term": "ML",
+      "definition": "A subset of AI focused on building systems that learn from data to make decisions without explicit programming."
+    },
+    {
+      "term": "Robo-Advisor",
+      "definition": "An automated financial advisor that uses algorithms to provide personalized investment advice with minimal human intervention."
+    },
+    {
+      "term": "Algorithmic Trading",
+      "definition": "The use of computer algorithms to automatically execute trades based on predefined criteria."
+    },
+    {
+      "term": "Federated Learning",
+      "definition": "A distributed machine learning approach that trains algorithms across multiple decentralized devices while preserving data privacy."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Kapoor",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI will be the biggest source of productivity gains in banking, adding up to $1 trillion in value annually.",
+      "role": "context"
+    },
+    {
+      "author": "Syed",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Innovative financial technology solutions, including AI, are reshaping consumer behavior and financial service delivery.",
+      "role": "baseline"
+    },
+    {
+      "author": "Shankar",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI-driven tools are enabling personalized financial services at an unprecedented scale.",
+      "role": "baseline"
+    },
+    {
+      "author": "Davenport",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The growing sophistication of AI and automation has sparked debate about the future of human work.",
+      "role": "context"
+    },
+    {
+      "author": "Al-Hussaeni",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Robo-advisors help optimize asset allocation and provide personalized investment recommendations.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.C",
+        "name": "FinTech Innovations and Digital Platforms",
+        "relevance": "high",
+        "justification": "Comprehensive review of AI and ML innovations transforming financial services."
+      },
+      {
+        "code": "7.A",
+        "name": "Rule-Based and AI-Driven Budgeting Systems",
+        "relevance": "high",
+        "justification": "Discusses AI-driven budgeting applications including automated budgeting, forecasting, and expense tracking."
+      },
+      {
+        "code": "7.B",
+        "name": "AI and LLM-Based Budgeting and Spending Analysis",
+        "relevance": "high",
+        "justification": "Reviews ML algorithms for personalized financial insights and spending pattern analysis."
+      },
+      {
+        "code": "11.A",
+        "name": "Chatbot-Based Financial Assistance",
+        "relevance": "medium",
+        "justification": "Discusses robo-advisors and AI-driven chatbots for financial guidance."
+      },
+      {
+        "code": "12.A",
+        "name": "Financial Literacy and System Evaluation",
+        "relevance": "medium",
+        "justification": "Evaluates effectiveness of AI applications in improving financial outcomes."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive review of AI and ML applications across the financial management spectrum, from investment strategies to budgeting practices. It synthesizes case studies of leading financial institutions and quantifies the impact of AI adoption. The paper highlights both the transformative potential and the challenges including data privacy, algorithmic bias, and regulatory compliance.",
+    "directly_justifies": [
+      "AI and ML are transforming budgeting through automated categorization, forecasting, and personalized insights.",
+      "73% of financial institutions are expected to adopt AI by 2025.",
+      "ML-driven fraud detection achieves 30% cost reduction and 20% revenue increase."
+    ],
+    "limits": [
+      "Review paper without original empirical research.",
+      "Focuses primarily on institutional finance rather than personal finance applications.",
+      "Rapid evolution of AI technology may quickly outdated specific findings."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 4 (Landscape of Existing Systems) is highly relevant through 4.C (FinTech Innovations) as the paper surveys AI/ML in finance. Domain 7 (Budgeting Strategies) is highly relevant through both 7.A (Rule-Based and AI-Driven Systems) and 7.B (AI and LLM-Based Analysis). Domain 11 (Personalized User Engagement) applies through 11.A (Chatbot-Based Assistance) via robo-advisors. Domain 12 (Evaluation Frameworks) applies through 12.A (Financial Literacy and System Evaluation). Other domains like 1-3, 8-10, 13, and 14 are less directly applicable."
+  },
+  "limitations": [
+    "Synthesis paper without original experimental data collection.",
+    "Rapid pace of AI development may render specific statistics outdated quickly.",
+    "Limited focus on personal finance applications despite discussing budgeting AI.",
+    "Does not address implementation challenges for small-scale personal finance systems."
+  ],
+  "remember_this": [
+    "73% of financial institutions expected to adopt AI by 2025.",
+    "ML-driven fraud detection achieves 30% cost reduction and 20% revenue increase.",
+    "Betterment and Wealthfront use algorithms for portfolio optimization and tax-loss harvesting.",
+    "PayPal reduced false positives in fraud detection by 50%.",
+    "Key challenges include data privacy, algorithmic bias, and regulatory compliance."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Chahar et al_marked.md",
+      "converted_at": "2026-07-21T05:14:50Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

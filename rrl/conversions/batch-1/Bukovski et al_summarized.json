@@ -1,1 +1,195 @@
-{}
+{
+  "paper_id": "10.17868/strath.00094718",
+  "designation": "international-algorithm-specific",
+  "title": "From Crisis to Prosperity: AI and Open Finance for Holistic Financial Health and Smart Future Planning",
+  "authors": "Bukovski, Kal; Jain, Kushagra; Cummins, Mark; Bowden, James; Tetteh, Godsway Korku; Lin, Zi",
+  "year": 2025,
+  "venue": "Financial Regulation Innovation Lab White Paper",
+  "odin_topics": ["4.A", "5.A", "5.B", "10.A", "10.B", "12.B"],
+  "tldr": "This whitepaper proposes an AI-driven framework for holistic financial health evaluation using Open Finance data, presenting a Smart Personalised Finance Management system with persona-based guidance and sequential optimisation.",
+  "problem_and_motivation": "Traditional credit-score-centric frameworks fail to capture the full spectrum of consumers' financial health. The COVID-19 pandemic and cost-of-living crises exposed vulnerabilities in reactive, one-dimensional risk models. Consumers and institutions require proactive, resilience-focused insights spanning day-to-day cashflow management, medium-term debt servicing, and long-term wealth accumulation. Only 8% of UK adults currently receive financial advice, creating a significant 'advice gap'.",
+  "approach": [
+    "Proposed a comprehensive framework integrating Open Finance data with AI and ML techniques.",
+    "Developed a Smart Personalised Finance Management Framework with hierarchical financial needs.",
+    "Applied clustering techniques (K-means, DBSCAN, hierarchical) for customer segmentation.",
+    "Implemented sequential optimisation engine with three layers of financial guidance.",
+    "Incorporated explainable AI techniques (SHAP, LIME) for transparency and regulatory compliance.",
+    "Used Monte Carlo simulations and Geometric Brownian Motion for stochastic modelling.",
+    "Mapped persona archetypes to tailored optimisation plans aligned with FCA's Advice Guidance Boundary Review."
+  ],
+  "findings": [
+    "Open Finance extends beyond Open Banking to encompass mortgages, savings, pensions, investments, insurance, and government benefits.",
+    "Financial health consists of four pillars: Spend, Save, Borrow, and Plan, with resilience as a cross-cutting capability.",
+    "Eight distinct customer personas identified through clustering: Emerging Professionals with Debt, Disciplined Debt Navigators, Established and Secure Homeowners, Vulnerable and Delinquent Renters, Affluent and Prudent Investors, Struggling to Start, Steady and Responsible Managers, Crisis-Prone and Underbanked.",
+    "Hierarchical financial needs framework prioritises cash flow stability before debt management, then wealth accumulation, then legacy planning.",
+    "Privacy-preserving techniques including GANs and VAEs enable synthetic data generation while maintaining statistical properties.",
+    "Behavioural interventions like soft goal setting causally increases savings rate, especially for low-income individuals.",
+    "ML models trained on Open Finance data can identify early warning indicators of financial distress."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Consumer Support Options → Shows FCA's advice/guidance spectrum from information to holistic advice.",
+    "Figure 2: Open Finance as extension of Open Banking → Illustrates expanded data categories.",
+    "Figure 3: Main Pillars of Financial Health → Spend, Save, Borrow, Plan framework.",
+    "Figure 4: Graph vs Relational schema → Data architecture approaches for Open Finance.",
+    "Figure 5: Technical schematic of VAEs and GANs → Privacy-preserving synthetic data generation.",
+    "Figure 6: Wealth & Assets Medians → Regional variation in UK wealth distribution.",
+    "Figure 7: Geometric Brownian Motion Simulation → Investment modelling approach.",
+    "Figure 8: S-Shape Curve and Poverty Trap → Wealth accumulation trajectories.",
+    "Figure 10: Maslow's theory in financial needs context → Hierarchical framework for financial guidance."
+  ],
+  "key_equations": [
+    {
+      "equation": "Geometric Brownian Motion: $dS = \\mu S \\, dt + \\sigma S \\, dW$",
+      "explanation": "Models asset price evolution for risky assets in stochastic investment modelling."
+    },
+    {
+      "equation": "Buffer Ratio = $\\frac{Liquid\\ Assets}{Essential\\ Monthly\\ Outflows}$",
+      "explanation": "Measures financial resilience by comparing liquid assets to essential expenses."
+    },
+    {
+      "equation": "Days-to-Buffer-Breach = $\\frac{Liquid\\ Assets - Min\\ Buffer}{Daily\\ Outflows}$",
+      "explanation": "Estimates time before liquid assets fall below minimum required buffer threshold."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Open Finance",
+      "definition": "Consent-driven sharing of comprehensive financial data including mortgages, savings, pensions, investments, insurance, and government benefits."
+    },
+    {
+      "term": "Financial Resilience",
+      "definition": "The capacity to absorb income shocks, maintain essential spending, and avoid harmful debt spirals."
+    },
+    {
+      "term": "Advice Guidance Boundary Review",
+      "definition": "FCA framework bridging generic guidance and full advice through 'targeted support' for groups with shared characteristics."
+    },
+    {
+      "term": "SHAP",
+      "definition": "SHapley Additive exPlanations - game theoretic approach to explain ML model outputs for transparency."
+    },
+    {
+      "term": "Consumer Duty",
+      "definition": "FCA framework requiring firms to deliver good outcomes for retail customers."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Bukovski",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Only 8% of UK adults currently receive financial advice, creating a significant advice gap.",
+      "role": "finding"
+    },
+    {
+      "author": "Bukovski",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Eight distinct customer personas identified through clustering analysis on Open Finance data.",
+      "role": "finding"
+    },
+    {
+      "author": "Bukovski",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Low financial resilience affected approximately one quarter of UK adults in 2022 (12.9 million people).",
+      "role": "finding"
+    },
+    {
+      "author": "Bukovski",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Soft goal setting causally increases savings rate, especially effective for low-income individuals.",
+      "role": "finding"
+    },
+    {
+      "author": "Bukovski",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Sequential optimisation engine addresses cash flow stability before debt management and wealth accumulation.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Predictive Modeling in Personal Finance",
+        "relevance": "high",
+        "justification": "Proposes ML-based predictive cash flow modelling for financial health assessment."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Discusses behavioural finance principles and spending pattern analysis."
+      },
+      {
+        "code": "5.B",
+        "name": "Customer Segmentation in Banking and Finance",
+        "relevance": "high",
+        "justification": "Identifies 8 distinct customer personas through clustering for tailored guidance."
+      },
+      {
+        "code": "10.A",
+        "name": "Algorithmic Trust in Personal Finance",
+        "relevance": "medium",
+        "justification": "Addresses ethical AI, explainability, and regulatory compliance for trust."
+      },
+      {
+        "code": "10.B",
+        "name": "AI-Driven Financial Advising and Recommendation",
+        "relevance": "high",
+        "justification": "Presents AI-driven framework for personalised financial guidance at scale."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Evaluates ML model performance and explainability trade-offs."
+      }
+    ],
+    "contribution_to_field": "This whitepaper contributes to FinTech and personal finance literature by proposing a comprehensive framework for holistic financial health evaluation using Open Finance data and AI. It introduces a hierarchical financial needs framework inspired by Maslow's theory, mapping it to a sequential optimisation engine with three layers of guidance. The identification of 8 distinct customer personas through clustering provides actionable insights for personalized financial services. The paper also addresses critical regulatory alignment with FCA's Advice Guidance Boundary Review and Consumer Duty framework, demonstrating how AI-driven guidance can bridge the advice gap while maintaining ethical standards.",
+    "directly_justifies": [
+      "Only 8% of UK adults currently receive financial advice.",
+      "Eight distinct customer personas identified through clustering analysis.",
+      "Low financial resilience affected approximately one quarter of UK adults in 2022.",
+      "Soft goal setting causally increases savings rate for low-income individuals.",
+      "Sequential optimisation engine addresses financial needs in priority order."
+    ],
+    "limits": [
+      "White paper format rather than peer-reviewed research study.",
+      "UK-centric focus may limit generalizability to other financial systems.",
+      "No empirical validation of proposed framework presented.",
+      "Focus on developed economy context may not apply to emerging markets."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all 14 topic domains revealed primary relevance to Domains 4, 5, 10, and 12. Topic 4.A (Predictive Modeling) received high relevance as the paper proposes ML-based cash flow modelling for financial health. Topic 5.A (Financial Behavioral Profiles) received medium relevance for behavioural finance principles. Topic 5.B (Customer Segmentation) received high relevance for the 8 persona clusters identified. Topic 10.A (Algorithmic Trust) received medium relevance for ethical AI discussion. Topic 10.B (AI-Driven Advising) received high relevance for the core framework proposal. Topic 12.B (Evaluation) received medium relevance for model performance evaluation. Domains 1-3, 6-9, 11, 13-14 were considered and rejected as the paper does not address Filipino demographics, expense categorization algorithms, anomaly detection, mobile design, data privacy mechanisms (beyond mentioning), savings/debt management specifics, or synthetic data generation techniques."
+  },
+  "limitations": [
+    "White paper format rather than peer-reviewed research study.",
+    "UK-centric focus may limit generalizability to other financial systems.",
+    "No empirical validation of proposed framework presented.",
+    "Focus on developed economy context may not apply to emerging markets."
+  ],
+  "remember_this": [
+    "Only 8% of UK adults currently receive financial advice - significant advice gap.",
+    "8 distinct customer personas identified through clustering analysis.",
+    "Hierarchical financial needs: cash flow stability → debt management → wealth accumulation → legacy planning.",
+    "Soft goal setting causally increases savings rate, especially for low-income individuals.",
+    "Open Finance extends beyond Open Banking to pensions, insurance, government benefits."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T10:55:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Bukovski et al_marked.md",
+      "converted_at": "2026-07-21T05:40:58Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

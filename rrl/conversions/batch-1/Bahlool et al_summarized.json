@@ -1,1 +1,133 @@
-{}
+{
+  "paper_id": "10.3390/jrfm19020104",
+  "designation": "international",
+  "title": "Performance, Fairness, and Explainability in AI-Based Credit Scoring: A Systematic Literature Review",
+  "authors": "Bahlool, R.; Hewahi, N.; Elmedany, W.",
+  "year": 2026,
+  "venue": "Journal of Risk and Financial Management",
+  "odin_topics": ["6.A", "10.A", "12.A", "12.B"],
+  "tldr": "Systematic review of 43 studies on AI credit scoring reveals performance, fairness, and explainability are typically optimized sequentially rather than jointly, with limited empirical measurement of actual trade-offs.",
+  "problem_and_motivation": "AI credit scoring research remains fragmented, with performance, fairness, and explainability dimensions typically addressed in isolation rather than as jointly optimized objectives. The field lacks unified frameworks that co-optimize all three pillars simultaneously, leaving uncertainty about how fairness can be practically implemented without compromising performance or interpretability. Current sequential approaches—training for accuracy, then adding explainability, then adjusting for fairness—are inadequate for meeting strict compliance expectations in modern regulatory environments.",
+  "approach": [
+    "Systematic literature review following PRISMA 2020 guidelines with PICOC framework for research question formulation.",
+    "Searched IEEE Xplore, Scopus, Web of Science, and ScienceDirect for peer-reviewed studies published 2020-2025.",
+    "Applied custom 3Rs&Q quality assessment framework scoring studies 0-24 across relevance, rigor, reach, and quality dimensions.",
+    "Extracted data from 43 included studies after screening 436 initial records through title/abstract and full-text assessment.",
+    "Synthesized findings across three research questions addressing trade-offs, bias mitigation strategies, and regulatory frameworks."
+  ],
+  "findings": [
+    "Explainability has become the dominant research pillar since 2023, surpassing fairness and regulation studies.",
+    "num: Performance gap between interpretable and black-box models is marginal, typically 0.14-0.21% AUC.",
+    "num: Only 10 of 43 studies (23.25%) explicitly measured effectiveness of fairness mitigation strategies.",
+    "Fairness is tunable and optimization-dependent rather than strictly achievable or impossible.",
+    "No universally dominant fairness mitigation strategy exists across the scoring pipeline.",
+    "In-processing techniques achieve larger fairness gains with minimal loss in predictive utility compared to pre/post-processing.",
+    "num: LendingClub dataset reduced from 1M+ observations to 25,535 with 25 features, enabling competitive interpretable models.",
+    "HITL oversight remains under-specified in practical implementation despite being widely acknowledged as important.",
+    "Regulatory frameworks (EU AI Act, ECOA, FCRA) increasingly mandate interpretable systems with adverse decision justifications.",
+    "Performance-vs-fairness trade-off is consistently confirmed: aggressive fairness constraints cause significant accuracy degradation."
+  ],
+  "key_figures_tables": [
+    "Table 6: Comparison of interpretable vs. black-box model performance → Marginal differences (0.14-0.21% AUC gap) suggest trade-off is largely assumed.",
+    "Figure 4: Topic coverage by year → Shows shift from performance-focused to bias/interpretability-aware research since 2023.",
+    "Table 5: Pairwise intersections between dimensions → Fairness-protected attributes has highest co-occurrence (21 papers).",
+    "Figure 2: Conceptual framework → Illustrates intersections among performance, explainability, and fairness with regulatory/HITL layers."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": "No equations; narrative synthesis of empirical studies."}
+  ],
+  "definitions": [
+    {"term": "SLR", "definition": "Systematic Literature Review using PRISMA guidelines for structured evidence synthesis."},
+    {"term": "PICOC", "definition": "Population, Intervention, Comparison, Outcome, Context framework for scoping research questions."},
+    {"term": "3Rs&Q", "definition": "Relevance, Rigor, Reproducibility, and Quality appraisal framework for study inclusion assessment."},
+    {"term": "HITL", "definition": "Human-in-the-loop oversight mechanisms for validating and correcting AI-driven credit decisions."},
+    {"term": "XAI", "definition": "Explainable Artificial Intelligence techniques for interpreting model predictions."},
+    {"term": "ECOA", "definition": "Equal Credit Opportunity Act prohibiting discriminatory lending practices in the United States."},
+    {"term": "FAIM", "definition": "Fair Interpolation Method post-processing algorithm for reconciling incompatible fairness criteria."},
+    {"term": "SHAP", "definition": "SHapley Additive exPlanations for computing feature attributions in model predictions."},
+    {"term": "LIME", "definition": "Local Interpretable Model-agnostic Explanations for generating local interpretability of predictions."}
+  ],
+  "citations": [
+    {"author": "Kozodoi", "year": 2022, "page": 0, "paragraph": 0, "claim": "Fairness can be improved without major profit loss when parity constraints are not enforced too strictly.", "role": "finding"},
+    {"author": "Dessain", "year": 2023, "page": 0, "paragraph": 0, "claim": "Performance gap between interpretable and black-box models corresponds to only 0.14-0.21% in annual return on investment.", "role": "finding"},
+    {"author": "S. Liu", "year": 2022, "page": 0, "paragraph": 0, "claim": "Fairness constraints reduce accuracy progressively as they tighten, confirming fairness is tunable.", "role": "finding"},
+    {"author": "Moldovan", "year": 2023, "page": 0, "paragraph": 0, "claim": "No single fairness metric satisfies fairness, performance, and profitability simultaneously.", "role": "finding"},
+    {"author": "Zehlike", "year": 2025, "page": 0, "paragraph": 0, "claim": "FAIM interpolates between fairness criteria to develop reward/penalty objective functions relaxing competing metrics.", "role": "methodology"},
+    {"author": "Hickey", "year": 2020, "page": 0, "paragraph": 0, "claim": "SHAP-based regularization penalizes predictions correlated with protected attributes via adversarial learning.", "role": "methodology"},
+    {"author": "Valdrighi", "year": 2025, "page": 0, "paragraph": 0, "claim": "Fairness interventions are categorized as pre-processing, in-processing, and post-processing based on pipeline position.", "role": "context"},
+    {"author": "Das", "year": 2023, "page": 0, "paragraph": 0, "claim": "Bias enters the deployment pipeline at multiple stages, requiring continuous fairness mitigation.", "role": "context"},
+    {"author": "Langenbucher", "year": 2020, "page": 0, "paragraph": 0, "claim": "EU AI Act mandates transparency and adequate fairness measures for high-risk AI applications.", "role": "context"},
+    {"author": "Nwofor", "year": 2024, "page": 0, "paragraph": 0, "claim": "Hybrid CNN-XGBoost stacking model achieves 96% accuracy while enhancing transparency via SHAP explanations.", "role": "finding"},
+    {"author": "Kozodoi", "year": 2025, "page": 0, "paragraph": 0, "claim": "BASL framework recovers 36% of performance loss due to sampling bias while improving fairness.", "role": "finding"},
+    {"author": "Hjelkrem", "year": 2023, "page": 0, "paragraph": 0, "claim": "1D-CNN outperforms BERT in AUC and Brier score for credit scoring with open banking data.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Credit scoring predictive modeling techniques overlap with personal finance prediction, though domain focus differs."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses regulatory requirements for protecting sensitive attributes and privacy compliance in financial AI."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Presents evaluation methodologies and quality assessment frameworks applicable to financial AI systems."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Evaluates ML algorithms (XGBoost, RF, neural networks) for credit scoring with performance metrics."
+      }
+    ],
+    "contribution_to_field": "This systematic literature review synthesizes 43 peer-reviewed studies on AI credit scoring across performance, fairness, and explainability dimensions. The review establishes that while these dimensions are frequently studied independently, they remain largely unoptimized jointly, representing a critical gap in current research. The paper provides a governance-oriented synthesis clarifying existing trade-offs and identifying methodological constraints in deployable credit decision pipelines. By consolidating empirical evidence across the three pillars, it offers actionable guidance for designing and deploying credit scoring models that align with regulatory requirements and ethical standards.",
+    "directly_justifies": [
+      "Performance gap between interpretable and black-box models is marginal, typically 0.14-0.21% AUC.",
+      "Explainability has become the dominant research pillar since 2023, surpassing fairness and regulation.",
+      "No universally dominant fairness mitigation strategy exists across the scoring pipeline.",
+      "In-processing techniques achieve larger fairness gains with minimal loss in predictive utility.",
+      "Fairness is tunable and optimization-dependent rather than strictly achievable or impossible."
+    ],
+    "limits": [
+      "Credit scoring domain specificity limits direct applicability to personal finance management systems.",
+      "Individual fairness definitions are conceptually discussed but lack empirical implementation across included studies.",
+      "Most studies use group fairness metrics; individual fairness remains conceptually discussed but unimplemented.",
+      "Geographic bias toward Western and Asian datasets may limit cross-jurisdictional generalizability.",
+      "Synthesis is narrative rather than meta-analytic, limiting quantitative conclusion strength."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned for relevance. Domain 6 (Predictive Modeling) was flagged as medium relevance because credit scoring employs similar ML techniques (XGBoost, RF, neural networks) to those used in personal finance forecasting, though the application domain differs. Domain 10 (Data Privacy and Security) received medium relevance due to coverage of regulatory requirements (GDPR, ECOA) for protecting sensitive attributes in financial AI. Domain 12 (Evaluation Frameworks) was assigned medium relevance for its systematic evaluation methodologies and quality assessment frameworks applicable to financial algorithmic modules. Domains 1-5, 7-9, 11, 13-14 were considered and rejected as the paper focuses on credit scoring rather than personal budgeting, expense categorization, or mobile-first design. The paper's primary contribution to personal finance systems research is methodological rather than domain-specific."
+  },
+  "limitations": [
+    "Individual fairness definitions are conceptually discussed but lack empirical implementation across included studies.",
+    "Most studies use group fairness metrics; individual fairness remains conceptually discussed but unimplemented.",
+    "Geographic bias toward Western and Asian datasets may limit cross-jurisdictional generalizability.",
+    "Synthesis is narrative rather than meta-analytic, limiting quantitative conclusion strength.",
+    "Credit scoring domain specificity limits direct applicability to personal finance management systems.",
+    "Quality assessment framework is novel and not validated against established alternatives.",
+    "Screening performed by single reviewer without inter-rater reliability assessment."
+  ],
+  "remember_this": [
+    "Explainability dominates credit scoring research since 2023, driven by regulatory mandates like EU AI Act and ECOA.",
+    "Performance gap between interpretable and black-box models is marginal, typically 0.14-0.21% AUC.",
+    "Fairness is tunable optimization-dependent, requiring balanced trade-offs rather than strict constraint enforcement.",
+    "No single fairness mitigation strategy universally dominates; context determines optimal approach.",
+    "Human-in-the-loop oversight remains under-specified despite being widely acknowledged as essential for compliance."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T15:48:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Bahlool et al_marked.md",
+      "converted_at": "2026-07-21T05:31:18Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

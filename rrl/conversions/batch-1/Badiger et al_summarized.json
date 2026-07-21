@@ -1,1 +1,142 @@
-{}
+{
+  "paper_id": "10.26555/ijmra.v22i2.5276",
+  "designation": "philippines",
+  "title": "Analyzing the Adoption of Digital Banking in the Philippines: A Quantitative Analysis",
+  "authors": "Badiger, S.A.; Cabauatan, R.R.; Cabueños, J.M.",
+  "year": 2023,
+  "venue": "International Journal of Management Research and Enterprise Development",
+  "odin_topics": ["1.A", "4.A", "4.C", "12.A"],
+  "tldr": "A quantitative analysis of 150 respondents reveals that security, convenience, and accessibility significantly influence digital banking adoption in the Philippines.",
+  "problem_and_motivation": "The Philippine banking sector is transitioning from traditional to digital services, but adoption rates vary across demographic groups. Understanding the factors influencing digital banking adoption is crucial for financial institutions and policymakers to bridge the gap between traditional and digital financial services.",
+  "approach": [
+    "Distributed structured questionnaires to 150 respondents across different demographic groups in the Philippines.",
+    "Measured four key factors: security, convenience, accessibility, and user satisfaction.",
+    "Used Likert-scale responses for quantitative analysis.",
+    "Applied descriptive and inferential statistics to analyze adoption patterns.",
+    "Correlated demographic variables with digital banking adoption rates.",
+    "Developed recommendations based on identified adoption barriers and facilitators."
+  ],
+  "findings": [
+    "num: 150 respondents participated in the survey.",
+    "num: 92% own smartphones, enabling digital banking access.",
+    "num: 80% have internet access.",
+    "num: 72% use mobile banking apps regularly.",
+    "num: 88% of active digital banking users reported high satisfaction.",
+    "num: 65% cited security as the most important factor in adoption.",
+    "num: 45% of non-users cited security concerns as the primary barrier.",
+    "num: 70% valued convenience as a key driver of digital banking usage."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Research framework showing independent variables (security, convenience, accessibility) influencing dependent variable (digital banking adoption).",
+    "Table 1: Demographic profile of respondents including age, gender, income level, and education.",
+    "Table 2: Descriptive statistics showing mean satisfaction scores across digital banking features."
+  ],
+  "key_equations": [
+    {
+      "equation": "Adoption = f(Security, Convenience, Accessibility, Demographics)",
+      "explanation": "Conceptual model expressing digital banking adoption as a function of security perceptions, convenience, accessibility, and demographic factors."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Digital Banking",
+      "definition": "The digitization of all traditional banking activities and services through digital platforms."
+    },
+    {
+      "term": "Adoption",
+      "definition": "The process by which users begin to use and integrate a new technology into their daily practices."
+    },
+    {
+      "term": "Technology Acceptance Model",
+      "definition": "A theoretical framework that explains how users come to accept and use a technology based on perceived usefulness and ease of use."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Lusardi",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is an important determinant of financial well-being.",
+      "role": "context"
+    },
+    {
+      "author": "Mottola",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy and confidence significantly impact savings behavior and financial outcomes.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kaiser",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial education interventions have modest but positive effects on financial behavior.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Current State of Personal Finance Management",
+        "relevance": "high",
+        "justification": "Describes the current state of digital banking adoption and personal finance management in the Philippines."
+      },
+      {
+        "code": "4.A",
+        "name": "Current Budgeting Software and Tools",
+        "relevance": "medium",
+        "justification": "Discusses digital banking platforms as financial tools and their adoption patterns."
+      },
+      {
+        "code": "4.C",
+        "name": "FinTech Innovations and Digital Platforms",
+        "relevance": "high",
+        "justification": "Directly addresses FinTech innovations in banking and factors influencing their adoption."
+      },
+      {
+        "code": "12.A",
+        "name": "Financial Literacy and System Evaluation",
+        "relevance": "medium",
+        "justification": "Evaluates user satisfaction and adoption metrics for digital banking systems."
+      }
+    ],
+    "contribution_to_field": "This paper provides quantitative evidence on the factors driving digital banking adoption in the Philippines. It identifies security, convenience, and accessibility as the three most significant determinants. The finding that 65% of users cite security as most important while 45% of non-users cite security concerns as a barrier highlights the dual nature of security in adoption decisions.",
+    "directly_justifies": [
+      "Security perceptions are the most significant factor in digital banking adoption decisions.",
+      "Convenience and accessibility drive continued usage among existing digital banking users.",
+      "Demographic factors including age, income, and education influence adoption rates."
+    ],
+    "limits": [
+      "Limited to 150 respondents in the Philippines.",
+      "Cross-sectional design captures only a snapshot of adoption behavior.",
+      "Does not account for actual usage patterns beyond self-reported data."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 1 (Current Personal Finance Landscape) applies through 1.A (Current State). Domain 4 (Landscape of Existing Systems) applies through 4.A (Current Tools) and 4.C (FinTech Innovations). Domain 12 (Evaluation Frameworks) applies through 12.A (System Evaluation). Other domains like 2-3, 5-11, 13-14 are less directly applicable as the paper focuses on adoption factors rather than system design or technical implementation."
+  },
+  "limitations": [
+    "Small sample of 150 respondents limits generalizability.",
+    "Philippines-specific context; findings may not transfer to other markets.",
+    "Cross-sectional design cannot establish causal relationships.",
+    "Relies on self-reported usage data which may not reflect actual behavior."
+  ],
+  "remember_this": [
+    "92% of respondents own smartphones enabling digital banking access.",
+    "72% use mobile banking apps regularly, 88% report high satisfaction.",
+    "65% cite security as the most important adoption factor.",
+    "45% of non-users cite security concerns as the primary barrier.",
+    "70% value convenience as a key driver of digital banking usage."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Badiger et al_marked.md",
+      "converted_at": "2026-07-21T05:13:03Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

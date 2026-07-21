@@ -1,1 +1,107 @@
-{}
+{
+  "paper_id": "JTWE-3(1)-2025-Carmona",
+  "designation": "international",
+  "title": "Empowering Financial Well-Being: A Comprehensive Approach to Managing Personal Finances of Employees of San Pablo Colleges Medical Center",
+  "authors": "Carmona, K.N.",
+  "year": 2025,
+  "venue": "Journal of Third World Economics",
+  "odin_topics": ["1.A", "2.A", "7.A", "8.A"],
+  "tldr": "A descriptive-correlational study of 125 hospital employees found that financial well-being is significantly positively correlated with budgeting, income, financial management behavior, and saving behavior, with budgeting identified as the strongest determinant and employees' salaries sufficient only for basic needs.",
+  "problem_and_motivation": "Healthcare workers in the Philippines face significant financial stressors including long working hours and meager income that negatively impact morale, quality of care, and patient outcomes. Prior research has shown financial well-being affects employee performance, but limited studies have focused specifically on the interplay between budgeting, income management, financial behavior, saving behavior, and financial well-being in this population.",
+  "approach": [
+    "Descriptive-correlational research design using a self-constructed survey questionnaire with 62 items across four parts: demographic profile, budgeting practices, saving behavior, and financial well-being.",
+    "Sample of 125 randomly selected employees from San Pablo Colleges Medical Center across diverse positions and roles.",
+    "Five-point Likert scale responses covering budgeting practices, saving behavior, income adequacy, and financial well-being indicators.",
+    "Statistical analysis using frequency, percentage, weighted mean, Pearson's Product Moment Correlation, and Spearman's Rank Correlation.",
+    "Validation of content and reliability through advisers, subject experts, statistical experts, and Cronbach's Alpha coefficient testing."
+  ],
+  "findings": [
+    "Budgeting is the strongest determinant of financial well-being with the highest correlation (r=0.71, p<0.001), followed by income (r=0.65), financial management behavior (r=0.65), and saving behavior (r=0.44).",
+    "Employees' salary is generally sufficient only for basic needs such as food and utilities, while housing allowances, overtime pay, and bonuses provide supplementary financial support.",
+    "Saving behavior is the weakest predictor of financial well-being, with employees reporting irregular saving habits due to income limitations.",
+    "No significant demographic differences in financial well-being were found based on position, gender, or other demographic factors.",
+    "All four independent variables (budgeting, income, financial management, saving behavior) are positively correlated with financial well-being at p<0.001 significance level."
+  ],
+  "key_figures_tables": [
+    "Table 1: Respondents' Profile showing demographic distribution by position, age, gender, and years of service with frequencies and percentages.",
+    "Table 2: Budgeting Practices responses showing monthly budgeting (82.4% always), financial tracking (67.2% always), and budget adjustment (54.4% always).",
+    "Table 3: Saving Habits responses showing 56.8% sometimes save, 26.4% always save, with most savings for emergency funds (63.2%).",
+    "Table 4: Financial Well-Being responses showing 35.2% sometimes feel financially secure, 32.8% sometimes confident about financial future.",
+    "Table 5: Correlation between Budgeting, Income, Financial Management Behavior, Saving Behavior, and Financial Well-Being showing all significant at p<0.001."
+  ],
+  "key_equations": [
+    {
+      "equation": "Pearson's Product Moment Correlation coefficient used for relationship analysis between financial variables.",
+      "explanation": "Statistical measure used to determine the strength and direction of linear relationships between continuous financial variables."
+    },
+    {
+      "equation": "Spearman's Rank Correlation coefficient used for ordinal data analysis.",
+      "explanation": "Non-parametric measure used to assess relationships between ranked variables in the study."
+    }
+  ],
+  "definitions": [
+    {"term": "Financial Well-Being", "definition": "The feeling of security and peace that comes from having enough income to cover expenses, with money left over for savings and discretionary spending, and feeling in control of finances."},
+    {"term": "Budgeting", "definition": "A systematic financial management approach involving determining expenses based on available income, serving as the strongest predictor of financial well-being in this study."},
+    {"term": "Saving Behavior", "definition": "The proportion of income set aside for future use, characterized in this study by irregular patterns due to income limitations, serving as the weakest predictor of financial well-being."},
+    {"term": "Financial Management Behavior", "definition": "The practice of tracking expenses, managing debt, and making informed financial decisions to maintain financial health."},
+    {"term": "Descriptive-Correlational Design", "definition": "A research design that describes variables and examines relationships between them without manipulation, suitable for studying naturally occurring financial patterns."},
+    {"term": "Weighted Mean", "definition": "A statistical measure that accounts for the frequency of each response category, providing a central tendency measure for Likert scale data."},
+    {"term": "Cronbach's Alpha", "definition": "A measure of internal consistency reliability used to validate the survey instrument's consistency across items."},
+    {"term": "Financial Stressors", "definition": "Economic pressures affecting healthcare workers including long hours, meager income, and irregular work arrangements that negatively impact performance and well-being."}
+  ],
+  "citations": [
+    {"author": "Lavorgna", "year": 2023, "page": 0, "paragraph": 0, "claim": "Financial well-being and mental health are deeply interconnected, with persistent money problems linked to increased stress, anxiety, and depression.", "role": "context"},
+    {"author": "Maramag", "year": 2022, "page": 0, "paragraph": 0, "claim": "Financial well-being encompasses having enough income for expenses while providing financial security and peace of mind.", "role": "context"},
+    {"author": "Dahl", "year": 2023, "page": 0, "paragraph": 0, "claim": "Financial well-being is deeply connected to various aspects of life, encompassing security, freedom of choice, and capacity to absorb financial shocks.", "role": "context"},
+    {"author": "Mandell", "year": 2009, "page": 0, "paragraph": 0, "claim": "Financial education doesn't necessarily lead to improved financial well-being, and debt levels are strongly correlated with financial well-being, making it one of the best predictors.", "role": "context"},
+    {"author": "Friedline", "year": 2021, "page": 0, "paragraph": 0, "claim": "Savings behavior among young adults is influenced by parental socioeconomic status, financial knowledge, and financial socialization.", "role": "context"},
+    {"author": "Xiao", "year": 2014, "page": 0, "paragraph": 0, "claim": "Financial behavior, including saving and budgeting, is strongly associated with financial well-being and financial satisfaction.", "role": "context"},
+    {"author": "Brizi", "year": 2021, "page": 0, "paragraph": 0, "claim": "Financial behavior mediates the relationship between financial knowledge and financial well-being.", "role": "context"},
+    {"author": "Kahneman", "year": 1973, "page": 0, "paragraph": 0, "claim": "Heuristics and biases influence decision-making processes, relevant to understanding financial decision-making in healthcare workers.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "User Financial Profile Analysis", "relevance": "high", "justification": "Directly analyzes financial profiles of employees including income adequacy, budgeting practices, saving behavior, and financial well-being."},
+      {"code": "2.A", "name": "Budgeting Strategies and Tools", "relevance": "high", "justification": "Identifies budgeting as the strongest predictor of financial well-being and analyzes monthly budgeting practices and tracking habits."},
+      {"code": "7.A", "name": "Savings and Investment Tracking", "relevance": "medium", "justification": "Analyzes saving behavior as a predictor of financial well-being, finding it the weakest predictor due to income limitations."},
+      {"code": "8.A", "name": "Real-time Analytics and Decision Support for Personal Finances", "relevance": "low", "justification": "Discusses financial decision-making patterns and their relationship to well-being, though not real-time analytics specifically."},
+      {"code": "11.A", "name": "Financial Literacy and Education Integration", "relevance": "low", "justification": "Discusses financial management behavior as a predictor of well-being, relevant to financial literacy initiatives."}
+    ],
+    "contribution_to_field": "This paper provides empirical evidence from a developing country context (Philippines) that budgeting, income, financial management behavior, and saving behavior are all significantly positively correlated with financial well-being among healthcare workers. The finding that budgeting is the strongest determinant challenges assumptions that income level alone drives financial well-being, suggesting that behavioral interventions may be more impactful than income increases alone for improving employee financial health.",
+    "directly_justifies": [
+      "Budgeting is the strongest predictor of financial well-being, more important than income level alone.",
+      "All four financial variables (budgeting, income, financial management, saving) are positively correlated with financial well-being at p<0.001.",
+      "Employee salaries are generally sufficient only for basic needs, with supplementary income sources providing additional support.",
+      "Saving behavior is the weakest predictor, suggesting income limitations override intended saving habits."
+    ],
+    "limits": [
+      "Limited to a single medical center in the Philippines, limiting generalizability to other populations and healthcare settings.",
+      "Self-constructed questionnaire may lack the validity and reliability of established financial well-being scales.",
+      "Cross-sectional design cannot establish causal relationships between financial variables and well-being.",
+      "The study does not address how digital financial tools or AI-based interventions might improve financial outcomes."
+    ],
+    "topic_mapping_rationale": "The systematic topic scan identified domain 1 (Financial Profile Analysis) as high relevance because the paper directly analyzes employee financial profiles including income adequacy, budgeting practices, and saving behavior. Domain 2 (Budgeting Strategies) received high relevance for identifying budgeting as the strongest predictor of financial well-being. Domain 7 (Savings and Investment Tracking) received medium relevance for analyzing saving behavior patterns. Domain 8 (Real-time Analytics) received low relevance for discussing financial decision-making but not real-time systems. Domain 11 (Financial Literacy) received low relevance for implications related to financial management education. Domains 3-6, 9, 10, 12-14 were considered and rejected as the paper does not address AI-based systems, user experience design, anomaly detection, predictive modeling, gamification, or personalization specifically."
+  },
+  "limitations": [
+    "The study is limited to a single institution in the Philippines, restricting generalizability.",
+    "The self-constructed questionnaire may not have the same validity as established financial well-being measures.",
+    "Cross-sectional design prevents causal inference about the relationships between financial variables.",
+    "The study does not address how technology or digital tools might improve financial outcomes for healthcare workers."
+  ],
+  "remember_this": [
+    "Budgeting is the strongest predictor of financial well-being (r=0.71), more important than income level alone.",
+    "All four financial variables are significantly positively correlated with financial well-being at p<0.001.",
+    "Employee salaries are generally sufficient only for basic needs like food and utilities.",
+    "Saving behavior is the weakest predictor of financial well-being due to income limitations overriding intended saving habits.",
+    "Financial well-being encompasses security, peace of mind, and the capacity to absorb financial shocks, not just income level."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T00:04:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Carmona_marked.md",
+      "converted_at": "2026-07-21T05:24:31Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

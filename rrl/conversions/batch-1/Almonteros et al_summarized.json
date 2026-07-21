@@ -1,1 +1,89 @@
-{}
+{
+  "paper_id": "10.12785/ijcds/150151",
+  "designation": "local",
+  "title": "Forecasting Students' Success To Graduate Using Predictive Analytics",
+  "authors": "Almonteros, J.R.; Matias, J.B.; Pitao, J.V.S.",
+  "year": 2024,
+  "venue": "International Journal of Computing and Digital Systems",
+  "odin_topics": ["6.A", "3.A"],
+  "tldr": "A study at Caraga State University used feature selection methods and seven classifiers to predict student graduation success, finding that Genetic Algorithm with Logistic Regression achieved 79% accuracy with 71% AUC.",
+  "problem_and_motivation": "Despite K-12 implementation in the Philippines, there is a high number of mismatched SHS strands, meaning preparatory education does not align with college courses. Universities need predictive models to forecast student success before admission to improve policy-making and student support.",
+  "approach": [
+    "Acquired dataset of 2,207 new entrants from Caraga State University Management Information System.",
+    "Applied KNN imputation for numerical missing values and mode imputation for categorical values.",
+    "Used binary encoding for nominal data to prevent algorithm ranking of values.",
+    "Compared three feature selection methods: LASSO Regression (L1), Ridge Regression (L2), and Genetic Algorithm (GA).",
+    "Tested seven classifiers: Decision Tree, Random Forest, Ensemble, KNN, Logistic Regression, SVM, and Naive Bayes."
+  ],
+  "findings": [
+    "LASSO Regression with Decision Tree achieved lowest accuracy (58%) and AUC (50%) with only 5 features.",
+    "GA selected 33 features with Logistic Regression achieving 79% accuracy and 71% AUC.",
+    "GA showed 21% increase in AUC score compared to no feature selection dataset.",
+    "Prior academic achievement and demographics are the most frequent predictors in student success literature.",
+    "SHS track alignment significantly affects college academic performance."
+  ],
+  "key_figures_tables": [
+    "Table I: Researches investigating student success features → prior academic achievement appears most frequently.",
+    "Table II: Predictive analytics research comparison → Random Forest and ensemble methods commonly used.",
+    "Table III: Dataset predictors → includes admission scores, demographics, and academic records.",
+    "Figure 1: Experimental design → preprocessing, feature selection, and modeling pipeline."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "LASSO", "definition": "Least Absolute Shrinkage and Selection Operator - a regression method using L1 regularization for feature selection."},
+    {"term": "Ridge", "definition": "A regression method using L2 regularization that shrinks coefficients but not to zero."},
+    {"term": "GA", "definition": "Genetic Algorithm - an optimization algorithm inspired by natural selection for feature selection."},
+    {"term": "KNN", "definition": "K-Nearest Neighbors - an algorithm that classifies based on proximity to training examples."},
+    {"term": "AUC", "definition": "Area Under the Curve - a metric measuring classifier performance across thresholds."},
+    {"term": "SHS", "definition": "Senior High School - the final two years of the K-12 education system in the Philippines."},
+    {"term": "MIS", "definition": "Management Information System - a system for managing university data and records."}
+  ],
+  "citations": [
+    {"author": "Alipio", "year": 2019, "page": 0, "paragraph": 0, "claim": "Academic adjustment and performance are affected by SHS strand taken by the student.", "role": "finding"},
+    {"author": "Alyahyan", "year": 2020, "page": 0, "paragraph": 0, "claim": "Prior academic achievement appears in 44% of all existing research on student success prediction.", "role": "context"},
+    {"author": "Zhang", "year": 2021, "page": 0, "paragraph": 0, "claim": "LinearSVC with Lasso regularization showed high-accuracy prediction in classification problems.", "role": "methodology"},
+    {"author": "Nijman", "year": 2022, "page": 0, "paragraph": 0, "claim": "No sufficient information for handling missing data was presented in most prediction models.", "role": "context"},
+    {"author": "Osisanwo", "year": 2023, "page": 0, "paragraph": 0, "claim": "All classifiers increased in accuracy when applied to larger datasets.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "medium", "justification": "Demonstrates predictive modeling techniques applicable to financial prediction tasks."},
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "low", "justification": "Uses categorical encoding and feature categorization methods relevant to data organization."}
+    ],
+    "contribution_to_field": "This study contributes to predictive analytics in education by demonstrating the effectiveness of feature selection methods, particularly Genetic Algorithms, for improving classification performance. It provides empirical evidence from the first batch of K-12 graduates in the Philippines, offering insights for policy-making in admission processes.",
+    "directly_justifies": [
+      "Genetic Algorithm feature selection improved AUC by 21% compared to no feature selection.",
+      "Logistic Regression with GA-selected features achieved 79% accuracy in predicting graduation success.",
+      "Prior academic achievement and demographics are the most frequent predictors in student success literature."
+    ],
+    "limits": [
+      "Study limited to a single university, limiting generalizability to other institutions.",
+      "Binary classification (graduate on time or not) may oversimplify student success dimensions.",
+      "Data from 2018-2022 may not capture long-term trends in student performance."
+    ],
+    "topic_mapping_rationale": "Systematically scanned all topic domains. The paper primarily addresses 6.A (predictive modeling techniques) and 3.A (categorical data handling). Other domains were considered but rejected: 1.A-1.C (Filippino demographics not the focus), 2.A-2.D (cultural spending patterns not addressed), 3.B-3.C (expense category design not discussed), 4.A-4.B (personal finance systems not covered), 5.A-5.C (financial behavioral profiles not addressed), 6.B (forecasting algorithms not the focus), 7.A-7.E (budgeting strategies not covered), 8.A-8.C (anomaly detection not relevant), 9.A-9.C (mobile design not addressed), 10.A-10.C (privacy not covered), 11.A-11.B (engagement not addressed), 12.A-12.C (evaluation not focused on PFMS), 13.A-13.C (savings/debt not covered), 14.A-14.C (deployment not addressed)."
+  },
+  "limitations": [
+    "Study limited to a single university in the Philippines, limiting generalizability.",
+    "Binary classification (graduate on time or not) may oversimplify student success.",
+    "Data from 2018-2022 represents only the first K-12 cohort, limiting long-term analysis.",
+    "Only seven classifiers were tested, potentially missing better-performing algorithms."
+  ],
+  "remember_this": [
+    "Genetic Algorithm feature selection improved AUC by 21% over no feature selection.",
+    "Logistic Regression achieved 79% accuracy with 33 GA-selected features.",
+    "Prior academic achievement is the most frequent predictor in student success research.",
+    "SHS track alignment significantly affects college academic performance."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T10:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Almonteros et al_marked.md",
+      "converted_at": "2026-07-21T05:22:03Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

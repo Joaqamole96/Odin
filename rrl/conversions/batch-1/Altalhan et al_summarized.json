@@ -1,1 +1,178 @@
-{}
+{
+  "paper_id": "10.1109/ACCESS.2025.3531662",
+  "designation": "international-algorithm-specific",
+  "title": "Imbalanced Data Problem in Machine Learning: A Review",
+  "authors": "Altalhan, Manahel; Algarni, Abdulmohsen; Turki-Hadjalouane, Monia",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "odin_topics": ["12.A", "12.B", "12.C"],
+  "tldr": "This comprehensive review surveys techniques for addressing class imbalance in ML, covering data-level, algorithm-level, and hybrid approaches with evaluation metrics like F1-score, AUC, and G-mean.",
+  "problem_and_motivation": "Imbalanced data is a fundamental challenge in machine learning where one class significantly outnumbers others, causing biased classifiers that favor the majority class. This leads to misclassification of minority class instances, which are often critical (e.g., fraud detection, medical diagnosis). Most real-world datasets exhibit this problem, requiring specialized techniques to ensure reliable model performance.",
+  "approach": [
+    "Systematic review of 40 studies from Q1/Q2 journals published 2020-2024.",
+    "Categorized techniques into data-level, algorithm-level, and hybrid approaches.",
+    "Evaluated oversampling methods (SMOTE, ADASYN, Borderline-SMOTE) and undersampling techniques.",
+    "Analyzed cost-sensitive learning, ensemble methods, and algorithm-specific adjustments.",
+    "Assessed evaluation metrics including Precision, F1 Score, Recall, G-mean, and AUC.",
+    "Identified persistent gaps in generalizability, scalability, and robustness across methods."
+  ],
+  "findings": [
+    "SMOTE and variants (Borderline-SMOTE, ADASYN) improve minority class representation through synthetic sampling.",
+    "Undersampling techniques (Random, Tomek Links, Cluster Centroids) reduce majority class but risk information loss.",
+    "Hybrid approaches combining oversampling and undersampling (SMOTEENN, SMOTE-Tomek) provide balanced solutions.",
+    "Cost-sensitive learning allocates varying weights to classes, prioritizing minority class misclassification penalties.",
+    "Ensemble methods (AdaBoost, Bagging, Random Forests) enhance robustness through multiple classifier combinations.",
+    "GAN-based methods generate realistic synthetic samples while maintaining data distribution properties.",
+    "Evaluation metrics like AUC-ROC and F1-score are more appropriate than accuracy for imbalanced datasets.",
+    "Key limitations include overfitting risk, computational complexity, and challenges with high-dimensional data."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Basic approaches to class distribution balance → Shows oversampling vs undersampling methods.",
+    "Figure 2: Approaches to handle imbalanced data problem → Three-category taxonomy diagram.",
+    "Table 1: Effectiveness and limitations of hybrid-sampling techniques → Comprehensive comparison.",
+    "Table 2: Effectiveness and limitations of ensemble methods → Boosting, bagging, and stacking approaches.",
+    "Table 3: Effectiveness and limitations of hybrid approaches → Combined data and algorithm techniques.",
+    "Table 4: Applications and datasets used in studies → Real-world implementations across domains."
+  ],
+  "key_equations": [
+    {
+      "equation": "SMOTE: $x_{new} = x_i + \\lambda \\cdot (x_{nn} - x_i)$",
+      "explanation": "Generates synthetic minority samples by interpolating between nearest neighbors."
+    },
+    {
+      "equation": "F1-Score = $2 \\cdot \\frac{Precision \\cdot Recall}{Precision + Recall}$",
+      "explanation": "Harmonic mean of precision and recall, balancing false positives and false negatives."
+    },
+    {
+      "equation": "G-mean = $\\sqrt{Sensitivity \\cdot Specificity}$",
+      "explanation": "Geometric mean of sensitivity and specificity for balanced classification assessment."
+    },
+    {
+      "equation": "AUC-ROC = $\\int_0^1 TPR \\, d(FPR)$",
+      "explanation": "Area under the Receiver Operating Characteristic curve measuring classification performance."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Class Imbalance",
+      "definition": "Unequal distribution of observations across target classes where one class significantly outnumbers others."
+    },
+    {
+      "term": "SMOTE",
+      "definition": "Synthetic Minority Oversampling Technique that generates new minority samples through interpolation."
+    },
+    {
+      "term": "Cost-Sensitive Learning",
+      "definition": "Approach assigning different misclassification costs to classes, prioritizing minority class accuracy."
+    },
+    {
+      "term": "Ensemble Methods",
+      "definition": "Techniques combining multiple classifiers to improve robustness and predictive performance."
+    },
+    {
+      "term": "Non-IID",
+      "definition": "Non-Independent and Identically Distributed data where class distributions differ across samples."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Altalhan",
+      "year": 2025,
+      "page": 13686,
+      "paragraph": 0,
+      "claim": "Imbalanced data causes classifiers to be biased toward the dominant class, misclassifying critical minority instances.",
+      "role": "finding"
+    },
+    {
+      "author": "Altalhan",
+      "year": 2025,
+      "page": 13687,
+      "paragraph": 0,
+      "claim": "SMOTE generates synthetic samples by interpolating between minority class instances connected via line segments.",
+      "role": "finding"
+    },
+    {
+      "author": "Altalhan",
+      "year": 2025,
+      "page": 13690,
+      "paragraph": 0,
+      "claim": "Hybrid approaches combining oversampling and undersampling provide more balanced solutions than single methods.",
+      "role": "finding"
+    },
+    {
+      "author": "Altalhan",
+      "year": 2025,
+      "page": 13692,
+      "paragraph": 0,
+      "claim": "GAN-based methods generate realistic synthetic samples while maintaining data distribution properties.",
+      "role": "finding"
+    },
+    {
+      "author": "Altalhan",
+      "year": 2025,
+      "page": 13694,
+      "paragraph": 0,
+      "claim": "AUC-ROC and F1-score are more appropriate evaluation metrics than accuracy for imbalanced datasets.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "12.A",
+        "name": "Clustering Methods in Finance",
+        "relevance": "high",
+        "justification": "Discusses sampling techniques and data balancing methods applicable to financial data analysis."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Comprehensive evaluation of ML algorithms and metrics for imbalanced classification tasks."
+      },
+      {
+        "code": "12.C",
+        "name": "Model Explainability in Finance",
+        "relevance": "medium",
+        "justification": "Addresses interpretability challenges in complex ensemble and hybrid ML models."
+      }
+    ],
+    "contribution_to_field": "This systematic review provides a comprehensive taxonomy of techniques for addressing class imbalance in machine learning. The three-tier classification (data-level, algorithm-level, hybrid) offers a structured framework for practitioners to select appropriate methods based on dataset characteristics. The identification of key limitations—overfitting risk, computational complexity, and scalability challenges—guides future research directions. The emphasis on appropriate evaluation metrics (AUC-ROC, F1-score over accuracy) establishes best practices for assessing model performance on imbalanced datasets.",
+    "directly_justifies": [
+      "SMOTE and variants improve minority class representation through synthetic sampling.",
+      "Hybrid approaches combining oversampling and undersampling provide balanced solutions.",
+      "Cost-sensitive learning allocates varying weights to prioritize minority class accuracy.",
+      "GAN-based methods generate realistic synthetic samples maintaining data distribution.",
+      "AUC-ROC and F1-score are more appropriate than accuracy for imbalanced datasets."
+    ],
+    "limits": [
+      "Focuses on classification tasks; regression and other ML paradigms not covered.",
+      "Most studies use standard benchmark datasets which may not reflect real-world complexity.",
+      "Computational overhead of advanced techniques not systematically compared.",
+      "Limited discussion on deployment challenges in production environments."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all 14 topic domains revealed primary relevance to Domain 12 (Algorithms and Mathematical Foundations). Topic 12.A (Clustering Methods) received high relevance as the paper discusses sampling and balancing techniques applicable to financial data. Topic 12.B (Evaluation of Algorithmic Modules) received high relevance for comprehensive evaluation of ML algorithms and metrics. Topic 12.C (Model Explainability) received medium relevance for addressing interpretability in complex models. Domains 1-11, 13-14 were considered and rejected as the paper focuses on algorithmic techniques rather than Filipino demographics, financial behavioral profiles, expense categorization, predictive modeling in personal finance, budgeting strategies, anomaly detection, mobile design, data privacy, trust mechanisms, savings/debt management, or synthetic data generation."
+  },
+  "limitations": [
+    "Focuses on classification tasks; regression and other ML paradigms not covered.",
+    "Most studies use standard benchmark datasets which may not reflect real-world complexity.",
+    "Computational overhead of advanced techniques not systematically compared.",
+    "Limited discussion on deployment challenges in production environments."
+  ],
+  "remember_this": [
+    "SMOTE generates synthetic minority samples by interpolating between nearest neighbors.",
+    "Hybrid approaches (SMOTEENN, SMOTE-Tomek) combine oversampling and undersampling.",
+    "AUC-ROC and F1-score are more appropriate than accuracy for imbalanced datasets.",
+    "GAN-based methods generate realistic synthetic samples maintaining data distribution.",
+    "Key limitations: overfitting risk, computational complexity, scalability challenges."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T11:05:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Altalhan et al_marked.md",
+      "converted_at": "2026-07-21T05:22:14Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

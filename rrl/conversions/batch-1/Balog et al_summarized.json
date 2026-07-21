@@ -1,1 +1,175 @@
-{}
+{
+  "paper_id": "10.33421/OJPS.15115232",
+  "designation": "unspecified",
+  "title": "AI-Powered Personalized Financial Planning Systems: A Systematic Review and Future Research Directions",
+  "authors": "Balog, A.; Nechita, E.; Mihai, S.",
+  "year": 2024,
+  "venue": "Open Journal of Psychology and Social Sciences",
+  "odin_topics": ["2.A", "4.A", "7.A", "7.B", "12.A", "12.D"],
+  "tldr": "A systematic review of 45 studies reveals key design principles for AI-powered personalized financial planning systems including adaptability, transparency, and user-centricity.",
+  "problem_and_motivation": "The proliferation of AI technologies has created opportunities for personalized financial planning systems, but the field lacks a comprehensive understanding of design principles, architectural patterns, and effectiveness metrics. Existing reviews focus on specific applications rather than providing a holistic view of system design requirements.",
+  "approach": [
+    "Conducted a systematic literature review following PRISMA guidelines.",
+    "Analyzed 45 peer-reviewed studies from 2018 to 2024 on AI-powered financial planning systems.",
+    "Categorized systems by architecture type: rule-based, ML-based, hybrid, and LLM-based.",
+    "Extracted design principles, effectiveness metrics, and implementation challenges.",
+    "Synthesized findings into a framework for system design and evaluation.",
+    "Identified gaps in current research and proposed future research directions."
+  ],
+  "findings": [
+    "num: 45 studies analyzed in the systematic review.",
+    "num: 73% of systems used hybrid architectures combining multiple AI techniques.",
+    "num: 89% incorporated some form of personalization.",
+    "num: 67% addressed explainability as a key design requirement.",
+    "num: 45% integrated behavioral finance insights.",
+    "num: 78% reported user satisfaction scores above 75%.",
+    "The most effective systems combined rule-based logic with ML-based personalization."
+  ],
+  "key_figures_tables": [
+    "Figure 1: PRISMA flow diagram showing study selection process from 500 initial papers to 45 included studies.",
+    "Figure 2: Taxonomy of AI-powered financial planning system architectures.",
+    "Table 1: Summary of included studies with system type, AI techniques used, and key findings.",
+    "Table 2: Design principles extracted from the literature with frequency of occurrence.",
+    "Table 3: Comparison of effectiveness metrics across different system architectures."
+  ],
+  "key_equations": [
+    {
+      "equation": "Effectiveness = w1*Accuracy + w2*UserSatisfaction + w3*BehavioralImpact",
+      "explanation": "Composite effectiveness score combining system accuracy, user satisfaction, and measurable behavioral impact."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Personalized Financial Planning",
+      "definition": "Financial planning systems that adapt recommendations based on individual user characteristics, goals, and behaviors."
+    },
+    {
+      "term": "Hybrid Architecture",
+      "definition": "System design that combines multiple AI techniques such as rule-based logic, ML, and NLP to leverage their respective strengths."
+    },
+    {
+      "term": "Explainability",
+      "definition": "The degree to which a system can provide clear, understandable explanations for its recommendations and decisions."
+    },
+    {
+      "term": "Behavioral Finance Integration",
+      "definition": "The incorporation of insights from behavioral finance research into system design to account for cognitive biases and emotional factors."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Kapoor",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI will be the biggest source of productivity gains in banking, adding up to $1 trillion in value annually.",
+      "role": "context"
+    },
+    {
+      "author": "Chahar",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Personalized financial management applications use data analytics to assess spending habits and tailor recommendations.",
+      "role": "baseline"
+    },
+    {
+      "author": "Shankar",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI-driven tools are enabling personalized financial services at an unprecedented scale.",
+      "role": "baseline"
+    },
+    {
+      "author": "Syed",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Innovative financial technology solutions, including AI, are reshaping consumer behavior and financial service delivery.",
+      "role": "context"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is an important determinant of financial well-being.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "2.A",
+        "name": "User Needs and Preferences in Personal Finance",
+        "relevance": "high",
+        "justification": "Synthesizes user needs and design requirements for personalized financial planning systems."
+      },
+      {
+        "code": "4.A",
+        "name": "Current Budgeting Software and Tools",
+        "relevance": "high",
+        "justification": "Reviews existing AI-powered financial planning tools and their architectures."
+      },
+      {
+        "code": "7.A",
+        "name": "Rule-Based and AI-Driven Budgeting Systems",
+        "relevance": "high",
+        "justification": "Categorizes and compares rule-based, ML-based, and hybrid budgeting system architectures."
+      },
+      {
+        "code": "7.B",
+        "name": "AI and LLM-Based Budgeting and Spending Analysis",
+        "relevance": "high",
+        "justification": "Analyzes LLM-based approaches to financial planning and their effectiveness."
+      },
+      {
+        "code": "12.A",
+        "name": "Financial Literacy and System Evaluation",
+        "relevance": "high",
+        "justification": "Provides a comprehensive framework for evaluating financial planning system effectiveness."
+      },
+      {
+        "code": "12.D",
+        "name": "Benchmarking Against Existing Financial Tools",
+        "relevance": "high",
+        "justification": "Compares effectiveness metrics across different system architectures and identifies best practices."
+      }
+    ],
+    "contribution_to_field": "This systematic review provides a comprehensive framework for designing and evaluating AI-powered personalized financial planning systems. It identifies that hybrid architectures combining rule-based logic with ML personalization are most effective, and establishes key design principles including adaptability, transparency, and user-centricity. The review synthesizes 45 studies to create actionable guidelines for system designers.",
+    "directly_justifies": [
+      "Hybrid AI architectures combining rule-based and ML approaches are most effective for financial planning systems.",
+      "User personalization and explainability are critical design requirements for adoption and trust.",
+      "Behavioral finance insights should be integrated into system design to improve outcomes."
+    ],
+    "limits": [
+      "Review limited to peer-reviewed studies; may miss industry implementations.",
+      "Rapid AI development may quickly outdated specific technical findings.",
+      "English-language bias in the systematic review process."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 2 (User Perspectives) applies through 2.A (User Needs and Preferences). Domain 4 (Existing Systems) applies through 4.A (Current Tools). Domain 7 (Budgeting Strategies) is highly relevant through 7.A (Rule-Based and AI-Driven Systems) and 7.B (AI and LLM-Based Analysis). Domain 12 (Evaluation Frameworks) is highly relevant through 12.A (System Evaluation) and 12.D (Benchmarking). Other domains like 1, 3, 5-6, 8-11, 13-14 are less directly applicable."
+  },
+  "limitations": [
+    "Peer-reviewed study bias may exclude valuable industry implementations.",
+    "Review timeframe (2018-2024) may miss earlier foundational work or the most recent developments.",
+    "English-language limitation may exclude relevant non-English studies.",
+    "Synthesized findings represent average effectiveness; individual system performance varies."
+  ],
+  "remember_this": [
+    "73% of effective systems used hybrid architectures combining multiple AI techniques.",
+    "89% of systems incorporated personalization features.",
+    "67% addressed explainability as a key design requirement.",
+    "78% reported user satisfaction scores above 75%.",
+    "Hybrid rule-based + ML personalization is the most effective architecture pattern."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Balog et al_marked.md",
+      "converted_at": "2026-07-21T05:11:57Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

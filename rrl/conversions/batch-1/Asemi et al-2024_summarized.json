@@ -1,1 +1,162 @@
-{}
+{
+  "paper_id": "10.33968/1945-0222.2024.10.1.35",
+  "designation": "iran",
+  "title": "Optimizing Personal Financial Management with Hybrid AI: Integrating Sentiment Analysis and Fuzzy Logic for Dynamic Financial Planning",
+  "authors": "Asemi, A.; Miah, M.J.; Asemi, M.",
+  "year": 2024,
+  "venue": "Journal of Economics, Finance and Management Studies",
+  "odin_topics": ["3.A", "7.B", "7.C", "10.A"],
+  "tldr": "A hybrid AI system integrating NLP sentiment analysis with fuzzy logic dynamically adjusts financial recommendations based on both market conditions and user emotional states.",
+  "problem_and_motivation": "Traditional PFM systems rely on static rules that fail to adapt to changing market conditions or individual emotional states affecting financial decisions. Users often receive generic advice that does not account for behavioral patterns, emotional influences, or real-time market sentiment.",
+  "approach": [
+    "Developed a hybrid AI system integrating NLP sentiment analysis with fuzzy logic for financial planning.",
+    "Created a simulated user interaction dataset with behavioral patterns, spending habits, and financial goals.",
+    "Implemented sentiment analysis using NLP to process user communications and market news.",
+    "Applied fuzzy logic to model uncertainty in both market conditions and user emotional states.",
+    "Generated personalized, real-time financial recommendations based on combined sentiment and market analysis.",
+    "Conducted comprehensive performance evaluation with 10,000 test cases."
+  ],
+  "findings": [
+    "num: 10,000 simulated test cases evaluated.",
+    "num: 95% accuracy in sentiment detection across positive, neutral, and negative categories.",
+    "num: Average time savings of 35% compared to manual financial analysis.",
+    "num: 88% user satisfaction rate.",
+    "num: 18% improvement in financial decision outcomes.",
+    "num: 20% increase in user engagement.",
+    "The hybrid system effectively balances objective market data with subjective emotional factors."
+  ],
+  "key_figures_tables": [
+    "Table 1: Dataset features including 12 variables: demographics, financial status, transaction history, and financial goals.",
+    "Table 2: Sentiment classification results with 95.2% accuracy, 93.5% recall, and 94.3% F1-score.",
+    "Table 3: Fuzzy logic rule system with inputs (Market Trend, Risk Tolerance, Sentiment Score) and outputs (Recommendation Type, Risk Level, Amount).",
+    "Table 4: Comprehensive performance evaluation showing system accuracy, user satisfaction, and financial outcome improvements."
+  ],
+  "key_equations": [
+    {
+      "equation": "Fuzzy Rule: IF Market is Strong AND Risk is Moderate AND Sentiment is Positive THEN Recommend Balanced Portfolio",
+      "explanation": "Example fuzzy logic rule combining market conditions, risk tolerance, and sentiment analysis for investment recommendations."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Fuzzy Logic",
+      "definition": "A computing approach based on degrees of truth rather than binary true/false values, useful for modeling uncertainty."
+    },
+    {
+      "term": "Sentiment Analysis",
+      "definition": "NLP technique that identifies and extracts subjective information from text to determine emotional tone."
+    },
+    {
+      "term": "Hybrid AI",
+      "definition": "A system combining multiple AI techniques to leverage the strengths of each approach."
+    },
+    {
+      "term": "Dynamic Financial Planning",
+      "definition": "Financial planning that adapts in real-time based on changing market conditions and user inputs."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Al-Hussaeni",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Robo-advisors help optimize asset allocation and provide personalized investment recommendations.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kapoor",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI will be the biggest source of productivity gains in banking, adding up to $1 trillion in value annually.",
+      "role": "context"
+    },
+    {
+      "author": "Rane",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep learning techniques can detect fraudulent transactions in real-time by learning from vast datasets.",
+      "role": "baseline"
+    },
+    {
+      "author": "Chahar",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Personalized financial management applications use data analytics to assess spending habits and tailor recommendations.",
+      "role": "baseline"
+    },
+    {
+      "author": "Shankar",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI-driven tools are enabling personalized financial services at an unprecedented scale.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Cognitive Biases in Financial Decisions",
+        "relevance": "high",
+        "justification": "Directly addresses how emotional states and cognitive biases affect financial decision-making."
+      },
+      {
+        "code": "7.B",
+        "name": "AI and LLM-Based Budgeting and Spending Analysis",
+        "relevance": "high",
+        "justification": "Implements AI-based dynamic financial recommendations using sentiment analysis and fuzzy logic."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "high",
+        "justification": "Uses fuzzy logic to optimize financial recommendations under uncertainty constraints."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Security and Privacy in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses privacy considerations in handling user emotional and financial data."
+      }
+    ],
+    "contribution_to_field": "This paper presents a novel hybrid AI system combining NLP sentiment analysis with fuzzy logic for personalized financial planning. It demonstrates that accounting for user emotional states alongside market conditions produces more effective financial recommendations than traditional static approaches. The 95% sentiment detection accuracy and 18% improvement in financial outcomes validate the approach.",
+    "directly_justifies": [
+      "Combining sentiment analysis with fuzzy logic improves financial recommendation accuracy.",
+      "User emotional states are significant factors in financial decision-making that should be considered.",
+      "Hybrid AI systems can adapt recommendations based on real-time market and emotional conditions."
+    ],
+    "limits": [
+      "Uses simulated data rather than real user financial data.",
+      "Fuzzy logic rules are manually defined rather than learned from data.",
+      "95% accuracy achieved on controlled test cases; real-world performance may differ."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 3 (Psychology of Personal Finance) is highly relevant through 3.A (Cognitive Biases in Financial Decisions) as the system accounts for emotional influences. Domain 7 (Budgeting Strategies) is highly relevant through both 7.B (AI and LLM-Based Analysis) and 7.C (Constrained Optimization). Domain 10 (Privacy) partially applies through 10.A regarding handling of emotional data. Other domains like 1-2, 4-6, 8-9, 11-14 are less directly applicable."
+  },
+  "limitations": [
+    "Relies on simulated user interaction data rather than real-world financial records.",
+    "Fuzzy logic rules are manually defined, limiting scalability and adaptability.",
+    "Single-sentiment model approach may not capture all emotional nuances.",
+    "Limited to financial recommendations; does not integrate with actual banking systems."
+  ],
+  "remember_this": [
+    "The hybrid system combines NLP sentiment analysis with fuzzy logic for dynamic financial planning.",
+    "95% accuracy in sentiment detection across positive, neutral, and negative categories.",
+    "35% time savings and 18% improvement in financial decision outcomes.",
+    "88% user satisfaction and 20% increase in user engagement.",
+    "Fuzzy logic rules model uncertainty in market conditions and emotional states."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Asemi et al-2024_marked.md",
+      "converted_at": "2026-07-21T05:13:49Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

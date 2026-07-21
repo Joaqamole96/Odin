@@ -1,1 +1,239 @@
-{}
+{
+  "paper_id": "10.70008/jmldeds.v1i01.36",
+  "designation": "international",
+  "title": "A Systematic Literature Review of Predictive Models and Analytics in AI-Driven Credit Scoring",
+  "authors": "Bari, H.; Juthi, S.; Mistry, A. M.; Kamrujjaman, M.",
+  "year": 2024,
+  "venue": "Journal of Machine Learning, Engineering and Data Science",
+  "odin_topics": ["4.A", "6.A", "6.B", "8.A", "8.B", "10.A", "10.B", "12.A", "12.B"],
+  "tldr": "Systematic review of 70 studies shows ML ensemble models and deep learning outperform traditional statistical methods in credit scoring, with hybrid approaches balancing accuracy and interpretability.",
+  "problem_and_motivation": "Traditional credit scoring methods like logistic regression fail to capture non-linear relationships in complex borrower datasets. AI-driven models offer superior predictive accuracy and adaptability but raise concerns about interpretability and fairness. A comprehensive synthesis of existing research is needed to evaluate model performance, data sources, and ethical implications.",
+  "approach": [
+    "Systematic literature review following PRISMA guidelines, screening 527 articles down to 60 high/medium quality studies.",
+    "Databases searched include IEEE Xplore, Scopus, PubMed, Google Scholar, and Web of Science from 2010-2024.",
+    "Categorized AI models into ML (decision trees, SVM, KNN), deep learning (CNNs, RNNs, autoencoders), and hybrid approaches.",
+    "Evaluated model performance using ROC-AUC, F1-score, and precision-recall metrics across diverse credit environments.",
+    "Analyzed gaps in literature including alternative data integration, model interpretability, bias, and economic resilience."
+  ],
+  "findings": [
+    "Ensemble models like random forests and gradient boosting outperform traditional statistical models in heterogeneous borrower segments.",
+    "Deep learning models (CNNs, RNNs) effectively process unstructured data sources including social media and transaction histories.",
+    "Hybrid models combining logistic regression with neural networks balance interpretability and predictive power for regulatory compliance.",
+    "Stacking and blending ensemble techniques reduce variance and bias, improving prediction accuracy across borrower demographics.",
+    "Autoencoders and GANs provide advanced anomaly detection for identifying fraud and emerging credit risks.",
+    "Reinforcement learning models dynamically adjust credit limits based on evolving borrower profiles."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Credit Score Measurement → Visual overview of credit scoring components and data inputs.",
+    "Figure 2: Credit scoring with AI framework → Illustrates AI integration in credit risk assessment pipeline.",
+    "Figure 3: Evolution of Credit Scoring Models → Shows progression from statistical to AI-driven approaches.",
+    "Figure 7: Comparative Analysis of Credit Scoring Models → Compares accuracy, robustness, and adaptability across model types."
+  ],
+  "key_equations": [
+    {
+      "equation": "$w \\cdot x + b = 0$",
+      "explanation": "SVM hyperplane equation defining the decision boundary between credit risk classes."
+    },
+    {
+      "equation": "$M = \\frac{2}{||w||}$",
+      "explanation": "SVM margin maximization formula for optimal class separation."
+    },
+    {
+      "equation": "$d(x, x_i) = \\sqrt{\\sum_{j=1}^{n}(x_j - x_{ij})^2}$",
+      "explanation": "Euclidean distance formula used in KNN for neighbor classification."
+    }
+  ],
+  "definitions": [
+    {"term": "AI", "definition": "Artificial Intelligence, encompassing ML and deep learning techniques for automated decision-making."},
+    {"term": "ML", "definition": "Machine Learning, algorithms that learn patterns from data to make predictions."},
+    {"term": "DL", "definition": "Deep Learning, neural network architectures with multiple layers for complex pattern recognition."},
+    {"term": "CNN", "definition": "Convolutional Neural Network, a deep learning model effective for feature extraction from unstructured data."},
+    {"term": "RNN", "definition": "Recurrent Neural Network, a neural network designed for sequential and time-series data processing."},
+    {"term": "LSTM", "definition": "Long Short-Term Memory, a type of RNN that captures long-term dependencies in sequential data."},
+    {"term": "SVM", "definition": "Support Vector Machine, a classification algorithm that finds optimal hyperplanes to separate data classes."},
+    {"term": "KNN", "definition": "K-Nearest Neighbors, a non-parametric classification method based on proximity to training examples."},
+    {"term": "ANN", "definition": "Artificial Neural Network, a computational model inspired by biological neural networks."},
+    {"term": "VAE", "definition": "Variational Autoencoder, a generative model used for anomaly detection in credit scoring."},
+    {"term": "GAN", "definition": "Generative Adversarial Network, a model that generates synthetic data for training and anomaly detection."},
+    {"term": "ROC-AUC", "definition": "Receiver Operating Characteristic - Area Under Curve, a metric measuring model classification performance."},
+    {"term": "FAT", "definition": "Fair, Accountable, and Transparent, frameworks ensuring ethical AI implementation in credit scoring."},
+    {"term": "XAI", "definition": "Explainable AI, methods for making AI model decisions interpretable and transparent."},
+    {"term": "PRISMA", "definition": "Preferred Reporting Items for Systematic Reviews and Meta-Analyses, a guideline for systematic review methodology."}
+  ],
+  "citations": [
+    {
+      "author": "Zhao",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep learning architectures like CNNs and RNNs have superior predictive capabilities for handling large, multi-dimensional datasets in credit scoring.",
+      "role": "finding"
+    },
+    {
+      "author": "Fuster",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Machine learning techniques capture non-linear relationships within borrower data that traditional statistical methods cannot address.",
+      "role": "finding"
+    },
+    {
+      "author": "Gambacorta",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Random forests and gradient boosting improve prediction reliability and handle complex data structures in credit scoring.",
+      "role": "finding"
+    },
+    {
+      "author": "Chen",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Hybrid models combining logistic regression with neural networks balance interpretability and predictive power for regulatory compliance.",
+      "role": "methodology"
+    },
+    {
+      "author": "Pietukhov",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep learning models are often perceived as black boxes, making it difficult for regulators to understand decision-making processes.",
+      "role": "context"
+    },
+    {
+      "author": "Guo",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Ensemble methods like random forests maintain high reliability in data-sparse conditions by mitigating overfitting through aggregation.",
+      "role": "finding"
+    },
+    {
+      "author": "Alom",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "CNNs can detect behavioral patterns from transaction histories while RNNs effectively understand time-series data trends in borrower behaviors.",
+      "role": "finding"
+    },
+    {
+      "author": "Bose",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ANNs provide greater predictive accuracy but are often criticized for their black-box nature with limited interpretability.",
+      "role": "critique"
+    },
+    {
+      "author": "Jagtiani",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Traditional statistical methods were limited in handling complex borrower behaviors and non-linear relationships in credit data.",
+      "role": "baseline"
+    },
+    {
+      "author": "Sutton",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Reinforcement learning models operate on reward-based systems, learning optimal credit decisions through iterative feedback on borrower responses.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Reviews the evolution and landscape of credit scoring systems from traditional to AI-driven approaches."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus is on evaluating ML, DL, and hybrid predictive models for credit risk assessment."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Discusses RNNs and LSTMs for analyzing time-series borrower behavior data."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Covers autoencoders and GANs for fraud detection and identifying unusual borrower behaviors."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "medium",
+        "justification": "Describes specific algorithms (autoencoders, VAEs, GANs) used for anomaly detection in credit data."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Addresses privacy concerns with alternative data sources and ethical implications of AI in credit scoring."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses the need for transparent and fair AI models to foster trust in credit scoring systems."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Evaluates model performance using ROC-AUC, F1-score, and precision-recall across diverse credit environments."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Provides comparative analysis of different ML and DL algorithms for credit scoring effectiveness."
+      }
+    ],
+    "contribution_to_field": "This systematic review synthesizes findings from 70 studies to provide a comprehensive evaluation of AI-driven models in credit scoring. It demonstrates that ensemble methods like random forests and gradient boosting outperform traditional statistical approaches by capturing non-linear relationships in borrower data. The review highlights how deep learning models, particularly CNNs and RNNs, extend credit scoring to unstructured data sources, supporting financial inclusion for individuals without traditional credit histories. It identifies critical gaps including model interpretability, ethical bias, and economic resilience that need addressing for responsible AI deployment in credit scoring.",
+    "directly_justifies": [
+      "Ensemble models like random forests and gradient boosting effectively capture complex non-linear relationships in borrower data.",
+      "Deep learning models extend credit scoring to unstructured data sources like social media and transaction histories.",
+      "Hybrid models combining logistic regression with neural networks balance interpretability and predictive power.",
+      "Stacking and blending techniques improve prediction accuracy across diverse borrower demographics.",
+      "AI models risk perpetuating biases from skewed training data without fairness-aware frameworks."
+    ],
+    "limits": [
+      "Limited empirical evidence supporting hybrid models' efficacy in meeting regulatory demands for transparency.",
+      "Insufficient testing of model resilience across varying economic conditions and market fluctuations.",
+      "Lack of standardized frameworks for ethical AI implementation in real-world credit scoring applications."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Domains 6.A and 12.A/12.B were flagged as high relevance since the paper's core contribution is evaluating predictive models and their performance metrics. Domains 4.A, 6.B, 8.A, 8.B, 10.A, and 10.B received medium relevance as the paper discusses credit scoring system landscapes, time-series analysis, anomaly detection algorithms, and data privacy/trust considerations. Domains 1 (Filipino Young Professionals), 2 (Culturally Specific Financial Practices), 3 (Expense Categorization), 5 (Financial Behavioral Profiles), 7 (Budgeting Strategies), 9 (Mobile-First Design), 11 (Engagement Dynamics), 13 (Savings/Debt Management), and 14 (Synthetic Data/ML Deployment) were considered and rejected as the paper does not address personal budget management, Filipino demographics, or mobile/offline design. The paper is a domain-agnostic systematic review focused on credit scoring model evaluation."
+  },
+  "limitations": [
+    "Limited empirical evidence on the efficacy of hybrid models in meeting regulatory demands for transparency. [unacknowledged]",
+    "Insufficient testing of model resilience across varying economic conditions and market fluctuations.",
+    "Lack of standardized frameworks for ethical AI implementation in real-world credit scoring applications. [unacknowledged]",
+    "Review limited to studies published between 2010-2024, potentially missing earlier foundational work."
+  ],
+  "remember_this": [
+    "Ensemble models like random forests and gradient boosting outperform traditional statistical methods in credit scoring.",
+    "Deep learning models extend credit risk assessment to unstructured data sources supporting financial inclusion.",
+    "Hybrid models combining logistic regression with neural networks balance accuracy and interpretability.",
+    "Autoencoders and GANs provide advanced anomaly detection for identifying fraud in credit data.",
+    "Fairness, transparency, and economic resilience remain critical unresolved challenges in AI credit scoring."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Bari et al_marked.md",
+      "converted_at": "2026-07-21T05:35:19Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

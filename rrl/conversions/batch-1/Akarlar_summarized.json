@@ -1,1 +1,229 @@
-{}
+{
+  "paper_id": "10.48550/arXiv.2402.12733",
+  "designation": "international-algorithm-specific",
+  "title": "Beyond Prompt Engineering: Neuro-Symbolic-Causal Architecture for Robust Multi-Objective AI Agents",
+  "authors": "Akarlar, G.A.",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "8.B",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "Chimera, a neuro-symbolic-causal architecture integrating LLM reasoning with formally verified symbolic constraints and causal inference, achieves 130-198% higher profit than LLM-only agents while maintaining zero constraint violations.",
+  "problem_and_motivation": "LLM-based autonomous agents exhibit catastrophic brittleness when deployed in high-stakes multi-objective decision-making, producing wildly different outcomes depending solely on prompt framing. Existing LLM agent frameworks lack hard safety guarantees and cannot anticipate long-term causal consequences of decisions, leading to either catastrophic failures or unsustainable outcomes that destroy brand trust.",
+  "approach": [
+    "Introduced Chimera, a neuro-symbolic-causal architecture integrating GPT-4o for strategic reasoning, a TLA+ formally verified symbolic constraint engine, and an EconML CausalForestDML inference module.",
+    "Built EcommerceSimulatorV5, a discrete-event simulator modeling price elasticity, brand trust dynamics, advertising returns, and seasonal demand over 52-week business cycles.",
+    "Compared three architectures: LLM-only, LLM+Guardian (symbolic constraints only), and Chimera (full integration) across neutral and biased organizational prompt conditions.",
+    "Applied TLA+ formal verification to prove zero constraint violations across 174 million explored states.",
+    "Conducted trust multiplier sensitivity analysis across five organizational risk preference settings ranging from aggressive to conservative.",
+    "Used identical GPT-4o API configurations across all agents, isolating architectural differences from foundation model capabilities."
+  ],
+  "findings": [
+    "num: Chimera achieves 130-198% higher profit than LLM-only baselines across all scenarios.",
+    "num: LLM-only agents fail catastrophically with -$99K total loss under volume-focused organizational bias.",
+    "num: Chimera delivers $1.52M and $1.96M profit in volume and margin scenarios respectively.",
+    "num: Zero constraint violations across 174,268,417 states verified by TLA+ model checker.",
+    "num: Chimera builds brand trust to +10.8% under margin-focused bias while LLM-only destroys trust by -48.6%.",
+    "num: LLM+Guardian achieves only 43-87% of Chimera's profit despite preventing catastrophic failures.",
+    "num: Chimera Sharpe ratios reach 6.18-8.272 compared to LLM-only's 2.47 under neutral conditions.",
+    "Chimera consistently delivers highest returns across all organizational bias conditions while improving brand trust.",
+    "Architectural design determines agent reliability more than prompt engineering when comparing across identical task definitions.",
+    "Causal engine enables self-correction where LLM overrides biased instructions based on counterfactual predictions."
+  ],
+  "key_figures_tables": [
+    "Figure 1: LLM-only agent failures under organizational biases → Same agent architecture produces opposite failure modes depending solely on prompt framing.",
+    "Figure 2: TLA+ verification results → 0 invariant violations across 174M states confirms mathematical safety guarantees.",
+    "Figure 3: Chimera architecture overview → Three components with well-defined interfaces enable independent verification and testing.",
+    "Figure 5: Neutral benchmark cumulative profit → Chimera achieves $1.89M vs. $1.69M (LLM+Guardian) and $1.34M (LLM-only).",
+    "Figure 6: Risk-return profile → Chimera occupies optimal high-return low-risk quadrant with Sharpe ratio 6.18.",
+    "Figure 10: Three-agent architecture comparison under organizational biases → Chimera maintains consistent performance across all conditions.",
+    "Figure 11: Cross-strategy robustness analysis → LLM-only shows catastrophic brittleness while Chimera proves architecturally robust.",
+    "Table 1: Comprehensive performance summary → Chimera achieves highest profit and trust across all conditions with zero violations."
+  ],
+  "key_equations": [
+    {
+      "equation": "\\tau(a, s) = E[Y | do(A = a), S = s] - E[Y | do(A = a_0), S = s]",
+      "explanation": "CATE estimation where do-operator represents causal intervention rather than correlation."
+    },
+    {
+      "equation": "Q_t = D_{base} \\times f_{price}(p_t) \\times f_{trust}(\\tau_t) \\times f_{ad}(a_t) \\times f_{season}(t)",
+      "explanation": "Multiplicative demand model combining price elasticity, trust, advertising, and seasonality factors."
+    },
+    {
+      "equation": "\\tau_{t+1} = \\tau_t + \\eta \\times \\{+0.02 \\text{ if price decreases or stable}; -0.1 \\times \\Delta\\% \\text{ if price increases}\\}",
+      "explanation": "Asymmetric brand trust dynamics where price increases erode trust faster than decreases build it."
+    },
+    {
+      "equation": "\\pi_t = (p_t - c) \\times Q_t - fixed\\_cost - a_t",
+      "explanation": "Weekly profit computation combining unit margin, demand volume, fixed costs, and advertising spend."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Neuro-Symbolic-Causal Architecture",
+      "definition": "A three-component system integrating neural strategic reasoning, formally verified symbolic constraint enforcement, and causal counterfactual prediction."
+    },
+    {
+      "term": "Symbolic Constraint Engine",
+      "definition": "A formally verified Guardian module that validates and repairs proposed actions against business logic constraints using TLA+ specifications."
+    },
+    {
+      "term": "Causal Inference",
+      "definition": "Counterfactual reasoning using interventional do-calculus to predict long-term consequences of actions rather than relying on correlational predictions."
+    },
+    {
+      "term": "TLA+",
+      "definition": "Temporal Logic of Actions, a formal specification language used to model-check concurrent systems and prove safety invariants across all possible states."
+    },
+    {
+      "term": "CATE",
+      "definition": "Conditional Average Treatment Effect, the expected difference in outcomes between treated and untreated actions given a specific state."
+    },
+    {
+      "term": "Sharpe Ratio",
+      "definition": "A risk-adjusted performance metric calculated as mean profit divided by standard deviation of weekly returns."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Pearl",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Pearl's do-calculus provides a mathematical framework for reasoning about interventions rather than correlations in causal inference.",
+      "role": "methodology"
+    },
+    {
+      "author": "Yao",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ReAct framework interleaves reasoning and acting through prompting, demonstrating tool-augmented LLM capabilities for complex tasks.",
+      "role": "baseline"
+    },
+    {
+      "author": "Lamport",
+      "year": 2002,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "TLA+ provides formal specification and model checking for describing and verifying concurrent systems with exhaustive state space exploration.",
+      "role": "methodology"
+    },
+    {
+      "author": "Oprescu",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Orthogonal random forests combine random forests with debiased machine learning for estimating heterogeneous treatment effects.",
+      "role": "methodology"
+    },
+    {
+      "author": "Garcez",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Neurosymbolic AI represents the third wave of AI, seeking to combine neural pattern recognition with symbolic logical reasoning.",
+      "role": "context"
+    },
+    {
+      "author": "Bai",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Constitutional AI and RLHF represent soft constraint approaches to agent safety that lack formal verification guarantees.",
+      "role": "baseline"
+    },
+    {
+      "author": "Eiband",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The mere presence of explanations reinforces non-experts' trust using placebic explanations, demonstrating over-reliance risks.",
+      "role": "finding"
+    },
+    {
+      "author": "Athey",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Policy learning with observational data enables estimation of treatment effects for policy optimization without randomized experiments.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Evaluates LLM-based agent architectures applicable to financial decision-making including pricing and portfolio management."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies fundamental limitations of LLM-only agents including lack of safety guarantees and counterfactual reasoning capabilities."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "low",
+        "justification": "Symbolic constraint engine prevents anomalous decisions (prices below cost, trust-destroying actions) analogous to anomaly detection."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Provides comprehensive multi-dimensional evaluation including profitability, stability, trust management, safety, and robustness metrics."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Benchmarks architectural components (neural, symbolic, causal) across controlled scenarios with isolation of variable effects."
+      }
+    ],
+    "contribution_to_field": "The paper introduces the first neuro-symbolic-causal framework specifically designed for multi-objective decision-making under organizational constraints, with formal TLA+ safety verification. It provides empirical evidence across 156 weeks of simulated operation that architectural design determines agent reliability more than prompt engineering, with Chimera achieving 130-198% higher profit than LLM-only baselines while maintaining zero constraint violations. The work establishes that autonomous agents in high-stakes domains require complementary systems providing verifiable constraint enforcement and counterfactual prediction, not merely improved prompting.",
+    "directly_justifies": [
+      "Chimera achieves 130-198% higher profit than LLM-only baselines while maintaining zero constraint violations.",
+      "TLA+ formal verification proves zero invariant violations across 174,268,417 explored states.",
+      "LLM-only agents produce catastrophic failures in 8-11% of decisions when operating without architectural guardrails.",
+      "LLM+Guardian prevents disasters but achieves only 43-87% of Chimera's profit due to lack of causal foresight.",
+      "Causal engine enables self-correction where agent overrides biased organizational instructions based on counterfactual predictions."
+    ],
+    "limits": [
+      "Evaluation uses a single e-commerce simulation domain with parameterized dynamics rather than real market data.",
+      "Results are based on a single random seed trial without statistical confidence intervals across multiple runs.",
+      "Causal engine may suffer cold-start problems when facing genuinely novel scenarios outside training distribution.",
+      "Computational overhead of 3-5x decision time compared to LLM-only agents may prohibit latency-critical applications.",
+      "Multi-agent competitive dynamics and equilibrium properties remain unexplored in this work."
+    ]
+  },
+  "limitations": [
+    "Evaluation is limited to a single e-commerce simulation domain with parameterized dynamics rather than ground truth from actual market data.",
+    "Results represent a single trial from the simulator's distribution using a fixed random seed, without statistical confidence intervals across multiple runs.",
+    "Causal engine relies on a pre-trained model and may suffer cold-start problems when facing genuinely novel scenarios outside training distribution.",
+    "Computational overhead of approximately 3-5x decision time compared to LLM-only agents may be prohibitive for latency-critical applications.",
+    "Multi-agent competitive dynamics and equilibrium properties remain unexplored, limiting claims about deployment in competitive market settings."
+  ],
+  "remember_this": [
+    "Architectural design determines agent reliability more than prompt engineering in high-stakes decision-making.",
+    "Chimera achieves 130-198% higher profit than LLM-only agents while maintaining zero constraint violations.",
+    "TLA+ formal verification proves safety across 174 million states, providing mathematical guarantees.",
+    "LLM-only agents fail catastrophically under organizational biases, losing $99K under volume-focused prompts.",
+    "Causal engine enables self-correction where agent overrides biased instructions based on counterfactual predictions."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T18:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Akarlar_marked.md",
+      "converted_at": "2026-07-21T05:18:14Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

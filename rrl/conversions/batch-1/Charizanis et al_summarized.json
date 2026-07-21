@@ -1,1 +1,155 @@
-{}
+{
+  "paper_id": "10.3390/app15126508",
+  "designation": "international",
+  "title": "Data-Driven Decision Support in SaaS Cloud-Based Service Models",
+  "authors": "Charizanis, G.; Mavridou, E.; Vrochidou, E.; Kalampokas, T.; Papakostas, G.A.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "odin_topics": ["11.A", "11.B", "12.B"],
+  "tldr": "This survey reviews data-driven decision support systems in SaaS, focusing on churn prediction, user engagement, and retention using machine learning methods.",
+  "problem_and_motivation": "SaaS businesses face high customer churn rates that threaten their subscription-based revenue models. Maintaining a regular customer base and keeping users engaged is crucial for SaaS survival. Existing reviews lack comprehensive coverage of data-driven approaches for SaaS decision support beyond single-task focus.",
+  "approach": [
+    "Conducted systematic literature review following PRISMA-ScR methodology.",
+    "Analyzed 28 papers from Scopus and Google Scholar databases covering 2014-2025.",
+    "Categorized research by main focus: churn prediction, user engagement, retention, and segmentation.",
+    "Examined data sources including usage behavior, transactional data, and customer profiles.",
+    "Evaluated machine learning methods: Random Forest, XGBoost, neural networks, and hybrid models.",
+    "Assessed how results are presented to SaaS providers for decision-making."
+  ],
+  "findings": [
+    "num: 53.57% of reviewed papers focused on churn prediction.",
+    "Random Forest was the most widely used ML algorithm across studies.",
+    "num: RF achieved 98.8% accuracy and 0.997 AUC in best-performing study.",
+    "num: XGBoost achieved 98.8% AUC in mobile game churn prediction.",
+    "Hybrid models combining multiple algorithms often outperformed single methods.",
+    "Usage behavior data was the most common data source category.",
+    "Customer lifetime value prediction emerged as important application area.",
+    "Free trial optimization can increase subscription rates by 6.8%."
+  ],
+  "key_figures_tables": [
+    "Figure 1: PRISMA flow diagram → Shows systematic review process from 426 to 28 papers.",
+    "Figure 2: Main focus of reviewed papers → 53.57% focused on churn prediction.",
+    "Figure 3: Machine learning methods proposed → Random Forest most frequently used.",
+    "Table 1: Types of data sources used → Usage behavior most common category.",
+    "Table 2: Machine learning methods and performance → Comprehensive comparison of algorithms."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "SaaS",
+      "definition": "Software as a Service, cloud-based software delivery model."
+    },
+    {
+      "term": "Churn Prediction",
+      "definition": "Predicting if a user is about to cancel their subscription."
+    },
+    {
+      "term": "CLV",
+      "definition": "Customer Lifetime Value, predicts future revenue from customers."
+    },
+    {
+      "term": "AUC",
+      "definition": "Area Under the Curve, performance metric for classification models."
+    },
+    {
+      "term": "PRISMA-ScR",
+      "definition": "Preferred Reporting Items for Systematic reviews and Meta-Analyses extension for Scoping Reviews."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Charizanis",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "53.57% of reviewed papers focused on churn prediction in SaaS applications.",
+      "role": "finding"
+    },
+    {
+      "author": "Charizanis",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Random Forest was the most widely used machine learning algorithm across studies.",
+      "role": "finding"
+    },
+    {
+      "author": "Charizanis",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Hybrid models combining multiple algorithms often outperformed single methods.",
+      "role": "finding"
+    },
+    {
+      "author": "Charizanis",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Usage behavior data was the most common data source category for churn prediction.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "medium",
+        "justification": "Reviews engagement dynamics in SaaS applications, providing context for personal finance app engagement."
+      },
+      {
+        "code": "11.B",
+        "name": "Retention Mechanisms and Engagement Design",
+        "relevance": "high",
+        "justification": "Focuses on user retention mechanisms, churn prediction, and engagement strategies in SaaS."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Evaluates and compares machine learning algorithms for churn prediction and user segmentation."
+      }
+    ],
+    "contribution_to_field": "This survey provides comprehensive review of data-driven decision support systems in SaaS cloud-based service models. It identifies churn prediction as the primary focus (53.57% of papers) and evaluates machine learning methods including Random Forest, XGBoost, and hybrid models. The paper examines various data sources including usage behavior, transactional data, and customer profiles. It highlights the importance of user retention and engagement for SaaS business sustainability. The review offers insights applicable to personal finance applications regarding user engagement and retention strategies.",
+    "directly_justifies": [
+      "53.57% of reviewed papers focused on churn prediction in SaaS applications.",
+      "Random Forest was the most widely used machine learning algorithm across studies.",
+      "Hybrid models combining multiple algorithms often outperformed single methods.",
+      "Usage behavior data was the most common data source category.",
+      "Free trial optimization can increase subscription rates by 6.8%."
+    ],
+    "limits": [
+      "Review limited to SaaS applications, not specifically personal finance systems.",
+      "Database coverage limited to Scopus and Google Scholar.",
+      "Papers from 2014-2025 may not capture very recent developments."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all 14 topic domains revealed primary relevance to Domain 11 (Engagement Dynamics in Personal Finance Applications) with high relevance for topic 11.B (Retention Mechanisms and Engagement Design) given the paper's focus on churn prediction and user retention. Topic 11.A (Engagement Dynamics) received medium relevance as the paper discusses engagement strategies in SaaS. Topic 12.B (Evaluation of Algorithmic Modules) received medium relevance due to comprehensive evaluation of ML algorithms. Domains 1-10 were considered and rejected as the paper does not address Filipino demographics, financial behavior, expense categorization, predictive modeling in personal finance, budgeting strategies, anomaly detection, mobile design, or data privacy. Domain 13 (Savings/Debt Management) and Domain 14 (Synthetic Data) were also rejected. Overall, the paper provides contextual insights about user engagement and retention in SaaS applications."
+  },
+  "limitations": [
+    "Review limited to SaaS applications, not specifically personal finance systems.",
+    "Database coverage limited to Scopus and Google Scholar.",
+    "Papers from 2014-2025 may not capture very recent developments."
+  ],
+  "remember_this": [
+    "53.57% of reviewed papers focused on churn prediction in SaaS.",
+    "Random Forest was the most widely used machine learning algorithm.",
+    "num: RF achieved 98.8% accuracy and 0.997 AUC in best-performing study.",
+    "Hybrid models combining multiple algorithms often outperformed single methods.",
+    "Usage behavior data was the most common data source category."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T10:40:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Charizanis et al_marked.md",
+      "converted_at": "2026-07-21T05:48:01Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

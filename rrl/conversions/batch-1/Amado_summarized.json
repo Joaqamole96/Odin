@@ -1,1 +1,148 @@
-{}
+{
+  "paper_id": "10.63498/ijabms2",
+  "designation": "local",
+  "title": "The plight of teachers on the twice-a-month salary release: Financial literacy and survival",
+  "authors": "Amado, M.A.",
+  "year": 2026,
+  "venue": "IJABMS",
+  "odin_topics": ["2.B", "7.A"],
+  "tldr": "Twice-a-month salary release improves teachers short-term financial planning but financial stress persists, with financial literacy as crucial enabler of resilience.",
+  "problem_and_motivation": "Teachers experience chronic financial instability despite being fundamental pillars of social infrastructure. The bi-monthly salary cycle creates structural economic survival behaviors but lacks explicit analysis of how it functions as a determinant of financial management. Mid-month liquidity constraints may render conventional budgeting strategies functionally inaccessible for educators.",
+  "approach": [
+    "Descriptive survey design involving 115 teachers from Claveria North District during SY 2023-2024.",
+    "Validated structured questionnaire with Cronbach's alpha of 0.88 measuring financial well-being and management.",
+    "5-point Likert scale used to assess financial literacy levels and survival strategies.",
+    "Weighted mean and percentage distribution analyzed the data.",
+    "Simple random sampling technique employed with 95% confidence level."
+  ],
+  "findings": [
+    "num: Overall weighted mean of 4.18 indicates teachers perceive twice-a-month salary release as beneficial for financial well-being.",
+    "num: Financial management practices overall mean 4.13 showing proactive coping strategies.",
+    "num: Prioritizing essential expenses highest at mean 4.46 demonstrating financial prioritization.",
+    "num: Financial literacy overall mean 4.03 indicating solid foundation among teachers.",
+    "num: Teachers with higher financial literacy better equipped to handle financial challenges (mean 4.37).",
+    "num: Financial survival strategies overall mean 4.07 showing strong agreement on effectiveness.",
+    "num: Perceived advantages of twice-a-month release mean 4.23 outweighing disadvantages mean 3.50.",
+    "Financial stress persists between pay periods despite segmented salary release system.",
+    "Teachers employ adaptive financial behaviors including budgeting and supplementary income.",
+    "Bi-monthly salary release helps spread expenses but creates timing-related challenges."
+  ],
+  "key_figures_tables": [
+    "Table 1: Impact on Financial Well-Being → Teachers agree twice-a-month release supports financial stability.",
+    "Table 2: Financial Management Practices → Proactive budgeting and expense prioritization employed.",
+    "Table 4: Financial Literacy Influence → Higher literacy improves financial management under salary system.",
+    "Table 5: Survival Strategies → Teachers use budgeting and supplementary income between releases."
+  ],
+  "key_equations": [
+    {
+      "equation": "M_n = \\frac{\\sum fx}{\\sum f} = \\frac{f_1x_1 + f_2x_2 + f_3x_3 + ... + f_nx_n}{f_1 + f_2 + f_3 + ... + f_n}",
+      "explanation": "Weighted mean formula used to calculate average responses across Likert scale items."
+    },
+    {
+      "equation": "Percentage (\\%) = \\frac{f}{N} \\times 100",
+      "explanation": "Percentage formula for analyzing frequency distribution of responses."
+    }
+  ],
+  "definitions": [
+    {"term": "Twice-a-Month Salary Release", "definition": "Payment schedule where teachers receive salaries on 15th and 30th of each month."},
+    {"term": "Financial Literacy", "definition": "Knowledge and skills required for managing debt and planning for long-term stability."},
+    {"term": "Financial Resilience", "definition": "Ability to withstand and recover from financial shocks through adaptive strategies."},
+    {"term": "Survival Strategies", "definition": "Practical measures teachers employ to navigate financial challenges between salary releases."}
+  ],
+  "citations": [
+    {
+      "author": "Lusardi",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is the essential toolkit required for managing debt and planning for long-term stability.",
+      "role": "methodology"
+    },
+    {
+      "author": "Thaler",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Nudge theory recognizes that psychological biases often lead to irrational financial choices.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lazarus",
+      "year": 1984,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Stress and coping theory explains how individuals navigate hardship through specific coping mechanisms.",
+      "role": "methodology"
+    },
+    {
+      "author": "Casingal",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Public school teachers face widespread dissatisfaction with income levels and resort to high-interest loans.",
+      "role": "context"
+    },
+    {
+      "author": "Matey",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial stress leads to diminished classroom effectiveness as teachers divert mental energy to survival.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "2.B",
+        "name": "Seasonal and Cyclical Spending Patterns",
+        "relevance": "high",
+        "justification": "Examines bi-monthly salary release cycle as structural determinant of financial behaviors."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Analyzes budgeting practices and financial management strategies employed by teachers."
+      }
+    ],
+    "contribution_to_field": "The study provides empirical evidence on how salary release frequency affects financial well-being of educators in the Philippines. It demonstrates that while twice-a-month salary release improves short-term financial planning, financial stress persists between pay periods. The research identifies financial literacy as crucial enabler of effective financial management under segmented salary systems. The study contributes localized data on teacher financial survival strategies, filling a gap in Philippine educational workforce literature.",
+    "directly_justifies": [
+      "Twice-a-month salary release perceived as beneficial for financial well-being (mean 4.18).",
+      "Financial literacy significantly influences ability to manage finances under salary system (mean 4.21).",
+      "Teachers with higher financial literacy better equipped to handle financial challenges (mean 4.37).",
+      "Financial stress persists between pay periods despite segmented salary release.",
+      "Proactive financial management practices employed by teachers (mean 4.13)."
+    ],
+    "limits": [
+      "Study limited to Claveria North District teachers only.",
+      "Cross-sectional design cannot establish causal relationships.",
+      "Self-reported survey data may introduce response bias.",
+      "Sample size of 115 represents subset of 162 total teachers."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 2.B (Seasonal and Cyclical Spending Patterns) flagged as high relevance due to examination of bi-monthly salary release cycle. Domain 7.A (Budgeting Strategies as Domain Knowledge) assigned medium relevance for analysis of budgeting practices. All other domains (1, 3-6, 8-14) rejected as paper focuses on teacher financial well-being rather than personal finance systems, demographic profiles, or technical components."
+  },
+  "limitations": [
+    "Study limited to Claveria North District teachers only.",
+    "Cross-sectional design cannot establish causal relationships.",
+    "Self-reported survey data may introduce response bias.",
+    "Sample of 115 represents only 71% of total teacher population.",
+    "Longitudinal effects of salary release system not examined."
+  ],
+  "remember_this": [
+    "Twice-a-month salary release improves short-term financial planning but stress persists.",
+    "Financial literacy is crucial enabler of effective financial management for teachers.",
+    "Teachers employ proactive strategies including budgeting and supplementary income.",
+    "Prioritizing essential expenses is highest-rated financial management practice.",
+    "Financial stress remains between pay periods despite segmented salary system."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T22:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Amado_marked.md",
+      "converted_at": "2026-07-21T05:23:07Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

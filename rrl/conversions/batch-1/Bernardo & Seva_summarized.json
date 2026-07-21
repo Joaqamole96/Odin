@@ -1,1 +1,112 @@
-{}
+{
+  "paper_id": "10.3390/informatics10010032",
+  "designation": "local",
+  "title": "Affective Design Analysis of Explainable Artificial Intelligence (XAI): A User-Centric Perspective",
+  "authors": "Bernardo, E.; Seva, R.",
+  "year": 2023,
+  "venue": "Informatics",
+  "odin_topics": ["None"],
+  "tldr": "Affective design components in XAI influence end-user trust via emotion-based calibration routes, complementing cognitive pathways.",
+  "problem_and_motivation": "Current XAI techniques are developer-centric and rely on cognitive trust calibration, leaving end-user affective responses underexplored. This gap threatens AI adoption since trust is the prerequisite for reliance. No prior study has empirically tested whether XAI can calibrate trust through the affective route.",
+  "approach": [
+    "Pre-study survey of 312 AI users identified explanation form, communication style, and supplementary information as top design priorities.",
+    "Between-subject experiment with 202 participants tested 64 design combinations of XAI configurations over two days.",
+    "Structural equation modeling with 2000 bootstrap runs validated the XAITC model's causal paths.",
+    "Mediation, direct effect, and multi-group moderation analyses were performed using AMOS version 24.",
+    "Post-experiment interviews with 22% of participants provided qualitative triangulation of findings."
+  ],
+  "findings": [
+    "Example-based explanation increases interestingly surprised and trusting emotions and perceived usefulness.",
+    "Robotic communication style significantly increases fearfully dismayed and anxiously suspicious emotions.",
+    "Presence of supplementary information decreases fearfully dismayed emotions.",
+    "Interestingly surprised and trusting emotions positively mediate trust, while fearfully dismayed negatively mediates it.",
+    "AI anxiety moderates the fearfully dismayed to perceived trust path (beta high = -0.059 vs beta low = 0.021).",
+    "AI reliability moderates trusting to perceived trust (beta low = 0.223 vs beta high = 0.064).",
+    "Experience moderates trusting to perceived trust (beta short = 0.184 vs beta long = 0.095).",
+    "Trust to reliance path is significant (Std.Est. = 0.439, p < 0.001).",
+    "Perceived usefulness to perceived trust path is significant (Std.Est. = 0.225, p = 0.007)."
+  ],
+  "key_figures_tables": [
+    "Table 1: Experimental design configurations → 24 design combinations across three XAI attributes.",
+    "Table 8: Mediation effect analysis → Affective and cognitive routes both mediate trust calibration.",
+    "Table 9: Direct effect analysis → 12 of 21 hypothesized direct relationships supported.",
+    "Table 12: Moderation difference effects → AI anxiety, incidental emotion, reliability, experience moderate key paths.",
+    "Table 13: Design element effect summary → Example form is the most positively impactful design choice."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "XAI", "definition": "Explainable Artificial Intelligence — techniques that provide human-level insights into AI decision-making."},
+    {"term": "XAITC", "definition": "XAI Trust Calibration Model — the proposed structural model for end-user trust calibration via affective and cognitive routes."},
+    {"term": "XES", "definition": "XAI Emotion Set — a set of emotion groups used to measure affective responses to XAI."},
+    {"term": "SEM", "definition": "Structural Equation Modeling — a statistical technique for testing causal relationships among latent variables."},
+    {"term": "CFA", "definition": "Confirmatory Factor Analysis — a method to validate the structure of measurement instruments."},
+    {"term": "EFA", "definition": "Exploratory Factor Analysis — a method to identify underlying factor structure in data."},
+    {"term": "ELM", "definition": "Elaboration Likelihood Model — a theory of persuasion distinguishing central and peripheral processing routes."},
+    {"term": "AVE", "definition": "Average Variance Explained — a measure of convergent validity for latent constructs."}
+  ],
+  "citations": [
+    {"author": "Lee", "year": 2004, "page": 0, "paragraph": 0, "claim": "Identified three trust calibration routes: rational, societal belief, and emotional engagement.", "role": "methodology"},
+    {"author": "Madsen", "year": 2000, "page": 0, "paragraph": 0, "claim": "Affective processing calibrates trust more rapidly, unconsciously, and with fewer cognitive resources.", "role": "context"},
+    {"author": "Petty", "year": 1986, "page": 0, "paragraph": 0, "claim": "ELM proposes central and peripheral persuasion routes depending on elaboration level.", "role": "methodology"},
+    {"author": "Norman", "year": 2004, "page": 0, "paragraph": 0, "claim": "Three levels of processing (visceral, behavioral, reflective) frame affective design.", "role": "context"},
+    {"author": "Jordan", "year": 2000, "page": 0, "paragraph": 0, "claim": "Four Pleasures framework categorizes product affect into physio-, socio-, psycho-, and ideopleasure.", "role": "context"},
+    {"author": "Khalid", "year": 2004, "page": 0, "paragraph": 0, "claim": "Framework for Affective Customer Needs identifies holistic attributes, styling, and functional design as preference categories.", "role": "context"},
+    {"author": "Lowry", "year": 2014, "page": 0, "paragraph": 0, "claim": "Two-stage SEM methodology for covariance-based optimization in behavioral research.", "role": "methodology"},
+    {"author": "Bernardo", "year": 2022, "page": 0, "paragraph": 0, "claim": "XAI Emotion Set classifies emotions into four groups for measuring XAI affective responses.", "role": "methodology"},
+    {"author": "Phillips", "year": 2013, "page": 0, "paragraph": 0, "claim": "Users with positive moods are more susceptible to trusting AI recommendations than those with negative moods.", "role": "finding"},
+    {"author": "Gompei", "year": 2018, "page": 0, "paragraph": 0, "claim": "Trust toward utility information from social robots is developed via the affective route, with feeling degree directly correlated to trust.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Study investigates trust calibration mechanisms for XAI which are applicable to financial AI systems."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "contextual",
+        "justification": "Affective design principles could inform engagement in finance apps, though not directly studied."
+      }
+    ],
+    "contribution_to_field": "This study demonstrates that XAI calibrates end-user trust through both cognitive and affective routes, challenging the prevailing assumption that cognitive interpretability alone drives trust. It introduces the XAITC model integrating emotional design with trust pathways, and provides empirical evidence that specific design choices (explanation form, communication style, supplementary information) differentially affect emotional states that mediate trust. The identification of AI anxiety, incidental emotion, AI reliability, and experience as significant moderators establishes that XAI effectiveness is context-dependent, offering a foundation for context-aware XAI design across domains.",
+    "directly_justifies": [
+      "Affective processing is a viable trust calibration route for XAI alongside cognitive processing.",
+      "Explanation form, communication style, and supplementary information are the design elements end-users prioritize in XAI.",
+      "AI anxiety and incidental emotions significantly moderate the trust calibration process.",
+      "The XAITC model integrates affective and cognitive paths for end-user trust calibration.",
+      "Design choices in XAI can be leveraged to target specific emotional states that influence trust."
+    ],
+    "limits": [
+      "Study limited to visual imagery XAI type; other types (tree diagrams, textual) untested.",
+      "Single use-context (image recognition) may not generalize to other AI domains.",
+      "Experience moderation tested only over two days; longer timeframes recommended.",
+      "Cross-demographic comparisons across AI adoption levels not conducted."
+    ],
+    "topic_mapping_rationale": "All topic domains in the taxonomy were systematically scanned. The paper's core contribution — XAI trust calibration via affective and cognitive routes — does not map cleanly to any primary topic domain in the personal finance-focused taxonomy. Domain 10 (Data Privacy and Security, User Trust) was flagged as contextual since the trust mechanisms studied are domain-general and could apply to financial AI. Domain 11 (Engagement Dynamics) was flagged as contextual since affective design could inform engagement in finance apps. Domains 1-9 and 12-14 were considered and rejected as the paper does not address Filipino demographics, financial behavior, expense categorization, personal finance systems, budgeting, anomaly detection, mobile design, savings/debt management, or ML deployment. The paper is fundamentally an HCI and XAI study with indirect relevance to personal finance system design."
+  },
+  "limitations": [
+    "Limited to visual imagery XAI type; other explanation types untested.",
+    "Single use-context (image recognition AI) limits generalizability.",
+    "Experience moderation tested only over two days rather than a longer realistic timeframe.",
+    "Cross-demographic view across AI adoption levels not conducted."
+  ],
+  "remember_this": [
+    "XAI trust calibration occurs through both cognitive and affective routes, not cognitive alone.",
+    "Example-based explanations increase positively-valenced emotions and perceived usefulness in XAI.",
+    "AI anxiety and incidental emotions significantly moderate the trust calibration process.",
+    "Design of XAI explanations matters as much as the information they carry for end-users.",
+    "Low AI reliability and short experience amplify emotional influence on trust."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Bernardo & Seva_marked.md",
+      "converted_at": "2026-07-21T05:37:50Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

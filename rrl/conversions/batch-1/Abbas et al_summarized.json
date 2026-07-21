@@ -1,1 +1,149 @@
-{}
+{
+  "paper_id": "10.1007/s42979-025-04214-8",
+  "designation": "international-algorithm-specific",
+  "title": "Machine Learning-Based Analysis of Technology Acceptance in FinTech: A Behavioral Study Using Digital Wallet Data",
+  "authors": "Abbas, S.K.; Hussain, M.; Rimal, Y.N.",
+  "year": 2025,
+  "venue": "SN Computer Science",
+  "odin_topics": ["1.C", "4.A", "4.B", "5.A", "5.C", "6.A", "11.A", "12.B"],
+  "tldr": "Four machine learning classifiers were applied to 7,000 digital wallet users to predict technology acceptance from behavioral data, with XGBoost outperforming linear models but achieving only modest predictive power.",
+  "problem_and_motivation": "Traditional technology acceptance models rely on survey-based perceptual data, which suffers from self-reporting bias and fails to capture real-world engagement patterns. There is limited empirical evidence on how actual behavioral and transactional data map onto technology acceptance in FinTech. This gap motivates the use of machine learning to classify users based on behavioral proxies rather than survey constructs.",
+  "approach": [
+    "Used the Digital Wallet LTV Dataset from Kaggle containing 7,000 user-level records with 20 features including demographic, transactional, and behavioral variables.",
+    "Operationalized technology acceptance as daily app usage frequency, classifying users into high-acceptance (daily) and low-acceptance (weekly/monthly) categories.",
+    "Applied Logistic Regression, SVM, Random Forest, and XGBoost classifiers with 80/20 stratified train-test split and grid search hyperparameter optimization.",
+    "Addressed class imbalance (33.5% high-acceptance) using SMOTE oversampling during training.",
+    "Evaluated models using accuracy, ROC AUC, precision, recall, F1-score, and confusion matrices with SHAP-based feature importance analysis."
+  ],
+  "findings": [
+    "All four models achieved similar overall accuracy of approximately 66.5%.",
+    "num: XGBoost achieved highest ROC AUC of 0.519, followed by Logistic Regression at 0.514.",
+    "Logistic Regression and SVM completely failed to classify high-acceptance users, yielding zero precision, recall, and F1-score for the minority class.",
+    "XGBoost achieved the highest F1-score of 0.22 for the high-acceptance class before SMOTE application.",
+    "num: After SMOTE, XGBoost F1-score improved from 0.22 to 0.36, and Random Forest improved to 0.28.",
+    "num: After SMOTE, XGBoost recall rose from 0.16 to 0.27 for the high-acceptance class.",
+    "Customer Lifetime Value, Customer Satisfaction Score, and Issue Resolution Time consistently ranked as the most important features across both Random Forest and XGBoost.",
+    "PCA revealed the first three components capture only 35.6% of total variance, indicating distributed signal across multiple dimensions."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Precision-Recall and ROC Curves for four classifiers → Ensemble models marginally outperform linear classifiers in identifying high-acceptance users.",
+    "Figure 2: PCA results showing 3D projection, explained variance, and feature loadings → LTV, Total Spent, and Satisfaction Score dominate PC1.",
+    "Figure 3: Model diagnostics including validation curve, feature importance, probability distribution, and calibration curves → Models cluster predictions near the middle, indicating uncertainty.",
+    "Table 1: Model performance metrics → XGBoost leads on ROC AUC (0.519) and high-class F1 (0.22).",
+    "Table 2: Comparative table mapping TAM/UTAUT constructs to proxy variables → Satisfaction and LTV align with perceived usefulness and performance expectancy."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "TAM", "definition": "Technology Acceptance Model, a framework positing perceived usefulness and ease of use influence behavioral intention to use technology."},
+    {"term": "UTAUT", "definition": "Unified Theory of Acceptance and Use of Technology, extending TAM with social influence, facilitating conditions, and hedonic motivation."},
+    {"term": "XGBoost", "definition": "Extreme Gradient Boosting, a tree-based ensemble method for classification and regression."},
+    {"term": "SMOTE", "definition": "Synthetic Minority Oversampling Technique, generates synthetic samples of the minority class to address class imbalance."},
+    {"term": "SHAP", "definition": "SHapley Additive exPlanations, a method for providing local and global model interpretability."},
+    {"term": "LTV", "definition": "Customer Lifetime Value, a metric estimating the total revenue a customer generates over their relationship with a business."},
+    {"term": "ROC AUC", "definition": "Area Under the Receiver Operating Characteristic Curve, a measure of a classifier's discriminative power."}
+  ],
+  "citations": [
+    {"author": "Davis", "year": 1989, "page": 0, "paragraph": 0, "claim": "TAM posits perceived usefulness and perceived ease of use directly influence behavioral intention to use technology.", "role": "methodology"},
+    {"author": "Williams", "year": 2015, "page": 0, "paragraph": 0, "claim": "UTAUT extends TAM by incorporating social influence, facilitating conditions, hedonic motivation, and price value.", "role": "context"},
+    {"author": "Zhang", "year": 2021, "page": 0, "paragraph": 0, "claim": "Perceived competence and benevolence of the algorithm significantly impact users' willingness to adopt robo-advisory services.", "role": "finding"},
+    {"author": "Chen", "year": 2025, "page": 0, "paragraph": 0, "claim": "Trust and loyalty are linked to the continued use of robo-advisory services.", "role": "finding"},
+    {"author": "Singh", "year": 2020, "page": 0, "paragraph": 0, "claim": "Multi-method evaluation using adapted TAM shows drivers of FinTech adoption.", "role": "context"},
+    {"author": "Belanche", "year": 2019, "page": 0, "paragraph": 0, "claim": "Financial behaviors like digital adoption exhibit nonlinear interactions influenced by socio-demographic and psychological factors.", "role": "finding"},
+    {"author": "Kavzoglu", "year": 2022, "page": 0, "paragraph": 0, "claim": "XGBoost and Random Forest are effective ensemble machine learning algorithms for classification tasks.", "role": "methodology"},
+    {"author": "Manzoor", "year": 2024, "page": 0, "paragraph": 0, "claim": "Machine learning methods for customer churn prediction include Random Forest, SVM, and Gradient Boosting.", "role": "context"},
+    {"author": "Barile", "year": 2024, "page": 0, "paragraph": 0, "claim": "Robo-advisors are automated digital platforms using algorithms and AI to provide investment advice with minimal human supervision.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "contextual",
+        "justification": "Paper studies behavioral patterns of FinTech users but not specifically Filipino young professionals."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Provides context on robo-advisors and digital financial platforms as part of the FinTech landscape."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "medium",
+        "justification": "Identifies gaps in using survey-based models for technology acceptance in FinTech."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Directly models behavioral profiles using transactional and engagement data to classify users."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "high",
+        "justification": "Compares four ML classifiers for distinguishing high vs low acceptance behavioral profiles."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Applies predictive ML models to classify technology acceptance from behavioral features."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "medium",
+        "justification": "Studies app usage frequency as a proxy for engagement and technology acceptance."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Evaluates multiple classifiers with comprehensive metrics including ROC AUC and F1-score."
+      }
+    ],
+    "contribution_to_field": "This study contributes to the FinTech adoption literature by bridging theoretical acceptance models with data-driven behavioral prediction. It demonstrates that ensemble machine learning methods can detect signals of technology acceptance from transactional and engagement data, complementing traditional survey-based approaches. The paper identifies Customer Lifetime Value, Satisfaction Score, and Issue Resolution Time as key behavioral predictors, offering empirical support for mapping behavioral proxies to TAM and UTAUT constructs. However, the modest predictive performance underscores the complexity of behavioral acceptance and the limitations of static feature sets.",
+    "directly_justifies": [
+      "Ensemble models like Random Forest and XGBoost outperform linear classifiers in predicting technology acceptance from behavioral data.",
+      "Customer Satisfaction Score and Lifetime Value are among the most influential behavioral predictors of high technology acceptance.",
+      "Static transactional features alone are insufficient for robust prediction without temporal or psychographic inputs.",
+      "Class imbalance and overlapping behavioral patterns between high and low acceptance users limit predictive precision."
+    ],
+    "limits": [
+      "Single dataset from one platform limits generalizability across regions and demographics.",
+      "Behavioral proxy (daily app usage) does not capture cognitive or affective components of acceptance.",
+      "Static snapshot features without temporal or sequential behavioral patterns.",
+      "Missing psychographic variables such as trust, perceived risk, and financial literacy."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. The paper directly addresses financial behavioral profiling (5.A, 5.C) and predictive modeling in personal finance systems (6.A), warranting high relevance. The FinTech landscape and robo-advisor context (4.A, 4.B) receive medium relevance as supporting background. Engagement dynamics (11.A) and algorithmic evaluation (12.B) are medium due to the study's focus on app usage frequency and comprehensive model benchmarking. Filipino-specific topics (1.A, 1.B, 1.C, 2.A-D) are contextual since the dataset originates from South Asia. Topics on budgeting (7.A-E), anomaly detection (8.A-C), mobile design (9.A-C), privacy (10.A-C), savings/debt (13.A-C), and synthetic data (14.A-C) were considered and rejected as not directly covered by the paper."
+  },
+  "limitations": [
+    "Single source and cross-sectional dataset limits generalizability across regions and FinTech service types.",
+    "Daily app usage as a behavioral proxy does not capture deeper cognitive and emotional dimensions of technology acceptance.",
+    "Static snapshot features without temporal or sequential behavioral patterns reduce modeling depth.",
+    "Missing psychographic variables such as financial goals, personality traits, and digital literacy levels.",
+    "Class imbalance (33.5% high-acceptance) challenges predictive performance despite SMOTE application.",
+    "Machine learning models focus on pattern detection and do not support causal inference.",
+    "Binary operationalization of technology acceptance likely fails to capture the full spectrum of user attitudes."
+  ],
+  "remember_this": [
+    "XGBoost achieved the highest ROC AUC of 0.519 and F1-score of 0.22 for high-acceptance classification.",
+    "After SMOTE, XGBoost F1-score improved from 0.22 to 0.36 for the minority class.",
+    "Linear models completely failed to classify high-acceptance users with zero precision and recall.",
+    "Customer Lifetime Value and Satisfaction Score consistently ranked as top predictive features.",
+    "Static transactional data alone is insufficient for robust technology acceptance prediction."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Abbas et al_marked.md",
+      "converted_at": "2026-07-21T05:13:47Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

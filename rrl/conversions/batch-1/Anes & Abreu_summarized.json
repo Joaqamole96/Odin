@@ -1,1 +1,180 @@
-{}
+{
+  "paper_id": "10.3390/app17137452",
+  "designation": "international",
+  "title": "A Novel Adaptive Cluster-Based Normalization Approach for MCDM Under Uncertainty: A Case Study on International Logistics Supplier Evaluation Under Industry 4.0",
+  "authors": "Anes, J.; Abreu, F.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "odin_topics": ["3.A", "3.B", "1.A", "1.B", "2.A"],
+  "tldr": "Proposes an adaptive cluster-based normalization method for TOPSIS MCDM that improves accuracy in logistics supplier evaluation under uncertainty.",
+  "problem_and_motivation": "Supplier selection is critical for logistics success. Multi-criteria decision-making (MCDM) faces the challenge of selecting an appropriate normalization method, as traditional approaches like Maximum, Sum, Vector, and Max-Min normalization each have limitations. The absence of a robust normalization method can lead to less precise decisions and significant economic losses for companies. Existing normalization methods either compress scores too much or produce negative values that create ambiguity in interpretation.",
+  "approach": [
+    "Developed a novel adaptive cluster-based normalization approach that uses k-means clustering (k=3) to group criteria scores.",
+    "Applied cluster-based normalization using mean and standard deviation of each cluster rather than global maximum or sum.",
+    "Integrated the method with TOPSIS decision-making framework.",
+    "Tested on international logistics supplier evaluation for agricultural products in the wine industry under Industry 4.0 and digitalization context.",
+    "Compared normalization performance against Maximum, Sum, Vector, and Max-Min methods using normalized performance ratio, entropy, and Gini coefficient metrics."
+  ],
+  "findings": [
+    "Traditional normalization methods showed significant variation in results — Maximum normalization gave supplier 10 the highest ranking while Sum normalization ranked it last.",
+    "Adaptive normalization produced a consistent pattern of results with smaller variation (standard deviation 0.015) and more balanced distribution among suppliers.",
+    "Adaptive normalization outperformed traditional methods in terms of normalized performance ratio, entropy, and Gini coefficient.",
+    "Suppliers 3, 4, and 8 ranked highest across all normalization methods due to strong technical support and competitive pricing.",
+    "Suppliers 10 and 12 ranked consistently lowest due to long lead times, poor communication, low innovation, and weak digital presence."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Comparison between traditional normalization methods showing result variation.",
+    "Figure 2: Adaptive cluster-based normalization methodology workflow.",
+    "Figure 21: Result comparison between traditional and adaptive normalization methods."
+  ],
+  "key_equations": [
+    {
+      "equation": "S_i = \\sum_{j=1}^{n} r_{ij} \\cdot w_j",
+      "explanation": "TOPSIS weighted score calculation for each alternative i."
+    },
+    {
+      "equation": "D^+_i = \\sqrt{\\sum_{j=1}^{n} (r_{ij} - A^+_j)^2}",
+      "explanation": "Distance to the positive ideal solution (AIS) for alternative i."
+    },
+    {
+      "equation": "D^-_i = \\sqrt{\\sum_{j=1}^{n} (r_{ij} - A^-_j)^2}",
+      "explanation": "Distance to the negative ideal solution (NIS) for alternative i."
+    },
+    {
+      "equation": "Score_i = D^-_i / (D^+_i + D^-_i)",
+      "explanation": "TOPSIS score representing closeness coefficient for each alternative."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "MCDM (Multi-Criteria Decision-Making)",
+      "definition": "A mathematical framework for evaluating alternatives against multiple conflicting criteria simultaneously."
+    },
+    {
+      "term": "TOPSIS",
+      "definition": "Technique for Order of Preference by Similarity to Ideal Solution — an MCDM method that ranks alternatives by their proximity to an ideal solution."
+    },
+    {
+      "term": "Normalization",
+      "definition": "The process of scaling raw criteria scores to ensure consistent units and fair comparison across dimensions."
+    },
+    {
+      "term": "Cluster-Based Normalization",
+      "definition": "A novel approach using k-means clustering to group criteria values before normalization, producing more balanced and distinct distributions."
+    },
+    {
+      "term": "Industry 4.0",
+      "definition": "The fourth industrial revolution characterized by digitalization, automation, and data exchange in manufacturing and logistics."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Hwang",
+      "year": 1981,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "TOPSIS was originally proposed as a method to address multi-attribute decision-making by ranking alternatives based on their distance from ideal solutions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zavadskas",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Comprehensive review of TOPSIS method applications across different domains.",
+      "role": "methodology"
+    },
+    {
+      "author": "Sultana",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "MCDM methods are essential tools for evaluating complex decisions in supply chain management.",
+      "role": "context"
+    },
+    {
+      "author": "Ghosh",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Logistics performance relies on supplier evaluation as one of the most critical aspects in the industry.",
+      "role": "context"
+    },
+    {
+      "author": "Sharma",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Advanced manufacturing technologies like Industry 4.0 are important for developing supply chain resilience.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "The cluster-based normalization approach relates to categorizing decision criteria into meaningful groups."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "contextual",
+        "justification": "Addresses how to handle heterogeneous criteria with different scales, analogous to categorization challenges in personal finance."
+      },
+      {
+        "code": "1.A",
+        "name": "LLMs for Financial Tasks",
+        "relevance": "low",
+        "justification": "Not directly applicable; paper focuses on traditional MCDM methods."
+      },
+      {
+        "code": "1.B",
+        "name": "AI/ML Techniques in Personal Finance",
+        "relevance": "medium",
+        "justification": "Demonstrates clustering techniques (k-means) applied to financial decision-making."
+      },
+      {
+        "code": "2.A",
+        "name": "Data Security and Privacy",
+        "relevance": "low",
+        "justification": "Not addressed in this paper."
+      }
+    ],
+    "contribution_to_field": "This paper introduces a novel adaptive cluster-based normalization approach for TOPSIS that addresses the problem of inconsistent results from traditional normalization methods. By grouping criteria values using k-means clustering before normalization, the method produces more balanced distributions and reduces result variability. The case study in international logistics supplier evaluation demonstrates that traditional methods can produce contradictory rankings, while the adaptive method produces consistent results. The paper provides a practical contribution to MCDM methodology that could be applied to financial decision-making contexts where criteria have diverse scales.",
+    "directly_justifies": [
+      "Traditional normalization methods in MCDM can produce contradictory results depending on which method is used.",
+      "Cluster-based normalization using k-means with k=3 produces more balanced and consistent distributions.",
+      "The adaptive method outperforms traditional methods on normalized performance ratio, entropy, and Gini coefficient metrics.",
+      "Suppliers with strong technical support and competitive pricing consistently rank highest across all normalization methods."
+    ],
+    "limits": [
+      "Case study limited to a single industry context (wine logistics). [unacknowledged]",
+      "Does not address how the method scales to very large numbers of criteria or alternatives. [unacknowledged]",
+      "No comparison with other clustering-based normalization approaches if they exist. [unacknowledged]"
+    ]
+  },
+  "limitations": [
+    "Single industry case study (wine logistics). [unacknowledged]",
+    "Does not address scalability for very large numbers of criteria or alternatives. [unacknowledged]",
+    "No comparison with other clustering-based normalization approaches. [unacknowledged]",
+    "Relatively small number of alternatives (12 suppliers) and criteria (16 factors). [unacknowledged]"
+  ],
+  "remember_this": [
+    "Traditional normalization methods in TOPSIS can produce contradictory rankings of alternatives.",
+    "Adaptive cluster-based normalization using k-means (k=3) reduces result variability to standard deviation of 0.015.",
+    "The method groups criteria by similarity before normalization, producing more balanced distributions.",
+    "Suppliers 3, 4, and 8 ranked highest due to strong technical support and competitive pricing.",
+    "Entropy and Gini coefficient metrics confirm adaptive normalization produces more balanced results."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Anes & Abreu_marked.md",
+      "converted_at": "2026-07-21T05:21:47Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

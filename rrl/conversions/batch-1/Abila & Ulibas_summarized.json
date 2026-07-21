@@ -1,1 +1,141 @@
-{}
+{
+  "paper_id": "d71c4357-1afa-55d9-bd76-c01b7f3d4492",
+  "designation": "local",
+  "title": "Analyzing the Financial Management Practices and Resilience of Online Freelancers in Laguna amid Digital Platform Taxation",
+  "authors": "Abila, J.P.; Ulibas, R.",
+  "year": 2026,
+  "venue": "IJMERI",
+  "odin_topics": ["5.A", "5.C", "7.A", "13.A"],
+  "tldr": "Online freelancers in Laguna show moderate financial resilience shaped by buffer stock savings, income volatility, and liquid asset accessibility amid 12% VAT implementation.",
+  "problem_and_motivation": "Online freelancers face income instability and lack formal employment protection, making financial management critical. The newly implemented 12% VAT on digital services adds additional financial pressure. Empirical research on how digital taxation affects freelancers' financial resilience remains limited in the Philippine context.",
+  "approach": [
+    "Mixed-methods exploratory pilot study with quantitative-dominant design.",
+    "Structured survey administered to purposive-stratified sample of 30 online freelancers across platforms.",
+    "Semi-structured interviews conducted with 10 participants exhibiting inconsistent financial behaviors.",
+    "Descriptive statistics, Pearson's correlation, and multiple linear regression analyzed quantitative data.",
+    "Deductive thematic and content analysis used for qualitative responses."
+  ],
+  "findings": [
+    "num: Overall financial management practices mean score 3.47 (SD=1.36), interpreted as high.",
+    "num: Digital Platform Taxation awareness highest at mean 3.81 (SD=1.25).",
+    "num: Financial resilience moderate overall at mean 3.19 (SD=1.30).",
+    "num: 73% of variance in financial resilience explained by practices and demographics (R²=0.73, p<0.01).",
+    "num: Liquid Asset Accessibility significant positive predictor (β=0.58, p=0.04).",
+    "num: Male freelancers scored 1.13 points higher in resilience (p=0.03).",
+    "num: Freelancers with 5-7 years experience showed lower resilience (-1.62, p=0.01).",
+    "Freelancers demonstrated adaptive financial behaviors primarily reactive and short-term focused.",
+    "Income volatility and taxation costs significantly influenced financial decision-making.",
+    "Proposed six-component financial literacy program addressing identified gaps."
+  ],
+  "key_figures_tables": [
+    "Table 4: Mean and Standard Deviation of Financial Management Practices → Freelancers show high financial management awareness overall.",
+    "Table 5: Descriptive Statistics of Financial Resilience Items → Gap exists between psychological confidence and actual preparedness.",
+    "Table 6: Proposed Financial Literacy Program → Six components target specific freelancer financial challenges."
+  ],
+  "key_equations": [
+    {
+      "equation": "n = n \\times \\frac{N}{N}",
+      "explanation": "Proportional allocation formula for stratified sampling across platforms."
+    }
+  ],
+  "definitions": [
+    {"term": "BSS", "definition": "Buffer Stock Savings - precautionary savings to smooth consumption during adverse shocks."},
+    {"term": "PIV", "definition": "Perceived Income Volatility - psychological perception of income instability."},
+    {"term": "LAA", "definition": "Liquid Asset Accessibility - ability to quickly access funds during emergencies."},
+    {"term": "DPT", "definition": "Digital Platform Taxation - 12% VAT imposed on digital services and subscriptions."},
+    {"term": "VAT", "definition": "Value-Added Tax - consumption tax placed on digital services."},
+    {"term": "FR", "definition": "Financial Resilience - capacity to withstand and recover from financial shocks."}
+  ],
+  "citations": [
+    {
+      "author": "Carroll",
+      "year": 1997,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The nature of precautionary wealth provides theoretical foundation for buffer stock theory.",
+      "role": "methodology"
+    },
+    {
+      "author": "Carroll",
+      "year": 1992,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The buffer-stock theory of saving explains macroeconomic evidence of precautionary savings behavior.",
+      "role": "methodology"
+    },
+    {
+      "author": "Jappelli",
+      "year": 2005,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Direct test of the buffer-stock model of saving validates theoretical predictions empirically.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Identifies three freelancer financial behavior profiles: cautious savers, adaptive spenders, vulnerable freelancers."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "Classifies freelancers based on financial management practices and resilience levels."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Examines adaptive budgeting and post-tax budgeting strategies amid income volatility."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "medium",
+        "justification": "Analyzes buffer stock savings patterns and emergency fund management behaviors."
+      }
+    ],
+    "contribution_to_field": "The study provides empirical evidence on financial behavioral profiles of online freelancers in developing economies facing digital taxation. It demonstrates how buffer stock theory applies to gig economy workers with irregular income streams. The research identifies liquid asset accessibility as the strongest predictor of financial resilience, surpassing savings accumulation. The study contributes localized data on freelancer financial practices under new taxation regimes, filling a gap in gig economy financial resilience literature.",
+    "directly_justifies": [
+      "Liquid asset accessibility significantly predicts financial resilience among freelancers (β=0.58, p=0.04).",
+      "Buffer stock savings positively correlate with financial resilience (r=0.598, p<0.01).",
+      "Perceived income volatility negatively correlates with financial resilience (r=-0.478, p<0.01).",
+      "73% of variance in financial resilience explained by financial practices and demographics (R²=0.73).",
+      "Male freelancers scored 1.13 points higher in resilience than female freelancers (p=0.03)."
+    ],
+    "limits": [
+      "Small exploratory pilot study with n=30 limits statistical generalizability.",
+      "Cross-sectional design cannot establish causal relationships.",
+      "Self-reported data may introduce response bias.",
+      "Findings limited to online freelancers in Laguna region only."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 5 (Financial Behavioral Profiles) flagged as high relevance due to identification of three distinct freelancer financial profiles. Domain 5.C (Classification Approaches) assigned medium relevance for profiling methodology. Domain 7.A (Budgeting Strategies) assigned medium relevance for adaptive budgeting under income volatility. Domain 13.A (Savings Goal Management) assigned medium relevance for buffer stock savings analysis. Domains 1-4 (Demographics, Cultural Practices, Expense Categorization, Existing Systems) rejected as paper focuses on freelancer behavior rather than demographics or system design. Domains 6, 8, 9, 10, 11, 12 (Predictive Modeling, Anomaly Detection, Mobile Design, Privacy, Engagement, Evaluation) rejected as paper addresses behavioral analysis rather than technical system components. Domain 14 (ML/Deployment) rejected as paper uses statistical methods not machine learning."
+  },
+  "limitations": [
+    "Small exploratory pilot study with n=30 limits statistical generalizability.",
+    "Cross-sectional design cannot establish causal relationships or long-term effects.",
+    "Self-reported data may introduce response bias.",
+    "Findings limited to online freelancers in Laguna region only.",
+    "Potential non-response bias in documentary evidence submission."
+  ],
+  "remember_this": [
+    "Liquid asset accessibility is the strongest predictor of freelancer financial resilience.",
+    "Buffer stock savings positively correlate with financial resilience while income volatility negatively correlates.",
+    "73% of variance in financial resilience explained by financial practices and demographics.",
+    "Freelancers show adaptive financial behaviors that are primarily reactive and short-term focused.",
+    "Proposed six-component financial literacy program addresses specific freelancer challenges."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T22:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Abila & Ulibas_marked.md",
+      "converted_at": "2026-07-21T05:15:53Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

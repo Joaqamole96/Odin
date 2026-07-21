@@ -1,1 +1,163 @@
-{}
+{
+  "paper_id": "10.21608/ejfs.2025.355771.1312",
+  "designation": "egypt",
+  "title": "Application of Artificial Intelligence and Robotic Process Automation in Egyptian Banks: Evidence from the Banking Sector",
+  "authors": "Abd-Ellatif, E.E.; El-Deen, D.M.; Ibrahim, M.E.",
+  "year": 2025,
+  "venue": "Egyptian Journal of Financial Studies",
+  "odin_topics": ["4.A", "4.C", "7.B", "11.A"],
+  "tldr": "A survey of 118 Egyptian banking professionals reveals that NLP, expert systems, and intelligent process automation are the most implemented AI/RPA technologies in banking, driven by security and cost reduction.",
+  "problem_and_motivation": "Banks are increasingly adopting AI and RPA to improve efficiency and reduce costs, but empirical evidence on their application in the Egyptian banking sector remains limited. Understanding which AI technologies are most effectively deployed and the challenges faced is crucial for banks seeking to modernize operations.",
+  "approach": [
+    "Conducted a descriptive-analytical survey targeting bankers in Egyptian banks.",
+    "Distributed 200 questionnaires to employees, managers, and CEOs, receiving 118 valid responses (59% response rate).",
+    "Analyzed the status of four AI technologies: robotic process automation, NLP, expert systems, and biometrics.",
+    "Measured implementation status across five metrics: implemented, under implementation, planned, under study, and rejected.",
+    "Correlated implementation choices with bank type (public vs. private), size (small, medium, large), and international ranking.",
+    "Used SPSS for statistical analysis of the survey data."
+  ],
+  "findings": [
+    "num: 118 valid questionnaires returned from 200 distributed (59% response rate).",
+    "num: NLP and expert systems were the most implemented AI technologies.",
+    "num: Biometrics had the highest rejection rate at 8.5%.",
+    "num: Public sector banks showed higher implementation rates than private banks.",
+    "num: Large and internationally ranked banks had greater adoption of AI/RPA technologies.",
+    "num: Top implementation reasons included data protection (60.2%), reduced human errors (50.8%), and cost reduction (43.2%).",
+    "num: Top challenges included cybersecurity threats (71.2%) and high implementation costs (65.3%)."
+  ],
+  "key_figures_tables": [
+    "Table 1: Demographic profile of sample showing bank sector, size, and international ranking distribution.",
+    "Table 2: Sample stratification by employment sector, bank size, and international ranking.",
+    "Table 4: Descriptive statistics showing RPA implementation status with 42.4% implemented and 33.1% under implementation.",
+    "Table 5: NLP implementation statistics showing 49.2% implemented and 30.5% under implementation.",
+    "Table 6: Expert systems implementation showing 50% implemented and 29.7% under implementation.",
+    "Table 7: Biometrics implementation showing 33.9% implemented and 24.6% under implementation."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {
+      "term": "AI",
+      "definition": "Artificial Intelligence refers to machine-based systems that can make predictions, recommendations, or decisions using real-world inputs."
+    },
+    {
+      "term": "RPA",
+      "definition": "Robotic Process Automation is technology that allows anyone today to configure computer software to emulate human actions in executing business processes."
+    },
+    {
+      "term": "NLP",
+      "definition": "Natural Language Processing enables machines to read and understand text or voice data, and respond with synthesized versions of human language."
+    },
+    {
+      "term": "Expert Systems",
+      "definition": "Computer programs that use AI technologies to simulate the judgment and behavior of a human expert in a particular field."
+    },
+    {
+      "term": "Biometrics",
+      "definition": "Technical terms for body measurements used in identification, including fingerprint scanning, facial recognition, and iris scanning."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Kapoor",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI will be the biggest source of productivity gains in banking, adding up to $1 trillion in value annually.",
+      "role": "context"
+    },
+    {
+      "author": "Elmously",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Chatbots, robo-advisors, and algorithmic trading systems use AI to provide personalized financial services.",
+      "role": "baseline"
+    },
+    {
+      "author": "Rane",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep learning techniques can detect fraudulent transactions in real-time by learning from vast datasets.",
+      "role": "baseline"
+    },
+    {
+      "author": "Davenport",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Automation will affect white-collar professions including financial services and banking.",
+      "role": "context"
+    },
+    {
+      "author": "Al-Hussaeni",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Robo-advisors help optimize asset allocation and provide personalized investment recommendations.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Current Budgeting Software and Tools",
+        "relevance": "medium",
+        "justification": "Surveys current AI and RPA technologies being implemented in banking systems."
+      },
+      {
+        "code": "4.C",
+        "name": "FinTech Innovations and Digital Platforms",
+        "relevance": "high",
+        "justification": "Directly addresses FinTech innovations including AI, RPA, NLP, expert systems, and biometrics in banking."
+      },
+      {
+        "code": "7.B",
+        "name": "AI and LLM-Based Budgeting and Spending Analysis",
+        "relevance": "medium",
+        "justification": "Discusses AI applications in financial analysis and decision-making processes."
+      },
+      {
+        "code": "11.A",
+        "name": "Chatbot-Based Financial Assistance",
+        "relevance": "medium",
+        "justification": "References chatbots as one of the AI technologies being implemented in banking."
+      }
+    ],
+    "contribution_to_field": "This paper provides empirical evidence on the adoption and implementation of AI and RPA technologies in the Egyptian banking sector. It identifies which technologies are most effectively deployed (NLP, expert systems), the primary motivations (security, error reduction, cost savings), and the key challenges (cybersecurity, implementation costs). The study offers insights for banks planning digital transformation strategies.",
+    "directly_justifies": [
+      "NLP and expert systems are the most widely implemented AI technologies in banking.",
+      "Data protection and cost reduction are primary drivers for AI/RPA adoption.",
+      "Cybersecurity threats represent the most significant challenge to implementation."
+    ],
+    "limits": [
+      "Survey limited to Egyptian banks; results may not generalize to other regions.",
+      "59% response rate may introduce non-response bias.",
+      "Focuses on banking sector rather than personal finance applications."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 4 (Landscape of Existing Systems) is relevant through 4.A (Current Budgeting Software and Tools) and 4.C (FinTech Innovations and Digital Platforms) as the paper surveys AI/RPA technologies in banking. Domain 7 (Budgeting Strategies) partially applies through 7.B (AI and LLM-Based Analysis). Domain 11 (Personalized User Engagement) applies through 11.A (Chatbot-Based Financial Assistance) as chatbots are discussed. Other domains like 1 (Personal Finance Landscape), 2 (User Perspectives), 3 (Psychology), 8 (Anomaly Detection), 9 (UX/UI), 10 (Privacy), 12 (Evaluation Frameworks), 13 (Savings/Debt), and 14 (Synthetic Data) are less directly applicable."
+  },
+  "limitations": [
+    "Geographically limited to Egyptian banking sector.",
+    "Cross-sectional survey design captures only a snapshot of implementation status.",
+    "59% response rate may introduce selection bias.",
+    "Does not assess the effectiveness or ROI of implemented technologies."
+  ],
+  "remember_this": [
+    "NLP and expert systems are the most implemented AI technologies in Egyptian banks.",
+    "Top reasons for implementation: data protection (60.2%), error reduction (50.8%), cost reduction (43.2%).",
+    "Top challenges: cybersecurity threats (71.2%) and high implementation costs (65.3%).",
+    "Public sector banks showed higher adoption than private sector banks.",
+    "Large and internationally ranked banks had greater AI/RPA implementation."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Abd-Ellatif et al_marked.md",
+      "converted_at": "2026-07-21T05:15:12Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,1 +1,223 @@
-{}
+{
+  "paper_id": "10.1080/16066359.2023.2264763",
+  "designation": "international-algorithm-specific",
+  "title": "An empirical attempt to identify binge gambling utilizing account-based player tracking data",
+  "authors": "Auer, M.; Griffiths, M.D.",
+  "year": 2024,
+  "venue": "Addiction Research & Theory",
+  "odin_topics": [
+    "5.A",
+    "5.C",
+    "8.A",
+    "8.B"
+  ],
+  "tldr": "Using k-means cluster analysis on 150,895 British online gamblers, two clusters were identified with behavioral patterns potentially indicative of binge gambling characterized by low frequency but high intensity sessions.",
+  "approach": [
+    "Analyzed anonymized secondary dataset from a British online casino operator comprising 150,895 online gamblers who gambled between January and March 2023.",
+    "Computed 14 player tracking variables reflecting gambling frequency, intensity, and impulsivity indicators such as deposits per session and low balance termination.",
+    "Applied k-means cluster analysis with min-max standardization to identify distinct gambler profiles, using scree plots and silhouette scores to determine the optimal six-cluster solution.",
+    "Applied the derived cluster model to April-June 2023 data to assess temporal stability of cluster memberships.",
+    "Identified two potential binge gambling clusters based on low gambling days but high gambling intensity during those days."
+  ],
+  "findings": [
+    "Six distinct clusters of gamblers were identified from the k-means analysis of 14 player tracking variables.",
+    "Cluster 2 (n=22,364, 15%) and Cluster 5 (n=12,523, 8%) showed low gambling days but high intensity, matching potential binge gambling patterns.",
+    "num: Cluster 2 averaged 9.58 playing days with average daily bets of £1,021.08 and daily deposits of £85.91.",
+    "num: Cluster 5 averaged 5.15 playing days with average daily bets of £827.48 and daily deposits of £50.67.",
+    "num: 61% of Cluster 2 and 55% of Cluster 5 remained in their respective clusters during April-June 2023.",
+    "num: 17% of Cluster 2 and 29% of Cluster 5 stopped gambling entirely between April and June 2023.",
+    "Cluster 1 (highest frequency, 49 playing days) showed 70% cluster stability and only 6% became inactive.",
+    "Binge gambling clusters did not show high values for deposits per day or session, suggesting controlled episodic gambling rather than loss-of-control chasing."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Elbow plot showing within sum of squares for one to nine cluster solutions → Six-cluster solution chosen for profile uniqueness.",
+    "Figure 2: Deviation of Cluster 2 from average values → Largest deviation in daily bet and deposit amounts.",
+    "Figure 3: Deviation of Cluster 5 from average values → Largest deviation in daily bet amount and bet per game.",
+    "Figure 4: Percentage of players moving from each cluster to others or inactivity → Cluster 5 had highest inactivity rate at 29%.",
+    "Table 1: Descriptive statistics for 14 player tracking variables → Average gambling days 10.02, average sessions 15.98.",
+    "Table 3: Average values per cluster → Clusters 2 and 5 show high intensity on few days.",
+    "Table 5: Transition matrix of cluster membership between January-March and April-June 2023 → Majority of players retained cluster membership."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Binge Gambling",
+      "definition": "An episodic form of problem gambling characterized by sudden onset of sustained gambling, excessive expenditure, and absence of cravings between episodes."
+    },
+    {
+      "term": "K-means Clustering",
+      "definition": "A partitioning algorithm that minimizes within-cluster sum of squares to group similar data records together."
+    },
+    {
+      "term": "Silhouette Score",
+      "definition": "A measure of cluster quality ranging from -1 to +1, where +1 indicates well-matched clusters."
+    },
+    {
+      "term": "Account-based Player Tracking",
+      "definition": "The use of transactional data from gambling accounts to analyze player behavior patterns."
+    },
+    {
+      "term": "Scree Plot",
+      "definition": "A plot displaying within-cluster sum of squares for different numbers of clusters to determine optimal cluster count."
+    },
+    {
+      "term": "Min-max Standardization",
+      "definition": "A normalization technique that scales each variable to a 0-1 range to equalize influence on clustering."
+    },
+    {
+      "term": "DSM-5",
+      "definition": "The Diagnostic and Statistical Manual of Mental Disorders, fifth edition, which reclassified gambling disorder as a behavioral addiction."
+    },
+    {
+      "term": "BGST",
+      "definition": "Binge Gambling Screening Tool, a nine-item instrument for operationalizing binge gambling criteria in clinical settings."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Nower",
+      "year": 2003,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Binge gambling involves sudden onset of sustained gambling with transient loss of control and absence of cravings between episodes.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cowlishaw",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "32% of patients entering gambling treatment reported irregular and intermittent gambling episodes, with 3.7% classified as binge gamblers.",
+      "role": "finding"
+    },
+    {
+      "author": "Williams",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Intermittent periods of problem gambling were common when considered across annual intervals in a longitudinal study of 4211 Canadians.",
+      "role": "finding"
+    },
+    {
+      "author": "Griffiths",
+      "year": 2006,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Binge gambling episodes were triggered by specific incidents such as relationship break-ups, and ceased when underlying problems were addressed.",
+      "role": "finding"
+    },
+    {
+      "author": "Gupta",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "16.4% of participants aged 17-23 reported experiencing binge gambling episodes over a sustained period of time.",
+      "role": "finding"
+    },
+    {
+      "author": "Hing",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Binge gambling was motivated by seeking escape from stress and was mostly exhibited by males who gambled socially but occasionally binged.",
+      "role": "finding"
+    },
+    {
+      "author": "Catania",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Most DSM-5 criteria for gambling disorder can be operationalized using actual transaction data from online gambling accounts.",
+      "role": "methodology"
+    },
+    {
+      "author": "Auer",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Frequent session depositing reflects chasing losses better than other operationalization metrics.",
+      "role": "methodology"
+    },
+    {
+      "author": "Perrot",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A cluster of online lottery players characterized by high activity and high probability of chasing behavior was identified.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Demonstrates clustering methodology for behavioral profiling, though applied to gambling rather than personal finance."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "high",
+        "justification": "Applies k-means clustering with 14 behavioral features to classify gamblers into distinct profiles."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Identifies binge gambling as an anomalous behavioral pattern using account-based tracking data."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Uses k-means clustering algorithm on transactional data to detect problematic behavioral patterns."
+      }
+    ],
+    "contribution_to_field": "This study makes a novel contribution by being the first to use account-based player tracking data to identify binge gambling patterns, moving beyond self-report methods. It demonstrates that k-means clustering of behavioral features can distinguish between regular and potentially binge gambling profiles. The temporal stability analysis shows that binge gambling patterns persist over time, supporting the validity of the identified clusters. While focused on gambling, the methodology provides a template for behavioral profiling and anomaly detection in any transactional financial system.",
+    "directly_justifies": [
+      "K-means clustering with 14 behavioral features identified six distinct gambling profiles including two potential binge gambling clusters.",
+      "Binge gambling clusters gambled on fewer days but with significantly higher intensity than other clusters.",
+      "Approximately 61-55% of identified binge gamblers maintained their behavioral pattern over a subsequent three-month period.",
+      "Episodic gambling patterns may evade detection algorithms designed for continuous problem gambling."
+    ],
+    "limits": [
+      "Data from a single gambling operator may not represent the totality of an individual's gambling behavior.",
+      "The three-month observation window may be too short to capture binge gambling episodes.",
+      "Multiple individuals may share a single gambling account, introducing noise into behavioral data.",
+      "No validation against clinical diagnoses of binge gambling was possible.",
+      "The study cannot distinguish between true binge gambling and high-intensity recreational gambling."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. The paper's core contribution centers on behavioral profiling (5.A, 5.C) and anomaly detection (8.A, 8.B), all receiving high relevance due to the direct application of clustering algorithms to transactional data for identifying problematic behavioral patterns. The methodology of using account-based tracking data for behavioral classification is transferable to personal finance systems. Topics on Filipino demographics (1.A-C), culturally specific practices (2.A-D), expense categorization (3.A-C), existing systems (4.A-B), predictive modeling (6.A-B), budgeting (7.A-E), mobile design (9.A-C), privacy (10.A-C), engagement (11.A-B), evaluation (12.A-C), savings/debt (13.A-C), and synthetic data (14.A-C) were considered and rejected as not directly addressed."
+  },
+  "limitations": [
+    "Single operator data may not represent total gambling behavior across multiple platforms.",
+    "Three-month observation window may be too short to capture episodic binge gambling.",
+    "Potential for multiple individuals using a single account introduces noise.",
+    "No clinical validation of binge gambling diagnoses was possible.",
+    "Cannot distinguish true binge gambling from high-intensity recreational gambling.",
+    "Sample skewed toward online casino gamblers and may not generalize to other gambling forms."
+  ],
+  "remember_this": [
+    "Two clusters showed low gambling frequency but high intensity, matching binge gambling characteristics.",
+    "Cluster 2 averaged £1,021 daily bets on just 9.58 playing days over three months.",
+    "29% of Cluster 5 gamblers stopped entirely in the following three months, suggesting episodic nature.",
+    "K-means clustering with 14 features identified six distinct behavioral gambling profiles.",
+    "Binge gambling patterns persisted in 55-61% of identified gamblers over subsequent months."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Auer & Griffiths_marked.md",
+      "converted_at": "2026-07-21T05:29:59Z",
+      "converter_tool": "markitdown"
+    }
+  },
+  "problem_and_motivation": "Binge gambling is an under-explored concept that has only been studied through self-report data, and no previous study has used account-based player tracking data to operationalize it. Identifying binge gambling behavior from transactional data could enable gambling operators to detect and intervene with this subgroup. The episodic nature of binge gambling may cause it to evade existing detection algorithms designed for continuous problem gambling."
+}

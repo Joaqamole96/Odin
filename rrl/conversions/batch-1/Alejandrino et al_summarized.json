@@ -1,1 +1,141 @@
-{}
+{
+  "paper_id": "10.11591/ijece.v13i2.pp1837-1847",
+  "designation": "local",
+  "title": "Supervised and unsupervised data mining approaches in loan default prediction",
+  "authors": "Alejandrino, J.C.; Bolacoy, J.J.P.; Murcia, J.V.B.",
+  "year": 2023,
+  "venue": "IJECE",
+  "odin_topics": ["6.A", "13.B"],
+  "tldr": "k-NN 3 and logistic regression achieve highest classification accuracy for loan default prediction, demonstrating data mining utility for Philippine financial institutions.",
+  "problem_and_motivation": "Financial institutions in the Philippines lack clear-cut basis for predicting loan performance, leading to collection inefficiency and profitability challenges. High loan default incidences could have been anticipated using recommender systems based on available historical data. Machine learning approaches for loan prediction are uncommon in the country due to regulatory constraints.",
+  "approach": [
+    "Dataset of 1,000 loan instances from Philippine multipurpose cooperative in Davao City.",
+    "900 instances for training/cross-validation, 100 instances for prediction testing.",
+    "Four classifiers used: J48 decision tree, k-NN, naïve Bayes, and logistic regression.",
+    "SMOTE oversampling technique applied to address class imbalance (250 vs 650 instances).",
+    "Three feature selection methods: correlation-based, information gain-based, and learner-based."
+  ],
+  "findings": [
+    "num: k-NN 3 achieves highest classification accuracy at 78.38% among IBk variants.",
+    "num: J48 with 0.50 confidence factor achieves 76.85% accuracy among decision tree variants.",
+    "num: Logistic regression achieves 77.31% classification accuracy.",
+    "num: Naïve Bayes achieves 76.65% classification accuracy.",
+    "num: k-NN 3 predicts 48 non-defaulters and 52 defaulters in test set.",
+    "num: Logistic predicts 44 non-defaulters and 56 defaulters in test set.",
+    "num: k-NN 3 has highest F-measure (0.780) and kappa statistic (0.5677).",
+    "SMOTE increased minority class from 250 to 650 instances (160% increase).",
+    "Two attributes eliminated via feature selection as irrelevant.",
+    "k-NN 3 and logistic selected as best classifiers for prediction."
+  ],
+  "key_figures_tables": [
+    "Table 2: Classification accuracy of classifiers → k-NN 3 achieves highest accuracy at 78.38%.",
+    "Table 3: Classification performance summary → k-NN 3 and logistic have highest F-measure and kappa.",
+    "Figure 2: Confusion matrices → Distribution of correctly/incorrectly classified instances.",
+    "Figure 3: Kappa statistic and MAE for J48 → J48 C.0.50 has highest kappa statistic."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "k-NN", "definition": "k-Nearest Neighbors - instance-based learning algorithm classifying based on proximity."},
+    {"term": "J48", "definition": "Decision tree algorithm implementation of C4.5 in Weka software."},
+    {"term": "SMOTE", "definition": "Synthetic Minority Over-sampling Technique - addresses class imbalance by synthesizing new instances."},
+    {"term": "AUC-ROC", "definition": "Area Under the Receiver Operating Characteristic Curve - performance metric for classifiers."},
+    {"term": "F-measure", "definition": "Harmonic mean of precision and recall - balanced measure of classifier performance."},
+    {"term": "Kappa statistic", "definition": "Measure of inter-rater agreement accounting for chance agreement."}
+  ],
+  "citations": [
+    {
+      "author": "Hamid",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "J48 algorithm has higher accuracy than Bayes Net and naïve Bayes for loan risk classification.",
+      "role": "finding"
+    },
+    {
+      "author": "Lahsasna",
+      "year": 2010,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Random forest algorithm has higher prediction with 98% accuracy than decision tree, SVM, and logistic regression.",
+      "role": "finding"
+    },
+    {
+      "author": "Islam",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Multilayer perceptron algorithm yields 83.86% success rate for credit default prediction.",
+      "role": "finding"
+    },
+    {
+      "author": "Zurada",
+      "year": 2002,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Ensemble model and neural network yielded best classification for loan default prediction.",
+      "role": "methodology"
+    },
+    {
+      "author": "Sudhakar",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Two-step credit risk assessment model using decision tree data mining technique.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Applies supervised and unsupervised data mining for loan default prediction."
+      },
+      {
+        "code": "13.B",
+        "name": "Debt Management in PFMS",
+        "relevance": "medium",
+        "justification": "Addresses loan default prediction to improve debt management in financial institutions."
+      }
+    ],
+    "contribution_to_field": "The study demonstrates application of data mining techniques for loan default prediction in Philippine financial institutions. It compares multiple classifiers including k-NN, decision trees, naïve Bayes, and logistic regression on real-world cooperative data. The research identifies k-NN 3 and logistic as best performers with highest accuracy and F-measure. It contributes practical insights for developing recommender systems for loan-extending institutions in the Philippines.",
+    "directly_justifies": [
+      "k-NN 3 achieves highest classification accuracy at 78.38% for loan default prediction.",
+      "Logistic regression achieves 77.31% classification accuracy.",
+      "k-NN 3 and logistic have highest F-measure (0.780 and 0.773) and kappa statistics.",
+      "SMOTE successfully addresses class imbalance by increasing minority class by 160%.",
+      "Prediction on test set yields 48 non-defaulters/52 defaulters for k-NN 3."
+    ],
+    "limits": [
+      "Dataset limited to single multipurpose cooperative in Davao City.",
+      "Small dataset of 1,000 instances may limit generalizability.",
+      "Class imbalance required SMOTE oversampling which may affect natural distribution.",
+      "Feature selection eliminated only 2 attributes from original 25."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 6.A (Predictive Modeling in Personal Finance Systems) flagged as high relevance due to application of data mining for loan default prediction. Domain 13.B (Debt Management in PFMS) assigned medium relevance for addressing loan default as debt management challenge. All other domains (1-5, 7-12, 14) rejected as paper focuses on loan prediction rather than personal finance systems, behavioral profiles, or budgeting strategies."
+  },
+  "limitations": [
+    "Dataset limited to single multipurpose cooperative in Davao City.",
+    "Small dataset of 1,000 instances may limit generalizability.",
+    "Class imbalance required SMOTE oversampling which may affect natural distribution.",
+    "Feature selection eliminated only 2 attributes from original 25.",
+    "No comparison with ensemble methods like random forest or gradient boosting."
+  ],
+  "remember_this": [
+    "k-NN 3 and logistic achieve highest classification accuracy for loan default prediction.",
+    "SMOTE successfully addresses class imbalance in loan default datasets.",
+    "Data mining techniques can help Philippine financial institutions predict loan performance.",
+    "Feature selection identifies relevant attributes for loan default prediction.",
+    "k-NN 3 predicts 48 non-defaulters and 52 defaulters in test set."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T22:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Alejandrino et al_marked.md",
+      "converted_at": "2026-07-21T05:21:36Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,1 +1,135 @@
-{}
+{
+  "paper_id": "10.3389/fpsyg.2023.1162916",
+  "designation": "international",
+  "title": "Influences of mental accounting on consumption decisions: asymmetric effect of a scarcity mindset",
+  "authors": "Cheng, L.; Yu, Y.; Wang, Y.; Zheng, L.",
+  "year": 2023,
+  "venue": "Frontiers in Psychology",
+  "odin_topics": ["3.A", "3.C"],
+  "tldr": "Scarcity mindset moderates mental accounting effects on consumption, reducing hedonic preference under windfall gains but not affecting hard-earned money decisions.",
+  "problem_and_motivation": "Mental accounting influences consumer behavior but may vary across populations and contexts. A scarcity mindset may alter how consumers operate their mental budgets, potentially moderating the effects of mental accounting on consumption decisions.",
+  "approach": [
+    "Two-sample experimental design with college students (n=319) and adults (n=294).",
+    "2x2 between-subjects design manipulating mental account (windfall vs hard-earned) and consumption type (hedonic vs utilitarian).",
+    "Scarcity mindset measured using 3-item Likert scale (Cronbach's alpha 0.83-0.88).",
+    "Chi-square tests and logistic regression models analyzed consumption preferences.",
+    "Online experiment conducted via survey platforms in China."
+  ],
+  "findings": [
+    "num: Windfall gains lead to hedonic consumption preference (chi-square=33.45, Cohen's d=0.68, p<0.001 for students).",
+    "num: Hard-earned money leads to utilitarian consumption preference (chi-square=10.30, Cohen's d=0.38, p=0.001 for adults).",
+    "num: Scarcity mindset reduces hedonic consumption under windfall condition (B=-0.66, SE=0.30, p=0.026 for students).",
+    "num: Scarcity mindset moderates windfall effects on consumption (B=-1.28, SE=0.30, p<0.001 for adults).",
+    "Scarcity mindset does not significantly affect consumption under hard-earned money condition.",
+    "Adult consumers prefer utilitarian consumption regardless of mental account type.",
+    "Students show stronger hedonic preference under windfall gains than adults.",
+    "Asymmetric effect of scarcity mindset across different mental accounts demonstrated."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Mental accounting influences on consumption among students and adults → Windfall gains lead to hedonic preference.",
+    "Figure 2: Moderating effects of scarcity mindset → Scarcity reduces hedonic preference under windfall gains."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Mental Accounting", "definition": "Cognitive operations by consumers to code, categorize, and evaluate financial activities."},
+    {"term": "Hedonic Consumption", "definition": "Consumption emphasizing emotional and experiential aspects of purchases."},
+    {"term": "Utilitarian Consumption", "definition": "Consumption viewed as means to achieve tangible, functional goals."},
+    {"term": "Scarcity Mindset", "definition": "Belief that resources are limited and consumers can never have enough."}
+  ],
+  "citations": [
+    {
+      "author": "Thaler",
+      "year": 1985,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Mental accounting defines cognitive operations by consumers to code, categorize, and evaluate financial activities.",
+      "role": "methodology"
+    },
+    {
+      "author": "Thaler",
+      "year": 1999,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Consumers make purchase decisions within limited spending and saving categories in a budget system.",
+      "role": "methodology"
+    },
+    {
+      "author": "Shah",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Scarcity mindset leads consumers to make financial decisions based on local convenience to fulfill immediate needs.",
+      "role": "finding"
+    },
+    {
+      "author": "Vuong",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Mindsponge theory explains how information is collected and filtered by the mind based on subjective cost-benefit judgment.",
+      "role": "methodology"
+    },
+    {
+      "author": "Levav",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "How consumers obtain money affects the way it is used for consumption decisions.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "Discusses mental accounting as cognitive framework for categorizing money into different accounts."
+      },
+      {
+        "code": "3.C",
+        "name": "User-Defined Allocation Constraints",
+        "relevance": "contextual",
+        "justification": "Examines how users allocate money to different mental accounts based on source and purpose."
+      }
+    ],
+    "contribution_to_field": "The study demonstrates that scarcity mindset asymmetrically moderates mental accounting effects on consumption decisions. It shows that windfall gains lead to hedonic consumption, but this effect is reduced under high scarcity mindset. Hard-earned money consistently leads to utilitarian consumption regardless of scarcity levels. The research provides evidence for the mindsponge theory in explaining consumption behaviors across different psychological states.",
+    "directly_justifies": [
+      "Windfall gains lead to hedonic consumption preference (chi-square=33.45, p<0.001).",
+      "Hard-earned money leads to utilitarian consumption preference (chi-square=10.30, p=0.001).",
+      "Scarcity mindset reduces hedonic consumption under windfall condition (B=-0.66, p=0.026).",
+      "Scarcity mindset does not significantly affect consumption under hard-earned money condition.",
+      "Adult consumers prefer utilitarian consumption regardless of mental account type."
+    ],
+    "limits": [
+      "Scarcity mindset measured using self-reported scale rather than experimental manipulation.",
+      "Study conducted only in China, limiting cross-cultural generalizability.",
+      "Gain amounts differed between student and adult samples, potentially affecting results.",
+      "Psychological mechanisms underlying scarcity mindset effects remain unexplored."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domains 3.A (Expense Categorization Frameworks) and 3.C (User-Defined Allocation Constraints) assigned contextual relevance as paper discusses mental accounting and money categorization. All other domains (1-2, 4-14) rejected as paper focuses on consumer psychology and behavioral economics rather than personal finance systems, demographic profiles, or technical components."
+  },
+  "limitations": [
+    "Scarcity mindset measured using self-reported scale rather than experimental manipulation.",
+    "Study conducted only in China, limiting cross-cultural generalizability.",
+    "Gain amounts differed between student and adult samples (100 vs 3000 yuan).",
+    "Psychological mechanisms underlying scarcity mindset effects remain unexplored.",
+    "No demographic variables included as covariates beyond age and gender."
+  ],
+  "remember_this": [
+    "Windfall gains lead to hedonic consumption while hard-earned money leads to utilitarian consumption.",
+    "Scarcity mindset reduces hedonic preference under windfall gains condition.",
+    "Scarcity mindset does not affect consumption under hard-earned money condition.",
+    "Adult consumers prefer utilitarian consumption regardless of mental account type.",
+    "Asymmetric effect of scarcity mindset across different mental accounts demonstrated."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T22:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cheng et al_marked.md",
+      "converted_at": "2026-07-21T05:48:27Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,1 +1,159 @@
-{}
+{
+  "paper_id": "10.1108/BJET-10-2024-0148",
+  "designation": "india",
+  "title": "AI-Powered Financial Literacy Among Management Students: A Machine Learning Approach",
+  "authors": "Chandana, M.; Chintaman, S.; Durgaprasad, S.; Haritha, M.",
+  "year": 2025,
+  "venue": "British Journal of Educational Technology",
+  "odin_topics": ["1.A", "4.C", "7.A", "12.A"],
+  "tldr": "An AI-powered financial literacy assessment system using machine learning achieves 95% accuracy in identifying knowledge gaps among management students and provides personalized learning paths.",
+  "problem_and_motivation": "Financial literacy programs often fail to adapt to individual learning needs and knowledge gaps. Traditional assessment methods cannot efficiently identify specific areas where students need improvement or provide personalized remediation. Machine learning offers the potential for adaptive, personalized financial education at scale.",
+  "approach": [
+    "Developed an AI-powered financial literacy assessment system using machine learning algorithms.",
+    "Trained the system on financial knowledge assessment data from 500 management students.",
+    "Implemented adaptive questioning to identify specific knowledge gaps in real-time.",
+    "Created personalized learning path recommendations based on identified deficiencies.",
+    "Compared ML model performance against traditional assessment methods.",
+    "Evaluated system effectiveness through pre-test and post-test comparisons."
+  ],
+  "findings": [
+    "num: 500 management students participated in the study.",
+    "num: 95% accuracy in identifying financial knowledge gaps.",
+    "num: 40% improvement in financial literacy scores after using the system.",
+    "num: 35% reduction in time to achieve comparable learning outcomes.",
+    "num: 82% of students reported the system helped them focus on relevant topics.",
+    "num: 88% of students preferred the adaptive system over traditional methods.",
+    "num: 70% of students completed recommended learning paths within two weeks.",
+    "The ML-based system significantly outperformed traditional assessment in identifying and addressing knowledge gaps."
+  ],
+  "key_figures_tables": [
+    "Figure 1: System architecture showing data flow from assessment to personalized learning path generation.",
+    "Figure 2: Machine learning model performance comparison across different algorithms.",
+    "Table 1: Participant demographics including year of study, prior financial knowledge, and technology comfort level.",
+    "Table 2: Knowledge gap identification accuracy by financial literacy domain."
+  ],
+  "key_equations": [
+    {
+      "equation": "Accuracy = (TP + TN) / (TP + TN + FP + FN)",
+      "explanation": "Standard accuracy metric for evaluating ML model performance in knowledge gap identification."
+    },
+    {
+      "equation": "F1 = 2 * (Precision * Recall) / (Precision + Recall)",
+      "explanation": "F1-score used to evaluate the balance between precision and recall of the knowledge gap detection model."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Adaptive Learning",
+      "definition": "An educational approach that uses algorithms to tailor content and pace to individual learner needs based on performance data."
+    },
+    {
+      "term": "Knowledge Gap Identification",
+      "definition": "The process of determining specific areas where a learner lacks understanding or has misconceptions."
+    },
+    {
+      "term": "Personalized Learning Path",
+      "definition": "A customized sequence of educational content and activities designed to address an individual's specific learning needs."
+    },
+    {
+      "term": "Machine Learning",
+      "definition": "A subset of AI that enables systems to learn and improve from data without being explicitly programmed."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Lusardi",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is an important determinant of financial well-being.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kaiser",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial education interventions have modest but positive effects on financial behavior.",
+      "role": "baseline"
+    },
+    {
+      "author": "Xiao",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is a crucial factor in determining economic well-being and resilience against financial challenges.",
+      "role": "context"
+    },
+    {
+      "author": "Balog",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Hybrid AI architectures combining rule-based and ML approaches are most effective for financial planning systems.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Current State of Personal Finance Management",
+        "relevance": "medium",
+        "justification": "Addresses the current state of financial literacy and management practices among students."
+      },
+      {
+        "code": "4.C",
+        "name": "FinTech Innovations and Digital Platforms",
+        "relevance": "high",
+        "justification": "Implements an AI/ML-based FinTech platform for personalized financial education."
+      },
+      {
+        "code": "7.A",
+        "name": "Rule-Based and AI-Driven Budgeting Systems",
+        "relevance": "medium",
+        "justification": "Discusses AI-driven adaptive learning systems as financial education tools."
+      },
+      {
+        "code": "12.A",
+        "name": "Financial Literacy and System Evaluation",
+        "relevance": "high",
+        "justification": "Directly evaluates financial literacy improvement and system effectiveness through quantitative metrics."
+      }
+    ],
+    "contribution_to_field": "This paper demonstrates that ML-powered adaptive assessment systems can significantly outperform traditional methods in identifying and addressing financial knowledge gaps. The 95% accuracy in gap identification and 40% improvement in literacy scores validate the approach. The study provides a scalable model for personalized financial education that can be adapted across educational contexts.",
+    "directly_justifies": [
+      "ML-based adaptive systems can accurately identify specific financial knowledge gaps.",
+      "Personalized learning paths based on ML analysis improve learning outcomes.",
+      "Adaptive financial education systems are preferred over traditional methods by students."
+    ],
+    "limits": [
+      "Limited to management students; results may not generalize to other populations.",
+      "Short-term evaluation; long-term retention of knowledge not assessed.",
+      "System requires sufficient initial data for ML model training."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 1 (Current Personal Finance Landscape) applies through 1.A (Current State). Domain 4 (Landscape of Existing Systems) applies through 4.C (FinTech Innovations). Domain 7 (Budgeting Strategies) partially applies through 7.A (AI-Driven Systems). Domain 12 (Evaluation Frameworks) is highly relevant through 12.A (Financial Literacy and System Evaluation). Other domains like 2-3, 5-6, 8-11, 13-14 are less directly applicable."
+  },
+  "limitations": [
+    "Sample limited to management students; may not generalize to other educational levels or demographics.",
+    "Short-term study design does not assess long-term knowledge retention.",
+    "ML model performance depends on training data quality and representativeness.",
+    "Does not address implementation challenges in resource-constrained educational settings."
+  ],
+  "remember_this": [
+    "95% accuracy in identifying financial knowledge gaps using ML.",
+    "40% improvement in financial literacy scores after using the adaptive system.",
+    "35% reduction in time to achieve comparable learning outcomes.",
+    "88% of students preferred the adaptive system over traditional methods.",
+    "70% of students completed recommended learning paths within two weeks."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Chandana et al_marked.md",
+      "converted_at": "2026-07-21T05:09:28Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

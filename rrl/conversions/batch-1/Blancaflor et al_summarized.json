@@ -1,1 +1,149 @@
-{}
+{
+  "paper_id": "10.26555/ijmra.v22i2.5275",
+  "designation": "philippines",
+  "title": "Bridging the Financial Literacy Gap: A Digital Financial Literacy Program for Young Adults",
+  "authors": "Blancaflor, S.A.; Bocaros, M.V.; Calibayan, T.M.; Camille, L.B.",
+  "year": 2023,
+  "venue": "International Journal of Management Research and Enterprise Development",
+  "odin_topics": ["1.A", "1.D", "12.A", "12.B"],
+  "tldr": "A digital financial literacy program using mobile applications and gamification significantly improves financial knowledge among young adults in the Philippines.",
+  "problem_and_motivation": "Young adults in the Philippines exhibit low financial literacy rates, with 64% lacking understanding of basic financial concepts. Traditional financial education methods are often inaccessible or unengaging for digital-native generations. The gap between financial knowledge and practical application persists despite existing literacy programs.",
+  "approach": [
+    "Developed a digital financial literacy program targeting young adults aged 18-30.",
+    "Created mobile-first educational modules covering budgeting, saving, investing, and debt management.",
+    "Incorporated gamification elements including challenges, quizzes, and achievement badges.",
+    "Conducted pre-test and post-test assessments with 200 participants.",
+    "Used statistical analysis to measure knowledge improvement across demographic groups.",
+    "Compared digital program effectiveness against traditional workshop-based approaches."
+  ],
+  "findings": [
+    "num: 200 participants completed the program.",
+    "num: 32% improvement in financial knowledge scores from pre-test to post-test.",
+    "num: 78% of participants reported increased confidence in financial decision-making.",
+    "num: 85% engagement rate with gamified modules.",
+    "num: 40% higher retention compared to traditional methods.",
+    "num: 64% of participants initially lacked understanding of basic financial concepts.",
+    "The digital format significantly outperformed traditional workshops in engagement and knowledge retention."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Research design flowchart showing pre-test, intervention, post-test methodology.",
+    "Table 1: Demographic profile of respondents showing age, gender, education level, and income distribution.",
+    "Table 2: Pre-test and post-test scores across financial literacy domains including budgeting, saving, investing, and debt management."
+  ],
+  "key_equations": [
+    {
+      "equation": "t = (x̄1 - x̄2) / (s_p * sqrt(1/n1 + 1/n2))",
+      "explanation": "Paired t-test formula used to measure statistically significant improvement in financial knowledge scores."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Financial Literacy",
+      "definition": "The ability to understand and effectively use various financial skills including budgeting, investing, and debt management."
+    },
+    {
+      "term": "Gamification",
+      "definition": "The application of game-design elements and principles in non-game contexts to enhance engagement and motivation."
+    },
+    {
+      "term": "Digital Financial Literacy",
+      "definition": "Financial literacy delivered through digital platforms, incorporating interactive and technology-enabled learning methods."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Lusardi",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is an important determinant of financial well-being.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kaiser",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial education interventions have modest but positive effects on financial behavior.",
+      "role": "baseline"
+    },
+    {
+      "author": "Xiao",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is a crucial factor in determining economic well-being and resilience against financial challenges.",
+      "role": "context"
+    },
+    {
+      "author": "Mottola",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy and confidence significantly impact savings behavior and financial outcomes.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Current State of Personal Finance Management",
+        "relevance": "high",
+        "justification": "Addresses the current state of financial literacy among young adults and proposes digital solutions."
+      },
+      {
+        "code": "1.D",
+        "name": "Behavioral and Psychological Barriers to Financial Decision-Making",
+        "relevance": "medium",
+        "justification": "Discusses behavioral barriers including lack of confidence and knowledge gaps that prevent effective financial management."
+      },
+      {
+        "code": "12.A",
+        "name": "Financial Literacy and System Evaluation",
+        "relevance": "high",
+        "justification": "Directly evaluates financial literacy improvement through a structured digital program."
+      },
+      {
+        "code": "12.B",
+        "name": "User Satisfaction and Adoption Metrics",
+        "relevance": "medium",
+        "justification": "Measures user engagement (85%) and confidence improvement (78%) as adoption metrics."
+      }
+    ],
+    "contribution_to_field": "This paper demonstrates that digital-first financial literacy programs with gamification significantly outperform traditional methods in engaging young adults. The 32% knowledge improvement and 85% engagement rate validate the approach. The study provides a scalable model for addressing financial literacy gaps in developing countries through technology-enabled education.",
+    "directly_justifies": [
+      "Digital financial literacy programs achieve higher engagement and retention than traditional methods.",
+      "Gamification elements significantly improve learning outcomes in financial education.",
+      "Targeted digital interventions can effectively address financial literacy gaps among young adults."
+    ],
+    "limits": [
+      "Limited to 200 participants in the Philippines; generalizability to other contexts is uncertain.",
+      "Short-term knowledge measurement; long-term behavior change not assessed.",
+      "Self-reported confidence improvements may not translate to actual behavioral changes."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 1 (Current Personal Finance Landscape) is relevant through 1.A (Current State of Personal Finance Management) describing the literacy gap. Domain 3 (Psychology) partially applies through 1.D (Behavioral Barriers). Domain 12 (Evaluation Frameworks) is highly relevant through 12.A (Financial Literacy and System Evaluation) and 12.B (User Satisfaction and Adoption). Other domains like 4-11, 13, 14 are less directly applicable as the paper focuses on education rather than technical system implementation."
+  },
+  "limitations": [
+    "Sample of 200 participants limits statistical power for subgroup analyses.",
+    "Short-term assessment only; does not measure long-term financial behavior change.",
+    "Philippines-specific context may limit generalizability to other countries.",
+    "Self-reported engagement and confidence measures may introduce social desirability bias."
+  ],
+  "remember_this": [
+    "32% improvement in financial knowledge scores from pre-test to post-test.",
+    "85% engagement rate with gamified digital modules.",
+    "40% higher retention compared to traditional workshop methods.",
+    "78% of participants reported increased confidence in financial decision-making.",
+    "64% of initial participants lacked understanding of basic financial concepts."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Blancaflor et al_marked.md",
+      "converted_at": "2026-07-21T05:13:21Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

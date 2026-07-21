@@ -1,1 +1,89 @@
-{}
+{
+  "paper_id": "10.1109/ACCESS.2025.3569609",
+  "designation": "international-algorithm-specific",
+  "title": "An Integrated Preprocessing and Drift Detection Approach With Adaptive Windowing for Fraud Detection in Payment Systems",
+  "authors": "Al Lawati, H.M.R.; Zainal, A.; Al-Rimy, B.A.S.; Al-Azawi, M.; Kassim, M.N.; AlMalki, S.A.; AlGhamdi, T.A.A.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "odin_topics": ["8.A", "8.B", "6.A"],
+  "tldr": "A fraud detection framework combining Mutual Information feature selection, ADASYN resampling, and CNN classification with EDDM/ADWIN drift detection achieved up to 99.99% accuracy on payment transaction datasets.",
+  "problem_and_motivation": "Static machine learning and rule-based fraud detection methods cannot capture the dynamic and evolving nature of fraudulent behaviors, resulting in lower detection accuracy and higher false positive rates. The constant evolution of fraud strategies requires adaptive detection systems.",
+  "approach": [
+    "Combined Mutual Information and SelectKBest for supervised feature selection.",
+    "Applied ADASYN (Adaptive Synthetic Sampling) to handle class imbalance in fraud datasets.",
+    "Used Convolutional Neural Networks (CNN) to capture complex transaction patterns.",
+    "Implemented hierarchical drift detection with EDDM and ADWIN for gradual and sudden changes.",
+    "Evaluated on three datasets including real-world transactions and mixed-data environments."
+  ],
+  "findings": [
+    "num: Achieved 99.99% accuracy and 1.0 precision on fraud detection datasets.",
+    "EDDM and ADWIN combination effectively detects both gradual and sudden concept drift.",
+    "ADASYN outperformed traditional oversampling methods for handling class imbalance.",
+    "Feature selection reduced dimensionality while maintaining detection performance.",
+    "The framework adapts to changing fraud patterns while reducing false positives."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Rule-based vs ML fraud detection comparison → ML approaches learn autonomously from data.",
+    "Figure 2: Credit card dataset class distribution → only 0.17% transactions are fraudulent.",
+    "Figure 5: Proposed framework architecture → integrates preprocessing, feature selection, and drift detection."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "CNN", "definition": "Convolutional Neural Network - a deep learning architecture for pattern recognition in sequential data."},
+    {"term": "ADASYN", "definition": "Adaptive Synthetic Sampling - a technique for generating synthetic minority class samples."},
+    {"term": "EDDM", "definition": "Early Drift Detection Method - a method for detecting gradual concept drift in data streams."},
+    {"term": "ADWIN", "definition": "ADaptive WINdowing - a method for detecting sudden concept drift using variable-size windows."},
+    {"term": "FDS", "definition": "Fraud Detection System - a system designed to identify fraudulent transactions."},
+    {"term": "CNP", "definition": "Card Not Present - transactions conducted without physical card presence, typically online."},
+    {"term": "KYC", "definition": "Know Your Customer - a process for verifying customer identity."},
+    {"term": "AML", "definition": "Anti-Money Laundering - regulations and processes to prevent money laundering."}
+  ],
+  "citations": [
+    {"author": "Shakya", "year": 2024, "page": 0, "paragraph": 0, "claim": "ML techniques with resampling methods achieved 98% accuracy in credit card fraud detection.", "role": "baseline"},
+    {"author": "Yusof", "year": 2024, "page": 0, "paragraph": 0, "claim": "Adaptive Multi-Layered Model uses fuzzy association rules for behavioral ambiguity handling.", "role": "methodology"},
+    {"author": "Lee", "year": 2024, "page": 0, "paragraph": 0, "claim": "Concept drift detection is essential for preserving model performance and reducing false alarms.", "role": "context"},
+    {"author": "Gomes de Oliveira", "year": 2022, "page": 0, "paragraph": 0, "claim": "Consumers' purchasing behavior often contradicts their stated sustainability concerns.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "high", "justificance": "Fraud detection in payment systems is a form of anomaly detection in financial transactions."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "high", "justification": "Proposes CNN-based anomaly detection with drift detection for transaction monitoring."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "medium", "justification": "Uses predictive modeling techniques applicable to financial transaction analysis."}
+    ],
+    "contribution_to_field": "This paper proposes an integrated framework combining advanced preprocessing, feature selection, and hierarchical drift detection for payment fraud detection. It addresses the critical challenge of concept drift in financial fraud systems by implementing both gradual (EDDM) and sudden (ADWIN) drift detection mechanisms.",
+    "directly_justifies": [
+      "CNN-based fraud detection achieved 99.99% accuracy on payment transaction datasets.",
+      "ADASYN effectively handles class imbalance where fraudulent transactions represent only 0.17% of data.",
+      "Hierarchical drift detection with EDDM and ADWIN adapts to evolving fraud patterns."
+    ],
+    "limits": [
+      "Evaluation limited to three datasets, may not generalize to all payment systems.",
+      "Computational overhead of drift detection not fully analyzed for real-time deployment.",
+      "Does not address adversarial attacks on the detection system itself."
+    ],
+    "topic_mapping_rationale": "Systematically scanned all topic domains. The paper directly addresses 8.A (anomaly detection in financial systems) and 8.B (anomaly detection algorithms for spending data) as fraud detection is fundamentally anomaly detection. 6.A is relevant as the framework uses predictive modeling for transaction classification. Other domains were considered but rejected: 1.A-1.C (Filippino demographics not covered), 2.A-2.D (cultural spending patterns not addressed), 3.A-3.C (expense categorization not discussed), 4.A-4.B (personal finance systems not the focus), 5.A-5.C (behavioral profiles not covered), 6.B (forecasting algorithms not addressed), 7.A-7.E (budgeting strategies not covered), 8.C (cold-start baseline not discussed), 9.A-9.C (mobile design not addressed), 10.A-10.C (privacy not covered), 11.A-11.B (engagement not addressed), 12.A-12.C (evaluation not focused on PFMS), 13.A-13.C (savings/debt not covered), 14.A-14.C (deployment not addressed)."
+  },
+  "limitations": [
+    "Evaluation limited to three datasets, may not generalize to all payment systems.",
+    "Computational overhead of drift detection not fully analyzed for real-time deployment.",
+    "Does not address adversarial robustness of the detection system.",
+    "Class overlap between fraudulent and legitimate transactions limits perfect classification."
+  ],
+  "remember_this": [
+    "CNN-based fraud detection achieved 99.99% accuracy on payment datasets.",
+    "ADASYN handles class imbalance where fraud represents only 0.17% of transactions.",
+    "EDDM and ADWIN together detect both gradual and sudden concept drift.",
+    "Feature selection with Mutual Information improves detection while reducing dimensionality."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T10:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Al Lawati et al_marked.md",
+      "converted_at": "2026-07-21T05:18:33Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

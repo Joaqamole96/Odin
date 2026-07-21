@@ -1,1 +1,134 @@
-{}
+{
+  "paper_id": "10.1007/s10462-025-11416-2",
+  "designation": "international",
+  "title": "Machine learning powered financial credit scoring: a systematic literature review",
+  "authors": "Ayari, H.; Guetari, R.; Kraïem, N.",
+  "year": 2025,
+  "venue": "Artificial Intelligence Review",
+  "odin_topics": ["2.A", "6.A", "6.B"],
+  "tldr": "Systematic literature review of 63 studies (2018–2024) finds ensemble and hybrid ML models (XGBoost, RF, stacked ensembles) consistently outperform traditional classifiers on benchmark credit scoring datasets, with SHAP/LIME emerging as essential interpretability tools.",
+  "problem_and_motivation": "Credit scoring enables banks and financial institutions to assess borrower creditworthiness and reduce default risk. Traditional models (logistic regression, scorecards) are valued for interpretability but are limited by narrow feature sets and linear assumptions. ML offers new capabilities for capturing nonlinear relationships and incorporating alternative data sources, yet the literature remains fragmented with no consensus on which models generalize best across datasets. A systematic synthesis was needed to consolidate evidence, compare model performance on standard benchmarks, and identify critical challenges around interpretability, bias, and data scarcity.",
+  "approach": [
+    "A systematic literature review following PRISMA 2020 guidelines was conducted across IEEE Xplore, ACM Digital Library, Springer Link, and Google Scholar for publications from 2018 to 2024.",
+    "330 research papers were initially identified; after duplicate removal, screening, and eligibility assessment, 63 primary studies were included in the final synthesis.",
+    "Studies were categorized into three groups: traditional ML models, deep learning models, and ensemble learning models, including hybrid approaches within each category.",
+    "Performance was comparatively evaluated using accuracy and AUC across four benchmark datasets: German, Australian, Japanese, and Lending Club.",
+    "VOSviewer-based bibliographic coupling and keyword co-occurrence analyses were performed to map the intellectual structure and thematic clusters of the field.",
+    "Research questions addressed: most widely used models, strengths and limitations, evaluation metrics, emerging trends, and adoption challenges."
+  ],
+  "findings": [
+    "Ensemble and hybrid models consistently outperform traditional single models across all benchmark datasets, achieving top accuracy and AUC scores.",
+    "Hybrid ensemble models are the most widely used approach, combining feature optimization with multiple classifiers to improve predictive accuracy and manage heterogeneous borrower profiles.",
+    "On the German dataset, the GA + NN model (Kazemi et al. 2023) achieved the highest accuracy (91.91%) and AUC (92.60%).",
+    "On the Australian dataset, Zhang et al.'s (2021) multi-stage ensemble achieved accuracy above 91% and AUC above 96%.",
+    "On the Japanese dataset, Zhang et al.'s (2021) multi-stage ensemble achieved 93.16% accuracy and 96.95% AUC.",
+    "Deep learning models show promise for large-scale datasets but remain less commonly adopted due to data-intensive requirements and limited interpretability.",
+    "SHAP and LIME are emerging as essential tools for making complex credit scoring models interpretable and transparent.",
+    "Alternative data sources (social media, mobile phone usage, psychometric data) show promise for improving credit scoring for borrowers lacking formal credit histories.",
+    "Accuracy is the most frequently reported metric (49 studies), followed by AUC (31), F1-score (25), and recall (24).",
+    "Class imbalance remains a major challenge addressed through SMOTE, cost-sensitive learning, and ensemble rebalancing techniques."
+  ],
+  "key_figures_tables": [
+    "Figure 1: PRISMA 2020 Flow Diagram showing identification of 345 studies, screening, and final inclusion of 63 studies. Illustrates the systematic review methodology.",
+    "Figure 2: Comparative accuracy (± standard deviation) of machine learning models in credit scoring. Shows RF and hybrid ML approaches achieving the highest accuracies.",
+    "Figure 5: Bibliographic coupling network identifying three clusters: traditional statistical approaches, ensemble-based ML techniques, and emerging DL applications.",
+    "Figure 6: Keyword co-occurrence map showing six thematic clusters including classification models, credit analysis, explainable AI, ensemble models, DL, and feature selection.",
+    "Table 7: Ranked comparative evaluation of models on the German dataset. GA+NN ranks first (91.91% accuracy, 92.60% AUC), followed by AugBoost-ELM and gcForest.",
+    "Table 8: Ranked evaluation on the Australian dataset. Multi-stage ensemble ranks first (92.36% accuracy, 96.65% AUC).",
+    "Table 9: Ranked evaluation on the Japanese dataset. Multi-stage ensemble ranks first (93.16% accuracy, 96.95% AUC).",
+    "Table 10: Ranked evaluation on the Lending Club dataset. GSCI ranks first (91.70% accuracy, 93.78% AUC)."
+  ],
+  "key_equations": [
+    {"equation": "P(Y=1|x) = 1 / (1 + e^{-(β_0 + β^T x)})", "explanation": "Logistic regression probability function estimating default likelihood from feature vector x."},
+    {"equation": "Accuracy = (TP + TN) / (TP + TN + FP + FN)", "explanation": "Proportion of correctly classified instances among total predictions."},
+    {"equation": "Precision = TP / (TP + FP)", "explanation": "Proportion of true positives among all predicted positives."},
+    {"equation": "Recall = TP / (TP + FN)", "explanation": "Proportion of true positives correctly identified among all actual positives."},
+    {"equation": "F1-Score = 2 × (Precision × Recall) / (Precision + Recall)", "explanation": "Harmonic mean of precision and recall, balancing both metrics."},
+    {"equation": "Specificity = TN / (TN + FP)", "explanation": "Proportion of true negatives correctly identified among all actual negatives."}
+  ],
+  "definitions": [
+    {"term": "Credit Scoring", "definition": "A systematic, data-driven approach to evaluating borrower creditworthiness that quantifies credit risk using applicants' financial behavior and repayment history."},
+    {"term": "Ensemble Learning", "definition": "A technique that integrates multiple learning algorithms to enhance predictive performance by combining the strengths of diverse models."},
+    {"term": "Hybrid Models", "definition": "Models that integrate multiple algorithms or combine supervised and unsupervised learning to overcome individual limitations and improve accuracy and robustness."},
+    {"term": "SMOTE", "definition": "Synthetic Minority Over-sampling Technique, used to address class imbalance by generating synthetic samples for the minority class."},
+    {"term": "SHAP", "definition": "SHapley Additive exPlanations, a game-theoretic approach that explains individual predictions by quantifying each feature's marginal contribution."},
+    {"term": "LIME", "definition": "Local Interpretable Model-agnostic Explanations, a method that provides locally accurate explanations for individual predictions using the assumption of local linearity."},
+    {"term": "AUC", "definition": "Area Under the ROC Curve, a summary statistic reflecting a model's overall ability to distinguish between classes."},
+    {"term": "KS Statistic", "definition": "Kolmogorov–Smirnov statistic, widely used in credit scoring to measure a model's discriminatory power."},
+    {"term": "Class Imbalance", "definition": "A situation where one class (default) is significantly underrepresented compared to the other (non-default) in training data, common in credit scoring."},
+    {"term": "XGBoost", "definition": "Extreme Gradient Boosting, an ensemble method combining tree models with gradient boosting that progressively adds model iterations to minimize error."}
+  ],
+  "citations": [
+    {"author": "Dastile et al.", "year": 2020, "page": 0, "paragraph": 0, "claim": "Examined 74 studies (2010–2018) finding ensemble methods like RF and XGBoost outperform single classifiers with 79% accuracy, and CNNs achieved highest AUC of 90% on German dataset.", "role": "context"},
+    {"author": "He et al.", "year": 2018, "page": 0, "paragraph": 0, "claim": "Proposed ensemble model adapting to varying class imbalance ratios using BalanceCascade, RF, XGBoost, stacking, and particle swarm optimization, achieving 88.04% F1-score and 92.79% AUC on Japanese dataset.", "role": "finding"},
+    {"author": "Dumitrescu et al.", "year": 2022, "page": 0, "paragraph": 0, "claim": "Introduced PLTR combining decision tree rules with logistic regression achieving best AUC of 92.99%, 77.80%, and 90.11% on Australian, Taiwan, and Housing datasets respectively.", "role": "finding"},
+    {"author": "Shen et al.", "year": 2021, "page": 0, "paragraph": 0, "claim": "Combined improved SMOTE with LSTM and AdaBoost achieving 80.32% AUC and 39.48% KS on German credit dataset.", "role": "finding"},
+    {"author": "Bao et al.", "year": 2019, "page": 0, "paragraph": 0, "claim": "Demonstrated that integrating unsupervised learning with supervised models at consensus and clustering stages significantly improves performance achieving 92.00% accuracy on Chinese P2P credit dataset.", "role": "finding"},
+    {"author": "Zhang et al.", "year": 2021, "page": 0, "paragraph": 0, "claim": "Introduced multi-stage ensemble model with outlier adaptation achieving 93.16% accuracy and 96.95% AUC on Japanese dataset, consistently outperforming other methods.", "role": "finding"},
+    {"author": "Bussmann et al.", "year": 2021, "page": 0, "paragraph": 0, "claim": "Proposed interpretable AI model using correlation networks and Shapley values for credit risk management in P2P lending, analyzing 15,000 small businesses.", "role": "methodology"},
+    {"author": "Bhandary and Ghosh", "year": 2025, "page": 0, "paragraph": 0, "claim": "Showed deep neural networks achieved highest predictive performance in terms of F1-score, G-mean, and AUC, with behavioral factors like age and payment history as key predictors.", "role": "finding"},
+    {"author": "Moscato", "year": 2021, "page": 0, "paragraph": 0, "claim": "Conducted benchmarking study of widely used ML models for P2P lending assessing both predictive performance and interpretability through explainable AI, achieving 64.00% accuracy and 71.70% AUC.", "role": "context"},
+    {"author": "Lenka et al.", "year": 2022, "page": 0, "paragraph": 0, "claim": "Found GA-based feature selection with CatBoost achieved best accuracy of 86.70%, 88.40%, and 86.20% on German, Australian, and Japanese datasets respectively.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "2.A",
+        "name": "Spending Behavior Analysis and Categorization",
+        "relevance": "medium",
+        "justification": "The paper reviews ML models for credit scoring that analyze borrower behavioral variables including payment history, credit utilization, delinquency counts, and loan repayment behavior—all forms of spending/financial behavior analysis."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "The paper directly reviews predictive ML models (logistic regression, RF, XGBoost, LSTM, neural networks, hybrid ensembles) applied to personal finance credit scoring, providing benchmark performance comparisons across standard datasets."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "low",
+        "justification": "The paper reviews models that predict future creditworthiness and default likelihood from historical borrower data, which is a form of sequential financial forecasting, though not focused on spending sequences per se."
+      }
+    ],
+    "contribution_to_field": "This SLR provides a comprehensive benchmark comparison of ML models for credit scoring across four standard datasets (German, Australian, Japanese, Lending Club), establishing that ensemble and hybrid approaches (stacked RF-XGBoost, multi-stage ensembles, GA-optimized NNs) consistently outperform traditional single classifiers. The review maps the field's intellectual structure through bibliographic coupling and keyword co-occurrence analyses, identifying six thematic clusters. It also surveys emerging trends including alternative data sources (social media, mobile data, psychometrics), explainability techniques (SHAP, LIME), and bias mitigation methods. For the Odin thesis specifically, the review validates the use of ensemble learning (Random Forest) and deep learning (LSTM) for financial prediction, which are two of the three core algorithms in the Odin system.",
+    "directly_justifies": [
+      "Ensemble and hybrid ML models consistently outperform traditional single models across all benchmark credit scoring datasets.",
+      "Random Forest and XGBoost are among the most effective algorithms for credit risk classification tasks.",
+      "LSTM networks capture temporal dependencies in borrower behavioral sequences relevant to default prediction.",
+      "Class imbalance handling through SMOTE is essential for credit scoring model performance.",
+      "SHAP and LIME provide essential interpretability for complex credit scoring models.",
+      "Alternative data sources (social media, mobile data) improve credit scoring for populations with limited credit history."
+    ],
+    "limits": ["The review focuses on credit scoring rather than personal budget management systems.", "Most benchmark datasets (German, Australian, Japanese) are relatively small and may not represent Philippine financial data characteristics.", "The review does not address real-time transaction monitoring or anomaly detection, which are components of the Odin system."],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. The paper is an SLR on ML methods for financial credit scoring—a core component of personal finance systems. Topic 6.A (Predictive Modeling in Personal Finance Systems) is the primary mapping because the paper directly reviews predictive models for assessing individual creditworthiness. Topic 2.A (Spending Behavior Analysis) is mapped because the paper reviews behavioral variables (payment history, credit utilization, repayment behavior) that are used as input features in credit scoring models. Topic 6.B (Forecasting Algorithms for Sequential Spending Data) receives low relevance because the paper reviews default prediction from historical data, which is a form of sequential financial forecasting. Topics 1.A-1.B (budgeting), 3.A-3.C (anomaly detection), 4.A (cash flow forecasting), 5.A (investment), 7.A-7.C (NLP), 8.A-8.C (anomaly algorithms) were scanned and rejected as the paper does not address budgeting strategies, transaction anomaly detection, or system architecture for personal finance apps. The paper's coverage of Random Forest, LSTM, and ensemble methods directly supports the Odin thesis's core algorithmic choices."
+  },
+  "limitations": [
+    "The search was confined to four digital databases (IEEE Xplore, ACM, Springer, Google Scholar), potentially missing relevant studies from other sources.",
+    "The review lacks a formal comparative analysis to identify the single most effective model due to heterogeneous evaluation metrics across studies.",
+    "Most reviewed studies used standard benchmark datasets (German, Australian, Japanese) which may not represent real-world production data characteristics.",
+    "The temporal scope (2018–2024) may exclude earlier foundational work that shaped current approaches.",
+    "The review does not include preprints or non-peer-reviewed publications, potentially omitting recent advances.",
+    "Several included studies used proprietary datasets with limited reproducibility."
+  ],
+  "remember_this": [
+    "Ensemble and hybrid ML models (stacked ensembles, multi-stage ensembles, GA-optimized NNs) consistently outperform single classifiers on credit scoring benchmarks.",
+    "The GA + NN model achieved 91.91% accuracy on German dataset; multi-stage ensemble achieved 93.16% accuracy on Japanese dataset.",
+    "Hybrid models combining RF with feature selection and ensemble methods are the most widely used approach.",
+    "SHAP and LIME are emerging as essential interpretability tools for credit scoring models.",
+    "Alternative data sources (social media, mobile data, psychometrics) improve credit scoring for underserved populations.",
+    "Class imbalance is a critical challenge addressed through SMOTE and cost-sensitive learning.",
+    "Most studies use German, Australian, Japanese, and Lending Club as standard benchmark datasets.",
+    "DL models show promise but face adoption barriers due to interpretability issues and data-intensive requirements.",
+    "The review validates ensemble learning (RF) and deep learning (LSTM) as effective approaches for financial prediction."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T15:15:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ayari et al_marked.md",
+      "converted_at": "2026-07-21T05:30:12Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

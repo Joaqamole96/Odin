@@ -1,1 +1,191 @@
-{}
+{
+  "paper_id": "469e2597-e2b4-556a-8024-75151534ef10",
+  "designation": "international",
+  "title": "Understanding Millennials' Financial Behavior: The Role of Fintech Adoption, Financial Literacy, and the Mediating Effect of Financial Attitudes in a Crisis-Affected Emerging Economy",
+  "authors": "Aoun, D.; Rahal, R.; Sfeir, L.; Jabbour Al Maalouf, N.",
+  "year": 2026,
+  "venue": "International Journal of Financial Studies",
+  "odin_topics": ["1.C", "4.A", "10.B", "11.A", "11.B"],
+  "tldr": "Financial literacy and fintech adoption positively shape Lebanese millennials' financial behavior, with financial attitudes serving as a strong mediator.",
+  "problem_and_motivation": "Financial literacy, fintech adoption, and financial attitudes shape economic decision-making among millennials, but their dynamics in crisis-affected economies remain underexplored. Lebanon's prolonged economic collapse, currency devaluation, and eroded trust in the financial system create a unique context where traditional behavioral finance assumptions may not hold. There is a critical empirical gap in understanding how these constructs jointly influence financial behavior in the MENA region.",
+  "approach": [
+    "Quantitative survey of 390 Lebanese millennials collected via Google Forms from March to May 2025 using five-point Likert scales.",
+    "Structural equation modeling (SEM) tests direct and mediating effects among fintech adoption, financial literacy, financial attitude, and financial behavior.",
+    "Confirmatory factor analysis validates measurement model with Cronbach's alpha, composite reliability, AVE, and HTMT ratio assessments.",
+    "Behavioral Finance Theory grounds the examination of cognitive, psychological, and technological determinants of financial behavior.",
+    "JASP statistical software version 0.95.4.0 used for SEM analysis with model fit indices including CFI, TLI, SRMR, and RMSEA."
+  ],
+  "findings": [
+    "num: Financial literacy positively predicts financial behavior (beta=0.337, p<0.001).",
+    "num: Financial attitude strongly predicts financial behavior (beta=0.414, p<0.001), the strongest predictor.",
+    "num: Fintech adoption positively predicts financial behavior (beta=0.144, p<0.001), with a smaller effect size.",
+    "num: Financial literacy strongly impacts financial attitude (beta=0.681, p<0.001), confirming partial mediation.",
+    "num: KMO value of 0.963 and Bartlett's chi-square of 5218.545 (p<0.001) confirm data suitability for factor analysis.",
+    "Model fit indices indicate good fit: CFI=0.908, TLI=0.921, SRMR=0.022, RMSEA=0.040.",
+    "All four factors have AVE values above 0.50, confirming convergent validity, with total reliability alpha of 0.954."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Conceptual research model showing hypothesized relationships among FITAD, FINL, FINA, and FINB.",
+    "Figure 2: Path diagram illustrating SEM results with standardized regression weights.",
+    "Table 1: Sample profile showing demographics of 390 Lebanese millennials.",
+    "Table 2: KMO test results with individual MSA values for all 18 indicators.",
+    "Table 3: AVE values for four factors ranging from 0.563 to 0.718.",
+    "Table 4: HTMT ratio confirming discriminant validity among constructs.",
+    "Table 5: Reliability coefficients (alpha and omega) all exceeding 0.86.",
+    "Table 6: Model fit indices all meeting recommended thresholds.",
+    "Table 7: SEM regression results with estimates, standard errors, z-values, and p-values."
+  ],
+  "key_equations": [
+    {
+      "equation": "\\text{FINB} = \\beta_1 \\cdot \\text{FITAD} + \\beta_2 \\cdot \\text{FINL} + \\beta_3 \\cdot \\text{FINA} + \\epsilon",
+      "explanation": "Structural equation model predicting financial behavior from fintech adoption, literacy, and attitude."
+    },
+    {
+      "equation": "\\text{FINA} = \\beta \\cdot \\text{FINL} + \\epsilon",
+      "explanation": "Financial attitude predicted by financial literacy, forming the mediation pathway."
+    }
+  ],
+  "definitions": [
+    {"term": "FINL", "definition": "Financial Literacy, the knowledge and skills enabling informed financial decision-making."},
+    {"term": "FINA", "definition": "Financial Attitude, psychological tendencies and evaluative judgments about money and financial decisions."},
+    {"term": "FITAD", "definition": "FinTech Adoption, the extent to which individuals accept and use digital financial technologies."},
+    {"term": "FINB", "definition": "Financial Behavior, the observable actions related to budgeting, saving, investing, and managing credit."},
+    {"term": "BFT", "definition": "Behavioral Finance Theory, framework recognizing cognitive, psychological, and contextual factors in financial decisions."},
+    {"term": "SEM", "definition": "Structural Equation Modeling, statistical method for testing relationships among latent constructs."},
+    {"term": "CFA", "definition": "Confirmatory Factor Analysis, procedure validating that items load onto their intended constructs."},
+    {"term": "AVE", "definition": "Average Variance Extracted, measure of convergent validity for latent constructs."},
+    {"term": "HTMT", "definition": "Heterotrait-Monotrait ratio, method for assessing discriminant validity between constructs."},
+    {"term": "KMO", "definition": "Kaiser-Meyer-Olkin measure, index of sampling adequacy for factor analysis."}
+  ],
+  "citations": [
+    {
+      "author": "Abu Daqar",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Millennials display high tendency to use e-wallet services to manage business payroll and pay tuition fees.",
+      "role": "finding"
+    },
+    {
+      "author": "Maalouf",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Lebanese students with higher financial literacy make better financial decisions.",
+      "role": "finding"
+    },
+    {
+      "author": "Baptista",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Both financial literacy and attitudes exert significant influence on financial management behavior.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy gives someone the ability to make informed financial decisions and accumulate wealth.",
+      "role": "context"
+    },
+    {
+      "author": "Qamar",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Positive financial attitudes correlate with good behaviors, encouraging savings and investment.",
+      "role": "finding"
+    },
+    {
+      "author": "Mawad",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Many Lebanese lost access to savings since the crisis resulted in severe capital and banking limitations.",
+      "role": "context"
+    },
+    {
+      "author": "Allen",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy and adopting FinTech positively affect financial behavior while financial attitude is a key component.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "contextual",
+        "justification": "Studies financial behavior of millennials but in Lebanese context, not Filipino young professionals."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Reviews fintech adoption and digital financial services as components of the personal finance landscape."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Examines how eroded trust in Lebanese financial system affects fintech adoption and financial behavior."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "high",
+        "justification": "Fintech adoption represents the behavioral engagement channel for financial management."
+      },
+      {
+        "code": "11.B",
+        "name": "Retention Mechanisms and Engagement Design",
+        "relevance": "medium",
+        "justification": "Financial attitudes mediate the link between literacy and behavior, suggesting attitudinal reinforcement for sustained engagement."
+      }
+    ],
+    "contribution_to_field": "This study provides empirical evidence from Lebanon, a crisis-affected emerging economy, on how financial literacy, fintech adoption, and financial attitudes jointly shape millennials' financial behavior. It demonstrates that financial attitude serves as the strongest predictor (beta=0.414) and partially mediates the literacy-behavior relationship, extending Behavioral Finance Theory to high-uncertainty environments. The findings reveal that in crisis contexts, attitudinal mechanisms exert disproportionate influence compared to stable economies, where literacy more directly predicts behavior.",
+    "directly_justifies": [
+      "Financial attitude is the strongest predictor of financial behavior (beta=0.414) in crisis-affected Lebanon.",
+      "Financial literacy positively impacts behavior (beta=0.337) but its effect is amplified through attitudinal mediation.",
+      "Fintech adoption contributes positively (beta=0.144) but with smaller effect due to infrastructural and trust limitations.",
+      "Financial literacy strongly shapes financial attitude (beta=0.681), confirming the knowledge-attitude-behavior pathway.",
+      "In unstable economies, psychological evaluations outweigh formal financial knowledge in driving behavior."
+    ],
+    "limits": [
+      "Cross-sectional design limits ability to track changes in financial behavior over time.",
+      "Self-reported Likert scales may reflect perceived tendencies rather than actual financial behavior.",
+      "Sample limited to Lebanese millennials, restricting generalizability to other populations or contexts.",
+      "Crisis-specific constructs like institutional trust and inflation exposure were not included in the model.",
+      "Socio-demographic variables were collected but not incorporated as control variables in the structural model."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. High relevance was assigned to user trust (10.B) as the paper examines how eroded trust in Lebanese financial institutions affects financial behavior, and engagement dynamics (11.A) as fintech adoption represents the behavioral engagement channel. Medium relevance was assigned to existing personal finance systems landscape (4.A) for the review of fintech services and retention mechanisms (11.B) for the attitudinal mediation pathway. Contextual relevance was assigned to financial behavior (1.C) as the paper studies financial behavior of millennials but in Lebanese context. Topics rejected include financial structure (1.B), culturally specific practices (2.A-2.D), expense categorization (3.A-3.C), budgeting strategies (7.A-7.D), anomaly detection (8.A-8.C), mobile design (9.A-9.C), data privacy (10.A), savings/debt management (13.A-13.C), and synthetic data generation (14.A). The paper's topical coverage centers on trust, engagement, and behavioral finance in crisis-affected contexts."
+  },
+  "limitations": [
+    "Cross-sectional design limits ability to track changes in financial behavior over time.",
+    "Self-reported Likert scales may reflect perceived tendencies rather than actual financial behavior [unacknowledged].",
+    "Sample limited to Lebanese millennials, restricting generalizability to other populations or contexts.",
+    "Crisis-specific constructs like institutional trust and inflation exposure were not included in the model [unacknowledged].",
+    "Socio-demographic variables were collected but not incorporated as control variables in the structural model."
+  ],
+  "remember_this": [
+    "Financial attitude is the strongest predictor of financial behavior in crisis-affected Lebanon (beta=0.414).",
+    "Financial literacy amplifies behavior through attitudinal mediation (beta=0.681 to attitude).",
+    "Fintech adoption has a positive but smaller effect due to trust and infrastructure limitations (beta=0.144).",
+    "In unstable economies, psychological evaluations outweigh formal financial knowledge in driving behavior.",
+    "The study extends Behavioral Finance Theory to high-uncertainty, crisis-affected emerging markets."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Aoun et al_marked.md",
+      "converted_at": "2026-07-21T05:25:33Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

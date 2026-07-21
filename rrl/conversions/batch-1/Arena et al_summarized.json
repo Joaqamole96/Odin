@@ -1,1 +1,218 @@
-{}
+{
+  "paper_id": "10.29369/riber.v12i2.2266",
+  "designation": "local",
+  "title": "Influences on the Stock Market Investing of Tertiary Students in the National Capital Region, Philippines",
+  "authors": "Arena, C.M.R.; Batac, A.A.S.; Religioso, A.M.A.; Magbata, E.V.S.; Mandigma, M.B.S.",
+  "year": 2023,
+  "venue": "Review of Integrative Business and Economics Research",
+  "odin_topics": [
+    "1.A",
+    "1.B",
+    "1.C",
+    "2.C",
+    "3.A",
+    "5.C"
+  ],
+  "tldr": "Financial knowledge significantly predicts stock market investing among 384 Filipino tertiary students in Metro Manila, while money attitude and risk attitude show significant correlation but not predictive significance.",
+  "problem_and_motivation": "Despite the growing interest in stock market participation among Filipino youth, with average daily trades increasing 33.7% during the pandemic, only 1.27% of the Philippine population is considered active stock market investors. There is limited understanding of how psychological and cognitive factors specifically influence stock market investing behavior among Filipino tertiary students, despite the theoretical frameworks from behavioral finance suggesting these relationships should exist.",
+  "approach": [
+    "Administered an online survey to 387 valid respondents from universities in Metro Manila, Philippines using purposive sampling.",
+    "Applied Klontz Money Script Inventory for money attitude, General Risk Propensity Scale for risk attitude, and Perry-Morris financial knowledge instrument.",
+    "Conducted Pearson Correlation Coefficient analysis to assess linear relationships between variables and stock market investing.",
+    "Performed Stepwise Regression Analysis to identify which independent variables significantly predict stock market investing.",
+    "Added control variables including number of stocks owned and total annual investment to test model robustness.",
+    "Used a descriptive-correlational research design with 4-point and 5-point Likert scales and Cronbach's alpha reliability of 0.889."
+  ],
+  "findings": [
+    "num: Financial knowledge explains 8.8% of variance in stock market investing with R Square of 0.88.",
+    "num: Financial knowledge correlation with stock market investing is r = .297 (p < .001).",
+    "num: Risk attitude correlation with stock market investing is r = .148 (p = .004).",
+    "num: Money attitude correlation with stock market investing is r = .116 (p = .009).",
+    "num: 43.67% of respondents own fewer than 2 stocks and invest less than P25,000 annually.",
+    "num: Financial knowledge beta coefficient is .226 with t-value of 4.561 (p < .001).",
+    "Money attitude and risk attitude are significantly correlated with stock market investing but do not significantly predict it in regression analysis.",
+    "Fourth-year students constitute 66.67% of respondents and show the highest stock market engagement.",
+    "Adding number of stocks owned as control variable negates financial knowledge significance (p = .535), while adding total annual investment maintains it (p = .047)."
+  ],
+  "key_figures_tables": [
+    "Table 1: Demographic profile → 66.67% of respondents are fourth-year students from University of Santo Tomas.",
+    "Table 2: Stock market participation profile → 43.67% own fewer than 2 stocks with annual investment under P25,000.",
+    "Table 3: Pearson correlation coefficients → All three variables show significant but mild correlation with stock market investing.",
+    "Table 4: Model summary → Financial knowledge alone explains 8.8% of variance in stock market investing.",
+    "Table 6: Stepwise regression → Stock Market Investing = 0.345 + 0.12 Financial Knowledge.",
+    "Table 7: Regression with control variable → Number of stocks owned negates financial knowledge significance (p = .535).",
+    "Table 8: Regression with total investment → Financial knowledge significance maintained (p = .047) with r2 = 0.282."
+  ],
+  "key_equations": [
+    {
+      "equation": "Stock\\ Market\\ Investing = 0.345 + 0.12 \\times Financial\\ Knowledge",
+      "explanation": "Stepwise regression model showing financial knowledge as the sole significant predictor of stock market investing."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Money Attitude",
+      "definition": "An individual's perception of money encompassing avoidance, worship, status, and vigilance dimensions as measured by Klontz Money Script Inventory."
+    },
+    {
+      "term": "Risk Attitude",
+      "definition": "A chosen response to uncertainty influenced by perception, distinguishing risk seekers from risk averse individuals."
+    },
+    {
+      "term": "Financial Knowledge",
+      "definition": "An individual's understanding of financial concepts and information that supports decision-making in spending, saving, and investing."
+    },
+    {
+      "term": "Theory of Planned Behavior",
+      "definition": "A framework stating that human behavior is predicted by motivational factors including attitudes, subjective norms, and perceived behavioral control."
+    },
+    {
+      "term": "Stepwise Regression",
+      "definition": "An automated computational process that identifies the ideal multiple regression model using only statistically significant predictors."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Nadeem",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Stock investing is not significantly affected in a strong positive way by money attitudes of investors in the Indian market context.",
+      "role": "finding"
+    },
+    {
+      "author": "Van Rooij",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy and stock market participation are positively linked, with limited financial knowledge limiting market engagement.",
+      "role": "finding"
+    },
+    {
+      "author": "Klontz",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Money attitudes comprise four elements: avoidance, worship, status, and vigilance, each associated with different financial behaviors.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy encompasses the capacity to analyze economic data for making financial plans, building wealth, acquiring debt, and retirement provision.",
+      "role": "context"
+    },
+    {
+      "author": "Ajzen",
+      "year": 1991,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The Theory of Planned Behavior states that human behavior is best predicted by motivational factors including attitudes, subjective norms, and perceived behavioral control.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ahinful",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy, ethical view of stock market investment, and attitude towards financial risk influence willingness to invest in stocks.",
+      "role": "finding"
+    },
+    {
+      "author": "Hibbert",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A person tends to efficiently allocate most investments if their knowledge of finance is higher.",
+      "role": "finding"
+    },
+    {
+      "author": "Akhtar",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Risk attitudes do not significantly affect investment in stocks, supporting the finding that highly risk-averse individuals may avoid stock investing.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "high",
+        "justification": "Studies 384 Filipino tertiary students in Metro Manila as a specific demographic group for stock market participation."
+      },
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Documents stock ownership patterns, annual investment amounts, and dividend earnings among student investors."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Examines how financial knowledge, money attitude, and risk attitude influence stock market investing behavior."
+      },
+      {
+        "code": "2.C",
+        "name": "User-Declared Financial Preferences",
+        "relevance": "medium",
+        "justification": "Measures self-reported money attitudes, risk attitudes, and financial knowledge through Likert-scale instruments."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "low",
+        "justification": "Tangentially relates to how students categorize and allocate investment expenditure across stock types."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "Uses regression analysis to classify which psychological factors predict stock market investing behavior."
+      }
+    ],
+    "contribution_to_field": "The paper contributes empirical evidence from the Philippine context on how financial knowledge, money attitude, and risk attitude influence stock market investing among tertiary students. It demonstrates that financial knowledge is the only significant predictor of stock market participation, explaining 8.8% of variance, while money attitude and risk attitude show correlation but not predictive significance. The study fills a gap in Philippine literature regarding behavioral factors influencing investment decisions among young investors and provides baseline data on student stock market participation patterns in Metro Manila.",
+    "directly_justifies": [
+      "Financial knowledge significantly predicts stock market investing with beta coefficient .226 and p < .001.",
+      "Money attitude and risk attitude are correlated with stock market investing but do not significantly predict it in regression analysis.",
+      "43.67% of student investors own fewer than 2 stocks with annual investment under P25,000.",
+      "Financial knowledge explains 8.8% of variance in stock market investing (R Square = 0.88).",
+      "Adding total annual investment as control variable maintains financial knowledge significance (p = .047) with r2 = 0.282."
+    ],
+    "limits": [
+      "Study is limited to tertiary students in Metro Manila, limiting generalizability to the broader Philippine population.",
+      "Data relies on self-reported measures which may be subject to social desirability and recall bias.",
+      "Cross-sectional design cannot establish causal relationships between variables.",
+      "Purposive sampling method introduces potential selection bias among respondents.",
+      "The study does not account for actual stock market performance or investment returns achieved by participants."
+    ]
+  },
+  "limitations": [
+    "Study is restricted to tertiary students in Metro Manila, limiting generalizability to the broader Philippine population and non-student investors.",
+    "Self-reported measures may be subject to social desirability bias and inaccurate recall of financial behaviors and attitudes.",
+    "Cross-sectional design prevents establishing causal relationships between financial knowledge and stock market investing.",
+    "Purposive sampling introduces potential selection bias that may not represent the full spectrum of student investors.",
+    "The study does not account for actual investment returns or portfolio performance, relying solely on self-reported participation."
+  ],
+  "remember_this": [
+    "Financial knowledge is the only significant predictor of stock market investing among Filipino tertiary students.",
+    "Money attitude and risk attitude correlate with stock investing but do not predict it in regression analysis.",
+    "43.67% of student investors own fewer than 2 stocks with annual investment under P25,000.",
+    "Financial knowledge explains 8.8% of variance in stock market investing behavior.",
+    "The study uses Theory of Planned Behavior framework adapted to the Philippine financial context."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T18:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Arena et al_marked.md",
+      "converted_at": "2026-07-21T05:26:05Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

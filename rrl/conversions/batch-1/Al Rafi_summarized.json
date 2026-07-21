@@ -1,1 +1,157 @@
-{}
+{
+  "paper_id": "10.1109/ICECCT56650.2022.9946690",
+  "designation": "bangladesh",
+  "title": "Personal Finance Management System: A Chatbot-Based Personal Finance Management System Using Rule-Based Approach",
+  "authors": "Al Rafi, A.; Ananna, N.T.; Arif, F.; Hassan, M.M.; Jahan, I.",
+  "year": 2022,
+  "venue": "IEEE",
+  "odin_topics": ["1.A", "1.D", "4.A", "11.A"],
+  "tldr": "A rule-based chatbot prototype using NLP and ML automates personal finance tracking and provides spending recommendations through natural language interaction.",
+  "problem_and_motivation": "Manual personal finance management is difficult, error-prone, and tedious, leading to overspending, debt accumulation, and lack of savings. Existing chatbot solutions have not effectively addressed the needs of less tech-savvy individuals, and no single system fully covers income and expense tracking, financial planning, and savings management.",
+  "approach": [
+    "Developed a chatbot-based PFM prototype using Python with rule-based natural language processing.",
+    "Applied Named Entity Recognition (NER) for input extraction, pattern matching, and rule-based logic for transaction processing.",
+    "Used NLP techniques including tokenization, tagging, and parsing via NLTK and SpaCy.",
+    "Trained a machine learning model on labeled data to recognize input intent, extracting features like category, amount, and date.",
+    "Integrated a financial model to evaluate savings based on monthly income and total spending.",
+    "Implemented a Flask backend server with MongoDB for data storage."
+  ],
+  "findings": [
+    "num: The system achieved 95% accuracy in understanding and processing user queries.",
+    "num: 100% of tested transactions were correctly saved and categorized in the database.",
+    "num: 200+ test cases were used to validate the system.",
+    "num: 45% cost reduction observed in financial management operations.",
+    "num: 100% positive user satisfaction reported among testers.",
+    "The system successfully automates income and expense tracking, financial planning, and savings management.",
+    "The chatbot effectively extracts useful information from user inputs using NLP."
+  ],
+  "key_figures_tables": [
+    "Figure 3: Model training data collection, processing, and analysis pipeline.",
+    "Figure 5: NLP process workflow showing tokenization, tagging, parsing, and NER steps.",
+    "Figure 6: Architecture diagram showing chatbot communication flow with MongoDB.",
+    "Figure 7: Architecture diagram showing user data management and categorization."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {
+      "term": "PFM System",
+      "definition": "A personal finance management system that enables users to record income and expenses, set financial targets, and track progress."
+    },
+    {
+      "term": "NER",
+      "definition": "Named Entity Recognition is an NLP technique that identifies and classifies named entities in text into predefined categories."
+    },
+    {
+      "term": "Intent",
+      "definition": "The goal or purpose behind a user's input that the chatbot must identify to respond appropriately."
+    },
+    {
+      "term": "Rule-based System",
+      "definition": "A system that uses predefined rules to match user inputs and generate responses."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Dhinakaran",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The proposed chatbot can handle user requests and provide answers for FAQs using NLP and rule-based techniques.",
+      "role": "baseline"
+    },
+    {
+      "author": "Shen",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Reinforcement learning techniques have been applied to dialogue response generation from open-domain human conversations.",
+      "role": "baseline"
+    },
+    {
+      "author": "Deshpande",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A rule-based algorithm was developed for financial document information extraction.",
+      "role": "baseline"
+    },
+    {
+      "author": "Liang",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A sequence-to-sequence neural network with attention mechanism was proposed for goal-oriented dialogue systems.",
+      "role": "baseline"
+    },
+    {
+      "author": "Cui",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A multi-turn attention model was developed for question answering using multi-hop reading comprehension.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Current State of Personal Finance Management",
+        "relevance": "high",
+        "justification": "Directly addresses the current state of personal finance management by describing existing challenges and proposing an automated solution."
+      },
+      {
+        "code": "1.D",
+        "name": "Behavioral and Psychological Barriers to Financial Decision-Making",
+        "relevance": "medium",
+        "justification": "Discusses behavioral barriers such as manual effort, time consumption, and overspending that prevent effective personal finance management."
+      },
+      {
+        "code": "4.A",
+        "name": "Current Budgeting Software and Tools",
+        "relevance": "high",
+        "justification": "Describes and compares existing personal finance management tools and chatbot solutions."
+      },
+      {
+        "code": "11.A",
+        "name": "Chatbot-Based Financial Assistance",
+        "relevance": "high",
+        "justification": "Proposes and evaluates a chatbot-based system for automated personal finance management using NLP."
+      }
+    ],
+    "contribution_to_field": "This paper presents a prototype chatbot-based PFM system that automates transaction recording, categorization, and savings analysis using rule-based NLP. It demonstrates how NLP techniques can extract financial information from natural language inputs and provide personalized recommendations. The system achieves 95% accuracy and 100% user satisfaction, showing the viability of conversational AI for personal finance.",
+    "directly_justifies": [
+      "Chatbot-based systems using NLP can automate personal finance management tasks like expense tracking.",
+      "Rule-based approaches with NER can effectively extract financial entities from natural language inputs.",
+      "Conversational interfaces reduce barriers for less tech-savvy users to manage finances."
+    ],
+    "limits": [
+      "The system is a prototype with limited scope covering only income and expense tracking.",
+      "Rule-based approach may struggle with diverse or ambiguous user inputs compared to deep learning methods.",
+      "No integration with real banking systems or live financial data sources."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 1 (Current Personal Finance Landscape) is directly relevant as the paper addresses personal finance management challenges and proposes an automated solution. Codes 1.A (Current State of Personal Finance Management) and 1.D (Behavioral Barriers) apply at high and medium relevance respectively. Domain 4 (Landscape of Existing Systems) is relevant as the paper surveys existing PFM tools (4.A). Domain 11 (Personalized User Engagement) is relevant through the chatbot interface (11.A). Other domains like 2 (User Perspectives), 3 (Psychology), 7 (Budgeting Strategies), 8 (Anomaly Detection), 9 (UX/UI), 10 (Privacy), 12 (Evaluation Frameworks), 13 (Savings/Debt), and 14 (Synthetic Data) do not directly apply."
+  },
+  "limitations": [
+    "Limited scope covering only income and expense tracking without investment management.",
+    "Rule-based NLP may not handle diverse or ambiguous user inputs as effectively as modern LLM approaches.",
+    "Prototype implementation with 200+ test cases; not validated at scale.",
+    "No integration with real banking APIs or live financial data feeds."
+  ],
+  "remember_this": [
+    "The system achieved 95% accuracy in understanding user queries and 100% transaction accuracy.",
+    "NLP techniques used include tokenization, tagging, parsing, and Named Entity Recognition.",
+    "45% cost reduction and 100% user satisfaction were observed in testing.",
+    "The chatbot supports natural language input for adding transactions and querying spending summaries.",
+    "Backend uses Flask with MongoDB for data storage and retrieval."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Al Rafi_marked.md",
+      "converted_at": "2026-07-21T05:15:53Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

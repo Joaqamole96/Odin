@@ -1,1 +1,93 @@
-{}
+{
+  "paper_id": "6c894c2f-5820-5a88-b913-ba1561f7f03b",
+  "designation": "local",
+  "title": "Abot kamay: Embedding digital transactions in the Philippines",
+  "authors": "Athique, Adrian; Lorenzana, Jozon A.",
+  "year": 2025,
+  "venue": "International Journal of Cultural Studies",
+  "odin_topics": ["1.A", "1.C", "2.A"],
+  "tldr": "Ethnographic study of how Filipino cultural norms around reciprocity, redistribution, and remuneration shape the adoption and use of digital transaction platforms (GCash, PayMaya, Smart Padala) across three Metro Manila communities.",
+  "problem_and_motivation": "The global rise of digital transactions is reshaping financial systems, but the interaction between digital platforms and local exchange cultures in the Global South remains underexplored. In the Philippines, where 44% of adults are unbanked and cash-based informal economies dominate, digital transaction platforms promise financial inclusion but must contend with deeply embedded social and cultural norms around money. There is a need to understand how local users make meaning of digital transactions within established frameworks of kinship, reciprocity, and community obligation, rather than assuming convenience as the primary driver of adoption.",
+  "approach": [
+    "Ethnographic fieldwork conducted from 2019 to 2022 across three Metro Manila districts with differing socio-economic profiles: Santa Mesa (middle-class established community), Payatas (working-class informal economy), and Quezon City (upper-middle-class digital economy professionals).",
+    "Focus groups of 8-10 participants conducted semi-structurally in Tagalog using communal meeting spaces, supplemented by individual video-link interviews during COVID-19 lockdowns.",
+    "Theoretical framework based on Karl Polanyi's concept of embeddedness, analyzing how the three Rs of exchange—reciprocity, redistribution, and remuneration—operate through digital transaction platforms.",
+    "Data analysis centered on the Filipino concept of 'abot kamay' (within reach/helping hand) as an organizing principle for understanding digital transaction adoption across communities.",
+    "Observation and photographic documentation of digital transaction visibility in local retail outlets, sari-sari stores, convenience franchises, and malls."
+  ],
+  "findings": [
+    "Abot kamay serves as the primary cultural framework through which Filipinos understand and adopt digital transactions, combining functional assistance with ontological proximity to others.",
+    "Three forms of digitally-enabled abot kamay emerged: Abono (paying for others), Pantawid (bridging cash shortages), and Emergency (crisis transfers).",
+    "GCash emerged as the dominant platform with 76 million users by 2023, partly through its integration with Facebook's free messenger service and 7-Eleven cash-out network.",
+    "Digital transactions remediate existing practices of reciprocity rather than replacing them, with the speed and frequency of digital transfers increasing the burden of social obligations.",
+    "Across all cohorts, relationships—not convenience—were the primary explanation for digital transaction adoption, contradicting industry narratives.",
+    "The COVID-19 pandemic accelerated adoption from 42.1% of retail payments in 2022, with P2P transfers growing at 91.2% per annum.",
+    "Mental accounting of social obligations became visible through digital transaction receipts, with participants treating SMS confirmations as passbook entries to track gifting relationships.",
+    "Platform affordances enabled novel forms of remuneration: content creation for micro-payments (Buzz Break), mobile gaming wagers (Mobile Legends), and online cockfighting (e-sabong)."
+  ],
+  "key_figures_tables": [],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Abot kamay", "definition": "Filipino idiom literally meaning 'within reach' or 'helping hand,' connoting both functional assistance and ontological proximity to others in financial transactions."},
+    {"term": "Abono", "definition": "Paying for someone else's expense, especially when they are unable to pay due to distance or lack of cash."},
+    {"term": "Pantawid", "definition": "Money borrowed to get through a cash shortage, a bridging mechanism in Filipino financial practice."},
+    {"term": "Embeddedness", "definition": "Polanyi's concept that economic exchanges always take place within and as networks of social relationships, not in abstract market isolation."},
+    {"term": "The three Rs", "definition": "Polanyi's framework of reciprocity (gift exchange with obligation), redistribution (collection and allocation by authority), and remuneration (market-based payment)."},
+    {"term": "Kakayahan", "definition": "Filipino concept denoting the capacity of the giver to give and offer help, defining the limits and possibilities of abot kamay."},
+    {"term": "Suki", "definition": "Filipino term for a loyal customer who receives privileges such as discounts and credit from a vendor."}
+  ],
+  "citations": [
+    {"author": "Polanyi", "year": 1944, "page": 0, "paragraph": 0, "claim": "Economic exchanges are always embedded within networks of social relationships; market economies seek to disembed existing relationships to impose profit motives.", "role": "theoretical"},
+    {"author": "Granovetter", "year": 1985, "page": 0, "paragraph": 0, "claim": "Market exchanges are always embedded, and reciprocity and redistribution have not been superseded by market logics.", "role": "theoretical"},
+    {"author": "Braudel", "year": 1977, "page": 0, "paragraph": 0, "claim": "The historical accretion of reciprocity, redistribution and remuneration constitutes multi-layered economies.", "role": "theoretical"},
+    {"author": "Graeber", "year": 2012, "page": 0, "paragraph": 0, "claim": "Digital transactions serve important functions in sustaining or transforming interpersonal and reciprocal relationships, signifying social currencies in the digital era.", "role": "context"},
+    {"author": "Madianou", "year": 2013, "page": 0, "paragraph": 0, "claim": "Money exchanges figure into expressions of nuclear and extended family relationships in transnational migration contexts.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Users' Daily Spending and Saving Behaviors", "relevance": "high", "justification": "The paper provides rich ethnographic data on how Filipinos across different socio-economic classes conduct daily financial transactions, including money transfers, shopping, lending, and gifting through digital platforms."},
+      {"code": "1.C", "name": "Filipino Cultural Attitudes Toward Money, Budgeting, and Financial Planning", "relevance": "high", "justification": "The concept of abot kamay and the three Rs (reciprocity, redistribution, remuneration) directly address Filipino cultural attitudes toward money and financial exchange."},
+      {"code": "2.A", "name": "Financial Inclusion Barriers for Unbanked and Underbanked Filipinos", "relevance": "medium", "justification": "The paper documents how 44% of Filipino adults remain unbanked and how digital platforms address barriers like stringent ID requirements and minimum balance requirements."}
+    ],
+    "contribution_to_field": "This ethnographic study demonstrates that digital transaction adoption in the Philippines is driven by cultural norms of reciprocity and kinship obligation rather than consumer convenience. The concept of abot kamay provides a culturally-grounded framework for understanding how Filipinos across socio-economic classes make meaning of digital financial platforms. The three communities studied reveal distinct patterns: Santa Mesa's middle-class cohort focuses on consumer benefits and privacy; Payatas's working-class cohort prioritizes money transfers and remittances; Quezon City's professional cohort navigates multi-platform transaction chains for both personal and business purposes. The COVID-19 pandemic accelerated adoption by making digital abot kamay essential for maintaining social bonds during lockdowns.",
+    "directly_justifies": [
+      "Abot kamay (within reach/helping hand) is the primary cultural framework through which Filipinos understand digital transaction utility.",
+      "Three forms of digitally-enabled abot kamay emerged: Abono, Pantawid, and Emergency transfers.",
+      "Relationships—not convenience—were the primary explanation for digital transaction adoption across all cohorts.",
+      "GCash reached 76 million users by 2023 through integration with Facebook Messenger and 7-Eleven network.",
+      "P2P transfers grew at 91.2% per annum, with digital transactions reaching 42.1% of retail payments by 2022.",
+      "Digital transaction receipts serve as mental accounting tools for tracking social obligations and gifting relationships."
+    ],
+    "limits": [
+      "Study limited to Metro Manila, potentially not representing provincial transaction cultures across the Philippine archipelago.",
+      "Ethnographic approach provides depth but limited generalizability compared to large-N quantitative studies.",
+      "Data collection disrupted by COVID-19 pandemic, requiring methodological shift from focus groups to video-link interviews.",
+      "No quantitative measurement of transaction volumes or platform usage patterns to complement qualitative accounts.",
+      "Research conducted during a period of rapid platform evolution, making findings potentially time-bound to the 2019-2022 period."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. High relevance was assigned to Filipino users' daily spending and saving behaviors (1.A) because the paper provides detailed ethnographic accounts of how Filipinos use digital platforms for money transfers, shopping, lending, and gifting. High relevance was assigned to Filipino cultural attitudes toward money (1.C) because abot kamay and the three Rs directly address cultural norms shaping financial behavior. Medium relevance was assigned to financial inclusion barriers (2.A) because the paper documents how 44% of adults remain unbanked and how platforms address structural barriers. Topics rejected include expense categorization (3.A-3.C), personal finance systems (4.A-4.B), classification approaches (5.A-5.C), predictive modeling (6.A-6.C), budgeting strategies (7.A-7.D), anomaly detection (8.A-8.B), mobile design (9.A-9.C), data privacy (10.A), engagement dynamics (11.A-11.B), evaluation frameworks (12.A-12.C), savings/debt management (13.A-13.C), and synthetic data generation (14.A). The paper is ethnographic rather than technical, focusing on cultural meaning-making rather than system design or algorithm development."
+  },
+  "limitations": [
+    "Study limited to Metro Manila, potentially not representing provincial transaction cultures across the Philippine archipelago.",
+    "Ethnographic approach provides depth but limited generalizability compared to large-N quantitative studies.",
+    "Data collection disrupted by COVID-19 pandemic, requiring methodological shift from focus groups to video-link interviews.",
+    "No quantitative measurement of transaction volumes or platform usage patterns to complement qualitative accounts.",
+    "Research conducted during a period of rapid platform evolution, making findings potentially time-bound to the 2019-2022 period."
+  ],
+  "remember_this": [
+    "Abot kamay (within reach/helping hand) is the cultural framework through which Filipinos adopt digital transactions, prioritizing relationships over convenience.",
+    "GCash dominates with 76M users by 2023, driven by Facebook Messenger integration and 7-Eleven cash-out network.",
+    "Three forms of digital abot kamay: Abono (paying for others), Pantawid (bridging cash shortages), and Emergency (crisis transfers).",
+    "P2P transfers grew 91.2% annually, reaching 42.1% of retail payments by 2022, accelerated by COVID-19 lockdowns.",
+    "Digital transaction receipts function as mental accounting tools for tracking social obligations and gifting relationships."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T13:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Athique & Lorenzana_marked.md",
+      "converted_at": "2026-07-21T05:29:51Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

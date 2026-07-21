@@ -1,1 +1,121 @@
-{}
+{
+  "paper_id": "6c51070b-5c81-5c8a-967d-a1b3805fb6b5",
+  "designation": "local",
+  "title": "Financial Management Practices of Employees at Bureau Of Internal Revenue",
+  "authors": "Cabiles, S. L. L.",
+  "year": 2025,
+  "venue": "United International Journal for Research & Technology",
+  "odin_topics": ["1.C", "2.A", "3.A", "13.A", "13.B"],
+  "tldr": "Examines budgeting, spending, saving, and investing practices of permanent BIR employees in Sorsogon City, identifying gaps between financial literacy and application.",
+  "problem_and_motivation": "Government employees face varying levels of financial literacy and inconsistent practical application of financial knowledge. Understanding current financial management practices and challenges is needed to design targeted financial literacy programs that improve employee financial security and organizational productivity.",
+  "approach": [
+    "Surveyed permanent employees at BIR RDO 068, Sorsogon City using online and pen-and-paper Likert-scale questionnaires.",
+    "Used embedded mixed methods design integrating quantitative financial practice data with qualitative data on financial challenges.",
+    "Analyzed responses using descriptive statistics: frequency count, percentage, ranking, and weighted mean.",
+    "Measured four financial domains: budgeting, spending, saving, and investing practices and literacy enhancement.",
+    "Ranked ten financial challenges by severity using frequency distribution and sum of ranks."
+  ],
+  "findings": [
+    "num: Employees show strong budgeting (mean 4.32 for emergency fund setup) but less consistent spending and investing practices.",
+    "num: Budgeting app usage is low (mean 3.07), indicating infrequent reliance on digital tools for budget management.",
+    "num: Accumulation of debt ranks as the top financial challenge (sum of ranks 241), followed by lack of awareness about interest rates.",
+    "num: Financial literacy activities have high perceived positive impact (mean 4.14) on financial practices.",
+    "num: Value-action gap identified in investing: knowledge (mean 3.98) exceeds practical application (mean 3.51 for real estate).",
+    "num: Impulse spending scored mean 3.20, and credit card usage is low (mean 2.52), suggesting cautious borrowing behavior.",
+    "num: Self-directed learning dominates; employer-sponsored literacy program attendance is rare (mean 2.10)."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {"term": "VAG", "definition": "Value-Action Gap — disparity between financial knowledge and actual behavior"},
+    {"term": "BIR", "definition": "Bureau of Internal Revenue"},
+    {"term": "RDO", "definition": "Revenue District Office"}
+  ],
+  "citations": [
+    {"author": "Ali", "year": 2024, "page": 0, "paragraph": 1, "claim": "Mental budgeting enables better personal financial management.", "role": "context"},
+    {"author": "Lusardi", "year": 2019, "page": 0, "paragraph": 1, "claim": "Financial education can be efficiently provided in workplaces through targeted workshops.", "role": "context"},
+    {"author": "Rao", "year": 2024, "page": 0, "paragraph": 1, "claim": "Emergency savings improve job performance by 7% and increase promotion likelihood by 16%.", "role": "finding"},
+    {"author": "Cwynar", "year": 2022, "page": 0, "paragraph": 1, "claim": "Many consumers have very low levels of debt literacy and understanding of effective interest rates.", "role": "finding"},
+    {"author": "Bai", "year": 2023, "page": 0, "paragraph": 1, "claim": "Higher financial literacy is associated with better financial status.", "role": "context"},
+    {"author": "Tamplin", "year": 2025, "page": 0, "paragraph": 1, "claim": "Monitoring and tracking expenses enables identification of expense types and fund allocation.", "role": "context"},
+    {"author": "Newmeyer", "year": 2020, "page": 0, "paragraph": 1, "claim": "Automation for liquid savings is more effective with the right savings mindset.", "role": "context"},
+    {"author": "Savitha", "year": 2022, "page": 0, "paragraph": 1, "claim": "Customers use new financial tools when they see real benefits and feel confident.", "role": "finding"},
+    {"author": "Grunwald", "year": 2025, "page": 0, "paragraph": 1, "claim": "Value-action gap is the disparity between an individual's beliefs and their actual behavior.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Studies financial behavior (budgeting, spending, saving, investing) but sample includes all permanent employees, not exclusively young professionals."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "high",
+        "justification": "Focuses on Filipino government employees' financial management practices, including culturally-contextual spending and saving behaviors."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "low",
+        "justification": "Classifies expenses into budgeting, spending, saving, and investing but does not propose a formal categorization framework."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "medium",
+        "justification": "Documents saving practices including emergency funds and long-term goal allocation among Filipino employees."
+      },
+      {
+        "code": "13.B",
+        "name": "Debt Management in PFMS",
+        "relevance": "medium",
+        "justification": "Debt accumulation ranks as the top financial challenge; paper addresses debt literacy gaps."
+      }
+    ],
+    "contribution_to_field": "This paper provides a domain-specific assessment of financial management practices among Filipino government employees, quantifying the gap between financial literacy and practical application across four financial domains. It identifies debt accumulation, interest rate unawareness, and insufficient budgeting knowledge as the most pressing challenges. The study demonstrates that self-directed learning dominates over formal financial education, and that employees perceive high value in literacy programs yet inconsistently apply learned knowledge. It contributes empirical evidence from a Philippine public-sector context to the broader literature on personal financial management behavior and financial literacy intervention design.",
+    "directly_justifies": [
+      "Employees show strong budgeting and saving but inconsistent spending and investing behaviors.",
+      "Debt accumulation is the top financial challenge, followed by low awareness of interest rates.",
+      "Financial literacy programs are perceived as highly beneficial but knowledge application remains inconsistent.",
+      "Employer-sponsored financial literacy program attendance is rare among BIR employees."
+    ],
+    "limits": [
+      "Sample is limited to one BIR revenue district office, limiting generalizability to other government or private sectors.",
+      "Quantitative Likert-scale data may not capture nuanced motivations behind financial behaviors.",
+      "Does not propose or evaluate any algorithmic or system-based intervention for financial management."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains in the taxonomy were systematically scanned. Relevant domains flagged: Domain 1 (Filipino Young Professionals) was considered but the paper studies all permanent employees, not specifically young professionals, so assigned medium relevance. Domain 2 (Culturally Specific Financial Practices) received high relevance as the study focuses on Filipino government employees' financial behaviors. Domain 3 (Expense Categorization) received low relevance — the paper groups expenses into four categories but does not propose a formal framework. Domain 13 (Savings and Debt Management) was relevant for both savings practices and debt challenges. Domains 4-12 and 14 were considered and rejected: the paper does not address system design, evaluation, algorithms, mobile UX, privacy, engagement, or ML model deployment. Overall, this paper contributes empirical data on financial behavior and literacy gaps in a Filipino workplace context."
+  },
+  "limitations": [
+    "Sample limited to one BIR revenue district office; findings may not generalize to other government agencies or private sector.",
+    "Relies on self-reported Likert-scale data subject to social desirability and recall bias. [unacknowledged]",
+    "Cross-sectional design captures behavior at one point in time; no longitudinal tracking of financial habit changes.",
+    "Does not evaluate effectiveness of any specific financial intervention or system.",
+    "Qualitative data on challenges collected via questionnaire rather than in-depth interviews, limiting depth. [unacknowledged]"
+  ],
+  "remember_this": [
+    "BIR employees show strong budgeting and saving but weak spending and investing practices.",
+    "Debt accumulation, low interest rate awareness, and limited budgeting skills are top challenges.",
+    "Financial literacy programs are highly valued but applied inconsistently by employees.",
+    "Digital budgeting tool usage is low despite availability of mobile banking platforms."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T05:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cabiles_marked.md",
+      "converted_at": "2026-07-21T05:42:33Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

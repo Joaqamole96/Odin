@@ -1,1 +1,175 @@
-{}
+{
+  "paper_id": "10.63125/z9s39s47",
+  "designation": "international",
+  "title": "AI-Powered Personalization in Digital Banking: A Review of Customer Behavior Analytics and Engagement",
+  "authors": "Ashrafuzzaman, M.; Parveen, R.; Sumiya, M.A.; Rahman, A.",
+  "year": 2025,
+  "venue": "American Journal of Interdisciplinary Studies",
+  "odin_topics": ["4.A", "5.A", "10.A", "10.B", "11.A", "11.B"],
+  "tldr": "This systematic review examines AI-powered personalization in digital banking, analyzing how customer behavior analytics and intelligent algorithms enhance engagement, satisfaction, and retention.",
+  "problem_and_motivation": "Financial institutions are integrating AI technologies to deliver personalized customer experiences in digital banking. Customer expectations are growing increasingly dynamic, requiring real-time adaptation based on individual behaviors and preferences. However, significant challenges remain including regulatory uncertainty, data privacy concerns, and insufficient attention to cultural diversity.",
+  "approach": [
+    "Conducted systematic literature review following PRISMA 2020 framework.",
+    "Analyzed 111 peer-reviewed articles published between 2014 and 2024.",
+    "Organized literature into seven key domains: AI techniques, behavioral modeling, predictive analytics, engagement outcomes, ethical challenges, emerging markets, and research limitations.",
+    "Examined machine learning, NLP, recommender systems, and sentiment analysis techniques.",
+    "Analyzed customer behavior analytics including transaction records, device usage, and clickstream data.",
+    "Assessed impact on customer satisfaction, loyalty, trust, and lifetime value."
+  ],
+  "findings": [
+    "AI-driven personalization improves operational efficiency and service quality.",
+    "Personalization fosters emotional loyalty and increases customer lifetime value.",
+    "Machine learning, NLP, recommender systems, and sentiment analysis are widely applied.",
+    "Real-time analytics enable context-aware experiences across mobile and web platforms.",
+    "Behavioral segmentation replaces traditional demographic profiling.",
+    "Privacy-by-design principles reduce regulatory risk and strengthen consumer trust.",
+    "Emerging markets show innovative adaptations through alternative data use.",
+    "Explainable AI models are gaining traction for transparency in recommendations."
+  ],
+  "key_figures_tables": [
+    "Figure 1: AI's Role in Transforming Digital Banking → Shows integration of AI technologies in banking.",
+    "Figure 2: Unveiling Dimensions of AI Personalization → Highlights multidimensional nature of personalization.",
+    "Figure 3: Six key components in Digital banking → Outlines core components of digital banking systems.",
+    "Figure 4: Trends in AI Techniques for Personalization → Shows evolution of AI techniques in banking.",
+    "Figure 5: Predictive Customer Analytics → Demonstrates predictive analytics capabilities.",
+    "Figure 6: Customer Micro-Segmentation → Shows behavior-based segmentation approaches.",
+    "Figure 7: Impact of AI-Powered Personalization on Customer Engagement → Illustrates engagement outcomes."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "AI",
+      "definition": "Artificial Intelligence, simulation of human intelligence processes by machines."
+    },
+    {
+      "term": "NLP",
+      "definition": "Natural Language Processing, enables chatbots and virtual assistants."
+    },
+    {
+      "term": "ML",
+      "definition": "Machine Learning, enables pattern extraction from large datasets."
+    },
+    {
+      "term": "PFM",
+      "definition": "Personal Finance Management, AI-powered features for budgeting and spending analysis."
+    },
+    {
+      "term": "XAI",
+      "definition": "Explainable AI, models that provide understandable explanations for recommendations."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Ashrafuzzaman",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "111 peer-reviewed articles published between 2014 and 2024 were analyzed.",
+      "role": "finding"
+    },
+    {
+      "author": "Ashrafuzzaman",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI-driven personalization improves operational efficiency and service quality.",
+      "role": "finding"
+    },
+    {
+      "author": "Ashrafuzzaman",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Personalization fosters emotional loyalty and increases customer lifetime value.",
+      "role": "finding"
+    },
+    {
+      "author": "Ashrafuzzaman",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Behavioral segmentation replaces traditional demographic profiling.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Reviews AI applications in digital banking including personal finance management features."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Analyzes customer behavior analytics and profiling techniques for personalization."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses data governance, privacy regulations, and security frameworks."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Examines customer trust, transparency, consent, and control mechanisms."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "high",
+        "justification": "Studies how AI personalization enhances customer engagement and satisfaction."
+      },
+      {
+        "code": "11.B",
+        "name": "Retention Mechanisms and Engagement Design",
+        "relevance": "medium",
+        "justification": "Discusses retention strategies and lifetime value optimization."
+      }
+    ],
+    "contribution_to_field": "This systematic review provides comprehensive synthesis of AI-powered personalization in digital banking, analyzing 111 articles across seven key domains. It identifies machine learning, NLP, and recommender systems as core techniques enabling personalized experiences. The review highlights how customer behavior analytics drives segmentation and micro-targeting strategies. It examines the impact of personalization on engagement, satisfaction, loyalty, and trust. The paper also addresses critical challenges including data privacy, algorithmic bias, and regulatory compliance, offering insights for personal finance systems.",
+    "directly_justifies": [
+      "111 peer-reviewed articles published between 2014 and 2024 were analyzed.",
+      "AI-driven personalization improves operational efficiency and service quality.",
+      "Personalization fosters emotional loyalty and increases customer lifetime value.",
+      "Behavioral segmentation replaces traditional demographic profiling.",
+      "Privacy-by-design principles reduce regulatory risk and strengthen consumer trust."
+    ],
+    "limits": [
+      "Review may not capture very recent developments post-2024.",
+      "Focus on digital banking may not fully translate to personal finance applications.",
+      "Emerging market innovations may have limited applicability to developed markets."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all 14 topic domains revealed primary relevance to Domains 4, 5, 10, and 11. Topic 4.A (Landscape of Existing Personal Finance Systems) received medium relevance as the paper reviews AI applications in digital banking including PFM features. Topic 5.A (Financial Behavioral Profiles) received high relevance due to focus on customer behavior analytics and profiling. Topic 10.A (Data Privacy) received medium relevance for discussing data governance and privacy frameworks. Topic 10.B (User Trust) received high relevance for examining trust, transparency, and consent. Topic 11.A (Engagement Dynamics) received high relevance for studying AI personalization impact on engagement. Topic 11.B (Retention Mechanisms) received medium relevance for discussing retention strategies. Domains 1-3, 6-9, 12-14 were considered and rejected as the paper does not address Filipino demographics, expense categorization, predictive modeling in personal finance, budgeting strategies, anomaly detection, mobile design principles, evaluation frameworks, savings/debt management, or synthetic data generation."
+  },
+  "limitations": [
+    "Review may not capture very recent developments post-2024.",
+    "Focus on digital banking may not fully translate to personal finance applications.",
+    "Emerging market innovations may have limited applicability to developed markets."
+  ],
+  "remember_this": [
+    "111 peer-reviewed articles analyzed across seven key domains.",
+    "AI personalization improves efficiency, quality, and customer lifetime value.",
+    "Behavioral segmentation replaces traditional demographic profiling.",
+    "Privacy-by-design principles strengthen consumer trust.",
+    "Explainable AI models gain traction for transparency."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T10:45:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ashrafuzzaman et al_marked.md",
+      "converted_at": "2026-07-21T05:28:17Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,1 +1,146 @@
-{}
+{
+  "paper_id": "10.69569/jip.2026.065",
+  "designation": "local",
+  "title": "Beyond Awareness: Examining Financial Behaviors Among Public School Teachers in the Philippines",
+  "authors": "Am-una, Alexander H.",
+  "year": 2026,
+  "venue": "Journal of Interdisciplinary Perspectives",
+  "odin_topics": ["7.A", "13.B"],
+  "tldr": "Public school teachers demonstrate moderately positive financial behaviors driven by structural necessity rather than mastery, with budgeting as most difficult behavior despite moderate frequency, revealing knowledge–action gap.",
+  "problem_and_motivation": "Financial literacy programs assume knowledge translates to behavior, but this knowledge–action gap remains underexplored among public school teachers who face constrained disposable income despite relatively stable employment. Teachers' financial behaviors directly influence students' financial socialization, making their own financial practices strategically important.",
+  "approach": [
+    "Explanatory sequential mixed-methods design with 335 survey responses and 9 follow-up interviews.",
+    "Modified OECD/INFE 2020 survey instrument measuring 16 financial behavior items.",
+    "McDonald's omega reliability: ω = 0.713.",
+    "Quantitative: ANOVA, t-tests, Friedman test. Qualitative: inductive thematic analysis.",
+    "Participants: regular public school teachers in Baguio City with ≥1 year experience."
+  ],
+  "findings": [
+    "num: General weighted mean of 2.69 for overall financial behaviors (moderately positive).",
+    "num: Making ends meet strongest domain (M = 2.90) driven by timely bill payments (M = 3.30).",
+    "num: Budgeting performed moderately (M = 2.68) but rated most difficult behavior (M = 2.17).",
+    "num: Active saving weakest domain (M = 2.43).",
+    "num: Choosing financial products easiest perceived domain (M = 4.15) despite low ownership (M = 2.45).",
+    "num: Single teachers significantly more positive behaviors than married (p = .034).",
+    "num: Master Teachers (M = 3.00) significantly higher than non-Master Teachers (M = 2.65), p = .002.",
+    "num: No significant difference between seminar attendees and non-attendees (p = .991).",
+    "Concept: 'conscious constraint' - disciplined management under limited income.",
+    "Paradox: Budgeting is most performed yet most difficult task.",
+    "Dunning-Kruger effect: limited financial exposure leads to overestimation of evaluative competence."
+  ],
+  "key_figures_tables": [
+    "Table 1: Level of Financial Behaviors → General weighted mean of 2.69 (moderately positive).",
+    "Table 2: Difference in Financial Behavior by Marital Status → F(2,332) = 4.15, p = .017.",
+    "Table 3: Tukey HSD Post Hoc Test → Single vs Married significant at p = .034.",
+    "Table 4: Difference in Financial Behavior by Employment Rank → t(333) = -3.83, p = .002.",
+    "Table 5: Difference by Seminar Attendance → t(233) = -0.01, p = .991 (no significance).",
+    "Table 6: Perceived Difficulty of Financial Behaviors → Budgeting most difficult (M = 2.17).",
+    "Table 7: Friedman Test → χ² = 302.326, df = 4, p < .001.",
+    "Table 8: Nemenyi Post Hoc Test → Budgeting vs All Others p < .001."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Conscious constraint", "definition": "Deliberate practice of responsible financial management under structurally limited income conditions."},
+    {"term": "Knowledge–action gap", "definition": "Disconnect between financial knowledge and actual financial behavior implementation."},
+    {"term": "Financial behavior", "definition": "Concrete actions individuals take to manage finances: budgeting, saving, managing debt, selecting financial products."},
+    {"term": "Dunning-Kruger Effect", "definition": "Limited exposure to complex instruments leads to overestimation of evaluative competence."},
+    {"term": "Life-Cycle Hypothesis", "definition": "Financial behaviors evolve as individuals assume greater family and economic responsibilities."}
+  ],
+  "citations": [
+    {
+      "author": "OECD/INFE",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is combination of awareness, knowledge, skills, attitudes, and behaviors for sound financial decisions.",
+      "role": "definition"
+    },
+    {
+      "author": "Modigliani & Brumberg",
+      "year": 1954,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Life-Cycle Hypothesis: marital status influences consumption and saving patterns.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kaiser & Menkhoff",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "One-off financial literacy seminars often yield limited behavioral change without sustained interventions.",
+      "role": "finding"
+    },
+    {
+      "author": "Dunning & Kruger",
+      "year": 1999,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Limited exposure to complex instruments leads to overestimation of evaluative competence.",
+      "role": "methodology"
+    },
+    {
+      "author": "Becker",
+      "year": 1964,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Human Capital Theory: higher occupational status enhances ability to apply financial knowledge.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Examines budgeting as primary financial behavior, its frequency and perceived difficulty."
+      },
+      {
+        "code": "13.B",
+        "name": "Debt Management in PFMS",
+        "relevance": "medium",
+        "justification": "Explores loan dependence and debt management patterns among teachers."
+      }
+    ],
+    "contribution_to_field": "The study introduces 'conscious constraint' concept: disciplined financial management under structural limitation. It distinguishes between behavioral frequency and perceived difficulty, showing budgeting is most performed yet most difficult task. The knowledge–action gap is empirically demonstrated with no significant difference between seminar attendees and non-attendees (p = .991). The study recommends shifting from awareness-based seminars to behavioral infrastructure: automated savings, debt-restructuring mechanisms, and just-in-time financial coaching.",
+    "directly_justifies": [
+      "Moderately positive financial behaviors (M = 2.69) reflect necessity-driven practices.",
+      "Budgeting most difficult despite moderate frequency (M = 2.17 vs M = 2.68).",
+      "No significant difference in behaviors between seminar attendees and non-attendees.",
+      "Marital status significantly moderates financial behaviors (single vs married, p = .034).",
+      "Employment rank significantly predicts financial behavior scores (p = .002)."
+    ],
+    "limits": [
+      "Single-city study limited to Baguio City public school teachers.",
+      "Cross-sectional design cannot establish causality.",
+      "Self-reported financial behaviors subject to social desirability bias.",
+      "Relatively modest reliability (ω = 0.713) for behavioral instrument."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 7.A (Budgeting Strategies as Domain Knowledge) flagged as high relevance due to explicit examination of budgeting behaviors and perceived difficulty. Domain 13.B (Debt Management in PFMS) assigned medium relevance for exploring loan dependence and debt patterns. All other domains rejected as paper focuses on financial behavior assessment rather than personal finance systems, predictive modeling, or mobile design."
+  },
+  "limitations": [
+    "Single-city study limited to Baguio City public school teachers.",
+    "Cross-sectional design cannot establish causality.",
+    "Self-reported financial behaviors subject to social desirability bias.",
+    "Relatively modest reliability (ω = 0.713) for behavioral instrument.",
+    "Sample limited to regular employees only, excluding contractual teachers."
+  ],
+  "remember_this": [
+    "'Conscious constraint' concept: disciplined management under limited income.",
+    "Budgeting is most performed yet most difficult financial behavior.",
+    "Knowledge–action gap: seminars have no measurable impact on actual behaviors.",
+    "Single teachers demonstrate significantly better financial behaviors than married.",
+    "Master Teachers significantly outperform non-Master Teachers on financial behaviors.",
+    "Making ends meet strongest domain (M = 2.90) driven by timely bill payments."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T22:05:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Am-una_marked.md",
+      "converted_at": "2026-07-21T05:22:56Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

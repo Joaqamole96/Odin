@@ -1,1 +1,107 @@
-{}
+{
+  "paper_id": "10.3390/s23167167",
+  "designation": "international",
+  "title": "Continual Deep Learning for Time Series Modeling",
+  "authors": "Ao, S.-I.; Fayek, H.",
+  "year": 2023,
+  "venue": "Sensors",
+  "odin_topics": ["6.A", "6.B", "4.A", "4.B"],
+  "tldr": "A systematic review of deep learning for sensor time series covering advanced preprocessing techniques and continual learning methods to address catastrophic forgetting in non-stationary environments.",
+  "problem_and_motivation": "Real-world sensor time series data often exhibits non-stationary distributions that cause deep learning models to suffer catastrophic forgetting, where previously learned knowledge is abruptly lost. Existing surveys on continual learning focus on classification, vision, NLP, or reinforcement learning tasks, leaving a gap in systematic coverage of continual learning for time series forecasting and regression applications.",
+  "approach": [
+    "Surveyed recent deep learning applications for sensor time series across classification and forecasting tasks, covering MLP, RNN, LSTM, GRU, CNN, GNN, and hybrid architectures.",
+    "Reviewed advanced preprocessing techniques including empirical mode decomposition, wavelet transformation, signal squeezing and stretching, and atmospheric correction for improving deep learning performance on sensor data.",
+    "Classified continual learning scenarios into six categories: Instance-Incremental, Domain-Incremental, Task-Incremental, Class-Incremental, Task-Free, and Online.",
+    "Organized continual learning methods into three families: regularization-based, replay, and parameter isolation, with combined approaches discussed.",
+    "Presented case studies from diverse sensor domains including human activity recognition, traffic flow, cardiac arrhythmia, industrial fault prediction, and greenhouse monitoring."
+  ],
+  "findings": [
+    "Deep learning models consistently outperform conventional machine learning methods for time series classification and forecasting tasks across multiple application domains.",
+    "Advanced preprocessing techniques such as EMD, wavelet transformation, and signal augmentation can significantly improve deep learning model performance on sensor time series data.",
+    "Continual learning approaches help mitigate catastrophic forgetting in non-stationary sensor time series environments, with replay methods with exemplars performing best across resource-constrained mobile and embedded devices.",
+    "MC-SGD performed best for addressing catastrophic forgetting in wearable sensor activity recognition, reducing forgetting by nearly 29%.",
+    "No single deep learning method fits universally across all time series tasks, with model selection depending on data characteristics and application requirements."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Tree diagram of popular deep learning methods for sensor time series → categorizes models by architecture type (MLP, RNN, LSTM, CNN, GNN, hybrids).",
+    "Table 1: Summary of DL techniques for sensor time series applications → compiles 17 studies with datasets, models, accuracy, and application details.",
+    "Table 2: Summary of advanced preprocessing for sensor time series DL → highlights preprocessing methods paired with DL models across 12 studies.",
+    "Figure 2: Tree diagram of preprocessing methods → groups techniques into filtering, decomposition, transformation, augmentation, and compression categories.",
+    "Table 3: Summary of CL techniques for time series applications → compiles 14 studies covering regularization, replay, and parameter isolation methods."
+  ],
+  "key_equations": [
+    {
+      "equation": "$TS(y_t)$ is (weakly) stationary if $E(y_t)=\\mu$, $Var(y_t)=\\sigma^2<\\infty$, $Cov(y_t, y_{t-k})=\\gamma(k)$",
+      "explanation": "Defines weak stationarity conditions for time series data."
+    },
+    {
+      "equation": "$L_i = \\frac{q}{N}\\sum L(y_{i,r}, \\hat{y}_{i,r}; \\theta_i) + \\frac{1-q}{(i-1)N}\\sum \\sum L(y_{j,r}, M(x_{j,r}; \\theta_j); \\theta_i)$",
+      "explanation": "Continual learning loss combining current task loss with knowledge distillation from previous tasks."
+    }
+  ],
+  "definitions": [
+    {"term": "Catastrophic Forgetting", "definition": "The abrupt loss of previously learned knowledge when neural networks are trained on new data with non-stationary distributions."},
+    {"term": "Continual Learning", "definition": "A machine learning paradigm that handles situations where data distributions change over time, enabling models to learn sequentially without forgetting."},
+    {"term": "Stationary Time Series", "definition": "A time series whose statistical properties (mean, variance, autocovariance) do not depend on time."},
+    {"term": "Non-Stationarity", "definition": "A property of time series data where statistical characteristics change over time due to trend, seasonal, cyclical, or irregular components."},
+    {"term": "LSTM", "definition": "Long Short-Term Memory network, an RNN variant with gating mechanisms (forget, update, output gates) that addresses vanishing and exploding gradient problems."},
+    {"term": "GRU", "definition": "Gated Recurrent Unit, a simplified LSTM variant with only two gates (update and relevance gate), requiring fewer parameters while maintaining long-term dependency handling."},
+    {"term": "GNN", "definition": "Graph Neural Network, a neural network that processes data represented in graph domains, capturing relational structures between nodes."},
+    {"term": "EWC", "definition": "Elastic Weight Consolidation, a regularization-based continual learning method that preserves important weights from previous tasks during new task learning."}
+  ],
+  "citations": [
+    {"author": "Hochreiter", "year": 1997, "page": 0, "paragraph": 0, "claim": "Designed LSTM with internal memory units and gate mechanisms to address vanishing and exploding gradient problems in RNNs.", "role": "methodology"},
+    {"author": "Lange", "year": 2021, "page": 0, "paragraph": 0, "claim": "Surveyed continual learning focusing on stability-plasticity trade-off and classification tasks, limiting discussion to classification alone.", "role": "context"},
+    {"author": "Wang", "year": 2021, "page": 0, "paragraph": 0, "claim": "Covered only five practical CL application tasks: object detection, semantic segmentation, conditional generation, reinforcement learning, and NLP.", "role": "context"},
+    {"author": "Mahmoud", "year": 2021, "page": 0, "paragraph": 0, "claim": "Surveyed deep learning models (CNN, RNN, LSTM, GRU, AEs, RBM, DBNs) for time series forecasting showing DL outperforms classical methods.", "role": "baseline"},
+    {"author": "Lara-Benitez", "year": 2021, "page": 0, "paragraph": 0, "claim": "Evaluated seven deep learning algorithms on twelve time series forecasting tasks showing LSTM performs best while CNN provides accurate forecasting with less computation.", "role": "finding"},
+    {"author": "Choi", "year": 2021, "page": 0, "paragraph": 0, "claim": "Highlighted that no single deep learning method fits universally for multivariate time series anomaly detection across all tasks.", "role": "finding"},
+    {"author": "Lim", "year": 2021, "page": 0, "paragraph": 0, "claim": "Hybrid methods combining quantitative time series models with deep learning may address limitations and improve overall forecasting performance.", "role": "methodology"},
+    {"author": "IsmailFawaz", "year": 2019, "page": 0, "paragraph": 0, "claim": "End-to-end deep learning is able to reach state-of-the-art performance for time series classification tasks on UCR/UEA archive.", "role": "finding"},
+    {"author": "Zheng", "year": 2020, "page": 0, "paragraph": 0, "claim": "LSTM outperforms ARIMA and BPNN for traffic flow forecasting with mean absolute percentage errors of 4.82% versus 20.97% and 9.06%.", "role": "finding"},
+    {"author": "Pfulb", "year": 2022, "page": 0, "paragraph": 0, "claim": "Large-scale experiments show no model and dataset is free of catastrophic forgetting problems.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "medium", "justification": "Reviews deep learning architectures for time series prediction applicable to financial forecasting."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "medium", "justificance": "Covers LSTM, GRU, CNN, and hybrid models applicable to sequential financial data prediction."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "low", "justification": "Provides context on AI/ML system capabilities relevant to personal finance systems."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "low", "justification": "Discusses catastrophic forgetting and non-stationarity challenges relevant to financial applications."}
+    ],
+    "contribution_to_field": "This paper provides a comprehensive systematic review of deep learning methods applied to sensor time series data, covering classification, forecasting, and anomaly detection tasks. It uniquely addresses the deployment of continual learning for time series modeling, a topic not systematically covered in prior surveys. The review organizes preprocessing techniques, deep learning architectures, and continual learning methods into clear taxonomies with practical case studies from real-world sensor applications.",
+    "directly_justifies": [
+      "Deep learning models can give better representation and classification than conventional time series methods for financial data.",
+      "LSTM performs best among evaluated deep learning algorithms for time series forecasting tasks.",
+      "Advanced preprocessing tools can significantly improve deep learning model performance on non-stationary time series data.",
+      "Continual learning may be very useful for addressing financial time series problems, which are commonly non-stationary."
+    ],
+    "limits": [
+      "Focuses exclusively on sensor time series, limiting direct applicability to financial time series without extrapolation.",
+      "Does not evaluate specific model architectures on personal finance datasets.",
+      "Continual learning section covers fewer case studies compared to the deep learning section."
+    ],
+    "topic_mapping_rationale": "The systematic topic scan flagged domains 6 (Predictive Modeling and Forecasting) as medium relevance since the paper reviews deep learning time series forecasting methods including LSTM and GRU, which are directly applicable to financial spending data. Domain 4 (Landscape and Gaps) received low relevance for providing context on AI system capabilities and limitations. Domains 1-3, 5, 7-14 were considered and rejected as the paper does not address financial behavior, budgeting strategies, user profiles, anomaly detection in personal finance, or mobile UX design. The paper's primary contribution is architectural and methodological rather than domain-specific to personal finance."
+  },
+  "limitations": [
+    "Survey covers sensor time series applications only, excluding financial and economic time series domains directly.",
+    "Continual learning section has fewer empirical case studies compared to the deep learning and preprocessing sections.",
+    "No experimental comparison or benchmarking of the reviewed methods is conducted.",
+    "The paper acknowledges that the scalability of continual learning methods for applications with very large numbers of sub-tasks and samples is under-investigated."
+  ],
+  "remember_this": [
+    "LSTM and CNN-LSTM hybrids consistently outperform other deep learning models for time series forecasting tasks.",
+    "Advanced preprocessing including wavelet transformation and empirical mode decomposition significantly improves DL performance on non-stationary sensor data.",
+    "Catastrophic forgetting remains a critical challenge when deploying deep learning on non-stationary time series data distributions.",
+    "Continual learning methods with replay and exemplars perform best for mobile and embedded sensing devices under resource constraints.",
+    "No single deep learning method universally fits all time series tasks; model selection depends on data characteristics and application requirements."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ao & Fayek_marked.md",
+      "converted_at": "2026-07-21T05:24:31Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,1 +1,163 @@
-{}
+{
+  "paper_id": "10.14236/ewic/BCSHCI2023.1",
+  "designation": "international",
+  "title": "Evaluating Budgeting Apps: Limited Support for Budgeting Compared to Tracking",
+  "authors": "Alenazi, M.; Sas, C.",
+  "year": 2023,
+  "venue": "Proceedings of BCS HCI 2023",
+  "odin_topics": ["4.A", "4.B", "3.A", "3.B", "5.A"],
+  "tldr": "A functionality review of 45 top-rated budgeting apps found that while all support transaction tracking, one third lack budgeting support informed by mental accounting money envelopes.",
+  "problem_and_motivation": "HCI research on financial practices has highlighted limited use of digital tools for budgeting, with most work focused on exploratory studies of analogue tools. Budgeting apps have grown rapidly yet limited research has evaluated their functionalities through a theoretical lens. There is a gap in understanding how well these apps support budgeting as distinct from expense tracking.",
+  "approach": [
+    "Reviewed 45 top-rated budgeting apps selected from 1,335 apps on Google Play Store and Apple Store using keywords budget, budgeting, and finance.",
+    "Applied mental accounting theory by Thaler (1999) as an analytical lens to identify functionalities related to funds, expenditures, categories, and mental accounts.",
+    "Conducted iterative expert evaluation of app functionalities including accounts, transactions, budgeting periods, and money envelopes.",
+    "Performed cross-platform comparison with 21 Google Play-only apps and 24 apps on both platforms.",
+    "Identified and categorized app functionalities through weekly author discussions over several months."
+  ],
+  "findings": [
+    "All 45 apps support expense tracking, but only 33 support budgeting for monitoring expenses against allocated budgets.",
+    "19 apps provide only single-budget tracking while 26 apps support multiple budgets using mental accounting money envelopes.",
+    "Inconsistent terminology across apps for labeling accounts, drawing from both banking domain and everyday financial practices.",
+    "Only 7 apps support linking to real bank accounts, and only as a premium feature.",
+    "Only 2 apps (Goodbudget, SimpleBudget) explicitly mention money envelope system design in their descriptions.",
+    "num: 15 of 45 apps provided subcategories for transaction grouping."
+  ],
+  "key_figures_tables": [
+    "Figure 1: PRISMA diagram of app selection process from 1,335 to 45 eligible apps.",
+    "Table 2: Functionalities of 45 apps across accounts, transactions, and budgeting dimensions."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Mental Accounting",
+      "definition": "A behavioral economics theory where people partition and budget money separately in mental accounts, typically materialized through money envelopes for specific purposes."
+    },
+    {
+      "term": "Money Envelopes",
+      "definition": "Physical or digital allocations of budgets to specific expense categories, aligned with mental accounting theory."
+    },
+    {
+      "term": "Single Budget",
+      "definition": "A budgeting approach where one main budget covers all expenses without category-specific allocations."
+    },
+    {
+      "term": "Multiple Budgets",
+      "definition": "A budgeting approach where separate budgets are allocated to distinct expense categories, aligned with mental accounting."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Thaler",
+      "year": 1999,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Mental accounting involves using labelled categories for sources and uses of funds to help households organize, track, and monitor spending.",
+      "role": "methodology"
+    },
+    {
+      "author": "Snow",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Banking apps are more common for tracking financial transactions, with only one third of participants having used budgeting apps.",
+      "role": "context"
+    },
+    {
+      "author": "Kaye",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "People tend to use digital tools to a limited extent for financial practices, preferring analogue tools like coin jars.",
+      "role": "context"
+    },
+    {
+      "author": "Bitrian",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The global revenue for financial management apps was over 1.4 million dollars in 2018 and estimated to double by 2025.",
+      "role": "context"
+    },
+    {
+      "author": "Vyas",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Coin jars and envelopes are commonly used analogue budgeting tools enabling people to see spending amounts.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Directly evaluates 45 existing budgeting apps and their functionalities."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies gaps in budgeting support, terminology clarity, and bank integration across apps."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "medium",
+        "justification": "Examines how apps categorize income and expense transactions."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "medium",
+        "justification": "Discusses user-defined vs system-defined categories and subcategories."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "contextual",
+        "justification": "References mental accounting as a behavioral framework for understanding user financial practices."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive functionality review of 45 top-rated budgeting apps through the lens of mental accounting theory, identifying significant gaps between app design and theoretical best practices. It documents inconsistent terminology for accounts and transactions across apps, and finds that while expense tracking is universal, proper budgeting through money envelopes is supported by only about 58% of apps. The paper proposes four design implications including clearer vocabulary for financial concepts, better support for multiple budgets, and grounding budgeting as a cognitive process in actual financial behavior.",
+    "directly_justifies": [
+      "One third of top-rated budgeting apps do not support budgeting informed by money envelopes.",
+      "Inconsistent terminology for accounts draws from banking domain but fails to differentiate money-in, money-out, and wealth accounts.",
+      "Only 2 of 45 apps explicitly reference money envelope system design.",
+      "Most apps prioritize tracking cognitive operations rather than grounding budgeting in actual financial behavior."
+    ],
+    "limits": [
+      "The study evaluates apps from UK marketplaces only, limiting generalizability to other regions.",
+      "Expert evaluation rather than user studies, so actual user experience is not assessed.",
+      "No app descriptions reported evaluation through user studies."
+    ]
+  },
+  "limitations": [
+    "UK marketplaces only, limiting cross-cultural generalizability. [unacknowledged]",
+    "Expert evaluation rather than user-centered studies. [unacknowledged]",
+    "Static snapshot of apps at one point in time; app features evolve rapidly. [unacknowledged]"
+  ],
+  "remember_this": [
+    "All 45 top-rated budgeting apps support expense tracking but only 33 support actual budgeting functionality.",
+    "Inconsistent terminology for accounts across apps creates confusion for users.",
+    "Only 2 apps explicitly mention money envelope system design in their descriptions.",
+    "Most apps prioritize cognitive operations over grounding budgeting in actual financial behavior.",
+    "Novel design implications proposed include clearer vocabulary and better multiple budget support."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Alenazi & Sas_marked.md",
+      "converted_at": "2026-07-21T05:21:47Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

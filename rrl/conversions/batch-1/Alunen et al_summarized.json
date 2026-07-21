@@ -1,1 +1,125 @@
-{}
+{
+  "paper_id": "10.46254/FA6.20250062",
+  "designation": "local",
+  "title": "Comparing Machine Learning Forecasting Models Based on Accuracy and Efficiency for Predicting Demand in a Food and Beverage Company",
+  "authors": "Alunen, Ray Baltazar; Molina, Cyrene Franchesca; Quesada, Raven Francheska; Reyes, Chloe Nicole",
+  "year": 2025,
+  "venue": "IEOM",
+  "odin_topics": ["6.B"],
+  "tldr": "XGBoost achieves best balance of accuracy and efficiency for demand forecasting, outperforming traditional methods by capturing non-linear relationships with external factors.",
+  "problem_and_motivation": "The Philippine food and beverage industry faces challenges in supply chain efficiency and demand forecasting. Traditional methods fail to capture non-linear relationships and external factors such as holidays, weather, and macroeconomic conditions. Accurate forecasting is critical for minimizing waste, optimizing inventory, and meeting market demands, especially in the alcoholic beverage segment.",
+  "approach": [
+    "Historical sales data from restobar in Quezon City (2021-2024) for alcoholic beverages.",
+    "External factors: unemployment rate, temperature, holidays, day of week.",
+    "ML algorithms: Random Forest, Gradient Boosting, XGBoost, AdaBoost.",
+    "Feature selection using Pearson Correlation Coefficient (threshold ±0.3).",
+    "Hyperparameter tuning: Grid Search vs Random Search.",
+    "Evaluation metrics: MSE, MAE, RMSE, R², execution time.",
+    "80% training, 20% testing split with 10-fold cross-validation."
+  ],
+  "findings": [
+    "num: XGBoost excelled in both accuracy and computational efficiency across products.",
+    "num: XGBoost execution time: 9.47s vs Random Forest: 203.67s.",
+    "num: Feature selection reduced dimensions but led to slight accuracy reduction.",
+    "num: Random Search outperformed Grid Search in accuracy and execution time.",
+    "num: Grid Search execution time: 390.43s vs Random Search: 16.91s.",
+    "num: All ML models outperformed traditional methods (MLR, Exponential Smoothing).",
+    "num: XGBoost R² = 0.42, MAE = 5.83, RMSE = 9.25.",
+    "num: Traditional MLR had R² = 0.39, MAE = 10.44.",
+    "num: Exponential Smoothing had R² = 0.07, MAE = 6.83.",
+    "Product 1 (Bucket): XGBoost R² = 0.52, Product 2 (Cocktails): RF R² = 0.45."
+  ],
+  "key_figures_tables": [
+    "Table 2: Feature Selection Comparison → Execution time reduced from 207.80s to 199.54s with feature selection.",
+    "Table 3: Hyperparameter Tuning Comparison → Grid Search 390.43s vs Random Search 16.91s.",
+    "Table 4: ML Algorithms by Products → XGBoost best for Product 1 and 3, RF for Product 2.",
+    "Table 5: Overall Comparison → XGBoost R² = 0.42 vs MLR R² = 0.39.",
+    "Figure 3: Visual comparison of ML algorithms → XGBoost and RF lowest errors.",
+    "Figure 4: ML vs Traditional Methods → ML models generally outperform traditional.",
+    "Figure 5: Feature Selection Impact → Slight accuracy reduction with efficiency gain.",
+    "Figure 6: Hyperparameter Tuning Comparison → Random Search significantly faster."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "XGBoost", "definition": "Extreme Gradient Boosting - ensemble method using gradient-boosted decision trees with regularization."},
+    {"term": "Feature Selection", "definition": "Process of removing irrelevant and noisy predictors using Pearson Correlation Coefficient."},
+    {"term": "Hyperparameter Tuning", "definition": "Optimization of model parameters outside the learning process (Grid Search vs Random Search)."},
+    {"term": "RMSE", "definition": "Root Mean Squared Error - sensitive to outliers due to squared prediction errors."},
+    {"term": "R²", "definition": "Coefficient of Determination - proportion of variation explained by independent variables."}
+  ],
+  "citations": [
+    {
+      "author": "Priyadarshi et al",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Compared RF, Gradient-Boosted, and XGBoost for fresh produce demand forecasting.",
+      "role": "background"
+    },
+    {
+      "author": "Groene & Zakharov",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ML models outperform heuristic forecasts, reducing prediction errors by 22-33% in RMSE.",
+      "role": "finding"
+    },
+    {
+      "author": "Tanizaki et al",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "XGBoost applied for hourly sales data in fast-food outlet.",
+      "role": "background"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Applies ML algorithms for time-series demand forecasting, though focused on product demand rather than personal spending."
+      }
+    ],
+    "contribution_to_field": "The study demonstrates that XGBoost achieves the best balance of accuracy (R² = 0.42) and computational efficiency (9.47s) for demand forecasting in F&B. All ML models outperform traditional methods (MLR, Exponential Smoothing) in capturing non-linear relationships. Feature selection using correlation reduces dimensions but introduces slight accuracy trade-offs. Random Search hyperparameter tuning is more efficient than Grid Search (16.91s vs 390.43s). The framework provides a scalable approach for improving supply chain practices in Philippine F&B industry.",
+    "directly_justifies": [
+      "XGBoost achieves best balance of accuracy and efficiency.",
+      "ML models outperform traditional forecasting methods.",
+      "Feature selection enhances computational efficiency with slight accuracy reduction.",
+      "Random Search outperforms Grid Search in both accuracy and execution time.",
+      "External factors (weather, holidays, macroeconomic) improve forecast accuracy."
+    ],
+    "limits": [
+      "Limited to alcoholic beverage segment in single restobar.",
+      "Dataset spans only 4 years (2021-2024).",
+      "R² values indicate moderate explanatory power (0.42).",
+      "Feature selection threshold (±0.3) may not be optimal.",
+      "No comparison with deep learning approaches (LSTM, etc.)."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 6.B (Forecasting Algorithms for Sequential Spending Data) assigned medium relevance as paper applies ML for time-series forecasting, though focused on product demand rather than personal spending patterns. All other domains rejected as paper focuses on demand forecasting rather than personal finance systems, behavioral profiles, or budgeting."
+  },
+  "limitations": [
+    "Limited to alcoholic beverage segment in single restobar.",
+    "Dataset spans only 4 years (2021-2024).",
+    "R² values indicate moderate explanatory power (0.42).",
+    "Feature selection threshold (±0.3) may not be optimal.",
+    "No comparison with deep learning approaches (LSTM, etc.)."
+  ],
+  "remember_this": [
+    "XGBoost achieves best balance: R² = 0.42, execution time = 9.47s.",
+    "ML models outperform traditional forecasting methods.",
+    "Random Search is 23x faster than Grid Search (16.91s vs 390.43s).",
+    "Feature selection reduces dimensions with slight accuracy trade-off.",
+    "External factors (weather, holidays, macroeconomic) improve forecasts."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T22:25:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Alunen et al_marked.md",
+      "converted_at": "2026-07-21T05:22:48Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

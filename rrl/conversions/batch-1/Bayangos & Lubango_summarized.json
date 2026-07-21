@@ -1,1 +1,164 @@
-{}
+{
+  "paper_id": "bayangos-lubango-remittances-household-spending-2024",
+  "designation": "local",
+  "title": "Do Remittances Boost Household Spending: New Evidence from Migrants' Household Survey",
+  "authors": "Bayangos, V. B., & Lubangco, C. K.",
+  "year": 2024,
+  "venue": "BSP Discussion Paper",
+  "institution": "Bangko Sentral ng Pilipinas",
+  "odin_topics": ["3.A", "3.B", "4.A", "5.A"],
+  "tldr": "Remittances increase Filipino household spending, but financial constraints limit welfare gains for poorer households — 50% of OFW households save nothing from remittances, 75% invest nothing, and consumption shifts toward non-food items only occur for non-poor households.",
+  "problem_and_motivation": "Despite the Philippines receiving USD40 billion in remittances annually, the specific mechanisms through which remittances affect household spending decisions remain poorly understood. Previous research has not adequately distinguished how remittance spending patterns differ across income groups, nor has it fully accounted for the binding financial constraints that poorer households face. This study addresses two questions: (1) Do remittances significantly influence household spending patterns? (2) What macroeconomic and financial drivers determine remittance inflows?",
+  "approach": [
+    "Analysis of Survey on Overseas Filipinos (SOF) 2007-2022 for remittance allocation patterns at household and regional levels.",
+    "Supplemental analysis using Family Income and Expenditure Survey (FIES) 2018 and 2021 for itemized consumption data.",
+    "Binomial logistic regression on determinants of saving/investing behavior of migrant households (43,089 observations).",
+    "Propensity score matching (PSM) to estimate average treatment effects of remittance receipt on household consumption (312,747 observations from FIES).",
+    "Working-Leser model to assess marginal expenditure behavior of remittance-receiving poor and non-poor households.",
+    "Panel GMM estimation of regional remittance determinants using 17 Philippine regions, 2007-2022 (255-272 observations).",
+    "Annual survey of 44 universal/commercial banks and 15 non-bank entities on financial costs of sending remittances, 2015-2023."
+  ],
+  "findings": [
+    "num: 50% of OFW households allocate zero cash remittances for savings.",
+    "num: 75% of OFW households allocate zero cash remittances for investments.",
+    "num: Over 50% of OFW households allocate at least 90% of cash remittances for immediate consumption.",
+    "num: 9.9% average saving rate for cash remittances (2008-2022).",
+    "num: 7.0-8.0% average investing rate for cash remittances (2008-2022).",
+    "num: OFW households save at 10.35% vs immigrants at 7.40% (statistically significant).",
+    "num: Remittance-receiving households reduce food expenditure share by 1.28-1.48 percentage points.",
+    "num: Non-poor remittance households increase education spending by 0.40pp and health by 0.50pp.",
+    "num: Poor remittance households show weaker consumption shifts due to binding financial constraints.",
+    "num: Telegraphic transfer fees cost 6.0-7.0% of average remittance per OFW — above the SDG target of 3.0%.",
+    "num: Higher regional wages reduce remittance receipts (altruistic motive — less need when domestic income is higher).",
+    "num: Peso depreciation increases remittance receipts (investment/exchange motive).",
+    "num: 1.96 million OFWs in 2022, up 7.6% from 1.83 million in 2021.",
+    "num: Banks handle 57.2% of cash remittances; non-banks handle 41.2%.",
+    "50% of pooled OFW households (2008-2022) did not allocate cash remittances to savings.",
+    "Migrants with higher educational attainment have higher saving rates than those with at most secondary education.",
+    "Male-headed migrant households are more likely to save than female-headed (OR: 1.425-1.438).",
+    "Financial development (bank deposit liabilities) increases cash remittance receipts.",
+    "Spillover effects on poor non-recipient households show reduced food share but no increase in total consumption — constraints remain binding."
+  ],
+  "key_figures_tables": [
+    "Figure 4: OFW Household Saving and Investing Rates — saving rate peaked at 13.1% in 2009, declining to ~9-10% since; investing rate ~7-8%.",
+    "Figure 5: Pooled Distribution — 50% save nothing, 75% invest nothing, 50%+ allocate ≥90% to immediate consumption.",
+    "Figure 6: Migrant vs Non-migrant Expenditures — migrant households consistently higher across food, education, health.",
+    "Figure 7-8: Financial Costs — PDDTS most expensive for outgoing; telegraphic/SWIFT most expensive for incoming remittances.",
+    "Table 1: Migrant Characteristics — OFWs save 10.35% vs immigrants 7.40%; higher education → higher saving.",
+    "Table 2: Logistic Regression — Cash remittance (ln) OR 1.768 for saving, 1.796 for investing.",
+    "Table 3: PSM Results — Poor households: food -1.28pp, education +0.02pp (ns); Non-poor: food -1.48pp, education +0.40pp, health +0.50pp.",
+    "Table 4: Panel Descriptive Stats — 139,000 average OFWs per region; ₱354.13 average daily wage; 6.0% unemployment.",
+    "Table 5: Panel GMM — OFWs (+), regional wage (-), unemployment (+), exchange rate (+), transfer fees (-12.46***)",
+    "Table A1: Financial Constraints — Remittance-receiving poor households have weaker consumption shifts across all categories."
+  ],
+  "key_equations": [
+    {"id": "1", "label": "Working-Leser Consumption Model", "expression": "Y_ij = β₀ + β₁·lncons_j + X'_iγ + θ·R_dj + ε_ij"},
+    {"id": "2", "label": "Panel GMM Remittance Determinants", "expression": "Remit_it = β₀ + β₁·Remit_{it-1} + β₂·GRDPpc + β₃·OFW + β₄·wage + β₅·π + β₆·unemployment + β₇·forex + β₈·cost + ε_it"}
+  ],
+  "definitions": [
+    {"term": "Cash Remittances", "definition": "Money sent by OFWs through banks, money transfer operators, agencies, friends/co-workers, door-to-door, and other channels. Subset of personal remittances."},
+    {"term": "Personal Remittances", "definition": "Sum of cash remittances, cash brought home during visits, and imputed value of in-kind remittances (goods/products). Broader IMF definition."},
+    {"term": "Saving Rate", "definition": "Percentage of cash remittances allocated to savings by OFW households, as reported in the SOF."},
+    {"term": "Investing Rate", "definition": "Percentage of cash remittances allocated to investments by OFW households, as reported in the SOF."},
+    {"term": "Propensity Score Matching (PSM)", "definition": "Statistical technique to estimate average treatment effects by matching remittance-receiving households with similar non-receiving households, controlling for observable characteristics."},
+    {"term": "Working-Leser Model", "definition": "Engel curve specification modeling budget shares as a function of total expenditure and household characteristics."},
+    {"term": "Financial Constraints", "definition": "Limitations on poorer households' ability to reallocate remittance income toward non-food expenditures (education, health, housing) due to immediate consumption needs."},
+    {"term": "Altruistic Motive", "definition": "Remittance behavior driven by concern for family welfare — higher remittances sent when home country conditions worsen (higher unemployment, lower wages)."},
+    {"term": "Investment Motive", "definition": "Remittance behavior driven by asset accumulation and return-home planning — higher remittances sent during economic growth periods."},
+    {"term": "Telegraphic Transfer Fee", "definition": "Cost of incoming remittances through banks, averaged at 6.0-7.0% of average remittance per OFW — above the SDG target of 3.0%."}
+  ],
+  "citations": [
+    {"author": "World Bank", "year": 2023, "page": 0, "paragraph": 0, "claim": "Global remittances to low- and middle-income countries reached USD669 billion in 2023, up 3.8% from 2022.", "role": "context"},
+    {"author": "BSP", "year": 2024, "page": 0, "paragraph": 0, "claim": "Personal remittances stable at 8-9% of nominal GDP since 2017; cash remittances at 7-8% of GDP.", "role": "context"},
+    {"author": "PSA SOF", "year": 2022, "page": 0, "paragraph": 0, "claim": "1.96 million OFWs estimated in 2022; 98.7% were overseas contract workers.", "role": "data"},
+    {"author": "Docquier & Rapoport", "year": 2006, "page": 0, "paragraph": 0, "claim": "Remittance size may increase with migrants' intention to return home — exchange motive predicts higher remittances from those planning to return.", "role": "theory"},
+    {"author": "Mishra et al.", "year": 2022, "page": 0, "paragraph": 0, "claim": "Migrant households in Nepal allocate more to non-food expenditures and less on food than non-migrant households, as long as they are not poor.", "role": "comparison"},
+    {"author": "Randazzo & Piracha", "year": 2019, "page": 0, "paragraph": 0, "claim": "PSM technique used to assess average treatment effect of remittances on household expenditure when strong instruments are unavailable.", "role": "method"},
+    {"author": "Tuaño-Amador et al.", "year": 2022, "page": 0, "paragraph": 0, "claim": "OFW households saved and invested less during COVID-19; remittances held up due to government support and regulatory relief.", "role": "context"},
+    {"author": "Agarwalla et al.", "year": 2013, "page": 0, "paragraph": 0, "claim": "Higher financial literacy compels individuals to make sound financial decisions — applied to migrant educational attainment as proxy.", "role": "theory"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Patterns of Personal Financial Behavior",
+        "relevance": "high",
+        "justification": "Directly documents how Filipino households allocate remittances: 50% save nothing, 75% invest nothing, 50%+ allocate ≥90% to immediate consumption. Provides granular spending patterns across food, education, health, housing, and durable goods."
+      },
+      {
+        "code": "3.B",
+        "name": "Barriers to Effective Financial Management",
+        "relevance": "high",
+        "justification": "Identifies binding financial constraints that prevent poorer households from shifting remittance income toward non-food investments. Poor households show weaker consumption shifts across all categories compared to non-poor."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Documents the formal financial landscape: 57.2% of remittances through banks, 41.2% through non-banks. Telegraphic transfer fees at 6-7% of average remittance — above SDG target. Financial development (bank deposits) increases remittance receipts."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Profiles migrant household financial behavior: OFWs vs immigrants (different saving rates), education-based differences, gender differences (male-headed save more), age effects, and propensity to return effects."
+      },
+      {
+        "code": "1.A",
+        "name": "Behavioral and Psychological Aspects of Personal Finance",
+        "relevance": "medium",
+        "justification": "Discusses altruistic vs investment motives for remittances — psychological/behavioral drivers of financial decisions that affect household spending patterns."
+      },
+      {
+        "code": "2.A",
+        "name": "Impact of Financial Inclusion on Poverty and Economic Growth",
+        "relevance": "medium",
+        "justification": "Examines how remittance-driven financial development and inclusion affect household welfare, with spillover effects on non-recipient households in high-remittance areas."
+      }
+    ],
+    "contribution_to_field": "This BSP discussion paper provides the most granular empirical evidence on how Filipino OFW households allocate remittances and how remittances reshape consumption patterns across income groups. The key innovation is the demonstration that financial constraints are binding for poorer households — while remittances generally increase spending on education, health, and housing, this effect is significantly weaker for poor households who must prioritize immediate consumption. The paper also identifies the macroeconomic drivers of remittance flows (OFW numbers, unemployment, exchange rates, transfer costs) and quantifies the cost of remittance channels (6-7% of average remittance). These findings directly justify the need for financial management tools that help low-income households optimize remittance allocation.",
+    "directly_justifies": [
+      "num: 50% of OFW households save nothing from remittances — half have zero savings allocation.",
+      "num: 75% of OFW households invest nothing — three-quarters have zero investment allocation.",
+      "num: 50%+ allocate ≥90% of remittances to immediate consumption — survival spending dominates.",
+      "num: Poor households' education spending increase is only +0.02pp (not significant) vs +0.40pp for non-poor.",
+      "num: Telegraphic transfer fees cost 6-7% of average remittance — double the SDG target of 3%.",
+      "num: Higher regional wages reduce remittance receipts (altruistic motive weakens).",
+      "num: 1.96 million OFWs in 2022, with 41.4% aged 30-39 and 44.4% in elementary occupations.",
+      "num: Migrants with higher education have significantly higher saving rates (10.58% vs 7.31%)."
+    ],
+    "limits": [
+      "SOF data limited to April-September reference period each year — may miss seasonal patterns.",
+      "Savings/investment allocation data only available from 2008 SOF round onward.",
+      "Endogeneity between remittances and household consumption — addressed via PSM but not fully resolved.",
+      "Itemized consumption data from FIES only available for 2018 and 2021 rounds.",
+      "Spillover effects estimated at province level — may not capture within-province heterogeneity.",
+      "Transfer cost data from BSP surveys of banks — may not reflect actual costs borne by individual remitters."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domain 3 (Patterns of Personal Financial Behavior) was flagged as high relevance for its empirical documentation of how 50% of OFW households save nothing, 75% invest nothing, and 50%+ allocate ≥90% to consumption. Domain 3 (Barriers) was flagged as high relevance for its demonstration that financial constraints are binding for poorer households — poor remittance households show weaker consumption shifts across all categories. Domain 4 (Landscape) was flagged as high relevance for documenting the formal financial landscape including 57.2% bank channel share and 6-7% transfer costs. Domain 5 (Financial Behavioral Profiles) was flagged as high relevance for its profiling of migrant household financial behavior by OFW status, education, gender, and age. Domain 1 (Behavioral/Psychological) was flagged as medium relevance for its discussion of altruistic vs investment motives. Domain 2 (Impact of Financial Inclusion) was flagged as medium relevance for its spillover analysis showing financial constraints remain binding for non-recipient poor households in high-remittance areas. Domains 6-14 were considered and rejected as the paper does not address AI/ML systems, budgeting tools, expense categorization algorithms, or system design."
+  },
+  "limitations": [
+    "SOF reference period limited to April-September.",
+    "Savings data only from 2008 onward.",
+    "Endogeneity partially addressed via PSM but not fully resolved.",
+    "FIES consumption data only 2018 and 2021.",
+    "Province-level spillover estimation.",
+    "Transfer costs may not reflect individual actual costs."
+  ],
+  "remember_this": [
+    "Half of OFW households save nothing from remittances — survival spending dominates over wealth building.",
+    "Three-quarters of OFW households invest nothing — remittances are not channeled into productive assets.",
+    "Poor households cannot shift remittance income to education/health — financial constraints are binding.",
+    "Remittance transfer fees (6-7%) are double the SDG target (3%) — a significant barrier to formal channels.",
+    "Higher domestic wages reduce remittance inflows — the altruistic motive weakens as local income rises."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T13:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Bayangos & Lubango_marked.md",
+      "converted_at": "2026-07-21T05:37:15Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

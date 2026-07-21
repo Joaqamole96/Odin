@@ -1,1 +1,186 @@
-{}
+{
+  "paper_id": "10.1145/3559540",
+  "designation": "international-algorithm-specific",
+  "title": "Generative Adversarial Networks in Time Series: A Systematic Literature Review",
+  "authors": "Brophy, Eoin; Wang, Zhengwei; She, Qi; Ward, Tomás",
+  "year": 2023,
+  "venue": "ACM Computing Surveys",
+  "odin_topics": ["12.A", "12.B", "12.C", "6.A"],
+  "tldr": "This systematic review categorizes time series GANs into discrete and continuous variants, evaluating architectures, evaluation metrics, and privacy measures for synthetic temporal data generation.",
+  "problem_and_motivation": "GANs have shown success in computer vision but face unique challenges when applied to time series data. There is no consensus on evaluation metrics for time series GANs, and training instability, mode collapse, and privacy risks remain significant barriers. The field lacks a comprehensive review specifically focused on time series applications.",
+  "approach": [
+    "Systematic review following PRISMA guidelines across major databases.",
+    "Categorized GANs into discrete-variant (discrete time series) and continuous-variant (continuous time series).",
+    "Evaluated architectures including SeqGAN, Quant GAN, C-RNN-GAN, TimeGAN, and SigCWGAN.",
+    "Analyzed evaluation metrics: t-SNE, PCA, MMD, IS, FID for quality assessment.",
+    "Examined privacy measures including differential privacy and re-identification risks.",
+    "Identified applications in healthcare, finance, music generation, and sensor data."
+  ],
+  "findings": [
+    "Discrete time series GANs struggle with zero gradient problem making generators untrainable via backpropagation alone.",
+    "SeqGAN addresses discrete generation using policy gradient and Monte Carlo search for reward estimation.",
+    "TimeGAN combines unsupervised GAN training with supervised autoregressive models for better temporal dynamics.",
+    "SigCWGAN uses Signature Wasserstein-1 metric to capture temporal dependencies efficiently.",
+    "Quant GAN applies temporal convolutional networks for financial time series with long-range dependencies.",
+    "No standardized benchmarking datasets exist for time series GAN evaluation.",
+    "Privacy risks include re-identification through linkage attacks on de-identified data.",
+    "Training stability challenges include vanishing gradients, mode collapse, and non-convergence."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Autoencoder model → Shows encoder-decoder architecture for comparison.",
+    "Figure 2: Generative adversarial network → Core GAN architecture with generator and discriminator.",
+    "Figure 3: Discrete and continuous time series examples → Visual comparison of data types.",
+    "Figure 4: RNN and LSTM cell architectures → Sequential modeling foundations.",
+    "Figure 5: SeqGAN training with policy gradient → Discrete sequence generation approach.",
+    "Figure 8: NR-GAN architecture → Noise reduction in EEG signals.",
+    "Figure 9: TimeGAN framework → Combined supervised and unsupervised training.",
+    "Table 1: Popular datasets used in reviewed works → Healthcare, finance, and sensor data sources."
+  ],
+  "key_equations": [
+    {
+      "equation": "GAN Value Function: $\\min_G \\max_D V(G,D) = \\mathbb{E}_{x \\sim p_{data}} [\\log D(x)] + \\mathbb{E}_{z \\sim p_z} [\\log(1-D(G(z)))]$",
+      "explanation": "Minimax game between generator and discriminator defining GAN training objective."
+    },
+    {
+      "equation": "Vanishing Gradient: $L_G = 2 \\cdot JS(p_{data} \\| p_g) - 2 \\cdot \\log 2$",
+      "explanation": "Loss function showing gradient vanishing when distributions have no overlap."
+    },
+    {
+      "equation": "SeqGAN Policy Gradient: $\\nabla_\\theta J(\\theta) = \\mathbb{E}_{Y \\sim G_\\theta} [\\sum_{t=1}^T \\nabla_\\theta \\log G_\\theta(y_t|Y_{1:t-1}) \\cdot R(Y)$",
+      "explanation": "Policy gradient update for discrete sequence generation using Monte Carlo rollouts."
+    },
+    {
+      "equation": "TimeGAN Supervised Loss: $L_{supervised} = \\mathbb{E}_{s,x_{1:T} \\sim p} [\\|h_t - g(h_{t-1}, z_t)\\|_2]$",
+      "explanation": "Supervised loss ensuring temporal coherence in generated sequences."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Generative Adversarial Network",
+      "definition": "Deep learning model with generator and discriminator trained in minimax competition."
+    },
+    {
+      "term": "Mode Collapse",
+      "definition": "GAN failure where generator produces limited variety of outputs ignoring data diversity."
+    },
+    {
+      "term": "Discrete-Variant GAN",
+      "definition": "GAN designed for generating discrete time series data like text or coded sequences."
+    },
+    {
+      "term": "Continuous-Variant GAN",
+      "definition": "GAN designed for generating continuous time series data like sensor readings or financial data."
+    },
+    {
+      "term": "Temporal Convolutional Network",
+      "definition": "Architecture using dilated causal convolutions for modeling long-range sequential dependencies."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Brophy",
+      "year": 2023,
+      "page": 199,
+      "paragraph": 0,
+      "claim": "No standardized benchmarking datasets exist for evaluating time series GANs.",
+      "role": "finding"
+    },
+    {
+      "author": "Brophy",
+      "year": 2023,
+      "page": 204,
+      "paragraph": 0,
+      "claim": "Discrete time series GANs face zero gradient problem making direct backpropagation impossible.",
+      "role": "finding"
+    },
+    {
+      "author": "Brophy",
+      "year": 2023,
+      "page": 213,
+      "paragraph": 0,
+      "claim": "TimeGAN achieves better temporal dynamics preservation by combining supervised and unsupervised training.",
+      "role": "finding"
+    },
+    {
+      "author": "Brophy",
+      "year": 2023,
+      "page": 214,
+      "paragraph": 0,
+      "claim": "SigCWGAN uses Signature Wasserstein-1 metric to efficiently capture temporal dependencies.",
+      "role": "finding"
+    },
+    {
+      "author": "Brophy",
+      "year": 2023,
+      "page": 206,
+      "paragraph": 0,
+      "claim": "Privacy risks include re-identification through linkage attacks on de-identified datasets.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Anomaly Detection in Financial Transactions",
+        "relevance": "high",
+        "justification": "GANs can generate synthetic financial time series for anomaly detection and fraud prevention."
+      },
+      {
+        "code": "12.A",
+        "name": "Clustering Methods in Finance",
+        "relevance": "high",
+        "justification": "Time series GAN architectures applicable to financial data clustering and pattern recognition."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Comprehensive evaluation of GAN architectures and metrics for temporal data generation."
+      },
+      {
+        "code": "12.C",
+        "name": "Model Explainability in Finance",
+        "relevance": "medium",
+        "justification": "Discusses interpretability challenges in complex GAN architectures for financial applications."
+      }
+    ],
+    "contribution_to_field": "This systematic review provides the first comprehensive categorization of time series GANs into discrete and continuous variants. The taxonomy enables researchers to identify appropriate architectures for specific temporal data types. The analysis reveals that TimeGAN and SigCWGAN represent state-of-the-art approaches for continuous time series generation. The review highlights critical gaps including lack of standardized benchmarks, evaluation metrics, and privacy preservation frameworks. For financial applications, Quant GAN demonstrates potential for capturing long-range dependencies in market data.",
+    "directly_justifies": [
+      "No standardized benchmarking datasets exist for time series GAN evaluation.",
+      "TimeGAN combines supervised and unsupervised training for better temporal dynamics.",
+      "Discrete GANs require policy gradient methods due to zero gradient problem.",
+      "Privacy risks include re-identification through linkage attacks.",
+      "Quant GAN captures long-range dependencies in financial time series."
+    ],
+    "limits": [
+      "Focuses on GANs specifically; other generative models like VAEs receive less attention.",
+      "Most reviewed works use relatively small datasets which may not scale.",
+      "No standardized evaluation metrics established for time series quality.",
+      "Privacy preservation techniques require further development for sensitive data."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all 14 topic domains revealed primary relevance to Domain 12 (Algorithms and Mathematical Foundations) and Domain 6 (Anomaly Detection). Topic 6.A (Anomaly Detection) received high relevance as GANs can generate synthetic data for anomaly detection. Topic 12.A (Clustering Methods) received high relevance for time series pattern recognition. Topic 12.B (Evaluation of Algorithmic Modules) received high relevance for comprehensive GAN evaluation. Topic 12.C (Model Explainability) received medium relevance for interpretability challenges. Domains 1-5, 7-11, 13-14 were considered and rejected as the paper focuses on generative models rather than Filipino demographics, financial behavioral profiles, expense categorization, predictive modeling in personal finance, budgeting strategies, mobile design, data privacy mechanisms, trust, savings/debt management, or synthetic data generation for finance."
+  },
+  "limitations": [
+    "Focuses on GANs specifically; other generative models like VAEs receive less attention.",
+    "Most reviewed works use relatively small datasets which may not scale.",
+    "No standardized evaluation metrics established for time series quality.",
+    "Privacy preservation techniques require further development for sensitive data."
+  ],
+  "remember_this": [
+    "No standardized benchmarking datasets for time series GAN evaluation.",
+    "TimeGAN combines supervised and unsupervised training for temporal dynamics.",
+    "Discrete GANs require policy gradient due to zero gradient problem.",
+    "Quant GAN captures long-range dependencies in financial time series.",
+    "Privacy risks include re-identification through linkage attacks."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T11:15:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Brophy et al_marked.md",
+      "converted_at": "2026-07-21T05:40:34Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

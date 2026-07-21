@@ -1,1 +1,132 @@
-{}
+{
+  "paper_id": "10.15662/IJEETR.2024.0606008",
+  "designation": "international",
+  "title": "A GRA-Enhanced Cloud AI Framework for Petabyte-Scale Multi-Tenant Environments: Multivariate Classification for Credit Card Fraud Detection and Adaptive Risk Analytics",
+  "authors": "Adlermann, Johannes Friedrich",
+  "year": 2024,
+  "venue": "IJEETR",
+  "odin_topics": ["8.A", "8.B"],
+  "tldr": "GRA-enhanced Cloud AI framework achieves 40-70% candidate reduction and 3-6% AUC improvement for petabyte-scale multi-tenant credit card fraud detection.",
+  "problem_and_motivation": "Modern payment platforms process millions to billions of events daily across multiple tenants with different risk profiles. Traditional classifiers struggle with scale, heterogeneity, and continual fraud pattern shifts. Systems must maintain low latency, high throughput, interpretability, and safe multi-tenant operation on shared infrastructure.",
+  "approach": [
+    "GRA (Grey Relational Analysis) as first-class primitive for compact relational signature computation.",
+    "Multi-tiered architecture: GRA preprocessor, ML ensemble (GBDT, TGNN, LSTM), tenant policy engine.",
+    "GRA signatures computed per sliding window (1h, 24h, 7d, 30d) using standard normalization and coefficient formulation.",
+    "Three uses of GRA: prefilter (reduce 40-70% transactions), direct input features, explanation attributes.",
+    "Hybrid ensemble: Light GBDT model, temporal graph neural network, isotonic regression calibration.",
+    "Petabyte-scale infrastructure: lakehouse storage, Spark batch processing, SSD-backed caching.",
+    "Semi-supervised label propagation across transaction graph with tenant policy constraints."
+  ],
+  "findings": [
+    "num: Candidate reduction: GRA prefilter reduced transactions forwarded to heavyweight inference by 40-70%.",
+    "num: Minimal loss of true fraud events (<5%) in candidate sets.",
+    "num: 35-60% reduction in per-hour compute utilization for heavy models.",
+    "num: ROC AUC improved by 3-6 percentage points over best baseline.",
+    "num: Precision@1000 improved by 5-12%.",
+    "num: False positives reduced for low-risk tenant groups by up to 18%.",
+    "num: End-to-end streaming scoring latencies met sub-300ms median at hundreds of thousands TPS.",
+    "num: GRA signatures provide succinct anomaly cues for analyst triage.",
+    "GRA is computationally cheap compared to modern representation learners.",
+    "GRA robust to sparse labels and can surface anomalies without full labeled fraud data."
+  ],
+  "key_figures_tables": [
+    "Table: Detection metrics → 40-70% candidate reduction, 3-6% AUC improvement.",
+    "Table: Latency metrics → sub-300ms median at hundreds of thousands TPS.",
+    "Table: Compute reduction → 35-60% reduction in per-hour utilization.",
+    "Section IV: Advantages and disadvantages of GRA approach.",
+    "Section V: Experimental results across synthetic and benchmark workloads."
+  ],
+  "key_equations": [
+    {"equation": "Δi(k) = |S(k) - R(k)|", "meaning": "Absolute difference between candidate sequence S and reference R at dimension k."},
+    {"equation": "γi(k) = (min + ζ·max) / (Δi(k) + ζ·max)", "meaning": "Grey relational coefficient with distinguishing coefficient ζ (0 < ζ ≤ 1)."},
+    {"equation": "Aggregate coefficients across dimensions", "meaning": "Produces bounded relational score vector and compact 8-16 value signature."}
+  ],
+  "definitions": [
+    {"term": "Grey Relational Analysis (GRA)", "definition": "Methodology computing relational degrees between sequences or observations and reference profiles for similarity measures."},
+    {"term": "Multi-tenancy", "definition": "Architecture where multiple tenants share infrastructure with data isolation and per-tenant policy enforcement."},
+    {"term": "Lakehouse", "definition": "Data architecture combining data lake and data warehouse with managed metadata and atomic updates."},
+    {"term": "Concept drift", "definition": "Non-stationary data distributions where fraud patterns evolve over time."},
+    {"term": "GRA signature", "definition": "Compact 8-16 value vector capturing relational degrees across feature groups."}
+  ],
+  "citations": [
+    {
+      "author": "Deng",
+      "year": 1982,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced Grey systems theory and Grey Relational Analysis for problems with partial information.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bolton & Hand",
+      "year": 2002,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Statistical fraud detection review covering challenges of scale, heterogeneity, and pattern shifts.",
+      "role": "background"
+    },
+    {
+      "author": "Kayacan et al",
+      "year": 2010,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Grey system theory in time series prediction demonstrates computational tractability.",
+      "role": "background"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus on credit card fraud detection using GRA-enhanced anomaly detection framework."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Details multivariate ML classifiers for transaction anomaly detection with GRA signatures."
+      }
+    ],
+    "contribution_to_field": "The GRA-AI Cloud framework introduces Grey Relational Analysis as a first-class primitive in cloud-native, multi-tenant fraud detection. GRA serves as prefilter (40-70% reduction), feature augmentation (3-6% AUC improvement), and interpretability tool. The architecture demonstrates that lightweight mathematical similarity measures can be computed at petabyte scale to multiplex resources efficiently and provide interpretable scores augmenting complex learned models. The approach addresses critical operational concerns: class imbalance, concept drift, multi-tenant isolation, and privacy.",
+    "directly_justifies": [
+      "GRA prefilter reduces candidate set by 40-70% with <5% fraud event loss.",
+      "Combined GRA + ensemble improves ROC AUC by 3-6 percentage points.",
+      "35-60% reduction in compute utilization for heavy models.",
+      "Sub-300ms median latency at hundreds of thousands transactions per second.",
+      "Tenant-aware policies reduce false positives by up to 18% for low-risk tenants."
+    ],
+    "limits": [
+      "GRA alone cannot replace deep pattern detection for sophisticated adversaries.",
+      "Adversarial mimicry can evade purely relational measures.",
+      "Engineering complexity increases with scale and tenant diversity.",
+      "Cross-tenant leakage risk if policy enforcement is misconfigured.",
+      "Model governance challenges with per-tenant variants."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 8.A (Anomaly Detection in Personal Finance Systems) flagged as high relevance due to core focus on fraud detection as anomaly detection problem. Domain 8.B (Anomaly Detection Algorithms for Personal Spending Data) assigned high relevance for detailing multivariate ML classifiers for transaction analysis. All other domains rejected as paper focuses on infrastructure and algorithms rather than personal finance systems, behavioral profiles, or budgeting."
+  },
+  "limitations": [
+    "GRA alone cannot replace deep pattern detection for sophisticated adversaries.",
+    "Adversarial mimicry can evade purely relational measures.",
+    "Engineering complexity increases with scale and tenant diversity.",
+    "Cross-tenant leakage risk if policy enforcement is misconfigured.",
+    "Model governance challenges with per-tenant variants."
+  ],
+  "remember_this": [
+    "GRA prefilter reduces candidate set by 40-70% with minimal fraud event loss.",
+    "GRA signatures provide compact 8-16 value relational degree vectors.",
+    "Combined GRA + ensemble improves ROC AUC by 3-6 percentage points.",
+    "Framework supports petabyte-scale multi-tenant operation with sub-300ms latency.",
+    "GRA serves three roles: prefilter, feature augmentation, interpretability tool."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T22:10:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Adlermann_marked.md",
+      "converted_at": "2026-07-21T05:16:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

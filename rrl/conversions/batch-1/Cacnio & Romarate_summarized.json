@@ -1,1 +1,278 @@
-{}
+{
+  "paper_id": "10.26438/discussion-paper-2024-13",
+  "designation": "local",
+  "title": "How does financial literacy affect financial behavior over the life cycle? Evidence from Filipino households",
+  "authors": "Cacnio, F.Q.; Romarate, M.E.",
+  "year": 2024,
+  "venue": "Bangko Sentral ng Pilipinas Discussion Paper Series",
+  "odin_topics": [
+    "1.A",
+    "1.B",
+    "1.C",
+    "5.A",
+    "5.B",
+    "7.A",
+    "7.B",
+    "13.A",
+    "13.B"
+  ],
+  "tldr": "Using 2018 BSP survey data from 7,084 Filipino households, the study constructs a financial literacy index and finds that young adults exhibit the highest financial literacy, while higher financial aptitude predicts retirement planning and insurance uptake across life stages.",
+  "problem_and_motivation": "Financial literacy is widely assumed to drive desirable financial behavior, yet the evidence from developing-country contexts like the Philippines remains sparse. Existing literature predominantly reflects developed nations with higher financial literacy levels, leaving gaps in understanding how literacy affects financial decisions across different life stages in lower-literacy settings. The paper addresses how financial literacy influences both short-term and long-term financial behaviors of individuals at varying ages and life stages.",
+  "approach": [
+    "Used the 2018 BSP Consumer Finance Survey with 7,084 Filipino households earning at least PhP 10,000 annually.",
+    "Constructed a financial literacy index with two major components: financial attitude and financial aptitude.",
+    "Applied ordinary least squares regression to identify factors affecting financial literacy levels.",
+    "Used logistic regression to assess how financial literacy relates to five specific financial behaviors.",
+    "Divided respondents into three age cohorts: young adults (18-39), middle-aged (40-59), and senior (60+).",
+    "Conducted probit regression as an alternative robustness check to the logit models."
+  ],
+  "findings": [
+    "num: Young adults registered the highest mean FLI score of 0.392 compared to 0.387 for middle-aged and 0.370 for seniors.",
+    "num: Only 2 percent of Filipino adults correctly answered all six basic financial literacy questions in the 2021 BSP survey.",
+    "Higher financial literacy was associated with a lower likelihood of spending less than or equal to income, suggesting increased consumption.",
+    "Middle-aged persons were less likely to have a loan-to-income ratio below one compared to young adults.",
+    "Higher financial attitude scores increased the probability of paying loans on time.",
+    "Higher financial aptitude significantly predicted having retirement or pension plans and insurance coverage.",
+    "num: Senior households had the highest average savings at PhP 36,722 compared to PhP 13,402 for young adults.",
+    "Education had a stronger positive effect on financial literacy than income level.",
+    "Households with children and those receiving remittances engaged in more financial activities.",
+    "Females showed slightly lower financial aptitude and overall financial literacy than males."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Conceptual linkage between financial knowledge, literacy, behavior, and well-being adapted from Huston → Establishes the theoretical pathway from literacy to financial outcomes.",
+    "Table 1: Descriptive statistics of 7,084 surveyed households → Shows 45% middle-aged, 39% young adults, 16% seniors; 64% female.",
+    "Table 2: Summary of FLI scores → Financial aptitude mean of 0.099 is much lower than financial attitude mean of 0.673.",
+    "Table 3: FLI by demographic categories → Young adults score highest at 0.392; remittance recipients from abroad score slightly higher.",
+    "Table 5: OLS determinants of financial literacy → Education coefficient of 0.015 is larger than income coefficient of 0.002.",
+    "Table 6: Logistic regression results for financial behaviors → Financial aptitude odds ratio of 85.478 for having pension plans.",
+    "Table 7: Total household savings by age group → Seniors average PhP 36,722 in savings versus PhP 13,402 for young adults."
+  ],
+  "key_equations": [
+    {
+      "equation": "FLI_i = (1/2) * sum_j(x_ij * gamma_j1) + (1/2) * sum_j(x_ij * gamma_j2) in [0,1]",
+      "explanation": "Computes the financial literacy index as the weighted sum of financial attitude and financial aptitude components."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Financial Literacy Index (FLI)",
+      "definition": "A composite score between 0 and 1 measuring financial literacy through financial attitude and financial aptitude components."
+    },
+    {
+      "term": "Financial Attitude (FA)",
+      "definition": "A component of FLI covering attitude toward money and planning, risk attitude, and time discounting preferences."
+    },
+    {
+      "term": "Financial Aptitude (FAp)",
+      "definition": "A component of FLI measuring practical financial capability through loan, deposit, and surplus money allocation scores."
+    },
+    {
+      "term": "Young Adult",
+      "definition": "Respondents aged 18 to 39 years in the life cycle classification."
+    },
+    {
+      "term": "Middle-aged",
+      "definition": "Respondents aged 40 to 59 years in the life cycle classification."
+    },
+    {
+      "term": "Senior",
+      "definition": "Respondents aged 60 years and above in the life cycle classification."
+    },
+    {
+      "term": "Loan-to-Income Ratio",
+      "definition": "The ratio of a household's outstanding loans to their annual income, divided monthly."
+    },
+    {
+      "term": "Life Cycle Hypothesis",
+      "definition": "Economic theory positing that individuals smooth consumption across their lifetime by borrowing when young, saving during peak earning years, and drawing down assets in retirement."
+    },
+    {
+      "term": "Permanent Income Hypothesis",
+      "definition": "Friedman's theory that consumption depends on expected long-run average income rather than current income alone."
+    },
+    {
+      "term": "BSP Consumer Finance Survey (CFS)",
+      "definition": "A nationwide triennial survey conducted by the Bangko Sentral ng Pilipinas covering household financial states and conditions."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Huston",
+      "year": 2010,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy involves knowledge, skills, and confidence to apply financial knowledge in decision-making, extending beyond mere knowledge acquisition.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is a good predictor and significant contributor to the financial behavior of individuals across various contexts.",
+      "role": "finding"
+    },
+    {
+      "author": "Modigliani",
+      "year": 1954,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "People seek to smooth consumption throughout their lifetimes, taking on debt when income is low and saving during peak earning years.",
+      "role": "context"
+    },
+    {
+      "author": "Agarwal",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Middle-aged adults borrow at lower interest rates and pay fewer fees than younger or older adults due to experience and acquired knowledge.",
+      "role": "baseline"
+    },
+    {
+      "author": "Magante",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The authors created two indices of financial literacy using the 2018 CFS dataset, which served as the methodological foundation for the current study's FLI construction.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kawamura",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financially literate people in Japan were found to take excessive risks, overborrow, and hold naive financial attitudes despite high literacy levels.",
+      "role": "finding"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Short-term financial education programs are unlikely to significantly alter savings behavior unless offered during peak saving years after age 40.",
+      "role": "finding"
+    },
+    {
+      "author": "Henager",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Younger people show positive financial behaviors when they have confidence and perceived financial capability, while older adults rely on objective knowledge.",
+      "role": "finding"
+    },
+    {
+      "author": "Atkinson",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Middle-aged individuals tend to have higher financial literacy levels relative to the young and elderly populations.",
+      "role": "baseline"
+    },
+    {
+      "author": "Dinkova",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A positive association was found between financial literacy and non-durable consumption, supporting the interpretation that literate individuals spend more.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "high",
+        "justification": "Directly profiles Filipino young adults (18-39) as one of three life-cycle cohorts with financial literacy and behavior data."
+      },
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Reports income levels, savings, loan patterns, and financial account ownership for Filipino households including young adults."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Examines spending, borrowing, saving, insurance, and retirement planning behaviors across age cohorts including young adults."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Constructs financial literacy profiles using attitude and aptitude components and analyzes their relationship to financial behaviors."
+      },
+      {
+        "code": "5.B",
+        "name": "Profile Dynamics and the Cold-Start Problem",
+        "relevance": "medium",
+        "justification": "Analyzes how financial literacy and behavior differ across life stages, demonstrating profile variation over the life cycle."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Examines spending relative to income as a budgeting behavior outcome and its relationship to financial literacy."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Provides contextual evidence on which demographic factors predict financial behaviors relevant to budget design."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "medium",
+        "justification": "Reports savings behavior and deposit account ownership across age groups, with seniors averaging the highest savings."
+      },
+      {
+        "code": "13.B",
+        "name": "Debt Management in PFMS",
+        "relevance": "medium",
+        "justification": "Analyzes loan-to-income ratios and loan repayment timeliness across age groups and literacy levels."
+      }
+    ],
+    "contribution_to_field": "This paper contributes to the financial literacy literature by providing evidence from a developing-country context where overall financial literacy levels are low. It constructs a two-component financial literacy index separating attitude from aptitude, which enables more granular analysis of how different facets of literacy relate to distinct financial behaviors. The study demonstrates that financial literacy's relationship with behavior is not uniformly positive, finding that higher literacy is associated with greater spending rather than budgeting restraint. By segmenting analysis across three life-cycle cohorts, it reveals that the effect of financial literacy on financial behavior varies meaningfully with age, with implications for how financial education programs should be targeted.",
+    "directly_justifies": [
+      "Young adults in the Philippines exhibit higher financial literacy scores than middle-aged and senior cohorts.",
+      "Higher financial aptitude significantly predicts having retirement or pension plans and insurance coverage.",
+      "Financial literacy is associated with a lower likelihood of spending within one's income, suggesting increased consumption.",
+      "Education has a stronger positive effect on financial literacy than income level.",
+      "Households with children and those receiving remittances engage in more financial activities.",
+      "Middle-aged persons carry higher loan-to-income ratios than young adults.",
+      "Senior households maintain the highest average savings at PhP 36,722."
+    ],
+    "limits": [
+      "Cross-sectional data prevents establishing causal direction between financial literacy and financial behavior.",
+      "Self-reported financial behavior may be subject to recall bias and social desirability effects.",
+      "The sample excludes households with annual income below PhP 10,000, potentially omitting the most financially vulnerable.",
+      "The FLI construction does not include a financial knowledge component since the 2018 CFS lacks such questions."
+    ],
+    "topic_mapping_rationale": "All topic domains in the taxonomy were systematically scanned. Domain 1 (Filipino Young Professionals) was flagged as highly relevant, with codes 1.A, 1.B, and 1.C all applicable given the paper's direct profiling of Filipino households across age groups. Domain 5 (Financial Behavioral Profiles) was flagged as highly relevant under 5.A for the FLI-based profiling and medium relevant under 5.B for the life-cycle variation analysis. Domain 7 (Budgeting) received medium relevance for 7.A since spending-versus-income is examined as a budgeting behavior, and low relevance for 7.B since budget recommendation is only tangentially addressed. Domain 13 (Savings and Debt) was flagged as medium relevant under both 13.A and 13.B based on the analysis of savings levels and loan-to-income ratios. Domains 2, 3, and 4 were considered but rejected as the paper does not address culturally specific financial practices, expense categorization, or existing personal finance systems. Domains 6, 8, 9, 10, 11, 12, and 14 were also rejected as the paper contains no predictive modeling, anomaly detection, mobile design, privacy, engagement, evaluation frameworks, or synthetic data generation. The paper is fundamentally a cross-sectional empirical study of financial literacy and behavior in the Philippines, with primary relevance to demographic profiling, behavioral analysis, and personal finance domain knowledge."
+  },
+  "limitations": [
+    "Cross-sectional design prevents establishing causal direction between financial literacy and financial behavior.",
+    "Self-reported financial behavior data may suffer from recall bias and social desirability bias.",
+    "The FLI does not incorporate a financial knowledge component because the 2018 CFS lacks relevant questions.",
+    "Sample excludes households earning below PhP 10,000 annually, omitting the most financially vulnerable.",
+    " [unacknowledged] The study assumes demographic variables like age and education are exogenous to financial literacy without formal exogeneity testing."
+  ],
+  "remember_this": [
+    "Young Filipinos (18-39) scored the highest financial literacy among three age cohorts.",
+    "Higher financial literacy was linked to spending more, not less, relative to income.",
+    "Financial aptitude strongly predicted retirement planning and insurance ownership.",
+    "Seniors averaged the highest savings at PhP 36,722 despite the lowest FLI scores.",
+    "Education had a larger effect on financial literacy than income level."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T15:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cacnio & Romarate_marked.md",
+      "converted_at": "2026-07-21T05:43:28Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

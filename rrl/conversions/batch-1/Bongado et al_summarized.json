@@ -1,1 +1,131 @@
-{}
+{
+  "paper_id": "1a312a77-3f53-5f68-b4e6-e8b63a18ab43",
+  "designation": "local",
+  "title": "Influence of Digital Wallets on the Financial Behavior of HEI's Students",
+  "authors": "Bongado, M.B.; Magallanes, A.R.; Semaña, C.M.",
+  "year": 2025,
+  "venue": "Unknown",
+  "odin_topics": ["7.A"],
+  "tldr": "Digital wallet usage significantly influences financial behavior of HEI students, explaining 45.4% of variance in cash management and budgeting practices.",
+  "problem_and_motivation": "The increasing adoption of digital wallets among students has made it essential to examine how this technology shapes their financial habits and decision-making. While digital wallets offer convenience, their influence on students' financial behavior particularly in terms of cash management, financial planning, and budgeting remains underexplored. Understanding this relationship is crucial for developing effective financial literacy programs in higher education.",
+  "approach": [
+    "Quantitative descriptive-correlational research design.",
+    "219 randomly selected HEI students from Bukidnon State University – Talisayan Campus.",
+    "Validated survey instruments adapted from Belmonte et al. (2024) with expert validation and pilot test.",
+    "Technology Acceptance Model (TAM) framework guided examination of digital wallet adoption determinants.",
+    "Pearson Product-Moment Correlation Coefficient and regression analysis used for data analysis."
+  ],
+  "findings": [
+    "num: Digital wallet usage explains 45.4% of variance in financial behavior (R²=0.454).",
+    "num: Regression model statistically significant with F-value 180.136 (p<.001).",
+    "num: Digital wallet usage coefficient Beta=0.673 significantly predicts financial behavior (p<.001).",
+    "num: Perceived Trust highest determinant mean 2.99 but highest variability (SD=1.24).",
+    "num: Financial Planning & Budgeting highest financial behavior mean 3.00 (SD=0.84).",
+    "num: Overall financial behavior mean 2.99 (SD=0.68) showing responsible practices.",
+    "Students generally perceive digital wallets positively across all adoption determinants.",
+    "Cash management mean 2.97 indicates students practice responsible financial behavior.",
+    "Perceived Ease of Use and Usefulness both mean 2.95-2.96 showing positive perception."
+  ],
+  "key_figures_tables": [
+    "Table 1: Determinants of Digital Wallet Usage → Students generally agree with all adoption factors.",
+    "Table 2: Financial Behavior → Students demonstrate responsible cash management and budgeting.",
+    "Table 3: Regression Analysis → Digital wallet usage significantly influences financial behavior."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "TAM", "definition": "Technology Acceptance Model - framework examining determinants of technology adoption."},
+    {"term": "HEI", "definition": "Higher Education Institution - post-secondary academic institutions."},
+    {"term": "FinTech", "definition": "Financial Technology - technology-driven innovation in financial services."},
+    {"term": "Digital Wallet", "definition": "Mobile-based platform for storing, transferring, and paying through mobile devices."}
+  ],
+  "citations": [
+    {
+      "author": "Thirunavukkarasu",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "E-wallets' features including ease of use, security, and rewards are major drivers of adoption.",
+      "role": "finding"
+    },
+    {
+      "author": "Kardoyo",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Performance expectancy and habitual use are emphasized as key factors in digital wallet adoption.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cabrera",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy enhances saving behavior, though its correlation with digital wallet usage remains limited.",
+      "role": "finding"
+    },
+    {
+      "author": "Scheresberg",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Mobile payment users tend to overspend, borrow more, and save less than non-users.",
+      "role": "context"
+    },
+    {
+      "author": "Sharma",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Students with higher levels of financial planning and budgeting exhibit more responsible financial behaviors.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Examines financial planning and budgeting as components of financial behavior influenced by digital wallet usage."
+      }
+    ],
+    "contribution_to_field": "The study provides empirical evidence on how digital wallet usage influences financial behavior among HEI students in the Philippines. It demonstrates that digital wallet adoption significantly predicts financial management practices including cash management and budgeting. The research identifies that digital wallets serve as catalysts for improved financial responsibility when used purposefully. The study contributes to understanding the role of fintech in shaping student financial behavior in developing economies.",
+    "directly_justifies": [
+      "Digital wallet usage explains 45.4% of variance in financial behavior (R²=0.454).",
+      "Digital wallet usage significantly predicts financial behavior (Beta=0.673, p<.001).",
+      "Students demonstrate responsible financial behavior overall (mean 2.99).",
+      "Financial Planning & Budgeting highest-rated financial behavior (mean 3.00).",
+      "Perceived Trust highest determinant but with most diverse opinions (SD=1.24)."
+    ],
+    "limits": [
+      "Study limited to HEI students in Talisayan, Misamis Oriental only.",
+      "Cross-sectional design cannot establish causal relationships.",
+      "Self-reported survey data may introduce response bias.",
+      "Year of publication not explicitly stated in document."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 7.A (Budgeting Strategies as Domain Knowledge) flagged as medium relevance due to examination of financial planning and budgeting practices. All other domains (1-6, 8-14) rejected as paper focuses on digital wallet influence on student financial behavior rather than personal finance systems, demographic profiles, or technical components."
+  },
+  "limitations": [
+    "Study limited to HEI students in Talisayan, Misamis Oriental only.",
+    "Cross-sectional design cannot establish causal relationships.",
+    "Self-reported survey data may introduce response bias.",
+    "No longitudinal data on sustained financial behavior changes.",
+    "Sample represents only students from one state university campus."
+  ],
+  "remember_this": [
+    "Digital wallet usage explains 45.4% of variance in student financial behavior.",
+    "Students demonstrate responsible financial practices with digital wallet usage.",
+    "Perceived Trust shows most diverse opinions among adoption determinants.",
+    "Financial Planning & Budgeting highest-rated financial behavior component.",
+    "Digital wallets serve as catalysts for improved financial responsibility."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T22:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Bongado et al_marked.md",
+      "converted_at": "2026-07-21T05:39:07Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

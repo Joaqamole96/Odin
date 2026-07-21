@@ -1,1 +1,208 @@
-{}
+{
+  "paper_id": "07b5f57e-d6f2-5508-b795-818d871f70fa",
+  "designation": "international-algorithm-specific",
+  "title": "TEMPO: Prompt-Based Generative Pre-trained Transformer for Time Series Forecasting",
+  "authors": "Cao, D.; Jia, F.; Arık, S.Ö.; Pfister, T.; Zheng, Y.; Ye, W.; Liu, Y.",
+  "year": 2024,
+  "venue": "ICLR 2024",
+  "odin_topics": ["6.A", "12.B"],
+  "tldr": "TEMPO introduces a prompt-based generative pre-trained transformer for time series forecasting that decomposes inputs into trend, seasonality, and residual components, achieving state-of-the-art zero-shot performance across multiple benchmark datasets.",
+  "problem_and_motivation": "Existing time series forecasting models vary highly across domains and lack a general-purpose foundation model approach. Deep learning architectures may not be as robust as previously thought, sometimes being outperformed by simpler models on certain benchmarks. The theoretical understanding of applying large pre-trained models to time series forecasting has not reached consensus.",
+  "approach": [
+    "Proposes TEMPO framework that decomposes time series into trend, seasonality, and residual components using STL decomposition.",
+    "Utilizes semi-soft prompting strategy to tune GPT-2 for forecasting tasks by encoding temporal knowledge of trend and seasonality.",
+    "Employs reverse instance normalization on each component to facilitate knowledge transfer and minimize distribution shift losses.",
+    "Implements time-series patching with temporal encoding to extract local semantics and increase historical horizon.",
+    "Uses Low-Rank Adaptation (LoRA) to efficiently adapt to varying time series distributions with fewer parameters.",
+    "Evaluates on zero-shot setting where model is pre-trained on multiple source datasets and tested on unseen target datasets.",
+    "Introduces TETS dataset combining time series with textual contextual information for multimodal forecasting evaluation.",
+    "Compares against pre-trained LLM models, transformer-based models, and linear-based models across benchmark datasets."
+  ],
+  "findings": [
+    "num: TEMPO achieves 6.5% improvement in MAE on weather dataset compared to PatchTST.",
+    "num: TEMPO achieves 19.1% improvement in MAE on ETTm1 dataset compared to PatchTST.",
+    "num: TEMPO outperforms all baselines on average across all datasets in zero-shot long-term forecasting.",
+    "num: In self-supervised setting, TEMPO's average MSE and MAE is 7.3% and 4.6% less than GPT2 for weather dataset.",
+    "Prompt design and decomposition components both contribute to performance improvements in ablation study.",
+    "Seasonal component shows dominant influence on model predictions according to SHAP value analysis.",
+    "Pre-trained language models provide superior starting point for model optimization compared to training from scratch.",
+    "Transformer-based architectures training from scratch tend to underperform compared to pre-trained linguistic models."
+  ],
+  "key_figures_tables": [
+    "Figure 1: TEMPO-GPT architecture showing decomposition into trend, seasonal, and residual components → Integrates STL decomposition with pre-trained GPT for time series forecasting.",
+    "Figure 2: SHAP values of decomposed components for ETTm1 → Seasonal component has dominant influence on predictions.",
+    "Table 1: Transfer learning results on benchmark datasets → TEMPO achieves best average performance across all datasets.",
+    "Table 2: SMAPE results on TETS and GDELT datasets → TEMPO outperforms baselines in cross-domain zero-shot forecasting.",
+    "Table 3: Ablation study showing impact of prompt and decomposition → Both components are essential for robust forecasting.",
+    "Figure 12: t-SNE visualization of TEMPO vs GPT4TS representations → TEMPO learns distinct representations for trend, seasonality, and residual components."
+  ],
+  "key_equations": [
+    {
+      "equation": "$\\hat{x}_t^i = \\gamma_T \\frac{x_t - E[x_T]}{\\sqrt{Var[x_T]} + \\epsilon} + \\beta_T$",
+      "explanation": "Reverse instance normalization formula for trend component normalization."
+    },
+    {
+      "equation": "$L_{Dec} = f_T(X_i, \\theta_T) - \\hat{X}_T^g$",
+      "explanation": "Decomposition loss function aligning local decomposition with global STL."
+    },
+    {
+      "equation": "$Y_{\\hat{}} = Y_{\\hat{T}} + Y_{\\hat{S}} + Y_{\\hat{R}}$",
+      "explanation": "Final prediction as additive combination of component predictions."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "TEMPO",
+      "definition": "Prompt-Based Generative Pre-trained Transformer for time series forecasting."
+    },
+    {
+      "term": "STL",
+      "definition": "Seasonal and Trend decomposition using Locally weighted scatterplot smoothing."
+    },
+    {
+      "term": "LoRA",
+      "definition": "Low-Rank Adaptation for efficient fine-tuning of large language models."
+    },
+    {
+      "term": "SMAPE",
+      "definition": "Symmetric Mean Absolute Percentage Error, a percentage-based accuracy measure."
+    },
+    {
+      "term": "EBITDA",
+      "definition": "Earnings Before Interest, Taxes, Depreciation and Amortization."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Radford",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "GPT-2 is used as the backbone architecture for TEMPO's generative pre-trained transformer.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cleveland",
+      "year": 1990,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "STL decomposition is used to separate time series into trend, seasonal, and residual components.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hu",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LoRA enables efficient adaptation to time series distributions with significantly fewer parameters.",
+      "role": "methodology"
+    },
+    {
+      "author": "Nie",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Time-series patching with temporal encoding aggregates adjacent time steps into tokens.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zhou",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Self-attention layer naturally learns an orthogonal transformation akin to PCA decomposition.",
+      "role": "finding"
+    },
+    {
+      "author": "Lundberg",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SHAP values provide comprehensive measure of feature importance for model interpretation.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hastie",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Generalized additive models provide interpretable framework for component interactions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Wang",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "DualPrompt introduces dual-space prompt architecture for continual learning.",
+      "role": "context"
+    },
+    {
+      "author": "Lester",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Prompt tuning uses trainable representations for efficient adaptation of pre-trained models.",
+      "role": "context"
+    },
+    {
+      "author": "Kim",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Reversible instance normalization facilitates knowledge transfer across different distributions.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Proposes TEMPO framework for time series forecasting with applications to financial data including EBITDA prediction."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justificance": "Evaluates TEMPO against multiple baselines across benchmark datasets using MSE, MAE, and SMAPE metrics."
+      }
+    ],
+    "contribution_to_field": "TEMPO introduces a novel approach to time series forecasting by combining STL decomposition with prompt-based generative pre-trained transformers. The paper demonstrates that decomposing time series into trend, seasonality, and residual components before feeding into a pre-trained GPT model significantly improves zero-shot forecasting performance. The work establishes that pre-trained language models can be effectively adapted for time series tasks through careful prompt design and decomposition strategies. The introduction of the TETS dataset combining time series with textual information advances multimodal forecasting research. The paper provides theoretical analysis showing why attention mechanisms struggle to disentangle non-orthogonal trend and seasonal components automatically.",
+    "directly_justifies": [
+      "TEMPO achieves state-of-the-art performance in zero-shot time series forecasting across multiple benchmark datasets.",
+      "Decomposition into trend, seasonality, and residual components is essential for effective time series representation learning.",
+      "Semi-soft prompting strategy enables efficient adaptation of pre-trained GPT models for forecasting tasks.",
+      "Pre-trained language models provide superior starting point compared to training transformer architectures from scratch.",
+      "Seasonal component shows dominant influence on model predictions according to SHAP value analysis."
+    ],
+    "limits": [
+      "Superior LLMs with better numerical reasoning capabilities might yield better results.",
+      "Prompt pool design is initial exploration with substantial room for advancement.",
+      "Computational efficiency could be improved by using larger data windows for decomposition."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all 14 topic domains revealed primary relevance to Domain 6 (Predictive Modeling in Personal Finance Systems) with high relevance for topic 6.A given TEMPO's focus on financial time series forecasting including EBITDA prediction. Topic 12.B (Evaluation of Algorithmic Modules) received medium relevance due to comprehensive evaluation against multiple baselines. Domain 14 (Synthetic Data Generation) was considered but rejected as the paper introduces TETS dataset but does not focus on synthetic data generation methodology. Domain 4 (Landscape of Existing Personal Finance Systems) was considered for contextual relevance but rejected as the paper focuses on general time series forecasting rather than personal finance system analysis. Overall, the paper's primary contribution is to time series forecasting methodology with financial applications."
+  },
+  "limitations": [
+    "Superior LLMs with better numerical reasoning capabilities might yield better results.",
+    "Prompt pool design is initial exploration with substantial room for advancement.",
+    "Computational efficiency could be improved by using larger data windows for decomposition."
+  ],
+  "remember_this": [
+    "TEMPO decomposes time series into trend, seasonality, and residual components for better forecasting.",
+    "Semi-soft prompting enables efficient adaptation of pre-trained GPT models for time series tasks.",
+    "num: Achieves 6.5% improvement in MAE on weather dataset compared to PatchTST.",
+    "num: Achieves 19.1% improvement in MAE on ETTm1 dataset compared to PatchTST.",
+    "Pre-trained language models outperform transformer architectures trained from scratch."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T10:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cao et al_marked.md",
+      "converted_at": "2026-07-21T05:43:46Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

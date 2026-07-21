@@ -1,1 +1,132 @@
-{}
+{
+  "paper_id": "b8c4d2e1-9a7f-4c3d-8e5f-1b2a3c4d5e6f",
+  "designation": "local",
+  "title": "Predicting the Filipino Household Income Using Naive Bayes Classification Algorithm",
+  "authors": "Apus, Jhumer O.; Mantalaba, Kurt Donn V.; Mackno, Abdul Jabbar B.; Bokingkito Jr., Paul B.",
+  "year": 2024,
+  "venue": "IJCDS",
+  "odin_topics": ["5.A"],
+  "tldr": "Naive Bayes with bagging ensemble achieves 93% accuracy for predicting Filipino economic class using household expenditure and income variables from FIES data.",
+  "problem_and_motivation": "Over 33% of Philippine households have seven or more members, increasing poverty risk. Food expenditure accounts for 41.5% of total household expenses. The 2018 FIES provides crucial data for poverty assessment, but there is lack of exploration using household expenditure and income variables as input features for predicting economic class.",
+  "approach": [
+    "FIES dataset from Philippine Statistics Authority with 41,545 instances and 60 features.",
+    "Data cleaning: handling missing values using mode (categorical) and mean/median (numeric).",
+    "Feature selection using univariate chi-squared test with SelectKBest function.",
+    "13 features selected with highest scores for stronger correlation to dependent variable.",
+    "Naive Bayes algorithm with bagging and boosting ensemble techniques.",
+    "80-20 train-test split with 10-fold cross-validation.",
+    "Evaluation using confusion matrix, precision, recall, F1-score, and accuracy."
+  ],
+  "findings": [
+    "num: Bagging ensemble (Model I) achieved 93% accuracy.",
+    "num: Boosting ensemble (Model II) achieved 89% accuracy.",
+    "num: Bagging precision: 0.93, recall: 0.94, F1-score: 0.94.",
+    "num: Boosting precision: 0.90, recall: 0.93, F1-score: 0.91.",
+    "num: Top feature: Total Income from Entrepreneurial Activities (score: 5.46).",
+    "num: Second feature: Total Food Expenditure (score: 7.23).",
+    "num: Third feature: Transportation Expenditure (score: 5.54).",
+    "num: Poor class yielded most True Positives, Rich class yielded least.",
+    "Naive Bayes demonstrated effectiveness for income class prediction.",
+    "Model can support LGUs in poverty reduction programs."
+  ],
+  "key_figures_tables": [
+    "Table I: Sample FIES Raw Data → Attributes include income, region, expenditure, occupation.",
+    "Table II: Standard Income Bracket → 7 classes from Poor (P0-P10,957) to Rich (P219,140+).",
+    "Table III: Selected Features → 13 features with chi-squared scores.",
+    "Table IV: Data Cleaning Sample → N/A replaced with mode values.",
+    "Table V: Data Transforming Sample → Categorical to numeric transformation.",
+    "Table VI: Classification Report Model I → Bagging: accuracy 0.93, weighted mean F1: 0.94.",
+    "Table VII: Classification Report Model II → Boosting: accuracy 0.89, weighted mean F1: 0.91.",
+    "Figure 1: Architecture for model design → Bagging and Boosting ensemble flow.",
+    "Figure 2: Confusion Matrix → 7x7 matrix showing actual vs predicted classes.",
+    "Figure 3-4: Confusion Matrix Reports → Detailed TP/TN for each model."
+  ],
+  "key_equations": [
+    {"equation": "Precision = TP / (TP + FP)", "meaning": "Accuracy of positive predictions."},
+    {"equation": "Recall = TP / (TP + FN)", "meaning": "Measure of correctly identifying true positives."},
+    {"equation": "F1-score = (Precision * Recall) / (Precision + Recall)", "meaning": "Weighted average of precision and recall."},
+    {"equation": "Accuracy = (TP + TN) / (P + N)", "meaning": "Total correct predictions divided by total predictions."}
+  ],
+  "definitions": [
+    {"term": "Naive Bayes", "definition": "Probabilistic classifier based on Bayes' theorem with independence assumption between features."},
+    {"term": "Bagging", "definition": "Bootstrap Aggregating - reduces variance by generating additional training data through combinations with repetitions."},
+    {"term": "Boosting", "definition": "Iterative technique adjusting observation weights based on last classification to improve accuracy."},
+    {"term": "FIES", "definition": "Family Income and Expenditure Survey - Philippine dataset on household income and expenses."},
+    {"term": "Chi-squared test", "definition": "Statistical test measuring dependence between stochastic variables for feature selection."}
+  ],
+  "citations": [
+    {
+      "author": "Greenspan",
+      "year": 1992,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Poverty in Philippines: impact of family size with over 33% having 7+ members.",
+      "role": "background"
+    },
+    {
+      "author": "PSA",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "2021 FIES data showing food expenditure at 41.5% of total household expenses.",
+      "role": "data"
+    },
+    {
+      "author": "Vallantin",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Model with accuracy above 80% is considered good in scientific literature.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Uses household expenditure patterns to classify economic class, though focused on national survey data rather than individual PFMS profiles."
+      }
+    ],
+    "contribution_to_field": "The study demonstrates Naive Bayes effectiveness for predicting Filipino economic class with 93% accuracy using household expenditure and income variables. It identifies key expenditure patterns correlated with income classes: entrepreneurial activities, food expenditure, and transportation costs. The model can support LGUs in poverty reduction by identifying vulnerable households. The approach uses FIES national survey data rather than individual transaction data, providing macro-level insights for policy-making.",
+    "directly_justifies": [
+      "Bagging ensemble achieves 93% accuracy for income class prediction.",
+      "13 household expenditure features selected as strongest predictors.",
+      "Top features: entrepreneurial income (5.46), food expenditure (7.23), transportation (5.54).",
+      "Model can identify households for priority in poverty reduction programs.",
+      "Naive Bayes is robust to irrelevant features and missing values."
+    ],
+    "limits": [
+      "Uses national survey data (FIES) rather than individual transaction data.",
+      "Income classes are broad brackets rather than granular predictions.",
+      "Limited to 2018 FIES dataset (collected every 3 years).",
+      "Naive Bayes assumes feature independence which may not hold.",
+      "No comparison with other ML algorithms beyond ensemble variants."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 5.A (Financial Behavioral Profiles in Personal Finance) assigned medium relevance as paper uses expenditure patterns to classify economic profiles, though focused on national survey data rather than individual PFMS behavioral profiles. All other domains rejected as paper focuses on income prediction rather than personal finance systems, behavioral profiles, or budgeting."
+  },
+  "limitations": [
+    "Uses national survey data (FIES) rather than individual transaction data.",
+    "Income classes are broad brackets rather than granular predictions.",
+    "Limited to 2018 FIES dataset (collected every 3 years).",
+    "Naive Bayes assumes feature independence which may not hold.",
+    "No comparison with other ML algorithms beyond ensemble variants."
+  ],
+  "remember_this": [
+    "Naive Bayes with bagging achieves 93% accuracy for income prediction.",
+    "Key predictors: entrepreneurial income, food expenditure, transportation costs.",
+    "13 household expenditure features selected via chi-squared test.",
+    "Model supports LGUs in identifying vulnerable households for poverty reduction.",
+    "FIES data provides crucial insights into Filipino household financial behavior."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T22:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Apus et al_marked.md",
+      "converted_at": "2026-07-21T05:25:45Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

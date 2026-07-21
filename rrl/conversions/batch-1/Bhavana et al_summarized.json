@@ -1,1 +1,155 @@
-{}
+{
+  "paper_id": "10.35914/ijfbmr.v8i1.189",
+  "designation": "india",
+  "title": "The Impact of Financial Literacy on Personal Financial Management: An Empirical Study Among Young Adults",
+  "authors": "Bhavana, K.S.; Sreelakshmi, M.R.; Surya, N.",
+  "year": 2024,
+  "venue": "International Journal of Finance and Business Management Research",
+  "odin_topics": ["1.A", "1.D", "12.A", "12.B"],
+  "tldr": "An empirical study of 300 young adults demonstrates that financial literacy significantly impacts savings behavior, budgeting practices, and investment decisions.",
+  "problem_and_motivation": "Young adults in India face increasing financial complexity with multiple investment options, credit products, and digital payment systems. Despite this, many lack the financial literacy needed to make informed decisions. Understanding the specific impact of financial literacy on different aspects of personal finance is crucial for designing effective interventions.",
+  "approach": [
+    "Surveyed 300 young adults aged 18-30 across urban and semi-urban areas in India.",
+    "Measured financial literacy across four dimensions: budgeting, saving, investing, and debt management.",
+    "Correlated literacy scores with financial behaviors and outcomes.",
+    "Applied regression analysis to identify the strongest predictors of financial behavior.",
+    "Compared findings across demographic groups including gender, education, and income levels.",
+    "Developed recommendations for financial education programs based on empirical findings."
+  ],
+  "findings": [
+    "num: 300 young adults participated in the study.",
+    "num: 45% demonstrated high financial literacy across all four dimensions.",
+    "num: 38% demonstrated moderate literacy with knowledge gaps in investing.",
+    "num: 17% showed low literacy levels.",
+    "num: Strong positive correlation (r=0.72) between literacy and savings behavior.",
+    "num: Moderate correlation (r=0.58) between literacy and budgeting practices.",
+    "num: 62% of high-literacy respondents had emergency savings, compared to 23% of low-literacy respondents.",
+    "num: 71% of high-literacy respondents actively invested, compared to 34% of low-literacy respondents."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Research framework showing financial literacy dimensions and their impact on financial behaviors.",
+    "Table 1: Demographic profile of respondents including age, gender, education, income, and occupation.",
+    "Table 2: Financial literacy scores across four dimensions by demographic group.",
+    "Table 3: Regression results showing impact of literacy dimensions on financial behaviors."
+  ],
+  "key_equations": [
+    {
+      "equation": "Y = β0 + β1*Budgeting + β2*Saving + β3*Investing + β4*Debt + ε",
+      "explanation": "Multiple regression model estimating the impact of financial literacy dimensions on overall financial behavior score."
+    },
+    {
+      "equation": "r = Σ[(xi - x̄)(yi - ȳ)] / sqrt[Σ(xi - x̄)² * Σ(yi - ȳ)²]",
+      "explanation": "Pearson correlation coefficient measuring the strength of relationship between financial literacy and financial behaviors."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Financial Literacy",
+      "definition": "The ability to understand and effectively use various financial skills including budgeting, investing, and debt management."
+    },
+    {
+      "term": "Emergency Savings",
+      "definition": "A financial reserve set aside to cover unexpected expenses or financial emergencies."
+    },
+    {
+      "term": "Financial Behavior",
+      "definition": "Observable actions related to managing personal finances including spending, saving, investing, and borrowing."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Lusardi",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is an important determinant of financial well-being.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kaiser",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial education interventions have modest but positive effects on financial behavior.",
+      "role": "baseline"
+    },
+    {
+      "author": "Xiao",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is a crucial factor in determining economic well-being and resilience against financial challenges.",
+      "role": "context"
+    },
+    {
+      "author": "Mottola",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy and confidence significantly impact savings behavior and financial outcomes.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Current State of Personal Finance Management",
+        "relevance": "high",
+        "justification": "Describes the current state of financial management practices among young adults in India."
+      },
+      {
+        "code": "1.D",
+        "name": "Behavioral and Psychological Barriers to Financial Decision-Making",
+        "relevance": "high",
+        "justification": "Identifies knowledge gaps as significant barriers to effective financial decision-making."
+      },
+      {
+        "code": "12.A",
+        "name": "Financial Literacy and System Evaluation",
+        "relevance": "high",
+        "justification": "Directly measures financial literacy levels and their correlation with financial behaviors."
+      },
+      {
+        "code": "12.B",
+        "name": "User Satisfaction and Adoption Metrics",
+        "relevance": "medium",
+        "justification": "Measures adoption of financial practices (savings, investing) as indicators of system effectiveness."
+      }
+    ],
+    "contribution_to_field": "This empirical study provides quantitative evidence on how financial literacy specifically impacts different aspects of personal finance among young adults. The finding that literacy has the strongest impact on savings behavior (r=0.72) followed by budgeting (r=0.58) suggests that financial education programs should prioritize these areas. The significant disparities between high and low literacy groups in emergency savings (62% vs 23%) and investment participation (71% vs 34%) demonstrate the practical importance of literacy.",
+    "directly_justifies": [
+      "Financial literacy has a strong positive correlation with savings behavior (r=0.72).",
+      "Knowledge gaps in investing are the most common literacy deficit among young adults.",
+      "Significant disparities exist between high and low literacy groups in key financial behaviors."
+    ],
+    "limits": [
+      "Cross-sectional design cannot establish causal relationships between literacy and behavior.",
+      "Indian context may limit generalizability to other countries.",
+      "Self-reported financial behaviors may introduce response bias."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 1 (Current Personal Finance Landscape) applies through 1.A (Current State) and 1.D (Behavioral Barriers). Domain 12 (Evaluation Frameworks) is highly relevant through 12.A (Financial Literacy and System Evaluation) and 12.B (User Satisfaction and Adoption). Other domains like 2-3, 4-11, 13-14 are less directly applicable as the paper focuses on measuring literacy impact rather than system design or technical implementation."
+  },
+  "limitations": [
+    "Cross-sectional design limits causal inference between literacy and behavior.",
+    "Indian context may not generalize to other economic and cultural settings.",
+    "Self-reported financial behavior measures may overestimate actual practices.",
+    "Study focuses on young adults (18-30); findings may not apply to other age groups."
+  ],
+  "remember_this": [
+    "Strong positive correlation (r=0.72) between financial literacy and savings behavior.",
+    "62% of high-literacy respondents had emergency savings vs 23% of low-literacy.",
+    "71% of high-literacy respondents actively invested vs 34% of low-literacy.",
+    "Investing knowledge was the most common literacy deficit among young adults.",
+    "45% demonstrated high literacy; 38% moderate; 17% low across all dimensions."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Bhavana et al_marked.md",
+      "converted_at": "2026-07-21T05:11:02Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

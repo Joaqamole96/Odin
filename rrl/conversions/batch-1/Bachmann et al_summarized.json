@@ -1,1 +1,247 @@
-{}
+{
+  "paper_id": "10.1371/journal.pone.0322690",
+  "designation": "international-algorithm-specific",
+  "title": "Adaptive political surveys and GPT-4: Tackling the cold start problem with simulated user interactions",
+  "authors": "Bachmann, F.; van der Weijden, D.; Heitz, L.; Sarasua, C.; Bernstein, A.",
+  "year": 2025,
+  "venue": "PLOS ONE",
+  "odin_topics": ["5.C", "7.E", "8.C", "14.A"],
+  "tldr": "GPT-4 generates synthetic training data for adaptive political questionnaires that closely mimics real party positions, significantly reducing the cold start problem and improving early-user prediction accuracy.",
+  "problem_and_motivation": "Adaptive questionnaires dynamically select the most informative questions for survey participants, but their effectiveness depends on training data from previous user interactions that is often unavailable at launch. This cold start problem results in poor early-user performance, limiting widespread adoption of adaptive questionnaires in political surveys and voting advice applications. Existing solutions either rely on expert heuristics, require prior data, or yield unsatisfactory results for early users.",
+  "approach": [
+    "Used data from the Swiss Voting Advice Application Smartvote (2023 National Elections) with 1,029 candidates and 25,783 voters from the canton of Zurich responding to 75 political questions.",
+    "Prompted GPT-4 to answer the 75-question Smartvote questionnaire from the perspective of eight major Swiss political parties, generating 400 synthetic candidates (50 per party) with varied temperature parameters.",
+    "Constructed three synthetic dataset variations: GPT (raw synthetic responses), GPTmeans (party-averaged means, 8 samples), and GPTvoters (linear combinations of party vertices weighted by election results via Dirichlet distribution).",
+    "Built a statistical model combining PCA and Logistic Regression as a computationally efficient alternative to Item Response Theory for latent ideology estimation.",
+    "Simulated adaptive questionnaire interactions where users sequentially answered K={5,10,...,45} questions selected by Gini impurity uncertainty sampling.",
+    "Evaluated using missing value imputation (RMSE) and candidate recommendation accuracy (CRA via k-Nearest Neighbors with Manhattan distance).",
+    "Introduced a replacement parameter gamma controlling how quickly synthetic data is replaced by real user interactions during continuous model updates.",
+    "Benchmarked against a cold-start (randomly initialised) model and an oracle (pre-trained on real candidates) model."
+  ],
+  "findings": [
+    "num: GPT-4 synthetic data were closer to party-means than real candidates for 6 of 8 parties, with weighted mean distance d=0.165 vs candidates' d=0.186 (p<0.001).",
+    "num: 85.3% of GPT-4 generated answers fell within one standard deviation of the real party-mean for the respective question.",
+    "num: Pre-trained models (GPTvoters) started with RMSE of 0.315 vs cold-start's 0.420, a 25% improvement for early users.",
+    "num: Pre-trained models (GPTvoters) started with CRA of 43.2% vs cold-start's 24.8%, a 17.5 percentage point improvement.",
+    "num: Break-even points for missing value imputation followed N*K=4,500 (users times questions answered).",
+    "num: Break-even points for candidate recommendation ranged from 290 users (K=5) to 650 users (K=15), then decreased for higher K.",
+    "num: For the Green Party, GPT-4 placed 90.7% of answers within the 1-sigma confidence interval of the party-mean.",
+    "num: Optimal replacement parameter gamma was between 4 and 8, achieving full synthetic data replacement near the break-even point.",
+    "GPT-4 showed a tendency toward centrist positions, with less extreme answers than real candidates across all parties.",
+    "Hypothesis 2C was rejected: the relationship between answers per user and break-even point depends on the downstream task, not a simple proportionality."
+  ],
+  "key_figures_tables": [
+    "Figure 3A: PCA projection of GPT samples vs candidates → GPT-4 samples form distinct clusters but are more centred than real candidates.",
+    "Figure 3B: GPT means vs real party-means in latent space → GPT means lie within 1-sigma for most parties; FDP and SP show larger deviation.",
+    "Figure 4: Per-question comparison of GPT vs candidates for Greens and FDP → GPT-4 mimics party profiles well where they are distinctive.",
+    "Figure 5A: RMSE evolution across initialisations (K=30) → Pre-trained models start lower; cold-start converges after ~175 users.",
+    "Figure 5B: CRA evolution across initialisations (K=30) → GPTvoters starts at 43.2% CRA vs 24.8% for cold-start; break-even at 485 users.",
+    "Figure 6: Break-even points across K values → Missing value imputation shows anti-proportional N*K=4500; CRA shows non-monotonic pattern.",
+    "Figure 7: Replacement parameter effects → Higher gamma converges faster to cold-start; optimal gamma between 4 and 8."
+  ],
+  "key_equations": [
+    {
+      "equation": "L(v_p) = ||v_p - \\bar{y}_p||^2 - \\sum_{q \\neq p} ||v_p - \\bar{y}_q||^2",
+      "explanation": "Objective function to find party vertex v_p that minimizes distance to own party-mean while maximizing distance to others."
+    },
+    {
+      "equation": "f(w; \\alpha) = \\frac{1}{B(\\alpha)} \\prod_p w_p^{\\alpha_p - 1}",
+      "explanation": "Dirichlet distribution used to sample voter weights proportional to election results."
+    },
+    {
+      "equation": "y_{ik} = \\sum_p w_{ip} v_{pk}",
+      "explanation": "Linear combination generating voter i's response to question k from party vertices and sampled weights."
+    },
+    {
+      "equation": "G(\\hat{y}_{nk}) = 2\\hat{y}_{nk}(1 - \\hat{y}_{nk})",
+      "explanation": "Gini impurity used for question selection, maximised when prediction probability is 0.5."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Cold Start Problem",
+      "definition": "The challenge of poor model performance for early users when no prior training data from user interactions is available."
+    },
+    {
+      "term": "Adaptive Questionnaire",
+      "definition": "A survey that dynamically selects the next most informative question for each participant based on their previous answers."
+    },
+    {
+      "term": "Item Response Theory (IRT)",
+      "definition": "A psychometric framework for assessing latent traits (e.g., knowledge or ideology) based on responses to a set of items."
+    },
+    {
+      "term": "Ideal Point Estimation",
+      "definition": "An IRT application in political science that positions politicians or voters in a low-dimensional ideology space based on voting or survey data."
+    },
+    {
+      "term": "Voting Advice Application (VAA)",
+      "definition": "An online tool that matches voters with political parties or candidates based on their answers to a policy questionnaire."
+    },
+    {
+      "term": "Gini Impurity",
+      "definition": "A measure of uncertainty used for question selection, maximised when the model is most uncertain about the user's answer."
+    },
+    {
+      "term": "Break-Even Point",
+      "definition": "The number of real user interactions at which a randomly initialised model achieves the same accuracy as a pre-trained model."
+    },
+    {
+      "term": "Candidate Recommendation Accuracy (CRA)",
+      "definition": "The overlap between nearest neighbours computed from true answers and from imputed answers, measuring recommendation quality."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Argyle",
+      "year": 2023,
+      "page": 4,
+      "paragraph": 7,
+      "claim": "LLMs demonstrate algorithmic fidelity, the capability to emulate response distributions from a wide variety of human subgroups.",
+      "role": "finding"
+    },
+    {
+      "author": "Park",
+      "year": 2024,
+      "page": 4,
+      "paragraph": 8,
+      "claim": "LLMs replicated participants' responses in qualitative surveys with similar accuracy as the participants themselves two weeks later.",
+      "role": "finding"
+    },
+    {
+      "author": "Gudiño",
+      "year": 2024,
+      "page": 4,
+      "paragraph": 9,
+      "claim": "Using LLM-augmented data to estimate public opinion yielded higher accuracy than using non-augmented data.",
+      "role": "finding"
+    },
+    {
+      "author": "Clinton",
+      "year": 2004,
+      "page": 3,
+      "paragraph": 5,
+      "claim": "Used IRT to compute positions of US representatives in a low-dimensional ideology space from roll call data.",
+      "role": "methodology"
+    },
+    {
+      "author": "Montgomery",
+      "year": 2013,
+      "page": 1,
+      "paragraph": 4,
+      "claim": "Proposed computerized adaptive testing for public opinion surveys using statistical models for question selection.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lika",
+      "year": 2014,
+      "page": 2,
+      "paragraph": 5,
+      "claim": "Cold start problem in recommender systems requires user-item interactions to update model parameters, with solutions involving heuristics, active learning, or LLMs.",
+      "role": "context"
+    },
+    {
+      "author": "Sanner",
+      "year": 2023,
+      "page": 2,
+      "paragraph": 7,
+      "claim": "LLMs are competitive near cold-start recommenders for language- and item-based preferences.",
+      "role": "finding"
+    },
+    {
+      "author": "Settles",
+      "year": 2009,
+      "page": 3,
+      "paragraph": 1,
+      "claim": "Active learning selects the most informative items to label, reducing the number of interactions needed for model training.",
+      "role": "methodology"
+    },
+    {
+      "author": "Motoki",
+      "year": 2023,
+      "page": 4,
+      "paragraph": 10,
+      "claim": "Prompted GPT models to answer political questionnaires from different party perspectives to measure political bias.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bachmann",
+      "year": 2024,
+      "page": 1,
+      "paragraph": 5,
+      "claim": "Proposed fast and adaptive questionnaires for voting advice applications using IRT-based statistical models.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "low",
+        "justification": "Uses PCA and logistic regression for latent trait classification, methodology applicable to behavioral profiling but applied to political ideology, not financial behavior."
+      },
+      {
+        "code": "7.E",
+        "name": "Onboarding and Cold-Start for Budget Recommendation",
+        "relevance": "low",
+        "justification": "Directly addresses the cold-start problem with LLM-generated synthetic data, a technique transferable to budget recommendation onboarding scenarios."
+      },
+      {
+        "code": "8.C",
+        "name": "Cold-Start Baseline Strategies for Anomaly Detection",
+        "relevance": "low",
+        "justification": "Proposes synthetic data pre-training as a cold-start mitigation strategy, relevant to baseline initialization for anomaly detection systems."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "low",
+        "justification": "Demonstrates LLM-based synthetic data generation for training ML models, a technique applicable to financial data generation contexts."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a method for using LLMs to generate synthetic training data that mitigates the cold start problem in adaptive questionnaires. It demonstrates that GPT-4 can accurately emulate political party positions and that pre-training on this synthetic data significantly improves early-user performance in both missing value imputation and candidate recommendation tasks. The paper provides a systematic analysis of break-even points, replacement strategies, and the trade-offs between different synthetic data generation approaches. While focused on political surveys, the methodology has broader applicability to any adaptive system facing the cold start problem.",
+    "directly_justifies": [
+      "GPT-4 synthetic data are closer to party-means than real candidates for most parties (weighted mean distance 0.165 vs 0.186).",
+      "Pre-trained models reduce initial RMSE by 25% and improve initial CRA by 17.5 percentage points compared to cold-start.",
+      "Break-even points follow N*K=4500 for missing value imputation, quantifying the value of synthetic training data.",
+      "Optimal synthetic data replacement occurs at the break-even point, with gamma between 4 and 8.",
+      "Hypothesis 2C was rejected: the relationship between answers per user and break-even point depends on the downstream task."
+    ],
+    "limits": [
+      "The method requires an LLM with domain knowledge of the target political system, limiting generalization to domains where the LLM has relevant information.",
+      "GPT-4 shows a centrist bias, producing less extreme answers than real candidates, which may introduce biases in the question selection policy.",
+      "The synthetic data exhibits less variance than real candidate responses, failing to capture viewpoint diversity within parties.",
+      "Only one question selection strategy (uncertainty sampling) was tested; other strategies addressing exploration-exploitation trade-offs were not evaluated.",
+      "The replacement parameter gamma requires heuristic tuning; the optimal value may depend on LLM quality, user noise, and task difficulty.",
+      "The simulation was limited to one Swiss canton; generalizability to other political systems and domains was not tested."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 5 (Financial Behavioral Profiles) was flagged at low for 5.C, as the PCA+logistic regression classification methodology is applicable to behavioral profiling but applied here to political ideology. Domain 7 (Budgeting Strategies) was flagged at low for 7.E, as the cold-start mitigation approach using synthetic data pre-training is directly transferable to budget recommendation onboarding. Domain 8 (Anomaly Detection) was flagged at low for 8.C, as the synthetic data pre-training strategy could serve as a cold-start baseline for anomaly detection. Domain 14 (Synthetic Data/ML Serving) was flagged at low for 14.A, as the LLM-based synthetic data generation technique is relevant to financial ML data generation. Domains 1 (Filipino Young Professionals), 2 (Culturally Specific Financial Practices), 3 (Expense Categorization), 4 (Existing Personal Finance Systems), 5.A-5.B (Financial Behavioral Profiles/Dynamics), 6 (Predictive Modeling), 7.A-7.D (Budgeting Strategies/Recommendation/Optimization/Infeasibility), 8.A-8.B (Anomaly Detection Algorithms), 9 (Mobile-First Design), 10 (Data Privacy/Trust), 11 (Engagement Dynamics), 12 (Evaluation Frameworks), and 13 (Savings/Debt Goals) were considered and rejected as the paper does not address personal finance, Filipino demographics, or the specific subtopics covered by these codes."
+  },
+  "limitations": [
+    "The method requires an LLM with domain knowledge of the target political system, which may not exist for all political contexts or for non-political domains like product recommendations.",
+    "GPT-4 shows a centrist bias, producing less extreme and less varied answers than real candidates, which may limit the diversity of the training data.",
+    "The synthetic data exhibits overfitting to party-means, with less variance than real candidate responses, failing to capture within-party viewpoint diversity.",
+    "Only one question selection strategy (uncertainty sampling via Gini impurity) was evaluated; other strategies addressing exploration-exploitation trade-offs may yield different results.",
+    "The replacement parameter gamma requires heuristic tuning without a systematic method for choosing the optimal value a priori.",
+    "The simulation was limited to one Swiss canton (Zurich) with eight parties; generalizability to other political systems, domains, or scales was not tested.",
+    "Potential path dependencies from biased synthetic training data were investigated only through extremity analysis; more complex bias introduction scenarios were not explored.",
+    " [unacknowledged] The study did not evaluate the approach on truly novel questions with no prior data, which is the most extreme cold-start scenario."
+  ],
+  "remember_this": [
+    "GPT-4 synthetic political survey data were closer to party-means than real candidates for 6 of 8 Swiss parties.",
+    "Pre-trained models reduce initial RMSE by 25% and improve candidate recommendation accuracy by 17.5 percentage points.",
+    "Break-even points for missing value imputation follow N*K=4500, quantifying the value of synthetic training data.",
+    "The replacement parameter gamma between 4 and 8 achieves optimal performance by aligning replacement with the break-even point.",
+    "Hypothesis 2C was rejected: the break-even relationship depends on the downstream task, not a simple proportionality with answers per user."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:15:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Bachmann et al_marked.md",
+      "converted_at": "2026-07-21T05:30:41Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

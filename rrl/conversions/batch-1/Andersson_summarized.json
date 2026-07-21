@@ -1,1 +1,111 @@
-{}
+{
+  "paper_id": "094324c8-cc95-5192-bc46-040c41a6a3a9",
+  "designation": "international-algorithm-specific",
+  "title": "Insights into the temporal dynamics of identifying problem gambling on an online casino: A machine learning study on routinely collected individual account data",
+  "authors": "Andersson, S.; Carlbring, P.; Lyon, K.; Bermell, M.; Lindner, P.",
+  "year": 2025,
+  "venue": "Journal of Behavioral Addictions",
+  "odin_topics": ["6.A", "8.A", "8.B", "5.C"],
+  "tldr": "XGBoost classifies online gamblers into risk categories using account data, with temporal stability validated across truncated training periods.",
+  "problem_and_motivation": "Early identification of problem gambling is crucial due to high societal costs, but existing methods rely on self-report questionnaires prone to bias or behavioral tracking requiring sophisticated analytics. Cross-sectional approaches fail to capture temporal dynamics of gambling behavior, and the temporal stability of machine learning predictions remains underexplored. There is a need for scalable, data-driven methods that reliably predict problem gambling behaviors over time for real-time intervention.",
+  "approach": [
+    "Player account data from a major Swedish online gambling provider covering 4.5 years (January 2019 to July 2023) with 35,048 authenticated players.",
+    "Feature engineering derives behavioral indicators including loss chasing, betting frequency, session lengths, and spending patterns from 11 raw data frames.",
+    "XGBoost classifier trained with Optuna hyperparameter optimization using nested forward-chaining cross-validation preserving temporal order.",
+    "Temporal stability assessed by truncating training data at 30, 60, and 90 days prior to reference date and comparing model performance across truncations.",
+    "SHAP values and GMLVQ used for feature selection, combining top 25 features from each method for final model training."
+  ],
+  "findings": [
+    "num: Model performance was modest yet consistent across truncation periods: F1 score ranged from 0.758 to 0.810, ROC AUC from 0.608 to 0.621.",
+    "num: No significant trend in most metrics across truncation periods (Accuracy 95% CI [-0.009, 0.031], F1 Score [-0.008, 0.035], ROC AUC [-0.008, 0.008]).",
+    "num: Precision showed a slight negative slope across truncations (95% CI [-0.005, -0.001]), indicating minor performance decline with less data.",
+    "num: High-risk group predictions were highly accurate (true mean 0.761 vs predicted 0.758 in 30-day dataset).",
+    "num: Low-risk group was consistently underestimated (true mean 0.557 vs predicted 0.219 in full dataset).",
+    "Loss chasing behavior weekly log transformed, net balance trend, max deposit log transformed, session sum p25, and total bets daily log transformed were consistently top features.",
+    "Key features maintained consistent importance across all truncation periods, confirming temporal stability of behavioral indicators."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Data pre-processing and analysis pipeline showing temporal alignment and feature engineering workflow.",
+    "Figure 2: Feature importance plot showing SHAP values for top behavioral predictors across truncation periods.",
+    "Figure 3: Temporal evaluation and prediction stability showing performance metrics across truncation periods.",
+    "Figure 4: Difference between true and predicted means across risk categories and truncation periods.",
+    "Table 1: Model performance metrics for different truncation labels (30-day, 60-day, 90-day, full).",
+    "Table 2: Risk category prediction table with true and predicted means for low, medium, and high risk groups."
+  ],
+  "key_equations": [
+    {
+      "equation": "\\text{F1} = 2 \\cdot \\frac{\\text{Precision} \\cdot \\text{Recall}}{\\text{Precision} + \\text{Recall}}",
+      "explanation": "Harmonic mean of precision and recall used as primary optimization metric for XGBoost."
+    },
+    {
+      "equation": "\\text{SHAP}(x_i) = \\sum_{S \\subseteq N \\setminus \\{i\\}} \\frac{|S|!(|N|-|S|-1)!}{|N|!} [v(S \\cup \\{i\\}) - v(S)]",
+      "explanation": "Shapley value decomposing prediction into additive feature contributions."
+    }
+  ],
+  "definitions": [
+    {"term": "XGBoost", "definition": "Extreme Gradient Boosting, an ensemble learning method using sequential decision trees."},
+    {"term": "SHAP", "definition": "SHapley Additive exPlanations, method for explaining individual predictions through feature contributions."},
+    {"term": "GMLVQ", "definition": "Generalized Matrix Learning Vector Quantization, supervised technique for feature discriminability optimization."},
+    {"term": "Loss Chasing", "definition": "Behavioral pattern of increasing bets to recover previous losses, a key indicator of problem gambling."},
+    {"term": "Optuna", "definition": "Automated hyperparameter optimization framework using Bayesian search."},
+    {"term": "Forward-Chaining CV", "definition": "Time-series cross-validation where each validation fold strictly follows training folds chronologically."},
+    {"term": "ROC AUC", "definition": "Area Under the Receiver Operating Characteristic Curve, measure of binary classification performance."},
+    {"term": "Net Balance Trend", "definition": "Feature capturing the directional change in a player's cumulative balance over time."}
+  ],
+  "citations": [
+    {"author": "Auer", "year": 2022, "page": 0, "paragraph": 0, "claim": "Predictive analytics and machine learning are promising in identifying problem gamblers using account data.", "role": "methodology"},
+    {"author": "Jonsson", "year": 2017, "page": 0, "paragraph": 0, "claim": "Early identification of problem gambling is crucial due to high societal and individual costs.", "role": "context"},
+    {"author": "Perrot", "year": 2022, "page": 0, "paragraph": 0, "claim": "Machine learning can leverage complex datasets and scientifically informed feature engineering to identify gambling behavior patterns.", "role": "baseline"},
+    {"author": "Lundberg", "year": 0, "page": 0, "paragraph": 0, "claim": "SHAP values decompose model predictions into additive feature contributions for interpretable explanations.", "role": "methodology"},
+    {"author": "Hopfgartner", "year": 2022, "page": 0, "paragraph": 0, "claim": "Features derived from online gambling behavior data capture loss chasing, betting frequency, session lengths, and spending patterns.", "role": "methodology"},
+    {"author": "Deng", "year": 2019, "page": 0, "paragraph": 0, "claim": "Longitudinal studies offer potential for deeper insights into evolution of gambling behavior and onset of problem gambling.", "role": "context"},
+    {"author": "Paterson", "year": 2020, "page": 0, "paragraph": 0, "claim": "Cross-sectional approaches often overlook temporal richness inherent in raw gambling behavior data.", "role": "critique"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "XGBoost classifier predicts problem gambling risk from behavioral account data using feature engineering."},
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "high", "justification": "Identifies problem gambling as anomalous behavior pattern from normal gambling activity."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "high", "justification": "Uses XGBoost with SHAP-based feature selection to detect behavioral anomalies in gambling transactions."},
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "medium", "justification": "Classifies gamblers into low-risk and higher-risk categories based on behavioral features."}
+    ],
+    "contribution_to_field": "This study demonstrates that machine learning predictions of problem gambling exhibit temporal stability across different data truncation periods, supporting their feasibility for real-time intervention. The consistent importance of key features like loss chasing and net balance trend across all truncation periods validates the robustness of behavioral indicators. The approach addresses a critical gap in gambling research by evaluating prediction stability over time rather than relying on cross-sectional snapshots.",
+    "directly_justifies": [
+      "XGBoost achieves consistent F1 scores (0.758-0.810) across 30, 60, and 90-day data truncation periods.",
+      "Loss chasing behavior and net balance trend are consistently the most important features across all truncation periods.",
+      "High-risk group predictions are highly accurate with predicted means closely matching true means.",
+      "No significant performance decline observed when reducing training data, supporting early prediction feasibility.",
+      "The model effectively identifies medium and high-risk individuals but underestimates low-risk cases."
+    ],
+    "limits": [
+      "Inconsistent application of risk labels over time may cause the model to capture temporal biases rather than genuine risk patterns.",
+      "Manual assessments used for labeling may introduce subjective bias impacting consistency and accuracy.",
+      "Dataset comes from a single gambling operator, missing cross-platform behavior of multi-operator problem gamblers.",
+      "The truncation strategy may bias the model toward accounts with more extensive histories.",
+      "Limited bootstrapping approach (four samples per metric) may reduce sensitivity to subtle trends."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. High relevance was assigned to predictive modeling (6.A) as the paper's core contribution is XGBoost-based prediction of problem gambling, anomaly detection (8.A) for identifying problem gambling as anomalous behavior, and anomaly detection algorithms (8.B) for the specific XGBoost and SHAP methodology. Medium relevance was assigned to classification approaches (5.C) for the binary risk classification. Topics rejected include Filipino-specific topics (1.A-1.C, 2.A-2.D), expense categorization (3.A-3.C), existing systems landscape (4.A-4.B), budgeting strategies (7.A-7.D), mobile design (9.A-9.C), data privacy (10.A), engagement dynamics (11.A-11.B), evaluation frameworks (12.A-12.C), savings/debt management (13.A-13.C), and synthetic data generation (14.A). The paper's topical coverage centers on predictive anomaly detection in behavioral spending data."
+  },
+  "limitations": [
+    "Inconsistent application of risk labels over time may cause the model to capture temporal biases rather than genuine risk patterns.",
+    "Manual assessments used for labeling may introduce subjective bias impacting consistency and accuracy [unacknowledged].",
+    "Dataset comes from a single gambling operator, missing cross-platform behavior of multi-operator problem gamblers.",
+    "The truncation strategy may bias the model toward accounts with more extensive histories [unacknowledged].",
+    "Limited bootstrapping approach (four samples per metric) may reduce sensitivity to subtle trends."
+  ],
+  "remember_this": [
+    "XGBoost achieves consistent F1 scores (0.758-0.810) across all data truncation periods.",
+    "Loss chasing behavior and net balance trend are the most important behavioral predictors.",
+    "High-risk predictions are highly accurate but low-risk cases are consistently underestimated.",
+    "No significant performance decline with reduced data supports early prediction feasibility.",
+    "Temporal stability validates machine learning for real-time gambling operator Duty of Care."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:45:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Andersson_marked.md",
+      "converted_at": "2026-07-21T05:23:32Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

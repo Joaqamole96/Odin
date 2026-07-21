@@ -1,1 +1,130 @@
-{}
+{
+  "paper_id": "caea4ec0-1e43-5843-8b12-6451c3c6635e",
+  "designation": "local",
+  "title": "Cash Management Practices and the Financial Performance of Micro-Enterprises",
+  "authors": "Aguilar, T.S.; Chavez, M.M.; Rayos, C.M.D.; Remoquin, K.J.A.; Melo, M.C.F.",
+  "year": 2024,
+  "venue": "AIJBM",
+  "odin_topics": ["7.A"],
+  "tldr": "Micro-enterprises show moderate cash management practices that strongly correlate with improved financial performance in sales growth, profitability, and liquidity.",
+  "problem_and_motivation": "Micro-enterprises face challenges managing financial resources while striving for growth and sustainability. Many struggle with low liquidity, insufficient income, and financial illiteracy. Efficient cash flow management remains one of the most significant issues for these businesses.",
+  "approach": [
+    "Quantitative descriptive-correlational research design.",
+    "Random sampling of 163 micro-enterprises from 404 registered in Baco, Oriental Mindoro.",
+    "Survey instrument with 4-point Likert scale measuring budgeting and cash flow management.",
+    "Cronbach's Alpha reliability testing showed acceptable to excellent reliability (0.790 to 0.925).",
+    "Spearman's correlation analysis used due to non-normality in data distributions."
+  ],
+  "findings": [
+    "num: Cash management practices at moderate extent with overall mean 3.04 (SD=0.539).",
+    "num: Budgeting practices moderately applied with overall mean 3.04 (SD=0.539).",
+    "num: Cash flow management from operating activities moderate at mean 2.97 (SD=0.537).",
+    "num: Cash flow management from financing activities moderate at mean 2.96 (SD=0.584).",
+    "num: Cash flow management from investing activities moderate at mean 2.70 (SD=0.534).",
+    "num: Sales growth moderate at mean 2.94 (SD=0.473).",
+    "num: Profitability moderate at mean 2.97 (SD=0.432).",
+    "num: Liquidity moderate at mean 3.01 (SD=0.420).",
+    "num: Strong positive correlation between budgeting and sales growth (rho=.506, p<.001).",
+    "num: Strong positive correlation between cash flow management and sales growth (rho=.648, p<.001)."
+  ],
+  "key_figures_tables": [
+    "Table 3: Budgeting practices → Micro-enterprises show moderate budgeting application overall.",
+    "Table 10: Correlation analysis → Strong positive relationship between all cash management practices and financial performance indicators."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Micro-enterprises", "definition": "Enterprises with Php 3,000,000 or less in assets and one to nine employees per DTI categorization."},
+    {"term": "Cash Management", "definition": "Planning, controlling, and accounting for cash transactions and balances."},
+    {"term": "Baumol Model", "definition": "Model determining optimal cash balances minimizing opportunity cost of holding cash and transaction costs."},
+    {"term": "Miller-Orr Model", "definition": "Cash management model for enterprises with uncertain cash flows allowing upper and lower limits."}
+  ],
+  "citations": [
+    {
+      "author": "Baumol",
+      "year": 1952,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The transactions demand for cash follows an inventory theoretic approach determining optimal cash balances.",
+      "role": "methodology"
+    },
+    {
+      "author": "Miller",
+      "year": 1966,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Model of demand for money by firms with uncertain cash inflows and outflows.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kasim",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Cash management practices and financial performance of SMEs in Northern Region of Ghana.",
+      "role": "baseline"
+    },
+    {
+      "author": "Onyango",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy moderates the relationship between cash management practices and financial performance of MSMEs.",
+      "role": "finding"
+    },
+    {
+      "author": "Otieno",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Impact of cash management practices on performance of SMEs in Eldoret Central Business District.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Examines budgeting practices and cash flow management as key indicators of financial performance."
+      }
+    ],
+    "contribution_to_field": "The study provides empirical evidence on cash management practices among micro-enterprises in the Philippines. It demonstrates that budgeting and cash flow management strongly correlate with financial performance indicators including sales growth, profitability, and liquidity. The research identifies moderate implementation of cash management practices with room for improvement. The study contributes localized data on micro-enterprise financial management, filling a gap in Philippine micro-enterprise literature.",
+    "directly_justifies": [
+      "Cash management practices strongly correlate with all financial performance indicators at p<.001.",
+      "Budgeting practices show strong positive correlation with sales growth (rho=.506, p<.001).",
+      "Cash flow management shows stronger correlation with sales growth than budgeting (rho=.648, p<.001).",
+      "Micro-enterprises show moderate implementation of cash management practices overall.",
+      "Liquidity shows moderate level among micro-enterprises (mean=3.01, SD=0.420)."
+    ],
+    "limits": [
+      "Study limited to micro-enterprises in Baco, Oriental Mindoro only.",
+      "Cross-sectional design cannot establish causal relationships.",
+      "Self-reported survey data may introduce response bias.",
+      "Small sample size relative to total registered micro-enterprises."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 7.A (Budgeting Strategies as Domain Knowledge) flagged as high relevance as the paper directly examines budgeting and cash flow management practices. All other domains (1-6, 8-14) rejected as paper focuses on micro-enterprise financial management rather than personal finance systems, behavioral profiles, predictive modeling, or technical components."
+  },
+  "limitations": [
+    "Study limited to micro-enterprises in Baco, Oriental Mindoro only.",
+    "Cross-sectional design cannot establish causal relationships.",
+    "Self-reported survey data may introduce response bias.",
+    "Sample of 163 represents only 40.3% of registered micro-enterprises."
+  ],
+  "remember_this": [
+    "Cash management practices strongly correlate with financial performance indicators.",
+    "Budgeting and cash flow management show strong positive correlations with sales growth.",
+    "Micro-enterprises demonstrate moderate cash management practice implementation.",
+    "Liquidity management shows moderate level among micro-enterprises.",
+    "Effective cash management is crucial for micro-enterprise financial stability."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T22:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Aguilar et al_marked.md",
+      "converted_at": "2026-07-21T05:17:00Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

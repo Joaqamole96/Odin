@@ -1,1 +1,221 @@
-{}
+{
+  "paper_id": "10.32996/jbms.2025.7.7.5",
+  "designation": "international-algorithm-specific",
+  "title": "Real-Time Hybrid Optimization Models for Edge-Based Financial Risk Assessment: Integrating Deep Learning with Adaptive Regression for Low-Latency Decision Making",
+  "authors": "Ahmed, M.P.; Tisha, S.A.; Sweet, M.M.R.",
+  "year": 2025,
+  "venue": "Journal of Business and Management Studies",
+  "odin_topics": [
+    "8.A",
+    "8.B",
+    "9.A",
+    "9.B",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "A hybrid framework routing transactions between deep learning and lightweight regression models achieves 55% latency reduction while preserving fraud detection performance on edge devices.",
+  "problem_and_motivation": "Financial fraud detection in U.S. payment systems faces a critical tradeoff between the predictive accuracy of deep learning and the low latency required for edge deployment. Centralized processing introduces unacceptable delays, while standalone deep models exceed the compute budgets of resource-constrained edge hardware like POS terminals and ATMs.",
+  "approach": [
+    "Developed a hybrid optimization framework that dynamically routes transactions between deep neural inference and adaptive regression based on latency and confidence thresholds.",
+    "Used a U.S. credit card fraud dataset with anonymized PCA features, structured as a streaming financial workload with chronological train-validation-test splits.",
+    "Implemented a batch replay streaming evaluation environment simulating real-time payment authorization cycles under edge CPU and memory constraints.",
+    "Applied dynamic quantization to compress the deep student model to 8 KB while maintaining inference speed.",
+    "Benchmarked hybrid routing strategies including cascade and gating approaches against standalone deep learning and regression baselines.",
+    "Simulated edge device constraints including reduced CPU cores and constrained memory budgets across multiple hardware profiles."
+  ],
+  "findings": [
+    "num: Hybrid routing reduces inference latency by up to 55% compared to deep learning alone.",
+    "num: Fast regression model achieves average latency of 0.31 ms in edge-tiny settings.",
+    "num: Quantized student model occupies 8253 bytes with 0.347 ms latency.",
+    "num: Median latency for hybrid_cascade is 0.501 ms and for hybrid_gating is 0.533 ms.",
+    "Hybrid approach preserves high recall on fraudulent cases while improving transaction-level risk detection.",
+    "Concept drift analysis shows fraud behavior evolves gradually, requiring adaptive systems.",
+    "Robustness checks confirm hybrid system maintains real-time guarantees under adversarial latency and concept drift.",
+    "Calibration analysis shows the deep model assigns risk scores aligned more closely with actual outcomes than the regression model."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Class distribution and transaction amount by class → Fraud is extremely rare but spans typical consumer spending ranges.",
+    "Figure 2: Fraud rate by hour of day and day of week → Slight temporal peaks suggest opportunistic timing by attackers.",
+    "Figure 3: Concept drift and correlation analysis → Fraud behavior evolves gradually, requiring continuous model adaptation.",
+    "Figure 4: Rolling fraud incidence analysis → Near-flat distribution demands low false positive rates from detection models.",
+    "Figure 5: Predictive performance metrics → All models show low PR AUC under default thresholds due to extreme class imbalance.",
+    "Figure 6: Latency and resource efficiency metrics → Quantized deep model fits within edge hardware memory and latency limits.",
+    "Figure 7: Trade-off analysis metrics → Confidence gating and cascading strategies balance detection quality with response time.",
+    "Figure 8: Robustness checks metrics → Hybrid system holds ground under stress, concept drift, and adversarial attacks."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Hybrid Optimization Controller",
+      "definition": "A routing mechanism that decides which model should handle each transaction based on real-time latency and confidence signals."
+    },
+    {
+      "term": "Concept Drift",
+      "definition": "The gradual shift in fraud behavior patterns over time that can degrade model performance if not addressed through adaptation."
+    },
+    {
+      "term": "PR AUC",
+      "definition": "Precision-Recall Area Under the Curve, a metric reflecting detection performance under class imbalance conditions."
+    },
+    {
+      "term": "Dynamic Quantization",
+      "definition": "A model compression technique that reduces deep network size and latency while maintaining acceptable prediction accuracy."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Clements",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Sequential deep learning on tabular financial transaction data enhances credit risk monitoring accuracy by capturing evolving risk signatures.",
+      "role": "methodology"
+    },
+    {
+      "author": "Tolo",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Recurrent networks enable predictive identification of systemic crisis triggers, improving resilience across financial networks.",
+      "role": "finding"
+    },
+    {
+      "author": "Ghosh",
+      "year": 1994,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Neural networks trained on payment streams detect signals that rigid rule systems fail to notice, shifting fraud detection toward learned behavior.",
+      "role": "context"
+    },
+    {
+      "author": "Feedzai",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Attackers exploit millisecond delays in fraud detection, where reactions trailing transactions create openings for loss.",
+      "role": "context"
+    },
+    {
+      "author": "Shen",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep ensemble methods enhance minority case detection in imbalanced transactional data through synthetic oversampling and multilayer feature abstraction.",
+      "role": "finding"
+    },
+    {
+      "author": "Jin",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Multiobjective optimization frameworks allow balancing performance, interpretability, and resource efficiency through explicit Pareto evaluation.",
+      "role": "methodology"
+    },
+    {
+      "author": "Manzo",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Neural architectures learn latent credit behavior signals across extended feature sets and temporal dynamics, improving loss forecasting and risk stratification.",
+      "role": "finding"
+    },
+    {
+      "author": "Chunhua",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Placing financial analytics on mobile edge devices improves organizational ability to detect and respond to risk compared to distant data centers.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Directly proposes a hybrid framework for real-time transaction anomaly (fraud) detection on edge devices."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Benchmarks deep learning, adaptive regression, and hybrid routing strategies against streaming financial transaction data."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "medium",
+        "justification": "Addresses edge deployment constraints including latency budgets, memory limits, and hardware heterogeneity in POS and ATM systems."
+      },
+      {
+        "code": "9.B",
+        "name": "Mobile UX Design for Personal Finance",
+        "relevance": "medium",
+        "justification": "Discusses user experience impacts of latency in payment authorization and mobile banking fraud detection."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Provides evaluation setup including latency-accuracy Pareto analysis, robustness checks, and concept drift testing."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Compares predictive performance of deep learning, regression, and hybrid models using PR AUC, recall, and latency metrics."
+      }
+    ],
+    "contribution_to_field": "The paper contributes a deployable hybrid optimization framework for real-time financial fraud detection that bridges the accuracy-latency gap in edge computing environments. It provides empirical evidence that dynamic routing between deep learning and lightweight regression models can halve inference latency while maintaining detection quality. The work also contributes a latency-accuracy Pareto analysis methodology for evaluating edge-deployed financial risk systems and demonstrates resilience under concept drift and adversarial latency conditions.",
+    "directly_justifies": [
+      "Hybrid routing reduces inference latency by up to 55% compared to deep learning alone while preserving fraud detection recall.",
+      "Quantized deep model achieves 0.347 ms latency within 8 KB memory, demonstrating edge deployment feasibility.",
+      "Confidence-based routing controller selectively invokes deep inference only for ambiguous or high-risk transactions.",
+      "Concept drift analysis confirms fraud behavior evolves gradually, necessitating adaptive model updates.",
+      "Robustness checks show hybrid system maintains real-time guarantees under resource contention and adversarial attacks."
+    ],
+    "limits": [
+      "Evaluation uses a single European credit card dataset rather than real U.S. transaction data, limiting direct generalizability to U.S. payment systems.",
+      "Hardware testing relies on simulated edge environments rather than real POS terminals or ATM modules.",
+      "No evaluation of adversarial data poisoning effects on the adaptive regression component.",
+      "The study does not address fairness or bias implications of the fraud detection system on different demographic groups.",
+      "PR AUC values remain extremely low (0.0008-0.0009), indicating limited overall detection capability under default thresholds."
+    ],
+    "remember_this": [
+      "Hybrid routing between deep learning and regression cuts edge inference latency by 55% while maintaining fraud detection recall.",
+      "Confidence-based routing controller selectively invokes deep inference only for ambiguous or high-risk transactions.",
+      "Dynamic quantization compresses deep models to 8 KB for deployment on resource-constrained edge devices.",
+      "Concept drift analysis confirms fraud behavior evolves gradually, necessitating adaptive model updates.",
+      "Edge-constrained evaluation demonstrates feasibility for POS terminals, ATMs, and mobile banking hardware."
+    ]
+  },
+  "limitations": [
+    "Evaluation relies on a single European credit card dataset rather than real U.S. transaction data, limiting direct generalizability to U.S. payment ecosystems [unacknowledged].",
+    "Hardware testing uses simulated edge environments rather than real POS terminals, ATM modules, or mobile banking devices [unacknowledged].",
+    "No assessment of adversarial data poisoning effects on the adaptive regression component that learns incrementally.",
+    "The study does not address fairness or demographic bias implications of the fraud detection system across different population groups.",
+    "PR AUC values remain extremely low across all models (0.0008-0.0009), suggesting limited overall detection capability despite the hybrid improvement."
+  ],
+  "remember_this": [
+    "Hybrid routing between deep learning and regression cuts edge inference latency by 55% while maintaining fraud detection recall.",
+    "Confidence-based routing controller selectively invokes deep inference only for ambiguous or high-risk transactions.",
+    "Dynamic quantization compresses deep models to 8 KB for deployment on resource-constrained edge devices.",
+    "Concept drift analysis confirms fraud behavior evolves gradually, necessitating adaptive model updates.",
+    "Edge-constrained evaluation demonstrates feasibility for POS terminals, ATMs, and mobile banking hardware."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T18:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ahmed et al_marked.md",
+      "converted_at": "2026-07-21T05:17:42Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

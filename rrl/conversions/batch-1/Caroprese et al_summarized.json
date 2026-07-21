@@ -1,1 +1,204 @@
-{}
+{
+  "paper_id": "10.1145/3707693",
+  "designation": "international",
+  "title": "Modelling Concept Drift in Dynamic Data Streams for Recommender Systems",
+  "authors": "Caroprese, L.; Pisani, F. S.; Veloso, B. M.; Konig, M.; Manco, G.; Hoos, H.; Gama, J.",
+  "year": 2025,
+  "venue": "ACM Transactions on Recommender Systems",
+  "odin_topics": ["5.A", "6.A", "12.A", "14.A"],
+  "tldr": "A stream-based data generator using latent embeddings and tripartite graphs models concept drift in recommender systems, producing synthetic preference data with controllable drift dynamics.",
+  "problem_and_motivation": "Limited availability of large-scale public datasets with realistic dynamic properties hampers development of efficient recommendation algorithms. Existing synthetic data generators do not account for concept drift or evolving user preferences over time. A systematic approach to modeling preference dynamics and generating realistic synthetic data streams is needed.",
+  "approach": [
+    "Proposed a preference model based on latent user/item embeddings mapped to a tripartite graph structure.",
+    "Used Bayesian Personalized Ranking (BPR) matrix factorization to learn embeddings from real data streams.",
+    "Employed HDDM drift detection algorithm to identify concept drift from loss function changes.",
+    "Developed a stream-based generator that produces synthetic preference data with controllable drift operations.",
+    "Evaluated on three real datasets: Microsoft News (MIND), Amazon Video Games, and Yoochoose."
+  ],
+  "findings": [
+    "The tripartite graph model effectively captures real-data distributions and preference dynamics.",
+    "Synthetic streams closely replicate frequency distributions of original datasets when item preferences are sufficient.",
+    "Drift detection using HDDM identifies regime changes from loss signal variations.",
+    "BPR model outperforms VAE baseline in adaptive scenarios with high item variability.",
+    "Generator supports six drift policies: user taste changes, new trends, new users/items, user churn, and item obsolescence."
+  ],
+  "key_figures_tables": [
+    "Figure 1: User/Feature/Item tripartite graph → Visualizes the latent embedding structure connecting users and items through features.",
+    "Figure 2: Regimes in a data stream → Shows how different regimes with distinct distributions interact in a stream.",
+    "Figure 5: Real vs synthetic stream comparison for MIND → Confirms frequency distribution similarity between real and generated data.",
+    "Figure 18: Test performance of first regime model → Demonstrates model deterioration when encountering data from new regimes.",
+    "Figure 21: Summary statistics on regime changes → Quantifies user/item appearance/disappearance and feature vector evolution across regimes."
+  ],
+  "key_equations": [
+    {
+      "equation": "$i \\succ_u j \\sim \\text{Bernoulli}(p), p = \\sigma(p_u^T(q_i - q_j))$",
+      "explanation": "BPR pairwise preference model using logistic function over embedding differences."
+    },
+    {
+      "equation": "$\\mathcal{L}_{bpr}(M|V) = \\sum_{u} \\sum_{i \\succ_u j} \\log \\sigma(p_u^T(q_i - q_j))$",
+      "explanation": "BPR loss function optimized to learn user/item embedding matrices."
+    },
+    {
+      "equation": "$\\mathcal{L}_d(\\tilde{M}; M, R^{(t)}) = \\mathcal{L}_c(\\tilde{M}; R^{(t)}) + \\delta \\sum_{u} \\sum_k |\\tilde{p}_{u,k} - p_{u,k}| + \\sum_{u} \\sum_{k>K} |\\tilde{p}_{u,k}| + \\sum_{i} \\sum_k |\\tilde{q}_{i,k} - q_{i,k}| + \\sum_{i} \\sum_{k>K} |\\tilde{q}_{i,k}|$",
+      "explanation": "Drift adaptation loss penalizing deviation from previous model while allowing new features."
+    }
+  ],
+  "definitions": [
+    {"term": "BPR", "definition": "Bayesian Personalized Ranking, a matrix factorization model for learning from implicit feedback through pairwise item comparisons."},
+    {"term": "Concept Drift", "definition": "Changes in the underlying data distribution over time that degrade model performance."},
+    {"term": "HDDM", "definition": "Hoeffding Drift Detection Method, an algorithm using Hoeffding bounds and moving average tests to detect concept drift."},
+    {"term": "MF", "definition": "Matrix Factorization, a technique decomposing user-item interaction matrices into latent factor representations."},
+    {"term": "Tripartite Graph", "definition": "A graph with three node types (users, features, items) where edges connect users to features and items to features."},
+    {"term": "Regime", "definition": "A period in the data stream characterized by a specific underlying model and data distribution."},
+    {"term": "VAE", "definition": "Variational Autoencoder, a generative model used as a baseline comparison for preference prediction."},
+    {"term": "EWMA", "definition": "Exponentially Weighted Moving Average, a statistical estimator used in drift detection."},
+    {"term": "HR@k", "definition": "Hit Rate at cutoff k, measuring the fraction of relevant items appearing in the top-k recommendations."},
+    {"term": "ADWIN", "definition": "Adaptive Windowing, a drift detection method using dynamic-sized windows to maintain consistent data distributions."}
+  ],
+  "citations": [
+    {
+      "author": "Rendle",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "BPR model ensures scalability and is trainable on implicit feedback without requiring explicit ratings.",
+      "role": "methodology"
+    },
+    {
+      "author": "Gama",
+      "year": 2010,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "DataStream Mining enables analysis of high-volume infinite streams with concept drift and high volatility.",
+      "role": "context"
+    },
+    {
+      "author": "Frias-Blanco",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "HDDM uses Hoeffding's inequality and moving weighted average test to detect concept drifts in data streams.",
+      "role": "methodology"
+    },
+    {
+      "author": "Veloso",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Incrementally updated embeddings with drift detectors can capture changes in user preferences over time.",
+      "role": "baseline"
+    },
+    {
+      "author": "Jakomin",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Existing approach generates inter-dependent data streams but does not consider changes in the latent feature space.",
+      "role": "baseline"
+    },
+    {
+      "author": "Koren",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Linear and spline modeling of user biases can capture gradual and sudden drifts in temporal dynamics.",
+      "role": "baseline"
+    },
+    {
+      "author": "Belletti",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Scalable synthetic recommendation datasets can be generated through fractal expansions of existing data.",
+      "role": "baseline"
+    },
+    {
+      "author": "Bifet",
+      "year": 2007,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ADWIN uses dynamic-sized windows that keep recent examples with the same data distribution.",
+      "role": "methodology"
+    },
+    {
+      "author": "Klimashevskaia",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Popularity bias in recommender systems tends to overlook contributions from cold-start users and low-popularity items.",
+      "role": "context"
+    },
+    {
+      "author": "Yang",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A generic learning framework for sequential recommendation addresses distribution shifts through adaptive modeling.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Models user preference behaviors and their evolution over time through latent embeddings."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Develops predictive models using BPR matrix factorization to forecast user-item preferences."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Evaluates model performance using Hit Rate@5 and Hit Rate@10 across multiple datasets."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "high",
+        "justification": "Core contribution is a stream-based synthetic data generator with controllable concept drift dynamics."
+      }
+    ],
+    "contribution_to_field": "This paper introduces a novel stream-based data generator that addresses the critical gap in realistic synthetic data for recommendation systems. By modeling user/item preferences through latent embeddings in a tripartite graph structure, the approach captures concept drift as modifications to the underlying graph topology. The framework systematically categorizes six types of preference drift and provides controllable generation policies for each. Experiments on three real-world datasets demonstrate the generator's fidelity in replicating actual data distributions while enabling controlled experimentation with dynamic preference scenarios.",
+    "directly_justifies": [
+      "The tripartite graph model effectively captures real-data distributions for preference generation.",
+      "Synthetic streams replicate frequency distributions of original datasets when sufficient preferences exist.",
+      "BPR model outperforms VAE baseline in adaptive scenarios with high item variability.",
+      "Six drift policies model user taste changes, new trends, user/item churn, and item obsolescence.",
+      "HDDM algorithm reliably detects concept drift from loss function variations in streaming data."
+    ],
+    "limits": [
+      "Generator performance degrades when item preferences are sparse, limiting applicability to low-interaction items.",
+      "Approach assumes geometric closeness in latent space, not tested with alternative preference models like Markov chains.",
+      "Limited to implicit feedback scenarios, not evaluated on explicit rating data."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Domain 14.A (Synthetic Data Generation) received high relevance as the paper's primary contribution is a controllable synthetic data stream generator. Domain 6.A (Predictive Modeling) received high relevance due to the BPR matrix factorization model for preference prediction. Domain 12.A (Evaluation Frameworks) received high relevance as the paper extensively evaluates using Hit Rate metrics across three datasets. Domain 5.A (Financial Behavioral Profiles) received medium relevance for modeling user preference evolution. Domains 1-3, 7, 9, 13 were considered and rejected as the paper focuses on recommender systems, not personal finance management. Domain 4.A received low relevance for discussing recommender system landscapes. Domain 10.A received low relevance for mentioning privacy concerns with data sharing. Domain 14.B-C received contextual relevance for touching on model deployment aspects."
+  },
+  "limitations": [
+    "Generator performance degrades when item preferences are sparse, limiting applicability to low-interaction items.",
+    "Approach assumes geometric closeness in latent space, not tested with alternative preference models like Markov chains.",
+    "Limited to implicit feedback scenarios, not evaluated on explicit rating data.",
+    "Requires sufficient number of preferences per item to accurately learn distribution patterns."
+  ],
+  "remember_this": [
+    "Tripartite graph model maps user/item preferences through latent embeddings for realistic data generation.",
+    "Six drift policies enable controllable synthesis of preference evolution including taste changes and item churn.",
+    "BPR model outperforms VAE baseline in adaptive scenarios with high item variability.",
+    "Synthetic streams closely match real data frequency distributions when item preferences are sufficient.",
+    "HDDM algorithm detects concept drift from loss variations, triggering model retraining."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Caroprese et al_marked.md",
+      "converted_at": "2026-07-21T05:44:52Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

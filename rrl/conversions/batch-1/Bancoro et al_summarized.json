@@ -1,1 +1,216 @@
-{}
+{
+  "paper_id": "10.69569/jip.2025.015",
+  "designation": "local",
+  "title": "The Role of Financial Literacy in Supporting Employee Work-Life Balance",
+  "authors": "Bancoro, J.C.; Barillo, R.M.; Buhian, D.L.",
+  "year": 2025,
+  "venue": "Journal of Interdisciplinary Perspectives",
+  "odin_topics": [
+    "1.B",
+    "1.C",
+    "2.C",
+    "4.B",
+    "10.B",
+    "11.B"
+  ],
+  "tldr": "Employees at a Philippine state university demonstrate positive financial literacy and work-life balance, but correlation analysis reveals only a weak and statistically insignificant relationship between the two constructs.",
+  "problem_and_motivation": "Financial stress significantly impairs employees' work-life balance and organizational outcomes, yet there is limited empirical research assessing the specific consequences of financial literacy on work-life balance. Most financial education programs target only financial performance metrics like debt reduction and retirement planning while neglecting broader well-being outcomes including the ability to balance work and personal life.",
+  "approach": [
+    "Employed a correlational descriptive design collecting quantitative data from 140 employees and qualitative data from 8 interviewees at a state university in Dumaguete City.",
+    "Measured financial literacy across three dimensions: knowledge (13-item multiple choice), attitude (5-point Likert), and behavior (5-point Likert).",
+    "Assessed work-life balance using 5-point Likert items covering scheduling flexibility, supervisor support, personal time, and family well-being.",
+    "Applied Spearman correlation due to non-normality of data (p < 0.001) to examine the relationship between financial literacy and work-life balance.",
+    "Conducted semi-structured interviews with 8 purposively sampled employees to triangulate quantitative findings.",
+    "Anchored the study in Conservation of Resources (COR) Theory, framing financial literacy as a resource for managing financial pressure."
+  ],
+  "findings": [
+    "num: Financial knowledge mean score is 8.35 out of 13 (SD = 3.13), indicating knowledgeable but heterogeneous employees.",
+    "num: Financial attitude mean is 3.99 (SD = 0.73) and behavior mean is 3.94 (SD = 0.58), both positive.",
+    "num: Spearman correlation between financial literacy and work-life balance is rho = 0.11, not significant (p = 0.191).",
+    "num: Overall work-life balance mean is 4.06 (SD = 0.60), rated as good.",
+    "num: Highest-rated work-life balance item is feeling happy with quality family time (M = 4.33, SD = 0.74).",
+    "Financial literacy reduces stress and improves focus according to qualitative accounts, but quantitative relationship is weak.",
+    "Employees acknowledge financial planning tools but struggle with complex financial concepts and long-term goals.",
+    "Heavy workloads, financial pressure, and limited personal time remain persistent challenges despite work-life balance policies.",
+    "Qualitative findings reveal employees value financial education but face barriers including fear of investing after being scammed."
+  ],
+  "key_figures_tables": [
+    "Table 1: Financial knowledge, attitudes, and behaviors summary → Knowledgeable employees (M=8.35) with positive attitudes (M=3.99) and behaviors (M=3.94).",
+    "Table 2: Financial attitudes detail → Setting goals (M=4.56) and recognizing money management impact (M=4.53) score highest.",
+    "Table 3: Financial behavior detail → Saving for future needs (M=4.22) and setting financial goals (M=4.23) are strongest behaviors.",
+    "Table 4: Work-life balance perception → Feeling happy with family time (M=4.33) and looking forward to work (M=4.24) score highest.",
+    "Table 5: Correlation analysis → Weak insignificant correlation between financial literacy and work-life balance (rho=0.11, p=0.191)."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Financial Literacy",
+      "definition": "The knowledge, attitudes, and behaviors related to managing finances effectively, including budgeting, saving, investing, and planning for future security."
+    },
+    {
+      "term": "Work-Life Balance",
+      "definition": "The relationship between obligations towards work and activities outside the working environment, encompassing scheduling flexibility, personal time, and family well-being."
+    },
+    {
+      "term": "Conservation of Resources Theory",
+      "definition": "A theoretical framework stating that people seek to obtain, protect, or build resources to minimize stress and handle challenges, with financial literacy functioning as a key resource."
+    },
+    {
+      "term": "Financial Stress",
+      "definition": "Psychological pressure arising from financial insecurity, economic instability, and inadequate personal financial management that impairs work performance and well-being."
+    },
+    {
+      "term": "Spearman Correlation",
+      "definition": "A non-parametric measure of rank correlation used when data violates normality assumptions, suitable for Likert-scale variables."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Hobfoll",
+      "year": 1989,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Conservation of Resources Theory states people seek to obtain, protect, or build resources to minimize stress and handle challenges better.",
+      "role": "methodology"
+    },
+    {
+      "author": "Viera",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy dimensions include knowledge of concepts, attitude comprising mindset and beliefs, and behavior as the action taken in managing finances.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hu",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Borrowers with high financial literacy experience mortgage stress 60% less than those with low literacy, with age-dependent effects.",
+      "role": "finding"
+    },
+    {
+      "author": "Rosso",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial stress negatively impacts employee health, commitment, and performance while increasing work-family conflict and deviant behaviors.",
+      "role": "finding"
+    },
+    {
+      "author": "Setiawan",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Digital financial literacy positively affects current saving behavior (coefficient 0.35, explaining 12.25% variation) and current spending behavior (coefficient 0.40, explaining 16% variation).",
+      "role": "finding"
+    },
+    {
+      "author": "Galapon",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial behavior significantly affects financial well-being of teachers with moderate positive correlation of r=.382, but financial literacy alone does not significantly impact well-being.",
+      "role": "finding"
+    },
+    {
+      "author": "Lone",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy impacts financial well-being with financial self-efficacy serving as a mediational role between the two constructs.",
+      "role": "finding"
+    },
+    {
+      "author": "Lestari",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Employees with higher financial literacy are more likely to use employer-offered benefits and employee assistance programs, leading to financial security.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Examines financial knowledge, attitudes, and behaviors of employees at a Philippine state university as a structural analysis."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Measures actual financial behaviors including budgeting, saving, and spending patterns through Likert-scale instruments."
+      },
+      {
+        "code": "2.C",
+        "name": "User-Declared Financial Preferences",
+        "relevance": "medium",
+        "justification": "Captures self-reported financial attitudes including goals, planning importance, and willingness to spend on important items."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "medium",
+        "justification": "Identifies gap in research linking financial literacy to work-life balance, noting most programs focus only on financial performance metrics."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Discusses employee trust in financial planning tools and hesitancy toward complex financial products and long-term commitments."
+      },
+      {
+        "code": "11.B",
+        "name": "Retention Mechanisms and Engagement Design",
+        "relevance": "medium",
+        "justification": "Addresses employee well-being, job satisfaction, and work-life balance as factors influencing retention and engagement."
+      }
+    ],
+    "contribution_to_field": "The paper contributes empirical evidence on the relationship between financial literacy and work-life balance among employees in a Philippine institutional context, finding only a weak and insignificant quantitative correlation (rho = 0.11, p = 0.191). It provides triangulated mixed-methods findings showing that while employees generally demonstrate positive financial literacy, the connection to work-life balance is more complex than previously assumed. The study suggests that targeted financial education programs and increased workplace flexibility are required to reduce financial stress and support employee well-being, contributing to the Conservation of Resources theoretical framework in organizational settings.",
+    "directly_justifies": [
+      "Spearman correlation between financial literacy and work-life balance is weak and insignificant (rho=0.11, p=0.191).",
+      "Employees demonstrate positive financial literacy with knowledge mean 8.35 out of 13 and attitude mean 3.99 out of 5.",
+      "Overall work-life balance rated good with mean 4.06 despite heavy workloads and financial pressure.",
+      "Qualitative interviews reveal financial literacy indirectly supports work-life balance by reducing stress and improving focus.",
+      "Employees value financial planning tools but face barriers including fear of investing and complex financial concepts."
+    ],
+    "limits": [
+      "Small sample size of 140 respondents from a single state university limits generalizability to other organizational contexts.",
+      "Study does not establish causality due to its cross-sectional correlational design.",
+      "Self-reported financial literacy measures may not reflect actual financial behavior or objective knowledge levels.",
+      "The study does not control for confounding variables such as income level, household size, or external financial obligations.",
+      "Qualitative component with only 8 interviewees may not capture the full range of employee experiences and perspectives."
+    ]
+  },
+  "limitations": [
+    "Small sample size of 140 respondents from a single state university limits generalizability to other organizational contexts and employee populations.",
+    "Cross-sectional correlational design prevents establishing causal relationships between financial literacy and work-life balance.",
+    "Self-reported financial literacy measures may not accurately reflect actual financial behavior or objective knowledge levels.",
+    "The study does not adequately control for confounding variables such as income level, household size, or external financial obligations.",
+    "Qualitative component with only 8 interviewees may not capture the full spectrum of employee experiences regarding financial literacy and work-life balance."
+  ],
+  "remember_this": [
+    "Weak insignificant correlation exists between financial literacy and work-life balance (rho=0.11, p=0.191).",
+    "Employees demonstrate positive financial literacy with knowledge mean 8.35 and attitude mean 3.99 out of 5.",
+    "Work-life balance rated good overall despite persistent heavy workloads and financial pressure.",
+    "Financial literacy indirectly supports work-life balance by reducing stress and improving focus.",
+    "Targeted financial education and workplace flexibility are needed to address employee financial stress."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T18:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Bancoro et al_marked.md",
+      "converted_at": "2026-07-21T05:32:26Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,1 +1,109 @@
-{}
+{
+  "paper_id": "10.1109/ACCESS.2025.3587231",
+  "designation": "international",
+  "title": "A Systematic Literature Review of Concept Drift Mitigation in Time-Series Applications",
+  "authors": "Abdullahi, M.; Alhussian, H.; Haziz, N.; Abdulkadir, S.; Baashar, Y.; Alashhab, A. A.; Afrin, A.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "odin_topics": ["6.A", "6.B"],
+  "tldr": "Systematic literature review of 60 studies identifies SVM as the most effective algorithm for detecting and adapting to concept drift in regression and classification tasks using time-series data.",
+  "problem_and_motivation": "Concept drift continuously changes the statistical properties of time-series datasets, degrading the predictive performance of machine learning models after deployment. Most existing studies on concept drift detection and adaptation have focused on classification learning with minimal attention to regression tasks, leaving a gap in comprehensive guidance for both learning paradigms.",
+  "approach": [
+    "A systematic literature review following PRISMA 2020 guidelines was conducted across SCOPUS, ScienceDirect, IEEE Xplore, Web of Science, MDPI, and ACM databases.",
+    "Sixty studies published between 2013 and 2024 were surveyed, screened, and evaluated using inclusion and exclusion criteria.",
+    "Research questions were formulated to identify effective ensemble-based learning methods, ML models, algorithms, and a general pipeline for concept drift detection.",
+    "A taxonomy and roadmap for AI-based concept drift detection was developed categorizing methods by drift speed and severity: incremental, gradual, sudden, and recurring.",
+    "Comparative analysis was conducted across detection capability, adaptability and flexibility, and performance and scalability dimensions."
+  ],
+  "findings": [
+    "Support Vector Machine is the most effective learning algorithm for concept drift detection and adaptation in both regression and classification tasks using time-series data.",
+    "SVM, k-NN, and LSTM are the most frequently employed ML models due to their efficacy in handling feature-based changes and temporal dependencies.",
+    "Most studies focused on classification tasks (60 percent), with regression (6 percent) and time-series (12 percent) receiving significantly less attention.",
+    "The number of publications on concept drift increased significantly from 2021 to 2022, reflecting growing interest driven by real-world applications in finance, healthcare, and energy.",
+    "Ensemble-based learning methods including ENSDS, SVR, ELM, OS-ELM, DEMSC, and DES were the most commonly used for detecting concept drift."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Concept drift types classified by speed as incremental, gradual, sudden, and recurring. Provides the foundational taxonomy for drift classification.",
+    "Figure 2: PRISMA SLR mapping process showing four-stage screening methodology. Illustrates the systematic review workflow.",
+    "Figure 9: Distribution of learning algorithms used across selected studies. Shows SVM, LSTM, and k-NN as dominant approaches.",
+    "Figure 11: Illustration of AI-based learners for concept drift detection by drift type. Maps algorithms to incremental, gradual, sudden, and recurring drift scenarios.",
+    "Table 5: Classification of studies by learner algorithms for classification tasks. Summarizes SVM, LSTM, k-NN, and NB usage across reviewed studies."
+  ],
+  "key_equations": [
+    {"equation": "Accuracy = \\frac{TP + TN}{TP + TN + FP + FN}", "explanation": "Proportion of correctly identified instances among total instances."},
+    {"equation": "RMSE = \\sqrt{\\frac{1}{n} \\sum_{i=1}^{n} (\\hat{y}_i - y_i)^2}", "explanation": "Root mean square error measuring average squared difference between predicted and actual values."},
+    {"equation": "F1 = 2 \\times \\frac{Precision \\times Recall}{Precision + Recall}", "explanation": "Harmonic mean of precision and recall providing balanced performance measure."}
+  ],
+  "definitions": [
+    {"term": "Concept Drift", "definition": "Continuous changes in the statistical properties of datasets over time that degrade machine learning model performance."},
+    {"term": "Incremental Drift", "definition": "Minimal and continuous change in the original data distribution occurring in small gradual increments over time."},
+    {"term": "Gradual Drift", "definition": "Noticeable changes in the target data distribution that occur progressively over an extended period."},
+    {"term": "Sudden Drift", "definition": "Abrupt and significant change in the original data distribution at a particular time point."},
+    {"term": "Recurrent Drift", "definition": "A situation where an old concept reappears after a period of absence from the data stream."},
+    {"term": "ADWIN", "definition": "Adaptive Windowing algorithm that dynamically adjusts window size based on observed data variations to detect drift."},
+    {"term": "DDM", "definition": "Drift Detection Method that monitors error rates to detect changes in data distribution."},
+    {"term": "SVM", "definition": "Support Vector Machine, a supervised learning algorithm effective for classification and regression in high-dimensional spaces."},
+    {"term": "LSTM", "definition": "Long Short-Term Memory network, a recurrent neural network architecture designed to capture temporal dependencies in sequential data."},
+    {"term": "PRISMA", "definition": "Preferred Reporting Items for Systematic Reviews and Meta-Analyses, a standardized guideline for conducting systematic literature reviews."}
+  ],
+  "citations": [
+    {"author": "Bayram", "year": 2022, "page": 0, "paragraph": 0, "claim": "Conducted comprehensive analysis and categorization of performance-based concept drift detection methods proposed over the past decade.", "role": "context"},
+    {"author": "Gama", "year": 2014, "page": 0, "paragraph": 0, "claim": "Provided comprehensive overview of adaptive learning methods for handling concept drift problems in dynamic data environments.", "role": "context"},
+    {"author": "Cavalcante", "year": 2015, "page": 0, "paragraph": 0, "claim": "Employed ensemble Extreme Learning Machine with explicit drift detection to improve financial time-series forecasting accuracy.", "role": "finding"},
+    {"author": "Tang", "year": 0, "page": 0, "paragraph": 0, "claim": "Used incremental support vector machine with domain adaptation to decrease concept drift in incremental learning.", "role": "methodology"},
+    {"author": "Sun", "year": 2021, "page": 0, "paragraph": 0, "claim": "Addressed recurring concept drift in process industry streaming data using DLSTM and LSTM with predictive methods for hybrid recurring drifts.", "role": "finding"},
+    {"author": "Wang", "year": 2024, "page": 0, "paragraph": 0, "claim": "Presented QuadCDD framework using deep neural network to detect and predict concept drift start points in data streams.", "role": "methodology"},
+    {"author": "Liu", "year": 0, "page": 0, "paragraph": 0, "claim": "Presented ensemble model based on SVR with steaming data points to reduce computational complexity while tracking ongoing patterns.", "role": "methodology"},
+    {"author": "Disabato", "year": 2024, "page": 0, "paragraph": 0, "claim": "Introduced Tiny Machine Learning solution integrating k-NN, SVM, and neural network learners with hybrid adaptation module for gradual drift.", "role": "methodology"},
+    {"author": "Jain", "year": 2021, "page": 0, "paragraph": 0, "claim": "Employed SVM classifier for concept drift detection in network anomaly detection tested on NSL-KDD and CIDDS-2017 datasets.", "role": "finding"},
+    {"author": "Pesaranghader", "year": 0, "page": 0, "paragraph": 0, "claim": "Introduced FHDDM method using sliding window and Hoeffding inequality with lower detection delay and fewer false positives.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Covers concept drift detection and adaptation techniques applicable to predictive models in dynamic time-series environments including financial forecasting."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Reviews time-series forecasting methods and their adaptation to changing data distributions relevant to sequential spending data."
+      }
+    ],
+    "contribution_to_field": "This systematic literature review provides a comprehensive classification of concept drift detection and adaptation methods across both regression and classification learning tasks in time-series applications. The study develops a taxonomy and roadmap for AI-based concept drift detection categorizing methods by drift speed and severity. It identifies SVM as the most effective algorithm for concept drift handling and highlights the gap in regression-focused drift research. The paper also presents comparative analysis across detection capability, adaptability, and scalability dimensions, offering practical guidance for selecting appropriate drift mitigation strategies.",
+    "directly_justifies": [
+      "SVM is the most effective learning algorithm for concept drift detection and adaptation in regression and classification tasks.",
+      "Concept drift occurs as incremental, gradual, sudden, or recurring changes requiring different adaptation strategies.",
+      "Ensemble-based learning methods provide robust frameworks for concept drift detection in time-series environments.",
+      "Most existing research focuses on classification with minimal attention to regression drift detection."
+    ],
+    "limits": ["The review focuses on general time-series concept drift without addressing personal finance domain-specific challenges.", "Most studies used synthetic or benchmark datasets rather than real-world financial transaction data.", "The taxonomy does not address user-facing deployment or mobile integration for personal finance applications."],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. The paper primarily addresses concept drift detection and adaptation in general time-series applications, with financial forecasting mentioned as one of many application domains. Topics 6.A and 6.B are assigned medium relevance because the predictive modeling and forecasting techniques reviewed have direct applicability to financial time-series data, though the paper does not focus specifically on personal finance systems. Topics related to anomaly detection (8.A-8.C) were considered but not selected because the paper focuses on concept drift rather than anomaly detection. All personal finance-specific topics (1-5, 7, 9-14) were scanned and rejected as the paper does not address budgeting, expense categorization, user behavior, or system design for personal finance applications."
+  },
+  "limitations": [
+    "The review analyzed only 60 studies selected from specific databases, potentially missing relevant research from other sources.",
+    "Most reviewed studies relied on synthetic or benchmark datasets which may not fully represent real-world financial scenarios.",
+    "Several studies tested proposed methods using single datasets, limiting generalizability of findings.",
+    "The search was restricted to English-language publications from 2013 to 2024, excluding earlier foundational work.",
+    "Comparisons with active approaches from state-of-the-art studies are limited in the reviewed literature."
+  ],
+  "remember_this": [
+    "SVM is identified as the most effective algorithm for concept drift detection in both regression and classification tasks.",
+    "Concept drift manifests as incremental, gradual, sudden, or recurring changes requiring distinct adaptation strategies.",
+    "Most concept drift research (60 percent) focuses on classification, with regression receiving minimal attention.",
+    "Ensemble-based methods provide robust frameworks for maintaining model accuracy under evolving data distributions.",
+    "Adaptive windowing techniques like ADWIN dynamically adjust to drift by monitoring statistical differences between sub-windows."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T15:05:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Abdullahi et al_marked.md",
+      "converted_at": "2026-07-21T05:14:19Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

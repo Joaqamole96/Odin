@@ -1,1 +1,102 @@
-{}
+{
+  "paper_id": "10.1287/isre.2023.1199",
+  "designation": "international",
+  "title": "Expl(AI)ned: The Impact of Explainable Artificial Intelligence on Users' Information Processing",
+  "authors": "Bauer, K.; von Zahn, M.; Hinz, O.",
+  "year": 2023,
+  "venue": "Information Systems Research",
+  "odin_topics": ["8.A", "12.A", "10.A"],
+  "tldr": "Three experimental studies demonstrate that AI systems' technical explainability, user understanding, and users' personality traits (reflection and need for cognition) interact to determine how users process AI system outputs, with understanding sometimes replacing explanation necessity.",
+  "problem_and_motivation": "AI systems often function as black boxes, raising demands for explainability to address transparency, compliance, and fairness concerns. However, prior research lacks clarity on how explainability actually influences users' information processing and decision-making, particularly when users may obtain system understanding through alternative means like usage experience.",
+  "approach": [
+    "Three controlled experiments using a Deep Learning-based ImageNet classifier, a content recommender for YouTube, and an XGBoost-based credit scoring model.",
+    "Measured AI system explainability (feature importance explanations), user understanding (verified comprehension tests), reflection, and need for cognition (NFC).",
+    "Manipulated explainability presence and user understanding levels across experimental conditions.",
+    "Assessed outcome variables including perceived system complexity, trust in the AI system, reliance on system decisions, and decision quality.",
+    "Tested mediation effects through perceived system complexity and trust in the AI system."
+  ],
+  "findings": [
+    "Explanations help users gain understanding of AI systems across multiple tasks and paradigms, though the effect is stronger for complex systems like credit scoring than for simpler classification tasks.",
+    "User understanding replaces the effect of explainability on perceived system complexity and trust, with users who already understand the system benefiting less from explanations.",
+    "Trust in the AI system mediates the relationship between explainability/understanding and users' reliance on system outputs.",
+    "Explanations help reflection-oriented users process AI system outputs more effectively than other users, while need for cognition did not significantly impact processing.",
+    "Increasing user understanding can have similar positive effects as providing explanations, with understanding emerging as a practical design approach alongside explainability."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Conceptual model showing AI system explainability influencing perceived system complexity and trust through understanding, moderated by reflection and NFC.",
+    "Figure 2: Experiment 1 task interface showing Deep Learning-based ImageNet classifier with feature importance explanation panel and user interaction elements.",
+    "Figure 3: Experiment 2 task interface showing YouTube video recommendation system with explanation panels and recommendation accuracy metrics.",
+    "Figure 4: Experiment 3 task interface showing XGBoost-based credit scoring model with feature importance explanations and credit decision options.",
+    "Table 1: Experiment 1 participant characteristics and summary statistics for demographics, reflection, NFC, understanding, and outcome variables."
+  ],
+  "key_equations": [
+    {
+      "equation": "Mediation model: Explainability → User Understanding → Trust/Perceived Complexity → Reliance",
+      "explanation": "Core theoretical model tested across all three experiments showing the mediating role of user understanding and trust."
+    }
+  ],
+  "definitions": [
+    {"term": "AI System Explainability", "definition": "The property of an AI system that enables users to understand the system's inner workings and decision processes."},
+    {"term": "User Understanding", "definition": "Users' comprehended knowledge about an AI system, verified through comprehension tests measuring knowledge of system features and decision processes."},
+    {"term": "Perceived System Complexity", "definition": "Users' subjective perception of how complex an AI system is to understand and operate."},
+    {"term": "Trust in the AI System", "definition": "Users' willingness to rely on an AI system's outputs and decisions, influenced by their understanding of the system."},
+    {"term": "Need for Cognition (NFC)", "definition": "An individual's tendency to engage in and enjoy effortful cognitive activities, measured via validated survey instruments."},
+    {"term": "Reflection", "definition": "An individual's tendency to reflect on and analyze problems, measured via the Reflection-Insight Questionnaire (RIQ)."},
+    {"term": "Reliance", "definition": "The degree to which users follow an AI system's recommendations or decisions in their own decision-making process."},
+    {"term": "System Usage Experience", "definition": "The amount of prior exposure and interaction a user has had with a specific AI system, which builds understanding over time."}
+  ],
+  "citations": [
+    {"author": "Zhang", "year": 2020, "page": 0, "paragraph": 0, "claim": "The absence of transparency in ML and AI models leads to issues of compliance and creates trust issues.", "role": "context"},
+    {"author": "Shin", "year": 2021, "page": 0, "paragraph": 0, "claim": "Explainable AI systems are considered more transparent by allowing users to verify if system outputs are based on appropriate parameters.", "role": "context"},
+    {"author": "Lipton", "year": 2018, "page": 0, "paragraph": 0, "claim": "Model interpretability can improve system transparency and fairness by allowing users to assess if systems are biased against certain user groups.", "role": "context"},
+    {"author": "Miller", "year": 2019, "page": 0, "paragraph": 0, "claim": "Perceived trustworthiness of information increases when it is easy to process, and understandability influences trust and reliance.", "role": "context"},
+    {"author": "Castelo", "year": 2019, "page": 0, "paragraph": 0, "claim": "The relationship between algorithmic transparency and reliance is more complex than assumed, with transparency sometimes increasing reliance on incorrect recommendations.", "role": "context"},
+    {"author": "Poursabzi-Sangdeh", "year": 2021, "page": 0, "paragraph": 0, "claim": "Manipulating interpretability levels did not impact participants' decision-making performance, contradicting assumptions that higher interpretability improves decisions.", "role": "context"},
+    {"author": "Cai", "year": 2019, "page": 0, "paragraph": 0, "claim": "Users' trust in algorithmic decisions is mediated by their understanding of the algorithm's decision process.", "role": "context"},
+    {"author": "Yeomans", "year": 2019, "page": 0, "paragraph": 0, "claim": "Reflection can improve decision-making in various contexts and may mitigate negative effects of algorithmic advice.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "8.A", "name": "Real-time Analytics and Decision Support for Personal Finances", "relevance": "high", "justification": "Directly addresses how explainability influences user trust and reliance on AI decision support systems, relevant to financial decision support."},
+      {"code": "12.A", "name": "User Experience Design for Financial Management Tools", "relevance": "medium", "justification": "Provides experimental evidence on how system transparency and understanding affect user interaction with AI-based tools."},
+      {"code": "10.A", "name": "Financial Behavior Pattern Recognition", "relevance": "low", "justification": "Discusses how users process AI outputs and adjust behavior, relevant to understanding financial behavior recognition systems."},
+      {"code": "12.B", "name": "Gamification and Engagement Mechanics in Financial Apps", "relevance": "low", "justification": "Provides insights on user engagement through understanding and trust that could inform gamification design."}
+    ],
+    "contribution_to_field": "This paper makes a significant contribution by demonstrating that user understanding can replace the effect of explainability on key user outcomes across three distinct AI task paradigms (classification, recommendation, and credit scoring). The identification of reflection as a moderating variable and the practical finding that system usage experience builds understanding over time provide actionable design implications for personal finance AI systems where explainability and user trust are critical.",
+    "directly_justifies": [
+      "Explanations help users gain understanding of AI systems, enabling better trust and decision-making.",
+      "User understanding can replace explainability effects, suggesting that user education and interface design are viable alternatives.",
+      "Trust mediates the relationship between system transparency and user reliance on AI outputs.",
+      "Reflection-oriented users benefit more from explanations, informing personalized UI design."
+    ],
+    "limits": [
+      "Experiments use relatively simple binary tasks (like/dislike) that may not reflect complex real-world financial decisions.",
+      "The classification task in Experiment 1 had low ecological validity with only 63% prediction accuracy.",
+      "Sample sizes were moderate (72-278 per experiment), potentially limiting statistical power for detecting smaller effects.",
+      "The paper does not address long-term user adaptation effects or the sustainability of explanation benefits over repeated use."
+    ],
+    "topic_mapping_rationale": "The systematic topic scan identified domain 8 (Real-time Analytics and Decision Support) as high relevance because the paper directly demonstrates how explainability and understanding affect user trust and reliance on AI decision support systems, which is critical for financial decision support tools. Domain 12 (User Experience Design) received medium relevance for providing experimental evidence on system transparency and understanding affecting user interaction. Domain 10 (Financial Behavior Pattern Recognition) received low relevance for discussing how users process AI outputs and adjust behavior. Domain 12B (Gamification) received low relevance for insights on user engagement through understanding. Domains 1-7, 9, 11, 13-14 were considered and rejected as the paper does not address financial time series, budgeting, spending tracking, credit scoring models, or mobile financial UX specifically."
+  },
+  "limitations": [
+    "Experimental tasks used binary like/dislike decisions that are less complex than real-world financial decisions requiring multiple criteria.",
+    "Prediction accuracy in the classification task was only 63%, which may not represent typical production AI system performance.",
+    "The study does not examine long-term effects of explanations on user learning or decision quality over extended periods.",
+    "Sample populations were primarily students, limiting generalizability to broader financial service users."
+  ],
+  "remember_this": [
+    "User understanding can replace the effect of explanations on perceived system complexity and trust, suggesting education and interface design are viable alternatives to feature explanations.",
+    "Trust in the AI system is the primary mediator between system transparency and user reliance on outputs.",
+    "Reflection-oriented users benefit more from explanations than other personality types.",
+    "System usage experience builds understanding over time, which can compensate for lack of initial explanations.",
+    "The interaction between technical explainability and user understanding is non-trivial and requires careful design consideration."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T00:02:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Bauer K. et al_marked.md",
+      "converted_at": "2026-07-21T05:24:31Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

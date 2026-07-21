@@ -1,1 +1,167 @@
-{}
+{
+  "paper_id": "10.21203/rs.3.rs-4378190/v1",
+  "designation": "unspecified",
+  "title": "A Comprehensive Review of Large Language Models in Personal Finance Management",
+  "authors": "Binzaid, M.; Hassan, M.M.; Al-Hussaeni, K.",
+  "year": 2025,
+  "venue": "Research Square",
+  "odin_topics": ["4.C", "7.A", "7.B", "7.D", "9.A", "11.A"],
+  "tldr": "A comprehensive review of LLM applications in personal finance reveals 8 key capability areas with significant potential but challenges in accuracy, privacy, and regulatory compliance.",
+  "problem_and_motivation": "Large Language Models represent a transformative technology for personal finance management, but their applications in this domain have not been comprehensively reviewed. Understanding the full scope of LLM capabilities, limitations, and integration challenges is essential for researchers and practitioners developing next-generation financial systems.",
+  "approach": [
+    "Conducted a comprehensive review of LLM applications across personal finance domains.",
+    "Identified 8 key capability areas: automated advice, fraud detection, sentiment analysis, personalized recommendations, risk assessment, natural language interfaces, document processing, and regulatory compliance.",
+    "Analyzed technical architectures for LLM integration in financial systems.",
+    "Evaluated accuracy, privacy, and compliance challenges.",
+    "Proposed a framework for responsible LLM deployment in personal finance.",
+    "Identified research gaps and future directions for the field."
+  ],
+  "findings": [
+    "num: 8 key capability areas identified for LLMs in personal finance.",
+    "num: LLMs achieved 87% accuracy in financial sentiment analysis tasks.",
+    "num: 73% improvement in document processing efficiency.",
+    "num: 62% of reviewed systems addressed some form of bias mitigation.",
+    "num: 45% implemented explainability features for LLM recommendations.",
+    "num: 89% of studies acknowledged data privacy as a primary concern.",
+    "num: 34% addressed regulatory compliance requirements.",
+    "LLMs show significant potential but require careful implementation to address accuracy, bias, and privacy concerns."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Taxonomy of LLM applications in personal finance across 8 capability areas.",
+    "Figure 2: Architecture patterns for integrating LLMs with financial data sources and user interfaces.",
+    "Table 1: Summary of reviewed studies with LLM type, application domain, and performance metrics.",
+    "Table 2: Comparison of accuracy, privacy, and compliance features across reviewed systems."
+  ],
+  "key_equations": [
+    {
+      "equation": "Accuracy = (TP + TN) / (TP + TN + FP + FN)",
+      "explanation": "Standard accuracy metric used to evaluate LLM performance on financial classification tasks."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "LLM",
+      "definition": "Large Language Model - a type of AI model trained on vast text data that can understand and generate human-like text for various applications."
+    },
+    {
+      "term": "Financial Sentiment Analysis",
+      "definition": "The use of NLP to determine the emotional tone of financial text, useful for market analysis and user communication understanding."
+    },
+    {
+      "term": "Explainability",
+      "definition": "The degree to which an AI system can provide clear, understandable explanations for its outputs and decisions."
+    },
+    {
+      "term": "Hallucination",
+      "definition": "When an LLM generates plausible-sounding but factually incorrect or fabricated information."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Kapoor",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI will be the biggest source of productivity gains in banking, adding up to $1 trillion in value annually.",
+      "role": "context"
+    },
+    {
+      "author": "Chahar",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Personalized financial management applications use data analytics to assess spending habits and tailor recommendations.",
+      "role": "baseline"
+    },
+    {
+      "author": "Shankar",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI-driven tools are enabling personalized financial services at an unprecedented scale.",
+      "role": "baseline"
+    },
+    {
+      "author": "Balog",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Hybrid AI architectures combining rule-based and ML approaches are most effective for financial planning systems.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.C",
+        "name": "FinTech Innovations and Digital Platforms",
+        "relevance": "high",
+        "justification": "Reviews LLM innovations as transformative FinTech applications in personal finance."
+      },
+      {
+        "code": "7.A",
+        "name": "Rule-Based and AI-Driven Budgeting Systems",
+        "relevance": "high",
+        "justification": "Discusses how LLMs enhance and complement existing rule-based budgeting approaches."
+      },
+      {
+        "code": "7.B",
+        "name": "AI and LLM-Based Budgeting and Spending Analysis",
+        "relevance": "high",
+        "justification": "Directly reviews LLM applications for budgeting, spending analysis, and financial insights."
+      },
+      {
+        "code": "7.D",
+        "name": "Behavioral Change Mechanisms in Budgeting Apps",
+        "relevance": "medium",
+        "justification": "Discusses how LLMs can be used to personalize financial guidance and encourage behavioral change."
+      },
+      {
+        "code": "9.A",
+        "name": "UX/UI Design Principles in Finance Apps",
+        "relevance": "high",
+        "justification": "Reviews natural language interfaces as key UX innovation enabled by LLMs."
+      },
+      {
+        "code": "11.A",
+        "name": "Chatbot-Based Financial Assistance",
+        "relevance": "high",
+        "justification": "Reviews LLM-powered chatbots for financial guidance and support."
+      }
+    ],
+    "contribution_to_field": "This comprehensive review provides the first systematic mapping of LLM applications across personal finance management. It identifies 8 key capability areas and establishes critical challenges in accuracy (87% sentiment analysis accuracy), privacy (89% acknowledge privacy concerns), and compliance (only 34% address regulatory requirements). The proposed framework for responsible LLM deployment addresses the tension between capability and risk.",
+    "directly_justifies": [
+      "LLMs can enhance budgeting systems through natural language interfaces and personalized insights.",
+      "Accuracy, privacy, and regulatory compliance are the primary challenges for LLM deployment in finance.",
+      "LLM hallucination poses significant risks in financial advice applications."
+    ],
+    "limits": [
+      "Review paper without original empirical research.",
+      "Rapid LLM development may quickly outdated findings.",
+      "Focus on capabilities rather than detailed technical implementation."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 4 (Existing Systems) applies through 4.C (FinTech Innovations). Domain 7 (Budgeting Strategies) is highly relevant through 7.A (Rule-Based and AI-Driven), 7.B (AI and LLM-Based), and 7.D (Behavioral Change Mechanisms). Domain 9 (UX/UI Design) applies through 9.A (UX/UI Design Principles) via natural language interfaces. Domain 11 (Personalized User Engagement) applies through 11.A (Chatbot-Based Assistance). Other domains like 1-3, 5-6, 8, 10, 12-14 are less directly applicable."
+  },
+  "limitations": [
+    "Synthesis paper without original empirical data collection.",
+    "Rapid evolution of LLM technology may render specific findings outdated.",
+    "Focus on capabilities rather than implementation details for specific systems.",
+    "English-centric review may miss relevant non-English LLM research."
+  ],
+  "remember_this": [
+    "8 key capability areas identified for LLMs in personal finance.",
+    "87% accuracy achieved in financial sentiment analysis tasks.",
+    "73% improvement in document processing efficiency with LLMs.",
+    "89% of studies acknowledged data privacy as a primary concern.",
+    "Only 34% addressed regulatory compliance requirements."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Binzaid_marked.md",
+      "converted_at": "2026-07-21T05:10:17Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

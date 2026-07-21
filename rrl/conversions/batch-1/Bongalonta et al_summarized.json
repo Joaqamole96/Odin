@@ -1,1 +1,132 @@
-{}
+{
+  "paper_id": "10.11594/ijmaber.05.08.32",
+  "designation": "local",
+  "title": "The Traditional Way of Saving Money Versus the Modern Style of Investment: The Financial Management Styles of Sorsogon State University (Sorsu) Bulan Campus Faculty Members",
+  "authors": "Bongalonta, M. B.; Bongalonta, M. M.; Gigantoca, S. E.",
+  "year": 2024,
+  "venue": "International Journal of Multidisciplinary: Applied Business and Education Research",
+  "odin_topics": ["1.A", "1.B", "1.C", "2.A"],
+  "tldr": "Filipino faculty members use both traditional saving methods and modern investments, but face rising costs, low financial literacy, and debt that limit their savings capacity.",
+  "problem_and_motivation": "Faculty members at Sorsogon State University Bulan Campus are experiencing difficulty managing their finances despite earning government salaries above the national median. The researchers observed that some faculty resort to long-term borrowings from GSIS and Landbank, leading to insolvency. There is a need to understand the specific saving practices and financial challenges of this population to develop a targeted financial management model.",
+  "approach": [
+    "Mixed-methods design combining survey of 40 faculty members with focus group discussions.",
+    "Quantitative portion captured demographic profiles, income, expenses, savings percentage, and saving modalities.",
+    "Qualitative portion used semi-structured FGD interviews to explore saving practices and financial problems.",
+    "Open coding method was used to identify emergent themes from FGD transcripts.",
+    "Bongalonta's Financial Model was formulated as a four-step framework based on findings."
+  ],
+  "findings": [
+    "60% of faculty members saved 0%-15% of income and 35% saved 16%-30%.",
+    "62.5% earned P40,001-P50,000 monthly, above the national median income.",
+    "82.5% incurred monthly expenses exceeding P12,000.",
+    "72.5% held permanent appointments with security of tenure.",
+    "60% used piggy banks and 30% joined paluwagan as primary saving methods.",
+    "Only 10% invested in stock securities, indicating limited modern investment adoption.",
+    "Four key problems identified: rising utility costs, lack of financial literacy, poor debt management, and low/delayed salaries.",
+    "Faculty who saved portion of income were better prepared for emergencies and more likely to achieve financial goals."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Age and gender distribution → 60% female, 53% aged 35-50.",
+    "Chart 6: Percentage of savings → 60% saved 0-15% of income.",
+    "Chart 9: Models of saving money → 30% piggy bank, 30% paluwagan, 10% stocks."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Paluwagan", "definition": "A traditional Filipino savings and credit system where group members contribute fixed amounts and take turns receiving pooled funds."},
+    {"term": "Sorsu", "definition": "Sorsogon State University — the Philippine state university where the study was conducted."},
+    {"term": "GSIS", "definition": "Government Service Insurance System — a Philippine government institution providing loans and benefits to public employees."},
+    {"term": "SSL", "definition": "Salary Standardization Law — Philippine law governing government employee compensation levels."}
+  ],
+  "citations": [
+    {"author": "Brown", "year": 2020, "page": 0, "paragraph": 0, "claim": "Financial management styles and traditional saving methods significantly impact personal financial outcomes.", "role": "finding"},
+    {"author": "Chen", "year": 2018, "page": 0, "paragraph": 0, "claim": "Individuals classified as planners tend to have higher savings, better retirement planning, and lower financial stress.", "role": "finding"},
+    {"author": "Gage", "year": 2020, "page": 0, "paragraph": 0, "claim": "A significant proportion of faculty members reported experiencing financial insecurity and difficulties in paying bills.", "role": "context"},
+    {"author": "Kim", "year": 2019, "page": 0, "paragraph": 0, "claim": "Individuals with higher financial literacy, confidence, and income tend to adopt a planner financial management style.", "role": "context"},
+    {"author": "Wolinsky", "year": 2018, "page": 0, "paragraph": 0, "claim": "Seven reasons to save include stress-free retirement, education, emergency cushion, planned risks, overcoming impulsive spending, investment, and debt-free life.", "role": "context"},
+    {"author": "Peng", "year": 2019, "page": 0, "paragraph": 0, "claim": "Use of piggy banks positively influenced saving behaviors among college students.", "role": "finding"},
+    {"author": "Alghalith", "year": 2018, "page": 0, "paragraph": 0, "claim": "Modern investment provides higher average net return than traditional savings over a ten-year period.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "high",
+        "justification": "Study profiles Filipino faculty members including age, gender, income, and appointment status."
+      },
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Documents salary grades, income levels, expenses, and savings percentages of Filipino faculty."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justificance": "Identifies saving modalities (piggy bank, paluwagan, bank deposits, stocks) and financial problems encountered."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "high",
+        "justification": "Paluwagan system is a culturally specific Filipino savings mechanism prominently discussed."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Faculty members use budgeting as a primary practice, allocating income to expenses then saving remainder."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "medium",
+        "justification": "Study addresses how faculty set savings goals and the barriers preventing achievement."
+      },
+      {
+        "code": "13.B",
+        "name": "Debt Management in PFMS",
+        "relevance": "medium",
+        "justification": "Poor debt management identified as a key problem, with GSIS and Landbank loans consuming income."
+      }
+    ],
+    "contribution_to_field": "This study provides empirical data on the saving behaviors and financial challenges of Filipino faculty members, a professional demographic in a developing economy. It documents the coexistence of traditional saving methods (piggy banks, paluwagan) alongside modern investment instruments, revealing that cultural saving practices remain dominant. The identification of rising costs, financial illiteracy, debt, and low salaries as primary barriers contributes to understanding the real-world constraints on personal financial management. The proposed Bongalonta's Financial Model offers a practical four-step framework (budget, minimize debt, emergency fund, retirement investment) grounded in empirical evidence from the target population.",
+    "directly_justifies": [
+      "60% of faculty members saved only 0%-15% of their total income.",
+      "62.5% earned P40,001-P50,000 monthly, above the national median income.",
+      "82.5% incurred monthly expenses exceeding P12,000, consuming most income.",
+      "Only 10% of respondents invested in stock securities.",
+      "Paluwagan default rates range from 5% to 50% depending on group size and frequency."
+    ],
+    "limits": [
+      "Small sample size of 40 faculty members limits generalizability.",
+      "Study confined to a single campus of Sorsogon State University.",
+      "Cross-sectional design does not capture longitudinal saving behavior changes.",
+      "No control group or comparison with non-faculty populations."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domains 1 (Filipino Young Professionals) were flagged as high relevance since the study directly profiles Filipino faculty members' demographics, financial structure, and financial behavior. Domain 2 (Culturally Specific Financial Practices) was flagged as high relevance due to extensive discussion of paluwagan, a culturally specific Filipino savings system. Domain 7 (Budgeting Strategies) was flagged as medium relevance since budgeting is discussed as a primary saving practice. Domains 13 (Savings Goal Management, Debt Management) were flagged as medium relevance given the focus on savings barriers and debt problems. Domains 3-6, 8-12, and 14 were considered and rejected as the paper does not address expense categorization frameworks, personal finance systems, behavioral profiles, predictive modeling, anomaly detection, mobile design, data privacy, engagement, evaluation, or ML deployment. The paper is primarily a descriptive financial behavior study with moderate relevance to personal finance system design."
+  },
+  "limitations": [
+    "Small sample size of 40 faculty members limits generalizability.",
+    "Study confined to a single campus of Sorsogon State University.",
+    "Cross-sectional design does not capture longitudinal saving behavior changes.",
+    "No control group or comparison with non-faculty populations."
+  ],
+  "remember_this": [
+    "60% of Filipino faculty saved only 0%-15% of their monthly income.",
+    "Paluwagan and piggy banks remain dominant saving methods among Filipino faculty.",
+    "Rising utility costs and unexpected expenses are primary barriers to saving.",
+    "Only 10% invested in modern instruments like stock securities.",
+    "Four-step financial model proposed: budget, minimize debt, emergency fund, retirement."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Bongalonta et al_marked.md",
+      "converted_at": "2026-07-21T05:39:14Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,1 +1,170 @@
-{}
+{
+  "paper_id": "10.1186/s40854-024-00625-3",
+  "designation": "international-algorithm-specific",
+  "title": "Examining user behavior with machine learning for effective mobile peer-to-peer payment adoption",
+  "authors": "Antonio, B.-O.; Lara-Rubio, J.; Irimia-Diéguez, A.; Liébana-Cabanillas, F.",
+  "year": 2024,
+  "venue": "Financial Innovation",
+  "odin_topics": ["5.A", "5.C", "11.A", "12.B"],
+  "tldr": "This study identifies drivers of mobile P2P payment adoption using machine learning, finding that usefulness, subjective norms, trust, and enjoyment best classify users.",
+  "problem_and_motivation": "Financial institutions need to understand factors that determine customers' adoption of mobile P2P payments to create customized products and plan business strategies. Previous research has focused on identifying adoption factors but lacks comparison between traditional parametric methods and machine learning approaches. The precursors and barriers to using P2P payments differ from those of mobile-based payment methods.",
+  "approach": [
+    "Used survey data from 701 Spanish smartphone users about Bizum mobile P2P payment adoption.",
+    "Applied feature selection using Boruta procedure and Gini index with random forest.",
+    "Compared traditional parametric methods with nonparametric machine learning approaches.",
+    "Implemented multiple ML algorithms: random forest, SVM, neural networks, and ensemble methods.",
+    "Evaluated models using sensitivity, specificity, G-mean, AUC, and other performance metrics.",
+    "Analyzed behavioral variables: perceived ease of use, risk, trust, innovation, norms, enjoyment."
+  ],
+  "findings": [
+    "Usefulness of mobile P2P payments is the most important predictor of adoption.",
+    "Subjective norms (influence of peers and social groups) significantly predict adoption.",
+    "Perceived trust in the mobile payment system is a key driver of adoption.",
+    "Perceived enjoyment of using the payment system influences continued use.",
+    "ML algorithms outperform traditional parametric methods in classification.",
+    "Feature selection using Boruta substantially increases prediction performance.",
+    "Eight key variables selected from forty-two original variables (19.04% of information).",
+    "Random forest achieved high AUC and classification accuracy."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Classification of payment systems → Shows evolution from cash to digital payments.",
+    "Figure 2: Important measure for each variable using Boruta → Shows feature selection results.",
+    "Figure 3: Area under ROC curve for random forest → Demonstrates model classification power.",
+    "Figure 4: Out-Of-Bag error for final random forest model → Shows model fitting improvement.",
+    "Table 1: Recent research on mobile payment adoption → Summarizes prior studies and theories.",
+    "Table 2: Variables and theoretical background → Defines behavioral variables and sources."
+  ],
+  "key_equations": [
+    {
+      "equation": "$Sensitivity = \\frac{TP}{TP + FN}$",
+      "explanation": "Measures probability that model classifies a user as real user."
+    },
+    {
+      "equation": "$Specificity = \\frac{TN}{TN + FP}$",
+      "explanation": "Measures probability that model classifies non-user as non-user."
+    },
+    {
+      "equation": "$G\\text{-}mean = \\sqrt{Sensitivity \\times Specificity}$",
+      "explanation": "Geometric mean of sensitivity and specificity for balanced classification."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "P2P",
+      "definition": "Peer-to-peer, direct transfers between individuals without intermediaries."
+    },
+    {
+      "term": "Bizum",
+      "definition": "Leading mobile P2P payment platform in Europe with 21 million users."
+    },
+    {
+      "term": "Boruta",
+      "definition": "Feature selection algorithm based on random forest for variable importance."
+    },
+    {
+      "term": "Gini Index",
+      "definition": "Measure of variable importance based on decrease in node impurity."
+    },
+    {
+      "term": "AUC",
+      "definition": "Area Under the ROC Curve, measure of classification model performance."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Antonio",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "8 key variables selected from 42 original variables using Boruta and Gini index procedures.",
+      "role": "finding"
+    },
+    {
+      "author": "Antonio",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ML algorithms outperform traditional parametric methods in classifying P2P payment users.",
+      "role": "finding"
+    },
+    {
+      "author": "Antonio",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Usefulness is the most important predictor of mobile P2P payment adoption.",
+      "role": "finding"
+    },
+    {
+      "author": "Antonio",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Feature selection using Boruta substantially increases prediction performance.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Analyzes user behavior factors driving mobile P2P payment adoption."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "high",
+        "justification": "Uses machine learning classification to predict payment adoption behavior."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "medium",
+        "justification": "Examines user adoption and engagement with mobile payment systems."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Evaluates and compares multiple machine learning algorithms for classification."
+      }
+    ],
+    "contribution_to_field": "This study contributes to FinTech and machine learning literature by identifying key drivers of mobile P2P payment adoption. It compares traditional parametric methods with nonparametric ML approaches, finding that ML outperforms classical techniques. The Boruta feature selection procedure reduces 42 variables to 8 key predictors while maintaining high classification performance. The study identifies usefulness, subjective norms, trust, and enjoyment as the most important adoption factors. These findings provide practical implications for banks to create customized products and marketing strategies.",
+    "directly_justifies": [
+      "8 key variables selected from 42 original variables using Boruta and Gini index procedures.",
+      "ML algorithms outperform traditional parametric methods in classifying P2P payment users.",
+      "Usefulness is the most important predictor of mobile P2P payment adoption.",
+      "Feature selection using Boruta substantially increases prediction performance.",
+      "Bizum has 21 million active users and 1,362 million transactions since 2016."
+    ],
+    "limits": [
+      "Study only conducted within Spanish population and European cultural context.",
+      "Results may not generalize to other countries with different institutional frameworks.",
+      "Survey-based data may have response bias limitations."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all 14 topic domains revealed primary relevance to Domains 5, 11, and 12. Topic 5.A (Financial Behavioral Profiles) received high relevance as the paper analyzes user behavior factors driving payment adoption. Topic 5.C (Classification Approaches) received high relevance due to use of ML classification methods. Topic 11.A (Engagement Dynamics) received medium relevance for examining user adoption and engagement. Topic 12.B (Evaluation of Algorithmic Modules) received medium relevance for comparing ML algorithms. Domains 1-4, 6-10, 13-14 were considered and rejected as the paper does not address Filipino demographics, financial structure, expense categorization, predictive modeling in personal finance, budgeting strategies, anomaly detection, mobile design principles, data privacy, trust mechanisms, savings/debt management, or synthetic data generation."
+  },
+  "limitations": [
+    "Study only conducted within Spanish population and European cultural context.",
+    "Results may not generalize to other countries with different institutional frameworks.",
+    "Survey-based data may have response bias limitations."
+  ],
+  "remember_this": [
+    "Usefulness is the most important predictor of mobile P2P payment adoption.",
+    "8 key variables selected from 42 using Boruta and Gini index procedures.",
+    "num: ML algorithms outperform traditional parametric methods in classification.",
+    "Subjective norms and trust significantly predict adoption behavior.",
+    "Feature selection substantially increases prediction performance."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-21T10:50:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Antonio et al_marked.md",
+      "converted_at": "2026-07-21T05:24:15Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}
