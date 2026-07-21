@@ -1,6 +1,6 @@
 ---
 conversion_metadata:
-  converted_at: "2026-07-20T14:51:51Z"
+  converted_at: "2026-07-21T05:37:15Z"
   converter_tool: "markitdown"
   converter_version: "0.1.6"
   source_pdf: "Bayangos & Lubango.pdf"

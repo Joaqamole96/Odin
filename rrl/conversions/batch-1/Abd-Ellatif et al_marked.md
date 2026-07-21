@@ -1,6 +1,6 @@
 ---
 conversion_metadata:
-  converted_at: "2026-07-20T14:21:06Z"
+  converted_at: "2026-07-21T05:14:13Z"
   converter_tool: "markitdown"
   converter_version: "0.1.6"
   source_pdf: "Abd-Ellatif et al.pdf"

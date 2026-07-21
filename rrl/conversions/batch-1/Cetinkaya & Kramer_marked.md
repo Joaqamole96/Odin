@@ -1,6 +1,6 @@
 ---
 conversion_metadata:
-  converted_at: "2026-07-20T15:10:37Z"
+  converted_at: "2026-07-21T05:47:26Z"
   converter_tool: "markitdown"
   converter_version: "0.1.6"
   source_pdf: "Cetinkaya & Kramer.pdf"

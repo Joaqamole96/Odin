@@ -1,6 +1,6 @@
 ---
 conversion_metadata:
-  converted_at: "2026-07-20T14:41:50Z"
+  converted_at: "2026-07-21T05:26:49Z"
   converter_tool: "markitdown"
   converter_version: "0.1.6"
   source_pdf: "Arinze.pdf"
@@ -294,14 +294,14 @@ Policy
 
 36,
 
+an
+
 in
 
 of
 
 State
 https://doi.org/10.1111/ropr.12358
-
-an
 
 2.  Allioui, H., & Mourdi, Y. Exploring the Full Potentials of IoT for Better Financial Growth and Stability: A
 
@@ -370,10 +370,10 @@ Journal  of  Network  Management,  2021,  32,
 
 International
 
+survey.
+
 technology:  A
 https://doi.org/10.1002/nem.2180
-
-survey.
 
 14.  Rezaei, T., Khouzani, P., Khouzani, S., Moghadam Fard, A., Rashidi, S., Ghazalgoo, A., Rezaei, M., Farrokhi,
 M., Moeini, A., Foroutani, L., Nouri, S., Moshtaghi, Z., Jahangiri, R., Mahmoodi, T., Taheri, F., Jahanshahi,
@@ -385,6 +385,8 @@ Telemedicine: Revolutionizing Healthcare Delivery, 2023.
 
 Sustainable  Agriculture.  Agriculture,
 
+of  Things
+
 (IoT)-Based
 
 2022,
@@ -393,8 +395,6 @@ Sustainable  Agriculture.  Agriculture,
 
 Internet
 https://doi.org/10.3390/agriculture12101745
-
-of  Things
 
 16.  Guermond, V. Whose money? Digital remittances, mobile money and fintech in Ghana. Journal of Cultural
 
@@ -413,6 +413,8 @@ Information
 
 Journal
 
+African
+
 2023,
 
 East
@@ -423,8 +425,6 @@ of
 
 Tanzania.
 https://doi.org/10.37284/eajit.6.1.1121
-
-African
 
 19.  Emeana, E.M., Trenchard, L., & Dehnen-Schmutz, K. The Revolution of Mobile Phone-Enabled Services for
 Agricultural  Development  (m-Agri  Services)  in  Africa:  The  Challenges  for  Sustainability.  Sustainability,

@@ -1,6 +1,6 @@
 ---
 conversion_metadata:
-  converted_at: "2026-07-20T14:27:29Z"
+  converted_at: "2026-07-21T05:19:22Z"
   converter_tool: "markitdown"
   converter_version: "0.1.6"
   source_pdf: "Al Rafi.pdf"

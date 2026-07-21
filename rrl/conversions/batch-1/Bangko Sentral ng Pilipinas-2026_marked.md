@@ -1,6 +1,6 @@
 ---
 conversion_metadata:
-  converted_at: "2026-07-20T14:48:58Z"
+  converted_at: "2026-07-21T05:34:43Z"
   converter_tool: "markitdown"
   converter_version: "0.1.6"
   source_pdf: "Bangko Sentral ng Pilipinas-2026.pdf"

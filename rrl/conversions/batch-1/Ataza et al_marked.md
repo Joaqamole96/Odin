@@ -1,6 +1,6 @@
 ---
 conversion_metadata:
-  converted_at: "2026-07-20T14:44:11Z"
+  converted_at: "2026-07-21T05:29:29Z"
   converter_tool: "markitdown"
   converter_version: "0.1.6"
   source_pdf: "Ataza et al.pdf"
@@ -859,6 +859,8 @@ Magendans, J., Gutteling, J. M., & Zebel, S. (2016). Psychological determinants 
 1076–1093.
 Journal
 
+regulatory
+
 Research,
 
 20(8),
@@ -873,8 +875,6 @@ of
 
 tolerance
 https://doi.org/10.1080/13669877.2016.1147491
-
-regulatory
 
 Montalto Catherine, P. (2000). The  effect of family  life cycle and  financial management practices  on  household  saving  patterns.
 

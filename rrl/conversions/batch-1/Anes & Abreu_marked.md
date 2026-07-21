@@ -1,6 +1,6 @@
 ---
 conversion_metadata:
-  converted_at: "2026-07-20T14:36:07Z"
+  converted_at: "2026-07-21T05:23:42Z"
   converter_tool: "markitdown"
   converter_version: "0.1.6"
   source_pdf: "Anes & Abreu.pdf"

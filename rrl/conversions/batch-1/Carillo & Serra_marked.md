@@ -1,6 +1,6 @@
 ---
 conversion_metadata:
-  converted_at: "2026-07-20T15:04:59Z"
+  converted_at: "2026-07-21T05:44:24Z"
   converter_tool: "markitdown"
   converter_version: "0.1.6"
   source_pdf: "Carillo & Serra.pdf"

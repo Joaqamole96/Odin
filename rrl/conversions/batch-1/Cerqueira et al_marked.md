@@ -1,6 +1,6 @@
 ---
 conversion_metadata:
-  converted_at: "2026-07-20T15:10:21Z"
+  converted_at: "2026-07-21T05:47:12Z"
   converter_tool: "markitdown"
   converter_version: "0.1.6"
   source_pdf: "Cerqueira et al.pdf"

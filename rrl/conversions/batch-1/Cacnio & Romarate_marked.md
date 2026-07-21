@@ -1,6 +1,6 @@
 ---
 conversion_metadata:
-  converted_at: "2026-07-20T15:03:03Z"
+  converted_at: "2026-07-21T05:43:28Z"
   converter_tool: "markitdown"
   converter_version: "0.1.6"
   source_pdf: "Cacnio & Romarate.pdf"

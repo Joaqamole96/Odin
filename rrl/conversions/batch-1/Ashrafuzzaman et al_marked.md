@@ -1,6 +1,6 @@
 ---
 conversion_metadata:
-  converted_at: "2026-07-20T14:42:02Z"
+  converted_at: "2026-07-21T05:28:17Z"
   converter_tool: "markitdown"
   converter_version: "0.1.6"
   source_pdf: "Ashrafuzzaman et al.pdf"
@@ -1532,14 +1532,14 @@ Management,
 
 14(11),
 
+and
+
 Risk
 
 of
 
 Journal
 https://doi.org/10.3390/jrfm14110565
-
-and
 
 [19]  Chattaraman, V., Kwon, W.-S., Gilbert, J. E., & Ross, K. (2019). Should AI-Based, conversational
 digital  assistants  employ  social-  or  task-oriented  interaction  style?  A  task-competency  and
@@ -1588,13 +1588,13 @@ Society,
 
 and
 
-Conference
-Ethics,
-https://doi.org/10.1145/3306618.3314228
-
 on
 
 AI,
+
+Conference
+Ethics,
+https://doi.org/10.1145/3306618.3314228
 
 [26]  Dasgupta,  A.,  &  Islam,  M.  M.,  Nahid,  Omar  Faruq,  Rahmatullah,  Rafio,  .  (2024).  Engineering
 Management  Perspectives  on  Safety  Culture  in  Chemical  and  Petrochemical  Plants:  A
@@ -1781,15 +1781,15 @@ Heliyon,
 
 7(8),
 
+new
+
+as
+
 a
 
 normal
 19
 https://doi.org/10.1016/j.heliyon.2021.e07821
-
-new
-
-as
 
 [62]  Liu, Y., Li, Q., Edu, T., Józsa, L., & Negricea, I. C. (2019). Mobile shopping platform characteristics
 as  consumer  behavior  determinants.  Asia  Pacific  Journal  of  Marketing  and  Logistics,  32(7),
@@ -1929,14 +1929,14 @@ Science,
 
 50(6),
 
+of
+
 Journal
 https://doi.org/10.1007/s11747-022-00876-5
 
 Academy
 
 the
-
-of
 
 [78]  Mogaji, E., & Nguyen, N. P. (2021). Managers' understanding of artificial intelligence in relation
 to marketing financial services: insights from a cross-country study. International Journal of Bank
@@ -1966,13 +1966,13 @@ Marketing,
 
 36(5),
 
+and
+
 &
 
 engagement
 loyalty.
 https://doi.org/10.1002/mar.21192
-
-and
 
 [82]  Moriuchi,  E.  (2020).  An  empirical  study  on  anthropomorphism  and  engagement  with
 disembodied  AIs  and  consumers'  re‐use  behavior.  Psychology  &  Marketing,  38(1),  21-42.
@@ -2037,9 +2037,9 @@ Behaviour,
 
 Journal
 
-21(3),
-
 brand
+
+21(3),
 
 and
 https://doi.org/10.1002/cb.1974
@@ -2311,11 +2311,11 @@ Behavior,
 
 106(NA),
 
+in
+
 Computers
 behavior.
 https://doi.org/10.1016/j.chb.2020.106245
-
-in
 
 [132] Yaïci,  W.,  Entchev, E.,  Longo,  M.,  &  Annuk, A.  (2023). Internet of  Things  (IoT)  Monitoring and
 Control  for  Smart  Heating  and  Cooling  in  a  Residential  Building.  2023  12th  International

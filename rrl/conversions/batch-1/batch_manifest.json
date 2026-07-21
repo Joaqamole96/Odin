@@ -1,0 +1,14 @@
+{
+  "run_at": "2026-07-21T05:48:36.427634+00:00",
+  "input_dir": "/home/joaquin/Repositories/Odin Repositories/Odin-Paper/rrl/papers/batch-1",
+  "output_dir": "/home/joaquin/Repositories/Odin Repositories/Odin-Paper/rrl/conversions/batch-1",
+  "limit": 100,
+  "max_size_mb": 100.0,
+  "page_aware": false,
+  "total_pdfs": 100,
+  "processed": 100,
+  "failed": 0,
+  "skipped_too_large": 0,
+  "skipped_files": [],
+  "elapsed_seconds": 2089.3
+}
