@@ -83,6 +83,8 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
 1. The System shall support offline capability for all modules except for the intelligent modules which rely on server-side model inference.
 
+2. Financial Trajectory (Article IV §5) and Financial Margin (Article IV §6) computations shall be included in the offline-capable list, since they are computed arithmetically from the user's own locally available transaction history and do not require the server-side FBP classifier — unlike Financial Stability and Financial Obligation classification itself, which remains online-only.
+
 ---
 
 ## ===== Article II. Interface =====
@@ -259,21 +261,37 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
 ## ===== Article IV. Financial Behavioral Profiles =====
 
-### Section 1. Income Stability
+### Section 1. Financial Stability
 
-> NOTE: Discuss income stability as a binary dimension, its labels, its quantitative/numerical measurability as a score, and its threshold.
+1. Financial Stability measures the consistency of the user's income amount and frequency over time. It is a binary dimension with the following labels:
 
-2. Income stability is the capacity of the user's inflow to maintain a stable amount and frequency in regular intervals.
+    1. **Stable** — income amount and frequency remain consistent across observed periods.
 
-### Section 2. Obligation Weight
+    2. **Variable** — income amount or frequency fluctuates materially across observed periods.
 
-> NOTE: Discuss obligation weight as a binary dimension, its labels, its quantitative/numerical measurability as a score, and its threshold.
+2. Financial Stability is quantified as a score derived from the dispersion of the user's income across observed periods (e.g., coefficient of variation). The threshold separating Stable from Variable is TBD pending team derivation and SME validation.
 
-3. Obligation weight is the proportion of the user's necessary expenses (sum of Essential and Obligatory expenses) to their total expenses.
+3. Financial Stability measures *dispersion* (consistency), not *level* (magnitude) or *trend* (direction). Income magnitude is handled implicitly by other dimensions; income trend is handled by Financial Trajectory (Section 5).
+
+4. **Cold-start fallback:** For new users without sufficient in-app transaction history to compute the dispersion-based score directly, the System falls back to the employment-category proxy defined in Article III §2.1.3 (Regular Employment → Stable; Independent Contract / Fixed-Term-Project → Variable) until sufficient history exists.
+
+> NOTE: Exact numeric threshold for the Stable/Variable split is pending team derivation and SME validation.
+
+### Section 2. Financial Obligation
+
+1. Financial Obligation measures the proportion of the user's necessary expenses to their total expenses. It is a binary dimension with the following labels:
+
+    1. **Obligated** — essential and obligatory expenses constitute a majority of total expenses.
+
+    2. **Flexible** — essential and obligatory expenses constitute a minority of total expenses.
+
+2. Financial Obligation is quantified as the ratio of (Essential + Obligatory expenses) to total expenses. The threshold separating Obligated from Flexible is TBD pending team derivation and SME validation.
+
+> NOTE: The working name "Financial Obligation" is tentative pending final naming confirmation. Exact numeric threshold is pending team derivation and SME validation.
 
 ### Section 3. Financial Behavioral Profile
 
-1. The four FBPs, derived from a combination of the user's income stability and obligation weight binary classifications, are:
+1. The four FBPs, derived from a combination of the user's Financial Stability and Financial Obligation binary classifications, are:
 
     1. Stable‑Flexible
 
@@ -283,9 +301,61 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
     4. Variable‑Obligated
 
+2. Financial Trajectory (Section 5) and Financial Margin (Section 6) do not factor into this classification; they are overlay indicators described separately.
+
 ### Section 4. Financial Behavioral Drift
 
-> PROP: A user's financial behavioral profile may drift over time. If a user retained a different income stability or obligation weight score for (a set length of time), the system will flag the user for reclassification.
+1. A user's Financial Behavioral Profile may drift over time. If a user retains a different Financial Stability or Financial Obligation score for a set length of time, the System will flag the user for reclassification.
+
+> PROP: A deteriorating Financial Trajectory (Section 5) or borderline classifier confidence near either dimension's threshold may trigger an early or out-of-cycle drift check, rather than waiting for the standard interval.
+
+### Section 5. Financial Trajectory
+
+1. Financial Trajectory measures the slope or trend of the user's income-expense gap over time. It is an overlay indicator with the following labels:
+
+    1. **Improving** — the income-expense gap is trending upward (surplus growing or deficit shrinking).
+
+    2. **Steady** — the income-expense gap is approximately flat.
+
+    3. **Deteriorating** — the income-expense gap is trending downward (surplus shrinking or deficit growing).
+
+2. Financial Trajectory is computed as a simple trend fit (e.g., linear slope) over the user's own transaction history. It is computed entirely from locally available data and does not require the server-side FBP classifier.
+
+3. Financial Trajectory is an overlay indicator and does not affect FBP classification (Section 3). It modifies system urgency and tone (e.g., triggering early drift checks per Section 4, lowering debt-hardship thresholds per Article XXXIII §4, informing budget conservatism per Article XX §3, and gating savings reallocation recommendations per Article XXXI §1).
+
+> NOTE: Exact computation method and thresholds for the Improving/Steady/Deteriorating labels are pending team derivation and SME validation.
+
+### Section 6. Financial Margin
+
+1. Financial Margin measures the level of the user's income-expense gap at a single point in time, independent of whether that gap is trending anywhere. It is an overlay indicator with the following labels:
+
+    1. **Comfortable** — total income materially exceeds total expenses (positive margin).
+
+    2. **Tight** — total income closely equates to total expenses (near-zero margin).
+
+    3. **Deficit** — total income falls short of total expenses (negative margin).
+
+2. Financial Margin is computed as (Income − Total Expenses) / Income at a point in time. It is computed entirely from locally available data and does not require the server-side FBP classifier.
+
+3. Financial Margin is a *flow* measure (this period's gap). It is distinct from Budget Health (Article XXI §1), which is a *stock* measure (months of expenses covered by existing savings/balance).
+
+4. Financial Margin is an overlay indicator and does not affect FBP classification (Section 3). It modifies system urgency and tone (e.g., informing debt-hardship suggestions per Article XXXIII §4, gating savings reallocation recommendations per Article XXXI §1, and surfacing contextual UI badges per Article XXXVI and Article X).
+
+> NOTE: Exact computation method and thresholds for the Comfortable/Tight/Deficit labels are pending team derivation and SME validation.
+
+### Section 7. Excluded Candidate Dimensions
+
+1. The following dimensions were considered but excluded from the FBP framework:
+
+    1. **Income magnitude** — describes wealth, not behavior; captured implicitly by other financial indicators.
+
+    2. **Debt/leverage burden** — subsumed into Financial Obligation (Section 2), which already captures the proportion of obligatory expenses.
+
+    3. **Liquidity buffer size** (months of expenses covered by existing savings) — belongs to Budget Health (Article XXI §1), not to behavioral profiling.
+
+    4. **Financial literacy / impulsivity** — not derivable from available transaction data.
+
+    5. **Expense volatility** (variability of expenses) — a real behavioral signal, but deliberately deferred to preserve the 4-class FBP structure; candidate for future work.
 
 ---
 
@@ -377,6 +447,8 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
 > INFO: Includes current FBP and user option to change FBP via questionnaire or simple manual user selection.
 
+> NOTE: Financial Trajectory (Article IV §5) and Financial Margin (Article IV §6) shall surface as small supplementary badges next to the FBP label on the FBP Screen. Phrasing should be constructive (e.g., "small buffer — consider building this up") rather than alarming, consistent with the existing sensitivity note in Article XX §3.
+
 ### Section 2. Financial Behavioral Drift Checking
 
 > NOTE: Every set length of days, the system runs the classifier.
@@ -406,7 +478,7 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
 > NOTE: Should tackle negative balance too.
 
-> NOTE: Debt accounts should be negative or zero only.
+> PROP: Debt accounts should be negative or zero only. This convention is pending Dr. Go's validation (Consultation Log Item 1.1).
 
 ### Section 5. Financial Account Flow
 
@@ -595,7 +667,7 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
 > NOTE: Should also discuss Budget Surplus Strategies (e.g., move surplus to balance or savings goal?)
 
-> NOTE: We can justify allotting surplus to the currently most prioritized savings goal, justified by the Zero-Based Budget Strategy.
+> PROP: We can justify allotting surplus to the currently most prioritized savings goal, justified by the Zero-Based Budget Strategy (Consultation Log Item 1.9). If the user has no savings goals, surplus adds to the general balance.
 
 > NOTE: We also have to consider, what if the user does not have any savings goals at all?
 
@@ -621,6 +693,8 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
 ### Section 4. Feature Engineering
 
+> PROP: Forecasting must incorporate computed credit card / loan amortization (minimum payments, interest schedules) rather than treating debt payments as flat user-entered figures (Consultation Log Item 1.11).
+
 ### Section 5. Exploratory Data Analysis
 
 ### Section 6. Data Modeling
@@ -636,6 +710,8 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 ## ===== Article XXIV. Forecasting Process =====
 
 ### Section 1. Standard Forecasting
+
+> PROP: Once a debt is forecasted to be fully paid off, the savings forecast for subsequent periods should automatically increase, reflecting the freed-up cash flow (Consultation Log Item 1.10). Current assumption: 100% of the freed payment redirects to savings — flagged as possibly too optimistic, pending SME.
 
 ### Section 2. Cold-Start Forecasting
 
@@ -721,6 +797,10 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
 ### Section 3. Savings Goal Milestone
 
+### Section 4. Savings Goal Categories
+
+> TODO: "Top 10 Filipino Savings Goal Categories" — standardized categorization scheme for grouping savings goals (feeds Article XXXI §1). Pending team draft + informal interviews + SME validation.
+
 ---
 
 ## ===== Article XXXI. Savings Goal Module =====
@@ -728,6 +808,10 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 ### Section 1. Savings Goal Hierarchy
 
 > NOTE: Tackles the savings goals and their order of priority, as set by the user or system.
+
+> PROP: Default priority heuristic: earliest target date first, unless manually ranked by the user (Consultation Log Item 1.6).
+
+> PROP: The System may recommend transferring funds from a lower-priority goal to a higher-priority one when the higher-priority goal is behind schedule. If accepted, the System sends recurring reminders to replenish the reduced goal until it returns to its expected trajectory or the user cancels (Consultation Log Item 1.8). The System references Financial Margin (Article IV §6) as a pre-check before recommending reallocation — it shall not suggest tapping an already-thin-margin goal without flagging the risk.
 
 ### Section 2. Savings Goal Strategies
 
@@ -739,19 +823,39 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
 ### Section 1. Debt
 
+### Section 2. Debt Categories
+
+> TODO: "Top 10 Filipino Debt Categories" — standardized categorization scheme for grouping debts (feeds Article XXXIII §1–2). Pending team draft + informal interviews + SME validation.
+
 ---
 
 ## ===== Article XXXIII. Debt Module =====
 
 ### Section 1. Debt Hierarchy
 
+> PROP: Debts are grouped by a standardized category/type (see Article XXXII for category definitions). Each category group may be assigned its own repayment strategy rather than one global strategy across all debts (Consultation Log Item 1.2).
+
+> PROP: Cross-group ordering is currently undefined/parallel; flagged open pending SME validation (Consultation Log Item 1.2).
+
 ### Section 2. Debt Strategies
+
+> PROP: The following debt repayment strategies are supported, assignable per debt category group (Consultation Log Item 1.3):
+
+    1. **Avalanche** — prioritize debts by highest interest rate first.
+
+    2. **Snowball** — prioritize debts by smallest balance first.
+
+    3. **Custom / Manual Priority** — user-defined ordering.
+
+> NOTE: Specific strategy-to-category defaults (e.g., snowball for small recurring bills, avalanche for high-interest revolving credit) are pending team draft and SME validation.
 
 ### Section 3. Debt Projection
 
 ### Section 4. Debt Hardship
 
 > NOTE: User will unfortunately have to record the penalty if any. System will suggest outside help at this situation.
+
+> PROP: No numeric trigger has been defined yet for when this suggestion should appear. A thin Financial Margin (Article IV §6) or deteriorating Financial Trajectory (Article IV §5) may lower this threshold, suggesting help proactively rather than only after a missed payment (Consultation Log Item 1.5).
 
 ---
 
@@ -788,6 +892,8 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 ### Section 1. Dashboard
 
 ### Section 2. Key Metrics Cards
+
+> NOTE: Financial Trajectory (Article IV §5) and Financial Margin (Article IV §6) shall surface as small supplementary badges next to the FBP label on the Dashboard. Phrasing should be constructive (e.g., "small buffer — consider building this up") rather than alarming, consistent with the existing sensitivity note in Article XX §3.
 
 ### Section 3. Recent Transactions
 
