@@ -1,0 +1,221 @@
+{
+  "paper_id": "10.29020/nybg.ejpam.v18i4.6875",
+  "designation": "local-algorithm-specific",
+  "title": "Optimized Nonlinear Grey Bernoulli Model for Nowcasting the Philippine Gross Domestic Product",
+  "authors": "Carillo, S.K.; Serra, I.J.",
+  "year": 2025,
+  "venue": "European Journal of Pure and Applied Mathematics",
+  "odin_topics": [
+    "6.A",
+    "6.B"
+  ],
+  "tldr": "PSO-optimized Nonlinear Grey Bernoulli Model achieved 5.45% out-of-sample MAPE for Philippine GDP nowcasting, outperforming standard grey model benchmarks.",
+  "problem_and_motivation": "Accurate and timely GDP forecasts are essential for economic policymaking, but official statistics are released quarterly with delays of up to two months, disrupting stakeholder planning. The Nonlinear Grey Bernoulli Model NGBM(1,1) can capture complex patterns in economic data but its performance depends heavily on precise estimation of the power index and background value coefficient. Existing parameter estimation methods for NGBM(1,1) have not been optimized for short-term GDP nowcasting in data-constrained environments.",
+  "approach": [
+    "Quarterly Philippine GDP data from Q1 2021 to Q4 2024 sourced from the Philippine Statistics Authority OpenSTAT portal, expressed in constant 2018 US dollars.",
+    "NGBM(1,1) model optimized using Particle Swarm Optimization with 40-particle swarm, 1000 max iterations, and default inertia and cognitive-social coefficients.",
+    "Alternative exponential background value method following Cheng et al. reformulates the background value using an exponential curve between consecutive time points.",
+    "Harmonic function simulation with 15 parameter combinations evaluated under 70/30 and 80/20 training-to-testing splits to determine the optimal data partitioning scheme.",
+    "Benchmarked against standard Grey Model GM(1,1), traditional NGBM(1,1), and Exponential NGBM(1,1) using out-of-sample MAPE and RMSE.",
+    "Post-modeling seasonal decomposition applied to address systematic Q4 prediction errors, with models re-evaluated on seasonally adjusted data."
+  ],
+  "findings": [
+    "num: PSO-NGBM(1,1) achieved the lowest out-of-sample MAPE of 5.45%, outperforming Exponential NGBM(1,1) at 5.76%, GM(1,1) at 5.77%, and NGBM(1,1) at 5.87%.",
+    "num: PSO-NGBM(1,1) achieved the lowest out-of-sample RMSE of 362,077.8 (millions PHP), compared to 412,050.9 for Exponential NGBM(1,1) and 429,109.5 for NGBM(1,1).",
+    "num: After seasonal adjustment, all models achieved MAPE below 1%, with PSO-NGBM(1,1) at 0.38%.",
+    "num: PSO-NGBM(1,1) achieved a near-perfect prediction in 2024 Q2 with a prediction error of 0.0001%.",
+    "num: Harmonic simulation identified the 70/30 training-to-testing split as superior in 8 of 15 parameter combinations.",
+    "PSO algorithm converged to near-optimal solution within approximately 30 iterations.",
+    "Prediction errors peaked during Q4 across all models, indicating unmodeled seasonal patterns in the raw data.",
+    "Exponential background value provided advantage only in 3 of 15 scenarios under strong cyclical patterns, with modest gains over PSO."
+  ],
+  "key_figures_tables": [
+    "Table 2: Best-performing models under 70/30 split → PSO-NGBM(1,1) won 12 of 15 parameter combinations.",
+    "Table 5: Full forecast results across all quarters → PSO-NGBM(1,1) achieved lowest out-of-sample MAPE at 5.45%.",
+    "Table 6: Out-of-sample accuracy metrics → PSO-NGBM(1,1) led on both RMSE (362,077.8) and MAPE (5.45%).",
+    "Table 7: Seasonally adjusted out-of-sample forecasts → All models achieved MAPE below 1% after adjustment.",
+    "Figure 1: PSO convergence plot → Error minimized rapidly, stabilizing after ~30 iterations.",
+    "Figure 2: Grey model forecasts → All models approximate upward GDP trend but none fully capture seasonal dynamics.",
+    "Figure 4: Seasonal-trend decomposition → Strong Q1 decline and sharp Q4 surge confirmed as systematic pattern."
+  ],
+  "key_equations": [
+    {
+      "equation": "MAPE = \\frac{1}{n-1} \\sum_{t=2}^{n} \\left| \\frac{x^{(0)}(t) - \\hat{x}^{(0)}(t)}{x^{(0)}(t)} \\right| \\times 100\\%",
+      "explanation": "Out-of-sample Mean Absolute Percentage Error used as the fitness function for model evaluation."
+    },
+    {
+      "equation": "x^{(0)}(k) + a z^{(1)}(k) = b \\left[ z^{(1)}(k) \\right]^m",
+      "explanation": "NGBM(1,1) whitening equation incorporating the Bernoulli power index m for nonlinearity."
+    },
+    {
+      "equation": "y(t) = \\beta_0 t + \\beta_1 \\cos(\\gamma t) + \\beta_2 \\sin(\\gamma t)",
+      "explanation": "Harmonic regression model used in the simulation study to generate synthetic cyclical GDP data."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "NGBM(1,1)",
+      "extension": "Nonlinear Grey Bernoulli Model, a first-order grey model extended with a Bernoulli differential equation to capture nonlinear systems with small samples."
+    },
+    {
+      "term": "PSO",
+      "definition": "Particle Swarm Optimization, a metaheuristic algorithm inspired by collective behavior of bird flocks used to optimize model parameters."
+    },
+    {
+      "term": "AGO",
+      "definition": "Accumulated Generating Operation, a cumulative sum transformation that smoothens raw data sequences in grey models."
+    },
+    {
+      "term": "MAPE",
+      "definition": "Mean Absolute Percentage Error, a metric measuring forecast accuracy as a percentage of actual values."
+    },
+    {
+      "term": "RMSE",
+      "definition": "Root Mean Square Error, a metric measuring the average magnitude of forecast errors in original data units."
+    },
+    {
+      "term": "GDP",
+      "definition": "Gross Domestic Product, the total monetary value of all finished goods and services produced within a country's borders."
+    },
+    {
+      "term": "Nowcasting",
+      "definition": "Prediction of the present, very near future, or very recent past, particularly for economic indicators released with delay."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Giannone",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 1,
+      "claim": "Pioneered the first consistent statistical framework for nowcasting, defined as prediction of the present and very near future.",
+      "role": "context"
+    },
+    {
+      "author": "Chen",
+      "year": 2006,
+      "page": 0,
+      "paragraph": 2,
+      "claim": "Introduced the NGBM(1,1) model for forecasting nonlinear systems, offering a framework more suitable than linear grey models.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cheng",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 4,
+      "claim": "Proposed reformulating the NGBM background value using an exponential curve to enhance model responsiveness to dynamic patterns.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zhou",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 6,
+      "claim": "Described PSO elements for NGBM parameter optimization, including particle representation, fitness evaluation, and personal/global best mechanisms.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lewis",
+      "year": 1982,
+      "page": 0,
+      "paragraph": 7,
+      "claim": "Proposed MAPE forecast accuracy grading criteria: below 10% is Excellent, 10-20% is Good, 20-50% is Reasonable.",
+      "role": "baseline"
+    },
+    {
+      "author": "Bok",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 1,
+      "claim": "Surveyed macroeconomic nowcasting and forecasting methods using big data platforms for real-time monitoring.",
+      "role": "context"
+    },
+    {
+      "author": "Rufino",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 1,
+      "claim": "Applied nowcasting to Philippine economic growth using MIDAS regression modeling for timely policy assessment.",
+      "role": "context"
+    },
+    {
+      "author": "Ugoh",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 1,
+      "claim": "Applied ARIMAX model for forecasting Nigeria's GDP, demonstrating econometric approaches to national economic indicators.",
+      "role": "baseline"
+    },
+    {
+      "author": "Bujosa",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 9,
+      "claim": "Applied linear dynamic harmonic regression to Spanish economic indicators including GDP to model cyclical patterns.",
+      "role": "context"
+    },
+    {
+      "author": "De Groot",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 9,
+      "claim": "Integrated harmonic regression with Fourier and GARCH methods to analyze multi-structured economic cycles in OECD countries.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Demonstrates PSO-based parameter optimization for grey forecasting models applicable to economic time-series prediction."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Evaluates NGBM(1,1) and its variants for sequential quarterly economic data forecasting with small sample sizes."
+      }
+    ],
+    "contribution_to_field": "This paper advances the application of grey forecasting models to macroeconomic nowcasting by demonstrating that Particle Swarm Optimization substantially improves the parameter estimation of the Nonlinear Grey Bernoulli Model. The study introduces a systematic simulation-based approach for selecting optimal data-splitting schemes in grey model applications, finding that a 70/30 training-to-testing ratio outperforms the more conventional 80/20 split. The work also provides empirical evidence that seasonal decomposition dramatically improves grey model accuracy, reducing MAPE from over 5% to below 1% for Philippine GDP data. These findings establish that metaheuristic optimization techniques like PSO are more effective than analytical background value adjustments for enhancing forecast performance in data-constrained economic environments.",
+    "directly_justifies": [
+      "PSO-NGBM(1,1) achieved the lowest out-of-sample MAPE of 5.45% among all competing grey models for Philippine GDP nowcasting.",
+      "Seasonal adjustment reduced forecast MAPE from over 5% to below 1% across all grey model variants tested.",
+      "The 70/30 training-to-testing split provided marginally superior forecasting accuracy compared to the 80/20 split in 8 of 15 simulation scenarios.",
+      "PSO optimization converged within approximately 30 iterations, indicating efficient parameter search for NGBM models.",
+      "The exponential background value approach provided minimal improvement over standard NGBM(1,1) in most scenarios."
+    ],
+    "limits": [
+      "The study uses only 16 quarterly observations, which may limit the generalizability of findings to other economic contexts.",
+      "All grey models systematically failed to capture sharp quarterly fluctuations and seasonal dynamics without explicit preprocessing.",
+      "No statistical significance testing was performed to establish whether performance differences between models are meaningful.",
+      "The study is restricted to Philippine GDP data and does not validate the approach on other countries or economic indicators."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains in the taxonomy were systematically scanned. The paper was flagged as relevant to topic 6.A (Predictive Modeling in Personal Finance Systems) at medium relevance, as the PSO optimization methodology for grey forecasting models is applicable to sequential economic data prediction, though the paper operates at the macroeconomic level rather than personal finance. Topic 6.B (Forecasting Algorithms for Sequential Spending Data) was also flagged at medium relevance, as the NGBM(1,1) and its optimized variants are demonstrated on sequential quarterly economic data with small sample sizes, a characteristic shared with personal spending data. Topics 7.A-7.E (budgeting strategies and recommendation) were considered but rejected because the paper addresses macroeconomic GDP forecasting, not individual budget allocation or recommendation systems. Topics 1.A-1.C (Filipino young professionals demographics and behavior) were rejected as the paper deals with national-level aggregate economic data, not individual financial behavior. Topics 5.A-5.C (financial behavioral profiles) were rejected because no behavioral classification or profiling is performed. Topics 3.A-3.C (expense categorization) and 4.A-4.B (existing personal finance systems) were rejected as outside the paper's scope. Topics 8.A-8.C (anomaly detection) were rejected despite the paper's focus on prediction error, as no anomaly detection methodology is employed. Topics 9-14 (mobile design, privacy, engagement, evaluation frameworks, savings/debt management, synthetic data) were all rejected as not addressed by this macroeconomic forecasting study. The paper's core contribution is methodological optimization of grey models for economic time-series forecasting, making it most relevant to the forecasting domain (topic 6) within the personal finance research taxonomy."
+  },
+  "limitations": [
+    "Only 16 quarterly observations were available, constraining the dataset size and potentially limiting generalizability.",
+    "All grey models failed to capture seasonal dynamics without explicit preprocessing, requiring separate seasonal decomposition.",
+    "No formal statistical significance testing was conducted to validate differences in model performance. [unacknowledged]",
+    "The study is limited to Philippine GDP data and does not test on other economic indicators or countries.",
+    "The exponential background value optimization yielded minimal gains, suggesting the method may not be broadly effective."
+  ],
+  "remember_this": [
+    "PSO-NGBM(1,1) achieved the lowest out-of-sample MAPE of 5.45% for Philippine GDP nowcasting.",
+    "Seasonal adjustment reduced MAPE from over 5% to below 1% across all grey model variants.",
+    "PSO converged within approximately 30 iterations, indicating efficient parameter optimization.",
+    "A 70/30 training-to-testing split was marginally superior to 80/20 for grey model performance.",
+    "All grey models struggled with Q4 prediction errors due to unmodeled seasonal patterns."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Carillo & Serra_marked.md",
+      "converted_at": "2026-07-22T12:37:41Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

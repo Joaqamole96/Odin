@@ -5,91 +5,139 @@
   "authors": "Casolaro, A.; Capone, V.; Iannuzzo, G.; Camastra, F.",
   "year": 2023,
   "venue": "Information",
-  "odin_topics": ["6.B"],
-  "tldr": "A comprehensive survey of deep learning architectures for time series forecasting covering short-term and long-term models including CNNs, RNNs, GNNs, GANs, Diffusion Models, and Transformers.",
-  "problem_and_motivation": "Existing reviews of deep learning for time series forecasting lack descriptions of Transformers, fail to distinguish short-term from long-term forecasting, and omit recent strategies like GNNs, Deep Gaussian Processes, GANs, and Diffusion Models. There is a need for a comprehensive survey addressing these gaps.",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "12.A"
+  ],
+  "tldr": "Comprehensive survey of deep learning architectures for time series forecasting covering short-term models (CNN, RNN, LSTM, GRU, GNN, GANs, Diffusion Models) and long-term models (Transformer variants) with benchmarking comparisons.",
+  "problem_and_motivation": "Existing reviews on deep learning for time series forecasting lack coverage of Transformer variants, do not distinguish between short-term and long-term forecasting models, omit recent architectures like GNNs and Diffusion Models.",
   "approach": [
-    "Conducted a comprehensive literature review of deep learning methods for time series forecasting published since 2016.",
-    "Categorized architectures into short-term (CNN, TCN, RNN, GNN, Deep Gaussian Processes, GANs, Diffusion Models) and long-term (Transformer variants).",
-    "Reviewed benchmark datasets for both short-term and long-term forecasting tasks.",
-    "Analyzed advantages and limitations of each architecture class with detailed mathematical formulations.",
-    "Provided a clear distinction between models suitable for short-term versus long-term forecasting."
+    "Review categorizes architectures into short-term (CNN, TCN, RNN, LSTM, GRU, GNN, DGP, GANs, Diffusion Models) and long-term (Transformer and variants).",
+    "Survey scope restricted to works from 2016 onward for tractability.",
+    "Benchmarking section provides comparative results on standardized short-term (M4) and long-term (ETT, Electricity, Traffic, Weather, Exchange, ILI) data sets.",
+    "Architecture descriptions include formal mathematical definitions and application tables.",
+    "Transformer variants (Informer, Autoformer, FEDFormer, PatchTST, Crossformer, Pyraformer, Scaleformer, Triformer, Non-stationary Transformer) are reviewed."
   ],
   "findings": [
-    "CNNs using Euclidean kernels have limited receptive fields for capturing long-range dependencies in time series.",
-    "TCNs with dilated causal convolutions can capture long-range dependencies while maintaining computational efficiency.",
-    "RNNs suffer from vanishing and exploding gradient problems limiting long-term dependency learning.",
-    "LSTM and GRU mitigate gradient problems but still struggle with very long sequences.",
-    "GNNs can model spatial dependencies in multivariate time series through adjacency matrices.",
-    "Deep Gaussian Processes provide both predictions and confidence intervals for uncertainty estimation.",
-    "GANs can augment small datasets through synthetic time series generation or serve as end-to-end forecasting models.",
-    "Diffusion Models show promise for time series generation and forecasting tasks."
-  ],
-  "key_figures_tables": [
-    "Table 1: CNN applications in time series forecasting → demonstrates wide applicability across domains.",
-    "Table 5: LSTM applications → shows extensive adoption for stock, electricity, and traffic forecasting.",
-    "Table 7: Hybrid deep learning models → CNN+LSTM combinations improve performance across applications.",
-    "Table 8: GNN applications → effective for multivariate time series with spatial dependencies."
-  ],
-  "key_equations": [
-    {"equation": "x_{t+p} = f(x_{t-1}, ..., x_{t-q}) + ε_{t+p}", "explanation": "Autoregressive model for time series forecasting."},
-    {"equation": "y(t) = (w * X)(t) = Σ w(a)X(t-a)", "explanation": "1D convolution operation for time series input."},
-    {"equation": "y(t) = Σ w(a)X(t-d·a)", "explanation": "Dilated 1D convolution with dilation factor d."},
-    {"equation": "min_G max_D V(D,G) = E[log D(x)] + E[log(1-D(G(z)))]", "explanation": "GAN minimax objective function."}
-  ],
-  "definitions": [
-    {"term": "CNN", "definition": "Convolutional Neural Network - a deep learning architecture using convolutional layers for feature extraction."},
-    {"term": "TCN", "definition": "Temporal Convolutional Network - a CNN variant using causal and dilated convolutions for sequence modeling."},
-    {"term": "RNN", "definition": "Recurrent Neural Network - a neural network with recurrent connections for processing sequential data."},
-    {"term": "LSTM", "definition": "Long Short-Term Memory - an RNN variant with gating mechanisms to capture long-term dependencies."},
-    {"term": "GRU", "definition": "Gated Recurrent Unit - a simplified LSTM variant with update and reset gates."},
-    {"term": "GNN", "definition": "Graph Neural Network - a neural network operating on graph-structured data."},
-    {"term": "DGP", "definition": "Deep Gaussian Process - a Bayesian model using cascaded Gaussian Processes for uncertainty estimation."},
-    {"term": "GAN", "definition": "Generative Adversarial Network - a generative model with competing generator and discriminator networks."},
-    {"term": "DM", "definition": "Diffusion Model - a generative model that learns to reverse a noise diffusion process."}
+    "Vanilla RNNs suffer from vanishing/exploding gradients, limiting long-term dependency learning.",
+    "LSTM and GRU gated cells mitigate gradient instability but still struggle with very distant sequence dependencies.",
+    "Graph Neural Networks enable multivariate forecasting by modeling inter-variable relationships.",
+    "Deep Gaussian Processes provide confidence intervals for predictions, unlike most other deep learning architectures.",
+    "GANs serve two roles: data augmentation for small datasets and end-to-end generative forecasting models.",
+    "Diffusion models represent a new generative paradigm for probabilistic time series forecasting.",
+    "PatchTST achieves strong long-term forecasting by treating each variate as independent univariate series.",
+    "Non-stationary Transformer addresses the over-stationarization problem via Series Stationarization and De-stationary Attention.",
+    "Most deep learning forecasting architectures cannot estimate prediction confidence intervals.",
+    "Stationarity assumption violations cause concept drift, dramatically decreasing prediction accuracy."
   ],
   "citations": [
-    {"author": "Hochreiter", "year": 1997, "page": 0, "paragraph": 0, "claim": "LSTM networks were proposed to address vanishing gradient problems in recurrent neural networks.", "role": "methodology"},
-    {"author": "Cho", "year": 2014, "page": 0, "paragraph": 0, "claim": "GRU networks were introduced as a simplified alternative to LSTM with comparable performance.", "role": "methodology"},
-    {"author": "Lea", "year": 2016, "page": 0, "paragraph": 0, "claim": "Temporal Convolutional Networks were proposed for action segmentation using causal and dilated convolutions.", "role": "methodology"},
-    {"author": "Jaeger", "year": 2001, "page": 0, "paragraph": 0, "claim": "Echo State Networks use fixed random weight matrices to mitigate unstable gradient problems.", "role": "methodology"},
-    {"author": "Goodfellow", "year": 2014, "page": 0, "paragraph": 0, "claim": "GANs employ adversarial training between generator and discriminator networks.", "role": "methodology"},
-    {"author": "Vaswani", "year": 2017, "page": 0, "paragraph": 0, "claim": "Transformers use self-attention mechanisms to capture long-range dependencies without recurrence.", "role": "methodology"}
+    {
+      "author": "Goodfellow",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep learning is currently the leading field of machine learning with successful applications across multiple domains.",
+      "role": "context"
+    },
+    {
+      "author": "Hochreiter",
+      "year": 1997,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LSTM networks use gating mechanisms to learn long-term dependencies and mitigate the vanishing gradient problem.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cho",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "GRUs use update and reset gates as a simpler gated alternative to LSTMs.",
+      "role": "methodology"
+    },
+    {
+      "author": "Vaswani",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Transformers rely entirely on attention mechanisms, eschewing recurrence to draw global dependencies.",
+      "role": "methodology"
+    },
+    {
+      "author": "Nie",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "PatchTST segments input sequences into local patches processed by a naive Transformer encoder.",
+      "role": "methodology"
+    },
+    {
+      "author": "Liu",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Non-stationary Transformer proposes De-stationary Attention to discover temporal dependencies from non-stationary data.",
+      "role": "methodology"
+    }
   ],
   "topic_relevance": {
     "topics": [
-      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Comprehensive survey of deep learning forecasting architectures applicable to sequential financial data."}
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Covers deep learning architectures directly applicable to sequential financial data prediction."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Surveys LSTM, GRU, Transformer, and other forecasting algorithms designed for sequential data."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Provides benchmark datasets and comparative evaluation methodology for forecasting models."
+      }
     ],
-    "contribution_to_field": "This survey provides a comprehensive taxonomy of deep learning architectures for time series forecasting, distinguishing between short-term and long-term models. It covers recent advances including GNNs, Deep Gaussian Processes, GANs, and Diffusion Models that were absent from prior reviews. The paper establishes benchmark datasets and identifies open problems for future research in time series forecasting.",
+    "contribution_to_field": "Comprehensive survey of deep learning architectures for time series forecasting, categorizing models by short-term and long-term horizons. Fills gaps by including Transformer-based models and presenting dedicated benchmarking comparisons. Four open problems identified: lack of confidence interval estimation, overfitting, data augmentation inadequacies, and non-stationarity handling.",
     "directly_justifies": [
-      "LSTM networks can capture long-term dependencies through gating mechanisms for sequential data modeling.",
-      "CNN-based approaches can achieve 22.6% improvement over traditional ARIMAX methods for load forecasting.",
-      "GNNs effectively model spatial dependencies in multivariate time series through graph representations."
+      "Deep learning applied to time series forecasting can cope with complex high-dimensional series.",
+      "Most deep learning methods except DGPs cannot estimate confidence intervals.",
+      "Vanilla RNNs suffer from vanishing or exploding gradients preventing long-term dependency learning.",
+      "PatchTST achieves competitive long-term forecasting by treating each dimension as independent univariate series.",
+      "Stationarity assumption violations lead to concept drift and dramatic accuracy decreases."
     ],
     "limits": [
-      "Focuses primarily on academic benchmarks rather than real-world financial applications.",
-      "Does not provide empirical comparisons across all reviewed architectures."
-    ],
-    "topic_mapping_rationale": "Systematically scanned all topic domains. The paper directly addresses 6.B (Forecasting Algorithms for Sequential Spending Data) as its core contribution, providing a taxonomy of deep learning methods for time series prediction. Other domains were considered but rejected: 1.A-2.D (Filippino demographics not covered), 3.A-3.C (expense categorization not addressed), 4.A-4.B (personal finance systems not discussed), 5.A-5.C (financial behavioral profiles not covered), 7.A-7.E (budgeting strategies not addressed), 8.A-8.C (anomaly detection only briefly mentioned), 9.A-9.C (mobile design not covered), 10.A-10.C (privacy not discussed), 11.A-11.B (engagement not addressed), 12.A-12.C (evaluation not focused on personal finance), 13.A-13.C (savings/debt not covered), 14.A-14.C (deployment not addressed)."
+      "Survey scope restricted to post-2016 works.",
+      "Spatio-temporal time series forecasting with GNNs explicitly excluded.",
+      "Benchmark comparisons rely on results reported in original papers rather than standardized re-evaluation.",
+      "No systematic hyperparameter sensitivity analysis.",
+      "Does not cover edge deployment or computational cost comparisons."
+    ]
   },
   "limitations": [
-    "Does not provide empirical comparisons across all reviewed architectures on standardized benchmarks.",
-    "Focuses on general time series forecasting rather than personal finance applications specifically.",
-    "Some recent Transformer variants may not be fully covered due to rapid development in the field."
+    "Survey restricted to works from 2016 onward.",
+    "Spatio-temporal forecasting with GNNs explicitly excluded despite relevance to multivariate financial data.",
+    "Benchmark comparisons rely on results reported in original papers, introducing potential evaluation inconsistencies.",
+    "No computational cost or latency analysis for comparing architectures.",
+    "Does not address concept drift mitigation strategies beyond identifying non-stationarity as an open problem."
   ],
   "remember_this": [
-    "LSTM and GRU are the most widely used recurrent architectures for time series forecasting.",
-    "CNNs with dilated convolutions can capture long-range dependencies more efficiently than standard RNNs.",
-    "GNNs enable modeling of spatial dependencies in multivariate time series data.",
-    "GANs can augment small datasets through synthetic time series generation.",
-    "Deep Gaussian Processes provide uncertainty estimates alongside predictions."
+    "Most deep learning forecasting methods cannot provide prediction confidence intervals, except Deep Gaussian Processes.",
+    "Vanilla RNNs fail on long-term dependencies due to vanishing gradients; LSTM and GRU gated cells partially mitigate this.",
+    "PatchTST segments input into local patches processed independently, achieving competitive long-term forecasting performance.",
+    "Stationarity assumption violations cause concept drift leading to dramatic prediction accuracy decreases.",
+    "GANs and Diffusion Models represent new generative paradigms for probabilistic time series forecasting."
   ],
   "summarization_metadata": {
-    "summarized_at": "2026-07-21T10:00:00Z",
+    "summarized_at": "2026-07-23T00:00:00Z",
     "summarizer_model": "opencode/big-pickle",
     "conversion_reference": {
       "file": "Casolaro et al_marked.md",
-      "converted_at": "2026-07-21T05:46:17Z",
+      "converted_at": "2026-07-22T12:41:49Z",
       "converter_tool": "markitdown"
     }
   }

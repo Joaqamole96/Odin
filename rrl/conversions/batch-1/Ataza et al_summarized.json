@@ -2,59 +2,187 @@
   "paper_id": "64e3b0e1-55d6-578b-96ca-fc380d7cb92f",
   "designation": "local",
   "title": "The Impact of Psychological, Economic, Social Aspects, and Interest Rate Variations on Working Millennials' Saving Patterns Through Digital Banking",
-  "authors": "Ataza, C.M.; Porcel, M.A.B.; Resabal, L.F.; Sandoval, A.E.G.; Bragas, C.M.",
+  "authors": "Ataza, C.; Porcel, M.; Resabal, L.; Sandoval, A.; Bragas, C.",
   "year": 2024,
   "venue": "Sachetas",
-  "odin_topics": ["1.A", "1.B", "1.C", "2.C", "4.A", "11.A", "11.B"],
-  "tldr": "A survey of 51 working millennials in Metro Manila found that interest rate variations and psychological aspects significantly predict saving patterns through digital banking, while social aspects have a negative effect.",
-  "problem_and_motivation": "Working millennials in the Philippines face complex financial decisions as digital banking proliferates, yet the combined influence of psychological, economic, social, and interest rate factors on their saving patterns through digital platforms remains underexplored. Understanding these factors is critical for digital banks seeking to optimize personalized offers and for policymakers promoting financial inclusion. Existing literature addresses individual factors in isolation but lacks an integrated analysis of their collective impact on saving behavior in the Philippine digital banking context.",
+  "odin_topics": [
+    "1.A",
+    "1.B",
+    "1.C",
+    "2.A",
+    "2.C",
+    "5.A",
+    "6.A",
+    "10.A",
+    "13.A"
+  ],
+  "tldr": "A survey of 51 working millennials in Metro Manila finds that interest rate variations and psychological aspects are the strongest positive predictors of saving patterns through digital banking, while social aspects have a significant negative effect.",
+  "problem_and_motivation": "Working millennials in the Philippines face a complex financial landscape shaped by psychological, economic, social, and interest rate factors when saving through digital banking platforms. Existing research lacks empirical evidence on which of these factors most significantly influence saving patterns in the Philippine digital banking context.",
   "approach": [
-    "Surveyed 51 working millennials aged 26-42 who have bank accounts in Metro Manila, Philippines using purposive sampling.",
-    "Used a 5-point Likert scale questionnaire with 20 items across four constructs: psychological aspects, economic aspects, social aspects, and interest rate variations.",
-    "Applied Cronbach's alpha to assess internal consistency, with all constructs exceeding 0.8 (ranging from 0.804 to 0.926).",
-    "Conducted multiple linear regression analysis to determine the relative influence of each factor on saving patterns through digital banking.",
-    "Grounded the study in the Classical Theory of Interest and Theory of Planned Behavior as theoretical frameworks."
+    "Survey questionnaire administered via Google Forms to 51 working millennials aged 25-42 with digital bank accounts in Metro Manila, Philippines.",
+    "Purposive sampling technique selected respondents who were using digital banks and aware of saving patterns through digital banking.",
+    "Instrument adapted from Classical Theory of Interest, measuring four constructs on a 5-point Likert scale.",
+    "Cronbach's alpha reliability analysis confirmed internal consistency across all four constructs (alpha range: 0.804 to 0.926).",
+    "Multiple linear regression analysis used to assess the predictive effects of the four independent variables on saving patterns through digital banking.",
+    "Regression equation Y = b1P + b2E + b3S + b4I + c formulated and tested."
   ],
   "findings": [
-    "Interest rate variations had the strongest positive effect on saving patterns (Beta = 0.878, p < 0.001), explaining approximately 70% of variance.",
-    "Psychological aspects had a significant positive effect (Beta = 0.430, p = 0.006), explaining 31.02% of variance in saving behaviors.",
-    "num: Social aspects had a significant negative effect (Beta = -0.182, p = 0.016), explaining only 8.47% of variance.",
-    "Economic aspects had a non-significant negative effect (Beta = -0.130, p = 0.293), explaining 26.42% of variance.",
-    "num: The combined model explained approximately 75.34% of variance in saving patterns through digital banking (R² = 0.7534).",
-    "num: 84.3% of respondents were aged 26-31, and 58.8% used both digital and traditional banks.",
-    "num: 58.8% of respondents were female, suggesting females save more through digital banking than males."
+    "num: Interest rate variations are the strongest predictor with Beta = 0.878, p < 0.001, explaining 70.06% of variance in saving behavior alone.",
+    "num: Psychological aspects positively predict saving patterns with Beta = 0.430, p = 0.006, explaining 31.02% of variance.",
+    "num: Social aspects have a significant negative effect with Beta = -0.182, p = 0.016, explaining only 8.47% of variance.",
+    "num: The combined model with all four factors explains 75.34% of the variance in saving patterns (R = 0.868).",
+    "num: Economic aspects are not statistically significant predictors (Beta = -0.130, p = 0.293) despite a moderate correlation of R = 0.514.",
+    "Social factors, despite being statistically significant, have a negative rather than positive effect on saving patterns.",
+    "The regression model Y = (0.430)P + (-0.130)E + (-0.182)S + (0.878)I + (-0.01) captures the saving pattern prediction.",
+    "84.3% of respondents were aged 26-31, aligning with PSA data showing this age group as the largest employed population segment."
   ],
   "key_figures_tables": [
-    "Figure 1: Classical Theory of Interest rate determination → Interest rate is determined by equilibrium of savings supply and demand.",
-    "Figure 2: Theory of Planned Behavior visual representation → Attitude, subjective norms, and perceived behavioral control form behavioral intention.",
-    "Figure 3: Conceptual framework → Integrates psychological, economic, social, and interest rate factors with saving patterns.",
-    "Figure 10: Degree of relationship of indicators in saving pattern → Interest rate variations show strongest positive relationship.",
-    "Table 1: Cronbach's alpha reliability scores → All constructs exceed 0.8, indicating good internal consistency.",
-    "Table 2: Descriptive statistics of research variables → Economic aspects have highest mean (4.22), social aspects have highest variability (SD = 0.86).",
-    "Table 3: R Square of model summary → Combined model R² = 0.7534, interest rate variations alone R² = 0.7006.",
-    "Table 4: Multiple linear regression analysis → Interest rate variations (Beta = 0.878) is the most significant predictor."
+    "Figure 1: Rate determination in classical theory.",
+    "Figure 2: Visual representation of the theory of planned behavior.",
+    "Figure 3: Visual representation of the conceptual framework.",
+    "Figure 10: Degree of relationship of indicators in saving pattern.",
+    "Table 1: Measurement scales used in reliability analysis.",
+    "Table 2: Descriptive statistics of research variables.",
+    "Table 3: R Square of model summary.",
+    "Table 4: Analysis of the multiple linear regression."
   ],
   "key_equations": [
-    {"equation": "Y = b1P + b2E + b3S + b4I + c", "explanation": "Regression equation where Y is saving patterns, P is psychological, E is economic, S is social, I is interest rate."},
-    {"equation": "Y = (0.430)P + (-0.130)E + (-0.182)S + (0.878)I + (-0.01)", "explanation": "Empirical regression model with standardized coefficients for predicting saving patterns through digital banking."}
+    {
+      "equation": "Y = b_1P + b_2E + b_3S + b_4I + c",
+      "explanation": "General regression equation relating saving patterns to four independent variables."
+    },
+    {
+      "equation": "Y = (0.430)P + (-0.130)E + (-0.182)S + (0.878)I + (-0.01)",
+      "explanation": "Empirical regression model with standardized coefficients from the study."
+    }
   ],
   "definitions": [
-    {"term": "TPB", "definition": "Theory of Planned Behavior, a psychological theory positing that attitude, subjective norms, and perceived behavioral control predict behavioral intention."},
-    {"term": "Classical Theory of Interest", "definition": "Economic theory stating that interest rates are determined by the equilibrium of savings supply and demand."},
-    {"term": "Cronbach's Alpha", "definition": "A measure of internal consistency reliability for a set of scale items, with values above 0.7 considered acceptable."},
-    {"term": "Digital Banking", "definition": "The digitization of banking services using online and mobile channels for transactions, transfers, and account management."},
-    {"term": "Millennials", "definition": "Individuals born approximately between 1981 and 1996, aged 25-42 at the time of this study."}
+    {
+      "term": "TPB",
+      "definition": "Theory of Planned Behavior, a psychological framework explaining behavior through attitudes, subjective norms, and perceived behavioral control."
+    },
+    {
+      "term": "Classical Theory of Interest",
+      "definition": "Economic theory positing that interest rates are determined by the equilibrium of savings supply and demand."
+    },
+    {
+      "term": "Cronbach's Alpha",
+      "definition": "Statistical measure of internal consistency reliability for a set of scale items, with values above 0.70 generally acceptable."
+    },
+    {
+      "term": "Digital Banking",
+      "definition": "Financial services delivered through electronic platforms, including mobile applications and online portals."
+    },
+    {
+      "term": "Standardized Coefficient Beta",
+      "definition": "Regression coefficient indicating the strength and direction of each predictor's effect on the dependent variable."
+    }
   ],
   "citations": [
-    {"author": "Co", "year": 2023, "page": 0, "paragraph": 0, "claim": "Social factors involving close family members significantly impact banking preferences among Filipino households.", "role": "finding"},
-    {"author": "Ajzen", "year": 1991, "page": 0, "paragraph": 0, "claim": "Theory of Planned Behavior posits that attitude, subjective norms, and perceived behavioral control form behavioral intention.", "role": "methodology"},
-    {"author": "Ricardo", "year": 0, "page": 0, "paragraph": 0, "claim": "Classical Theory of Interest states interest rates are determined by equilibrium of savings supply and demand.", "role": "methodology"},
-    {"author": "Felici", "year": 2022, "page": 0, "paragraph": 0, "claim": "Savings respond positively at high nominal interest rates and decline as nominal rates fall.", "role": "finding"},
-    {"author": "Copur", "year": 2019, "page": 0, "paragraph": 0, "claim": "Psychological factors including assertiveness, financial risk tolerance, and anxiety influence saving behavior.", "role": "finding"},
-    {"author": "Rey-Ares", "year": 2021, "page": 0, "paragraph": 0, "claim": "Financial habits are influenced by self-control, with those possessing more self-control saving more money.", "role": "finding"},
-    {"author": "Seguino", "year": 2003, "page": 0, "paragraph": 0, "claim": "Females tend to save more than males, with notable variations in savings and investment choices based on gender.", "role": "finding"},
-    {"author": "Kim", "year": 2013, "page": 0, "paragraph": 0, "claim": "Parents are the most important and influential figures in children's financial socialization.", "role": "finding"},
-    {"author": "Jumena", "year": 2022, "page": 0, "paragraph": 0, "claim": "Two factors influence savings: income received and amount consumed, with higher income leading to more savings.", "role": "finding"}
+    {
+      "author": "Co",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Filipino households show considerable differences in financial access, with social factors involving close family members significantly impacting banking preferences.",
+      "role": "context"
+    },
+    {
+      "author": "Jünger",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "FinTech companies examine the significant impact of technological advancements on financial management services.",
+      "role": "context"
+    },
+    {
+      "author": "Felici",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Consumer judgments regarding saving are more influenced by nominal interest rates than real interest rates.",
+      "role": "finding"
+    },
+    {
+      "author": "Copur",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Assertiveness, financial risk tolerance, impulsiveness, distrust, anxiety, and planning horizon are psychological factors that influence saving behavior.",
+      "role": "finding"
+    },
+    {
+      "author": "Lown",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "There is a bidirectional connection between savings and self-efficacy, with effective savers demonstrating higher levels of self-efficacy.",
+      "role": "finding"
+    },
+    {
+      "author": "Magendans",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Individuals with strong financial self-efficacy demonstrate considerable intention to save and engage in more saving activities.",
+      "role": "finding"
+    },
+    {
+      "author": "Kim",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Children's saving habits for future educational costs are positively correlated with higher parental warmth levels and discussions about money.",
+      "role": "finding"
+    },
+    {
+      "author": "Xaba",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The interest rate is the predominant factor that determines the savings rate.",
+      "role": "finding"
+    },
+    {
+      "author": "Ajzen",
+      "year": 1991,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The Theory of Planned Behavior posits that attitudes, subjective norms, and perceived behavioral control together form behavioral intention preceding actual behavior.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ricardo",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The Classical Theory of Interest holds that interest rates are determined by the equilibrium of savings supply and demand.",
+      "role": "methodology"
+    },
+    {
+      "author": "Aizenman",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Lowering interest rates can discourage savings and encourage consumption or investment.",
+      "role": "baseline"
+    },
+    {
+      "author": "Rey-Ares",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial habits are influenced by self-control, with individuals possessing more self-control saving more money.",
+      "role": "finding"
+    },
+    {
+      "author": "Ribaj",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Higher rates of savings help a country achieve faster economic growth by using them as investments.",
+      "role": "context"
+    }
   ],
   "topic_relevance": {
     "topics": [
@@ -62,82 +190,79 @@
         "code": "1.A",
         "name": "Filipino Young Professionals as a Demographic",
         "relevance": "high",
-        "justification": "Directly studies working millennials in Metro Manila, Philippines aged 26-42."
+        "justification": "Study exclusively examines working millennials aged 25-42 in Metro Manila, Philippines"
       },
       {
         "code": "1.B",
         "name": "Financial Structure of Filipino Young Professionals",
-        "relevance": "medium",
-        "justification": "Examines income distribution and banking mode preferences among respondents."
+        "relevance": "high",
+        "justification": "Analyzes income levels, employment status, and banking mode preferences of the sample"
       },
       {
         "code": "1.C",
         "name": "Financial Behavior of Filipino Young Professionals",
         "relevance": "high",
-        "justification": "Core focus on saving patterns and behaviors through digital banking platforms."
+        "justification": "Core focus on saving patterns and behaviors through digital banking platforms"
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "medium",
+        "justification": "Contextualizes findings within Philippine financial culture and Central Bank policies"
       },
       {
         "code": "2.C",
         "name": "User-Declared Financial Preferences",
         "relevance": "high",
-        "justification": "Uses Likert-scale survey to measure psychological, economic, social, and interest rate preferences."
+        "justification": "Measures self-reported attitudes toward saving on a Likert scale across four constructs"
       },
       {
-        "code": "4.A",
-        "name": "Landscape of Existing Personal Finance Systems",
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
         "relevance": "medium",
-        "justification": "Discusses the shift from traditional to digital banking in the Philippine financial sector."
+        "justification": "Identifies demographic and behavioral segments among millennial savers"
       },
       {
-        "code": "11.A",
-        "name": "Engagement Dynamics in Personal Finance Applications",
-        "relevance": "medium",
-        "justification": "Examines factors driving millennials to engage with digital banking for saving purposes."
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Develops a multiple linear regression model predicting saving patterns from four factors"
       },
       {
-        "code": "11.B",
-        "name": "Retention Mechanisms and Engagement Design",
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
         "relevance": "low",
-        "justification": "Discusses how digital banks can optimize personalized offers to retain millennial savers."}
+        "justification": "Briefly mentions compliance with Data Privacy Act RA 10173 in methodology"
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "medium",
+        "justification": "Directly addresses saving patterns and motivations through digital banking"
+      }
     ],
-    "contribution_to_field": "This study contributes to the understanding of financial behavior among Filipino working millennials by integrating psychological, economic, social, and interest rate factors into a single regression model for digital banking saving patterns. It provides empirical evidence from the Philippine context that interest rate variations are the dominant predictor of saving behavior, explaining 70% of variance, while psychological factors contribute an additional 31%. The study identifies that social aspects have a counterintuitive negative effect, suggesting millennials prioritize personal financial goals over social pressures. These findings offer actionable insights for digital bank managers seeking to optimize saving products for the Philippine millennial market.",
+    "contribution_to_field": "This study contributes empirical evidence on the relative importance of psychological, economic, social, and interest rate factors in shaping saving behaviors among Filipino working millennials using digital banking.",
     "directly_justifies": [
-      "Interest rate variations explain approximately 70% of variance in saving patterns through digital banking.",
-      "Psychological aspects have a significant positive effect (Beta = 0.430) on saving patterns.",
-      "Social aspects have a significant negative effect (Beta = -0.182) on saving patterns.",
-      "The combined model explains 75.34% of variance in saving behaviors."
+      "Interest rate variations explain 70.06% of variance in saving behavior, making it the dominant predictor.",
+      "The combined model of psychological, economic, social, and interest rate factors explains 75.34% of saving pattern variance.",
+      "Social aspects have a significant negative effect (Beta = -0.182) on saving patterns, contrary to expected positive influence.",
+      "Psychological aspects positively predict saving patterns with Beta = 0.430 at p = 0.006 significance level.",
+      "Economic aspects are not statistically significant predictors (p = 0.293) despite moderate individual correlation."
     ],
     "limits": [
-      "Small sample size of 51 respondents limits statistical power and generalizability.",
-      "Purposive sampling may introduce selection bias.",
-      "Cross-sectional design does not capture temporal changes in saving behavior.",
-      "Single geographic focus on Metro Manila excludes rural and provincial millennials.",
-      "Self-reported Likert scale data may be subject to social desirability bias."
+      "Small sample size of 51 respondents limits generalizability to the broader Filipino millennial population.",
+      "Purposive sampling may introduce selection bias as respondents were self-selected digital banking users.",
+      "Cross-sectional survey design captures only a snapshot, preventing causal inference about temporal relationships.",
+      "No control for confounding variables such as financial literacy level, total assets, or household size.",
+      "Economic aspects not being significant may reflect measurement limitations rather than true non-influence."
     ],
-    "topic_mapping_rationale": "All topic domains were systematically scanned. The paper directly addresses Filipino young professionals (1.A, 1.B, 1.C) with high relevance, as the entire study focuses on working millennials in Metro Manila. User-declared financial preferences (2.C) receive high relevance through the survey-based methodology measuring psychological, economic, social, and interest rate factor preferences. The digital banking landscape (4.A) receives medium relevance as contextual background. Engagement dynamics (11.A, 11.B) receive medium and low relevance respectively, as the study examines factors driving saving engagement but does not focus on retention design. Topics on culturally specific practices (2.A, 2.B, 2.D), expense categorization (3.A-C), existing system limitations (4.B), financial behavioral profiles (5.A-C), predictive modeling (6.A-B), budgeting (7.A-E), anomaly detection (8.A-C), mobile design (9.A-C), privacy (10.A-C), savings/debt (13.A-C), and synthetic data (14.A-C) were considered and rejected as not directly covered."
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 1 was flagged as high relevance across codes 1.A, 1.B, and 1.C since the paper exclusively studies working millennials in Metro Manila. Domain 2 was partially relevant: 2.A at medium relevance and 2.C at high relevance. Domain 5 received medium relevance for 5.A. Domain 6 was flagged as high relevance for 6.A. Domain 10 received low relevance for 10.A. Domain 13 received medium relevance for 13.A."
   },
-  "limitations": [
-    "Small sample size of 51 respondents limits statistical power and generalizability to the broader millennial population.",
-    "Purposive sampling technique may introduce selection bias among respondents.",
-    "Cross-sectional design does not capture temporal changes in saving behavior over time.",
-    "Single geographic focus on Metro Manila excludes rural and provincial millennials.",
-    "Self-reported Likert scale data may be subject to social desirability and response biases.",
-    "The study does not account for specific digital bank platform differences or features."
-  ],
   "remember_this": [
-    "Interest rate variations explain approximately 70% of variance in saving patterns through digital banking.",
-    "Psychological aspects significantly and positively predict saving patterns (Beta = 0.430).",
-    "Social aspects have a significant but negative effect on saving patterns (Beta = -0.182).",
-    "The combined regression model explains 75.34% of variance in saving behaviors.",
-    "84.3% of respondents were aged 26-31, and 58.8% used both digital and traditional banks."
-  ],
-  "summarization_metadata": {
-    "summarized_at": "2026-07-21T00:00:00Z",
-    "summarizer_model": "opencode/big-pickle",
-    "conversion_reference": {
-      "file": "Ataza et al_marked.md",
-      "converted_at": "2026-07-21T05:29:29Z",
-      "converter_tool": "markitdown"
-    }
-  }
+    "Interest rate variations explain 70.06% of variance in saving patterns, making it the dominant predictor among all factors tested.",
+    "Social aspects have a statistically significant negative effect on saving behavior, contrary to conventional expectations.",
+    "The combined regression model explains 75.34% of saving pattern variance across four predictor variables.",
+    "Psychological factors positively influence saving patterns, supporting the role of self-efficacy and financial confidence.",
+    "The study uses a small purposive sample of 51 Metro Manila millennials, limiting generalizability."
+  ]
 }

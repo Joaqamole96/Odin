@@ -1,162 +1,183 @@
 {
-  "paper_id": "10.1177/09746846251333451",
-  "designation": "india",
-  "title": "Transforming Financial Management Through AI and Machine Learning: An In-Depth Analysis of Investment Strategies and Budgeting Practices",
-  "authors": "Chahar, S.K.; Mahipalan, M.; Sharma, S.; Saini, D.",
+  "paper_id": "64caff97-a0e9-5303-9640-fdf9258389fe",
+  "designation": "international-algorithm-specific",
+  "title": "Artificial Intelligence Powered Personal Finance Management System",
+  "authors": "Chahar, P.; Vishwakarma, Y.K.; Mishra, R.; Paliwal, G.",
   "year": 2025,
-  "venue": "Global Business and Management Research",
-  "odin_topics": ["4.C", "7.A", "7.B", "11.A", "12.A"],
-  "tldr": "A comprehensive review of AI and ML applications in financial management covering investment strategies, budgeting, risk assessment, and fraud detection with case studies of major institutions.",
-  "problem_and_motivation": "Traditional financial management practices struggle with real-time data processing, personalized guidance, and adaptive risk management. The rapid growth of AI and ML presents opportunities to transform financial decision-making, but comprehensive analysis of their applications across investment and budgeting domains is needed.",
+  "venue": "Unknown",
+  "odin_topics": [
+    "3.A",
+    "3.B",
+    "4.A",
+    "4.B",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "8.A",
+    "10.A",
+    "10.B",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "An AI-powered personal finance management system combining Random Forest, SVM, and LSTM classifiers with a Flask-React web stack delivers automated expense categorization, predictive forecasting, and personalized budget recommendations, achieving high user satisfaction in preliminary evaluation.",
+  "problem_and_motivation": "Existing personal finance tools rely on static rule-based methods and offer generic guidance, failing to adapt to individual spending behaviors or diverse income streams.",
   "approach": [
-    "Conducted a comprehensive review of AI and ML applications in financial management.",
-    "Analyzed applications in algorithmic trading, robo-advisors, fraud detection, and risk assessment.",
-    "Reviewed case studies of major financial institutions including Betterment, Wealthfront, and PayPal.",
-    "Explored challenges including data privacy, algorithmic bias, and regulatory compliance.",
-    "Provided insights for financial institutions and professionals on AI integration."
+    "A modular system architecture integrates data collection, expense classification, predictive analytics, recommendation, NLP interface, and security modules.",
+    "Supervised ML algorithms including Random Forest, Support Vector Machine, and LSTM networks trained on labeled transaction datasets.",
+    "Feature engineering uses transaction metadata with TF-IDF and word embeddings for text vectorization.",
+    "Time series forecasting models including ARIMA and LSTM applied to predict future expenses and cash flow trends.",
+    "Technology stack combines React.js for frontend UI, Flask for backend ML operations, MongoDB for data storage, and Firebase for authentication.",
+    "Security measures include end-to-end encryption, role-based access control, anonymization during training, and GDPR compliance."
   ],
   "findings": [
-    "num: 73% of financial institutions are adopting AI by 2025.",
-    "num: 30% cost reduction and 20% revenue increase through ML-driven fraud detection.",
-    "num: 25% of financial advisory roles may be automated by 2025.",
-    "num: Betterment and Wealthfront use sophisticated algorithms for portfolio optimization and tax-loss harvesting.",
-    "num: PayPal reduced false positives in fraud detection by 50%.",
-    "num: JP Morgan's COiN platform processes 12,000 commercial credit agreements annually."
-  ],
-  "key_figures_tables": [
-    "Figure 1: AI and ML in budgeting and personal finance management with five key applications: AI-driven budgeting apps, enhanced data security, personalized insights, integration with financial tools, and automated investing.",
-    "Table 1: Comprehensive comparison of AI and ML roles in financial services spanning trading, robo-advisory, financial management, fraud detection, and risk assessment."
-  ],
-  "key_equations": [],
-  "definitions": [
-    {
-      "term": "AI",
-      "definition": "The simulation of human intelligence processes by machines, especially computer systems, including learning, reasoning, and self-correction."
-    },
-    {
-      "term": "ML",
-      "definition": "A subset of AI focused on building systems that learn from data to make decisions without explicit programming."
-    },
-    {
-      "term": "Robo-Advisor",
-      "definition": "An automated financial advisor that uses algorithms to provide personalized investment advice with minimal human intervention."
-    },
-    {
-      "term": "Algorithmic Trading",
-      "definition": "The use of computer algorithms to automatically execute trades based on predefined criteria."
-    },
-    {
-      "term": "Federated Learning",
-      "definition": "A distributed machine learning approach that trains algorithms across multiple decentralized devices while preserving data privacy."
-    }
+    "num: User survey yielded overall satisfaction rating of 4.4 out of 5 across financial management requirements.",
+    "Convenience of use received the highest user rating at 4.5 out of 5.",
+    "Goal-setting functionality received a user satisfaction score of 4.3 out of 5.",
+    "Transaction categorization correctness scored 4.2 out of 5.",
+    "System performed well for users with stable income but struggled with variable or irregular spending patterns.",
+    "Data quality directly impacted prediction accuracy."
   ],
   "citations": [
     {
-      "author": "Kapoor",
-      "year": 2024,
-      "page": 0,
-      "paragraph": 0,
-      "claim": "AI will be the biggest source of productivity gains in banking, adding up to $1 trillion in value annually.",
+      "author": "Siami-Namini",
+      "year": 2018,
+      "page": 3,
+      "paragraph": 5,
+      "claim": "ARIMA and LSTM networks have been applied to predict future expenses or cash flow trends.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cao",
+      "year": 2021,
+      "page": 4,
+      "paragraph": 4,
+      "claim": "Comprehensive examination of AI strategies classifying analytics and learning approaches supporting financial tasks.",
       "role": "context"
     },
     {
-      "author": "Syed",
-      "year": 2024,
-      "page": 0,
-      "paragraph": 0,
-      "claim": "Innovative financial technology solutions, including AI, are reshaping consumer behavior and financial service delivery.",
-      "role": "baseline"
+      "author": "Zhang",
+      "year": 2007,
+      "page": 3,
+      "paragraph": 3,
+      "claim": "Decision trees, SVMs, and neural networks categorize transactions based on descriptions and amounts with high accuracy.",
+      "role": "methodology"
     },
     {
-      "author": "Shankar",
-      "year": 2024,
-      "page": 0,
-      "paragraph": 0,
-      "claim": "AI-driven tools are enabling personalized financial services at an unprecedented scale.",
-      "role": "baseline"
-    },
-    {
-      "author": "Davenport",
+      "author": "Luef",
       "year": 2020,
-      "page": 0,
-      "paragraph": 0,
-      "claim": "The growing sophistication of AI and automation has sparked debate about the future of human work.",
-      "role": "context"
+      "page": 3,
+      "paragraph": 6,
+      "claim": "Collaborative filtering and content-based methods provide personalized saving tips and investment advice.",
+      "role": "baseline"
     },
     {
-      "author": "Al-Hussaeni",
-      "year": 2022,
-      "page": 0,
-      "paragraph": 0,
-      "claim": "Robo-advisors help optimize asset allocation and provide personalized investment recommendations.",
-      "role": "baseline"
+      "author": "Molina-Garcia",
+      "year": 2023,
+      "page": 4,
+      "paragraph": 3,
+      "claim": "University students risk tolerance and literacy were negatively correlated, supporting educational interventions.",
+      "role": "finding"
     }
   ],
   "topic_relevance": {
     "topics": [
       {
-        "code": "4.C",
-        "name": "FinTech Innovations and Digital Platforms",
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
         "relevance": "high",
-        "justification": "Comprehensive review of AI and ML innovations transforming financial services."
+        "justification": "Core focus on ML-based automated expense categorization using RF, SVM, and LSTM."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Systematic literature review of Mint, YNAB, Digit, Tally, and academic tools."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies gaps in adaptability, personalization, and privacy across current tools."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses ARIMA and LSTM for predicting future expenses and cash flow."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "References LSTM for sequential financial time series forecasting."
       },
       {
         "code": "7.A",
-        "name": "Rule-Based and AI-Driven Budgeting Systems",
-        "relevance": "high",
-        "justification": "Discusses AI-driven budgeting applications including automated budgeting, forecasting, and expense tracking."
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Discusses budgeting approaches and theoretical connections to spending biases."
       },
       {
         "code": "7.B",
-        "name": "AI and LLM-Based Budgeting and Spending Analysis",
-        "relevance": "high",
-        "justification": "Reviews ML algorithms for personalized financial insights and spending pattern analysis."
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Proposes personalized budget recommendations based on user behavior and goals."
       },
       {
-        "code": "11.A",
-        "name": "Chatbot-Based Financial Assistance",
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
         "relevance": "medium",
-        "justification": "Discusses robo-advisors and AI-driven chatbots for financial guidance."
+        "justification": "Addresses encryption, access control, anonymization, and GDPR compliance."
       },
       {
         "code": "12.A",
-        "name": "Financial Literacy and System Evaluation",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
         "relevance": "medium",
-        "justification": "Evaluates effectiveness of AI applications in improving financial outcomes."
+        "justification": "Evaluates system using accuracy, precision, MAE, and F1 metrics."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Evaluates classification and forecasting models across key functionalities."
       }
     ],
-    "contribution_to_field": "This paper provides a comprehensive review of AI and ML applications across the financial management spectrum, from investment strategies to budgeting practices. It synthesizes case studies of leading financial institutions and quantifies the impact of AI adoption. The paper highlights both the transformative potential and the challenges including data privacy, algorithmic bias, and regulatory compliance.",
+    "contribution_to_field": "Contributes a comprehensive modular system design integrating multiple AI capabilities including expense classification, predictive analytics, recommendation, and NLP into a single personal finance platform. Provides systematic literature review of existing AI-powered personal finance tools.",
     "directly_justifies": [
-      "AI and ML are transforming budgeting through automated categorization, forecasting, and personalized insights.",
-      "73% of financial institutions are expected to adopt AI by 2025.",
-      "ML-driven fraud detection achieves 30% cost reduction and 20% revenue increase."
+      "Machine learning algorithms such as decision trees, SVM, and neural networks categorize transactions with high accuracy.",
+      "Time series models including ARIMA and LSTM predict future expenses or cash flow trends.",
+      "Existing personal finance tools rely on static rules rather than adaptive learning models.",
+      "Consumer acceptability of AI finance tools varies significantly across demographics."
     ],
     "limits": [
-      "Review paper without original empirical research.",
-      "Focuses primarily on institutional finance rather than personal finance applications.",
-      "Rapid evolution of AI technology may quickly outdated specific findings."
-    ],
-    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 4 (Landscape of Existing Systems) is highly relevant through 4.C (FinTech Innovations) as the paper surveys AI/ML in finance. Domain 7 (Budgeting Strategies) is highly relevant through both 7.A (Rule-Based and AI-Driven Systems) and 7.B (AI and LLM-Based Analysis). Domain 11 (Personalized User Engagement) applies through 11.A (Chatbot-Based Assistance) via robo-advisors. Domain 12 (Evaluation Frameworks) applies through 12.A (Financial Literacy and System Evaluation). Other domains like 1-3, 8-10, 13, and 14 are less directly applicable."
+      "Preliminary prototype lacks quantitative experimental comparison against established baselines.",
+      "No specific dataset size or benchmark accuracy numbers are reported for classification models.",
+      "System adaptability is limited for users with irregular or fluctuating income streams.",
+      "Paper does not address the cold-start problem for new users without historical data.",
+      "Evaluation relies primarily on user surveys rather than rigorous algorithmic benchmarking."
+    ]
   },
   "limitations": [
-    "Synthesis paper without original experimental data collection.",
-    "Rapid pace of AI development may render specific statistics outdated quickly.",
-    "Limited focus on personal finance applications despite discussing budgeting AI.",
-    "Does not address implementation challenges for small-scale personal finance systems."
+    "No quantitative algorithmic benchmark results reported for the proposed classifiers.",
+    "No comparison against established baselines or state-of-the-art models for expense classification.",
+    "Evaluation relies primarily on user survey scores rather than rigorous algorithmic performance metrics.",
+    "Model adaptability is limited for users with irregular or fluctuating income streams.",
+    "Data quality dependency acknowledged as a factor impacting prediction accuracy."
   ],
   "remember_this": [
-    "73% of financial institutions expected to adopt AI by 2025.",
-    "ML-driven fraud detection achieves 30% cost reduction and 20% revenue increase.",
-    "Betterment and Wealthfront use algorithms for portfolio optimization and tax-loss harvesting.",
-    "PayPal reduced false positives in fraud detection by 50%.",
-    "Key challenges include data privacy, algorithmic bias, and regulatory compliance."
+    "System combines Random Forest, SVM, and LSTM classifiers for automated expense categorization.",
+    "User survey reported 4.4 out of 5 overall satisfaction with the proposed system.",
+    "Convenience of use scored highest at 4.5 out of 5 in user evaluation.",
+    "Model struggles with users having irregular or fluctuating income streams.",
+    "Security includes end-to-end encryption, role-based access, and GDPR compliance."
   ],
   "summarization_metadata": {
-    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarized_at": "2026-07-23T00:00:00Z",
     "summarizer_model": "opencode/big-pickle",
     "conversion_reference": {
       "file": "Chahar et al_marked.md",
-      "converted_at": "2026-07-21T05:14:50Z",
+      "converted_at": "2026-07-22T12:44:07Z",
       "converter_tool": "markitdown"
     }
   }

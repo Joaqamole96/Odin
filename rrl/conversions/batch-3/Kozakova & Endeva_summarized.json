@@ -5,106 +5,267 @@
   "authors": "Kozakova, N.L.; Endeka, M.H.",
   "year": 2025,
   "venue": "Problems of applied mathematics and mathematical modeling",
-  "odin_topics": ["8.A", "8.B", "6.A", "6.B", "7.B", "3.A", "4.A"],
-  "tldr": "Integrates k-NN, decision trees, ARIMA, LSTM, Isolation Forests, autoencoders, SVM, and LLMs into a modular personal finance management system achieving 91.2% classification accuracy and 6.8% MAPE for forecasting.",
-  "problem_and_motivation": "Traditional budgeting methods lack accuracy and adaptability for modern financial data complexity. AI technologies offer potential to transform personal finance management through automated analysis and optimization. Existing systems need integration of multiple AI approaches for comprehensive financial support.",
+  "odin_topics": [
+    "3.A",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "8.A",
+    "8.B",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "Presents an intelligent personal finance management system integrating supervised and unsupervised machine learning with LLMs for transaction classification, forecasting, anomaly detection, and personalized recommendations.",
+  "problem_and_motivation": "Traditional budgeting methods are insufficient for achieving the desired accuracy and adaptability due to growing financial data complexity. There is a need for intelligent systems that automate financial record-keeping, analysis, and optimization.",
   "approach": [
-    "Developed a two-level modular architecture with analytical computation and AI recommendation blocks.",
-    "Implemented k-NN and decision trees for transaction categorization using Euclidean distance and information gain.",
-    "Used ARIMA and LSTM models for expense forecasting with time series data.",
-    "Applied Isolation Forests, autoencoders, and SVM for anomaly detection in transactions.",
-    "Integrated matrix factorization and collaborative filtering for personalized recommendations.",
-    "Deployed LLMs to generate real-time textual advice based on aggregated financial activity.",
-    "Stored data in PostgreSQL with REST API for inter-module communication.",
-    "Tested system on dataset of 1000 transactions to evaluate performance.",
-    "Combined traditional statistical models with modern AI techniques in hybrid framework."
+    "Implements k-NN and decision trees for transaction classification.",
+    "Uses ARIMA and LSTM models for expense forecasting.",
+    "Applies autoencoders, Isolation Forest, and SVM for anomaly detection.",
+    "Generates personalized recommendations using collaborative filtering, matrix factorization, and LLMs.",
+    "Connects to banking APIs via OAuth2 and supports CSV data imports.",
+    "Stores data in a PostgreSQL database for scalable and reliable storage.",
+    "Implements a two-level modular architecture with REST API for inter-module communication.",
+    "System is implemented in Python using libraries like pandas, scikit-learn, tensorflow, and openai.",
+    "Generates analytical visualizations and textual recommendations.",
+    "Utilizes a locally deployed AI module for generating insights."
   ],
   "findings": [
-    "num: 91.2% classification accuracy achieved with k-NN and decision trees.",
-    "num: 6.8% Mean Absolute Percentage Error (MAPE) for ARIMA forecasting.",
-    "num: 5.4% MAPE for LSTM forecasting outperforming ARIMA.",
-    "num: 0.86 F1-score for anomaly detection using autoencoders and Isolation Forest.",
-    "num: 0.89 recommendation precision achieved.",
-    "LSTM outperformed ARIMA in expense forecasting accuracy.",
-    "Hybrid approach combining statistical and AI methods enhances system performance."
+    "num: Classification accuracy of 91.2% was achieved using k-NN and decision trees.",
+    "num: Mean Absolute Percentage Error (MAPE) was 6.8% for ARIMA and 5.4% for LSTM.",
+    "num: F1-score for anomaly detection was 0.86 using autoencoders and Isolation Forest.",
+    "num: Recommendation precision was 0.89.",
+    "Combining statistical models with modern AI techniques enhances the performance of personal finance management systems."
   ],
   "key_figures_tables": [
-    "Figure 1: Raw DataFrame of users' transactional data before preprocessing → shows data structure.",
-    "Figure 2: Processed DataFrame ready for model training → normalized and categorized data.",
-    "Figure 3: AI-generated feedback and recommendations → demonstrates LLM output."
+    "Figure 1: Raw DataFrame example → Shows pre-processing transaction data.",
+    "Figure 2: Processed DataFrame → Dataset normalized and ready for model training.",
+    "Figure 3: AI-generated feedback → Example of insights and recommendations for the user."
   ],
   "key_equations": [
-    {"equation": "$d(x,y) = \\sqrt{\\sum_{i=1}^{m} (x_i - y_i)^2}$", "explanation": "Euclidean distance for k-NN similarity measurement."},
-    {"equation": "$Gain(S,A) = Entropy(S) - \\sum_{v \\in Values(A)} \\frac{|S_v|}{|S|} Entropy(S_v)$", "explanation": "Information gain for decision tree attribute selection."},
-    {"equation": "$ARIMA(p,d,q)$", "explanation": "Auto Regressive Integrated Moving Average model."},
-    {"equation": "$LSTM: f_t = \\sigma(W_f \\cdot [h_{t-1}, x_t] + b_f)$", "explanation": "LSTM forget gate equation."},
-    {"equation": "$Loss(x,\\hat{x}) = \\frac{1}{n} \\sum_{i=1}^{n} (x_i - \\hat{x}_i)^2$", "explanation": "Autoencoder reconstruction loss."},
-    {"equation": "$f(x) = \\sum_{i=1}^{n} \\alpha_i y_i K(x_i, x) + b$", "explanation": "SVM decision function."}
+    {
+      "equation": "d(x, y) = \\sqrt{\\sum_{i=1}^{m} (x_i - y_i)^2}",
+      "explanation": "Euclidean distance for k-NN similarity."
+    },
+    {
+      "equation": "Gain(S, A) = Entropy(S) - \\sum_{v \\in Values(A)} \\frac{|S_v|}{|S|} Entropy(S_v)",
+      "explanation": "Information gain for decision tree splits."
+    },
+    {
+      "equation": "(1 - L)^d y_t = c + \\sum_{i=1}^{p} \\phi_i (1 - L)^d y_{t-i} + \\sum_{j=1}^{q} \\theta_j \\epsilon_{t-j} + \\epsilon_t",
+      "explanation": "ARIMA model for expense forecasting."
+    },
+    {
+      "equation": "f_t = \\sigma(W_f \\cdot [h_{t-1}, x_t] + b_f)",
+      "explanation": "LSTM forget gate equation."
+    },
+    {
+      "equation": "i_t = \\sigma(W_i \\cdot [h_{t-1}, x_t] + b_i)",
+      "explanation": "LSTM input gate equation."
+    },
+    {
+      "equation": "o_t = \\sigma(W_o \\cdot [h_{t-1}, x_t] + b_o)",
+      "explanation": "LSTM output gate equation."
+    },
+    {
+      "equation": "L(x) = \\frac{1}{n} \\sum_{i=1}^{n} (x_i - \\hat{x}_i)^2",
+      "explanation": "Reconstruction loss for autoencoder anomaly detection."
+    },
+    {
+      "equation": "f(x) = \\sum_{i=1}^{N_s} \\alpha_i y_i K(x_i, x) + b",
+      "explanation": "SVM decision function for anomaly detection."
+    }
   ],
   "definitions": [
-    {"term": "k-NN", "definition": "k-Nearest Neighbors algorithm for classification based on similarity."},
-    {"term": "ARIMA", "definition": "Auto Regressive Integrated Moving Average for time series forecasting."},
-    {"term": "LSTM", "definition": "Long Short-Term Memory neural network for sequence modeling."},
-    {"term": "SVM", "definition": "Support Vector Machine for classification and anomaly detection."},
-    {"term": "MAPE", "definition": "Mean Absolute Percentage Error metric for forecasting accuracy."},
-    {"term": "LLM", "definition": "Large Language Model for generating text recommendations."},
-    {"term": "OAuth2", "definition": "Open authorization protocol for secure API access."}
+    {
+      "term": "AI",
+      "definition": "Artificial Intelligence."
+    },
+    {
+      "term": "API",
+      "definition": "Application Programming Interface."
+    },
+    {
+      "term": "ARIMA",
+      "definition": "AutoRegressive Integrated Moving Average."
+    },
+    {
+      "term": "CSV",
+      "definition": "Comma-Separated Values."
+    },
+    {
+      "term": "GRU",
+      "definition": "Gated Recurrent Unit."
+    },
+    {
+      "term": "HDBSCAN",
+      "definition": "Hierarchical Density-Based Spatial Clustering of Applications with Noise."
+    },
+    {
+      "term": "LLM",
+      "definition": "Large Language Model."
+    },
+    {
+      "term": "LSTM",
+      "definition": "Long Short-Term Memory."
+    },
+    {
+      "term": "MAPE",
+      "definition": "Mean Absolute Percentage Error."
+    },
+    {
+      "term": "NLP",
+      "definition": "Natural Language Processing."
+    },
+    {
+      "term": "OAuth2",
+      "definition": "Open Authorization 2.0."
+    },
+    {
+      "term": "REST API",
+      "definition": "Representational State Transfer Application Programming Interface."
+    },
+    {
+      "term": "SVM",
+      "definition": "Support Vector Machine."
+    }
   ],
   "citations": [
-    {"author": "Mienye", "year": 2024, "page": 0, "paragraph": 0, "claim": "Deep learning models demonstrate high efficiency in financial analytics applications.", "role": "context"},
-    {"author": "Li", "year": 2023, "page": 0, "paragraph": 0, "claim": "Large language models show effectiveness in financial analytics and text processing.", "role": "context"},
-    {"author": "Kong", "year": 2025, "page": 0, "paragraph": 0, "claim": "LSTM and GRU algorithms demonstrate high efficiency in forecasting financial time series.", "role": "context"},
-    {"author": "Su", "year": 2024, "page": 0, "paragraph": 0, "claim": "Transformer architectures offer advantages for long-term financial time series forecasting.", "role": "context"},
-    {"author": "Li", "year": 2025, "page": 0, "paragraph": 0, "claim": "Hybrid models combining ARIMA with neural networks enhance forecasting performance.", "role": "context"},
-    {"author": "Afzal", "year": 2024, "page": 0, "paragraph": 0, "claim": "HDBSCAN successfully segments customers and detects anomalies in transaction data.", "role": "context"}
+    {
+      "author": "Mienye",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Discusses application of deep learning models in financial analytics.",
+      "role": "context"
+    },
+    {
+      "author": "Li",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Discusses application of LLMs in financial analytics.",
+      "role": "context"
+    },
+    {
+      "author": "Kong",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LSTM and GRU demonstrate high efficiency in forecasting financial time series.",
+      "role": "finding"
+    },
+    {
+      "author": "Su",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Transformer architectures show advantages for long-term forecasting.",
+      "role": "finding"
+    },
+    {
+      "author": "Li",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Hybrid models combine ARIMA with neural networks.",
+      "role": "methodology"
+    },
+    {
+      "author": "Afzal",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "HDBSCAN is used to segment customers and detect anomalies in transaction data.",
+      "role": "methodology"
+    }
   ],
   "topic_relevance": {
     "topics": [
-      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "high", "justification": "Core focus on detecting fraudulent transactions using multiple algorithms."},
-      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "high", "justification": "Uses Isolation Forests, autoencoders, and SVM for anomaly detection."},
-      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Implements ARIMA and LSTM for expense forecasting."},
-      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Compares ARIMA and LSTM for time series forecasting."},
-      {"code": "7.B", "name": "Budget Recommendation in Personal Finance Systems", "relevance": "medium", "justification": "Provides budget optimization recommendations via LLM."},
-      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "medium", "justification": "Implements transaction categorization using k-NN and decision trees."},
-      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "medium", "justification": "Discusses existing AI approaches in financial management."}
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "high",
+        "justification": "Proposes k-NN and decision trees for automatic transaction classification."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Uses ARIMA and LSTM for expense forecasting."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Evaluates ARIMA and LSTM on financial time series data."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "System aims to optimize budgets through analysis and recommendations."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Generates personalized recommendations for financial well-being."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core module for detecting unusual or fraudulent transactions."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Implements autoencoders, Isolation Forest, and SVM for this task."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Reports classification accuracy, MAPE, F1-score, and precision."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Provides quantitative metrics for different system components."
+      }
     ],
-    "contribution_to_field": "This paper contributes a comprehensive modular architecture for personal finance management that integrates multiple machine learning approaches. It demonstrates the effectiveness of combining traditional statistical methods like ARIMA with deep learning models like LSTM for financial forecasting. The system showcases how Isolation Forests, autoencoders, and SVM can be combined for robust anomaly detection in transaction data. The integration of LLMs for generating personalized financial recommendations represents an advancement in human-AI interaction for financial applications. The hybrid approach provides a framework for building adaptive financial systems that combine analytical precision with personalization.",
+    "contribution_to_field": "This paper contributes a comprehensive architecture for an AI-driven personal finance management system that integrates multiple machine learning paradigms. It provides a practical framework combining classical statistical methods, deep learning, and generative AI for automated financial analysis. The paper demonstrates the feasibility and performance of a hybrid system through empirical results on a sample dataset.",
     "directly_justifies": [
-      "Combining k-NN and decision trees achieves 91.2% classification accuracy for transactions.",
-      "LSTM forecasting achieves 5.4% MAPE outperforming ARIMA's 6.8% MAPE.",
-      "Autoencoders combined with Isolation Forest achieve 0.86 F1-score for anomaly detection.",
-      "Recommendation precision reaches 0.89 using matrix factorization and collaborative filtering.",
-      "LLM integration provides real-time textual advice based on aggregated financial activity."
+      "Combining traditional statistical models with modern AI techniques enhances performance of personal finance management systems.",
+      "The Smart Wallet prototype achieved 91.2% classification accuracy and an F1-score of 0.86 for anomaly detection.",
+      "LSTM outperformed ARIMA with a MAPE of 5.4% compared to 6.8%."
     ],
     "limits": [
-      "Testing limited to 1000 transactions dataset.",
-      "No comparison with other state-of-the-art anomaly detection methods.",
-      "Real-world deployment and user studies not evaluated.",
-      "LLM integration details and prompt engineering not fully described.",
-      "Privacy and security aspects beyond OAuth2 not discussed."
+      "The experimental dataset is limited to 1000 transactions, which may not represent real-world scale and diversity.",
+      "The paper does not detail the composition of the dataset or its representativeness, limiting generalizability."
     ],
-    "topic_mapping_rationale": "All topic domains were systematically scanned. The paper directly addresses anomaly detection (8.A, 8.B) and predictive modeling (6.A, 6.B) as core components, earning high relevance. Budget recommendation (7.B) and expense categorization (3.A) are implemented but secondary, earning medium relevance. The landscape discussion (4.A) provides context. Mobile UX (9.B) was considered but rejected as the paper mentions mobile interface without detailed design. Data privacy (10.A) was considered but only OAuth2 is mentioned. Financial behavioral profiles (5.A) were considered but not a primary focus. The paper primarily covers anomaly detection, forecasting, and recommendation generation in personal finance systems."
+    "topic_mapping_rationale": "A systematic scan across all topic domains revealed direct relevance to expense categorization, predictive modeling, anomaly detection, and budget recommendation. The paper's core contributions center on algorithmic methods for transaction classification (3.A), forecasting (6.A, 6.B), and anomaly detection (8.A, 8.B), with a clear application to budget recommendation (7.B). Topic 7.A was assigned medium relevance as budgeting strategies are implied but not formally defined. Evaluation topics (12.A, 12.B) were marked medium because the paper reports performance metrics but lacks a rigorous comparative evaluation. Domains related to culturally specific practices (2.A, 2.B), demographic specifics (1.A-C), mobile design (9.A-C), privacy (10.A-C), and engagement (11.A-B) were considered but rejected as the paper provides no content on these subjects, focusing instead on algorithmic architecture and initial performance validation."
   },
   "limitations": [
-    "Testing limited to 1000 transactions dataset.",
-    "No comparison with other state-of-the-art anomaly detection methods.",
-    "Real-world deployment and user studies not evaluated.",
-    "LLM integration details and prompt engineering not fully described.",
-    "Privacy and security aspects beyond OAuth2 not discussed."
+    "The dataset used for testing is limited to 1000 transactions. [unacknowledged]",
+    "The evaluation is performed on an undisclosed dataset, preventing replication or generalization. [unacknowledged]",
+    "The system's performance and personalization are not validated with real-world user studies. [unacknowledged]"
   ],
   "remember_this": [
-    "System combines k-NN, decision trees, ARIMA, LSTM, Isolation Forests, autoencoders, and SVM.",
-    "Achieves 91.2% classification accuracy and 5.4% MAPE with LSTM forecasting.",
-    "Anomaly detection reaches 0.86 F1-score using autoencoders and Isolation Forest.",
-    "LLM integration provides personalized textual recommendations for users.",
-    "Hybrid approach enhances performance over single-method systems."
+    "Smart Wallet integrates multiple AI methods for transaction classification, forecasting, and anomaly detection.",
+    "Classification accuracy reached 91.2% using k-NN and decision trees.",
+    "LSTM provided the best forecasting performance with a MAPE of 5.4%.",
+    "The system uses a locally deployed LLM to generate user-friendly text recommendations."
   ],
   "summarization_metadata": {
-    "summarized_at": "2026-07-21T08:29:03Z",
-    "summarizer_model": "opencode/big-pickle",
+    "summarized_at": "2026-07-21T14:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20260514",
     "conversion_reference": {
       "file": "Kozakova & Endeva_marked.md",
-      "converted_at": "2026-07-21T06:59:13Z",
+      "converted_at": "2026-07-21T13:50:42Z",
       "converter_tool": "markitdown"
     }
   }

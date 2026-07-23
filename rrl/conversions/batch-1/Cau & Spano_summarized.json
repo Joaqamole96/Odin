@@ -1,100 +1,154 @@
 {
   "paper_id": "10.1007/s11257-025-09438-0",
   "designation": "international",
-  "title": "Exploring the impact of explainable AI and cognitive capabilities on users' decisions",
+  "title": "Exploring the impact of explainable AI and cognitive capabilities on users decisions",
   "authors": "Cau, F.M.; Spano, L.D.",
   "year": 2026,
   "venue": "User Modeling and User-Adapted Interaction",
-  "odin_topics": ["8.A", "12.A", "10.A", "13.A"],
-  "tldr": "An experimental study with 310 participants in a loan management scenario found that users with low Need for Cognition (NFC) showed improved decision quality when provided with AI explanations, while high-NFC users were negatively impacted by explanations, and system understanding was unaffected by explanation type or NFC level.",
-  "problem_and_motivation": "As AI systems increasingly support or replace human decision-making, users often cannot evaluate outputs due to opaque algorithms. While explanations should help, prior work shows contradictory results—some studies find explanations improve user decisions while others find they can negatively impact them. The paper investigates how user personality traits (specifically Need for Cognition) moderate the relationship between AI explanation types and user decision quality.",
+  "odin_topics": [
+    "4.A",
+    "5.A",
+    "10.B",
+    "11.A",
+    "12.B"
+  ],
+  "tldr": "A user study with 288 participants found that high AI confidence increases reliance and reduces cognitive load, counterfactual explanations improve accuracy despite lower understandability, and Need for Cognition shows no significant effect on decision outcomes.",
+  "problem_and_motivation": "Most XAI research focuses on feature-based explanations with inconclusive evidence on their effectiveness. The benefits of alternative explanation styles such as rule-based and counterfactual explanations remain largely underexplored in high-stakes financial decision scenarios.",
   "approach": [
-    "Online survey with 310 participants simulating a loan management scenario with an AI assistant recommending loan accept or reject decisions.",
-    "Manipulated three explanation types: no explanations (NO), explanation of correct decisions (EXPH), and explanation including both correct and incorrect AI decisions (EXPHI).",
-    "Measured user Need for Cognition (NFC) using the adapted 18-item French instrument (fNCS), validated through PCA.",
-    "Assessed decision quality, system understanding (correctly answered questions about the classifier's decision logic), and user trust.",
-    "Conducted PCA, factorial ANOVA, and correlation analyses to test relationships between NFC, explanation type, decision quality, and system understanding."
+    "Conducted an online user study with 288 participants via Prolific, each completing 16 loan approval tasks across six AI assistance conditions.",
+    "Trained a Random Forest Classifier on the Loan Prediction Problem Dataset achieving 83% test accuracy, with confidence estimated via Shannon entropy.",
+    "Evaluated four explanation styles: example-based, feature-based (SHAP), rule-based (Anchors), and counterfactual (DiCE).",
+    "Used a mixed-factorial design with AI assistance as between-subjects factor and AI confidence and correctness as within-subjects covariates.",
+    "Applied mixed-effects logistic regression and Generalized Estimation Equations.",
+    "Used Friedman tests with Nemenyi post hoc analysis for ranked interface component importance."
   ],
   "findings": [
-    "Users with low NFC showed improved decision quality when provided with explanations explaining correct AI decisions, while high-NFC users showed worse decision quality with explanations.",
-    "System understanding was unaffected by both explanation type and Need for Cognition levels—users understood the AI system similarly regardless of explanations or personality.",
-    "Trust in the AI system showed mixed results: a one-way ANOVA found significant difference across explanation types (p=0.033), but a factorial ANOVA found no significant interaction with NFC.",
-    "The correlation between system understanding and decision quality was stronger (r=0.28, p<0.001) than the correlation between understanding and trust (r=0.19, p=0.001).",
-    "No significant correlation was found between trust and decision quality (r=-0.002, p=0.972), suggesting users can distinguish between trusting an AI and relying on its recommendations."
-  ],
-  "key_figures_tables": [
-    "Figure 1: Conceptual model of the relationships among need for cognition, trust, decision quality, system understanding, and explanation of AI decision-making.",
-    "Figure 2: Interface of the web application for user study showing loan proposal with AI recommendation panel and explanation options.",
-    "Table 1: Comparison of PCA components from French et al. (2011) original study versus this study's adapted NFC validation, showing aligned component structure.",
-    "Table 2: Post-hoc power analysis comparing the three explanation groups, showing 89.8% power to detect medium effect sizes."
-  ],
-  "key_equations": [
-    {
-      "equation": "Decision Quality = (number of correctly aligned decisions) / (number of decisions)",
-      "explanation": "Quantifies how often a user's decision matches the correct ground truth for each loan proposal."
-    }
-  ],
-  "definitions": [
-    {"term": "Need for Cognition (NFC)", "definition": "A personality trait describing an individual's tendency to enjoy and engage in effortful cognitive activities, measured via the French Need for Cognition Short scale."},
-    {"term": "Decision Quality", "definition": "The proportion of decisions a user makes that align with ground truth labels, measuring how accurately users make decisions."},
-    {"term": "System Understanding", "definition": "The degree to which users comprehend the AI classifier's decision logic, measured through correctly answered comprehension questions."},
-    {"term": "Explanation Type", "definition": "The level of information provided about AI decisions: no explanations, explanations of correct decisions only, or explanations including both correct and incorrect decisions."},
-    {"term": "Explainable AI (XAI)", "definition": "AI systems designed to provide transparent, interpretable outputs that help users understand the reasoning behind AI decisions."},
-    {"term": "Algorithmic Aversion", "definition": "A tendency for people to prefer human judgment over algorithmic decisions, even when the algorithm performs better, influenced by trust and perceived control."},
-    {"term": "Human-in-the-Loop", "definition": "A design approach where human users participate in decision-making alongside AI systems, potentially benefiting from explanations of AI decisions."},
-    {"term": "Loan Management Scenario", "definition": "The experimental task where users decided whether to accept or reject loan proposals with AI recommendations, simulating real financial decision-making."}
+    "num: High AI confidence significantly increased reliance on AI (Log-Odds = 1.22, p < .01) while reducing cognitive load (Log-Odds = -0.41, p < .01).",
+    "Feature-based explanations did not improve accuracy compared to other AI assistance conditions.",
+    "num: Counterfactual explanations increased overall accuracy (Log-Odds = 0.87, p = .0015) despite being rated as less understandable.",
+    "num: Counterfactual explanations interacting with correct AI predictions increased reliance and reduced cognitive load.",
+    "Both low and high NFC participants prioritized loan attributes first, explanations second, and AI information third.",
+    "num: No significant differences between low and high NFC participants in accuracy or cognitive load.",
+    "num: 288 participants showed low familiarity with loan approval tasks (mean 1.83 on 5-point scale)."
   ],
   "citations": [
-    {"author": "Cau", "year": 2023, "page": 0, "paragraph": 0, "claim": "Explaining the decisions of AI systems helps users assess trustworthiness, understand system functioning, and detect errors.", "role": "context"},
-    {"author": "Choudhury", "year": 2020, "page": 0, "paragraph": 0, "claim": "The growing influence of AI systems has sparked increasing concern for the adoption of systems that support human decision-making and provide explanations.", "role": "context"},
-    {"author": "Logg", "year": 2019, "page": 0, "paragraph": 0, "claim": "People often prefer algorithmic advice over their own judgment (algorithm appreciation) but can be averse to algorithmic advice when their decisions are being supervised (algorithmic aversion).", "role": "context"},
-    {"author": "Yeomans", "year": 2019, "page": 0, "paragraph": 0, "claim": "Explanations can lead people to discount advice provided by algorithms, negatively impacting decision quality through reflective effort.", "role": "context"},
-    {"author": "French", "year": 2011, "page": 0, "paragraph": 0, "claim": "Developed and validated the French Need for Cognition Short scale (fNCS), an 18-item instrument measuring NFC with high reliability.", "role": "methodology"},
-    {"author": "Cummings", "year": 2004, "page": 0, "paragraph": 0, "claim": "Trust, reliance, and human decision-making performance are interconnected concepts where users may choose not to follow recommendations even when trusting the system.", "role": "context"},
-    {"author": "Dietvorst", "year": 2015, "page": 0, "paragraph": 0, "claim": "People are more averse to algorithmic advice when they believe they are responsible for its outcomes, affecting trust and decision quality.", "role": "context"}
+    {
+      "author": "Zhang",
+      "year": 2020,
+      "page": 5,
+      "paragraph": 2,
+      "claim": "People were more likely to follow AI predictions when confidence was higher.",
+      "role": "finding"
+    },
+    {
+      "author": "Buccinca",
+      "year": 2020,
+      "page": 5,
+      "paragraph": 1,
+      "claim": "Participants with AI predictions provided more accurate answers than those without AI assistance.",
+      "role": "finding"
+    },
+    {
+      "author": "Buccinca",
+      "year": 2021,
+      "page": 8,
+      "paragraph": 4,
+      "claim": "High NFC participants performed better but trusted cognitive forcing functions less than simple XAI approaches.",
+      "role": "finding"
+    },
+    {
+      "author": "Chen",
+      "year": 2023,
+      "page": 7,
+      "paragraph": 2,
+      "claim": "Example-based explanations improved accuracy when AI predictions were correct; feature-based increased overreliance when wrong.",
+      "role": "finding"
+    },
+    {
+      "author": "Lundberg",
+      "year": 2017,
+      "page": 13,
+      "paragraph": 3,
+      "claim": "SHAP explains predictions by computing Shapley contribution of each feature.",
+      "role": "methodology"
+    },
+    {
+      "author": "Mothilal",
+      "year": 2020,
+      "page": 15,
+      "paragraph": 1,
+      "claim": "DiCE generates counterfactual explanations emphasizing diversity and actionable changes.",
+      "role": "methodology"
+    }
   ],
   "topic_relevance": {
     "topics": [
-      {"code": "8.A", "name": "Real-time Analytics and Decision Support for Personal Finances", "relevance": "high", "justification": "Directly addresses AI-assisted financial decision-making in a loan scenario with explanations affecting user decisions and trust."},
-      {"code": "12.A", "name": "User Experience Design for Financial Management Tools", "relevance": "high", "justification": "Provides evidence on how explanation design and user personality traits affect interaction quality with financial AI tools."},
-      {"code": "10.A", "name": "Financial Behavior Pattern Recognition", "relevance": "medium", "justification": "Discusses user decision patterns, trust, and reliance on AI recommendations, relevant to understanding financial behavior."},
-      {"code": "13.A", "name": "AI-based Personalization for Financial Services", "relevance": "medium", "justification": "Demonstrates how personality traits moderate explanation effectiveness, supporting personalized financial AI design."},
-      {"code": "12.B", "name": "Gamification and Engagement Mechanics in Financial Apps", "relevance": "low", "justification": "Provides insights on user engagement through explanations that could inform gamification elements in financial apps."}
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Studies reliance and trust on AI predictions in high-stakes financial decisions."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Evaluates Random Forest classifier and systematically compares four XAI methods."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Uses loan approval scenario as financial AI decision task."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "low",
+        "justification": "Examines NFC personality trait affecting financial decision behavior with AI assistance."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "low",
+        "justification": "Analyzes user engagement with XAI interface elements and information prioritization."
+      }
     ],
-    "contribution_to_field": "This paper makes a novel contribution by demonstrating the moderating role of Need for Cognition in the relationship between AI explanations and decision quality. The finding that explanations help low-NFC users while hurting high-NFC users challenges the assumption that more explanations are always better. The discovery that system understanding remains constant regardless of explanations or NFC levels provides important design implications for personalizing financial AI interfaces.",
+    "contribution_to_field": "Contributes to the Explainable AI field by conducting a comprehensive user study comparing four explanation styles in a high-stakes financial decision scenario. Demonstrates that counterfactual explanations, despite lower perceived understandability, can improve user accuracy and reduce cognitive load.",
     "directly_justifies": [
-      "User personality traits (NFC) moderate the effectiveness of AI explanations for financial decision-making.",
-      "Low-NFC users benefit from explanations of correct AI decisions for loan accept/reject decisions.",
-      "High-NFC users may be negatively impacted by explanations, suggesting personalized explanation strategies.",
-      "System understanding can exist independently of trust, enabling users to distinguish between trusting and relying on AI."
+      "High AI confidence significantly increases user reliance on AI predictions while reducing cognitive load.",
+      "Counterfactual explanations improve overall user accuracy despite being rated as less understandable.",
+      "Feature-based explanations do not enhance accuracy compared to other AI assistance conditions.",
+      "No significant differences exist between low and high NFC individuals in accuracy or cognitive load.",
+      "Both low and high NFC participants prioritize explanations after loan attributes, with AI information as least important."
     ],
     "limits": [
-      "The loan scenario used only 10 proposals, limiting statistical power for detecting smaller effects.",
-      "The study was conducted as an online survey with primarily student participants, limiting generalizability.",
-      "Trust was measured through a single question rather than a validated multi-item instrument.",
-      "The explanation types did not include explanations of incorrect decisions in a comprehensive manner."
-    ],
-    "topic_mapping_rationale": "The systematic topic scan identified domain 8 (Real-time Analytics and Decision Support) as high relevance because the paper directly studies AI-assisted financial decision-making in a loan scenario, measuring how explanations affect decision quality and trust. Domain 12 (User Experience Design) received high relevance for demonstrating how explanation design and personality traits should inform UI personalization. Domain 10 (Financial Behavior Pattern Recognition) received medium relevance for analyzing user decision patterns and reliance on AI. Domain 13 (AI-based Personalization) received medium relevance for showing NFC moderates explanation effectiveness, supporting personalized design. Domain 12B (Gamification) received low relevance for insights on engagement through explanations. Domains 1-7, 9, 11, 14 were considered and rejected as the paper does not address financial time series, budgeting, spending tracking, credit scoring models, or long-term financial management specifically."
+      "AI model used uncalibrated confidence estimates.",
+      "One-stage detection paradigm may restrict ability to disentangle independent reasoning from AI reliance.",
+      "Findings limited to a single financial domain with low participant familiarity.",
+      "Generalizability concerns regarding specific dataset, classification model, confidence thresholds, and explanation methods."
+    ]
   },
   "limitations": [
-    "Limited to a binary accept/reject loan scenario that may not reflect the complexity of real financial decisions.",
-    "Trust measurement relied on a single question rather than a validated multi-item trust scale.",
-    "The study population was predominantly students, potentially not representative of diverse financial service users.",
-    "The study did not examine long-term effects or repeated interactions with the AI system."
+    "AI model used uncalibrated confidence estimates, which may have affected confidence-based explanations and user decisions.",
+    "One-stage detection paradigm may restrict the ability to disentangle users independent reasoning from AI reliance.",
+    "Findings limited to a single financial domain with low participant familiarity and may not generalize to expert users.",
+    "Generalizability concerns regarding specific dataset, classification model, confidence thresholds, and explanation generation methods.",
+    "Only Need for Cognition personality trait was examined, while other traits like AI literacy may better capture individual differences."
   ],
   "remember_this": [
-    "Users with low Need for Cognition show improved decision quality when provided with explanations of correct AI decisions.",
-    "High-NFC users may experience decreased decision quality when provided with explanations, suggesting explanations are not universally beneficial.",
-    "System understanding is independent of both explanation type and Need for Cognition level.",
-    "Trust and decision quality are not correlated (r=-0.002), suggesting users can distinguish between trusting an AI and relying on its outputs.",
-    "Personalizing explanation strategies based on user personality traits is important for financial AI design."
+    "High AI confidence increases reliance on AI and reduces cognitive load in financial decisions.",
+    "Counterfactual explanations improve accuracy despite being perceived as less understandable.",
+    "Feature-based explanations do not outperform other explanation styles for user accuracy.",
+    "NFC personality trait shows no significant effect on decision outcomes in complex tasks.",
+    "XAI interface design should consider confidence calibration and hybrid explanation approaches."
   ],
   "summarization_metadata": {
-    "summarized_at": "2026-07-21T00:03:00Z",
+    "summarized_at": "2026-07-23T00:00:00Z",
     "summarizer_model": "opencode/big-pickle",
     "conversion_reference": {
       "file": "Cau & Spano_marked.md",
-      "converted_at": "2026-07-21T05:24:31Z",
+      "converted_at": "2026-07-22T12:42:19Z",
       "converter_tool": "markitdown"
     }
   }

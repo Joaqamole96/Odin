@@ -1,13 +1,2671 @@
 ---
 conversion_metadata:
-  converted_at: "2026-07-21T06:47:49Z"
+  converted_at: "2026-07-21T13:41:58Z"
   converter_tool: "markitdown"
   converter_version: "0.1.6"
   source_pdf: "Kashif & Naseer.pdf"
   source_pdf_sha256: "c778cf2223723a68306bde49caeb55907434ad314446c13e7fc7b53399f93146"
   page_count: 20
-  markdown_char_count: 86269
+  markdown_char_count: 148866
 ---
+
+<!-- PAGE-AWARE EXTRACTION (via pdfminer.six) -->
+
+<!-- PAGE 1 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+COMPREHENSIVE ANALYSIS OF FRAUD DETECTION PREVENTION
+SYSTEMS FOR ACCURACY AND EFFICACY
+
+Hasnain Kashif*1, Fawad Naseer 2
+
+*1Computer Science Department, University of South Asia, Lahore, 54000, Pakistan;
+2Department of Computer Science and Software Engineering, Beaconhouse International College, Pakistan
+
+*1hasnain.kashif@usa.edu.pk, 2fawad.naseer@bic.edu.pk
+
+DOI: https://doi.org/10.5281/zenodo.15081246
+
+Keywords
+Fraud Detection, Prevention
+System, System Accuracy, System
+Efficacy, Artificial Intelligence
+
+Article History
+Received on 18 February 2025
+Accepted on 18 March 2025
+Published on 25 March 2025
+
+Copyright @Author
+Corresponding Author: *
+
+Abstract
+Financial fraud, waste, and abuse cost global economies an estimated $5.4
+trillion annually, with digital payment platforms experiencing unprecedented
+vulnerability. This study presents a systematic evaluation of contemporary fraud
+detection and prevention systems across major financial institutions, analyzing
+their accuracy, efficacy, and scalability in high-volume transaction environments.
+The mixed-methods approach combined quantitative performance metrics from
+financial institutions with qualitative assessments from cybersecurity specialists to
+evaluate detection algorithms across four dimensions: detection accuracy (false
+efficiency, adaptability to emerging
+positive/negative rates),
+computational
+threats, and implementation feasibility. Results demonstrate
+that hybrid
+approaches combining supervised machine learning with unsupervised anomaly
+detection achieved superior performance (92.7% detection accuracy) compared to
+traditional rule-based systems (78.3%). Notably, models integrating graph-based
+network analysis with deep learning techniques showed particular promise in
+identifying sophisticated organized fraud schemes, reducing false positives by 34%
+while increasing true positive rates by 27% compared to standalone approaches.
+The rise of cloud computing and mobile transactions has fundamentally altered
+the fraud landscape, requiring detection systems that can process and analyze real-
+time streaming data at unprecedented scale. The comprehensive classification
+framework categorizes existing detection systems based on algorithmic approach,
+fraud typology, and quantitative performance metrics across diverse financial
+contexts. The study identify critical challenges
+implementations,
+including the increasing sophistication of adversarial attacks, computational
+constraints in real-time environments, and the dynamic nature of fraudulent
+behaviors. Based on our findings, we propose a next-generation architectural
+framework for financial fraud detection that emphasizes real-time adaptability,
+explainable AI components, and cross-institutional collaboration, potentially
+reducing overall fraud losses by an estimated 41% when implemented at scale.
+
+in current
+
+INTRODUCTION
+In today’s era, fraud is very common in all aspects of
+intentional unlawful
+life. Fraud refers
+in an
+exploitation of a system that outcomes
+
+to the
+
+oblivious entity's injury. Financial fraud includes the
+exploitation of
+too
+deficient to maintain financial resources, which is
+
+that are
+
+financial
+
+systems
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 382
+
+---
+
+<!-- PAGE 2 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+scan
+
+blessings
+
+competed
+
+the maximum outstanding money. However,
+different damages along with a lacking condition are
+possible. Fraud, waste, and abuse in lots of financial
+systems wait to provoke massive annual losses in the
+billions of US dollars. Robbing a bank with a gun
+has now turned out
+to be obsolete. Now the
+fraudster devotes theft simply with the aid of using
+seating at their home. Frauds are one of the big
+challenges for the finance industry. Credit card fraud
+is the maximum not unusual place sort of fraud and
+as per the report, 270,000 instances had been
+reported in 2019 [1]. Some research proposes that in
+the USA on my own a lack of 17-billion-dollar credit
+card fraud turned into associated. There have been
+1,387,615 reports of identification robbery in 2020.
+According to this scam viewpoint, the year 2020 can
+be the nastiest year on the highest
+rank. The
+numbers of identification robberies ascended and
+fecund
+authorities
+throughout the epidemic [2].
+Financial fraud is a difficulty that has huge attaining
+effects on the finance industry and everyday life.
+Fraud can lessen self-belief in industry, destabilize
+economies, and affect an effect on people's value of
+living. Traditional methods of
+trusted manual
+techniques including auditing might be inefficient
+the
+and unreliable because of
+problem. Data mining-primarily based methods had
+been proven to be beneficial because of their capacity
+to discover small anomalies in huge facts sets [3].
+There are several kinds of frauds and different kinds
+of data mining methods which are under research to
+get the best optimum.
+Financial fraud is an extensive term with diverse
+capability meanings, however, for our purposes, it
+may be described because of the intentional use of
+unlawful strategies to acquire financial gain [4].
+Fraud has a massive terrible effect on business and
+society: credit score card fraud on my debts for
+billions of dollars of misplaced revenue every year [5],
+and a few figures propose that the overall every year
+price to the U.S. could be an extra $400 billion [6].
+At the same time, the research indicates that UK
+insurers are out 1.6 billion pounds a year because of
+fraudulent claims [7]. Financial fraud additionally
+has broader ramifications for the industry, which
+includes offering investment for illicit activities like
+drug trafficking and organized crime [5]. For credit
+
+the difficulty of
+
+card approval,
+
+score card fraud, the price is typically worn through
+the merchants, who emerge as paying shipping,
+chargeback, and administrative costs in addition to
+dropping patron self-belief after being a sufferer to a
+fraudulent transaction [8]. In this manner, we will
+see the huge effects that fraud will have and the
+significance of reducing it.
+Advancements in current technology along with the
+internet and cellular computing have caused a
+growth in financial fraud in the latest years [9]. Social
+elements such as the improved distribution of credit
+score playing cards have improved spending however
+additionally led to a growth in fraud [10]. Fraudsters
+are usually refining their strategies, and as such there
+may be a demand for detection strategies which will
+evolve accordingly [5]. Data mining has already been
+proven to be beneficial in comparable domain names
+along with credit
+bankruptcy
+prediction, and evaluation of percentage markets [11].
+Fraud detection is taken into consideration to be
+comparable class trouble however with a tremendous
+imbalance in fraudulent to valid transactions, and a
+widespread distinction in value for misclassifying
+them [12]. Data mining methods also are relevant to
+fraud detection of her performance at processing big
+datasets and their capacity to paintings without
+requiring information of the input variables [13].
+A beneficial framework for making use of records
+mining for fraud detection is to apply it as a method
+for classifying suspicious transactions or samples for
+similar consideration. Studies display that reviewing
+2% of credit score card transactions should lessen
+fraud losses to 1% of the whole price of all purchases,
+with extra exams ensuing in smaller losses, however
+with growth in auditing costs. A multilayer pipeline
+technique can be used with every step making use of
+an extra rigorous technique to discover fraud. Data
+mining can be utilized to efficaciously clear out extra
+apparent fraud instances withinside the preliminary
+levels and go away the extra diffused ones to be
+reviewed manually [8].
+extensive
+In this project, we
+terminologies which can be described for clarity.
+Data mining refers to any technique that approaches
+huge portions of data to derive an underlying
+meaning. Within this category, we cannot forget
+classes of data mining: statistical and computational.
+We outline the statistical strategies as the ones which
+
+can use
+
+some
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 383
+
+---
+
+<!-- PAGE 3 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+that
+
+techniques,
+
+consisting of
+
+can be primarily based totally on traditional
+mathematical
+logistic
+regression and Bayesian theory. Computational
+techniques are the ones which use present-day
+intelligence techniques, such as neural networks and
+assist vector machines. Though those classes share
+many similarities, we cannot forget that the principal
+computational
+distinction among them is
+techniques can study from and adapt to the problem
+domain, even as statistical techniques are extra rigid.
+Both forms of data mining may be researched in this
+project.
+Financial
+institutions attempt many strategies to
+protect against fraud. But fraudsters are very adaptive
+to these strategies, over time they find out how to
+conquer those protective models. Fraudsters are very
+smart and rapid learners. Precisely, we will say that
+the exceptional strategies carried out with the aid of
+using financial institutions for fraud detection fail
+and fraud continues. Development
+in the new
+technology era in artificial intelligence and machine
+learning is gambling vital function in detecting and
+stopping fraud.
+
+financial
+
+classification of
+
+The objective of this project is to deliver an existing
+literature review in financial fraud detection and
+compare their findings. The focus of this project is
+on the reported performance of detection techniques
+for specific fraud types and focus on the systems and
+tools for security provisions. Some mathematical
+equations are formalized and analyzed. This will
+provide a clear indication to future researchers in
+that given field and discuss the improvement.
+The
+fraud has not
+established an agreement since the kinds of financial
+research
+fraud are diverse and increasing. This
+proposes
+categorization
+financial
+methodology based on the main financial institution
+involved. Securities and commodity fraud, as well as
+financial statement fraud, are examples of securities
+fraud. Mortgage fraud, loan default, credit card fraud,
+and money laundering are just a few examples of
+include e-commerce
+bank-related scams. Others
+and
+transaction fraud, mass marketing
+unlawful
+include
+health care fraud, automotive insurance fraud,
+corporate insurance fraud, and so on. Figure 1 shows
+the categorization framework.
+
+fund-raising.
+
+Insurance
+
+fraud,
+
+scams
+
+fraud
+
+a
+
+Figure 1: Classification of Financial Institution and its types
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 384
+
+---
+
+<!-- PAGE 4 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+fraudsters
+
+the threats
+
+sufferers of
+
+Literature Review
+
+from a distance. This
+
+I.
+Fraud is a standard phrase for the unlawful use of
+a system to attain a few benefits, typically ensuing
+in damage to any other person. Frauds are
+numerous in addition to fraud methods. Financial
+fraud is fraud inside the financial industry that
+typically includes money. The financial industries
+fraudulent
+had been the major
+activities. According to [14], billions or likely
+trillions of US bucks had been misplaced to
+coverage fraud. The proliferation of internet use
+has made it less complicated to speak and join
+from a distance. It has additionally made it less
+to goal economic
+complicated for
+similarly
+establishments
+complicates
+to protection systems;
+accordingly, fraud prevention and detection are
+essential troubles for all financial institutions. By
+many estimates, a minimum of 10 per cent of
+coverage enterprise payments are for fraudulent
+claims and the worldwide sum of those fraudulent
+payments quantities to billions or likely trillions of
+bucks. Fraud prevention refers to all measures
+installed region to protect fraud from happening,
+even as Fraud detection refers to mechanisms to
+hit upon Fraud while prevention fails, [15]. A vital
+their
+requirement
+precision. Much situation is given to enhancing
+the precision of such systems. Detection systems,
+on the opposite hand, want
+to evolve to the
+consistent evolution of threats. Therefore, further
+to feasible predictiveness, Fraud detection systems
+want
+to be adaptive. An associated situation
+typically classified below feasible predictiveness is
+the time required to locate fraudulent transactions.
+Certain structures
+to real-time
+close
+require
+indicators of suspicious transactions.
+Prior research has already been done on a few
+factors of smart financial fraud detection. Initial
+fraud detection research targeted closely statistical
+models including logistic regression, in addition to
+neural networks [16], [17]. The researchers located
+that neural networks were used for
+financial
+programs including forecasting because 1988 [18].
+In 1995,
+anticipated financial
+the usage of a back-
+declaration fraud was
+propagation neural community [19]. In this paper,
+a
+techniques
+they
+
+for preventive
+
+the primary
+
+throughout
+
+compared
+
+systems
+
+is
+
+techniques
+
+they reviewed the look at
+
+statistical and
+quantitative spectrum such as
+computational
+including regression
+and neural networks [20]. In 1998, researchers
+used a neural community primarily based totally
+on different
+financial ratios and variables and
+discovered it compared favourably to discriminant
+evaluation and logistic regression [21]. In 2001 and
+2002, they have done a few trendy evaluations on
+focusing mainly on statistical
+fraud detection,
+[23], and investigated financial
+learning [22],
+declaration fraud in depth [24]. Recent
+fraud
+detection studies have been some distance extra
+numerous in strategies studied, even though the
+previous techniques are nevertheless popular. In
+trendy fraud
+2004,
+detection through the usage of analytic techniques
+such as neural networks [25]. In this paper, they
+investigated a unique technique the usage of the
+game principle in 2005, which modelled fraudsters
+and detection techniques as opposing gamers in a
+sport, every striving to achieve the best financial
+advantage [26]. They studied healthcare fraud
+through the usage of a system mining technique
+[27].
+In 2007,
+they studied logistic regression with
+coverage fraud, targeting a database of Spanish car
+coverage claims [28], [29]. Researchers as compared
+statistical strategies with neural networks to pick
+out fraudulent Greek production organizations [6]
+and targeted class and regression trees to remedy
+financial declaration fraud in a choice of Chinese
+organizations
+in 2007 delivered a
+genetic set of rules on Accounting and Auditing
+Enforcement Releases to come across fraudulent
+organizations in the US [17] and evaluate present
+fraud detection literature. They claimed that the
+most effective hit strategies of fraud detection to
+in addition to the maximum generally
+date,
+researched, have been class-primarily based totally
+[16]. Researchers used decision trees to look at
+financial declaration fraud for a choice of Chinese
+in 2008 [31]. They took a statistical
+groups
+technique to cover fraud detection, the usage of
+the equal samples that have been used previously
+[32]. Both researchers checked out visualizing
+credit score card fraud with self-organizing maps,
+that specialize in real-global samples from the
+Singaporean department of a global bank [8]. They
+
+[30]. Also,
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 385
+
+---
+
+<!-- PAGE 5 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+et
+
+to
+
+to
+
+and
+
+pick
+
+studied
+
+probable
+
+synthetic
+
+personnel
+
+changed the usual
+immune system
+technique with a coevolutionary technique, the
+usage of it to remedy transactional fraud with the
+automated teller and point-of-sale information for
+a financial organization [33].
+In 2009, applied a combination of text mining and
+Bayesian perception networks
+out
+dedicate
+disgruntled
+company fraud [34]. This paper mixed a Dempster-
+Schaefer adder with a Bayesian learner to remedy
+credit
+score card fraud with their very own
+al.
+synthesized information [11]. Sánchez
+targeted credit score playing cards supplied with
+the aid of using a multinational branch store, and
+the usage of self-organizing maps to cluster and
+visualize fraudulent patterns [10]. In this newsletter,
+they as compared help vector machines with
+decision trees in fixing credit score card fraud, with
+a focal point on aggregating not unusual place
+transactional variables to create new inputs [35]. In
+2010,
+Auditing
+Accounting
+Enforcement Releases (AAER) with their very own
+textual content mining and help vector device
+hybrid to are expecting economic declaration fraud
+in US groups [36].
+In 2011, as compared the capacity of
+logistic
+regression, help vector machines, and random
+forests on a massive pattern of credit score card
+to pick out which have been
+transactions
+fraudulent
+[7]. Both researchers mixed the
+strengths of genetic algorithms and scatter seek to
+create their very own hybrid technique. They used
+to tune customer spending with a massive
+it
+the
+Turkish bank, as a resource to predict
+incidence of credit score card fraud [11]. In this
+paper, they created text-mining hybrids with the
+aid of using making use of different not unusual
+place strategies to behave because of the classifier.
+With a help vector machine, decision tree, and
+Bayesian belief network they
+controlled to
+effectively perceive fraud in the company’s 10-K
+report filings [37]. Both researchers additionally
+studied sections of 10-K files
+for US groups
+recognized to be fraudulent, processing the text
+with a novel validation decomposition vector to
+[38]. They carried out
+categorize the samples
+system mining to the inner logs created with the
+aid of using a European financial institution to
+
+they
+
+logistic
+
+checked out
+
+come across company fraud [39] and did a huge
+evaluation of present fraud detection [7]. Also, in
+2011, as compared a massive variety of techniques
+financial declaration fraud inside
+to discover
+to helping
+Chinese organizations. In addition,
+vector machines,
+genetic
+programming,
+regression, organization
+technique of information handling, and a lot of
+neural networks [13]. This newsletter created a
+universal framework for financial declaration fraud
+detection through the usage of response floor
+methodology [4], then in 2012 with the aid of
+using making use of an artificial immune system to
+expect credit
+score card fraud for a first-rate
+Australian bank [40].
+In 2013 Huang investigated financial declaration
+fraud in a chain of Taiwanese organizations
+through the usage of logistic regression and a help
+vector machine [41]. Both scientists took an extra
+direct technique and targeted the litigation phase
+of
+the Securities and Exchange Commission
+website, making use of their very own text-mining
+set of rules to categorize financial declaration fraud
+[42]. In this paper, they studied the capacity of
+decision trees to pick out fraudulent credit score
+card transactions, and the usage of a six-month
+In 2014
+pattern from a first-rate bank [43].
+researchers used text mining to look at AAERs for
+Chinese groups that have been buying and selling
+publicly in the US [44]. researcher visualized credit
+scorecard fraud with self-organizing maps, focusing
+most effectively on accounts held with the aid of
+using citizens of Warsaw, Poland [45] researchers
+applied an artificial immune system to pick out
+credit scorecard fraud for a nameless Brazilian
+bank [46] and investigated the prevailing kingdom
+of fraud detection studies [47].
+are
+In 2015,
+mentioned for fraud detection, which is based on
+the kind of consumer clustering and for every
+cluster representing a certain kind of consumer,
+the system could have distinct behaviour. Finally,
+also studied through a decision tree set of rules
+and a neural network model. Models can extract
+associated with consumer
+numerous policies
+the
+chosen withinside
+behaviour which are
+corresponding table and have a chance per cent to
+discover the suspected cases [48]. In 2016, k-means
+
+the data mining
+
+techniques
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 386
+
+---
+
+<!-- PAGE 6 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+regular
+
+supervised learning
+
+clustering is used for credit card fraud detection.
+Data is growing haphazardly for credit cards and
+the k-means set of rules is used for coming across
+transactions whether it is fraud transaction or a
+valid transaction [49]. In 2017, researchers checked
+various detection techniques primarily based
+totally on credit cards in phrases of Parameter
+Speed of detection and provides a survey of diverse
+techniques utilized in credit card fraud detection
+and prevention [50]. In 2018, there are two main
+focuses, first on fraud instances that cannot be
+detected primarily based totally on preceding
+records or
+and secondly
+producing a model of deep Auto-encoder and
+restricted Boltzmann machine (RBM) that may
+reconstruct
+to search out
+anomalies from regular patterns [51].
+In 2019, this paper could be very vital for ATM
+card issuers to select the best optimum solution for
+fraud detection problem, additionally permit us to
+construct a hybrid technique for growing a few
+optimum algorithms that can carry out nicely on
+In 2020,
+fraud detection mechanism [52].
+been developed
+numerous
+primarily based totally on Artificial
+intelligence,
+Machine
+learning, Data mining, Genetic
+programming, Fuzzy logic etc. for detecting credit
+card fraudulent activities. On the other hand, the
+K-Nearest Neighbour
+algorithm and outlier
+detection techniques are applied to optimize the
+fraud detection
+for
+exceptional
+problem [53]. In 2021, develop a model to analyze
+the imbalanced credit card fraud dataset [54].
+
+techniques have
+
+transactions
+
+answer
+
+the
+
+fraud
+
+Fraud Detection and Prevention
+
+II.
+Fraud Detection and Prevention is a system-
+installed software program that may analyze any
+inappropriate activity, offering risk mitigation and
+safety monitoring.
+from a network
+It differs
+protection strategy and enables the computer to
+identify suspicious activity before theft or other
+crimes are committed. Tools for detecting and
+preventing
+investigative
+techniques to find and stop fraud on a company
+device. These algorithms examine data from many
+different sources to look for probable errors like
+anomalies or illusions. It is utilized by a variety of
+businesses and organizations, including those in
+and
+the
+government work. It is used to prevent cybercrimes
+that harm a company or organization, including
+account theft, malware, hacking, DDoS, phishing,
+and credit card identity theft.
+
+healthcare,
+
+sciences,
+
+travel,
+
+used
+
+life
+
+are
+
+as
+
+Fraud Detection
+
+A.
+The system of the fraud detection which can be
+detect and also manages scammers from getting
+cash or possessions means wrong. It is a collection
+of actions designed to disclose and prevent
+attempts from scammers to acquire money or
+assets fraudulently. Fraud detection is popular in
+banks, insurance, healthcare, government, and the
+public
+regulation
+enforcement
+overall working
+scenario is shown in Figure 2.
+
+agencies. The
+
+addition
+
+sectors,
+
+in
+
+to
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 387
+
+---
+
+<!-- PAGE 7 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+Figure 2: Fraud Detection Working Scenario
+
+Laundering of money, cyberattacks, fake monetary
+privileges, bogus financial-bank cheques, burglary
+identification and lots of greater illegal moves that
+are the cases of duplicitous movement. From now,
+to respond the upward thrust in deceitful dealings
+corporations adapt
+throughout diverse stages,
+front-line fraud detection and prevention methods
+in addition to the strategies of risk management.
+B.
+Types of Fraud Detection Techniques
+The techniques based on data analysis are generally
+applied to detect fraud. The particular approaches
+
+may be roughly grouped into different categories
+such as artificial intelligence-based, and statistical
+data analysis or computational methods. Imagine
+artificial
+intelligence, machine learning, neural
+networks, and deep learning as russian-nesting
+dolls [55] as shown in Figure 3. This is maybe the
+simplest way to conceptualize these concepts. Every
+one of them functions as a part of the previous
+work.
+
+Figure 3: Count Nested
+
+In other words, artificial intelligence includes the
+field of machine learning. The algorithms of deep
+learning which is the foundation of the neural
+networks and these are the branch of machine
+learning. In actuality, the neural network depth,
+the node layers having wide variety that splits it
+from a deep learning approach are requires greater
+
+than three layers. The detection techniques as
+given below,
+
+Artificial Immune System (AIS)
+
+a)
+The data mining strategy is the artificial immune
+systems which detects antigens through mimicking
+the biological immune system behavior [56]. The
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 388
+
+---
+
+<!-- PAGE 8 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+in
+
+traits, but
+
+the majority of
+
+artificial immune system may imitate a wide range
+of biological
+them
+revolve around the detector cells formation and
+having potential capability to recognize external
+things. The cells of detector are created at random,
+and reproduction is used to check and assess their
+efficacy,
+how other
+comparable with
+classification systems train.
+Clonal selection is a typical kind that produces the
+cells of detector which at most exist for the brief
+period. When a cell identifies an antibody that
+the invader and can
+lives
+transform such as an outcome of the battle. The
+cells that survive after the imitation are the finest
+prepared to recognize the antitoxins. Negative
+selection is one more frequent method that the
+random producing cells and
+whole thing at
+
+to combat
+
+longer
+
+defining how they interact with another epidemic
+cells in the system. In general, it has deleted and
+leaving
+capable of detecting
+intruders [57].
+
+remaining
+
+the
+
+Neural Network (NN)
+
+b)
+This is a computer model of the human brain
+which is named as neural network that represents
+neuronal and synapsis using the vertices and edges
+graphs [3]. The network works by modeling the
+enter variables as a layer of vertices after which
+making use of a weight to every link withinside the
+graph, whereas the ultimate vertices are located at
+distinctive layers primarily based totally on their
+distance from the enter nodes [58] as shown in
+Figure 4.
+
+Figure 4: Simple Neural Network
+
+Each node bases its input on the associated vertices
+to it preceding layer. The received signal through
+each neuron
+
+is given by
+
+shows the link weight of neurons
+
+Where
+and
+
+=  × 
+ 
+
+and
+represents the input. If the result exceeds
+a certain threshold, the existing neuron fires and
+
+develops an input for the following layer.
+Training a back proliferation neural network
+involves putting trials from the training data set
+through the system and compared the outcomes.
+At
+selected
+arbitrarily for first iteration, and when the results
+is lightly changed
+are computed, every weight
+through the following sequence [59]. The process
+is repeated until either the network's error has
+
+each edge weights are generally
+
+been decreased to an acceptable level or a
+predefined iteration limit has remained achieved.
+Following iteration, the network's performance can
+be evaluated using a set of validation data [3].
+Overtraining
+through
+backpropagation the neural network, causing the
+network to emphasis on trends specific to the set
+of training data rather than broader challenge [59].
+
+typical
+
+issue
+
+is
+
+a
+
+employ
+
+the notion of
+
+Genetic Algorithm (GA)
+
+c)
+To iteratively enhance issue solutions, genetic
+algorithms
+resident
+development. It works by establishing a beginning
+group at random, then repeatedly replicating every
+resident utilizing various methods and choosing
+strength.
+survivors
+taking two
+Reproduction is accomplished by
+
+depending
+
+upon
+
+their
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 389
+
+---
+
+<!-- PAGE 9 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+exiting generation parents and employing crossover
+on dual places, at that time arbitrarily transforming
+a individual element of the resultant successors. A
+fitness function is used to assess the capacity of the
+offspring, and the results determine whose parents
+and kids are chosen as the future generation's
+representatives. The proportion of samples that the
+kids properly classify can be utilized to gauge their
+
+level of strength. The method finishes when it
+achieves the desired strength, even though to
+prevent indefinite looping, a limit on the number
+of iterations can be stated, as illustrated in Figure 5.
+Similar to neural networks, genetic algorithms may
+uncover underlying correlations among the data
+without the need for advance information of the
+issue domain. [60].
+
+Figure 5: Flowchart of Genetic Algorithm Process
+
+Hidden Markov Model (HMM)
+
+d)
+The is a statistical model named as hidden markov
+model in which the represented system is believed
+to remain a markov process through an unseen
+state [61].
+fraud by analyzing user
+spending profiles, which are classified into three
+types [62]:
+
+It detects
+
+I.
+II.
+III.
+
+lower profile
+middle profile
+higher profile
+
+Figures 6 depict the training and detection and
+preventive phases [63] [64] of the procedure. In
+
+this setup, launch the bank server and the HMM
+server first. When a transaction is initiated by the
+client, HMM begins watching and comparing the
+process. If fraud is detected, the transaction is
+stopped. The user responds with a password on a
+cellphone through Bluetooth to the similar ATM
+of bank, otherwise via message/sms. The passkey is
+validated for authorization, and the transaction is
+permitted. After three failed tries, the transaction
+is completely halted.
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 390
+
+---
+
+<!-- PAGE 10 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+Figure 6: Flow chart of Training and Detection Phase in HMM
+
+Bayesian Belief Network (BBN)
+
+e)
+A statistical categorization approach is the bayesian
+belief network which employs the theorem of bayes,
+which is a way of determining the likelihood
+having a given hypothesis is true. According to
+theorem, the probability
+. For
+may be categorized inside a certain type
+example,
+that specified as
+
+for a hypothesis
+
+χ
+
+χ  =
+
+χ  ()
+(χ)
+
+χ
+
+and inserts
+
+for
+A network uses a classifier to calculate
+into the class
+all possible classes
+  χ
+. In this way, the network
+with the highest
+
+is demonstrated to categorize each sample into the
+  χ
+class to which it is most likely to belong [6].
+A network may be represented graphically as a
+focused on acyclic graph, having nodes which is
+representing
+a
+fundamental relationship among them as shown in
+Figure 7. The absence of missing edges may thus
+be used to exhibit in which two variables are
+unrelated of each other [3].
+
+representing
+
+and edges
+
+trials
+
+Figure 7:BNN Graphical Representation
+
+Cluster Method (CM)
+
+f)
+The cluster method is the procedure of organizing
+information within classes of things that are alike.
+Several cluster algorithms existing in classes of the
+dataset produce different grouping outcomes. The
+
+approach used will be determined by the intended
+outcome [65]. The clustering of k-means is a
+modest and effective approach to data clustering.
+Figure 8 depicts the clustering-based approach's
+system architecture [66].
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 391
+
+---
+
+<!-- PAGE 11 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+Figure 8: System Architecture of Cluster Method
+
+the accuracy of
+
+Firstly, the parameters utilised in the programme,
+like transaction award, credit/debit
+just
+card
+number, current
+transaction time,
+transaction,
+mercantile group id, transaction category id and
+transaction state, are declared. The validation
+mechanism then verifies
+the
+transaction information. The previously prepared
+data table is now inserted within the database. The
+information that is being removed from counter
+and now inserted to take transaction info. The
+transaction information is then produced row by
+row using an array. Following that, the cluster is
+labelled as down, up, or moderate dangerous. The
+current transaction information was obtained to
+detect fraud or real transactions using the k-means
+clustering method. Uncertainty, the transaction is
+deceitful, the notification says "fraud transaction,"
+or else it will say "legal transaction."
+
+Self-Organizing Map (SOM)
+
+g)
+The main type of artificial neural network is self-
+organizing map that consists of a single neural
+matrix. Inputs from a high-dimensional space are
+mapped to a two-dimensional array of neurons, a
+
+non-linear method is utilized. The mapping is
+intended to model comparable input vectors as
+neurons which are nearer together in the final
+matrix, allowing the inputs to be seen. To group
+the nodes, a distance or neighborhood function,
+just like the euclidean distance formula or the
+gaussian formula, is utilized [63]. The clustering
+subjected to is
+function that each neuron is
+provided by:
+
+Where
+represents the specific node present
++1 =  + ( − −1)
+represents the present input vector
+weighting,
+
+represents the preferred the function of
+and
+distance. Before the process
+the
+clustering phase is
+repeated a predetermined
+number of times [67].
+
+finished,
+
+is
+
+Decision Tree (DT)
+
+h)
+Decision trees are a classification or prediction
+approach that utilizes a tree with internal nodes
+reflecting binary options on characteristics and
+branches expressing the result of that decision [59]
+as shown in Figure 9. Now trial travels the tree, it
+is segregated within the subsets though it is finally
+categorized within a jointly special subclass.
+
+Figure 9:Decision Tree Representation
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 392
+
+---
+
+<!-- PAGE 12 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+A decision forest, sometimes known as a random
+forests that is a decision tree collection intended to
+prevent the unstableness and risk of exaggerate in
+which an individual tree may cause [5]. Random
+forests employ distinct training info among tree
+and limit the characteristics pool presented to each
+internal node at random [5]. Pruning is another
+strategy for decreasing overfitting in decision trees,
+which includes removing decision nodes without
+affecting the tree's overall accuracy [6]. These
+approaches
+to
+exaggerate and noise. Because every tree is created
+randomly, the computing complexity is minimal.
+Furthermore, the only two factors that must be
+adjusted are the number of trees and the collection
+of characteristics from which to create each node,
+making decision forests straightforward to generate
+[5].
+
+random forest
+
+resistant
+
+render
+
+Super Vector Machine (SVM)
+
+i)
+Support Vector Machines (SVM) are statistical
+learning approaches that have been successfully
+idea
+used for a variety of issues. The essential
+behind the SVM sorting method is to build a
+hyperplane known the decision plane, maximizing
+the distance among the positive and negative
+[68]. SVM is a well-known machine
+modes
+learning approach for
+sorting, regression, and
+additional problems. LIB-SVM is a Support Vector
+Machines library (SVM). LIBSVM is often used in
+two stages: first, setting a training sequence to
+generate a model. After that utilizing the model to
+guess information from a testing info set. The
+SVM have major functions are as follows:
+
+model development.
+
+produced dataset and refer it to SVM training.
+
+point in the big dataset.
+
+the SVM Predictor predicts the learned data.
+
+SVM Trainer, which trains every single data
+
+After the dataset has been entirely trained,
+
+Next, arrange SVM elements for the newly
+
+First, set up the training information for
+
+the same time as the opposite does not. This is a
+significant difference and there are several factors
+areas where one of the two approaches performs
+better than the other, although the two strategies
+do differ somewhat from one another.
+
+Supervised Learning
+
+a.
+The supervised learning method to machine
+learning is prominent by the utilize of labelled
+datasets. Classification and regression are two
+main types that may be used to classify supervised
+learning when applying data mining.
+
+Classification
+
+i)
+The Classification issues utilize an algorithm to
+exactly distribute test data into various classes, just
+like distinctive among apples and oranges. An
+alternative is to segregate spam from your email in
+supervised learning
+a
+techniques. Decision
+vector
+machines, random forests, and linear classifiers are
+examples of common classification approaches.
+
+folder using
+
+separate
+
+support
+
+trees,
+
+to
+
+get
+
+learning
+
+technique,
+
+Regression
+
+ii)
+An algorithm is utilized in regression, a distinct
+supervised
+the
+relationship among dependent and independent
+parameters. Regression models are beneficial while
+expecting numbers based on a species of data
+sources, just like sales revenue estimations for a
+and
+particular
+polynomial regressions are a few mutual regression
+methods.
+
+organization. Logistic,
+
+linear
+
+Unsupervised Learning
+
+b.
+Unsupervised learning investigates and classifies
+unlabeled statistical sets using machine learning
+methods. Without the support of humans, these
+algorithms look for statistics that point to hidden
+elegances.
+and
+dimensionality lessening were the three main
+learning
+functions
+paradigms.
+
+in unsupervised
+
+association,
+
+Clustering,
+
+applied
+
+C.
+Supervised and Unsupervised Learning
+There are important strategies utilized in machine
+intelligence which are
+learning and artificial
+supervised and unsupervised learning. One employ
+labelled data to support in outcome estimation, at
+
+Clustering
+
+i)
+Unlabeled data may be characterized utilizing the
+statistics mining method, in which clusters objects
+only based upon their resemblances or alterations.
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 393
+
+---
+
+<!-- PAGE 13 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+K-means clustering approaches
+split associated
+statistical elements within clusters based upon
+the
+comparations, and the k-means
+identifies
+the
+dimensions and amount of granularity of
+clusters. Various parameters, consisting market
+segmentation and image reduction, build this
+tactic attractive.
+
+Association
+
+a diversity of measures
+
+ii)
+The association shape of unsupervised learning
+utilizes
+to novelty
+in a provided
+associations among parameters
+dataset. Both the marketplace basket evaluation
+and the "Customers who bought this item also
+bought" recommendation engine frequently utilize
+those approaches.
+
+iii) Dimensionality Reduction
+Dimensionality reduction is a learning method
+utilized when a dataset has excessive properties (or
+
+dimensions). It mitigates the info inputs volume to
+a well-behaved level whereas retaining the data
+integrity. This method is broadly utilized for pre-
+processing data, just like whenever autoencoders
+enhance the video quality of resultant images.
+
+and
+
+politicians have
+
+Fraud Prevention
+
+D.
+adopted
+Corporations
+technologies
+like data analytics and artificial
+intelligence to significantly reduce and even avoid
+the economic, social, and financial consequences
+of fraud. Consequently, analysts and researchers
+eliminate barriers, discover and rank severity-based
+alerts, and then present high-priority indications
+for further analysis.
+Advances in fraud detection technology serve as a
+precise and effective weapon against scammers.
+There are eight steps for fraud prevention as
+shown in Figure 10.
+
+Figure 10: Fraud Prevention Steps
+
+executing
+
+Institution's
+
+The fraud prevention strategy presents a high-level
+fraud
+the
+plan for
+prevention policy. In view of the fact that the
+approach is the supreme important factor of the
+fraud prevention plan, it should be simple and
+realistic. The fraud risk management policy and
+the fraud risk profile of the institution determine
+the fraud prevention approach. There are some
+fraud prevention strategies as follows [69] [70].
+
+Identification and Evaluation of Sensitive
+
+a)
+Regions
+To develop and implement a fraud prevention
+the organization should firstly define
+strategy,
+wherever
+in the Institution's
+fraud risks exist
+present operational systems and processes. Only
+
+when these exposures have been recognized will it
+be feasible to take corrective action and, if possible,
+avoid or minimize the occurrence of fraud in the
+future.
+
+Fraud Risk Ownership
+
+b)
+To some extent, all
+staff are accountable for
+managing fraud risk, although the Accounting
+Officer / Authority has final accountability. Line
+managers in certain areas of the Institution may be
+delegated authority by the Accounting Officer /
+Authority. The Accounting Officer / Authority has
+the authority to transfer responsibilities for fraud
+risk management as well as the flow of operations
+from the strategic to the operational level.
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 394
+
+---
+
+<!-- PAGE 14 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+Plan of Action
+
+c)
+The Institution should define clear processes for
+dealing with control deficiencies as part of the
+response plan. The organization must establish
+clean reporting forms for scam. Scam reporting
+must be incorporated into the respond strategy or
+investigative policy. The rejoinder proposal must
+include define the actions and persons in charge of
+each response activity.
+
+The Legal Framework
+
+d)
+The necessary legislation for dealing with civil and
+criminal offences against the Institution should be
+defined and properly construed.
+should be
+obvious what defines a fraudulent or corrupt
+behaviour.
+
+It
+
+Culture of Anti-Fraud
+
+e)
+should
+The Accounting Officer / Authority
+establish frameworks
+to promote and educate
+stakeholders about the Institution's anti-fraud and
+anti-corruption culture. As part of an anti-fraud
+strategy, management might be entrusted with the
+obligation of teaching other employees under their
+supervision on fraud and corruption.
+
+III. Analysis and Discussion
+We will categorize the financial fraud detection
+techniques described in this area based on their
+
+existing
+
+patterns
+
+success rate, the method used, and the fraud type
+to
+analyzed. This classification will allow us
+illustrate
+research
+in
+methodologies. The study's objectives were to
+ascertain the operational response of various fraud
+detection methods. We conducted a comparative
+study on fraud detection methods to analyze the
+results. For comparison, we considered the most
+important parameters such as accuracy, speed, and
+cost. A comparison table has been created to
+compare different ATM card fraud detection
+the ATM card fraud
+mechanisms. Each of
+detection techniques described in this study has its
+own set of benefits and drawbacks. Table 1 shows
+the comparison results obtained from this study
+[71], [72], [73], [74],[75], [76].
+This study examined the performance of various
+ATM cards fraud detection techniques such as
+algorithms, Hidden
+neural networks,
+Markov models, Bayesian networks, decision trees,
+clustering methods,
+vector machines
+(SVM), and artificial immune systems. As a result,
+each method has benefits and drawbacks. At the
+same time, the support vector machine has a low
+detection speed and the artificial immune system
+has a high detection speed. So, based on the results,
+the best method among these techniques is AIS,
+NN, GA, HMM, BBN, CN, SOM, DT and SVM.
+
+support
+
+genetic
+
+Table 1: Benefits and Drawbacks of various Fraud Detection Techniques
+
+Techniques
+Artificial
+(AIS)
+
+Immune
+
+System
+
+Neural Networks (NN)
+
+Genetic Algorithm (GA)
+
+Markov
+
+Hidden
+(HMM)
+Bayesian Belief Network (BBN)
+
+Model
+
+ease
+
+Benefits
+Self-organization,
+of
+integration with other systems,
+and fault tolerance
+High
+detection
+portability, and speed
+Detection is inexpensive and
+quick.
+
+accuracy,
+
+Rapid detection.
+
+To operate, data must be
+trained and a high processing
+speed is required. More precise
+than a neural
+and faster
+
+Drawbacks
+In the NSA, extensive training
+is required.
+
+format
+
+cost/data
+
+High
+sensitivity
+Setup and operation require
+extensive tool knowledge and
+are difficult to understand.
+Low accuracy/incapability to
+handle large data sets
+Excessive training is required,
+and BBN's are slower to apply
+to new instances.
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 395
+
+---
+
+<!-- PAGE 15 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+network.
+
+Clustering method (CN)
+
+Self-Organizing Map (SOM)
+
+Decision Tree (DT)
+
+into
+
+Clustering assists in grouping
+clusters,
+data
+allowing
+data
+retrieval.
+
+similar
+
+simple
+
+for
+
+To reduce incredibly complex
+problems
+easily
+down
+interpreted data mappings
+High
+adaptability/ease
+implementation
+
+to
+
+of
+
+Support
+(SVM)
+
+Vector Machine
+
+SVMs can be robust even if the
+training sample is biased.
+
+non-fraudulent
+Numerous
+were mistakenly
+activities
+to
+frauds. So,
+identified as
+and
+fraud accurately
+detect
+efficiently, real data must be
+available.
+Requires neuron weights to be
+necessary
+to
+cluster inputs.
+Each
+be
+The
+checked
+transaction condition is used
+in fraud detection.
+performance
+Expensive/poor
+when processing large datasets.
+
+condition must
+individually.
+
+and sufficient
+
+This paper presents a comparative study of various
+credit
+card fraud detection techniques. The
+this paper is to examine the
+primary goal of
+methodology of various credit card detection
+
+methods. The survey-based comparison of
+the
+mentioned approaches in terms of parameters such
+as detection speed, accuracy, and the cost is shown
+in Table 2.
+
+Table 2: Comparison of various Fraud Detection Techniques
+
+Techniques
+
+AIS
+NN
+GA
+HMM
+
+BBN
+CM
+SOM
+DT
+SVM
+
+Detection
+Speed
+Very Fast
+Fast
+Good
+Fast
+
+Very Fast
+High
+Fast
+Fast
+Low
+
+IV. Conclusion
+Fraud detection is an essential component of the
+modern financial business. This
+the
+literature focused on research on statistical and
+computational
+intelligence techniques for fraud
+detection. Despite differences in effectiveness, each
+approach was demonstrated to be relatively capable
+of identifying various types of financial fraud. The
+
+study of
+
+Accuracy
+
+Cost
+
+Good
+Medium
+Medium
+Low
+
+High
+Medium
+Medium
+Medium
+Medium
+
+Inexpensive
+Expensive
+Inexpensive
+High
+Expensive
+Expensive
+Expensive
+Expensive
+Expensive
+Expensive
+capacity of computational approaches
+such as
+neural networks and support vector machines to
+learn and adapt to new strategies is extremely
+useful in fraudsters growing strategies.
+The main objective of
+this work is to review
+various fraud detection methods. Fraud detection
+and prevention should be a key concern for every
+company. A well-planned and implemented fraud
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 396
+
+---
+
+<!-- PAGE 16 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+a
+
+inside
+
+company
+
+detection system may lower the likelihood of fraud
+occurring
+dramatically.
+Furthermore, the quick discovery of fraud has a
+direct beneficial impact on the firm by lowering
+future potential
+losses. AI and statistical data
+analysis are effective detection approaches that act
+as a deterrent to potential scammers. As legal
+and regulatory demands have
+requirements
+increased, it has become more critical to create an
+effective fraud detection and prevention program.
+All the fraud detection techniques presented in
+this project have both strengths and disadvantages.
+Some approaches have a high detection speed but
+a low accuracy. Some approaches offer high
+accuracy but are prohibitively costly.
+
+financial
+
+Future Work and Challenges
+
+V.
+Although data-driven artificial intelligence systems
+have demonstrated remarkable performance in the
+detection of financial fraud, significant concerns
+remain unresolved as
+fraud schemes
+evolve to adapt to this new digital environment. As
+follows, we present the primary problems and offer
+future work directions from task-oriented, data-
+oriented, and model-oriented perspectives.
+Financial fraud is becoming more difficult to
+
+detect due to its increasing secrecy and complexity.
+The secrecy of financial fraud causes natural
+
+inaccuracy in sampling.
+processes
+of
+
+necessitates the involvement of large amounts of
+data.
+
+fraud detection is vast, yet it is dispersed.
+
+address.
+
+large-scale data processing.
+
+more adaptable and interpretable.
+
+
+
+
+The issue of model bias must be addressed.
+Robustness should be improved.
+Improved interpretability is required.
+
+Data isolation is a challenging problem to
+
+Model training is made more difficult by
+
+The amount of financial data available for
+
+Models for detecting financial fraud must be
+
+financial
+
+intricacy
+
+The
+
+References
+https://legaljobs.io/blog/credit-card-fraud-statistics/ -
+
+Jenifer Kuadli - 2022
+
+https://www.fool.com/the-ascent/research/identity-
+theft-credit-card-fraud-statistics/ - Lyle Daly
+and Jack Caporal, 2022.
+
+Ngai E., Hu Y., Wong Y., Chen Y., and Sun X., “The
+application of data mining techniques in
+fraud detection: A classification
+financial
+framework and an academic
+review of
+literature,” Decision Support Systems 50, 559-
+69, 2011.
+
+Zhou W. and Kapoor G., “Detecting evolutionary
+financial statement fraud,” Decision Support
+Systems 50, 570-5, 2011.
+
+Bhattacharyya S.,
+
+Jha S., Tharakunnel K., and
+Westland J. C., “Data mining for credit card
+fraud: A comparative study,” Decision Support
+Systems 50, 602-13, 2011.
+
+for
+
+financial
+
+Kirkos E., Spathis C. and Manolopoulos Y., “Data
+the detection of
+mining techniques
+statements,” Expert
+fraudulent
+Systems with Applications 32, 995-1003, 2007.
+Ngai E., Hu Y., Wong Y., Chen Y. and Sun X., “The
+application of data mining techniques in
+financial
+fraud detection: A classification
+review of
+framework and an academic
+literature,” Decision Support Systems 50, 559-
+69, 2011.
+
+Quah J. T. and Sriganesh M., “Real-time credit card
+fraud
+computational
+intelligence,” Expert Systems with Applications
+35, 1721-32, 2008.
+
+detection
+
+using
+
+techniques
+
+Yeh I. and Lien C. H. “The comparisons of data
+mining
+predictive
+accuracy of probability of default of credit
+card clients,” Expert Systems with Applications
+36, 2473-80, 2009.
+
+the
+
+for
+
+Sánchez D., Vila M., Cerda L. and Serrano J. M.,
+“Association rules applied to credit card
+Systems with
+fraud
+Applications 36, 3630-40, 2009.
+
+detection,”
+
+Expert
+
+Panigrahi S, Kundu A, Sural S, and Majumdar AK,
+“Credit card fraud detection: A fusion
+approach using Dempster Shafer theory and
+Bayesian learning,” Information Fusion 10,
+354-63, 2009.
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 397
+
+---
+
+<!-- PAGE 17 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+Duman E. and Ozcelik M. H., “Detecting credit card
+fraud by genetic algorithm and scatter
+search,” Expert Systems with Applications 38,
+13057-63, 2011.
+
+Ravisankar P., Ravi V., Raghava Rao G., and Bose I.,
+“Detection of financial statement fraud and
+feature
+data mining
+techniques,” Decision Support Systems 50, 491-
+500, 2011.
+
+selection
+
+using
+
+Judith Hurwitz, Alan Nugent, Fern Halper, and
+Marcia Kaufman, “How Big Data Analytics
+Can Prevent Fraud,” chapter 22, page 260.
+Big Data for Dummies. John Wiley & Sons,
+2013.
+
+Richard J. Bolton and David J. Hand, “Statistical
+Fraud Detection: A Review,” Journal of
+Statistical Science, 17:235-255, 2002.
+Yue D., Wu. X., Wang Y., Li Y., and Chu C. H, “A
+review of data mining based financial fraud
+detection
+Wireless
+Communications, Networking
+and Mobile
+Computing, WiCom. International Conference
+on. (ed.), Vol. pp. 5519-22, IEEE, 2007.
+
+research,”
+
+In
+
+Hoogs B., Kiehl T, Lacomb C., and Senturk D., “A
+genetic algorithm approach to detecting
+temporal patterns
+financial
+fraud,”
+statement
+in
+Accounting, Finance and Management 15, 41-
+56, 2007.
+
+indicative of
+Intelligent
+
+Systems
+
+Zhang G., Eddy Patuwo B., and Y. Hu M.,
+“Forecasting with artificial neural networks:
+The state of the art,” International journal of
+forecasting 14, 35-62, 1998.
+
+Sohl J. E. and Venkatachalam A., “A neural network
+approach to forecasting model selection,”
+Information & Management 29, 297-303, 1995.
+Fraser I. A., Hatherly D. J., and Lin K. Z., “AN
+EMPIRICAL INVESTIGATIONOF THE
+USE OF ANALYTICAL REVIEW BY
+EXTERNAL AUDITORS,” The British
+Accounting Review 29, 35-47, 1997.
+
+Fanning K. M. and Cogger K. O., “Neural network
+fraud using
+International
+in Accounting,
+
+detection of management
+financial
+published
+data,”
+Intelligent Systems
+Journal of
+Finance & Management 7, 21-41, 1998.
+
+Bolton R.
+
+J. and Hand D. J., “Statistical
+
+fraud
+detection: A review,” Statistical Science 235-
+49, 2002.
+
+Bolton R. J. and Hand D. J., “Unsupervised profiling
+methods for fraud detection,” Credit Scoring
+and Credit Control VII 235-55, 2001.
+Rezaee Z., “In Financial statement fraud: prevention and
+detection,” Vol. pp. John Wiley & Sons, 2002.
+Kou Y., Lu C. T., Sirwongwattana S., and Huang Y.
+P., “Survey of fraud detection techniques,”
+In Networking,
+IEEE
+international conference on. (ed.), Vol. 2, pp.
+749-54, IEEE, 2004.
+
+sensing and control,
+
+Vatsa V., Sural S., and Majumdar AK., “A game
+theoretic approach to credit card fraud
+detection,” In Information Systems Security.
+Vol. pp. 263-76. Springer, 2005.
+
+Yang W. S. and Hwang S. Y., “A process mining
+framework for the detection of healthcare
+fraud and abuse,” Expert
+Systems with
+Applications 31, 56-68, 2006.
+
+Pinquet J., Ayuso M., and Guillen M., “Selection
+insurance
+bias and auditing policies
+claims,” Journal of Risk and Insurance 74, 425-
+40, 2007.
+
+for
+
+in
+
+for
+
+the
+
+claims
+
+“Strategies
+
+Viaene S., Ayuso M., Guillen M., Van Gheel D., and
+detecting
+automobile
+of
+
+Dedene G.,
+fraudulent
+insurance industry,” European Journal
+Operational Research 176, 565-83, 2007.
+Bose I. and Wang J., “Data mining for detection of
+financial
+in Chinese
+Companies,” International Conference on
+Administration,
+Electronic Commerce,
+Society and Education, Hong Kong, 2007.
+
+statement
+
+fraud
+
+Bai B., Yen J., and Yang X., “False financial
+statements: characteristics of China's listed
+companies and CART detecting approach,”
+International Journal of Information Technology
+& Decision Making 7, 339-59, 2008.
+Bermúdez L., Pérez J., Ayuso M., Gómez E., and
+Vázquez F., “A Bayesian dichotomous model
+in
+with
+link
+insurance,”
+and
+Economics 42, 779-86, 2008.
+
+Insurance: Mathematics
+
+asymmetric
+
+fraud
+
+for
+
+Wu S. X. and Banzhaf W., “Combatting financial
+fraud: a coevolutionary anomaly detection
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 398
+
+---
+
+<!-- PAGE 18 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+approach,” In Proceedings of the 10th annual
+conference
+evolutionary
+computation. (ed.), Vol. pp. 1673-80, ACM,
+2008.
+Holton C.,
+
+on Genetic
+
+and
+
+“Identifying disgruntled employee
+systems fraud risk through text mining: A
+simple solution for a multi-billion-dollar
+problem,” Decision Support Systems 46, 853-64,
+2009.
+
+Whitrow C., Hand D. J., Juszczak P., Weston D., and
+Adams N. M., “Transaction aggregation as a
+strategy for credit card fraud detection,”
+Data Mining and Knowledge Discovery 18, 30-
+55, 2009.
+
+Cecchini M., Aytug H., Koehler G. J., and Pathak P.,
+“Making words work: Using financial text as
+a predictor of
+financial events,” Decision
+Support Systems 50, 164-75, 2010.
+
+Humpherys S. L., Moffitt K. C., Burns M. B.,
+F.,
+Burgoon
+financial
+“Identification
+statements
+credibility
+analysis.,” Decision Support Systems 50, 585-94,
+2011.
+
+and
+fraudulent
+linguistic
+
+J. K.,
+of
+using
+
+Felix W.
+
+Glancy F. H. and Yadav S. B., “A computational
+model
+fraud
+detection,” Decision Support Systems 50, 595-
+601, 2011.
+
+reporting
+
+financial
+
+for
+
+Jans M., vander Werf J. M., Lybaert N. and Vanhoof
+K., “A business process mining application
+for internal transaction fraud mitigation,”
+Expert Systems with Applications 38, 13351-9,
+2011.
+
+Wong N., Ray P., Stephens G. and Lewis L.,
+“Artificial immune systems for the detection
+an architecture,
+of
+credit
+prototype
+results,”
+Information Systems Journal 22, 53-76, 2012.
+
+card fraud:
+and
+
+preliminary
+
+Huang S. Y., “Fraud Detection Model by Using
+Support Vector Machine Techniques,”
+JDCTA: International Journal of Digital Content
+Technology and its Applications 7, 32- 42, 2013.
+Zaki M. and Theodoulidis B., “Analyzing Financial
+Fraud Cases Using a Linguistics Based Text
+Mining Approach,” Available
+SSRN
+2353834, 2013.
+
+at
+
+Sahin Y., Bulkan S., and Duman E., “A cost-sensitive
+decision tree approach for fraud detection,”
+Expert Systems with Applications 40, 5916-23,
+2013.
+
+Dong W., Liao S. S., Fang B., Cheng X., Chen Z.,
+and Fan W., “The Detection of Fraudulent
+Financial
+Integrated
+Statements:
+Language Model,” 2014.
+
+An
+
+Olszewski D., “Fraud detection using self-organizing
+map visualizing the user profiles,” Knowledge
+Based Systems, 2014.
+
+Soltani Halvaiee N. and Akbari M. K., “A novel
+model for credit card fraud detection using
+Artificial
+Immune Systems,” Applied Soft
+Computing, 2014.
+
+West J., Bhattacharya M. and Islam R., “Intelligent
+Financial Fraud Detection Practices: An
+Investigation”,
+International
+10th
+Conference on Security and Privacy in
+Communication Networks, 2014.
+
+Singh, P. and Singh, M., “Fraud Detection by
+Monitoring Customer
+and
+Activities,” International Journal of Computer
+Applications, 111, 23-32, 2015.
+
+Behavior
+
+Sonawane, Y.B., Gadgil, A.S., More, A.E. and Jathar,
+N.K., “Credit Card Fraud Detection Using
+Clustering Based Approach,” International
+Journal of Advance Research and Innovative
+Ideas in Education, 2, 1773-1776, 2016.
+Gupta, Surbhi, Mrs. and Nitima Malsa. “Credit Card
+Fraud Detection & Prevention – A Survey,”
+International Journal for Innovative Research in
+Science & Technology, vol.1, 4, 2017.
+Pumsirirat, A. and Liu, Y., “Credit Card Fraud
+Detection Using Deep Learning based on
+Auto-Encoder and Restricted Boltzmann
+Machine,” International Journal of Advanced
+Computer Science and Application, 9, 18-25,
+2018.
+
+Rahman, M. and Saha, A., “A Comparative Study
+and Performance Analysis of ATM Card
+Fraud Detection Techniques,” Journal of
+Information Security, 10, 188-197, 2019.
+Pooja, Dr. Ashlesha, "Review on Credit Card Fraud
+Detection using Machine Learning Algorithms,"
+International Journal of Computer Trends and
+Technology, 68.6, 77-81, 2020.
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 399
+
+---
+
+<!-- PAGE 19 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+Panda, A., Yadlapalli, B., & Zhou, Z., “Credit card
+fraud detection through machine learning
+algorithm,” Big data and computing visions, 1
+(3), 140-145, 2021.
+
+B.
+
+Jiang and Y. Mu,
+
+Learning Nested Networks
+Adaptive Dynamic
+IEEE/CVF
+Computer Vision Workshops
+336-344, 2021.
+
+"Russian Doll Network:
+for Sample-
+2021
+on
+(ICCVW), pp.
+
+International Conference
+
+Inference,"
+
+coevolutionary
+
+Wu SX and Banzhaf W, “Combatting financial fraud:
+detection
+a
+approach,” In Proceedings of the 10th annual
+conference
+evolution-ary
+computation. (ed.), Vol. pp. 1673-80, ACM,
+2008.
+
+on Genetic
+
+anomaly
+
+and
+
+Soltani Halvaiee N and Akbari MK,” A novel model
+card fraud detection using
+Immune Systems,” Applied Soft
+
+credit
+
+for
+Artificial
+Computing, 2014.
+
+Koh HC and Low CK, “Going concern prediction
+using data mining techniques,” Managerial
+Auditing Journal 19, 462-76, 2004.
+
+Zhang D and Zhou L, “Discovering golden nuggets:
+data mining in financial application,” Systems,
+Man, and Cybernetics, Part C: Applications and
+Reviews, IEEE Transac-tions on 34, 513-22,
+2004.
+
+Su, Jianhai & Havens, Timothy., “Fuzzy community
+detection in social networks using a genetic
+algortihm.” IEEE International Conference
+on
+2039-2046.
+Systems.
+10.1109/FUZZ-IEEE.2014.6891611, 2014.
+
+Fuzzy
+
+Sonawne, V.D., Gupta, P., Raut, A. and Saudagar, F.,
+“ATM Card Fraud Detection Using Hidden
+Journal of
+Markov Model,” International
+Innovative Research in Computer
+and
+Communication Engineering, 4, 8742-8747,
+2016.
+
+Patidar, R. and Sharma, L., “Credit Card Fraud
+Using
+Network,”
+Journal of Soft Computing
+
+Detection
+International
+and Engineering , 1, 32-38, 2011.
+
+Neural
+
+Mhamane, S.S. and Lobo, L.M.R.J., “Use of Hidden
+Markov Model as Internet Banking Fraud
+Detection,”
+of
+Journal
+International
+Computer Applications, 45, 5-10, 2012.
+
+Bhingarde, A., Bangar, A., Gupta, P. and Karambe,
+S., “Credit Card Fraud Detection Using
+Hidden Markov Model,”
+International
+Journal of Advanced Research in Computer
+and Communication Engineering, 4, 169-
+170, 2015.
+
+Vaishali, “Fraud Detection in Credit Card by
+Clustering Approach,” International Journal
+of Computer Applications, 98, 29-32, 2014.
+Sonawane, Y.B., Gadgil, A.S., More, A.E. and Jathar,
+N.K., “Credit Card Fraud Detection Using
+Clustering Based Approach,” International
+Journal of Advance Research and Innovative
+Ideas in Education, 2, 1773-1776, 2016.
+
+Quah JT and Sriganesh M, “Real-time credit card
+fraud
+computational
+intelligence,” Expert Systems with Applications
+35, 1721-32, 2008.
+
+detection
+
+using
+
+Olszewski D, “Fraud detection using self-organizing
+map visualizing the user profiles,” Knowledge-
+Based Systems, 2014.
+
+S. Surbhi and D. S. Kumar, "Fraud Detection During
+Money Transaction and Prevention," 2019
+International Conference
+and
+Challenges in Intelligent Computing Techniques
+(ICICT), pp. 1-4, 2019.
+
+Issues
+
+on
+
+in
+
+an
+
+S. Hoyer, H. Zakhariya, T. Sandner and M. H.
+Breitner, "Fraud Prediction and the Human
+Factor: An Approach to Include Human
+Fraud
+Behavior
+Audit," 2012 45th Hawaii
+International
+Conference on System Sciences, 2012, pp. 2382-
+2391, 2018.
+Zareapoor, M., Seeja, K.R.
+
+Automated
+
+and Alam, M.A.,
+“Analysis of Credit Card Fraud Detection
+Techniques: Based on Certain Design
+Criteria,”
+of
+International
+Computer Applications, 52, 35-42, 2012.
+
+Journal
+
+Kumari, S. and Choubey, A. “A Review on Various
+Techniques and Approaches for Credit Card
+Fraud Detection,” International Journal of
+Engineering &
+Scientific
+Technology, 6, 485-489, 2017.
+
+Research
+
+Bhatia, S., Bajaj, R. and Hazari, S., “Analysis of
+Credit Card Fraud Detection Techniques,”
+International
+and
+Research, 5, 1302-1307, 2016.
+
+Science
+
+Journal
+
+of
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 400
+
+---
+
+<!-- PAGE 20 -->
+
+ISSN (e) 3007-3138 (p) 3007-312X
+
+Singh, P. and Singh, M., “Fraud Detection by
+and
+of
+
+Monitoring Customer
+Activities,”
+International
+Computer Applications, 111, 23-32, 2015.
+
+Behavior
+
+Journal
+
+Pumsirirat, A. and Liu, Y., “Credit Card Fraud
+Detection Using Deep Learning based on
+Auto-Encoder and Restricted Boltzmann
+of
+Machine,”
+Advanced
+and
+Applications, 9, 18-25, 2018.
+
+International
+Computer
+
+Science
+
+Journal
+
+Gupta, S. and Malsa, N. “Credit Card Fraud
+Prevention—A Survey,”
+Detection
+International
+Innovative
+Research in Science & Technology, 4,1-7,
+2017.
+
+Journal
+
+and
+
+for
+
+https://sesjournal.com
+
+| Kashif & Naseer, 2025 |
+
+Page 401
+
+<!-- MARKITDOWN CONVERSION -->
+
+<!-- Full MarkItDown conversion for formatting fidelity. -->
 
 | ISSN (e) 3007-3138 | (p) 3007-312X |          |     |           |              |     |           |          |     |            |     |     |
 | ------------------ | ------------- | -------- | --- | --------- | ------------ | --- | --------- | -------- | --- | ---------- | --- | --- |

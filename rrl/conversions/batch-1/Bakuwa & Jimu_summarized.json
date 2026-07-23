@@ -1,191 +1,244 @@
 {
-  "paper_id": "10.37745/afriresearch.2025.1266419",
-  "designation": "international",
-  "title": "Dynamic Credit Scoring for Financial Inclusion: Evaluating Machine Learning Methods in the Zambian Credit Market",
-  "authors": "Bakuwa, F.; Jimu, L.",
+  "paper_id": "10.5281/zenodo.17795962",
+  "designation": "international-algorithm-specific",
+  "title": "Dynamic Credit Scoring with Machine Learning: Enhancing Financial Inclusion and Risk Management",
+  "authors": "Bakuwa, D.; Jimu, P.",
   "year": 2026,
-  "venue": "Afriresearch",
-  "odin_topics": ["1.B", "5.A", "5.B", "4.A", "2.B"],
-  "tldr": "Random Forest outperforms Logistic Regression in dynamic credit scoring for Zambian informal financial institutions, promoting financial inclusion.",
-  "problem_and_motivation": "Financial institutions heavily rely on credit scoring for informed lending decisions. In Zambia, limited research exists on applying ML methods for credit scoring, particularly for informal financial institutions. The goal is to develop a more inclusive credit scoring system that can serve individuals without formal banking history, thereby promoting financial inclusion in the Zambian context.",
+  "venue": "Afriresearch.com",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.C",
+    "6.A",
+    "6.B",
+    "10.A",
+    "10.B"
+  ],
+  "tldr": "Dynamic credit scoring using machine learning and alternative data expands financial inclusion while reducing default rates compared to traditional static methods.",
+  "problem_and_motivation": "Traditional credit scoring relies on static datasets such as credit history and income records, excluding large segments of the population in developing economies who lack formal financial footprints. Millions of potentially creditworthy individuals remain underserved or entirely excluded from formal financial systems. There is a need for adaptive, real-time credit assessment methods that leverage alternative data sources to bridge this gap.",
   "approach": [
-    "Collected credit data from 500 customers of a Zambian SACCO (Savings and Credit Cooperative).",
-    "Built ML models using Random Forest (RF) and Logistic Regression (LR) algorithms.",
-    "Tested multiple hyperparameter configurations: RF with n=100, n=200, n=300 trees and m=4,8,10,12 split features; LR with C=0.1,0.5,1 regularization.",
-    "Used 80/20 train/test split with stratified sampling.",
-    "Compared model performance using AUC, precision, recall, and F1-score metrics.",
-    "Implemented dynamic credit scoring with periodic retraining to address concept drift."
+    "Stakeholder requirements were gathered from financial institutions, microfinance organizations, and potential borrowers for a three-tier system architecture.",
+    "A relational PostgreSQL database was designed to store borrower profiles, transaction histories, alternative financial indicators, and risk assessment results.",
+    "Data sources included traditional financial records, alternative data such as mobile money transactions and utility payments, and real-time transaction streams.",
+    "Data preprocessing used pandas and numpy with mean/median imputation for missing values and IQR-based outlier capping.",
+    "Features were engineered from raw data including transaction consistency, debt-to-income ratio, temporal trends, and network-based social indicators.",
+    "The dataset was split 80/20 into training and testing subsets using stratified sampling to balance creditworthy and high-risk borrowers.",
+    "Four model types were evaluated: logistic regression as baseline, random forests, XGBoost, and LSTM networks for temporal pattern capture.",
+    "Hyperparameters were optimized using grid search with 5-fold cross-validation across all model types.",
+    "Models were evaluated using ROC-AUC, precision, recall, F1-score, KS statistic, and Gini coefficient with fairness monitoring across demographic groups.",
+    "Borrowers were classified into risk tiers based on predicted probability of default for lending decisions."
   ],
   "findings": [
-    "Random Forest significantly outperforms Logistic Regression for credit scoring in the Zambian context.",
-    "Best RF model (m=8, n=200) achieved AUC=0.988, precision=0.956, recall=0.931, F1=0.943.",
-    "Best LR model (C=0.1) achieved AUC=0.949, precision=0.862, recall=0.877, F1=0.869.",
-    "Random Forest's higher performance is attributed to its ability to capture non-linear relationships in credit data.",
-    "Dynamic credit scoring with periodic retraining addresses temporal changes in credit behavior patterns."
+    "num: 62% of borrowers were classified as low-risk, 25% moderate-risk, and 13% high-risk.",
+    "num: 58% of borrowers without formal credit histories were correctly identified as low or moderate risk using alternative data.",
+    "num: Risk-adjusted lending informed by dynamic scoring could reduce expected default rates by 15–20% compared to traditional methods.",
+    "Models incorporating mobile transactions, utility payments, and social behavior data outperformed those relying solely on traditional financial records.",
+    "LSTM models effectively tracked evolving borrower behavior on time-series data, providing adaptive credit scores and early default detection.",
+    "Ensemble and neural network models captured complex nonlinear relationships, significantly improving predictive performance over logistic regression.",
+    "Transaction consistency and timely bill payments emerged as strong predictors of low default probability.",
+    "Borrowers with improving financial behaviors over time had lower default probabilities.",
+    "Network influence such as cooperative savings group participation positively correlated with repayment reliability.",
+    "Explainable AI tools such as SHAP provide transparency into model predictions for regulatory compliance."
   ],
   "key_figures_tables": [
-    "Table 4: Performance metrics comparison across RF and LR models.",
-    "Table 5: Confusion matrices for all model variants.",
-    "Table 6: RF performance metrics with AUC, Precision, Recall, F1.",
-    "Table 7: LR performance metrics with AUC, Precision, Recall, F1."
+    "None."
   ],
   "key_equations": [
     {
-      "equation": "AUC = \\int_{0}^{1} TPR(TPR - FPR) dT",
-      "explanation": "Area Under the ROC Curve, measuring model discrimination ability across all classification thresholds."
-    },
-    {
-      "equation": "Precision = TP / (TP + FP)",
-      "explanation": "Proportion of true positives among all positive predictions."
-    },
-    {
-      "equation": "Recall = TP / (TP + FN)",
-      "explanation": "Proportion of true positives correctly identified among all actual positives."
-    },
-    {
-      "equation": "F1 = 2 * (Precision * Recall) / (Precision + Recall)",
-      "explanation": "Harmonic mean of precision and recall, balancing both metrics."
+      "equation": "None.",
+      "explanation": ""
     }
   ],
   "definitions": [
     {
-      "term": "Credit Scoring",
-      "definition": "A numerical assessment of a borrower's creditworthiness based on historical financial data and behavioral patterns."
+      "term": "PD",
+      "definition": "Probability of default, used to classify borrowers into risk tiers."
     },
     {
-      "term": "Dynamic Credit Scoring",
-      "definition": "Credit scoring that is periodically updated or retrained to reflect temporal changes in borrower behavior and economic conditions."
+      "term": "LSTM",
+      "definition": "Long Short-Term Memory neural network for capturing temporal patterns."
     },
     {
-      "term": "Financial Inclusion",
-      "definition": "Access to useful and affordable financial products and services that meet needs — transactions, payments, savings, credit, and insurance."
+      "term": "XGBoost",
+      "definition": "Extreme Gradient Boosting, an ensemble method for classification."
     },
     {
-      "term": "SACCO (Savings and Credit Cooperative)",
-      "definition": "A member-owned financial cooperative that provides savings and credit services, common in East Africa."
+      "term": "ROC-AUC",
+      "definition": "Area under the Receiver Operating Characteristic curve, a model evaluation metric."
     },
     {
-      "term": "Concept Drift",
-      "definition": "Changes in the underlying data distribution over time, which can degrade model performance if not addressed through retraining."
+      "term": "KS",
+      "definition": "Kolmogorov-Smirnov statistic, measures separation between classes."
     },
     {
-      "term": "Random Forest",
-      "definition": "An ensemble learning method that constructs multiple decision trees and aggregates their predictions for improved accuracy."
+      "term": "SHAP",
+      "definition": "SHapley Additive exPlanations, an explainable AI technique."
     },
     {
-      "term": "Logistic Regression",
-      "definition": "A statistical method for binary classification that models the probability of an outcome using a logistic function."
+      "term": "IQR",
+      "definition": "Interquartile range method for outlier detection."
+    },
+    {
+      "term": "Fintech",
+      "definition": "Financial technology companies applying technology to financial services."
     }
   ],
   "citations": [
+    {
+      "author": "Abdou",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Credit scoring statistical techniques and evaluation criteria reviewed across the literature.",
+      "role": "context"
+    },
+    {
+      "author": "Bellotti",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Support vector machines discover significant features for credit scoring.",
+      "role": "methodology"
+    },
+    {
+      "author": "Chen",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "XGBoost is a scalable tree boosting system for classification tasks.",
+      "role": "methodology"
+    },
+    {
+      "author": "Crook",
+      "year": 2007,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Recent developments in consumer credit risk assessment documented.",
+      "role": "context"
+    },
+    {
+      "author": "Galindo",
+      "year": 2000,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Basic methodology for credit risk assessment using statistical and machine learning approaches.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hand",
+      "year": 1997,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Statistical classification methods in consumer credit scoring reviewed.",
+      "role": "baseline"
+    },
     {
       "author": "Khandani",
       "year": 2010,
       "page": 0,
       "paragraph": 0,
-      "claim": "Bank account cash flow features can be used to improve credit scoring, showing the value of non-traditional data sources.",
-      "role": "context"
+      "claim": "Consumer credit-risk models via machine learning algorithms demonstrated improved performance.",
+      "role": "finding"
     },
     {
-      "author": "Baesens",
-      "year": 2003,
+      "author": "Lessmann",
+      "year": 2015,
       "page": 0,
       "paragraph": 0,
-      "claim": "Neural networks and support vector machines achieve performance levels comparable to or exceeding logistic regression and decision trees for credit scoring.",
-      "role": "context"
-    },
-    {
-      "author": "Butaru",
-      "year": 2016,
-      "page": 0,
-      "paragraph": 0,
-      "claim": "Random forest and gradient boosting machines often outperform traditional methods in credit risk modeling.",
-      "role": "context"
-    },
-    {
-      "author": "Bao",
-      "year": 2020,
-      "page": 0,
-      "paragraph": 0,
-      "claim": "A hybrid approach combining gradient boosted trees and logistic regression achieved an AUC of 0.750.",
-      "role": "context"
-    },
-    {
-      "author": "Dastile",
-      "year": 2020,
-      "page": 0,
-      "paragraph": 0,
-      "claim": "Ensemble methods outperform other algorithms for credit scoring when evaluated through AUC metrics.",
-      "role": "context"
+      "claim": "Benchmarking state-of-the-art classification algorithms for credit scoring showed ensemble methods outperform single models.",
+      "role": "finding"
     }
   ],
   "topic_relevance": {
     "topics": [
       {
-        "code": "1.B",
-        "name": "AI/ML Techniques in Personal Finance",
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
         "relevance": "high",
-        "justification": "Directly applies ML algorithms (Random Forest, Logistic Regression) to credit scoring for personal financial assessment."
+        "justification": "Reviews the full history of credit scoring systems from 1950s to present."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies static data reliance and exclusion of unbanked populations as core limitations."
       },
       {
         "code": "5.A",
         "name": "Financial Behavioral Profiles in Personal Finance",
         "relevance": "high",
-        "justification": "Credit scoring creates behavioral profiles based on transaction and payment history to assess creditworthiness."
+        "justification": "Uses behavioral features such as transaction consistency and temporal trends to profile borrowers."
       },
       {
-        "code": "5.B",
-        "name": "Savings Behavior",
-        "relevance": "contextual",
-        "justification": "SACCO membership implies savings behavior, though the paper focuses on credit rather than savings."
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "high",
+        "justification": "Compares logistic regression, random forests, XGBoost, and LSTM for creditworthiness classification."
       },
       {
-        "code": "4.A",
-        "name": "Landscape of Existing Personal Finance Systems",
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core contribution is ML-based predictive credit scoring models evaluated with standard metrics."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
         "relevance": "medium",
-        "justification": "Evaluates existing credit scoring approaches and proposes improvements for the Zambian financial system."
+        "justification": "LSTM captures temporal patterns in borrower behavior over time-series data."
       },
       {
-        "code": "2.B",
-        "name": "Bias and Fairness in Financial Systems",
-        "relevance": "contextual",
-        "justification": "Addresses financial inclusion for underserved populations, which relates to fairness concerns in credit scoring."
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses privacy and consent concerns raised by alternative data usage."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Examines trust-building through transparent, data-driven credit decisions."
       }
     ],
-    "contribution_to_field": "This paper demonstrates that Random Forest significantly outperforms Logistic Regression for credit scoring in the Zambian informal financial sector (SACCOs). It addresses the gap in applying ML credit scoring in developing economies where many individuals lack formal banking history. The dynamic credit scoring approach with periodic retraining addresses concept drift, ensuring models remain accurate as borrower behavior changes over time. The work promotes financial inclusion by enabling informal financial institutions to make data-driven lending decisions.",
+    "contribution_to_field": "This paper provides a comprehensive review of credit scoring evolution from statistical methods to machine learning approaches, establishing a historical baseline for the field. It demonstrates that incorporating alternative data sources such as mobile money transactions and utility payments significantly improves credit assessment accuracy compared to traditional financial records alone.",
     "directly_justifies": [
-      "Random Forest achieves AUC=0.988 compared to Logistic Regression's AUC=0.949.",
-      "Dynamic credit scoring with periodic retraining addresses temporal changes in credit behavior.",
-      "ML methods can serve individuals without formal banking history, promoting financial inclusion.",
-      "Feature engineering from transaction data is critical for model performance in low-data contexts."
+      "num: Models incorporating alternative data outperform those relying solely on traditional financial records.",
+      "num: Dynamic scoring could reduce expected default rates by 15–20% compared to traditional methods.",
+      "num: 58% of borrowers without formal credit histories were correctly identified as low or moderate risk.",
+      "num: 62% of borrowers classified as low-risk using the dynamic scoring system.",
+      "LSTM models effectively tracked evolving borrower behavior providing real-time adaptive credit scores.",
+      "Ensemble and neural network models captured complex nonlinear relationships improving performance over logistic regression."
     ],
     "limits": [
-      "Single SACCO dataset limits generalizability to other financial institutions. [unacknowledged]",
-      "Does not address potential algorithmic bias or fairness concerns. [unacknowledged]",
-      "Relatively small dataset (500 customers) compared to industry standards. [unacknowledged]",
-      "No comparison with state-of-the-art deep learning methods. [unacknowledged]"
-    ]
+      "No specific dataset size or source institution is reported, limiting reproducibility.",
+      "The study does not provide concrete ROC-AUC or F1-score values for individual models.",
+      "Model bias persists despite fairness monitoring due to uneven data representation.",
+      "Real-time scoring infrastructure requirements may not be feasible in low-resource rural regions.",
+      "The study does not compare against other recent alternative-data credit scoring benchmarks."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 4 was flagged as high relevance for credit scoring history review. Domain 5 was flagged as high relevance for behavioral profiling. Domain 6 was flagged as high relevance as core contribution. Domain 10 was flagged as medium relevance for privacy discussions."
   },
   "limitations": [
-    "Single SACCO dataset limits generalizability across different financial institutions and regions. [unacknowledged]",
-    "Does not analyze potential bias or fairness in credit scoring decisions. [unacknowledged]",
-    "Relatively small dataset (500 customers) may not capture full range of credit behaviors. [unacknowledged]",
-    "No comparison with more advanced ML methods like gradient boosting or neural networks. [unacknowledged]",
-    "Temporal dynamics of concept drift not quantified — retraining frequency not optimized. [unacknowledged]"
+    "No specific dataset size, source institution, or geographic sample is reported.",
+    "Quantitative model performance metrics such as exact ROC-AUC values are not provided for individual models.",
+    "Model bias from uneven data representation acknowledged by authors.",
+    "Infrastructure requirements for real-time scoring in rural regions acknowledged by authors.",
+    "No comparison against recent alternative-data credit scoring benchmarks."
   ],
   "remember_this": [
-    "Random Forest outperforms Logistic Regression for credit scoring in Zambian SACCOs (AUC 0.988 vs 0.949).",
-    "Dynamic credit scoring with periodic retraining addresses concept drift in borrower behavior.",
-    "ML credit scoring can serve individuals without formal banking history, promoting financial inclusion.",
-    "Feature engineering from transaction data is critical when traditional credit bureau data is unavailable.",
-    "Best RF model uses 200 trees and 8 features per split."
+    "Dynamic credit scoring using ML and alternative data outperforms traditional static methods for credit assessment.",
+    "Ensemble and LSTM models capture nonlinear and temporal borrower behavior patterns effectively.",
+    "Alternative data such as mobile money and utility payments enables scoring of previously unscored populations.",
+    "num: Expected default rates can be reduced by 15–20% through risk-adjusted dynamic scoring strategies.",
+    "Explainable AI tools such as SHAP are essential for regulatory compliance and borrower trust."
   ],
   "summarization_metadata": {
-    "summarized_at": "2026-07-21T12:00:00Z",
+    "summarized_at": "2026-07-22T15:00:00Z",
     "summarizer_model": "opencode/big-pickle",
     "conversion_reference": {
       "file": "Bakuwa & Jimu_marked.md",
-      "converted_at": "2026-07-21T05:21:47Z",
+      "converted_at": "2026-07-22T12:07:32Z",
       "converter_tool": "markitdown"
     }
   }
