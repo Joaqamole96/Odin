@@ -11,13 +11,12 @@ rrl/
 ├── conversions/         # _marked.md markdown conversions with YAML frontmatter
 ├── summaries/           # _summarized.json structured JSON summaries
 ├── compilations/        # Compiled topic-level review documents
-│   ├── All-Floor*-Ceiling*-YearSorted-Compilation.md
-│   ├── 1.X/             # Topic 1 compilations
-│   ├── ...              # Topics 2-14
-│   └── local/           # By designation
-├── syntheses/           # Per-topic and cross-topic synthesis documents
-│   ├── {Topic}.{Letter}_Synthesis.md
-│   └── {TopicA}x{TopicB}_Cross-Synthesis.md
+│   ├── 1.X/ … 13.X/     # Topic folders (codes follow the old outline)
+│   ├── local/           # By designation: local
+│   ├── local-algorithm-specific/
+│   ├── international/
+│   └── international-algorithm-specific/
+├── archive/             # Old/unsorted workspace snapshots (e.g. 2026-07-20_190503)
 ├── scripts/             # Python utility scripts
 └── skills/              # AI agent skill prompts
 ```
@@ -187,7 +186,9 @@ See `docs/standards/rrl-workflow.md` for the full 9-step processing workflow. Su
 
 ## Topic Taxonomy
 
-14 major topics with codes 1.A–14.C defined in `topic-outline.md`. Topics cover Filipino financial behavior, cultural context, expense categorization, existing systems, behavioral profiling, spending forecasting, budget recommendation, anomaly detection, mobile design, privacy, retention, system evaluation, savings/debt management, and ML pipeline infrastructure.
+> **Note:** the RRL topic codes and folders below follow the **old** topic outline. The new thesis topical outline (`docs/thesis/topical-outline/topical-outline.md`) supersedes it, and re-mapping the RRL taxonomy to it is pending. Until then, treat compilation folder codes as organizational only.
+
+The old taxonomy defined 14 major topics with codes 1.A–14.C (compilation folders currently cover `1.X`–`13.X`). Topics covered Filipino financial behavior, cultural context, expense categorization, existing systems, behavioral profiling, spending forecasting, budget recommendation, anomaly detection, mobile design, privacy, retention, system evaluation, savings/debt management, and ML pipeline infrastructure.
 
 ## Dependencies
 
