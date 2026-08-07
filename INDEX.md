@@ -1,8 +1,12 @@
 # Odin Papers — Repository Index
 
-- **Project:** Development of Odin: A Personal Budget Management System Using Random Forest, LSTM, and Isolation Forest Algorithms
+- **Project:** Development of Odin: A Personal Finance Management Application for Filipino Working Young Adults Using Random Forest, LSTM, and Isolation Forest
 - **Institution:** University of Makati | Group 4, III-DCSAD
-- **Last indexed:** 2026-07-17
+- **Last indexed:** 2026-08-06
+
+---
+
+> **Ground truth:** the authoritative versions of the thesis documents live in the Google Drive folder. Copies in this repository are working mirrors and may lag behind the Drive source — verify before citing.
 
 ---
 
@@ -11,14 +15,12 @@
 | Need | Go to |
 | :--- | :--- |
 | Formal RP2 proposal, title, objectives, scope | `docs/research-proposal/Research-Proposal.md` |
-| Current technical and paper specification | `docs/thesis/system/Specification.md` |
+| Topical outline of the thesis | `docs/thesis/topical-outline/topical-outline.md` |
+| System specification (working contract) | `docs/thesis/specifications/system-spec.md` |
+| Chapter 1 draft | `docs/thesis/paper/chapter-1.md` |
 | Product-facing app scope, user stories, screens | `docs/thesis/system/PRD-Full-Odin-App.md` |
-| Gap analysis between PRD and specification | `docs/thesis/system/Specification-PRD-Alignment-Report.md` |
-| Revision checklist for specification | `docs/thesis/system/Specification-Revision-Points-Based-on-PRD.md` |
-| RRL topic hierarchy and search prompts | `rrl/topic-outline.md` |
-| Chapter 1 draft | `docs/thesis/paper/chapter-1/purpose-and-description.md` |
+| RRL workspace: papers, summaries, conversions | `rrl/` |
 | Survey instrument | `survey/PUEPS.md` |
-| RRL source store, summaries, conversions | `rrl/` |
 | Agent navigation and standards | `AGENTS.md` |
 
 ---
@@ -41,11 +43,11 @@
 | Layer | Source | Notes |
 | :--- | :--- | :--- |
 | Formal research proposal | `docs/research-proposal/Research-Proposal.md` | Authoritative for RP2 framing, objectives, scope. |
+| Topical outline | `docs/thesis/topical-outline/topical-outline.md` | Thesis structure: problem, PFM systems, application, ML, metrics, evaluation. |
+| System specification | `docs/thesis/specifications/system-spec.md` | Working system contract (v0.1.0, 2026.08.05). |
+| Paper chapters | `docs/thesis/paper/` | Drafts such as `chapter-1.md`. |
 | Product scope | `docs/thesis/system/PRD-Full-Odin-App.md` | Full-app PRD with user stories and screen descriptions. |
-| Technical contract | `docs/thesis/system/Specification.md` | Detailed system and paper specification (v4.0). |
-| Reconciliation | `docs/thesis/system/Specification-PRD-Alignment-Report.md` | Gaps between PRD and specification. |
-| Revision plan | `docs/thesis/system/Specification-Revision-Points-Based-on-PRD.md` | Editing checklist for specification alignment. |
-| RRL map | `rrl/topic-outline.md` | Current topic taxonomy (13 topics, codes 1.A–13.C). |
+| RRL workspace | `rrl/` | Papers, summaries, conversions, compilations. Topic codes (1.A–14.C) still follow the old topic outline — see RRL note below. |
 
 ---
 
@@ -59,19 +61,41 @@
 | `research-proposal/Proposal Panel's Comments & Suggestions/Panel-Comments-and-Suggestions.md` | Organized panel comments. |
 | `research-proposal/Proposal Panel's Comments & Suggestions/Transcription-of-Comments-and-Suggestions.md` | Verbatim panel defense Q&A. |
 
-### Thesis — System
+### Thesis — Topical Outline
 
 | File | Purpose |
 | :--- | :--- |
-| `thesis/system/Specification.md` | Technical specification (v4.0). |
-| `thesis/system/Specification-(OUTDATED).md` | Superseded specification. Do not use. |
+| `thesis/topical-outline/topical-outline.md` | Official topical outline (v0.1.0). Supersedes the old `thesis/system/topic-outline (OLD).md`. |
+
+### Thesis — Specifications
+
+| File | Purpose |
+| :--- | :--- |
+| `thesis/specifications/system-spec.md` | Working system specification (v0.1.0). Supersedes `thesis/system/specification (OLD).md` (v4.0). |
+
+### Thesis — Paper
+
+| File | Purpose |
+| :--- | :--- |
+| `thesis/paper/chapter-1.md` | Chapter 1 draft (Introduction). |
+| `thesis/paper/README.md` | Paper-copy rules (Google Drive ground truth, metadata requirement). |
+
+### Thesis — System (working & preserved)
+
+| File | Purpose |
+| :--- | :--- |
 | `thesis/system/PRD-Full-Odin-App.md` | Product requirements document. |
-| `thesis/system/Model-&-Algorithm-Plan-(OUTDATED).md` | Superseded model plan. Do not use. |
+| `thesis/system/requirements-engineering/ODIN-REQUIREMENTS-ENGINEERING-V1.07.27.2026.md` | Functional requirements per module. |
+| `thesis/system/screen-descriptions/` | 24 screen descriptions. See `00-index.md`. |
+| `thesis/system/Notes.md` | Research notes on data synthesis and SME validation. |
+| `thesis/system/specification (OLD).md` | Superseded technical specification (v4.0). Historical; do not use as current spec. |
+| `thesis/system/topic-outline (OLD).md` | Superseded topical outline. Historical; do not use as current outline. |
 
 ### Screen Descriptions (24 screens)
 
 | File | Screen |
 | :--- | :--- |
+| `thesis/system/screen-descriptions/00-index.md` | Screen set index and cross-cutting notes. |
 | `thesis/system/screen-descriptions/01-login-register.md` | Login / Register |
 | `thesis/system/screen-descriptions/02-onboarding-questionnaire.md` | Onboarding Questionnaire |
 | `thesis/system/screen-descriptions/03-profile-result.md` | Profile Result |
@@ -97,24 +121,11 @@
 | `thesis/system/screen-descriptions/23-account-offboarding.md` | Account Offboarding |
 | `thesis/system/screen-descriptions/24-help-problem-reporting.md` | Help / Problem Reporting |
 
-### Thesis — Paper
-
-| File | Purpose |
-| :--- | :--- |
-| `thesis/paper/chapter-1/purpose-and-description.md` | Chapter 1 draft. |
-
-### Specification Alignment
-
-| File | Purpose |
-| :--- | :--- |
-| `thesis/system/Specification-PRD-Alignment-Report.md` | Gap analysis: PRD vs specification. |
-| `thesis/system/Specification-Revision-Points-Based-on-PRD.md` | Revision checklist for specification. |
-
 ### Meeting Records
 
 | File | Purpose |
 | :--- | :--- |
-| `group-sessions/4-24-meeting.md` | Group session notes (April 24). |
+| `docs/group-sessions/4-24-meeting.md` | Group session notes (April 24). |
 
 ---
 
@@ -126,12 +137,13 @@ RRL is the largest and most active part of the workspace.
 | :--- | :--- |
 | `rrl/bucket/` | Raw candidate PDF intake pool. |
 | `rrl/papers/` | Curated source-paper PDFs. |
-| `rrl/summaries/` | Structured `_summarized.md` paper summaries. |
+| `rrl/summaries/` | Structured `_summarized.json` paper summaries. |
 | `rrl/conversions/` | `_marked.md` Markdown conversions from source papers. |
 | `rrl/compilations/` | Compiled topic-level review documents. |
 | `rrl/scripts/` | Python utility scripts. |
 | `rrl/skills/` | AI agent skill prompts. |
-| `rrl/topic-outline.md` | RRL topic taxonomy (13 topics, codes 1.A–13.C). |
+
+> **Note:** the RRL topic codes (`1.A`–`14.C`, folders `1.X`–`13.X`) follow the **old** topic outline. The new thesis topical outline is `docs/thesis/topical-outline/topical-outline.md`; re-mapping the RRL taxonomy to it is pending. See `rrl/README.md`.
 
 ### RRL Workflow
 
@@ -189,10 +201,11 @@ Full reference: `docs/standards/rrl-naming-conventions.md`
 | Task | Use |
 | :--- | :--- |
 | Understand what Odin proposes to build | `docs/research-proposal/Research-Proposal.md` |
+| Topical outline of the thesis | `docs/thesis/topical-outline/topical-outline.md` |
 | Full app product requirements | `docs/thesis/system/PRD-Full-Odin-App.md` |
-| Detailed system rules | `docs/thesis/system/Specification.md` |
-| Fix specification/PRD mismatches | `docs/thesis/system/Specification-PRD-Alignment-Report.md` |
+| Detailed system rules | `docs/thesis/specifications/system-spec.md` |
+| Chapter drafts | `docs/thesis/paper/` |
 | Plan ML/model implementation | `Odin-ML/` (separate repo: `docs/`, `scripts/`) |
 | Ground synthetic data parameters | `Odin-ML/docs/data-synthesis-handoff.md` |
-| Draft RRL topic sections | `rrl/topic-outline.md`, `rrl/compilations/` |
+| Draft RRL topic sections | `rrl/compilations/` |
 | Evaluate one paper's relevance | `rrl/summaries/` |

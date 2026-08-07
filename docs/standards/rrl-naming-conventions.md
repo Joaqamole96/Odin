@@ -1,5 +1,7 @@
 # RRL Naming Conventions
 
+> **Note:** topic codes referenced below follow the **old** topic outline. The new thesis topical outline is `docs/thesis/topical-outline/topical-outline.md`; re-mapping the RRL taxonomy to it is pending. The `rrl/syntheses/` output directory does not exist yet.
+
 ## Source Prefixes
 
 Every curated paper file uses a prefix to indicate geographic/institutional origin.
@@ -66,7 +68,7 @@ The `LetterSuffix` (a, b, c...) is used when multiple papers share the same auth
 
 ## Topic-Subtopic Folder Codes
 
-RRL compilation folders use codes from `topic-outline.md`:
+RRL compilation folders use the old-outline topic codes (see note at top):
 
 ```
 rrl/compilations/{Topic}.{Letter}/
@@ -74,4 +76,4 @@ rrl/compilations/{Topic}.{Letter}/
 
 Examples: `1.A/`, `5.C/`, `8.B/`, `14.A/`
 
-The special folder `01_Irrelevant/` holds papers culled from the active corpus.
+Papers culled from the active corpus are classified as **Crucial**, **Supporting**, or **Irrelevant** by the culler skill (`rrl/skills/paper-culler-skill.md`).

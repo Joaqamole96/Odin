@@ -18,6 +18,8 @@ Course Adviser: Prof. Era Marie Gannaban
 
 Technical Adviser: Prof. Christian Michael Mansueto
 
+Subject Matter Expert: Dr. Pamela A. Go
+
 Panels:
 - Prof. Daniel Dellosa (Chair)
 - Prof. Jomariss Plan
@@ -27,27 +29,19 @@ Institutional Affiliation: College of Computing and Information Sciences, Univer
 
 ---
 
-# RULES
+# Specification Rules and Standards
 
-1. Article flow is hierarchical; if a system module, component, or feature has dependencies, all of those must be discussed fully and completely first before it.
+- Article flow is hierarchical; if a system module, component, or feature has dependencies, all of those must be discussed fully and completely first before it.
 
-2. The discussion of said dependencies must be as close to the dependent module as possible. For example, three dependency features for dependent feature A must be discussed in order of Article I, II, III (dependencies), then IV (dependent). Feature B whose dependencies are not the exact same must not be Article IV.
+- The discussion of said dependencies must be as close to the dependent module as possible. For example, three dependency features for dependent feature A must be discussed in order of Article I, II, III (dependencies), then IV (dependent). Feature B whose dependencies are not the exact same must not be Article IV.
 
-3. A system feature or topic merits its own article if it is depended upon by at least two other features or topics. If a feature is used by only one other feature or is self‑contained, it shall be described within that dependent feature's article as a section.
+- A system feature or topic merits its own article if it is depended upon by at least two other features or topics. If a feature is used by only one other feature or is self‑contained, it shall be described within that dependent feature's article as a section.
 
-4. Cross‑cutting dependencies, or dependencies with two or more dependents, provided that they qualify as articles, shall be defined in dedicated articles before any module that uses them. These articles appear in order of conceptual dependency (e.g. User → Account → Transaction → Category).
+- Cross‑cutting dependencies, or dependencies with two or more dependents, provided that they qualify as articles, shall be defined in dedicated articles before any module that uses them. These articles appear in order of conceptual dependency (e.g. User → Account → Transaction → Category).
 
 ---
 
 # SYSTEM SPECIFICATION
-
-> TODO: Three out of the four core modules, the FBP classification module, the forecasting module, and the anomaly detection module, hereby known as the intelligent modules, implement a model, and are consequently hosted on the server side. Therefore, their functionality relies on Internet access.
-
-> TODO: Include every module in the offline capability support list except for the FBP, forecasting, and anomaly detection module.
-    
-> TODO: Add this to the scope and delimitations: "iOS is explicitly excluded from the scope. No iOS‑specific development, testing, or distribution shall be undertaken."
-
-> TODO: Add this to the onboarding: 'The System shall display an informational notice during onboarding that states: "Odin is a thesis project designed primarily for Filipino working young adults aged 20–40 in Metro Manila. All users are welcome to use the app, but please be aware that only data from users meeting these criteria will be used to train and improve Odin's AI models. By continuing, you acknowledge this limitation."'
 
 ---
 

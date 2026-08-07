@@ -1,6 +1,6 @@
 # Odin-Paper — Agent Guide
 
-**Thesis**: Development of Odin: A Personal Budget Management System Using Random Forest, LSTM, and Isolation Forest
+**Thesis**: Development of Odin: A Personal Finance Management Application for Filipino Working Young Adults Using Random Forest, LSTM, and Isolation Forest
 **Group 4, III-DCSAD, University of Makati**
 
 ---
@@ -8,6 +8,8 @@
 ## Repository Role
 
 This is the **academic documentation repository** for the Odin thesis. It contains thesis documents, literature reviews (RRL), and survey instruments. It does **not** contain application code, API servers, or ML model implementations — those live in `Odin-App/` and `Odin-ML/` respectively.
+
+> **Ground truth:** the authoritative versions of the thesis documents live in the Google Drive folder. Copies in this repository are working mirrors and may lag behind the Drive source — verify before citing.
 
 ---
 
@@ -71,8 +73,9 @@ Odin-Paper/
 | Document | Purpose |
 |----------|---------|
 | **`INDEX.md`** | Master index. Authoritative navigation for all files. |
-| **`rrl/topic-outline.md`** | RRL topic taxonomy (14 topics, codes 1.A–14.C). Authoritative for topic mapping. |
-| **`docs/thesis/system/Specification.md`** | Technical specification (v4.0). The main design contract. |
+| **`docs/thesis/topical-outline/topical-outline.md`** | Topical outline (v0.1.0). Thesis structure ground truth. |
+| **`docs/thesis/specifications/system-spec.md`** | System specification (v0.1.0). The main design contract. |
+| **`docs/thesis/paper/chapter-1.md`** | Chapter 1 draft (Introduction). |
 | **`docs/thesis/system/PRD-Full-Odin-App.md`** | Product requirements. 24 screen descriptions in `docs/thesis/system/screen-descriptions/`. |
 | **`docs/research-proposal/Research-Proposal.md`** | Formal RP2 proposal. Authoritative for objectives/scope. |
 
@@ -94,6 +97,8 @@ Every curated paper has up to four files (same `{stem}`):
 `L--` = local (Philippine), `I--` = international, `A--` = algorithm/system focus.
 
 Full reference: `docs/standards/rrl-naming-conventions.md`
+
+> **Note:** the RRL topic codes (`1.A`–`14.C`, compilation folders `1.X`–`13.X`) follow the **old** topic outline. The new thesis topical outline (`docs/thesis/topical-outline/topical-outline.md`) supersedes it; re-mapping the RRL taxonomy is pending.
 
 ### Python Utilities
 
@@ -157,8 +162,8 @@ pip install -r requirements.txt
 
 ## Important Gotchas
 
-- `docs/thesis/system/` contains `Specification-(OUTDATED).md` and `Model-&-Algorithm-Plan-(OUTDATED).md` — these are stale. Prefer the non-OUTDATED versions.
-- `rrl/topic-outline.md` has 14 topics, but `docs/thesis/system/Specification.md` still says "twelve topics" in places.
+- `docs/thesis/system/` holds preserved historical copies: `specification (OLD).md` (v4.0 spec) and `topic-outline (OLD).md`. Both are superseded — the current spec is `docs/thesis/specifications/system-spec.md` and the current outline is `docs/thesis/topical-outline/topical-outline.md`.
+- RRL topic codes (`1.A`–`14.C`) and topic-count references follow the **old** topic outline. The new topical outline is being finalized; expect the RRL taxonomy to be re-mapped to it. Until then, treat compilation folder codes as organizational only.
 - 518 PDFs (~969 MB) are tracked via Git LFS. New clones require `git lfs pull` to fetch binary content.
-- Generated compilation files in `rrl/compilations/` are gitignored. Regenerate with `compile_summaries.py`.
+- Generated compilation files in `rrl/compilations/` are regenerated with `compile_summaries.py` and are not committed.
 - Legacy summaries (`.yaml`, `.md`) are still readable by `compile_summaries.py` but new summaries must be `.json`.

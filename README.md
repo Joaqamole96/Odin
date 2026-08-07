@@ -1,10 +1,12 @@
 # Odin-Paper
 
-Academic documentation repository for the thesis **"Development of Odin: A Personal Finance Management System For Filipino Working Young Adults Using Random Forest, LSTM, and Isolation Forest"** by Group 4 - Aesir, IV-DCSAD, University of Makati.
+Academic documentation repository for the thesis **"Development of Odin: A Personal Finance Management Application for Filipino Working Young Adults Using Random Forest, LSTM, and Isolation Forest"** by Group 4 - Aesir, IV-DCSAD, University of Makati.
 
 ## Purpose
 
 This repository contains thesis documents, the Review of Related Literature (RRL), and survey instruments.
+
+> **Ground truth:** the authoritative versions of the thesis documents live in the Google Drive folder. Copies in this repository are working mirrors and may lag behind the Drive source — verify before citing.
 
 ## Setup
 
@@ -26,21 +28,16 @@ pip install -r requirements.txt
 |----------|------|
 | Master index | `INDEX.md` |
 | Agent guide | `AGENTS.md` |
-| RRL topic taxonomy | `rrl/topic-outline.md` |
-| RRL directory | `rrl/README.md` |
-| Technical specification | `docs/thesis/system/Specification.md` |
+| Topical outline | `docs/thesis/topical-outline/topical-outline.md` |
+| System specification | `docs/thesis/specifications/system-spec.md` |
+| Chapter 1 draft | `docs/thesis/paper/chapter-1.md` |
 | Product requirements | `docs/thesis/system/PRD-Full-Odin-App.md` |
+| RRL directory | `rrl/README.md` |
 | Research proposal | `docs/research-proposal/Research-Proposal.md` |
 
 ## RRL Workflow
 
-1. Place PDFs in `rrl/bucket/`
-2. Convert: `python3 rrl/scripts/prepare_pdf.py rrl/bucket/`
-3. Summarize with AI using `rrl/skills/paper-summarizer-skill.md`
-4. Move converted/summarized files into `rrl/conversions/` and `rrl/summaries/`
-5. Classify into topic folders under `rrl/compilations/{Topic}.{Letter}/`
-6. Compile: `python3 rrl/scripts/compile_summaries.py -i <dir> -o <outdir>`
-7. Cull with AI using `rrl/skills/paper-culler-skill.md`
+The RRL processing workflow (intake, convert, summarize, move, classify, compile, synthesize, cross-synthesize, cull) is documented in `docs/standards/rrl-workflow.md`. Quick reference: `rrl/README.md`.
 
 ## Git LFS
 

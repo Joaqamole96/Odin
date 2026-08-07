@@ -2,6 +2,8 @@
 
 Nine-step workflow for adding, processing, and synthesizing literature in the Review of Related Literature.
 
+> **Note:** topic codes referenced below (e.g. `5.C/`, `7.C`) follow the **old** topic outline. The new thesis topical outline is `docs/thesis/topical-outline/topical-outline.md`; re-mapping the RRL taxonomy to it is pending. The `rrl/syntheses/` output directory does not exist yet — create it when the first synthesis is produced.
+
 ## Steps
 
 ### 1. Intake
@@ -53,7 +55,7 @@ Copy relevant `_marked.md`, `_summarized.json` files into the matching topic fol
 rrl/compilations/{Topic}.{Letter}/
 ```
 
-Use `rrl/topic-outline.md` codes (e.g., `5.C/`, `8.B/`) to determine placement.
+Use the RRL topic codes (e.g., `5.C/`, `8.B/`) to determine placement. The codes come from the old outline (see note at top).
 
 ### 6. Compile
 

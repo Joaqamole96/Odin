@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This directory describes the user-facing screens and major workflow surfaces for Odin. The latest system specification is authoritative; these screen descriptions translate that scope into buildable product surfaces.
+This directory describes the user-facing screens and major workflow surfaces for Odin. The latest system specification (`../../specifications/system-spec.md`) is authoritative; these screen descriptions translate that scope into buildable product surfaces.
 
 ## Screen Set
 

@@ -1,0 +1,3 @@
+The latest contents of the thesis paper shall always reside in the Google Drive, to ensure consistent ground truth. Any copies in this directory shall never be assumed to be up-to-date, and cautious use of such documents must always be exercised.
+
+Metadata of the paper copies must always be present (a JSON `## Metadata` block with `document-type`, `version`, `date`, and `authors`), so that any given copy can be checked against the Drive source.
