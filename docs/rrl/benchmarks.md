@@ -1,0 +1,1 @@
+<!-- Markdown table comparing existing apps, strengths, and weaknesses -->

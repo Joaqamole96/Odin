@@ -1,0 +1,418 @@
+{
+  "pipeline_run_at": "2026-07-30T14:31:40Z",
+  "input_dir": "/home/joaquin/Repositories/Odin Repositories/Odin-Paper/rrl/conversions/batch-2",
+  "output_dir": "/home/joaquin/Repositories/Odin Repositories/Odin-Paper/rrl/conversions/batch-2",
+  "steps": [
+    {
+      "step": "validate",
+      "status": "success",
+      "total_json": 100,
+      "valid": 0,
+      "invalid": [
+        {
+          "file": "Chen & Lin_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Chen & Tan_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Chen J. et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Chen V. et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Chen X. et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Chen Y. et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Chepkutwo_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Chikoore et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Cho_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Chowdhury A. et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Chowdhury T. et al-2026_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Chowdhury T. et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Ciric et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Claros et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Co & Centeno_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Compagnino et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Conales_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Contreras_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Cortez_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Cucio & Hennig_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "D'Acunto & Rossi_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "D'Souza et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "D. R. et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Danach et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Darwish et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Das et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Dela Cruz et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Dela Torre et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Delena et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Deselo & Agner_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Dewi_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Dhanekula & Munira_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Dimaranan & Dy_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Dimaunahan et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Dominguez et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Donato et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Doroy_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Dritsas & Trigka_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Du Y. et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Duvalla_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Efendi & Widagdo_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Eigenschink et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Eliades & Papadopoulos_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Elliyana et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Erno & Grefalde_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Espelita et-al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Esperanza et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Espiritu F. et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Espiritu M.-2025_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Espiritu M.-2026_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Espiritu P. et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Essahraui et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Estorba et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Faisal et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Fariha et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Fathy_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Fei_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Flores_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Gabatin et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Gao J. et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Gao et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Garcia_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Garg et al-2023_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Garg et al-2024_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Gavric et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Gentyala_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "George et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Gerzon et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Ghonaim & El-Sharawy_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Gomez et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Goncu et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Gong_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Gotehus_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Guban et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Gudelosao et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Guedi_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Guido et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Gulbakyt et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Gumasing et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Hall & Rasheed_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Hall_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Hamidi & Hagdi_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Han & Ko_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Han & Lai_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Hartomo et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Hasan et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Hashemi et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Hassan et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Hassan_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Hassine et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Heirene R. et al-2026a_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Heirene R. et al-2026b_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Hidayat et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Hoang & Wiegratz_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Holmgren_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Hopfgartner et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Hossain et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "Houria & Hadjer_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "de Goma et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        },
+        {
+          "file": "de Zarza et al_summarized.json",
+          "error": "missing keys: {'paper_id', 'title', 'year', 'authors', 'tldr'}"
+        }
+      ],
+      "started_at": "2026-07-30T14:31:40Z",
+      "completed_at": "2026-07-30T14:31:40Z"
+    }
+  ],
+  "completed_at": "2026-07-30T14:31:40Z"
+}
