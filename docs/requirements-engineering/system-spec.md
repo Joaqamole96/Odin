@@ -8,13 +8,13 @@
 {
   "document-type": "system-spec",
   "version": 0.3.0,
-  "date": "2026.08.06",
+  "date": "2026.08.08",
   "authors": [
     "Gabion, Stefanie S.",
     "Guevarra, Joaquin Luis T.",
     "San Jose, Alexa Joanne Paula G.",
     "Togle, Charles Nathaniel B."
-  ],
+  ]
 }
 ```
 
@@ -50,7 +50,7 @@
 | :--- | :--- | :--- | :--- |
 | 0.1.0 | 2026.08.05 | Gabion, Guevarra, San Jose, Togle | Initial skeleton: Metadata, Acronyms, and section placeholders. |
 | 0.2.0 | 2026.08.06 | Gabion, Guevarra, San Jose, Togle | First content fill: sections 0–13 and Appendices drafted; section numbering reordered to be sequential; change log added. |
-| 0.3.0 | 2026.08.07 | Gabion, Guevarra, San Jose, Togle | Manual correction of content. |
+| 0.3.0 | 2026.08.08 | Gabion, Guevarra, San Jose, Togle | Manual correction of content; review comments applied (Budget module added, offline/online split documented, fbp→pfp, links fixed, redundant ML sections trimmed). |
 
 ---
 
@@ -64,11 +64,14 @@ Odin is a **financial decision-support system**. Intelligent outputs (profiles, 
 
 ### 1.2 Problem Statement
 
+Odin is a **personal finance management (PFM) application** that helps Filipino working young adults record, review, and act on their money even when the network is unreliable, while serving as a defensible, testable system for thesis evaluation of its intelligent finance modules.
+
 Filipino working young adults manage money under real conditions that generic expense trackers do not serve well:
 
-<!-- Refer to `topic-outline.md` for an idea of the targeted pain points in the problem statement -->
+- **In concept**, conventional PFM apps assume stable, predictable income, rely on generic category labels that do not reflect Filipino financial realities, and focus on recording past expenses rather than supporting forward-looking, profile-aware, obligation-aware budgeting.
+- **In application**, they provide limited support for variable income, protected or fixed obligations, family and culturally patterned spending, offline transaction entry, and local-first dashboards; many keep sensitive financial data only on the server and block core features without a connection.
 
-Conventional PFM apps and systems <!-- List down gaps and weaknesses of conventional PFM apps and systems, both in concept and in application -->. Odin addresses both halves of this problem at once: a useful mobile app and a testable system for research.
+Odin addresses both halves of this problem at once: a useful mobile app and a testable system for research.
 
 ### 1.3 Target Users
 
@@ -112,8 +115,9 @@ The primary product areas are:
    ┌───────────────┐   │   │ Local SQLite │   │  ML subsystem        │   │
    │ External      │   │   │ + sync queue │   │  (PFP Classifier,    │   │
    │ services:     │   │   └──────────────┘   │  Forecaster, Anomaly │   │
-   │ Google Auth   │   │                      │  Detector)           │   │
-   │ (TBD cloud)   │   │                      └──────────┬───────────┘   │
+    │ Google Auth   │   │                      │  Detector, Budget    │   │
+    │ (TBD cloud)   │   │                      │  Optimizer)          │   │
+    └───────────────┘   │                      └──────────┬───────────┘   │
    └───────────────┘   │                                 │               │
                        └─────────────────────────────────┼───────────────┘
                                                          │
@@ -132,29 +136,14 @@ The mobile app is the primary product surface. Research data sources are consume
 
 | Term | Definition |
 | :--- | :--- |
-<!-- Open, protected, and fixed categories can just be defined in their own section. -->
-<!-- | Protected (fixed) category | An expense category a user marks so the system will not recommend reducing it (e.g., rent, tuition, family support). | -->
-| Financial weight | The proportion of total expenses consumed by essential and obligatory spending; one of the three PFP classifying dimensions. |
 | Financial stability | The consistency of a user's inflow, measured by the coefficient of variation of income; one of the three PFP classifying dimensions. |
+| Financial weight | The proportion of total expenses consumed by essential and obligatory spending; one of the three PFP classifying dimensions. |
 | Financial tolerance | A user's capacity to absorb shocks, measured by emergency runway (months of expenses covered by savings); one of the three PFP classifying dimensions. |
 | PFP Class / Octant | One of eight profile categories produced by combining the three binary dimensions. |
-<!-- Originally "newcomer", the new term "newcomer" is friendlier. -->
 | Newcomer | The condition of a new user with little or no transaction history, served by questionnaire-based defaults (PFP). |
-<!-- Unsure if sync queue, sync convergence, and tombstone were made by me, Charles, or one of the agents. -->
-<!-- | Sync queue | The local queue that records domain operations (transaction creation, category update, etc.) for background synchronization. |
-| Sync convergence | The state reached when push and pull synchronization have brought local and remote data to the same consistent version. |
-| Tombstone | A marker left in place of a deleted synced record so deletes propagate instead of being lost. | -->
 | Archetype | A named, parameterized segment of the target population used to generate personas. |
 | Persona | An individual synthetic user generated from an archetype, with a ground-truth PFP and a transaction history. |
-<!-- "Classification mode" can just be defined in its own section. -->
-<!-- | Classification mode | The PFP classifier input mode: `STANDARD` (transaction history) or `QUESTIONNAIRE` (onboarding answers). | -->
-<!-- Why does only the PFP classification model get a tier? Why don't the budget optimizer, forecaster, and anomalous transaction detector models get tiers? If they all get tiers, won't this term just simply be "Tier" or "Model Tier"? -->
-<!-- | PFP Tier | One of the evaluated classifier designs (Tier 0 naive baseline through Tier 4 advanced learner); the final module may be rule-based or learned. | -->
 | Walk-forward validation | Time-series validation that trains on expanding windows and evaluates one step ahead, avoiding information leakage. |
-<!-- Not sure how "expected events" are significant enough to deserve a glossary entry? This too should just be placed in its own section. -->
-<!-- | Expected event | A known recurring income or expense the user has declared (e.g., rent, salary), incorporated into forecast display. | -->
-
-<!-- Overall, I expected the entries in the glossary to be for significant terms. -->
 
 ---
 
@@ -168,11 +157,9 @@ Odin has three subsystems:
 
 2. **Backend services** — an Express API and Supabase-backed data layer providing authentication, server-side validation, sync endpoints, and online-only operations (registration, login, password flows, data export, account deletion, push token registration).
 
-3. **ML subsystem** — a set of FastAPI microservices serving the PFP Classifier, Forecaster, and Anomaly Detector, wired to the backend through an API gateway and event bus.
+3. **ML subsystem** — a set of FastAPI microservices serving the PFP Classifier, Forecaster, Anomaly Detector, and Budget Optimizer, wired to the backend through an API gateway and event bus.
 
-<!-- Not sure if this offline-first sync model was made by Charles or one of the agents. -->
-
-<!-- ### 3.2 Offline-First Sync Model
+### 3.2 Offline-First Sync Model
 
 The implementation model is:
 
@@ -182,16 +169,24 @@ UI -> local repository -> SQLite table -> sync_queue -> runSync() -> /odin/api/s
 ```
 
 - The UI reads from local SQLite and writes through feature repositories; network sync is background convergence, not the primary interaction path.
-
 - The sync queue stores domain operations (e.g., "create transaction", "update category"), not stored HTTP requests.
-
 - Conflict resolution is automatic: delete wins, then per-field last-write-wins for concurrent edits.
-
 - Duplicate operations are idempotent through operation IDs and applied-operation tracking; losing/rejected operations are logged for audit/recovery.
-
 - Synced user-owned rows preserve `user_id`, versioning, deletion state (tombstones), timestamps, and last-sync metadata; deletes for synced entities are tombstones, not hard deletes.
+- All user-owned data is scoped to the authenticated user, locally and remotely; foreign keys and related record references are validated against the user's ownership boundary before local persistence and before remote sync application.
 
-- All user-owned data is scoped to the authenticated user, locally and remotely; foreign keys and related record references are validated against the user's ownership boundary before local persistence and before remote sync application. -->
+#### Offline/Online Assignment per Module
+
+Intelligent-module execution is server-side per the PRD, with results cached locally for offline display. The assignment is chosen per module on the basis of **model size, inference latency, and the urgency/staleness tolerance of the output**:
+
+| Module | Execution | Offline behavior | Rationale |
+| :--- | :--- | :--- | :--- |
+| PFP Classifier | Server-side | Cached profile + explanation; deterministic `QUESTIONNAIRE` newcomer mapping | Learned tiers grow in complexity; the output is low-urgency |
+| Budget Optimizer | Server-side | Cached recommendations | Refresh is periodic; server-side calculation keeps the mobile build light |
+| Forecaster | Server-side | Cached forecast runs, series, points, explanations, metadata | Learned models are too heavy for on-device inference today |
+| Anomaly Detector | Server-side | Cached alerts and explanations | Per-user baselines and inference run on the server |
+
+A future move of any module on-device would be justified by the same criteria (e.g., a small rule-based classifier or optimizer meeting the size and latency budgets); until then, server-side execution with local caching is the confirmed model.
 
 ### 3.3 Application Modules
 
@@ -225,16 +220,16 @@ These map to the 18 product areas in §1.4 and the 24 screens in the screen desc
 
 ### 3.5 Deployment Architecture
 
-The three ML modules and two supporting services run as independent Docker containers (see `deployment-architecture.md` v1.0):
+The ML modules and supporting services run as independent Docker containers (see `deployment-architecture.md` v1.0; the `budget-optimizer` row is pending its Odin-ML definition):
 
 | Container | Port | Purpose |
 | :--- | :--- | :--- |
 | api-gateway | 8000 | Route and aggregate ML requests |
-| fbp-classifier | 8001 | PFP classification |
-<!-- A container and port for budget optimization is missing -->
+| pfp-classifier | 8001 | PFP classification |
 | forecaster | 8002 | Forecasting |
 | anomaly-detector | 8003 | Anomalous transaction detection |
 | transaction-service | 8004 | Transaction ingestion and event publishing |
+| budget-optimizer | 8005 | Budget optimization (definition pending in Odin-ML) |
 
 Separate containers give independent scaling, independent deployment, and fault isolation. Model artifacts are stored in versioned object storage with metadata (training data hash, performance metrics, dependency versions). Each module exposes `/health`, `/ready`, and `/metrics` endpoints.
 
@@ -247,18 +242,18 @@ Following `module-integration.md` v1.0:
                                     ↓
                             [Event Bus (Kafka/RabbitMQ)]
                                     ↓
-                    ┌───────────────┼───────────────┐
-                    ↓               ↓               ↓
-            [PFP Classifier] [Forecaster]  [Anomaly Detector] 
-                    ↓               ↓               ↓
-                    └───────────────┼───────────────┘
+                    ┌───────────────┬───────────────┬───────────────┐
+                    ↓               ↓               ↓               ↓
+            [PFP Classifier] [Forecaster]  [Anomaly Detector] [Budget Optimizer]
+                    ↓               ↓               ↓               ↓
+                    └───────────────┴───────────────┴───────────────┘
                                     ↓
                             [Response Aggregator]
                                     ↓
                             [User App (Response)]
 ```
 
-<!-- Budget optimizer is missing here. -->
+The Budget Optimizer is shown ahead of `module-integration.md` v1.0; it will be defined in a later version (v1.1).
 
 Integration principles: loose coupling (API-based, no shared state), event-driven (modules react to transaction events), fail-safe (module failures degrade gracefully without crashing the system), and composable (outputs can be combined or used independently).
 
@@ -279,31 +274,7 @@ Odin is a **single-user-account application**. Product and research roles:
 
 ### 4.2 Archetypes
 
-Archetype segmentation is informed by the **BSP Consumer Finance Report**; granular income/expense parameters are drawn from **PSA FIES 2023 NCR microdata**. Values below are the archetype generation targets from `Odin-ML/training/synth/archetype_summary.json`.
-
-<!-- Odin-ML already contains docs for all things ML. Therefore, this system spec doesn't need to specifically reference the subset; it can just simply point to Odin-ML. -->
-
-<!-- | ID | Archetype | Expected PFP | Avg income (₱) | Obligation ratio | Income CV | Runway (months) |
-| :--- | :--- | :--- | ---: | ---: | ---: | ---: |
-| A | BPO Employee, Moderate Obligations, Healthy Fund | Stable/Obligated/Tolerant | 39,993 | 0.70 | 0.10 | 5.00 |
-| B | Manufacturing Worker, Heavy Obligations, No Savings | Stable/Obligated/At-Risk | 29,975 | 0.85 | 0.15 | 0.50 |
-| C | Tech Employee, Low Obligations, Strong Savings | Stable/Flexible/Tolerant | 62,642 | 0.45 | 0.08 | 8.98 |
-| D | Government Employee, Low Obligations, Minimal Savings | Stable/Flexible/At-Risk | 34,897 | 0.50 | 0.12 | 1.49 |
-| E | Freelancer, High Obligations, Adequate Buffer | Variable/Obligated/Tolerant | 42,782 | 0.75 | 0.70 | 4.01 |
-| F | Contract Worker, High Obligations, Paycheck-to-Paycheck | Variable/Obligated/At-Risk | 28,668 | 0.80 | 0.65 | 0.32 |
-| G | Freelance Writer/VA, Low Obligations, Healthy Fund | Variable/Flexible/Tolerant | 32,620 | 0.40 | 0.60 | 7.00 |
-| H | Tricycle Driver/Vendor, No Emergency Fund | Variable/Flexible/At-Risk | 14,002 | 0.45 | 0.80 | 1.00 |
-| I | Recovering from Financial Shock, Depleted Savings | Variable/Obligated/At-Risk | 27,595 | 0.78 | 0.70 | 0.80 |
-| J | Part-time Sales + Online Selling, Borderline Tolerance | Variable/Flexible/At-Risk | 22,341 | 0.55 | 0.55 | 2.50 |
-| K | Telecom Employee, High Obligations Near Threshold | Stable/Obligated/Tolerant | 50,111 | 0.65 | 0.10 | 4.03 |
-| L | Marketing Agency, No Savings Habit Despite Stable Income | Stable/Flexible/At-Risk | 42,155 | 0.50 | 0.10 | 1.01 | -->
-
-<!-- ### 4.3 Personas
-
-- **Planned set:** 12,000 personas (1,000 per archetype), each with a full 12-month transaction history, per the MDDs.
-- **Current synthetic run:** 300 personas (see `Odin-ML/training/synth/`), 35,568 transactions over 12 months, used for the current training runs.
-- **Ground truth:** each persona's PFP label is derived deterministically from its full mature history via the score/threshold formula (§5.2); borderline cases are reserved for manual SME review.
-- **Validation:** `persona-validation-list.md` and `persona-validation-list-SME-draft.md` (Odin-ML) track persona acceptance; the PUEPS survey informs persona prevalence weights so the synthetic population statistically resembles the target demographic. -->
+Archetype segmentation is informed by the **BSP Consumer Finance Report**; granular income/expense parameters are drawn from **PSA FIES 2023 NCR microdata**. Archetype definitions and the full 12-archetype table live in Odin-ML (`Odin-ML/training/synth/archetype_summary.json`); see the Odin-ML synthetic-data documentation for generation parameters and persona-validation lists.
 
 ---
 
@@ -319,11 +290,11 @@ A user's PFP is defined by three binary dimensions:
 | Financial weight | Flexible / Obligated | `obligation_ratio = (essential + obligatory expenses) / total expenses` |
 | Financial tolerance | Tolerant / At-Risk | Emergency runway: months of expenses covered by savings |
 
-<!-- Before I can allow this section into the spec, I will need `literature-matrix.md` and `benchmarks.md` to be completed first (i.e., be at least v0.1.0) -->
+<!-- Section 5.2 (SME-Draft Thresholds) is gated: it enters the spec once `docs/rrl/literature-matrix.md` and `docs/rrl/benchmarks.md` are completed (at least v0.1.0). -->
 
 <!-- ### 5.2 SME-Draft Thresholds
 
-Thresholds are **researcher-defined and SME-validated**. The comprehensive literature review found no PFMS study that formally defines these thresholds, so the researchers define them and validate them with the SME (see `../system/Notes.md`). Current SME-draft thresholds (provisional, pending the SME validation protocol): -->
+Thresholds are **researcher-defined and SME-validated**. The comprehensive literature review found no PFMS study that formally defines these thresholds, so the researchers define them and validate them with the SME (see `../archive/Notes.md`). Current SME-draft thresholds (provisional, pending the SME validation protocol):
 
 | Dimension | Threshold | Rationale (SME draft) |
 | :--- | :--- | :--- |
@@ -331,7 +302,8 @@ Thresholds are **researcher-defined and SME-validated**. The comprehensive liter
 | Financial weight | `ratio > 0.6` → Obligated | Essential obligations exceed 60% of expenses |
 | Financial tolerance | `runway ≥ 3 months` → Tolerant | 3-month buffer before depletion |
 
-Synthetic-data distributions of the three measures are listed in §8.5. These thresholds are calibrated on the training persona set (ROC-based cutoff selection) rather than fixed a priori, so the rule-based candidate is compared fairly against learned candidates.
+These thresholds are calibrated on the training persona set (ROC-based cutoff selection) rather than fixed a priori, so the rule-based candidate is compared fairly against learned candidates. -->
+
 
 ### 5.3 Label Space
 
@@ -371,11 +343,7 @@ The module returns, at minimum: `prediction` (one of the eight PFP classes), `fi
 
 ## 6. Functional Requirements
 
-The authoritative, full requirement statements are in the Requirements Engineering document (`../system/requirements-engineering/reqs-eng.md`), cited by ID below. This section summarizes each module.
-
-<!-- I have no qualms about being offline-first. Even though it's no longer a priority for us, it's still a great endeavor. However, do note that the intelligent modules rely on an Internet connection as they are hosted on the server. -->
-
-<!-- CORRECTION: The budget optimizer model shouldn't rely on an online connection. Otherwise, it deliberately constricts the majority of the app's functionalities to online. -->
+The authoritative, full requirement statements are in the Requirements Engineering document (`reqs-eng.md`), cited by ID below. This section summarizes each module.
 
 ### 6.0 Cross-cutting: Offline Sync Behavior
 
@@ -530,50 +498,14 @@ All offline-capable modules inherit the sync behavior of §3.2: local-first writ
 
 ## 7. Machine Learning Model Specifications
 
-Per the confirmed experimental methodology, this section states **candidate algorithms per model** rather than pre-committing to a single algorithm. Contracts and evaluation details are authoritative in the Model Design Documents (`Odin-ML/training/docs/1_problem-statement/module-design-document.md`).
+The ML modules are specified in Odin-ML, not repeated here:
 
-<!-- Again, better to just reference the file instead of repeating the contents. Globally, let's minimize documentation redundancy. -->
+- **PFP Classifier** — PFP MDD v1.3 (`Odin-ML/training/docs/1_problem-statement/module-design-document.md`) and `feature-set.md` v1.0; §5 of this document defines the classifying dimensions, label space, and classification modes.
+- **Forecaster** — Forecaster MDD v2.3 (same directory) and Phase-6 training documentation (`Odin-ML/training/docs/6_model-training/forecaster-training.md`).
+- **Anomaly Detector** — Anomaly Detector MDD (same directory) and Phase-6 training documentation (`Odin-ML/training/docs/6_model-training/anomaly-training.md`).
+- **Budget Optimizer** — pending definition in Odin-ML (see §3.5, §3.6).
 
-<!-- ### 7.1 PFP Classifier
-
-| Aspect | Specification |
-| :--- | :--- |
-| Task | 8-class multi-class classification over the three binary PFP dimensions (§5). |
-| Input | JSON per PFP MDD v1.3: `user_id`, `classification_mode` (`STANDARD`/`QUESTIONNAIRE`), and the matching payload. |
-| Output | `prediction`, three calibrated dimension scores, `confidence`, `status` (`SUCCESS`/`FAILURE`/`FALLBACK`). |
-| Candidate algorithms | **Tier 0** majority-class baseline; **Tier 1** deterministic rule-based (thresholds on `stability_cv`, `obligation_ratio`, `runway_months`, ROC-calibrated); **Tier 2** Logistic Regression (multi-class, L2); **Tier 3** Random Forest and SVM (RBF); **Tier 4** XGBoost (MLP if needed). |
-| Evaluation | Macro-F1 (primary), accuracy (secondary), per-class precision/recall/F1; persona-level split (never transaction-level); identical partial-window cuts (full, 2/4/6 weeks) for every tier; time-series split (3 months train / 1 month validation). |
-| Selection rule | Highest Macro-F1 within latency budget; >75% per-class accuracy; ties within a pre-registered 2-point Macro-F1 margin favor the simpler/more interpretable candidate (Tier 1 over Tiers 3–4). |
-| KPIs | Macro-F1 > 0.80 (on synthetic personas); deployment-model size suitable for mobile-app context. |
-| Cold start | `QUESTIONNAIRE` mode serves day-0 users deterministically; the Tier comparison applies only once `STANDARD` mode is reachable. |
-| Documented result | Phase-6 training compares all tiers via 5-fold expanding-window temporal folds (`Odin-ML/training/docs/6_model-training/README.md`); final selection is pending the pre-registered decision rule. |
-
-### 7.2 Forecaster
-
-| Aspect | Specification |
-| :--- | :--- |
-| Task | Multi-step time-series forecasting of expense amounts at total, category-group, and category levels. |
-| Input | JSON per Forecaster MDD v2.3: `user_id`, non-empty `historical_transactions` (amount, category, date, type), `forecast_horizon` (`WEEKLY` 7d, `SEMI_MONTHLY` 15d, `MONTHLY` 30d), `forecast_level` (`TOTAL`/`CATEGORY_GROUP`/`CATEGORY`), optional `target_categories`, optional `user_metadata`. |
-| Output | `forecasts` (date, amount, metadata), echoed `forecast_level`/`forecast_horizon`, 80%/95% confidence intervals, `model_version`, `status`. |
-| Candidate algorithms | **Tier 1** ARIMA / ETS / Prophet baselines; **Tier 2** XGBoost, LightGBM, Random Forest regressors (lag + calendar features); **Tier 3** PyTorch LSTM, GRU, BiLSTM (`torch.nn`), Transformer/hybrid variants if needed. |
-| Features | 23 per persona-day: temporal encoding (day-of-week sin/cos, day-of-month), lags (1/7/14/15/30/60 days), rolling statistics (7/14/30-day mean and std), calendar (is_payday 15th/16th/29th–31st, days_to_payday), RFM (recency, frequency, monetary), STL decomposition (trend, seasonal, residual). |
-| Evaluation | MAPE (primary) at total (<15%), category group (<20%), category (<25%) levels; R² (>0.70), RMSE (<25% of mean daily spending); time-series 70/15/15 split; walk-forward validation (expanding window, 5 folds); must beat the naive baseline by ≥20% MAPE reduction. |
-| Constraints | Fixed three horizons only (weekly/semi-monthly/monthly) aligned to Philippine pay cycles; model size <500 MB; P95 inference <1 s; RAM <1 GB (GPU optional). |
-| Documented result | Phase-6 training: Random Forest (Tier 2) won at MAPE 9.63% ± 0.15%, R² 0.831 ± 0.022 (~77% MAPE reduction vs naive); PyTorch LSTM/GRU/BiLSTM remain the research comparison path (`Odin-ML/training/docs/6_model-training/forecaster-training.md`). |
-
-### 7.3 Anomaly Detector
-
-| Aspect | Specification |
-| :--- | :--- |
-| Task | Per-transaction anomaly detection (unsupervised/semi-supervised) for unusual spending or overspending risk. |
-| Input | Transaction data plus per-user baseline (see Anomaly Detector MDD); scored at the individual transaction level. |
-| Output | Anomaly score, threshold, and an explanation of the identified unusual pattern (for display per AN-02). |
-| Candidate algorithms | **Tier 0** majority-class baseline; **Tier 1** IQR per-feature detector; **Tier 2** Isolation Forest, One-Class SVM (RBF), Autoencoder (Keras 24→7→3→7→24); **Tier 3** hybrid ensemble (averaged IQR + Isolation Forest + OCSVM scores). |
-| Features | 24 per transaction: baseline (income/expense mean and std, category distribution, transaction frequency, avg transaction size, category entropy, volatility index, spending concentration) and detection (amount/category/frequency/income/expense deviation, novel-category flag, amount vs category mean/std, category frequency change, amount percentile in category, days since last transaction, weekend flag, overall and category amount z-scores). |
-| Anomaly types | amount_spike, category_mismatch, frequency_change, new_merchant. |
-| Evaluation | PR-AUC (primary), F1 at optimal threshold, precision, recall; walk-forward validation (expanding window, 5 folds); KPI F1 ≥ 0.85, Recall ≥ 0.85, FPR ≤ 0.05. |
-| Cold start | First 6 months establish the per-user baseline; no detection until baseline exists. |
-| Documented result | Phase-6 training: One-Class SVM won at PR-AUC 0.1478 ± 0.0358 (416.8% improvement over baseline); Isolation Forest remains a candidate and the thesis-title algorithm (`Odin-ML/training/docs/6_model-training/anomaly-training.md`). | -->
+Candidate algorithms per model, feature sets, evaluation protocols, and KPIs are authoritative in those documents. Reported Phase-6 training results (e.g., Random Forest winning the forecaster tier comparison, One-Class SVM winning the anomaly tier comparison) are **preliminary initial-training outcomes, not final model selections**; the pre-registered selection rule (highest primary metric within the latency budget, favoring the simpler/more interpretable candidate within a pre-registered margin against any higher tier) governs final selection.
 
 ---
 
@@ -585,77 +517,20 @@ Per the confirmed experimental methodology, this section states **candidate algo
 | :--- | :--- | :--- |
 | PSA 2023 FIES (NCR microdata, Public Use File) | Income/expense totals, family size, per-capita income, decile ranking, urban/rural | Primary statistical basis for persona parameterization. |
 | BSP 2021 Consumer Finance Report | Archetype segmentation | Primary basis for archetype definitions. |
-| PSA 2026 Consumer Price Index | Average unit prices for transaction generation | Input to transaction synthesis. ||
+| PSA 2026 Consumer Price Index | Average unit prices for transaction generation | Input to transaction synthesis. |
 | PUEPS Pre-Survey | User expectations | Informs NFRs. |
 
 ### 8.2 Key Data Limitation
 
 FIES PUFs are anonymized per RA 10173 and PSA disclosure policy and contain only aggregate/geographic fields. There is no available Filipino dataset pairing household totals with granular behavioral transaction data, so **behavioral features must be synthetically injected**. Consequently, the dataset represents the **general population of the NCR** (no age/employment linkage); this is an explicit limitation of the thesis.
 
-<!-- Specific details like data pipelines can just be discussed in Odin-ML. This spec will only just contain the overview or general information that concerns the system in the most minimal way. -->
-
-<!-- ### 8.3 Data Pipeline
-
-1. Filter FIES to NCR; compute derived features (e.g., financial slack).
-2. Define candidate thresholds for financial stability and financial weight; validate with the SME (blind sorting, CART rule extraction).
-3. Define 12 archetypes from BSP CFS and FIES parameters.
-4. Fit persona parameter distributions (multivariate LogNormal per category vector; Dirichlet for monthly allocation; Gamma for transaction amounts; Poisson for transaction counts).
-5. Apply temporal weighting: expenses concentrate in the 1–2 days after paydays and before/during holidays, and shrink in the days before payday; essentials are inelastic, discretionary spending absorbs most variation.
-6. Inject anomalies at fixed rates (≈3–5% overspending) for detector training.
-7. Calibrate persona prevalence with PUEPS weights.
-8. Export training datasets (tabular + time-series) with versioning (SHA hashes). -->
-
-<!-- ### 8.4 Per-Module Feature Sets
-
-PFP Classifier doesn't include Financial Tolerance. Why?
-
-| Module | Feature set | Source |
-| :--- | :--- | :--- |
-| PFP Classifier | Tier 1: `stability_cv`, `obligation_ratio` (2); Tiers 2–4: 30 features (19 engineered + 11 raw) | `Odin-ML/training/docs/1_problem-statement/feature-set.md`; `6_model-training/README.md` §6 |
-| Forecaster | 23 features per persona-day (§7.2) | `Odin-ML/training/docs/6_model-training/forecaster-training.md` |
-| Anomaly Detector | 24 features per transaction (§7.3) | `Odin-ML/training/docs/6_model-training/anomaly-training.md` | -->
-
-<!-- ### 8.5 Dimension Distributions (Synthetic Data)
-
-| Dimension | Mean | Std | Median | Range |
-| :--- | ---: | ---: | ---: | ---: |
-| stability_cv | 0.3874 | 0.2888 | 0.3595 | [0.0000, 0.9200] |
-| obligation_ratio | 0.8800 | 0.0397 | 0.8810 | [0.5870, 1.0280] |
-| runway_months | 0.7884 | 1.2686 | 0.2200 | [0.0000, 9.7200] |
-
-Clustering analysis supports binary splits for each dimension (k = 2 sufficient). These distributions reflect the synthetic generation parameters, not real-world distributions. -->
-
-<!-- ### 8.6 Datasets and Splits
-
-Splits are at the **persona level** (never transaction level) so no candidate is evaluated on a persona it was trained on. The forecaster's persona-level split follows a **70/15/15** train/validation/test ratio.
-
-| Dataset | Split | Personas | Rows/Samples |
-| :--- | :--- | ---: | ---: |
-| `synth/transactions.parquet` | — | 300 | 35,568 transactions (12 months) |
-| `datasets/forecaster/train.parquet` | Train (70%) | 210 | 76,650 daily rows / 1,260 monthly samples |
-| `datasets/forecaster/val.parquet` | Validation (15%) | 45 | 16,425 daily rows / 270 monthly samples |
-| `datasets/forecaster/test.parquet` | Test (15%) | 45 | 16,425 daily rows / 270 monthly samples |
-| `datasets/anomaly/train.parquet` | Train | — | 25,135 rows @ 2.94% anomaly |
-| `datasets/anomaly/val.parquet` | Validation | — | 4,980 rows @ 2.87% anomaly |
-| `datasets/anomaly/test.parquet` | Test | — | 5,446 rows @ 3.23% anomaly | -->
-
-<!-- ### 8.7 Synthetic Data Schemas
-
-`Odin-ML/training/synth/` contains:
-
-| File | Contents |
-| :--- | :--- |
-| `personas.json` / `personas.parquet` | 300 personas with ground-truth attributes (archetype, PFP label, income/expense parameters). |
-| `transactions.json` / `transactions.parquet` | Time-stamped transactions (amount, category, date, type) per persona. |
-| `archetype_summary.json` | 12 archetypes with expected PFP, income, obligation ratio, income CV, and runway targets (§4.2). |
-| `monthly_summaries.parquet` | Monthly aggregate income/expense summaries per persona. |
-| `validation.json` | Validation record of the synthetic dataset. | -->
+Detailed data-pipeline, feature-set, split, and schema documentation lives in Odin-ML (`Odin-ML/training/docs/`, `Odin-ML/training/synth/`); this specification keeps only the data overview.
 
 ---
 
 ## 9. Non-Functional Requirements
 
-Non-functional requirements are organized by ISO 25010 quality characteristics (see `../system/PRD-Full-Odin-App.md`, Testing Decisions; `../thesis/system/topic-outline (OLD).md` §12.A for the evaluation framing).
+Non-functional requirements are organized by ISO 25010 quality characteristics (see `prd.md`, Testing Decisions; `../archive/topic-outline (OLD).md` §12.A for the evaluation framing).
 
 | ISO 25010 characteristic | Requirement |
 | :--- | :--- |
@@ -681,7 +556,7 @@ Non-functional requirements are organized by ISO 25010 quality characteristics (
 
 | Endpoint | Service |
 | :--- | :--- |
-| `POST /api/v1/fbp/classify` (+ `/batch`, `/user/{id}/history`, `/user/{id}/latest`) | PFP Classifier |
+| `POST /api/v1/pfp/classify` (+ `/batch`, `/user/{id}/history`, `/user/{id}/latest`) | PFP Classifier |
 | `POST /api/v1/forecast/predict` (+ `/batch`, `/user/{id}/history`) | Forecaster |
 | `POST /api/v1/anomaly/detect` (+ `/batch`, `/user/{id}/alerts`, `/user/{id}/baseline`) | Anomaly Detector |
 | `POST /api/v1/analyze`, `GET /api/v1/user/{id}`, `POST /api/v1/classify`, `POST /api/v1/forecast` | Gateway convenience/aggregation |
@@ -732,7 +607,7 @@ Google Authentication (OAuth) for login, in addition to email/password with emai
 
 - Target users are Filipino working young adults aged 20–40 living or working in Metro Manila.
 - All users may use the app, but only consenting, qualifying target-user data is used for model training/evaluation.
-- Expense patterns concentrate around paydays and holidays, with essentials largely inelastic (see §8.3).
+- Expense patterns concentrate around paydays and holidays, with essentials largely inelastic (see Odin-ML `synthetic-injection-rules.md`).
 - Module outputs are decision support, not licensed financial advice; users keep final control.
 - Savings and debt category standards remain provisional until SME/RRL validation.
 
@@ -745,13 +620,14 @@ Google Authentication (OAuth) for login, in addition to email/password with emai
 ```text
 Mobile app
    └── API Gateway ──▶ Transaction Service ──▶ Event Bus
-                                                     ├──▶ PFP Classifier
-                                                     ├──▶ Forecaster
-                                                     └──▶ Anomaly Detector
+                                                      ├──▶ PFP Classifier
+                                                      ├──▶ Forecaster
+                                                      ├──▶ Anomaly Detector
+                                                      └──▶ Budget Optimizer
 Event Bus ──▶ Response Aggregator ──▶ Mobile app
 ```
 
-- The PFP Classifier, Forecaster, and Anomaly Detector depend on the Transaction Service's transaction events (PFP: 3 months of history; Forecaster: 6 months; Anomaly: per transaction, after a 6-month baseline).
+- The PFP Classifier, Forecaster, Anomaly Detector, and Budget Optimizer depend on the Transaction Service's transaction events (PFP: 3 months of history; Forecaster: 6 months; Anomaly: per transaction, after a 6-month baseline; Budget: current allocations and obligations).
 - The API Gateway aggregates module outputs for combined analysis; a module failure must not block the others (graceful degradation).
 - The Forecaster and Budget modules consume each other's outputs; the PFP module consumes onboarding/questionnaire data for cold start; Debt Management feeds freed-cash-flow inputs into savings forecasts.
 
@@ -762,10 +638,11 @@ Event Bus ──▶ Response Aggregator ──▶ Mobile app
 | PFP Classifier | Onboarding questionnaire answers (`QUESTIONNAIRE` mode), transaction history (`STANDARD` mode), SME-validated thresholds. |
 | Forecaster | Daily aggregated expenses by category, calendar/payday features, user metadata for cold start. |
 | Anomaly Detector | Transaction stream and per-user baseline; whitelist/suppression rules and culturally expected spending inputs. |
+| Budget Optimizer | Budget allocations, transaction history, protected/fixed restriction levels, forecast outputs. |
 
 ### 12.3 Document Dependencies
 
-- This specification depends on the MDDs, PRD, and Requirements Engineering document for authoritative detail (§0.2).
+- This specification depends on the MDDs, PRD, and Requirements Engineering document for authoritative detail (Appendix A).
 - Feature sets depend on the shared synthetic data pipeline; module features are triplicated per module at feature engineering.
 - The critical path for ML work: shared data phase → triplicated feature engineering → parallel module training (PFP 41 days, Forecaster 44 days, Anomaly 41 days).
 
@@ -775,14 +652,14 @@ Event Bus ──▶ Response Aggregator ──▶ Mobile app
 
 ### A. References
 
-- Odin thesis: *Development of Odin: A Personal Finance Management Application for Filipino Working Young Adults Using Random Forest, LSTM, and Isolation Forest* — topical outline (`../topical-outline/topical-outline.md`).
-- Full Odin App PRD (`../system/PRD-Full-Odin-App.md`).
-- Odin Requirements Engineering v1.07.27.2026 (`../system/requirements-engineering/ODIN-REQUIREMENTS-ENGINEERING-V1.07.27.2026.md`).
-- Screen descriptions (`../system/screen-descriptions/00-index.md`).
-- System notes and addenda (`../system/Notes.md`).
-- Public User Expectations and Perception Survey (`../../../survey/PUEPS.md`).
+- Odin thesis: *Development of Odin: A Personal Finance Management Application for Filipino Working Young Adults Using Random Forest, LSTM, and Isolation Forest* — topical outline (`../planning-management/topical-outline.md`).
+- Odin PRD (`prd.md`).
+- Odin Requirements Engineering (`reqs-eng.md`).
+- Screen descriptions (`../design-architecture/screen-descriptions/00-index.md`).
+- System notes and addenda (`../archive/Notes.md`).
+- Public User Expectations and Perception Survey (`../assessment-evaluation/survey/PUEPS.md`).
 - Model design documents and training documentation (`Odin-ML/training/docs/`): PFP MDD v1.3, Forecaster MDD v2.3, Anomaly Detector MDD, `feature-set.md` v1.0, `module-integration.md` v1.0, `deployment-architecture.md` v1.0, `dimension-threshold-candidates.md`, Phase-6 training docs (`6_model-training/`), and synthetic data (`training/synth/`).
-- Preserved historical reference: `specification (OLD).md` (v4.0) and `topic-outline (OLD).md` under `../system/`.
+- Preserved historical reference: `specification (OLD).md` (v4.0) and `topic-outline (OLD).md` under `../archive/`.
 
 ### B. Revision History Detail
 
@@ -790,87 +667,4 @@ Event Bus ──▶ Response Aggregator ──▶ Mobile app
 | :--- | :--- | :--- | :--- |
 | 0.1.0 | 2026.08.05 | All | Skeleton created with Metadata, Acronyms, and section placeholders. |
 | 0.2.0 | 2026.08.06 | All | Drafted full content for sections 0–13 and Appendices; renumbered sections sequentially (Document Control remains §0); added change log and references; bumped version and date. |
-| 0.3.0 | 2026.08.08 | All | Manual correction of details by Joaquin. |
-
-<!-- 
-
-# System Spec Review Comments — for OpenCode Agent
-
-Source: `system-spec.md` v0.3.0 review with Claude, 2026-08-08.
-
----
-
-## 1. Caveat the Phase-6 training results (§7.2, §7.3, currently commented out)
-
-Random Forest (Forecaster) and One-Class SVM (Anomaly Detector) winning their respective
-tier comparisons is a result from **initial training only**. Nothing in Odin-ML or Odin-Paper
-is concrete yet — the experimental methodology means these results are provisional, not a
-resolution of the thesis-title-vs-methodology conflict. If/when §7.1–7.3 are un-commented and
-reintroduced into the spec, add an explicit caveat above the "Documented result" rows stating
-these are preliminary/initial-training outcomes subject to change under the pre-registered
-selection rule, not final model selections.
-
-## 2. Decide and document the offline/online split per module, and fix the architecture to reflect it
-
-Currently two modules must run offline (PFP Classifier, Budget module) and two rely on an
-Internet connection (Forecaster, Anomaly Detector). This split isn't arbitrary — it should be
-chosen based on factors like model size, inference latency, and urgency of output — but the
-spec doesn't currently state the criteria or even show the Budget module in the architecture at
-all.
-
-Action items:
-- Add a short subsection (or a table) stating the offline/online assignment per module and the
-  criteria used (model size, inference latency, urgency/staleness tolerance).
-- Fix the two previously-flagged gaps in §3.5 (Deployment Architecture table — no
-  container/port for the Budget/optimizer service) and §3.6 (Integration Architecture diagram —
-  Budget optimizer missing from the flow).
-- Fix §12.1 (Service Dependencies diagram) — Budget module is absent there too.
-
-## 3. `fbp` leftover in ML Service API paths (§10.2)
-
-`POST /api/v1/fbp/classify` (+ `/batch`, `/user/{id}/history`, `/user/{id}/latest`) still uses
-the old "FBP" naming. Every other reference in the doc correctly uses PFP. Rename to
-`/api/v1/pfp/classify` etc., and check Odin-ML / module-integration.md for the same leftover.
-
-## 4. Dimension naming — "Financial weight" is now final
-
-Confirmed: "Financial weight" is the final term (was previously drafted as
-"Obligation/Necessity" in earlier working notes). No content change needed in the spec — just
-flagging so the term is used consistently across Odin-ML, MDDs, and future documents going
-forward, since the older term may still appear elsewhere in the repo.
-
-## 5. Glossary dimension ordering (§2)
-
-The Glossary lists the three PFP dimensions as Financial weight → Financial stability →
-Financial tolerance. Every other place in the doc (§5.1, octant naming convention
-Stable/Flexible/Tolerant) uses Stability → Weight → Tolerance order. Reorder the Glossary
-entries to match for consistency.
-
-## 6. Metadata block (top of doc)
-
-- `"version": 0.2.0` is stale — change log and Appendix B are already at 0.3.0. Bump to match.
-- Trailing comma after the `authors` array (`],` before the closing `}`) makes the JSON block
-  invalid for strict parsers. Remove it.
-- Reconcile the date mismatch for v0.3.0: §0.1 Change Log lists 2026.08.07, Appendix B lists
-  2026.08.08. Pick the correct one and make both match.
-
-## 7. Stale glossary comment (§2, line ~141)
-
-The inline comment reads "Originally 'newcomer', the new term 'newcomer' is friendlier" — a
-global cold-start → newcomer search-and-replace overwrote the original term reference in the
-comment itself. Either restore it to read "Originally 'cold-start', the new term 'newcomer' is
-friendlier," or just delete the comment since the rename is already resolved and finalized.
-
-## 8. Formatting: stray `||` in §8.1
-
-The PSA 2026 CPI row in the Data Sources table ends with a stray `||`:
-`| Input to transaction synthesis. ||` — drop the extra pipe.
-
----
-
-*Not included above but still open from the last review round: §7.1's tier-selection rule
-only states a Tier 1 vs. Tiers 3–4 tie-break; it's silent on Tier 1 vs. Tier 2. Worth deciding
-whether Tier 1 should be favored against any higher tier within the pre-registered margin, not
-just Tiers 3–4.*
-
- -->
+| 0.3.0 | 2026.08.08 | All | Manual correction of content; review comments applied: Budget Optimizer added to architecture, offline/online split documented, `fbp→pfp` naming, glossary trimmed and reordered, §5.2 thresholds gated, §7/§8.3–8.7 reduced to references, links updated. |
