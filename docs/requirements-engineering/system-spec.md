@@ -274,7 +274,7 @@ Odin is a **single-user-account application**. Product and research roles:
 
 ### 4.2 Archetypes
 
-Archetype segmentation is informed by the **BSP Consumer Finance Report**; granular income/expense parameters are drawn from **PSA FIES 2023 NCR microdata**. Archetype definitions and the full 12-archetype table live in Odin-ML (`Odin-ML/training/synth/archetype_summary.json`); see the Odin-ML synthetic-data documentation for generation parameters and persona-validation lists.
+Archetype segmentation is informed by the **BSP Consumer Finance Report**; granular income/expense parameters are drawn from **PSA FIES 2023 NCR microdata**. Archetype definitions and the full 12-archetype table live in Odin-ML (`Odin-ML/training/synth/archetype_summary.json`); see the synthetic-data documentation in `../ml/1_problem-statement/` (generation parameters and persona-validation lists).
 
 ---
 
@@ -498,12 +498,12 @@ All offline-capable modules inherit the sync behavior of §3.2: local-first writ
 
 ## 7. Machine Learning Model Specifications
 
-The ML modules are specified in Odin-ML, not repeated here:
+The ML modules are specified in `../ml/`, not repeated here:
 
-- **PFP Classifier** — PFP MDD v1.3 (`Odin-ML/training/docs/1_problem-statement/module-design-document.md`) and `feature-set.md` v1.0; §5 of this document defines the classifying dimensions, label space, and classification modes.
-- **Forecaster** — Forecaster MDD v2.3 (same directory) and Phase-6 training documentation (`Odin-ML/training/docs/6_model-training/forecaster-training.md`).
-- **Anomaly Detector** — Anomaly Detector MDD (same directory) and Phase-6 training documentation (`Odin-ML/training/docs/6_model-training/anomaly-training.md`).
-- **Budget Optimizer** — pending definition in Odin-ML (see §3.5, §3.6).
+- **PFP Classifier** — PFP MDD v1.3 (`../ml/1_problem-statement/module-design-document.md`) and `feature-set.md` v1.0 (same directory); §5 of this document defines the classifying dimensions, label space, and classification modes.
+- **Forecaster** — Forecaster MDD v2.3 (same directory) and Phase-6 training documentation (`../ml/6_model-training/forecaster-training.md`).
+- **Anomaly Detector** — Anomaly Detector MDD (same directory) and Phase-6 training documentation (`../ml/6_model-training/anomaly-training.md`).
+- **Budget Optimizer** — pending definition in `../ml/` (see §3.5, §3.6).
 
 Candidate algorithms per model, feature sets, evaluation protocols, and KPIs are authoritative in those documents. Reported Phase-6 training results (e.g., Random Forest winning the forecaster tier comparison, One-Class SVM winning the anomaly tier comparison) are **preliminary initial-training outcomes, not final model selections**; the pre-registered selection rule (highest primary metric within the latency budget, favoring the simpler/more interpretable candidate within a pre-registered margin against any higher tier) governs final selection.
 
@@ -524,7 +524,7 @@ Candidate algorithms per model, feature sets, evaluation protocols, and KPIs are
 
 FIES PUFs are anonymized per RA 10173 and PSA disclosure policy and contain only aggregate/geographic fields. There is no available Filipino dataset pairing household totals with granular behavioral transaction data, so **behavioral features must be synthetically injected**. Consequently, the dataset represents the **general population of the NCR** (no age/employment linkage); this is an explicit limitation of the thesis.
 
-Detailed data-pipeline, feature-set, split, and schema documentation lives in Odin-ML (`Odin-ML/training/docs/`, `Odin-ML/training/synth/`); this specification keeps only the data overview.
+Detailed data-pipeline, feature-set, split, and schema documentation lives in `../ml/` (this repository); synthetic-data artifacts live in Odin-ML (`Odin-ML/training/synth/`). This specification keeps only the data overview.
 
 ---
 
@@ -607,7 +607,7 @@ Google Authentication (OAuth) for login, in addition to email/password with emai
 
 - Target users are Filipino working young adults aged 20–40 living or working in Metro Manila.
 - All users may use the app, but only consenting, qualifying target-user data is used for model training/evaluation.
-- Expense patterns concentrate around paydays and holidays, with essentials largely inelastic (see Odin-ML `synthetic-injection-rules.md`).
+- Expense patterns concentrate around paydays and holidays, with essentials largely inelastic (see `../ml/1_problem-statement/synthetic-injection-rules.md`).
 - Module outputs are decision support, not licensed financial advice; users keep final control.
 - Savings and debt category standards remain provisional until SME/RRL validation.
 
@@ -658,7 +658,7 @@ Event Bus ──▶ Response Aggregator ──▶ Mobile app
 - Screen descriptions (`../design-architecture/screen-descriptions/00-index.md`).
 - System notes and addenda (`../archive/Notes.md`).
 - Public User Expectations and Perception Survey (`../assessment-evaluation/survey/PUEPS.md`).
-- Model design documents and training documentation (`Odin-ML/training/docs/`): PFP MDD v1.3, Forecaster MDD v2.3, Anomaly Detector MDD, `feature-set.md` v1.0, `module-integration.md` v1.0, `deployment-architecture.md` v1.0, `dimension-threshold-candidates.md`, Phase-6 training docs (`6_model-training/`), and synthetic data (`training/synth/`).
+- Model design documents and training documentation (`../ml/`): PFP MDD v1.3, Forecaster MDD v2.3, Anomaly Detector MDD, `feature-set.md` v1.0, `module-integration.md` v1.0, `deployment-architecture.md` v1.0, dimension-threshold candidates (`../ml/4.5_dimension-threshold-discovery/`), Phase-6 training docs (`../ml/6_model-training/`), and synthetic data (`Odin-ML/training/synth/`).
 - Preserved historical reference: `specification (OLD).md` (v4.0) and `topic-outline (OLD).md` under `../archive/`.
 
 ### B. Revision History Detail

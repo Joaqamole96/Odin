@@ -34,6 +34,7 @@
 | `requirements.txt` | Python dependencies for RRL scripts. |
 | `rrl/` | Review of Related Literature: PDFs, conversions, summaries, compilations, scripts. |
 | `docs/` | Thesis documents, standards, and documentation. |
+| `docs/ml/` | ML model design, data analysis, and training documentation (moved from `Odin-ML/training/docs/`). |
 | `survey/` | Survey instruments. |
 
 ---
@@ -121,6 +122,22 @@
 | `thesis/system/screen-descriptions/23-account-offboarding.md` | Account Offboarding |
 | `thesis/system/screen-descriptions/24-help-problem-reporting.md` | Help / Problem Reporting |
 
+### ML — Model Design & Training
+
+| Path | Purpose |
+| :--- | :--- |
+| `ml/README.md` | ML documentation index — phases 1–6, scripts, pipeline order. |
+| `ml/TODO.md` | MDD follow-up tasks and known data/version gaps. |
+| `ml/1_problem-statement/` | MDD (PFP, Forecaster, Anomaly, Budget Optimizer), feature-set, module integration, deployment architecture, synthetic-injection rules. |
+| `ml/2_data-collection/` | FIES/BSP data sources. Dictionary xlsx + dependency report stay in `Odin-ML/`. |
+| `ml/3_data-preprocessing/` | Preprocessing pipeline documentation. |
+| `ml/4_eda/` | EDA guide (generated `eda_report.md` stays in `Odin-ML/`). |
+| `ml/4.5_dimension-threshold-discovery/` | PFP dimension/threshold discovery (generated candidates + `clustering_results.json` land in `Odin-ML/training/datasets/dimension-discovery/`). |
+| `ml/5_feature-engineering/` | Feature engineering pipeline documentation. |
+| `ml/6_model-training/` | PFP/Forecaster/Anomaly training documentation. |
+
+> Moved from `Odin-ML/training/docs/` on 2026-08-13 so all project documentation lives in one place.
+
 ### Meeting Records
 
 | File | Purpose |
@@ -205,7 +222,7 @@ Full reference: `docs/standards/rrl-naming-conventions.md`
 | Full app product requirements | `docs/thesis/system/PRD-Full-Odin-App.md` |
 | Detailed system rules | `docs/thesis/specifications/system-spec.md` |
 | Chapter drafts | `docs/thesis/paper/` |
-| Plan ML/model implementation | `Odin-ML/` (separate repo: `docs/`, `scripts/`) |
-| Ground synthetic data parameters | `Odin-ML/docs/data-synthesis-handoff.md` |
+| Plan ML/model implementation | `docs/ml/` (design docs) + `Odin-ML/` (code: `training/scripts/`, `app/`) |
+| Ground synthetic data parameters | `docs/ml/1_problem-statement/synthetic-injection-rules.md` |
 | Draft RRL topic sections | `rrl/compilations/` |
 | Evaluate one paper's relevance | `rrl/summaries/` |

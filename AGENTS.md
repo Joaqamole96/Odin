@@ -78,6 +78,7 @@ Odin-Paper/
 | **`docs/thesis/paper/chapter-1.md`** | Chapter 1 draft (Introduction). |
 | **`docs/thesis/system/PRD-Full-Odin-App.md`** | Product requirements. 24 screen descriptions in `docs/thesis/system/screen-descriptions/`. |
 | **`docs/research-proposal/Research-Proposal.md`** | Formal RP2 proposal. Authoritative for objectives/scope. |
+| **`docs/ml/README.md`** | ML model design, data analysis, and training documentation (phases 1–6). |
 
 ---
 
@@ -139,7 +140,8 @@ Full reference: `docs/standards/rrl-workflow.md`
 
 ## Model & Data
 
-- Model design docs, FIES CSV, BSP/PSA data, synthetic data handoffs are in `Odin-ML/`
+- ML model design, data analysis, and training documentation are in `docs/ml/` (see `docs/ml/README.md`).
+- FIES CSV, BSP/PSA data, and synthetic data handoffs are in `Odin-ML/`.
 
 ---
 
