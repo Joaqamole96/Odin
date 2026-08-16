@@ -32,12 +32,16 @@ pip install -r requirements.txt
 | System specification | `docs/thesis/specifications/system-spec.md` |
 | Chapter 1 draft | `docs/thesis/paper/chapter-1.md` |
 | Product requirements | `docs/thesis/system/PRD-Full-Odin-App.md` |
-| RRL directory | `rrl/README.md` |
+| RRL workspace | `literature/` (see `literature/_MIGRATION.md`; curated corpus in Odin-Literature) |
 | Research proposal | `docs/research-proposal/Research-Proposal.md` |
 
 ## RRL Workflow
 
-The RRL processing workflow (intake, convert, summarize, move, classify, compile, synthesize, cross-synthesize, cull) is documented in `docs/standards/rrl-workflow.md`. Quick reference: `rrl/README.md`.
+The RRL processing workflow (intake, convert, summarize, move to Odin-Literature, score) is documented in `docs/standards/rrl-workflow.md`. Quick reference: `AGENTS.md` → RRL Workflow. See `literature/_MIGRATION.md` for what moved where.
+
+## Curated Corpus (Odin-Literature)
+
+The 518-paper curated corpus (conversions, summaries, relevance/quality/redundancy scores) lives in **Odin-Literature** (https://github.com/VibeCoders-3DCSAD/Odin-Literature). Source PDFs remain here under Git LFS.
 
 ## Git LFS
 

@@ -1,14 +1,18 @@
 # RRL Processing Workflow
 
-Nine-step workflow for adding, processing, and synthesizing literature in the Review of Related Literature.
+Workflow for adding and processing literature in the Review of Related Literature.
 
-> **Note:** topic codes referenced below (e.g. `5.C/`, `7.C`) follow the **old** topic outline. The new thesis topical outline is `docs/thesis/topical-outline/topical-outline.md`; re-mapping the RRL taxonomy to it is pending. The `rrl/syntheses/` output directory does not exist yet — create it when the first synthesis is produced.
+> **RRL migration:** the curated corpus (conversions, summaries, scores) lives in
+> **Odin-Literature** (https://github.com/VibeCoders-3DCSAD/Odin-Literature).
+> This repo (`Odin-Paper`) now only handles intake: source PDFs, conversion,
+> summarization, and handing off to Odin-Literature. See
+> `literature/_MIGRATION.md`.
 
 ## Steps
 
 ### 1. Intake
 
-Place candidate PDFs in `rrl/bucket/` (intake pool).
+Place candidate PDFs in `literature/bucket/` (intake pool).
 
 ### 2. Convert
 
@@ -16,10 +20,10 @@ Run the pipeline orchestrator or the converter directly:
 
 ```bash
 # Full pipeline (recommended):
-python3 rrl/scripts/pipeline.py --input-dir rrl/bucket/ --step convert --page-aware
+python3 literature/scripts/pipeline.py --input-dir literature/bucket/ --step convert --page-aware
 
 # Or directly:
-python3 rrl/scripts/prepare_pdf.py rrl/bucket/ --page-aware
+python3 literature/scripts/prepare_pdf.py literature/bucket/ --page-aware
 ```
 
 Produces `{stem}_marked.md` with YAML frontmatter (conversion metadata, SHA-256 hash, page count) and an empty `{stem}_summarized.json`.
@@ -32,75 +36,36 @@ Requires: `markitdown`, `pypdf` (for `--page-aware`)
 
 ### 3. Summarize
 
-Use `rrl/skills/paper-summarizer-skill.md` as an AI agent prompt. Feed it the `_marked.md` file. The agent fills the corresponding `_summarized.json` with a structured JSON summary.
+Use `literature/skills/paper-summarizer-skill.md` as an AI agent prompt. Feed it the `_marked.md` file. The agent fills the corresponding `_summarized.json` with a structured JSON summary.
 
 The summarizer is **objective and unbiased** — it describes what the paper says without application-specific framing. Page and paragraph references are included in structured `citations` objects.
 
 See `docs/standards/summary-format.md` for the schema reference.
 
-### 4. Move
+### 4. Move to Odin-Literature
 
-Move converted and summarized files into their curated stores:
-
-```bash
-mv <file>_marked.md rrl/conversions/
-mv <file>_summarized.json rrl/summaries/
-```
-
-### 5. Classify into Topics
-
-Copy relevant `_marked.md`, `_summarized.json` files into the matching topic folder:
-
-```
-rrl/compilations/{Topic}.{Letter}/
-```
-
-Use the RRL topic codes (e.g., `5.C/`, `8.B/`) to determine placement. The codes come from the old outline (see note at top).
-
-### 6. Compile
-
-Run the compiler for the relevant topic folder:
+Move the converted/summarized file pair into the Odin-Literature corpus:
 
 ```bash
-# Markdown compilation (default):
-python3 rrl/scripts/compile_summaries.py -i <dir> -o <outdir> [--topic 7.C] [--designation local] [--sort year]
-
-# JSON compilation:
-python3 rrl/scripts/compile_summaries.py -i <dir> -o <outdir> --format json
-
-# Or use the pipeline orchestrator:
-python3 rrl/scripts/pipeline.py --input-dir <dir> --output-dir <outdir> --step compile
+mv <file>_marked.md <file>_summarized.json ../Odin-Literature/literature/conversions/batch-<N>/
 ```
 
-Produces a single `_Compilation.md` (or `.json`) combining all summaries in the directory.
+Start a new `batch-<N>` directory (next number) when adding a group of papers.
 
-### 7. Synthesize (per-topic)
+### 5. Score
 
-Use `rrl/skills/synthesis-compiler-skill.md` as an AI agent prompt on a compilation file. The agent produces a synthesis document that integrates findings across papers for a single topic.
+In Odin-Literature, compute embeddings and scores:
 
-Output: `rrl/syntheses/{Topic}.{Letter}_Synthesis.md`
+```bash
+python3 scripts/embed.py
+python3 scripts/score.py
+```
 
-The synthesis identifies:
-- Areas of agreement across papers
-- Areas of disagreement or diverging findings
-- Gaps in the literature (methodological, empirical, conceptual)
-- Key claims with structured citations
+`score.py` ranks every paper against the thesis modules (BERT 0.5 / TF-IDF 0.3 / BM25 0.2) and assigns tiers: **crucial** (≥0.45), **supporting** (≥0.30), **cull** (<0.30). Redundant near-duplicates are flagged (threshold 0.98). Outputs land in `scores/`.
 
-### 8. Cross-Synthesize (cross-topic)
+### 6. Adapt to Thesis Changes
 
-Use `rrl/skills/cross-topic-synthesis-skill.md` as an AI agent prompt on two or more per-topic synthesis documents. The agent produces a cross-topic synthesis.
-
-Output: `rrl/syntheses/{TopicA}x{TopicB}_Cross-Synthesis.md`
-
-The cross-synthesis identifies:
-- Cross-cutting themes spanning multiple topics
-- Dependencies and interactions between topics
-- Tensions where findings pull in opposite directions
-- Cross-cutting gaps requiring multi-topic research
-
-### 9. Cull
-
-Use `rrl/skills/paper-culler-skill.md` as an AI agent prompt on a compilation. The agent classifies each paper as **Crucial**, **Supporting**, or **Irrelevant**.
+The thesis outline, architecture, and algorithm selections change often. When they do, edit **only** `Odin-Literature/config/modules.yaml` (module queries, weights, tier thresholds, redundancy threshold) and re-run `score.py`. No code changes needed.
 
 ## Python Dependencies
 
@@ -123,8 +88,10 @@ pip install -r requirements.txt
 
 | Script | Purpose |
 |--------|---------|
-| `rrl/scripts/prepare_pdf.py` | Convert PDFs to Markdown with metadata |
-| `rrl/scripts/pipeline.py` | Orchestrate the full pipeline |
-| `rrl/scripts/compile_summaries.py` | Compile summaries into a single document |
-| `rrl/scripts/count_pdf_pages.py` | List PDFs with page counts |
-| `rrl/scripts/check_dupe_pdfs.py` | Find duplicate PDFs by hash cascade |
+| `literature/scripts/prepare_pdf.py` | Convert PDFs to Markdown with metadata |
+| `literature/scripts/pipeline.py` | Orchestrate the intake pipeline |
+| `literature/scripts/compile_summaries.py` | Compile summaries into a single document (legacy) |
+| `literature/scripts/count_pdf_pages.py` | List PDFs with page counts |
+| `literature/scripts/check_dupe_pdfs.py` | Find duplicate PDFs by hash cascade |
+
+Scoring utilities (embedding, scoring) are in Odin-Literature: `scripts/embed.py`, `scripts/score.py`, `config/modules.yaml`.

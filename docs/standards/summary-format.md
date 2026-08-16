@@ -1,8 +1,8 @@
 # RRL Summary Format
 
-Reference for the structured JSON summary schema used in `rrl/summaries/`.
+Reference for the structured JSON summary schema. Summaries are produced in `literature/` (intake) and stored with their `_marked.md` pair in **Odin-Literature** (`literature/conversions/batch-<N>/`). See `literature/_MIGRATION.md`.
 
-Full prompt: `rrl/skills/paper-summarizer-skill.md`
+Full prompt: `literature/skills/paper-summarizer-skill.md`
 
 ## Schema
 
@@ -112,4 +112,4 @@ Example: `Cabalfin et al_summarized.json`
 
 ## Legacy Formats
 
-YAML (`.yaml`) and Markdown (`.md`) summaries are still supported for reading by `compile_summaries.py`, but all new summaries must be produced as JSON.
+YAML (`.yaml`) and Markdown (`.md`) summaries were removed with the `literature/archive/` migration; all summaries are produced as JSON.

@@ -2,7 +2,7 @@
 """
 RRL Pipeline Orchestrator
 
-Usage: python3 pipeline.py --input-dir <bucket> [--output-dir <rrl>] [--step STEP]
+Usage: python3 pipeline.py --input-dir <bucket> [--output-dir <literature>] [--step STEP]
 
 Chains the full RRL processing pipeline:
   1. convert    — Run prepare_pdf.py on input directory
@@ -156,7 +156,7 @@ def main():
         "--input-dir",
         "-i",
         required=True,
-        help="Input directory (e.g., rrl/bucket or rrl/conversions)",
+        help="Input directory (e.g., literature/bucket)",
     )
     parser.add_argument(
         "--output-dir",

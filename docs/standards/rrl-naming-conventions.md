@@ -1,6 +1,8 @@
 # RRL Naming Conventions
 
-> **Note:** topic codes referenced below follow the **old** topic outline. The new thesis topical outline is `docs/thesis/topical-outline/topical-outline.md`; re-mapping the RRL taxonomy to it is pending. The `rrl/syntheses/` output directory does not exist yet.
+> **Note:** topic codes referenced below follow the **old** topic outline. The new thesis topical outline is `docs/thesis/topical-outline/topical-outline.md`; re-mapping the RRL taxonomy to it is pending.
+>
+> **RRL migration:** the curated corpus moved to **Odin-Literature**. Processing suffixes now point there; only the source `.pdf` stays in `Odin-Paper/literature/papers/`. See `literature/_MIGRATION.md`.
 
 ## Source Prefixes
 
@@ -24,10 +26,10 @@ Each paper has up to four files, distinguished by suffix:
 
 | Suffix | Meaning | Location |
 |--------|---------|----------|
-| `.pdf` | Source paper PDF | `rrl/papers/` |
-| `_marked.md` | Markdown conversion with YAML frontmatter | `rrl/conversions/` |
-| `_summarized.json` | Structured JSON summary | `rrl/summaries/` |
-| `_Compilation.md` | Multi-paper compilation for a topic | `rrl/compilations/` |
+| `.pdf` | Source paper PDF | `Odin-Paper/literature/papers/` |
+| `_marked.md` | Markdown conversion with YAML frontmatter | `Odin-Literature/literature/conversions/batch-<N>/` |
+| `_summarized.json` | Structured JSON summary | `Odin-Literature/literature/conversions/batch-<N>/` (same folder as `_marked.md`) |
+| `_Compilation.md` | Multi-paper compilation for a topic (legacy/deprecated) | `Odin-Paper/literature/compilations/` |
 
 ### Legacy Suffixes
 
@@ -51,7 +53,7 @@ Examples:
 - `5.C_Synthesis.md` — synthesis for Topic 5.C (Classification Approaches)
 - `7x8_Cross-Synthesis.md` — cross-topic synthesis for Topics 7 and 8
 
-Location: `rrl/syntheses/`
+Location: `literature/syntheses/` (does not exist yet — create when the first synthesis is produced)
 
 ## File Stem Format
 
@@ -68,12 +70,12 @@ The `LetterSuffix` (a, b, c...) is used when multiple papers share the same auth
 
 ## Topic-Subtopic Folder Codes
 
-RRL compilation folders use the old-outline topic codes (see note at top):
+Legacy RRL compilation folders use the old-outline topic codes (see note at top):
 
 ```
-rrl/compilations/{Topic}.{Letter}/
+literature/compilations/{Topic}.{Letter}/
 ```
 
 Examples: `1.A/`, `5.C/`, `8.B/`, `14.A/`
 
-Papers culled from the active corpus are classified as **Crucial**, **Supporting**, or **Irrelevant** by the culler skill (`rrl/skills/paper-culler-skill.md`).
+The folder set is **deprecated** — the migration deprecated `literature/compilations/`. Relevance tiers (crucial/supporting/cull) are now assigned automatically by Odin-Literature `scripts/score.py`.

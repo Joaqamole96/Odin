@@ -41,7 +41,7 @@ Always include a scope. Use imperative mood. 50-72 characters.
 
 | Scope | Use For |
 |-------|---------|
-| `rrl` | RRL corpus: papers, summaries, compilations, syntheses |
+| `rrl` | RRL workspace: `literature/` intake/tooling; curated corpus in Odin-Literature |
 | `model` | Model design documents and data analysis |
 | `data` | Data sources, synthetic data, FIES/BSP files |
 | `docs` | Thesis documents, specifications, chapter drafts |
@@ -61,10 +61,15 @@ Odin-Paper/
   AGENTS.md              # This file — agent navigation and standards
   INDEX.md               # Master navigation index (authoritative)
   requirements.txt       # Python dependencies for RRL scripts
-  rrl/                   # Review of Related Literature workspace (largest component)
+  literature/            # RRL intake & tooling: source PDFs, bucket, scripts, skills
   docs/                  # Thesis documents and standards
   survey/                # Survey instruments
 ```
+
+> **RRL migration:** the curated corpus (conversions + summaries + scores) lives in
+> **`Odin-Literature`** (https://github.com/VibeCoders-3DCSAD/Odin-Literature).
+> `literature/` here holds source PDFs, intake, and tools only. See
+> `literature/_MIGRATION.md`.
 
 ---
 
@@ -84,14 +89,15 @@ Odin-Paper/
 
 ## RRL Structure
 
-Every curated paper has up to four files (same `{stem}`):
+Every curated paper has up to four files (same `{stem}`). The processed files
+live in **Odin-Literature**; only the source PDF stays in this repo:
 
 | File | Location |
 |------|----------|
-| `{stem}.pdf` | `rrl/papers/` |
-| `{stem}_marked.md` | `rrl/conversions/` |
-| `{stem}_summarized.json` | `rrl/summaries/` |
-| `{stem}_Compilation.md` | `rrl/compilations/` (generated) |
+| `{stem}.pdf` | `literature/papers/` |
+| `{stem}_marked.md` | `Odin-Literature/literature/conversions/` |
+| `{stem}_summarized.json` | `Odin-Literature/literature/conversions/` (same folder, next to the `_marked.md`) |
+| `{stem}_Compilation.md` | `literature/compilations/` (deprecated; old-taxonomy copies) |
 
 ### File Prefix Convention
 
@@ -105,36 +111,39 @@ Full reference: `docs/standards/rrl-naming-conventions.md`
 
 | Script | Deps | What it does |
 |--------|------|-------------|
-| `rrl/scripts/prepare_pdf.py` | `markitdown`, `pypdf` | Converts PDFs → `_marked.md` with YAML frontmatter (metadata, SHA-256, page count) + empty `_summarized.json` |
-| `rrl/scripts/pipeline.py` | stdlib | Orchestrates the full pipeline: convert, manifest, validate, compile |
-| `rrl/scripts/compile_summaries.py` | stdlib | Compiles summaries → single `_Compilation.md` or `.json` with filters, sorting, range |
-| `rrl/scripts/count_pdf_pages.py` | `pypdf` | Lists PDFs with page counts, optional `--lte`/`--gte` filtering |
-| `rrl/scripts/check_dupe_pdfs.py` | `PyPDF2` (+ opt `PyMuPDF`, `Pillow`, `imagehash`) | Finds duplicate PDFs by hash cascade |
+| `literature/scripts/prepare_pdf.py` | `markitdown`, `pypdf` | Converts PDFs → `_marked.md` with YAML frontmatter (metadata, SHA-256, page count) + empty `_summarized.json` |
+| `literature/scripts/pipeline.py` | stdlib | Orchestrates the intake pipeline: convert, manifest, validate, compile |
+| `literature/scripts/compile_summaries.py` | stdlib | Compiles summaries → single `_Compilation.md` or `.json` (legacy workflow) |
+| `literature/scripts/count_pdf_pages.py` | `pypdf` | Lists PDFs with page counts, optional `--lte`/`--gte` filtering |
+| `literature/scripts/check_dupe_pdfs.py` | `PyPDF2` (+ opt `PyMuPDF`, `Pillow`, `imagehash`) | Finds duplicate PDFs by hash cascade |
 
-### RRL Workflow (9 Steps)
+> Scoring utilities (BERT + TF-IDF + BM25 relevance, quality, redundancy) are in
+> **Odin-Literature**: `scripts/embed.py`, `scripts/score.py`, config in
+> `config/modules.yaml`.
 
-1. Place candidate PDFs in `rrl/bucket/`
-2. Convert: `python3 rrl/scripts/prepare_pdf.py rrl/bucket/ --page-aware`
-3. Summarize: use `rrl/skills/paper-summarizer-skill.md` as AI prompt (produces JSON)
-4. Move converted/summarized files into `rrl/conversions/` and `rrl/summaries/`
-5. Classify into topic folders: copy outputs into matching `rrl/compilations/{Topic}.{Letter}/` folder
-6. Compile: `python3 rrl/scripts/compile_summaries.py -i <dir> -o <outdir>`
-7. **Synthesize** (per-topic): use `rrl/skills/synthesis-compiler-skill.md` as AI prompt
-8. **Cross-synthesize** (cross-topic): use `rrl/skills/cross-topic-synthesis-skill.md` as AI prompt
-9. Cull: use `rrl/skills/paper-culler-skill.md` as AI prompt on a compilation
+### RRL Workflow (Intake → Odin-Literature)
+
+1. Place candidate PDFs in `literature/bucket/`
+2. Convert: `python3 literature/scripts/prepare_pdf.py literature/bucket/ --page-aware`
+3. Summarize: use `literature/skills/paper-summarizer-skill.md` as AI prompt (fills `_summarized.json`)
+4. Move the `_marked.md` + `_summarized.json` pair into `Odin-Literature/literature/conversions/batch-<N>/`
+5. Score in Odin-Literature: `python3 scripts/embed.py` then `python3 scripts/score.py`
+6. Adapt: edit `Odin-Literature/config/modules.yaml` (module queries, weights, thresholds) and re-run `score.py`
 
 Full reference: `docs/standards/rrl-workflow.md`
 
 ### AI Agent Skills
 
-| Skill | Purpose |
-|-------|---------|
-| `paper-summarizer-skill.md` | Objective, unbiased JSON summary from `_marked.md` with structured citations |
-| `synthesis-compiler-skill.md` | Per-topic synthesis from a compilation of summaries |
-| `cross-topic-synthesis-skill.md` | Cross-topic synthesis spanning multiple topic domains |
-| `paper-culler-skill.md` | Classify papers as Crucial, Supporting, or Irrelevant |
-| `paper-scorer-skill.md` | Score paper relevance with weighted dimensions |
-| `paper-verifier-skill.md` | Verify summary completeness and designation correctness |
+| Skill | Status |
+|-------|--------|
+| `paper-summarizer-skill.md` | **Active** — fills `_summarized.json` for new papers |
+| `synthesis-compiler-skill.md` | Active (old-taxonomy synthesis) |
+| `cross-topic-synthesis-skill.md` | Active (cross-topic synthesis) |
+| `paper-verifier-skill.md` | Active — verifies summary completeness |
+| `paper-culler-skill.md` | **Superseded** — replaced by Odin-Literature `scripts/score.py` |
+| `paper-scorer-skill.md` | **Superseded** — replaced by Odin-Literature `scripts/score.py` |
+
+See `literature/skills/DEPRECATED.md`.
 
 ---
 
@@ -167,5 +176,6 @@ pip install -r requirements.txt
 - `docs/thesis/system/` holds preserved historical copies: `specification (OLD).md` (v4.0 spec) and `topic-outline (OLD).md`. Both are superseded — the current spec is `docs/thesis/specifications/system-spec.md` and the current outline is `docs/thesis/topical-outline/topical-outline.md`.
 - RRL topic codes (`1.A`–`14.C`) and topic-count references follow the **old** topic outline. The new topical outline is being finalized; expect the RRL taxonomy to be re-mapped to it. Until then, treat compilation folder codes as organizational only.
 - 518 PDFs (~969 MB) are tracked via Git LFS. New clones require `git lfs pull` to fetch binary content.
-- Generated compilation files in `rrl/compilations/` are regenerated with `compile_summaries.py` and are not committed.
-- Legacy summaries (`.yaml`, `.md`) are still readable by `compile_summaries.py` but new summaries must be `.json`.
+- **Migrated:** `literature/conversions/`, `literature/summaries/`, and `literature/archive/` were removed — the corpus now lives in Odin-Literature. See `literature/_MIGRATION.md`.
+- `literature/compilations/` is **deprecated** (old-taxonomy copies); do not add new files there.
+- New summaries must be `.json` (schema: `docs/standards/summary-format.md`).

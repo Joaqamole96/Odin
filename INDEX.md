@@ -19,7 +19,7 @@
 | System specification (working contract) | `docs/thesis/specifications/system-spec.md` |
 | Chapter 1 draft | `docs/thesis/paper/chapter-1.md` |
 | Product-facing app scope, user stories, screens | `docs/thesis/system/PRD-Full-Odin-App.md` |
-| RRL workspace: papers, summaries, conversions | `rrl/` |
+| RRL workspace: papers, intake, tooling | `literature/` (curated corpus: Odin-Literature) |
 | Survey instrument | `survey/PUEPS.md` |
 | Agent navigation and standards | `AGENTS.md` |
 
@@ -32,7 +32,7 @@
 | `AGENTS.md` | Agent navigation guide, standards, and repository conventions. |
 | `INDEX.md` | This file. Master navigation index. |
 | `requirements.txt` | Python dependencies for RRL scripts. |
-| `rrl/` | Review of Related Literature: PDFs, conversions, summaries, compilations, scripts. |
+| `literature/` | Review of Related Literature: source PDFs, intake bucket, scripts, skills. Curated corpus lives in Odin-Literature. |
 | `docs/` | Thesis documents, standards, and documentation. |
 | `docs/ml/` | ML model design, data analysis, and training documentation (moved from `Odin-ML/training/docs/`). |
 | `survey/` | Survey instruments. |
@@ -48,7 +48,7 @@
 | System specification | `docs/thesis/specifications/system-spec.md` | Working system contract (v0.1.0, 2026.08.05). |
 | Paper chapters | `docs/thesis/paper/` | Drafts such as `chapter-1.md`. |
 | Product scope | `docs/thesis/system/PRD-Full-Odin-App.md` | Full-app PRD with user stories and screen descriptions. |
-| RRL workspace | `rrl/` | Papers, summaries, conversions, compilations. Topic codes (1.A–14.C) still follow the old topic outline — see RRL note below. |
+| RRL workspace | `literature/` | Source PDFs, intake, scripts, skills. Curated conversions/summaries/scores: Odin-Literature. Old topic codes (1.A–14.C) — see RRL note below. |
 
 ---
 
@@ -146,31 +146,32 @@
 
 ---
 
-## rrl/
+## literature/ (RRL workspace)
 
-RRL is the largest and most active part of the workspace.
+RRL is the largest and most active part of the workspace. The **curated corpus**
+(conversions, summaries, scores) moved to **Odin-Literature**
+(https://github.com/VibeCoders-3DCSAD/Odin-Literature); `literature/` here keeps
+the source PDFs, intake, and tooling.
 
 | Path | Purpose |
 | :--- | :--- |
-| `rrl/bucket/` | Raw candidate PDF intake pool. |
-| `rrl/papers/` | Curated source-paper PDFs. |
-| `rrl/summaries/` | Structured `_summarized.json` paper summaries. |
-| `rrl/conversions/` | `_marked.md` Markdown conversions from source papers. |
-| `rrl/compilations/` | Compiled topic-level review documents. |
-| `rrl/scripts/` | Python utility scripts. |
-| `rrl/skills/` | AI agent skill prompts. |
+| `literature/bucket/` | Raw candidate PDF intake pool. |
+| `literature/papers/` | Curated source-paper PDFs. |
+| `literature/compilations/` | Deprecated old-taxonomy compiled review docs (see `DEPRECATED.md`). |
+| `literature/scripts/` | Python utility scripts (intake/convert/compile). |
+| `literature/skills/` | AI agent skill prompts (scorer/culler skills superseded). |
+| `_MIGRATION.md` | What moved to Odin-Literature and where it went. |
 
-> **Note:** the RRL topic codes (`1.A`–`14.C`, folders `1.X`–`13.X`) follow the **old** topic outline. The new thesis topical outline is `docs/thesis/topical-outline/topical-outline.md`; re-mapping the RRL taxonomy to it is pending. See `rrl/README.md`.
+> **Note:** the RRL topic codes (`1.A`–`14.C`, folders `1.X`–`13.X`) follow the **old** topic outline. The new thesis topical outline is `docs/thesis/topical-outline/topical-outline.md`; re-mapping the RRL taxonomy to it is pending. Odin-Literature scores against the new outline via `config/modules.yaml`.
 
-### RRL Workflow
+### RRL Workflow (Intake → Odin-Literature)
 
-1. Place PDFs in `rrl/bucket/`
-2. Convert: `python3 rrl/scripts/prepare_pdf.py rrl/bucket/`
-3. Summarize: use `rrl/skills/paper-summarizer-skill.md` as AI prompt
-4. Move converted/summarized files into `rrl/conversions/` and `rrl/summaries/`
-5. Classify into topic folders: `rrl/compilations/{Topic}.{Letter}/`
-6. Compile: `python3 rrl/scripts/compile_summaries.py -i <dir> -o <outdir>`
-7. Cull: use `rrl/skills/paper-culler-skill.md` as AI prompt
+1. Place PDFs in `literature/bucket/`
+2. Convert: `python3 literature/scripts/prepare_pdf.py literature/bucket/`
+3. Summarize: use `literature/skills/paper-summarizer-skill.md` as AI prompt (fills `_summarized.json`)
+4. Move the `_marked.md` + `_summarized.json` pair into `Odin-Literature/literature/conversions/batch-<N>/`
+5. Score: in Odin-Literature run `python3 scripts/embed.py` then `python3 scripts/score.py`
+6. Adapt: edit `Odin-Literature/config/modules.yaml` and re-run `score.py`
 
 Full reference: `docs/standards/rrl-workflow.md`
 
@@ -224,5 +225,5 @@ Full reference: `docs/standards/rrl-naming-conventions.md`
 | Chapter drafts | `docs/thesis/paper/` |
 | Plan ML/model implementation | `docs/ml/` (design docs) + `Odin-ML/` (code: `training/scripts/`, `app/`) |
 | Ground synthetic data parameters | `docs/ml/1_problem-statement/synthetic-injection-rules.md` |
-| Draft RRL topic sections | `rrl/compilations/` |
-| Evaluate one paper's relevance | `rrl/summaries/` |
+| Draft RRL topic sections | `literature/compilations/` (deprecated) or Odin-Literature scores |
+| Evaluate one paper's relevance | Odin-Literature `scores/index.json` / `report.md` |
