@@ -2,7 +2,7 @@
 
 - **Project:** Development of Odin: A Personal Finance Management Application for Filipino Working Young Adults Using Random Forest, LSTM, and Isolation Forest
 - **Institution:** University of Makati | Group 4, III-DCSAD
-- **Last indexed:** 2026-08-06
+- **Last indexed:** 2026-08-25
 
 ---
 
@@ -15,11 +15,11 @@
 | Need | Go to |
 | :--- | :--- |
 | Formal RP2 proposal, title, objectives, scope | `docs/research-proposal/Research-Proposal.md` |
-| Topical outline of the thesis | `docs/thesis/topical-outline/topical-outline.md` |
+| Topical outline of the thesis | `docs/planning-management/topical-outline.md` |
 | System specification (working contract) | `docs/thesis/specifications/system-spec.md` |
 | Chapter 1 draft | `docs/thesis/paper/chapter-1.md` |
 | Product-facing app scope, user stories, screens | `docs/thesis/system/PRD-Full-Odin-App.md` |
-| RRL workspace: papers, intake, tooling | `literature/` (curated corpus: Odin-Literature) |
+| RRL corpus, scoring, pipeline | **Odin-Literature** (https://github.com/VibeCoders-3DCSAD/Odin-Literature) |
 | Survey instrument | `survey/PUEPS.md` |
 | Agent navigation and standards | `AGENTS.md` |
 
@@ -31,11 +31,10 @@
 | :--- | :--- |
 | `AGENTS.md` | Agent navigation guide, standards, and repository conventions. |
 | `INDEX.md` | This file. Master navigation index. |
-| `requirements.txt` | Python dependencies for RRL scripts. |
-| `literature/` | Review of Related Literature: source PDFs, intake bucket, scripts, skills. Curated corpus lives in Odin-Literature. |
 | `docs/` | Thesis documents, standards, and documentation. |
-| `docs/ml/` | ML model design, data analysis, and training documentation (moved from `Odin-ML/training/docs/`). |
+| `docs/ml/` | ML model design, data analysis, and training documentation. |
 | `survey/` | Survey instruments. |
+| `literature/` | **DEPRECATED.** See `literature/DEPRECATED.md`. RRL work lives in Odin-Literature. |
 
 ---
 
@@ -44,11 +43,11 @@
 | Layer | Source | Notes |
 | :--- | :--- | :--- |
 | Formal research proposal | `docs/research-proposal/Research-Proposal.md` | Authoritative for RP2 framing, objectives, scope. |
-| Topical outline | `docs/thesis/topical-outline/topical-outline.md` | Thesis structure: problem, PFM systems, application, ML, metrics, evaluation. |
-| System specification | `docs/thesis/specifications/system-spec.md` | Working system contract (v0.1.0, 2026.08.05). |
+| Topical outline | `docs/planning-management/topical-outline.md` | Thesis structure: problem, PFM systems, application, ML, metrics, evaluation. |
+| System specification | `docs/thesis/specifications/system-spec.md` | Working system contract. |
 | Paper chapters | `docs/thesis/paper/` | Drafts such as `chapter-1.md`. |
 | Product scope | `docs/thesis/system/PRD-Full-Odin-App.md` | Full-app PRD with user stories and screen descriptions. |
-| RRL workspace | `literature/` | Source PDFs, intake, scripts, skills. Curated conversions/summaries/scores: Odin-Literature. Old topic codes (1.A–14.C) — see RRL note below. |
+| RRL corpus & scoring | **Odin-Literature** | Conversions, summaries, scores, module config. |
 
 ---
 
@@ -62,17 +61,17 @@
 | `research-proposal/Proposal Panel's Comments & Suggestions/Panel-Comments-and-Suggestions.md` | Organized panel comments. |
 | `research-proposal/Proposal Panel's Comments & Suggestions/Transcription-of-Comments-and-Suggestions.md` | Verbatim panel defense Q&A. |
 
-### Thesis — Topical Outline
+### Planning & Management
 
 | File | Purpose |
 | :--- | :--- |
-| `thesis/topical-outline/topical-outline.md` | Official topical outline (v0.1.0). Supersedes the old `thesis/system/topic-outline (OLD).md`. |
+| `planning-management/topical-outline.md` | Official topical outline. Supersedes the old `thesis/system/topic-outline (OLD).md`. |
 
 ### Thesis — Specifications
 
 | File | Purpose |
 | :--- | :--- |
-| `thesis/specifications/system-spec.md` | Working system specification (v0.1.0). Supersedes `thesis/system/specification (OLD).md` (v4.0). |
+| `thesis/specifications/system-spec.md` | Working system specification. Supersedes `thesis/system/specification (OLD).md` (v4.0). |
 
 ### Thesis — Paper
 
@@ -126,17 +125,15 @@
 
 | Path | Purpose |
 | :--- | :--- |
-| `ml/README.md` | ML documentation index — phases 1–6, scripts, pipeline order. |
+| `ml/README.md` | ML documentation index — phases 1-6, scripts, pipeline order. |
 | `ml/TODO.md` | MDD follow-up tasks and known data/version gaps. |
 | `ml/1_problem-statement/` | MDD (PFP, Forecaster, Anomaly, Budget Optimizer), feature-set, module integration, deployment architecture, synthetic-injection rules. |
 | `ml/2_data-collection/` | FIES/BSP data sources. Dictionary xlsx + dependency report stay in `Odin-ML/`. |
 | `ml/3_data-preprocessing/` | Preprocessing pipeline documentation. |
 | `ml/4_eda/` | EDA guide (generated `eda_report.md` stays in `Odin-ML/`). |
-| `ml/4.5_dimension-threshold-discovery/` | PFP dimension/threshold discovery (generated candidates + `clustering_results.json` land in `Odin-ML/training/datasets/dimension-discovery/`). |
+| `ml/4.5_dimension-threshold-discovery/` | PFP dimension/threshold discovery. |
 | `ml/5_feature-engineering/` | Feature engineering pipeline documentation. |
 | `ml/6_model-training/` | PFP/Forecaster/Anomaly training documentation. |
-
-> Moved from `Odin-ML/training/docs/` on 2026-08-13 so all project documentation lives in one place.
 
 ### Meeting Records
 
@@ -146,62 +143,19 @@
 
 ---
 
-## literature/ (RRL workspace)
+## literature/ (DEPRECATED)
 
-RRL is the largest and most active part of the workspace. The **curated corpus**
-(conversions, summaries, scores) moved to **Odin-Literature**
-(https://github.com/VibeCoders-3DCSAD/Odin-Literature); `literature/` here keeps
-the source PDFs, intake, and tooling.
+**This directory is deprecated.** All RRL processing has moved to **Odin-Literature** (https://github.com/VibeCoders-3DCSAD/Odin-Literature).
 
-| Path | Purpose |
+| Path | Status |
 | :--- | :--- |
-| `literature/bucket/` | Raw candidate PDF intake pool. |
-| `literature/papers/` | Curated source-paper PDFs. |
-| `literature/compilations/` | Deprecated old-taxonomy compiled review docs (see `DEPRECATED.md`). |
-| `literature/scripts/` | Python utility scripts (intake/convert/compile). |
-| `literature/skills/` | AI agent skill prompts (scorer/culler skills superseded). |
-| `_MIGRATION.md` | What moved to Odin-Literature and where it went. |
-
-> **Note:** the RRL topic codes (`1.A`–`14.C`, folders `1.X`–`13.X`) follow the **old** topic outline. The new thesis topical outline is `docs/thesis/topical-outline/topical-outline.md`; re-mapping the RRL taxonomy to it is pending. Odin-Literature scores against the new outline via `config/modules.yaml`.
-
-### RRL Workflow (Intake → Odin-Literature)
-
-1. Place PDFs in `literature/bucket/`
-2. Convert: `python3 literature/scripts/prepare_pdf.py literature/bucket/`
-3. Summarize: use `literature/skills/paper-summarizer-skill.md` as AI prompt (fills `_summarized.json`)
-4. Move the `_marked.md` + `_summarized.json` pair into `Odin-Literature/literature/conversions/batch-<N>/`
-5. Score: in Odin-Literature run `python3 scripts/embed.py` then `python3 scripts/score.py`
-6. Adapt: edit `Odin-Literature/config/modules.yaml` and re-run `score.py`
-
-Full reference: `docs/standards/rrl-workflow.md`
-
-### RRL Naming Conventions
-
-| Prefix | Meaning |
-| :--- | :--- |
-| `L--` | Local (Philippine) |
-| `I--` | International |
-| `A--` | Algorithm/system focus |
-
-Full reference: `docs/standards/rrl-naming-conventions.md`
-
-### RRL Topic Reference
-
-| # | Topic |
-| :---: | :--- |
-| 1 | Filipino Young Professionals and the Financial Problem |
-| 2 | Filipino Cultural Context in Personal Finance |
-| 3 | Expense Categorization in Personal Finance Systems |
-| 4 | Existing Personal Finance and Budget Management Systems |
-| 5 | Financial Behavioral Profiling |
-| 6 | Spending Forecasting |
-| 7 | Budget Recommendation |
-| 8 | Anomalous Spending Detection |
-| 9 | Mobile-First Design |
-| 10 | Data Privacy, Security, and User Trust |
-| 11 | User Retention and Engagement |
-| 12 | System Evaluation |
-| 13 | Savings and Debt Management Algorithms |
+| `literature/papers/` | Source PDFs (Git LFS). Pending migration to Odin-Literature. |
+| `literature/bucket/` | Deprecated. Use Odin-Literature's bucket. |
+| `literature/compilations/` | Deprecated. Old taxonomy. Do not use. |
+| `literature/scripts/` | Deprecated. All useful scripts moved to Odin-Literature. |
+| `literature/skills/` | Deprecated. Not moved. Skills form through demand in Odin-Literature. |
+| `literature/DEPRECATED.md` | Full deprecation details. |
+| `literature/_MIGRATION.md` | Final migration state. |
 
 ---
 
@@ -219,11 +173,11 @@ Full reference: `docs/standards/rrl-naming-conventions.md`
 | Task | Use |
 | :--- | :--- |
 | Understand what Odin proposes to build | `docs/research-proposal/Research-Proposal.md` |
-| Topical outline of the thesis | `docs/thesis/topical-outline/topical-outline.md` |
+| Topical outline of the thesis | `docs/planning-management/topical-outline.md` |
 | Full app product requirements | `docs/thesis/system/PRD-Full-Odin-App.md` |
 | Detailed system rules | `docs/thesis/specifications/system-spec.md` |
 | Chapter drafts | `docs/thesis/paper/` |
-| Plan ML/model implementation | `docs/ml/` (design docs) + `Odin-ML/` (code: `training/scripts/`, `app/`) |
+| Plan ML/model implementation | `docs/ml/` (design docs) + `Odin-ML/` (code) |
 | Ground synthetic data parameters | `docs/ml/1_problem-statement/synthetic-injection-rules.md` |
-| Draft RRL topic sections | `literature/compilations/` (deprecated) or Odin-Literature scores |
-| Evaluate one paper's relevance | Odin-Literature `scores/index.json` / `report.md` |
+| RRL corpus and scoring | **Odin-Literature** — `scores/index.json` / `scores/report.md` |
+| RRL processing workflow | **Odin-Literature** — `docs/standards/rrl-workflow.md` |
