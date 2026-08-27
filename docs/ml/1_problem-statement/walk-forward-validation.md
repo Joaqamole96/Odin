@@ -17,7 +17,7 @@ Walk-forward validation (WFV) is the gold standard for evaluating time-series mo
 3. Expanding the training window forward
 4. Repeating until all data is exhausted
 
-This methodology is critical for Odin because:
+This methodology is critical for BUDI because:
 - Financial data has strong temporal dependencies
 - Models must generalize to unseen future periods
 - Static splits can overfit to specific time periods

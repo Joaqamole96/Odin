@@ -8,21 +8,21 @@ This phase transforms preprocessed raw data into engineered feature matrices rea
 
 ```bash
 # Basic usage (17 derived features + cyclical encoding)
-python Odin-ML/training/scripts/feature_engineering.py
+python BUDI-ML/training/scripts/feature_engineering.py
 
 # With feature selection
-python Odin-ML/training/scripts/feature_engineering.py \
+python BUDI-ML/training/scripts/feature_engineering.py \
   --select-method mutual_info \
   --select-k 15
 
 # With PCA dimensionality reduction
-python Odin-ML/training/scripts/feature_engineering.py \
+python BUDI-ML/training/scripts/feature_engineering.py \
   --pca-variance 0.95
 
 # Full pipeline
-python Odin-ML/training/scripts/feature_engineering.py \
-  --input Odin-ML/training/datasets/processed/ \
-  --output Odin-ML/training/datasets/engineered/ \
+python BUDI-ML/training/scripts/feature_engineering.py \
+  --input BUDI-ML/training/datasets/processed/ \
+  --output BUDI-ML/training/datasets/engineered/ \
   --encoding cyclical \
   --select-method mutual_info \
   --select-k 12 \
@@ -32,7 +32,7 @@ python Odin-ML/training/scripts/feature_engineering.py \
 
 ## Pipeline
 
-1. Load preprocessed data (`Odin-ML/training/datasets/processed/`)
+1. Load preprocessed data (`BUDI-ML/training/datasets/processed/`)
 2. Compute 17 derived financial features
 3. Impute missing values + cap outliers (fit on train only)
 4. Cyclical encoding for temporal features (month)
@@ -40,19 +40,19 @@ python Odin-ML/training/scripts/feature_engineering.py \
 6. Drop redundant multi-collinear features
 7. Feature selection (mutual information or ANOVA F-test)
 8. PCA dimensionality reduction (optional)
-9. Export to `Odin-ML/training/datasets/engineered/`
+9. Export to `BUDI-ML/training/datasets/engineered/`
 
 ## Key Files
 
 | File | Purpose |
 |------|---------|
-| `Odin-ML/training/scripts/feature_engineering.py` | Main pipeline |
+| `BUDI-ML/training/scripts/feature_engineering.py` | Main pipeline |
 | `feature-engineering.md` | Full documentation |
 
 ## Output
 
 ```
-Odin-ML/training/datasets/engineered/
+BUDI-ML/training/datasets/engineered/
 ├── train.parquet
 ├── val.parquet
 ├── test.parquet
@@ -66,9 +66,9 @@ Odin-ML/training/datasets/engineered/
 ## Pipeline Integration
 
 ```
-Odin-ML/training/datasets/processed/ (Phase 3 output)
-    ↓ Odin-ML/training/scripts/feature_engineering.py
-Odin-ML/training/datasets/engineered/
+BUDI-ML/training/datasets/processed/ (Phase 3 output)
+    ↓ BUDI-ML/training/scripts/feature_engineering.py
+BUDI-ML/training/datasets/engineered/
     ↓
 Phase 4.5: Dimension & Threshold Discovery (precedes this phase conceptually)
     → Financial Trajectory and Financial Margin features defined here

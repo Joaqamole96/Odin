@@ -8,16 +8,16 @@ This phase transforms raw synthetic transaction data into labeled, split feature
 
 | Input | Location | Description |
 |-------|----------|-------------|
-| FIES data (CSV or Parquet) | `Odin-ML/training/datasets/unprocessed/` | Raw FIES data collected by `collector.py` |
+| FIES data (CSV or Parquet) | `BUDI-ML/training/datasets/unprocessed/` | Raw FIES data collected by `collector.py` |
 
-The preprocessor runs synthesis internally as step 1, generating personas and transactions into `Odin-ML/training/synth/` before proceeding with splitting.
+The preprocessor runs synthesis internally as step 1, generating personas and transactions into `BUDI-ML/training/synth/` before proceeding with splitting.
 
 ## Process
 
 ### 8-Step Pipeline
 
 ```
-Step 1: Synthesis (persona + transaction generation → Odin-ML/training/synth/)
+Step 1: Synthesis (persona + transaction generation → BUDI-ML/training/synth/)
     ↓
 Step 2: Load & Validate
     ↓
@@ -37,7 +37,7 @@ Step 7: Export
 - Load FIES data from the `--input` path (CSV or Parquet)
 - Generate 12 archetypes × 1,000 personas = 12,000 synthetic personas
 - Generate 12-month transaction histories for each persona
-- Export to `Odin-ML/training/synth/` directory (personas, transactions, monthly summaries)
+- Export to `BUDI-ML/training/synth/` directory (personas, transactions, monthly summaries)
 
 ### Step 2: Load & Validate
 
@@ -94,7 +94,7 @@ For each split (train, val, test):
 
 Total output schema: `user_id, month, pfp_label, is_anomalous, anomaly_type, 11 raw columns` = 16 columns.
 
-> Run `Odin-ML/training/scripts/feature_engineering.py` next to compute derived features (income stability, ratios, trends, etc.)
+> Run `BUDI-ML/training/scripts/feature_engineering.py` next to compute derived features (income stability, ratios, trends, etc.)
 
 ### Step 6: Temporal Fold Metadata
 
@@ -122,9 +122,9 @@ Generate all output files with metadata and diagnostics.
 ## CLI Usage
 
 ```bash
-python Odin-ML/training/scripts/preprocessor.py \
-  --input Odin-ML/training/datasets/unprocessed/puf.parquet \
-  --output Odin-ML/training/datasets/processed/ \
+python BUDI-ML/training/scripts/preprocessor.py \
+  --input BUDI-ML/training/datasets/unprocessed/puf.parquet \
+  --output BUDI-ML/training/datasets/processed/ \
   --personas-per-archetype 1000 \
   --months 12 \
   --seed 42 \
@@ -141,7 +141,7 @@ python Odin-ML/training/scripts/preprocessor.py \
 Minimum usage:
 
 ```bash
-python Odin-ML/training/scripts/preprocessor.py --input Odin-ML/training/datasets/unprocessed/puf.parquet
+python BUDI-ML/training/scripts/preprocessor.py --input BUDI-ML/training/datasets/unprocessed/puf.parquet
 ```
 
 ## Key Design Decisions
@@ -160,11 +160,11 @@ The preprocessor intentionally outputs only raw cumulative features (metadata + 
 ## Integration
 
 ```
-Odin-ML/training/datasets/processed/ (Phase 3 output)
-    ↓ Odin-ML/training/scripts/feature_engineering.py
-Odin-ML/training/datasets/engineered/ (Phase 5 output)
-    ↓ Odin-ML/training/scripts/eda.py (or directly from processed/)
-Odin-ML/training/figures/eda_report.md, Odin-ML/training/figures/*.png
+BUDI-ML/training/datasets/processed/ (Phase 3 output)
+    ↓ BUDI-ML/training/scripts/feature_engineering.py
+BUDI-ML/training/datasets/engineered/ (Phase 5 output)
+    ↓ BUDI-ML/training/scripts/eda.py (or directly from processed/)
+BUDI-ML/training/figures/eda_report.md, BUDI-ML/training/figures/*.png
     ↓
 Phase 7: Model Training (pending)
 ```

@@ -4,13 +4,13 @@
 **Author(s):** Guevarra; Group 4, III-DCSAD
 **Date:** 2026-08-10
 **Status:** Draft
-**Purpose:** Define the deployment architecture for Odin ML modules
+**Purpose:** Define the deployment architecture for BUDI ML modules
 
 ---
 
 ## 1. Overview
 
-This document specifies the deployment architecture for the four Odin ML modules. The design follows the **separate containers** recommendation from the architecture discussion, with each module running as an independent microservice.
+This document specifies the deployment architecture for the four BUDI ML modules. The design follows the **separate containers** recommendation from the architecture discussion, with each module running as an independent microservice.
 
 ---
 
@@ -29,7 +29,7 @@ Each module is packaged as a **Docker container**:
 | API Gateway | api-gateway | 8000 | odin/api-gateway:v1.0 |
 | Transaction Service | transaction-service | 8004 | odin/transaction-service:v1.0 |
 
-> Ports match the Odin-Paper system spec v0.3.0 deployment diagram (PFM 8001, forecaster 8002, anomaly 8003, gateway 8000, transaction 8004, budget optimizer 8005).
+> Ports match the BUDI-Paper system spec v0.3.0 deployment diagram (PFM 8001, forecaster 8002, anomaly 8003, gateway 8000, transaction 8004, budget optimizer 8005).
 
 ### 2.2 Why Separate Containers
 
@@ -208,7 +208,7 @@ spec:
 
 ### 5.1 Model Storage
 
-Models are trained locally into `Odin-ML/training/models/` (gitignored, regenerable from `Odin-ML/training/scripts/`) and published to cloud object storage:
+Models are trained locally into `BUDI-ML/training/models/` (gitignored, regenerable from `BUDI-ML/training/scripts/`) and published to cloud object storage:
 
 ```
 <object-store>/odin-models/
@@ -250,7 +250,7 @@ from pathlib import Path
 class ModelLoader:
     """Loads model artifacts by module + version.
 
-    Artifacts live in `Odin-ML/training/models/{module}/{version}/` locally; the
+    Artifacts live in `BUDI-ML/training/models/{module}/{version}/` locally; the
     deployment environment mounts the same layout into `/app/models/`.
     """
 
@@ -532,10 +532,10 @@ async def classify(request: PFPRequest, token = Security(security)):
 
 | Output | Description | Location |
 |--------|-------------|----------|
-| `docker-compose.yml` | Development setup | `Odin-ML/` |
-| `Dockerfile` | Per module | `Odin-ML/{module}/` |
-| `k8s/` | Kubernetes manifests | `Odin-ML/deploy/` |
-| `.github/workflows/` | CI/CD pipelines | `Odin-ML/.github/` |
+| `docker-compose.yml` | Development setup | `BUDI-ML/` |
+| `Dockerfile` | Per module | `BUDI-ML/{module}/` |
+| `k8s/` | Kubernetes manifests | `BUDI-ML/deploy/` |
+| `.github/workflows/` | CI/CD pipelines | `BUDI-ML/.github/` |
 
 ---
 

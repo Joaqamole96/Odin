@@ -1,6 +1,6 @@
 # Odin-Paper
 
-Knowledge base for the thesis **"Development of Odin: A Personal Finance Management Application for Filipino Working Young Adults Using Random Forest, LSTM, and Isolation Forest"** by Group 4 - Aesir, IV-DCSAD, University of Makati.
+Knowledge base for the thesis **"Development of BUDI: A Personalized Intelligent Finance Management Application for Filipinos Using Classification, Forecasting, Optimization, and Anomaly Detection Models for Improving Savings and Debt"** by Group 4, III-DCSAD, University of Makati.
 
 ## Purpose
 

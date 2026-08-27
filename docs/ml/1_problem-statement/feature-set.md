@@ -4,13 +4,13 @@
 **Author(s):** Guevarra
 **Date:** 2026-07-17
 **Status:** Draft
-**Purpose:** Define the complete feature set for all Odin models, derived from RRL benchmarks and FIES data
+**Purpose:** Define the complete feature set for all BUDI models, derived from RRL benchmarks and FIES data
 
 ---
 
 ## 1. Overview
 
-This document defines the final feature set for all three Odin models:
+This document defines the final feature set for all three BUDI models:
 
 1. **PFP Classifier** — 8-class financial behavior classification (3 binary dimensions)
 2. **Forecaster** — Monthly spending prediction

@@ -378,7 +378,7 @@
 **Status:** Draft
 **Companion Documents:** `bsp-fies-crosswalk.md`, `synthetic-injection-rules.md`
 
-> **v2.4 change:** Evaluation metrics aligned with Odin-Paper chapter-1 §4.3 — primary metrics are now MAE, SMAPE, MDA, RMSE; MAPE demoted to supplementary. KPI thresholds updated accordingly.
+> **v2.4 change:** Evaluation metrics aligned with BUDI-Paper chapter-1 §4.3 — primary metrics are now MAE, SMAPE, MDA, RMSE; MAPE demoted to supplementary. KPI thresholds updated accordingly.
 
 ---
 
@@ -437,11 +437,11 @@
 
 - **Core Problem:** Multi-step time series forecasting of expense amounts at hierarchical levels (total, category group, category), for three fixed horizons (weekly, semi-monthly, monthly), with heteroscedastic noise (variance increases with amount), seasonal patterns (weekly, semi-monthly, monthly), and potential concept drift over time. Longer or arbitrary horizons are explicitly out of scope: Variable-income users' irregular/seasonal pay cycles make longer-horizon targets unreliable to label and validate given the thesis timeline, so the module commits only to the three horizons above.
 
-- **Quantitative Objectives (KPIs)** (primary metrics align with Odin-Paper chapter-1 §4.3; MAPE is supplementary):
+- **Quantitative Objectives (KPIs)** (primary metrics align with BUDI-Paper chapter-1 §4.3; MAPE is supplementary):
   - **Primary:**
     - **MAE** < 15% of mean daily spending at total level
     - **SMAPE** < 15% at total level
-      - **⚠ Domain mismatch note:** The originally cited benchmarks (NNAR 2.67%, CNN-LSTM 2.72% [Krstev et al., 2023; Ullah et al., 2024]) are from electricity load forecasting and generic time-series datasets, not household/personal finance. These benchmarks are not directly comparable to Odin's synthetic Filipino persona data. The 15% target is a researcher-defined fallback based on: (a) household expense forecasting is inherently noisier than electricity load forecasting due to irregular spending patterns, discretionary variability, and income volatility; (b) Odin's data is synthetic with injected behavioral features, adding a layer of approximation; (c) realistic targets for personal finance forecasting in developing-economy contexts should account for higher income volatility and irregular transaction patterns.
+      - **⚠ Domain mismatch note:** The originally cited benchmarks (NNAR 2.67%, CNN-LSTM 2.72% [Krstev et al., 2023; Ullah et al., 2024]) are from electricity load forecasting and generic time-series datasets, not household/personal finance. These benchmarks are not directly comparable to BUDI's synthetic Filipino persona data. The 15% target is a researcher-defined fallback based on: (a) household expense forecasting is inherently noisier than electricity load forecasting due to irregular spending patterns, discretionary variability, and income volatility; (b) BUDI's data is synthetic with injected behavioral features, adding a layer of approximation; (c) realistic targets for personal finance forecasting in developing-economy contexts should account for higher income volatility and irregular transaction patterns.
     - **SMAPE** < 20% at category group level
     - **SMAPE** < 25% at category level
     - **MDA** > 0.60 at total level (direction-of-change accuracy)
@@ -608,7 +608,7 @@
 ## 7. Model Evaluation Plan
 *Define the rigorous methodology to compare models fairly, without predefining the outcomes.*
 
-- **Primary Evaluation Metrics** (aligns with Odin-Paper chapter-1 §4.3 specific objectives):
+- **Primary Evaluation Metrics** (aligns with BUDI-Paper chapter-1 §4.3 specific objectives):
   - **MAE** (Mean Absolute Error) - literature: robust, intuitive metric [Bhavana et al., 2025]
   - **SMAPE** (Symmetric Mean Absolute Percentage Error) - scale-independent, symmetric between under- and over-forecasts
   - **MDA** (Mean Directional Accuracy) - measures whether the direction of change is predicted correctly
@@ -835,7 +835,7 @@
 **Status:** Draft
 **Companion Documents:** `bsp-fies-crosswalk.md`, `synthetic-injection-rules.md`
 
-> **v2.3 change:** Evaluation metrics aligned with Odin-Paper chapter-1 §4.4 — primary metrics are now Accuracy, Precision, Recall, F1; AUC-PR/ROC demoted to supplementary.
+> **v2.3 change:** Evaluation metrics aligned with BUDI-Paper chapter-1 §4.4 — primary metrics are now Accuracy, Precision, Recall, F1; AUC-PR/ROC demoted to supplementary.
 
 ---
 
@@ -1080,7 +1080,7 @@
 ## 7. Model Evaluation Plan
 *Define the rigorous methodology to compare models fairly, without predefining the outcomes.*
 
-- **Primary Evaluation Metrics** (aligns with Odin-Paper chapter-1 §4.4 specific objectives):
+- **Primary Evaluation Metrics** (aligns with BUDI-Paper chapter-1 §4.4 specific objectives):
   - **Accuracy** - overall correct classification rate
   - **Precision** (anomalous class) - literature: users are sensitive to false positives; 0.98 precision achieved in fraud detection [Al Rafi, 2024]
   - **Recall** - literature: prioritize catching anomalies; 0.886-0.918 recall achieved [Sahraoui & Zari, 2025]
@@ -1400,7 +1400,7 @@
 **Status:** Draft
 **Purpose:** Define the Budget Optimizer module that turns a user's income, obligations, restrictions, and preferences into a recommended budget allocation.
 
-> **Status note:** This module was added to the Odin system specification in `system-spec.md` v0.3.0 (2026.08.08). This MDD closes the "definition pending in Odin-ML" gap referenced by the system spec (§3.5, §3.6, §7). It follows the same structure and candidate-selection discipline as the PFP, Forecaster, and Anomaly Detector MDDs. Budget recommendation is a **constraint-optimization** problem rather than a predictive modeling problem, so its candidates are allocation strategies and its KPIs are satisfaction/utilization measures.
+> **Status note:** This module was added to the BUDI system specification in `system-spec.md` v0.3.0 (2026.08.08). This MDD closes the "definition pending in BUDI-ML" gap referenced by the system spec (§3.5, §3.6, §7). It follows the same structure and candidate-selection discipline as the PFP, Forecaster, and Anomaly Detector MDDs. Budget recommendation is a **constraint-optimization** problem rather than a predictive modeling problem, so its candidates are allocation strategies and its KPIs are satisfaction/utilization measures.
 
 ---
 
@@ -1481,7 +1481,7 @@ Filipino working young adults manage budgets under variable income, protected ob
 ## 2. Data Collection Plan (Sourcing, Types, and Sizes)
 
 - **Sources:** user budget allocations and restriction levels (system taxonomy TX-01, user CRUD), transaction history, obligation records (FA-03), and the Forecaster output. All data is user-owned and scoped by `user_id`.
-- **Synthetic evaluation set:** reuse the persona/transaction pipeline (`Odin-ML/training/synth/`) — each persona provides a ground-truth budget (from its PFP octant's profile rule), restriction levels (sampled from archetype parameters), and 12 months of transactions. Target: ~10,000 personas for optimization evaluation.
+- **Synthetic evaluation set:** reuse the persona/transaction pipeline (`BUDI-ML/training/synth/`) — each persona provides a ground-truth budget (from its PFP octant's profile rule), restriction levels (sampled from archetype parameters), and 12 months of transactions. Target: ~10,000 personas for optimization evaluation.
 - **Baselines:** current-spending proportional allocation and a uniform split serve as Tier 0 reference allocations.
 
 ---
@@ -1622,8 +1622,8 @@ Retraining here = re-estimating target ratios and validating the selected strate
 
 ## 14. References
 
-- Odin system specification v0.3.0 (§3.5, §3.6, §6.9, §12) — budget optimizer definition pending note, now closed by this MDD.
-- Odin PRD (`prd.md`) — budget recommendation requirements (BR-01 to BR-03).
+- BUDI system specification v0.3.0 (§3.5, §3.6, §6.9, §12) — budget optimizer definition pending note, now closed by this MDD.
+- BUDI PRD (`prd.md`) — budget recommendation requirements (BR-01 to BR-03).
 - Preserved historical `specification (OLD).md` v4.0 (Articles XVIII–XXI) — restriction levels, feasibility, reduction hierarchy, cold-start budget recommendation.
 - `module-integration.md` v1.1 — Budget Optimizer integration contracts.
 - `deployment-architecture.md` v1.1 — `budget-optimizer` container definition.

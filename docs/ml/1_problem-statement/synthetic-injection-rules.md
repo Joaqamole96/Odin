@@ -11,7 +11,7 @@
 
 ## 1. Overview
 
-This document defines the deterministic rules for transforming PSA 2023 FIES NCR microdata into labeled synthetic personas with transaction histories. The output feeds all three Odin ML models:
+This document defines the deterministic rules for transforming PSA 2023 FIES NCR microdata into labeled synthetic personas with transaction histories. The output feeds all three BUDI ML models:
 
 - **PFP Classifier:** Questionnaire answers + transaction history → PFP label
 - **Forecaster:** Transaction history → expense forecasts

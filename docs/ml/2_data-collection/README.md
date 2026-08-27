@@ -8,10 +8,10 @@ This phase acquires, documents, and organizes all source data needed for model d
 
 | Input | Source | Location |
 |-------|--------|----------|
-| FIES 2023 CSV | PSA | `Odin-ML/training/datasets/raw/Family Income and Expenditure.csv` |
-| FIES Dictionary | PSA | `Odin-ML/training/docs/2_data-collection/dictionary-and-valueset.xlsx` |
+| FIES 2023 CSV | PSA | `BUDI-ML/training/datasets/raw/Family Income and Expenditure.csv` |
+| FIES Dictionary | PSA | `BUDI-ML/training/docs/2_data-collection/dictionary-and-valueset.xlsx` |
 
-> **Note**: Raw data files are not committed to Git (too large). Download from PSA/BSP and place in `Odin-ML/training/datasets/raw/` before running the pipeline.
+> **Note**: Raw data files are not committed to Git (too large). Download from PSA/BSP and place in `BUDI-ML/training/datasets/raw/` before running the pipeline.
 
 ## Process
 
@@ -84,10 +84,10 @@ The archetype list and classification thresholds need validation from a financia
 
 | Output | Location | Description |
 |--------|----------|-------------|
-| `dictionary-and-valueset.xlsx` | `Odin-ML/training/docs/2_data-collection/` | Variable ID mapping |
+| `dictionary-and-valueset.xlsx` | `BUDI-ML/training/docs/2_data-collection/` | Variable ID mapping |
 | `persona-validation-list.md` | `1_problem-statement/` | 12 archetypes for SME review |
 | `synthetic-injection-rules.md` | `1_problem-statement/` | 20 rules for FIES→Persona→Transaction |
-| `fies_columns.py` | `Odin-ML/training/scripts/` | Python module for FIES column access |
+| `fies_columns.py` | `BUDI-ML/training/scripts/` | Python module for FIES column access |
 
 ## Data Quality Notes
 
@@ -101,11 +101,11 @@ The archetype list and classification thresholds need validation from a financia
 The data collected in this phase feeds directly into preprocessing:
 
 ```
-Odin-ML/training/datasets/raw/Family Income and Expenditure.csv
-    ↓ Odin-ML/training/scripts/collector.py
-Odin-ML/training/datasets/unprocessed/puf.parquet
-    ↓ Odin-ML/training/scripts/preprocessor.py (synthesis + preprocessing)
-Odin-ML/training/synth/ → Odin-ML/training/datasets/processed/
+BUDI-ML/training/datasets/raw/Family Income and Expenditure.csv
+    ↓ BUDI-ML/training/scripts/collector.py
+BUDI-ML/training/datasets/unprocessed/puf.parquet
+    ↓ BUDI-ML/training/scripts/preprocessor.py (synthesis + preprocessing)
+BUDI-ML/training/synth/ → BUDI-ML/training/datasets/processed/
 ```
 
 ## Legal Constraints

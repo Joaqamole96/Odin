@@ -93,23 +93,23 @@ Must maintain >75% per-class accuracy across all PFP classes.
 ## 4. Input/Output
 
 ### Input
-- `Odin-ML/training/datasets/engineered/train.parquet` — Engineered features (train split)
-- `Odin-ML/training/datasets/engineered/val.parquet` — Engineered features (validation split)
-- `Odin-ML/training/datasets/engineered/test.parquet` — Engineered features (test split)
-- `Odin-ML/training/datasets/engineered/feature_columns.json` — Feature column definitions
-- `Odin-ML/training/datasets/processed/temporal_folds.json` — Temporal fold definitions
+- `BUDI-ML/training/datasets/engineered/train.parquet` — Engineered features (train split)
+- `BUDI-ML/training/datasets/engineered/val.parquet` — Engineered features (validation split)
+- `BUDI-ML/training/datasets/engineered/test.parquet` — Engineered features (test split)
+- `BUDI-ML/training/datasets/engineered/feature_columns.json` — Feature column definitions
+- `BUDI-ML/training/datasets/processed/temporal_folds.json` — Temporal fold definitions
 
 ### Output
-- `Odin-ML/training/models/pfp/` — Trained model artifacts
+- `BUDI-ML/training/models/pfp/` — Trained model artifacts
   - `tier0_majority.joblib` — Tier 0 model
   - `tier1_rule_based.joblib` — Tier 1 model (thresholds)
   - `tier2_logistic_regression.joblib` — Tier 2 model
   - `tier3_random_forest.joblib` — Tier 3 RF model
   - `tier3_svm.joblib` — Tier 3 SVM model
   - `tier4_xgboost.joblib` — Tier 4 XGB model
-- `Odin-ML/training/models/pfp/evaluation.json` — Cross-fold metrics for all tiers
-- `Odin-ML/training/models/pfp/evaluation_report.md` — Human-readable comparison report
-- `Odin-ML/training/models/pfp/confusion_matrices/` — Confusion matrix plots per fold
+- `BUDI-ML/training/models/pfp/evaluation.json` — Cross-fold metrics for all tiers
+- `BUDI-ML/training/models/pfp/evaluation_report.md` — Human-readable comparison report
+- `BUDI-ML/training/models/pfp/confusion_matrices/` — Confusion matrix plots per fold
 
 ---
 
@@ -117,13 +117,13 @@ Must maintain >75% per-class accuracy across all PFP classes.
 
 ```bash
 # Train all tiers and evaluate
-python Odin-ML/training/scripts/train_pfp.py --input Odin-ML/training/datasets/engineered/ --output Odin-ML/training/models/pfp/
+python BUDI-ML/training/scripts/train_pfp.py --input BUDI-ML/training/datasets/engineered/ --output BUDI-ML/training/models/pfp/
 
 # Train with custom options
-python Odin-ML/training/scripts/train_pfp.py \
-  --input Odin-ML/training/datasets/engineered/ \
-  --output Odin-ML/training/models/pfp/ \
-  --temporal-folds Odin-ML/training/datasets/processed/temporal_folds.json \
+python BUDI-ML/training/scripts/train_pfp.py \
+  --input BUDI-ML/training/datasets/engineered/ \
+  --output BUDI-ML/training/models/pfp/ \
+  --temporal-folds BUDI-ML/training/datasets/processed/temporal_folds.json \
   --seed 42
 ```
 

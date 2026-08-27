@@ -12,8 +12,8 @@ This phase sits between Phase 4 (EDA) and Phase 5 (Feature Engineering) because 
 
 | Input | Source | Purpose |
 |-------|--------|---------|
-| `Odin-ML/training/datasets/engineered/` | Phase 5 output (once available) | Full engineered feature matrices |
-| `Odin-ML/training/datasets/processed/` | Phase 3 output | Raw feature matrices (fallback if Phase 5 not yet run) |
+| `BUDI-ML/training/datasets/engineered/` | Phase 5 output (once available) | Full engineered feature matrices |
+| `BUDI-ML/training/datasets/processed/` | Phase 3 output | Raw feature matrices (fallback if Phase 5 not yet run) |
 | Persona/archetype metadata | Phase 2 | Archetype labels and parameters for validation |
 
 ## Process
@@ -43,8 +43,8 @@ Flag/fix the Phase 2 archetype table's use of "Income Level: High/Low" as a prox
 
 | Output | Location | Description |
 |--------|----------|-------------|
-| `dimension_discovery.py` | `Odin-ML/training/scripts/` | Clustering analysis + new feature computation script |
-| `dimension-threshold-candidates.md` | `Odin-ML/training/datasets/dimension-discovery/` | Proposed thresholds with rationale |
+| `dimension_discovery.py` | `BUDI-ML/training/scripts/` | Clustering analysis + new feature computation script |
+| `dimension-threshold-candidates.md` | `BUDI-ML/training/datasets/dimension-discovery/` | Proposed thresholds with rationale |
 | Updated `feature-set.md` | `1_problem-statement/` | Add Financial Trajectory and Financial Margin feature definitions |
 | Updated `persona-validation-list.md` | `1_problem-statement/` | Guidance that personas should vary across Trajectory/Margin combinations within each PFP quadrant |
 | Log remaining open gaps | `../TODO.md` | Open task: final threshold values pending SME review + clustering analysis |
@@ -52,14 +52,14 @@ Flag/fix the Phase 2 archetype table's use of "Income Level: High/Low" as a prox
 ## Pipeline Integration
 
 ```
-Odin-ML/training/datasets/processed/ (Phase 3 output)
+BUDI-ML/training/datasets/processed/ (Phase 3 output)
     ↓
-Phase 4: EDA → Odin-ML/training/figures/
+Phase 4: EDA → BUDI-ML/training/figures/
     ↓
 Phase 4.5: Dimension & Threshold Discovery (this phase)
     → dimension_discovery.py
     → dimension-threshold-candidates.md
     → Updates to feature-set.md, persona-validation-list.md, TODO-MDD-Gaps.md
     ↓
-Phase 5: Feature Engineering → Odin-ML/training/datasets/engineered/
+Phase 5: Feature Engineering → BUDI-ML/training/datasets/engineered/
 ```

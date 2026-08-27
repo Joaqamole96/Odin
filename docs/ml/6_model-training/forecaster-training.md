@@ -9,8 +9,8 @@ This document describes the training pipeline for the LSTM Spending Forecaster m
 
 ## Feature Engineering
 
-**Script:** `Odin-ML/training/scripts/feature_engineering_forecaster.py`  
-**Output:** `Odin-ML/training/datasets/forecaster/{train,val,test}.parquet`
+**Script:** `BUDI-ML/training/scripts/feature_engineering_forecaster.py`  
+**Output:** `BUDI-ML/training/datasets/forecaster/{train,val,test}.parquet`
 
 ### Features (23 per persona-day)
 
@@ -25,7 +25,7 @@ This document describes the training pipeline for the LSTM Spending Forecaster m
 
 ### Pipeline
 
-1. Load `Odin-ML/training/synth/transactions.parquet` (35,568 rows, 300 personas, 12 months)
+1. Load `BUDI-ML/training/synth/transactions.parquet` (35,568 rows, 300 personas, 12 months)
 2. Build daily grid per persona (365 days)
 3. Aggregate expense transactions to daily level
 4. Compute temporal encodings (sin/cos day-of-week)
@@ -47,8 +47,8 @@ This document describes the training pipeline for the LSTM Spending Forecaster m
 
 ## Training Pipeline
 
-**Script:** `Odin-ML/training/scripts/train_forecaster.py`  
-**Output:** `Odin-ML/training/models/forecaster/`
+**Script:** `BUDI-ML/training/scripts/train_forecaster.py`  
+**Output:** `BUDI-ML/training/models/forecaster/`
 
 ### Model Tiers
 
@@ -80,7 +80,7 @@ This document describes the training pipeline for the LSTM Spending Forecaster m
 
 ### Evaluation Metrics
 
-- **Primary:** MAE, SMAPE, MDA, RMSE (aligned with MDD v2.4 / Odin-Paper chapter-1 §4.3)
+- **Primary:** MAE, SMAPE, MDA, RMSE (aligned with MDD v2.4 / BUDI-Paper chapter-1 §4.3)
 - **Supplementary:** MAPE, R² (MAPE kept for continuity with earlier baselines, not a primary KPI)
 - **Decision Rule:** Best model must beat the naive/ARIMA baseline by ≥20% MAPE reduction. Primary KPI targets per MDD v2.4: MAE < 15% of mean daily spending at total level, SMAPE < 15% at total level, MDA > 0.60, RMSE < 25% of mean daily spending.
 
@@ -143,7 +143,7 @@ This approach maintains the research requirement for deep learning comparison wh
 ## Model Artifacts
 
 ```
-Odin-ML/training/models/forecaster/
+BUDI-ML/training/models/forecaster/
 ├── evaluation.json              # Machine-readable metrics
 ├── evaluation_report.md         # Human-readable report
 ├── tier2_random_forest.joblib   # Final model (trained on all data)
@@ -156,10 +156,10 @@ Odin-ML/training/models/forecaster/
 
 ```bash
 # Feature engineering
-python Odin-ML/training/scripts/feature_engineering_forecaster.py
+python BUDI-ML/training/scripts/feature_engineering_forecaster.py
 
 # Training
-python Odin-ML/training/scripts/train_forecaster.py
+python BUDI-ML/training/scripts/train_forecaster.py
 
-# Output: Odin-ML/training/models/forecaster/
+# Output: BUDI-ML/training/models/forecaster/
 ```

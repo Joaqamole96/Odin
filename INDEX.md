@@ -1,8 +1,8 @@
 # Odin Papers — Repository Index
 
-- **Project:** Development of Odin: A Personal Finance Management Application for Filipino Working Young Adults Using Random Forest, LSTM, and Isolation Forest
+- **Project:** Development of BUDI: A Personalized Intelligent Finance Management Application for Filipinos Using Classification, Forecasting, Optimization, and Anomaly Detection Models for Improving Savings and Debt
 - **Institution:** University of Makati | Group 4, III-DCSAD
-- **Last indexed:** 2026-08-25
+- **Last indexed:** 2026-08-26
 
 ---
 
@@ -21,6 +21,7 @@
 | Product-facing app scope, user stories, screens | `docs/thesis/system/PRD-Full-Odin-App.md` |
 | RRL corpus, scoring, pipeline | **Odin-Literature** (https://github.com/VibeCoders-3DCSAD/Odin-Literature) |
 | Survey instrument | `survey/PUEPS.md` |
+| Google Drive CLI tool | `scripts/gdrive/README.md` |
 | Agent navigation and standards | `AGENTS.md` |
 
 ---
@@ -33,6 +34,8 @@
 | `INDEX.md` | This file. Master navigation index. |
 | `docs/` | Thesis documents, standards, and documentation. |
 | `docs/ml/` | ML model design, data analysis, and training documentation. |
+| `ground-truth/` | Local mirrors of Drive chapter drafts. Gitignored. Run `fetch_chapters.py` to refresh. |
+| `scripts/gdrive/` | Google Drive API CLI tool (local OAuth 2.0). See `scripts/gdrive/README.md`. |
 | `survey/` | Survey instruments. |
 | `literature/` | **DEPRECATED.** See `literature/DEPRECATED.md`. RRL work lives in Odin-Literature. |
 
@@ -179,5 +182,6 @@
 | Chapter drafts | `docs/thesis/paper/` |
 | Plan ML/model implementation | `docs/ml/` (design docs) + `Odin-ML/` (code) |
 | Ground synthetic data parameters | `docs/ml/1_problem-statement/synthetic-injection-rules.md` |
+| List/search/download Drive files | `scripts/gdrive/README.md` |
 | RRL corpus and scoring | **Odin-Literature** — `scores/index.json` / `scores/report.md` |
 | RRL processing workflow | **Odin-Literature** — `docs/standards/rrl-workflow.md` |

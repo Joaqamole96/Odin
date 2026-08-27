@@ -2,7 +2,7 @@
 
 ## What This Phase Is
 
-This phase defines the ML problem space for Odin's four intelligent modules. It produces the Model Design Document (MDD) — the complete specification for what each model does, how it's trained, and how it integrates with the app.
+This phase defines the ML problem space for BUDI's four intelligent modules. It produces the Model Design Document (MDD) — the complete specification for what each model does, how it's trained, and how it integrates with the app.
 
 ## Inputs
 
@@ -10,7 +10,7 @@ This phase defines the ML problem space for Odin's four intelligent modules. It 
 |-------|--------|---------|
 | PSA 2023 FIES data | PSA Data Archive microdata | Income/expense distributions for persona generation; scoped to NCR |
 | RRL benchmarks | Academic papers | Baseline model performance (XGBoost 90.66%, CatBoost 90.93%, LSTM, etc.) |
-| Thesis requirements | `Odin-Paper` repository | Alignment with research objectives |
+| Thesis requirements | `BUDI-Paper` repository | Alignment with research objectives |
 | SME domain knowledge | Asst. Prof. Pamela A. Go (CBFS) | Business logic validation |
 
 ## Process

@@ -1,14 +1,14 @@
-**ODIN Public User Expectations and Perception Survey**
+**BUDI Public User Expectations and Perception Survey**
 
-*For the Odin Personal Budget Management System – A Web and Mobile Application for Filipino Young Professionals in Metro Manila*
+*For the BUDI Personal Budget Management System – A Web and Mobile Application for Filipino Young Professionals in Metro Manila*
 
 **Introduction**
 
-Thank you for participating in this survey for Odin, a web and mobile personal budget management system developed for Filipino young professionals in Metro Manila. Odin is a research initiative of the University of Makati \- College of Computing and Information Sciences (UMak-CCIS), designed to provide intelligent, behavior-aware budget guidance through machine learning-driven spending forecasts and anomaly detection.
+Thank you for participating in this survey for BUDI, a web and mobile personal budget management system developed for Filipino young professionals in Metro Manila. BUDI is a research initiative of the University of Makati \- College of Computing and Information Sciences (UMak-CCIS), designed to provide intelligent, behavior-aware budget guidance through machine learning-driven spending forecasts and anomaly detection.
 
-This pre-survey aims to understand your current financial management practices, digital habits, budgeting challenges, and expectations from a locally developed personal finance tool. Your responses will directly shape how Odin is designed, what features are prioritized, and how its expense categories and guidance are structured to reflect your real financial life as a Filipino young professional.
+This pre-survey aims to understand your current financial management practices, digital habits, budgeting challenges, and expectations from a locally developed personal finance tool. Your responses will directly shape how BUDI is designed, what features are prioritized, and how its expense categories and guidance are structured to reflect your real financial life as a Filipino young professional.
 
-**Your input will help us ensure Odin is:**
+**Your input will help us ensure BUDI is:**
 
 * Easy to use  
 * Technologically inclusive  
@@ -22,10 +22,10 @@ This pre-survey aims to understand your current financial management practices, 
 2. Financial Management Behavior  
 3. Digital and App Literacy  
 4. Budgeting Challenges and Current Tools  
-5. Expectations from Odin  
+5. Expectations from BUDI  
 6. Trust, Privacy, and Cultural Relevance
 
-**All responses are anonymous** and used only to guide the development and design of Odin’s web and mobile application design, features, and usability.
+**All responses are anonymous** and used only to guide the development and design of BUDI’s web and mobile application design, features, and usability.
 
 **I. Demographics**
 
@@ -279,7 +279,7 @@ This pre-survey aims to understand your current financial management practices, 
 ○ Somewhat uncomfortable. I find automated alerts intrusive  
 ○ Not comfortable. I prefer to review my finances on my own terms
 
-**8\. 	What device would you most likely use to access Odin?**  
+**8\. 	What device would you most likely use to access BUDI?**  
  ***Select one option:***  
  ○ Smartphone (Android)  
  ○ Smartphone (iOS / iPhone)  
@@ -295,7 +295,7 @@ This pre-survey aims to understand your current financial management practices, 
  ○ Not confident  
  ○ Not confident at all
 
-**10\. Would you want Odin to provide a guided tutorial or onboarding walkthrough when you first use it?**  
+**10\. Would you want BUDI to provide a guided tutorial or onboarding walkthrough when you first use it?**  
  ***Select one option:***  
  ○ Yes, a full step-by-step tutorial would be helpful  
  ○ Yes, but just a brief overview of the main features  
@@ -369,7 +369,7 @@ This pre-survey aims to understand your current financial management practices, 
  ○ Not applicable — I have never used one  
  ○ Other (please specify): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**V. Expectations from Odin**
+**V. Expectations from BUDI**
 
 **1\.** 	**Which feature is most important to you in a personal budget management system?**  
  ***Select one option:***  
@@ -381,7 +381,7 @@ This pre-survey aims to understand your current financial management practices, 
  ○ Expense categories tailored to Filipino financial obligations  
  ○ Other (please specify): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**2\. 	What information should Odin display or analyze about your finances?**  
+**2\. 	What information should BUDI display or analyze about your finances?**  
  ***Check all that apply:***  
  ☐ Monthly income and expenses breakdown  
  ☐ Predicted spending for the next month  
@@ -392,7 +392,7 @@ This pre-survey aims to understand your current financial management practices, 
  ☐ Tips or recommendations for improving budgeting  
  ☐ Other (please specify): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**3\. 	How should Odin notify you when an unusual spending pattern is detected?**  
+**3\. 	How should BUDI notify you when an unusual spending pattern is detected?**  
  ***Select one option:***  
  ○ In-app alert or notification  
  ○ Email notification  
@@ -409,21 +409,21 @@ This pre-survey aims to understand your current financial management practices, 
  ○ Not useful  
  ○ Not useful at all
 
-**5\. 	How often would you prefer to receive budget summaries or financial reports from Odin?**  
+**5\. 	How often would you prefer to receive budget summaries or financial reports from BUDI?**  
  ***Select one option:***  
  ○ Daily  
  ○ Weekly  
  ○ Monthly  
  ○ On-demand only (when I request it)
 
-**6\. 	Would you be willing to manually input your expenses into Odin if it provides useful financial insights in return?**  
+**6\. 	Would you be willing to manually input your expenses into BUDI if it provides useful financial insights in return?**  
  ***Select one option:***  
  ○ Yes, I am willing  
  ○ Yes, if the process is quick and simple  
  ○ Unsure  
  ○ No, I prefer automatic tracking only
 
-**7\.** 	**How important is it that Odin includes expense categories specific to Filipino financial obligations (e.g., *paluwagan*, family support, *ambag*, government contributions)?**  
+**7\.** 	**How important is it that BUDI includes expense categories specific to Filipino financial obligations (e.g., *paluwagan*, family support, *ambag*, government contributions)?**  
  ***Select one option:***  
  ○ Extremely important  
  ○ Very important  
@@ -431,7 +431,7 @@ This pre-survey aims to understand your current financial management practices, 
  ○ Slightly important  
  ○ Not at all important
 
-**8\. 	What additional features would make Odin more useful for you?**  
+**8\. 	What additional features would make BUDI more useful for you?**  
  *Open response:*
 
 ---
@@ -474,7 +474,7 @@ This pre-survey aims to understand your current financial management practices, 
  ☐ Informal loans (e.g., borrowing from family or friends)
  ☐ Other (please specify): \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**5\. 	How important is it that Odin is developed by a local Philippine institution rather than a foreign company?**  
+**5\. 	How important is it that BUDI is developed by a local Philippine institution rather than a foreign company?**  
  ***Select one option:***  
  ○ Extremely important  
  ○ Very important  
@@ -482,14 +482,14 @@ This pre-survey aims to understand your current financial management practices, 
  ○ Slightly important  
  ○ Not at all important
 
-**6\. 	What is your main concern about using a personal budget management system like Odin?**  
+**6\. 	What is your main concern about using a personal budget management system like BUDI?**  
  *Open response:*
 
 ---
 
 ---
 
-**7\.** 	**What would make Odin a genuinely useful tool for improving your personal financial management?**  
+**7\.** 	**What would make BUDI a genuinely useful tool for improving your personal financial management?**  
  *Open response:*
 
 ---

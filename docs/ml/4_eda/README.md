@@ -2,15 +2,15 @@
 
 ## What This Phase Is
 
-This phase analyzes the processed feature matrices to understand data distributions, class balance, correlations, temporal patterns, anomalies, and data quality issues before model training. The EDA script is designed to work with both raw data (`Odin-ML/training/datasets/processed/`) and engineered data (`Odin-ML/training/datasets/engineered/`), dynamically detecting which features are available.
+This phase analyzes the processed feature matrices to understand data distributions, class balance, correlations, temporal patterns, anomalies, and data quality issues before model training. The EDA script is designed to work with both raw data (`BUDI-ML/training/datasets/processed/`) and engineered data (`BUDI-ML/training/datasets/engineered/`), dynamically detecting which features are available.
 
 ## Inputs
 
 | Input | Location | Description |
 |-------|----------|-------------|
-| `train.parquet` | `Odin-ML/training/datasets/processed/` or `Odin-ML/training/datasets/engineered/` | Training feature matrix |
-| `val.parquet` | `Odin-ML/training/datasets/processed/` or `Odin-ML/training/datasets/engineered/` | Validation feature matrix |
-| `test.parquet` | `Odin-ML/training/datasets/processed/` or `Odin-ML/training/datasets/engineered/` | Test feature matrix |
+| `train.parquet` | `BUDI-ML/training/datasets/processed/` or `BUDI-ML/training/datasets/engineered/` | Training feature matrix |
+| `val.parquet` | `BUDI-ML/training/datasets/processed/` or `BUDI-ML/training/datasets/engineered/` | Validation feature matrix |
+| `test.parquet` | `BUDI-ML/training/datasets/processed/` or `BUDI-ML/training/datasets/engineered/` | Test feature matrix |
 | `pipeline_report.json` | input directory | Feature statistics and range violations |
 
 ## Process
@@ -31,8 +31,8 @@ This phase analyzes the processed feature matrices to understand data distributi
 
 The EDA dynamically detects which features are present in the input data:
 
-- **When run on `Odin-ML/training/datasets/processed/`** (raw data): 11 raw features + 5 metadata columns = 16 columns. Engineered feature sections are skipped gracefully.
-- **When run on `Odin-ML/training/datasets/engineered/`** (engineered data): 17 engineered features + 11 raw features + 5 metadata columns = 33 columns. Full analysis including engineered feature distributions, correlations, and temporal patterns.
+- **When run on `BUDI-ML/training/datasets/processed/`** (raw data): 11 raw features + 5 metadata columns = 16 columns. Engineered feature sections are skipped gracefully.
+- **When run on `BUDI-ML/training/datasets/engineered/`** (engineered data): 17 engineered features + 11 raw features + 5 metadata columns = 33 columns. Full analysis including engineered feature distributions, correlations, and temporal patterns.
 
 ## Outputs
 
@@ -72,9 +72,9 @@ Plots are generated for features that exist in the data. When run on raw data on
 ## CLI Usage
 
 ```bash
-python Odin-ML/training/scripts/eda.py \
-  --input Odin-ML/training/datasets/processed/ \
-  --output Odin-ML/training/figures/ \
+python BUDI-ML/training/scripts/eda.py \
+  --input BUDI-ML/training/datasets/processed/ \
+  --output BUDI-ML/training/figures/ \
   --seed 42
 ```
 
@@ -82,8 +82,8 @@ python Odin-ML/training/scripts/eda.py \
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
-| `--input` | `Odin-ML/training/datasets/processed/` | Directory with train.parquet, val.parquet, test.parquet |
-| `--output` | `Odin-ML/training/figures/` | Output directory for plots |
+| `--input` | `BUDI-ML/training/datasets/processed/` | Directory with train.parquet, val.parquet, test.parquet |
+| `--output` | `BUDI-ML/training/figures/` | Output directory for plots |
 | `--seed` | `42` | Random seed for reproducibility |
 
 ## Dependencies
@@ -108,11 +108,11 @@ Added to `requirements.txt`:
 ## Pipeline Integration
 
 ```
-Odin-ML/training/datasets/processed/ (Phase 3 output)
-    ↓ Odin-ML/training/scripts/eda.py
-Odin-ML/training/figures/eda_report.md, Odin-ML/training/figures/*.png
+BUDI-ML/training/datasets/processed/ (Phase 3 output)
+    ↓ BUDI-ML/training/scripts/eda.py
+BUDI-ML/training/figures/eda_report.md, BUDI-ML/training/figures/*.png
     ↓ (inform feature selection, preprocessing improvements)
 Phase 4.5: Dimension & Threshold Discovery → dimension-threshold-candidates.md
-Phase 5: Feature Engineering → Odin-ML/training/datasets/engineered/
+Phase 5: Feature Engineering → BUDI-ML/training/datasets/engineered/
 Phase 7: Model Training (pending)
 ```

@@ -22,7 +22,7 @@
 
 ## Benchmark
 
-The following evaluates existing local PFM applications against **Odin**, listing objective features present and absent. A competitive summary follows.
+The following evaluates existing local PFM applications against **BUDI**, listing objective features present and absent. A competitive summary follows.
 
 ---
 
@@ -266,57 +266,110 @@ The following evaluates existing local PFM applications against **Odin**, listin
 **Developer**: BudgetBakers
 
 **Features Present**:
-- All in one money manager. organize bills, optimize spending, and grow savings. Wallet is the all in one personal finance manager built to help you save money and plan for the future. connect your bank accounts to track expenses automatically and know where every dollar is going. dive into in depth reports on your spending and cash flow to help you effectively manage your money. wallet allows you to see your finances your way: anywhere, anytime.
-- key features
-    - connect accounts and manage all things finance in one comprehensive dashboard
-    - take control of your money with custom budgets
-    - keep track of your monthly bills and subscriptions
-    - monitor your cash flow and balance trend
-    - track stocks alongside your other accounts
-    - manage savings to plan for your future
-    - get insightful reports and financial tips
-    - customize your dashboard to see what matters most to you
-    - avoid overspending with predictive alerts
-    - share accounts and track together with family and friends
-    - sync your data across all your devices with secure cloud backup
-- your finances in one place
-    - Wallet is the money manager and bill tracker designed to help you from day one. Utilize in depth reports and statistics on all your spending, accounts and investments to always know where you stand. Your financial data is securely synced to the cloud, so you can access it from any device and gain the continuous access you need to stay in control of your finances. Whether you need to save money until payday or budget for the long-term, Wallet is flexible for your changing needs. Track your stock portfolio in Wallet and combine your stock holdings with other assets and grow your wealth by building a diversified portfolio of stocks, ETFs and other funds.
-- Take control of your finances with Wallet 
-🔗Automatic Bank Updates - Track where every dollar is going by seamlessly connecting your accounts. Transactions are automatically and securely synced, then smartly categorized, and factored into your budget.
 
-🚀 Seamless Setup & Data Import - Get a complete picture of your finances from day one. Wallet utilizes a temporary foreground service during your initial bank connection or profile sync to securely download up to 3 months of historical transactions.
+- **Account Management**
+  - Dashboard consolidating all financial accounts
+  - Connect bank accounts for automatic transaction syncing
+  - Add account options: Bank Sync, Investments, File Import, Manual Input
+  - Multicurrency support across accounts
 
-💰Flexible Budgets - Whatever it is you need to accomplish, from paying off debt to buying a car or saving for retirement, this budgeting app offers the flexibility to meet your goals and cleverly react to any changing financial circumstances. With Wallet, budgeting expenses has never been easier.
+- **Transaction Tracking**
+  - Automatic transaction categorisation
+  - Manual transaction entry
+  - Transaction log with filtering capabilities
+  - Import historical data (up to 3 months during initial setup)
 
-⏰Planned Payments - Never miss a due date with this bill tracker. Organize bills and subscriptions and keep track of due dates. See upcoming payments and how the payments will impact your cash flow.
+- **Budgeting**
+  - Custom budgets with flexible parameters
+  - Monitor budget performance
+  - Customisable categories with personalised icons
 
-🤝Sharing selected accounts - Selected accounts can be shared with your spouse, family, friends or colleagues who need to cooperate on a budget. Whether you’re buying your first home with your partner or managing household costs with roommates, everyone can contribute from any platform. Track your spending together!
+- **Bills & Payments**
+  - Planned Payments for tracking upcoming bills and subscriptions
+  - View future cash flow impact of scheduled payments
+  - Payment due date reminders
 
-📊Insightful reports - Wallet's financial overviews give you actionable insights about the state of your finances, across accounts, cards, debts and cash. Gain insights on where you should be budgeting more or could save more money.
+- **Reports & Analytics**
+  - Balance Trend with line graph visualisation
+  - Spending by Categories or Labels
+  - Cash Flow analysis (income vs. expenses)
+  - Period-to-Period Consumption comparison
+  - Credit Limits Utilisation and Debt to Income Ratio
+  - Income & Expense Book reports
+  - Predictive alerts for overspending
 
-🗂Imports or Manual Updates - You can now import all your transaction data from sources of your choice so you will get a full report for simple expense tracking. Be it from your bank or your own spreadsheets.
+- **Investment Tracking**
+  - Track stocks, ETFs, and other funds alongside regular accounts
+  - Monitor portfolio value and combine with other assets for net worth overview
 
-💱Multicurrency - Multicurrency accounts and worldwide bank coverage makes Wallet the perfect partner for expats, international students and travelers.
+- **Sharing & Collaboration**
+  - Share selected accounts with spouse, family, or roommates
+  - Collaborative budget tracking for shared expenses
 
-Technical Note : To provide a seamless experience, Wallet uses foreground services to perform data transfers during initial bank synchronization and profile setup. This ensures that your data is imported securely and completely, even if you navigate away from the app during the process.
+- **Cloud & Synchronisation**
+  - Secure cloud backup with cross-device sync
+  - Access data from any device
 
-- Reviews
-    - 5 Stars
-        - So far the best tracking and budgeting app I've tried. Some of the features confused me at first but I eventually got around to it. I just wish there was a way to account for the interest rates in your savings account or to properly monitor credit card goings in and out. Also, hope there were more options for bank syncing. But overall, it is GREAT! Love it. Bought the lifetime sub literally 5 minutes into using it.
-        - Best budgeting app especially for people who loves to look at analytics. Been a premium user since 2022, and never looked for another. I've been on and off for a few months, this time I went back in tracking and the investment tracker is working very well now! I would just like to suggest to add more crypto (I was looking for AAVE, but it's okay). I would also like to suggest to add custom coin and we can input the quantity and cost per share, so that there's an option for manual input. Thanks!
-        - Nice app for budgeting and expense tracking. Easy to use and lots of features. You can customize many features to suit your needs. I do have some issues I'd like to discuss with customer support but those are really minor. I bought the lifetime premium license literally 20 minutes after I started using it. That's how much I liked it. And a one-time payment for lifetime acess to premium features, that's great...
-    - 4 Stars
-        - The Goals feature is useful, but it would be much better if we could link goals to specific accounts and track progress automatically as funds are deposited. It would also be great if we could have multiple goals linked to one account (e.g., saving for both a phone and laptop) and see transaction history for each goal to better track progress and stay motivated. Overall, it's a great app to budget and track expenses.
-        - I love the app. I have been using it for more than a year, and it fits my need. The charts and graphs help make it more fun to track my expense. But, if I may suggest, can we also have a section in the Statistics for Income by Category/Labels? If it can be added, this app would be really perfect 5 stars for me! Thank you!
+- **Security**
+  - Optional biometric unlock (face or fingerprint)
+  - PIN lock
+  - Required sign-in (Google, Facebook, email)
+
+- **Profile & Settings**
+  - User profile (first name, last name, email)
+  - Logout and delete all user data options
+  - Customisable dashboard
+
+- **Monetisation**
+  - Freemium model: free version limited to 3 accounts
+  - Premium subscription (Monthly, Yearly, Lifetime)
+  - Premium features: unlimited accounts, bank synchronisation, investment accounts, automatic categorisation, ad removal, automatic rules, group sharing
+  - Premium call-to-action throughout the app
+
+
+**Reviews**
+
+*5 Stars*
+- So far the best tracking and budgeting app I've tried. Some of the features confused me at first but I eventually got around to it. I just wish there was a way to account for the interest rates in your savings account or to properly monitor credit card goings in and out. Also, hope there were more options for bank syncing. But overall, it is GREAT! Love it. Bought the lifetime sub literally 5 minutes into using it.
+- Best budgeting app especially for people who loves to look at analytics. Been a premium user since 2022, and never looked for another. I've been on and off for a few months, this time I went back in tracking and the investment tracker is working very well now! I would just like to suggest to add more crypto (I was looking for AAVE, but it's okay). I would also like to suggest to add custom coin and we can input the quantity and cost per share, so that there's an option for manual input. Thanks!
+- Nice app for budgeting and expense tracking. Easy to use and lots of features. You can customize many features to suit your needs. I do have some issues I'd like to discuss with customer support but those are really minor. I bought the lifetime premium license literally 20 minutes after I started using it. That's how much I liked it. And a one-time payment for lifetime acess to premium features, that's great...
+
+*4 Stars*
+- The Goals feature is useful, but it would be much better if we could link goals to specific accounts and track progress automatically as funds are deposited. It would also be great if we could have multiple goals linked to one account (e.g., saving for both a phone and laptop) and see transaction history for each goal to better track progress and stay motivated. Overall, it's a great app to budget and track expenses.
+- I love the app. I have been using it for more than a year, and it fits my need. The charts and graphs help make it more fun to track my expense. But, if I may suggest, can we also have a section in the Statistics for Income by Category/Labels? If it can be added, this app would be really perfect 5 stars for me! Thank you!
+- I just started using it last week and I love it so far! A little overwhelming at first but I got the hang of it. There were a few glitches but they're the type that I can ignore. One thing I'd like to suggest is in the 'Income & Expense Book' card and/or 'The Nature of Spending' card, to include another column that shows the percentage (%) of grand total.
+- I like how the app is very easy to use. Can the devs make the timeout period longer before it locks? I know it's for security, but maybe we can lengthen this timeout to maybe 30 to 60 secs (or make it user configurable)? It locks too soon and asks for PIN / fingerprint when I switch from the app to any of my banking apps and back again, in less than 30secs. None of my banks can sync to this app, so I encode manually going back & forth between apps, and the frequent locking can be a pain.
+- I like the app, it is very helpful and the UI looks good and very frinedly. I was just disappointed that I can't change my base currency (PHP) especially now that I just opened new accounts in British Pound. Since my base is in PHP, all entries in my GBP accounts is automatically converted to peso especially in "Statistics" which is the very important part of the app. It would be lovely if in "Statistics" I would be able to temporarily disable some accounts so that I could see my income and expenses on that specific account/s clearly and in the same currency. Or, it would be very helpful if I could create a "sub profile" for a different base currency.
+
+*3 Stars*
+- Probably one of the best budgeting apps out here on Google Play! It helps a lot in keeping track of your money and expenses. Widgets are alsop really easy to use, plus you can have more than one savings/bank account in one registered email. Like me, I have 2 savings accounts, 1 checking account, and 1 cash on hand, and 5 credit card "wallets" in the app that's all integrated with each other. Homescreen Widget is not working on OnePlus 8T running Latest Android Update
+- As of now, I'll give it four star. This app is useful for understanding your spending habits and it suits me as a visual learner. I never want to synch my bank for security reason and some users report that it isn't working properly. I wish that they could expand the options for "Asset Types" under the investments. As of 12/08/25, they changed the UI into like a Google Form. I do not like the new interface. No big change at the moment.
+- Disappointed that I paid for premium but my banks are not available for auto-import. Also my budget for a category is not decreasing when I spend it. The interface can also improve, be a little less words and more icons. I also hope you can add a records tracker for the GOALS and an option to link the goal to a specified bank account so it automatically increases when I transfer money to that account. Please also add investment tracking. Overall has more to improve but a good basic app.
+- Dear team, Stop guessing my expenses in Budgets. BUdgets are for planning, not guessing. It's not a lottery. I've created Planned Payments, including recurring ones, because I need to know how much I have top pay during a given period and plan my budget accordingly. Instead, some AI now tries to guess how much I might spend. As a result, I can no longer see how much I need for my planned expenses, and how much I can save. Please bring back the old BUdget functionality. It worked well for years.
+- It somewhat organizes stuff but there is a lot that doesn't make sense. You cannot view budgets on your main screen. You set a monthly budget but it adds the previous month to the current date. Transfers even after selecting that is between two accounts still counts as income, I had round ups active so you can imagine. There is no way to set Spending by categories to switch from highest to most recent, also always opens in your biggest expense instead of general and you cannot change this.
+
+*2 Stars*
+- New update is constantly showing popups for their new cost sharing app. Very annoying and unacceptable when I already paid for this software.
+- Really hard to use, can't import credit card data because it automatically changes it to a "general" account and records expenses as income, and has no calendar view.
+- Hi Team, Love this app for expenses, but debt tracking is too confusing. Credit cards, loans, and stock market accounts are treated as regular expense accounts instead of distinct types, making it hard to differentiate them from savings account. Even after a year of use and emailing support, I still don't get it. Please create a practical YouTube walkthrough showing how to use these features.It is too difficult to continue using the app without a clear video guide.
+- Upd. (16-07-2026): Took off two stars. One for a recurring problem with the bank sync through Saltedge. It's reappearing since a year now, no permanent fix. And one bc my experience with their support is getting worse w/ time. My last ticket was sent in on the 1st of July. I have zero updates since the 3rd of July. Orig.: They try to improve the new category system, thats a plus. A recoloring/icon changing option for the 1st and 2nd level categories would be nice.
+- Why do you guys changed budget :sobbing-emoji:, it was better earlier, and why you removed that "daily recommended", I used that as a way to know how much I can spend in a day rather than calculating everytime, but now I have to calculate as you guys removed it :pensive-emoji: (might have to switch to some other app)
+
+*1 Star*
+- I can't sync my savings bank account and now I can't cancel my plan also
+- I bought premium to connect my bank accounts but nothing comes through from my bank.
+- this is the fraud company beleive me , it works good for few months then they stops their services and you are unable to get the automatic syncing of data. i have been doing compliant for the last 8 months but get no resolution. totaly fraud company
+- i purchased a lifetime subscription but it doesn't sync my account every time i tried to connect it shows an error worst experience support is also very bad i want my refund
+- 31jul26: contacted customer care with hope. same response to wait. if i have to pay the premium and keep updating manually,a and WAIT, sorry this APP is not worth. 15jul26: worst experience. Tried with trail and purchased after checking the banks sync availability. after purchase, banks wont get sync and app just removes the bank from list. we are stuck with doing manual entries even after paying for premium. please dont buy this app :sobbing-emoji: no help from customer care too even after raising tickets.
 
 ---
 
 ## Summary of Market Gaps
 
-### Strengths of Existing Apps against Odin
+### Strengths of Existing Apps against BUDI
 
-<!-- Capabilities current apps have that Odin does not yet offer in its feature list -->
+<!-- Capabilities current apps have that BUDI does not yet offer in its feature list -->
 
-### Weaknesses Compared to Odin
+### Weaknesses Compared to BUDI
 
-<!-- Critical gaps that Odin aims to fill -->
+<!-- Critical gaps that BUDI aims to fill -->

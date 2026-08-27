@@ -4,20 +4,20 @@
 **Author(s):** Guevarra; Group 4, III-DCSAD
 **Date:** 2026-08-10
 **Status:** Draft
-**Purpose:** Define how the four Odin modules (PFP, Forecaster, Anomaly Detector, Budget Optimizer) integrate
+**Purpose:** Define how the four BUDI modules (PFP, Forecaster, Anomaly Detector, Budget Optimizer) integrate
 
 ---
 
 ## 1. Overview
 
-This document specifies the integration architecture for the four Odin modules:
+This document specifies the integration architecture for the four BUDI modules:
 
 1. **PFP Classifier** — Personal Financial Profile classification
 2. **Forecaster** — Monthly Spending Prediction
 3. **Anomaly Detector** — Unusual Transaction Detection
 4. **Budget Optimizer** — Budget allocation recommendation (constraint optimization)
 
-> **Note:** The **Budget Optimizer** was defined in this version (v1.1) following the Odin-Paper system spec v0.3.0, which added it to the deployment and integration architecture. Its model design is defined in the Budget Optimizer MDD v1.0 within `module-design-document.md`.
+> **Note:** The **Budget Optimizer** was defined in this version (v1.1) following the BUDI-Paper system spec v0.3.0, which added it to the deployment and integration architecture. Its model design is defined in the Budget Optimizer MDD v1.0 within `module-design-document.md`.
 
 The integration design follows these principles:
 - **Loose coupling** — Modules communicate via APIs, not shared state

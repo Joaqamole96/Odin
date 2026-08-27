@@ -1,9 +1,9 @@
 # Feature Engineering Pipeline
 
 **Module:** Feature Engineering
-**Script:** `Odin-ML/training/scripts/feature_engineering.py`
-**Input:** `Odin-ML/training/datasets/processed/` (preprocessed raw data)
-**Output:** `Odin-ML/training/datasets/engineered/` (engineered feature matrices)
+**Script:** `BUDI-ML/training/scripts/feature_engineering.py`
+**Input:** `BUDI-ML/training/datasets/processed/` (preprocessed raw data)
+**Output:** `BUDI-ML/training/datasets/engineered/` (engineered feature matrices)
 
 ---
 
@@ -21,7 +21,7 @@ Key design principles:
 ## Architecture
 
 ```
-Odin-ML/training/scripts/feature_engineering.py
+BUDI-ML/training/scripts/feature_engineering.py
 │
 ├── Step 1: Load Preprocessed Data
 │   ├── train.parquet, val.parquet, test.parquet
@@ -75,31 +75,31 @@ Odin-ML/training/scripts/feature_engineering.py
 
 ```bash
 # Minimal (17 derived features + cyclical encoding + drop redundant)
-python Odin-ML/training/scripts/feature_engineering.py
+python BUDI-ML/training/scripts/feature_engineering.py
 
 # Feature selection with mutual information
-python Odin-ML/training/scripts/feature_engineering.py \
+python BUDI-ML/training/scripts/feature_engineering.py \
   --select-method mutual_info \
   --select-k 12
 
 # Feature selection with ANOVA
-python Odin-ML/training/scripts/feature_engineering.py \
+python BUDI-ML/training/scripts/feature_engineering.py \
   --select-method anova \
   --select-k 10
 
 # PCA dimensionality reduction
-python Odin-ML/training/scripts/feature_engineering.py \
+python BUDI-ML/training/scripts/feature_engineering.py \
   --pca-variance 0.95
 
 # PCA with fixed components
-python Odin-ML/training/scripts/feature_engineering.py \
+python BUDI-ML/training/scripts/feature_engineering.py \
   --pca-components 8
 
 # Full pipeline
-python Odin-ML/training/scripts/feature_engineering.py \
-  --input Odin-ML/training/datasets/processed/ \
-  --synth-dir Odin-ML/training/synth/ \
-  --output Odin-ML/training/datasets/engineered/ \
+python BUDI-ML/training/scripts/feature_engineering.py \
+  --input BUDI-ML/training/datasets/processed/ \
+  --synth-dir BUDI-ML/training/synth/ \
+  --output BUDI-ML/training/datasets/engineered/ \
   --encoding cyclical \
   --select-method mutual_info \
   --select-k 12 \
@@ -107,19 +107,19 @@ python Odin-ML/training/scripts/feature_engineering.py \
   --seed 42
 
 # Skip redundant feature removal
-python Odin-ML/training/scripts/feature_engineering.py --no-drop-redundant
+python BUDI-ML/training/scripts/feature_engineering.py --no-drop-redundant
 
 # No encoding (just 17 derived features)
-python Odin-ML/training/scripts/feature_engineering.py --encoding none
+python BUDI-ML/training/scripts/feature_engineering.py --encoding none
 ```
 
 ### Parameters
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
-| `--input` | `Odin-ML/training/datasets/processed/` | Input directory with preprocessed data |
-| `--synth-dir` | `Odin-ML/training/synth/` | Synthesis data directory (for incremental computation) |
-| `--output` | `Odin-ML/training/datasets/engineered/` | Output directory for engineered features |
+| `--input` | `BUDI-ML/training/datasets/processed/` | Input directory with preprocessed data |
+| `--synth-dir` | `BUDI-ML/training/synth/` | Synthesis data directory (for incremental computation) |
+| `--output` | `BUDI-ML/training/datasets/engineered/` | Output directory for engineered features |
 | `--encoding` | `cyclical` | Temporal encoding: `cyclical` or `none` |
 | `--select-method` | `None` | Feature selection: `mutual_info` or `anova` |
 | `--select-k` | `None` | Number of features to select |
@@ -172,7 +172,7 @@ Based on EDA correlation analysis (|r| > 0.98 threshold):
 
 ## Normalization Strategy
 
-The preprocessor exports scalers (`scalers.json`) fitted on the raw training data. These scalers are carried forward to `Odin-ML/training/datasets/engineered/` unchanged.
+The preprocessor exports scalers (`scalers.json`) fitted on the raw training data. These scalers are carried forward to `BUDI-ML/training/datasets/engineered/` unchanged.
 
 Future work: Move normalization into this module once the separation is fully validated.
 
@@ -180,10 +180,10 @@ Future work: Move normalization into this module once the separation is fully va
 
 ### Mode A: Incremental (preferred)
 
-Requires synthesis data in `Odin-ML/training/synth/`. Computes features per persona per month using only historical data (months 1..M). This is the same methodology as the original preprocessor.
+Requires synthesis data in `BUDI-ML/training/synth/`. Computes features per persona per month using only historical data (months 1..M). This is the same methodology as the original preprocessor.
 
 ```bash
-python Odin-ML/training/scripts/feature_engineering.py --synth-dir Odin-ML/training/synth/
+python BUDI-ML/training/scripts/feature_engineering.py --synth-dir BUDI-ML/training/synth/
 ```
 
 ### Mode B: Direct (fallback)
@@ -256,9 +256,9 @@ No new dependencies — all are already in `requirements.txt`.
 
 ```bash
 # Full feature engineering pipeline
-python Odin-ML/training/scripts/feature_engineering.py \
-  --input Odin-ML/training/datasets/processed/ \
-  --output Odin-ML/training/datasets/engineered/ \
+python BUDI-ML/training/scripts/feature_engineering.py \
+  --input BUDI-ML/training/datasets/processed/ \
+  --output BUDI-ML/training/datasets/engineered/ \
   --encoding cyclical \
   --seed 42
 
@@ -266,15 +266,15 @@ python Odin-ML/training/scripts/feature_engineering.py \
 python -c "
 import pandas as pd
 for split in ['train', 'val', 'test']:
-    df = pd.read_parquet(f'Odin-ML/training/datasets/engineered/{split}.parquet')
+    df = pd.read_parquet(f'BUDI-ML/training/datasets/engineered/{split}.parquet')
     print(f'{split}: {df.shape[0]} rows, {df[\"user_id\"].nunique()} personas, {len(df.columns)} columns')
 "
 
 # Quick test with feature selection
-python Odin-ML/training/scripts/feature_engineering.py \
+python BUDI-ML/training/scripts/feature_engineering.py \
   --select-method mutual_info \
   --select-k 10 \
-  --output Odin-ML/training/datasets/engineered_test/
+  --output BUDI-ML/training/datasets/engineered_test/
 ```
 
 ## Design Decisions

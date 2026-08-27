@@ -1,4 +1,4 @@
-# ODIN Presurvey With Inline Removal Notes
+# BUDI Presurvey With Inline Removal Notes
 
 Source reviewed: `Untitled document.pdf`
 
@@ -6,7 +6,7 @@ Purpose of this annotated copy: preserve the presurvey structure while adding no
 
 Legend:
 
-- `NOTE - REMOVE`: redundant, misplaced, or inconsistent with Odin scope.
+- `NOTE - REMOVE`: redundant, misplaced, or inconsistent with BUDI scope.
 - `NOTE - MOVE`: useful item, but better placed in the post-survey or final evaluation.
 - `NOTE - REVISE`: topic is useful, but wording should be changed before deployment.
 
@@ -80,7 +80,7 @@ Objective: To assess the budgeting habits, expense management behavior, savings 
 
 10. Seasonal events such as holidays, school enrollment, or payday periods significantly affect my budgeting and saving habits.
 
-Recommended result for Section II: keep all 10 items. This section is directly aligned with Odin's budgeting behavior, savings, obligations, Filipino-context categories, forecasting, and anomaly-detection scope.
+Recommended result for Section II: keep all 10 items. This section is directly aligned with BUDI's budgeting behavior, savings, obligations, Filipino-context categories, forecasting, and anomaly-detection scope.
 
 ## III. Digital and Financial Technology Literacy
 
@@ -106,7 +106,7 @@ Objective: To determine respondents' familiarity, confidence, adaptability, and 
 
 10. I can easily adapt to newly introduced financial technologies or budgeting systems.
 
-Recommended result for Section III: keep all 10 items. This section supports Odin's mobile-first design, manual logging, dashboards, forecasts, alerts, onboarding, and trust requirements.
+Recommended result for Section III: keep all 10 items. This section supports BUDI's mobile-first design, manual logging, dashboards, forecasts, alerts, onboarding, and trust requirements.
 
 ## IV. Budgeting Challenges and Existing Tool Limitations
 
@@ -132,11 +132,11 @@ Objective: To identify the financial management difficulties, budgeting obstacle
 
 10. Privacy and security concerns discourage me from fully using budgeting applications.
 
-Recommended result for Section IV: keep all 10 items. This section captures Odin's problem basis: tracking fatigue, lack of local fit, weak insights, privacy concerns, and difficulty managing obligations.
+Recommended result for Section IV: keep all 10 items. This section captures BUDI's problem basis: tracking fatigue, lack of local fit, weak insights, privacy concerns, and difficulty managing obligations.
 
-## V. User Expectations and Preferred Features for ODIN
+## V. User Expectations and Preferred Features for BUDI
 
-Objective: To determine the preferred functionalities, forecasting features, budgeting assistance tools, and usability expectations for the ODIN budgeting system.
+Objective: To determine the preferred functionalities, forecasting features, budgeting assistance tools, and usability expectations for the BUDI budgeting system.
 
 1. Expense tracking is an important feature in a budgeting application.
 
@@ -156,11 +156,11 @@ Objective: To determine the preferred functionalities, forecasting features, bud
 
 9. Regular budget summaries and progress reports would help improve my financial discipline.
 
-10. ODIN would be more useful if it reflects the actual financial lifestyle of Filipino young professionals.
+10. BUDI would be more useful if it reflects the actual financial lifestyle of Filipino young professionals.
 
 Recommended result for Section V: keep all 10 items. Items 9 and 10 overlap slightly with other sections, but the section is already at the 10-question minimum. Replace rather than remove if the team wants to reduce repetition.
 
-Possible replacement topics if needed: debt repayment strategy preference, savings goal prioritization, protected categories, or willingness to accept/modify/reject Odin's budget recommendations.
+Possible replacement topics if needed: debt repayment strategy preference, savings goal prioritization, protected categories, or willingness to accept/modify/reject BUDI's budget recommendations.
 
 ## VI. Trust, Privacy, Security, and Cultural Relevance
 
@@ -186,23 +186,23 @@ Objective: To evaluate respondents' trust perceptions, privacy concerns, data se
 
 10. Cultural relevance improves the practicality and usefulness of budgeting applications for Filipino users.
 
-Recommended result for Section VI: keep all 10 items. This section is aligned with Odin's privacy, local trust, Filipino-context categories, and data-control requirements.
+Recommended result for Section VI: keep all 10 items. This section is aligned with BUDI's privacy, local trust, Filipino-context categories, and data-control requirements.
 
-## VII. Overall User Perception Toward ODIN
+## VII. Overall User Perception Toward BUDI
 
-Objective: To assess the perceived usefulness, effectiveness, relevance, and acceptance of the ODIN Personal Budget Management System.
+Objective: To assess the perceived usefulness, effectiveness, relevance, and acceptance of the BUDI Personal Budget Management System.
 
-> NOTE - MOVE ENTIRE SECTION: This section is useful, but it is better for a post-survey, prototype evaluation, or final acceptance survey. These questions ask respondents to judge Odin's usefulness before they have used or seen the system. The section also repeats many ideas already covered in Section V and Section IX. If the presurvey must be shorter, move all Section VII items out of the presurvey.
+> NOTE - MOVE ENTIRE SECTION: This section is useful, but it is better for a post-survey, prototype evaluation, or final acceptance survey. These questions ask respondents to judge BUDI's usefulness before they have used or seen the system. The section also repeats many ideas already covered in Section V and Section IX. If the presurvey must be shorter, move all Section VII items out of the presurvey.
 
-1. ODIN has the potential to improve personal budgeting habits and financial discipline.
+1. BUDI has the potential to improve personal budgeting habits and financial discipline.
 
 > NOTE - MOVE: This is a post-exposure perception item. It duplicates Section V item 9 and Section IX item 1.
 
-2. ODIN can help users become more financially aware and responsible.
+2. BUDI can help users become more financially aware and responsible.
 
 > NOTE - MOVE: This is broad and leading for a presurvey. It is better asked after a prototype demo or usability test.
 
-3. The proposed features of ODIN are relevant to my financial management needs.
+3. The proposed features of BUDI are relevant to my financial management needs.
 
 > NOTE - MOVE: This is useful, but it duplicates the feature-expectation logic of Section V. Use it in post-survey acceptance testing instead.
 
@@ -210,27 +210,27 @@ Objective: To assess the perceived usefulness, effectiveness, relevance, and acc
 
 > NOTE - MOVE: This duplicates Section V item 2 and Section IX item 5. Keep one forecast expectation item in the presurvey and move this broader perception item to post-survey.
 
-5. ODIN can help users better understand their spending behavior and financial patterns.
+5. BUDI can help users better understand their spending behavior and financial patterns.
 
 > NOTE - MOVE: This duplicates Section IV item 5, Section V item 5, and Section IX items 4 and 9.
 
-6. ODIN would be useful for monitoring recurring expenses, obligations, and savings goals.
+6. BUDI would be useful for monitoring recurring expenses, obligations, and savings goals.
 
-> NOTE - MOVE: The topic is strong and Odin-specific, but it belongs better in feature acceptance after respondents understand Odin's modules. If Section VII is removed, this idea can be preserved in Section IX or a post-survey.
+> NOTE - MOVE: The topic is strong and BUDI-specific, but it belongs better in feature acceptance after respondents understand BUDI's modules. If Section VII is removed, this idea can be preserved in Section IX or a post-survey.
 
-7. ODIN can support better saving habits and financial preparation.
+7. BUDI can support better saving habits and financial preparation.
 
 > NOTE - MOVE: This duplicates Section II item 6, Section VIII items 5 and 7, and Section IX item 10.
 
-8. I would consider using ODIN regularly if it is easy to use, secure, and reliable.
+8. I would consider using BUDI regularly if it is easy to use, secure, and reliable.
 
 > NOTE - MOVE: This is a strong adoption-intention item, but it is better after respondents see the prototype or concept screen.
 
-9. I would recommend ODIN to other Filipino young professionals if it effectively supports budgeting needs.
+9. I would recommend BUDI to other Filipino young professionals if it effectively supports budgeting needs.
 
 > NOTE - MOVE: Recommendation intent is a post-use or post-demo measure, not a strong presurvey item.
 
-10. Overall, ODIN would be a beneficial financial management tool for Filipino users.
+10. Overall, BUDI would be a beneficial financial management tool for Filipino users.
 
 > NOTE - MOVE: This is a broad summary judgment and duplicates item 1 and Section IX item 15.
 
@@ -260,21 +260,21 @@ Objective: To assess respondents' budgeting workflow, income allocation process,
 
 10. A budgeting system that visually presents income allocation flow would improve my financial management process.
 
-Recommended result for Section VIII: keep all 10 items. This section strongly supports Odin's budget setup, allocation flow, protected categories, recurring obligations, emergency preparation, and dashboard/report design.
+Recommended result for Section VIII: keep all 10 items. This section strongly supports BUDI's budget setup, allocation flow, protected categories, recurring obligations, emergency preparation, and dashboard/report design.
 
-## IX. Expectations, Desired Outcomes, and Future Perception Toward the Proposed ODIN System
+## IX. Expectations, Desired Outcomes, and Future Perception Toward the Proposed BUDI System
 
-Objective: To determine the respondents' expectations, anticipated benefits, desired capabilities, and preferred outcomes from the proposed ODIN Personal Budget Management System and the overall study.
+Objective: To determine the respondents' expectations, anticipated benefits, desired capabilities, and preferred outcomes from the proposed BUDI Personal Budget Management System and the overall study.
 
 1. I look forward to using a budgeting system that can help improve my financial discipline and spending behavior.
 
 > NOTE - REMOVE: This is generic and overlaps with Section VII item 1, Section VII item 2, Section V item 9, and Section IX item 12. It is also leading because it assumes the system will improve behavior.
 
-2. I expect ODIN to provide accurate and useful financial insights based on my spending habits.
+2. I expect BUDI to provide accurate and useful financial insights based on my spending habits.
 
 3. I look forward to seeing automated expense categorization and spending summaries in the proposed system.
 
-> NOTE - REMOVE OR REVISE: Remove as written because "automated expense categorization" may imply functionality beyond Odin's current PRD. The PRD says Odin uses manual or recurring-template transaction capture, with category selection and possible smart defaults. If this item is needed, revise it to: "I look forward to clear expense categories and category suggestions that make manual logging easier."
+> NOTE - REMOVE OR REVISE: Remove as written because "automated expense categorization" may imply functionality beyond BUDI's current PRD. The PRD says BUDI uses manual or recurring-template transaction capture, with category selection and possible smart defaults. If this item is needed, revise it to: "I look forward to clear expense categories and category suggestions that make manual logging easier."
 
 4. I expect the proposed system to help users better understand where their money is spent.
 
@@ -282,7 +282,7 @@ Objective: To determine the respondents' expectations, anticipated benefits, des
 
 5. I look forward to features that can forecast future expenses and possible overspending risks.
 
-6. I expect ODIN to provide recommendations that can improve budgeting and saving habits.
+6. I expect BUDI to provide recommendations that can improve budgeting and saving habits.
 
 7. I look forward to a budgeting system that reflects Filipino financial realities and obligations.
 
@@ -290,7 +290,7 @@ Objective: To determine the respondents' expectations, anticipated benefits, des
 
 9. I look forward to seeing financial dashboards, charts, and reports that summarize budgeting performance clearly.
 
-10. I expect ODIN to help users prepare for emergencies, recurring expenses, and long-term financial goals.
+10. I expect BUDI to help users prepare for emergencies, recurring expenses, and long-term financial goals.
 
 11. I look forward to a system that provides real-time notifications regarding spending behavior and budget limits.
 
@@ -300,7 +300,7 @@ Objective: To determine the respondents' expectations, anticipated benefits, des
 
 13. I look forward to features that can help users balance savings, obligations, and discretionary spending effectively.
 
-14. I expect ODIN to provide a secure and trustworthy platform for managing personal financial information.
+14. I expect BUDI to provide a secure and trustworthy platform for managing personal financial information.
 
 15. I look forward to seeing a budgeting application that combines usability, financial forecasting, and culturally relevant budgeting support.
 
@@ -310,11 +310,11 @@ Recommended result for Section IX: keep items 2, 5, 6, 7, 8, 9, 10, 11, 13, and 
 
 ## Optional Open-Ended Questions for Proposed System Expectations
 
-Objective: To gather qualitative insights regarding the respondents' expectations, preferred features, and recommendations for the ODIN system.
+Objective: To gather qualitative insights regarding the respondents' expectations, preferred features, and recommendations for the BUDI system.
 
-1. What features or capabilities would you most like to see in the ODIN Personal Budget Management System?
+1. What features or capabilities would you most like to see in the BUDI Personal Budget Management System?
 
-2. What budgeting difficulties do you expect ODIN to help solve?
+2. What budgeting difficulties do you expect BUDI to help solve?
 
 > NOTE - REMOVE: This duplicates the closed-ended challenge items in Section IV. Respondents will already identify budgeting difficulties there.
 
@@ -322,7 +322,7 @@ Objective: To gather qualitative insights regarding the respondents' expectation
 
 4. What improvements would encourage you to consistently use a budgeting application?
 
-5. What additional suggestions can you provide to improve the proposed ODIN system?
+5. What additional suggestions can you provide to improve the proposed BUDI system?
 
 > NOTE - REMOVE: This is too broad and likely duplicates item 1. If the survey needs an open-ended closing item, keep this only if item 1 is removed.
 

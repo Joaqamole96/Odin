@@ -15,6 +15,12 @@ __pycache__/
 # Markitdown (freezed utility; no need to update)
 /Utilities/Markitdown
 
+# Environment variables
+.env
+
+# Token cache
+*.pickle
+
 # Virtual environment
 .venv
 
@@ -23,3 +29,6 @@ RRL/04_Compilations/**/*.md
 !RRL/04_Compilations/0_Culler.md
 !RRL/04_Compilations/Z_Scorer.md
 !RRL/04_Compilations/Z_Verifier.md
+
+# Local mirrors of Google Drive ground truth
+ground-truth/

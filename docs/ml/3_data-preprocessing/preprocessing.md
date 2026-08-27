@@ -1,12 +1,12 @@
 # Data Preprocessing Pipeline
 
 **Module:** Data Preprocessing
-**Script:** `Odin-ML/training/scripts/preprocessor.py`
+**Script:** `BUDI-ML/training/scripts/preprocessor.py`
 **Input:** FIES data file (CSV or Parquet)
-**Output:** `Odin-ML/training/datasets/processed/` (preprocessed raw data ready for feature engineering)
+**Output:** `BUDI-ML/training/datasets/processed/` (preprocessed raw data ready for feature engineering)
 
 > **Note:** Feature engineering has been moved to Phase 5 (`../5_feature-engineering/`).
-> The preprocessor now outputs raw data only. Run `Odin-ML/training/scripts/feature_engineering.py`
+> The preprocessor now outputs raw data only. Run `BUDI-ML/training/scripts/feature_engineering.py`
 > after preprocessing to produce engineered feature matrices.
 
 ---
@@ -24,7 +24,7 @@ The preprocessing pipeline runs synthesis (persona + transaction generation) and
 ## Architecture
 
 ```
-Odin-ML/training/scripts/preprocessor.py
+BUDI-ML/training/scripts/preprocessor.py
 │
 ├── Step 1: Synthesis
 │   ├── Load FIES data (CSV or Parquet)
@@ -33,11 +33,11 @@ Odin-ML/training/scripts/preprocessor.py
 │   ├── Compute FIES statistics + expense ratios
 │   ├── Generate 12 archetypes × 1,000 personas
 │   ├── Generate 12-month transaction histories
-│   └── Export to Odin-ML/training/synth/ (personas, transactions, summaries)
+│   └── Export to BUDI-ML/training/synth/ (personas, transactions, summaries)
 │
 ├── Step 2: Load & Validate
-│   ├── Load monthly_summaries.parquet from Odin-ML/training/synth/
-│   ├── Load personas.parquet from Odin-ML/training/synth/
+│   ├── Load monthly_summaries.parquet from BUDI-ML/training/synth/
+│   ├── Load personas.parquet from BUDI-ML/training/synth/
 │   ├── Load anomaly info from transactions.parquet
 │   └── Validate schema, data types, completeness
 │
@@ -65,9 +65,9 @@ Odin-ML/training/scripts/preprocessor.py
 
 === Next: Run feature_engineering.py ===
 
-Odin-ML/training/scripts/feature_engineering.py (see ../5_feature-engineering/)
+BUDI-ML/training/scripts/feature_engineering.py (see ../5_feature-engineering/)
 │
-├── Step 1: Load preprocessed data from Odin-ML/training/datasets/processed/
+├── Step 1: Load preprocessed data from BUDI-ML/training/datasets/processed/
 ├── Step 2: Compute 17 derived features
 ├── Step 3: Impute + cap outliers (fit on train only)
 ├── Step 4: Cyclical encoding (month → sin/cos)
@@ -75,15 +75,15 @@ Odin-ML/training/scripts/feature_engineering.py (see ../5_feature-engineering/)
 ├── Step 6: Drop redundant features
 ├── Step 7: Feature selection (mutual info / ANOVA)
 ├── Step 8: PCA dimensionality reduction (optional)
-└── Step 9: Export to Odin-ML/training/datasets/engineered/
+└── Step 9: Export to BUDI-ML/training/datasets/engineered/
 ```
 
 ## CLI Usage
 
 ```bash
-python Odin-ML/training/scripts/preprocessor.py \
-  --input Odin-ML/training/datasets/unprocessed/puf.parquet \
-  --output Odin-ML/training/datasets/processed/ \
+python BUDI-ML/training/scripts/preprocessor.py \
+  --input BUDI-ML/training/datasets/unprocessed/puf.parquet \
+  --output BUDI-ML/training/datasets/processed/ \
   --personas-per-archetype 1000 \
   --months 12 \
   --seed 42 \
@@ -101,8 +101,8 @@ python Odin-ML/training/scripts/preprocessor.py \
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
-| `--input` | `Odin-ML/training/datasets/unprocessed/puf.parquet` | Path to FIES data file (CSV or Parquet) |
-| `--output` | `Odin-ML/training/datasets/processed/` | Output directory for processed data |
+| `--input` | `BUDI-ML/training/datasets/unprocessed/puf.parquet` | Path to FIES data file (CSV or Parquet) |
+| `--output` | `BUDI-ML/training/datasets/processed/` | Output directory for processed data |
 | `--personas-per-archetype` | `1000` | Number of personas to generate per archetype |
 | `--months` | `12` | Number of months of transaction history to generate |
 | `--seed` | `42` | Random seed (applies to both synthesis and splitting) |
@@ -141,7 +141,7 @@ Raw data matrices with one row per persona-month. Schema includes metadata and r
 | `debt_payment` | float | Cumulative debt payment |
 | `transaction_count` | int | Total transaction count |
 
-> Run `Odin-ML/training/scripts/feature_engineering.py` next to compute derived features (income stability, ratios, trends, etc.)
+> Run `BUDI-ML/training/scripts/feature_engineering.py` next to compute derived features (income stability, ratios, trends, etc.)
 
 ### `split_metadata.json`
 
@@ -198,7 +198,7 @@ Quality report with validation warnings, split sizes, and persona counts.
 
 ## Feature Engineering
 
-Feature engineering is handled by the separate **Phase 5** pipeline (`Odin-ML/training/scripts/feature_engineering.py`).
+Feature engineering is handled by the separate **Phase 5** pipeline (`BUDI-ML/training/scripts/feature_engineering.py`).
 See the full documentation at `../5_feature-engineering/feature-engineering.md`.
 
 The feature engineering pipeline computes:
@@ -260,7 +260,7 @@ For monthly features on daily data, the embargo should equal the feature aggrega
 
 ## Input Data Format
 
-The preprocessor generates these files internally during the synthesis step (step 1). They are written to `Odin-ML/training/synth/` and consumed by the subsequent preprocessing steps.
+The preprocessor generates these files internally during the synthesis step (step 1). They are written to `BUDI-ML/training/synth/` and consumed by the subsequent preprocessing steps.
 
 ### `monthly_summaries.parquet`
 
@@ -330,9 +330,9 @@ Run the full pipeline with a small dataset:
 
 ```bash
 # Run preprocessing (synthesis + splitting + raw data export)
-python Odin-ML/training/scripts/preprocessor.py \
-  --input Odin-ML/training/datasets/unprocessed/puf.parquet \
-  --output Odin-ML/training/datasets/processed/ \
+python BUDI-ML/training/scripts/preprocessor.py \
+  --input BUDI-ML/training/datasets/unprocessed/puf.parquet \
+  --output BUDI-ML/training/datasets/processed/ \
   --personas-per-archetype 2 \
   --seed 42
 
@@ -340,7 +340,7 @@ python Odin-ML/training/scripts/preprocessor.py \
 python -c "
 import pandas as pd
 for split in ['train', 'val', 'test']:
-    df = pd.read_parquet(f'Odin-ML/training/datasets/processed/{split}.parquet')
+    df = pd.read_parquet(f'BUDI-ML/training/datasets/processed/{split}.parquet')
     print(f'{split}: {df.shape[0]} rows, {df[\"user_id\"].nunique()} personas')
 "
 ```

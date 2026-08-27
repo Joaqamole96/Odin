@@ -16,11 +16,11 @@
 |--------|-------------|-----------------|-------------|
 | **BSP CFS 2021** | Individual respondent (18+) | One respondent per household; questions about personal financial behavior, attitudes, and inclusion | Behavioral/attitudinal data is individual-level but reported per household |
 | **PSA FIES 2023** | Household aggregate | One row per household; income and expenditure totals summed across all household members | Financial numerical data is household-level, not individual |
-| **Odin Target** | Individual user (18+) | One PFP classification per user; transaction history is individual-level | Target user is a single individual within a household |
+| **BUDI Target** | Individual user (18+) | One PFP classification per user; transaction history is individual-level | Target user is a single individual within a household |
 
 ### 1.2 Disaggregation Assumption
 
-FIES data is household-aggregate, but Odin targets individual users. The persona-generation pipeline applies the following disaggregation:
+FIES data is household-aggregate, but BUDI targets individual users. The persona-generation pipeline applies the following disaggregation:
 
 1. **Income disaggregation:** Household income (`TOINC`) is divided by household size (`FSIZE`) to produce a per-capita income proxy. For archetypes with known employment status, income is further adjusted by employment-type multipliers (e.g., regular salaried = 1.0× per-capita, freelance = 0.7× per-capita reflecting irregular receipts).
 
@@ -153,9 +153,9 @@ For Classifier training, all 12 archetypes resolve to one of the 8 PFP octants. 
 
 ### 4.1 Explicit Assumptions
 
-1. **BSP≈FIES≈Odin-user equivalence:** Archetype segmentation from BSP CFS (behavioral/attitudinal) is mapped to FIES NCR (financial numerical) as if both describe the same population. In reality, BSP CFS is nationwide (not NCR-specific) and FIES NCR is NCR-specific. Any mismatch between BSP-defined archetypes and FIES-derived income/expense profiles is a threat to validity, not a confirmed equivalence.
+1. **BSP≈FIES≈BUDI-user equivalence:** Archetype segmentation from BSP CFS (behavioral/attitudinal) is mapped to FIES NCR (financial numerical) as if both describe the same population. In reality, BSP CFS is nationwide (not NCR-specific) and FIES NCR is NCR-specific. Any mismatch between BSP-defined archetypes and FIES-derived income/expense profiles is a threat to validity, not a confirmed equivalence.
 
-2. **Household-to-individual disaggregation:** FIES data is household-aggregate; Odin targets individual users. Per-capita disaggregation assumes roughly even income/expense distribution within households, which is known to be imperfect.
+2. **Household-to-individual disaggregation:** FIES data is household-aggregate; BUDI targets individual users. Per-capita disaggregation assumes roughly even income/expense distribution within households, which is known to be imperfect.
 
 3. **Temporal mismatch:** BSP CFS is 2021; FIES NCR is 2023. Income and expense levels may have shifted due to inflation and economic changes. The 2-year gap is accepted as unavoidable given data availability.
 

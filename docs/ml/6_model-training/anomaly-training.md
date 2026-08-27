@@ -8,8 +8,8 @@ This document describes the training pipeline for the Isolation Forest Anomaly D
 
 ## Feature Engineering
 
-**Script:** `Odin-ML/training/scripts/feature_engineering_anomaly.py`  
-**Output:** `Odin-ML/training/datasets/anomaly/{train,val,test}.parquet`
+**Script:** `BUDI-ML/training/scripts/feature_engineering_anomaly.py`  
+**Output:** `BUDI-ML/training/datasets/anomaly/{train,val,test}.parquet`
 
 ### Features (24 per transaction)
 
@@ -20,7 +20,7 @@ This document describes the training pipeline for the Isolation Forest Anomaly D
 
 ### Pipeline
 
-1. Load `Odin-ML/training/synth/transactions.parquet` (35,568 rows, 300 personas, 12 months)
+1. Load `BUDI-ML/training/synth/transactions.parquet` (35,568 rows, 300 personas, 12 months)
 2. Build per-persona category history (monthly counts, amounts by category)
 3. For each transaction, compute baseline stats from previous months
 4. Compute detection features (deviations, novelty flags, z-scores)
@@ -40,8 +40,8 @@ This document describes the training pipeline for the Isolation Forest Anomaly D
 
 ## Training Pipeline
 
-**Script:** `Odin-ML/training/scripts/train_anomaly.py`  
-**Output:** `Odin-ML/training/models/anomaly/`
+**Script:** `BUDI-ML/training/scripts/train_anomaly.py`  
+**Output:** `BUDI-ML/training/models/anomaly/`
 
 ### Model Tiers
 
@@ -119,8 +119,8 @@ This document describes the training pipeline for the Isolation Forest Anomaly D
 
 ## Artifacts
 
-- `Odin-ML/training/models/anomaly/anomaly_detector.joblib` — trained OCSVM model
-- `Odin-ML/training/models/anomaly/evaluation.json` — full evaluation metrics and fold results
-- `Odin-ML/training/models/anomaly/evaluation_report.md` — markdown evaluation report
-- `Odin-ML/training/models/anomaly/confusion_matrices.png` — confusion matrix heatmaps
-- `Odin-ML/training/models/anomaly/pr_curves.png` — precision-recall curves
+- `BUDI-ML/training/models/anomaly/anomaly_detector.joblib` — trained OCSVM model
+- `BUDI-ML/training/models/anomaly/evaluation.json` — full evaluation metrics and fold results
+- `BUDI-ML/training/models/anomaly/evaluation_report.md` — markdown evaluation report
+- `BUDI-ML/training/models/anomaly/confusion_matrices.png` — confusion matrix heatmaps
+- `BUDI-ML/training/models/anomaly/pr_curves.png` — precision-recall curves

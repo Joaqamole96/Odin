@@ -1,4 +1,4 @@
-# OpenCode Agent Task List — Odin MDD Follow-Ups
+# OpenCode Agent Task List — BUDI MDD Follow-Ups
 **Date:** 2026-07-26 (status refreshed 2026-08-10)
 **Relates to:** `module-design-document.md` (PFP Classifier v1.4, Forecaster v2.4, Anomaly Detector v2.3, Budget Optimizer v1.0)
 **Purpose:** Tasks flagged in the MDD with `[PROP — pending]` or `[NOTE]` that require external context, source documents, or research the researchers/Claude do not have loaded in-session. Each task lists what's needed, why it matters, and what "done" looks like so the agent can close the loop without a researcher re-explaining context.
@@ -20,13 +20,13 @@
 ## Task 1 — Build `bsp-fies-crosswalk.md`
 **Priority:** High (blocks Data Collection Plan sign-off for all three modules)
 
-**Context:** Odin's synthetic persona pipeline now draws on two separate PSA/BSP sources: the **BSP Consumer Finance Report** (archetype/persona segmentation) and **PSA 2023 FIES microdata** (granular transaction-level data). The MDD currently references a crosswalk file that doesn't exist yet.
+**Context:** BUDI's synthetic persona pipeline now draws on two separate PSA/BSP sources: the **BSP Consumer Finance Report** (archetype/persona segmentation) and **PSA 2023 FIES microdata** (granular transaction-level data). The MDD currently references a crosswalk file that doesn't exist yet.
 
 **What to produce:**
-1. **Unit-of-analysis mapping** — state explicitly how BSP's survey unit (household vs. individual respondent) and FIES's household-aggregate unit each map onto Odin's individual-user target. Reuse the disaggregation-assumption pattern already established for FIES-only use.
+1. **Unit-of-analysis mapping** — state explicitly how BSP's survey unit (household vs. individual respondent) and FIES's household-aggregate unit each map onto BUDI's individual-user target. Reuse the disaggregation-assumption pattern already established for FIES-only use.
 2. **Field-level mapping table** — for every BSP field used to define an archetype (e.g., income source type, savings behavior, debt indicators — pull actual field names from the report), state which FIES field(s), if any, it's cross-referenced against, and flag any BSP field with no FIES counterpart (these become injected/assumed features, same treatment as existing indirect features).
 3. **Archetype-to-octant mapping** — formally confirm or correct the working assumption that the 12 archetypes = 8 PFP octants (Stable/Variable × Flexible/Obligated × Tolerant/At-Risk) + up to 4 edge cases. Table format: archetype name → BSP segment(s) it derives from → PFP octant it maps to (or "edge case — no direct octant mapping").
-4. **Assumptions & limitations section** — name the BSP≈FIES≈Odin-user equivalence as an explicit threat to validity, matching the tone of the existing "Key Assumption" blocks in each MDD's Section 13.
+4. **Assumptions & limitations section** — name the BSP≈FIES≈BUDI-user equivalence as an explicit threat to validity, matching the tone of the existing "Key Assumption" blocks in each MDD's Section 13.
 
 **Done when:** the file exists, is referenced correctly from all three MDDs' Section 2 and Section 13 (already updated to point to it), and the `[PROP — pending]` tags in `module-design-document.md` can be removed.
 
@@ -54,7 +54,7 @@
 **What to do:**
 1. For each "Paper N, 2025" placeholder, locate the actual source in the team's literature review and replace it with `[Author(s), Year]` format, consistent with the properly-cited entries already in the document (e.g., `[Shakhovska & Pukach, 2025]`).
 2. If a placeholder's underlying source can't be found or re-verified, do not guess an author — flag it explicitly as `[CITATION NOT FOUND — verify or remove claim]` rather than leaving it anonymous or inventing an attribution.
-3. Apply the same author+year convention to all *future* literature additions across `Specification.md` and the `Odin-ML` repo, not just this MDD.
+3. Apply the same author+year convention to all *future* literature additions across `Specification.md` and the `BUDI-ML` repo, not just this MDD.
 
 **Done when:** zero "Paper N" placeholders remain in `module-design-document.md`, and every remaining citation resolves to a real, checkable source.
 
@@ -77,7 +77,7 @@
 ## Task 5 — Derive Forecaster target metrics from literature; flag domain mismatches
 **Priority:** Medium
 
-**Context:** Forecaster metrics should be derived from literature first, and only redefined by researchers/Claude if found inappropriate. Current targets (e.g., MAPE < 5% total-level, citing NNAR at 2.67% and CNN-LSTM at 2.72%) cite benchmarks that are likely from different datasets/domains than Odin's synthetic Filipino persona data.
+**Context:** Forecaster metrics should be derived from literature first, and only redefined by researchers/Claude if found inappropriate. Current targets (e.g., MAPE < 5% total-level, citing NNAR at 2.67% and CNN-LSTM at 2.72%) cite benchmarks that are likely from different datasets/domains than BUDI's synthetic Filipino persona data.
 
 **What to do:**
 1. Re-derive each Forecaster KPI target from literature that used comparable data (household/personal finance forecasting, not generic time-series benchmarks from unrelated domains).
@@ -113,9 +113,9 @@
 
 These were surfaced during the serving-API work (2026-08-10) and left as **flags** per the scoped agreement — none were silently "fixed" in the training data or retrained models.
 
-1. **Persona volume vs. SME-reviewed archetypes.** The persona validation list documents **12 archetypes (A–L)** for SME review, but the pipeline generates **12,000 personas** (`generate_personas.py` default `personas_per_archetype=1000`, verified in `Odin-ML/training/synth/personas.parquet`). Confirm 12,000 is intended (per FIES 2023 sample size) or scale down.
+1. **Persona volume vs. SME-reviewed archetypes.** The persona validation list documents **12 archetypes (A–L)** for SME review, but the pipeline generates **12,000 personas** (`generate_personas.py` default `personas_per_archetype=1000`, verified in `BUDI-ML/training/synth/personas.parquet`). Confirm 12,000 is intended (per FIES 2023 sample size) or scale down.
 2. **PFP per-class support is zero for some labels.** `train_pfp.py` produced per-class metrics of 0% for several `pfp_label` classes (e.g., `Stable/Obligated/At-Risk`). This is a labeling artifact of the synth data, not a serving bug — needs a labeling-quality pass before trusting PFP class confidence.
-3. **Label vocabulary mismatch.** `system-spec.md` v0.3.0 uses `At-Risk` while training data and `train_pfp.py` use `Tight` (e.g., `Stable/Obligated/Tight`). Either the spec or the labels must change; the spec is the ground truth. **Status: resolved in code and docs (2026-08-13)** — serving code, training scripts, and training docs now use `At-Risk` per the spec. The only remaining `Tight` labels live in the gitignored trained artifacts (`Odin-ML/training/models/`); they will resolve on the next retrain.
+3. **Label vocabulary mismatch.** `system-spec.md` v0.3.0 uses `At-Risk` while training data and `train_pfp.py` use `Tight` (e.g., `Stable/Obligated/Tight`). Either the spec or the labels must change; the spec is the ground truth. **Status: resolved in code and docs (2026-08-13)** — serving code, training scripts, and training docs now use `At-Risk` per the spec. The only remaining `Tight` labels live in the gitignored trained artifacts (`BUDI-ML/training/models/`); they will resolve on the next retrain.
 4. **Python version drift.** The thesis system spec targets Python 3.14; `odin-ml` runtime is pinned to 3.13.14 (`.python-version`). Revisit before deployment. **Status: resolved (2026-08-13)** — `.python-version` bumped to 3.14.4 and all references updated; install the venv under 3.14.4 on next setup.
 5. **scikit-learn version pin.** Training artifacts were produced with scikit-learn 1.9.0, but `requirements.txt` pins 1.8.0 — produces `InconsistentVersionWarning` app-wide (filtered, non-fatal). Pin to 1.9.0 or retrain. **Status: resolved (2026-08-13)** — `requirements.txt` pins `scikit-learn==1.9.0`.
 6. **Anomaly artifact metadata.** `evaluation.json` has no `feature_columns` key; the serving layer hardcodes `ANOMALY_FEATURE_COLS` (24) in `app/services/anomaly_service.py`. Move the column list into `metadata.json` on the next retrain.
