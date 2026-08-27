@@ -11,7 +11,7 @@ This skill enables an AI agent to review a compilation of research paper summari
 A **compilation document** (Markdown) produced by `Z_Compiler.py`, containing full YAML summaries for each paper. Each summary includes:
 
 - `title`, `authors`, `year`
-- `odin_topics` and `relevance.topics` with relevance levels (high/medium/low/contextual)
+- `topic_tags` and `relevance.topics` with relevance levels (high/medium/low/contextual)
 - `tldr`, `problem_and_motivation`, `approach`, `findings`
 - `contribution`, `directly_justifies`
 - `limitations`
@@ -87,7 +87,7 @@ Use the following **four‑factor framework** to evaluate each paper. Do not rel
 
 0. **Count total papers first** – Before reading any summaries in detail, scan the compilation document to determine the exact total number of unique paper summaries. Record this number prominently at the very top of your output (e.g., *“Total papers in compilation: N”*). This count will serve as your immutable baseline for the final verification.
 
-1. **Group papers by primary topic** – Before evaluating individually, group all papers by their primary `odin_topics` (e.g., Forecasting, Anomaly Detection, Savings, Debt, Behavioral Profiling, Budget Recommendation). This groups papers that are likely to overlap, making redundancy detection straightforward. If a paper has multiple topics, assign it to the most prominent one listed first.
+1. **Group papers by primary topic** – Before evaluating individually, group all papers by their primary `topic_tags` (e.g., Forecasting, Anomaly Detection, Savings, Debt, Behavioral Profiling, Budget Recommendation). This groups papers that are likely to overlap, making redundancy detection straightforward. If a paper has multiple topics, assign it to the most prominent one listed first.
 
 2. **Scan each topic group** – Read every summary within each group (title, tldr, findings, contribution, topics). Within a group, perform a **preliminary redundancy scan** – identify papers that appear to report the same or extremely similar findings.
 

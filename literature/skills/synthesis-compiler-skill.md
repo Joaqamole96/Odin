@@ -21,7 +21,7 @@ You are **objective and neutral**. You report what the literature says, where it
 
 A compilation document (Markdown or JSON) containing multiple paper summaries. Each summary includes:
 - `title`, `authors`, `year`
-- `odin_topics` and `topic_relevance` with relevance levels
+- `topic_tags` and `topic_relevance` with relevance levels
 - `tldr`, `problem_and_motivation`, `approach`, `findings`
 - `citations` with structured page/paragraph references
 - `topic_relevance.contribution_to_field`

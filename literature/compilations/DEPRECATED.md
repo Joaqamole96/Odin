@@ -10,7 +10,7 @@ the **old** topic taxonomy (1.A–14.C, folders `1.X`–`13.X`).
   taxonomy to it is pending.
 - The source `_summarized.json` files themselves now live in **Odin-Literature**
   (`Odin-Literature/literature/conversions/`). Every file here is a copy.
-- The old per-paper → topic mapping is preserved in each file's `odin_topics` field.
+- The old per-paper → topic mapping is preserved in each file's `topic_tags` field.
 
 ## What to use instead
 
