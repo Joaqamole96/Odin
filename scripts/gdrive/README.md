@@ -36,6 +36,6 @@ Add `--limit N` to control result count (default: 10).
 | `auth.py` | OAuth 2.0 credential management, token caching |
 | `client.py` | Google Drive API wrapper functions |
 | `cli.py` | CLI entry point (argparse) |
-| `fetch_chapters.py` | Fetch chapter drafts to ground-truth/ |
+| `fetch_drive.py` | Fetch all Drive files to google-drive/ |
 | `.env` | Live credentials (gitignored, never commit) |
 | `.env.example` | Credential template |

@@ -34,7 +34,7 @@
 | `INDEX.md` | This file. Master navigation index. |
 | `docs/` | Thesis documents, standards, and documentation. |
 | `docs/ml/` | ML model design, data analysis, and training documentation. |
-| `ground-truth/` | Local mirrors of Drive chapter drafts. Gitignored. Run `fetch_chapters.py` to refresh. |
+| `google-drive/` | Local mirrors of Drive files. Gitignored. Run `fetch_drive.py` to refresh. |
 | `scripts/gdrive/` | Google Drive API CLI tool (local OAuth 2.0). See `scripts/gdrive/README.md`. |
 | `survey/` | Survey instruments. |
 | `literature/` | **DEPRECATED.** See `literature/DEPRECATED.md`. RRL work lives in Odin-Literature. |

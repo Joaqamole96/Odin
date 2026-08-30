@@ -60,7 +60,7 @@ Odin-Paper/
   AGENTS.md              # This file — agent navigation and standards
   INDEX.md               # Master navigation index (authoritative)
   docs/                  # Thesis documents and standards
-  ground-truth/          # Local mirrors of Drive chapter drafts (gitignored)
+  google-drive/          # Local mirrors of Drive files (gitignored)
   scripts/               # Standalone tooling
   survey/                # Survey instruments
   literature/            # DEPRECATED — see literature/DEPRECATED.md
@@ -101,7 +101,7 @@ A self-contained Google Drive API CLI tool for reading files from the group's Dr
 
 ## Important Gotchas
 
-- **`ground-truth/` is gitignored.** It holds local `.docx` mirrors fetched from Drive. Run `python scripts/gdrive/fetch_chapters.py` to refresh. Drive is the source of truth.
+- **`google-drive/` is gitignored.** It holds local `.docx` mirrors fetched from Drive. Run `python scripts/gdrive/fetch_drive.py` to refresh. Drive is the source of truth.
 - `docs/thesis/system/` holds preserved historical copies: `specification (OLD).md` (v4.0 spec) and `topic-outline (OLD).md`. Both are superseded.
 - 518 PDFs (~969 MB) are tracked via Git LFS in `literature/papers/`. These will be migrated to Odin-Literature when verified against the new topical outline.
 - **`literature/` is deprecated.** See `literature/DEPRECATED.md`. All RRL work happens in Odin-Literature.

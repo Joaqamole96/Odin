@@ -9,14 +9,14 @@ This directory provides agents with real-time access to the latest thesis docume
 ## Usage
 
 ```bash
-# Fetch all chapter drafts from Drive
-python scripts/gdrive/fetch_chapters.py
+# Fetch all files from Drive
+python scripts/gdrive/fetch_drive.py
 ```
 
 ## Structure
 
 ```
-ground-truth/
+google-drive/
   chapters/
     chapter-1/    # Chapter 1 .docx files
     chapter-2/    # Chapter 2 .docx files
@@ -26,5 +26,5 @@ ground-truth/
 
 - **Drive is source of truth.** Files here may lag behind Drive.
 - **Gitignored.** These files are not tracked in version control.
-- **Refresh before citing.** Always run `fetch_chapters.py` to get the latest versions.
+- **Refresh before citing.** Always run `fetch_drive.py` to get the latest versions.
 - **File names match Drive.** The original Google Drive file names are preserved.

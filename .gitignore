@@ -30,5 +30,5 @@ RRL/04_Compilations/**/*.md
 !RRL/04_Compilations/Z_Scorer.md
 !RRL/04_Compilations/Z_Verifier.md
 
-# Local mirrors of Google Drive ground truth
-ground-truth/
+# Local mirrors of Google Drive
+google-drive/
