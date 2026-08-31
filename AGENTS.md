@@ -17,16 +17,18 @@ The RRL corpus, scoring pipeline, and related tooling live in **Odin-Literature*
 
 ## Coding Standards
 
-This repository does not contain application code, so backend/frontend coding standards from `REPOSITORY-STANDARDS.md` do not apply. The applicable standards are:
+This repository does not contain application code, so backend/frontend coding standards from `Odin-ML/docs/standards/REPOSITORY-STANDARDS.md` do not apply. The applicable standards are:
 
 | Standard | Location |
 |----------|----------|
 | Git commit messages | `docs/standards/git-commit-standards.md` |
+| Documentation format | `docs/standards/documentation-format.md` |
 | Documentation discipline | `docs/standards/documentation-discipline.md` |
+| Document versioning | `docs/standards/versioning.md` |
 
 Enforcement: Follow the commit message format for all commits. Keep `INDEX.md` updated when adding or moving files.
 
-> **RRL standards** (naming conventions, summary format, workflow) have moved to **Odin-Literature**: `docs/standards/`.
+> **RRL standards** (naming conventions, summary format, workflow) have moved to **Odin-Literature**: `Odin-Literature/docs/standards/`.
 
 ---
 
@@ -63,22 +65,25 @@ Odin-Paper/
   google-drive/          # Local mirrors of Drive files (gitignored)
   scripts/               # Standalone tooling
   survey/                # Survey instruments
-  literature/            # DEPRECATED — see literature/DEPRECATED.md
+  archived-literature/    # DEPRECATED — see archived-literature/DEPRECATED.md
 ```
 
 ---
 
 ## Navigation
 
+See **`INDEX.md`** for the authoritative index. Key documents:
+
 | Document | Purpose |
 |----------|---------|
-| **`INDEX.md`** | Master index. Authoritative navigation for all files. |
-| **`docs/planning-management/topical-outline.md`** | Topical outline. Thesis structure ground truth. |
-| **`docs/thesis/specifications/system-spec.md`** | System specification. The main design contract. |
+| **`docs/INDEX.md`** | Documentation index for everything under `docs/`. |
+| **`docs/requirements-engineering/system-spec.md`** | System specification. The main design contract. |
+| **`docs/requirements-engineering/product-requirements-document.md`** | Product requirements. |
+| **`docs/requirements-engineering/requirements-engineering.md`** | Functional requirements per module. |
+| **`docs/design-architecture/screen-descriptions/00-index.md`** | Index of the 24 screen descriptions. |
 | **`docs/thesis/paper/chapter-1.md`** | Chapter 1 draft (Introduction). |
-| **`docs/thesis/system/PRD-Full-Odin-App.md`** | Product requirements. 24 screen descriptions in `docs/thesis/system/screen-descriptions/`. |
-| **`docs/research-proposal/Research-Proposal.md`** | Formal RP2 proposal. Authoritative for objectives/scope. |
 | **`docs/ml/README.md`** | ML model design, data analysis, and training documentation (phases 1-6). |
+| **`docs/archive/research-proposal/Research-Proposal.md`** | Formal RP2 proposal (authoritative for objectives/scope). |
 
 ---
 
@@ -190,7 +195,6 @@ When locating a Drive item, search by its recorded ID or exact name. When adding
 ## Important Gotchas
 
 - **`google-drive/` is gitignored.** It holds local `.docx` mirrors fetched from Drive. Run `python scripts/gdrive/fetch_drive.py` to refresh. Drive is the source of truth.
-- `docs/thesis/system/` holds preserved historical copies: `specification (OLD).md` (v4.0 spec) and `topic-outline (OLD).md`. Both are superseded.
-- 518 PDFs (~969 MB) are tracked via Git LFS in `literature/papers/`. These will be migrated to Odin-Literature when verified against the new topical outline.
-- **`literature/` is deprecated.** See `literature/DEPRECATED.md`. All RRL work happens in Odin-Literature.
-- RRL topic codes (`1.A`-`14.C`) follow the **old** topic outline. The new topical outline supersedes it; re-mapping is pending.
+- The authoritative topical outline is `google-drive/topical-outline/topical-outline.md` (Drive mirror). See the `TOPICAL OUTLINE` entries in the Drive table.
+- RRL processing live in **Odin-Literature**. There are no RRL standards or pipeline scripts here; see `docs/standards/*rrl*` deprecation notices.
+- **`archived-literature/` is deprecated.** See `archived-literature/DEPRECATED.md`. All RRL work happens in Odin-Literature.

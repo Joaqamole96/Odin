@@ -1,7 +1,11 @@
-Major.Minor.Patch
+# Document Versioning
 
-Major Updates are for Adviser-backed revisions.
+All versioned documents use semantic versioning (`Major.Minor.Patch`).
 
-Minor Updates are for Researcher revisions within the present assumptions of the Adviser.
+## Version Increments
 
-Patch Updates are for any general and trivial revisions.
+| Increment | Applies To |
+| :--- | :--- |
+| `Major` | Adviser-backed revisions. |
+| `Minor` | Researcher revisions within the present assumptions of the Adviser. |
+| `Patch` | Any general and trivial revisions. |

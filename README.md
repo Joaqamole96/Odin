@@ -14,16 +14,17 @@ This repository contains thesis documents, specifications, PRDs, and survey inst
 |----------|------|
 | Master index | `INDEX.md` |
 | Agent guide | `AGENTS.md` |
-| Topical outline | `docs/planning-management/topical-outline.md` |
-| System specification | `docs/thesis/specifications/system-spec.md` |
+| Documentation index | `docs/INDEX.md` |
+| Topical outline | `google-drive/topical-outline/topical-outline.md` |
+| System specification | `docs/requirements-engineering/system-spec.md` |
 | Chapter 1 draft | `docs/thesis/paper/chapter-1.md` |
-| Product requirements | `docs/thesis/system/PRD-Full-Odin-App.md` |
-| Research proposal | `docs/research-proposal/Research-Proposal.md` |
+| Product requirements | `docs/requirements-engineering/product-requirements-document.md` |
+| Research proposal | `docs/archive/research-proposal/Research-Proposal.md` |
 | RRL corpus & scoring | **Odin-Literature** |
 
 ## Git LFS
 
-Source PDFs in `literature/papers/` are tracked via Git LFS. After cloning:
+Source PDFs in `archived-literature/papers/` are tracked via Git LFS. After cloning:
 
 ```bash
 git lfs pull

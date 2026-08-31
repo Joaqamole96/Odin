@@ -4,15 +4,15 @@
 
 ```json
 {
-    "document-type": "prd",
-    "version": 0.1.0,
-    "date": "2026.08.07",
-    "authors": [
-        "Gabion, Stefanie S.",
-        "Guevarra, Joaquin Luis T.",
-        "San Jose, Alexa Joanne Paula G.",
-        "Togle, Charles Nathaniel B."
-    ],
+  "document-type": "prd",
+  "version": 0.1.0,
+  "date": "2026.08.07",
+  "authors": [
+    "Gabion, Stefanie S.",
+    "Guevarra, Joaquin Luis T.",
+    "San Jose, Alexa Joanne Paula G.",
+    "Togle, Charles Nathaniel B."
+  ]
 }
 ```
 

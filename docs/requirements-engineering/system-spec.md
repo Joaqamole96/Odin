@@ -294,7 +294,7 @@ A user's PFP is defined by three binary dimensions:
 
 <!-- ### 5.2 SME-Draft Thresholds
 
-Thresholds are **researcher-defined and SME-validated**. The comprehensive literature review found no PFMS study that formally defines these thresholds, so the researchers define them and validate them with the SME (see `../archive/Notes.md`). Current SME-draft thresholds (provisional, pending the SME validation protocol):
+Thresholds are **researcher-defined and SME-validated**. The comprehensive literature review found no PFMS study that formally defines these thresholds, so the researchers define them and validate them with the SME (see `../archive/notes.md`). Current SME-draft thresholds (provisional, pending the SME validation protocol):
 
 | Dimension | Threshold | Rationale (SME draft) |
 | :--- | :--- | :--- |
@@ -652,11 +652,11 @@ Event Bus ──▶ Response Aggregator ──▶ Mobile app
 
 ### A. References
 
-- Odin thesis: *Development of Odin: A Personal Finance Management Application for Filipino Working Young Adults Using Random Forest, LSTM, and Isolation Forest* — topical outline (`../planning-management/topical-outline.md`).
-- Odin PRD (`prd.md`).
-- Odin Requirements Engineering (`reqs-eng.md`).
+- Odin thesis: *Development of Odin: A Personal Finance Management Application for Filipino Working Young Adults Using Random Forest, LSTM, and Isolation Forest* — topical outline (`../../google-drive/topical-outline/topical-outline.md`).
+- Odin PRD (`product-requirements-document.md`).
+- Odin Requirements Engineering (`requirements-engineering.md`).
 - Screen descriptions (`../design-architecture/screen-descriptions/00-index.md`).
-- System notes and addenda (`../archive/Notes.md`).
+- System notes and addenda (`../archive/notes.md`).
 - Public User Expectations and Perception Survey (`../assessment-evaluation/survey/PUEPS.md`).
 - Model design documents and training documentation (`../ml/`): PFP MDD v1.3, Forecaster MDD v2.3, Anomaly Detector MDD, `feature-set.md` v1.0, `module-integration.md` v1.0, `deployment-architecture.md` v1.0, dimension-threshold candidates (`../ml/4.5_dimension-threshold-discovery/`), Phase-6 training docs (`../ml/6_model-training/`), and synthetic data (`Odin-ML/training/synth/`).
 - Preserved historical reference: `specification (OLD).md` (v4.0) and `topic-outline (OLD).md` under `../archive/`.

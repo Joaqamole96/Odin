@@ -36,7 +36,6 @@ Shared across all Odin repositories.
 
 | Scope | Use For |
 |-------|---------|
-| `rrl` | RRL corpus: papers, summaries, compilations |
 | `model` | Model design documents and data analysis |
 | `data` | Data sources, synthetic data, FIES/BSP files |
 | `docs` | Thesis documents, specifications, chapter drafts |
@@ -45,11 +44,12 @@ Shared across all Odin repositories.
 | `standards` | Shared engineering standards and agent guidance |
 | `deps` | Dependency additions, removals, upgrades |
 
+> **Note:** RRL corpus commits (previously `rrl` scope) now belong in **Odin-Literature**. Odin-Paper only tracks RRL-related documentation references.
+
 Examples:
 
 ```text
-docs(rrl): add summarizer v5 schema reference
-feat(model): add RF classifier prep notes
+docs(model): add RF classifier prep notes
 chore(config): update .gitignore for __pycache__
 ```
 

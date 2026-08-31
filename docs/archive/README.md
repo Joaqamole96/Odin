@@ -1,14 +1,15 @@
-# System
+# Archive
 
-Working documents for the Odin application system.
+Preserved and superseded documents. Files here are retained for historical reference — **do not treat them as current**.
 
-| Path | Contents |
+## Contents
+
+| Path | Status |
 | :--- | :--- |
-| `PRD-Full-Odin-App.md` | Product requirements (full). |
-| `requirements-engineering/` | Requirements engineering traceability (ODIN-REQUIREMENTS-ENGINEERING V1.0). |
-| `screen-descriptions/` | 24 screen descriptions (`00-index.md` lists them all). |
-| `Notes.md` | Research notes (PFP dimensions). |
-| `specification (OLD).md` | **Superseded** system specification (v4.0, 2026-06-13). The current spec is `../specifications/system-spec.md`. |
-| `topic-outline (OLD).md` | **Superseded** topic outline. The current outline is `../topical-outline/topical-outline.md`. |
+| `research-proposal/` | Formal RP2 proposal and panel comments/suggestions. Authoritative for objectives/scope. |
+| `notes.md` | Research notes (PFP dimensions and SME validation). |
+| `prd (OLD).md` | **Superseded** PRD (2026-08-07). Current: `../requirements-engineering/product-requirements-document.md`. |
+| `reqs-eng (OLD).md` | **Superseded** requirements engineering (2026-08-07, Joplin tables). Current: `../requirements-engineering/requirements-engineering.md`. |
+| `specification (OLD).md` | **Superseded** system specification (v4.0, 2026-06-13). Current: `../requirements-engineering/system-spec.md`. |
 
-`(OLD)` files are preserved for reference only — do not treat them as current.
+The canonical, current documents live under `docs/requirements-engineering/`, `docs/design-architecture/`, and `docs/planning-management/`. See `docs/INDEX.md` for the authoritative documentation index.
